@@ -80,7 +80,7 @@
     "encrypted": "false",
     "start_blocks": "// Example\r\nconsole.log(5%2);\r\nconsole.log(1);\r\nconsole.log(\"\");\r\n\r\n// console.log your answer - check that the two lines match in the console\r\nconsole.log(2%3);\r\n\r\nconsole.log(\"\");\r\n\r\n// console.log your answer - check that the two lines match in the console\r\nconsole.log(10%2);\r\n\r\nconsole.log(\"\");\r\n\r\n// console.log your answer - check that the two lines match in the console\r\nconsole.log(2%4);\r\n\r\nconsole.log(\"\");\r\n\r\n// console.log your answer - check that the two lines match in the console\r\nconsole.log(7%1);\r\n\r\nconsole.log(\"\");",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "map_reference": "/docs/concepts/app-lab/patterns/random-list-access/",
+    "map_reference": "/docs/concepts/patterns/random-list-access/",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null,

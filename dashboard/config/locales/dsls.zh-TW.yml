@@ -26,16 +26,17 @@ zh-TW:
         title: 選擇題
       2-3 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: 找到與組合按鈕相符的舞蹈動作，將它們配對起來。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: 配對
       2-3 Binary Match 1:
         answers:
@@ -61,6 +62,14 @@ zh-TW:
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: 根據遊戲規則，哪一組牌卡的得分是正確的？
+        teacher_markdown: |
+          ## 老師們︰
+
+          學生很可能會有所誤解，而這就是一個可以好好爬梳的地方。如果學生認為這裡 *沒有* 正確答案，那麼他們可能對條件判斷有所誤會。
+
+          這裡有一段影片可以幫助解釋在這個問題中發生了什麼︰
+
+          https://youtu.be/TbUaEnAYPjI
         title: 選擇題
       2-3 Getting Loopy Multi 1:
         answers:
@@ -118,17 +127,20 @@ zh-TW:
         title: 迷宮：選擇題
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: 哪個程式 **無法** 畫出這個圖像？
         title: 選擇題
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: 哪一組的程式與圖像沒有問題？
         title: 選擇題
@@ -142,7 +154,8 @@ zh-TW:
         content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
         questions:
-        - {}
+        - text: 你要修正什麼地方才能完成這個圓圈？
+        title: 小藝術家 - 除錯：選擇題 1
       2-3 artist functions multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
@@ -166,6 +179,7 @@ zh-TW:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: 小藝術家 - 迴圈：配對題 1
       2-3 artist loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
@@ -212,6 +226,7 @@ zh-TW:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: 下列的比較中，哪個得到的結果會是 true？
+        title: 蜜蜂 - 條件判斷：選擇題 1
       2-3 bee conditionals multi 3:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
@@ -223,6 +238,7 @@ zh-TW:
           500"
         questions:
         - text: 選出最適合的程式積木。
+        title: 蜜蜂 - 條件判斷：選擇題 2
       2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -281,10 +297,10 @@ zh-TW:
         title: 選擇題
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: 每台車已經被分解成小部分，利用它的分解列表幫每台車子完成配對。
         questions:
         - text: "<h3>車輪/側面: 2<br/>窗戶/側面: 0</h3>"
@@ -305,8 +321,9 @@ zh-TW:
         title: 選擇題
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: 這些圖片中，哪一個最能用來代表群眾外包（Crowdsourcing）？
         title: 選擇題
@@ -337,24 +354,34 @@ zh-TW:
         - text: 64.14.68.10
         - text: 54.243.71.82
           correct: true
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 當你試著造訪 code.org 時，DNS 最有可能帶你到哪個 IP 位址？
         title: 選擇題
       4-5 Internet Multi 2:
         answers:
         - text: code.org
-        - correct: true
-        - {}
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
         - text: khanacademy.org
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 如果 DNS 已把你導向 IP 為 100.42.50.110 的網頁，那麼你會在哪個網站？
         title: 選擇題
       4-5 Songwriting Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
+          correct: true
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - text: 在這首歌裡，哪一大段因為每次都會完全重複，所以能被稱為副歌？
         title: 選擇題
@@ -365,115 +392,220 @@ zh-TW:
         - text: "<h4>STAR</h4>"
         - text: "<h4>RAMP</h4>"
         content1: 這些程式分別製造出了什麼單字？請配對。
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: 配對
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: 下列的哪個程式<strong>沒有</strong>產生和程式 1 相同的序列？
         title: 選擇題
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: 哪個程式可以作出這樣的圖案？
         title: 小藝術家 - 迴圈：選擇題
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: 哪個程式可以畫出周長為 100 像素的長方形？
         title: 小藝術家：選擇題
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: 哪一個圖形是對稱的？
         title: 小藝術家：選擇題
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         content2: "？一朵紫色的花可能會有 1 至 3 個花蜜，但你不知道有多少。用哪些積木可以正確的檢查並收集紫色花蜜呢？"
         questions:
         - text: 選出最適合的程式積木。
         title: 蜜蜂 - 條件判斷：選擇題
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: 哪個版本的函式有用？
         title: 蜜蜂 - 除錯：選擇題
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: 哪個程式可以完成這個關卡？
         title: 蜜蜂 - 迴圈：選擇題
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
         - text: 哪個程式可以解決這個關卡？
         title: 迷宮 - 條件判斷（Conditionals）：選擇題
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: 哪個程式積木可以解決關卡，把它們配對起來。
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: 迷宮：配對題
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: 哪個程式可以解決這個關卡？
         title: 迷宮：選擇題
       Begin planning your project:
         content1: 在此描述
+        markdown: "\"# 設計過程\n設計軟體意味著始終要解決許多小問題。軟體設計中的主要問題是首先要創建什麼。\n\n這個過程對所有事物都是有用的，但是我們將專注於將其用於應用程式設計。\n\n<!--
+          翻譯術語 \"\"定義\"\", \"\"準備\"\", \"\"嘗試\"\", \"\"反思\"\" 並根據需要更改字型大小和位置-->\n<div
+          style=\"\"position: relative; text-align: center; font-size: 1em\"\">\n
+          \ <img src=\"\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"\"
+          alt=\"\"Design Process\"\" style=\"\"width: 50%;\"\">\n  <div style=\"\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\"\">Define</div> \n  <div style=\"\"position: absolute; top: 52%;
+          left: 61%; transform: translateX(-61%); font-weight: bold;\"\">Prepare</div>\n
+          \ <div style=\"\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\"\">Try</div>\n  <div style=\"\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\"\">Reflect</div>\n</div>\n\n*
+          **定義**\n  * 你想建立一個什麼樣的應用程式？\n  *你受到什麼約束？\n  *要怎麼樣才能達到勝利？\n* **準備**\n  *
+          集思廣益/研究可能的要素\n  * 比較利弊\n  * 制定計劃\n* **嘗試**\n  * 把你的計劃付諸行動\n* **反思**\n  *
+          你的結果與你在定義應用程式時設定的目標相比如何？\n  *你可以從中學到什麼，下次能做得更好嗎？\n  *你發現了什麼新問題？\n\n# 它看起來像什麼？\n在接下來的幾周中，你將有機會嘗試一些現有的遊戲，並根據所學知識設計自己的遊戲。
+          \ 創建遊戲後，你將有機會將其展示給其他人並獲得回饋。  這些步驟在軟體行業中都是至關重要的，而實踐設計過程中的要素將有助於你更有效地創建更好的產品。
+          \ \n\n隨著我們對設計過程的更多瞭解，接下來幾周我們將舉行：\n\n1.**定義和準備**\n   * 玩現有的遊戲來獲得想法和了解侷限性\n
+          \  * 集思廣益，規劃你的新應用或改良後的應用\n1.**嘗試**\n   * 按照你的計劃來打造一個應用程式\n1.**反思和編輯**\n
+          \  * 與其他小組交換應用程式來幫助改善專案品質\n1.**展示**\n   * 炫耀你的最終產品！\"\n"
       Begin planning your project_2018:
         content1: 在此描述
+        markdown: "\"# 設計過程\n設計軟體意味著始終要解決許多小問題。軟體設計中的主要問題是首先要創建什麼。\n\n這個過程對所有事物都是有用的，但是我們將專注於將其用於應用程式設計。\n\n<!--
+          翻譯術語 \"\"定義\"\", \"\"準備\"\", \"\"嘗試\"\", \"\"反思\"\" 並根據需要更改字型大小和位置-->\n<div
+          style=\"\"position: relative; text-align: center; font-size: 1em\"\">\n
+          \ <img src=\"\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"\"
+          alt=\"\"Design Process\"\" style=\"\"width: 50%;\"\">\n  <div style=\"\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\"\">Define</div> \n  <div style=\"\"position: absolute; top: 52%;
+          left: 61%; transform: translateX(-61%); font-weight: bold;\"\">Prepare</div>\n
+          \ <div style=\"\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\"\">Try</div>\n  <div style=\"\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\"\">Reflect</div>\n</div>\n\n*
+          **定義**\n  * 你想建立一個什麼樣的應用程式？\n  *你受到什麼約束？\n  *要怎麼樣才能達到勝利？\n* **準備**\n  *
+          集思廣益/研究可能的要素\n  * 比較利弊\n  * 制定計劃\n* **嘗試**\n  * 把你的計劃付諸行動\n* **反思**\n  *
+          你的結果與你在定義應用程式時設定的目標相比如何？\n  *你可以從中學到什麼，下次能做得更好嗎？\n  *你發現了什麼新問題？\n\n# 它看起來像什麼？\n在接下來的幾周中，你將有機會嘗試一些現有的遊戲，並根據所學知識設計自己的遊戲。
+          \ 創建遊戲後，你將有機會將其展示給其他人並獲得回饋。  這些步驟在軟體行業中都是至關重要的，而實踐設計過程中的要素將有助於你更有效地創建更好的產品。
+          \ \n\n隨著我們對設計過程的更多瞭解，接下來幾周我們將舉行：\n\n1.**定義和準備**\n   * 玩現有的遊戲來獲得想法和了解侷限性\n
+          \  * 集思廣益，規劃你的新應用或改良後的應用\n1.**嘗試**\n   * 按照你的計劃來打造一個應用程式\n1.**反思和編輯**\n
+          \  * 與其他小組交換應用程式來幫助改善專案品質\n1.**展示**\n   * 炫耀你的最終產品！\"\n"
       Begin planning your project_2018_2019:
         content1: 在此描述
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          | 餓了的松鼠 | 外星人的故事 |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG ""Hungry Squirrel (Play Lab"")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG ""Alien Story (Play Lab"")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 試著在這個遊戲中新增聲音！| 試著在這個故事中加入另一個場景！|"
+      Begin planning your project_2018_2019_2020:
+        content1: 在此描述
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          | 餓了的松鼠 | 外星人的故事 |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG ""Hungry Squirrel (Play Lab"")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG ""Alien Story (Play Lab"")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 試著在這個遊戲中新增聲音！| 試著在這個故事中加入另一個場景！|"
       BigEvent-Unplugged:
         markdown: |
           # 大事件（Evnets）
 
           在計算機科學（Computer Science）、事件（Evnets）是一個由電腦監控的動作。在本課中，依據按下的按鈕，反應會有所不同。
+      BigEvent-Unplugged_2020:
+        markdown: |
+          # 大事件（Evnets）
+
+          在計算機科學（Computer Science）、事件（Evnets）是一個由電腦監控的動作。在本課中，依據按下的按鈕，反應會有所不同。
+      BinaryBracelets-Unplugged:
+        markdown: |
+          "# 二進位制手鐲
+
+          構建一個手環，用電腦能夠理解的系統來代表你的名字！
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          "# 二進位制手鐲
+
+          構建一個手環，用電腦能夠理解的系統來代表你的名字！
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
+      BinaryImages-Unplugged:
+        markdown: |
+          "# 二進位制圖片
+
+          探討如何用兩個簡單的值來重新創造一個圖片。"
+      BinaryImages-Unplugged_2020:
+        markdown: |
+          "# 二進位制圖片
+
+          探討如何用兩個簡單的值來重新創造一個圖片。"
       CSD Header Size MC:
         answers:
         - {}
@@ -972,6 +1104,21 @@ zh-TW:
           ## 資源
 
           * [真實世界中的數據](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - 活動指南
+      ConditionalsWithCards-Unplugged:
+        markdown: |
+          "# 條件撲克牌
+
+          玩一個紙牌遊戲，建立一個規則，比如「如果我抽到一張紅牌，我就會得到一分」和「如果我抽到一張黑牌，你就會得到一分」。"
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |
+          "# 條件撲克牌
+
+          玩一個紙牌遊戲，建立一個規則，比如「如果我抽到一張紅牌，我就會得到一分」和「如果我抽到一張黑牌，你就會得到一分」。"
+      Crowdsourcing-Unplugged:
+        markdown: |
+          "# 群眾外包
+
+          看看群眾外包這個在電腦科學中常見的解決問題的技巧，如何幫助你在課堂上一起完成一項任務，比你一個人完成更有效率。"
       Dance_Party_extras_intro:
         markdown: "# 繼續跳舞!\n\n第 2 部分裡，你可以創作自己的專案。這裡沒有要解決的關卡，只有一堆利用不同方式做出的五花八門的舞蹈派對專案。
           \n\n你可以_隨意選擇_要從哪一關開始，看看之前完成的關卡，或是把這些專案中的概念合而為一。盡情嘗試，隨你開心，打造一個屬於你自己的舞蹈派對。\n\n<a
@@ -1008,12 +1155,72 @@ zh-TW:
           src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\n加速、減速\n</h2>\n\n<img
           src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          "# 無障礙設計
+
+          * 在電腦科學的世界裡，**無障礙**是指為殘疾人士創造科技。
+          * 殘疾包括身體、聽覺、視覺以及其他許多其他方面的殘疾。
+          * 殘疾分很多種類，在不同方面影響人們，包括他們使用**智慧型手機應用程式**等科技的方式。
+          * 為殘疾人士設計便利的應用程式也可以讓這些程式更好地為其他人服務！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          "# 無障礙設計
+
+          * 在電腦科學的世界裡，**無障礙**是指為殘疾人士創造科技。
+          * 殘疾包括身體、聽覺、視覺以及其他許多其他方面的殘疾。
+          * 殘疾分很多種類，在不同方面影響人們，包括他們使用**智慧型手機應用程式**等科技的方式。
+          * 為殘疾人士設計便利的應用程式也可以讓這些程式更好地為其他人服務！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DigitalCitizenship-Unplugged:
+        markdown: |
+          "# 數位公民
+
+          有些資訊在網上分享是不安全的。本節課將幫助你瞭解安全資訊和隱私資訊的區別。"
       DigitalFootprint-Unplugged:
         markdown: |
           # 你的數位足跡
 
           將關於你自己的訊息放到網路上，建立你的數位足跡。
+      DigitalSharing-Unplugged:
+        markdown: |
+          "# 數字化分享
+
+          在本課中，你將考慮尊重所有權和版權的挑戰和好處，特別是在數字環境中。"
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          "# 數字化分享
+
+          在本課中，你將考慮尊重所有權和版權的挑戰和好處，特別是在數字環境中。"
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          "# 信封變數
+
+          在電腦科學中，變數讓我們有了很大的自由度。這節課幫助我們解釋了什麼是變數，以及我們可以用多少不同的方式來使用變數。"
+      EnvelopeVariables-Unplugged_2020:
+        markdown: |
+          "# 信封變數
+
+          在電腦科學中，變數讓我們有了很大的自由度。這節課幫助我們解釋了什麼是變數，以及我們可以用多少不同的方式來使用變數。"
+      ForLoopFun-Unplugged:
+        markdown: |
+          "# 計數迴圈的樂趣
+
+          我們知道迴圈可以讓我們重複做一些事情，但現在我們要學習如何在迴圈中加入額外的結構。"
+      ForLoopFun-Unplugged_2020:
+        markdown: |
+          "# 計數迴圈的樂趣
+
+          我們知道迴圈可以讓我們重複做一些事情，但現在我們要學習如何在迴圈中加入額外的結構。"
       GettingLoopy-Unplugged:
+        markdown: |
+          # 學習迴圈
+
+          本課透過跳舞活動來介紹迴圈（Loop）的程式設計概念。
+      GettingLoopy-Unplugged_2020:
         markdown: |
           # 學習迴圈
 
@@ -1025,7 +1232,24 @@ zh-TW:
           網際網路很強大，但有時很危險的地方。當你在瀏覽網際網路時，要隨時注意安全。
 
           <p align=center>
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          "# 程式設計畫圖
+
+          寫演算法，讓同學們可以用它來畫圖。"
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |
+          "# 程式設計畫圖
+
+          寫演算法，讓同學們可以用它來畫圖。"
       HappyLoops-Unplugged:
+        markdown: |
+          # 開心迴圈（Loop）
+
+          在這個課程裡，你將會學到迴圈（Loop）！
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
         markdown: |
           # 開心迴圈（Loop）
 
@@ -1037,98 +1261,126 @@ zh-TW:
           # 開心地圖
 
           建立一個演算法去移動字符穿過迷宮。
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # 開心地圖
+
+          建立一個演算法去移動字符穿過迷宮。
       Internet Simulator Setup:
         content1: 在此描述
       Internet Simulator Setup 2:
         content1: 在此描述
       Internet Simulator Setup 3:
         content1: 在此描述
+      Internet-Unplugged:
+        markdown: |
+          "# 網際網路
+
+          在課堂上只需用紙片就能建立自己的網際網路。"
+      Internet-Unplugged_2020:
+        markdown: |
+          "# 網際網路
+
+          在課堂上只需用紙片就能建立自己的網際網路。"
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: 哪個程式可以解決這個關卡？
         title: 選擇題
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: 哪個程式可以畫出這個正方形？
         title: 選擇題
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: 配對同類的形狀。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: 配對
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: 合起來有多少花蜜？
         title: 選擇題
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: 合起來有多少花蜜？
         title: 選擇題
       K-1 Bee Loops Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: 配對這些程式積木
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: 配對
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: 找到與組合按鈕相符的舞蹈動作，將它們配對起來。
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: 配對
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: 哪隻動物留下的數位足跡讓牠最有可能<strong>曝露在危險中</strong>？
         title: 選擇題
       K-1 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: 要如何利用迴圈簡化循序運行的程式？
         title: 選擇題
@@ -1145,65 +1397,76 @@ zh-TW:
         title: 選擇題
       K-1 Keep it Private Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
         - text: 你<strong>不應該</strong>在線上分享哪種資訊？
         title: 選擇題
       K-1 Maze Debugging Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: 最後一個積木應該是？
         title: 選擇題
       K-1 Maze Loops Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: 哪個重複積木的結果會和左圖一樣？
         title: 選擇題
       K-1 Maze Loops Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: 選出正確的重複積木。
         title: 選擇題
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: 哪個程式積木可以解決關卡，把它們配對起來。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: 配對
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: 哪個答案可以解決這個關卡？
         title: 迷宮
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: 哪個演算法可以讓 Flurb 到達花的位置？
         title: 選擇題
@@ -1229,9 +1492,11 @@ zh-TW:
         title: 選擇題
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: 哪個程式可以拼出單字 MOVE？
         title: 選擇題
@@ -1241,6 +1506,7 @@ zh-TW:
         - text: 四邊形
           correct: true
         - text: 南
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: 哪個單字被拼出來了？（中英對照：設置 - Set，正方形 - Square，南 - South ）
         title: 選擇題
@@ -1249,19 +1515,201 @@ zh-TW:
           # 移動它, 移動它
 
           使用地圖和給予指令而抵達目標。
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # 移動它, 移動它
+
+          使用地圖和給予指令而抵達目標。
       Multi-Screen Apps:
         content1: 在此描述
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          "# 我的糊塗機器人朋友
+
+          使用迴圈，讓你的程式更短！"
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          "# 我的糊塗機器人朋友
+
+          使用迴圈，讓你的程式更短！"
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          "# 我的機器人朋友
+
+          透過為朋友們寫程式碼來學習程式設計！"
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |
+          "# 我的機器人朋友
+
+          透過為朋友們寫程式碼來學習程式設計！"
       New Challenge Introduction:
+        content1: 在此描述
+        markdown: "### 新挑戰：破解隨機替換加密法...透過一個新的小器具\n\n假設這次所有字母都不是依照相同的平移方式，而是將每一個英文字母隨機地對應到不同的字母呢？這種方式稱為**隨機替換加密法**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\n現在，您將面對經過**隨機替換**編碼的訊息，不再是經過簡單字母平移方式編碼的機密訊息。\n\n這次破解的困難度大增，而且需要比較複雜的工具幫忙，所以...\n\n當點選繼續後，您將看到一個**較新又較複雜版本的加密工具**，並且顯示許許多多不同的工具內容。\n\n但這工具是如何做到的，至今仍是個謎！\n\n###
+          您的任務：\n\n * 了解這個新版本的工具到底做了什麼事情\n * 您接收到了什麼資訊/訊息呢？\n * 找出這個工具可以讓您完成什麼事情\n
+          * 如同以往一樣：您無法破壞它。所以四處隨意戳戳看\n * 如果您了解了它的原理，那麼您應該就能夠解讀 經過隨機替換方法編碼的訊息\n \n###
+          提示\n\n* 您知道在英文中，**E**是最常使用的字母嗎？ \n\n### 集合討論\n 再花了一些時間把玩這個工具之後，您應該跟您的夥伴、朋友、甚至是整個班級同學，一同討論您的發現。而且您將驗證您所了解的整個加密過程，以及其他可以使用這個工具的方法。\n"
+      OPD-K5 Reviewing Reflections:
         content1: 在此描述
       OPD-K5 Stage3aGo:
         content1: 在此描述
+      OPD-K5 Stage3aGo_copy:
+        content1: 在此描述
+      OPD-K5 conditionals introduced:
+        content1: 在此描述
+      OPD-K5 debugging:
+        content1: 在此描述
+      OPD-K5 diving deeper intro:
+        content1: 在此描述
+      OPD-K5 events introduced:
+        content1: 在此描述
+      OPD-K5 for loops:
+        content1: 在此描述
+      OPD-K5 for loops intro:
+        content1: 在此描述
+      OPD-K5 for loops introduction:
+        content1: 在此描述
+      OPD-K5 functions introduced:
+        content1: 在此描述
+      OPD-K5 journaling:
+        content1: 在此描述
+      OPD-K5 lesson implementation planning:
+        content1: 在此描述
+      OPD-K5 lesson plans:
+        content1: 在此描述
+      OPD-K5 loops introduced:
+        content1: 在此描述
+      OPD-K5 project:
+        content1: 在此描述
+      OPD-K5 projects introduction:
+        content1: 在此描述
+      OPD-K5 role_of_teacher:
+        content1: 在此描述
+      OPD-K5 sequencing introduced:
+        content1: 在此描述
+      OPD-K5 sprite lab:
+        content1: 在此描述
+      OPD-K5 sprite lab introduction:
+        content1: 在此描述
+      OPD-K5 sprite lab unplugged:
+        content1: 在此描述
+      OPD-K5 sprite lab video:
+        content1: 在此描述
+      OPD-K5 types of lessons:
+        content1: 在此描述
+      OPD-K5 using lesson plans:
+        content1: 在此描述
+      OPD-K5 variables:
+        content1: 在此描述
+      OPD-K5 variables introduction:
+        content1: 在此描述
+      OPD-K5 variables unplugged:
+        content1: 在此描述
+      OPD-K5 where to next:
+        content1: 在此描述
+      OPD-K5-projects-1:
+        content1: 在此描述
+      PicturingData-Unplugged:
+        markdown: |
+          "# 畫出資料
+
+          利用 Play Lab 專案收集資料並進行預測。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)"
+      PicturingData-Unplugged_2020:
+        markdown: |
+          "# 畫出資料
+
+          利用 Play Lab 專案收集資料並進行預測。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)"
+      PowerOfWords-Unplugged:
+        markdown: |
+          "# 言語的力量
+
+          今天，你將學習到如果在網路上遇到惡人該怎麼辦。"
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          "# 強大的密碼
+
+          探討人們使用密碼的原因、學習使用密碼的好處，並尋找建立和保持安全的密碼的策略。
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)"
       Prepare for your presentation:
         content1: 在此描述
+        markdown: |
+          "# 專案介紹
+
+          是時候介紹你的專案了！你的老師將提供有關如何向同學展示你的作品的更多詳細資訊。"
+      Prepare for your presentation_2018:
+        markdown: |
+          "# 專案介紹
+
+          是時候介紹你的專案了！你的老師將提供有關如何向同學展示你的作品的更多詳細資訊。"
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          "# 隱私和個人資訊
+
+          這節課由常識教育開發，是關於在網上分享安全的資訊和不安全的資訊之間的區別。
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)"
+      RelayProgramming-Unplugged:
+        markdown: |
+          "# 接力程式設計
+
+          分成小組，共同編寫程式來畫圖。"
+      RelayProgramming-Unplugged_2020:
+        markdown: |
+          "# 接力程式設計
+
+          分成小組，共同編寫程式來畫圖。"
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          "# 遠離惡人
+
+          今天，你將學習到如果在網路上遇到惡人該怎麼辦。"
+      SimonSays-Unplugged:
+        markdown: |
+          "# Simon 說
+
+          玩個遊戲，想一想，需要什麼命令才能得到正確的結果。"
+      SimonSays-Unplugged_2020:
+        markdown: |
+          "# Simon 說
+
+          玩個遊戲，想一想，需要什麼命令才能得到正確的結果。"
+      Songwriting-Unplugged:
+        markdown: |
+          "# 創作歌曲
+
+          利用歌曲中的副歌概念，學習函式的定義和呼叫。"
+      Songwriting-Unplugged_2020:
+        markdown: |
+          "# 創作歌曲
+
+          利用歌曲中的副歌概念，學習函式的定義和呼叫。"
       'Technique: Frequency Analysis':
         content1: 在此描述
       Terminology Recap:
         content1: 在此描述
+        markdown: |
+          # 中間總結
+
+          經過**凱薩加密方法**加密過的訊息是容易破解的，而且當有計算工具在手邊可以利用時，就會變得更加容易破解。現在你已經對於破解字母移轉加密方法有了練習以及經驗。（相當簡單，對吧？）那麼，我們再來嘗試一些稍微困難一點的方法吧。
+
+
+          **技術總結：**
+
+          * **加密** - 對訊息進行編碼的過程。為了讓訊息保持機密性，並且達到只有經過授權的人員可以閱讀訊息的目的。
+          * **解密** - 對訊息進行反加密的過程，就是將秘密訊息轉變回原本的文字訊息。
+          * **加密方法** - 可以完成加密訊息的一種技術（或是演算法）
+          * **凱薩加密方法** - 一種針對英文字母進行固定數量平移（向前或向後）的加密技術
+          * **加密破解** - 當您完全不了解加密方法並且式圖解碼秘密訊息時，您就是在嘗試破解加密。
+
+          點擊繼續，並接受**下一個挑戰**...
       TheRightAppMarkdownLevel_2019:
+        markdown: "# 正確的應用程式\n\n* 現在所有人都使用電腦，特別是智慧型手機。 \n* 智慧型手機的應用程式幫助人們做一些事情，像是與們有說話，聽音樂，買東西，或只是瀏覽網頁。\n*
+          對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel_2019_2020:
         markdown: "# 正確的應用程式\n\n* 現在所有人都使用電腦，特別是智慧型手機。 \n* 智慧型手機的應用程式幫助人們做一些事情，像是與們有說話，聽音樂，買東西，或只是瀏覽網頁。\n*
           對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       Unit 1 Lesson 2 Overview:
@@ -1284,22 +1732,100 @@ zh-TW:
           * [解決問題 — 活動指南](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
       behaviors 1 predict:
         answers:
-        - feedback: 不正確。
-        - correct: true
+        - text: '精靈會旋轉
+
+'
+          feedback: 不正確。
+        - text: '精靈會縮小。
+
+'
+          correct: true
           feedback: 正確！
-        - feedback: 不正確。
-        - feedback: 不正確
+        - text: '精靈會移動。
+
+'
+          feedback: 不正確。
+        - text: '精靈會改變顏色。
+
+'
+          feedback: 不正確
         questions:
-        - {}
+        - text: '按一下「編輯」按鈕，檢視`神祕行為`的工作原理。研究一下里面的程式碼，然後做一個預測。
+
+'
+      behaviors 1 predict_2020:
+        answers:
+        - text: '精靈會旋轉
+
+'
+          feedback: 不正確。
+        - text: '精靈會縮小。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: '精靈會移動。
+
+'
+          feedback: 不正確。
+        - text: '精靈會改變顏色。
+
+'
+          feedback: 不正確
+        questions:
+        - text: '按一下「編輯」按鈕，檢視`神祕行為`的工作原理。研究一下里面的程式碼，然後做一個預測。
+
+'
       behaviors 4 predict:
         answers:
-        - feedback: 不正確。
-        - correct: true
+        - text: '向左，然後向下
+
+'
+          feedback: 不正確。
+        - text: '斜向
+
+'
+          correct: true
           feedback: 正確！
-        - {}
-        - feedback: 不正確
+        - text: '之字形
+
+'
+          feedback: '不正確。
+
+'
+        - text: '向下，然後向左
+
+'
+          feedback: 不正確
         questions:
-        - {}
+        - text: '做個預測。衛星會向銀河系的哪個方向移動？
+
+'
+      behaviors 4 predict_2020:
+        answers:
+        - text: '向左，然後向下
+
+'
+          feedback: 不正確。
+        - text: '斜向
+
+'
+          correct: true
+          feedback: 正確！
+        - text: '之字形
+
+'
+          feedback: '不正確。
+
+'
+        - text: '向下，然後向左
+
+'
+          feedback: 不正確
+        questions:
+        - text: '做個預測。衛星會向銀河系的哪個方向移動？
+
+'
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -1319,7 +1845,10 @@ zh-TW:
           feedback: 不正確。小藝術家會畫出一個正方形。
         - text: 小藝術家將畫出一條線。
           feedback: 不正確。小藝術家會畫出一個正方形。
-        - correct: true
+        - text: '小藝術家會畫一個正方形。
+
+'
+          correct: true
           feedback: 正確！
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
@@ -1331,7 +1860,25 @@ zh-TW:
           feedback: 不正確。小藝術家會畫出一個正方形。
         - text: 小藝術家將畫出一條線。
           feedback: 不正確。小藝術家會畫出一個正方形。
-        - correct: true
+        - text: '小藝術家會畫一個正方形。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: 我不知道。
+          feedback: 小藝術家會畫出一個正方形。
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: 小藝術家將畫出一個三邊相等的三角形。
+          feedback: 不正確。小藝術家會畫出一個正方形。
+        - text: 小藝術家將畫出一條線。
+          feedback: 不正確。小藝術家會畫出一個正方形。
+        - text: '小藝術家會畫一個正方形。
+
+'
+          correct: true
           feedback: 正確！
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
@@ -1364,6 +1911,19 @@ zh-TW:
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+          feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        - text: '12'
+          correct: true
+          feedback: 正確！
+        - text: '15'
+          feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        - text: 我不知道。
+          feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
           feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
@@ -1415,6 +1975,19 @@ zh-TW:
           feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
         questions:
         - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
+          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
+        - text: Scrat 在最後一次轉彎時將走錯路。
+          correct: true
+          feedback: 正確！
+        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
+          feedback: 不正確。Scrat 轉錯方向後，還差了一步。
+        - text: 我不知道。
+          feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
+        questions:
+        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
@@ -1442,6 +2015,19 @@ zh-TW:
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - text: 這隻鳥離豬豬只差了一步。
+          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 小鳥會成功抓住豬豬。
+          correct: true
+          feedback: 正確！
+        - text: 這隻鳥會撞到 TNT。
+          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 我不知道。
+          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
           feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
@@ -1493,6 +2079,19 @@ zh-TW:
           feedback: 重複積木將使 BB-8 前進 5 次。
         questions:
         - text: 當你點擊「運行」時，你覺得會發生什麼？
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8 不會移動。
+          feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        - text: BB-8 只會移動一個空格
+          feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        - text: BB-8 將移動 5 次並獲得所有廢金屬
+          correct: true
+          feedback: 正確！
+        - text: 我不知道
+          feedback: 重複積木將使 BB-8 前進 5 次。
+        questions:
+        - text: 當你點擊「運行」時，你覺得會發生什麼？
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -1532,6 +2131,21 @@ zh-TW:
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 在第一次循環會跑太遠。
+          feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        - text: BB-8 在第一個迴圈中行進的距離不足獲取所有廢金屬。
+          correct: true
+          feedback: 正確！
+        - text: BB-8 會順利收集到所有廢金屬。
+          feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        - text: 我不知道。
+          feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+      courseD_EOC_2020:
+        display_name: 課程結束專案
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1571,6 +2185,19 @@ zh-TW:
           feedback: 正確！
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: 不正確。
+        - text: B
+          feedback: 不正確。
+        - text: C
+          feedback: 不正確。
+        - text: D
+          correct: true
+          feedback: 正確！
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1582,6 +2209,13 @@ zh-TW:
           feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
         - text: 我不知道。
           feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
         - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
       courseD_multi_artist_nestedLoops9_predict1_2018:
@@ -1595,6 +2229,13 @@ zh-TW:
           feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
         - text: 我不知道。
           feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
         - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
@@ -1608,6 +2249,33 @@ zh-TW:
           feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
         - text: 我不知道。
           feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: 正確！
+        - text: B
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        - text: C
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        - text: 我不知道。
+          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
         - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
       courseD_multi_bee_conditionals1_predict1:
@@ -1637,6 +2305,32 @@ zh-TW:
         questions:
         - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 我不知道。
+          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+        questions:
+        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 我不知道。
+          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+        questions:
+        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
@@ -1683,7 +2377,20 @@ zh-TW:
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
         - text: 我不知道。
         questions:
-        - {}
+        - text: '仔細看下面的代碼。  你覺得按一下「執行」之後會發生什麼？請記住：每朵雲的後面只會有*一*個蜂窩或者*一*朵花。
+
+'
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: 正確！
+        - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
+        - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
+        - text: 我不知道。
+        questions:
+        - text: '仔細看下面的代碼。  你覺得按一下「執行」之後會發生什麼？請記住：每朵雲的後面只會有*一*個蜂窩或者*一*朵花。
+
+'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: 蜜蜂將向前移動並僅收集一次花蜜。
@@ -1711,6 +2418,19 @@ zh-TW:
         questions:
         - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - text: 蜜蜂將向前移動並僅收集一次花蜜。
+          feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        - text: 蜜蜂將只得到 2 個單位的花蜜。
+          feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        - text: 蜜蜂會獲得所有的花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 我不知道。
+          feedback: 蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        questions:
+        - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: 蜜蜂將向前移動並僅收集一次花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
@@ -1771,6 +2491,22 @@ zh-TW:
             乘以 2 是 8！
         questions:
         - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: 不正確。蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        - text: '8'
+          correct: true
+          feedback: 正確！
+        - text: '12'
+          feedback: 不正確。蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        - text: 我不知道。
+          feedback: 蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        questions:
+        - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel 在繞著正方形走時會轉錯方向。
@@ -1795,24 +2531,87 @@ zh-TW:
           feedback: 正確！
         - text: 我不知道。
           feedback: 該代碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會收集南瓜。
+        markdown: |
+          "這個關卡中的新芽將是玉米或生菜。
+          <br/>"
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: 收割機將收集所有農作物。
-        - {}
-        - correct: true
+          feedback: '不正確。這裡沒有用來收集南瓜的程式碼。
+
+'
+        - text: '收割機不會沿著她的路線收集任何農作物。
+
+'
+          feedback: '不正確。該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        - text: '收割機將採摘除南瓜以外的所有農作物。
+
+'
+          correct: true
           feedback: 正確！
         - text: 我不知道。
+          feedback: '該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        markdown: |
+          "這個關卡中的新芽將是玉米或生菜。
+          <br/>"
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: 收割機將收集所有農作物。
-        - {}
-        - correct: true
+          feedback: '不正確。這裡沒有用來收集南瓜的程式碼。
+
+'
+        - text: '收割機不會沿著她的路線收集任何農作物。
+
+'
+          feedback: '不正確。該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        - text: '收割機將採摘除南瓜以外的所有農作物。
+
+'
+          correct: true
           feedback: 正確！
         - text: 我不知道。
+          feedback: '該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        markdown: |
+          "這個關卡中的新芽將是玉米或生菜。
+          <br/>"
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: 收割機將收集所有農作物。
+          feedback: '不正確。這裡沒有用來收集南瓜的程式碼。
+
+'
+        - text: '收割機不會沿著她的路線收集任何農作物。
+
+'
+          feedback: '不正確。該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        - text: '收割機將採摘除南瓜以外的所有農作物。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: 我不知道。
+          feedback: '該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        markdown: |
+          "這個關卡中的新芽將是玉米或生菜。
+          <br/>"
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_farmer_ramp13:
@@ -1868,6 +2667,19 @@ zh-TW:
           feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
         - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: 什麼都沒有。此代碼運行後只剩下平地。
+          feedback: 錯誤，沒有移除土堆的程式積木。
+        - text: 此代碼運行後土堆完全不受影響。
+          correct: true
+          feedback: 正確！
+        - text: 此代碼運行後完全不會碰到坑洞。
+          feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
+        - text: 我不知道。
+          feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
+        questions:
+        - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: 什麼都不會發生。
@@ -1907,6 +2719,19 @@ zh-TW:
           feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 農夫永遠不會停止移除土堆。
+          feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 只要有土堆，農夫就會移除它，直到它消失。
+          correct: true
+          feedback: 正確！
+        - text: 我不知道。
+          feedback: 只要有土堆，農夫就會移除它，直到它消失。
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_maze_until10_predict2:
         answers:
         - text: 殭屍將立即向右轉並被卡住。
@@ -1922,20 +2747,65 @@ zh-TW:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+          correct: true
           feedback: 正確！
         - text: 殭屍將吃到向日葵上。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
         - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
         - text: 我不知道。
+          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
+
+'
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+          correct: true
           feedback: 正確！
         - text: 殭屍將吃到向日葵上。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
         - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
         - text: 我不知道。
+          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
+
+'
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: 殭屍將吃到向日葵上。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+        - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+        - text: 我不知道。
+          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
+
+'
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
       courseD_multi_maze_until2_predict1:
@@ -1977,6 +2847,19 @@ zh-TW:
           feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
         questions:
         - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: 鳥根本不會動。
+          feedback: 不正確。代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到抓到小豬為止！
+        - text: 小鳥會成功抓住豬豬。
+          correct: true
+          feedback: 正確！
+        - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
+          feedback: 不正確。代碼使小鳥在有安全通路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+        - text: 我不知道。
+          feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+        questions:
+        - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
       courseD_multi_scrat_predict1:
         answers:
         - text: 沒事。鼠奎特一動不動。
@@ -1990,6 +2873,12 @@ zh-TW:
           feedback: 將「move forward」模塊放進「repeat」模塊會致使鼠奎特向前移動3次。然後它轉彎，繼續向前移動3次，讓它拿到橡果！
         questions:
         - text: 這個程式使用新的模塊。當您按下「運行」時，您認為會發生什麼？
+      courseD_project_exemplars_2020_2021:
+        content1: '測試標記課件頁面
+
+'
+      courseE_EOC_2020:
+        display_name: 課程結束專案
       courseE_multi_bee_functions_predict1:
         answers:
         - text: 同樣的程式也可以用來通過這個關卡。
@@ -2019,21 +2908,58 @@ zh-TW:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: 收割機將採集兩個南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         - text: 收割機將採摘所有南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         - text: 收割機將採摘生菜。
           correct: true
           feedback: 正確！
         - text: 收割機將採摘玉米。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         questions:
         - text: 查看下面定義的函式。收割機會採摘什麼？
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: 收割機將採集兩個南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         - text: 收割機將採摘所有南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         - text: 收割機將採摘生菜。
           correct: true
           feedback: 正確！
         - text: 收割機將採摘玉米。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        questions:
+        - text: 查看下面定義的函式。收割機會採摘什麼？
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: 收割機將採集兩個南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        - text: 收割機將採摘所有南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        - text: 收割機將採摘生菜。
+          correct: true
+          feedback: 正確！
+        - text: 收割機將採摘玉米。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
         questions:
         - text: 查看下面定義的函式。收割機會採摘什麼？
       courseE_prediction_artistFunction1:
@@ -2075,28 +3001,132 @@ zh-TW:
           feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
         questions:
         - text: 按下「運行」後會發生什麼？
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: 沒有。程式中未呼叫該函式。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製一個正方形。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製兩個重疊的正方形。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
+        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          correct: true
+          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+        questions:
+        - text: 按下「運行」後會發生什麼？
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: 沒有。程式中未呼叫該函式。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製一個正方形。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製兩個重疊的正方形。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
+        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          correct: true
+          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+        questions:
+        - text: 按下「運行」後會發生什麼？
+      courseE_project_exemplars_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          ## 精靈實驗室
+
+          | 怪物舞蹈（精靈實驗室）| 蛋糕遊戲（精靈實驗室）|
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png ""Monster Dance (Sprite Lab"")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png ""Cupcake Game (Sprite Lab"")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | 試著在這個遊戲中新增文字或得分！| 試著在這個遊戲中新增文字或得分！|
+
+          ## 小藝術家
+
+          | 圖案（小藝術家） | 函式之花（小藝術家）|
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png ""Pattern (Artist)"")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png ""Function Flowers (Artist)"")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | 讓我們用巢狀迴圈發揮創意！| 讓我們用函式來創新吧！|"
+      courseE_project_exemplars_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+      courseExpress_EOC_2020:
+        display_name: 課程結束專案
+      courseExpress_project_exemplars_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+      courseF_EOC_2020:
+        display_name: 課程結束專案
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
+        - text: '蜜蜂不會收集到任何花蜜，因為變數沒有呼叫「收集」。
+
+'
+          feedback: '不正確。  你給變數起的名字並不影響它的值。
+
+'
         - text: 蜜蜂只能收集到2塊花蜜。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會收集到所有的花蜜。
           feedback: 不正確。在調用最後兩個函數之前，將變量設置回0。
         - text: 我不知道。
+          feedback: '在最後兩次函式呼叫之前，變數會被設定回 0，然後每次都加 1。然後蜜蜂就會收集到 2 個花蜜單位。
+
+'
         questions:
         - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
+        title: '多個蜜蜂變數
+
+'
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
+        - text: '蜜蜂不會收集到任何花蜜，因為變數沒有呼叫「收集」。
+
+'
+          feedback: '不正確。  你給變數起的名字並不影響它的值。
+
+'
         - text: 蜜蜂只能收集到2塊花蜜。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會收集到所有的花蜜。
           feedback: 不正確。在調用最後兩個函數之前，將變量設置回0。
         - text: 我不知道。
+          feedback: '在最後兩次函式呼叫之前，變數會被設定回 0，然後每次都加 1。然後蜜蜂就會收集到 2 個花蜜單位。
+
+'
         questions:
         - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
+        title: '多個蜜蜂變數
+
+'
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - text: '蜜蜂不會收集到任何花蜜，因為變數沒有呼叫「收集」。
+
+'
+          feedback: '不正確。  你給變數起的名字並不影響它的值。
+
+'
+        - text: 蜜蜂只能收集到2塊花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會收集到所有的花蜜。
+          feedback: 不正確。在調用最後兩個函數之前，將變量設置回0。
+        - text: 我不知道。
+          feedback: '在最後兩次函式呼叫之前，變數會被設定回 0，然後每次都加 1。然後蜜蜂就會收集到 2 個花蜜單位。
+
+'
+        questions:
+        - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
+        title: '多個蜜蜂變數
+
+'
       courseF_external_variableConstant:
         markdown: |-
           <h2>有關變數的更多資訊</h2>
@@ -2106,6 +3136,238 @@ zh-TW:
           當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在點擊「運行」後更改該值。</h3>
           <br/><hr/>
           <h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>
+      courseF_external_variableConstant_2018:
+        markdown: "\"<h2>有關變數的更多資訊</h2>\n\n\n<img src=\"\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"\"
+          style=\"\"padding-left: 30px; width:300px; float:right;\"\"/>\n<h3>你剛剛學習了一種將變數用作常量的好方法！
+          \ \n當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在按「執行」後更改該值。  </h3>\n<br/><hr/>\n<h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>\"\n"
+      courseF_external_variableConstant_2018_2019:
+        markdown: "\"<h2>有關變數的更多資訊</h2>\n\n\n<img src=\"\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"\"
+          style=\"\"padding-left: 30px; width:300px; float:right;\"\"/>\n<h3>你剛剛學習了一種將變數用作常量的好方法！
+          \ \n當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在按「執行」後更改該值。  </h3>\n<br/><hr/>\n<h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>\"\n"
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: "\"<h2>有關變數的更多資訊</h2>\n\n\n<img src=\"\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"\"
+          style=\"\"padding-left: 30px; width:300px; float:right;\"\"/>\n<h3>你剛剛學習了一種將變數用作常量的好方法！
+          \ \n當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在按「執行」後更改該值。  </h3>\n<br/><hr/>\n<h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>\"\n"
+      courseF_markdown_algorithms_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「演算法」！**  \n\n\n\n### **演算法只是一個完成任務的步驟清單**。演算法的有趣之處在於，你可以一步一步地決定會發生什麼。
+          \ \n\n### 當你給機器寫一套演算法的時候，這個就叫做**程式**。  \n\n---\n\n## **要知道的詞彙**\n\n**###
+          **演算法** - 完成任務的步驟清單\n\n* ### **程式** - 被編碼成可以由機器執行的演算法\"\n"
+      courseF_markdown_algorithms_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### 你有沒有想過要對別人說清楚該怎麼做？他們總是聽你的嗎？
+
+          ### 今天，你將會一步一步地告訴機器該怎麼做，它就會聽你的！
+
+          ---
+
+          ## **要知道的積木**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
+      courseF_markdown_conditionals_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「條件式」！**\n\n### 條件式在電腦科學中是超級有用的。想象一下，登入你最喜歡的網站，輸入密碼。該網站必須使用條件式來檢查你輸入的密碼與它為你的使用者名稱儲存的密碼*是否*匹配。
+          \n\n### `如果`匹配，就登入！ \n\n###`否則`，給使用者一個出錯提示。  \n\n---\n\n## **要知道的詞彙**\n\n*
+          ### **條件** - 程式在允許操作前要檢查的東西\n\n* ### **條件式** - 只在特定條件下執行的陳述式\"\n"
+      courseF_markdown_conditionals_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **在這節課上…**\n\n### **條件**是指可以是真或假的東西。 \n\n### 你將學習如何在程式中使用條件來在`重複
+          判斷`、`直到`、或`如果`某事為真時使事情發生！\n---\n\n## **要知道的積木**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\"\n"
+      courseF_markdown_debugging_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **你剛剛學會了「調試」！**
+
+          ### **臭蟲是指出錯的東西。**它是程式中的錯誤。查找並修復錯誤的過程，叫做**調試**問題。
+
+          ### 你必須學會**堅持**，或者叫不放棄，才能發現並修復所有的臭蟲。
+
+          ---
+
+          ## **要知道的詞彙**
+
+          * ### **臭蟲** - 程式中不能正常工作的部分
+
+          *### **調試** - 發現並修復你的演算法或程式中的問題
+
+          * ### **堅持** - 不放棄"
+      courseF_markdown_debugging_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# 在這節課上…\n\n### 當你想到蟲子的時候，你會想到什麼？ \n\n### 當大多數人想到蟲子時，他們會想到爬行的那種小蟲。在電腦科學中，蟲子不是活的，但它們仍然很棘手。\n\n###
+          本課的關卡已經為你解開了！但別急，它們似乎還沒起作用。難道是臭蟲子在背後搞鬼？ \n\n---\n\n## 要知道的積木\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\"\n"
+      courseF_markdown_forloops_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「計數迴圈」！**\n\n### **計數迴圈是一種迴圈，在這裡你可以設定開始、停止和步長值。**\n\n###
+          這種新的`重複`迴圈給了你更多的控制權，讓你可以控制迴圈何時開始、何時結束，以及每次執行時迴圈應該增加多少。\n\n### 更多的控制意味著你可以更快地解決關卡！
+          \n\n---\n\n## **要知道的詞彙**\n\n### **計數迴圈** - 計數迴圈是指有預定的開始、結束和增量（步長間隔）的迴圈。\"\n"
+      courseF_markdown_forloops_end_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「計數迴圈」！**\n\n### **計數迴圈是一種迴圈，在這裡你可以設定開始、停止和步長值。**\n\n###
+          這種新的`重複`迴圈給了你更多的控制權，讓你可以控制迴圈何時開始、何時結束，以及每次執行時迴圈應該增加多少。\n\n### 更多的控制意味著你可以更快地解決關卡！
+          \n\n---\n\n## **要知道的詞彙**\n\n### **計數迴圈** - 計數迴圈是指有預定的開始、結束和增量（步長間隔）的迴圈。\"\n"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「計數迴圈」！**\n\n### **計數迴圈是一種迴圈，在這裡你可以設定開始、停止和步長值。**\n\n###
+          這種新的`重複`迴圈給了你更多的控制權，讓你可以控制迴圈何時開始、何時結束，以及每次執行時迴圈應該增加多少。\n\n### 更多的控制意味著你可以更快地解決關卡！
+          \n\n---\n\n## **要知道的詞彙**\n\n### **計數迴圈** - 計數迴圈是指有預定的開始、結束和增量（步長間隔）的迴圈。\"\n"
+      courseF_markdown_forloops_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### 今天你將學習一種新的`重複`迴圈。下面是你將使用的積木的預覽：
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ## *幸好*，這個新的迴圈將使這樣的關卡變得非常容易！
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)"
+      courseF_markdown_forloops_intro_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### 今天你將學習一種新的`重複`迴圈。下面是你將使用的積木的預覽：
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ## *幸好*，這個新的迴圈將使這樣的關卡變得非常容易！
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)"
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### 今天你將學習一種新的`重複`迴圈。下面是你將使用的積木的預覽：
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ## *幸好*，這個新的迴圈將使這樣的關卡變得非常容易！
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)"
+      courseF_markdown_loops_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「迴圈」！**  \n\n## ** 迴圈是指反覆做某事的動作。**再做一次某事的另一個說法就是重複。\n\n###
+          迴圈對於重複規律真的很有用。先寫出沒有迴圈的程式，然後試著找到一個規律，可能會有幫助。 \n\n### 當你看到一個規律時，把這個規律插入到一個`重複`積木裡！\n\n---\n\n##
+          **要知道的詞彙**\n\n* ### **迴圈## - 是指反覆做某事的動作\n\n* ### **重複** - 再做一次\"\n"
+      courseF_markdown_loops_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# 在這節課上…\n\n### 想像一下您要讓您的角色向前移動 **5** 次。這很容易，只需要拖出來 **5** 個移動
+          - 向前積木就可以了。現在，想像一下您要讓您的角色向前移動 **5,000** 次！ \n\n### 拖 **5,000** 個積木出來要花多少時間啊？
+          \n\n### 希望有一個簡單的方法可以做到這一點嗎？有啊！\n\n---\n\n## 要知道的積木\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\"\n"
+      courseF_markdown_nestedloops_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「巢狀迴圈」！**\n\n### **巢狀迴圈就是在一個迴圈裡放另一個迴圈。**想想看，它就像一個外套，另一個迴圈在外套迴圈內巢狀放置，很舒適。
+          \n\n### 巢狀迴圈對於重複規律的規律是非常有用的。如果使用得當，它們可以非常強大。\n\n---\n\n## **要知道的詞彙**\n\n###
+          __巢狀迴圈__ - 迴圈中的迴圈\"\n"
+      courseF_markdown_nestedloops_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **在這節課上…**\n\n### 你有沒有想過，如果你把一個迴圈*放在另一個迴圈裡面*會發生什麼？ \n\n###
+          它可能會讓你圈圈轉起來！\n\n### 如果一個普通的迴圈可以用來重複規律，那麼你覺得在另一個迴圈裡面放一個迴圈會有什麼好處呢？讓我們一起來看看吧！\n\n---\n\n##
+          **要知道的積木**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\"\n"
+      courseF_markdown_variables_end:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「變數」！**\n\n### 要使用一個變數，需要給它一個名字和一個值。名字不能改變，但值可以。這樣一來，你就可以在程式中的任何地方使用變數的名字作為預留位置。
+          \n\n---\n\n## **要知道的詞彙**\n\n### **變數** - 一個可以變化的資訊的預留位置\"\n"
+      courseF_markdown_variables_end_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「變數」！**\n\n### 要使用一個變數，需要給它一個名字和一個值。名字不能改變，但值可以。這樣一來，你就可以在程式中的任何地方使用變數的名字作為預留位置。
+          \n\n---\n\n## **要知道的詞彙**\n\n### **變數** - 一個可以變化的資訊的預留位置\"\n"
+      courseF_markdown_variables_end_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+        markdown: "\"# **你剛剛學會了「變數」！**\n\n### 要使用一個變數，需要給它一個名字和一個值。名字不能改變，但值可以。這樣一來，你就可以在程式中的任何地方使用變數的名字作為預留位置。
+          \n\n---\n\n## **要知道的詞彙**\n\n### **變數** - 一個可以變化的資訊的預留位置\"\n"
+      courseF_markdown_variables_intro:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### *變數*是可以改變的資訊的預留位置。  擁有一個預留位置的話，即使是現在還不知道值是多少，也可以寫出程式來！
+
+
+          ---
+
+          ## **要知道的積木**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)"
+      courseF_markdown_variables_intro_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### *變數*是可以改變的資訊的預留位置。  擁有一個預留位置的話，即使是現在還不知道值是多少，也可以寫出程式來！
+
+
+          ---
+
+          ## **要知道的積木**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)"
+      courseF_markdown_variables_intro_2019_2020:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# **在這節課上…**
+
+          ### *變數*是可以改變的資訊的預留位置。  擁有一個預留位置的話，即使是現在還不知道值是多少，也可以寫出程式來！
+
+
+          ---
+
+          ## **要知道的積木**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)"
       courseF_multi_artist_for10_predict1:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
@@ -2117,6 +3379,7 @@ zh-TW:
           feedback: 正確！
         - text: 我不知道。
           feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+        markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
         - text: 點擊「運行」時會發生什麼？
       courseF_multi_artist_for10_predict1_2018:
@@ -2130,6 +3393,7 @@ zh-TW:
           feedback: 正確！
         - text: 我不知道。
           feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+        markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
         - text: 點擊「運行」時會發生什麼？
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -2143,6 +3407,21 @@ zh-TW:
           feedback: 正確！
         - text: 我不知道。
           feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+        markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
+        questions:
+        - text: 點擊「運行」時會發生什麼？
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
+          feedback: 不正確。小藝術家在`計數`迴圈的反覆之間進行切換。
+        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越細。
+          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越粗。
+          correct: true
+          feedback: 正確！
+        - text: 我不知道。
+          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+        markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
         - text: 點擊「運行」時會發生什麼？
       courseF_multi_artist_fwp2_predict1:
@@ -2198,6 +3477,19 @@ zh-TW:
           feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
         - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: 小藝術家將繪製一個邊長 50 像素的三角形。
+          correct: true
+          feedback: 正確！
+        - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
+          feedback: 不正確。變數`長度`必須放在`重複`迴圈中才能實現。
+        - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
+          feedback: 不正確。可能需要在`轉向`積木中使用`長度`變數才能實現。
+        - text: 我不知道。
+          feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+        questions:
+        - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
@@ -2237,6 +3529,9 @@ zh-TW:
           feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: 蜜蜂會前進，並嘗試收集比花朵中更多的花蜜。
           feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
+
+'
         questions:
         - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
       courseF_multi_bee_for3_predict1_2018:
@@ -2249,6 +3544,12 @@ zh-TW:
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
           feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: '我不知道。 '
+          feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+
+'
+        markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
+
+'
         questions:
         - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -2261,6 +3562,30 @@ zh-TW:
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
           feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: '我不知道。 '
+          feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+
+'
+        markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
+
+'
+        questions:
+        - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
+          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
+          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - text: '我不知道。 '
+          feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+
+'
+        markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
+
+'
         questions:
         - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
       courseF_multi_bee_fwp9_predict1:
@@ -2296,6 +3621,32 @@ zh-TW:
           使用者輸入的任何文本都將保存到`詢問`積木末尾顯示的變數中。
         questions:
         - text: 如果使用者在提示符下輸入名稱「Ali」會怎樣？
+      courseF_project_exemplars_2019:
+        content1: '測試標記課件頁面
+
+'
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          ## 精靈實驗室
+
+          | 蛋糕遊戲（精靈實驗室） | 直升機遊戲（精靈實驗室）|
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | 試著在這個遊戲中新增文字或得分！| 試著在這個遊戲中新增文字或得分！|
+
+          ## 小藝術家
+
+          | 鮮花 （小藝術家） | 螺旋線（小藝術家） |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | 讓我們用變數發揮創意吧！| 讓我們用計數迴圈發揮創意吧！|"
+      courseF_project_exemplars_2019_2020:
+        content1: '測試標記課件頁面
+
+'
       coursee_prediction_artistfunction2:
         answers:
         - text: 藝術家會完美地解決這個難題。
@@ -2335,6 +3686,19 @@ zh-TW:
           feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
         questions:
         - text: 按下「運行」按鈕會發生什麼？
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: 藝術家會完美地解決這個難題。
+          feedback: 不正確。迴圈使用`繪製多邊形`而不是`繪製一行多邊形`。
+        - text: 小藝術家將按窗戶的佈局來繪製四個正方形。
+          correct: true
+          feedback: 正確！
+        - text: 小藝術家將只畫一行正方形。
+          feedback: 不正確。程式未呼叫`繪製一行多邊形`。
+        - text: 小藝術家將繪製向上重疊的四個正方形。
+          feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
+        questions:
+        - text: 按下「運行」按鈕會發生什麼？
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # 概述
@@ -2345,6 +3709,12 @@ zh-TW:
           ## 資源
 
           * [鋁箔紙船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活動指南 (複製為 [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: 在此描述
+      csf_password_power-up:
+        content1: 在此描述
+      csf_putting_a_stop_to_online_meanness:
+        content1: 在此描述
       grade2_multi_collector_A_predict1:
         answers:
         - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
@@ -2370,7 +3740,9 @@ zh-TW:
         - text: 我不知道。
           feedback: Laurel 會收集到所有寶石。
         questions:
-        - {}
+        - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
+
+'
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
@@ -2383,7 +3755,24 @@ zh-TW:
         - text: 我不知道。
           feedback: Laurel 會收集到所有寶石。
         questions:
-        - {}
+        - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
+
+'
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
+          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          correct: true
+          feedback: 正確！
+        - text: Laurel 會收集到所有寶石。
+          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 我不知道。
+          feedback: Laurel 會收集到所有寶石。
+        questions:
+        - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
+
+'
       gradek1_activity_beNice:
         markdown: "#計算機實驗室行為\n\n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>轉至教學計劃</button> \n</a>\n\n<br/><br/>\n<a class=\"btn

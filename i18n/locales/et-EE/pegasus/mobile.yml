@@ -1078,6 +1078,8 @@
   header_educate_hoc: "KoodiTund"
   header_teach: "Õpeta"
   header_about: "Info"
+  header_legal_privacy: "Privaatsuspoliitika"
+  header_legal_tos: "Teenuse tingimused"
   header_documentation: "Dokumentatsioon"
   user_header_label: "Tere, %{username}"
   user_header_team: "Võistkond"

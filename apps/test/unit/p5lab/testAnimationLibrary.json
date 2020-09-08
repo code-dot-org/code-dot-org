@@ -1,0 +1,79 @@
+{
+  "//": ["Test Animation Library Manifest", "For testing only"],
+  "metadata": {
+    "category_animals/hippo": {
+      "name": "hippo"
+    },
+    "category_animals/hippo_gray": {
+      "name": "hippo_gray"
+    },
+    "category_animals/elephant_square": {
+      "name": "elephant_square"
+    },
+    "category_animals/giraffe_square": {
+      "name": "giraffe_square"
+    },
+    "category_animals/hippo_square": {
+      "name": "hippo_square"
+    },
+    "category_animals/monkey_square": {
+      "name": "monkey_square"
+    },
+    "category_animals/panda_square": {
+      "name": "panda_square"
+    },
+    "category_animals/hippo_token": {
+      "name": "hippo_token"
+    },
+    "category_animals/bear": {
+      "name": "медведь"
+    },
+    "category_animals/bear_with_fish": {
+      "name": "медведь с рыбой"
+    },
+    "category_body_parts/hip": {
+      "name": "hip"
+    }
+  },
+  "categories": {
+    "animals": [
+      "category_animals/hippo",
+      "category_animals/hippo_gray",
+      "category_animals/elephant_square",
+      "category_animals/giraffe_square",
+      "category_animals/hippo_square",
+      "category_animals/monkey_square",
+      "category_animals/panda_square",
+      "category_animals/hippo_token",
+      "category_animals/bear",
+      "category_animals/bear_with_fish"
+    ]
+  },
+  "aliases": {
+    "hippo": ["category_animals/hippo"],
+    "hippo_gray": ["category_animals/hippo_gray"],
+    "hippo": ["category_animals/hippo"],
+    "elephant_square": ["category_animals/elephant_square"],
+    "giraffe_square": ["category_animals/giraffe_square"],
+    "hippo_square": ["category_animals/hippo_square"],
+    "monkey_square": ["category_animals/monkey_square"],
+    "panda_square": ["category_animals/panda_square"],
+    "hippo_token": ["category_animals/hippo_token"],
+    "медведь": ["category_animals/bear"],
+    "медведь с рыбой": ["category_animals/bear_with_fish"],
+    "hip": ["category_body_parts/hip"],
+    "category_animals": [
+      "category_animals/hippo",
+      "category_animals/hippo_gray",
+      "category_animals/elephant_square",
+      "category_animals/giraffe_square",
+      "category_animals/hippo_square",
+      "category_animals/monkey_square",
+      "category_animals/panda_square",
+      "category_animals/hippo_token",
+      "category_animals/bear",
+      "category_animals/bear_with_fish"
+    ],
+    "category_body_parts": ["category_body_parts/hip"]
+  }
+}

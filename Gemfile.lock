@@ -6,6 +6,13 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
+  remote: https://github.com/code-dot-org/newrelic-ruby-agent.git
+  revision: 5a46cdf3f3f144018bca2edce6b008d464da18fa
+  ref: PR-359_prevent_reconnect_attempts_during_shutdowns
+  specs:
+    newrelic_rpm (6.12.0)
+
+GIT
   remote: https://github.com/code-dot-org/petit.git
   revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
   specs:
@@ -185,11 +192,11 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/sprockets.git
-  revision: df60ba28584d51235cb0af23cef1b2bbd9d8d2dc
+  revision: 35caa45a78b739362b7db087b141f89e27d107c7
   ref: concurrent_asset_bundle_3.x
   specs:
     sprockets (3.7.1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.1)
       rack (> 1, < 3)
 
 GEM
@@ -197,10 +204,10 @@ GEM
   specs:
     Ascii85 (1.0.2)
     StreetAddress (1.0.6)
-    acme-client (1.0.0)
+    acme-client (2.0.5)
       faraday (~> 0.9, >= 0.9.1)
-    acmesmith (0.11.1)
-      acme-client (~> 1)
+    acmesmith (2.3.1)
+      acme-client (~> 2)
       aws-sdk-acm
       aws-sdk-route53
       aws-sdk-s3
@@ -262,67 +269,67 @@ GEM
     attr_required (1.0.1)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-eventstream (1.0.3)
+    aws-eventstream (1.1.0)
     aws-google (0.1.2)
       aws-sdk-core (~> 3)
       google-api-client (~> 0.23)
       launchy (~> 2)
-    aws-partitions (1.168.0)
-    aws-sdk-acm (1.9.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-cloudformation (1.6.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-cloudfront (1.4.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-cloudwatch (1.6.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-cloudwatchlogs (1.4.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.54.0)
-      aws-eventstream (~> 1.0, >= 1.0.2)
-      aws-partitions (~> 1.0)
+    aws-partitions (1.340.0)
+    aws-sdk-acm (1.34.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-cloudformation (1.41.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-cloudfront (1.34.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-cloudwatch (1.41.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-cloudwatchlogs (1.34.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-core (3.103.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-databasemigrationservice (1.23.0)
-      aws-sdk-core (~> 3, >= 3.53.0)
+    aws-sdk-databasemigrationservice (1.38.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-dynamodb (1.9.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-ec2 (1.40.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-firehose (1.6.0)
-      aws-sdk-core (~> 3, >= 3.26.0)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-glue (1.10.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-kms (1.6.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-rds (1.55.0)
-      aws-sdk-core (~> 3, >= 3.53.0)
+    aws-sdk-dynamodb (1.51.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-route53 (1.10.1)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.17.0)
-      aws-sdk-core (~> 3, >= 3.21.2)
+    aws-sdk-ec2 (1.176.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-firehose (1.31.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-glue (1.63.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-kms (1.36.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-rds (1.93.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-route53 (1.40.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.74.0)
+      aws-sdk-core (~> 3, >= 3.102.1)
       aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-secretsmanager (1.20.0)
-      aws-sdk-core (~> 3, >= 3.39.0)
-      aws-sigv4 (~> 1.0)
-    aws-sigv4 (1.1.0)
-      aws-eventstream (~> 1.0, >= 1.0.2)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-secretsmanager (1.39.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.2.1)
+      aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
-    bcrypt (3.1.11)
+    bcrypt (3.1.13)
     benchmark-ips (2.7.2)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -354,7 +361,7 @@ GEM
     colorize (0.8.1)
     composite_primary_keys (9.0.10)
       activerecord (~> 5.0.0, >= 5.0.7)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     connection_pool (2.2.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -381,6 +388,11 @@ GEM
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
+    datapackage (0.0.4)
+      colorize
+      json
+      json-schema
+      rest-client
     debug_inspector (0.0.3)
     declarative (0.0.10)
     declarative-option (0.1.0)
@@ -503,6 +515,8 @@ GEM
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jsonapi-serializers (1.0.0)
       activesupport
     jumphash (0.1.0)
@@ -559,7 +573,6 @@ GEM
     net-ssh (5.2.0)
     net_http_ssl_fix (0.0.10)
     netrc (0.11.0)
-    newrelic_rpm (4.8.0.341)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -590,6 +603,9 @@ GEM
     omniauth-openid (1.0.1)
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
+    omniauth-rails_csrf_protection (0.1.2)
+      actionpack (>= 4.2)
+      omniauth (>= 1.3.1)
     open_uri_redirections (0.2.1)
     openid_connect (1.0.3)
       activemodel
@@ -690,7 +706,6 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rb-readline (0.5.5)
     rdoc (4.2.2)
       json (~> 1.4)
     recaptcha (4.6.3)
@@ -878,7 +893,7 @@ PLATFORMS
 
 DEPENDENCIES
   StreetAddress
-  acmesmith (~> 0)
+  acmesmith (~> 2.3.1)
   active_model_serializers!
   active_record_query_trace
   active_record_union
@@ -888,22 +903,22 @@ DEPENDENCIES
   annotate
   auto_strip_attributes (~> 2.1)
   aws-google
-  aws-sdk-acm (~> 1)
-  aws-sdk-cloudformation (~> 1)
-  aws-sdk-cloudfront (~> 1)
-  aws-sdk-cloudwatch (~> 1)
-  aws-sdk-cloudwatchlogs (~> 1)
-  aws-sdk-core (~> 3)
-  aws-sdk-databasemigrationservice (~> 1)
-  aws-sdk-dynamodb (~> 1)
-  aws-sdk-ec2 (~> 1)
-  aws-sdk-firehose (~> 1.6)
-  aws-sdk-glue (~> 1)
-  aws-sdk-rds (>= 1.38.1)
-  aws-sdk-route53 (~> 1)
-  aws-sdk-s3 (~> 1)
-  aws-sdk-secretsmanager (~> 1)
-  bcrypt
+  aws-sdk-acm
+  aws-sdk-cloudformation
+  aws-sdk-cloudfront
+  aws-sdk-cloudwatch
+  aws-sdk-cloudwatchlogs
+  aws-sdk-core
+  aws-sdk-databasemigrationservice
+  aws-sdk-dynamodb
+  aws-sdk-ec2
+  aws-sdk-firehose
+  aws-sdk-glue
+  aws-sdk-rds
+  aws-sdk-route53
+  aws-sdk-s3
+  aws-sdk-secretsmanager
+  bcrypt (= 3.1.13)
   benchmark-ips
   better_errors
   binding_of_caller
@@ -919,6 +934,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
+  datapackage
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
   dotiw
@@ -969,7 +985,7 @@ DEPENDENCIES
   net-http-persistent
   net-scp
   net-ssh
-  newrelic_rpm (~> 4.8.0)
+  newrelic_rpm!
   nokogiri (>= 1.10.0)
   octokit
   oj
@@ -979,6 +995,7 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-openid-connect!
+  omniauth-rails_csrf_protection (~> 0.1)
   omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
@@ -1000,7 +1017,6 @@ DEPENDENCIES
   rails (~> 5.0.7.2)
   rails-controller-testing
   rambling-trie
-  rb-readline
   recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
@@ -1056,4 +1072,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.1
+   1.17.3

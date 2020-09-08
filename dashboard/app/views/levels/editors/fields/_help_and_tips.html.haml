@@ -1,0 +1,22 @@
+-# Deprecated for Sprite Lab and Dance
+- if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab) || @level.is_a?(BubbleChoice))
+  %h1.control-legend{data: {toggle: "collapse", target: "#help_and_tips"}}
+    Help and Tips
+  #help_and_tips.in.collapse
+
+    = f.label :map_reference, 'Map Reference'
+    %li If there is a key resource you want to reference in the instructions, add the link here. It will show up under the 'Help & Tips' tab.
+    %li This should be a string representing the URL on studio.code.org/docs you want to embed, i.e. '/docs/csd/maker_leds/index.html'.
+
+    = f.text_field :map_reference, placeholder: 'Map Reference'
+
+    .field
+      = f.label :reference_link, 'Reference Links'
+      %li Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and the map reference.
+      %li These should be strings representing the URL on [docs|curriculum].code.org you want to embed, i.e. '/docs/csd/maker_leds/index.html' or '/curriculum/path/to/file'.
+      %li Put each link on a new line
+
+      .row
+        .span8
+          - @level.reference_links = [''] unless @level.reference_links.try(:present?)
+          = text_area_tag 'level[reference_links]', @level.reference_links.join("\r\n"), rows: 6, class: "input-block-level", placeholder: 'Additional Reference Link'

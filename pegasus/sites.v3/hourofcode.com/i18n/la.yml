@@ -5,12 +5,30 @@ la:
   language: Inglés
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 4 dic.
+  campaign_date_start_short: 7 Dic.
   campaign_date_start_long: 4 de diciembre
   campaign_date_short: 4-10 dic.
   campaign_date_full: Del 4 al 10 de diciembre
   campaign_date_year: '2017'
   campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: Octubre 1
+  latam_campaign_date_short: Oct. 1 - Dic. 18
+  latam_campaign_date_full: Octubre 1 - Diciembre 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: Octubre 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: Octubre 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: Octubre 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: Octubre 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: Octubre 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: Octubre 1-31, 2020
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -29,7 +47,7 @@ la:
   oceans_landing_description: 'Explora el aprendizaje automático enseñando "A.I."
     para reconocer a los peces. #CSforGood'
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Sólo en inglés | +11 años
+  oceans_landing_specs: Ahora disponible en más de 25 idiomas | +11 años
   oceans_landing_explanation: "¡Las ciencias de la computación son mucho más que programar!
     Aprende acerca de la inteligencia artificial (IA), el aprendizaje automático,
     los datos de entrenamiento y el sesgo, mientras exploras los problemas éticos
@@ -49,7 +67,7 @@ la:
     a enseñar AI, aprendizaje automático, fechas de entrenamientos y sesgos, mientras
     exploras cuestiones éticas.
   oceans_landing_resource_button: Ver recursos
-  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good: Ciencias de la computación para el bien
   oceans_landing_cs_for_good_desc: Recursos para ayudar a los estudiantes a comprender
     el papel que podrían desempeñar las ciencias de la computación en la creación
     de un mundo más equitativo.
@@ -69,19 +87,19 @@ la:
     lista resultante de anotaciones con las del conjunto de datos de capacitación.
     Clasificamos la nueva imagen con la misma etiqueta (como "pez" o "no pez") que
     las imágenes del conjunto de entrenamiento con los resultados más similares.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
+  oceans_behind_the_scenes_1_markdown: Los niveles 2-4 usan el modelo predefinido
+    provisto por el proyecto [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    El modelo de MobileNet es un [red neuronal convolucional] que ha sido entrenada
+    en [ImageNet](http://www.image-net.org/), un conjunto de datos de más de 14 millones
+    de imágenes escritas a mano con palabras como "globo" o "fresa". Para personalizar
+    este modelo con los datos de entrenamiento etiquetados que genera el estudiante
+    en esta actividad, usamos una técnica llamada [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Cada imagen en el conjunto de datos de entrenamiento se alimenta a MobileNet,
+    como pixeles, para obtener una lista de anotaciones que es más probable que se
+    apliquen. Luego, para una nueva imagen, la enviamos a MobileNet y comparamos su
+    lista resultante de anotaciones con las del conjunto de datos de capacitación.
+    Clasificamos la nueva imagen con la misma etiqueta (como "pez" o "no pez") que
+    las imágenes del conjunto de entrenamiento con los resultados más similares.
   oceans_behind_the_scenes_2: Los niveles 6-8 usan una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). Observamos cada componente del pez (como los ojos, la boca,
     el cuerpo) y reunimos todos los metadatos de los componentes (como el número de
@@ -89,13 +107,13 @@ la:
     vectores para entrenar el SVM. Según los datos de entrenamiento, el SVM separa
     el "espacio" de todos los peces posibles en dos partes, que corresponden a las
     clases que estamos tratando de aprender (como "azul" o "no azul").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
+  oceans_behind_the_scenes_2_markdown: Los niveles 6-8 usan una [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). Observamos cada componente del pez (como los ojos, la boca, el cuerpo)
+    y reunimos todos los metadatos de los componentes (como el número de dientes,
+    la forma del cuerpo) en un vector de números para cada pez. Usamos estos vectores
+    para entrenar el SVM. Según los datos de entrenamiento, el SVM separa el "espacio"
+    de todos los peces posibles en dos partes, que corresponden a las clases que estamos
+    tratando de aprender (como "azul" o "no azul").
   social_hoc2019_oceans_title: 'IA para océanos #CSForGood'
   social_hoc2019_oceans_desc: Aprende sobre inteligencia artificial, aprendizaje automático,
     datos de entrenamiento y prejuicios, mientras exploras cuestiones éticas y cómo
@@ -183,11 +201,14 @@ la:
   codeorg_homepage_special2020_body1: Apoyo para padres y profesores que enfrentan
     cierres de escuelas.
   codeorg_homepage_special2020_body2: Mira nuestros recursos de aprendizaje sugeridos.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
-  codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_special2020_body: "¿Tu escuela está cerrada? Aprende desde casa.
+    Toma un descanso con código, o ve los recursos para estudiantes, padres de familia,
+    y educadores. "
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Comenzar
+  codeorg_homepage_code_break_body: "¡Tómate un recreo con código! Tu dosis semanal
+    de inspiración , comunidad, y ciencias de la computación."
   codeorg_homepage_code_break_link_text: Conoce más
   cookie_banner_message: Al navegar en nuestro sitio o seleccionar la opción "Acepto",
     aceptas que se guarden las cookies en tu computadora o dispositivo.
@@ -438,9 +459,10 @@ la:
     Las actividades de la Hora del Código están disponibles todo el año. <a href='%{hoc_activities_url}'>Prueba
     una actividad</a> o lee nuestra <a href='%{howto_guide_url}'>Guía práctica</a>
     para planificar un evento para tu clase."
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  signup_registration_not_required_markdown: "¡No es necesario inscribirse para participar!
+    Las actividades de la Hora del Código están disponibles todo el año. [Prueba una
+    actividad](%{hoc_activities_url}) o lee nuestra [Guía práctica](%{howto_guide_url})
+    para planificar un evento para tu clase."
   signup_registration_closed: Y cada año, en diciembre, tu clase puede unirse a millones
     de estudiantes de todo el mundo que celebran La Semana por la Educación en Ciencias
     de la Computación con la Hora del Código. Abriremos la inscripción para la celebración
@@ -542,7 +564,8 @@ la:
   map_legend_cs_tech_jam: Evento especial
   map_warning: Puedes ver una lista completa de eventos en la <a href='%{events_url}'>página
     de eventos.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: La lista con todos los eventos se puede ver en la [página
+    de eventos](%{events_url})
   meta_tag_og_title: 'Hora del Código: únete al movimiento'
   meta_tag_og_description: La Hora del Código es un movimiento global que llega a
     decenas de millones de estudiantes de todas las edades, en más de 180 países y
@@ -567,13 +590,15 @@ la:
     comunitarias. Conoce los <a href=''%{tutorials}''>tutoriales y actividades</a>.
     Esta campaña comunitaria es apoyada por más de <a href=''%{partners}''>400 socios</a>
     y 200,000 educadores de todo el mundo.'
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: 'La Hora del Código comenzó como una introducción
+    de una hora a las ciencias de la computación, diseñada para desmitificar el "código",
+    demostrar que todos pueden aprender los conceptos básicos y ampliar la participación
+    en el campo de las ciencias de la computación. Desde entonces, se ha convertido
+    en una iniciativa mundial que celebra las ciencias de la computación: comenzó
+    con actividades de programación de una hora y se amplió a todo tipo de iniciativas
+    comunitarias. Conoce los [tutoriales y actividades](%{tutorials}). Esta campaña
+    comunitaria es apoyada por más de [400 socios](%{partners}) y 200,000 educadores
+    de todo el mundo.'
   hoc_faq_last_year: Prueba los tutoriales
   hoc_faq_when_is_hoc_q: "¿Cuándo es la Hora del Código?"
   hoc_faq_when_is_hoc_a: La Hora del Código tiene lugar cada año durante la <a href='%{csedweek_url}'>Semana
@@ -583,43 +608,46 @@ la:
     por la Educación en Ciencias de la Computación se celebra todos los años en reconocimiento
     al cumpleaños de la <a href='%{grace_hopper}'>almirante Grace Murray Hopper</a>,
     pionera de computación (9 de diciembre de 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: La Hora del Código tiene lugar cada año durante
+    la [Semana por la Educación en Ciencias de la Computación](%{csedweek_url}). La
+    Semana por la Educación en Ciencias de la Computación de %{campaign_date_year}
+    será el %{campaign_date_full}, pero puedes organizar una Hora del Código en cualquier
+    momento del año. Semana por la Educación en Ciencias de la Computación se celebra
+    todos los años en reconocimiento al cumpleaños de la [almirante Grace Murray Hopper](%{grace_hopper}),
+    pionera de computación (9 de diciembre de 1906).
   hoc_faq_why_cs_q: "¿Por qué las ciencias de la computación?"
   hoc_faq_why_cs_a: "<i>Todos</i> los estudiantes deberían tener la oportunidad de
     aprender ciencias de la computación. Ayuda a fomentar las habilidades para resolver
     problemas, la lógica y la creatividad. Cuanto antes comiencen, los estudiantes
     tendrán una base para el éxito en cualquier carrera profesional del siglo 21.
     Consulta más estadísticas <a href='%{stats_url}'>aquí</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Todos_ los estudiantes deberían tener la oportunidad
+    de aprender ciencias de la computación. Ayuda a fomentar las habilidades para
+    resolver problemas, la lógica y la creatividad. Cuanto antes comiencen, los estudiantes
+    tendrán una base para el éxito en cualquier carrera profesional del siglo 21.
+    Consulta más estadísticas [aqui](%{stats_url})
   hoc_faq_how_participate_q: "¿Cómo puedo participar en la Hora del Código?"
   hoc_faq_how_participate_a: "<a href='/how-to'>Comienza a planificar aquí</a> con
     nuestra guía práctica. Podrás organizar un evento de la Hora del Código en tu
     escuela o comunidad, por ejemplo, en un taller extracurricular, una organización
     sin ánimo de lucro o tu lugar de trabajo. Solo tienes que probarlo por ti mismo
     cuando llegue el %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Comienza a planificar aquí](%{howto}) con
+    nuestra guía práctica. Podrás organizar un evento de la Hora del Código en tu
+    escuela o comunidad, por ejemplo, en un taller extracurricular, una organización
+    sin ánimo de lucro o tu lugar de trabajo. O prúebalo por ti mismo cuando llegue
+    el %{campaign_date}."
   hoc_faq_behind_hoc_q: "¿Quién está detrás de la Hora del Código?"
   hoc_faq_behind_hoc_a: La Hora del Código es impulsada por los <a href='%{partner_url}'>Comités
     de Asesoría y Revisión</a> de la Hora del Código y la Semana por la Educación
     en Ciencias de la Computación, así como por una coalición de socios sin precedentes
     que se han unido para apoyar la Hora del Código, entre ellos, Microsoft, Apple,
     Amazon, Boys and Girls Clubs of America y el College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: La Hora del Código es impulsada por los [Comités
+    de Asesoría y Revisión](%{partner_url}) de la Hora del Código y la Semana por
+    la Educación en Ciencias de la Computación, así como por una coalición de socios
+    sin precedentes que se han unido para apoyar la Hora del Código, entre ellos,
+    Microsoft, Apple, Amazon, Boys and Girls Clubs of America y el College Board.
   hoc_faq_host_q: No sé nada acerca de programación. ¿Aún así puedo organizar un evento?
   hoc_faq_host_a: Por supuesto. Las actividades de la Hora del Código son autoguiadas.
     Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>probar nuestros
@@ -627,11 +655,12 @@ la:
     nos ocupamos del resto. También tenemos opciones para todas las edades y niveles
     de experiencia, desde jardín de infantes en adelante. Lee nuestra <a href='/how-to'>guía</a>
     y comienza a planificar tu evento.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Por supuesto. Las actividades de la Hora del Código son
+    autoguiadas. Todo lo que tienes que hacer es [prueba nuestros tutoriales](%{codeorg_url}/learn)
+    seleccionar el tutorial que quieras y elegir una hora; nosotros nos ocupamos del
+    resto. También tenemos opciones para todas las edades y niveles de experiencia,
+    desde jardín de niños en adelante. Lee nuestra [guía](%{howto}) y comienza a planificar
+    tu evento.
   hoc_faq_devices_q: "¿Qué dispositivos debería utilizar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
     y navegadores. Puedes ver más información sobre la tecnología compatible con los
@@ -639,11 +668,12 @@ la:
     tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/aprender</a>
     la descripción específica del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
     sin conexión</a> si tu escuela no puede incorporar los tutoriales!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Los tutoriales de Code.org funcionan en todos los dispositivos
+    y navegadores. Puedes ver más información sobre las necesidades tecnológicas de
+    los tutoriales de Code.org [aquí](%{codeorg_url}/educate/it). Las necesidades
+    tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en [%{partner_url}/learn])
+    en la descripción específica del tutorial. ¡No olvides que también ofrecemos [actividades
+    sin conexión](%{unplugged_url}) si tu escuela no puede acceder a los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito computadoras para todos los participantes?"
   hoc_faq_need_computers_a: No. Tenemos tutoriales de la Hora del Código que funcionan
     en PC, smartphones y tablets, ¡ y algunos que no requieren computadoras! Puedes
@@ -656,31 +686,33 @@ la:
     hacer una Hora del Código juntos. Mirar videos juntos y tomar turnos para resolver
     desafíos o responder preguntas. <li><b>Desconéctate.</b>Ofrecemos <a href='%{unplugged_url}'>tutoriales
     que no requieren computadora</a>.</ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: "No. Tenemos tutoriales de la Hora del Código
+    que funcionan en PCs, smartphones y tablets, ¡ y algunos que no requieren computadoras!
+    Puedes unirte donde sea que estés, con lo que sea que tengas.\n\n_Estas son algunas
+    opciones:_\n\n-**Trabajar en parejas.** [La investigación muestra que](%{pair_programming_research})
+    los estudiantes aprenden mejor con la [programación en parejas](%{pair_programming_video}),
+    compartiendo una computadora y trabajando juntos. Anima a tus alumnos a que se
+    junten.\n-**Usa una pantalla proyectada.** Si tienes un proyector y una pantalla
+    con una computadora conectada a Internet, todos pueden hacer una Hora del Código
+    juntos. Vean videos juntos y tomen turnos para resolver desafíos o responder preguntas.
+    \n-**Desconéctate.** Ofrecemos [tutoriales que no requieren computadora](%{unplugged_url})."
   hoc_faq_international_q: Estoy en <country>. ¿Cómo puedo participar?
   hoc_faq_international_a: Todos pueden organizar un evento de la Hora del Código,
     en cualquier parte del mundo. En los últimos años, estudiantes de todo el mundo
     se han unido por la Hora del Código. Encuentra más información <a href='/promote'>aquí</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: Todos pueden organizar un evento de la Hora del
+    Código, en cualquier parte del mundo. En los últimos años, estudiantes de todo
+    el mundo se han unido por la Hora del Código. Encuentra más información [aquí](%{promote}).
   hoc_faq_tutorial_q: "¿Cómo puedo crear un tutorial para la Hora del Código?"
   hoc_faq_tutorial_a: Si estás interesado en convertirte en nuestro socio de tutoriales,
     <a href='/tutorial-guidelines'>consulta nuestra guía e instrucciones</a>. Nos
     gustaría tener una variedad de opciones atractivas, pero la meta principal es
     optimizar la experiencia de los estudiantes y docentes que recién comienzan a
     transitar el camino de las ciencias de la computación.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: Si usted está interesado en convertirse en un socio
+    para tutoriales, [vea nuestras directrices e instrucciones](%{tutorial_guidelines}).
+    Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar
+    la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales.
   hoc_faq_account_q: "¿Los estudiantes necesitan tener una cuenta para iniciar sesión?"
   hoc_faq_account_a: No. No se requiere registro o iniciar sesión para que los estudiantes
     prueben la Hora del Código. La mayoría de los <a href='%{codeorg_url}/learn/beyond'>cursos
@@ -688,11 +720,11 @@ la:
     del estudiante. Además, registrarse en la Hora del Código NO crea automáticamente
     una cuenta en Studio Code. Si quieres crear cuentas para tus estudiantes, sigue
     estas <a href='https://youtu.be/_smelV_KISE'>instrucciones</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: No. No se requiere registro o iniciar sesión para que
+    los estudiantes prueben la Hora del Código. La mayoría de los [cursos de seguimiento](%{codeorg_url}/learn/beyond)
+    requieren la creación de una cuenta para guardar el avance del estudiante. Además,
+    registrarse en la Hora del Código NO crea automáticamente una cuenta en Studio
+    Code. Si quieres crear cuentas para tus estudiantes, sigue estas [instrucciones](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: "¿Que actividades debería hacer con estudiantes de secundaria?"
   hoc_faq_high_school_a: Nuestros tutoriales de Star Wars y Minecraft son geniales
     para los estudiantes de secundaria, especialmente la versión Javascript de Star
@@ -701,23 +733,23 @@ la:
     como el tutorial de Angry Birds o de Ana y Elsa. Un estudiante de secundaria será
     capaz de finalizarlo en 30 minutos y después puede probar un tutorial más avanzado
     en Javascript como Khan Academy o CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Nuestros tutoriales de Star Wars y Minecraft son
+    geniales para los estudiantes de secundaria, especialmente la versión Javascript
+    de Star Wars y el nivel de juego libre de ambos tutoriales. Además, para comenzar,
+    te recomendamos probar uno de los tutoriales para principiantes en [%{partner_url}/learn](%{codeorg_url}/learn)
+    para comenzar, como el tutorial de Angry Birds o el de Ana y Elsa. Un estudiante
+    de secundaria será capaz de finalizarlo en 30 minutos y después puede probar un
+    tutorial más avanzado en Javascript como los de Khan Academy o CodeHS.
   hoc_faq_scratch_q: Enseño Scratch para la Hora del Código. ¿Qué pasa si mis estudiantes
     usan iPad en lugar de computadoras portátiles?
   hoc_faq_scratch_a: Scratch no funciona en tablets. Si tus estudiantes son jóvenes
     y están aprendiendo a leer, pueden utilizar la aplicación ScratchJR para iPad.
     En <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, puedes encontrar otros
     tutoriales de Code.org, Tynker, Lightbot o CodeSpark que funcionan en iPad.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch no funciona en tabletas. Si tus estudiantes
+    son jóvenes, puden usar la aplicación ScratchJR para iPad. Si buscas en los tutoriales
+    en [%{partner_url}/learn](%{codeorg_url}/learn), podrás encontrar otros que funcionan
+    en iPads - de Code.org, Tynker, Lightbot o CodeSpark.
   hoc_faq_count_hoc_q: "¿Cómo se cuentan las Horas del Código?"
   hoc_faq_map_q: "¿Por qué no puedo ver mi punto en el mapa?"
   hoc_faq_map_a: Sentimos que no puedas ver tu evento en el mapa de la Hora del Código.
@@ -728,24 +760,26 @@ la:
     Además, debido a las miles de personas que se registran para la Hora del Código,
     el mapa y la lista de evento suelen tardar 48 horas en actualizarse. ¡Vuelve a
     consultarlos en unos días!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: Sentimos que no puedas ver tu evento en el mapa de la Hora
+    del Código. Debido a las decenas de miles de organizadores que se inscriben, el
+    mapa agrupa los datos y muestra un punto para varios eventos. Si haces clic en
+    el enlace de la [página de eventos](%{events_url}) debajo del mapa, serás dirigido
+    a una lista de todos los eventos por geografía en la que encontrarás tu evento.
+    Además, debido a las miles de personas que se registran para la Hora del Código,
+    el mapa y la lista de eventos suelen tardar 48 horas en actualizarse. ¡Vuelve
+    a consultarlos en unos días!
   hoc_faq_count_hoc_a: El seguimiento de la Hora del Código no es una medición exacta
     del uso. No contamos las identificaciones únicas de los estudiantes con precisión
     cuando hacemos seguimiento de la participación en la Hora del Código, sobre todo
     porque no requerimos que los estudiantes inicien sesión o se registren. Como resultado,
     no podemos contar la cantidad de participantes que trabajan al mismo tiempo. Conoce
     todos los detalles <a href='%{codeorg_url}/loc'> aquí</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: El seguimiento de la Hora del Código no es una medición
+    exacta del uso. No contamos las identificaciones únicas de los estudiantes con
+    precisión cuando hacemos seguimiento de la participación en la Hora del Código,
+    sobre todo porque no requerimos que los estudiantes inicien sesión o se registren.
+    Como resultado, no podemos contar la cantidad de participantes que trabajan al
+    mismo tiempo. Conoce todos los detalles [aquí](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: "¿Cuánto se puede aprender en una hora?"
   hoc_faq_one_hour_a: La meta de la Hora del Código no es enseñar a cualquiera para
     que se convierta en un científico de computación experto en una hora. Una hora
@@ -766,44 +800,57 @@ la:
     que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes
     desean y que sus docentes están capacitados para enseñar. <br/><br/> Pero, sobre
     todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: La meta de la Hora del Código no es enseñar a cualquiera
+    para que se convierta en un científico de computación experto en una hora. Una
+    hora es suficiente para aprender que las ciencias de la computación son divertidas
+    y creativas, y accesibles a estudiantes de todas las edades, sin importar su situación.
+    La medida del éxito de esta campaña no es cuántos estudiantes aprenden ciencias
+    de computación, sino la amplia participación entre los distintos grupos de género,
+    étnicos y socioeconómicos, y el consecuente aumento de las inscripciones y la
+    participación en cursos de ciencias de la computación en todos los niveles. Millones
+    de docentes y estudiantes han decidido ir más allá de una hora, para aprender
+    durante un día entero, una semana o más, y muchos estudiantes han decidido inscribirse
+    en un curso completo (inclusive en una universidad). <br/><br/> Junto a los estudiantes,
+    otro "aprendiz" es el educador que, luego de una hora, gana la confianza para
+    enseñar ciencias de la computación aún cuando no tiene un grado universitario
+    como científico de computación. Decenas de miles de docentes deciden continuar
+    con las ciencias de la computación, ya sea inscribiéndose en un doctorado, en
+    cursos en línea, o en ambos. Y esto aplica también a escuelas de administradores,
+    que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes
+    desean y que sus docentes están capacitados para enseñar. <br/><br/> Pero, sobre
+    todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
   hoc_faq_more_questions_q: "¿Aún tienes preguntas?"
   hoc_faq_more_questions_a: Intenta encontrar una respuesta en nuestro <a href='http://support.code.org'>foro
     de soporte</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: Busca una respuesta en nuestro [foro de soporte](http://support.code.org).
   hoc_faq_keep_learning_q: "¿Cómo sigo aprendiendo luego de la Hora del Código?"
   hoc_faq_keep_learning_a: Cualquier persona puede organizar una Hora del Código en
     cualquier momento. Los tutoriales están disponibles todo el año. Nuestros tutoriales
     y planes de estudios estarán en nuestro sitio de forma permanente. Visita <a href='/promote'>nuestros
     recursos</a> para ver guías prácticas de eventos y otros recursos que te ayudarán
     a que tu Hora del Código sea un éxito.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: Cualquier persona puede organizar una Hora del
+    Código en cualquier momento. Los tutoriales están disponibles todo el año. Nuestros
+    tutoriales y planes de estudios estarán en nuestro sitio de forma permanente.
+    Visita [nuestros recursos](%{promote}) para ver guías prácticas de eventos y otros
+    recursos que te ayudarán a que tu Hora del Código sea un éxito.
   hoc_faq_certificates_q: "¿Dónde puedo imprimir certificados para mis estudiantes?"
   hoc_faq_certificates_a: Visita nuestra <a href='%{codeorg_url}/certificates'>página
     de certificados</a>, donde podrás imprimir los certificados para tu clase. También
     podrás imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados especiales</a>
     para aquellos estudiantes que hayan realizado el tutorial de Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Visita nuestra [página de certificados](%{codeorg_url}/certificates),
+    donde podrás imprimir los certificados para tu grupo. También podrás imprimir
+    [certificados especiales](%{codeorg_url}/certificates?courses=mc) para aquellos
+    estudiantes que hayan realizado el tutorial de Minecraft.
   hoc_faq_logo_q: "¿Existen limitaciones sobre el uso del logotipo o el nombre de
     la Hora del Código?"
   hoc_faq_logo_a: La Hora del Código es una marca registrada. No queremos evitar su
     uso, pero sí asegurarnos de que quede dentro de ciertos límites. Consulta <a href='%{logo_url}'>esta
     guía de uso</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: La Hora del Código es una marca registrada. No queremos
+    evitar su uso, pero sí asegurarnos de que quede dentro de ciertos límites. Consulta
+    [esta guía de uso](%{logo_url}).
   stats_hoc_2013_image_alt: Estadísticas de la Hora del Código 2013
   stats_growth: Fue la más rápida en alcanzar los 15 millones de usuarios.
   stats_i18n: Los estudiantes aprenden en más de 45 idiomas
@@ -821,8 +868,8 @@ la:
     de trabajo.
   stats_females_more: Durante la Hora del Código, ¡las mujeres son el <b>50% de todos
     los participantes</b>!
-  stats_females_more_markdown: During the Hour of Code, female students make up **50%
-    of all participants**!
+  stats_females_more_markdown: Durante la Hora del Código, ¡las mujeres son el **50%
+    de todos los participantes**!
   stats_nina: '"Cada día dio el mismo resultado: 100% de participación". - Nina Nichols
     Peery, docente'
   stats_student: '"Sabía que esto sería una oportunidad <b>única</b>". - Mariana Alzate,
@@ -845,7 +892,7 @@ la:
   resources_press_kit: Paquete de prensa
   resources_social: Social
   resources_country_resources: Recursos específicos para cada país
-  resources_stickers: Pegatinas
+  resources_stickers: Etiquetas
   resources_how_to_guides: Guías prácticas
   resources_promote: Promover
   resources_nav_tutorials: Prueba los tutoriales
@@ -955,11 +1002,12 @@ la:
     de 180 países comenzando con una Hora del Código.
   learn_banner_beyond: "¿Quieres seguir aprendiendo? <a id='learn_banner_beyond'>Ve
     más allá de una hora</a>"
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: "¿Quieres seguir aprendiendo? [Ve más allá de una
+    hora](%{url})"
   learn_banner_teachers: 'Profesores: <a id=''teacher_banner_host''>Organiza una Hora
     del Código</a> o <a id=''teacher_banner_howto''>lee la Guía para hacerlo</a>.'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Para profesores: [Organiza una hora](%{host_url})
+    o [lee la Guía Práctica](%{howto_url})'
   learn_robotics_banner_heading: Robótica y circuitos
   learn_robotics_banner_blurb: "¿Tienes robots o kits de computación física? ¡Utilízalos
     con las siguientes actividades y prepara una tarea tangible de la Hora del Código
@@ -6268,7 +6316,9 @@ la:
   tutorial_activitypackets_language: Inglés
   tutorial_googlerookie_language: Inglés
   tutorial_tommyturtle_language: Inglés
-  tutorial_mazyad_language: Árabe, inglés
+  tutorial_mazyad_language: 'Árabe, Checo, Chino, Danes, Holandés, Ingles, Finlandés,
+    Frances, Alemán, Hindi, Indonesio, Italiano, Japonés, Ruso, Español, Tagalog,
+    Tamil, Tailandés, Turco, Urdu, y muchos más '
   tutorial_gamemaker_language: Inglés
   tutorial_duckrace_language: Inglés, alemán
   tutorial_allcancodeapps_language: Inglés
@@ -7523,7 +7573,7 @@ la:
   tutorial_groklearningpython_string_platforms: Todos los navegadores modernos
   tutorial_htmltimetravel_string_platforms: Todos los navegadores modernos
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Sin conexión
+  tutorial_appytappin_string_platforms: Todos los navegadores modernos
   tutorial_icipher_string_platforms: Sin conexión
   tutorial_iguess_string_platforms: Tablet Android, iPad, iPhone
   tutorial_imake_string_platforms: Sin conexión
@@ -9449,7 +9499,9 @@ la:
     finlandés, danés, sueco, noruego, eslovaco, checo, holandés
   tutorial_kuborobo_language: Danés, holandés, inglés, francés, italiano, noruego
     (Nynorsk), ruso, español, sueco
-  tutorial_ai-oceans_language: Inglés
+  tutorial_ai-oceans_language: 'Árabe, Checo, Chino, Danes, Holandés, Ingles, Finlandés,
+    Frances, Alemán, Hindi, Indonesio, Italiano, Japonés, Ruso, Español, Tagalog,
+    Tamil, Tailandés, Turco, Urdu, y muchos más '
   tutorial_scratchimagine_string_detail_grades: A partir de Grado 2
   tutorial_codesterspsa_string_detail_grades: Grados 6+
   tutorial_googlehero_string_detail_grades: Grados 2-8
@@ -9559,8 +9611,8 @@ la:
     Android, iPad
   tutorial_scratchcartoon_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Tablets Android, iPad, teléfonos Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Todos los navegadores modernos, tableta
+    Android, iPad, teléfono Android, iPhone
   tutorial_bananatales_string_platforms: Todos los navegadores modernos
   tutorial_scratchtales_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
@@ -9945,3 +9997,4 @@ la:
   some: Algunos
   all: Todos
   dont_know: No sé
+  language_label: Idioma

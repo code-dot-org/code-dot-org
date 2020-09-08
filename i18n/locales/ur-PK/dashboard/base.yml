@@ -96,6 +96,9 @@ ur:
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: "جی"
     email_preference_no: "نہيں"
+    parent_account_checkbox: "میں ایک والد یا والدہ/سرپرست ہوں جو اپنے بچے کی جانب سے دستخط کر رہا/رہی ہوں"
+    parent_account_email_progress_permission: "کیا ہم آپ کو گاہے بگاہے آپ کے بچے کی ترقی اور پراجیکٹس، اور ان کے کورس اور کمپیوٹر ساینس کے حوالے سے تازہ احوال ایمیل کر سکتے ہیں؟[(ہماری پرائیویسی پالیسی دیکھ لیں)] (%{privacy_policy_url})"
+    parent_account_email_label: "والدین/سرپرست کا ایمیل ایڈرس"
   school_info:
     other: 'دیگر'
   signin_form:
@@ -139,6 +142,8 @@ ur:
       professional_learning: "پیشہ ورانہ تعلیم"
       educate_hoc: "آور-آف-کوڈ"
       about: "متعلق"
+      legal_privacy: "رازداری کی پالیسی"
+      legal_tos: "سروس کی شرائط"
     user:
       classroom: 'استاد کی ہوم پیج'
       signin: 'سائن ان کریں'
@@ -163,7 +168,10 @@ ur:
       student: 'Talib-e-ilm'
   user:
     new_email_hint: '(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں کریں.)'
+    for_parents_and_guardians: "والدین اور سرپرستوں کے لئے"
+    link_a_parent_email: "اپنے بچے کی ترقی اور پراجیکٹس کے بارے میں تازہ احوال سے باخبر رہنے کے لئے والد یا والدہ/سرپرست کا ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں۔ آپ اس ایمیل ایڈرس کو اپنا بھولا ہوا پاسورڈ بدلنے کے لئے استعمال کر سکتے ہیں۔"
     none: "کوئی نہيں"
+    only_one_parent_email_supported_warning: "نوٹ: ہم فعل الحال ایک سٹوڈنٹ اکاؤنٹ میں والدین/سرپرست کا ایک ہی ایمیل ایڈرس رکھنے کی سہولت دے پا رہے ہیں۔"
   home:
     student_reg_link: 'طالبعلم کا سائن اپ'
     teacher_reg_link: 'استاد کا سائن اپ'
@@ -199,8 +207,6 @@ ur:
       title: "فروزن"
     unplugged_conditionals:
       title: "شرائط"
-  gallery:
-    report_abuse: "غلط استعمال کی اطلاع دیں"
   landing:
     help_support: "مدد اور معاونت"
   dialog:
@@ -226,15 +232,6 @@ ur:
       report_abuse_form:
         abuse_type:
           other: 'دیگر'
-  flex_category:
-    csf_loops: 'لوپس'
-    csf_events: 'ایونٹس/واقعات'
-    csf_conditionals: 'شرائط'
-    csf_variables: 'متغیرات'
-    csp_variables: 'متغیرات'
-    csp_conditionals: 'شرائط'
-    csp_lists: 'فہرستیں'
-    csp_loops: 'لوپس'
   hoc_download:
     minecraft_name: 'Minecraft کوڈ کی گھڑی'
   pd:
@@ -256,3 +253,7 @@ ur:
     message: 'اس ویب سائٹ کے آپ کے استعمال سے کوائف ہو کو بھیجا اور ذخیرہ کرنا یا ریاست ہائے متحدہ امریکہ میں عملدرآمد کیا ۔'
     yes: 'جی'
   copy: 'کاپی'
+  parent_email_banner:
+    text: "**کیا اپ والدین یا سرپرست ہیں؟** اپنے بچے کی ترقی اور پراجیکٹس کے بارے میں تازہ احوال سے باخبر رہنے کے لئے والد یا والدہ/سرپرست کا ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں۔"
+    link_your_email: "ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں"
+    not_now: "ابھی نہیں"

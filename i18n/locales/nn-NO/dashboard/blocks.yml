@@ -927,6 +927,10 @@ nn:
         text: sprite {SPRITE} startar {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -970,8 +974,46 @@ nn:
         options:
           CHOICE:
             '"this"': denne
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høgre
+            '"space"': verdsrommmet
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} hoppar til {LOCATION}"
       gamelab_keyPressed:
@@ -1039,6 +1081,8 @@ nn:
             '"West"': Vest
       gamelab_moveToward:
         text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
+      gamelab_objectSpritePointer:
+        text: klikka på {SPRITE}
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:
@@ -1093,6 +1137,8 @@ nn:
           CONDITION:
             '"when"': når
             '"while"': så lenge
+      gamelab_subjectSpritePointer:
+        text: klikka på {SPRITE}
       gamelab_turn:
         options:
           DIRECTION:

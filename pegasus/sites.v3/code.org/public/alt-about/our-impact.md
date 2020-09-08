@@ -30,19 +30,19 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
 
 <div class="col-33" style="padding-right: 15px; text-align: center">
     <img src="/images/alt-about/photo.png" style="width: 75%">
-    <p>More than 100,000 teachers have taken our <a href="https://code.org/educate/professional-learning">professional development workshops</a>, and 98% of them would recommend our workshops to another teacher.</p>
+    <p><a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">Six different studies show</a>: students who study computer science perform better in other subjects, excel at problem-solving, and are more likely to attend college.</p>
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <div class="col-33" style="padding-right: 15px; text-align: center">
     <img src="/images/alt-about/photo.png" style="width: 75%">
-    <p>In large part thanks to the Code.org Advocacy Coalition, all 50 US states (plus Washington DC) and more than 50 countries have <a href="https://advocacy.code.org/">passed or implemented policies</a> that give students more access to CS education.</p>
+    <p>More than 100,000 teachers have taken our <a href="https://code.org/educate/professional-learning">professional development workshops</a>, and 98% of them would recommend our workshops to another teacher.</p>
 </div>
 
 <div class="col-33" style="padding-right: 15px; text-align: center">
     <img src="/images/alt-about/photo.png" style="width: 75%">
-    <p>Our nationwide network of <a href="https://code.org/educate/regional-partner">Regional Partners</a> are establishing regional computer science hubs, expanding CS access and opportunities to more people than ever before.</p>
+    <p>In large part thanks to the Code.org Advocacy Coalition, all 50 US states (plus Washington DC) and more than 50 countries have <a href="https://advocacy.code.org/">passed or implemented policies</a> that give students more access to CS education.</p>
 </div>
 
 <div class="col-33" style="padding-right: 15px; text-align: center">

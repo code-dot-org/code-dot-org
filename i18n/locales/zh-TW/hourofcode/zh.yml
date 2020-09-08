@@ -11,6 +11,24 @@ zh:
   campaign_date_full: 12 月 4 日 - 10 日
   campaign_date_year: '2017'
   campaign_date_full_year: 2017 年 12 月的 4-10 日
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: 學電腦科學以改變世界
   hoc2019_header_line1_mobile: 學電腦科學以
   hoc2019_header_line2_mobile: 改變世界
@@ -167,8 +185,10 @@ zh:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -2389,7 +2409,6 @@ zh:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: 這個數字明信片開始學習HTML和CSS是容易和有趣的。 了解如何添加標題，段落，圖片和鏈接來創建節日賀卡或生日慶祝活動，以便與朋友和家人分享。
   tutorial_marco_longdescription: 學生根據原始故事玩一個冒險遊戲。 他們通過每個級別指導Marco（主要角色），以 Hour of
     Code 使用的可視化編程語言的形式向他提供分步說明。 他們引入了序列命令，迭代和條件，甚至沒有註意到它。
@@ -3395,30 +3414,29 @@ zh:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -3480,7 +3498,7 @@ zh:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -5372,7 +5390,7 @@ zh:
   tutorial_groklearningpython_string_platforms: 所有的主流瀏覽器
   tutorial_htmltimetravel_string_platforms: 所有的主流瀏覽器
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: 不插電活動
+  tutorial_appytappin_string_platforms: 所有的主流瀏覽器
   tutorial_icipher_string_platforms: 不插電活動
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: 不插電活動
@@ -7294,7 +7312,7 @@ zh:
   tutorial_googlehero_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codestersbball_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_scratchcartoon_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
-  tutorial_codemonkeyjr_string_platforms: Android平板電腦, iPad, Android手機, iPhone
+  tutorial_codemonkeyjr_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
   tutorial_bananatales_string_platforms: 所有的主流瀏覽器
   tutorial_scratchtales_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -7646,3 +7664,4 @@ zh:
   some: 一些
   all: 所有
   dont_know: 我不知道
+  language_label: Language

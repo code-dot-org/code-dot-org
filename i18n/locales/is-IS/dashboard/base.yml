@@ -344,6 +344,8 @@ is:
       help_us: "Hjálpaðu"
       teach: "Kenndu"
       about: "Um okkur"
+      legal_privacy: "Persónuverndarstefna"
+      legal_tos: "Skilmálar"
     user:
       classroom: 'Heimasíða kennara'
       district_dashboard: 'Stjórnborð umdæmis'
@@ -691,20 +693,6 @@ is:
       body: "Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir um einstök hugtök fyrir hópinn."
       audience: "Aldur 14+"
       cta: "Læra hvernig"
-  gallery:
-    students_drew_these_with_code: "Nemendur teiknuðu þetta með kóða!"
-    students_made_these_with_code: "Nemendur gerðu þetta með forritun!"
-    picture_count: "Undanfarna <b>%{days}</b> daga hafa nemendur teiknað <b>%{count}</b> myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar til að sjá hvernig forritin virka."
-    activity_count: "Undanfarna <b>%{days}</b> daga hafa nemendur búið til <b>%{count}</b> forrit og myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar og skjásýnin til að sjá forritin virka."
-    want_to_make_your_own: "Viltu búa til þitt eigið?"
-    how_to_save: "Á síðasta borði þessa kennsluefnis þarf að smella á \"Ljúka\" og \"Vista\" til að vista verkefnið í safninu."
-    more: "Meira &rarr;"
-    caption_by_name_age: "höfundur %{name}, %{age} ára"
-    caption_time_ago: "fyrir %{time_ago}"
-    header: "Safn"
-    header_playlab: "Leikjasmiðja"
-    header_artist: "Listamaður"
-    report_abuse: "Tilkynna misnotkun"
   landing:
     prerelease_tutorial: "Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir því sem endurgjöf berst og endurbætur eru gerðar."
     report_bug: "Tilkynna galla"
@@ -890,96 +878,7 @@ is:
     peer_feedback: 'Álit samnemenda'
     outdated: 'Þessi umsögn átti við áður innsenda útgáfu'
     review_count: 'Þú verður að ljúka %{review_count} upprifjunum fyrir þessa einingu'
-  flex_category:
-    required: 'Yfirlit'
-    content: 'Innihald'
-    practice: 'Kennsluaðferðir'
     peer_review: 'Álit samnemenda'
-    ramp_up: 'Efling'
-    main_course: 'Aðalnámskeið'
-    extra_course_content: 'Viðbótarefni námskeiðs'
-    csf_e_1: 'Uppfærsla í Námskeið E (val)'
-    csf_e_2: 'Innihald Námskeiðs E'
-    csf_f_1: 'Uppfærsla í Námskeið F (val)'
-    csf_f_2: 'Innihald Námskeiðs F'
-    csf_digcit: 'Stafrænn borgari'
-    csf_jigsaw: 'Púsl'
-    csf_sequencing: 'Skipanaröð'
-    csf_loops: 'Lykkjur'
-    csf_events: 'Atvik'
-    csf_online_safety: 'Netöryggi'
-    csf_binary: 'Tvíundir'
-    csf_data: 'Gögn'
-    csf_conditionals: 'Skilyrði'
-    csf_sprites: 'Kvikar'
-    csf_spritelab: 'Kvikasmiðjan'
-    csf_nested_loops: 'Innri lykkjur'
-    csf_functions: 'Föll'
-    csf_variables: 'Breytur'
-    csf_for_loops: 'Frá lykkjur'
-    csf_internet: 'Internet'
-    csf_warmup: 'Upphitun'
-    csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
-    csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
-    csd1_3: 'Annað kennsluefni'
-    csd2_1: 'Kafli 1: Innihald vefja og HTML'
-    csd2_2: 'Kafli 2: Útlitsmótun og CSS'
-    csd3_1: 'Kafli 1: Myndir og Hreyfing'
-    csd3_2: 'Kafli 2: Gerð leikja'
-    csd4_1: 'Kafli 1: Notendamiðuð hönnun'
-    csd4_2: 'Kafli 2: Frumgerðir appa'
-    csd5_1: 'Kafli 1: Kóðun upplýsinga'
-    csd5_2: 'Kafli 2: Lausn vandamála með gögn'
-    csd6_1: 'Kafli 1: Forritun vélbúnaðar'
-    csd6_2: 'Kafli 2: Smíði frumgerða vélbúnaðar'
-    csd_survey: 'Könnun eftir námskeið'
-    csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
-    csp1_2: 'Kafli 2: Að finna upp internetið'
-    csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
-    csp2_2: 'Kafli 2: Mótun og sjóngerving gagna'
-    csp3_1: 'Kafli 1: Forritunarmál og algrím'
-    csp4_1: 'Kafli 1: Heimur ofurgagna og dulkóðun'
-    csp5_1: 'Kafli 1: Atburðaknúin forritun'
-    csp5_2: 'Kafli 2: Forritað með formgerðum gagna'
-    cspSurvey: 'Könnun'
-    cspAssessment: 'Kaflamat'
-    csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
-    csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
-    csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
-    csp_postap_1: 'Kafli 1: Mótun og sjóngerving gagna'
-    csp_postap_2: 'Kafli 2: Öpp og gagnagrunnar'
-    csp2_1_2018: 'Kafli 2 - Stafrænar upplýsingar'
-    csp3_1_2018: 'Kafli 3: Inngangur að forritun'
-    csp4_1_2018: 'Kennslueining 4: Gríðargögn og persónuvernd'
-    csp_variables: 'Breytur'
-    csp_conditionals: 'Skilyrði'
-    csp_functions: 'Föll'
-    csp_project: 'Verkefni'
-    csp_lists: 'Listar'
-    csp_loops: 'Lykkjur'
-    csp_traversals: 'Yfirferðir'
-    csp_libraries: 'Söfn'
-    csp_parameters_return_values: 'Stikar og skilagildi'
-    csp_unit1_2020: 'Kafli 1 - Stafrænar upplýsingar'
-    csp_unit3_2020: 'Eining 3: Kynning á gerð appa'
-    csp_unit8_2020: 'Eining 8: Create PT undirbúið'
-    csp_unit10_2020: 'Eining 10: Netöryggi og mikilvægi þess'
-    dlp: 'Kvaðningar um íhugun'
-    time4cs_c1: 'Everglades og vistkerfi þess'
-    time4cs_c2: 'Fæðukeðjur í Everglades'
-    time4cs_c3: 'Líf í Everglades'
-    time4cs_c4: 'Utanaðkomandi áhrif í Everglades'
-    time4cs_c5: 'Borgarar til hins betra í Everglades'
-    time4cs_c6: 'Skilyrðingar (upprifjun)'
-    k5_getting_started: 'Fyrstu skrefin'
-    k5_csf_intro: 'Kynntu þér námskeiðin um Undirstöðuatriði tölvunarfræði'
-    k5_coding_concepts: 'Forritunarhugtök og kennsluaðferðir'
-    k5_next_steps: 'Næstu skref'
-    k5_basic_concepts: 'Grunnhugtök forritunar og framkvæmd kennslu'
-    k5_diving_deeper: 'Kafað dýpra: Námskeið E og F'
-    web_lab_projects: 'Verkefni Vefsmiðju'
-    game_lab_projects: 'Verkefni Leikjasmiðju'
-    app_lab_projects: 'Verkefni Appsmiðju'
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org sér ekki um.
@@ -1062,6 +961,8 @@ is:
       school_name: 'Nafn skóla'
       school_city: 'Bær skóla'
       school_country: 'Land skóla'
+      colombian_school_city: 'Bær skóla'
+      colombian_school_name: 'Nafn skóla'
       ages: 'Hvaða aldurshóp(um) kennir þú þetta árið?'
       subjects: 'Hvaða fag/fög kennir þú þetta árið?'
       resources: 'Hvaða eftirfarandi tilföng notar þú fyrir tölvunarfræði?'

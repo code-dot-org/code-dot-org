@@ -1,4 +1,10 @@
 {
+  "clicked": "rákattintva",
+  "clickedSprite": "szereplőre kattintva",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "",
   "reinfFeedbackMsg": "",
   "shareGame": "Oszd meg a játékodat:",

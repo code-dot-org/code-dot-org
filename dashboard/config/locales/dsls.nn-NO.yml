@@ -448,6 +448,8 @@ nn-NO:
         content1: forklaring her
       Begin planning your project_2018_2019:
         content1: forklaring her
+      Begin planning your project_2018_2019_2020:
+        content1: forklaring her
       CSD Header Size MC:
         answers:
         - {}
@@ -1182,7 +1184,65 @@ nn-NO:
           med nokon - ein partnar, ei lita gruppe, heile klassen - for å diskutere
           kva de fann ut og verifisere at de veit kva som skjer og ulike måtar de
           kan bruke verktøyet på. \n\n\n"
+      OPD-K5 Reviewing Reflections:
+        content1: forklaring her
       OPD-K5 Stage3aGo:
+        content1: forklaring her
+      OPD-K5 Stage3aGo_copy:
+        content1: forklaring her
+      OPD-K5 conditionals introduced:
+        content1: forklaring her
+      OPD-K5 debugging:
+        content1: forklaring her
+      OPD-K5 diving deeper intro:
+        content1: forklaring her
+      OPD-K5 events introduced:
+        content1: forklaring her
+      OPD-K5 for loops:
+        content1: forklaring her
+      OPD-K5 for loops intro:
+        content1: forklaring her
+      OPD-K5 for loops introduction:
+        content1: forklaring her
+      OPD-K5 functions introduced:
+        content1: forklaring her
+      OPD-K5 journaling:
+        content1: forklaring her
+      OPD-K5 lesson implementation planning:
+        content1: forklaring her
+      OPD-K5 lesson plans:
+        content1: forklaring her
+      OPD-K5 loops introduced:
+        content1: forklaring her
+      OPD-K5 project:
+        content1: forklaring her
+      OPD-K5 projects introduction:
+        content1: forklaring her
+      OPD-K5 role_of_teacher:
+        content1: forklaring her
+      OPD-K5 sequencing introduced:
+        content1: forklaring her
+      OPD-K5 sprite lab:
+        content1: forklaring her
+      OPD-K5 sprite lab introduction:
+        content1: forklaring her
+      OPD-K5 sprite lab unplugged:
+        content1: forklaring her
+      OPD-K5 sprite lab video:
+        content1: forklaring her
+      OPD-K5 types of lessons:
+        content1: forklaring her
+      OPD-K5 using lesson plans:
+        content1: forklaring her
+      OPD-K5 variables:
+        content1: forklaring her
+      OPD-K5 variables introduction:
+        content1: forklaring her
+      OPD-K5 variables unplugged:
+        content1: forklaring her
+      OPD-K5 where to next:
+        content1: forklaring her
+      OPD-K5-projects-1:
         content1: forklaring her
       Prepare for your presentation:
         content1: forklaring her
@@ -1239,7 +1299,23 @@ nn-NO:
         - feedback: Feil
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1264,6 +1340,14 @@ nn-NO:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1298,6 +1382,15 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1315,6 +1408,14 @@ nn-NO:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1346,6 +1447,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1363,6 +1472,14 @@ nn-NO:
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Eg veit ikkje
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1394,6 +1511,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1413,6 +1538,15 @@ nn-NO:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
@@ -1448,6 +1582,15 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1465,6 +1608,22 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1496,6 +1655,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1513,6 +1680,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1539,6 +1714,15 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1579,6 +1763,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1611,6 +1803,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1628,6 +1828,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1659,6 +1867,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1676,6 +1892,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1723,6 +1947,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1747,6 +1979,22 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1756,6 +2004,14 @@ nn-NO:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1780,6 +2036,14 @@ nn-NO:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1812,6 +2076,14 @@ nn-NO:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -1859,6 +2131,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1899,10 +2179,24 @@ nn-NO:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Funns Slutt på Kursets Elevundersøkelse
       csd-post-survey-levelgroup-2018:
         title: CS Funns Slutt på Kursets Elevundersøkelse
+      csf_be_a_super_digital_citizen:
+        content1: forklaring her
+      csf_password_power-up:
+        content1: forklaring her
+      csf_putting_a_stop_to_online_meanness:
+        content1: forklaring her
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1920,6 +2214,14 @@ nn-NO:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

@@ -185,6 +185,8 @@ hr:
       sign_in_to_save: 'Prijavite se da bi spremili napredak'
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
+      legal_privacy: "Pravila privatnosti"
+      legal_tos: "Uvjeti"
     user:
       classroom: 'Učiteljeva Početna stranica'
       district_dashboard: 'Regionalna nadzorna ploča'
@@ -405,19 +407,6 @@ hr:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Uvjeti"
-  gallery:
-    students_drew_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    students_made_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    picture_count: "U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b> slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli svaki program na djelu."
-    activity_count: "U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b> aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike i snimke ekrana da biste vidjeli svaki program na djelu."
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
-    more: "Više &rarr;"
-    caption_by_name_age: "od %{name}, dob %{age}"
-    caption_time_ago: "prije %{time_ago}"
-    header: "Galerija"
-    header_playlab: "Laboratorij igara"
-    header_artist: "Umjetnik"
-    report_abuse: "Prijava zloupotrebe"
   landing:
     report_bug: "Prijavi grešku"
     support: "Dobivanje pomoći"
@@ -536,24 +525,6 @@ hr:
           other: 'Ostalo'
         detail: 'Molimo vas da nam date što više detalja o sadržaju koji prijavljujete.'
         acknowledge: 'Slanjem ove informacije, vi prihvaćate da će se postupati u skladu s uvjetima %{link_start_privacy}Pravila privatnosti%{link_end} i %{link_start_tos}Uvjetima korištenja%{link_end}'
-  flex_category:
-    required: 'Pregled'
-    csf_digcit: 'Digitalno građanstvo'
-    csf_jigsaw: 'Slagalica'
-    csf_loops: 'Petlje'
-    csf_events: 'Događaji'
-    csf_binary: 'Binarno'
-    csf_conditionals: 'Uvjeti'
-    csf_nested_loops: 'Ugniježđene petlje'
-    csf_functions: 'Funkcije'
-    csf_variables: 'Varijable'
-    csf_for_loops: 'Petlja brojača'
-    csf_internet: 'Internet'
-    csp_variables: 'Varijable'
-    csp_conditionals: 'Uvjeti'
-    csp_functions: 'Funkcije'
-    csp_lists: 'Liste'
-    csp_loops: 'Petlje'
   hoc_download:
     minecraft_name: 'Minecraft Sat Kodiranja'
   pd:

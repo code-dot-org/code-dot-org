@@ -970,6 +970,14 @@ es-MX:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: en {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': segundos
+            '"frames"': marcos
+      gamelab_bounceOff:
+        text: "{SPRITE} rebota en {TARGET}"
       gamelab_changePropBy:
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
@@ -988,9 +996,11 @@ es-MX:
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
       gamelab_clickedSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentario: {COMMENT}'
+      gamelab_countByAnimation:
+        text: numero de {SPRITE}
       gamelab_createNewSprite:
         text: "hacer un nuevo sprite \n llamado {NAME} \n con disfraz {COSTUME} \n
           en {LOCATION}"
@@ -1000,6 +1010,8 @@ es-MX:
         text: poder arrastrastrarlos
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
+      gamelab_getAllSprites:
+        text: todos los sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1016,10 +1028,53 @@ es-MX:
           CHOICE:
             '"this"': este
             '"other"': otro
+      gamelab_getTime:
+        text: tiempo en {UNIT}
+        options:
+          UNIT:
+            '"seconds"': segundos
+            '"frames"': marcos
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
+      gamelab_isKeyPressed:
+        text: "{KEY} esta presionada"
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando los bordes"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} esta tocando a {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
       gamelab_keyPressed:
@@ -1070,6 +1125,8 @@ es-MX:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      gamelab_makeNumSprites:
+        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1078,6 +1135,8 @@ es-MX:
             '"left"': izquierda
       gamelab_mouseLocation:
         text: posición del ratón
+      gamelab_moveBackward:
+        text: mover {SPRITE} {DISTANCE} pixeles hacia atrás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixeles hacia adelante
       gamelab_moveInDirection:
@@ -1090,6 +1149,10 @@ es-MX:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: Patrullar hacia arriba y abajo
       gamelab_playSound:
         text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
@@ -1170,12 +1233,18 @@ es-MX:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
           DIRECTION:
             '"right"': derecha
             '"left"': izquierda
+      gamelab_updateTitleWithColor:
+        text: mostrar pantalla de título {BREAK} con título {TITLE} y color {COLOR}
       gamelab_whenDownArrow:
         text: cuando se presiona la flecha abajo
       gamelab_whenKey:
@@ -1571,9 +1640,16 @@ es-MX:
       aalab_setupStory:
         text: configurar historia
       aalab_starwars_playSound:
+        text: reproducir{OPTION}sonido
         options:
           OPTION:
             '"random"': al azar
+            '"R2-D2 random"': R2-D2 aleatorio
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:

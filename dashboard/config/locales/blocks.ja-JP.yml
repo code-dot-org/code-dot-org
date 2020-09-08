@@ -975,6 +975,10 @@ ja:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
@@ -1019,8 +1023,46 @@ ja:
         options:
           CHOICE:
             '"this"': これ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_hideTitleScreen:
         text: タイトル画面を非表示にする
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} エッジに触れている"
       gamelab_jumpTo:
@@ -1093,6 +1135,8 @@ ja:
             '"West"': 西だ
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+      gamelab_objectSpritePointer:
+        text: クリック {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1170,6 +1214,8 @@ ja:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      gamelab_subjectSpritePointer:
+        text: クリック {SPRITE}
       gamelab_turn:
         text: ターン {SPRITE} {DIRECTION} {N} 度
         options:

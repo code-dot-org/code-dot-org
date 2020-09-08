@@ -969,6 +969,10 @@ el:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: aalab όλοι {ANIMATION}
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       gamelab_changePropBy:
         text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
@@ -1014,8 +1018,46 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+            '"a"': α
+            '"b"': b
+            '"c"': c
+            '"d"': β
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': η
+            '"i"': ι
+            '"j"': ξ
+            '"k"': κ
+            '"l"': λ
+            '"m"': μ
+            '"n"': ν
+            '"o"': ο
+            '"p"': π
+            '"q"': q
+            '"r"': ρ
+            '"s"': σ
+            '"t"': τ
+            '"u"': θ
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"y"': y
+            '"z"': ζ
       gamelab_isTouchingEdges:
         text: "{SPRITE} αγγίζει τις άκρες"
       gamelab_jumpTo:
@@ -1088,6 +1130,8 @@ el:
             '"West"': Δυτικά
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
+      gamelab_objectSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
@@ -1167,6 +1211,8 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+      gamelab_subjectSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:

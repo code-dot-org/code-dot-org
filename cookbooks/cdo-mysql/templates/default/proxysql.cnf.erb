@@ -1,3 +1,15 @@
+<%
+# If this is an Aurora cluster, resolve instance-endpoint hostnames
+# to help with instance auto-discovery.
+servers = @mysql_servers.map {|s| s.keys.first}
+if @is_aurora
+  servers.each do |server|
+    server.host = get_cname(server.host)
+  end
+end
+writer, reader, reporting = servers
+-%>
+
 # libconfig file format:
 # http://www.hyperrealm.com/libconfig/libconfig_manual.html#Configuration-Files
 
@@ -23,7 +35,7 @@ mysql_variables=
 
   # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
-  interfaces="127.0.0.1:<%= @port %>"
+  interfaces="127.0.0.1:<%=@port%>;127.0.0.1:<%=@reporting_port%>"
 
   # The server version with which the proxy will respond to the clients.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
@@ -33,8 +45,8 @@ mysql_variables=
   # The user needs also REPLICATION CLIENT if it needs to monitor replication lag.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_username
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_password
-  monitor_username="<%= @reader.user %>"
-  monitor_password="<%= @reader.password %>"
+  monitor_username="<%= reader.user %>"
+  monitor_password="<%= reader.password %>"
 
   # If this variable is set, after an OK packet with `last_insert_id` is received,
   # multiplexing is temporary disabled for the number of queries specified (default 5).
@@ -75,7 +87,12 @@ mysql_variables=
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
 mysql_servers =
 (
-<% [@writer, @reader].uniq.product([1, 2]).push([@writer, 0]).each do |server, hostgroup| -%>
+<%
+  # Expand {server => [hg, ..]} to individual [server, hg] table rows.
+  @mysql_servers.map {|s| s.to_a.first}.
+    flat_map {|s, hgs| [s].product(hgs)}.
+    uniq.each do |server, hostgroup|
+-%>
   {
     address =        "<%= server.host %>"
     port =            <%= server.port || 3306 %>
@@ -103,7 +120,7 @@ mysql_aws_aurora_hostgroups:
     reader_hostgroup=1
     new_reader_weight=10000000
     writer_is_also_reader=1
-    domain_name="<%=@writer.host.sub(/[^.]*/, '')%>"
+    domain_name="<%=writer.host.sub(/[^.]*/, '')%>"
   }
 )
 <% end -%>
@@ -111,17 +128,17 @@ mysql_aws_aurora_hostgroups:
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_users
 mysql_users:
 (
-<% if @writer.user != @reader.user -%>
+<% if writer.user != reader.user -%>
   {
-    username = "<%= @reader.user %>"
-    password = "<%= @reader.password %>"
+    username = "<%= reader.user %>"
+    password = "<%= reader.password %>"
     # Send all reader-user queries to reader hostgroup (1) by default.
     default_hostgroup = 1
   },
 <% end -%>
   {
-    username = "<%= @writer.user %>"
-    password = "<%= @writer.password %>"
+    username = "<%= writer.user %>"
+    password = "<%= writer.password %>"
     default_hostgroup = 0
   }
 )
@@ -152,7 +169,7 @@ mysql_query_rules:
   {
     # Send writer-user SELECTs to the primary-reader (HG2).
     rule_id=3
-    username="<%= @writer.user %>"
+    username="<%= writer.user %>"
     active=1
     match_pattern="^SELECT"
     destination_hostgroup=2
@@ -174,4 +191,12 @@ mysql_query_rules:
     match_digest="SET @@wait_timeout"
     multiplex=2
   },
+  {
+    # Send reporting-port queries to the reporting hostgroup (HG3).
+    rule_id=6
+    proxy_port=<%=@reporting_port%>
+    active=1
+    destination_hostgroup=3
+    apply=1
+  }
 )

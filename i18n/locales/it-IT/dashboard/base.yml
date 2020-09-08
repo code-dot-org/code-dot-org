@@ -173,6 +173,9 @@ it:
     email_preference_yes: "Sì"
     email_preference_no: "No"
     email_preference_required: "Devi specificare una preferenza relativa all'indirizzo email."
+    parent_account_checkbox: "Sono un genitore/tutore e mi iscrivo per conto di mio figlio"
+    parent_account_email_progress_permission: "Possiamo inviarti aggiornamenti occasionali sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi la nostra politica sulla privacy)](%{privacy_policy_url})"
+    parent_account_email_label: "E-mail del genitore/tutore"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -339,6 +342,8 @@ it:
       help_us: "Aiutaci"
       teach: "Insegna"
       about: "Informazioni"
+      legal_privacy: "Informativa sulla privacy"
+      legal_tos: "Termini di servizio"
     user:
       classroom: 'Cruscotto di Controllo dell''insegnante'
       district_dashboard: 'Dashboard'
@@ -459,8 +464,11 @@ it:
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
     update_email: "Aggiorna"
+    for_parents_and_guardians: "Per genitori e tutori"
+    link_a_parent_email: "Collega un indirizzo email del genitore/tutore a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio. Potrai usare questo indirizzo email per il recupero della password."
     parent_guardian_email_label: "E-mail del genitore/tutore"
     none: "Nessuno"
+    only_one_parent_email_supported_warning: "Nota: al momento possiamo supportare un solo indirizzo email genitore/tutore per ogni account studente."
     encrypted: "crittografato"
   user_level:
     completed: 'Completato'
@@ -680,20 +688,6 @@ it:
       body: "Gli studenti possono esplorare concetti dal nostro corso Cs Principles usando questi strumenti digitali sul campo. Possono utilizzare i componenti per conto proprio o creare una lezione su un singolo concetto per la classe."
       audience: "Dai 14 anni in su"
       cta: "Scopri come"
-  gallery:
-    students_drew_these_with_code: "Gli studenti li hanno disegnati con dei programmi!"
-    students_made_these_with_code: "Gli studenti li hanno creati scrivendo del codice!"
-    picture_count: "Nei <b>%{days}</b> giorni passati, gli studenti hanno realizzato <b>%{count}</b> disegni scrivendo da soli i programmi per disegnarli. Clicca sulle immagini per vedere ogni programma in azione."
-    activity_count: "Negli ultimi <b>%{days}</b> giorni,  gli studenti hanno realizzato <b>%{count}</b> applicazioni e immagini scrivendo i loro programmi. Clicca sulle immagini per vedere ogni programma in azione."
-    want_to_make_your_own: "Vuoi farne uno tu?"
-    how_to_save: "Al termine dell'ultimo esercizio di questi corsi, clicca su \"Salva e Pubblica\" per salvare il tuo progetto nella collezione."
-    more: "Di più &rarr;"
-    caption_by_name_age: "da %{name}, età %{age}"
-    caption_time_ago: "%{time_ago} fa"
-    header: "La tua collezione"
-    header_playlab: "Laboratorio"
-    header_artist: "Artista"
-    report_abuse: "Segnala un abuso"
   landing:
     prerelease_tutorial: "Questa esercitazione è in **versione provvisoria**. È soggetta a revisioni man mano che arrivano osservazioni, al fine di migliorarla."
     report_bug: "Report Bug"
@@ -784,6 +778,14 @@ it:
     reminder_desc: 'Abbiamo aggiornato i nostri <a href="%{tos_url}" target="_blank">Termini di Servizio</a> e l''<a href="%{privacy_url}" target="_blank">Informativa sulla Privacy</a>. Si prega di leggerli attentamente prima di accettarli. Sii noti che i nostri strumenti per l''insegnamento di JavaScript potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.'
     reminder_desc_markdown: Abbiamo aggiornato i nostri [Termini di Servizio](%{tos_url}) e l'[Informativa sulla Privacy](%{privacy_url}). Si prega di leggerli attentamente prima di accettarli. Sii noti che i nostri strumenti per l'insegnamento di JavaScript potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.
     review_terms: "Rivedi i termini dell'aggiornamento"
+  donor_interstitial:
+    title: "Questi corsi di informatica sono gratuiti grazie a..."
+    subtitle: "Ringraziamo i generosi finanziatori il cui sostegno ha reso possibile il successo di Code.org. Ci impegniamo a mantenere Code.org gratuito sia per le scuole sia per gli studenti, in tutto il mondo, grazie alla continua generosità dei nostri [donors](%{donors_url})!\n"
+    local_supporters: "Sostenitori locali"
+    global_supporters: "Sostenitori globali"
+    support_codeorg_1: "Ogni dollaro donato a Code.org permette di dare un'opportunità a tantissimi studenti."
+    support_codeorg_2: "[Dona ora](%{donate_url}) per sostenere Code.org."
+    get_started: "Inizia con Code.org"
   school_info_interstitial:
     title: "Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia dei nostri progressi!"
     message: "Per favore qui sotto inserisci le informazioni sulla scuola."
@@ -878,85 +880,7 @@ it:
     instructor_feedback: 'Feedback dell''istruttore'
     peer_feedback: 'Feedback di un collega'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
-  flex_category:
-    required: 'Panoramica'
-    content: 'Contenuto'
-    practice: 'Pratiche d''insegnante'
     peer_review: 'Valutazioni dei parigrado'
-    ramp_up: 'Introduzione'
-    end_of_course_project: 'Progetto di fine corso'
-    main_course: 'Corso principale'
-    extra_course_content: 'Contenuti supplementari'
-    csf_e_1: 'Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)'
-    csf_e_2: 'Contenuti del Corso E'
-    csf_f_1: 'Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)'
-    csf_f_2: 'Contenuti del Corso F'
-    csf_digcit: 'Cittadinanza digitale'
-    csf_jigsaw: 'Puzzle'
-    csf_sequencing: 'Sequenze'
-    csf_loops: 'Ripetizioni'
-    csf_events: 'Eventi'
-    csf_online_safety: 'Sicurezza Online'
-    csf_binary: 'Binario'
-    csf_conditionals: 'Istruzioni condizionali'
-    csf_sprites: 'Personaggi'
-    csf_spritelab: 'Laboratorio dei Personaggi'
-    csf_nested_loops: 'Cicli annidati'
-    csf_functions: 'Funzioni'
-    csf_variables: 'Variabili'
-    csf_for_loops: 'Cicli con contatore'
-    csf_internet: 'Internet'
-    csf_warmup: 'Riscaldamento'
-    csd1_1: 'Capitolo 1: il Problem Solving'
-    csd1_2: 'Capitolo 2: Computers e Problem Solvig'
-    csd2_1: 'Capitolo 1: Contenuti Web e HTML'
-    csd2_2: 'Capitolo 2: Styling e CSS'
-    csd3_1: 'Capitolo 1: Immagini e animazioni'
-    csd3_2: 'Capitolo 2: Costruzione di Giochi'
-    csd4_1: 'Capitolo 1: Design a cura dell''Utente'
-    csd4_2: 'Capitolo 2: Prototipazione di App'
-    csd5_1: 'Capitolo 1: Rappresentazione delle informazioni'
-    csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
-    csd6_1: 'Capitolo 1: Output Hardware'
-    csd6_2: 'Capitolo 2: Input Hardware'
-    csd_survey: 'Sondaggio Post-corso'
-    csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
-    csp1_2: 'Capitolo 2: Inventare Internet'
-    csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
-    csp2_2: 'Capitolo 2: Manipolazione e Visualizzazione dei dati'
-    csp3_1: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
-    csp4_1: 'Capitolo 1: Il mondo di grandi quantità di dati e la crittografia'
-    csp5_1: 'Capitolo 1: Programmazione guidata dagli eventi'
-    csp5_2: 'Capitolo 2: Programmazione con strutture di dati'
-    cspSurvey: 'Sondaggio'
-    cspAssessment: 'Valutazione del Capitolo'
-    csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
-    csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
-    csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
-    csp_postap_1: 'Capitolo 1: Manipolare e visualizzare dati'
-    csp_postap_2: 'Capitolo 2: Apps e Database'
-    csp2_1_2018: 'Unità 2: Informazioni digitali'
-    csp3_1_2018: 'Unit 3: Introduzione alla Programmazione'
-    csp4_1_2018: 'Unità 4: Big Data e Privacy'
-    csp_variables: 'Variabili'
-    csp_conditionals: 'Istruzioni condizionali'
-    csp_functions: 'Funzioni'
-    csp_project: 'Progetto'
-    csp_lists: 'Liste'
-    csp_loops: 'Ripetizioni'
-    csp_traversals: 'Traversali'
-    csp_libraries: 'Librerie'
-    csp_parameters_return_values: 'Parametri e Valori di Ritorno'
-    csp_unit1_2020: 'Princìpi dell''Informatica - Unità 1'
-    csp_unit2_2020: 'Princìpi dell''Informatica - Unità 2'
-    dlp: 'Punti di riflessione'
-    time4cs_c1: 'Everglades ed i Suoi Ecosistemi'
-    time4cs_c2: 'Catene Alimentari negli Everglades'
-    time4cs_c3: 'Vivere negli Everglades'
-    time4cs_c4: 'Impatti Invasivi sugli Everglades'
-    time4cs_c5: 'I Cittadini Influenzano il Cambiamento negli Everglades'
-    k5_getting_started: 'Per cominciare'
-    k5_next_steps: 'I prossimi passi'
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che non è gestito da Code.org.
@@ -1037,6 +961,8 @@ it:
       school_name: 'Nome della scuola'
       school_city: 'Città della scuola'
       school_country: 'Paese della Scuola'
+      colombian_school_city: 'Città della scuola'
+      colombian_school_name: 'Nome della scuola'
       ages: 'Qual è l''età degli studenti a cui insegni quest''anno?'
       subjects: 'Quali materie insegni quest''anno?'
       resources: 'Quali delle seguenti risorse di informatica utilizzi?'
@@ -1137,3 +1063,9 @@ it:
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
   copy: 'Copia'
+  parent_email_banner:
+    text: "**Sei un genitore o tutore?** Collega la tua email a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
+    link_your_email: "Collega la tua email"
+    not_now: "Non ora"
+  behaviors:
+    this_sprite: "questo personaggio"

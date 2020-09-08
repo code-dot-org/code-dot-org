@@ -47,10 +47,18 @@
         %div
           %a{href: "/break"}
             %img{src: "images/homepage/learn_more_drawn_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_check"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/codebreak_check_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_home"
+        %div
+          %a{href: "/athome"}
+            %img{src: "images/homepage/codebreak_home_button.png", style: "width: 250px; margin-top: 10px"}
       - elsif entry[:type] == "code_break_video"
         %div
           %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px; "}
+            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px"}
 
   .clear{style: "clear: both"}
 
@@ -134,7 +142,7 @@
     .right.col-50.mobile-center{style: "margin-top: 14px; padding-left: 5px; padding-right: 5px; text-align: center"}
       %div
         %img{src: "images/homepage/codebreak_logo_hand.png", style: "width: 400px; max-width: 100%"}
-      %h3{style: "font-weight: 800; color:#191919; font-size: 16px;"}Take a Code Break! Your weekly dose of inspiration, community, and computer science.
+      %h3{style: "font-weight: 800; color:#191919; font-size: 16px;"}Take a Code Break! Your weekly dose of inspiration, community, and computer science. And check out our other home learning resources!
 
       %h3{style: "font-weight: 800;color:#191919; width: 100%; font-family: 'Gotham 5r', sans-serif"} Every Wednesday at 10am PST / 1pm EST
       .desktop-feature
@@ -152,13 +160,13 @@
             %img#special-guest-stars{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 30px; max-width: 100%"}
           .headshots{style: "text-align: center"}
             .guest-1{style: "display: inline-block"}
-              %img{src: "/images/fill-200/homepage/codebreak_keegan_michael_key.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
-              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Keegan-Michael Key
+              %img{src: "/images/fill-200/homepage/codebreak_aloe_blacc.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Aloe Blacc
             &nbsp;
             &nbsp;
             .guest-2{style: "display: inline-block"}
-              %img{src: "/images/fill-200/homepage/codebreak_vint_cerf.png", style: "border-radius: 50%; width: 150px; height: 150px;"}
-              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Vint Cerf
+              %img{src: "/images/fill-200/homepage/codebreak_bret_taylor.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Bret Taylor
 
         %div{style: "clear:both;"}
 

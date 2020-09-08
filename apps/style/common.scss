@@ -224,7 +224,7 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin-left: 5px;
+  margin-left: 9px;
   margin-right: 0px;
   display: none;
 }
@@ -243,18 +243,16 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -5px;
+  margin-left: -9px;
   -webkit-touch-callout: none;
-  &.soft-buttons-none {
-    display: none;
-  }
   &.soft-buttons-compact {
-    margin-left: 0;
+    margin: 0;
     button {
-      margin: 0;
+      margin: 0 4px 0 0;
     }
   }
 }
+
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
@@ -488,9 +486,9 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
-    margin-left: 0;
+    margin: 5px -8px 0 0;
     button {
-      margin: 0;
+      margin: 0 4px 0 0;
     }
   }
   .small-footer-base.responsive {
@@ -1117,10 +1115,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 #showVersionsModal {
   width: 700px;
   margin-left: -350px;
-}
-
-#showVersionsModal .versionRow p {
-  margin: 15px 0 0 0;
+  h1 {
+    border-bottom: solid 1px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  td {
+    vertical-align: middle;
+  }
+  tr:nth-child(even){
+    background-color: $lightest_purple;
+  }
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
@@ -1483,13 +1490,20 @@ $examples-link-font: $gotham-extra-bold;
 
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link, .tooltip-choose-link {
+.tooltip-example-link,
+.tooltip-choose-link,
+.tooltip-code-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a, .tooltip-choose-link > a {
-  &:hover, &:link, &:active, &:visited {
+.tooltip-example-link > a,
+.tooltip-choose-link > a,
+.tooltip-code-link > a {
+  &:hover,
+  &:link,
+  &:active,
+  &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;
@@ -1712,3 +1726,4 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 @import "RotateContainer";
+@import "HideToolbarHelper";

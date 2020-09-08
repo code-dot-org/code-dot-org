@@ -1,24 +1,25 @@
 pilot_experiment 'csd-piloters'
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
-stage 'What is a Computer?', flex_category: 'csd1_2'
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
 level 'CSD U1L04 TFMD_pilot', named: true
 level 'CSD What Makes a Computer a Computer Video_pilot', named: true
 
-stage 'Input and Output', flex_category: 'csd1_2'
+lesson 'Input and Output', display_name: 'Input and Output'
 level 'CSD U1L05 TFMD_pilot', named: true
 level 'csd wiac pet chooser', named: true
 level 'csd wiac mad libs', named: true
 
-stage 'Processing', flex_category: 'csd1_2'
+lesson 'Processing', display_name: 'Processing'
 level 'CSD U1L06 TFMD_pilot', named: true
 
-stage 'Apps and Storage', flex_category: 'csd1_2'
+lesson 'Apps and Storage', display_name: 'Apps and Storage'
 level 'CSD U1L07 TFMD_pilot', named: true
 
-stage 'Project - Propose an App', flex_category: 'csd1_2'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
 level 'CSD U1L09 TFMD_pilot', named: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
 level 'CSD U1 Test_pilot', assessment: true
+

@@ -1,37 +1,37 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit9/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
-stage 'Learning From Data'
+lesson 'Learning From Data', display_name: 'Learning From Data'
 level 'CSP U9L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9L1 Metadata', progression: 'Exploring Metadata'
 level 'U9L1 google trends CFU', progression: 'Check For Understanding', assessment: true
 
-stage 'Exploring One Column'
+lesson 'Exploring One Column', display_name: 'Exploring One Column'
 level 'CSP U9L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9L2 Making Bar Charts and Histograms', progression: 'Making Bar Charts and Histograms'
 level 'U9L2 CFU Histogram vs Bar Chart', progression: 'Check For Understanding', assessment: true
 
-stage 'Filtering and Cleaning Data'
+lesson 'Filtering and Cleaning Data', display_name: 'Filtering and Cleaning Data'
 level 'CSP U9L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9L3 Data Cleaning', progression: 'Cleaning Data'
 level 'CSP U9L3 Data Filtering', progression: 'Filtering Data'
 level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding', assessment: true
 
-stage 'Exploring Two Columns'
+lesson 'Exploring Two Columns', display_name: 'Exploring Two Columns'
 level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9L4 Making Crosstabs and Scatter Plots', progression: 'Crosstab and Scatter Charts'
 level 'Which Type of Chart', progression: 'What Type of Chart?'
 level 'U9L4 CFU Two Column vs One', progression: 'Check For Understanding', assessment: true
 
-stage 'Big Data, Crowdsourcing, and Machine Learning'
+lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big Data, Crowdsourcing, and Machine Learning'
 level 'CSP U9L6 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Machine Learning and Bias'
+lesson 'Machine Learning and Bias', display_name: 'Machine Learning and Bias'
 level 'CSP U9L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'Oceans_Video_Machine_Learning', progression: 'AI for Oceans - Machine Learning'
 level 'Oceans_FishVTrash', progression: 'AI for Oceans - Machine Learning'
@@ -42,14 +42,15 @@ level 'Oceans_Short', progression: 'AI for Oceans - Machine Learning'
 level 'Oceans_Long', progression: 'AI for Oceans - Machine Learning'
 level 'U9L6 CFU ML Bias', progression: 'Check for Understanding', assessment: true
 
-stage 'Project - Tell a Data Story - Part 1'
+lesson 'Project - Tell a Data Story - Part 1', display_name: 'Project - Tell a Data Story - Part 1'
 level 'CSP U9L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9 Data Story Day 1', progression: 'Data Story Workspace'
 
-stage 'Project - Tell a Data Story - Part 2'
+lesson 'Project - Tell a Data Story - Part 2', display_name: 'Project - Tell a Data Story - Part 2'
 level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9 Data Story Day 2', progression: 'Data Story Workspace', assessment: true
 
-stage 'Lesson 9: Assessment Day', lockable: true
+lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true
 level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 9 AP-Style Assessment _2020', progression: 'Unit 9 Exam', assessment: true
+

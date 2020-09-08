@@ -14,13 +14,13 @@ title: Anleitung für freiwillige "Hour of Code"-Teinehmer
 
 Lesen Sie, was andere Ehrenamtliche berichten:
 
-- "Das Beste für mich war, dass die gesamte Klasse aus Frauen und Farbigen bestand. Diese Kinder erreichen und begeistern zu können, vespricht Gutes für die Zukunft unserer Branche."
+- "Das Beste für mich war, dass die gesamte Klasse aus Frauen und Farbigen bestand. Diese Kinder erreichen und begeistern zu können, vesprricht Gutes für die Zukunft unserer Branche."
 - "Hat mir besonders gefallen, junge Mädchen zur Technologie zu ermuntern. Hab mich gefühlt, als ob ich der nächsten Generation meiner Umgebung geholfen habe."
 - "Ich HABE ES GELIEBT zu sehen, wie begeistert die Kids waren. "Eine erstaunliche Sache war, dass die Lehrer bei einigen Schülern, die sonst nicht so gut in der Schule waren, bemerkten, dass diese sehr gut darin waren, wie ein Entwickler zu denken und den anderen beim Lernen helfen konnten - und so eine Gelegenheit bekamen, Selbstvertrauen zu bekommen."
 
 ## Jeder kann als Ehrenamtlicher mitmachen
 
-### Volunteers and speakers in tech:
+### Freiwillige und Technologie Referenten
 
 Haben Sie etwas mit der Software- oder Tech-Branche zu tun? Wenn Sie in der Software-Entwicklung arbeiten, oder in einer Firma der Tech-Branche, egal ob als Ingenieur oder in einer anderen Funktion, oder wenn Sie auch nur Informatik-/Programmier-Kurse besucht haben: Sie können helfen, Schüler für das Fach zu begeistern! Viele Schüler haben noch nie jemanden getroffen, der in der Tech-Branche arbeitet und unsere Lehrer lieben es, eine Verbindung zwischen ihrer Klasse und einem Profi oder Studenten herstellen zu können.
 
@@ -42,11 +42,11 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
 
 <ol>
   <li>
-    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Schicken Sie diese E-Mail</a> an den Lehrer Ihres Kindes und bieten Sie an dabei zu helfen, eine "Hour of Code" zu veranstalten.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
+    Bieten Sie an, ein "Hour of Code" Event nach Schulschluss an Ihrer Schule vor Ort zu veranstalten. Benutzen Sie diesen <a href="{{ urls/how_to_guide }}">How-To Guide</a>, der Ihnen bei der Planung hilft.
   </li>
 </ol>
 

@@ -170,18 +170,6 @@ ky:
       report_abuse_form:
         abuse_type:
           other: 'Башка'
-  flex_category:
-    csf_jigsaw: 'Jigsaw'
-    csf_loops: 'Циклдер'
-    csf_events: 'Окуялар'
-    csf_conditionals: 'Шартуулар'
-    csf_functions: 'Функциялар'
-    csf_variables: 'Өзгөрмөлөр'
-    csp_variables: 'Өзгөрмөлөр'
-    csp_conditionals: 'Шартуулар'
-    csp_functions: 'Функциялар'
-    csp_lists: 'Тизмелер'
-    csp_loops: 'Циклдер'
   hoc_download:
     minecraft_name: 'Minecraft код сааты'
     windows: 'Windows'
@@ -190,6 +178,7 @@ ky:
     form_labels:
       email: 'Эмейл'
       school_city: 'Мектеп жайгашкан шаар'
+      colombian_school_city: 'Мектеп жайгашкан шаар'
     form_entries:
       subjects:
         cs: 'Информатика'

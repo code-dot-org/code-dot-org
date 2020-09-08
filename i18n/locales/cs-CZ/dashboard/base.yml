@@ -161,6 +161,9 @@ cs:
     email_preference_yes: "Ano"
     email_preference_no: "Ne"
     email_preference_required: "Musíte vyplnit nastavení e-mailové komunikace."
+    parent_account_checkbox: "Jsem rodič nebo zákonný zástupce přihlašující se jménem svého dítěte."
+    parent_account_email_progress_permission: "Smíme Vám příležitostně poslat e-mail s novinkami o pokroku a projektech Vašeho dítěte a s novinkami o jeho výuce a počítačové vědě? [(Viz naše zásady ochrany osobních údajů)](%{privacy_policy_url})"
+    parent_account_email_label: "E-mail rodiče nebo zákonného zástupce"
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -325,6 +328,8 @@ cs:
       help_us: "Pomozte nám"
       teach: "Učit"
       about: "O nás"
+      legal_privacy: "Zásady ochrany osobních údajů"
+      legal_tos: "Podmínky"
     user:
       classroom: 'Učitelská domovská stránka'
       district_dashboard: 'Okresní řídicí panel'
@@ -350,6 +355,7 @@ cs:
       dance: 'Taneční večírek'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab: 'Game Lab'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'Gumball'
       iceage: 'Doba ledová'
@@ -438,8 +444,11 @@ cs:
     update: "Aktualizovat účet"
     account_successfully_updated: "Účet úspěšně aktualizován."
     update_email: "Aktualizovat"
+    for_parents_and_guardians: "Pro rodiče a zákonné zástupce"
+    link_a_parent_email: "Když k tomuto účtu připojíte e-mailovou adresu rodiče nebo zákonného zástupce, budete dostávat pravidelné aktualizace o pokroku a projektech vašeho dítěte. Tuto e-mailovou adresu budete také moci použít k obnovení hesla."
     parent_guardian_email_label: "E-mail rodiče/zákonného zástupce"
     none: "Žádný"
+    only_one_parent_email_supported_warning: "Poznámka: v současnosti můžeme podporovat jen jednu e-mailovou adresu rodiče nebo zákonného zástupce na jeden studentský účet."
     encrypted: "šifrováno"
   user_level:
     completed: 'Dokončeno'
@@ -537,6 +546,7 @@ cs:
     autoplay_option: 'Automatické přehrávání videí'
     download: 'Stáhnout Video'
     show_notes: 'Zobrazit poznámky'
+    show_video: 'Zobrazit video'
     label: 'Video'
   compatibility:
     upgrade:
@@ -601,6 +611,7 @@ cs:
       title: "Galerie"
       body: "Zobrazit galerii app a uměleckých obrázků vytvořené našimi uživateli"
     gamelab:
+      title: "Game Lab"
       body: "Game Lab je programovací prostředí, kde můžete tvořit jednoduché animace a hry - s objekty a postavami, které interagují navzájem."
       audience: "Věk 13 +"
       cta: "Jak na to"
@@ -646,20 +657,6 @@ cs:
       title: "Widgety"
       audience: "Věk 14+"
       cta: "Jak na to"
-  gallery:
-    students_drew_these_with_code: "Studenti tyto nakreslili kódem!"
-    students_made_these_with_code: "Studenti tyto vytvořili kódem!"
-    picture_count: "V posledních dnech <b>%{days}</b> studenti nakreslili obrázky <b>%{count}</b> napsáné vlastními počítačovými programy. Klepněte na obrázky, abys si viděl každý program v akci."
-    activity_count: "V posledních dnech <b>%{days}</b> studenti udělali <b>%{count}</b> aplikace a obrázky napsáním vlastních počítačových programů. Klepněte na obrázky a snímky, abys si viděl každý program v akci."
-    want_to_make_your_own: "Chcete si vyrobit vlastní?"
-    how_to_save: "V poslední části těchto výukových programů klepněte na tlačítko \"Dokončit\" a \"Uložit\" pro odeslání vaší práce do galerie."
-    more: "Více &rarr;"
-    caption_by_name_age: "podle %{name}, věk %{age}"
-    caption_time_ago: "před %{time_ago}"
-    header: "Galerie"
-    header_playlab: "Play Lab"
-    header_artist: "Umělec"
-    report_abuse: "Ohlásit urážlivý příspěvek"
   landing:
     report_bug: "Nahlásit chybu"
     support: "Získat pomoc"
@@ -831,49 +828,7 @@ cs:
     instructor_feedback: 'Připomínky instruktora'
     peer_feedback: 'Připomínky spoluřešitele'
     outdated: 'Tato zpětná vazba byla přidána k dříve odeslané verzi'
-  flex_category:
-    required: 'Přehled'
-    content: 'Obsah'
-    practice: 'Výukové postupy'
     peer_review: 'Nezávislý posudek'
-    main_course: 'Hlavní kurs'
-    csf_digcit: 'Digitální občanství'
-    csf_jigsaw: 'Skládačka'
-    csf_sequencing: 'Sekvence'
-    csf_loops: 'Cykly'
-    csf_events: 'Události'
-    csf_online_safety: 'Online bezpečnost'
-    csf_binary: 'Binární'
-    csf_conditionals: 'Podmínky'
-    csf_nested_loops: 'Vnořené cykly'
-    csf_functions: 'Funkce'
-    csf_variables: 'Proměnné'
-    csf_for_loops: 'Cykly "For"'
-    csf_internet: 'Internet'
-    csd1_1: 'Kapitola 1: Proces řešení problémů'
-    csd1_2: 'Kapitola 2: Počítače a řešení problémů'
-    csd2_1: 'Kapitola 1: Obsah webu a HTML'
-    csd2_2: 'Kapitola 2: Styly a CSS'
-    csd3_1: 'Kapitola 1: Obrázky a animace'
-    csd3_2: 'Kapitola 2: Tvorba her'
-    csd4_2: 'Kapitola 2: Prototypování aplikací'
-    csd5_2: 'Kapitola 2: Řešení datových problémů'
-    csd6_1: 'Kapitola 1: Programování s hardware'
-    csd6_2: 'Kapitola 2: Stavba fyzického prototypu'
-    csp1_1: 'Kapitola 1: Reprezentace a přenos informací'
-    csp1_2: 'Kapitola 2: Objev Internetu'
-    csp2_1: 'Kapitola 1: Kódování a komprese komplexních informací'
-    csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
-    csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
-    csp_postap_1: 'Kapitola 2: Práce s daty a jejich zobrazení'
-    csp2_1_2018: 'Kapitola 2: Digitální informace'
-    csp3_1_2018: 'Kapitola 3: Úvod do programování'
-    csp_variables: 'Proměnné'
-    csp_conditionals: 'Podmínky'
-    csp_functions: 'Funkce'
-    csp_lists: 'Seznamy'
-    csp_loops: 'Cykly'
-    csp_unit1_2020: 'Kapitola 1: Digitální informace'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností Code.org.
@@ -941,10 +896,13 @@ cs:
   pd:
     form_labels:
       first_name: 'Křestní jméno'
+      first_name_preferred: 'Preferované jméno'
       last_name: 'Příjmení'
       email: 'E-mail'
+      gender: 'Rod'
       school_name: 'Název školy'
       school_country: 'Země školy'
+      colombian_school_name: 'Název školy'
     form_entries:
       gender:
         male: 'Muž'
@@ -993,6 +951,9 @@ cs:
         raspberry: 'Raspberry Pi'
         other: "Ostatní:"
       workshop_course:
+        csf_af: 'Základy informatiky (Kurzy A-F)'
+        csf_express: 'Základy informatiky (Zrychlené kurzy)'
+        csd: 'Objevujeme informatiku'
         csp: 'Principy informatiky 2016-2017'
       email_opt_in:
         opt_in_yes: 'Ano'
@@ -1010,3 +971,7 @@ cs:
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_button: "Zpět domů"
   copy: 'Kopírovat'
+  parent_email_banner:
+    text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"
+    link_your_email: "Připojte svůj e-mail."
+    not_now: "Teď ne."

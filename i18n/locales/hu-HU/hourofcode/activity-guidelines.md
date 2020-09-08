@@ -32,10 +32,11 @@ A few tips:
 - [Általános irányelvek a Kódolás órája™ tevékenységek létrehozásához](#guidelines)
 - [Hogyan küldd el](#submit)
 - [Hogyan lesznek értékelve az ötletek](#inclusion)
-- [Javaslatok a tevékenységek megtervezéséhez](#design)
-- [Védjegyre vonatkozó irányelvek](#tm)
-- [Pixel követése](#pixel)
-- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#promote)
+- [Javaslatok a tevékenységek megtervezéséhez](#earlyreview)
+- [Védjegyre vonatkozó irányelvek](#design)
+- [Pixel követése](#tm)
+- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#pixel)
+- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -104,9 +105,7 @@ Amire szükséged lesz:
 * Tevékenység neve (nem tartalmazhatja a "Kódolás órája" elnevezést)
 * URL link a tevékenységhez
 * Tevékenység leírása 
-    * Egy hosszabb leírás a számítógépes nézethez. Maximális karakterszám: 400
-    * Egy rövidebb leírás a mobilos nézethez. Maximális karakterszám: 75
-    * Kérlek, tüntesd fel a leírásban, hogy a tevékenység elsősorban önálló munkát vagy tanári támogatást igényel-e. Mindemellett néhány iskola érdeklődik a Common Core, illetve a Next Generation Science Standardok iránt is. Amennyiben a tevékenység tartalmaz ilyeneket, említsd meg ezeket az információkat is.
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Ajánlott felhasználói szint(ek). Utalás tehető a Számítástechnika Tanárok Egyesületének K-12 szabványára (https://k12cs.org/framework-statements-by-grade-band/) az egyes szinteket leíró informatika fogalmak kapcsán. Példák az egyes szintekre: 
     * Óvoda - 1. kategória (4-6 éves korig)
     * 2-5. kategória (7-10 év között)
@@ -120,15 +119,12 @@ Amire szükséged lesz:
     * 1 órás
     * 1 órás, melyet további tanfolyamrészek követnek
     * 2-6 óra (lehet több óra is)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### További dolgok, amire szükséged van az órai tervek benyújtásakor
 
-* Név
-* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. 
-* Iskola, ahol tanítassz, továbbá város és ország (választható)
-* Tanított osztály(ok) és tantárgy(ak) (opcionális)
-* Portréfotó rólad (opcionális)
-* Milyen szoftverre lesz szükség az óratervhez (Scratch? Robotok? Más egyéb? Esetleg semmi?)
+* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
+* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. Nothing?)
 
 #### További dolgok, amelyekre szükséged van online tevékenységek benyújtásakor
 
@@ -143,14 +139,14 @@ Amire szükséged lesz:
         * Android Chrome (mobilra optimalizált)
     * Nem web alapú: add meg a forrás kód platformját (Mac, Win, iOS, Android, xBox, egyéb)
     * Unplugged
-* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz.
-* A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. Helyezd el a pixelt a kezdőlapra. Ne helyezz pixelt az átmeneti oldalakra). További részletekért lásd az alábbi Nyomkövető pixelről szóló részt.
+* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. Helyezd el a pixelt a kezdőlapra.
 * A tevékenység befejezése után a felhasználókat a [ code.org/api/hour/finish ](https://code.org/api/hour/finish) webhelyre szükséges irányítani, ahol képesek lesznek: 
     * Megosztani a hírt a közösségi médiában, hogy befejezték a Kódolás órája gyakorlatot
     * Igazolást kapni arról, hogy teljesítették az egy órás kódot
     * Megtekinteni a ranglistákat arról, hogy mely országok / városok vesznek részt legeredményesebben a Kódolás órája tevékenységekben
     * Azon felhasználók számára, akik bár egy órát eltöltenek a tevékenység megoldásával, de be nem fejezik azt, kérlek, tégy be egy gombot, amelynek felirata az alábbi: „Befejeztem a Kódolás óráját”, amely visszirányítja őket a <a href = "https: // kódra mutat..org / api / hour / finish "> code.org/api/hour/finish </a> oldalra.
-* (Opcionális) Az online felmérés / űrlap hivatkozással nyomon követhetjük a tevékenységekkel kapcsolatos mutatók eredményeit a decemberi esemény hetén. December 9. éjféltől December 15. éjfélig 
+* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
     * Online tevékenységekhez (különösen okostelefon- / táblagép-alkalmazásokhoz): 
         * Felhasználók száma
         * Mennyien tejesítették a feladatot
@@ -254,7 +250,7 @@ Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet webol
 
 <a id="tm"></a>
 
-## Védjegyre vonatkozó irányelvek
+## Pixel követése
 
 Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
@@ -277,9 +273,9 @@ If your tutorial is approved and included on the final tutorial page, Code.org w
 
 NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Example tracking pixels for AppInventor:
+Example tracking pixels for Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
 [**Vissza az elejére**](#top)

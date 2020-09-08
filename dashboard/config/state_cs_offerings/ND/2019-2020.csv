@@ -1,0 +1,144 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Valley City Jr-Sr High School,ND-02002-89542,381885000656,10411,Robotics Engineering,79,46,18,18,20,1,165,56,2
+Valley City Jr-Sr High School,ND-02002-89543,381885000655,10411,Robotics Engineering,70,30,18,18,20,1,165,56,2
+Valley City Jr-Sr High School,ND-02002-89543,381885000655,27123,Programming Essentials-Python 9-12,167,85,18,18,20,1,165,56,2
+Valley City Jr-Sr High School,ND-02002-89542,381885000656,27123,Programming Essentials-Python 9-12,167,85,18,18,20,1,165,56,2
+Valley City Jr-Sr High School,ND-02002-89543,381885000655,23580,AP Comp Sci A,70,30,18,18,20,1,165,56,2
+Valley City Jr-Sr High School,ND-02002-89542,381885000656,23580,AP Comp Sci A,70,30,18,18,20,1,165,56,2
+Barnes County North Public School,ND-02007-94633,380006000702,23012,Comp Programming,23,11,0,5,0,1,96,24,
+Barnes County North Public School,ND-02007-94631,380006000701,23012,Comp Programming,32,12,0,5,0,1,96,24,
+Barnes County North Public School,ND-02007-94631,380006000701,27120,Introduction to Programming Languges,20,9,0,5,0,1,96,24,
+Barnes County North Public School,ND-02007-94633,380006000702,27120,Introduction to Programming Languges,20,9,0,5,0,1,96,24,
+Minnewaukan Public School,ND-03005-57413,381299000431,23012,Comp Programming,11,3,0,2,225,2,258,39,1
+Minnewaukan Public School,ND-03005-57411,381299000430,23012,Comp Programming,28,16,0,2,225,2,258,39,1
+Westhope Public School,ND-05017-93251,381947000685,27120,Introduction to Programming Languges,27,15,4,7,2,0,58,20,
+Westhope Public School,ND-05017-93253,381947000686,27120,Introduction to Programming Languges,27,15,4,7,2,0,58,20,
+Bowman Co Public School,ND-06001-10431,380320000074,27510,AP Computer Science Principles (CTE) 10-12,10,10,2,40,8,0,69,43,22
+Bowman Co Public School,ND-06001-10433,380320000075,27510,AP Computer Science Principles (CTE) 10-12,24,12,2,40,8,0,69,43,22
+Bismarck High School,ND-08001-09703,380001400045,23582,AP Computer Science Principles 10-12,14,9,51,66,177,9,365,141,40
+Bismarck High School,ND-08001-09703,380001400045,27120,Introduction to Programming Languges,19,8,51,66,177,9,365,141,40
+Bismarck High School,ND-08001-09703,380001400045,27122,Program Ess-Vis Bas,11,5,51,66,177,9,365,141,40
+Bismarck High School,ND-08001-09703,380001400045,10411,Robotics Engineering,13,6,51,66,177,9,365,141,40
+Century High School,ND-08001-13653,380001400047,27127,Adv JAVA Program,0,0,62,42,49,6,155,100,33
+Century High School,ND-08001-13653,380001400047,27120,Introduction to Programming Languges,9,6,62,42,49,6,155,100,33
+Century High School,ND-08001-13653,380001400047,27122,Program Ess-Vis Bas,11,7,62,42,49,6,155,100,33
+Century High School,ND-08001-13653,380001400047,10411,Robotics Engineering,8,5,62,42,49,6,155,100,33
+Legacy High School,ND-08001-51993,380001400866,23582,AP Computer Science Principles 10-12,305,167,45,41,97,11,227,96,31
+Legacy High School,ND-08001-51993,380001400866,27120,Introduction to Programming Languges,273,128,45,41,97,11,227,96,31
+Legacy High School,ND-08001-51993,380001400866,27122,Program Ess-Vis Bas,30,18,45,41,97,11,227,96,31
+Legacy High School,ND-08001-51993,380001400866,10411,Robotics Engineering,31,12,45,41,97,11,227,96,31
+Fargo Davies High School,ND-09001-17403,380678000855,27125,Fund of JAVA Program,14,6,194,28,24,9,252,92,117
+South High School,ND-09001-27443,380678000208,27120,Introduction to Programming Languges,3,1,151,58,33,3,332,119,125
+North High School,ND-09001-61253,380678000205,27125,Fund of JAVA Program,12,10,47,39,41,4,215,142,18
+North High School,ND-09001-61253,380678000205,27120,Introduction to Programming Languges,29,11,47,39,41,4,215,142,18
+Kindred High School,ND-09002-49343,380002500335,23580,AP Comp Sci A,4,0,1,3,7,0,41,40,1
+West Fargo Sheyenne High School,ND-09006-78653,381941000838,27125,Fund of JAVA Program,10,3,206,47,39,6,298,171,79
+West Fargo Sheyenne High School,ND-09006-78653,381941000838,27120,Introduction to Programming Languges,12,3,206,47,39,6,298,171,79
+West Fargo Sheyenne High School,ND-09006-78653,381941000838,27122,Program Ess-Vis Bas,2,1,206,47,39,6,298,171,79
+West Fargo High School,ND-09006-93153,381941000683,10411,Robotics Engineering,40,18,259,72,39,3,515,208,186
+West Fargo High School,ND-09006-93153,381941000683,27125,Fund of JAVA Program,16,9,259,72,39,3,515,208,186
+West Fargo High School,ND-09006-93153,381941000683,27120,Introduction to Programming Languges,263,124,259,72,39,3,515,208,186
+Central Cass Public School,ND-09017-13541,380409000099,23012,Comp Programming,3,0,18,11,18,2,160,107,1
+Central Cass Public School,ND-09017-13542,380409000163,23012,Comp Programming,80,52,18,11,18,2,160,107,1
+Central Cass Public School,ND-09017-13543,380409000100,23012,Comp Programming,13,5,18,11,18,2,160,107,1
+Northern Cass Public School,ND-09097-61213,380004400138,23012,Comp Programming,37,21,5,3,2,0,84,40,
+Northern Cass Public School,ND-09097-61212,380004400120,23012,Comp Programming,37,21,5,3,2,0,84,40,
+Northern Cass Public School,ND-09097-61211,380004400119,23012,Comp Programming,2,0,5,3,2,0,84,40,
+Ellendale Public School,ND-11040-23331,380609000177,23582,AP Computer Science Principles 10-12,10,10,3,13,4,0,91,19,2
+Ellendale Public School,ND-11040-23333,380609000178,23582,AP Computer Science Principles 10-12,19,9,3,13,4,0,91,19,2
+Ellendale Public School,ND-11040-23333,380609000178,23580,AP Comp Sci A,10,10,3,13,4,0,91,19,2
+Ellendale Public School,ND-11040-23331,380609000177,23580,AP Comp Sci A,11,2,3,13,4,0,91,19,2
+Ellendale Public School,ND-11040-23333,380609000178,23012,Comp Programming,72,36,3,13,4,0,91,19,2
+Ellendale Public School,ND-11040-23331,380609000177,23012,Comp Programming,19,9,3,13,4,0,91,19,2
+Strasburg Public School,ND-15015-82483,380001600615,27120,Introduction to Programming Languges,20,12,0,2,1,0,51,11,
+Strasburg Public School,ND-15015-82481,380001600614,27120,Introduction to Programming Languges,13,6,0,2,1,0,51,11,
+Strasburg Public School,ND-15015-82483,380001600615,27122,Program Ess-Vis Bas,0,0,0,2,1,0,51,11,
+Strasburg Public School,ND-15015-82481,380001600614,27122,Program Ess-Vis Bas,13,6,0,2,1,0,51,11,
+Linton Public School,ND-15036-52883,380001700371,10411,Robotics Engineering,22,10,4,3,4,3,89,22,
+Linton Public School,ND-15036-52881,380001700370,10411,Robotics Engineering,50,29,4,3,4,3,89,22,
+Carrington High School,ND-16049-13043,380005300088,23012,Comp Programming,40,26,4,2,3,0,39,24,1
+Central High School,ND-18001-32393,380813000254,27122,Program Ess-Vis Bas,13,5,84,106,97,7,306,156,14
+Central High School,ND-18001-32393,380813000254,10411,Robotics Engineering,8,5,84,106,97,7,306,156,14
+Red River High School,ND-18001-73603,380813000261,10411,Robotics Engineering,11,7,82,54,54,4,182,147,68
+Red River High School,ND-18001-73603,380813000261,27122,Program Ess-Vis Bas,176,90,82,54,54,4,182,147,68
+Northwood Public School,ND-18129-61341,381434000508,27122,Program Ess-Vis Bas,50,26,1,6,5,1,92,38,1
+Northwood Public School,ND-18129-61343,381434000509,27122,Program Ess-Vis Bas,22,13,1,6,5,1,92,38,1
+New England Public School,ND-21009-60263,380002700487,23580,AP Comp Sci A,19,10,1,3,22,1,134,24,
+New England Public School,ND-21009-60261,380002700486,23580,AP Comp Sci A,28,12,1,3,22,1,134,24,
+Gackle-Streeter Public School,ND-24056-30133,380004300231,27120,Introduction to Programming Languges,9,9,0,6,1,0,43,13,
+Gackle-Streeter Public School,ND-24056-30131,380004300230,27120,Introduction to Programming Languges,8,4,0,6,1,0,43,13,
+Velva Public School,ND-25001-90033,381704000591,27120,Introduction to Programming Languges,76,30,3,4,4,1,103,45,
+Velva Public School,ND-25001-90031,381704000590,27120,Introduction to Programming Languges,44,20,3,4,4,1,103,45,
+Velva Public School,ND-25001-90033,381704000591,23012,Comp Programming,3,3,3,4,4,1,103,45,
+Velva Public School,ND-25001-90031,381704000590,23012,Comp Programming,30,16,3,4,4,1,103,45,
+Velva Public School,ND-25001-90033,381704000591,11041,Integrated Math for Computer Science (Math) 9-12,40,21,3,4,4,1,103,45,
+Velva Public School,ND-25001-90031,381704000590,11041,Integrated Math for Computer Science (Math) 9-12,44,20,3,4,4,1,103,45,
+Zeeland Public School,ND-26004-98491,382040000717,27120,Introduction to Programming Languges,4,0,0,0,0,0,18,5,
+Zeeland Public School,ND-26004-98493,382040000718,27120,Introduction to Programming Languges,16,6,0,0,0,0,18,5,
+Watford City High School,ND-27001-56063,381254000415,27510,AP Computer Science Principles (CTE) 10-12,16,4,25,80,25,1,98,47,33
+Alexander Public School,ND-27002-03151,380176000003,10411,Robotics Engineering,44,18,7,16,7,0,50,25,1
+Alexander Public School,ND-27002-03153,380176000004,10411,Robotics Engineering,44,18,7,16,7,0,50,25,1
+Max Public School,ND-28050-55191,381235000401,23015,Comp Program Adv,6,2,9,1,14,0,68,21,
+Max Public School,ND-28050-55193,381235000402,23015,Comp Program Adv,22,14,9,1,14,0,68,21,
+Hazen High School,ND-29003-35293,380003100294,27120,Introduction to Programming Languges,39,22,1,2,16,1,46,15,6
+Hazen High School,ND-29003-35293,380003100294,27122,Program Ess-Vis Bas,9,5,1,2,16,1,46,15,6
+Beulah High School,ND-29027-09243,380003200032,27120,Introduction to Programming Languges,38,17,10,6,11,1,43,21,1
+Glen Ullin Public School,ND-30048-31653,380783000236,27120,Introduction to Programming Languges,7,7,5,7,6,0,60,5,
+Glen Ullin Public School,ND-30048-31651,380783000235,27120,Introduction to Programming Languges,28,16,5,7,6,0,60,5,
+Glen Ullin Public School,ND-30048-31653,380783000236,27122,Program Ess-Vis Bas,31,19,5,7,6,0,60,5,
+Glen Ullin Public School,ND-30048-31651,380783000235,27122,Program Ess-Vis Bas,31,19,5,7,6,0,60,5,
+New Salem-Almont High School,ND-30049-60333,380039200493,27120,Introduction to Programming Languges,25,10,0,2,2,0,29,10,
+New Salem-Almont High School,ND-30049-60333,380039200493,27122,Program Ess-Vis Bas,17,7,0,2,2,0,29,10,
+New Town High School,ND-31001-60393,381392000015,27120,Introduction to Programming Languges,12,5,6,23,407,0,221,74,38
+New Town High School,ND-31001-60392,381392000496,27120,Introduction to Programming Languges,31,17,6,23,407,0,221,74,38
+Parshall High School,ND-31003-69253,381494000528,27122,Program Ess-Vis Bas,15,9,0,7,75,1,58,16,
+Dakota Prairie High School,ND-32001-88263,380004000649,27120,Introduction to Programming Languges,41,21,1,5,4,1,38,17,1
+Cavalier Public School,ND-34006-13231,380001800094,27120,Introduction to Programming Languges,30,13,6,32,9,0,128,80,13
+Cavalier Public School,ND-34006-13233,380001800089,27120,Introduction to Programming Languges,24,13,6,32,9,0,128,80,13
+North Border-Pembina Public School,ND-34100-69823,380005400530,23012,Comp Programming,8,4,6,9,5,0,27,20,2
+North Border-Pembina Public School,ND-34100-69821,380005400529,23012,Comp Programming,12,6,6,9,5,0,27,20,2
+Rugby High School,ND-35005-76143,381613000563,27510,AP Computer Science Principles (CTE) 10-12,2,2,2,0,15,0,65,34,1
+Lidgerwood Public School,ND-39028-52601,381114000365,23580,AP Comp Sci A,16,7,1,8,8,0,58,31,
+Lidgerwood Public School,ND-39028-52603,381114000366,23580,AP Comp Sci A,12,2,1,8,8,0,58,31,
+Wahpeton High School,ND-39037-91703,381902000666,27510,AP Computer Science Principles (CTE) 10-12,16,7,9,24,19,2,102,36,11
+Wahpeton High School,ND-39037-91703,381902000666,27125,Fund of JAVA Program,85,41,9,24,19,2,102,36,11
+Wyndmere Public School,ND-39042-96271,382031000712,27120,Introduction to Programming Languges,28,14,0,19,4,0,46,26,1
+Wyndmere Public School,ND-39042-96273,382031000713,27120,Introduction to Programming Languges,28,14,0,19,4,0,46,26,1
+Richland Jr-Sr High School,ND-39044-61203,380003600553,27120,Introduction to Programming Languges,24,9,0,1,2,0,26,19,
+Rolette Public School,ND-40029-75553,381605000559,27120,Introduction to Programming Languges,1,1,0,3,65,0,80,21,
+Rolette Public School,ND-40029-75551,381605000558,27120,Introduction to Programming Languges,1,1,0,3,65,0,80,21,
+Milnor Public School,ND-41002-57193,381293000427,23012,Comp Programming,10,6,3,6,2,0,54,35,
+Milnor Public School,ND-41002-57191,381293000426,23012,Comp Programming,10,6,3,6,2,0,54,35,
+North Sargent Public School,ND-41003-61301,381429000504,23012,Comp Programming,9,3,0,12,3,0,90,27,1
+North Sargent Public School,ND-41003-61303,381429000505,23012,Comp Programming,25,17,0,12,3,0,90,27,1
+South Heart Public School,ND-45009-80603,381713000593,23015,Comp Program Adv,27,12,4,16,2,0,73,38,4
+South Heart Public School,ND-45009-80601,381713000592,23015,Comp Program Adv,10,1,4,16,2,0,73,38,4
+Richardton-Taylor Public School,ND-45034-74333,380004800551,10411,Robotics Engineering,46,18,2,9,2,1,66,33,
+Richardton-Taylor Public School,ND-45034-74331,380004800893,10411,Robotics Engineering,19,12,2,9,2,1,66,33,
+Richardton-Taylor Public School,ND-45034-74333,380004800551,27120,Introduction to Programming Languges,8,8,2,9,2,1,66,33,
+Richardton-Taylor Public School,ND-45034-74331,380004800893,27120,Introduction to Programming Languges,5,1,2,9,2,1,66,33,
+Jamestown High School,ND-47001-45703,380002100310,27510,AP Computer Science Principles (CTE) 10-12,4,4,30,23,20,4,154,84,16
+Fordville-Lankin Public School,ND-50005-28913,380005600225,27120,Introduction to Programming Languges,9,3,0,5,0,0,10,2,8
+Fordville-Lankin Public School,ND-50005-28911,380005600224,27120,Introduction to Programming Languges,11,3,0,5,0,0,10,2,8
+Park River Area Public School,ND-50008-92081,380040100145,27120,Introduction to Programming Languges,25,11,1,14,6,2,135,42,4
+Park River Area Public School,ND-50008-92083,380040100526,27120,Introduction to Programming Languges,7,7,1,14,6,2,135,42,4
+Central Campus School,ND-51001-57503,381303000433,27120,Introduction to Programming Languges,47,20,73,90,57,3,253,115,14
+Magic City Campus High School,ND-51001-57523,381303000442,27120,Introduction to Programming Languges,1,1,58,57,45,3,171,114,22
+Des Lacs-Burlington High School,ND-51007-88233,381873000647,27122,Program Ess-Vis Bas,8,2,9,3,8,0,55,10,
+South Prairie Public School,ND-51070-80681,381717000594,27120,Introduction to Programming Languges,21,10,17,16,12,0,99,50,6
+South Prairie Public School,ND-51070-80683,381717000875,27120,Introduction to Programming Languges,21,10,17,16,12,0,99,50,6
+Berthold Public School,ND-51161-09161,380005800029,27120,Introduction to Programming Languges,17,4,1,3,2,0,23,30,
+Berthold Public School,ND-51161-09163,380005800030,27120,Introduction to Programming Languges,21,9,1,3,2,0,23,30,
+Berthold Public School,ND-51161-09161,380005800029,27122,Program Ess-Vis Bas,18,9,1,3,2,0,23,30,
+Berthold Public School,ND-51161-09163,380005800030,27122,Program Ess-Vis Bas,18,9,1,3,2,0,23,30,
+North Shore Plaza Public School,ND-51161-71083,380005800507,27122,Program Ess-Vis Bas,9,2,3,17,23,3,29,22,6
+North Shore Plaza Public School,ND-51161-71081,380005800537,27122,Program Ess-Vis Bas,16,7,3,17,23,3,29,22,6
+North Shore Plaza Public School,ND-51161-71083,380005800507,27120,Introduction to Programming Languges,13,5,3,17,23,3,29,22,6
+North Shore Plaza Public School,ND-51161-71081,380005800537,27120,Introduction to Programming Languges,9,2,3,17,23,3,29,22,6
+Fessenden-Bowdon Public School,ND-52025-27923,380004900213,23015,Comp Program Adv,22,16,3,0,2,0,39,20,
+Fessenden-Bowdon Public School,ND-52025-27921,380004900212,23015,Comp Program Adv,22,16,3,0,2,0,39,20,
+Williston High School,ND-53001-94163,381988000695,23580,AP Comp Sci A,200,115,95,165,92,13,255,152,81
+Williston High School,ND-53001-94163,381988000695,23582,AP Computer Science Principles 10-12,31,17,95,165,92,13,255,152,81
+Williston High School,ND-53001-94163,381988000695,27120,Introduction to Programming Languges,52,28,95,165,92,13,255,152,81
+Tioga High School,ND-53015-84633,380003900635,27120,Introduction to Programming Languges,36,17,9,33,0,0,42,32,9
+Williston Trinity Christian School,#N/A,A9303500,27120,Introduction to Programming Languges,,,11,14,9,1,,,

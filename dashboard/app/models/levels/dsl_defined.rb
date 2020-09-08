@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -176,7 +176,8 @@ class DSLDefined < Level
   end
 
   def dsl_text
-    self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
+    path = file_path
+    self.class.decrypt_dsl_text_if_necessary(File.read(path)) if path && File.exist?(path)
   end
 
   def assign_attributes(params)

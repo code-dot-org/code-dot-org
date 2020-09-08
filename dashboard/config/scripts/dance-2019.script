@@ -1,7 +1,7 @@
-tts true
 hidden false
+tts true
 
-stage 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party'
 level 'Dance_2019_01'
 level 'Dance_2019_02'
 level 'Dance_2019_03'
@@ -12,3 +12,4 @@ level 'Dance_2019_07'
 level 'Dance_2019_08'
 level 'Dance_2019_09'
 level 'Dance_2019_10'
+

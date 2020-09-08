@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Sepertinya kami mengalami kesulitan saat memuat animasi \"{animationName}\". Pastikan kamu tersambung dengan internet dan coba muat ulang halaman ini. Kalau masih bermasalah, ada kemungkinan animasi ini rusak. Dalam keadaan seperti itu, kamu bisa lanjut dengan menghapus animasi-nya.",
   "reinfFeedbackMsg": "Kamu selesai! Klik \"Lanjutkan\" untuk maju ke level selanjutnya.",
   "shareGame": "Bagikan permainanmu:",

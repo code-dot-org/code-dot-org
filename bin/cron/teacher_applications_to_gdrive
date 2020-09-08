@@ -1,26 +1,15 @@
 #!/usr/bin/env ruby
-require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/google_drive'
+require 'cdo/google/sheet'
 require 'honeybadger/ruby'
 
-# Squash an unhelpful warning that's causing a Honeybadger error
-# see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
-class WebAgent
-  class Cookie < HTTP::Cookie
-    def domain
-      original_domain
-    end
-  end
-end
-
-# Writes teacher application data for this year into
+# Returns a set of teacher application data to be written to
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
-def update_sheets(drive)
-  # Update application sheet
+def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
                      free_reduced_lunch_percent urm_percent accepted_at)]
@@ -56,62 +45,18 @@ def update_sheets(drive)
     ]
   end
 
-  drive.update_sheet applications, CDO.applications_2020_2021_gsheet_key, 'all_apps (auto)'
-
-  # Update metadata sheet
-  last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
-  metadata = [
-    ['AUTOMATION METADATA'],
-    [''],
-    ['The tabs "all_apps (auto)" and "meta (auto)" are auto-generated;'],
-    ['Any edits you make to them (besides formatting) may be lost.'],
-    [''],
-    ['Last updated:', last_updated.strftime('%Y-%m-%d %l:%M%P GMT%:::z')],
-    ['Written by:', CDO.gdrive_export_secret.client_email],
-    ['Teacher applications:', applications.length - 1],
-    [''],
-    ['Parts of this Google Sheet are auto-populated from our live application by an automated process.'],
-    ["The sheet is shared with a \"service account\" that updates it on the application's behalf."],
-    ["(Technical Details: https://github.com/code-dot-org/code-dot-org/pull/32597)"],
-  ]
-
-  drive.update_sheet metadata, CDO.applications_2020_2021_gsheet_key, 'meta (auto)'
-end
-
-def notify_of_external_sharing(drive)
-  # List of external emails that we can share this document with.
-  # This list is saved in DCDO as an array. To append a new value to this list:
-  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
-  allowed_list = DCDO.get('external_emails_with_application_data_access', []) << CDO.gdrive_export_secret.client_email
-
-  acl = drive.get_spreadsheet_acl CDO.applications_2020_2021_gsheet_key
-
-  external_emails = []
-  acl.each do |entry|
-    next if entry.email_address.blank? ||
-      entry.email_address.end_with?('@code.org') ||
-      allowed_list.include?(entry.email_address)
-
-    external_emails << entry.email_address
-  end
-
-  if external_emails.present?
-    email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
-    error_msg = "Document containing PII information is shared to "\
-      "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
-      "Please check with PLC team that this is intentional!"
-
-    Honeybadger.notify error_msg
-    puts error_msg
-  end
+  applications
 end
 
 def main
-  # Uses a Google Cloud service account to access Google Drive
-  drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+  # This list is saved in DCDO as an array. To append a new value to this list:
+  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
+  allowed_list = DCDO.get('external_emails_with_application_data_access', [])
 
-  update_sheets(drive)
-  notify_of_external_sharing(drive)
+  # Uses a Google Cloud service account to access Google Drive
+  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
+  sheet.export(tab_name: 'all_apps', rows: get_rows)
+  sheet.notify_of_external_sharing(allowed_list)
 end
 
 main

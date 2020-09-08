@@ -1,4 +1,10 @@
 {
+  "clicked": "kliknięto",
+  "clickedSprite": "kliknięty duszek",
+  "subject": "temat ",
+  "subjectSprite": "temat duszka",
+  "object": "obiekt",
+  "objectSprite": "obiekt duszek",
   "errorLoadingAnimation": "Wygląda na to, że mamy problem z załadowaniem Twojej animacji \"{animationName}\". Upewnij się, że Twoje połączenie z internetem jest poprawne i spróbuj przeładować stronę. Jeżeli problem nadal występuje, możliwym jest, że animacja jest uszkodzona. W tym przypadku, aby kontynuować musisz usunąć animację.",
   "reinfFeedbackMsg": "Zakończyłeś! Kliknij \"Kontynuuj\", aby przejść na kolejny poziom.",
   "shareGame": "Udostępnij swoją grę:",

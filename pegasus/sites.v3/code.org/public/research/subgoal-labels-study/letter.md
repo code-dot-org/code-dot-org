@@ -145,11 +145,11 @@ Then the hard work of our research begins. We plan to share any and all findings
 
 Student work isn't lost, but you will have to directly go to the original URL to see it, and your teacher dashboard will only show progress for the subgoals version of Unit 3.
 
-Once you activate the subgoals version of Unit 3, it effectively switches you and any of your CSP students to using the subgoals version with a clean slate. Any student work in the original version of Unit 3 is preserved and students can see their work by entering the original Unit 3 URL directly: [studio.code.org/s/csp3](studio.code.org/s/csp3)
+Once you activate the subgoals version of Unit 3, it effectively switches you and any of your CSP students to using the subgoals version with a clean slate. Any student work in the original version of Unit 3 is preserved and students can see their work by entering the original Unit 3 URL directly: [studio.code.org/s/csp3-2017](studio.code.org/s/csp3-2017)
 
 From there, they can revisit any code, and even copy/paste into the subgoals version if they like.
 
-As the teacher, your teacher dashboard will always show student progress for the subgoals version only (unless you opt-out of the study, in which case you go back to using the original version of Unit 3). If you need to look at student work that has been done previously in the original version of Unit 3, you can visit the level directly via the URL at [studio.code.org/s/csp3](studio.code.org/s/csp3) and use the blue "teacher tray" to find an individual student's work.
+As the teacher, your teacher dashboard will always show student progress for the subgoals version only (unless you opt-out of the study, in which case you go back to using the original version of Unit 3). If you need to look at student work that has been done previously in the original version of Unit 3, you can visit the level directly via the URL at [studio.code.org/s/csp3-2017](studio.code.org/s/csp3-2017) and use the blue "teacher tray" to find an individual student's work.
 
 <a name="Can I talk about"> </a>
 

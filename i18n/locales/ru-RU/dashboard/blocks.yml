@@ -971,14 +971,18 @@ ru:
         text: Спрайт {SPRITE} Начинается {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
         options:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} Касается {SPRITE2}"
@@ -1006,8 +1010,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
             '"tint"': оттенок
       gamelab_getThisSprite:
@@ -1015,8 +1019,46 @@ ru:
         options:
           CHOICE:
             '"this"': Это
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+            '"a"': a
+            '"b"': B
+            '"c"': C
+            '"d"': D
+            '"e"': E
+            '"f"': f
+            '"g"': g
+            '"h"': H
+            '"i"': Я
+            '"j"': J
+            '"k"': K
+            '"l"': L
+            '"m"': М
+            '"n"': 'N'
+            '"o"': O
+            '"p"': P
+            '"q"': q
+            '"r"': R
+            '"s"': s
+            '"t"': T
+            '"u"': U
+            '"v"': V
+            '"w"': Ж
+            '"x"': x
+            '"y"': у
+            '"z"': Z
       gamelab_isTouchingEdges:
         text: "{SPRITE} трогательно края"
       gamelab_jumpTo:
@@ -1089,6 +1131,10 @@ ru:
             '"West"': Запад
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
+      gamelab_objectSpritePointer:
+        text: Нажал {SPRITE}
+      gamelab_patrollingUpDown:
+        text: патрулирование вверх и вниз
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1139,8 +1185,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       gamelab_setSizes:
         text: установить {SPRITE} {PROPERTY} на {N}%
@@ -1166,12 +1212,18 @@ ru:
           CONDITION:
             '"when"': когда
             '"while"': пока
+      gamelab_subjectSpritePointer:
+        text: Нажал {SPRITE}
+      gamelab_tumbling:
+        text: акробатика
       gamelab_turn:
         text: Свою очередь {SPRITE} {DIRECTION} {N} Градусов
         options:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
+      gamelab_updateTitleWithColor:
+        text: показать заголовок страницы {BREAK} заголовок {TITLE} цвет {COLOR}
       gamelab_whenDownArrow:
         text: когда стрелка вниз нажата
       gamelab_whenKey:
@@ -1240,8 +1292,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_createNewSprite:
         options:
@@ -1262,8 +1314,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupChangeAnim:
         text: поменяйте {SELECT} {COSTUME} на {COSTUME2}
@@ -1280,8 +1332,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupCreateNewSprite:
         text: сделать новый {COSTUME} в {LOCATION}
@@ -1315,8 +1367,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupRemoveAllBehaviors:
         text: Остановить {SELECT} {COSTUME} Поведения
@@ -1345,8 +1397,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupSetTint:
         text: изменить цвет {SELECT} {COSTUME} на {COLOR}
@@ -1436,8 +1488,8 @@ ru:
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
+            '"x"': позиция на оси абсцисс (x)
+            '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_showScoreboard:
         options:
@@ -1567,6 +1619,7 @@ ru:
       aalab_setupStory:
         text: История установки
       aalab_starwars_playSound:
+        text: Воспроизвести{OPTION}звук
         options:
           OPTION:
             '"random"': случайный

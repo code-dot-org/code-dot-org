@@ -864,6 +864,10 @@
         text: oppsett
       Dancelab_whenSetup2:
         text: oppsett
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -904,8 +908,40 @@
         options:
           CHOICE:
             '"this"': denne
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} hopp til {LOCATION}"
       gamelab_keyPressed:

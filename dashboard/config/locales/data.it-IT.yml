@@ -620,8 +620,8 @@ it:
         C2_binary_bracelets: Braccialetti Binari
         C2_relay_programming: Programmazione a staffetta
         C2_paper_airplanes: Aeroplani di carta
-        C2_digital_footprint: La tua impronta digitale
-        C2_digital_footprint_v2: La tua impronta digitale
+        C2_digital_footprint: Segui le tracce digitali
+        C2_digital_footprint_v2: Segui le tracce digitali
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: Artista - Introduzione
         C3_artist_functions: 'Artista: Funzioni'
@@ -641,7 +641,7 @@ it:
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
         C4_intro: Introduzione
-        C4_loops_zombie: Ripetizioni
+        C4_loops_zombie: Cicli
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
@@ -709,7 +709,7 @@ it:
         csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
         csp_applab_functions: Introduzione alle Funzioni
         csp_applab_functions_parameters: Funzioni con parametri
-        csp_applab_loops: Ripetizioni
+        csp_applab_loops: Cicli
         csp_concept_rgb: Un po ' sui pixel
         csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
         csp_pixelation_color_1: Color pixelation widget - parte 1
@@ -811,7 +811,7 @@ it:
         CSF_if_allskins: Il blocco "se"
         CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
         CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
-        CSF_loops_AB: Ripetizioni
+        CSF_loops_AB: Cicli
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: Dichiarazioni Se/altrimenti
@@ -836,7 +836,8 @@ it:
         what_is_cs: Cos'è l'informatica?
         repeat_block: Uso del blocco Ripeti
         lesson_planning: Pianificazione Lezione
-        opd_closing: 'Insegnare i Fondamenti di CS: Chiusura & Passi Successivi'
+        opd_closing: 'Fondamenti di Informatica - Corso per insegnanti: Conclusione
+          & Passi successivi'
         why_unplugged_lessons: Essere "scollegato"
         writing_first_program: Scrivi il tuo primo programma per computer
         conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
@@ -854,7 +855,7 @@ it:
         csd_applab_loops: Loop in Sviluppo App
         CSF_Going_Places_Safely: Il mio quartiere digitale
         CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
-        CSF_Spritelab_MakeSprite_v2: Come fare un Personaggio
+        CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
         csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia

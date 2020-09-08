@@ -176,6 +176,13 @@ el:
     email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
     email_preference_yes: Ναι
     email_preference_no: Όχι
+    parent_account_checkbox: Είμαι γονέας/κηδεμόνας και κάνω την εγγραφή για λογαριασμό
+      του τέκνου μου
+    parent_account_email_progress_permission: Μπορούμε να σας αποστείλουμε ηλεκτρονικά
+      μηνύματα με περιστασιακές ενημερώσεις για την πρόοδο και τα έργα του παιδιού
+      σας, καθώς και ενημερώσεις σχετικά με το τμήμα τους και την επιστήμη των υπολογιστών;
+      [(Δείτε την πολιτική απορρήτου μας)](%{privacy_policy_url})
+    parent_account_email_label: Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα
   school_info:
     title: Πληροφορίες σχολείου (προαιρετικό)
     school_country: Χώρα σχολείου
@@ -310,6 +317,8 @@ el:
       learn: Εκμάθηση
       teach: Διδασκαλία
       about: Σχετικά
+      legal_privacy: Πολιτική Απορρήτου
+      legal_tos: Όροι
     user:
       classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
@@ -415,9 +424,14 @@ el:
     update_email: Ενημέρωση
     for_parents_and_guardians: Για Γονείς και Κηδεμόνες
     link_a_parent_email: Συνδέστε μία διεύθυνση email γονέα/κηδεμόνα με αυτόν τον
-      λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού σας
+      λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού σας.
+      Θα μπορείτε να χρησιμοποιείτε επίσης αυτή την ηλεκτρονική διεύθυνση για την
+      ανάκτηση κωδικών πρόσβασης.
     parent_guardian_email_label: Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα
     none: Κανένα
+    only_one_parent_email_supported_warning: 'Σημείωση: μπορούμε να υποστηρίξουμε
+      μόνο μία ηλεκτρονική διεύθυνση γονέα/κηδεμόνα ανά λογαριασμό φοιτητή αυτή τη
+      στιγμή.'
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε
@@ -680,24 +694,6 @@ el:
     widgets:
       audience: Ηλικίες 14+
       cta: Μάθε πώς
-  gallery:
-    students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
-    students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
-    picture_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές σχεδίασαν <b>%{count}</b>
-      εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε κλικ επάνω στις εικόνες για
-      να δείτε το κάθε πρόγραμμα σε δράση.
-    activity_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές δημιούργησαν
-      <b>%{count}</b> εφαρμογές και εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε
-      κλικ επάνω στις εικόνες και τα στιγμιότυπα για να δείτε το κάθε πρόγραμμα σε
-      δράση.
-    want_to_make_your_own: Θέλετε να φτιάξετε το δικό σας;
-    more: Επιπλέον &rarr;
-    caption_by_name_age: από %{name}, ηλικία %{age}
-    caption_time_ago: "%{time_ago} πριν"
-    header: Συλλογή φωτογραφιών
-    header_playlab: Εργαστήριο Παιχνιδιού
-    header_artist: Καλλιτέχνης
-    report_abuse: Αναφορά κατάχρησης
   landing:
     report_bug: Αναφορά σφάλματος
     support: Λάβετε βοήθεια
@@ -862,29 +858,6 @@ el:
         acknowledge: Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε
           σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy
           και το %{link_start_tos}Terms του Service%{link_end}
-  flex_category:
-    required: Επισκόπηση
-    csf_digcit: Ψηφιακή υπηκοότητα
-    csf_jigsaw: Παζλ
-    csf_loops: Βρόχοι
-    csf_events: Συμβάντα
-    csf_binary: Δυαδικό
-    csf_conditionals: Συνθήκες
-    csf_spritelab: Sprite Lab
-    csf_nested_loops: Φωλιασμένες Επαναλήψεις
-    csf_functions: Συναρτήσεις
-    csf_variables: Μεταβλητές
-    csf_for_loops: Βρόχοι Για
-    csf_internet: Διαδίκτυο
-    csf_warmup: Ζέσταμα
-    cspSurvey: Έρευνα
-    csp_variables: Μεταβλητές
-    csp_conditionals: Συνθήκες
-    csp_functions: Συναρτήσεις
-    csp_project: Έργο
-    csp_lists: Λίστες
-    csp_loops: Βρόχοι
-    csp_libraries: Βιβλιοθήκες
   external_links:
     disclaimer: Αποποίηση ευθυνών
   hoc_download:
@@ -920,6 +893,7 @@ el:
       email: Ηλεκτρονικό ταχυδρομείο
       school_name: Όνομα σχολείου
       school_country: Χώρα σχολείου
+      colombian_school_name: Όνομα σχολείου
     form_entries:
       gender:
         male: Αγόρι
@@ -985,3 +959,9 @@ el:
     logout: Αποσύνδεση
     true: Ναι
   copy: Αντιγραφή
+  parent_email_banner:
+    text: "**Είστε γονέας ή κηδεμόνας;** Συνδέστε την ηλεκτρονική σας διεύθυνση με
+      αυτόν τον λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού
+      σας!"
+    link_your_email: Συνδέστε την ηλεκτρονική σας διεύθυνση
+    not_now: Όχι τώρα

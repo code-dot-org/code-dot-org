@@ -5,12 +5,30 @@ cn:
   language: 英文
   front_title: "%{campaign_date}，加入有史以来最大的学习活动"
   coming_soon: 即将推出
-  campaign_date_start_short: 12 月 4 日
-  campaign_date_start_long: 12 月 4 日
-  campaign_date_short: 12 月 4-10 日
-  campaign_date_full: 12 月 4-10 日
-  campaign_date_year: '2017'
-  campaign_date_full_year: 2017年12月4日至12月10日
+  campaign_date_start_short: 12月7日
+  campaign_date_start_long: 12月7日
+  campaign_date_short: 12月7-13日
+  campaign_date_full: 12月7-13日
+  campaign_date_year: '2020'
+  campaign_date_full_year: 2020年12月7日至12月13日
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2020'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2020'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: 学习计算机科学，改变世界！
   hoc2019_header_line1_mobile: 学习计算机科学。
   hoc2019_header_line2_mobile: 改变世界！
@@ -167,8 +185,10 @@ cn:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -434,7 +454,7 @@ cn:
   signup_email_preference_no: 不是
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: 如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。
-  signup_registration_deadline: Hour of Code 的注册会在12月11日关闭
+  signup_registration_deadline: Hour of Code 的注册会在12月13日关闭.
   signup_name_placeholder: 您的姓名
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例如，林肯高中
@@ -782,7 +802,7 @@ cn:
     the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: 机器人
   learn_robotics_banner_blurb: 有机器人？使用机器人执行下面的活动，为不同年龄的学生打造充实的“编程一小时”！
-  tutorial_dance2019_name: 舞蹈派对 2019
+  tutorial_dance2019_name: 舞蹈派对
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 编写你专属的运动游戏
@@ -2257,8 +2277,8 @@ cn:
   tutorial_itchbounceball_longdescription: "我们将带您通过用 Scratch 视觉编程语言来介绍 Itch。\n              \n本课为学生提供的代码视频和文本方向需要添加让球可笑地在屏幕上跳动。\n
     \             \n一旦学生完成了这项活动，就有机会探索其他可以进行的改变和活动。没有一个设定的目标或结果，因为它是一个开放的学习环境，但是这些刚刚开始代码的学生才能想出惊人的计划！\n
     \             \n所有指令都包含在 Itch 的环境中，所以不需要切换屏幕来跟随项目。建议戴上耳机。"
-  tutorial_vidclim_longdescription: "学生们研究一个有关地球气候的事实，从事科学家和艺术家在应对气候变化方面的工作。学生们进行研究，并计划视频分享他们的事实。
-    \n\n视频可以是关于 \n了解气候变化及其影响 \n公众对气候变化影响的反应 \n气候变化如何影响日常生活 \n你能采取什么行动来改变现状？"
+  tutorial_vidclim_longdescription: 学生们研究一个有关地球气候的事实，从事科学家和艺术家在应对气候变化方面的工作。学生们进行研究，并制作视频分享他们的发现。
+    视频可以关于：了解气候变化及其影响、公众对气候变化影响的反应、气候变化如何影响日常生活、你能采取什么行动来改变现状等。
   tutorial_matlab_longdescription: 学习代码是一个吸引人的在线互动教程，在里面你可以学习如何编写代码。用 MATLAB 找出最接近和朋友见面的地点是电影院、购物中心还是咖啡馆。将问题分解成更小的块，并在一路上学习基本的编程概念。到了小时的末尾，创建一个算法来找到你朋友的最短路径!
   tutorial_flap_longdescription: 使用拖拽式编程制作您专属的《像素鸟》游戏，并为它定制多种不同外观（像素鲨鱼、像素圣诞老人等等）。一键将游戏添加到您的手机上。
   tutorial_galaxy_longdescription: '使用你的安卓系统的智能手机, 探索遥远的星系! 在 #GalaxyGameJam 您可以创建您自己的安卓系统的应用程序.
@@ -2267,9 +2287,16 @@ cn:
 '
   tutorial_inf_longdescription: 通过游戏实验室，用《迪士尼无限世界》中的人物创作一个故事或一款游戏。
   tutorial_tynkersol_longdescription: 编程一个我们太阳系的交互式模型。这个项目提供一步一步的指导，引导你创建一个围绕太阳运行的行星的模拟，然后添加每颗行星在点击时弹出的事实。
-  tutorial_itchg_longdescription: "Name-IT，你创造了一个认可的游戏！\n\n结束的项目有学生创造一个游戏来命名澳大利亚的国家！您将首先浏览并按照指示创建一个游戏来标记水循环的三个阶段。
-    \n\n你会做一个完整的运行游戏，包括得分！\n\n从编码方面，您将了解变量，条件，列表，串联字符串等等。 这些都是编码技术，您可以在其他项目中重复使用，随着您的进步建立新的编码技巧！\n\n您可以通过添加自己的图像和标签（以及许多其他额外的项目选项，乐趣永远不会结束）进一步采取行动。
-    建议使用耳机。"
+  tutorial_itchg_longdescription: |-
+    Name-IT，你创造了一个受到认可的游戏！
+
+    项目尾声是由学生创造一个游戏来命名澳大利亚的州郡！
+
+    您将首先浏览并按照指示创建一个游戏来标记水循环的三个阶段。你会做一个完整的运行游戏，包括计分！
+
+    在编程方面，您将了解变量、条件、列表、串联字符串等等。这些都是编程技术，您可以在其他项目中重复使用，随着您的进步建立新的编程技巧！
+
+    您可以通过添加自己的图像和标签（以及许多其他额外的项目选项，乐趣永远不会结束）进一步采取行动。建议使用耳机。
   tutorial_como_longdescription: Help a cute monkey catch bananas in 30 fun-filled
     coding challenges! As you play, you will meet different animals that will guide
     you along the way. You will use code and think outside the box to win as many
@@ -2281,10 +2308,8 @@ cn:
   tutorial_art_longdescription: 与“小艺术家”一起画出炫酷的图画和设计！
   tutorial_tynkerbrick_longdescription: 使用Tynker的物理引擎来制作这款经典街机游戏的个性化版本。 按下箭头键，开始编程拨片来移动，然后添加一个球和一些砖块。
     您将通过添加球，砖和桨的自定义资源来个性化游戏。
-  tutorial_itchbio_longdescription: "Name-IT 您创造了一个识别游戏! \n\n创建一个游戏来命名生物细胞的各个部分。在您做游戏的时候学习细胞的各个部分,
-    并在需要刷新内存的情况下多次播放！ \n\n您将首先要走过一条路线并按照指示创建一个游戏来标记水循环的三阶段。您会做一个功能全面的游戏，包括得分！ \n\n从编码方面,
-    您将了解变量、条件、列表、串联字符串等等。这些都是编码技术, 您将能够在其他项目中重复使用, 随着您的进展以建立新的编码技能! \n\n您可以通过添加自己的图像和标签
-    (还有许多其他的项目选项，乐趣永远不会结束) 进一步采取的活动。建议戴耳机。"
+  tutorial_itchbio_longdescription: "Name-IT，你创造了一个受到认可的游戏！\n\n创建一个游戏来命名生物细胞的各个部分。在您做游戏的时候学习细胞的各个部分，并通过多次游玩来记住知识！
+    \n\n您将首先浏览并按照指示创建一个游戏来标记水循环的三个阶段。你会做一个完整的运行游戏，包括计分！\n\n在编程方面，您将了解变量、条件、列表、串联字符串等等。这些都是编程技术，您可以在其他项目中重复使用，随着您的进步建立新的编程技巧！\n\n您可以通过添加自己的图像和标签（以及许多其他额外的项目选项，乐趣永远不会结束）进一步采取行动。建议使用耳机。"
   tutorial_itchj_longdescription: "我们的跳跃活动为您提供编码技巧，让一个角色跳转到平台上，在许多街机游戏中使用。 \n\n使用跳跃技巧和创造你自己的游戏目标。
     \n\n这将使用笛卡尔坐标系，这样你就可以在这里学到一些屏幕坐标。 \n\n享受与 Itch 学习所有关于跳跃的乐趣！建议使用耳机。"
   tutorial_tickleo_longdescription: Tickle，是一个用户容易掌握的编码应用程序，你可以很容易地用多种方式编程 Orca，只需拖放编码块，它就会遵循创建的命令。
@@ -2355,7 +2380,6 @@ cn:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: 用这个电子明信片开始学习HTML和CSS是容易和有趣的。 了解如何添加标题，段落，图片和链接来创建节日贺卡或生日庆祝活动，以便与朋友和家人分享。
   tutorial_marco_longdescription: 学生根据原本的故事玩一个冒险游戏。 他们通过每个级别指导Marco（主要角色），以小时代使用的可视化编程语言的形式向他提供分步说明。
     他们被引入了序列命令，迭代和条件，学生甚至没有注意到它。
@@ -2434,7 +2458,7 @@ cn:
   tutorial_fufafrenz_longdescription: 序列的初学者课程 (K-5)。这是一个介绍最基本的编程概念, 序列。这是第三年级的例子,
     我们有关于搭建基架 K-5这个概念的课程计划。
   tutorial_bbcgeo_longdescription: 等级 K-5 的基于标准的课程计划。把您的孩子带到计算机实验室, 手里拿着工作表, 并构建涉及几何的应用程序。
-  tutorial_chspixel_longdescription: 在学习图形如何工作之后, 学生将通过像素程序创建自己的颜色。课程计划由四部分组成, 每一部分都有一个特定的主题。整个五部分的彩色按像素课设计运行大约一小时。
+  tutorial_chspixel_longdescription: 在学习图形如何工作之后，学生将通过像素程序创建自己的颜色。课程计划由四部分组成，每一部分都有一个特定的主题。整个五部分的彩色按像素课设计运行大约一小时。
   tutorial_hummingbird_longdescription: 在这个活动中, 您将创造您自己的游戏! 您将使用蜂鸟板和传感器, 以检测球员何时把一个球投进一个盒子里。你会写一个程序,
     当球员投球时保持得分并打开灯。然后, 您可以自定义您的游戏使其独一无二! 对于此活动, 您可以使用笔记本电脑或 Chromebook; 你不需要有任何编程经验。
   tutorial_recoloring_longdescription: '没有事先编码经验的学生可以学习如何使用计算机来创建图像和了解天文数据。参与者学习基本的编码，从熟悉的概念开始，如形状和颜色，以及渐渐到天文学物体。根据搭建的一系列活动,
@@ -2470,9 +2494,8 @@ cn:
   tutorial_codingrobotics_longdescription: 学生将学习基本的编程概念, 并将新知识应用于机器人。与 Kodable 和神奇车间一起工作,
     学生将使用编程知识命令 在 Path 应用程序中命令 "Dash" 机器人。
   tutorial_box_longdescription: 在盒子岛上旅行, 帮助 Hiro 收集散落在荒野中的所有时钟! 在本教程中, 您将学习算法、序列、循环和条件的基础知识!
-  tutorial_hopgame_longdescription: "保持乐趣！使用基本项目指南, 以方便游戏设计工作室, Hackathon, 或在课内系列。
-    \n \n制作: \n1. 过马路\n2. 几何跳线\n3. 测验创造者\n4. 坠落的鸟\n5. 地铁滑冰选手\n6. 逃生室\n\n每个包括讨论问题,
-    差异化, 和视频教程。 \n\n学生可以建立你的指令来定制他们的游戏。无需事先经验。"
+  tutorial_hopgame_longdescription: "继续享受乐趣！使用项目指南来帮你打造游戏设计工作室、黑客马拉松或课内系列。制作：过马路、几何跳线、测验创造者、坠落的鸟、地铁滑冰选手、逃生室。每个内容都包括讨论问题、特色化和视频教程。
+    \n\n学生可以根据你的指令来定制他们的游戏。无需事先经验。"
   tutorial_icontrol_longdescription: "这个老师引导课程, 适用于编程一小时, 通过机器人 - Sphero为学生提供了一个探索物理编程的机会。
     \n\n使用拖放编程环境和可编程的机器人 Sphero, 学生将学习物理系统可以被编程和控制。"
   tutorial_cocomteach_longdescription: 你可以用《代码战争》这堂一小时的免费计算机入门课，向你的学生介绍Python或者JavaScript。我们另有专门的课程，采用地牢迷宫中搜集宝石和英雄与食人魔之战的形式，来帮助你向学生解释各种概念，包括基本语法，字符串，参数，循环，变量和x和y坐标等。
@@ -2511,7 +2534,7 @@ cn:
   tutorial_unfortunate_longdescription: 我们都对发生在我们周围的事件作出反应, 当校队获胜了喝彩, 在悲伤的电影中哭泣, 或者当我们听到音乐时跳舞。在本课中,
     学生将学习如何教 Dash 和 Dot 对他们周围发生的事情做出反应！
   tutorial_cha_longdescription: 计算机的历史是令人着迷的。这是你学习更多的机会。
-  tutorial_elaseq_longdescription: 学生将在阅读和写作的语境中检查序列的概念。通过等级水平的 ELA 课程, 学生将他们的序列知识应用到更进一步理解角色序列在编程中的作用。
+  tutorial_elaseq_longdescription: 学生将在阅读和写作的语境中了解序列的概念。通过等级水平的 ELA 课程，学生将他们的序列知识应用到更进一步理解角色序列在编程中的作用。
   tutorial_bbcmathi_longdescription: 等级 3-5 的基于标准的课程计划。把您的孩子带到计算机实验室, 带上工作表, 并构建包含分数，变量和公式的应用程序。
   tutorial_tlcpixel_longdescription: 像素拼图将图像表现成一系列代表像素的数字变成拼图的方式。它们有多种形式, 从一个简单的彩色数字到更复杂的基于压缩的拼图,
     图像以较少的数字表示, 因此占用较少的存储空间 - 但是你能把它们找回来吗？每个表示都需要自己的算法来跟踪获取图像。
@@ -2557,9 +2580,9 @@ cn:
   tutorial_oralhist_longdescription: 计算机教育家口述历史项目是一个收集访谈以及与 CEOHP 绑定的教学材料和工具
   tutorial_tlcmicro_longdescription: 此视频可作为人类计算机交互 (HCI) 的一般介绍，特别是为什么这么多的小工具比需要的更难使用。设计确实有区别，而且重要的是，对接口进行评估以检查它们是否易于使用。
   tutorial_imathematician_longdescription: |
-    这种以教师为主导的活动为学生提供了使用计算机科学和数学的跨学科方法的机会。
+    这种以教师带领下的活动为学生提供了使用计算机科学和数学的跨学科方法的机会。
 
-    学生们将创建一个计算机程序，以解决数学分支中一个著名问题的变种 (游戏理论) ，称为囚犯的困境。
+    学生们将创建一个计算机程序，以解决数学分支（游戏理论）中一个著名问题的变种，称为囚徒困境。
   tutorial_tlcmagic_longdescription: 在探索魔术的工作原理时，你学习了计算思维：特别是评估对算法思维的重要性。你探索了测试和风险分析。魔术表演展示了计算机科学家、工程师
     (和魔术师) 如何彻底检查他们的算法。他们必须在检查算法是否正确的同时，仔细考虑可能会发生什么错误。
   tutorial_scratchmus_longdescription: 在Scratch上，你可以创建自己的互动游戏、故事、动画，并把它们分享给你的朋友们。开始时可以制作一个交互式音乐项目。活动卡和创作室指南也可免费在scratch.mit.edu上找到。
@@ -2729,7 +2752,7 @@ cn:
   tutorial_hopfireworks_longdescription: '当他们编写自己的烟花应用程序（不会真的爆炸哦！）时，你的学生会非常兴奋！Hopscotch是iPad/iPhone上的简单编程工具，因其创造性的表达自由而深受百万学生喜爱。这个自学视频教程教授8岁以上孩子的编程基础知识，同时他们编写自定义版本的交互式烟花。 '
   tutorial_grokspace_longdescription: 此活动旨在为您提供您的第一次体验编程, 并已专门为《编程一小时》设计。使用可视化编程语言
     Blockly 来研究空间和探索星辰。
-  tutorial_codehspython_longdescription: 通过编写可与之交互的程序，学习使用Python编程语言进行编码的基础知识！这一个小时将包括输出结果，变量，数学和从用户获取信息。编写一个接受和存储用户数据的程序，并返回一个唯一的响应。
+  tutorial_codehspython_longdescription: 通过编写可与之交互的程序，学习使用 Python 编程语言进行编码的基础知识！这一个小时将包括输出结果，变量，数学和从用户获取信息。编写一个接受和存储用户数据的程序，并返回一个唯一的响应。
   tutorial_codehsjava_longdescription: 在 Java 中使用 CodeHS 编程
   tutorial_techioda_longdescription: 这个有用的教程将会交互式地教会你如何在图中预先计算两个节点之间的最短路径，这要归功于Dijkstra的算法。
   tutorial_grokmonster_longdescription: 让孩子进入编码与这个友好的课程专门为《编程一小时》设计! 使用拖放块编写自己的程序,
@@ -2799,7 +2822,7 @@ cn:
   tutorial_floevents_longdescription: 学生将探索事件，一个允许程序响应特定刺激的概念。 事件是由一些称为事件处理程序的代码来确定的，这些事件处理程序监听特定事件，并包含有关如何响应的说明。
     学生将学习关键词汇，并在Mad Libs风格的练习中为事件处理者编写文本，在练习中他们创建并执行自己的事件处理程序。
   tutorial_florobot_longdescription: 在这节课上，学生将进入机器人领域的学习，来培养他们的读写能力。他们将观看Flocabulary的教育嘻哈视频，了解机器人是什么，并了解日常生活中机器人的案例。他们会仔细阅读有关机器人的短文，讨论适合机器人的相关任务，并通过设计自己的机器人来完成课程，来解决这一特定的问题。
-  tutorial_isavesanta_longdescription: 在这个以老师为指导的，改编自编程一小时的活动中，孩子们通过使用Scratch，创建一个计算机游戏来保存圣诞老人。他们设计算法、使用条件语句以及测试和调试他们的工作。其中包括分步的课程计划、学生资源、支持卡和预先编写的编程模板。
+  tutorial_isavesanta_longdescription: 在这个老师指导的，改编自编程一小时的活动中，孩子们通过使用 Scratch，创建一个计算机游戏来救援圣诞老人。他们设计算法、使用条件语句以及测试和调试他们的工作。其中包括分步的课程计划、学生资源、支持卡和预先编写的编程模板。
   tutorial_iorder_longdescription: 这个老师指导的的活动，改编自编程一小时，通过使用Scratch2.0来开发计算思维和编码的技能。孩子们编写一个冰激凌摊位模拟和/或游戏，并在这里面设计算法，使用重复，条件陈述，测试和调试他们的工作。这里面包括分步的课程计划、学生支持材料以及为老师和学生预先编写的Scratch2.0编程模板。
   tutorial_ianimate_longdescription: 这项老师指导的季节性活动，改编自编程一小时，它向孩子们介绍了如何创建计算机动画。孩子们将创建框架，添加艺术作品并创建一个简单的圣诞节场景。对于更多有能力的学生，很多想法的分化、扩展和丰富都来源于制作一个非常简单的动画序列：动画背景以及角色和对象，添加3D效果（如阴影），创建更多的框架来保持顺畅的运动，切换背景来创建场景变化并对多个动画进行处理。
   tutorial_iloveada_longdescription: 这项老师指导的活动，改编自编程一小时，它提供了一个教计算机与历史跨学科的机会。在计算机科学领域，Ada
@@ -3256,30 +3279,29 @@ cn:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -3335,7 +3357,7 @@ cn:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -3543,7 +3565,7 @@ cn:
   tutorial_frogger_language: 英语、西班牙语、意大利语、法语、德语和荷兰语
   tutorial_tynkereco_language: 仅英语
   tutorial_mitedarc_language: 仅英语
-  tutorial_khan_language: 英语, 葡萄牙语, 西班牙语
+  tutorial_khan_language: 捷克语、英语、葡萄牙语、西班牙语
   tutorial_tynkerd_language: 仅英语
   tutorial_cdmy_language: 仅英语
   tutorial_codestersdance_language: 仅英语
@@ -3751,8 +3773,8 @@ cn:
   tutorial_wolframp_language: 仅英语
   tutorial_wolframn_language: 仅英语
   tutorial_soloweb_language: 仅英语
-  tutorial_khanweb_language: 英语, 葡萄牙语, 西班牙语
-  tutorial_khandata_language: 英语, 葡萄牙语, 西班牙语
+  tutorial_khanweb_language: 捷克语、英语、葡萄牙语、西班牙语
+  tutorial_khandata_language: 捷克语、英语、葡萄牙语、西班牙语
   tutorial_robomeshiq_language: 仅英语
   tutorial_googlelogo_language: 仅英语
   tutorial_playtune_language: 仅英语
@@ -5160,7 +5182,7 @@ cn:
   tutorial_groklearningpython_string_platforms: 所有高版本浏览器
   tutorial_htmltimetravel_string_platforms: 所有高版本浏览器
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: 未插电
+  tutorial_appytappin_string_platforms: 所有高版本浏览器
   tutorial_icipher_string_platforms: 未插电
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: 未插电
@@ -7093,7 +7115,7 @@ cn:
   tutorial_googlehero_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_codestersbball_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_scratchcartoon_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
-  tutorial_codemonkeyjr_string_platforms: 安卓平板电脑，iPad，Android 手机 iPhone
+  tutorial_codemonkeyjr_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone
   tutorial_bananatales_string_platforms: 所有高版本浏览器
   tutorial_scratchtales_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -7449,3 +7471,4 @@ cn:
   some: 一些
   all: 全部
   dont_know: 我不知道
+  language_label: Language

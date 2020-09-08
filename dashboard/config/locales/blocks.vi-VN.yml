@@ -967,6 +967,10 @@ vi:
         text: sprite {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': giây
       gamelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -1012,8 +1016,45 @@ vi:
         options:
           CHOICE:
             '"this"': điều này
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': giây
       gamelab_hideTitleScreen:
         text: ẩn màn hình tiêu đề
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
       gamelab_jumpTo:
@@ -1085,6 +1126,8 @@ vi:
             '"West"': Phía Tây
       gamelab_moveToward:
         text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
+      gamelab_objectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_playSound:
         text: Âm thanh chơi {SOUND}
       gamelab_pointInDirection:
@@ -1171,6 +1214,8 @@ vi:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
+      gamelab_subjectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_turn:
         text: lần lượt {SPRITE} {DIRECTION} {N} độ
         options:

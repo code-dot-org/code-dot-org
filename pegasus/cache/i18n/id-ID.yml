@@ -23,13 +23,23 @@ id-ID:
   csedweek_banner_teachers_text: Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
+  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} disajikan</h3>"
+  try_hoc_num_served_markdown: |-
+    # Coba
+
+    ## Hour of Code
+
+    ### %{num} disajikan #Try an
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
     untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan
     milis kami dengan # orang lainnya.'
+  petition_sign_message_num: Jika Anda setuju, daftarkan nama Anda dan bergabunglah
+    dengan milis kami bersama %{num} orang lainnya.
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
+  petition_join_others_num: Gabung bersama %{num} orang lainnya
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -61,6 +71,7 @@ id-ID:
   hoc2014_support: Dukunglah &#x25BE;
   hoc2014_whatishoc: Apa itu Hour of Code?
   csedweek_map_header: "# CSEdWeek / acara Hour of Code di seluruh dunia"
+  csedweek_map_header_num: "%{num} CSEdWeek / acara Hour of Code di seluruh dunia"
   csedweek_map_signup: Daftarkan acaramu
   csedweek_map_search_placeholder: Telusuri acara Hour of Code
   csedweek_map_search_search: Telusuri
@@ -220,15 +231,31 @@ id-ID:
     Sekarang, terus berjalan dengan <a href='http://studio.code.org'> kursus lain</a>
     kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui
     satu jam</a>.
+  get_a_certificate_message_after_markdown: Klik sertifikat untuk mengunduh atau mencetaknya.
+    Sekarang, terus ikuti [other courses](http://studio.code.org) kami, atau lihat
+    opsi selengkapnya untuk [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Terima kasih untuk kiriman!
   if_you_enjoyed: Jika Anda suka mengikuti pelajaran ini, ajaklah teman-temanmu untuk
     mencoba juga!  Kami ingin seluruh dunia untuk ikut belajar.
   personalize_certificate: Personalisasi sertifikat Anda
+  print_batch_certificates: Cetak sekumpulan sertifikat
   print_certificates: Cetak Sertifikat
+  certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk
+    mensponsori pembelajaran Anda."
+  print_ice_art_from_frozen: Cetak seni salju dari Frozen tutorials
+  want_a_blank_certificate_template: Ingin templat sertifikat kosong untuk menuliskan
+    nama-nama siswa Anda?
+  landscape_recommended_certificates: Anda dianjurkan memilih **Lanskap** ketika mencetak
+    sertifikat.
+  print_one_here_certificates: Cetak satu di sini.
+  enter_certificate_names: Masukkan maksimal 30 nama, **satu per baris**. Sebuah halaman
+    yang bisa dicetak dengan sertifikat %{script_name} dipersonalisasi akan muncul.
   share_achievement: Tunjukkanlah prestasi Anda
   beyond_hour_message: Teruskan dengan <a href='http://studio.code.org'>kursus lain</a>
     kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui
     satu jam</a>.
+  beyond_hour_message_markdown: Terus ikuti [other courses](http://studio.code.org)
+    kami, atau lihat opsi selengkapnya untuk [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Leaderboards untuk jam kode.
   support_url: http://support.code.org/
   country: Negara
@@ -317,6 +344,12 @@ id-ID:
     Alzate, anak kelas 5'
   stats_michael: Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira
     belajar. "-Michael Clark, guru
+  stats_nina_markdown: '"Setiap hari membuahkan hasil yang — partisipasi 100%."-Nina
+    Nichols Peery, Guru'
+  stats_student_markdown: '"Saya tahu ini adalah kesempatan **sekali-seumur-hidup**."
+    -Mariana Alzate, anak kelas 5'
+  stats_michael_markdown: Saya **belum pernah sekalipun** melihat murid-murid saya
+    begitu gembira belajar." - Frank Martinez, Guru
   studiobar_title: Kunjungi <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Kunjungi Code Studio
   studiobar_elementary_title: Latihan-latihan dasar
@@ -503,8 +536,12 @@ id-ID:
   class_submission_languages_other: Bahasa yang lain
   videos_more: Selengkapnya <a href='%{inspiring_videos_playlist}'>video inspiratif
     </a> menampilkan role model dan selebriti
+  videos_more_markdown: "[inspirational videos](%{inspiring_videos_playlist}) selengkapnya
+    yang menampilkan model peran dan selebritis"
   careers_page_more: Selengkapnya <a href='%{careers_url}' target='_blank'> video
     inspiratif</a> menampilkan beberapa ahli di bidang teknologi
+  careers_page_more_markdown: "[inspirational videos](%{careers_url}) selengkapnya
+    yang menampilkan para profesional di bidang teknologi"
   playlab_choose_theme: Pilih laboratorium bermain-mu
   playlab_classic_title: Klasik
   playlab_gumball_title: Dunia Gumball yang menakjubkan
@@ -534,6 +571,8 @@ id-ID:
   minecraft_tutorials: Tutorial Minecraft Jam Kode
   minecraft_specs: Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+
   minecraft_start_tutorial: Mulai tutorial
+  minecraft_agent_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   minecraft_agent_button: Mulai
   minecraft_designer_description: Program animal dan objek - objek Minecraft lainnya
     dalam versi Minecraft Anda sendiri.
@@ -591,6 +630,7 @@ id-ID:
   sports_video_title: Dorong dirimu. Setiap orang bisa belajar.
   sports_select_theme: Pilih tema tutorial Anda
   sports_basketball_title: Buat sebuah permainan basket
+  sports_all_sports_title: Padu dan padankan lintas olahraga
   sports_featured_athletes: Atlet unggulan
   sports_athletes_title: Atlet unggulan
   sports_athlete_Draymond: Draymoon Green, peraih medali emas olimpiade dan juara
@@ -622,6 +662,7 @@ id-ID:
     Mavericks
   watch_inspirational_videos: Sebelum Anda memulai, lihat salah satu video inspiratif
     ini
+  video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya
   video_title_inspire_girl: Inspirasi seorang gadis
   video_title_cs_intro: Perkenalan Ilmu Komputer
   video_title_schools_dont_teach: Apa yang tidak diajarkan di kebanyakan sekolah
@@ -637,9 +678,9 @@ id-ID:
   video_title_my_name_is_aracely: Nama saya Aracely
   video_1min: 1 menit
   video_2min: 2 menit
-  video_3min: 3 min
-  video_5min: 5 min
-  speak_another_language: Berbicara bahasa lain?
+  video_3min: 3 menit
+  video_5min: 5 menit
+  speak_another_language: Berbicara dengan bahasa lain?
   help_translate: Bantuk kami menerjemahkan.
   no_internet: Tidak ada koneksi Internet?
   download_offline: Versi unduh secara offline.
@@ -661,14 +702,29 @@ id-ID:
     untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;">
     menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan
     dengan ilmu komputer.'
+  volunteer_engineer_submission_intro_recruit_markdown: Guru tentu senang memiliki
+    siswa yang **sangat menyukai pendidikan ilmu komputer** yang dapat membantu di
+    ruang kelas, atau bagi seorang guru yang dapat **menginspirasi** siswanya dengan
+    mengupas luasnya kemungkinan ilmu komputer (yang dapat dilakukan lewat obrolan
+    video).
   volunteer_engineer_submission_intro_guide: kami belajar lebih tentang <a href="%{volunteer_guide}">
     secara sukarela program disini </a>.
+  volunteer_engineer_submission_intro_guide_markdown: Pelajari selengkapnya [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Masukkan informasi berikut jika Anda
     seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai
     dengan <span class="form-required-field"> *</span> diperlukan.
+  volunteer_engineer_submission_intro_signup_markdown: Masukkan informasi berikut
+    jika Anda seorang siswa ilmu komputer atau profesional perangkat lunak. Anda harus
+    berusia minimal 18 tahun untuk mendaftar sebagai relawan. Catat bahwa semua kolom
+    yang Anda isi di bagian ini akan dapat dilihat secara publik oleh siapa pun yang
+    mencermati [volunteer map](/volunteer/local). Kolom dengan tanda _*_ wajib diisi.
   volunteer_engineer_submission_intro_links: Apakah Anda membutuhkan voluntir? Temukan
     seorang voluntir dari lingkungan anda pada <a href="%{volunteer_local}">volunteer
     map</a>.
+  volunteer_engineer_submission_intro_links_markdown: Apakah Anda seorang guru yang
+    sedang mencari relawan? Temukan relawan lokal di [volunteer map](%{volunteer_local})
+    kami.
   volunteer_engineer_submission_update_information: Perbarui informasi Anda
   volunteer_engineer_submission_header_shared: Informasi yang dibagi dengan guru-guru
     pada peta relawan
@@ -711,7 +767,7 @@ id-ID:
     kepada anda tentang pembaruan kursus kami, kesempatan relawan, atau berita ilmu
     komputer yang lain?
   volunteer_engineer_submission_field_email_preference_privacy: "(Lihat kebijakan
-    privasi)"
+    privasi kami)\n"
   volunteer_engineer_submission_field_email_preference_yes: Ya
   volunteer_engineer_submission_field_email_preference_no: Tidak
   volunteer_engineer_submission_final_paragraph: Anda akan didaftarkan dalam sebuah
@@ -728,6 +784,10 @@ id-ID:
   volunteer_engineer_submission_thankyou: Terima kasih sudah mendaftar untuk bersukarela.
     Para guru akan menggunakan <a href="%{url}">peta ini</a> untuk mencari dan menghubungi
     sukarela-sukarela seperti Anda.
+  volunteer_engineer_submission_thankyou_markdown: Terima kasih! Informasi relawan
+    Anda berhasil terkirim. Guru akan menggunakan [this map](%{url}) untuk mencari
+    dan menghubungi relawan seperti Anda. Silakan tunggu 48 jam agar informasi Anda
+    muncul secara tepat di peta.
   volunteer_engineer_submission_commitment_uncertain: Belum Pasti
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 jam per minggu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 jam per minggu
@@ -878,7 +938,7 @@ id-ID:
   dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
   dashboard_navigation_section_lesson_plans: Rencana pelajaran dan sumber daya
   dashboard_navigation_section_community: Bantuan dan komunitas
-  dashboard_navigation_section_pd: Pengembangan profesional
+  dashboard_navigation_section_pd: Pengembangan Profesional
   dashboard_navigation_section_speakers: Ilmu Komputer <br/> Pembicara Tamu
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Perkembangan
@@ -909,7 +969,7 @@ id-ID:
     kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka
     respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan
     diatas.
-  dashboard_sections_new_section: Kelompok baru
+  dashboard_sections_new_section: Bagian baru
   dashboard_sections_new_google_section: Bagian impor dari ruang kelas Google
   dashboard_sections_jumbotron_instruction: Buatlah kelompok baru dan tambahkan murid
     di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil
@@ -952,7 +1012,7 @@ id-ID:
     saat ini dan seperti bagian baru
   dashboard_sections_no_move: Tidak, Saya tidak ingin memindahkan siswa hanya untuk
     berada di bagian baru.
-  dashboard_sections_move_students: Siswa pindahan
+  dashboard_sections_move_students: Pindahkan siswa
   dashboard_sections_assign_hoc_script_desc: Berpartisipasi dalam Jam kode?
   dashboard_sections_assign_hoc_script_msg: Silahkan dicatat bahwa kami tidak akan
     dapat untuk menyimpan kemajuan dalam kursus 3- 11 Desember karena banyaknya lalu
@@ -1027,6 +1087,8 @@ id-ID:
   dashboard_express: 'Kursus Express: '
   dashboard_unplugged: Jika Anda tidak memiliki komputer, <a href='%{unplugged_url}'>cobalah
     pelajaran tanpa penggunaan komputer </a> di kelas Anda.
+  dashboard_unplugged_markdown: Jika Anda tidak memiliki komputer,  [try these unplugged
+    lessons](%{unplugged_url}) di ruang kelas Anda.
   dashboard_tools: 'Peralatan: '
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: Tinjauan Kurikulum K-5
@@ -1061,7 +1123,7 @@ id-ID:
   dashboard_correctness_unsubmitted: Tidak terkirim
   dashboard_correctness_correct: Benar
   dashboard_correctness_incorrect: Salah
-  dashboard_submission_submitted: Dikirim
+  dashboard_submission_submitted: Terkirim
   dashboard_submission_in_progress: Sedang berlangsung
   dashboard_status: Status
   dashboard_multi_correct: "# pilihan ganda yang benar"
@@ -1071,7 +1133,7 @@ id-ID:
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
     lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
-  dashboard_teacher: Pelajar
+  dashboard_teacher: Guru
   dashboard_student: Siswa
   dashboard_sections_email_question: Apakah semua murid memiliki alamat email yang
     berlaku?
@@ -1248,12 +1310,34 @@ id-ID:
   coursed-2017_name: Kursus D (2017)
   coursee-2017_name: Kursus E (2017)
   coursef-2017_name: Kursus F (2017)
+  coursea-2018_name: Kursus A(2018)
+  courseb-2018_name: Kursus B (2018)
+  coursec-2018_name: Kursus C (2018)
+  coursed-2018_name: Kursus D (2018)
+  coursee-2018_name: Kursus E (2018)
+  coursef-2018_name: Kursus F (2018)
+  coursea-2019_name: Kursus A(2019)
+  courseb-2019_name: Kursus B (2019)
+  coursec-2019_name: Kursus C (2019)
+  coursed-2019_name: Kursus D (2019)
+  coursee-2019_name: Kursus E (2019)
+  coursef-2019_name: Kursus F (2019)
+  coursea-2020_name: Kursus A(2020)
+  courseb-2020_name: Kursus B (2020)
+  coursec-2020_name: Kursus C (2020)
+  coursed-2020_name: Kursus D (2020)
+  coursee-2020_name: Kursus E (2020)
+  coursef-2020_name: Kursus F (2020)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
+  express-2019_name: Kursus Kilat (2019)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
+  express-2020_name: Kursus Kilat (2020)
+  pre-express-2020_name: Kursus Kilat Pre-reader(2020)
   csd2_name: 'Unit 2: Pengembangan Web'
   csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: Kursus akselerasi
+  express_name: Kursus Kilat
   pre-express_name: Kursus ekspres Pre-reader
   20-hour_name: Kursus akselerasi
   algebra_name: CS di Kursus penuh Aljabar
@@ -1267,7 +1351,7 @@ id-ID:
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
   applab_name: Laboratorium Aplikasi
-  gamelab_name: Laboratorium Game
+  gamelab_name: Game Lab
   basketball_name: Buat sebuah permainan basket
   sports_name: Kode permainan olahraga Anda
   applab_gradelevel: Usia 13+
@@ -1494,6 +1578,8 @@ id-ID:
   coursea_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni,
+    cerita, dan permainan Anda sendiri.
   coursed_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1503,6 +1589,8 @@ id-ID:
   coursea-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2017_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2017_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2017_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1512,6 +1600,8 @@ id-ID:
   coursea-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2018_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2018_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2018_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1521,6 +1611,8 @@ id-ID:
   coursea-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2019_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2019_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2019_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -2104,6 +2196,10 @@ id-ID:
   header_teacher_community: Komunitas guru
   header_help_support: 'Bantuan dan dukungan '
   header_report_bug: Laporkan masalah
+  header_report_abuse: Laporkan penyalahgunaan
+  header_legal: Privasi & Hukum
+  header_legal_privacy: Kebijakan privasi
+  header_legal_tos: Ketentuan Layanan
   header_tutorials: Tutorial
   app_lab_documentation: Dokumentasi aplikasi Lab
   app_lab_tutorials: Tutorial aplikasi Lab
@@ -2121,9 +2217,10 @@ id-ID:
   user_header_create: 'Buat '
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
-  user_header_gamelab: Laboratorium Game
+  user_header_gamelab: Game Lab
   user_header_playlab: Play Lab/Lab Permainan
   user_header_dance: Pesta Tari
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Lihat semua proyek...
@@ -2176,6 +2273,7 @@ id-ID:
     tab:"manage students":'
   google_sign_in_instruct: 'Dari sana, mereka harus memilih opsi:"sign with Google
     Account":'
+  hero_name: 'Minecraft: Perjalanan Pahlawan'
   applab-intro_name: Pembukaan aplikasi lab
   applab_tile_title: Pembukaan untuk aplikasi Lab(usia13+)
   applab_tile_subtitle: Buat aplikasimu sendiri di javascriptmenggunakan blok dasar
@@ -2183,10 +2281,11 @@ id-ID:
     hanya dalam bahasa inggris)
   applab_tile_start_tutorial: Mulai
   applab_tile_teacher_guide: Lihat petunjuk guru
+  aquatic_name: 'Minecraft: Perjalanan Air'
   account_sign_up_email_opt_in: Dapat kami email Anda tentang pembaruan kursus kami,
     peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
-  account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
-    tua atau wali hukum izin untuk menggunakan layanan Code.org.
+  account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
+    izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
   hoc_overview_dance_title: Pesta Tari
   hoc_overview_dance_subtitle: Kodekan Pesta Tari untuk dibagikan ke teman-teman Anda.
     Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 orang
@@ -2199,6 +2298,10 @@ id-ID:
     gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa
     menyelenggarakan acara Hour of Code atau mencoba apa saja dari 200+lebih satu
     -jam tutorial,tersedia lebih dari 45 bahasa.
+  hoc_overview_subtitle_markdown: "[Hour of Code](https://hourofcode.com) adalah sebuah
+    gerakan global yang menjangkau puluhan juta siswa di 180+ negara. Siapa pun, di
+    mana pun dapat mengadakan acara Hour of Code atau mencoba salah satu dari 500+
+    tutorial satu-jam, tersedia di lebih dari 45 bahasa."
   hoc_overview_partner_activities_title: Banyak aktifitas dari teman
   hoc_overview_partner_activities_body: Situs Hour of Code memiliki lebih dari 100
     aktifitas ilmu komputer untuk semua usia dan tingkat pengalaman,dikembangkan pleh
@@ -2228,8 +2331,12 @@ id-ID:
     BARU untuk Hour of Code (Des 3-9). Pastikan untuk mengecek brand aktifitas minekraft
     baru untuk 2018, perjalanan air! Daftarkan kelasmu sekarang.
   hoc2018_mc_aquatic_title: Perjalanan air Minekraft
+  hoc2018_mc_aquatic_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2019_mc_aquatic_description: Jelajahi dan bangun dunia bawah laut dengan kode.
   hoc2018_mc_hero_title: 'Minecraft: Perjalanan Pahlawan'
+  hoc2018_mc_hero_description: Minecraft hadir kembali dengan aktivitas baru untuk
+    Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2018_mc_designer_title: Perancang Minecraft
   hoc2018_mc_designer_description: Program animal dan objek - objek Minecraft lainnya
     dalam versi Minecraft Anda sendiri.
@@ -2265,10 +2372,11 @@ id-ID:
     video inspiratif</a> menampilkan beberapa ahli di bidang teknologi
   hoc2018_mc_video_1min: 1 menit
   hoc2018_mc_video_2min: 2 menit
-  hoc2018_mc_video_3min: 3 min
-  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_3min: 3 menit
+  hoc2018_mc_video_5min: 5 menit
   hoc2018_mc_video_title_steph_curry: Hour of Code bersama Steph Curry
   hoc2018_mc_video_title_sports: Dorong dirimu. Setiap orang bisa belajar.
+  hoc2018_mc_video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya
   hoc2018_mc_video_title_inspire_girl: Inspirasi seorang gadis
   hoc2018_mc_video_title_cs_intro: Perkenalan Ilmu Komputer
   hoc2018_mc_video_title_schools_dont_teach: Apa yang tidak diajarkan di kebanyakan
@@ -2284,6 +2392,10 @@ id-ID:
   hoc2018_mc_homepage_watch_video: Tonton video kami
   hoc2018_mc_homepage_join_us: Bergabunglah dengan kami
   hoc2018_mc_homepage_try_it: Cobalah
+  hoc2018_mc_back: Minecraft hadir kembali dengan aktivitas Hour of Code yang serba
+    baru!
+  hoc2018_mc_back_journey: Minecraft hadir kembali dengan aktivitas baru untuk Hour
+    of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
   hoc2018_mc_teacher_guide: Lihat petunjuk guru
   hoc2018_mc_minecraft_education: Pendidikan Minecraft
   hoc2018_mc_continue_learning: Lanjutkan pembelajaran dengan Minecraft.
@@ -2314,7 +2426,7 @@ id-ID:
   hoc2018_dance_teacher_resources_tile2_title: Pesta tari dicabut
   hoc2018_dance_teacher_resources_tile2_description: Tidak perlu komputer! Belajar
     konsep koding untuk koreografi pesta dansa bersama.
-  hoc2018_dance_teacher_resources_tile2_button: Kegiatan tanpa komputer
+  hoc2018_dance_teacher_resources_tile2_button: Aktivitas Offline
   hoc2018_dance_featured_student_creations_title: Kreasi siswa ditampilkan
   hoc2018_dance_videos_section_heading: Terinspirasi
   hoc2018_dance_video_title_what_is_creativity: Apa kreatifitas itu?
@@ -2325,6 +2437,10 @@ id-ID:
     mendidik, dan melatih anak-anak dan kaum muda yang berpenghasilan rendah dan yang
     kurang beruntung untuk mengejar karir di bidang ilmu komputer. <a href='%{amazon_future_engineer_link}'
     target='_blank'>Pelajari lebih lanjut</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer * adalah program anak-anak-hingga-karier yang lengkap untuk menginspirasi,
+    mendidik, dan melatih anak-anak dan kaum muda dengan penghasilan rendah dan kurang
+    beruntung untuk mengejar karir di bidang ilmu komputer. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pelajari lebih
     lanjut tentang Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Tentang ahli teknik masa depan
@@ -2386,3 +2502,12 @@ id-ID:
   hoc2019_dance_previous_versions: |-
     Mencari Dance Party versi yang lama?
     Klik di sini untuk memulai [Bagian 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) edisi tahun lalu.
+  homepage_slot_text_title_at_home: Pelajari di Rumah
+  homepage_slot_text_blurb_at_home: Materi pembelajaran ini memudahkan
+  homepage_slot_text_link_code_break: Ambil Code Break
+  homepage_slot_text_link_do_hoc: Adakan Hour of Code
+  homepage_slot_text_link_express_course: Coba Kursus Kilat
+  page_not_available_title: Halaman Tidak Tersedia
+  page_not_available_description: Mohon maaf, halaman yang Anda minta tidak lagi tersedia
+    di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link}).
+  page_not_available_button: Pulang ke rumah

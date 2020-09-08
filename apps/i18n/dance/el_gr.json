@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Πιέσατε ένα πλήκτρο, αλλά ο χορευτής σας δεν ανταποκρίθηκε.",
   "danceFeedbackNeedTwoDancers": "Χρειάζεται να φτιάξετε έναν χορευτή.",
   "danceFeedbackOnlyOneDancerMoved": "Μόνο ένας από τους χορευτές σας κινήθηκε.",
-  "danceFeedbackNeedLead": "Χρειάζεται επίσης να δημιουργήσετε έναν επικεφαλής χορευτή με το μπλοκ <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Χρειάζεται επίσης να δημιουργήσετε έναν επικεφαλής χορευτή με το μπλοκ <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Χρειάζεται να δημιουργήσετε μια ομάδα χορευτών υποστήριξης με το μπλοκ <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Χρειάζεται να αλλάξετε το μέγεθος τουλάχιστον ενός χορευτή αφού αρχίσει η μουσική.",
   "measure": "Μέτρα:"

@@ -6,15 +6,16 @@
   "user_id": 324,
   "properties": {
     "encrypted": "false",
-    "video_key": "csd_pair_programming",
+    "video_key": "csd_how_teamwork_works",
     "instructions_important": "false",
-    "long_instructions": "# Teamwork Video\r\n\r\nStay tuned for a new video on how to make a great team!  For now, check out this video on pair programming.",
+    "long_instructions": "Questions to Consider:\r\n\r\n* What are the advantages to working in a team?\r\n* What are some tips for teams to work well together?",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "teacher_markdown": "**Goals for Discussion**\r\n\r\nThe goal of this video is to help students come into teamwork with a positive attitude, and give them a few suggestions for how to make their teams run more smoothly.\r\n\r\nStudents may have different ideas for the advantages of working on a team, but they should note that people can get more done in a team, and that bringing in a diversity of ideas will make a project better.\r\n\r\nTips mentioned in the video are to\r\n\r\n1. Have a plan\r\n2. Give everyone a special role\r\n2. Celebrate successes of your teammates\r\n3. Have fun!\r\n4. Figure out everyone's strengths\r\n5. Listen to and respect everyone's ideas\r\n6. Be confident in sharing your ideas"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-03-27 22:03:11 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-03-27 22:03:11 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:25:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:31:37 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:34:47 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

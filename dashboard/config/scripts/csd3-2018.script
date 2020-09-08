@@ -1,10 +1,9 @@
-tts true
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-18/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit3/code/"]]
-stage_extras_available true
+lesson_extras_available true
 has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
@@ -15,9 +14,10 @@ version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
 lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
-stage 'Programming for Entertainment', flex_category: 'csd3_1'
+lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment'
 level 'CSD U3L01 TFMD_2018', named: true
 level 'CSD U3 Entertainment_2018', named: true
 level 'CSD U3 Entertainment Sample 4_2018', progression: 'Sample Programs'
@@ -25,11 +25,11 @@ level 'CSD U3 Entertainment Sample 3_2018', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 1_2018', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_2018', progression: 'Sample Programs'
 
-stage 'Plotting Shapes', flex_category: 'csd3_1'
+lesson 'Plotting Shapes', display_name: 'Plotting Shapes'
 level 'CSD U3L02 TFMD_2018', named: true
 level 'CSD U3 Plotting Shapes Shape Lab_2018', named: true
 
-stage 'Drawing in Game Lab', flex_category: 'csd3_1'
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab'
 level 'CSD U3L03 TFMD_2018', named: true
 level 'CSD U3 rect_2018', named: true
 level 'CSD: Drawing in Game Lab 1_2018', named: true
@@ -45,7 +45,7 @@ bonus 'CSD U3 challenge face_2018', progression: 'Challenges'
 bonus 'CSD U3 challenge new shape_2018', progression: 'Challenges'
 bonus 'CSD U3 L3 Freeplay_2018'
 
-stage 'Shapes and Randomization', flex_category: 'csd3_1'
+lesson 'Shapes and Randomization', display_name: 'Shapes and Randomization'
 level 'CSD U3L04 TFMD_2018', named: true
 level 'CSD U3 Random Taller Rectangle_2018', progression: 'New Shapes'
 level 'CSD U3 shape size map_2018', named: true
@@ -60,7 +60,7 @@ level 'CSD U3 Random random ellipse2_2018', progression: 'Using Random Numbers'
 level 'CSD U3 Random rainbow snake_2018', progression: 'Using Random Numbers'
 bonus 'CSD U3 L4 Freeplay_2018'
 
-stage 'Variables', flex_category: 'csd3_1'
+lesson 'Variables', display_name: 'Variables'
 level 'CSD U3L05 TFMD_2018', named: true
 level 'Introduction to Variables - Part 1_2018', named: true
 level 'CSD U3 Variables Predict Where X_2018', progression: 'Intro to Variables'
@@ -75,7 +75,7 @@ bonus 'CSD U3 Variables Draw Challenge_2018'
 bonus 'CSD U3 Variables Challenge_2018'
 bonus 'CSD U3 L5 Freeplay_2018'
 
-stage 'Sprites', flex_category: 'csd3_1'
+lesson 'Sprites', display_name: 'Sprites'
 level 'CSD U3L06 TFMD_2018', named: true
 level 'CSD: Sprites in Game Lab_2018', named: true
 level 'CSD U3 Sprites Map_2018', named: true
@@ -97,7 +97,7 @@ level 'CSD U3 Sprites scene text_2018', progression: 'Making Scenes'
 bonus 'CSD U3 Sprites scene challenge_2018'
 bonus 'CSD U3 L6 Freeplay_2018'
 
-stage 'The Draw Loop', flex_category: 'csd3_1'
+lesson 'The Draw Loop', display_name: 'The Draw Loop'
 level 'CSD U3L07 TFMD_2018', named: true
 level 'CSD: Introduction to the Draw Loop_2018', named: true
 level 'CSD U3 Draw Loop Plugged predict 1_2018', progression: 'Shapes and the Draw Loop'
@@ -112,10 +112,10 @@ level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2018', progression: 'Spri
 level 'CSD U3 Draw Loop Plugged update your scene_2018', progression: 'Animate Your Scene'
 bonus 'CSD U3 L7 Freeplay_2018'
 
-stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
+lesson 'The Counter Pattern Unplugged', display_name: 'The Counter Pattern Unplugged'
 level 'CSD U3L08 TFMD_2018', named: true
 
-stage 'Sprite Movement', flex_category: 'csd3_1'
+lesson 'Sprite Movement', display_name: 'Sprite Movement'
 level 'CSD U3L09 TFMD_2018', named: true
 level 'CSD: Animating Sprite Movement_2018', named: true
 level 'CSD Counter Pattern Map_2018', named: true
@@ -135,10 +135,10 @@ bonus 'CSD sprite movement challenge_2018'
 bonus 'CSD U3 Movement Fish challenge_2018'
 bonus 'CSD U3 L9 Freeplay_2018'
 
-stage 'Booleans Unplugged', flex_category: 'csd3_1'
+lesson 'Booleans Unplugged', display_name: 'Booleans Unplugged'
 level 'CSD U3L10 TFMD_2018', named: true
 
-stage 'Conditionals', flex_category: 'csd3_1'
+lesson 'Conditionals', display_name: 'Conditionals'
 level 'CSD U3L11 TFMD_2018', named: true
 level 'CSD U3 Boolean Predict_2018', progression: 'Make a Prediction'
 level 'CSD U3 - Booleans Video_2018', named: true
@@ -154,7 +154,7 @@ level 'CSD U3 Conditionals Apple 2_2018', progression: 'Basic Conditionals'
 bonus 'CSD U3 - conditionals - first conditional 2_2018', progression: 'Basic Conditionals'
 bonus 'CSD U3 L11 Freeplay_2018'
 
-stage 'Keyboard Input', flex_category: 'csd3_1'
+lesson 'Keyboard Input', display_name: 'Keyboard Input'
 level 'CSD U3L12 TFMD_2018', named: true
 level 'CSD U3 Keypress Boolean_2018', progression: 'Keyboard Input'
 level 'CSD U3 keydown conditional_2018', progression: 'Keyboard Input'
@@ -167,7 +167,7 @@ level 'CSD U3 Direction Animations_2018', progression: 'Keyboard Input'
 bonus 'CSD U3 Keyboard Input Challenge_2018'
 bonus 'CSD U3 L12 Freeplay_2018'
 
-stage 'Other Forms of Input', flex_category: 'csd3_1'
+lesson 'Other Forms of Input', display_name: 'Other Forms of Input'
 level 'CSD U3L13 TFMD_2018', named: true
 level 'CSD U3 Mouse Input Bee 1_2018', progression: 'Follow the Mouse'
 level 'CSD U3 Mouse Input Bee 2_2018', progression: 'Follow the Mouse'
@@ -183,7 +183,7 @@ level 'CSD U3 - complex - mouse move_2018', progression: 'Input with If-Else'
 bonus 'CSD U3 Compound Nested Challenge_2018'
 bonus 'CSD U3 L13 Freeplay_2018'
 
-stage 'Project - Interactive Card', flex_category: 'csd3_1'
+lesson 'Project - Interactive Card', display_name: 'Project - Interactive Card'
 level 'CSD U3L14 TFMD_2018', named: true
 level 'CSD U3 Interactive Card Exemplar_2018', named: true
 level 'CSD U3 Card Examples_2018', named: true
@@ -195,7 +195,7 @@ level 'CSD U3 Interactive Card Final_2018', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018', progression: 'Reflection', assessment: true
 
 lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
-stage 'Velocity', flex_category: 'csd3_2'
+lesson 'Velocity', display_name: 'Velocity'
 level 'CSD U3L15 TFMD_2018', named: true
 level 'CSD: Sprite Velocity_2018', named: true
 level 'CSD U3 velocity map_2018', named: true
@@ -211,7 +211,7 @@ level 'CSD U3 abstraction tumbleweed_2018', progression: 'Side Scroller'
 level 'CSD U3 abstraction looping_2018', progression: 'Side Scroller'
 bonus 'CSD U3 L15 Freeplay_2018'
 
-stage 'Collision Detection', flex_category: 'csd3_2'
+lesson 'Collision Detection', display_name: 'Collision Detection'
 level 'CSD U3L16 TFMD_2018', named: true
 level 'CSD U3 collisions car intro_2018', named: true
 level 'CSD U3 collisions build isTouching_2018', named: true
@@ -225,7 +225,7 @@ level 'CSD U3 collisions sidescroll2_2018', progression: 'Collisions in Games'
 level 'CSD U3 istouching map_2018', named: true
 bonus 'CSD U3 L16 Freeplay_2018'
 
-stage 'Complex Sprite Movement', flex_category: 'csd3_2'
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement'
 level 'CSD U3L17 TFMD_2018', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab_2018', named: true
 level 'CSD U3 abstraction accelerateX_2018', progression: 'Velocity and the Counter Pattern'
@@ -242,7 +242,7 @@ level 'CSD U3 abstraction make it your own_2018', progression: 'Flyer Game'
 level 'CSD U3 acceleration map_2018', named: true
 bonus 'CSD U3 L17 Freeplay_2018'
 
-stage 'Collisions', flex_category: 'csd3_2'
+lesson 'Collisions', display_name: 'Collisions'
 level 'CSD U3L18 TFMD_2018', named: true
 level 'CSD U3 collisions predict set velocity code_2018', named: true
 level 'CSD U3 collisions displace x_2018', progression: 'Collisions'
@@ -262,7 +262,7 @@ level 'CSD U3 collisions flyman make it your own_2018', progression: 'Flyer Game
 level 'CSD U3 interactions map_2018', named: true
 bonus 'CSD U3 L18 Freeplay_2018'
 
-stage 'Functions', flex_category: 'csd3_2'
+lesson 'Functions', display_name: 'Functions'
 level 'CSD U3L19 TFMD_2018', named: true
 level 'CSD U3 Functions Call Function_2018', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_2018', progression: 'Functions'
@@ -277,7 +277,7 @@ level 'CSD U3 Functions Add Change Background_2018', progression: 'Collector Gam
 level 'CSD U3 functions review_2018', named: true
 bonus 'CSD U3 L19 Freeplay_2018'
 
-stage 'The Game Design Process', flex_category: 'csd3_2'
+lesson 'The Game Design Process', display_name: 'The Game Design Process'
 level 'CSD U3L20 TFMD_2018', named: true
 level 'CSD U3 AnimationsMulti Play Defender_2018', named: true
 level 'CSD U3 AnimationsMulti STOP project guide_2018', named: true
@@ -296,7 +296,7 @@ level 'CSD U3 AnimationsMulti defender displace enemies_2018', progression: 'Cak
 level 'CSD U3 AnimationsMulti defender touch water_2018', progression: 'Cake Defender'
 level 'CSD U3 AnimationsMulti defender make it your own_2018', progression: 'Cake Defender'
 
-stage 'Using the Game Design Process', flex_category: 'csd3_2'
+lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process'
 level 'CSD U3L21 TFMD_2018', named: true
 level 'CSD U3 platform sample1_2018', named: true
 level 'CSD U3 platform intro_2018', named: true
@@ -318,7 +318,7 @@ level 'CSD U3 platform sample2_2018', named: true
 level 'CSD U3 platform sample3_2018', named: true
 level 'CSD U3 platform challenge_2018', named: true
 
-stage 'Project - Design a Game', flex_category: 'csd3_2'
+lesson 'Project - Design a Game', display_name: 'Project - Design a Game'
 level 'CSD U3L22 TFMD_2018', named: true
 level 'CSD U3 game intro_2018', named: true
 level 'CSD U3 game variables_2018', progression: 'Project - Background and Variables'
@@ -334,8 +334,9 @@ level 'CSD U3 finishing touches_2018', named: true
 level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
+lesson 'CS Discoveries End of Semester Survey', display_name: 'CS Discoveries End of Semester Survey', lockable: true
 level 'csd-post-survey-2017-levelgroup_2018', assessment: true
 
-stage 'CS Discoveries Post-Course Survey', flex_category: 'cspSurvey'
+lesson 'CS Discoveries Post-Course Survey', display_name: 'CS Discoveries Post-Course Survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

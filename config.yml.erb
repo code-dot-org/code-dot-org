@@ -214,6 +214,10 @@ firebase_max_table_rows: 20000
 firebase_max_record_size: 4096
 firebase_max_property_size: 4096
 
+# Azure keys for speech service
+azure_speech_service_key: !Secret
+azure_speech_service_region: !Secret
+
 # Configuration Options for Pusher.com integration
 # Optional for most devs, very useful if working on Internet Simulator
 use_pusher: false
@@ -242,6 +246,11 @@ google_client_secret:
 aws_region: us-east-1
 aws_access_key:
 aws_secret_key:
+
+# Amazon Future Engineer integration
+afe_pardot_form_handler_url:
+csta_jotform_api_key: !Secret
+csta_jotform_form_id: !Secret
 
 ### Service configurations (urls, endpoints, etc)
 
@@ -318,7 +327,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%>
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx cuantrix.gilasw.com <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -417,7 +426,7 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
-default_hoc_mode:   post-hoc # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode:   pre-hoc # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
 
 localize_apps: false
@@ -452,8 +461,9 @@ bundler_use_sudo: <%=chef_managed%>
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
-# Used for the teacher application data export
+# Used to export data on professional learning to gsheets
 applications_2020_2021_gsheet_key: !Secret
+enrollments_summer_2020_gsheet_key:
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
@@ -532,3 +542,9 @@ dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%
 dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
 pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
+imm_reader_client_id:
+imm_reader_client_secret: !Secret
+imm_reader_subdomain:     cdo-immersive-reader-<%=env%>

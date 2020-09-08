@@ -172,6 +172,9 @@ de:
     email_preference_yes: "Ja"
     email_preference_no: "Nein"
     email_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
+    parent_account_checkbox: "Ich bin einer der Eltern/ein Vormund und melde mich für mein Kind an."
+    parent_account_email_progress_permission: "Dürfen wir Ihnen gelegentliche Updates über den Fortschritt Ihres Kindes und Projekte, Updates über dessen Kurs und Informatik per E-Mail senden? [(Siehe unsere Datenschutzbestimmungen)](%{privacy_policy_url})"
+    parent_account_email_label: "E-Mail der Eltern/Erziehungsberechtigten"
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -307,6 +310,7 @@ de:
       sections: "Lerngruppen"
       help_support: "Hilfe und Support"
       report_bug: "Einen Fehler melden"
+      report_abuse: "Missbrauch melden"
       teacher_community: "Lehrer Community"
       professional_learning: "Professionelles Lernen"
       documentation: "Dokumentation"
@@ -342,6 +346,9 @@ de:
       help_us: "Helfen Sie uns"
       teach: "Unterrichten"
       about: "Über"
+      legal: "Privatsphäre und Rechtliches"
+      legal_privacy: "Datenschutzerklärung"
+      legal_tos: "AGBs"
     user:
       classroom: 'Lehrer-Homepage'
       district_dashboard: 'Landkreis-Dashboard'
@@ -384,6 +391,7 @@ de:
       playlab_k1: 'Spielelabor (Leseanfänger)'
       scratch: 'Scratch'
       sports: 'Sport'
+      spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bausteine)'
       starwarsblocks_hour: 'Star Wars (Bausteine)'
@@ -440,7 +448,7 @@ de:
     delete_text_teacher_managed_note: "Du hast keine Berechtigung, dieses Konto zu löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst."
     delete_text_teacher_note: "Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler."
     delete_confirm: 'Bist du sicher, dass du deinen Account löschen willst?'
-    deleted_user: 'Benutzer entfernen'
+    deleted_user: 'Gelöschter Benutzer'
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
     create_personal_login: 'Erstelle ein persönliches Login'
@@ -463,8 +471,11 @@ de:
     auth_option_saved: "Du hast erfolgreich deinen %{provider} Account mit deiner E-Mail %{email} verknüpft."
     auth_option_saved_no_email: "Du hast erfolgreich deinen %{provider} Account verbunden."
     update_email: "Aktualisieren"
+    for_parents_and_guardians: "Für Eltern und und Erziehungsberechtigte"
+    link_a_parent_email: "Verbinden Sie Eltern/Erziehungsberechtigte mit diesem Konto, damit Sie stets über den aktuellen Fortschritt und die Projekte Ihres Kindes informiert sind. Sie können diese E-Mail-Adresse auch für die Passwortwiederherstellung verwenden."
     parent_guardian_email_label: "Eltern / Erziehungsberechtigten E-Mail-Adresse"
     none: "Keiner"
+    only_one_parent_email_supported_warning: "Hinweis: Es kann derzeit nur eine E-Mail-Adresse von Eltern/Erziehungsberechtigten mit dem Schülerkonto verbunden werden."
     encrypted: "verschlüsselt"
   user_level:
     completed: 'Abgeschlossen'
@@ -505,6 +516,7 @@ de:
     no_primary_course: "Probiere einen Code-Studio-Kurs aus"
     choose_next_course: "Wähle einen der Code-Studio-Kurse unten aus"
     print_certificate: "Zertifikat drucken"
+  certificate_sponsor_message: "%{sponsor_name} machte das großzügige Geschenk, um dein Lernerfolg zu fördern."
   move_students:
     new_section_dne: "Entschuldigung, aber die Lerngruppe %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Lerngruppencode ein."
     section_code_cant_be_current_section: "Die derzeitige Lerngruppe kann nicht gleich mit der neuen Lerngruppe sein."
@@ -685,20 +697,6 @@ de:
       body: "Die Studenten können Konzepte aus unserem Informatikgrundkurs mit diesen digitalen Werkzeugen praktisch erproben. Verwenden Sie die Widgets einzeln oder erstellen Sie eine Lektion mit einem Konzept für Ihre Klasse."
       audience: "Ab 14 Jahren"
       cta: "Lerne wie"
-  gallery:
-    students_drew_these_with_code: "Schüler haben diese Bilder mit Code gezeichnet!"
-    students_made_these_with_code: "Schüler haben diesen Code gemacht!"
-    picture_count: "In den vergangenen <b>%{days}</b> Tagen haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Bilder gezeichnet. Klicke auf die Bilder, um das jeweilige Programm in Aktion zu sehen."
-    activity_count: "In den vergangenen <b>%{days}</b> Tage haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Apps und Bilder gemacht. Klicke auf die Bilder und Screenshots der Programme, um sie in Aktion zu sehen."
-    want_to_make_your_own: "Möchtest du dein eigenes Programm machen?"
-    how_to_save: "Eine der letzten Stufe dieser Tutorials klicken Sie auf \"Fertig stellen\" und \"Speichern\", um Ihre Arbeit in der Galerie speichern."
-    more: "Mehr →"
-    caption_by_name_age: "Von %{name}, Alter %{age}"
-    caption_time_ago: "vor %{time_ago}"
-    header: "Galerie"
-    header_playlab: "Geschichten und Spiele"
-    header_artist: "Code-Kunst"
-    report_abuse: "Missbrauch melden"
   landing:
     prerelease_tutorial: "Diese Anleitung ist in der **Beta**-Version.  Sie wird nach Rückmeldungen noch überarbeitet und verbessert."
     report_bug: "Fehler melden"
@@ -759,6 +757,8 @@ de:
     open_response_body: "Danke für deine Antwort!"
     correct_title: "Richtig"
     correct_body: "Das ist die richtige Antwort."
+  lesson_extras:
+    bonus_level: "Bonus-Level"
   dialog:
     ok: "OK"
     startover_title: "Bist du dir sicher, dass du neu anfangen möchtest?"
@@ -885,82 +885,7 @@ de:
     instructor_feedback: 'Rückmeldung von der Lehrperson'
     peer_feedback: 'Rückmeldung von Mitschülern'
     outdated: 'Dieses Feedback wurde für eine frühere Version hinzugefügt'
-  flex_category:
-    required: 'Übersicht'
-    content: 'Inhalt'
-    practice: 'Lehrer Übungen'
     peer_review: 'Peer Review'
-    optional: 'Optional'
-    main_course: 'Hauptkurs'
-    extra_course_content: 'Extra Kurs Inhalte'
-    csf_e_2: 'Kurs E Inhalt'
-    csf_f_2: 'Kurs F Inhalt'
-    csf_digcit: 'Digitalen Staatsbürgerschaft'
-    csf_jigsaw: 'Puzzle'
-    csf_loops: 'Schleifen'
-    csf_events: 'Ereignisse'
-    csf_online_safety: 'Online-Sicherheit'
-    csf_binary: 'Binärdatei'
-    csf_data: 'Daten'
-    csf_conditionals: 'Bedingungen'
-    csf_sprites: 'Sprites'
-    csf_nested_loops: 'Verschachtelte Schleifen'
-    csf_functions: 'Funktionen'
-    csf_variables: 'Variablen'
-    csf_for_loops: '"Zähle mit"-Schleifen'
-    csf_internet: 'Internet'
-    csf_warmup: 'Aufwärmübung'
-    csd1_1: 'Kapitel 1: Der Problemlösungsprozess'
-    csd1_2: 'Kapitel 2: Computer und Problemlösung'
-    csd2_1: 'Kapitel 1: Webinhalte und HTML'
-    csd2_2: 'Kapitel 2: Styling und CSS'
-    csd3_1: 'Kapitel 1: Bilder und Animationen'
-    csd3_2: 'Kapitel 2: Erstellen von Spielen'
-    csd4_1: 'Kapitel 1: Benutzerzentriertes Design'
-    csd4_2: 'Kapitel 2: App Prototyping'
-    csd5_1: 'Kapitel 1: Darstellung von Informationen'
-    csd5_2: 'Kapitel 2: Datenprobleme lösen'
-    csd6_1: 'Kapitel 1: Programmierung mit Hardware'
-    csp1_1: 'Kapitel 1: Darstellung und Übertragung von Informationen'
-    csp1_2: 'Kapitel 2: Die Erfindung des Internets'
-    csp2_1: 'Kapitel 1: Kodierung und Komprimierung komplexer Informationen'
-    csp2_2: 'Kapitel 2: Daten manipulieren und visualisieren'
-    csp3_1: 'Kapitel 1: Programmiersprachen und Algorithmen'
-    csp4_1: 'Kapitel 1: Große Datenmengen und Verschlüsselung'
-    csp5_1: 'Kapitel 1: Ereignisgesteuerte Programmierung'
-    csp5_2: 'Kapitel 2: Programmierung mit Datenstrukturen'
-    cspSurvey: 'Umfrage'
-    csp_postap_1: 'Kapitel 1: Daten manipulieren und visualisieren'
-    csp_postap_2: 'Kapitel 2: Apps und Datenbanken'
-    csp2_1_2018: 'Einheit 2: Digitale Informationen'
-    csp3_1_2018: 'Einheit 3: Einführung in die Programmierung'
-    csp4_1_2018: 'Lektion 4: Big Data und Datenschutz'
-    csp_variables: 'Variablen'
-    csp_conditionals: 'Bedingungen'
-    csp_functions: 'Funktionen'
-    csp_project: 'Projekt'
-    csp_lists: 'Listen'
-    csp_loops: 'Schleifen'
-    csp_libraries: 'Bibliotheken'
-    csp_parameters_return_values: 'Parameter und Rückgabewerte'
-    csp_unit1_2020: 'Einheit 2: Digitale Informationen'
-    csp_unit2_2020: 'Lektion 2: Das Internet'
-    csp_unit3_2020: 'Lerneinheit 3: Einführung in das App Design '
-    csp_unit6_2020: 'Lerneinheit 6: Algorithmen'
-    csp_unit9_2020: 'Lektion 9: Daten'
-    time4cs_c1: 'Everglades und seine Ökosysteme'
-    time4cs_c2: 'Nahrungsketten in den Everglades'
-    time4cs_c3: 'Leben in den Everglades'
-    time4cs_c4: 'Invasive Auswirkungen auf die Everglades'
-    time4cs_c5: 'Bürger beeinflussen den Wandel in den Everglades'
-    time4cs_c6: 'Bedingungen (Überprüfung)'
-    k5_getting_started: 'Erste Schritte'
-    k5_csf_intro: 'Lernen Sie die CS Fundamentals Kurse kennen'
-    k5_coding_concepts: 'Kodierungskonzepte und Unterrichtsstrategien'
-    k5_next_steps: 'Nächste Schritte'
-    k5_basic_concepts: 'Grundlegende Kodierungskonzepte und Unterrichtsmethoden'
-    game_lab_projects: 'Spielelabor Projekte'
-    app_lab_projects: 'App-Labor Projekte'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."
@@ -1023,6 +948,7 @@ de:
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
   hidden_script: "Dein Lehrer hat nicht erwartet, dass du hier bist. Bitte frag Deinen Lehrer, in welcher Lerneinheit du sein solltest."
   no_course_access_student: "Du hast keinen Zugang zu diesem Kurs. Bitte frage deine Lehrperson, in welchem Kurs du sein solltest. "
+  no_course_access_teacher: "Du hast keinen Zugriff auf diesen Kurs. Falls du der Meinung bist, dass du Zugriff auf diesen Kurs haben solltest, dann schreibe bitte eine E-Mail an support@code.org, sodass wir die Situation überprüfen können"
   no_script_access_student: "Du hast keinen Zugriff auf diese Lerneinheit. Bitte frag Deinen Lehrer, auf welcher Lerneinheit du sein solltest."
   no_script_access_teacher: "Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben, dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org, damit wir die Situation beheben können."
   return_unit_overview: 'Gehe zur Übersicht der Einheit'
@@ -1040,6 +966,8 @@ de:
       school_name: 'Schulname'
       school_city: 'Stadt der Schule'
       school_country: 'Land der Schule'
+      colombian_school_city: 'Stadt der Schule'
+      colombian_school_name: 'Schulname'
       ages: 'Welches Alter unterrichten Sie in diesem Jahr?'
       subjects: 'Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?'
       resources: 'Welche der folgenden informatischen Bildungsressourcen nutzen Sie?'
@@ -1103,6 +1031,9 @@ de:
         wonder: 'Wonder Workshop'
         other: "Andere:"
       workshop_course:
+        csf_af: 'CS Grundlagen (Kurse A-F)'
+        csf_express: 'CS Grundlagen (Pre-Express oder Express)'
+        csd: 'CS Entdeckungen'
         csp: 'Informatik Grundprinzipien'
       email_opt_in:
         opt_in_yes: 'Ja'
@@ -1140,8 +1071,13 @@ de:
   maker:
     google_oauth:
       login_with_google: 'Melde dich in der Maker App mit Google an'
+      enter_code: 'Bitte gebe den Code ein, der dir beim einloggen auf deinem Standardbrowser via Google zur Verfügung gestellt wurde.'
       copy_code: 'Bitte kopieren Sie diesen Code und fügen Sie ihn in der Maker App ein um sich auf Code.org anzumelden'
+      error_token_expired: 'Dein Token ist nicht mehr gültig. Bitte logge erneut ein für einen neuen Token.'
+      error_wrong_provider: 'Falscher Provider.Bitte stelle sicher, dass du auf Google einloggen möchtest.'
       error_invalid_user: 'Ungültige Benutzer ID. Versuche dich später wieder einzuloggen.'
       error_no_code: 'Bitte geben Sie ihren Login Code ein'
   parent_email_banner:
-    not_now: "Nicht jetzt"
+    text: "** Sind Sie die Eltern oder Erziehungsberechtigten?** Verbinden Sie Ihre E-Mail-Adresse mit diesem Konto, damit Sie stets über den aktuellen Fortschritt und die Projekte Ihres Kindes informiert sind!"
+    link_your_email: "Ihre E-Mail-Adresse verlinken"
+    not_now: "Später"

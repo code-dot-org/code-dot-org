@@ -967,6 +967,7 @@
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
+  pre-express-2020_name: 學前兒童的速學課程（2020）
   csd2_name: '單元 2：Web 開發'
   csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
@@ -1460,6 +1461,10 @@
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
   header_report_bug: "回報問題"
+  header_report_abuse: "檢舉濫用"
+  header_legal: "法律與隱私權"
+  header_legal_privacy: "隱私政策"
+  header_legal_tos: "服務條款"
   header_tutorials: "所有教程"
   app_lab_documentation: "App Lab 說明文件"
   app_lab_tutorials: "App Lab 教程"
@@ -1666,3 +1671,11 @@
   hoc2019_mc_mee_description2: "免費獲得資源，包括課程計劃、影片、電腦科學課程及教師培訓。"
   hoc2019_mc_more_coding_resources: "更多編程資源"
   hoc2019_dance_previous_versions: "你在找之前的舞蹈派對嗎？\n這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。"
+  homepage_slot_text_title_at_home: "在家學習"
+  homepage_slot_text_blurb_at_home: "這些資源讓它可以輕鬆達成"
+  homepage_slot_text_link_code_break: "來場程式休憩時刻"
+  homepage_slot_text_link_do_hoc: "試試「一小時玩程式」！"
+  homepage_slot_text_link_express_course: "嘗試速學課程吧！"
+  page_not_available_title: "沒有可用的頁面"
+  page_not_available_description: "我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求"
+  page_not_available_button: "返回主頁"

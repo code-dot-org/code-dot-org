@@ -1044,6 +1044,8 @@
   header_courses: "Курстар"
   header_project_gallery: "Жобалар"
   header_educate_hoc: "Код жазу Сағаты"
+  header_legal_privacy: "Құпиялылық саясаты"
+  header_legal_tos: "Қызмет көрсету шарттары"
   user_header_label: "Сәлем %{username}"
   user_header_team: "Топ"
   user_header_settings: "Менің жеке парақшам"

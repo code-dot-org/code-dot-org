@@ -98,7 +98,7 @@ it:
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       PlantASeed:
-        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        title: Pianta un seme
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
           come esempio l'atto del piantare un seme. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -156,7 +156,7 @@ it:
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
-        title: La tua impronta digitale
+        title: Segui le tracce digitali
         desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
           le loro informazioni personali crea un''impronta digitale che lascia tracce
           riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
@@ -204,7 +204,7 @@ it:
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       EnvelopeVariables:
-        title: Variabili e Buste
+        title: Variabili e buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
@@ -305,7 +305,7 @@ it:
           programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
           / "Per la scuola primaria"'
       courseAB_unplugged_plantASeed:
-        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        title: Pianta un seme
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
           come esempio l'atto del piantare un seme. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -328,7 +328,7 @@ it:
           un controller di carta e gli studenti dovranno reagire in funzione del pulsante
           cliccato.
       courseB_unplugged_digitalFootprint:
-        title: La tua impronta digitale
+        title: Segui le tracce digitali
         desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
           le loro informazioni personali crea un''impronta digitale che lascia tracce
           riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
@@ -413,7 +413,7 @@ it:
           che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno
           di essere maggiormente dettagliato.
       courseF_unplugged_envelopeVariables:
-        title: Variabili e Buste
+        title: Variabili e buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione
           aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
@@ -433,7 +433,7 @@ it:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       PlantASeed_2018:
-        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        title: Pianta un seme
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
           come esempio l'atto del piantare un seme. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -480,7 +480,7 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
-        title: La tua impronta digitale
+        title: Segui le tracce digitali
         desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
           le loro informazioni personali crea un''impronta digitale che lascia tracce
           riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
@@ -604,7 +604,7 @@ it:
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       PlantASeed_2019:
-        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        title: Pianta un seme
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
           come esempio l'atto del piantare un seme. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -625,7 +625,7 @@ it:
       MoveItMoveIt_2019:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
-        title: La tua impronta digitale
+        title: Segui le tracce digitali
         desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
           le loro informazioni personali crea un''impronta digitale che lascia tracce
           riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di

@@ -973,6 +973,10 @@ pt:
         text: Sprite {SPRITE} Começa {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         text: Mudar {SPRITE} {PROPERTY} Por {VAL}
         options:
@@ -1018,8 +1022,46 @@ pt:
         options:
           CHOICE:
             '"this"': Isto
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: ocultar tela de título
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+            '"space"': espaço
+            '"a"': uma
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': eu
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando bordas"
       gamelab_jumpTo:
@@ -1094,6 +1136,8 @@ pt:
             '"West"': Ocidente
       gamelab_moveToward:
         text: Mover {SPRITE} Pixels {DISTANCE} Para {TARGET}
+      gamelab_objectSpritePointer:
+        text: clicado {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1173,6 +1217,8 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      gamelab_subjectSpritePointer:
+        text: clicado {SPRITE}
       gamelab_turn:
         text: Transformar {SPRITE} {DIRECTION} {N} Graus
         options:

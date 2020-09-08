@@ -170,6 +170,9 @@ da:
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "Du skal angive en e-mail adresse."
+    parent_account_checkbox: "Jeg er en forælder / værge, der tilmelder mig på vegne af mit barn"
+    parent_account_email_progress_permission: "Kan vi sende dig e-mail lejligheds med opdateringer om dit barns fremskridt og projekter og opdateringer om deres kursus og datalogi? [(Se vores privatlivspolitik)] (%{privacy_policy_url})"
+    parent_account_email_label: "Forældres/værges e-mail adresse"
   school_info:
     title: 'Skoleoplysninger (valgfri)'
     school_country: 'Skolens land'
@@ -317,6 +320,8 @@ da:
       help_us: "Hjælp os"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Privatlivspolitik"
+      legal_tos: "Termer"
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Særskilt betjeningspanel'
@@ -411,8 +416,11 @@ da:
     account_successfully_updated: "Konto opdateret"
     auth_option_saved: "Du har linket din %{provider} konto med email %{email}.\n"
     update_email: "Opdater"
+    for_parents_and_guardians: "For forældre og værger"
+    link_a_parent_email: "Knyt en forælder / værges e-mail-adresse til denne konto for at holde dig opdateret om dit barns fremskridt og projekter. Du vil også være i stand til at bruge denne e-mail-adresse til gendannelse af adgangskode."
     parent_guardian_email_label: "Forældres/værges e-mail adresse"
     none: "Ingen"
+    only_one_parent_email_supported_warning: "Bemærk: Vi er kun i stand til at understøtte en forælder / værges e-mail-adresse pr. studiekonto på dette tidspunkt."
   user_level:
     completed: 'Fuldført'
     tried: 'Forsøgt'
@@ -584,19 +592,6 @@ da:
       audience: "Alder 4+"
     unplugged_conditionals:
       title: "Betingelser"
-  gallery:
-    students_drew_these_with_code: "Elever har tegnet disse med kode!"
-    students_made_these_with_code: "Elever har lavet dette med kode!"
-    picture_count: "I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at prøve programmerne."
-    activity_count: "I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip for at prøve programmerne."
-    want_to_make_your_own: "Vil du lave dit eget?"
-    more: "Mere &rarr;"
-    caption_by_name_age: "af %{name}, alder %{age}"
-    caption_time_ago: "%{time_ago} siden"
-    header: "Galleri"
-    header_playlab: "Play Lab"
-    header_artist: "Kunstner"
-    report_abuse: "Rapporter misbrug"
   landing:
     report_bug: "Rapporter fejl"
     support: "Få hjælp"
@@ -721,25 +716,6 @@ da:
       name: 'Accepteret'
     escalated:
       name: 'Eskalerede'
-  flex_category:
-    required: 'Oversigt'
-    csf_digcit: 'Digital statsborgerskab'
-    csf_jigsaw: 'Puslespil'
-    csf_loops: 'Løkker'
-    csf_events: 'Hændelser'
-    csf_binary: 'Binære'
-    csf_conditionals: 'Betingelser'
-    csf_spritelab: 'SpriteLab'
-    csf_nested_loops: 'Indlejret Løkker'
-    csf_functions: 'Funktioner'
-    csf_variables: 'Variabler'
-    csf_for_loops: 'For Loops'
-    csf_internet: 'Internet'
-    csp_variables: 'Variabler'
-    csp_conditionals: 'Betingelser'
-    csp_functions: 'Funktioner'
-    csp_lists: 'Lister'
-    csp_loops: 'Løkker'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
     download_in_Swedish: 'Download på svensk:'
@@ -762,6 +738,7 @@ da:
       gender: 'Køn'
       school_name: 'Skolens navn'
       school_country: 'Skolens land'
+      colombian_school_name: 'Skolens navn'
       ages: 'Hvilket alderstrin underviser du på?'
       subjects: 'Hvilke emner underviser du i?'
       workshop_course: 'Workshop kursus'
@@ -803,3 +780,7 @@ da:
     logout: 'Log af'
     yes: 'Ja'
   copy: 'Kopier'
+  parent_email_banner:
+    text: "** Er du forælder eller værge? ** Knyt din e-mail til denne konto for at holde dig opdateret om dit barns fremskridt og projekter!"
+    link_your_email: "Knyt din e-mail"
+    not_now: "Ikke nu"

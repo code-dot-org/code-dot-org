@@ -1414,6 +1414,8 @@
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
   header_report_bug: "Report a problem"
+  header_legal_privacy: "Informativa sulla privacy"
+  header_legal_tos: "Termini di servizio"
   header_tutorials: "Corsi"
   sprite_lab_documentation: "Documentazione Sviluppo App"
   sprite_lab_tutorials: "Esercitazioni Sviluppo App"
@@ -1608,3 +1610,6 @@
   page_not_found_button: "Ritorna alla homepage"
   hoc2018_mc_with_microsoft: "In collaborazione con"
   hoc2018_mc_thank_microsoft: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."
+  page_not_available_title: "Pagina non disponibile"
+  page_not_available_description: "Ci dispiace, la pagina che stai cercando non è più disponibile a questo indirizzo. Se ne hai ancora bisogno, invia un'e-mail a <a href='mailto:support@code.org'>support@code.org</a>."
+  page_not_available_button: "Ritorna alla homepage"

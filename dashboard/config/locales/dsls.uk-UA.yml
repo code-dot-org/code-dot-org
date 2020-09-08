@@ -511,6 +511,8 @@ uk-UA:
         content1: опис тут
       Begin planning your project_2018_2019:
         content1: опис тут
+      Begin planning your project_2018_2019_2020:
+        content1: опис тут
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -1369,7 +1371,65 @@ uk-UA:
         content1: опис тут
       New Challenge Introduction:
         content1: опис тут
+      OPD-K5 Reviewing Reflections:
+        content1: опис тут
       OPD-K5 Stage3aGo:
+        content1: опис тут
+      OPD-K5 Stage3aGo_copy:
+        content1: опис тут
+      OPD-K5 conditionals introduced:
+        content1: опис тут
+      OPD-K5 debugging:
+        content1: опис тут
+      OPD-K5 diving deeper intro:
+        content1: опис тут
+      OPD-K5 events introduced:
+        content1: опис тут
+      OPD-K5 for loops:
+        content1: опис тут
+      OPD-K5 for loops intro:
+        content1: опис тут
+      OPD-K5 for loops introduction:
+        content1: опис тут
+      OPD-K5 functions introduced:
+        content1: опис тут
+      OPD-K5 journaling:
+        content1: опис тут
+      OPD-K5 lesson implementation planning:
+        content1: опис тут
+      OPD-K5 lesson plans:
+        content1: опис тут
+      OPD-K5 loops introduced:
+        content1: опис тут
+      OPD-K5 project:
+        content1: опис тут
+      OPD-K5 projects introduction:
+        content1: опис тут
+      OPD-K5 role_of_teacher:
+        content1: опис тут
+      OPD-K5 sequencing introduced:
+        content1: опис тут
+      OPD-K5 sprite lab:
+        content1: опис тут
+      OPD-K5 sprite lab introduction:
+        content1: опис тут
+      OPD-K5 sprite lab unplugged:
+        content1: опис тут
+      OPD-K5 sprite lab video:
+        content1: опис тут
+      OPD-K5 types of lessons:
+        content1: опис тут
+      OPD-K5 using lesson plans:
+        content1: опис тут
+      OPD-K5 variables:
+        content1: опис тут
+      OPD-K5 variables introduction:
+        content1: опис тут
+      OPD-K5 variables unplugged:
+        content1: опис тут
+      OPD-K5 where to next:
+        content1: опис тут
+      OPD-K5-projects-1:
         content1: опис тут
       Prepare for your presentation:
         content1: опис тут
@@ -1385,7 +1445,23 @@ uk-UA:
         - feedback: Неправильно
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Неправильно
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Неправильно
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1410,6 +1486,14 @@ uk-UA:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1444,6 +1528,15 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1461,6 +1554,14 @@ uk-UA:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1492,6 +1593,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1509,6 +1618,14 @@ uk-UA:
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1540,6 +1657,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: А
@@ -1559,6 +1684,15 @@ uk-UA:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: А
+        - text: Б
+        - text: В
+        - text: Г
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: А
         - text: Б
@@ -1594,6 +1728,15 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: А
+          correct: true
+        - text: Б
+        - text: В
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1611,6 +1754,22 @@ uk-UA:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1642,6 +1801,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1659,6 +1826,14 @@ uk-UA:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1685,6 +1860,15 @@ uk-UA:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1725,6 +1909,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1757,6 +1949,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1774,6 +1974,14 @@ uk-UA:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1805,6 +2013,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1829,6 +2045,14 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1837,6 +2061,8 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      courseD_project_exemplars_2020_2021:
+        content1: Тест зменшення Сторінки Підручника
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -1869,6 +2095,14 @@ uk-UA:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1893,7 +2127,27 @@ uk-UA:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseE_project_exemplars_2019:
+        content1: Тест зменшення Сторінки Підручника
+      courseE_project_exemplars_2019_2020:
+        content1: Тест зменшення Сторінки Підручника
+      courseExpress_project_exemplars_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_bee_variables_8a_2018:
         answers:
@@ -1904,6 +2158,14 @@ uk-UA:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1927,9 +2189,13 @@ uk-UA:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_end_2019:
         content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_intro:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_intro_2019:
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_intro_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_loops_end:
         content1: Тест зменшення Сторінки Підручника
@@ -1943,9 +2209,13 @@ uk-UA:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_end_2019:
         content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_end_2019_2020:
+        content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_intro:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_intro_2019:
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_intro_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_multi_artist_for10_predict1:
         answers:
@@ -1964,6 +2234,14 @@ uk-UA:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1996,6 +2274,14 @@ uk-UA:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -2043,6 +2329,14 @@ uk-UA:
         - text: 'Не знаю. '
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: 'Не знаю. '
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2060,6 +2354,8 @@ uk-UA:
         questions:
         - {}
       courseF_project_exemplars_2019:
+        content1: Тест зменшення Сторінки Підручника
+      courseF_project_exemplars_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       coursee_prediction_artistfunction2:
         answers:
@@ -2085,6 +2381,20 @@ uk-UA:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: опис тут
+      csf_password_power-up:
+        content1: опис тут
+      csf_putting_a_stop_to_online_meanness:
+        content1: опис тут
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2102,6 +2412,14 @@ uk-UA:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

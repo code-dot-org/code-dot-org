@@ -343,7 +343,7 @@ de:
       5:
         image: notes/stage15_5.jpg
         text: Wenn du nun "Länge" an die Stelle schreibst, wo "x" steht, und dann
-          "Enter" drückst, erstellst du eine Längeneingabe für deine Funktion.
+          "Eingeben" drückst, erstellst du eine Längeneingabe für deine Funktion.
       6:
         image: notes/stage15_6.jpg
         text: Klicke dann auf den Stern. Jetzt klickst du auf die "Variablen"-Kategorie
@@ -495,7 +495,7 @@ de:
           Ein Beispiel ist der Code, den du geschrieben hast, um ein Quadrat zu zeichnen.
       5:
         image: notes/frozen3_5.jpg
-        text: 'Du kannst diese Funktion "Zeichne ein Quadrat" nennen. '
+        text: 'Du kannst diese Funktion "ein Quadrat zeichnen" nennen. '
       6:
         image: notes/frozen3_6.jpg
         text: Nun hast du einen neuen Baustein, den du viele Male benutzen kannst,
@@ -555,8 +555,8 @@ de:
           eine Aktion aus.
       2:
         image: notes/playlab_events_2.png
-        text: Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten
-          oder ein Antippen den Bildschirms zu achten.
+        text: Ereignisse sind beispielsweise das Achten auf Mausklicks, Pfeiltasten
+          oder ein Antippen des Bildschirms.
       3:
         image: notes/playlab_events_3.png
         text: Hier bringen wir den Space Bot dazu, die Erdlinge zu grüßen, wenn ein
@@ -1275,9 +1275,9 @@ de:
     C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes
-          Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives
-          Spiel erstellen, das man tatsächlich spielen kann.
+        text: Du hast bereits eine Animation oder eine Geschichte programmiert, die
+          jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein
+          interaktives Spiel programmieren, das man tatsächlich spielen kann.
       2:
         image: notes/C2_playlab_createastory_2.png
         text: Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der
@@ -1726,9 +1726,9 @@ de:
           fünf Felder nach vorne zur leckeren Sonnenblume gehen.
     C3_playlab_create_game:
       1:
-        text: Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes
-          Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives
-          Spiel erstellen, das man tatsächlich spielen kann.
+        text: Du hast bereits eine Animation oder eine Geschichte programmiert, die
+          jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein
+          interaktives Spiel programmieren, das man tatsächlich spielen kann.
       2:
         text: Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der
           "Wenn Pfeil"-Baustein und der "Figur bewegen"-Baustein. Diese Bausteine
@@ -2606,8 +2606,8 @@ de:
           Befehl an BB-8.
       6:
         image: notes/starwars_intro_6.JPG
-        text: Der leere Bereich rechts wird Arbeitsbereich genannt. Dort werden wir
-          unser Programm zusammenbauen.
+        text: Der leere Bereich rechts ist der Arbeitsbereich. Dort werden wir unser
+          Programm zusammenbauen.
       7:
         image: notes/starwars_intro_7.JPG
         text: Wenn ich den "moveLeft();"-Baustein in den Arbeitsbereich ziehe und
@@ -2665,9 +2665,8 @@ de:
           Tippfehler kann BB-8 den Code nicht verstehen und wird sich nicht bewegen.
       6:
         image: notes/starwars_typing_6.JPG
-        text: Wenn du in einer Zeile einen Fehler machst, dann hebt der Editor ihn
-          für dich hervor, damit du versuchen kannst, den Quelltext zu ändern und
-          den Fehler zu beheben.
+        text: Wenn du in einer Zeile einen Fehler machst, dann markiert ihn der Editor,
+          damit du versuchen kannst, den Quelltext zu ändern und den Fehler zu beheben.
       7:
         image: notes/starwars_typing_7.JPG
         text: Wenn du nicht weiter weißt, kannst du alles mit der "Neu Starten"-Schaltfläche
@@ -2696,8 +2695,8 @@ de:
           ist, wird eine Aktion durchgeführt.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Zum Beispiel wenn die Maus geklickt wird, eine Taste gedrückt oder auf
-          den Bildschirm getippt wird.
+        text: Ereignisse sind beispielsweise das Achten auf Mausklicks, Pfeiltasten
+          oder ein Antippen des Bildschirms.
       5:
         image: notes/starwars_events_5.JPG
         text: Wir werden R2-D2 so programmieren, dass er zuerst dem oberen Rebellenpiloten
@@ -2730,8 +2729,8 @@ de:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hallo, mein Name ist Alice und ich leite die Produkt- und Ingenieurteams
-          hier bei Code.org und ich habe an dem Tutorial gearbeitet, dass du gerade
+        text: Hallo, mein Name ist Alice und ich leite die Produkt- und Technikteams
+          hier bei Code.org. Ich habe auch an dem Tutorial gearbeitet, in dem du gerade
           spielst.
       2:
         image: notes/starwars_congrats_2.JPG
@@ -2838,8 +2837,8 @@ de:
           ist, wird eine Aktion durchgeführt.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Zum Beispiel wenn die Maus geklickt wird, eine Taste gedrückt oder auf
-          den Bildschirm getippt wird.
+        text: Ereignisse sind beispielsweise das Achten auf Mausklicks, Pfeiltasten
+          oder ein Antippen des Bildschirms.
       5:
         image: notes/starwars_blocks_events_5.JPG
         text: Wir werden R2-D2 so programmieren, dass er zuerst dem oberen Rebellenpiloten
@@ -2859,8 +2858,8 @@ de:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hallo, mein Name ist Alice und ich leite die Produkt- und Ingenieurteams
-          hier bei Code.org und ich habe an dem Tutorial gearbeitet, dass du gerade
+        text: Hallo, mein Name ist Alice und ich leite die Produkt- und Technikteams
+          hier bei Code.org. Ich habe auch an dem Tutorial gearbeitet, in dem du gerade
           spielst.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
@@ -3357,84 +3356,86 @@ de:
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
-        text: Mein Name ist Mei'lani. Ich bin Praktikantin bei code.org und bin auch
-          ein Informatik-Studentin. Ich mag Informatik, weil es wirklich kreativ ist.
-          Ich werde zum Problemlöser. Ich gestalte es so, dass alles funktioniert
-          wie ich es will. Aber ich möchte auch Designerin werden. Ich möchte die
-          Künstlerin und alles von der kreativen Seite her angehen.
+        text: Mein Name ist Mei'lani. Ich bin Praktikantin bei code.org und studiere
+          auch Informatik. Mir gefällt das Fach Informatik, weil es wirklich kreativ
+          ist. Ich bin die Problemlöserin. Meine Aufgabe ist es, die Dinge so zu gestalten,
+          dass alles so funktioniert, wie ich es will. Aber ich möchte auch Designerin
+          werden. Ich möchte die Künstlerin sein und alles von der kreativen Seite
+          her angehen.
       2:
         image: notes/applab_intro_welcome_2.png
-        text: Die Erstellung Deiner eigenen Apps ist mit App Lab ganz einfach! Ob
-          du neu in der Programmierung bist oder bereits Erfahrung hast. App Lab ist
-          ein großartiges Werkzeug, um neue Apps zu erstellen und diese mit Deinen
+        text: Die Erstellung deiner eigenen Apps ist mit App Lab ganz einfach! Egal,
+          ob du neu in der Programmierung bist oder bereits Erfahrung hast - App Lab
+          ist ein großartiges Werkzeug, um neue Apps zu erstellen und diese mit deinen
           Freunden zu teilen.
       3:
         image: notes/applab_intro_welcome_3.png
-        text: Dies ist ein App-Labor. Auf der linken Seite ist Deine App. Auf der
-          rechten Seite ist der Code der ausgeführt wird. Du baust Dein Programm indem
-          Du Blöcke aus der Toolbox ziehst. Du startest mit einenm Block der "SetProperty"
-          genannt wird.
+        text: Dies ist ein App-Labor. Auf der linken Seite ist deine App. Auf der
+          rechten Seite ist der Code, der ausgeführt wird. Du baust dein Programm,
+          indem du Bausteine aus der Werkzeugkiste ziehst. Du startest mit einem Baustein,
+          der "SetProperty" genannt wird.
       4:
         image: notes/applab_intro_welcome_4.png
         text: Der Set-Eigenschaft-Baustein verändert das Aussehen der Elemente auf
-          Deinem Bildschirm. Wie die Tasten, Beschriftungen oder sogar der Bildschirm
-          selbst. Zuerst musst du sich entscheiden, welches Element du ändern möchtest.
-          Wenn du mit der Maus über ein Element in Ihrer App fährst, kannst du hier
-          den Namen oder die ID sehen. Wähle dann diese ID aus dem ersten Dropdown-Menü
-          aus.
+          deinem Bildschirm, z.B. die Schaltflächen, Beschriftungen oder sogar der
+          Bildschirm selbst. Zuerst musst du dich entscheiden, welches Element du
+          ändern möchtest. Wenn du mit der Maus über ein Element in deiner App fährst,
+          kannst du hier den Namen oder die ID sehen. Wähle dann diese ID aus dem
+          ersten Dropdown-Menü aus.
       5:
         image: notes/applab_intro_welcome_5.png
-        text: Elemente haben viele Eigenschaften, die du ändern kannst, wie z. B.
-          Textfarbe, Hintergrundfarbe oder Schriftgröße. Du kannst die vollständige
+        text: Die einzelnen Elemente haben viele Eigenschaften, die du ändern kannst,
+          wie z. B. Textfarbe, Hintergrundfarbe oder Schriftgröße. Du kannst die vollständige
           Liste sehen und im zweiten Dropdown-Menü auswählen, welche Eigenschaft du
           ändern möchtest.
       6:
         image: notes/applab_intro_welcome_6.png
         text: Das letzte Dropdown-Menü ist der Bereich, in dem du den Wert eingeben
-          kannst, den du verwenden möchtest. Der Block wird dir einen Vorschlag machen.
-          Aber du kannst jederzeit selbst verschiedene Farben oder Zahlen eingeben.
+          kannst, den du verwenden möchtest. Der Baustein wird dir einen Vorschlag
+          machen. Aber du kannst jederzeit selbst verschiedene Farben oder Zahlen
+          eingeben.
       7:
         image: notes/applab_intro_welcome_7.png
-        text: 'Sobald du fertig bist, liest sich der Block ein wenig wie ein Satz:
-          "Setze die Hintergrundfarbe der Taste1 auf grün". Klicke auf Ausführen,
-          um die Änderungen zu sehen, die du im Code gemacht hast. Wenn du "Zurücksetzen"
-          klickst, kannst du weitere Blöcke hineinziehen, um andere Dinge an deiner
-          App zu ändern. Wie der Text!'
+        text: 'Sobald du fertig bist, liest sich der Baustein ein wenig wie ein Satz:
+          "Stelle die Hintergrundfarbe der Schaltfläche1 auf grün". Klicke auf Ausführen,
+          um deine Änderungen am Code zu sehen. Wenn du auf "Zurücksetzen" klickst,
+          kannst du weitere Bausteine hineinziehen, um andere Dinge an deiner App
+          zu ändern. Genau wie den Text!'
       8:
         image: notes/applab_intro_welcome_8.png
-        text: Für dieses Tutorial werden wir im Blockmodus arbeiten, aber App Lab
-          unterstützt auch die Arbeit im Text.
+        text: Für dieses Tutorial werden wir im Bausteinmodus arbeiten, App Lab unterstützt
+          aber auch die Arbeit im Text.
       9:
         image: notes/applab_intro_welcome_9.png
-        text: Sie werden in JavaScript, der Sprache des Webs, programmieren. Jedes
-          Level hat ein Ziel, Anweisungen und ein Bild von dem, was du schaffen sollst.
+        text: Ihr werdet in JavaScript, der Sprache des Webs, programmieren. Jedes
+          Level hat ein Ziel, Anweisungen und ein Bild von dem, was du erstellen sollst.
       10:
         image: notes/applab_intro_welcome_10.png
         text: Wenn du mal nicht weiter kommst, klicke auf dieses Bild und es wird
-          dir genau zeigen, wie du das Level abschließen kannst. Aber sieh bitter
-          erst zu, ob du es nicht vielleicht auch alleine schaffen kannst.
+          dir genau zeigen, wie du das Level abschließen kannst. Aber sieh dir bitte
+          erst an, ob du es nicht vielleicht auch alleine schaffen kannst.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Sobald du das Ziel für diese Stufe erreicht hast, klicken auf "Fertig
-          stellen", um fortzufahren. Das ist alles, was es gibt! Klicke auf den orangefarbenen
-          "Weiter"-Button, um zum nächsten Level zu gelangen und dein Abenteuer mit
-          einem App Lab zu beginnen!
+        text: Sobald du das Ziel für diese Stufe erreicht hast, klicke auf "Fertigstellen",
+          um fortzufahren. Das ist schon alles! Klicke auf die orangefarbene Schaltfläche
+          "Weiter", um zum nächsten Level zu gelangen und dein Abenteuer mit einem
+          App Lab zu beginnen!
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
-        text: Apps sind wirklich cool, denn es ist so etwas wie die Gründung eines
-          eigenen Unternehmens. Man kann alles von Grund auf entwerfen, man kann alles
-          verwalten, und man ist der Besitzer dieses Werkes, das man gerade mit Code
-          erstellt hat.
+        text: Apps sind wirklich cool, denn sie sind ein bisschen wie die Gründung
+          eines eigenen Unternehmens. Man kann alles von Grund auf entwerfen, man
+          kann alles verwalten, und man ist der Besitzer dieses Werkes, das man gerade
+          mit Code erstellt hat.
       2:
         image: notes/applab_intro_events_2.png
-        text: Jetzt, da Sie das Aussehen Ihrer App ändern können, machen wir sie interaktiv,
+        text: Jetzt, wo du das Aussehen der App ändern kannst, machen wir sie interaktiv,
           indem wir auf Ereignisse reagieren! Ereignisse sind Benutzeraktionen wie
           das Klicken auf eine Schaltfläche, das Blättern durch ein Menü oder das
-          Bewegen mit der Maus über ein Bild. Interaktive Anwendungen benötigen Methoden,
-          um auf Ereignisse zu reagieren, wie z. B. die Wiedergabe eines Sounds, wenn
-          ich auf diese Schaltfläche klicke. Um dies in App Lab zu tun, müssen Sie
-          einen neuen Block namens 'onEvent' verwenden.
+          Bewegen mit der Maus über ein Bild. Interaktive Apps erfordern Methoden,
+          wie auf Ereignisse reagiert werden soll, wie z. B. die Wiedergabe eines
+          Geräusches, wenn ich auf diese Schaltfläche klicke. Um dies in App Lab zu
+          tun, musst du einen neuen Baustein namens 'onEvent' verwenden.
       3:
         image: notes/applab_intro_events_3.png
         text: Dieses Programm setzt den Bildschirm auf blau. Ich möchte, dass der
@@ -3444,15 +3445,15 @@ de:
           im ersten Dropdown-Menü auswählen.
       4:
         image: notes/applab_intro_events_4.png
-        text: Als nächstes wähle ich die Art des Events. Es gibt viele Optionen, aus
-          denen man wählen kann, aber im Moment belasse ich es bei einem normalen
+        text: Als nächstes wähle ich die Art des Ereignisses. Es gibt viele Optionen,
+          aus denen man wählen kann, aber im Moment belasse ich es bei einem normalen
           Klick.
       5:
         image: notes/applab_intro_events_5.png
-        text: 'Schließlich ergänze ich den Code innerhalb des on-Events, der die Hintergrundfarbe
-          des Bildschirms ändert. Du kannst diesen Block wie einen Satz lesen: "Für
-          den Fall, dass auf die Schaltfläche geklickt wird, führe diesen ganzen Code
-          aus."'
+        text: 'Schließlich ergänze ich den Code innerhalb des on-Events, der die Hintergraundfarbe
+          des Bildschirms ändert. Du kannst diesen Baustein wie einen Satz lesen:
+          "Bei dem Ereignis, dass auf die Schaltfläche geklickt wird, führe diesen
+          gesamten Code aus."'
       6:
         image: notes/applab_intro_events_6.png
         text: Lasst es uns ausprobieren. Bausteine außerhalb eines onEvent laufen
@@ -3464,32 +3465,33 @@ de:
       8:
         image: notes/applab_intro_events_8.png
         text: Wenn du nach dem Ereignis noch mehr ändern möchtest, wie z. B. den Text
-          auf dem Bildschirm, füge einfach mehr Code zum onEvent hinzu
+          auf dem Bildschirm, füge einfach mehr Code zum onEvent Baustein hinzu.
       9:
         image: notes/applab_intro_events_9.png
         text: Damit das Programm auf mehr Ereignisse reagiert, füge weitere onEvent
-          Bausteine hinzu. Achte nur darauf, dass du sie nicht ineinander steckst.
-          Jetzt ist es an der Zeit, es selbst auszuprobieren. Viel Spaß dabei!
+          Bausteine hinzu. Achte nur darauf, dass du sie nicht ineinander verschachtelst.
+          Jetzt ist es an der Zeit, dass du es selbst ausprobierst. Viel Spaß dabei!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
-        text: Als nächstes erfähst du, wie Bilder und Sounds zur App hinzugefügt werden
-          können. Beginnen wir mit dem Ausprobieren der Soundoptionen.
+        text: Als nächstes erfährst du, wie Bilder und Geräusche zur App hinzugefügt
+          werden können. Beginnen wir mit dem Ausprobieren der Soundoptionen.
       2:
         image: notes/applab_intro_sounds_2.png
-        text: In der Toolbox findest du einen neuen Baustein namens "playSound". Ziehe
-          ihn in den Arbeitsbereich. Du kannst einen Sound zur Wiedergabe auswählen,
+        text: In der Werkzeugkiste findest du einen neuen Baustein namens "playSound".
+          Ziehe ihn in den Arbeitsbereich. Du kannst einen Sound zur Wiedergabe auswählen,
           indem du auf das Dropdown-Menü klickst und dann auf "Auswählen" klickst.
       3:
         image: notes/applab_intro_sounds_3.png
-        text: Von hier aus kannst du entweder eine Audiodatei von Deinem Computer
-          hochladen oder nach einem Sound aus der Soundbibliothek suchen. Die Klangbibliothek
+        text: Von hier aus kannst du entweder eine Audiodatei von deinem Computer
+          hochladen oder nach einem Sound aus der Soundbibliothek suchen. Die Soundbibliothek
           hat viele verschiedene Kategorien wie Instrumente, Hintergrundmusik oder
-          Tiere.
+          Tiergeräusche.
       4:
         image: notes/applab_intro_sounds_4.png
-        text: Sobald du den gewünschten Sound erhalten hast, klicke auf "Auswählen".
-          Wenn dieser Block ausgeführt wird gibt er den von Dir gewählten Sound wieder.
+        text: Sobald du das gewünschte Geräusch gefunden hast, klicke auf "Auswählen".
+          Wenn dieser Baustein ausgeführt wird, spielt er das von dir gewählte Geräusch
+          ab.
       5:
         image: notes/applab_intro_sounds_5.png
         text: Um Bilder zu deinen Elementen hinzuzufügen, kannst du einfach den setProperty-Baustein
@@ -3499,8 +3501,8 @@ de:
         text: Wähle dann aus dem dritten Dropdown-Menü "Auswählen".
       7:
         image: notes/applab_intro_sounds_7.png
-        text: Von hier aus kannst du ein Bild von Deinem Computer hochladen oder durch
-          eine riesige Bibliothek von Symbolen in der Symbolbibliothek schauen.
+        text: Von hier aus kannst du ein Bild von Deinem Computer hochladen oder eine
+          riesige Bibliothek von Symbolen in der Symbolbibliothek durchsuchen.
       8:
         image: notes/applab_intro_sounds_8.png
         text: Zurück im Codemodus kannst du mit dem Baustein "setProperty" die Symbolfarbe
@@ -3508,17 +3510,17 @@ de:
           verwenden sollst, klicke auf "Ausführen", um zu sehen, wie es aussieht.
       9:
         image: notes/applab_intro_sounds_9.png
-        text: Das ist alles, was es gibt! Jetzt kannst du anfangen, Bilder und Sounds
+        text: Das ist schon alles! Jetzt kannst du anfangen, Bilder und Geräusche
           hinzuzufügen, um Deine Apps noch unterhaltsamer und dynamischer zu gestalten.
     applab_intro_designmode:
       1:
         text: Um eigene Apps zu erstellen, musst du mit dem Design von Bildschirmen
-          und Elementen von Grund auf neu beginnen. App Lab macht dies mit dem Designmodus
-          einfach.
+          und Elementen von Grund auf Grund auf beginnen. App Lab macht das mit dem
+          Designmodus einfach.
       2:
-        text: Verwend den Schalter oben in Deiner App, um in den Designmodus zu gelangen.
+        text: Verwende den Schalter oben in deiner App, um in den Designmodus zu gelangen.
       3:
-        text: Du kannst neue Elemente hinzufügen, indem du sie auf den Bildschirm
+        text: Du kannst neue Elemente hinzufügen, indem du siae auf den Bildschirm
           ziehst. Du kannst sie an verschiedene Positionen verschieben und ihre Größe
           ändern, indem du die untere rechte Ecke ziehst.
       4:
@@ -3526,10 +3528,10 @@ de:
           auf der rechten Seite. So ist es beispielsweise sehr einfach, Text, Farbe
           und Schriftgröße dieser Schaltfläche zu ändern.
       5:
-        text: Wenn du ein neues Element zu Deinem Bildschirm hinzufügst, erhält es
-          eine generische ID wie button1. Es ist eine gute Idee, die ID dieser Schaltfläche
-          in etwas Aussagekräftigeres wie "rightButton" zu ändern. Damit du weißt
-          welches es ist, wenn du zum Programm gehst.
+        text: Wenn du ein neues Element zu deinem Bildschirm hinzufügst, erhält es
+          eine generische ID wie button1/Schaltfläche1. Es ist eine gute Idee, die
+          ID dieser Schaltfläche in etwas Aussagekräftigeres wie "rightButton" umzubenennen.
+          Dann weißt due, welche Schaltfläche es ist, wenn du das Programm aufmachst.
       6:
         text: Wenn du versehentlich ein Element zur App hinzugefügt hast, ziehe es
           einfach heraus oder klicke auf Löschen.
@@ -3537,13 +3539,13 @@ de:
         text: Du kannst Deiner App völlig neue Bildschirme hinzufügen, indem du ein
           Bildschirmelement per Drag & Drop in die App ziehst
       8:
-        text: Über das Dropdown-Menü oben kannst du schnell zwischen den von Dir erstellten
+        text: Über das Dropdown-Menü oben kannst du schnell zwischen den von dir erstellten
           Bildschirmen hin und her wechseln.
       9:
-        text: Innerhalb der App benötigst du eine Möglichkeit, zwischen all diesen
-          Bildschirmen zu wechseln, so dass der setScreen-Baustein der Toolbox hinzugefügt
-          wurde. Verwende "setScreen" innerhalb des Blocks "onEvent", um die Bildschirme
-          per Knopfdruck zu wechseln.
+        text: Innerhalb der App brauchst du eine Möglichkeit, zwischen all diesen
+          Bildschirmen zu wechseln, so dass der setScreen-Baustein der  Werkzeugkiste
+          hinzugefügt wurde. Verwende "setScreen" innerhalb des Bausteins "onEvent",
+          um die Bildschirme mit einem Klick auf die Schaltfläche zu wechseln.
       10:
         text: In den nächsten Stufen wirst du an einem einzelnen Projekt arbeiten.
           Zuerst füge eine Schaltfläche hinzu, dann füge einen neuen Bildschirm hinzu
@@ -3553,46 +3555,46 @@ de:
       1:
         image: notes/applab_intro_share_1.png
         text: Jetzt, da du einige der Grundlagen von App Lab gelernt hast, wie das
-          Hinzufügen von Schaltflächen, Sounds, Bildern, Text und neuen Bildschirmen,
-          kannst u alle Arten von Anwendungen erstellen.
+          Hinzufügen von Schaltflächen, Geräuschen, Bildern, Text und neuen Bildschirmen,
+          kannst du alle Arten von Apps erstellen.
       2:
         image: notes/applab_intro_share_2.png
-        text: Im nächsten Level findest du die App, die du gerade gebaut hast. Mit
+        text: Im nächsten Level findest du die App, die du gerade erstellt hast. Mit
           ein wenig Kreativität kannst du daraus ein Persönlichkeitsquiz für deine
           Freunde machen, eine Grußkarte, die du mit deiner Familie teilen kannst,
           oder ein Abenteuerspiel nach deinem Geschmack. Alle diese Apps sind nur
           eine Kombination aus den Fähigkeiten, die du bereits gelernt hast, und ich
-          wette, du kannst dir noch mehr einfallen lassen.
+          bin sicher, dass dir noch mehr einfällt.
       3:
         image: notes/applab_intro_share_3.png
-        text: Sobald du mit Deiner App fertig bist, kannst du diese ganz einfach an
-          Dein Handy senden, um zu sehen, wie sie aussieht. Klicke einfach auf "Teilen"
-          und gib hier Deine Telefonnummer ein.
+        text: Sobald du mit deiner App fertig bist, kannst du diese ganz einfach an
+          dein Handy senden, um zu sehen, wie sie aussieht. Klicke einfach auf "Teilen"
+          und gib hier deine Telefonnummer ein.
       4:
         image: notes/applab_intro_share_4.png
-        text: Du erhältst eine Sms, mit der du die App sofort öffnen kannst.
+        text: Du erhältst eine SMS, mit der du die App sofort öffnen kannst.
       5:
         image: notes/applab_intro_share_5.png
         text: Du kannst auch einen Link zur App über Social Media teilen oder ihn
           in der öffentlichen Galerie von code.org veröffentlichen, damit andere Personen
-          ihn spielen und teilen können.
+          auf der App spielen und sie teilen können.
       6:
         image: notes/applab_intro_share_6.png
-        text: Du hast gerade die Oberfläche dessen, was App Lab kann, zerkratzt. Full
-          App Lab bietet erweiterte Benutzerinteraktionen, neue Bildschirmelemente
-          und sogar eine integrierte Datenbank, so dass du schnell vollwertige Anwendungen
-          erstellen kannst. Unter "code.org/applab" findest du das komplette Tool
-          und viele Ideen, wenn du weitermachen willst.
+        text: Du hast gerade nur einen kleinen Teil davon gesehen, was App Lab kann.
+          Full App Lab bietet erweiterte Benutzerinteraktionen, neue Bildschirmelemente
+          und sogar eine integrierte Datenbank, so dass du schnell vollwertige Apps
+          erstellen kannst. Unter "code.org/applab" findest du alle Werkzege und viele
+          Ideen, wenn du weitermachen willst.
       7:
         image: notes/applab_intro_share_7.png
-        text: Danke, dass du die Fahrt mitgenommen hast. Jetzt kannst du deine erste
-          App erstellen und freigeben und mit App Lab weiter Apps erstellen!
+        text: Danke, dass du mitgemacht hast. Jetzt kannst du deine erste App erstellen
+          und freigeben und mit App Lab weiter Apps erstellen!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - danke, dass du mit mir gekommen bist.
-          Was ich dir zeigen möchte, ist direkt über diesem Plateau. Ich denke, du
-          wirst es lieben!'
+        text: 'Stacy: Stampy, Lizzy, Preston - danke, dass ihr mit mir gekommen seid.
+          Was ich euch zeigen möchte, ist direkt über diesem Plateau. Ich denke, dass
+          es euch gefallen wird!'
       2:
         image: notes/mc_2017_agent_intro_2.png
         text: Moment mal - da ist ein Loch in der Schiene! (kreisch)
@@ -3600,63 +3602,64 @@ de:
         image: notes/mc_2017_agent_intro_3.png
         text: 'Geht es allen gut? Stampy: Ah, ich sehe das Problem. Seht mal! Da war
           ein Loch in der Schiene. Stacy: Wirklich, Stampy? Lizzy: Vielleicht sollten
-          wir Blöcke sammeln, um es zu reparieren. Preston: Lasst es uns zu einem
+          wir Bausteine sammeln, um sie zu reparieren. Preston: Lasst es uns zu einem
           Rennen machen. Der erste, der wieder an die Spitze kommt, gewinnt. Stacy:
           Ok, auf die Plätze, fertig, los! Ok, ich werde nur etwas von diesem Terrakotta
-          sammeln. Warte. Leute, ich kann nicht graben! Preston: Das Gleiche. Lizzy:
+          sammeln. Warte. Leute, ich kann nicht graben! Preston: Ich auch nicht. Lizzy:
           Ich kann es auch nicht. Stacy: Ok, das ist wirklich seltsam. Stampy, kannst
           du graben? Stampy: Ich kann auch nicht graben! Stacy: Ok, alle bleiben ruhig.
-          Stampy: Ist das Spiel unterbrochen? Stacy: Wenn ja, wie können wir es beheben?
+          Stampy: Ist das Spiel unterbrochen? Stacy: Wenn ja, wie können wir das reparieren?
           Lizzy: Ich weiß es nicht. Stampy: Weiß jemand, wie man Minecraft-Code schreibt?'
       4:
         image: notes/mc_2017_agent_intro_4.png
         text: "(puff) Preston: Was ist das denn? Stampy: Ich habe so etwas noch nie
-          zuvor gesehen. Lizzy: Es ist so bezaubernd! Stacy: Ist es....ist es zähmbar?
-          Preston: Okay, was ist los? Jemand muss in die reale Welt zurückkehren und
-          das in Ordnung bringen.  Alle: Nicht doch! Stacy: Nicht ich-(ach) Ok, ich
-          gehe."
+          zuvor gesehen. Lizzy: Es ist so süß! Stacy: Kann man es....zähmen? Preston:
+          Okay, was ist los? Jemand muss in die reale Welt zurückkehren und das in
+          Ordnung bringen.  Alle: Nicht doch! Stacy: Nicht ich-(seufzt) Ok, ich gehe."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Oh, okay, hey, also bin ich jetzt in der realen Welt. Ich werde versuchen,
+        text: Oh, okay, hey, ich bin jetzt also in der realen Welt. Ich werde versuchen,
           die Büros von Minecraft zu finden.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: Aber ich werde deine Hilfe brauchen. Beginne das Tutorial zu machen,
+        text: Aber dafür brauche ich deine Hilfe. Beginne das Tutorial zu bearbeiten,
           fange an zu lernen, wie man kodiert, und ich werde euch nach ein paar Levels
-          einholen, okay? Wünsch mir Glück! Ich glaube, es geht hier entlang. Au!
-          Kaktus! Mir geht es gut!
+          treffen, okay? Wünscht mir Glück! Ich glaube, es geht hier entlang. Au!
+          Kaktus! Mir geht‘s gut!
       7:
         image: notes/mc_2017_agent_intro_7.png
-        text: Um die Herausforderung "Stunde des Codes" abzuschließen, musst du Code
-          schreiben, um den Agenten zu programmieren. Du wirst mit dem Agenten zusammenarbeiten,
+        text: Um die Aufgabe "Hour of Code" abzuschließen, musst du Code schreiben,
+          der den Agenten zu programmiert. Du wirst mit dem Agenten zusammenarbeiten,
           um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände,
-          die du für deine Reise benötigst, abholen kannst. Nur der Agent kann Blöcke
-          platzieren und auflösen, und nur du kannst Gegenstände sammeln. Dein Bildschirm
-          ist in drei Hauptteile gegliedert. Auf der linken Seite befindet sich Minecraft.
+          die du für deine Reise benötigst, einsammeln kannst. Nur der Agent kann
+          Bausteine platzieren und auflösen, und nur du kannst Gegenstände einsammeln.
+          Dein Bildschirm ist in drei Hauptteile gegliedert. Auf der linken Seite
+          befindet sich Minecraft.
       8:
         image: notes/mc_2017_agent_intro_8.png
-        text: Der mittlere Bereich ist die Toolbox mit Befehlen, die der Agent verstehen
-          kann.
+        text: Der mittlere Bereich ist die Werkzeugkiste mit Befehlen, die der Agent
+          verstehen kann.
       9:
         image: notes/mc_2017_agent_intro_9.png
-        text: Und auf der rechten Seite befindet sich der Arbeitsbereich. Dort stapelst
+        text: Auf der rechten Seite befindet sich der Arbeitsbereich. Dort stapelst
           du die Befehle, um dein Programm zur Steuerung des Agenten zu erstellen.
       10:
         image: notes/mc_2017_agent_intro_10.png
-        text: Der Agent kann gehen, drehen und Druckplatten aktivieren. Er kann auch
-          Blöcke zerstören und Blöcke platzieren. Wenn er den Block wie diese Minecartschienen
-          platziert, legt er ihn unter sich selbst.
+        text: Der Agent kann gehen, sich drehen und Druckplatten aktivieren. Er kann
+          auch Bausteine zerstören und Bausteine platzieren. Wenn er den Baustein
+          wie diese Minecart-Schienen platziert, gehen sie von selbst darunter.
       11:
         image: notes/mc_2017_agent_intro_11.png
         text: Hast du vergessen, was du in einem Level tun musst, findest du oben
           die nötigen Anweisungen.
       12:
         image: notes/mc_2017_agent_intro_12.png
-        text: Wenn du es noch einmal versuchen möchtest, kannst du die blaue Reset-Taste
-          drücken, um alles auf den Ausgangspunkt zurückzusetzen. Und wenn du einen
-          Codeblock löschen möchtest, ziehe ihn von deinem Arbeitsbereich in die Toolbox.
-          Denke daran, auf Run zu drücken, um den Agenten in Bewegung zu bringen.
-          Okay, mach weiter und probiere die ersten Level aus. Viel Glück!
+        text: Wenn du es noch einmal versuchen möchtest, kannst du die blaue Schaltfläche
+          Zurücksetzen drücken, um alles auf den Ausgangspunkt zurückzusetzen. Und
+          wenn du einen Codebaustein löschen möchtest, ziehe ihn von deinem Arbeitsbereich
+          in die Werkzeugkiste. Denke daran, auf Run zu drücken, um den Agenten in
+          Bewegung zu bringen. Okay, mach weiter und probiere die ersten Level aus.
+          Viel Glück!
     mc_2017_repeat:
       1:
         image: notes/mc_2017_repeat_1.png
@@ -3694,49 +3697,49 @@ de:
       7:
         image: notes/mc_2017_repeat_7.png
         text: Im nächsten Level kannst du eine Schleife verwenden, um den Agenten
-          auf dem Pfad zu bewegen. Ziehe den Wiederholungsblock in den Arbeitsbereich
-          und plaziere den Vorwärtsbewegungsblock innerhalb des Wiederholungsblocks.
+          auf dem Pfad zu bewegen. Ziehe den Wiederholungsbaustein in den Arbeitsbereich
+          und platziere den Bausteien „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins.
           Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu
-          tun, ohne einen ganzen Haufen Blöcke in den Arbeitsbereich ziehen zu müssen.
-          Du kannst wählen, wie oft du wiederholen möchtest, indem du eine Zahl in
-          den Wiederholungsblock einträgst.
+          tun, ohne einen ganzen Haufen Bausteine in den Arbeitsbereich ziehen zu
+          müssen. Du kannst wählen, wie oft du wiederholen möchtest, indem du eine
+          Zahl in den Wiederholungsbaustein einträgst.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: Du kannst auch Abbiegungen und mehrere Befehle in den Wiederholungsblock
+        text: Du kannst auch Abbiegungen und mehrere Befehle in den Wiederholungsbaustein
           einfügen, aber versuche vorerst, eine Wiederholung zu verwenden, um den
           Agenten ein paar Schritte vorwärts zu bewegen. Denke daran, wenn du an einem
-          Puzzle hängen bleibst, kannst du immer auf den blauen Reset-Knopf drücken
-          und es erneut versuchen.
+          Puzzle hängen bleibst, kannst du immer auf die blaue Schaltfläche Zurücksetzen
+          drücken und es erneut versuchen.
       9:
         image: notes/mc_2017_repeat_9.png
         text: 'Wenn du darüber nachdenkst, einen coolen Job wie Katie''s zu haben,
-          dann klicke einfach auf den Showcode Knopf, wenn du jedes Level beendet
+          dann klicke einfach auf die Schaltfläche Showcode wenn du jedes Level beendet
           hast. Das wird dir tatsächlich den Javascript-Code zeigen, den jemand wie
           Katie benutzt, wenn sie Minecraft programmiert. Katie: Ja, viel Glück für
           alle!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: Ich versuche nicht zu prahlen, aber ich bin ziemlich gut im
-          Parkour. Lizzy: Lass uns schlafen, damit es Tag ist, an dem Stacy zurückkommt.'
+        text: 'Preston: Ich will nicht angeben, aber ich bin ziemlich gut im Parkour.
+          Lizzy: Lass uns schlafen, damit es Tag ist, wenn Stacy zurückkommt.'
       2:
         image: notes/mc_2017_functions_2.png
         text: 'Stacy: Ok Leute, ich bin zurück von den Minecraft Büros, und ich denke,
           ich weiß, wie ich das Problem, das ich in meinem Spiel habe, lösen kann.
-          Ich denke, ich kann eine Funktion benutzen. Lass mich das nur öffnen.'
+          Ich denke, ich kann eine Funktion verwenden. Lass mich das nur öffnen.'
       3:
         image: notes/mc_2017_functions_3.png
         text: Eine Funktion ist also ein bestimmter Satz von Anweisungen, um eine
           bestimmte Aufgabe zu erfüllen, ähnlich wie ein Rezept. In den nächsten Stufen
-          hast du Zugriff auf Funktionen, mit denen du die Rätsel lösen kannst.
+          hast du Zugriff auf Funktionen, mit denen du die Aufgaben lösen kannst.
       4:
         image: notes/mc_2017_functions_4.png
         text: Sieh dir den Code in der Funktion an, wenn er sich im Arbeitsbereich
           befindet, um zu sehen, was er tut.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Dann suche den Baustein mit diesem Namen in der Toolbox und ziehe ihn
-          von der Toolbox auf den 'wenn Ausführen' Baustein.
+        text: Dann suche den Baustein mit diesem Namen in der  Werkzeugkiste und ziehe
+          ihn von der  Werkzeugkiste auf den 'wenn Ausführen' Baustein.
       6:
         image: notes/mc_2017_functions_6.png
         text: Denke daran, dass du die gleiche Funktion jedes Mal verwenden kannst,
@@ -3751,7 +3754,7 @@ de:
       3:
         text: 'Stampy: Herzlichen Glückwunsch, du hast es geschafft!'
       4:
-        text: 'Stacy: Herzlichen Glückwunsch Jungs, du hast das total gerockt! Und
+        text: 'Stacy: Herzlichen Glückwunsch Leute, du hast das total gerockt! Und
           jetzt, da du die Stunde des Codes abgeschlossen hast, kannst du mit der
           Programmierung in Minecraft beginnen. Du hast mehr über Schleifen, Funktionen
           und was ein Software-Agent macht gelernt.'
@@ -3767,10 +3770,10 @@ de:
       7:
         text: 'Stacy: Und ich bin wieder da! Okay, Leute, hier ist der Agent! Ich
           zeige dir, was es kann. Schau, es tut es! Ich habe ihm gesagt, dass er eine
-          Treppe aus diesen Terrakotta-Blöcken bauen soll, jetzt können wir das einfach
-          benutzen, um hier rauszukommen. Und Leute, es sind nicht nur Treppen. Ich
-          kann dem Agenten sagen, er soll alles tun, was ich will, und er wird es
-          für mich tun.'
+          Treppe aus diesen Terrakotta-Bausteinen bauen soll, jetzt können wir das
+          einfach benutzen, um hier rauszukommen. Und Leute, es sind nicht nur Treppen.
+          Ich kann dem Agenten sagen, er soll alles tun, was ich will, und er wird
+          es für mich tun.'
       8:
         text: 'Stampy: Wie hast du das gemacht? Stacy: Es war eigentlich ganz einfach.
           Ich habe nur den Code benutzt!'
@@ -3781,16 +3784,15 @@ de:
           auf unseren Desktops, in unseren Häusern, in unseren Taschen oder einfach
           nur irgendwo anders sind. Aber während die meisten von uns diese revolutionäre
           Technologie täglich nutzen, fragen wir nicht oft: "Wie funktionieren Computer?"
-          In dieser Serie werden Sie lernen, wie Computer wirklich funktionieren,
-          beginnend mit dem, was einen Computer zu einem Computer macht. Dann werden
-          Sie sich ansehen, wie Informationen im Computer mit winzigen elektrischen
-          Signalen dargestellt werden, die mit unglaublicher Geschwindigkeit ein-
-          und ausgehen.'
+          In dieser Serie werdet ihr lernen, wie Computer wirklich funktionieren,
+          beginnend mit dem, was einen Computer zu einem Computer macht. Dann werdet
+          ihr sehen, wie Informationen im Computer mit winzigen elektrischen Signalen
+          dargestellt werden, die mit unglaublicher Geschwindigkeit ein- und ausgehen.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
         text: Danach erfährst du, wie Computer Schaltkreise verwenden, um alles zu
           tun, von einfacher Mathematik bis hin zur Simulation ganzer virtueller Welten.
-          Als nächstes zoome Dich heraus und schau Dir die verschiedenen Teile eines
+          Als nächstes zoome Dich heraus und schau dir die verschiedenen Teile eines
           Computers an, die tatsächlich alle diese Informationen eingeben, ausgeben
           und speichern. Schließlich wirf einen Blick darauf, was Code eigentlich
           ist und wie Software die Hardware steuert. Egal, ob du nur neugierig auf
@@ -3801,7 +3803,7 @@ de:
       1:
         image: notes/csd_concept_computer_1.png
         text: Mein Name ist May-Li Khoe und ich bin Designer und Erfinder. Einige
-          der Dinge, die ich entworfen habe, waren also bei Apple, und jetzt entwerfe
+          der Dinge, die ich entworfen habe, waren für  Apple, und jetzt entwerfe
           ich Produkte für Kinder, die sie verwenden können, damit sie eine leichtere
           Zeit in der Schule haben. Zu meinen weiteren Aufgaben gehören DJing und
           Tanz.
@@ -3815,10 +3817,10 @@ de:
       3:
         image: notes/csd_concept_computer_3.png
         text: Hi, ich bin Nat! Ich war einer der ursprünglichen Designer der Xbox.
-          Ich arbeite mit Computern, seit ich vielleicht sieben Jahre alt bin, und
-          jetzt arbeite ich an Virtual Reality. Als Menschen haben wir immer Werkzeuge
-          entwickelt, die uns helfen, Probleme zu lösen. Werkzeuge wie eine Schubkarre,
-          ein Hammer, eine Druckmaschine oder ein Sattelzug.
+          Ich arbeite mit Computern, seit ich circa sieben Jahre alt bin, und jetzt
+          arbeite ich an Virtual Reality. Als Menschen haben wir immer Werkzeuge entwickelt,
+          die uns helfen, Probleme zu lösen. Werkzeuge wie eine Schubkarre, ein Hammer,
+          eine Druckmaschine oder ein Sattelzug.
       4:
         image: notes/csd_concept_computer_4.png
         text: Alle diese Erfindungen halfen uns bei der manuellen Arbeit. Im Laufe
@@ -3878,8 +3880,8 @@ de:
           Schaltungen für Mode und Musik und Technologie.
       2:
         text: Mein Name ist Federico Gomez Suarez, und ich bin Softwareentwickler
-          bei Microsoft Hack for Good. Und ich beschäftige mich mit dem Einsatz von
-          Technologie, um einige der großen sozialen Probleme unserer Zeit zu lösen.
+          bei Microsoft Hack for Good. Ich beschäftige mich mit dem Einsatz von Technologie,
+          um einige der großen sozialen Probleme unserer Zeit zu lösen.
       3:
         text: Du hast vielleicht gehört, dass Computer mit Einsen und Nullen arbeiten.
           Aber fast niemand beschäftigt sich heute wirklich direkt mit diesen Einsen
@@ -3908,10 +3910,10 @@ de:
           Null und Eins. Mit diesen beiden Ziffern können wir bis zu einer beliebigen
           Zahl zählen.'
       8:
-        text: 'Und so funktionierts. Im dezimalen Zahlensystem, an das wir alle gewöhnt
-          sind, hat jede Position in einer Zahl einen anderen Wert. Es gibt eine 1
-          Position, die 10 Position, die 100 Position, und so weiter. Zum Beispiel
-          ist eine 9 in der Position 100 eine 900. Im Binärbetrieb trägt jede Position
+        text: 'Und so funktioniert das. Im dezimalen Zahlensystem, an das wir alle
+          gewöhnt sind, hat jede Position in einer Zahl einen anderen Wert. Es gibt
+          eine 1 Position, die 10 Position, die 100 Position, und so weiter. Zum Beispiel
+          ist eine 9 in der Position 100 eine 900. Im binären System hat jede Position
           auch einen Wert. Aber anstatt jedes Mal mit 10 zu multiplizieren, multiplizieren
           wir mit 2: Es gibt also die 1 Position, die 2 Position, die 4 Position,
           die 8 Position, und so weiter. Zum Beispiel ist die Zahl 9 im Binärformat
@@ -3934,8 +3936,8 @@ de:
           gespeichert werden. Jedes Wort, das du auf jeder Webseite oder deinem Handy
           siehst, wird mit einem System wie diesem dargestellt.
       10:
-        text: Betrachten wir nun Fotos, Videos und alle Grafiken, die Sie auf einem
-          Bildschirm sehen.
+        text: Betrachten wir nun Fotos, Videos und alle Grafiken, die ihr auf einem
+          Bildschirm seht.
       11:
         text: Alle diese Bilder bestehen aus winzigen Punkten, die Pixel genannt werden,
           und jedes Pixel hat eine Farbe. Jede der Farben kann mit Zahlen dargestellt
@@ -3946,9 +3948,9 @@ de:
         text: Jeder Klang ist im Grunde genommen eine Reihe von Schwingungen in der
           Luft. Vibrationen können grafisch als Wellenform dargestellt werden. Jeder
           Punkt dieser Wellenform kann durch eine Zahl dargestellt werden. Und so
-          kann jeder Klang in eine Reihe von Zahlen zerlegt werden. Wenn Sie eine
-          höhere Klangqualität wünschen, wählen Sie 32-Bit-Audio oder ein 8-Bit-Audio.
-          Mehr Bits bedeuten einen größeren Zahlenbereich.
+          kann jeder Klang in eine Reihe von Zahlen zerlegt werden. Wenn du eine höhere
+          Klangqualität willst, wähle 32-Bit-Audio oder ein 8-Bit-Audio. Mehr Bits
+          bedeuten einen größeren Zahlenbereich.
       13:
         text: Wenn du einen Computer benutzt, um Code zu schreiben oder deine eigene
           App zu erstellen, hast du es nicht direkt mit diesen Einsen und Nullen zu
@@ -3961,7 +3963,7 @@ de:
         text: Eines der coolsten Dinge, die ich über Schaltkreise entdeckt habe, ist,
           dass Schaltkreise eine Kunstform sein können, wie wenn ich eine kreative
           Idee habe, ich kann diese kreative Idee mit Schaltkreisen herausbringen.
-          Wenn Du also Ideen hast, kannst du die Technologie nutzen, um diese Ideen
+          Wenn du also Ideen hast, kannst du die Technologie nutzen, um diese Ideen
           zum Leben zu erwecken.
       2:
         text: Jeder Ein- oder Ausgang eines Computers ist im Grunde genommen eine
@@ -4011,7 +4013,7 @@ de:
       9:
         text: Verschiedene Stromkreise können andere einfache Berechnungen wie Subtraktion
           oder Multiplikation durchführen. Tatsächlich ist die gesamte Informationsverarbeitung,
-          die Ihr Computer durchführt, nur eine Menge und viele kleine einfache Operationen
+          die dein Computer durchführt, nur eine Menge und viele kleine einfache Operationen
           zusammengesetzt. Jede einzelne Operation, die von einem Computer durchgeführt
           wird, ist so einfach, dass sie von einem Menschen durchgeführt werden könnte,
           aber diese Schaltungen in Computern sind viel schneller.
@@ -4061,8 +4063,8 @@ de:
           Eingabegeräte.
       6:
         text: Betrachten wir nun ein einfaches Beispiel dafür, wie Input durch einen
-          Computer läuft und zu Output wird. Wenn Sie eine Taste auf Ihrer Tastatur
-          drücken - sagen wir den Buchstaben "B". Die Tastatur wandelt den Buchstaben
+          Computer läuft und zu Output wird. Wenn du eine Taste auf deiner Tastatur
+          drückst - sagen wir den Buchstaben "B". Die Tastatur wandelt den Buchstaben
           in eine Zahl um. Diese Zahl wird als Binärwert, Einsen und Nullen, an den
           Computer gesendet.
       7:
@@ -4108,7 +4110,7 @@ de:
           ihr Job ist es, unter meinem Schreibtisch zu schlafen und sehr laut zu schnarchen.
       2:
         text: 'Mein Name ist Jerome Holman, und ich bin Programm-Manager bei Team
-          Xbox und ich habe einen wirklich lustigen Job: Im Grunde genommen bringen
+          Xbox und ich habe einen wirklich witzigenJob: Im Grunde genommen bringen
           ich Hardware und Software zusammen, um euch alle Spiele zu geben, die ihr
           auf eurer Xbox liebt.'
       3:
@@ -4152,15 +4154,15 @@ de:
         image: notes/csd_concept_hardware_software_10.png
         text: Heute sieht die Software, die wir schreiben, eher so aus (Python), oder
           so (Rubin), oder sogar so (Blockly). Programmiersprachen wie diese ermöglichen
-          es Dir, Befehle in etwas einzugeben, das ähnlich wie einfache Sprache aussieht.
+          es dir, Befehle in etwas einzugeben, das ähnlich wie einfache Sprache aussieht.
       11:
         image: notes/csd_concept_hardware_software_11.png
-        text: Um ein Rechteck auf dem Bildschirm zu zeichnen, benötigen Sie nur einen
+        text: Um ein Rechteck auf dem Bildschirm zu zeichnen, benötigst du nur einen
           einzigen Befehl. Dieser High-Level-Befehl wird in Hunderte oder Tausende
           von einfacheren binären Befehlen umgewandelt, die die CPU versteht. Die
-          Software sagt der CPU, was sie tun soll, aber wenn Sie Musik hören, im Internet
-          surfen und mit einem Freund chatten, führt Ihr Computer mehrere Softwarekomponenten
-          auf einmal aus.
+          Software sagt der CPU, was sie tun soll, aber wenn du Musik hören, im Internet
+          surfen und mit einem Freund chatten willst, führt dein Computer mehrere
+          Softwarekomponenten auf einmal aus.
       12:
         image: notes/csd_concept_hardware_software_12.png
         text: Wie kommen also alle diese Programme überhaupt auf den Computer, und
@@ -4176,7 +4178,7 @@ de:
         image: notes/csd_concept_hardware_software_14.png
         text: Das Betriebssystem ist ein Programm mit speziellen Fähigkeiten, mit
           denen es die andere Software auf dem Computer steuern kann. Du kannst neue
-          Programme installieren, indem du sie in den Speicher deines Computers ladest.
+          Programme installieren, indem du sie in den Speicher deines Computers lädst.
           Es entscheidet, wann ein Programm von der zentralen Verarbeitungseinheit
           ausgeführt wird und ob dieses Programm auf die Ein- und Ausgabegeräte des
           Computers zugreifen kann. Und wenn du denkst, dass dein Computer viele Programme
@@ -4189,8 +4191,6 @@ de:
           die die Hardware des Computers steuert.
       16:
         image: notes/csd_concept_hardware_software_16.png
-        text: In jedem Computer befindet sich ein Betriebssystem, das Software verwaltet,
-          die die Hardware des Computers steuert.
       17:
         image: notes/csd_concept_hardware_software_17.png
         text: Computer haben das Potenzial, alle möglichen erstaunlichen Dinge zu
@@ -4230,22 +4230,24 @@ de:
           und Tänzer auftauchen.
       7:
         image: notes/hoc_dance_warmup_7.png
-        text: Dieser mittlere Bereich ist die Toolbox. Neue Codeblöcke werden in diesem
-          Bereich verfügbar sein, während du durch die Lektionen gehst.
+        text: Dieser mittlere Bereich ist die Werkzeugkiste. Neue Codeblöcke werden
+          in diesem Bereich verfügbar sein, während du durch die Lektionen gehst.
       8:
         image: notes/hoc_dance_warmup_8.png
-        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Blöcke
-          aus der Toolbox in den Arbeitsbereich ziehen, um dein Programm zu erstellen.
+        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Bausteine
+          aus der Werkzeugkiste in den Arbeitsbereich ziehen, um dein Programm zu
+          erstellen.
       9:
         image: notes/hoc_dance_warmup_9.png
         text: Die Anweisungen für jede Ebene findest du hier oben am oberen Bildschirmrand.
           Wenn du einen Hinweis brauchst, klicke einfach auf die Glühbirne.
       10:
         image: notes/hoc_dance_warmup_10.png
-        text: Um zu beginnen, lasst uns mit diesem roten Block eine neue Tänzerin
-          machen. Zuerst ziehe es aus der Toolbox und raste es unter diesen orangefarbenen
-          "Setup" Baustein ein. Diese Tänzerin ist eine Katze und ihr Name ist "my_first_dancer".
-          Du kannst den Namen in einen beliebigen Namen ändern, indem du hier klickst.
+        text: Um zu beginnen, lasst uns mit diesem roten Baustein eine neue Tänzerin
+          machen. Zuerst ziehe es aus der Werkzeugkiste und raste es unter diesen
+          orangefarbenen "Setup" Baustein ein. Diese Tänzerin ist eine Katze und ihr
+          Name ist "my_first_dancer". Du kannst den Namen in einen beliebigen Namen
+          ändern, indem du hier klickst.
       11:
         image: notes/hoc_dance_warmup_11.png
         text: Damit kannst du auch ändern, wo die Tänzerin in deinem Spielraum erscheint.
@@ -4259,7 +4261,7 @@ de:
       13:
         image: notes/hoc_dance_warmup_13.png
         text: Probiere es selbst aus! Und wenn du dich festgefahren fühlst, ist es
-          okay! Steh einfach auf und beweg dich, und bevor du dich versiehst, hast
+          okay! Steh einfach auf und bewege dich, und bevor du dich versiehst, hast
           du deine eigene Tanzparty gemacht. Also, was wirst du erschaffen?
     hoc_dance_events:
       1:
@@ -4274,7 +4276,7 @@ de:
       3:
         image: notes/hoc_dance_events_3.png
         text: Um verschiedene Tanzbewegungen zur richtigen Zeit mit der Musik durchzuführen,
-          kannst du so genannte Events verwenden. Ein Event sagt deinem Programm,
+          kannst du so genannte Ereignisse verwenden. Ein Ereignis sagt deinem Programm,
           dass es darauf achten soll, dass etwas passiert und dann sofort reagiert.
       4:
         image: notes/hoc_dance_events_4.png
@@ -4288,16 +4290,17 @@ de:
           Songs zählen.
       6:
         image: notes/hoc_dance_events_6.png
-        text: In der Musik bezieht sich ein Takt auf eine bestimmte Anzahl von Beats.
-          In den meisten populären Songs ist ein Takt vier Schläge lang.
+        text: In der Musik bezieht sich ein Takt auf eine bestimmte Anzahl von Beats
+          oder Schälägen. In den meisten populären Songs ist ein Takt vier Schläge
+          lang.
       7:
         image: notes/hoc_dance_events_7.png
         text: Damit deine Tänzer loslegen zu lassen, brauchst du einen grünen Ereignisbaustein.
           Dieser Ereignisbaustein besagt, "nach 4 Takten".
       8:
         image: notes/hoc_dance_events_8.png
-        text: Wenn du einen lilafarbenen "do forever"-Block herausziehst, kannst du
-          einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Eventblock
+        text: Wenn du einen lilafarbenen "do forever"-Baustein herausziehst, kannst
+          du einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Ereignisbaustein
           "nach 4 Takten" befindet, wartet deine Tänzerin auf 4 Takten des Songs,
           bevor sie mit ihrem Tanz beginnt.
       9:
@@ -4313,8 +4316,8 @@ de:
         text: 'Hour of Code | Tanzparty: Eigenschaften'
       2:
         image: notes/hoc_dance_properties_2.png
-        text: Mein Name ist Maria, ich bin Junior an der University of Washington
-          und ich bin Amazon Future Engineer.
+        text: Mein Name ist Maria, ich studiere im ersten Jahr an der University of
+          Washington und ich bin Amazon Future Engineer.
       3:
         image: notes/hoc_dance_properties_3.png
         text: Ich liebe die Informatik, weil sie Problemlösung und kritisches Denken
@@ -4338,10 +4341,10 @@ de:
           und die Farbe der Tänzerin.
       7:
         text: Um die Eigenschaften einer Tänzerin zu ändern, verwende einen festen
-          Block. Lasst uns einen festen Block verwenden, damit unsere Tänzer kleiner
-          aussehen. Zuerst ziehe den gesetzten Satz in dein Programm. Dann wähle die
-          Tänzerin aus, die du ändern möchtest, und gib die Größe ein, die auf dem
-          Bildschirm angezeigt wird.
+          Baustein. Lasst uns einen festen Baustein verwenden, damit unsere Tänzer
+          kleiner aussehen. Zuerst ziehe den gesetzten Satz in dein Programm. Dann
+          wähle die Tänzerin aus, die du ändern möchtest, und gib die Größe ein, die
+          auf dem Bildschirm angezeigt wird.
       8:
         text: Die volle Größe ist 100. Wenn du eine niedrigere Zahl wählst, wird die
           Tänzerin kleiner. Je kleiner die Tänzerin ist, desto weiter entfernt sieht
@@ -4354,9 +4357,9 @@ de:
           und sie mit verschiedenen Teilen des Songs verknüpfen.
       10:
         text: Denke daran, dass du nur die Eigenschaften einer Tänzerin einstellen
-          kannst, die bereits existiert. Achte darauf, dass dein Set-Block nach dem
-          Block "Make a new dancer" kommt. Zögere nicht zu experimentieren, sei kreativ
-          und habe Spaß.
+          kannst, die bereits existiert. Achte darauf, dass dein Set-Baustein nach
+          dem Baustein "Make a new dancer" kommt. Zögere nicht zu experimentieren,
+          sei kreativ und habe Spaß.
     hoc_dance_congrats:
       1:
         image: notes/hoc_dance_congrats_1.png
@@ -4367,14 +4370,14 @@ de:
           gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
           deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
       3:
-        text: Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke
-          finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
-          mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen.
+        text: Wenn du in der Werkzeugkiste nachschaust, wirst du einige brandneue
+          Bausteine finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
+          mit dem Layoutbaustein die Tänzer auf dem Bildschirm unterschiedlich anordnen.
       4:
         image: notes/hoc_dance_congrats_4.png
         text: Sieh dich um und versuche, mit diesen neuen Bausteinen und Funktionen
           zu experimentieren. Schaffst du es einen sorgfältig choreographierten Tanz
-          zu deinem Lieblingslied kreieren?
+          zu deinem Lieblings-Song kreieren?
       5:
         image: notes/hoc_dance_congrats_5.png
         text: Oder ein Tanzwettbewerb mit deinen Freunden?
@@ -4389,7 +4392,7 @@ de:
         image: notes/mc_2018_intro_1.png
         text: Hallo! Du kommst gerade richtig. Willkommen auf der Voyage Aquatic.
           Ich bin dabei, mich auf die Suche nach versteckten Unterwasserschätzen zu
-          begeben und bin sehr froh, dass Sie mir geholfen haben. Wer weiß, was uns
+          begeben und bin sehr froh, dass du mir geholfen hast. Wer weiß, was uns
           entlang dieser mysteriösen Wasserwege begegnen wird? Wir sind dazu bestimmt,
           unseren ersten Reiseleiter irgendwo auf diesem Dock zu treffen.
       2:
@@ -4402,8 +4405,8 @@ de:
         text: Auf der linken Seite siehst du die Welt der Minecraft.
       4:
         image: notes/mc_2018_intro_4.png
-        text: Der mittlere Bereich ist Ihre Toolbox, in der Du Codierbefehle finden
-          kannst.
+        text: Der mittlere Bereich ist deine Werkzeugkiste, in der du Codierbefehle
+          finden kannst.
       5:
         image: notes/mc_2018_intro_5.png
         text: Und der große Bereich auf der rechten Seite ist dein Arbeitsplatz. Hier
@@ -4415,8 +4418,8 @@ de:
           Klicke auf das Pluszeichen, um zwischen Lang- und Kurzanleitung zu wechseln.
       7:
         image: notes/mc_2018_intro_7.png
-        text: Zieh Bausteine aus der Toolbox in den Arbeitsbereich, stapel sie, und
-          klicke dann auf die Schaltfläche Ausführen, um deine Befehle auszuführen.
+        text: Zieh Bausteine aus der Werkzeugkiste in den Arbeitsbereich, stapel sie,
+          und klicke dann auf die Schaltfläche Ausführen, um deine Befehle auszuführen.
       8:
         image: notes/mc_2018_intro_8.png
         text: Du musst es vielleicht ein paar Mal versuchen, um es richtig zu machen,
@@ -4428,12 +4431,12 @@ de:
           um dorthin zurückzukehren, wo du angefangen hast.
       10:
         image: notes/mc_2018_intro_10.png
-        text: Wenn du einen Befehl löschen möchtest, ziehe einfach den Block aus deinem
-          Arbeitsbereich zurück in die Toolbox. Denke daran auf "Ausführen" zu klicken,
-          um zu sehen, wie dein Code in Aktion aussieht.
+        text: Wenn du einen Befehl löschen möchtest, ziehe einfach den Baustein aus
+          deinem Arbeitsbereich zurück in die Werkzeugkiste. Denke daran auf "Ausführen"
+          zu klicken, um zu sehen, wie dein Code in Aktion aussieht.
       11:
         image: notes/mc_2018_intro_11.png
-        text: Okay, genug herumgealbert, Abenteurerfreund. Lasst uns anfangen zu programmieren,
+        text: Okay, genug Spaß gehabt, Abenteurerfreund. Lasst uns anfangen zu programmieren,
           um einen Unterwasserschatz zu finden.
     MC_2018_loops:
       1:
@@ -4458,13 +4461,13 @@ de:
           gleichen Anweisungen mehrmals wiederholt, kannst du eine Schleife verwenden!
       4:
         image: notes/MC_2018_loops_4.png
-        text: Der Schleifenblock enthält Anweisungen, die wiederholt werden, bis das
-          Ziel erreicht ist. Sobald dein Programm eine "Repeat until goal"-Schleife
+        text: Der Schleifenbaustein enthält Anweisungen, die wiederholt werden, bis
+          das Ziel erreicht ist. Sobald dein Programm eine "Repeat until goal"-Schleife
           startet, wiederholt es die Anweisungen darin, bis es zum Ziel kommt.
       5:
         image: notes/MC_2018_loops_5.png
-        text: Versuche das selbst! Plaziere die Befehle, die du wiederholen möchtest,
-          innerhalb des Blocks "Wiederholen bis zum Ziel", klicke auf "Ausführen"
+        text: Versuche das selbst! Platziere die Befehle, die du wiederholen möchtest,
+          innerhalb des Bausteins "Wiederholen bis zum Ziel", klicke auf "Ausführen"
           und beobachte, wie es losgeht!
       6:
         image: notes/MC_2018_loops_6.png
@@ -4482,7 +4485,7 @@ de:
           ein Hinweis! Lasst uns einen Blick hinein werfen.
       2:
         image: notes/mc_2018_conditionals_2.png
-        text: Mein Name ist Netty und willkommen in meinen Ruinen. Wir treffen Entscheidungen
+        text: Mein Name ist Netty - Willkommen in meinen Ruinen. Wir treffen Entscheidungen
           immer auf der Grundlage von Bedingungen. Wenn es nach Regen aussieht, dann
           holen wir uns einen Regenschirm. Wenn wir Hunger haben, dann essen wir einen
           Snack.
@@ -4493,7 +4496,7 @@ de:
           mit Code auf Bedingungen reagieren.
       4:
         image: notes/mc_2018_conditionals_4.png
-        text: Um eine solche Antwort mit Ihren Codebefehlen zu programmieren, wähle
+        text: Um eine solche Antwort mit deinen Codebefehlen zu programmieren, wähle
           einen if-path Baustein.
       5:
         image: notes/mc_2018_conditionals_5.png
@@ -4508,7 +4511,8 @@ de:
           Situationen ausführst, wie z. B. mysteriösen Ruinen in Unterwasserhöhlen.
       7:
         image: notes/mc_2018_conditionals_7.png
-        text: Versuche die if-Blöcke zu verwenden und nimm deinen Code für einen Spin.
+        text: Versuche die if-Bausteine zu verwenden und nimm deinen Code für einen
+          Spin.
       8:
         image: notes/mc_2018_conditionals_8.png
         text: Wow! Netty's Ruinen waren fantastisch. Ich muss wirklich aus dem Haus
@@ -4551,7 +4555,7 @@ de:
         image: notes/mc_2018_closing_9.png
         text: Du hast dich inzwischen sicherlich als unerschrockener Programmierer
           erwiesen, und ich kann es kaum erwarten zu sehen, was du baust. Und hoffentlich
-          Deine Ihre Programmierungs-Abenteuer nicht hier. Bon Voyage!
+          Deine deine Programmierungs-Abenteuer nicht hier. Gute Reise!
     teaching_csf_how_it_works:
       1:
         image: notes/teaching_cs_fundamentals_1.png
@@ -4562,11 +4566,12 @@ de:
           Schlüsselwörter.
       3:
         image: notes/teaching_cs_fundamentals_3.png
-        text: Als nächstes werden Sie lernen, wie man so programmiert, wie es Ihre
-          Schüler tun. Die letzten Phasen des Kurses helfen Ihnen, einen Plan für
-          den Informatikunterricht in Ihrem Klassenzimmer zu erstellen. Während des
-          gesamten Kurses sehen Sie Beispiele für sowohl Plugged - oder Online - Lektionen,
-          als auch Unplugged Lektionen, die ohne Computer durchgeführt werden.
+        text: Als nächstes werdet ihr lernen, wie man so programmiert, wie es eure
+          Schüler tun. Die letzten Phasen des Kurses helfen euch dabei, einen Plan
+          für den Informatikunterricht in deinem Klassenzimmer zu erstellen. Während
+          des gesamten Kurses seht ihr  Beispiele für sowohl Plugged - oder Online
+          - Lektionen, als auch Unplugged Lektionen, also solche, die ohne Computer
+          durchgeführt werden.
       4:
         image: notes/teaching_cs_fundamentals_4.png
         text: Die Lernplattform verfolgt deinen Fortschritt, so dass du jederzeit
@@ -4574,14 +4579,17 @@ de:
     what_is_cs:
       1:
         image: notes/what_is_cs.png
-        text: |-
-          Die Programmierung ist der Satz von Anweisungen, die du einem Computer gibst. Die Informatik ist ein Bereich, in dem Menschen die Kraft des Computers nutzen, um große Probleme zu lösen. Die Informatik umfasst die Kodierung, aber auch andere Dinge, wie z. B. wie das Internet funktioniert und die Gesellschaft beeinflusst, was man mit großen Datenmengen macht und wie man große Probleme löst. In der Informatik geht es um Problemlösung, kritisches Denken und Beharrlichkeit.
-
-          Übersetzt mit www. DeepL. com/Translator.
+        text: Die Programmierung ist der Satz von Anweisungen, die du einem Computer
+          gibst. Die Informatik ist ein Bereich, in dem Menschen die Kraft des Computers
+          nutzen, um große Probleme zu lösen. Die Informatik umfasst die Kodierung,
+          aber auch andere Dinge, wie z. B. wie das Internet funktioniert und die
+          Gesellschaft beeinflusst, was man mit großen Datenmengen macht und wie man
+          große Probleme löst. In der Informatik geht es um Problemlösung, kritisches
+          Denken und Beharrlichkeit.
     writing_first_program:
       1:
         image: notes/writing_first_program_1.png
-        text: Code.org verwendet eine visuelle, Drag & Drop-Programmiersprache namens
+        text: Code.org verwendet eine visuelle Drag & Drop-Programmiersprache namens
           Blockly. Blockly verwendet bunte Anweisungen, die Bausteine genannt werden,
           um Programme zu erstellen und Rätsel zu lösen.
       2:
@@ -4589,27 +4597,30 @@ de:
         text: Jedes Puzzle besteht aus vier Teilen.
       3:
         image: notes/writing_first_program_3.png
-        text: Der Spielarena befindet sich auf der linken Seite, wo Ihr Programm läuft.
+        text: Der Spielbereich befindet sich auf der linken Seite, wo dein Programm
+          ausgeführt wird.
       4:
         image: notes/writing_first_program_4.png
-        text: Die Mitte hat den Toolbox-Bereich, der alle benötigten Blöcke enthält.
+        text: Die Mitte hat den Werkzeugkiste-Bereich, der alle benötigten Bausteine
+          enthält.
       5:
         image: notes/writing_first_program_5.png
-        text: Auf der rechten Seite befindet sich der Arbeitsbereich, in dem du Blöcke
+        text: Auf der rechten Seite befindet sich der Arbeitsbereich, in dem du Bausteine
           ziehen kannst, um dein Programm zu erstellen.
       6:
         image: notes/writing_first_program_6.png
         text: Über dem Arbeitsbereich befinden sich die Anweisungen für jedes Puzzle.
       7:
         image: notes/writing_first_program_7.png
-        text: Wenn du zu viele Bausteine aus der Toolbox herausgezogen hast, ziehe
-          einfach den überflüssigen Block zurück in die Toolbox.  Klicke auf Ausführen,
-          um Dein Programm auszuprobieren, und auf Zurücksetzen, um es erneut zu versuchen.
+        text: Wenn du zu viele Bausteine aus der Werkzeugkiste herausgezogen hast,
+          ziehe einfach den überflüssigen Baustein zurück in die Werkzeugkiste.  Klicke
+          auf Ausführen, um Dein Programm auszuprobieren, und auf Zurücksetzen, um
+          es erneut zu versuchen.
     repeat_block:
       1:
         image: notes/repeat_block.png
-        text: Ein Wiederholungsblock ermöglicht es dir, den Code innerhalb des Blocks
-          so oft zu wiederholen, wie du es ihm sagst.
+        text: Ein Wiederholungsbaustein ermöglicht es dir, den Code innerhalb des
+          Bausteins so oft zu wiederholen, wie du es ihm sagst.
     what_is_an_event:
       1:
         image: notes/what_is_an_event.png
@@ -4620,37 +4631,37 @@ de:
     lesson_planning:
       1:
         image: notes/lesson_planning_1.png
-        text: Informatik Grundlagen Lektionen beginnen mit Übersichten, um Ihnen mitzuteilen,
-          was die Lektion abdecken wird.
+        text: Die Lektionen zu den Grundlagen der Informatik  beginnen mit Übersichten,
+          die dir erklären, was in der Lektion behandelt wird.
       2:
         image: notes/lesson_planning_2.png
         text: Der Unterricht umfasst Aufwärmübungen, Aktivitäten und Nachbereitungen.
-          Wenn Sie Ihre eigenen Unterrichtspläne erstellen möchten, sollten Sie diese
-          Tipps im Hinterkopf behalten.
+          Wenn du eigene Unterrichtspläne erstellen möchtest, solltest du diese Tipps
+          im Hinterkopf behalten.
       3:
         image: notes/lesson_planning_3.png
         text: 1. Versuchen Sie, ein spiralförmiges Curriculum-Design zu verwenden.
           Führen Sie Konzepte einmal ein und besuchen Sie sie dann erneut.
       4:
         image: notes/lesson_planning_4.png
-        text: 2. Erstellen Sie eine Blended Learning Erfahrung, indem Sie Online-Lektionen
-          mit unplugged Lektionen kombinieren.
+        text: 2. Erstelle eine Blended Learning Erfahrung, indem du Online-Lektionen
+          mit unplugged Lektionen kombinierst.
       5:
         image: notes/lesson_planning_5.png
-        text: 3. Unterteilen Sie Ihren Lehrplan in kleinere Teile.
+        text: 3. Unterteile deinen Lehrplan in kleinere Teile.
       6:
         image: notes/lesson_planning_6.png
-        text: 4. Stellen Sie sicher, dass Sie sich an die lokalen Standards sowie
-          an die Fähigkeiten im Bereich der Hochschul- und Berufsbereitschaft halten.
+        text: 4. Achte darauf, dass du dich an die lokalen Standards sowie an die
+          Fähigkeiten im Bereich der Hochschul- und Berufsbereitschaft hätst.
     opd_closing:
       1:
         image: notes/opd_closing_1.png
-        text: Herzlichen Glückwunsch! Sie haben den Online-Kurs Teaching Computer
-          Science Fundamentals abgeschlossen. Sie sind jetzt Teil der wachsenden Gemeinschaft
+        text: Herzlichen Glückwunsch! Du hast den Online-Kurs „Grundlagen der Informatik
+          unterrichten“ abgeschlossen. Du bist jetzt Teil der wachsenden Gemeinschaft
           von Lehrern, die ihre Schüler auf die Zukunft vorbereiten.
       2:
         image: notes/opd_closing_2.png
-        text: 'Schaue Dir diese Ressourcen an, wenn du mehr Unterstützung benötigen:
+        text: 'Schaue dir diese Ressourcen an, wenn du mehr Unterstützung benötigen:
           1. forum.code.org 2. @teachcode auf Twitter 3. studio.code.org '
     hoc_dance_warmup_2019:
       1:
@@ -4662,11 +4673,11 @@ de:
           und Entwickler von iLuminate.
       3:
         image: notes/hoc_dance_warmup_3.png
-        text: Die Informatik bezieht sich auf die Kreativität in vielfältiger Weise.
-          Unermesslich, wirklich. Sobald man die Fähigkeit hat, Software zu schreiben,
-          kann man Ideen in alles umsetzen. Ich mache es mit leichten Anzügen. Es
-          gibt so viel, was man tun kann, wenn man die Werkzeuge hat, um Software
-          zu schreiben, und die Möglichkeiten sind wirklich endlos.
+        text: Die Informatik bezieht sich also auf Kreativität in vielfältiger Weise.
+          Unermesslich, wirklich. Ich meine, sobald man die Fähigkeit hat, Software
+          zu schreiben, kann man Ideen in alles umsetzen. Ich mache es mit leichten
+          Anzügen. Es gibt so viel, was man tun kann, wenn man die Werkzeuge hat,
+          um Software zu schreiben, und die Möglichkeiten sind wirklich endlos.
       4:
         image: notes/hoc_dance_warmup_4.png
         text: In der nächsten Stunde wirst du mit der Informatik beginnen, indem du
@@ -4684,12 +4695,13 @@ de:
           und Tänzer auftauchen.
       7:
         image: notes/hoc_dance_warmup_2019_7.png
-        text: Der mittlere Bereich ist die Toolbox. Neue Bausteine werden in diesem
-          Bereich verfügbar sein, während du durch die Lektionen gehst.
+        text: Der mittlere Bereich ist die Werkzeugkiste. Neue Bausteine werden in
+          diesem Bereich verfügbar sein, während du durch die Lektionen gehst.
       8:
         image: notes/hoc_dance_warmup_2019_8.png
-        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Blöcke
-          aus der Toolbox in den Arbeitsbereich ziehen, um dein Programm zu erstellen.
+        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Bausteine
+          aus der Werkzeugkiste in den Arbeitsbereich ziehen, um dein Programm zu
+          erstellen.
       9:
         image: notes/hoc_dance_warmup_2019_9.png
         text: Die Anweisungen für jede Ebene findest du hier oben am oberen Bildschirmrand.
@@ -4697,8 +4709,8 @@ de:
       10:
         image: notes/hoc_dance_warmup_2019_10.png
         text: Um zu beginnen, lasst uns mit diesem roten Baustein eine neue Tänzerin
-          machen. Zuerst ziehst du diesen aus der Toolbox und rastest ihn unter diesen
-          orangefarbenen "Setup"-Baustein ein. Diese Tänzerin ist eine Katze.
+          machen. Zuerst ziehst du diesen aus der Werkzeugkiste und rastest ihn unter
+          diesen orangefarbenen "Setup"-Baustein ein. Diese Tänzerin ist eine Katze.
       11:
         image: notes/hoc_dance_warmup_2019_11.png
         text: Damit kannst du auch ändern, wo die Tänzerin in deinem Spielraum erscheint.
@@ -4730,8 +4742,8 @@ de:
           dann sofort reagieren soll.
       4:
         image: notes/hoc_dance_events_2019_4.png
-        text: Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten
-          oder ein Antippen den Bildschirms zu achten.
+        text: Ereignisse sind beispielsweise das Achten auf Mausklicks, Pfeiltasten
+          oder ein Antippen des Bildschirms.
       5:
         image: notes/hoc_dance_events_2019_5.png
         text: Hier werden wir eine Tänzerin programmieren, um eine Bewegung auszuführen,
@@ -4739,10 +4751,10 @@ de:
           drückst.
       6:
         image: notes/hoc_dance_events_2019_6.png
-        text: Wir können den Ereignisblock "when arrow up" verwenden und einen "do
-          once"-Block mit ihm verbinden. Wenn jemand die Pfeiltaste nach oben drückt,
-          wird der Code ausgeführt, der dem Block "Wenn Pfeil nach oben" zugeordnet
-          ist. Welche Tanzbewegung wirst du wählen?
+        text: Wir können den Ereignisbaustein "when arrow up" verwenden und einen
+          "do once"-Baustein mit ihm verbinden. Wenn jemand die Pfeiltaste nach oben
+          drückt, wird der Code ausgeführt, der dem Baustein "Wenn Pfeil nach oben"
+          zugeordnet ist. Welche Tanzbewegung wirst du wählen?
       7:
         image: notes/hoc_dance_events_2019_7.png
         text: Stelle sicher, dass die Art der Tänzerin, die du wählst, mit einer der
@@ -4750,10 +4762,10 @@ de:
           siehst du vielleicht nicht, dass etwas passiert.
       8:
         image: notes/hoc_dance_events_2019_8.png
-        text: Schließlich kannst du mehr Events wie diese erstellen, damit deine Tänzer
-          mit jeder Taste verschiedene Bewegungen ausführen können. Probiere es aus,
-          und mit ein paar Zeilen Code kannst du deinen eigenen interaktiven Tanz
-          machen.
+        text: Schließlich kannst du mehr Eriegnisse wie diese erstellen, damit deine
+          Tänzer mit jeder Taste verschiedene Bewegungen ausführen können. Probiere
+          es aus, und mit ein paar Zeilen Code kannst du deinen eigenen interaktiven
+          Tanz machen.
     hoc_dance_measures_2019:
       1:
         image: notes/hoc_dance_measures_2019_1.png
@@ -4780,8 +4792,8 @@ de:
           Dieser Ereignisbaustein besagt, "nach 4 Takten".
       6:
         image: notes/hoc_dance_measures_2019_6.png
-        text: Wenn du einen lilafarbenen "do forever"-Block herausziehst, kannst du
-          einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Eventblock
+        text: Wenn du einen lilafarbenen "do forever"-Baustein herausziehst, kannst
+          du einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Ereignisbaustein
           "nach 4 Takten" befindet, wartet deine Tänzerin auf 4 Takten des Songs,
           bevor sie mit ihrem Tanz beginnt.
       7:
@@ -4797,8 +4809,8 @@ de:
         text: 'Hour of Code | Tanzparty: Eigenschaften'
       2:
         image: notes/hoc_dance_properties_2.png
-        text: Mein Name ist Maria, ich bin Junior an der University of Washington
-          und ich bin Amazon Future Engineer.
+        text: Mein Name ist Maria, ich studiere im ersten Jahr an der University of
+          Washington und ich bin Amazon Future Engineer.
       3:
         image: notes/hoc_dance_properties_3.png
         text: Ich liebe die Informatik, weil sie Problemlösung und kritisches Denken
@@ -4823,8 +4835,8 @@ de:
       7:
         image: notes/hoc_dance_properties_2019_7.png
         text: Um die Eigenschaften einer Tänzerin zu ändern, verwende einen festen
-          Block.  Lasst uns einen festen Block verwenden, damit unsere Tänzer kleiner
-          aussehen. Ziehe zuerst den gesetzten Satz in Dein Programm.
+          Baustein.  Lasst uns einen festen Baustein verwenden, damit unsere Tänzer
+          kleiner aussehen. Ziehe zuerst den gesetzten Satz in Dein Programm.
       8:
         image: notes/hoc_dance_properties_2019_8.png
         text: Dann wähle eine Tänzerin aus, die du ändern möchtest. Gib die Größe
@@ -4833,14 +4845,14 @@ de:
           kleiner die Tänzerin ist, desto weiter entfernt sieht sie aus.
       9:
         image: notes/hoc_dance_properties_2019_9.png
-        text: Mit dem Set-Block kannst du auch die Maße, die Drehung, die Position
-          und die Farbe einer Tänzerin ändern. Indem du mit diesen Eigenschaften herumspielst,
-          kannst du alle möglichen Änderungen vornehmen und sie mit verschiedenen
-          Teilen des Songs verknüpfen.
+        text: Mit dem Set-Baustein kannst du auch die Abmessungen, die Drehung, die
+          Position und die Farbe einer Tänzerin ändern. Indem du mit diesen Eigenschaften
+          herumspielst, kannst du alle möglichen Änderungen vornehmen und sie mit
+          verschiedenen Teilen des Songs verknüpfen.
       10:
         image: notes/hoc_dance_properties_2019_10.png
         text: Beachte, dass du nur die Eigenschaften einer Tänzerin einstellen kannst,
-          die bereits existiert. Achte darauf, dass dein Set-Block nach dem Block
+          die bereits existiert. Achte darauf, dass dein Set-Baustein nach dem Baustein
           "Make a new dancer" kommt. Zögere nicht zu experimentieren, sei kreativ
           und habe Spaß!
     hoc_dance_congrats_2019:
@@ -4853,14 +4865,14 @@ de:
           gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
           deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
       3:
-        text: Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke
-          finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
-          mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen.
+        text: Wenn du in der Werkzeugkiste nachschaust, wirst du einige brandneue
+          Bausteine finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
+          mit dem Layoutbaustein die Tänzer auf dem Bildschirm unterschiedlich anordnen.
       4:
         image: notes/hoc_dance_congrats_4.png
         text: Sieh dich um und versuche, mit diesen neuen Bausteinen und Funktionen
           zu experimentieren. Schaffst du es einen sorgfältig choreographierten Tanz
-          zu deinem Lieblingslied kreieren?
+          zu deinem Lieblings-Song kreieren?
       5:
         image: notes/hoc_dance_congrats_5.png
         text: Oder ein Tanzwettbewerb mit deinen Freunden?

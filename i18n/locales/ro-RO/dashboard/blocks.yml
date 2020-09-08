@@ -973,6 +973,10 @@ ro:
         text: sprite {SPRITE} începe {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
       gamelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -1017,8 +1021,46 @@ ro:
         options:
           CHOICE:
             '"this"': acest
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
       gamelab_hideTitleScreen:
         text: ascend ecranul cu titlu
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} atinge marginile"
       gamelab_jumpTo:
@@ -1091,6 +1133,8 @@ ro:
             '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
+      gamelab_objectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1212,8 @@ ro:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
+      gamelab_subjectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_turn:
         text: întoarce {SPRITE} {DIRECTION} {N} grade
         options:

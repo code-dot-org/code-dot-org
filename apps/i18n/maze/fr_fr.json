@@ -61,7 +61,7 @@
   "make": "produire",
   "moveBackward": "reculer",
   "moveEastTooltip": "Me déplacer d’une case vers l’Est.",
-  "moveForward": "avancer plus",
+  "moveForward": "avancer",
   "moveForwardTooltip": "Me fait avancer d'un espace.",
   "moveNorthTooltip": "Me déplacer d'une case vers le Nord.",
   "moveSouthTooltip": "Me déplacer d'une case vers le Sud.",

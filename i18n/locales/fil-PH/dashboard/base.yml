@@ -134,6 +134,9 @@ fil:
     error: "May problemang naganap."
     email_preference_yes: "Oo"
     email_preference_no: "Hindi"
+    parent_account_checkbox: "Ako ay magulang/tagapag-alagang lumalagda sa ngalan ng anak ko"
+    parent_account_email_progress_permission: "Maaari ba kaming mag-email sa iyo para sa paminsan-minsang update sa progreso ng anak mo at mga proyekto, at mga update tungkol sa kurso nila at computer science? [(Tingnan ang aming patakaran sa pagkapribado)](%{privacy_policy_url})"
+    parent_account_email_label: "Email ng Magulang/Tagapangalaga"
   school_info:
     title: 'Impormasyon ng Paaralan (opsyonal)'
     school_country: 'Bansa ng Paaralan'
@@ -295,6 +298,8 @@ fil:
       help_us: "Tulungan Kami"
       teach: "Magturo"
       about: "Tungkol sa"
+      legal_privacy: "Patakaran sa Pagkapribado"
+      legal_tos: "Mga Alituntunin ng Serbisyo"
     user:
       classroom: 'Home Page ng Teacher'
       district_dashboard: 'Dashboard ng Distrito'
@@ -399,8 +404,11 @@ fil:
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
     update_email: "I-update"
+    for_parents_and_guardians: "Para sa mga Magulang at mga Tagapag-alaga"
+    link_a_parent_email: "Iugnay ang email address ng magulang/tagapag-alaga sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo. Magagamit mo rin ang email address na ito para mabawi ang password."
     parent_guardian_email_label: "Email Magulang/Tagapangalaga"
     none: "Wala"
+    only_one_parent_email_supported_warning: "Tandaan: masusuportahan lang namin ang isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. "
   user_level:
     completed: 'Nakompleto'
     tried: 'Sinubukan'
@@ -614,20 +622,6 @@ fil:
       body: "Ang mga estudyante ay maaring magsiyasat sa mga konsepto mula sa ating mga Prinsipyo ng Computer Science na hands-on na kurso gamit ang mga digital na mga kagamitan. Gamitin ang mga widgets nang sila lang, o gumawa ng solong-konsepto na leskyon para sa iyong klase."
       audience: "Edad 14+"
       cta: "Pag-aralang kung paano"
-  gallery:
-    students_drew_these_with_code: "Iginuhit ito ng mga estudyante gamit ang code!"
-    students_made_these_with_code: "Ginawa ito ng mga estudyante gamit ang code!"
-    picture_count: "Sa nakaraang mga <b>%{days}</b> na mga araw, ang mga estudyante ay nagguhit ng <b>%{count}</b> na mga larawan sa pamamagitan ng pagsulat ng sarili nilang mga computer programs. I-click ang mga larawan para tingnan ang bawat programa."
-    activity_count: "Sa nakaraang mga <b>%{days}</b> na mga araw, ang mga estudyante ay gumawa ng mga <b>%{count}</b> na mga apps at larawan sa pamamagitan ng pagsulat ng sarili nilang mga computer programs. I-click ang mga larawan at mga screenshot para tingnan ang bawat programa."
-    want_to_make_your_own: "Gusto mong gumawa para sa sarli mo?"
-    how_to_save: "Sa pinakahuling antas ng tutorial na ito, i-click ang \"Finish\" at \"Save\" para i-save ang iyong ginawa sa galeriya."
-    more: "Higit pa &rarr;"
-    caption_by_name_age: "sa pamamagitan ni %{name}, edad na %{age}"
-    caption_time_ago: "%{time_ago} ang nakaraan"
-    header: "Galeriya"
-    header_playlab: "Mga Istorya at mga laro"
-    header_artist: "Code ng sining"
-    report_abuse: "I-report ang Abuso"
   landing:
     report_bug: "I-report ang Bug"
     support: "Humingi ng Tulong"
@@ -805,64 +799,6 @@ fil:
     instructor_feedback: 'Feedback ng Guro'
     peer_feedback: 'Feedback ng Kasamahan'
     outdated: 'Ang feedback ay nadadag sa mga dating isinumite na bersyon'
-  flex_category:
-    required: 'Buod'
-    ramp_up: 'Pabilisin'
-    main_course: 'Pangunahing Kurso'
-    extra_course_content: 'Ekstra na Nilalaman ng Kurso'
-    csf_e_1: 'Mag-ramp up sa Course E (Opsyonal)'
-    csf_e_2: 'Nilalaman ng Kurso na E'
-    csf_f_1: 'Mag-ramp up sa Kursong F (Opsyonal)'
-    csf_f_2: 'Nilalaman ng Kursong F'
-    csf_digcit: 'Digital na Pagkamamamayan'
-    csf_jigsaw: 'Jigsaw'
-    csf_loops: 'Mga loop'
-    csf_events: 'Mga event'
-    csf_binary: 'Binary'
-    csf_conditionals: 'Mga conditional'
-    csf_sprites: 'Mga Sprites'
-    csf_nested_loops: 'Mga Loops na naka-nest'
-    csf_functions: 'Mga function'
-    csf_variables: 'Mga variable'
-    csf_for_loops: 'For Loops'
-    csf_internet: 'Internet'
-    csf_impacts: 'Epekto ng Pag-Compute'
-    csd1_1: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
-    csd1_2: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
-    csd2_1: 'Kabanata 1: Web Content at HTML'
-    csd2_2: 'Kabanata 2: Pag-iistilo at CSS'
-    csd3_1: 'Kabanata 1: Mga Larawan at Animation'
-    csd3_2: 'Kabanata 2: Paggawa ng mga Laro'
-    csd4_1: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
-    csd4_2: 'Kabanata 2: Pag-Prototype ng App'
-    csd5_1: 'Kabanata 1: Pagrepresenta ng Impormasyon'
-    csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
-    csd6_1: 'Kabanata 1: Output ng Hardware'
-    csd6_2: 'Kabanata 2: Input ng Hardware'
-    csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
-    csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
-    csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
-    csp2_2: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
-    csp3_1: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
-    csp4_1: 'Kabanata 1: Ang Mundo ng Malalaking Datos at Pag-Encrypt'
-    csp5_1: 'Kabanata 1: Event-Driven na Programming'
-    csp5_2: 'Kabanata 2: Programming gamit ang mga Data Structures'
-    cspSurvey: 'Pagsisiyasat'
-    cspAssessment: 'Pagsusuri sa Kabanata'
-    csp_ap_1: 'Kabanata 1: AP Tech na Setup'
-    csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
-    csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
-    csp_postap_1: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
-    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
-    csp_variables: 'Mga variable'
-    csp_conditionals: 'Mga conditional'
-    csp_functions: 'Mga function'
-    csp_lists: 'Mga listahan'
-    csp_loops: 'Mga loop'
-    csp_unit1_2020: '(luma) Yunit 1: Digital na Impormasyon'
-    dlp: 'Pagmunimuni na mga Prompt'
-    k5_getting_started: 'Pagsisimula'
-    k5_next_steps: 'Mga susunod na Hakbang'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Ikaw ay paalis mula sa domain na ito, papunta sa isang site na hindi pinamamahalaan ng Code.org.
@@ -933,6 +869,8 @@ fil:
       school_name: 'Pangalan ng Paaralan'
       school_city: 'Lungsod ng Paaralan'
       school_country: 'Bansa ng Paaralan'
+      colombian_school_city: 'Lungsod ng Paaralan'
+      colombian_school_name: 'Pangalan ng Paaralan'
     form_entries:
       gender:
         male: 'Lalaki'
@@ -958,3 +896,7 @@ fil:
   gdpr_dialog:
     yes: 'Oo'
   copy: 'Kopyahin'
+  parent_email_banner:
+    text: "**Ikaw ba ay magulang o tagapag-alaga?** I-link ang email mo sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo!"
+    link_your_email: "I-link ang email mo"
+    not_now: "Hindi ngayon"

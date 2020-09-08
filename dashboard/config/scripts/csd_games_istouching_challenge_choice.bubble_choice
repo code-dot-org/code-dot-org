@@ -4,6 +4,7 @@ display_name 'Collision Challenges'
 description 'Try out these new blocks and challenges with collisions.'
 
 sublevels
-level 'CSD U3 collisions egg2_2020'
-level 'CSD U3 collision detection challenge groups'
+
+level 'CSD U3 collision detection challenge collider angle'
+level 'CSD U3 collision detection practice debugpoints'
 level 'CSD U3 L16 Freeplay_2020'

@@ -216,7 +216,7 @@ export default class SortedTableSelect extends React.Component {
       sort: orderBy
     })(rowData);
     return (
-      <div>
+      <div className="ui-test-sortable-table-select">
         {titleText && <Heading1>{titleText}</Heading1>}
         <div style={styles.container}>
           <div style={styles.leftColumn}>

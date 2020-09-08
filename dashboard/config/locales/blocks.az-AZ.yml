@@ -263,6 +263,10 @@ az:
             '"space"': kosmos
             '"x"': x
             '"y"': y
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -276,6 +280,20 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+            '"x"': x
+            '"y"': y
       gamelab_keyPressed:
         options:
           CONDITION:

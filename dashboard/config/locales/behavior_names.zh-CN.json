@@ -1,0 +1,290 @@
+{
+  "zh-CN": {
+    "data": {
+      "behavior_names": {
+        "CourseE_Project_SpriteLab": {
+          "wandering": "徘徊"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "wandering": "徘徊"
+        },
+        "CourseE_hoops": {
+          "wandering": "徘徊"
+        },
+        "CourseF_Project_SpriteLab": {
+          "wandering": "徘徊"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 2": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 2_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 2_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 3_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 3_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 4_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 4_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 5_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 5_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 6": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 6_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 6_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 7_2019": {
+          "wandering": "徘徊"
+        },
+        "Dance Party 7_2020": {
+          "wandering": "徘徊"
+        },
+        "Dance Party Freeplay": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 2-validated_2019": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 2-validated_2020": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 3-validated_2019": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 3-validated_2020": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 4-validated_2019": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 4-validated_2020": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 5-validated_2019": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 5-validated_2020": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 6-validated_2019": {
+          "wandering": "徘徊"
+        },
+        "Fish Tank 6-validated_2020": {
+          "wandering": "徘徊"
+        },
+        "OPD-K5-spritelab-2": {
+          "wandering": "徘徊"
+        },
+        "OPD-K5-spritelab-3": {
+          "wandering": "徘徊"
+        },
+        "OPD-K5-spritelab-4": {
+          "wandering": "徘徊"
+        },
+        "OPD-K5-spritelab-6": {
+          "wandering": "徘徊"
+        },
+        "OPD-K5-spritelab-7": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 1_2019": {
+          "wandering": "徘徊",
+          "mystery": "神秘\n"
+        },
+        "Virtual Pet 1_2020": {
+          "wandering": "徘徊",
+          "mystery": "神秘\n"
+        },
+        "Virtual Pet 2": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 2_2019": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 2_2020": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 3_2019": {
+          "wandering": "徘徊",
+          "wandering2": "徘徊2",
+          "moving east2": "向右移动2\n",
+          "spinning left2": "向左旋转2\n",
+          "spinning right2": "向右旋转2\n",
+          "shrinking2": "缩小2\n",
+          "growing2": "放大2\n",
+          "moving south2": "向下移动2\n",
+          "swimming left and right2": "左右游动2\n",
+          "moving north2": "向上移动2\n",
+          "jittering2": "抖动2\n",
+          "moving west2": "向左移动2\n",
+          "patrolling2": "巡逻2\n"
+        },
+        "Virtual Pet 3_2020": {
+          "wandering": "徘徊",
+          "wandering2": "徘徊2",
+          "moving east2": "向右移动2\n",
+          "spinning left2": "向左旋转2\n",
+          "spinning right2": "向右旋转2\n",
+          "shrinking2": "缩小2\n",
+          "growing2": "放大2\n",
+          "moving south2": "向下移动2\n",
+          "swimming left and right2": "左右游动2\n",
+          "moving north2": "向上移动2\n",
+          "jittering2": "抖动2\n",
+          "moving west2": "向左移动2\n",
+          "patrolling2": "巡逻2\n"
+        },
+        "Virtual Pet 4": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 4_2019": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 4_2020": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 5": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet 6": {
+          "wandering": "徘徊"
+        },
+        "Virtual Pet Freeplay": {
+          "wandering": "徘徊"
+        },
+        "behaviors 1": {
+          "mystery behavior": "神秘行为\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 1_2020": {
+          "mystery behavior": "神秘行为\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 2": {
+          "flying": "快速移动\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 2_2020": {
+          "flying": "快速移动\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 3": {
+          "zooming east": "向右缩放\n",
+          "driving east": "向右推动\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 3_2020": {
+          "zooming east": "向右缩放\n",
+          "driving east": "向右推动\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 3a": {
+          "zooming east": "向右缩放\n",
+          "driving east": "向右推动\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 3a_2020": {
+          "zooming east": "向右缩放\n",
+          "driving east": "向右推动\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 4": {
+          "move south and west": "左右移动\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 4_2020": {
+          "move south and west": "左右移动\n",
+          "wandering": "徘徊",
+          "running east": "向右运行\n"
+        },
+        "behaviors 6": {
+          "running east": "向右运行\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 6_2020": {
+          "running east": "向右运行\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 7": {
+          "running east": "向右运行\n",
+          "wandering": "徘徊"
+        },
+        "behaviors 7_2020": {
+          "running east": "向右运行\n",
+          "wandering": "徘徊"
+        },
+        "behaviors free play": {
+          "spinning and growing": "旋转和放大\n"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "旋转和放大\n"
+        },
+        "courseE_Dogger_2": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_1": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_1_2020": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_2": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_2_2020": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_3": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_3_2020": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_4": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_4_2020": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_5": {
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_5_2020": {
+          "wandering": "徘徊"
+        },
+        "courseF_project_1": {
+          "wandering": "徘徊"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "徘徊 2",
+          "wandering 1": "徘徊 1"
+        }
+      }
+    }
+  }
+}

@@ -202,6 +202,8 @@ lv:
       educate_hoc: "Programmēšanas stunda"
       about_us: "Par mums"
       about_partners: "Partneri"
+      legal_privacy: "Privātuma politika"
+      legal_tos: "Nosacījumi"
     user:
       classroom: 'Skolotāju mājas lapa'
       label: 'Sveiki, %{username}'
@@ -412,18 +414,6 @@ lv:
       title: "Sazarojumi"
     widgets:
       audience: "Vecums 14+"
-  gallery:
-    students_drew_these_with_code: "Skolnieki uzzīmēja šos ar kodu!"
-    students_made_these_with_code: "Skolēni izveidoja šos ar kodu!"
-    picture_count: "Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b> attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu katru programmu darbībā."
-    activity_count: "Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem un ekrānšāviņiem, lai apskatītu katru programmu darbībā."
-    want_to_make_your_own: "Vēlies uzveidot pats savu?"
-    more: "Vēl &rarr;"
-    caption_by_name_age: "%{name}, vecums %{age}"
-    caption_time_ago: "%{time_ago} pirms"
-    header: "Galerija"
-    header_playlab: "Spēles laboratorija"
-    header_artist: "Mākslinieks"
   landing:
     report_bug: "Kļūdas ziņojums"
     support: "Saņemt palīdzību"
@@ -499,26 +489,6 @@ lv:
       report_abuse_form:
         abuse_type:
           other: 'Citi'
-  flex_category:
-    required: 'Pārskats'
-    csf_e_2: 'Kursa E saturs'
-    csf_f_2: 'Kursa F saturs'
-    csf_digcit: 'Digitālā pilsonība'
-    csf_jigsaw: 'Puzle'
-    csf_loops: 'Cikli'
-    csf_events: 'Pasākumi'
-    csf_binary: 'Binārie'
-    csf_conditionals: 'Sazarojumi'
-    csf_nested_loops: 'Cikls ciklā'
-    csf_functions: 'Funkcijas'
-    csf_variables: 'Mainīgie'
-    csf_for_loops: '"par" cikli'
-    csf_internet: 'Internets'
-    csp_variables: 'Mainīgie'
-    csp_conditionals: 'Sazarojumi'
-    csp_functions: 'Funkcijas'
-    csp_lists: 'Saraksti'
-    csp_loops: 'Cikli'
   hoc_download:
     capsule_title: 'Vai Tev ir internets?'
     instructions_headline: 'Nav interneta?'
@@ -528,6 +498,7 @@ lv:
       last_name: 'Uzvārds'
       email: 'E-pasts'
       school_name: 'Skolas nosaukums'
+      colombian_school_name: 'Skolas nosaukums'
     form_entries:
       gender:
         male: 'Vīrietis'

@@ -976,6 +976,10 @@ fr:
         text: le lutin {SPRITE} commence à {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': des secondes
       gamelab_changePropBy:
         text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
@@ -994,7 +998,7 @@ fr:
       gamelab_clickedOn:
         text: quand {SPRITE} cliqué
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} cliqué"
+        text: cliqué {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
       gamelab_createNewSprite:
@@ -1021,8 +1025,45 @@ fr:
           CHOICE:
             '"this"': ceci
             '"other"': autre
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': des secondes
       gamelab_hideTitleScreen:
         text: cacher l'écran-titre
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': q
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} touche les bords"
       gamelab_jumpTo:
@@ -1096,6 +1137,8 @@ fr:
             '"West"': L’Ouest
       gamelab_moveToward:
         text: déplacer {SPRITE} de {DISTANCE} pixels vers {TARGET}
+      gamelab_objectSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_playSound:
         text: jouer le son {SOUND}
       gamelab_pointInDirection:
@@ -1168,6 +1211,8 @@ fr:
           CONDITION:
             '"when"': quand
             '"while"': tant que
+      gamelab_subjectSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_turn:
         text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:
@@ -1507,7 +1552,7 @@ fr:
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
       RyanLab_moveForward:
-        text: avancer plus
+        text: avancer
       RyanLab_turnLeft:
         text: tourner à gauche
       RyanLab_turnRight:
@@ -1573,6 +1618,12 @@ fr:
         options:
           OPTION:
             '"random"': aléatoire
+            '"R2-D2 random"': R2-D2 aléatoire
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:
@@ -1644,7 +1695,7 @@ fr:
       craft_log:
         text: message de journal {MESSAGE}
       craft_moveForward:
-        text: avancer plus
+        text: avancer
       craft_placeBlock:
         text: placer {blockType}
         options:

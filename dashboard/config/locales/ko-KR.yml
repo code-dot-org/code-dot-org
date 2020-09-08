@@ -152,6 +152,10 @@ ko:
     email_preference_yes: 예
     email_preference_no: 아니요
     email_preference_required: 이메일 주소를 지정해야합니다.
+    parent_account_checkbox: 본인은 내 자녀를 대신하여 가입하는 부모/보호자입니다.
+    parent_account_email_progress_permission: 귀 자녀의 진도와 프로젝트 및 과정과 컴퓨터 과학에 대한 업데이트를
+      종종 이메일로 알려드려도 되겠습니까? [(당사 개인정보 보호정책 참조)](%{privacy_policy_url})
+    parent_account_email_label: 부모/보호자 이메일
   school_info:
     title: 학교 정보(선택사항)
     school_country: 학교 국가정보
@@ -317,6 +321,8 @@ ko:
       help_us: 도움주기
       teach: 가르치기
       about: 소개
+      legal_privacy: 개인정보보호 정책
+      legal_tos: 이용 약관
     user:
       classroom: 선생님 홈페이지
       district_dashboard: 대시보드 구역
@@ -420,8 +426,13 @@ ko:
     create_personal_login_terms_markdown: Code.org 의 [서비스 약관](<>)을 준수할 것에 동의합니다. 13세
       미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다.
     update_email: 업데이트
+    for_parents_and_guardians: 부모 및 보호자용
+    link_a_parent_email: 부모/보호자 이메일 주소를 이 계정에 연결하여 귀 자녀의 진도와 프로젝트에 대한 업데이트를 보내 드립니다.
+      또한 암호 복구 시에도 이 이메일 주소를 사용하실 수 있습니다.
     parent_guardian_email_label: 부모/보호자 이메일
     none: 없음
+    only_one_parent_email_supported_warning: '주: 현재는 학생 한 명당 하나의 부모/보호자 이메일 주소만 지원할
+      수 있습니다.'
   user_level:
     completed: 완료
     tried: 시도함
@@ -646,22 +657,6 @@ ko:
       body: 여기에 있는 카드덱을 활용한 "언플러그" 활동으로 알고리즘과 조건문에 대해서 배워보세요.
     widgets:
       cta: 방법 알아보기
-  gallery:
-    students_drew_these_with_code: 학생들이 그린 작품!
-    students_made_these_with_code: 학생들이 만든 작품!
-    picture_count: 지난 <b>%{days}</b> 일 동안, <b>%{count}</b> 개의 그림을 프로그래밍으로 그렸습니다. 각
-      프로그램을 살펴보려면 그림을 누르세요.
-    activity_count: 지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
-      만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다.
-    want_to_make_your_own: 자기 코드를 만들겠습니까?
-    how_to_save: 이 튜토리얼의 마지막 레벨에서 여러분의 작품을 갤러리에 저장하기 위해 "완료"와 "저장"을 클릭하세요.
-    more: 더 살펴보기
-    caption_by_name_age: "%{age}살, %{name}가"
-    caption_time_ago: "%{time_ago} 전에"
-    header: 갤러리
-    header_playlab: 스토리 및 게임
-    header_artist: 화가
-    report_abuse: 악용 사례 신고
   landing:
     report_bug: 버그(오류) 신고하기
     support: 도움 받기
@@ -864,45 +859,7 @@ ko:
     instructor_feedback: 강사 피드백
     peer_feedback: 동료 피드백
     outdated: 이 피드백은 이전에 제출된 버전에 추가되었습니다.
-  flex_category:
-    required: 개요
-    content: 콘텐츠
-    practice: 선생님 연습
     peer_review: 동료 평가
-    main_course: 메인 코스
-    extra_course_content: 추가 코스 내용
-    csf_digcit: 디지털 시민의식
-    csf_jigsaw: 직소퍼즐
-    csf_loops: 반복
-    csf_events: 이벤트
-    csf_binary: 2진
-    csf_conditionals: 조건
-    csf_spritelab: 스프라이트 연구소
-    csf_nested_loops: 중첩 반복
-    csf_functions: 함수
-    csf_variables: 변수
-    csf_for_loops: 반복을 위한
-    csf_internet: 인터넷
-    csd1_1: '1 장: 문제 해결 과정'
-    csd1_2: '2 장: 컴퓨터와 문제 해결'
-    csd2_1: '1 장: 웹 콘텐츠 및 HTML'
-    csd2_2: '2 장: 스타일링 및 CSS'
-    csd3_1: '1 장: 이미지와 애니메이션'
-    csd3_2: '2 장: 게임 만들기'
-    csd4_1: '1 장: 사용자 중심 디자인'
-    csd4_2: '2 장: 앱 프로토타입'
-    csd5_1: '1 장: 정보를 표현하기'
-    csd5_2: '2 장: 데이터 문제 해결하기'
-    csd6_1: '1 장: 하드웨어 출력'
-    csd6_2: '2 장: 하드웨어 입력'
-    csp2_1_2018: '유닛 2: 디지털 정보'
-    csp_variables: 변수
-    csp_conditionals: 조건
-    csp_functions: 함수
-    csp_lists: 리스트
-    csp_loops: 반복
-    csp_unit1_2020: CS 원리 1단원
-    csp_unit2_2020: CS 원리 2단원
   external_links:
     disclaimer: 경고
     leaving_domain: 여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다.
@@ -977,6 +934,7 @@ ko:
       email: 이메일
       school_name: 학교 이름
       school_country: 학교 국가정보
+      colombian_school_name: 학교 이름
     form_entries:
       gender:
         male: 남
@@ -1006,3 +964,8 @@ ko:
     true: 예
   page_not_found_title: 페이지를 찾을 수 없습니다.
   copy: 복사
+  parent_email_banner:
+    text: "**귀하는 부모입니까 아니면 보호자입니까?** 귀하의 이메일을 이 계정에 연결하여 귀 자녀의 진도와 프로젝트에 대한 업데이트를
+      받으십시오!"
+    link_your_email: 이메일 연결
+    not_now: 나중에

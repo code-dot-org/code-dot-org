@@ -3,28 +3,29 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Novice Reflection Overview', flex_category: 'required'
+lesson 'Novice Reflection Overview', display_name: 'Novice Reflection Overview'
 level 'welcome-novice-18', named: true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Day 1'
+lesson 'Day 1', display_name: 'Day 1'
 level 'novice-monday-1'
 level 'novice-monday-2'
 
-stage 'Day 2'
+lesson 'Day 2', display_name: 'Day 2'
 level 'novice-tuesday-1'
 level 'instructional-strategy-tuesday'
 level 'novice-tuesday-2'
 
-stage 'Day 3'
+lesson 'Day 3', display_name: 'Day 3'
 level 'novice-wednesday-1'
 level 'getting-buy-in-wednesday'
 level 'novice-wednesday-2'
 
-stage 'Day 4'
+lesson 'Day 4', display_name: 'Day 4'
 level 'novice-thursday-1'
 level 'recruiting-thursday'
 level 'novice-thursday-2'
 
-stage 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up'
 level 'novice-congrats', named: true
+

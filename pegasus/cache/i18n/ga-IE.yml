@@ -2186,6 +2186,8 @@ ga-IE:
   header_teacher_community: Comhphobal múinteoirí
   header_help_support: 'Cabhair agus tacaíocht '
   header_report_bug: Déan tuairisc ar fhadhb
+  header_legal_privacy: Polasaí Príobháideachais
+  header_legal_tos: Téarmaí Seirbhíse
   header_tutorials: Cúrsaí Teagaisc
   app_lab_documentation: 'Saotharlann Aipeanna: Doiciméadú'
   app_lab_tutorials: 'Saotharlann Aipeanna: Cúrsaí Teagaisc'
@@ -2498,3 +2500,4 @@ ga-IE:
   hoc2019_dance_previous_versions: "An bhfuil tú ag lorg leagan níos sine den Chóisir
     Dhamhsa?  \nCliceáil anseo chun [Cuid 1](%{dance_2018_link}) agus [Cuid 2](%{dance_extras_2018_link})
     ón bhliain seo caite a thosú."
+  page_not_available_button: Baile

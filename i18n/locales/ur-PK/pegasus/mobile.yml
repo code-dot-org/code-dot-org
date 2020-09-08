@@ -382,6 +382,8 @@
   header_about: "متعلق"
   header_help_support: 'مدد اور معاونت '
   header_report_bug: "ایک مسئلہ کی اطلاع دیں"
+  header_legal_privacy: "رازداری کی پالیسی"
+  header_legal_tos: "سروس کی شرائط"
   user_header_signin: "سائن ان کریں"
   user_header_create: 'تخلیق کریں '
   user_header_dance: "ڈانس پارٹی"

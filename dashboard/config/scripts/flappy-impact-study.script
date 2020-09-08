@@ -1,9 +1,9 @@
 login_required true
 
-stage 'Pre Hour of Code Survey'
+lesson 'Pre Hour of Code Survey', display_name: 'Pre Hour of Code Survey'
 level 'HOC pre-survey 2016 levelgroup', assessment: true
 
-stage 'Flappy Code'
+lesson 'Flappy Code', display_name: 'Flappy Code'
 level 'flappy_1'
 level 'flappy_2'
 level 'flappy_3'
@@ -15,5 +15,6 @@ level 'flappy_8'
 level 'flappy_9'
 level 'flappy_11'
 
-stage 'Post Hour of Code Survey'
+lesson 'Post Hour of Code Survey', display_name: 'Post Hour of Code Survey'
 level 'HOC post-survey 2016 levelgroup', assessment: true
+

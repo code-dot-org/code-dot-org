@@ -195,7 +195,12 @@ ro:
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: Trebuie să specificaţi un email preferat.
-    parent_account_email_label: E-mail părinte/tutore
+    parent_account_checkbox: Sunt un părinte/tutore care se înscrie în numele copilului
+      meu
+    parent_account_email_progress_permission: Putem să vă trimitem un email cu actualizări
+      ocazionale privind progresul și proiectele copilului dv., precum și actualizări
+      despre cursul lui și despre informatică? [(Vedeți politica noastră de confidențialitate)](%{privacy_policy_url})
+    parent_account_email_label: Email-ul Părintelui/Tutorelui
   school_info:
     title: Informații școală (opțional)
     school_country: Țara școlii
@@ -368,6 +373,8 @@ ro:
       help_us: Ajutați-ne
       teach: Predați
       about: Despre
+      legal_privacy: Politică de confidențialitate
+      legal_tos: Termeni şi condiţii de utilizare
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -406,7 +413,7 @@ ro:
       playlab: Laborator de Joacă
       playlab_k1: Play Lab (Pre-cititor)
       scratch: Scratch
-      sports: Sporturi
+      sports: Sporturi (Sports)
       spritelab: Laborator Sprite
       starwars: Star Wars
       starwarsblocks: Star Wars (blocuri)
@@ -512,8 +519,14 @@ ro:
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
     update_email: Actualizează
+    for_parents_and_guardians: Pentru Părinți și Tutori
+    link_a_parent_email: Corelați adresa de email a unui părinte/tutore cu acest cont
+      pentru a primi actualizări despre progresul și proiectele copilului dv. De asemenea,
+      veți putea utiliza această adresă de email pentru recuperarea parolei.
     parent_guardian_email_label: E-mail părinte/tutore
     none: Nici unul
+    only_one_parent_email_supported_warning: 'Notă: pentru moment, putem accepta doar
+      o adresă de email a părintelui/tutorelui pentru un cont de elev'
     encrypted: criptat
   user_level:
     completed: Finalizat
@@ -783,7 +796,7 @@ ro:
     hero:
       title: Minecraft
     sports:
-      title: Sporturi
+      title: Sporturi (Sports)
       body: Creați un joc de basketball sau un "mix and match" din toate sporturile.
     text-compression:
       body: În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru
@@ -808,25 +821,6 @@ ro:
         sau creați o lecție cu un singur concept pentru clasa dvs.
       audience: Vârste 14+
       cta: Află cum
-  gallery:
-    students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
-    students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
-    picture_count: În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b>
-      imagini scriind propriile programe de calculator. Fă clic pe imagini pentru
-      a vedea fiecare program în acțiune.
-    activity_count: În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b>
-      aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic
-      pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.
-    want_to_make_your_own: Vrei să realizezi propriul tău program?
-    how_to_save: In ultimul nivel al acestor tutoriale, faceţi click pe "Finish" şi
-      "Save" pentru a salva munca de pana acum in Galerie.
-    more: Mai mult &rarr;
-    caption_by_name_age: de %{name}, vârsta %{age}
-    caption_time_ago: cu %{time_ago} în urmă
-    header: Galerie
-    header_playlab: Laborator de Joacă
-    header_artist: Artist
-    report_abuse: Raportează abuz
   landing:
     report_bug: Raporteazã eroare
     support: Obţine ajutor
@@ -1076,52 +1070,7 @@ ro:
     instructor_feedback: Instructor de Feedback
     peer_feedback: Trimiteţi o recenzie
     outdated: Acest feedback a fost adaugat pentru o versiune anterior prezentata
-  flex_category:
-    required: Prezentare generală
-    content: Conţinut
-    practice: Practicile de predare
     peer_review: Împerecheaţi dispozitivele
-    ramp_up: Avansare
-    main_course: Curs principal
-    extra_course_content: Conținut curs suplimentar
-    csf_e_1: Avansare la Cursul E (Opțional)
-    csf_e_2: Conținut curs E
-    csf_f_1: Avansare la Cursul F (Opțional)
-    csf_f_2: Conținut curs F
-    csf_digcit: Cetățenia Digitală
-    csf_jigsaw: Puzzle
-    csf_loops: Bucle
-    csf_events: Evenimente
-    csf_binary: Binar
-    csf_conditionals: Condiţionale
-    csf_spritelab: Laborator Sprite
-    csf_nested_loops: Repetiții imbricate
-    csf_functions: Funcţii
-    csf_variables: Variabile
-    csf_for_loops: Bucle Pentru
-    csf_internet: Internet
-    csd1_1: 'Capitolul 1: Procesul de rezolvare a problemelor'
-    csd1_2: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
-    csd2_1: 'Capitolul 1: Conţinutul Web şi HTML'
-    csd2_2: 'Capitolul 2: Styling şi CSS'
-    csd3_1: 'Capitolul 1: Imagini şi animaţii'
-    csd3_2: 'Capitolul 2: Cum facem jocuri'
-    csd4_1: 'Capitolul 1: Design orientat spre utilizator'
-    csd4_2: 'Capitolul 2: Prototipare aplicații'
-    csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
-    csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
-    csd6_1: 'Capitolul 1: Programare cu hardware'
-    csd_survey: Chestionar după curs
-    cspSurvey: Sondaj
-    cspAssessment: Evaluare capitol
-    csp2_1_2018: 'Unitatea 2: Informaţii digitale'
-    csp_variables: Variabile
-    csp_conditionals: Condiţionale
-    csp_functions: Funcţii
-    csp_lists: Liste
-    csp_loops: Bucle
-    csp_unit1_2020: "(vechi) Unitatea 1: Informaţii digitale"
-    k5_next_steps: Pașii următori
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de
@@ -1210,6 +1159,8 @@ ro:
       school_name: Numele școlii
       school_city: Orașul în care se află școala
       school_country: Țara școlii
+      colombian_school_city: Orașul în care se află școala
+      colombian_school_name: Numele școlii
     form_entries:
       gender:
         male: De sex masculin
@@ -1288,3 +1239,8 @@ ro:
     logout: Deconectare
     true: Da
   copy: Copiază
+  parent_email_banner:
+    text: "**Sunteți un părinte sau un tutore?** Corelați emailul dv. cu acest cont
+      pentru a primi actualizări despre progresul și proiectele copilului dv.!"
+    link_your_email: Corelați emailul dv.
+    not_now: Nu acum

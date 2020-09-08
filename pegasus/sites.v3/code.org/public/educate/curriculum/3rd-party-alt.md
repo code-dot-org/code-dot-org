@@ -4,8 +4,6 @@ theme: responsive
 style_min: true
 ---
 
-<!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
-
 <img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Educator Resources</h1>
 <div>

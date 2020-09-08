@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Näib, et meil on raskusi sinu animatsiooni \"{animationName}\" laadimisega. Palun veendu, et sul on hea interneti ühendus ja püüa lehte värskendada. Kui probleem säilib, võib see animatsioon olla katkine. Võib-olla tuleb sul sellisel juhul jätkamiseks animatsioon eemaldada.",
   "reinfFeedbackMsg": "Sa oled lõpetanud! Vajuta \"Jätka\", et liikuda edasi järgmisele tasemele.",
   "shareGame": "Jaga oma mängu:",

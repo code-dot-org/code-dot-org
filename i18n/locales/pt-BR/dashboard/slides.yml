@@ -3,7 +3,7 @@
 #1) Numeric keys in Yaml are loaded as Fixnums, not strings.
 #2) Rails' i18n can only look up string or symbol keys.
 #3) Crowdin proofreaders are translating filepaths, despite being hidden.
-pt-BR:
+pt:
   slides:
     maze_intro:
       1:
@@ -314,45 +314,32 @@ pt-BR:
         text: "Inúmeras formas simples podem ser usadas para criar padrões mais complexos. No próximo desafio, o código que você acabou de escrever para fazer um círculo estará disponível como uma nova função que pode fazer círculos de diferentes tamanhos. Você pode usá-la para ajudar Elsa a criar padrões belos e intrincados na neve?"
     playlab_intro:
       1:
-        image: 'notes/playlab_intro_1.png'
         text: "Nós vamos criar jogos usando o Laboratório. Os bons jogos têm histórias, e toda história tem personagens. Nós vamos aprender como criar nossos personagens, como bruxas, alienígenas e animais que falam, andam e interagem uns com os outros. Ao final deste tutorial, você poderá criar um jogo a partir do zero e compartilhá-lo com seus amigos."
       2:
-        image: 'notes/playlab_intro_2.png'
         text: "Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo."
       3:
-        image: 'notes/playlab_intro_3.png'
         text: "A parte do meio é onde fica a caixa de ferramentas, e cada um desses blocos representa uma parte do código. O espaço em branco à direita é chamado de área de trabalho e é onde criaremos nosso programa."
       4:
-        image: 'notes/playlab_intro_4.png'
         text: "Para começar, você terá que conectar seus blocos ao bloco laranja \"quando executar\". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam."
       5:
-        image: 'notes/playlab_intro_5.png'
         text: "Neste primeiro desafio, nosso personagem é um pinguim, e nós o faremos dizer \"Olá!\", arrastando o bloco \"diga\", conectando-o ao bloco \"quando executar\" e digitando \"Olá\". Nós também podemos fazer com que o pinguim se mova usando os blocos \"mova à direita\" e \"mova à esquerda\". Depois que seus blocos estiverem no lugar certo, aperte o botão \"executar\" para ver o que você programou."
       6:
-        image: 'notes/playlab_intro_6.png'
         text: "Comece agora mesmo! Ao final, você conseguirá criar seu próprio jogo, com todos os tipos de jogadores que poderão interagir, ficar felizes ou tristes, marcar pontos ou lançar bolas de fogo, ou até mesmo fazer desaparecer uns aos outros. Depende da sua imaginação e do jogo que você quer criar."
     playlab_events:
       1:
-        image: 'notes/playlab_events_1.png'
         text: "Agora, vamos aprender um pouco sobre algo que os programadores de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que ele deve ouvir quando algo acontece. Quando tal coisa acontece, ele realiza uma ação."
       2:
-        image: 'notes/playlab_events_2.png'
         text: "Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar uma tecla de direção ou tocar a tela."
       3:
-        image: 'notes/playlab_events_3.png'
         text: "Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco \"quando clicado\" e conectaremos o bloco \"diga\" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento \"quando clicado\" será realizado. O que seu alienígena diz?"
       4:
-        image: 'notes/playlab_events_4.png'
         text: "Há também os blocos \"quando a seta estiver pressionada\". Se você conectar os blocos \"mova\" a eles, será possível começar a mover seus personagens para cima, para baixo, para esquerda e para a direita. Pouco a pouco, seu jogo está ficando cada vez mais interativo."
     playlab_repeat_forever:
       1:
-        image: 'notes/playlab_repeat_forever_1.png'
         text: "Este é o bloco \"repita infinitamente\". Tudo que estiver contido neste bloco acontecerá repetidamente no jogo."
       2:
-        image: 'notes/playlab_repeat_forever_2.png'
         text: "Se quisermos que um personagem faça algo repetidamente, sem nenhuma ação do jogador, colocaremos esses blocos dentro do bloco \"repita infinitamente\"."
       3:
-        image: 'notes/playlab_repeat_forever_3.png'
         text: "Neste desafio, nosso objetivo é ajudar o mago a proteger as fronteiras do reino, andando da esquerda para a direita e vice-versa, continuamente. Aprender como repetir ações de comandos vai economizar muito do seu tempo no futuro, quando você for criar seu próprio jogo."
     C1_artist_intro:
       1:
@@ -765,10 +752,8 @@ pt-BR:
         text: "Isso economiza tempo e torna as coisas mais fáceis. Para usá-lo, coloque o bloco avance dentro do bloco repita. Clique em Executar e o zumbi vai avançar cinco vezes para chegar ao saboroso girassol."
     C3_playlab_create_game:
       1:
-        image: 'notes/C3_playlab_create_game_1.png'
         text: "Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade."
       2:
-        image: 'notes/C3_playlab_create_game_2.png'
         text: "Existem alguns novos blocos para experimentar. Há os blocos \"quando a seta estiver pressionada\" e \"mova o personagem\". Você pode juntar esses blocos para mover os personagens com as setas do teclado. E há alguns blocos que fazem coisas quando os personagens trombam ou são clicados. Dê uma olhada e divirta-se!"
     C3_songwriting_with_parameters:
       1:

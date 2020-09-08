@@ -282,6 +282,8 @@ km:
       help_us: ជួយពួកយើង
       teach: បង្រៀន
       about: អំពី
+      legal_privacy: សិទ្ធបុគ្គល
+      legal_tos: លក្ខខណ្ឌ
     user:
       classroom: ទំព័រដើមគ្រូបង្រៀន
       label: សួស្តី%{username}
@@ -448,10 +450,6 @@ km:
         ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
     unplugged_conditionals:
       title: លក្ខខណ្ឌ
-  gallery:
-    want_to_make_your_own: តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?
-    more: ច្រើន​ទៀត &rarr;
-    report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
@@ -500,17 +498,6 @@ km:
       report_abuse_form:
         abuse_type:
           other: ផ្សេងៗ
-  flex_category:
-    csf_loops: រង្វិល​ជុំ
-    csf_events: ព្រឹត្តិការណ៍
-    csf_conditionals: លក្ខខណ្ឌ
-    csf_functions: អនុ​គមន៍
-    csf_variables: អ​ថេរ
-    csp_variables: អ​ថេរ
-    csp_conditionals: លក្ខខណ្ឌ
-    csp_functions: អនុ​គមន៍
-    csp_lists: បញ្ជី
-    csp_loops: រង្វិល​ជុំ
   hoc_download:
     minecraft_name: Minecraft Hour of Code
   pd:
@@ -519,6 +506,8 @@ km:
       school_name: ឈ្មោះរបស់សាលា
       school_city: ទីក្រុងរបស់សាលា
       school_country: សាលាក្នុងប្រទេស
+      colombian_school_city: ទីក្រុងរបស់សាលា
+      colombian_school_name: ឈ្មោះរបស់សាលា
     form_entries:
       gender:
         male: ប្រុស

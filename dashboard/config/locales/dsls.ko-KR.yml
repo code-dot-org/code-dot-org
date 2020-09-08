@@ -99,12 +99,12 @@ ko-KR:
         title: 미로 퍼즐 짝맞추기
       2-3 Maze Multi 2:
         answers:
-        - {}
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
         - correct: true
         - {}
         - {}
         questions:
-        - {}
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
         title: 미로 퍼즐 객관식
       2-3 Relay Programming Multi 1:
         answers:
@@ -451,6 +451,8 @@ ko-KR:
       Begin planning your project_2018:
         content1: 설명 입력
       Begin planning your project_2018_2019:
+        content1: 설명 입력
+      Begin planning your project_2018_2019_2020:
         content1: 설명 입력
       CSD Header Size MC:
         answers:
@@ -1226,7 +1228,65 @@ ko-KR:
         content1: 설명 입력
       New Challenge Introduction:
         content1: 설명 입력
+      OPD-K5 Reviewing Reflections:
+        content1: 설명 입력
       OPD-K5 Stage3aGo:
+        content1: 설명 입력
+      OPD-K5 Stage3aGo_copy:
+        content1: 설명 입력
+      OPD-K5 conditionals introduced:
+        content1: 설명 입력
+      OPD-K5 debugging:
+        content1: 설명 입력
+      OPD-K5 diving deeper intro:
+        content1: 설명 입력
+      OPD-K5 events introduced:
+        content1: 설명 입력
+      OPD-K5 for loops:
+        content1: 설명 입력
+      OPD-K5 for loops intro:
+        content1: 설명 입력
+      OPD-K5 for loops introduction:
+        content1: 설명 입력
+      OPD-K5 functions introduced:
+        content1: 설명 입력
+      OPD-K5 journaling:
+        content1: 설명 입력
+      OPD-K5 lesson implementation planning:
+        content1: 설명 입력
+      OPD-K5 lesson plans:
+        content1: 설명 입력
+      OPD-K5 loops introduced:
+        content1: 설명 입력
+      OPD-K5 project:
+        content1: 설명 입력
+      OPD-K5 projects introduction:
+        content1: 설명 입력
+      OPD-K5 role_of_teacher:
+        content1: 설명 입력
+      OPD-K5 sequencing introduced:
+        content1: 설명 입력
+      OPD-K5 sprite lab:
+        content1: 설명 입력
+      OPD-K5 sprite lab introduction:
+        content1: 설명 입력
+      OPD-K5 sprite lab unplugged:
+        content1: 설명 입력
+      OPD-K5 sprite lab video:
+        content1: 설명 입력
+      OPD-K5 types of lessons:
+        content1: 설명 입력
+      OPD-K5 using lesson plans:
+        content1: 설명 입력
+      OPD-K5 variables:
+        content1: 설명 입력
+      OPD-K5 variables introduction:
+        content1: 설명 입력
+      OPD-K5 variables unplugged:
+        content1: 설명 입력
+      OPD-K5 where to next:
+        content1: 설명 입력
+      OPD-K5-projects-1:
         content1: 설명 입력
       Prepare for your presentation:
         content1: 설명 입력
@@ -1269,7 +1329,23 @@ ko-KR:
         - feedback: 틀림
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: 틀림
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: 틀림
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1294,6 +1370,14 @@ ko-KR:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1328,6 +1412,15 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1345,6 +1438,14 @@ ko-KR:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1376,6 +1477,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1393,6 +1502,14 @@ ko-KR:
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: 잘 모르겠음
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1424,6 +1541,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1443,6 +1568,15 @@ ko-KR:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
@@ -1478,6 +1612,15 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1495,6 +1638,22 @@ ko-KR:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1526,6 +1685,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1543,6 +1710,14 @@ ko-KR:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1569,6 +1744,15 @@ ko-KR:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1609,6 +1793,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1641,6 +1833,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1658,6 +1858,14 @@ ko-KR:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1689,6 +1897,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1706,6 +1922,14 @@ ko-KR:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1753,6 +1977,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1777,6 +2009,22 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1786,6 +2034,14 @@ ko-KR:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1810,6 +2066,14 @@ ko-KR:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1842,6 +2106,14 @@ ko-KR:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -1889,6 +2161,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1929,6 +2209,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Overview
@@ -1938,6 +2226,17 @@ ko-KR:
           ## Resources
 
           * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 활동가이드 (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: 설명 입력
+      csf_password_power-up:
+        content1: 설명 입력
+      csf_putting_a_stop_to_online_meanness:
+        content1: 설명 입력
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # 나의 온라인 마을
+
+          ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1955,6 +2254,14 @@ ko-KR:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

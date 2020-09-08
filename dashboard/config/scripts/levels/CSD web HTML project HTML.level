@@ -12,23 +12,21 @@
     "parent_level_id": 20056,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
       "/docs/concepts/html/lists/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
     "submittable": "false",
     "encrypted": "false",
     "mini_rubric": "false",
     "encrypted_examples": [
 
-    ]
+    ],
+    "map_reference": "/docs/concepts/html/formatting-html/"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-30 21:12:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:34:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:14:11 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-30 21:12:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:34:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:14:11 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-05 20:45:41 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-05 20:46:02 +0000\",\"changed\":[\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-26 16:56:03 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-29 18:27:59 +0000\",\"changed\":[\"reference_links\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

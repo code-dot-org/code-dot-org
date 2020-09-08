@@ -443,9 +443,81 @@ ar-SA:
         title: متاهة - اختيار من متعدد
       Begin planning your project:
         content1: الوصف هنا
+        markdown: "# عملية التصميم\nيُقصَد بتصميم البرامج حلّ الكثير من المشكلات الصغيرة
+          طوال الوقت. وتكمن المشكلة الرئيسية في تصميم البرامج فيما يجب إنشاؤه في المقام
+          الأول.\n\nهذه العملية مفيدة في أمورٍ كثيرة، لكننا سنركِّز على استخدامها
+          في تصميم التطبيقات.\n\n<!-- Translate the terms \"التعريف\", \"التحضير\",
+          \"المحاولة\", \"التفكير\" and change font size and positioning as needed-->\n<div
+          style=\"position: relative; text-align: center; font-size: 1em\">\n  <img
+          src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **التعريف**\n  * ما نوع التطبيق الذي تريد ابتكاره؟\n  * ما القيود التي تواجهك؟\n
+          \ * كيف يبدو النجاح؟\n* **التحضير**\n  * تبادل الأفكار / البحث عن العناصر
+          الممكنة\n  * المقارنة بين المزايا والعيوب\n  * تجهيز خطة\n* **المحاولة**\n
+          \ * ضع خطتك موضع التنفيذ\n* **التفكير**\n  * كيف تقارِن نتائجك بالأهداف
+          التي وضعتها في أثناء تعريف التطبيق؟\n  * ما الذي يمكنك أن تتعلَّمه من هذا
+          النشاط أو تفعله على نحو أفضل في المرة القادمة؟\n  * ما المشكلات الجديدة
+          التي اكتشفتها؟\n\n# كيف يبدو الأمر\nعلى مدار الأسابيع القليلة القادمة، ستنال
+          الفرصة لتجربة بعض الألعاب الموجودة، وتصمِّم لعبتك الخاصة حسب ما تعلَّمته.
+          وبعد ابتكار لعبتك، ستحظى لفرصة تقديمها للآخرين والحصول على تعليقاتهم. وهذه
+          الخطوات في غاية الأهمية في قطاع البرمجيات، كما أن التدريب على عناصر عملية
+          التصميم سيساعدك في ابتكار منتجات أفضل بكفاءة أكبر.  \n\nإليك ما ستحمله إلينا
+          الأسابيع القادمة في أثناء تعلمنا عملية التصميم:\n\n1. **التعريف والتحضير**\n
+          \  * العب الألعاب الموجودة للحصول على أفكار ولاستيعاب القيود\n   * تبادَل
+          الأفكار وخطِّط لتطبيقك الجديد أو المعدَّل\n1. **المحاولة**\n   * تابع خطتك
+          لبناء التطبيق.\n1. **التفكير والتعديل**\n   * بدِّل التطبيقات مع مجموعة
+          أخرى للمساعدة في تحسين مشاريعك\n1. **العرض**\n   * اعرِض منتجك النهائي!\n"
       Begin planning your project_2018:
         content1: الوصف هنا
+        markdown: "# عملية التصميم\nيُقصَد بتصميم البرامج حلّ الكثير من المشكلات الصغيرة
+          طوال الوقت. وتكمن المشكلة الرئيسية في تصميم البرامج فيما يجب إنشاؤه في المقام
+          الأول.\n\nهذه العملية مفيدة في أمورٍ كثيرة، لكننا سنركِّز على استخدامها
+          في تصميم التطبيقات.\n\n<!-- Translate the terms \"التعريف\", \"التحضير\",
+          \"المحاولة\", \"التفكير\" and change font size and positioning as needed-->\n<div
+          style=\"position: relative; text-align: center; font-size: 1em\">\n  <img
+          src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **التعريف**\n  * ما نوع التطبيق الذي تريد ابتكاره؟\n  * ما القيود التي تواجهك؟\n
+          \ * كيف يبدو النجاح؟\n* **التحضير**\n  * تبادل الأفكار / البحث عن العناصر
+          الممكنة\n  * المقارنة بين المزايا والعيوب\n  * تجهيز خطة\n* **المحاولة**\n
+          \ * ضع خطتك موضع التنفيذ\n* **التفكير**\n  * كيف تقارِن نتائجك بالأهداف
+          التي وضعتها في أثناء تعريف التطبيق؟\n  * ما الذي يمكنك أن تتعلَّمه من هذا
+          النشاط أو تفعله على نحو أفضل في المرة القادمة؟\n  * ما المشكلات الجديدة
+          التي اكتشفتها؟\n\n# كيف يبدو الأمر\nعلى مدار الأسابيع القليلة القادمة، ستنال
+          الفرصة لتجربة بعض الألعاب الموجودة، وتصمِّم لعبتك الخاصة حسب ما تعلَّمته.
+          وبعد ابتكار لعبتك، ستحظى لفرصة تقديمها للآخرين والحصول على تعليقاتهم. وهذه
+          الخطوات في غاية الأهمية في قطاع البرمجيات، كما أن التدريب على عناصر عملية
+          التصميم سيساعدك في ابتكار منتجات أفضل بكفاءة أكبر.  \n\nإليك ما ستحمله إلينا
+          الأسابيع القادمة في أثناء تعلمنا عملية التصميم:\n\n1. **التعريف والتحضير**\n
+          \  * العب الألعاب الموجودة للحصول على أفكار ولاستيعاب القيود\n   * تبادَل
+          الأفكار وخطِّط لتطبيقك الجديد أو المعدَّل\n1. **المحاولة**\n   * تابع خطتك
+          لبناء التطبيق.\n1. **التفكير والتعديل**\n   * بدِّل التطبيقات مع مجموعة
+          أخرى للمساعدة في تحسين مشاريعك\n1. **العرض**\n   * اعرِض منتجك النهائي!\n"
       Begin planning your project_2018_2019:
+        content1: الوصف هنا
+        markdown: |+
+          #أمثلة_مشاريع
+
+          أنت على وشك البدء بمشروعك النهائي.قبل البدء, اقضي وقت بالاطلاع على أمثلة المشاريع المطروحة.
+
+          | Hungry Squirrel | Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Try adding sounds to this game! | Try adding another scene to this story! |
+
+      Begin planning your project_2018_2019_2020:
         content1: الوصف هنا
         markdown: |+
           #أمثلة_مشاريع
@@ -462,6 +534,11 @@ ar-SA:
           #الحدث الأكبر
 
           في علوم الحاسوب، الأحداث هي الاجراءات التي يراقبها جهاز الحاسوب باستمرار، في هذا الدرس سوف تتفاعل بشكل مختلف استناداً إلى أي زر يتم الضغط عليه.
+      BigEvent-Unplugged_2020:
+        markdown: |
+          #الحدث الأكبر
+
+          في علوم الحاسوب، الأحداث هي الاجراءات التي يراقبها جهاز الحاسوب باستمرار، في هذا الدرس سوف تتفاعل بشكل مختلف استناداً إلى أي زر يتم الضغط عليه.
       BinaryBracelets-Unplugged:
         markdown: |
           # الإسورة_ الثنائية
@@ -469,7 +546,20 @@ ar-SA:
           اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # الإسورة_ الثنائية
+
+          اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
+        markdown: |
+          #الصور الثنائية
+
+
+          تواصل مع كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
+      BinaryImages-Unplugged_2020:
         markdown: |
           #الصور الثنائية
 
@@ -922,6 +1012,16 @@ ar-SA:
           #الشرطية مع بطاقات
 
           إلعب لعبة بطاقات وقم بإنشاء قواعد مثل "إذا رسمت بطاقة حمراء ، أحصل على نقطة" و "إذا رسمت بطاقة سوداء ، فستحصل على نقطة."
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |
+          #الشرطية مع بطاقات
+
+          إلعب لعبة بطاقات وقم بإنشاء قواعد مثل "إذا رسمت بطاقة حمراء ، أحصل على نقطة" و "إذا رسمت بطاقة سوداء ، فستحصل على نقطة."
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          # التعهيد الجماعي
+
+          اكتشِف كيف من الممكن أن يساعِدك التعهيد الجماعي، أحد الأساليب الشائعة في علوم الكمبيوتر لحل المشكلات، في إنهاء إحدى المهمات كفصل بطريقة أكثر فاعلية مقارنة بما إذا فعلت ذلك بمفردك.
       Dance_Party_extras_intro:
         markdown: "# مواصلة الرقص!\n\n بالنسبة للجزء 2، أنت ستقوم بإنشاء المشروع الخاص
           بك. لا توجد إلغاز هنا- بدلاً من ذلك توجد مجموعة من المشروعات التي تظهر طرقاً
@@ -1043,6 +1143,16 @@ ar-SA:
           *تصميم التطبيقات التي تسهّل للأشخاص ذوي الاحتياجات الخاصة الوصول إليها تجعل هذه التطبيقات أفضل للجميع أيضاً!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          #التصميم لسهولة الوصول
+
+          *في عالم عِلم الحاسوب، **سهولة الوصول** تدور حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
+          *الاحتياجات الخاصة تشمل المادية، السمعية، البصرية، وغيرها الكثير.
+          *الاحتياجات الخاصة متنوعة وتؤثر في الأشخاص بطرق مختلفة ،بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
+          *تصميم التطبيقات التي تسهّل للأشخاص ذوي الاحتياجات الخاصة الوصول إليها تجعل هذه التطبيقات أفضل للجميع أيضاً!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
         markdown: |
           # المواطنة الرقمية
@@ -1053,7 +1163,42 @@ ar-SA:
           #البصمة الرقمية الخاصة بك
 
           وضع معلومات عن نفسك عبر الإنترنت يخلق بصمة رقمية.
+      DigitalSharing-Unplugged:
+        markdown: |
+          # المشاركة الرقمية
+
+          ستفكِّر في هذا الدرس في تحدّيات ومزايا احترام الملكية وحقوق التأليف والنشر، لا سيما في البيئات الرقمية.
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          # المشاركة الرقمية
+
+          ستفكِّر في هذا الدرس في تحدّيات ومزايا احترام الملكية وحقوق التأليف والنشر، لا سيما في البيئات الرقمية.
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # المتغيرات في المغلَّفات
+
+          تسمَح المتغيرات بكثير من الحريّة في علوم الكمبيوتر. ويساعِد هذا الدرس في شرح طبيعة المتغيرات، وكيف يمكننا استخدامها في العديد من الطرق المختلفة.
+      EnvelopeVariables-Unplugged_2020:
+        markdown: |
+          # المتغيرات في المغلَّفات
+
+          تسمَح المتغيرات بكثير من الحريّة في علوم الكمبيوتر. ويساعِد هذا الدرس في شرح طبيعة المتغيرات، وكيف يمكننا استخدامها في العديد من الطرق المختلفة.
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # امرحوا مع الحلقة البرمجية For#
+
+          نعلم أن الحلقات البرمجية تسمَح لنا بفعل أمور مرارًا وتكرارًا، ولكننا سنتعلَّم الآن كيفية استخدام الحلقات البرمجية ذات البينة الإضافية المضمنة فيها.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # امرحوا مع الحلقة البرمجية For#
+
+          نعلم أن الحلقات البرمجية تسمَح لنا بفعل أمور مرارًا وتكرارًا، ولكننا سنتعلَّم الآن كيفية استخدام الحلقات البرمجية ذات البينة الإضافية المضمنة فيها.
       GettingLoopy-Unplugged:
+        markdown: |
+          #حصول التكرار
+
+          يقدم هذا الدرس مفهوم برمجة التكرار من خلال نشاط الرقص.
+      GettingLoopy-Unplugged_2020:
         markdown: |
           #حصول التكرار
 
@@ -1067,7 +1212,19 @@ ar-SA:
           #برمجة ورقة رسم بياني
 
           اكتب خوارزميات يمكن لزملائك في الصف استخدامها لرسم صور.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |
+          #برمجة ورقة رسم بياني
+
+          اكتب خوارزميات يمكن لزملائك في الصف استخدامها لرسم صور.
       HappyLoops-Unplugged:
+        markdown: |
+          #التكرار الممتع
+
+          في هذا الدرس، ستتعلم عن التكرار
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
         markdown: |
           #التكرار الممتع
 
@@ -1079,12 +1236,27 @@ ar-SA:
           #الخرائط الممتعة
 
           انشاء خوارزمية لتحريك الشخصية من خلال المتاهة.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          #الخرائط الممتعة
+
+          انشاء خوارزمية لتحريك الشخصية من خلال المتاهة.
       Internet Simulator Setup:
         content1: الوصف هنا
       Internet Simulator Setup 2:
         content1: الوصف هنا
       Internet Simulator Setup 3:
         content1: الوصف هنا
+      Internet-Unplugged:
+        markdown: |
+          # الإنترنت
+
+          ابنِ الإنترنت الخاص بك في قاعة الدراسة باستخدام مجموعة من الأوراق فقط.
+      Internet-Unplugged_2020:
+        markdown: |
+          # الإنترنت
+
+          ابنِ الإنترنت الخاص بك في قاعة الدراسة باستخدام مجموعة من الأوراق فقط.
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1285,9 +1457,19 @@ ar-SA:
           #حرّكها، حرّكها
 
           استخدم الخريطة و أعطي أوامر للوصول إلى الهدف.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          #حرّكها، حرّكها
+
+          استخدم الخريطة و أعطي أوامر للوصول إلى الهدف.
       Multi-Screen Apps:
         content1: الوصف هنا
       MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          #أصدقائي_الربوتات_المتكررين
+
+          اجعل برنامجك اقصر باستخدام التكرار!
+      MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           #أصدقائي_الربوتات_المتكررين
 
@@ -1297,9 +1479,72 @@ ar-SA:
           #صديقي_الروبوت
 
           تعلم البرمجة عن طريق كتابة كود برمجي لأصدقائك!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |
+          #صديقي_الروبوت
+
+          تعلم البرمجة عن طريق كتابة كود برمجي لأصدقائك!
       New Challenge Introduction:
         content1: الوصف هنا
+      OPD-K5 Reviewing Reflections:
+        content1: الوصف هنا
       OPD-K5 Stage3aGo:
+        content1: الوصف هنا
+      OPD-K5 Stage3aGo_copy:
+        content1: الوصف هنا
+      OPD-K5 conditionals introduced:
+        content1: الوصف هنا
+      OPD-K5 debugging:
+        content1: الوصف هنا
+      OPD-K5 diving deeper intro:
+        content1: الوصف هنا
+      OPD-K5 events introduced:
+        content1: الوصف هنا
+      OPD-K5 for loops:
+        content1: الوصف هنا
+      OPD-K5 for loops intro:
+        content1: الوصف هنا
+      OPD-K5 for loops introduction:
+        content1: الوصف هنا
+      OPD-K5 functions introduced:
+        content1: الوصف هنا
+      OPD-K5 journaling:
+        content1: الوصف هنا
+      OPD-K5 lesson implementation planning:
+        content1: الوصف هنا
+      OPD-K5 lesson plans:
+        content1: الوصف هنا
+      OPD-K5 loops introduced:
+        content1: الوصف هنا
+      OPD-K5 project:
+        content1: الوصف هنا
+      OPD-K5 projects introduction:
+        content1: الوصف هنا
+      OPD-K5 role_of_teacher:
+        content1: الوصف هنا
+      OPD-K5 sequencing introduced:
+        content1: الوصف هنا
+      OPD-K5 sprite lab:
+        content1: الوصف هنا
+      OPD-K5 sprite lab introduction:
+        content1: الوصف هنا
+      OPD-K5 sprite lab unplugged:
+        content1: الوصف هنا
+      OPD-K5 sprite lab video:
+        content1: الوصف هنا
+      OPD-K5 types of lessons:
+        content1: الوصف هنا
+      OPD-K5 using lesson plans:
+        content1: الوصف هنا
+      OPD-K5 variables:
+        content1: الوصف هنا
+      OPD-K5 variables introduction:
+        content1: الوصف هنا
+      OPD-K5 variables unplugged:
+        content1: الوصف هنا
+      OPD-K5 where to next:
+        content1: الوصف هنا
+      OPD-K5-projects-1:
         content1: الوصف هنا
       PicturingData-Unplugged:
         markdown: |
@@ -1308,6 +1553,18 @@ ar-SA:
           استخدم معمل الألعاب لتجمع البيانات و تتنبأ عنها.
 
           ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          #تصور_البيانات
+
+          استخدم معمل الألعاب لتجمع البيانات و تتنبأ عنها.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |-
+          #قوة الكلمات
+
+          ستتعلَّم اليوم ما تفعله عندما يؤذيك شخصٌ وضيع على الإنترنت.
       PowerfulPasswords-Unplugged:
         markdown: |
           #كلمة_سر_قوية
@@ -1317,6 +1574,15 @@ ar-SA:
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: الوصف هنا
+        markdown: |-
+          # العروض التقديمية للمشروع
+
+          حان الوقت لعرْض مشروعاتك! سيقدِّم لك معلمَّك مزيدًا من التفاصيل بشأن الأسلوب الذي ستعرِض به عملك لزملائك في الفصل.
+      Prepare for your presentation_2018:
+        markdown: |-
+          # العروض التقديمية للمشروع
+
+          حان الوقت لعرْض مشروعاتك! سيقدِّم لك معلمَّك مزيدًا من التفاصيل بشأن الأسلوب الذي ستعرِض به عملك لزملائك في الفصل.
       PrivatePersonalInformation-Unplugged:
         markdown: |
           #معلومات عامة وخاصة
@@ -1325,6 +1591,11 @@ ar-SA:
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
+        markdown: |
+          #تناوب البرمجة
+
+           التقسيم إلى فرق و العمل معًا لكتابة برامج التي ترسم صور.
+      RelayProgramming-Unplugged_2020:
         markdown: |
           #تناوب البرمجة
 
@@ -1339,7 +1610,17 @@ ar-SA:
           #يقول سيمون
 
           العب لعبة وفكر في الأوامر المطلوب اتخاذها للحصول على النتيجة الصحيحة.
+      SimonSays-Unplugged_2020:
+        markdown: |
+          #يقول سيمون
+
+          العب لعبة وفكر في الأوامر المطلوب اتخاذها للحصول على النتيجة الصحيحة.
       Songwriting-Unplugged:
+        markdown: |
+          #تأليف الأغاني
+
+          استخدم مفهوم الجوقة في أغنية لتتعلّم تعريف واستدعاء الدوال.
+      Songwriting-Unplugged_2020:
         markdown: |
           #تأليف الأغاني
 
@@ -1356,24 +1637,68 @@ ar-SA:
           *تساعد تطبيقات الهواتف الذكية الأشخاص على فعل أشياء مثل التحدث إلى الأصدقاء ،الاستماع إلى الموسيقى ، التسوق أو تصفح الانترنت فقط.
           * من المهم للمبرمجين فهم احتياجات الآخرين وتصميم التطبيقات مع أخذها في الاعتبار
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |
+          #التطبيق الصحيح
+
+          *في وقتنا الحالي، الجميع يستخدم الحاسب الآلي، خصوصاً الهواتف الذكية.
+          *تساعد تطبيقات الهواتف الذكية الأشخاص على فعل أشياء مثل التحدث إلى الأصدقاء ،الاستماع إلى الموسيقى ، التسوق أو تصفح الانترنت فقط.
+          * من المهم للمبرمجين فهم احتياجات الآخرين وتصميم التطبيقات مع أخذها في الاعتبار
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       behaviors 1 predict:
         answers:
-        - {}
-        - correct: true
+        - text: ستدور الصورة المتحركة الثنائية الأبعاد
+          feedback: غير صحيح
+        - text: ستنكمش الصورة المتحركة الثنائية الأبعاد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستتحرَّك الصورة المتحركة الثنائية الأبعاد.
+          feedback: غير صحيح
+        - text: ستغيِّر الصورة المتحركة الثنائية الأبعاد الألوان.
+          feedback: غير صحيح
         questions:
-        - {}
+        - text: انقر فوق زر "تعديل" لترى أسلوب عمل `السلوك الغامِض`. وادرس الكود البرمجي
+            داخله، ثم تنبأ.
+      behaviors 1 predict_2020:
+        answers:
+        - text: ستدور الصورة المتحركة الثنائية الأبعاد
+          feedback: غير صحيح
+        - text: ستنكمش الصورة المتحركة الثنائية الأبعاد.
+          correct: true
+          feedback: صحيح!
+        - text: ستتحرَّك الصورة المتحركة الثنائية الأبعاد.
+          feedback: غير صحيح
+        - text: ستغيِّر الصورة المتحركة الثنائية الأبعاد الألوان.
+          feedback: غير صحيح
+        questions:
+        - text: انقر فوق زر "تعديل" لترى أسلوب عمل `السلوك الغامِض`. وادرس الكود البرمجي
+            داخله، ثم تنبأ.
       behaviors 4 predict:
         answers:
-        - {}
-        - correct: true
+        - text: لليسار ثم لأسفل
+          feedback: غير صحيح
+        - text: قطريًا
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: خطوط متعرجة
+          feedback: غير صحيح.
+        - text: لأسفل، ثم لليسار
+          feedback: غير صحيح
         questions:
-        - {}
+        - text: تنبأ. ما المسار الذي سيسلكه القمر الصناعي تجاه المجرَّة؟
+      behaviors 4 predict_2020:
+        answers:
+        - text: لليسار ثم لأسفل
+          feedback: غير صحيح
+        - text: قطريًا
+          correct: true
+          feedback: صحيح!
+        - text: خطوط متعرجة
+          feedback: غير صحيح.
+        - text: لأسفل، ثم لليسار
+          feedback: غير صحيح
+        questions:
+        - text: تنبأ. ما المسار الذي سيسلكه القمر الصناعي تجاه المجرَّة؟
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
@@ -1401,6 +1726,19 @@ ar-SA:
         questions:
         - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: سوف يرسم الرسام خط مستقيم.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: الرسام سوف يرسم مربع.
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: الرسام سوف يرسم مربع.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
           feedback: خطأ. سوف يرسم الرسام مربع.
@@ -1464,6 +1802,23 @@ ar-SA:
         questions:
         - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
             المزارع بعد ضغط زر "تشغيل"؟
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+            مضروب في 3 يساوي 12!
+        - text: '12'
+          correct: true
+          feedback: صحيح!
+        - text: '15'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+            مضروب في 3 يساوي 12!
+        - text: لا أعرف.
+          feedback: سيجمع المزارع 4 يقطينات في في كل دالة من دوال التكرار. 4 مضروب
+            في 3 يساوي 12!
+        questions:
+        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
+            المزارع بعد ضغط زر "تشغيل"؟
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
@@ -1495,6 +1850,21 @@ ar-SA:
         - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
             يخفق؟ '
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
+          feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+        - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          correct: true
+          feedback: صحيح!
+        - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
+          feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
+        - text: لا أعرف.
+          feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
+            الاخير. '
+        questions:
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
           feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
@@ -1548,6 +1918,19 @@ ar-SA:
           feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
         questions:
         - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: سيصل الطائر إلى الخنزير.
+          correct: true
+          feedback: صحيح!
+        - text: سيصدم الطائر صندوق المتفجرات TNT.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: لا أعرف.
+          feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
+        questions:
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 لن يتحرك.
@@ -1575,6 +1958,19 @@ ar-SA:
         questions:
         - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - text: BB-8 لن يتحرك.
+          feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        - text: BB-8 سوف يتحرك خطوة واحدة للأمام
+          feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        - text: BB-8 سوف يتحرك 5 مرات ويجمع كل قطع الحديد
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف
+          feedback: بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        questions:
+        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 لن يتحرك.
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
@@ -1635,342 +2031,977 @@ ar-SA:
             أن يتحرك ثلاث خطوات.
         questions:
         - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 سوف ينتقل بسرعة في دالة كرر الاولى.
+          feedback: غير صحيح. حلقة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
+            بينما المطلوب أن يتحرك ثلاث خطوات.
+        - text: BB-8 لن يتحرك كفاية في دالة كرر الاولى ليجمع كل قطع الحديد.
+          correct: true
+          feedback: صحيح!
+        - text: BB-8 سوف يجمع كل قطع الحديد بدون أي مشاكل.
+          feedback: غير صحيح. حلقة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
+            بينما المطلوب أن يتحرك ثلاث خطوات.
+        - text: لا أعرف.
+          feedback: حلقة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط، بينما المطلوب
+            أن يتحرك ثلاث خطوات.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          feedback: غير صحيح
         - text: B
+          feedback: غير صحيح
         - text: C
+          feedback: غير صحيح
         - text: D
           correct: true
           feedback: صحيح!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          feedback: غير صحيح
         - text: B
+          feedback: غير صحيح
         - text: C
+          feedback: غير صحيح
         - text: D
           correct: true
           feedback: صحيح!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          feedback: غير صحيح
         - text: B
+          feedback: غير صحيح
         - text: C
+          feedback: غير صحيح
         - text: D
           correct: true
           feedback: صحيح!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: غير صحيح
+        - text: B
+          feedback: غير صحيح
+        - text: C
+          feedback: غير صحيح
+        - text: D
+          correct: true
+          feedback: صحيح!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
           feedback: صحيح!
         - text: B
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: C
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: لا أعرف.
+          feedback: غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. أي رسم سيصنع البرنامج عندما
+            تنقر على "تشغيل"؟
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
           feedback: صحيح!
         - text: B
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: C
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: لا أعرف.
+          feedback: غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. أي رسم سيصنع البرنامج عندما
+            تنقر على "تشغيل"؟
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
           feedback: صحيح!
         - text: B
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: C
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
         - text: لا أعرف.
+          feedback: غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. أي رسم سيصنع البرنامج عندما
+            تنقر على "تشغيل"؟
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: صحيح!
+        - text: B
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
+        - text: C
+          feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+
+'
+        - text: لا أعرف.
+          feedback: غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
+            الأربعة تكررها 4 مرات في دائرة
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية أدناه. أي رسم سيصنع البرنامج عندما
+            تنقر على "تشغيل"؟
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         questions:
-        - {}
+        - text: الغيمة تحجب المنظر. ربما يوجد زهرة تحت الغيمة. فإذا كانت هنالك زهرة،
+            على النحلة جمع الرحيق مرة واحدة. وإذا لم تكن هناك زهرة فعلى النحلة إلا
+            تفعل شيئَا. أمعن النطر إلى التعليمات البرمجية أدناه. ماذا تعتقد سيحدث
+            بعد أن تنقر على "تشغيل"؟
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         questions:
-        - {}
+        - text: الغيمة تحجب المنظر. ربما يوجد زهرة تحت الغيمة. فإذا كانت هنالك زهرة،
+            على النحلة جمع الرحيق مرة واحدة. وإذا لم تكن هناك زهرة فعلى النحلة إلا
+            تفعل شيئَا. أمعن النطر إلى التعليمات البرمجية أدناه. ماذا تعتقد سيحدث
+            بعد أن تنقر على "تشغيل"؟
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         questions:
-        - {}
+        - text: الغيمة تحجب المنظر. ربما يوجد زهرة تحت الغيمة. فإذا كانت هنالك زهرة،
+            على النحلة جمع الرحيق مرة واحدة. وإذا لم تكن هناك زهرة فعلى النحلة إلا
+            تفعل شيئَا. أمعن النطر إلى التعليمات البرمجية أدناه. ماذا تعتقد سيحدث
+            بعد أن تنقر على "تشغيل"؟
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
+          feedback: صحيح!
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        questions:
+        - text: الغيمة تحجب المنظر. ربما يوجد زهرة تحت الغيمة. فإذا كانت هنالك زهرة،
+            على النحلة جمع الرحيق مرة واحدة. وإذا لم تكن هناك زهرة فعلى النحلة إلا
+            تفعل شيئَا. أمعن النطر إلى التعليمات البرمجية أدناه. ماذا تعتقد سيحدث
+            بعد أن تنقر على "تشغيل"؟
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
+          feedback: صحيح!
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        questions:
+        - text: الغيمة تحجب المنظر. ربما يوجد زهرة تحت الغيمة. فإذا كانت هنالك زهرة،
+            على النحلة جمع الرحيق مرة واحدة. وإذا لم تكن هناك زهرة فعلى النحلة إلا
+            تفعل شيئَا. أمعن النطر إلى التعليمات البرمجية أدناه. ماذا تعتقد سيحدث
+            بعد أن تنقر على "تشغيل"؟
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: ستحصل النحلة على الرحيق من كل زهرة وعسل من كل خلية نحل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            من كل زهرة والعسل من كل خلية نحل.
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. خطأ. المربع البرمي "إذا عند الزهرة" يسمح للنحلة الحصول على
+            الرحيق من كل زهرة والعسل من كل خلية نحل.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            في كل زهرة والعسل في كل خلية نحل.
         questions:
-        - {}
+        - text: 'أمعن النطر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث بعد أن تنقر
+            "تشغيل"؟ تذكّر: ستوجد خلية نحل "واحدة" أو زهرة "واحدة خلف كل غيمة.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - correct: true
+        - text: ستحصل النحلة على الرحيق من كل زهرة وعسل من كل خلية نحل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            من كل زهرة والعسل من كل خلية نحل.
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. خطأ. المربع البرمي "إذا عند الزهرة" يسمح للنحلة الحصول على
+            الرحيق من كل زهرة والعسل من كل خلية نحل.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            في كل زهرة والعسل في كل خلية نحل.
         questions:
-        - {}
+        - text: 'أمعن النطر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث بعد أن تنقر
+            "تشغيل"؟ تذكّر: ستوجد خلية نحل "واحدة" أو زهرة "واحدة خلف كل غيمة.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: وستحصل النحلة على الرحيق في كل زهرة، وتنتِج العسل في كل قرص عسل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: 'قطعة برمجية  أو كتلة برمجيةغير صحيح. يسمَح المربع البرمجي `إذا
+            كانت عند الزهرة` للنحلة بالحصول على الرحيق عند كل زهرة، وبإنتاج العسل
+            في كل قرص عسل.
+
+'
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: غير صحيح. غير صحيح. يسمَح المربع البرمجي `إذا كانت عند الزهرة`
+            للنحلة بالحصول على الرحيق عند كل زهرة، وبإنتاج العسل في كل قرص عسل.
         - text: لا أعرف.
+          feedback: 'يسمَح المربع البرمجي `إذا كانت عند الزهرة` للنحلة بالحصول على
+            الرحيق عند كل زهرة، وبإنتاج العسل في كل قرص عسل.
+
+'
+        questions:
+        - text: 'انظر بعناية في الكود أدناه. ماذا برأيك سيحدث بعد النقر فوق "تشغيل"؟
+            تذكر: لن يكون هناك سوى * عسل واحد* أو *زهرة واحدة* خلف كل سحابة.'
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - text: وستحصل النحلة على الرحيق في كل زهرة، وتنتِج العسل في كل قرص عسل.
+          correct: true
+          feedback: صحيح!
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: 'قطعة برمجية  أو كتلة برمجيةغير صحيح. يسمَح المربع البرمجي `إذا
+            كانت عند الزهرة` للنحلة بالحصول على الرحيق عند كل زهرة، وبإنتاج العسل
+            في كل قرص عسل.
+
+'
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: غير صحيح. غير صحيح. يسمَح المربع البرمجي `إذا كانت عند الزهرة`
+            للنحلة بالحصول على الرحيق عند كل زهرة، وبإنتاج العسل في كل قرص عسل.
+        - text: لا أعرف.
+          feedback: 'يسمَح المربع البرمجي `إذا كانت عند الزهرة` للنحلة بالحصول على
+            الرحيق عند كل زهرة، وبإنتاج العسل في كل قرص عسل.
+
+'
         questions:
         - text: 'انظر بعناية في الكود أدناه. ماذا برأيك سيحدث بعد النقر فوق "تشغيل"؟
             تذكر: لن يكون هناك سوى * عسل واحد* أو *زهرة واحدة* خلف كل سحابة.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتحصل على الرحيق مرة واحدة فقط.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على عدد 2 وحدة رحيق.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على جميع الرحيق.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
         questions:
-        - {}
+        - text: أنظر عن قرب على الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتحصل على الرحيق مرة واحدة فقط.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على عدد 2 وحدة رحيق.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على جميع الرحيق.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
         questions:
-        - {}
+        - text: أنظر عن قرب على الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتحصل على الرحيق مرة واحدة فقط.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على عدد 2 وحدة رحيق.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على جميع الرحيق.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
         questions:
-        - {}
+        - text: أنظر عن قرب على الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: ستتحرك النحلة للأمام وتحصل على الرحيق مرة واحدة فقط.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على عدد 2 وحدة رحيق.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        - text: ستحصل النحلة على جميع الرحيق.
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: تلف النحلة بحركة التفاف للمضي قدمًا وجمع الرحيق، وتتيح لها حل
+            اللغز.
+        questions:
+        - text: أنظر عن قرب على الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: '8'
           correct: true
           feedback: صحيح!
         - text: '12'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: لا أعرف.
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية الواردة أدناه. ما هي كمية العسل التي
+            ستصنعها النحلة عندما تنقر على "تشغيل"؟
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: '8'
           correct: true
           feedback: صحيح!
         - text: '12'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: لا أعرف.
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية الواردة أدناه. ما هي كمية العسل التي
+            ستصنعها النحلة عندما تنقر على "تشغيل"؟
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: '8'
           correct: true
           feedback: صحيح!
         - text: '12'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         - text: لا أعرف.
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية الواردة أدناه. ما هي كمية العسل التي
+            ستصنعها النحلة عندما تنقر على "تشغيل"؟
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
+        - text: '8'
+          correct: true
+          feedback: صحيح!
+        - text: '12'
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
+        - text: لا أعرف.
+          feedback: خطأ. تلتقط النحلة عدد 2 رحيق في حلقة المضي قدمًا، ثم عدد 2 رحيق
+            في حركة الالتفاف للأسفل. وهذا كله موجود داخل حلقة أخرى الذي يحدث مرتين.
+            4 مرات مضروبًا في 2 يساوي 8!
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية الواردة أدناه. ما هي كمية العسل التي
+            ستصنعها النحلة عندما تنقر على "تشغيل"؟
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: لوريل سوف تستدير بالاتجاه الخاطئ عند صناعة مربع.
+          feedback: غير صحيح. هذا الجواب كان صحيحًا جزئيًا، لكن الحلقة البرمجية لا
+            تشتغل لمدة تكفي للحصول على الكنز كله.
+        - text: الحلقة البرمجية لا تشتغل لمدة طويلة تكفي لحصول لوريل على الكنز كله.
+          feedback: غير صحيح. هذا الجواب كان صحيحًا جزئيًا، لكن النحلة تستدير أيضًا
+            في الطريق الخاطئ عند محاولتها تكوين مربع.
+        - text: لوريل تستدير في الطريق الخطأ *و* الحلقة البرمجية لا تشتغل لمدة طويلة
+            تكفي لحصول لوريل على كل الكنز.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: لوريل تستدير في الطريق الخطأ *و* الحلقة البرمجية لا تشتغل لمدة
+            طويلة تكفي لحصول لوريل على كل الكنز.
         questions:
-        - {}
+        - text: 'أمعن النظر في التعليمات البرمجية أدناه. لماذا لا تجمع لوريل كل الكنز
+            عندما تنقر على "تشغيل"؟ تحذير: هذا سؤال مخادع، تأكد من أنك تقرأ كل الخيارات
+            قبل الإجابة عليه!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: خطأ. ليس هنالك تعليمات برمجية لجمع القرع.
+        - text: الحاصدة لن تجمع أي محاصيل بالمسار الذي تسلكه.
+          feedback: خطأ. التعليمات البرمجية ستوجه الحاصدة مرارًا لاتخاذ نمط خطوات
+            السلم وتجمع اكبر كمية من الذرة أو الخس التي تصادفها. أنها لن تجمع القرع.
+        - text: الحاصدة ستجمع كل المحاصيل، ما عدا القرع.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. التعليمات البرمجية ستوجه الحاصدة مرارًا لاتخاذ نمط خطوات
+            السلم وتجمع اكبر كمية من الذرة أو الخس التي تصادفها. أنها لن تجمع القرع.
+        markdown: |
+          ستكون البراعم في هذا اللغز إما ذرة وإما خس.
+          <br/>
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. لا يوجد كود برمجي لالتقاط ثمرة اليقطين.
+        - text: لن تحصد عامِلة الحصاد أي محاصيل من خلال المسار الذي تسلكه.
+          feedback: غير صحيح. سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط
+            السلم وتحصد أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة
+            اليقطين.
+        - text: ستحصد عامِلة الحصاد كل المحاصيل باستثناء اليقطين.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط السلم وتحصد
+            أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة اليقطين.
+        markdown: |
+          ستكون البراعم في هذا اللغز إما ذرة وإما خس.
+          <br/>
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. لا يوجد كود برمجي لالتقاط ثمرة اليقطين.
+        - text: لن تحصد عامِلة الحصاد أي محاصيل من خلال المسار الذي تسلكه.
+          feedback: غير صحيح. سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط
+            السلم وتحصد أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة
+            اليقطين.
+        - text: ستحصد عامِلة الحصاد كل المحاصيل باستثناء اليقطين.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط السلم وتحصد
+            أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة اليقطين.
+        markdown: |
+          ستكون البراعم في هذا اللغز إما ذرة وإما خس.
+          <br/>
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. لا يوجد كود برمجي لالتقاط ثمرة اليقطين.
+        - text: لن تحصد عامِلة الحصاد أي محاصيل من خلال المسار الذي تسلكه.
+          feedback: غير صحيح. سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط
+            السلم وتحصد أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة
+            اليقطين.
+        - text: ستحصد عامِلة الحصاد كل المحاصيل باستثناء اليقطين.
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: سيدفع الكود البرمجي عامِلة الحصاد باستمرار إلى عمل نمط السلم وتحصد
+            أكبر قدر ممكن من الذرة أو الخس الذي تصادفه. ولن تحصد ثمرة اليقطين.
+        markdown: |
+          ستكون البراعم في هذا اللغز إما ذرة وإما خس.
+          <br/>
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_farmer_ramp13:
         answers:
-        - {}
-        - correct: true
+        - text: يمشي المزارع إلى نهاية المسار ويحصد القرع.
+          feedback: خطأ.  المربع البرمجي "التقط القرع" موجود داخل حلقة، لذلك سيحاول
+            المزارع التقاط القرعات في كل خطوة، بدلاً من التقاطها في النهاية فقط.
+        - text: سيحاول المزارع التقاط القرعات في كل مربع، لكنه لن يتمكن من الوصول
+            إلى القرع.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: المزارع سيمشي أربع مربعات، ثم يحاول التقاط قرع واحد.
+          feedback: خطأ.  المربع البرمجي "التقط القرع" موجود داخل حلقة، لذلك سيحاول
+            المزارع التقاط القرعات في كل خطوة، بدلاً من التقاطها في النهاية فقط.
         - text: لا أعرف.
+          feedback: المربع البرمجي "التقط القرع" موجود داخل حلقة، لذلك سيحاول المزارع
+            التقاط القرعات في كل خطوة، بدلاً من التقاطها في النهاية فقط.
+        markdown: هنا نوع جديد من اللغز الذي يستخدم مربعات برمجية مماثلة للتي شاهدتها
+          فعلاً. هل يمكنك التنبؤ بشأن ما يحدث عندما تقوم بتشغيل التعليمات البرمجية
+          الواردة أدناه؟
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: لا شيء. هذا التعليمات البرمجية ستترك أرضًا مسطحة فقط.
+          feedback: خطأ. ليس هنالك تعليمات برمجية تزيل التراب من كومة.
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         - text: لا أعرف.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدنا. ما الذي سيبق في نهاية هذا اللغز؟
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: لا شيء. هذا التعليمات البرمجية ستترك أرضًا مسطحة فقط.
+          feedback: خطأ. ليس هنالك تعليمات برمجية تزيل التراب من كومة.
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         - text: لا أعرف.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدنا. ما الذي سيبق في نهاية هذا اللغز؟
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: لا شيء. هذا التعليمات البرمجية ستترك أرضًا مسطحة فقط.
+          feedback: خطأ. ليس هنالك تعليمات برمجية تزيل التراب من كومة.
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         - text: لا أعرف.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدنا. ما الذي سيبق في نهاية هذا اللغز؟
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: لا شيء. هذا التعليمات البرمجية ستترك أرضًا مسطحة فقط.
+          feedback: خطأ. ليس هنالك تعليمات برمجية تزيل التراب من كومة.
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          correct: true
+          feedback: صحيح!
+        - text: هذه التعليمات البرمجية ستترك الكومة دون أن تلمسها تمامًا.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
+        - text: لا أعرف.
+          feedback: خطأ. الحلقة المتداخلة "أثناء" يمكنها مداولة أي حلقة متداخلة بأي
+            حجم، لكن لا يوجد تعليمات تزيل لتربة من كومة.
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية أدنا. ما الذي سيبق في نهاية هذا اللغز؟
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: لن يحدث شيئًا.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: لن يتوقف المزارع عن إزالة التراب.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف عندما
+            تختفي الكومة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
         questions:
-        - {}
+        - text: أمعن النظر في الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: لن يحدث شيئًا.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: لن يتوقف المزارع عن إزالة التراب.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف عندما
+            تختفي الكومة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
         questions:
-        - {}
+        - text: أمعن النظر في الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: لن يحدث شيئًا.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: لن يتوقف المزارع عن إزالة التراب.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف عندما
+            تختفي الكومة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
         questions:
-        - {}
+        - text: أمعن النظر في الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: لن يحدث شيئًا.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: لن يتوقف المزارع عن إزالة التراب.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        - text: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف عندما
+            تختفي الكومة.
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: خطأ. سيقوم المزارع بإزالة التراب طالما كانت هناك كومة، ثم يقف
+            عندما تختفي الكومة.
+        questions:
+        - text: أمعن النظر في الحلقات المتداخلة الواردة أدناه. ما الذي يحدث عندما
+            تنقر على "تشغيل"؟
       courseD_multi_maze_until10_predict2:
         answers:
-        - correct: true
+        - text: سيتحرك الزومبي إلى اليمين فورًا ويعلق.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سوف يصل الزومبي إلى زهرة عباد الشمس.
+          feedback: 'خطأ. في التعليمات البرمجية هذه، يبدو أنه يبحث عن الالتفاف إلى
+            اليمين *قبل* أن يبحث ليرى ما إذا كان في إمكانه الذهاب للأمام. بسبب هذا
+            الأمر، يفشل اللغز. '
+        - text: سيلف الزومبي لليمين في المسار الأول ويذهب حول الدوائر للأبد.
+          feedback: 'خطأ. يبحث الزومبي عن الالتفاف لليمين فقط أو للمسار المستقيم.
+            أنه ينظر للالتفاف لليسار، لذلك يعلق على الفور تمامًا.
+
+'
         - text: لا أعرف.
+          feedback: خطأ. في التعليمات البرمجية هذه، يبدو أنه يبحث عن الالتفاف إلى
+            اليمين *قبل* أن يبحث ليرى ما إذا كان في إمكانه الذهاب للأمام. بسبب هذا
+            الأمر، يفشل اللغز.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر ذهابًا وإيابًا
+            إلى الأبد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سوف يصل الزومبي إلى زهرة عباد الشمس.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
+        - text: سيلف الزومبي لليمين في المسار الأول ويذهب حول الدوائر للأبد.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
         - text: لا أعرف.
+          feedback: في هذا الكود البرمجي، سيمرّ الزومبي في المسار الصحيح ولكن سينتهي
+            به الأمر ذهابًا وإيابًا إلى الأبد.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر ذهابًا وإيابًا
+            إلى الأبد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سوف يصل الزومبي إلى زهرة عباد الشمس.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
+        - text: سيلف الزومبي لليمين في المسار الأول ويذهب حول الدوائر للأبد.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
         - text: لا أعرف.
+          feedback: في هذا الكود البرمجي، سيمرّ الزومبي في المسار الصحيح ولكن سينتهي
+            به الأمر ذهابًا وإيابًا إلى الأبد.
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية. ما الذي يحدث عندما تنقر على "تشغيل"؟
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر ذهابًا وإيابًا
+            إلى الأبد.
+          correct: true
+          feedback: صحيح!
+        - text: سوف يصل الزومبي إلى زهرة عباد الشمس.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
+        - text: سيلف الزومبي لليمين في المسار الأول ويذهب حول الدوائر للأبد.
+          feedback: غير صحيح. سيمرّ الزومبي في المسار الصحيح ولكن سينتهي به الأمر
+            ذهابًا وإيابًا إلى الأبد.
+        - text: لا أعرف.
+          feedback: في هذا الكود البرمجي، سيمرّ الزومبي في المسار الصحيح ولكن سينتهي
+            به الأمر ذهابًا وإيابًا إلى الأبد.
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
+        - text: الطير لن يتحرك أبدًا
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: سيصل الطائر إلى الخنزير.
           correct: true
           feedback: صحيح!
-        - {}
+        - text: 'سيتحرك الطير للأمام حتى يصطدم بالتي أند تي TNT. '
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: لا أعرف.
+          feedback: التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار، ثم
+            يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
+        - text: الطير لن يتحرك أبدًا
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: سيصل الطائر إلى الخنزير.
           correct: true
           feedback: صحيح!
-        - {}
+        - text: 'سيتحرك الطير للأمام حتى يصطدم بالتي أند تي TNT. '
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: لا أعرف.
+          feedback: التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار، ثم
+            يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
+        - text: الطير لن يتحرك أبدًا
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: سيصل الطائر إلى الخنزير.
           correct: true
           feedback: صحيح!
-        - {}
+        - text: 'سيتحرك الطير للأمام حتى يصطدم بالتي أند تي TNT. '
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         - text: لا أعرف.
+          feedback: التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار، ثم
+            يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: الطير لن يتحرك أبدًا
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
+        - text: سيصل الطائر إلى الخنزير.
+          correct: true
+          feedback: صحيح!
+        - text: 'سيتحرك الطير للأمام حتى يصطدم بالتي أند تي TNT. '
+          feedback: خطأ. التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار،
+            ثم يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
+        - text: لا أعرف.
+          feedback: التعليمات البرمجية ستحرك الطير للأمام طالما كان هناك مسار، ثم
+            يلف لليسار. ويستمر في عمل ذلك حتى يصل إلى الخنزير!
+        questions:
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تقوم
+            بالنقر على "تشغيل"؟
       courseD_multi_scrat_predict1:
         answers:
         - text: لا يوجد أي فعل. لن يتحرك الطائر سكرات على الإطلاق.
+          feedback: خطأ. إن وضع المربع البرمجي "تحرك للامام" داخل المربع البرمجي "تكرار"
+            سيتسبب في حركة سكرات للأمام ثلاث مرات.
         - text: سيتحرك الطائر  سكرات للأمام ثلاث مرات، أو  ينعطف، ثم يتقدم للأمام
             ثلاث مرات إضافية، متقدماً إلى البلوط!
           correct: true
           feedback: صحيح!
         - text: سيتحرك الطائر سكرات إلى الأمام، ثم يقوم بالانعطاف والتصادم.
+          feedback: خطأ. إن وضع المربع البرمجي "تحرك للامام" داخل المربع البرمجي "تكرار"
+            سيتسبب في حركة سكرات للأمام ثلاث مرات.
         - text: لا أعرف.
           feedback: 'سيؤدي وضع المربع البرمجي "التحرك إلى الأمام" داخل المربع البرمجي
             "تكرار" إلى جعل الطائر سكرات يتقدم إلى الأمام ثلاث مرات. ثم ينعطف، ويتقدم
@@ -1978,66 +3009,157 @@ ar-SA:
         questions:
         - text: تستخدم هذه التعليمات البرمجية مربع برمجي جديد. باعتقادك ما الذي سيحدث
             عند ضغطك على خيار "تشغيل"؟
+      courseD_project_exemplars_2020_2021:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: سيعمل نفس البرنامج لحل هذا اللغز، أيضًا.
+          correct: true
+          feedback: صحيح! ليس من المهم وجود كمية مختلفة من العسل. فالدالة مبرمجة للتعامل
+            مع ذلك.
+        - text: النحلة لا تصنع كمية كافية من العسل.
+          feedback: خطأ. تم برمجة الدالة للتعامل مع أي كمية من العسل أكثر من 0.
+        - text: ستجرب النحلة صنع العسل أكثر من اللازم.
+          feedback: خطأ. تم برمجة الدالة للتعامل مع أي كمية من العسل أكثر من 0.
         - text: لا أعرف.
+          feedback: سيعمل البرنامج على حل هذا اللغز، أيضًا. أنه مبرمج للتعامل مع أي
+            كمية من العسل أكثر من 0.
         questions:
-        - {}
+        - text: 'هنا نفس البرنامج بالضبط من اللغز الأخير، لكن كمية العسل التي يلزم
+            جمعها في هذا اللغز قد تغيرت. ما الذي يحدث عندما تنقر على "تشغيل"؟ '
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: خطأ. الحاصدة لا تطلب "افحص والتقط" حتى تصل إلى الذرة.
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: خطأ. الحاصدة لا تطلب "افحص والتقط" حتى تصل إلى الذرة.
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: خطأ. الحاصة ستلف مرة واحدة فقط، وتنتهي عند الذرة.
+        - text: الحاصدة ستلتقط قرعين.
+          correct: true
           feedback: صحيح!
         questions:
-        - {}
+        - text: أنظر إلى الدالات المحددة أدناه. ماذا ستلتقط الحاصدة؟
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستلتقط قرعين.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
         questions:
-        - {}
+        - text: أنظر إلى الدالات المحددة أدناه. ماذا ستلتقط الحاصدة؟
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستلتقط قرعين.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
         questions:
-        - {}
+        - text: أنظر إلى الدالات المحددة أدناه. ماذا ستلتقط الحاصدة؟
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستجمع كل المحاصيل.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        - text: الحاصدة ستلتقط قرعين.
+          correct: true
+          feedback: صحيح!
+        - text: الحاصدة ستلتقط قرعين.
+          feedback: غير صحيح. تتحرَّك عامِلة الحصاد إلى الأمام حتى نهاية المسار، ثم
+            تنعطف وتتحرِّك للخلف حتى تلتقط الخس.
+        questions:
+        - text: أنظر إلى الدالات المحددة أدناه. ماذا ستلتقط الحاصدة؟
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: لا شيء. الدالة لم يتم استدعاؤها في البرنامج.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعًا واحدًا.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعين متراكبين.
+          feedback: خطأ. يبلغ طول كل جانب من جوانب المربع 100 بِكسِل فقط، لكن الفنان
+            يقفز 175 بِكسِل بين الدالات.
+        - text: سيرسم الفنان مربعين مع فجوة صغيرة بينهما.
+          correct: true
+          feedback: صحيح! يتم استدعاء الدالة مرتين في البرنامج، مع قفزة فيما بينهما.
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: لا شيء. الدالة لم يتم استدعاؤها في البرنامج.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعًا واحدًا.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعين متراكبين.
+          feedback: خطأ. يبلغ طول كل جانب من جوانب المربع 100 بِكسِل فقط، لكن الفنان
+            يقفز 175 بِكسِل بين الدالات.
+        - text: سيرسم الفنان مربعين مع فجوة صغيرة بينهما.
+          correct: true
+          feedback: صحيح! يتم استدعاء الدالة مرتين في البرنامج، مع قفزة فيما بينهما.
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: لا شيء. الدالة لم يتم استدعاؤها في البرنامج.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعًا واحدًا.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعين متراكبين.
+          feedback: خطأ. يبلغ طول كل جانب من جوانب المربع 100 بِكسِل فقط، لكن الفنان
+            يقفز 175 بِكسِل بين الدالات.
+        - text: سيرسم الفنان مربعين مع فجوة صغيرة بينهما.
+          correct: true
+          feedback: صحيح! يتم استدعاء الدالة مرتين في البرنامج، مع قفزة فيما بينهما.
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: لا شيء. الدالة لم يتم استدعاؤها في البرنامج.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعًا واحدًا.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعين متراكبين.
+          feedback: خطأ. يبلغ طول كل جانب من جوانب المربع 100 بِكسِل فقط، لكن الفنان
+            يقفز 175 بِكسِل بين الدالات.
+        - text: سيرسم الفنان مربعين مع فجوة صغيرة بينهما.
+          correct: true
+          feedback: صحيح! يتم استدعاء الدالة مرتين في البرنامج، مع قفزة فيما بينهما.
+        questions:
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: لا شيء. الدالة لم يتم استدعاؤها في البرنامج.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعًا واحدًا.
+          feedback: لا شيء. تم استدعاء الدالة بالفعل مرتين في البرنامج.
+        - text: سيرسم الفنان مربعين متراكبين.
+          feedback: خطأ. يبلغ طول كل جانب من جوانب المربع 100 بِكسِل فقط، لكن الفنان
+            يقفز 175 بِكسِل بين الدالات.
+        - text: سيرسم الفنان مربعين مع فجوة صغيرة بينهما.
+          correct: true
+          feedback: صحيح! يتم استدعاء الدالة مرتين في البرنامج، مع قفزة فيما بينهما.
+        questions:
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseE_project_exemplars_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |+
           #أمثلة مشروع
 
@@ -2057,24 +3179,63 @@ ar-SA:
           | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | دعنا نبدع مع حلقات متداخلة! | لنكن مبدعين مع الوظائف! |
 
+      courseE_project_exemplars_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+      courseExpress_project_exemplars_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
-        - correct: true
+        - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
+          feedback: غير صحيح. اسم المتغيِّر الخاص بك لا يؤثِّر في قيمته.
+        - text: لن تجمع النحلة سوى 2 من الرحيق.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستجمع النحلة الرحيق كله.
+          feedback: غير صحيح. يتم ضبط المتغيِّر ليعود للقيمة 0 قبل آخر استدعائين للدالة.
         - text: لا أعرف.
+          feedback: يتم ضبط المتغيِّر ليعود للقيمة قبل آخر استدعائين للدالة، حيث يُضاف
+            الرقم 1 في كل مرة. بعد ذلك، تجمع النحلة 2 من وحدات الرحيق.
         questions:
-        - {}
+        - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
+            في النهاية؟
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
+          feedback: غير صحيح. اسم المتغيِّر الخاص بك لا يؤثِّر في قيمته.
+        - text: لن تجمع النحلة سوى 2 من الرحيق.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستجمع النحلة الرحيق كله.
+          feedback: غير صحيح. يتم ضبط المتغيِّر ليعود للقيمة 0 قبل آخر استدعائين للدالة.
         - text: لا أعرف.
+          feedback: يتم ضبط المتغيِّر ليعود للقيمة قبل آخر استدعائين للدالة، حيث يُضاف
+            الرقم 1 في كل مرة. بعد ذلك، تجمع النحلة 2 من وحدات الرحيق.
         questions:
-        - {}
+        - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
+            في النهاية؟
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
+          feedback: غير صحيح. اسم المتغيِّر الخاص بك لا يؤثِّر في قيمته.
+        - text: لن تجمع النحلة سوى 2 من الرحيق.
+          correct: true
+          feedback: صحيح!
+        - text: ستجمع النحلة الرحيق كله.
+          feedback: غير صحيح. يتم ضبط المتغيِّر ليعود للقيمة 0 قبل آخر استدعائين للدالة.
+        - text: لا أعرف.
+          feedback: يتم ضبط المتغيِّر ليعود للقيمة قبل آخر استدعائين للدالة، حيث يُضاف
+            الرقم 1 في كل مرة. بعد ذلك، تجمع النحلة 2 من وحدات الرحيق.
+        questions:
+        - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
+            في النهاية؟
+      courseF_external_variableConstant:
+        markdown: '<h2>More on Variables</h2><img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
+          style="padding-left: 30px; width:300px; float:right;"/><h3>You''ve just
+          learned one great way to use a variable...as a constant!  When you use a
+          variable as a constant, you are setting a value one time, then using that
+          *same* value multiple times in your program without changing it after you
+          click "Run".  </h3><br/><hr/><h3>In the next part of the series, you will
+          write code with variables that *do* change inside the program.</h3>'
       courseF_external_variableConstant_2018:
         markdown: "<h2>المزيد عن المتغيرات</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>ها قد تعلمت
@@ -2089,13 +3250,22 @@ ar-SA:
           تقوم بتعيين قيمة مرة واحدة, ومن ثم إستخدام القيمة *ذاتها* عدة مرات في البرنامج
           الخاص بك دون تغييرها بعد النقر على \"تشغيل\".</h3>\n<br/><hr/>\n<h3>في الجزء
           التالي من السلسلة, ستقوم بكتابة كود برمجي بمتغيرات *تتغير* بالفعل داخل البرنامج.</h3>"
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: "<h2>المزيد عن المتغيرات</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>ها قد تعلمت
+          للتو طريقة إستخدام المتغير...كثابت!  \nعند إستخدامك متغير ما كثابت, فأنت
+          تقوم بتعيين قيمة مرة واحدة, ومن ثم إستخدام القيمة *ذاتها* عدة مرات في البرنامج
+          الخاص بك دون تغييرها بعد النقر على \"تشغيل\".</h3>\n<br/><hr/>\n<h3>في الجزء
+          التالي من السلسلة, ستقوم بكتابة كود برمجي بمتغيرات *تتغير* بالفعل داخل البرنامج.</h3>"
       courseF_markdown_algorithms_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "### **الخوارزمية هي عبارة عن قائمة من الخطوات لإتمام مهمة ما**.
           الممتع بالخوارزميات هو أنه بإمكانك أن تقرر ما يحدث خطوة بخطوة.  \n\n###
           عند قيامك بكتابة خوارمية ما لآلة, يسمى هذا **بالبرنامج**.  \n\n---\n\n##
           **المصطلحات**\n\n* ### **الخوارزمية** - قائمة بخطوات لإتمام مهمة ما\n\n*
           ### ** - عبارة عن خوارزمية تمت برمجتها بحيث يمكن تشغيلها بواسطة الآلة"
       courseF_markdown_algorithms_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |+
           # **في هذا الدرس...**
 
@@ -2112,6 +3282,7 @@ ar-SA:
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
 
       courseF_markdown_conditionals_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "# **ها قد تعلمت عن \"الشروط\" للتو!**\n\n### تعد الشروط مهمةٌ للغاية
           في علم الحواسيب والبرمجة. لنفترض بأنك تقوم بتسجيل الدخول إلى موقعك المفضل
           وقمت بكتابة كلمة المرور. فسيتحتم على الموقع إستخدام شروط للتحقق *إذا* كانت
@@ -2121,10 +3292,12 @@ ar-SA:
           يقوم البرنامج بالتحقق منه قبل السماح بأي إجراء\n\n* ### **جمل شرطية** -
           أوامر تعمل فقط في ظل شروط معيّنة"
       courseF_markdown_conditionals_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "# **في هذا الدرس...**\n\n### **الشروط** هي أشياء قد تكون إما صحيحة
           أو خاطئة. \n\n### سوف تتعلم كيفية إستخدام الشروط في برنامج ما لجعل الأشياء
           تحدث `طالما`, `حتى`, أو `إذا`كان شيئًا صحيحًا!\n\n## **القطع البرمجية المستخدمة**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n"
       courseF_markdown_debugging_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |-
           # **ها قد تعلمت الآن حل الأخطاء أو ما يسمى بالـ "debugging"!**
 
@@ -2142,13 +3315,84 @@ ar-SA:
 
           *### **المثابرة** - عدم الإستسلام
       courseF_markdown_debugging_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "# في هذا الدرس\n\n### بم تفكر عندما يخطر ببالك الحشرات؟ \n\n###
           معظم الأشخاص عندما يفكرون بالحشرات (bugs), يخطر ببالهم مخلوقات زاحفة مخيفة.
           وفيما يتعلق بعلم الحواسيب والبرمجيات, لا تعد الحشرات هذه (bugs) بالشيء الملموس,
           لكن بإمكانها إحداث خلل ما.\n\n### تم حل الألغاز في هذا الدرس! لكن ليس بهذه
           السرعة - يبدو بأن هنالك خطب ما. هل المسبب هو الـ bugs؟\n\n## المربعات البرمجية
           المستخدمة\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+      courseF_markdown_forloops_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# لقد انتهيت من تعلُّم \"الحلقات البرمجية for\"!**\n\n### **الحلقات
+          البرمجية For هي حلقات برمجية تعيِّن فيها قيم البداية والتوقف وقيم الخطوات.**\n\n###
+          هذا النوع الجديد من الحلقة البرمجية `repeat`يعطيك مزيدًا من التحكُّم في
+          متى تبدأ الحلقة البرمجية ومتي تنهيها، وما الذي من المفترض أن تزيده حلقتك
+          البرمجية في كل مرة يتم تشغيلها.\n\n### يُقصَد بمزيد من التحكُّم أن تتمكَّن
+          من حلّ الألغاز بسرعة أكبر! \n\n---\n\n## **مفردات عليك معرفتها**\n\n###
+          **الحلقة البرمجية For** - الحلقات البرمجية For هي حلقات برمجية لها قيمة
+          محددة مسبقًا للبداية والنهاية والزيادة (فاصل الخطوة)\n"
+      courseF_markdown_forloops_end_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# لقد انتهيت من تعلُّم \"الحلقات البرمجية for\"!**\n\n### **الحلقات
+          البرمجية For هي حلقات برمجية تعيِّن فيها قيم البداية والتوقف وقيم الخطوات.**\n\n###
+          هذا النوع الجديد من الحلقة البرمجية `repeat`يعطيك مزيدًا من التحكُّم في
+          متى تبدأ الحلقة البرمجية ومتي تنهيها، وما الذي من المفترض أن تزيده حلقتك
+          البرمجية في كل مرة يتم تشغيلها.\n\n### يُقصَد بمزيد من التحكُّم أن تتمكَّن
+          من حلّ الألغاز بسرعة أكبر! \n\n---\n\n## **مفردات عليك معرفتها**\n\n###
+          **الحلقة البرمجية For** - الحلقات البرمجية For هي حلقات برمجية لها قيمة
+          محددة مسبقًا للبداية والنهاية والزيادة (فاصل الخطوة)\n"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# لقد انتهيت من تعلُّم \"الحلقات البرمجية for\"!**\n\n### **الحلقات
+          البرمجية For هي حلقات برمجية تعيِّن فيها قيم البداية والتوقف وقيم الخطوات.**\n\n###
+          هذا النوع الجديد من الحلقة البرمجية `repeat`يعطيك مزيدًا من التحكُّم في
+          متى تبدأ الحلقة البرمجية ومتي تنهيها، وما الذي من المفترض أن تزيده حلقتك
+          البرمجية في كل مرة يتم تشغيلها.\n\n### يُقصَد بمزيد من التحكُّم أن تتمكَّن
+          من حلّ الألغاز بسرعة أكبر! \n\n---\n\n## **مفردات عليك معرفتها**\n\n###
+          **الحلقة البرمجية For** - الحلقات البرمجية For هي حلقات برمجية لها قيمة
+          محددة مسبقًا للبداية والنهاية والزيادة (فاصل الخطوة)\n"
+      courseF_markdown_forloops_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: |+
+          # **في هذا الدرس...**
+
+          ### ستتعلَّم اليوم نوعًا جديدا من الحلقة البرمجية `repeat`. وفيما يلي معاينة للمربع البرمجي الذي ستستخدمه:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### لحسن الحظ، ستجعل هذه الحلقة البرمجية الجديدة من حل الألغاز أمرًا في غاية السهولة!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_forloops_intro_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: |+
+          # **في هذا الدرس...**
+
+          ### ستتعلَّم اليوم نوعًا جديدا من الحلقة البرمجية `repeat`. وفيما يلي معاينة للمربع البرمجي الذي ستستخدمه:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### لحسن الحظ، ستجعل هذه الحلقة البرمجية الجديدة من حل الألغاز أمرًا في غاية السهولة!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: |+
+          # **في هذا الدرس...**
+
+          ### ستتعلَّم اليوم نوعًا جديدا من الحلقة البرمجية `repeat`. وفيما يلي معاينة للمربع البرمجي الذي ستستخدمه:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### لحسن الحظ، ستجعل هذه الحلقة البرمجية الجديدة من حل الألغاز أمرًا في غاية السهولة!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
       courseF_markdown_loops_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "# **ها قد تعلمت الآن عن \"الحلقات\"!**  \n\n### **الحلقة هي عبارة
           عن القيام بشيء مرارًا وتكرارًا.** كلمة ثانيةلفعل شيء مرًة أخرى وهي التكرار.\n\n###
           تعد الحلقات بالشيء المفيد لتكرار الأنماط. لربما قد يكون من الأفضل كتابة
@@ -2157,6 +3401,7 @@ ar-SA:
           **المصطلحات المستخدمة**\n\n* ### **حلقة** - عملية القيام بفعل شيء مرارًا
           وتكرارًا\n\n* ### **تكرار** - عمل شيء مجددًا"
       courseF_markdown_loops_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "### لنفترض بأنك تريد الشخصية الخاصة بك أن تتحرك إلى الأمام **5**
           مرات. يبدو هذا بالأمر السهل, ما عليك إلا بوضع **5** مربعات برمجية للتقدم
           إلى الأمام. تخيل الآن بأنك تريد من هذه الشخصية أن تتحرك إلى الأمام **5000**
@@ -2164,6 +3409,7 @@ ar-SA:
           أتتمنى لو كان هناك طريقة أسهل للقيام بذلك؟ نعم هناك طريقة أسهل بالفعل!\n\n---\n\n##
           المربعات البرمجية المستخدمة\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
       courseF_markdown_nestedloops_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |-
           # **ها قد تعلمت الآن عن "الحلقات المتداخلة"!**
 
@@ -2177,11 +3423,34 @@ ar-SA:
 
           ### __الحلقات المتداخلة__ - حلقة ضمن حلقة أخرى
       courseF_markdown_nestedloops_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: "# **في هذا الدرس...**\n\n### أتسائلت عما يحصل إذا قمت بوضع حلقة
           ما *داخل حلقة أخرى*؟ \n\n### قد يفقدك هذا الأمر صوابك!\n\n### في حال كانت
           حلقة ما جيدة في تكرار الأنماط, فماذا تظن الفائدة من الأمر عند وجود حلقة
           ما داخل أخرى؟ بنا نكتشف!\n\n---\n\n## **المربعات البرمجية المستخدمة**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
+      courseF_markdown_variables_end:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# **لقد انتهيت من تعلُّم \"المتغيرات\"!**\n\n### لكي تستخدِم المتغيِّر،
+          سيحتاج إلى اسمٍ وقيمة. ولا يتغيَّر الاسم، ولكن يمكن للقيمة أن تتغيَّر. ويمكنك
+          بهذه الطريقة أن تستخدِم اسم المتغيِّر كعنصر نائب في أي مكان تريده في برنامجك!
+          \n\n---\n\n## **مفردات عليك معرفتها**\n\n### **المتغيِّر** - عنصر نائب لمعلومة
+          يمكن تغييرها\n\n"
+      courseF_markdown_variables_end_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# **لقد انتهيت من تعلُّم \"المتغيرات\"!**\n\n### لكي تستخدِم المتغيِّر،
+          سيحتاج إلى اسمٍ وقيمة. ولا يتغيَّر الاسم، ولكن يمكن للقيمة أن تتغيَّر. ويمكنك
+          بهذه الطريقة أن تستخدِم اسم المتغيِّر كعنصر نائب في أي مكان تريده في برنامجك!
+          \n\n---\n\n## **مفردات عليك معرفتها**\n\n### **المتغيِّر** - عنصر نائب لمعلومة
+          يمكن تغييرها\n\n"
+      courseF_markdown_variables_end_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: "# **لقد انتهيت من تعلُّم \"المتغيرات\"!**\n\n### لكي تستخدِم المتغيِّر،
+          سيحتاج إلى اسمٍ وقيمة. ولا يتغيَّر الاسم، ولكن يمكن للقيمة أن تتغيَّر. ويمكنك
+          بهذه الطريقة أن تستخدِم اسم المتغيِّر كعنصر نائب في أي مكان تريده في برنامجك!
+          \n\n---\n\n## **مفردات عليك معرفتها**\n\n### **المتغيِّر** - عنصر نائب لمعلومة
+          يمكن تغييرها\n\n"
       courseF_markdown_variables_intro:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |
           # **في هذا الدرس...**
 
@@ -2194,6 +3463,20 @@ ar-SA:
 
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
       courseF_markdown_variables_intro_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: |
+          # **في هذا الدرس...**
+
+          ### *المتغيرات* هي عبارة عن عنصر نائب لمعلومات قابلة للتغيير. فوجود عنصر نائب يجعل من الممكن كتابة برنامج ما حتى في حال عدم معرفتك كل القيم حتى وقت لاحق!
+
+
+          ---
+
+          ## **المربعات البرمجية المستخدمة**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+      courseF_markdown_variables_intro_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
         markdown: |
           # **في هذا الدرس...**
 
@@ -2207,155 +3490,409 @@ ar-SA:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
       courseF_multi_artist_for10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: سيرسم الفنان خطًا مستقيمًا الذي يزداد سمكًا من جانب واحد من مساحة
+            اللعب إلى الجانب الآخر.
+          feedback: خطأ. الفنان يستدير بين تكرارات حلقة "فور".
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأنحف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأكثر ثخانة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        markdown: "استخدمنا العداد من الحلقة البرمجية `for` لدينا لتغيير عرْض الفرشاة
+          على هذه الرسمة.  \n\n\n"
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: سيرسم الفنان خطًا مستقيمًا الذي يزداد سمكًا من جانب واحد من مساحة
+            اللعب إلى الجانب الآخر.
+          feedback: خطأ. الفنان يستدير بين تكرارات حلقة "فور".
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأنحف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأكثر ثخانة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        markdown: "استخدمنا العداد من الحلقة البرمجية `for` لدينا لتغيير عرْض الفرشاة
+          على هذه الرسمة.  \n\n\n"
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: سيرسم الفنان خطًا مستقيمًا الذي يزداد سمكًا من جانب واحد من مساحة
+            اللعب إلى الجانب الآخر.
+          feedback: خطأ. الفنان يستدير بين تكرارات حلقة "فور".
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأنحف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأكثر ثخانة.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        markdown: "استخدمنا العداد من الحلقة البرمجية `for` لدينا لتغيير عرْض الفرشاة
+          على هذه الرسمة.  \n\n\n"
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: سيرسم الفنان خطًا مستقيمًا الذي يزداد سمكًا من جانب واحد من مساحة
+            اللعب إلى الجانب الآخر.
+          feedback: خطأ. الفنان يستدير بين تكرارات حلقة "فور".
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأنحف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        - text: سيرسم الفنان حلزونًا وفي كل مرة من خلال حلقة "فور" يصبح الخط أطول
+            وأكثر ثخانة.
+          correct: true
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: خطأ. كل مرة يمر الفنان من خلال حلقة "فور" يقوم برسم خط أطول والذي
+            يتميز بالسماكة أيضًا.
+        markdown: "استخدمنا العداد من الحلقة البرمجية `for` لدينا لتغيير عرْض الفرشاة
+          على هذه الرسمة.  \n\n\n"
+        questions:
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - correct: true
+        - text: سيستعمل الفنان نفس الدالة لرسم صندوقين بحجمين مختلفين.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيستعمل الفنان نفس الدالة لرسم صندوقين بحجمين مختلفين.
+          feedback: خطأ. إن استخدام المَعْلمات يسمح باستخدام دالة واحدة لإنشاء نتائج
+            مختلفة.
+        - text: سيستعمل الفنان دالتين مختلفتين لرسم صندوقين بنفس الحجم مرتين.
+          feedback: خطأ. إن استخدام المَعْلمات يسمح باستخدام دالة واحدة لإنشاء نتائج
+            مختلفة.
         - text: لا أعرف.
+          feedback: يستخدم البرنامج مَعْلمات تسمح لدالة واحدة إنشاء صندوقين بحجمين
+            مختلفين.
+        markdown: |+
+          لقد أضفنا مَعْلمات إلى دالة "رسم مربع". أنقر زر "تحرير" الأزرق لمشاهدة التعريف الكامل للدالة.
+
+
         questions:
-        - {}
+        - text: ما الذي يحدث عندما تشغل هذا البرنامج.
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
+        - text: سيرسم الفنان مثلث بجوانب قياسها 50 بِكسِل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان مثلث بجوانب قياسها 3 بِكسِل.
+          feedback: خطأ. يجب أن يكون "الطول" المتغير في حلقة "تكرار" ليحدث ذلك.
+        - text: سيقوم الفنان بسحب ثلاثة جوانب مفتوحة ذات استدارة 50 درجة.
+          feedback: خطأ. يجب أن يستعمل متغير "الطول" في مربع برمجي للأستدارة ليحدث
+            ذلك.
         - text: لا أعرف.
+          feedback: لقد تم تحديد "الطول" المتغير في 50 ويستعمل في "التحرك للأمام بواسطة"
+            المربع البرمجي، لذلك فالفنان سيسحب مثلثًا بجوانب قياس 50 بِكسِل.
         questions:
-        - {}
+        - text: لقد حددنا "طول" المتغر إلى 50. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
+        - text: سيرسم الفنان مثلث بجوانب قياسها 50 بِكسِل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان مثلث بجوانب قياسها 3 بِكسِل.
+          feedback: خطأ. يجب أن يكون "الطول" المتغير في حلقة "تكرار" ليحدث ذلك.
+        - text: سيقوم الفنان بسحب ثلاثة جوانب مفتوحة ذات استدارة 50 درجة.
+          feedback: خطأ. يجب أن يستعمل متغير "الطول" في مربع برمجي للأستدارة ليحدث
+            ذلك.
         - text: لا أعرف.
+          feedback: لقد تم تحديد "الطول" المتغير في 50 ويستعمل في "التحرك للأمام بواسطة"
+            المربع البرمجي، لذلك فالفنان سيسحب مثلثًا بجوانب قياس 50 بِكسِل.
         questions:
-        - {}
+        - text: لقد حددنا "طول" المتغر إلى 50. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
+        - text: سيرسم الفنان مثلث بجوانب قياسها 50 بِكسِل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان مثلث بجوانب قياسها 3 بِكسِل.
+          feedback: خطأ. يجب أن يكون "الطول" المتغير في حلقة "تكرار" ليحدث ذلك.
+        - text: سيقوم الفنان بسحب ثلاثة جوانب مفتوحة ذات استدارة 50 درجة.
+          feedback: خطأ. يجب أن يستعمل متغير "الطول" في مربع برمجي للأستدارة ليحدث
+            ذلك.
         - text: لا أعرف.
+          feedback: لقد تم تحديد "الطول" المتغير في 50 ويستعمل في "التحرك للأمام بواسطة"
+            المربع البرمجي، لذلك فالفنان سيسحب مثلثًا بجوانب قياس 50 بِكسِل.
         questions:
-        - {}
+        - text: لقد حددنا "طول" المتغر إلى 50. ما الذي يحدث عندما تنقر على "تشغيل"؟
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: سيرسم الفنان مثلث بجوانب قياسها 50 بِكسِل.
+          correct: true
+          feedback: صحيح!
+        - text: سيرسم الفنان مثلث بجوانب قياسها 3 بِكسِل.
+          feedback: خطأ. يجب أن يكون "الطول" المتغير في حلقة "تكرار" ليحدث ذلك.
+        - text: سيقوم الفنان بسحب ثلاثة جوانب مفتوحة ذات استدارة 50 درجة.
+          feedback: خطأ. يجب أن يستعمل متغير "الطول" في مربع برمجي للأستدارة ليحدث
+            ذلك.
+        - text: لا أعرف.
+          feedback: لقد تم تحديد "الطول" المتغير في 50 ويستعمل في "التحرك للأمام بواسطة"
+            المربع البرمجي، لذلك فالفنان سيسحب مثلثًا بجوانب قياس 50 بِكسِل.
+        questions:
+        - text: لقد حددنا "طول" المتغر إلى 50. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        - text: ستنتقل النحلة إلى الغيمة وتحاول الحصول على الرحيق فقط إذا كانت هنالك
+            زهرة تحتها.
+          correct: true
           feedback: صحيح!
-        - {}
+        - text: ستنتقل النحلة إلى الغيمة ولا تفعل شيئَا، مهما كان الأمر.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" تضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يضمن أن النحلة سوف تحاول
+            الحصول على الرحيق إذا كانت هنالك زهرة تحت الغيمة.
+        markdown: 'الغيوم تحجب المنظر. من الممكن وجود زهرة تحت هذه الغيمة. فإذا كانت
+          هناك زهرة، ستسعى النحلة لجمع الرحيق **مرة واحدة**.
+
+'
         questions:
-        - {}
+        - text: إذا لم تكن هناك زهرة لا تفعل النحلة شيئًا. أمعن النظر في التعليمات
+            البرمجية أدناه. ماذا تعتقد سيحدث بعد أن تنقر على "تشغيل"؟
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: ستحصل النحلة على الرحيق من كل زهرة وإلا ستصنع العسل.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            في كل زهرة إذا لم تكن هناك زهرة (لذلك خلية نحل).
+        - text: ستحصل النحلة على الرحيق من الأزهار وخلية النحل.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            من كل زهرة والعسل من كل خلية نحل.
         - text: لا أعرف.
+          feedback: خطأ. المربع البرمجي "إذا عند الزهرة" يسمح للنحلة الحصول على الرحيق
+            من كل زهرة وبعكسه ستصنع العسل.
+        markdown: "تحجب الغيمة أحيانًا زهرة، وأحيانًا أنها تغطي خلية النحل! على أي
+          حال، ستوجد دائمًا فقط زهرة **واحدة** أو خلية نحل **واحدة** تحت كل غيمة.
+          \n"
         questions:
-        - {}
+        - text: أمعن النظر في التعليمات البرمجية أدناه. ماذا تعتقد سيحدث عندما تنقر
+            على "تشغيل"؟
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة، باستثناء واحد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستتحرك النحلة للأمام وتجمع رحيق واحد من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: ستتحرك النحلة للأمام وتحاول جمع رحيق أكثر مما هو موجود في الأزهار.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        markdown: |+
+          حسنًا! فإن استخدام الحلقات البرمجية `for` يسهِّل هذا اللغز كثيرًا!
+
+
         questions:
-        - {}
+        - text: اقرأ التعليمات البرمجية أدناه. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة، باستثناء واحد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستتحرك النحلة للأمام وتجمع رحيق واحد من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: لا أعرف.
+          feedback: ستسمَح الحلقة البرمجية `for` للنحلة بجمْع القدر المناسب من الرحيق،
+            لكن لم يتم ضبطها إلا للوصول إلى 4 أزهار فقط.
+        markdown: |+
+          حسنًا! فإن استخدام الحلقات البرمجية `for` يسهِّل هذا اللغز كثيرًا!
+
+
         questions:
-        - {}
+        - text: اقرأ التعليمات البرمجية أدناه. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة، باستثناء واحد.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: ستتحرك النحلة للأمام وتجمع رحيق واحد من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: لا أعرف.
+          feedback: ستسمَح الحلقة البرمجية `for` للنحلة بجمْع القدر المناسب من الرحيق،
+            لكن لم يتم ضبطها إلا للوصول إلى 4 أزهار فقط.
+        markdown: |+
+          حسنًا! فإن استخدام الحلقات البرمجية `for` يسهِّل هذا اللغز كثيرًا!
+
+
         questions:
-        - {}
+        - text: اقرأ التعليمات البرمجية أدناه. ما الذي يحدث عندما تنقر على "تشغيل"؟
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: ستتحرك النحلة للأمام وتجمع كل الرحيق من كل زهرة، باستثناء واحد.
+          correct: true
+          feedback: صحيح!
+        - text: ستتحرك النحلة للأمام وتجمع رحيق واحد من كل زهرة.
+          feedback: خطأ. الحلقة "إلى" ستسمح للنحلة جمع الكمية الصحيحة من الرحيق، ولكن
+            تم إعدادها للوصول إلى 4 أزهار.
+        - text: لا أعرف.
+          feedback: ستسمَح الحلقة البرمجية `for` للنحلة بجمْع القدر المناسب من الرحيق،
+            لكن لم يتم ضبطها إلا للوصول إلى 4 أزهار فقط.
+        markdown: |+
+          حسنًا! فإن استخدام الحلقات البرمجية `for` يسهِّل هذا اللغز كثيرًا!
+
+
+        questions:
+        - text: اقرأ التعليمات البرمجية أدناه. ما الذي يحدث عندما تنقر على "تشغيل"؟
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: لا تجمع النحلة أي رحيق أو عسل.
+          feedback: خطأ. تم إعداد الدالة لجمع أكبر قدر من الرحيق أو العسل الذي يمر
+            من خلال مَعْلمة.
+        - text: ستجمع النحلة ثلاثة رحائق أو عسل، ثم رحيقين أو عسلين في نمط درج السلم.
+          correct: true
+          feedback: خطأ. تم إعداد الدالة لجمع أكبر قدر من الرحيق أو العسل الذي يمر
+            من خلال مَعْلمة.
+        - text: ستجمع النحلة رحيق واحد أو عسل واحد في تكرار من تكرارات الحلقة.
+          feedback: خطأ. تم إعداد الدالة لجمع أكبر قدر من الرحيق أو العسل الذي يمر
+            من خلال مَعْلمة.
         - text: لا أعرف.
+          feedback: إن النقر للنظر في داخل الدالة يبين أن الدالة تم إعدادها لجمع أكبر
+            قدر من الرحيق أو العسل الذي يمر من خلال مَعْلمة.
+        markdown: |+
+          تحت هذه الغيوم، توجد إما زهرة بها رحيق واحد بالضبط، أو خلية نحل بها عسل واحد بالضبط. انقر على زر "التحرير" الأزرق في الدالة لمشاهدة ما هو موجود داخلها قبل الإجابة على السؤال أدناه.
+
+
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: يقول القرصان، "سعيد بلقائك، يا علي." هذا كل ما في الأمر.
+          correct: true
+          feedback: صحيحاً.
+        - text: يقول القرصان، "سعيد بلقائك"، وهذا كل ما في الأمر.
+          feedback: خطأ. لاحظ أن المربع البرمجي "انضمام" يُدخل الأسم المزود في جملة
+            القرصان.
+        - text: يقول القرصان، "علي" وهذا كل ما في الأمر.
+          feedback: خطأ. لاحظ أن المربع البرمجي "انضمام" يُدخل الأسم المزود في جملة
+            القرصان.
         - text: لا أعرف.
+          feedback: خطأ. لاحظ أن المربع البرمجي "انضمام" يُدخل الأسم (علي) المزود
+            في جملة القرصان.
+        markdown: |
+          **هذا اللغز يستخدم مربع برمجي جديد يسمى "اسأل".**
+
+          يقوم المربع البرمجي "اسأل" بإيقاف البرنامج ويحث المستخدم على إدخال بعص النصوص.
+
+          مهما يكن النص الذي يستخدمه المستخدم فأنه يحفظ فيما بعد في المتنوع المبين في نهاية المربع البرمجي "اسأل". وفي هذه الحالة، أنه "اسم" المتنوع.
         questions:
-        - {}
+        - text: ماذا يحدث إذا أدخل اسم "علي" في التحفيز؟
+      courseF_project_exemplars_2019:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
+        markdown: |
+          # عينة من المشاريع
+
+          أنت على وشك بدء مشروعك النهائي. وقبل البدء، اقضِ بعض الوقت في الاطلاع على عينة من المشاريع المطروحة.
+
+          # مشروع Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | حاوِل إضافة نص أو درجة إلى هذه اللعبة! | حاوِل إضافة نص أو درجة إلى هذه اللعبة! |
+
+          ## الرسام
+
+          | Flowers (Artist) | Spiral (Arist) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | هيا بنا نصبح مبدعين باستخدام المتغيرات! | هيا بنا نصبح مبدعين باستخدام الحلقات البرمجية For! |
+      courseF_project_exemplars_2019_2020:
+        content1: اختبار صفحة كتاب مدرسي مصغرة
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: الفنان سيحل اللغز بصورة صحيحة.
+          feedback: خطأ. تستخدم الحلقة "رسم المضلع" بدلا من "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان خط واحد من خطوط المربعات.
+          feedback: خطأ. البرنامج لا يستدعي "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          feedback: خطأ. الحلقة تلف 90 درجة بين دعوات "رسم المضلع".
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على زر "تشغيل"؟
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: الفنان سيحل اللغز بصورة صحيحة.
+          feedback: خطأ. تستخدم الحلقة "رسم المضلع" بدلا من "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان خط واحد من خطوط المربعات.
+          feedback: خطأ. البرنامج لا يستدعي "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          feedback: خطأ. الحلقة تلف 90 درجة بين دعوات "رسم المضلع".
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على زر "تشغيل"؟
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: الفنان سيحل اللغز بصورة صحيحة.
+          feedback: خطأ. تستخدم الحلقة "رسم المضلع" بدلا من "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          correct: true
           feedback: صحيح!
-        - {}
-        - {}
+        - text: سيرسم الفنان خط واحد من خطوط المربعات.
+          feedback: خطأ. البرنامج لا يستدعي "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          feedback: خطأ. الحلقة تلف 90 درجة بين دعوات "رسم المضلع".
         questions:
-        - {}
+        - text: ما الذي يحدث عندما يتم الضغط على زر "تشغيل"؟
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: الفنان سيحل اللغز بصورة صحيحة.
+          feedback: خطأ. تستخدم الحلقة "رسم المضلع" بدلا من "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          correct: true
+          feedback: صحيح!
+        - text: سيرسم الفنان خط واحد من خطوط المربعات.
+          feedback: خطأ. البرنامج لا يستدعي "رسم خط المضلعات".
+        - text: سيرسم الفنان أربعة مربعات في نمط النافذة.
+          feedback: خطأ. الحلقة تلف 90 درجة بين دعوات "رسم المضلع".
+        questions:
+        - text: ما الذي يحدث عندما يتم الضغط على زر "تشغيل"؟
+      csf_be_a_super_digital_citizen:
+        content1: الوصف هنا
+      csf_password_power-up:
+        content1: الوصف هنا
+      csf_putting_a_stop_to_online_meanness:
+        content1: الوصف هنا
       grade2_multi_collector_A_predict1:
         answers:
         - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
@@ -2385,6 +3922,20 @@ ar-SA:
         - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
             الكود؟
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          correct: true
+          feedback: صحيح!
+        - text: سوف تجمع لورا كل المجوهرات.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: لا أعرف.
+          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+        questions:
+        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
+            الكود؟
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
           feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.

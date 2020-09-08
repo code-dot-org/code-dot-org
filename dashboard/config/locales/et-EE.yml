@@ -246,6 +246,8 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
+      legal_privacy: Privaatsuspoliitika
+      legal_tos: Teenuse tingimused
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -583,25 +585,6 @@ et:
       title: Vidinad
       audience: Vanuses 14 +
       cta: Õpi kuidas
-  gallery:
-    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
-    students_made_these_with_code: Õpilased tegid need koodiga!
-    picture_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide
-      tööd ise näha.
-    activity_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel ja ekraanipiltidel,
-      et näha nende programmide tööd.
-    want_to_make_your_own: Tahad teha enda oma?
-    how_to_save: Nende juhendite viimases staadiumis vajuta "Lõpeta" ja "Salvesta",
-      et oma töö galeriisse salvestada.
-    more: Rohkem &rarr;
-    caption_by_name_age: 'Nimi: %{name}, Vanus: %{age}'
-    caption_time_ago: "%{time_ago} tagasi"
-    header: Galerii
-    header_playlab: Play Lab
-    header_artist: Kunstnik
-    report_abuse: Teata rikkumisest
   landing:
     report_bug: Raporteeri veast
     support: Abi saamine
@@ -815,30 +798,7 @@ et:
     instructor_feedback: Õpetaja tagasiside
     peer_feedback: Kaaslaste tagasiside
     outdated: See tagasiside lisati varem esitatud versioonile
-  flex_category:
-    required: Ülevaade
-    content: Sisu
-    practice: Õpetamise tavad
     peer_review: Vastastikune hindamine
-    csf_f_2: Kursuse F sisu
-    csf_digcit: Digitaalne kodakondsus
-    csf_jigsaw: Pusle
-    csf_loops: Tsüklid
-    csf_events: Sündmused
-    csf_binary: Binaarne
-    csf_conditionals: Tingimuslaused
-    csf_nested_loops: Korduvad tsüklid
-    csf_functions: Funktsioonid
-    csf_variables: Muutujad
-    csf_for_loops: For tsükkel
-    csf_internet: Internet
-    cspSurvey: Uuring
-    csp_variables: Muutujad
-    csp_conditionals: Tingimuslaused
-    csp_functions: Funktsioonid
-    csp_lists: Loendid
-    csp_loops: Tsüklid
-    k5_next_steps: Järgmised sammud
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
@@ -920,6 +880,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
+      colombian_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees

@@ -969,6 +969,10 @@ he:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -1013,8 +1017,46 @@ he:
         options:
           CHOICE:
             '"this"': זה
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+            '"a"': a
+            '"b"': נ
+            '"c"': ב
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': מ
+            '"o"': o
+            '"p"': p
+            '"q"': "/"
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} נוגע בפינות"
       gamelab_jumpTo:
@@ -1087,6 +1129,8 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_objectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_playSound:
         text: פלייסאונד {SOUND}
       gamelab_pointInDirection:
@@ -1164,6 +1208,8 @@ he:
           CONDITION:
             '"when"': כאשר
             '"while"': כאשר
+      gamelab_subjectSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_turn:
         text: הפוך {SPRITE} {DIRECTION} {N} מעלות
         options:

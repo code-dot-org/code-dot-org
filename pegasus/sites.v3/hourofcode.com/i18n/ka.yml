@@ -11,6 +11,24 @@ ka:
   campaign_date_full: 4-10 დეკემბერი
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 დეკემბერი, 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -171,8 +189,10 @@ ka:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -3148,7 +3168,6 @@ ka:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: HTML-ისა და CSS-ის სწავლის დაწყება მარტივია ამ
     ციფრული საფოსტო ღია ბარათის საშუალებით. ისწავლეთ სათაურების, აბზაცების, სურათების
     და ბმულების დამატება და შექმენით საარდადაგებო ან დაბადების დღის მისალოცი ბარათი
@@ -3584,7 +3603,7 @@ ka:
     შანსია, გაიგოთ მეტი.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: სტანდარტული სასწავლო გეგმა 3-5 კლასებისთვის.
     ჩაატარეთ გაკვეთილი კომპიუტერულ ლაბორატორიაში და შექმენით წილადების, ცვლადებისა
@@ -3706,7 +3725,7 @@ ka:
     გაიგებთ, თუ რატომ არის ამდენი მოწყობილობის გამოყენება უფრო რთული, ვიდრე საჭიროა.
     ამაზე დიდ გავლენას ახდენს დიზაინი, ამიტომ, მნიშვნელოვანია, შევამოწმოთ ინტერფეისი,
     რომ მისი გამოყენება მარტივი იყოს.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -4516,9 +4535,9 @@ ka:
     ამოცანებს, რომლებთანაც რობოტებს მარტივად შეუძლიათ გამკვლავება და დაამთავრებენ
     გაკვეთილს რობოტის დაპროექტებით, რომელიც მოცემულ ამოცანას ამოხსნის.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -5175,30 +5194,29 @@ ka:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -5260,7 +5278,7 @@ ka:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -7298,7 +7316,7 @@ ka:
   tutorial_groklearningpython_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_htmltimetravel_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: უსადენო
+  tutorial_appytappin_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_icipher_string_platforms: უსადენო
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: უსადენო
@@ -9263,8 +9281,8 @@ ka:
     iPad
   tutorial_scratchcartoon_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android ტაბლეტი, iPad, Android ტელეფონი,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
+    iPad, iPhone
   tutorial_bananatales_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_scratchtales_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
@@ -9646,3 +9664,4 @@ ka:
   some: ზოგიერთი
   all: ყველა
   dont_know: არ ვიცი
+  language_label: Language

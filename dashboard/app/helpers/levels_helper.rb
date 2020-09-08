@@ -5,6 +5,10 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'cdo/languages'
+require 'net/http'
+require 'uri'
+require 'json'
 
 module LevelsHelper
   include ApplicationHelper
@@ -241,8 +245,6 @@ module LevelsHelper
         question_options
       elsif @level.is_a? Widget
         widget_options
-      elsif @level.is_a? Scratch
-        scratch_options
       elsif @level.unplugged?
         unplugged_options
       else
@@ -256,7 +258,7 @@ module LevelsHelper
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -313,6 +315,7 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: view_options[:useGoogleBlockly],
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -335,19 +338,6 @@ module LevelsHelper
     app_options
   end
 
-  def scratch_options
-    app_options = {
-      baseUrl: Blockly.base_url,
-      skin: {},
-      app: 'scratch',
-    }
-    app_options[:level] = @level.properties.camelize_keys
-    app_options[:level][:scratch] = true
-    app_options[:level][:editCode] = false
-    app_options.merge! view_options.camelize_keys
-    app_options
-  end
-
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
@@ -359,8 +349,12 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
@@ -469,6 +463,51 @@ module LevelsHelper
     end
 
     fb_options
+  end
+
+  def azure_speech_service_options
+    speech_service_options = {}
+
+    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
+      # First, get the token
+      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+      token_http_request.use_ssl = true
+      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
+      token_response = token_http_request.request(token_request)
+      speech_service_options[:azureSpeechServiceToken] = token_response.body
+      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+
+      # Then, get the list of voices and languages
+      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_header = {'Authorization': 'Bearer ' + token_response.body}
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
+      voice_response = voice_http_request.request(voice_request)
+
+      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
+      language_dictionary = {}
+      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+      all_voices.each do |voice|
+        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        next if native_locale_name.empty?
+        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
+        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
+      end
+
+      language_dictionary.delete_if {|_, voices| voices.length < 3}
+
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+    end
+    speech_service_options
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
+    speech_service_options
   end
 
   # Options hash for Blockly
@@ -793,12 +832,15 @@ module LevelsHelper
       else
         error_message = I18n.t("errors.messages.too_young")
         FirehoseClient.instance.put_record(
-          study: "redirect_under_13",
-          event: "student_with_no_teacher_redirected",
-          user_id: current_user.id,
-          data_json: {
-            game: level.game.name
-          }.to_json
+          :analysis,
+          {
+            study: "redirect_under_13",
+            event: "student_with_no_teacher_redirected",
+            user_id: current_user.id,
+            data_json: {
+              game: level.game.name
+            }.to_json
+          }
         )
       end
       redirect_to '/', flash: {alert: error_message}

@@ -48,9 +48,32 @@ class Pd::Workshop < ActiveRecord::Base
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
-  serialized_attrs %w(
-    fee
-  )
+  serialized_attrs [
+    'fee',
+
+    # Indicates that this workshop will be conducted virtually, which has the
+    # following effects in our system:
+    #   - Ensures `suppress_email` is set (see below)
+    #     when it is left blank.
+    #   - Uses a different, virtual-specific post-workshop survey.
+    'virtual',
+
+    # Allows a workshop to be associated with a third party
+    # organization.
+    # Only current allowed values are "friday_institute" and nil.
+    # "friday_institute" represents The Friday Institute,
+    # a regional partner whose model of virtual workshop was used
+    # by several partners during summer 2020.
+    'third_party_provider',
+
+    # If true, our system will not send enrollees reminders related to this workshop.
+    # Note that this is one of (at least) three mechanisms we use to suppress
+    # email in various cases -- see Workshop.suppress_reminders? for
+    # subject-specific suppression of reminder emails. This is functionally
+    # extremely similar (identical?) to the logic currently implemented
+    # by this serialized attribute.
+    'suppress_email'
+  ]
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -60,6 +83,10 @@ class Pd::Workshop < ActiveRecord::Base
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
+  validate :all_virtual_workshops_suppress_email
+  validate :all_academic_year_workshops_suppress_email
+  validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
+  validate :virtual_only_subjects_must_be_virtual
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -86,6 +113,24 @@ class Pd::Workshop < ActiveRecord::Base
   def subject_must_be_valid_for_course
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
+    end
+  end
+
+  def all_virtual_workshops_suppress_email
+    if virtual? && !suppress_email?
+      errors.add :properties, 'All virtual workshops must suppress email.'
+    end
+  end
+
+  def all_academic_year_workshops_suppress_email
+    if MUST_SUPPRESS_EMAIL_SUBJECTS.include?(subject) && !suppress_email?
+      errors.add :properties, 'All academic year workshops must suppress email.'
+    end
+  end
+
+  def virtual_only_subjects_must_be_virtual
+    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
+      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
   end
 
@@ -153,7 +198,7 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
-  scope :in_year, ->(year = Date.now.year) do
+  scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
     scheduled_start_on_or_before(Date.new(year + 1))
   end
@@ -250,6 +295,14 @@ class Pd::Workshop < ActiveRecord::Base
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
+  # Find the workshop with the closest session to today
+  # enrolled in by the given teacher.
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_enrolled_in_by(teacher)
+    current_scope.enrolled_in_by(teacher).nearest
+  end
+
   def course_name
     COURSE_NAME_OVERRIDES[course] || course
   end
@@ -267,11 +320,19 @@ class Pd::Workshop < ActiveRecord::Base
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name += " in #{friendly_location}" if friendly_location.present?
+    name[0...255]
   end
 
   def friendly_subject
-    subject ? "#{subject} Workshop" : nil
+    if subject && (subject.downcase.include?("workshop") || subject == SUBJECT_TEACHER_CON)
+      subject
+    elsif subject
+      "#{subject} Workshop"
+    else
+      nil
+    end
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
@@ -286,17 +347,20 @@ class Pd::Workshop < ActiveRecord::Base
   # 1. known variant of TBA? use TBA
   # 2. processed location? use city, state
   # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use TBA
+  # 4. no location address at all? use blank
   def friendly_location
     return 'Location TBA' if location_address_tba?
     return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || 'Location TBA'
+    location_address.presence || ''
   end
 
+  # Returns date and location (only date if no location specified)
   def date_and_location_name
-    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
-    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
+    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
+    date_and_location_string += ' TeacherCon' if teachercon?
+    date_and_location_string
   end
 
   # Puts workshop in 'In Progress' state
@@ -331,10 +395,12 @@ class Pd::Workshop < ActiveRecord::Base
   # for details.
   def self.process_ends
     end_on_or_after(Time.now - 2.days).each do |workshop|
-      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
-        workshop.send_exit_surveys
-        workshop.update!(processed_at: Time.zone.now)
-      end
+      # only process if the workshop has not already been processed or if workshop was
+      # processed before the workshop ended.
+      next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
+      workshop.send_exit_surveys
+      workshop.send_facilitator_post_surveys
+      workshop.update!(processed_at: Time.zone.now)
     end
   end
 
@@ -362,6 +428,9 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
+  # Note that this is one of (at least) two mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email'
+  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -397,6 +466,17 @@ class Pd::Workshop < ActiveRecord::Base
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => e
         errors << "organizer workshop #{workshop.id} - #{e.message}"
+      end
+
+      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP)
+      workshop.facilitators.each do |facilitator|
+        next unless facilitator.email
+        begin
+          Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        end
       end
     end
 
@@ -472,6 +552,17 @@ class Pd::Workshop < ActiveRecord::Base
       end
 
       enrollment.send_exit_survey
+    end
+  end
+
+  # Send Post-surveys to facilitators of CSD and CSP workshops
+  def send_facilitator_post_surveys
+    if course == COURSE_CSD || course == COURSE_CSP
+      facilitators.each do |facilitator|
+        next unless facilitator.email
+
+        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
+      end
     end
   end
 
@@ -584,7 +675,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -592,8 +683,40 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 
+  # Get all teachers who have attended all sessions of this workshop.
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
+
+    # Filter attendances to only scholarship teachers
+    if filter_by_cdo_scholarship
+      scholarship_teachers = Pd::ScholarshipInfo.where(
+        {
+          application_year: school_year,
+          course: course_key,
+          scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
+        }
+      ).pluck(:user_id)
+      teachers_attending.select! {|teacher| scholarship_teachers.include? teacher.id}
+    end
+
+    # Get number of sessions attended by teacher
+    attendance_count_by_teacher = Hash[
+      teachers_attending.uniq.map do |teacher|
+        [teacher, teachers_attending.count(teacher)]
+      end
+    ]
+
+    # Return only teachers who attended all sessions
+    attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
+  end
+
+  # return true if this is a CSP Workshop for Returning Teachers
+  def csp_wfrt?
+    subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
 
   def teachercon?
@@ -614,6 +737,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def csf?
     course == COURSE_CSF
+  end
+
+  def csf_intro?
+    course == Pd::Workshop::COURSE_CSF && subject == Pd::Workshop::SUBJECT_CSF_101
   end
 
   def csf_201?
@@ -674,7 +801,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
+    # so we do not show any to teachers ourselves.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
@@ -684,7 +813,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def pre_survey_course
     return nil unless pre_survey?
-    Course.find_by_name! pre_survey_course_name
+    UnitGroup.find_by_name! pre_survey_course_name
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.
@@ -698,7 +827,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
-      unit_name = script.localized_title
+      unit_name = script.title_for_display
       stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"
@@ -740,9 +869,23 @@ class Pd::Workshop < ActiveRecord::Base
 
   def last_valid_day
     last_day = sessions.size
-    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+
+    # If we don't have Jotform survey constants set up for this workshop,
+    # return the session size to avoid erroring out in the next step.
+    return last_day if VALID_DAYS[CATEGORY_MAP[subject]].nil?
+
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include?(last_day)
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
+
     last_day
+  end
+
+  def friday_institute?
+    third_party_provider == 'friday_institute'
+  end
+
+  def user_attended?(user)
+    attending_teachers.include?(user)
   end
 end

@@ -3,6 +3,7 @@ he:
   data:
     script:
       category:
+        csf_category_name: יסודות מדעי המחשב
         hoc_category_name: שעה של קוד
         math_category_name: מתמטיקה
       name:
@@ -14,7 +15,7 @@ he:
             יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
           description_short: מבוא למדעי המחשב לקוראים מתחילים.
           description_audience: גילאי 4-6
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'אמן: לולאות'
             'Artist: Sequence':
@@ -54,7 +55,7 @@ he:
             וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
           description_short: מבוא למדעי המחשב לתלמידים שיכולים לקרוא.
           description_audience: גילאי 6+ (קריאה נדרשת)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'אמן: איתור באגים'
             'Artist: Loops':
@@ -99,7 +100,7 @@ he:
             ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
           description_short: קורס 3 הינו המשך לקורס 2.
           description_audience: גילאי 8-18
-          stages:
+          lessons:
             Artist:
               name: אמן
             'Artist: Functions':
@@ -138,14 +139,14 @@ he:
           title: מעבדת הצעצועים
           description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
           description_short: צור סיפור או משחק בעזרת מעבדת הצעצועים!
-          stages:
+          lessons:
             Play Lab:
               name: מעבדת הצעצועים
         artist:
           title: אמן
           description: ציירו תמונות מגניבות ועיצובים עם האמן!
           description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
-          stages:
+          lessons:
             Artist:
               name: אמן
         hourofcode:
@@ -153,7 +154,7 @@ he:
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
             זומבים וסקראט מעידן הקרח!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          stages:
+          lessons:
             Maze:
               name: מבוך
         frozen:
@@ -162,7 +163,7 @@ he:
             שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
           description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
             והיופי של קרח.
-          stages:
+          lessons:
             Artist:
               name: אמן
         course4:
@@ -175,7 +176,7 @@ he:
           description_short: בנה תוכניות מורכבות יותר עם עקרונות כמו לולאות "for"
             ופונקציות עם פרמטרים. זהו קורס המשך לקורס 3.
           description_audience: גילאי 9-18
-          stages:
+          lessons:
             Artist:
               name: אמן
             Artist Binary:
@@ -207,7 +208,7 @@ he:
             'Unplugged: For Loop Fun':
               name: 'ללא מחשב: כיף עם לולאות עבור'
         Course4pre:
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'אמן: פונקציות'
             'Artist: Loops':
@@ -227,7 +228,7 @@ he:
             'Maze: Sequence':
               name: 'מבוך: רצף'
         usability:
-          stages:
+          lessons:
             Binary:
               name: בינארי
             For Loops:
@@ -237,7 +238,7 @@ he:
             Variables:
               name: משתנים
         algebra:
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: משתנים בוליאנים
             'Eval: Conditionals':
@@ -260,11 +261,11 @@ he:
             האינסוף של דיסני.
           description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות
             דמויות האינסוף של דיסני.
-          stages:
+          lessons:
             Infinity:
               name: אינסוף
         algebrademo:
-          stages:
+          lessons:
             Defining Simple Functions:
               name: הגדרת פונקציות פשוטות
             Defining Variables:
@@ -276,20 +277,22 @@ he:
             The Design Recipe:
               name: עיצוב המתכון
         K5PD:
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: פדגוגית מדעי המחשב
             K-5 Courses:
               name: קורסים לגילאי גן-כיתה ה'
             Next Steps:
               name: השלבים הבאים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         netsim:
           title: מדמה אינטרנט
         20-hour:
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
             הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
           description_audience: גילאי 10-18
-          stages:
+          lessons:
             Abstraction:
               name: הפשטה
             Algorithms:
@@ -334,7 +337,7 @@ he:
           title: עריכת קוד
           description: עריכת קוד
           description_short: עריכת קוד
-          stages:
+          lessons:
             Play Lab:
               name: מעבדת הצעצועים
             The Artist:
@@ -345,7 +348,7 @@ he:
           title: אירועים
           description: אירועים
           description_short: אירועים
-          stages:
+          lessons:
             Bounce:
               name: להקפיץ
             Studio:
@@ -355,37 +358,39 @@ he:
           description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות
             שלנו!
           description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
-          stages:
+          lessons:
             Flappy Code:
               name: קוד מתנופף
         jigsaw:
           title: פאזל
-          stages:
+          lessons:
             Jigsaw:
               name: פאזל
         step:
           title: צעד
-          stages:
+          lessons:
             Step:
               name: צעד
         Hour of Code:
           title: שעת קוד 2013
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
         cspunit1:
-          stages:
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
         algebraPD:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         algPDmiami:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
             Sam the Bat:
@@ -393,11 +398,11 @@ he:
             Strings and Images:
               name: מחרוזות ותמונות
         cspunit3:
-          stages:
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
         algebraPD3:
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: פדגוגית מדעי המחשב
             Evaluation Blocks:
@@ -406,28 +411,34 @@ he:
               name: השלבים הבאים
             Strings and Images:
               name: מחרוזות ותמונות
+            Teacher Dashboard:
+              name: לוח בקרה למורה
             The Design Recipe:
               name: עיצוב המתכון
         algebraPD-NexTech:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         algebraPD-iZone:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         sciencePD2:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
               name: אריזה
         cspunit2:
-          stages:
+          lessons:
             The Internet:
               name: האינטרנט
         algebraPD2a:
-          stages:
+          lessons:
             Defining Variables:
               name: הגדרת משתנים
             Evaluation Blocks:
@@ -441,7 +452,7 @@ he:
             The Design Recipe:
               name: עיצוב המתכון
         allthethings:
-          stages:
+          lessons:
             Artist:
               name: אמן
             Bee:
@@ -461,7 +472,7 @@ he:
             Web Lab:
               name: מעבדת האתרים
         algebraPD2b:
-          stages:
+          lessons:
             Defining Variables:
               name: הגדרת משתנים
             Evaluation Blocks:
@@ -470,10 +481,12 @@ he:
               name: השלבים הבאים
             Strings and Images:
               name: מחרוזות ותמונות
+            Teacher Dashboard:
+              name: לוח בקרה למורה
             Writing Contracts:
               name: כתיבת חוזים
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: מעבדת היישומים
             Internet Simulator:
@@ -481,13 +494,13 @@ he:
             Welcome!:
               name: ברוכים הבאים!
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: יסודות מדעי המחשב
             Next Steps:
               name: השלבים הבאים
         ECSPD2:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -499,13 +512,15 @@ he:
             Wrap-up:
               name: סיום
         algebraPD2:
-          stages:
+          lessons:
+            Teacher Dashboard:
+              name: לוח בקרה למורה
             The Design Recipe:
               name: עיצוב המתכון
             Welcome!:
               name: ברוכים הבאים!
         sciencePD2b:
-          stages:
+          lessons:
             Remixing Phases 1 and 2:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Welcome!:
@@ -513,7 +528,7 @@ he:
             Wrap-Up:
               name: אריזה
         science-PD2:
-          stages:
+          lessons:
             Remixing Phases 1 and 2:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Welcome!:
@@ -521,11 +536,11 @@ he:
             Wrap-Up:
               name: אריזה
         Equity-OnlinePD:
-          stages:
+          lessons:
             Next Steps:
               name: השלבים הבאים
         sciencePD2b-iZone:
-          stages:
+          lessons:
             Remixing Phases 1 and 2:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Welcome!:
@@ -533,7 +548,7 @@ he:
             Wrap-Up:
               name: אריזה
         ECSPD2-iZone:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -545,7 +560,7 @@ he:
             Wrap-up:
               name: סיום
         ECSPD2-NexTech:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -557,7 +572,7 @@ he:
             Wrap-up:
               name: סיום
         asUnplugged:
-          stages:
+          lessons:
             Binary Bracelets:
               name: צמידים בינארים
             Getting Loopy:
@@ -575,11 +590,11 @@ he:
             The Big Event:
               name: האירוע הגדול
         algebraPD3a:
-          stages:
+          lessons:
             Updates - The Big Game and Projects:
               name: עדכונים - המשחק הגדול ופרויקטים
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
@@ -592,18 +607,18 @@ he:
           title: עידן הקרח Play Lab
           description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
           description_short: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
         cspunit3temp:
-          stages:
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
         gumball:
           title: מעבדת הצעצועים עם גמבול
           description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
           description_short: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
-          stages:
+          lessons:
             Gumball Play Lab:
               name: מעבדת הצעצועים עם גמבול
         starwars:
@@ -612,7 +627,7 @@ he:
             שלכם בגלקסיה רחוקה, רחוקה...
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה...
-          stages:
+          lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
         starwarsblocks:
@@ -621,7 +636,7 @@ he:
             שלכם בגלקסיה רחוקה, רחוקה...
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה...
-          stages:
+          lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
         mc:
@@ -629,21 +644,21 @@ he:
           description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
             של מיינקראפט
           description_short: גלה את העולם של מיינקראפט באמצעות קוד
-          stages:
+          lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
               name: אריזה
         AlgebraA:
-          stages:
+          lessons:
             'Play Lab: Defining Functions':
               name: 'מעבדת הצעצועים: הגדרת פונקציות'
         AlgebraB:
-          stages:
+          lessons:
             'Play Lab: Animation (Big Game)':
               name: 'מעבדת הצעצועים: אנימציות (משחק גדול)'
             'Play Lab: Boolean (Big Game)':
@@ -655,11 +670,20 @@ he:
             'Play Lab: Defining Variables (Big Game)':
               name: 'מעבדת הצעצועים: הגדרת משתנים (משחק גדול)'
         algebraPD1:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         csp1-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
@@ -669,49 +693,82 @@ he:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csp2-2017:
-          stages:
+          lesson_groups:
+            csp2_1:
+              display_name: 'פרק 1: קידוד וכיווץ מידע מורכב'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csp3-2017:
-          stages:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csp4-2017:
-          stages:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csp5-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
             Post-Course Survey:
               name: סקר שלאחר הקורס
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: פונקציות
         CSF_Secret_Sample:
           description_audience: גילאי 8-18
         algebraFacilitator:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: בדיקת בלוקים
+            Teacher Dashboard:
+              name: לוח בקרה למורה
         cspunit1-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: סקירה
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: סקירה
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: מעבדת המשחקים
         artistExemplar:
           description_audience: גילאי 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: סקירה
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'דבורה: התניות'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: אירועים
             'Jigsaw: Learn to drag and drop':
@@ -721,7 +778,7 @@ he:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
         grade4:
-          stages:
+          lessons:
             'Bee: Determine the Concept':
               name: 'דבורה: קבע את הרעיון'
             'Bee: Functions (Course 3)':
@@ -731,7 +788,7 @@ he:
             Songwriting:
               name: כתיבת שירים
         grade1:
-          stages:
+          lessons:
             Events:
               name: אירועים
             'Jigsaw: Learn to drag and drop':
@@ -739,7 +796,7 @@ he:
             Loops:
               name: חזרות
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'אמן: לולאות For'
             'Artist: Functions with Parameters':
@@ -755,7 +812,7 @@ he:
             'Unplugged: For Loop Fun':
               name: 'ללא מחשב: כיף עם לולאות עבור'
         ecs-unit1:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -767,7 +824,7 @@ he:
             Wrap-up:
               name: סיום
         grade3:
-          stages:
+          lessons:
             " Bee: Conditionals":
               name: 'דבורה: התניות'
             'Artist: Nested Loops':
@@ -780,8 +837,21 @@ he:
               name: 'מבוך: התניות עם לולאות'
             'Maze: Nested Loops':
               name: 'מבוך: לולאות מקוננות'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: סקירה
         csd3-2017:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+          lessons:
             Functions:
               name: פונקציות
             Variables:
@@ -789,7 +859,7 @@ he:
             Conditionals:
               name: תנאים
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: פלאפי
             Binary Bracelets:
@@ -799,7 +869,7 @@ he:
             The Big Event:
               name: האירוע הגדול
         k5concepts:
-          stages:
+          lessons:
             Binary:
               name: בינארי
             Conditionals:
@@ -819,28 +889,42 @@ he:
             While Loops:
               name: לולאות "כל עוד"
         algebrapdnext:
-          stages:
+          lessons:
+            Teacher Dashboard:
+              name: לוח בקרה למורה
             The Design Recipe:
               name: עיצוב המתכון
             Welcome!:
               name: ברוכים הבאים!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
         basketball:
-          stages:
+          lessons:
             Bounce:
               name: להקפיץ
-        fesbinary:
-          title: בינארי
-          stages:
-            Binary Bracelets:
-              name: צמידים בינארים
-            Binary Images:
-              name: תמונות בינאריות
-            Binary Artist Puzzles:
-              name: חידות של האמן הבינארי
-            Play Lab:
-              name: מעבדת הצעצועים
         csd2-2017:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -875,31 +959,43 @@ he:
                 מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן
                 שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט
                 שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
         minecraft:
           title: מעצבי מיינקראפט
           description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
           description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
-          stages:
+          lessons:
             Minecraft Hour of Code Designer:
               name: מעצבי מיינקראפט
         flappy-impact-study:
-          stages:
+          lessons:
             Flappy Code:
               name: קוד מתנופף
         coursea-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
               name: תכנות במבוך
         courseb-draft:
-          stages:
+          lessons:
             Programming in Maze:
               name: תכנות במבוך
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
         coursec-draft:
-          stages:
+          lessons:
             Programming in Maze:
               name: תכנות במבוך
             'Real-life Algorithms: Paper Planes':
@@ -911,7 +1007,7 @@ he:
             Debugging in Maze:
               name: איתור באגים במבוך
         coursed-draft:
-          stages:
+          lessons:
             Nested Loops in Maze:
               name: לולאות מקוננות במבוך
             Conditionals with Cards:
@@ -925,7 +1021,10 @@ he:
             Introduction:
               name: מבוא
         coursee-draft:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Internet:
@@ -935,7 +1034,7 @@ he:
             Conditionals:
               name: תנאים
         coursef-draft:
-          stages:
+          lessons:
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
             For Loop Fun:
@@ -952,16 +1051,16 @@ he:
               name: עידן הקרח Play Lab
         classic-hoc-impact-study:
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
         hoc-impact-study:
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Remixing Phases 1 and 2:
@@ -969,41 +1068,61 @@ he:
             Wrap-Up:
               name: אריזה
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Remixing Phases 1 and 2:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Wrap-Up:
               name: אריזה
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
         sciencepd4:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
               name: אריזה
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
               name: אריזה
         csf2harvey:
-          stages:
+          lessons:
             Binary:
               name: בינארי
         sciencepd5:
-          stages:
+          lessons:
             Welcome!:
               name: ברוכים הבאים!
             Wrap-Up:
               name: אריזה
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
         csppostap-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csd6-draft:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+          lessons:
             Lists:
               name: רשימות
             For Loops:
@@ -1015,25 +1134,37 @@ he:
             Functions with Parameters:
               name: פונקציות ופרמטרים
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
         csd5-draft:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
             Conditionals:
               name: תנאים
         csd6-2017:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+          lessons:
             Lists:
               name: רשימות
             For Loops:
@@ -1049,7 +1180,7 @@ he:
             Functions with Parameters_:
               name: פונקציות ופרמטרים
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
@@ -1057,19 +1188,26 @@ he:
             Functions:
               name: פונקציות
         csd5-2017:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: פונקציות
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: רשימות
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
@@ -1079,19 +1217,23 @@ he:
             'null':
               name: ריק
         coursef-ramp:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         artist-and-bb8:
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
             Bounce:
               name: להקפיץ
         coursea-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
@@ -1106,7 +1248,7 @@ he:
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
         courseb-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
@@ -1114,7 +1256,7 @@ he:
             More Programming in Maze:
               name: עוד תכנות במבוך
         coursec-2017:
-          stages:
+          lessons:
             Programming in Maze:
               name: תכנות במבוך
             Debugging in Maze:
@@ -1126,7 +1268,9 @@ he:
             Binary Bracelets:
               name: 'מעבר לתכנות: צמידים בינארים'
         coursed-2017:
-          stages:
+          title: קורס ד'
+          assignment_family_title: קורס ד'
+          lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
               description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או
@@ -1151,10 +1295,15 @@ he:
                 כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
               name: אמן בינארי
-          title: קורס ד'
-          assignment_family_title: קורס ד'
         coursee-2017:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
               description_teacher: בשלב זה, תלמידים יחלו עם היכרות (או סקירה, תלוי
@@ -1199,7 +1348,12 @@ he:
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
         coursef-2017:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+          lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
             Variables in Play Lab:
@@ -1217,8 +1371,56 @@ he:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
         express-2017:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
             Internet:
@@ -1242,7 +1444,7 @@ he:
             Until Loops in Maze:
               name: לולאות "עד" במבוך
         pre-express-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
@@ -1250,11 +1452,32 @@ he:
             Spelling Bee:
               name: תחרות איות
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: תודה
+        csp3-research-mxghyt:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
         e-f-ramp:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             Sequence and Preview in Maze:
               name: רצף ותצוגה מקדימה במבוך
             Debugging with Scrat:
@@ -1268,7 +1491,8 @@ he:
             Sequence in Maze:
               name: רצף במבוך
         new-d:
-          stages:
+          title: קוד חדש לקורס ד'
+          lessons:
             Introduction:
               name: מבוא
             Conditionals with Cards:
@@ -1281,9 +1505,12 @@ he:
               name: אמן בינארי
             Loops in Ice Age:
               name: לולאות בעידן הקרח
-          title: קוד חדש לקורס ד'
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
         new-express:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
             Conditional Loops in Maze:
@@ -1297,7 +1524,14 @@ he:
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
         new-e:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1309,7 +1543,12 @@ he:
             Internet:
               name: אינטרנט
         new-f:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1327,24 +1566,54 @@ he:
             Songwriting with Parameters:
               name: כתיבת שירים
         csd5-old:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csp3-staging:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
         hero:
-          stages:
+          title: 'מיינקראפט: המסע של הירו'
+          lessons:
             Minecraft Hour of Code:
               name: 'שעת הקוד: גרסת מיינקראפט'
-          title: 'מיינקראפט: המסע של הירו'
         csp-explore-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         csp-create-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
         course-e-2018:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1358,7 +1627,12 @@ he:
             Internet:
               name: אינטרנט
         course-f-2018:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1378,13 +1652,25 @@ he:
             Songwriting with Parameters:
               name: כתיבת שירים
         csd6-old:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+          lessons:
             Lists:
               name: רשימות
             For Loops:
               name: בשביל לולאות
         csd3-1819draft:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
@@ -1392,7 +1678,14 @@ he:
             Functions:
               name: פונקציות
         csd3-2018:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
@@ -1400,7 +1693,14 @@ he:
             Functions:
               name: פונקציות
         csd2-2018:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -1424,7 +1724,7 @@ he:
             Lists:
               name: רשימות
         coursea-2018:
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: מפות שמחות
             Programming in Maze:
@@ -1441,7 +1741,7 @@ he:
             Sequencing in Maze:
               name: יצירת רצפים עם ציפורים כועסות
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction:
@@ -1479,7 +1779,7 @@ he:
             Graph Paper Programming:
               name: תכנות לנייר משבצות
         courseb-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
@@ -1493,7 +1793,7 @@ he:
           assignment_family_title: קורס ד'
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction:
@@ -1525,11 +1825,11 @@ he:
             Nested Loops in Maze:
               name: לולאות מקוננות במבוך
         coursec-2018:
-          stages:
+          lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
-              name: איתור באגים עם ציפורים כועסות
+              name: איתור באגים במבוך
             'Real-life Algorithms: Paper Planes':
               name: מטוסי נייר
             'Loops: Getting Loopy':
@@ -1539,13 +1839,27 @@ he:
             Binary Bracelets:
               name: צמידים בינארים
         csd6-2018:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Arrays and For Loops:
               name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
         coursee-2018:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+          lessons:
             'Programming: My Robotic Friends':
               name: חברי הרובוטיים
             Sequence in Maze:
@@ -1585,7 +1899,12 @@ he:
             Minecraft Hour of Code:
               name: 'שעת הקוד: גרסת מיינקראפט'
         coursef-2018:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+          lessons:
             'Programming: My Robotic Friends':
               name: חברי הרובוטיים
             Sequence in Maze:
@@ -1612,23 +1931,160 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
         csp1-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
             The Internet:
               name: האינטרנט
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            cspSurvey:
+              display_name: סקר
         csd5-2018:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
+        csp2-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+        csp3-2018:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'יחידה 3: מבוא לתכנות'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp4-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
         csp5-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
+        csppostap-2018:
+          lesson_groups:
+            csp_postap_2:
+              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
@@ -1639,37 +2095,60 @@ he:
               name: זוזו, זוזו
             Loops in Ice Age:
               name: לולאות עם סקראט
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: סקירה
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: אמן
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: אמן
         dance:
-          stages:
+          title: מסיבת ריקודים
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
-          title: מסיבת ריקודים
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: אמן
         aquatic:
           title: 'מיינקראפט: מסע ימי'
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
         dance-extras:
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_internet:
+              display_name: אינטרנט
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1685,13 +2164,22 @@ he:
             Internet:
               name: האינטרנט
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
         coursed-2019:
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_binary:
+              display_name: בינארי
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
@@ -1731,7 +2219,12 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         coursee-2019:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_functions:
+              display_name: פונקציות
+          lessons:
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1754,7 +2247,20 @@ he:
             Songwriting:
               name: כתיבת שירים
         express-2019:
-          stages:
+          lesson_groups:
+            csf_warmup:
+              display_name: חימום
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+          lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Relay Programming:
@@ -1777,15 +2283,33 @@ he:
               name: אינטרנט
             Dance Party:
               name: מסיבת ריקודים
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: סקירה
+          lessons:
             'null':
               name: ריק
         dance-extras-gallery:
           title: המשיכו לרקוד
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursec-2019:
-          stages:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
@@ -1796,10 +2320,19 @@ he:
               name: האירוע הגדול
             Binary Bracelets:
               name: צמידים בינארים
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         gamelab:
           title: מעבדת המשחקים
         coursea-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             'Programming: Happy Maps':
               name: מפות שמחות
             Programming in Maze:
@@ -1821,7 +2354,12 @@ he:
             Loops in Ice Age:
               name: לולאות עם סקראט
         courseb-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Move It, Move It:
               name: זוזו, זוזו
             Loops in Ice Age:
@@ -1833,7 +2371,12 @@ he:
             Sequencing in Maze:
               name: יצירת רצפים עם ציפורים כועסות
         pre-express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Move It, Move It:
               name: זוזו, זוזו
             Loops in Ice Age:
@@ -1843,11 +2386,18 @@ he:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
         removed19:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
         csd2-2019:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -1871,57 +2421,271 @@ he:
             Lists:
               name: רשימות
         csd3-2019:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
               name: תנאים
             Functions:
               name: פונקציות
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
         csd5-2019:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
         csd6-2019:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Arrays and For Loops:
               name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            required:
+              display_name: סקירה
         csp1-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
             The Internet:
               name: האינטרנט
+        csp2-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp3-2019:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'יחידה 3: מבוא לתכנות'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp4-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
         csp5-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csppostap-2019:
+          lesson_groups:
+            csp_postap_2:
+              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
+            cspSurvey:
+              display_name: סקר
         csp1-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            required:
+              display_name: סקירה
+          lessons:
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
         time4csdemo:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+          lessons:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             Programming in Maze:
               name: תכנות במבוך
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            required:
+              display_name: סקירה
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd2-pilot:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -1945,7 +2709,14 @@ he:
             Lists:
               name: רשימות
         csd3-pilot:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Variables:
               name: משתנים
             Conditionals:
@@ -1954,23 +2725,87 @@ he:
               name: פונקציות
             Sprite Properties:
               name: מאפייני ספרייט
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
         csl-vn:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Programming in Maze:
               name: תכנות במבוך
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
         peru-2019:
-          stages:
+          lessons:
             Introduction:
               name: מבוא
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
         dance-2019:
-          stages:
+          title: מסיבת ריקודים (2019)
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
-          title: מסיבת ריקודים (2019)
         k5-onlinepd-2019:
-          stages:
+          lesson_groups:
+            k5_next_steps:
+              display_name: השלבים הבאים
+          lessons:
             Computer Science Fundamentals:
               name: יסודות מדעי המחשב
             Next Steps:
@@ -1990,28 +2825,90 @@ he:
         dance-extras-2019:
           title: המשיכו לרקוד (2019)
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: תנאים
         time4cs-control-unit-2:
-          stages:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+          lessons:
             Conditionals with Cards:
               name: התניות עם כרטיסים
         time4cs-experiment-unit-2:
-          stages:
+          lessons:
             Nested Loops in Maze:
               name: לולאות מקוננות במבוך
         time4cs-control-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            ramp_up:
+              display_name: העלה רמה
+          lessons:
             Conditionals:
               name: תנאים
         time4cs-experiment-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            ramp_up:
+              display_name: העלה רמה
+          lessons:
             Conditionals:
               name: תנאים
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
         csd2-2020:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -2032,18 +2929,57 @@ he:
                 מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן
                 שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט
                 שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
         csd5-2020:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
         csd6-2020:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Arrays and For Loops:
               name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
         csd3-2020:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+          lessons:
             Variables:
               name: משתנים
             Sprite Properties:
@@ -2055,7 +2991,12 @@ he:
             Text:
               name: טקסט
         coursea-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             'Programming: Happy Maps':
               name: מפות שמחות
             Loops in Ice Age:
@@ -2070,7 +3011,12 @@ he:
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
         courseb-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Move It, Move It:
               name: זוזו, זוזו
             Sequencing in Maze:
@@ -2080,7 +3026,14 @@ he:
             'Loops: Getting Loopy':
               name: עוברים ללולאות
         coursec-2020:
-          stages:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
@@ -2092,7 +3045,16 @@ he:
         coursed-2020:
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_binary:
+              display_name: בינארי
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
@@ -2130,7 +3092,12 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         coursee-2020:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_functions:
+              display_name: פונקציות
+          lessons:
             Conditionals:
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
                 _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
@@ -2143,7 +3110,14 @@ he:
             'Functions: Songwriting':
               name: כתיבת שירים
         coursef-2020:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+          lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
             For Loop Fun:
@@ -2151,7 +3125,20 @@ he:
             Internet:
               name: האינטרנט
         express-2020:
-          stages:
+          lesson_groups:
+            csf_warmup:
+              display_name: חימום
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+          lessons:
             Dance Party:
               name: מסיבת ריקודים
             Programming in Maze:
@@ -2164,26 +3151,51 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
         pre-express-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+          lessons:
             Programming in Maze:
               name: תכנות במבוך
             Spelling Bee:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
-        csd3-virtual:
-          stages:
-            Variables:
-              name: משתנים
-            Conditionals:
-              name: תנאים
-            Functions:
-              name: פונקציות
-            Sprite Properties:
-              name: מאפייני ספרייט
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Tell a Story in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Loops with Scrat:
+              name: לולאות עם סקראט
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp3-virtual:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'יחידה 3: מבוא לתכנות'
         csd2-virtual:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+          lessons:
             Intro to HTML:
               description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
                 למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
@@ -2205,22 +3217,74 @@ he:
                 שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט
                 שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
         csp5-virtual:
-          stages:
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
             Variables:
               name: משתנים
         virtual-holding-place:
-          stages:
+          lesson_groups:
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+          lessons:
             Functions:
               name: פונקציות
         code-break:
-          stages:
+          lessons:
             Algorithms:
               name: אלגוריתמים
             Events:
               name: אירועים
         csp5-virtual-part2:
-          stages:
+          lessons:
             While Loops:
               name: לולאות "כל עוד"
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: משתנים
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: שיעור

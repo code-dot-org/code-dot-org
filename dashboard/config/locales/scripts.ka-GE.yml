@@ -3,6 +3,7 @@ ka:
   data:
     script:
       category:
+        csf_category_name: CS საფუძვლები
         csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
         csf2_draft_category_name: 'დამუშავების პროცესში: კურსები A - F'
         csp_category_name: "'15-'16 CS საფუძვლები"
@@ -21,7 +22,7 @@ ka:
             რეკოენდებულია K-1 კლასებისთვის.
           description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
           description_audience: ასაკი 4-დან 6-მდე
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'მხატვარი: ციკლები'
             'Artist: Sequence':
@@ -67,7 +68,7 @@ ka:
           description_short: შესავალი კომპიუტერულ მეცნიერებებში მოსწავლეებისთვის,
             რომელთაც უკვე შეუძლიათ კითხვა.
           description_audience: 'ასაკი: 6+ (უნდა შეეძლოს კითხვა)'
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'მხატვარი: შეცდომების გამოსწორება'
             'Artist: Loops':
@@ -117,7 +118,7 @@ ka:
             თამაშების შექმნისა და ინტერაქტიული სწავლების მეშვეობით. ეს არის მე-2 კურსის
             გაგრძელება.
           description_audience: 'ასაკი: 8-18'
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
             'Artist: Functions':
@@ -164,7 +165,7 @@ ka:
           title: თამაშების ლაბი
           description: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიაში!
           description_short: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიაში!
-          stages:
+          lessons:
             Play Lab:
               name: თამაშების ლაბი
         artist:
@@ -172,7 +173,7 @@ ka:
           description: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
           description_short: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან
             ერთად!
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
         hourofcode:
@@ -181,7 +182,7 @@ ka:
             Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ის Scrat-თან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
-          stages:
+          lessons:
             Maze:
               name: ლაბირინთი
         frozen:
@@ -192,7 +193,7 @@ ka:
             გაზიარება შეგეძლებათ!
           description_short: გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის
             აღმოჩენაში.
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
         course4:
@@ -207,7 +208,7 @@ ka:
             როგორიცაა, მაგალითად, ციკლები და ფუნქციები, თავისი პარამეტრებით. ეს არის
             მე-3 კურსის გაგრძელება.
           description_audience: 'ასაკი: 10-18'
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
             Artist Binary:
@@ -258,7 +259,7 @@ ka:
             2 და 3.
           description_short: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ
             კურსები 2 და 3.
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'მხატვარი: ფუნქციები'
             'Artist: Loops':
@@ -278,7 +279,7 @@ ka:
             'Maze: Sequence':
               name: 'ლაბირინთი: თანმიმდევრობა'
         usability:
-          stages:
+          lessons:
             Binary:
               name: ორობითი
             For Loops:
@@ -290,7 +291,7 @@ ka:
             Variables:
               name: ცვლადები
         algebra:
-          stages:
+          lessons:
             'Calc: Defining Variables':
               name: განსაზღვრეთ ცვლადები და ჩამნაცვლებლები
             'Calc: Evaluation Blocks':
@@ -332,11 +333,11 @@ ka:
             Infinity-ს პერსონაჟების მონაწილეობით.
           description_short: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად
             დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
-          stages:
+          lessons:
             Infinity:
               name: უსასრულობა
         algebrademo:
-          stages:
+          lessons:
             Defining Simple Functions:
               name: მარტივი ფუნქციების განსაზღვრა
             Defining Variables:
@@ -348,7 +349,7 @@ ka:
             The Design Recipe:
               name: დიზაინის რეცეპტი
         K5PD:
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: კომპიუტერული მეცნიერების პედაგოგიკა
             Introduction to PD:
@@ -381,7 +382,7 @@ ka:
           description_short: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერების და
             პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4.
           description_audience: 'ასაკი: 10-18'
-          stages:
+          lessons:
             Abstraction:
               name: აბსტრაქცია
             Algorithms:
@@ -426,7 +427,7 @@ ka:
           title: კოდის რედაქტირება
           description: კოდის რედაქტირება
           description_short: კოდის რედაქტირება
-          stages:
+          lessons:
             Applab:
               name: აპლიკაციების ლაბორატორია
             Play Lab:
@@ -439,7 +440,7 @@ ka:
           title: მოვლენები
           description: მოვლენები
           description_short: მოვლენები
-          stages:
+          lessons:
             Bounce:
               name: Bounce
             Calc:
@@ -453,21 +454,21 @@ ka:
           description: გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი
             ტუტორიალი "Flappy კოდი"!
           description_short: დაწერე შენი Flappy თამაში!
-          stages:
+          lessons:
             Flappy Code:
               name: ფლაპი კოდი
         jigsaw:
           title: ფაზლი
           description: სცადე ჩვენი პაზლის ტუტორიალი.
           description_short: სცადე ჩვენი პაზლის ტუტორიალი.
-          stages:
+          lessons:
             Jigsaw:
               name: ფაზლი
         step:
           title: ნაბიჯი
           description: ნაბიჯ–ნაბიჯ ახსნა
           description_short: ნაბიჯ–ნაბიჯ ახსნა
-          stages:
+          lessons:
             Step:
               name: ნაბიჯი
         Hour of Code:
@@ -476,20 +477,20 @@ ka:
             და Plants vs Zombies-ის პერსონაჟებთან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: კოდის ერთი საათი 2013
         CodeStudioPuzzleChallenge:
-          stages:
+          lessons:
             Puzzles:
               name: თავსატეხები
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
+          lessons:
             Puzzles:
               name: თავსატეხები
         cspunit1:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Binary Numbers:
               name: ორობითი რიცხვები
             Bytes and File Sizes:
@@ -513,7 +514,7 @@ ka:
             Sending Numbers:
               name: რიცხვების გაგზავნა
         algebraPD:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: შეფასების ბლოკები
             Introduction to PD:
@@ -523,7 +524,7 @@ ka:
             Why Computer Science belongs in Algebra:
               name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algPDmiami:
-          stages:
+          lessons:
             Booleans:
               name: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
             Evaluation Blocks:
@@ -545,7 +546,7 @@ ka:
             Your Game - Player Movement:
               name: თქვენი თამაში - მოთამაშის მოძრაობა
         CSPPD:
-          stages:
+          lessons:
             Impact of Computer Science:
               name: კომპიუტერული მეცნიერების გავლენა
             Introduction to PD:
@@ -555,13 +556,13 @@ ka:
             What is CSP?:
               name: რა არის CSP?
         CSPLessonSamples:
-          stages:
+          lessons:
             Lesson 14:
               name: გაკვეთილი 14
             Lesson 15:
               name: გაკვეთილი 15
         ECSPD:
-          stages:
+          lessons:
             Impact of Computer Science:
               name: კომპიუტერული მეცნიერების გავლენა
             Introduction to PD:
@@ -571,7 +572,7 @@ ka:
             What is ECS?:
               name: რა არის ECS?
         sciencePD:
-          stages:
+          lessons:
             Introduction to Complex Adaptive Systems:
               name: შესავალი რთულ ადაპტირებად სისტემებში
             Introduction to Computational Science:
@@ -585,16 +586,16 @@ ka:
             What to Expect:
               name: რას უნდა ველოდოთ
         rbo-reference:
-          stages:
+          lessons:
             reference:
               name: მინიშნება
         Test Wednesday:
-          stages:
+          lessons:
             PDK5 Intro:
               name: PDK5 შესავალი
         cspunit3:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Controlling Memory with Variables:
               name: მეხსიერების გაკონტროლება ცვლადებით
             Creating Functions:
@@ -630,7 +631,7 @@ ka:
             While Loops:
               name: '"სანამ" ციკლები'
         algebraPD3:
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: კომპიუტერული მეცნიერების პედაგოგიკა
             Evaluation Blocks:
@@ -646,7 +647,7 @@ ka:
             The Design Recipe:
               name: დიზაინის რეცეპტი
         ECSPD-NexTech:
-          stages:
+          lessons:
             Impact of Computer Science:
               name: კომპიუტერული მეცნიერების გავლენა
             Introduction to PD:
@@ -656,7 +657,7 @@ ka:
             What is ECS?:
               name: რა არის ECS?
         ECSPD-iZone:
-          stages:
+          lessons:
             Impact of Computer Science:
               name: კომპიუტერული მეცნიერების გავლენა
             Introduction to PD:
@@ -666,7 +667,7 @@ ka:
             What is ECS?:
               name: რა არის ECS?
         algebraPD-NexTech:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: შეფასების ბლოკები
             Introduction to PD:
@@ -676,7 +677,7 @@ ka:
             Why Computer Science belongs in Algebra:
               name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algebraPD-iZone:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: შეფასების ბლოკები
             Introduction to PD:
@@ -686,7 +687,7 @@ ka:
             Why Computer Science belongs in Algebra:
               name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         sciencePD-NexTech:
-          stages:
+          lessons:
             Introduction to Complex Adaptive Systems:
               name: შესავალი რთულ ადაპტირებად სისტემებში
             Introduction to Computational Science:
@@ -700,7 +701,7 @@ ka:
             What to Expect:
               name: რას უნდა ველოდოთ
         sciencePD-iZone:
-          stages:
+          lessons:
             Introduction to Complex Adaptive Systems:
               name: შესავალი რთულ ადაპტირებად სისტემებში
             Introduction to Computational Science:
@@ -716,13 +717,13 @@ ka:
         sciencePD2:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Wrap-Up:
               name: შეჯამება
         sciencePD3:
-          stages:
+          lessons:
             Mystery Model:
               name: საიდუმლო მოდელი
             Welcome Back!:
@@ -731,12 +732,12 @@ ka:
           title: გატესტვა
           description: გატესტვა
           description_short: გატესტვა
-          stages:
+          lessons:
             Testing:
               name: გატესტვა
         cspunit2:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Algorithms Detour - Hard Problems TSP:
               name: რთული პრობლემები - მოგზაური ვაჭრის პრობლემა
             Algorithms Detour - How Routers Learn:
@@ -752,7 +753,7 @@ ka:
         algebraPD2a:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Big Game - Animation:
               name: დიდი თამაში – ანიმაცია
             Big Game - Booleans:
@@ -782,7 +783,7 @@ ka:
             The Design Recipe:
               name: დიზაინის რეცეპტი
         allthethings:
-          stages:
+          lessons:
             Anonymous student survey:
               name: მოსწავლეთა ანონიმური გამოკითხვა
             Anonymous student survey 2:
@@ -822,7 +823,7 @@ ka:
         algebraPD2b:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Booleans:
               name: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
             Defining Functions:
@@ -844,7 +845,7 @@ ka:
             Writing Contracts:
               name: კონტრაქტების წერა
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
@@ -852,7 +853,7 @@ ka:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: კომპიუტერული მეცნიერების საფუძვლები
             Getting Started:
@@ -870,7 +871,7 @@ ka:
         ECSPD2:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: სექცია 1, დღე 10 ამბის მოყოლა მონაცემებით
             Unit 1, Day 11-14 Data Modeling and Design:
@@ -892,13 +893,13 @@ ka:
             Wrap-up:
               name: შედეგები
         equityPD:
-          stages:
+          lessons:
             Necessary Background:
               name: საჭირო ფონი
         algebraPD2:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Lesson Prep:
               name: გაკვეთილისთვის მომზადება
             Teacher Dashboard:
@@ -912,7 +913,7 @@ ka:
         sciencePD2b:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Reviewing the Modules:
               name: მოდულების მიმოხილვა
             Welcome!:
@@ -920,13 +921,13 @@ ka:
             Wrap-Up:
               name: შეჯამება
         equity-pd:
-          stages:
+          lessons:
             Necessary Background:
               name: საჭირო ფონი
         science-PD2:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Reviewing the Modules:
               name: მოდულების მიმოხილვა
             Welcome!:
@@ -934,7 +935,7 @@ ka:
             Wrap-Up:
               name: შეჯამება
         Equity-OnlinePD:
-          stages:
+          lessons:
             Getting Started:
               name: დაწყება
             Next Steps:
@@ -942,7 +943,7 @@ ka:
         sciencePD2b-iZone:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Reviewing the Modules:
               name: მოდულების მიმოხილვა
             Welcome!:
@@ -952,7 +953,7 @@ ka:
         ECSPD2-iZone:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: სექცია 1, დღე 10 ამბის მოყოლა მონაცემებით
             Unit 1, Day 11-14 Data Modeling and Design:
@@ -976,7 +977,7 @@ ka:
         ECSPD2-NexTech:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
-          stages:
+          lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: სექცია 1, დღე 10 ამბის მოყოლა მონაცემებით
             Unit 1, Day 11-14 Data Modeling and Design:
@@ -998,7 +999,7 @@ ka:
             Wrap-up:
               name: შედეგები
         CSPPD2:
-          stages:
+          lessons:
             Getting Started:
               name: დაწყება
             Lesson Chunk 1- Sending Binary Messages:
@@ -1012,7 +1013,7 @@ ka:
             Welcome to the Course!:
               name: კეთილი იყოს თქვენი მობრძანება ამ კურსში!
         asUnplugged:
-          stages:
+          lessons:
             Binary Bracelets:
               name: ორობითი სამაჯურები
             Building a Foundation:
@@ -1032,7 +1033,7 @@ ka:
             The Big Event:
               name: დიდი მოვლენა
         algebraPD3a:
-          stages:
+          lessons:
             Lesson Prep:
               name: გაკვეთილისთვის მომზადება
             Updates - The Big Game and Projects:
@@ -1040,15 +1041,15 @@ ka:
             Updates - The Design Recipe:
               name: განახლებები - დიზაინის რეცეპტი
         sciencePD3_pre1:
-          stages:
+          lessons:
             Welcome Back!:
               name: კეთილი იყოს თქვენი დაბრუნება!
         frequency_analysis:
-          stages:
+          lessons:
             Frequency Analysis:
               name: სიხშირის ანალიზი
         ECSPD3-Unit2:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1062,7 +1063,7 @@ ka:
             Unit 2 Challenge:
               name: გაძლიერებული სექცია 2
         ECSPD3-Unit3:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1076,7 +1077,7 @@ ka:
             Unit 3 Day-by-Day:
               name: სექცია 3 დღითი დღე სწავლა
         ECSPD3-Unit4:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1090,7 +1091,7 @@ ka:
             Unit 4 Day-by-Day:
               name: სექცია 4 დღითი დღე სწავლა
         ECSPD3-Unit5:
-          stages:
+          lessons:
             Complete the Challenge:
               name: დაასრულეთ ეს გამოწვევა
             Getting Started:
@@ -1102,7 +1103,7 @@ ka:
             Unit 5 lessons:
               name: სექცია 5 გაკვეთილები
         ECSPD3-Unit6:
-          stages:
+          lessons:
             Alternative Ideas for Unit 6:
               name: ალტერნატიული იდეები მე-6 თავისთვის
             Getting Started:
@@ -1114,7 +1115,7 @@ ka:
             Unit 6 lessons:
               name: სექცია 6 გაკვეთილები
         cspunit4draft:
-          stages:
+          lessons:
             Check Your Assumptions:
               name: შეამოწმეთ თქვენი ვარაუდები
             Cleaning Data:
@@ -1144,7 +1145,7 @@ ka:
             Why Make Apps?:
               name: რატომ უნდა ვაკეთოთ აპლიკაციები?
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Physical Science Challenges:
               name: ფიზიკის გამოწვევები
             Welcome!:
@@ -1152,11 +1153,11 @@ ka:
             Wrap-Up:
               name: შეჯამება
         algebraPD3b:
-          stages:
+          lessons:
             Getting Started:
               name: დაწყება
         CSPPD3-Unit2:
-          stages:
+          lessons:
             Challenge Overview:
               name: გამოწვევათა მიმოხილვა
             Complete the Challenge:
@@ -1166,19 +1167,19 @@ ka:
             Unit 2 Overview:
               name: სექცია 2 მიმოხილვა
         duino:
-          stages:
+          lessons:
             JunkBot:
               name: ნაგვის ბოტი
             Making Music:
               name: მუსიკის შექმნა
         Special Fun:
           description_audience: 'ასაკი: 10-18'
-          stages:
+          lessons:
             Halloween 2015:
               name: ჰელოუინი 2015
         SpecialSeries:
           description_audience: 'ასაკი: 10-18'
-          stages:
+          lessons:
             Spring 2016:
               name: გაზაფხული 2016
             Halloween 2015:
@@ -1189,11 +1190,11 @@ ka:
             ლაბორატორიაში!
           description_short: შექმენით ისტორია ან თამაში გამყინვარების პერიოდის თამაშების
             ლაბორატორიაში!
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: გამყინვარების პერიოდი - თამაშების ლაბორატორია
         CSPPD3-Unit3:
-          stages:
+          lessons:
             Challenge Overview:
               name: გამოწვევათა მიმოხილვა
             Chunk 1 Overview:
@@ -1214,7 +1215,7 @@ ka:
               name: სექცია 3 მიმოხილვა
         cspunit3temp:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Introduction to Arrays:
               name: შესავალი მასივებში
             Loops and Simulations:
@@ -1224,7 +1225,7 @@ ka:
             While Loops:
               name: '"სანამ" ციკლები'
         CSP-Unit3-Support:
-          stages:
+          lessons:
             Chunk 1 Overview:
               name: ფრაგმენტი 1 - მიმოხილვა
             Chunk 2 Overview:
@@ -1241,7 +1242,7 @@ ka:
           title: გამბოლი - თამაშების ლაბორატორია
           description: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
           description_short: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
-          stages:
+          lessons:
             Gumball Play Lab:
               name: გამბოლი - თამაშების ლაბორატორია
         starwars:
@@ -1250,7 +1251,7 @@ ka:
             ომების თამაში.
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი
             ვარსკვლავური ომების თამაში.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: კოდის ერთი საათი 2015
         starwarsblocks:
@@ -1259,7 +1260,7 @@ ka:
             ომების თამაში.
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი
             ვარსკვლავური ომების თამაში.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: კოდის ერთი საათი 2015
         mc:
@@ -1267,17 +1268,17 @@ ka:
           description: გამოიყენეთ კოდის ბლოკები და გაიარეთ Minecraft-ის სამყაროს თავგადასავლები
             სტივთან ან ალექსთან ერთად
           description_short: შეისწავლეთ Minecraft-ის სამყარო კოდით
-          stages:
+          lessons:
             Hour of Code 2015:
               name: კოდის ერთი საათი 2015
         CSPPD3-Unit3-pt2:
-          stages:
+          lessons:
             Challenge Overview:
               name: გამოწვევათა მიმოხილვა
             Complete the Challenge:
               name: დაასრულეთ ეს გამოწვევა
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Wrap-Up:
@@ -1286,7 +1287,7 @@ ka:
           description_short: პროგრამირება
         cspunit4:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Check Your Assumptions:
               name: შეამოწმეთ თქვენი ვარაუდები
             Cleaning Data:
@@ -1304,7 +1305,7 @@ ka:
             What is Big Data?:
               name: რა არის დიდი მონაცემები?
         CSPPD3-Unit4:
-          stages:
+          lessons:
             Challenge Overview:
               name: გამოწვევათა მიმოხილვა
             Chapter 1 Overview:
@@ -1318,7 +1319,7 @@ ka:
             Unit 4 Overview:
               name: სექცია 4 მიმოხილვა
         cspunit6draft:
-          stages:
+          lessons:
             Creating Javascript Objects:
               name: ჯავასკრიპტ ობიექტების შექმნა
             Deleting Records:
@@ -1336,7 +1337,7 @@ ka:
             Visualizing Data:
               name: მონაცემთა ვიზუალიზაცია
         CSPPD3-Unit5:
-          stages:
+          lessons:
             Challenge Overview:
               name: გამოწვევათა მიმოხილვა
             Complete the Challenge:
@@ -1348,7 +1349,7 @@ ka:
         cspunit6:
           description_short: ისწავლეთ მონაცემთა შეგროვება და მათი გამოყენება აპლიკაციების
             ლაბორატორიაში.
-          stages:
+          lessons:
             Creating Javascript Objects:
               name: ჯავასკრიპტ ობიექტების შექმნა
             Deleting Records:
@@ -1368,7 +1369,7 @@ ka:
         AlgebraA:
           description: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_short: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
-          stages:
+          lessons:
             'Calc: Defining Variables':
               name: 'კალკულატორი: ცვლადების განსაზღვრა'
             'Calc: Evaluation Blocks':
@@ -1386,7 +1387,7 @@ ka:
         AlgebraB:
           description: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_short: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: 'შეფასება: ბულის ტიპის (ლოგიკური) ოპერატორები'
             'Eval: Conditionals':
@@ -1413,7 +1414,7 @@ ka:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'გაკვეთილი კომპიუტერის გარეშე: ვიდეოთამაშები და საკოორდინატო სიბრტყეები'
         algebraPD1:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: შეფასების ბლოკები
             Introduction to PD:
@@ -1423,13 +1424,20 @@ ka:
             Why Computer Science belongs in Algebra:
               name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algebraPD3c:
-          stages:
+          lessons:
             Getting Started:
               name: დაწყება
             Sharing Student Work:
               name: მოსწავლის ნამუშევრის გაზიარება
         csp1-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp1_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა და გადაცემა'
+            csp1_2:
+              display_name: 'თავი 2: ინტერნეტის გამოგონება'
+          lessons:
             Binary Numbers:
               name: ორობითი რიცხვები
             CS Principles Pre-survey:
@@ -1449,7 +1457,14 @@ ka:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         csp2-2017:
-          stages:
+          lesson_groups:
+            csp2_1:
+              display_name: 'თავი 1: რთული ინფრომაციის კოდირება და შეკუმშვა'
+            csp2_2:
+              display_name: 'თავი 2: მონაცემების მანიპულაცია და ვიზუალიზაცია'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Bytes and File Sizes:
               name: ბაიტები და ფაილის ზომები
             Check Your Assumptions:
@@ -1472,7 +1487,14 @@ ka:
               name: კურსის შემდგომი გამოკითხვა
         csp3-2017:
           description_short: პროგრამირება
-          stages:
+          lesson_groups:
+            csp3_1:
+              display_name: 'თავი 1: პროგრამირების ენები და ალგორითმები'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Creating Functions:
               name: ფუნქციების შექმნა
             Creativity in Algorithms:
@@ -1488,7 +1510,14 @@ ka:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         csp4-2017:
-          stages:
+          lesson_groups:
+            csp4_1:
+              display_name: 'თავი 1: დიდი მონაცემებისა და დაშიფვრის სამყარო'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Cracking the Code:
               name: კოდის გატეხვა
             Simple Encryption:
@@ -1500,7 +1529,14 @@ ka:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         csp5-2017:
-          stages:
+          lesson_groups:
+            csp5_1:
+              display_name: 'თავი 1: მოვლენებზე დაფუძნებული პროგრამირება'
+            csp5_2:
+              display_name: 'თავი 2: მონაცემთა სტრუქტურებით პროგრამირება'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Controlling Memory with Variables:
               name: მეხსიერების გაკონტროლება ცვლადებით
             Digital Assistant Project:
@@ -1549,7 +1585,7 @@ ka:
               name: კურსის შემდგომი გამოკითხვა
         CSDU3-Draft:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Collision Detection:
               name: შეჯახების აღმოჩენა
             Collisions:
@@ -1587,7 +1623,7 @@ ka:
             Using the Game Design Process:
               name: თამაშის დიზაინის პროცესის გამოყენება
         2016_sciencePD_phase1:
-          stages:
+          lessons:
             Introduction to Complex Adaptive Systems:
               name: შესავალი რთულ ადაპტირებად სისტემებში
             Introduction to Computational Science:
@@ -1602,16 +1638,16 @@ ka:
               name: რას უნდა ველოდოთ
         TEMP CSD Unit 3:
           description_short: პროგრამირება
-          stages:
+          lessons:
             Drawing in Game Lab:
               name: ხატვა თამაშების ლაბორატორიაში
         CSF_Secret_Sample:
           description_audience: 'ასაკი: 8-18'
-          stages:
+          lessons:
             Sample Stage:
               name: სატესტო დონე
         ECSPD1:
-          stages:
+          lessons:
             Background and Context:
               name: ფონი და კონტექსტი
             Welcome to Phase 1!:
@@ -1619,7 +1655,7 @@ ka:
             Wrap Up:
               name: შეჯამება
         algebraFacilitator:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: შეფასების ბლოკები
             Introduction to PD:
@@ -1629,7 +1665,7 @@ ka:
             Why Computer Science belongs in Algebra:
               name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         sciencePD1:
-          stages:
+          lessons:
             Introduction to Complex Adaptive Systems:
               name: შესავალი რთულ ადაპტირებად სისტემებში
             Introduction to Computational Science:
@@ -1643,13 +1679,20 @@ ka:
             What to Expect:
               name: რას უნდა ველოდოთ
         cspoptional:
-          stages:
+          lessons:
             Unit 1 - Encoding Numbers in the Real World:
               name: თავი 1 - რიცხვების კოდირება რეალურ ცხოვრებაში
             Unit 1 - Sending Bits in the Real World:
               name: თავი 1 - ბიტების გაგზავნა რეალურ ცხოვრებაში
         cspunit1-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Chapter Overviews:
               name: თავის მიმოხილვა
             Encoding and Sending Numbers:
@@ -1658,22 +1701,30 @@ ka:
               name: შესავალი სექციაში
             Sending Binary Messages:
               name: ორობითი წერილების გაგზავნა
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: თამაშების ლაბი
         cspunit1-support-test:
-          stages:
+          lessons:
             Unit 1 Overview:
               name: სექცია 1 - მიმოხილვა
         csp-facilitators:
-          stages:
+          lessons:
             Introduction to Events:
               name: მოვლენები - შესავალი
             Introduction to Text Compression:
               name: შესავალი ტექსტის შეკუმშვაში
         CSDU4-Draft:
-          stages:
+          lessons:
             Design Mode:
               name: დიზაინის რეჟიმი
             Analysis of Design:
@@ -1689,13 +1740,13 @@ ka:
             App Presentation:
               name: აპლიკაციის პრეზენტაცია
         CSDU1-Draft:
-          stages:
+          lessons:
             Exploring Apps:
               name: აპლიკაციების გამოკვლევა
             Processing Information:
               name: ინფორმაციის დამუშავება
         CSDU2-Draft:
-          stages:
+          lessons:
             Describing Webpages:
               name: ვებ-გვერდების აღწერა
             Digital Footprint:
@@ -1727,11 +1778,11 @@ ka:
             Describing Web Pages:
               name: ვებ-გვერდების აღწერა
         CSF_Secret_Sample_Story:
-          stages:
+          lessons:
             Sample Stage:
               name: სატესტო დონე
         MikeTest:
-          stages:
+          lessons:
             Artist Functions:
               name: მხატვრის ფუნქციები
             Sample Stage:
@@ -1741,7 +1792,14 @@ ka:
         artistExemplar:
           description_audience: 'ასაკი: 8-18'
         teachercon:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Introduction to Teachercon:
               name: შესავალი Teachercon-ში
             Lesson 1,6:
@@ -1751,13 +1809,13 @@ ka:
             Lesson 2,3:
               name: 'გაკვეთილი 2.3: შავთეთრი პიქსელაცია'
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'ფუტკარი: პირობითი ბრძანებები'
             Kindergarten Stage 1:
               name: საბავშვო ბაღის დონე 1
         gradeKinder:
-          stages:
+          lessons:
             Debugging:
               name: გამართვა
             Events:
@@ -1775,7 +1833,7 @@ ka:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
         grade4:
-          stages:
+          lessons:
             'Bee: Determine the Concept':
               name: 'ფუტკარი: გაარკვიეთ კონცეფცია'
             'Bee: Functions (Course 3)':
@@ -1795,7 +1853,7 @@ ka:
             Songwriting:
               name: სიმღერის დაწერა
         grade1:
-          stages:
+          lessons:
             Debugging:
               name: გამართვა
             Events:
@@ -1813,7 +1871,7 @@ ka:
             Unspotted Bugs:
               name: შეუჩმნეველი შეცდომები
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'მხატვარი: "მიზნისთვის" ციკლები'
             'Artist: Functions with Parameters':
@@ -1839,7 +1897,7 @@ ka:
             'Unplugged: Songwriting with Parameters':
               name: 'გაკვეთილი კომპიუტერის გარეშე: სიმღერის წერა პარამეტრებით'
         ecs-unit1:
-          stages:
+          lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: სექცია 1, დღე 10 ამბის მოყოლა მონაცემებით
             Unit 1, Day 11-14 Data Modeling and Design:
@@ -1861,7 +1919,7 @@ ka:
             Wrap-up:
               name: შედეგები
         ecs-unit2:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1875,7 +1933,7 @@ ka:
             Unit 2 Challenge:
               name: გაძლიერებული სექცია 2
         ecs-unit3:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1889,7 +1947,7 @@ ka:
             Unit 3 Day-by-Day:
               name: სექცია 3 დღითი დღე სწავლა
         ecs-unit4:
-          stages:
+          lessons:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
             Getting Started:
@@ -1903,7 +1961,7 @@ ka:
             Unit 4 Day-by-Day:
               name: სექცია 4 დღითი დღე სწავლა
         ecs-unit5:
-          stages:
+          lessons:
             Complete the Challenge:
               name: დაასრულეთ ეს გამოწვევა
             Getting Started:
@@ -1919,7 +1977,7 @@ ka:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
         ecs-unit6:
-          stages:
+          lessons:
             Alternative Ideas for Unit 6:
               name: ალტერნატიული იდეები მე-6 თავისთვის
             Getting Started:
@@ -1933,7 +1991,7 @@ ka:
             Close & Next Steps:
               name: დახურვა და შემდეგი საფეხურები
         grade3:
-          stages:
+          lessons:
             " Bee: Conditionals":
               name: " ფუტკარი: პირობითი ბრძანებები"
             'Artist: Nested Loops':
@@ -1953,7 +2011,14 @@ ka:
             Robot Running the Farm:
               name: ფერმერი რობოტი
         alltheplcthings:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Introduction to Teachercon:
               name: შესავალი Teachercon-ში
             Lesson 1,10:
@@ -1977,7 +2042,16 @@ ka:
         csd3-2017:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
             და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
+          lessons:
             Complex Conditionals:
               name: რთული პირობითი ბრძანებები
             Draw Loop and Randomization:
@@ -2052,7 +2126,7 @@ ka:
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy
             New Home for My Pet:
@@ -2072,7 +2146,7 @@ ka:
             The Big Event:
               name: დიდი მოვლენა
         transferring-over:
-          stages:
+          lessons:
             20-hr Stage 2:
               name: 20–სთ დონე 2
             20-hr Stage 9:
@@ -2084,7 +2158,7 @@ ka:
             Course 3 Stage 17:
               name: კურსი 3 დონე 17
         k5concepts:
-          stages:
+          lessons:
             Binary:
               name: ორობითი
             Conditionals:
@@ -2106,7 +2180,7 @@ ka:
             While Loops:
               name: '"სანამ" ციკლები'
         algebrapdnext:
-          stages:
+          lessons:
             Lesson Prep:
               name: გაკვეთილისთვის მომზადება
             Teacher Dashboard:
@@ -2118,13 +2192,20 @@ ka:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
         csp-pre-survey:
-          stages:
+          lessons:
             Anonymous student pre-survey:
               name: მოსწავლეთა ანონიმური წინარეგამოკითხვა
         csd1-2017:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -2159,7 +2240,14 @@ ka:
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
         csp-online-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 1 Overview:
               name: სექცია 1 - მიმოხილვა
             'Lessons 2-3: Binary Messages':
@@ -2220,7 +2308,14 @@ ka:
             Unit 5 Overview:
               name: სექცია 5 მიმოხილვა
         csp1-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 1 Overview:
               name: სექცია 1 - მიმოხილვა
             'Lessons 2 - 3: Binary Messages':
@@ -2235,35 +2330,27 @@ ka:
           title: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
           description_short: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
           description: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
-          stages:
+          lessons:
             Bounce:
               name: Bounce
         sample-csp5:
-          stages:
+          lessons:
             Controlling Memory with Variables:
               name: მეხსიერების გაკონტროლება ცვლადებით
         hoc-encryption:
-          stages:
+          lessons:
             Simple Encryption:
               name: მარტივი შიფრირება
-        fesbinary:
-          title: ორობითი
-          stages:
-            Binary Bracelets:
-              name: ორობითი სამაჯურები
-            Binary Images:
-              name: ორობითი სურათები
-            Binary Artist Puzzles:
-              name: ორობითი მხატვრის თავსატეხები
-            RGB Color:
-              name: RGB ფერი
-            Processing with Bits:
-              name: დამუშავება ბიტებით
-            Play Lab:
-              name: თამაშების ლაბი
         csd2-2017:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
+          lessons:
             new stage:
               name: ახალი დონე
             Quality Websites:
@@ -2352,7 +2439,14 @@ ka:
             Headings:
               name: სათაურები
         csp2-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 2 Overview:
               name: სექცია 2 მიმოხილვა
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
@@ -2367,7 +2461,14 @@ ka:
             'Lessons 11 - 15: Communicating with Visualizations':
               name: 'გაკვეთილები 11 - 15: კომუნიკაცია ვიზუალიზაციებთან'
         csd4-2017:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -2396,11 +2497,11 @@ ka:
             საკუთარ სამყაროში.
           description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ
             სამყაროში.
-          stages:
+          lessons:
             Minecraft Hour of Code Designer:
               name: 'Minecraft-ის კოდის ერთი საათი: დიზაინერი'
         flappy-impact-study:
-          stages:
+          lessons:
             Pre Hour of Code Survey:
               name: კოდირების საათის წინარეგამოკითხვა
             Flappy Code:
@@ -2410,7 +2511,7 @@ ka:
         coursea-draft:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ეს-ესაა
             დაიწყო კითხვა.
-          stages:
+          lessons:
             'Debugging: Bugs in Codeville':
               name: 'გამართვა: ხოჭოები კოდვილში'
             'Real-life Algorithms: Plant a Seed':
@@ -2434,7 +2535,7 @@ ka:
         courseb-draft:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ეს-ესაა
             დაიწყო კითხვა.
-          stages:
+          lessons:
             Sequence & Algorithms:
               name: მიმდევრობა და ალგორითმები
             'Programming: My Robotic Friends':
@@ -2456,7 +2557,7 @@ ka:
             Your Digital Footprint:
               name: თქვენი ციფრული ნაკვალევი
         coursec-draft:
-          stages:
+          lessons:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             'Real-life Algorithms: Paper Planes':
@@ -2486,7 +2587,7 @@ ka:
             Debugging in Maze:
               name: გამართვა ლაბირინთში
         coursed-draft:
-          stages:
+          lessons:
             Events in Bounce:
               name: მოვლენები მხტუნავში
             Nested Loops in Maze:
@@ -2528,7 +2629,12 @@ ka:
             Debugging in Collector:
               name: გამართვა შემგროვებელში
         coursee-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             Digital Citizenship:
               name: ციფრული მოქალაქეობა
             Build a Star Wars Game:
@@ -2566,7 +2672,10 @@ ka:
             'Algorithms: Dice Race':
               name: 'ალგორითმები: კამათლის შეჯიბრი'
         coursef-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+          lessons:
             Digital Citizenship:
               name: ციფრული მოქალაქეობა
             Envelope Variables:
@@ -2612,7 +2721,7 @@ ka:
         classic-hoc-impact-study:
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
-          stages:
+          lessons:
             Pre Hour of Code Survey:
               name: კოდირების საათის წინარეგამოკითხვა
             Hour of Code 2013:
@@ -2622,7 +2731,7 @@ ka:
         hoc-impact-study:
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
-          stages:
+          lessons:
             Pre Hour of Code Survey:
               name: კოდირების საათის წინარეგამოკითხვა
             Hour of Code 2013:
@@ -2633,11 +2742,11 @@ ka:
           title: შექმენით საკუთარი სპორტული თამაში
           description_short: შეაერთეთ სხვადასხვა სპორტული თამაშები
           description: შეაერთეთ სხვადასხვა სპორტული თამაშები
-          stages:
+          lessons:
             Sports:
               name: სპორტი
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Reviewing the Modules:
@@ -2645,7 +2754,7 @@ ka:
             Wrap-Up:
               name: შეჯამება
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Reviewing the Modules:
@@ -2653,11 +2762,18 @@ ka:
             Wrap-Up:
               name: შეჯამება
         sciencepd3-2016:
-          stages:
+          lessons:
             Welcome Back!:
               name: კეთილი იყოს თქვენი დაბრუნება!
         csp3-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 3 Overview:
               name: სექცია 3 მიმოხილვა
             'Lessons 1 - 3: Algorithms':
@@ -2668,13 +2784,20 @@ ka:
               name: 'გაკვეთილები 7 - 9: დოკუმენტაცია, მარტივი ციკლები და შემთხვევითი
                 რიცხვები'
         csdgraveyard:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Introduction to Styling with CSS (2.7):
               name: შესავალი CSS-ით სტილის მორგებაში (2.7)
         csp4-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 3 Overview:
               name: სექცია 3 მიმოხილვა
             'Lessons 1 - 2: Data in the Real World':
@@ -2686,13 +2809,13 @@ ka:
             Unit 4 Overview:
               name: სექცია 4 მიმოხილვა
         sciencepd4:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Wrap-Up:
               name: შეჯამება
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Physical Science Challenges:
@@ -2700,7 +2823,10 @@ ka:
             Wrap-Up:
               name: შეჯამება
         csf2harvey:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+          lessons:
             'Functions: Songwriting':
               name: 'ფუნქციები: სიმღერების დაწერა'
             Functions in Artist:
@@ -2714,7 +2840,7 @@ ka:
             Snowflakes:
               name: ფიფქები
         sciencepd5:
-          stages:
+          lessons:
             Welcome!:
               name: კეთილი იყოს თქვენი მობრძანება!
             Physical Science Challenges:
@@ -2722,7 +2848,14 @@ ka:
             Wrap-Up:
               name: შეჯამება
         csp5-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+            practice:
+              display_name: სწავლება
+          lessons:
             Unit 5 Overview:
               name: სექცია 5 მიმოხილვა
             Event Driven Programming:
@@ -2738,7 +2871,12 @@ ka:
         csppostap-2017:
           description_short: ისწავლეთ მონაცემთა შეგროვება და მათი გამოყენება აპლიკაციების
             ლაბორატორიაში.
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Creating Javascript Objects:
               name: ჯავასკრიპტ ობიექტების შექმნა
             Reading Records:
@@ -2758,11 +2896,16 @@ ka:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         gamelab-demo:
-          stages:
+          lessons:
             Simple Sprite Movement:
               name: სპრაიტების მარტივი მოძრაობა
         csd6-draft:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          lessons:
             Foo:
               name: Foo
             Lists:
@@ -2792,7 +2935,7 @@ ka:
             Functions with Parameters:
               name: ფუნქციები პარამეტრებით
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: შესავალი
             Sprites:
@@ -2802,7 +2945,12 @@ ka:
             'Project: Interactive Card':
               name: 'პროექტი: ინტერაქტიული ბარათი'
         csd5-draft:
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          lessons:
             new stage:
               name: ახალი დონე
             Interpreting Data:
@@ -2832,7 +2980,7 @@ ka:
         applab-1hour:
           title: აპლიკაციების ლაბორატორია 1-საათიანი სახელოსნო
           description_audience: საშუალო და დამამთავრებელი კლასების მოსწავლეები
-          stages:
+          lessons:
             App Lab Workshop:
               name: აპლიკაციების ლაბორატორიის სახელოსნო
             Digital Design:
@@ -2850,7 +2998,7 @@ ka:
         applab-2hour:
           title: აპლიკაციების ლაბორატორია 2-საათიანი სახელოსნო
           description_audience: საშუალო და დამამთავრებელი კლასების მოსწავლეები
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Digital Design:
@@ -2862,18 +3010,18 @@ ka:
             Event Types:
               name: ღონისძიების ტიპები
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: შესავალი
         workshop-maker:
           title: შემქმნელის ინსტრუმენტების პანელის სამუშაო სივრცე
-          stages:
+          lessons:
             App Lab Basics:
               name: აპლიკაციების ლაბორატორიის საფუძვლები
             Physical Input:
               name: ფიზიკურად შეყვანილი ინფორმაცია
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: შესავალი
             Conditionals:
@@ -2882,7 +3030,14 @@ ka:
               name: 'ცხოვრებისეული ალგორითმები: კამათლების შეჯიბრი'
         csd6-2017:
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
+          lessons:
             Event Types:
               name: ღონისძიების ტიპები
             Lists:
@@ -2909,7 +3064,7 @@ ka:
               name: ფუნქციები პარამეტრებით
         csd3-draft:
           description_short: ანიმაციები და თამაშები
-          stages:
+          lessons:
             Shapes and Randomness:
               name: ფიგურები და შემთხვევითობა
             Drawing in Game Lab:
@@ -2954,7 +3109,14 @@ ka:
           title: 'CSD თავი 5: მონაცემები და საზოგადოება'
           description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
             დაკავშირებული პრობლემების გადასაჭრელად.
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
+          lessons:
             Representing Numbers Part 1:
               name: რიცხვების წარმოდგენა ნაწილი 1
             Representing Numbers Part 2:
@@ -2978,7 +3140,7 @@ ka:
             Encryption:
               name: დაშიფრვა
         csd3-old:
-          stages:
+          lessons:
             Drawing in Game Lab:
               name: ხატვა თამაშების ლაბორატორიაში
             Draw Loop and Randomization:
@@ -3011,7 +3173,7 @@ ka:
               name: 'პროექტი: შექმენით თამაშის დიზაინი'
         csd1-old:
           title: CSD თავი 1 (შემოკლებული)
-          stages:
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -3029,7 +3191,7 @@ ka:
             'Project: Apps and Problem Solving':
               name: 'პროექტი: აპლიკაციები და პრობლემების გადაჭრა'
         csd2-draft:
-          stages:
+          lessons:
             Text on the Web:
               name: ტექსტი ვებში
             Digital Footprint:
@@ -3065,7 +3227,7 @@ ka:
             Lists:
               name: სიები
         csd1-draft:
-          stages:
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -3085,7 +3247,7 @@ ka:
             Input and Output:
               name: შეყვანილი და მიღებული ინფორმაცია
         csd3-chapters:
-          stages:
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -3127,7 +3289,7 @@ ka:
             'null':
               name: ნული
         coursef-ramp:
-          stages:
+          lessons:
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
             Introduction:
@@ -3139,11 +3301,15 @@ ka:
             Conditionals and Functions in Bee:
               name: პირობითი ოპერატორები და ფუნქციები ფუტკარში
         fmscsd3preview:
-          stages:
+          lessons:
             Drawing in Game Lab:
               name: ხატვა თამაშების ლაბორატორიაში
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
         csd2-old:
-          stages:
+          lessons:
             Quality Websites:
               name: ხარისხიანი ვებ-საიტები
             Website Design:
@@ -3169,7 +3335,7 @@ ka:
             'Project: Personal Portfolio Website':
               name: 'პროექტი: პირადი პორტფოლიოს ვებ-საიტი'
         artist-and-bb8:
-          stages:
+          lessons:
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
@@ -3185,7 +3351,15 @@ ka:
             Bounce:
               name: Bounce
         coursea-2017:
-          stages:
+          title: კურსი A
+          assignment_family_title: კურსი A
+          description_audience: 'ასაკი: 4-7'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
+            არ იცის.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
             Learn to Drag and Drop:
@@ -3219,16 +3393,16 @@ ka:
                 შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ
                 კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ
                 კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
-          title: კურსი A
-          assignment_family_title: კურსი A
-          description_audience: 'ასაკი: 4-7'
-          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
-            არ იცის.
+        courseb-2017:
+          title: კურსი B
+          assignment_family_title: კურსი B
+          description_audience: 'ასაკი: 5-8'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
+            (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
-        courseb-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
             Your Digital Footprint:
@@ -3249,16 +3423,16 @@ ka:
               name: მოვლენები სათამაშო ლაბორატორიაში
             Programming with Rey and BB-8:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
-          title: კურსი B
-          assignment_family_title: კურსი B
-          description_audience: 'ასაკი: 5-8'
-          description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
-            (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
-            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
-            გაზიარებასაც შეძლებთ.
         coursec-2017:
-          stages:
+          title: კურსი C
+          assignment_family_title: კურსი C
+          description_audience: 'ასაკი: 6-10'
+          description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით.
+            გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის
+            სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+            კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
+            შეძლებთ!
+          lessons:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
@@ -3281,16 +3455,10 @@ ka:
               name: ციკლები მხატვარში
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
-          title: კურსი C
-          assignment_family_title: კურსი C
-          description_audience: 'ასაკი: 6-10'
-          description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით.
-            გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის
-            სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
-            კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
-            შეძლებთ!
         coursed-2017:
-          stages:
+          title: კურსი D
+          assignment_family_title: კურსი D
+          lessons:
             Introduction:
               name: შესავალი ონლაინ თავსატეხებში
             Events in Bounce:
@@ -3313,10 +3481,18 @@ ka:
               name: შექმენით სათამაშო ლაბორატორიის თამაში
             Debugging in Collector:
               name: გამართვა შემგროვებელში
-          title: კურსი D
-          assignment_family_title: კურსი D
         coursee-2017:
-          stages:
+          title: კურსი E
+          assignment_family_title: კურსი E
+          description_audience: 'ასაკი: 8-12'
+          lesson_groups:
+            csf_e_1:
+              display_name: მიდი კურს E-მდე (არჩევითი)
+            csf_e_2:
+              display_name: E კურსის შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
             Introduction:
@@ -3413,11 +3589,16 @@ ka:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
             Nested Loops:
               name: ჩასმული ციკლები
-          title: კურსი E
-          assignment_family_title: კურსი E
-          description_audience: 'ასაკი: 8-12'
         coursef-2017:
-          stages:
+          title: კურსი F
+          assignment_family_title: კურსი F
+          description_audience: 'ასაკი: 9-13'
+          lesson_groups:
+            csf_f_1:
+              display_name: მიდი კურს F-მდე (არჩევითი)
+            csf_f_2:
+              display_name: F კურსის შიგთავსი
+          lessons:
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
               description_student: აქ თქვენ შეისწავლით ალგორითმებს თავსატეხების საშუალებით.
@@ -3491,11 +3672,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
-          title: კურსი F
-          assignment_family_title: კურსი F
-          description_audience: 'ასაკი: 9-13'
         csdnovice:
-          stages:
+          lessons:
             Tuesday:
               name: სამშაბათი
             Wednesday:
@@ -3508,8 +3686,21 @@ ka:
               name: გილოცავთ
             Wrap Up:
               name: შეჯამება
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'თავი 1: AP ტექნოლოგიების დაყენება'
+            csp_ap_3:
+              display_name: 'თავი 2: AP წარმადობის დავალების შექმნა'
+            csp_ap_2:
+              display_name: 'თავი 2: AP წარმადობის დავალების გამოკვლევა'
         cspnovice:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Welcome:
               name: კეთილი იყოს თქვენი მობრძანება
             Tuesday:
@@ -3521,7 +3712,9 @@ ka:
             Wrap Up:
               name: შეჯამება
         novice-view:
-          stages:
+          title: ახალბედების გამოხმარეუბების ნახვა
+          description_audience: ბრუკი, დანი, მალი
+          lessons:
             CSP Tuesday:
               name: CSP სამშაბათი
             CSP Wednesday:
@@ -3534,12 +3727,86 @@ ka:
               name: CSD ოთხშაბათი
             CSD Thursday:
               name: CSD ხუთშაბათი
-          title: ახალბედების გამოხმარეუბების ნახვა
-          description_audience: ბრუკი, დანი, მალი
         csp1-dlp:
           title: CSP თავი 1 გაღრმავებული სწავლა
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
         express-2017:
-          stages:
+          title: დაჩქარებული კურსი
+          assignment_family_title: დაჩქარებული კურსი
+          description_audience: 'ასაკი: 9-18'
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
+            სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+          lessons:
             Introduction:
               name: შესავალი
             'Loops: My Loopy Robotic Friends':
@@ -3618,16 +3885,12 @@ ka:
               name: ჩასმული ციკლები
             Conditionals & Loops in Harvester:
               name: პირობითი წინადადებები და ციკლები ფერმერში
-          title: დაჩქარებული კურსი
-          assignment_family_title: დაჩქარებული კურსი
-          description_audience: 'ასაკი: 9-18'
-          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
-            სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+        pre-express-2017:
+          description_audience: 'ასაკი: 4-8'
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
-        pre-express-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
             'Online Safety: Your Digital Footprint':
@@ -3650,22 +3913,26 @@ ka:
               name: მოვლენები სათამაშო ლაბორატორიაში
             Spelling Bee:
               name: შეჯიბრი დამარცვლაში
-          description_audience: 'ასაკი: 4-8'
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
-            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
-            გაზიარებასაც შეძლებთ.
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             other:
               name: სხვა
             Thanks:
               name: მადლობა
         csp-pre-survey-test-2017:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp3-research-mxghyt:
-          stages:
+          description_short: პროგრამირება
+          lesson_groups:
+            csp3_1:
+              display_name: 'თავი 1: პროგრამირების ენები და ალგორითმები'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             new stage:
               name: ახალი დონე
             The Need For Programming Languages:
@@ -3680,9 +3947,13 @@ ka:
               name: ფუნქციების შექმნა
             Looping and Random Numbers:
               name: ციკლები და შემთხვევითი რიცხვები
-          description_short: პროგრამირება
         csd4-draft:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -3706,7 +3977,12 @@ ka:
             Linking Screens:
               name: ეკრანების დაკავშირება
         applab-intro:
-          stages:
+          title: შესავალი აპლიკაციების ლაბორატორიაში
+          description_short: ეს გაკვეთილები გაგაცნობენ აპლიკაციების ლაბორატორიას კრეატიული
+            პროექტების მიმდევრობების საშუალებით.
+          description: ეს გაკვეთილები გაგაცნობენ აპლიკაციების ლაბორატორიას კრეატიული
+            პროექტების მიმდევრობების საშუალებით.
+          lessons:
             Intro to AppLab - Choose Your Own Adventure:
               name: შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
                 თავგადასავალი
@@ -3717,13 +3993,15 @@ ka:
               name: შესავალი აპლიკაციების ლაბორატორიაში - თქვენი პირველი აპლიკაცია
             Intro to App Lab:
               name: შესავალი აპლიკაციების ლაბორატორიაში
-          title: შესავალი აპლიკაციების ლაბორატორიაში
-          description_short: ეს გაკვეთილები გაგაცნობენ აპლიკაციების ლაბორატორიას კრეატიული
-            პროექტების მიმდევრობების საშუალებით.
-          description: ეს გაკვეთილები გაგაცნობენ აპლიკაციების ლაბორატორიას კრეატიული
-            პროექტების მიმდევრობების საშუალებით.
         e-f-ramp:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: მიდი კურს E-მდე (არჩევითი)
+            csf_e_2:
+              display_name: E კურსის შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -3773,7 +4051,7 @@ ka:
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
         new-d:
-          stages:
+          lessons:
             Introduction:
               name: შესავალი
             Events in Bounce:
@@ -3813,11 +4091,17 @@ ka:
             Loops in Ice Age:
               name: ციკლები გამყინვარების პერიოდში
         csp3-a:
-          stages:
+          lesson_groups:
+            csp3_1:
+              display_name: 'თავი 1: პროგრამირების ენები და ალგორითმები'
+          lessons:
             new stage:
               name: ახალი დონე
         new-express:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+          lessons:
             Introduction:
               name: შესავალი
             Debugging in Collector:
@@ -3881,14 +4165,21 @@ ka:
             Nested Loops:
               name: ჩასმული ციკლები
         new-stages-sept-2017:
-          stages:
+          title: ახალი დონეები 9/17-სთვის
+          lessons:
             Loops in Artist:
               name: ციკლები მხატვარში
             Sequences with Scrat:
               name: მიმდევრობები სკრეტთან ერთად
-          title: ახალი დონეები 9/17-სთვის
         new-e:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: მიდი კურს E-მდე (არჩევითი)
+            csf_e_2:
+              display_name: E კურსის შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -3934,7 +4225,12 @@ ka:
             Crowdsourcing:
               name: ქრაუდსორსინგი
         new-f:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: მიდი კურს F-მდე (არჩევითი)
+            csf_f_2:
+              display_name: F კურსის შიგთავსი
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -3988,7 +4284,15 @@ ka:
             Present Your Project:
               name: წარმოადგინეთ თქვენი პროექტი
         csd5-old:
-          stages:
+          title: 'CSD თავი 5: მონაცემები და საზოგადოება'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          lessons:
             Representing Numbers:
               name: რიცხვების წარმოდგენა
             8-bit Numbers:
@@ -4005,15 +4309,17 @@ ka:
               name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
             Project - Solve a Data Problem:
               name: პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა
-          title: 'CSD თავი 5: მონაცემები და საზოგადოება'
-          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
-            დაკავშირებული პრობლემების გადასაჭრელად.
         hocali:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csd4-old:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -4035,7 +4341,12 @@ ka:
             App Presentation:
               name: აპლიკაციის პრეზენტაცია
         csp3-staging:
-          stages:
+          lesson_groups:
+            csp3_1:
+              display_name: 'თავი 1: პროგრამირების ენები და ალგორითმები'
+            cspAssessment:
+              display_name: თავის დავალება
+          lessons:
             The Need For Programming Languages:
               name: პროგრამირების ენების საჭიროება
             The Need for Algorithms:
@@ -4049,7 +4360,7 @@ ka:
             Looping and Random Numbers:
               name: ციკლები და შემთხვევითი რიცხვები
         pwc:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Personal Innovations:
@@ -4061,11 +4372,11 @@ ka:
             Intro to App Lab:
               name: შესავალი აპლიკაციების ლაბორატორიაში
         hero:
-          stages:
+          lessons:
             Minecraft Hour of Code:
               name: Minecraft-ის კოდის ერთი საათი
         applab-intro-staging:
-          stages:
+          lessons:
             Intro to AppLab - Choose Your Own Adventure:
               name: შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
                 თავგადასავალი
@@ -4077,25 +4388,42 @@ ka:
             Intro to App Lab:
               name: შესავალი აპლიკაციების ლაბორატორიაში
         csp-explore-2017:
-          stages:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'თავი 2: AP წარმადობის დავალების გამოკვლევა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             new stage:
               name: ახალი დონე
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         csp-create-2017:
-          stages:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'თავი 2: AP წარმადობის დავალების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
         aws-demo:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         colehoc17:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         course-e-2018:
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: მიდი კურს E-მდე (არჩევითი)
+            csf_e_2:
+              display_name: E კურსის შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -4143,7 +4471,12 @@ ka:
             Build a Star Wars Game:
               name: ააწყვეთ ვარსკვლავური ომების თამაში
         course-f-2018:
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: მიდი კურს F-მდე (არჩევითი)
+            csf_f_2:
+              display_name: F კურსის შიგთავსი
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -4199,7 +4532,12 @@ ka:
             Present Your Project:
               name: წარმოადგინეთ თქვენი პროექტი
         csd6-old:
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          lessons:
             Event Types:
               name: ღონისძიების ტიპები
             Lists:
@@ -4217,7 +4555,16 @@ ka:
             Sensor Applications:
               name: სენსორული აპლიკაციები
         csd3-1819draft:
-          stages:
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
+            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -4252,16 +4599,21 @@ ka:
               name: თამაშის დიზაინის პროცესის გამოყენება
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
-          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
-            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
         textbook:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csd3-2018:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
             და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -4319,7 +4671,14 @@ ka:
               name: პროექტი - შექმენით თამაშის დიზაინი
         csd2-2018:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Exploring Websites:
               name: ვებ-საიტების გამოკვლევა
               description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც
@@ -4391,7 +4750,7 @@ ka:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
             არ იცის.
           description_audience: 'ასაკი: 4-7'
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: შეუჩმნეველი შეცდომები
             'Persistence & Frustration: Stevie and the Marbles':
@@ -4438,7 +4797,7 @@ ka:
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
             სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description_audience: 'ასაკი: 9-18'
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction:
@@ -4555,7 +4914,7 @@ ka:
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 5-8'
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
             Your Digital Footprint:
@@ -4578,7 +4937,7 @@ ka:
               name: ვისწავლოთ გადაადგილება
         coursed-2018:
           assignment_family_title: კურსი D
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction:
@@ -4633,7 +4992,7 @@ ka:
             კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
             შეძლებთ!
           description_audience: 'ასაკი: 6-10'
-          stages:
+          lessons:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Programming in Maze:
@@ -4660,7 +5019,14 @@ ka:
               name: ორობითი სამაჯურები
         csd6-2018:
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Making Music:
               name: მუსიკის შექმნა
             Functions with Parameters:
@@ -4668,7 +5034,14 @@ ka:
         coursee-2018:
           assignment_family_title: კურსი E
           description_audience: 'ასაკი: 8-12'
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: მიდი კურს E-მდე (არჩევითი)
+            csf_e_2:
+              display_name: E კურსის შიგთავსი
+            extra_course_content:
+              display_name: კურსის დამატებითი მასალები
+          lessons:
             'Programming: My Robotic Friends':
               name: ჩემი რობოტი-მეგობრები
             Building a Foundation:
@@ -4747,7 +5120,12 @@ ka:
         coursef-2018:
           assignment_family_title: კურსი F
           description_audience: 'ასაკი: 9-13'
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: მიდი კურს F-მდე (არჩევითი)
+            csf_f_2:
+              display_name: F კურსის შიგთავსი
+          lessons:
             'Programming: My Robotic Friends':
               name: ჩემი რობოტი-მეგობრები
             Building a Foundation:
@@ -4824,7 +5202,14 @@ ka:
             Conditionals with Cards:
               name: პირობები ბარათებით
         csp1-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp1_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა და გადაცემა'
+            csp1_2:
+              display_name: 'თავი 2: ინტერნეტის გამოგონება'
+          lessons:
             CS Principles Pre-survey:
               name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
             Personal Innovations:
@@ -4844,7 +5229,14 @@ ka:
         csd1-2018:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -4869,7 +5261,14 @@ ka:
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
         csd4-2018:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -4890,7 +5289,14 @@ ka:
           title: 'CSD თავი 5: მონაცემები და საზოგადოება'
           description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
             დაკავშირებული პრობლემების გადასაჭრელად.
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Representing Numbers:
               name: რიცხვების წარმოდგენა
             Project - Create a Representation:
@@ -4906,7 +5312,12 @@ ka:
             Project - Solve a Data Problem:
               name: პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა
         csp2-2018:
-          stages:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'სექცია 2: ციფრული ინფორმაცია'
+            cspAssessment:
+              display_name: თავის დავალება
+          lessons:
             Bytes and File Sizes:
               name: ბაიტები და ფაილის ზომები
             Encoding B&W Images:
@@ -4927,7 +5338,14 @@ ka:
               name: შეჯამების ცხრილების შექმნა
         csp3-2018:
           description_short: პროგრამირება
-          stages:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3 თავი: შესავალი პროგრამირებაში'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             The Need For Programming Languages:
               name: პროგრამირების ენების საჭიროება
             The Need for Algorithms:
@@ -4940,8 +5358,25 @@ ka:
               name: ფუნქციების შექმნა
             Looping and Random Numbers:
               name: ციკლები და შემთხვევითი რიცხვები
+        csp-explore-2018:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'თავი 2: AP წარმადობის დავალების გამოკვლევა'
+            cspSurvey:
+              display_name: გამოკითხვა
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'თავი 2: AP წარმადობის დავალების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
         csp4-2018:
-          stages:
+          lesson_groups:
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             What is Big Data?:
               name: რა არის დიდი მონაცემები?
             The Cost of Free:
@@ -4951,7 +5386,14 @@ ka:
             Check Your Assumptions:
               name: შეამოწმეთ თქვენი ვარაუდები
         csp5-2018:
-          stages:
+          lesson_groups:
+            csp5_1:
+              display_name: 'თავი 1: მოვლენებზე დაფუძნებული პროგრამირება'
+            csp5_2:
+              display_name: 'თავი 2: მონაცემთა სტრუქტურებით პროგრამირება'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Buttons and Events:
               name: ღილაკები და მოვლენები
             Multi-screen Apps:
@@ -4987,7 +5429,14 @@ ka:
         csppostap-2018:
           description_short: ისწავლეთ მონაცემთა შეგროვება და მათი გამოყენება აპლიკაციების
             ლაბორატორიაში.
-          stages:
+          lesson_groups:
+            csp_postap_1:
+              display_name: '1 თავი: მონაცემების დამუშავება და ვიზუალიზაცია'
+            csp_postap_2:
+              display_name: '2 თავი: აპები და მონაცემთა ბაზები'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Creating Javascript Objects:
               name: ჯავასკრიპტ ობიექტების შექმნა
             Reading Records:
@@ -5016,8 +5465,95 @@ ka:
               name: მონაცემთა გასუფთავება
             Creating Summary Tables:
               name: შეჯამების ცხრილების შექმნა
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: კურსის შემდგომი გამოკითხვა
         csd-novice-18:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Welcome:
               name: კეთილი იყოს თქვენი მობრძანება
             Tuesday:
@@ -5029,7 +5565,12 @@ ka:
             Wrap Up:
               name: შეჯამება
         csd-apprentice-18:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Tuesday:
               name: სამშაბათი
             Wednesday:
@@ -5039,7 +5580,12 @@ ka:
             Wrap Up:
               name: შეჯამება
         csp-novice-18:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Tuesday:
               name: სამშაბათი
             Wednesday:
@@ -5049,7 +5595,12 @@ ka:
             Wrap Up:
               name: შეჯამება
         csp-apprentice-18:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Tuesday:
               name: სამშაბათი
             Wednesday:
@@ -5063,7 +5614,7 @@ ka:
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 4-8'
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: შეუჩმნეველი შეცდომები
             'Persistence & Frustration: Stevie and the Marbles':
@@ -5094,42 +5645,69 @@ ka:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
             'Persistence & Frustration: Stevie and the Big Project':
               name: სტივი და დიდი პროექტი
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
         dance:
-          stages:
+          title: ცეკვა
+          lessons:
             new stage:
               name: ახალი დონე
             Dance Party:
               name: ცეკვა
-          title: ცეკვა
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: მხატვარი
         sconyers:
-          stages:
+          lessons:
             Digital Design:
               name: ციფრული დიზაინი
             Linking Screens:
               name: ეკრანების დაკავშირება
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: ცეკვა
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: ცეკვა
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
         coursef-2019:
           description_audience: 'ასაკი: 9-13'
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: გაუმჯობესება
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+            csf_internet:
+              display_name: ინტერნეტი
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -5198,11 +5776,22 @@ ka:
             Digital Sharing:
               name: ციფრული გაზიარება
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: ცეკვა
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_binary:
+              display_name: ორობითი
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction to Online Puzzles:
@@ -5250,7 +5839,18 @@ ka:
               name: ცეკვა
         coursee-2019:
           description_audience: 'ასაკი: 8-12'
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: გაუმჯობესება
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_nested_loops:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Building a Foundation:
@@ -5333,7 +5933,20 @@ ka:
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
             სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description_audience: 'ასაკი: 9-18'
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+            csf_sprites:
+              display_name: სპრაიტები
+          lessons:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Relay Programming:
@@ -5403,7 +6016,14 @@ ka:
         csd1-2019:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -5424,7 +6044,12 @@ ka:
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             new stage:
               name: ახალი დონე
             'null':
@@ -5436,7 +6061,16 @@ ka:
             კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
             შეძლებთ!
           description_audience: 'ასაკი: 6-10'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_binary:
+              display_name: ორობითი
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
@@ -5468,6 +6102,10 @@ ka:
               name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
             Sticker Art with Loops:
               name: ციკლები მხატვარში
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
         gamelab:
           title: თამაშების ლაბი
         coursea-2019:
@@ -5477,7 +6115,14 @@ ka:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
             არ იცის.
           description_audience: 'ასაკი: 4-7'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             'Programming: Happy Maps':
               name: ბედნიერი რუკები
               description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ
@@ -5524,7 +6169,14 @@ ka:
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 5-8'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Move It, Move It:
               name: ვისწავლოთ გადაადგილება
             Your Digital Footprint:
@@ -5542,7 +6194,7 @@ ka:
             Loops in Collector:
               name: ციკლები შემგროვებელში
             Loops in Artist:
-              name: ციკლები მხატვარში
+              name: ეზოების ხატვა ციკლებით
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
             'Loops: Getting Loopy':
@@ -5560,7 +6212,12 @@ ka:
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 4-8'
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Move It, Move It:
               name: ვისწავლოთ გადაადგილება
             Your Digital Footprint:
@@ -5592,16 +6249,23 @@ ka:
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
         removed19:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
         dani-test-script:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csd2-2019:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Exploring Websites:
               name: ვებ-საიტების გამოკვლევა
               description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც
@@ -5668,7 +6332,14 @@ ka:
         csd3-2019:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
             და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -5725,7 +6396,16 @@ ka:
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
         csd4-2019:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -5746,7 +6426,14 @@ ka:
           title: 'CSD თავი 5: მონაცემები და საზოგადოება'
           description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
             დაკავშირებული პრობლემების გადასაჭრელად.
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Representing Numbers:
               name: რიცხვების წარმოდგენა
             Project - Create a Representation:
@@ -5763,17 +6450,40 @@ ka:
               name: პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა
         csd6-2019:
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Making Music:
               name: მუსიკის შექმნა
             Functions with Parameters:
               name: ფუნქციები პარამეტრებით
         csp4-pilot:
-          stages:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+            required:
+              display_name: მიმოხილვა
+          lessons:
             Surveys:
               name: გამოკითხვები
         csp1-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp1_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა და გადაცემა'
+            csp1_2:
+              display_name: 'თავი 2: ინტერნეტის გამოგონება'
+          lessons:
             CS Principles Pre-survey:
               name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
             Personal Innovations:
@@ -5789,7 +6499,14 @@ ka:
             HTTP and Abstraction:
               name: HTTP და აბსტრაქცია
         csp2-2019:
-          stages:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'სექცია 2: ციფრული ინფორმაცია'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Bytes and File Sizes:
               name: ბაიტები და ფაილის ზომები
             Encoding B&W Images:
@@ -5798,7 +6515,14 @@ ka:
               name: ფერადი სურათების კოდირება
         csp3-2019:
           description_short: პროგრამირება
-          stages:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3 თავი: შესავალი პროგრამირებაში'
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             The Need For Programming Languages:
               name: პროგრამირების ენების საჭიროება
             The Need for Algorithms:
@@ -5812,7 +6536,12 @@ ka:
             Looping and Random Numbers:
               name: ციკლები და შემთხვევითი რიცხვები
         csp4-2019:
-          stages:
+          lesson_groups:
+            cspAssessment:
+              display_name: თავის დავალება
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             What is Big Data?:
               name: რა არის დიდი მონაცემები?
             Check Your Assumptions:
@@ -5822,7 +6551,14 @@ ka:
             Simple Encryption:
               name: მარტივი შიფრირება
         csp5-2019:
-          stages:
+          lesson_groups:
+            csp5_1:
+              display_name: 'თავი 1: მოვლენებზე დაფუძნებული პროგრამირება'
+            csp5_2:
+              display_name: 'თავი 2: მონაცემთა სტრუქტურებით პროგრამირება'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Buttons and Events:
               name: ღილაკები და მოვლენები
             Multi-screen Apps:
@@ -5855,10 +6591,29 @@ ka:
               name: მასივების დამუშავება
             Unit 5 Assessment 4:
               name: სექცია 5 დავალება 4
+        csp-explore-2019:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'თავი 2: AP წარმადობის დავალების გამოკვლევა'
+            cspSurvey:
+              display_name: გამოკითხვა
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'თავი 2: AP წარმადობის დავალების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
         csppostap-2019:
           description_short: ისწავლეთ მონაცემთა შეგროვება და მათი გამოყენება აპლიკაციების
             ლაბორატორიაში.
-          stages:
+          lesson_groups:
+            csp_postap_1:
+              display_name: '1 თავი: მონაცემების დამუშავება და ვიზუალიზაცია'
+            csp_postap_2:
+              display_name: '2 თავი: აპები და მონაცემთა ბაზები'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Intro to Data:
               name: მონაცემები – შესავალი
             Good and Bad Data Visualizations:
@@ -5886,7 +6641,12 @@ ka:
             Final Project:
               name: ფინალური პროექტი
         csp1-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            required:
+              display_name: მიმოხილვა
+          lessons:
             new stage:
               name: ახალი დონე
             Sending Binary Messages:
@@ -5900,11 +6660,16 @@ ka:
             Representing Information:
               name: ინფორმაციის წარმოდგენა
         csd-videos:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         time4csdemo:
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: გაუმჯობესება
+            csf_sprites:
+              display_name: სპრაიტები
+          lessons:
             Crowdsourcing:
               name: ქრაუდსორსინგი
             Conditionals with Cards:
@@ -5933,38 +6698,132 @@ ka:
               name: 'ფუნქციები: სიმღერების დაწერა'
             Functions in Artist:
               name: ფუნქციები მხატვარში
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: სიები
+            csp_loops:
+              display_name: ციკლები
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
         csp7-pilot-staging:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: გრაფიკული პროგრამირება ქაღალდზე
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
         csp5-pilot:
-          stages:
+          lesson_groups:
+            csp_lists:
+              display_name: სიები
+            csp_loops:
+              display_name: ციკლები
+            required:
+              display_name: მიმოხილვა
+          lessons:
             new stage:
               name: ახალი დონე
         fit2019-novice:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Wrap Up:
               name: შეჯამება
         csd-test-saving-state:
-          stages:
+          lessons:
             What is a Computer?:
               name: რა არის კომპიუტერი?
         fit2019-apprentice:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             Wrap Up:
               name: შეჯამება
         csd1-pilot:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -5986,7 +6845,14 @@ ka:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
         csd2-pilot:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Exploring Websites:
               name: ვებ-საიტების გამოკვლევა
               description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც
@@ -6057,7 +6923,14 @@ ka:
         csd3-pilot:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
             და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -6114,15 +6987,25 @@ ka:
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
         maddie-test:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp3-pilot:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            required:
+              display_name: მიმოხილვა
+          lessons:
             Debugging:
               name: გამართვა
         csl-vn:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Programming with Rey and BB-8:
@@ -6131,12 +7014,74 @@ ka:
               name: ციკლები გამყინვარების პერიოდში
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
         dlp19-csd-mod-w2:
-          stages:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+          lessons:
             new stage:
               name: ახალი დონე
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
+            content:
+              display_name: შიგთავსი
         csd4-pilot:
-          stages:
+          lesson_groups:
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             What is a Computer?:
               name: რა არის კომპიუტერი?
             Input and Output:
@@ -6146,11 +7091,16 @@ ka:
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
         csp2-pilot:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            required:
+              display_name: მიმოხილვა
+          lessons:
             new stage:
               name: ახალი დონე
         peru-2019:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Introduction:
@@ -6165,12 +7115,23 @@ ka:
               name: ჩასმული ციკლები
             Events in Star Wars:
               name: მოვლენები ვარსკვლავურ ომებში
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            required:
+              display_name: მიმოხილვა
         dance-2019:
-          stages:
+          lessons:
             Dance Party:
               name: ცეკვა
         k5-onlinepd-2019:
-          stages:
+          lesson_groups:
+            k5_getting_started:
+              display_name: დაწყება
+            k5_next_steps:
+              display_name: მომდევნო ნაბიჯები
+          lessons:
             Getting Started:
               name: დაწყება
             Computer Science Fundamentals:
@@ -6198,15 +7159,22 @@ ka:
             For Loops:
               name: '"მიზნისთვის" ციკლები'
         csp10-pilot:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp4-preview:
-          stages:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+          lessons:
             new stage:
               name: ახალი დონე
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: პირობითი ბრძანებები
             'Events: The Big Event':
@@ -6214,7 +7182,16 @@ ka:
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
         time4cs-control-unit-2:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_nested_loops:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+          lessons:
             Crowdsourcing:
               name: ქრაუდსორსინგი
             Conditionals with Cards:
@@ -6228,7 +7205,7 @@ ka:
             Functions in Artist:
               name: ფუნქციები მხატვარში
         time4cs-experiment-unit-2:
-          stages:
+          lessons:
             Nested Loops in Maze:
               name: ჩადგმული ციკლები ლაბირინთში
             Fancy Shapes using Nested Loops:
@@ -6236,7 +7213,20 @@ ka:
             Functions with Artist:
               name: ფუნქციები მხატვარში
         time4cs-control-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_events:
+              display_name: მოვლენები
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            ramp_up:
+              display_name: გაუმჯობესება
+          lessons:
             Conditionals:
               name: პირობითი ბრძანებები
             'Events: The Big Event':
@@ -6244,24 +7234,62 @@ ka:
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
         time4cs-experiment-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_events:
+              display_name: მოვლენები
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            ramp_up:
+              display_name: გაუმჯობესება
+          lessons:
             Conditionals:
               name: პირობითი ბრძანებები
             'Events: The Big Event':
               name: 'მოვლენები: დიდი მოვლენა'
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: მიმოხილვა
         csp8-pilot:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: სიები
+            csp_loops:
+              display_name: ციკლები
         csp9-pilot:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csd2-2020:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Intro to HTML:
               name: შესავალი HTML-ში
             Headings:
@@ -6292,7 +7320,14 @@ ka:
         csd1-2020:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          lessons:
             Intro to Problem Solving:
               name: შესავალი პრობლემების გადაწყვეტაში
             The Problem Solving Process:
@@ -6312,8 +7347,19 @@ ka:
               name: დამუშავება
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
+            Storage:
+              name: საცავი
         csd4-2020:
-          stages:
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Analysis of Design:
               name: დიზაინის ანალიზი
             User-Centered Design Micro Activity:
@@ -6334,7 +7380,14 @@ ka:
           title: 'CSD თავი 5: მონაცემები და საზოგადოება'
           description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
             დაკავშირებული პრობლემების გადასაჭრელად.
-          stages:
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Representing Numbers:
               name: რიცხვების წარმოდგენა
             Project - Create a Representation:
@@ -6351,7 +7404,14 @@ ka:
               name: პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა
         csd6-2020:
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
-          stages:
+          lesson_groups:
+            csd6_1:
+              display_name: 'თავი 1: აპარატული გამოყვანა'
+            csd6_2:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Making Music:
               name: მუსიკის შექმნა
             Functions with Parameters:
@@ -6359,7 +7419,14 @@ ka:
         csd3-2020:
           description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
             და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             Programming for Entertainment:
               name: პროგრამირება გართობისათვის
             Drawing in Game Lab:
@@ -6415,6 +7482,8 @@ ka:
               name: პროექტი - შექმენით თამაშის დიზაინი
             Text:
               name: ტექსტი
+            Sprites:
+              name: სპრაიტები
         coursea-2020:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -6422,7 +7491,14 @@ ka:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
             არ იცის.
           description_audience: 'ასაკი: 4-7'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Going Places Safely:
               name: უსაფრთხო მგზავრობა
             Learn to Drag and Drop:
@@ -6465,7 +7541,14 @@ ka:
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 5-8'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             Your Digital Footprint:
               name: თქვენი ციფრული ნაკვალევი
             Move It, Move It:
@@ -6493,7 +7576,16 @@ ka:
             კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
             შეძლებთ!
           description_audience: 'ასაკი: 6-10'
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_binary:
+              display_name: ორობითი
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
             Programming in Maze:
@@ -6522,7 +7614,18 @@ ka:
               description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ
                 თქვენი პროექტის აწყობა.
         coursed-2020:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_binary:
+              display_name: ორობითი
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction to Online Puzzles:
@@ -6564,9 +7667,23 @@ ka:
               name: ციფრული მოქალაქეობა
             Dance Party:
               name: ცეკვა
+            End of Course Project:
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ
+                თქვენი პროექტის აწყობა.
         coursee-2020:
           description_audience: 'ასაკი: 8-12'
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: გაუმჯობესება
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_nested_loops:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+          lessons:
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
             Nested Loops in Bee:
@@ -6588,7 +7705,18 @@ ka:
               name: ციფრული გაზიარება
         coursef-2020:
           description_audience: 'ასაკი: 9-13'
-          stages:
+          lesson_groups:
+            ramp_up:
+              display_name: გაუმჯობესება
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+            csf_sprites:
+              display_name: სპრაიტები
+          lessons:
             Nested Loops in the Maze:
               name: ჩადგმული ციკლები ლაბირინთში
             Envelope Variables:
@@ -6628,7 +7756,20 @@ ka:
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
             სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description_audience: 'ასაკი: 9-18'
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+            csf_sprites:
+              display_name: სპრაიტები
+          lessons:
             Dance Party:
               name: ცეკვა
             Programming in Maze:
@@ -6657,12 +7798,53 @@ ka:
               name: For ციკლები ფუტკარში
             For Loops in Artist:
               name: For ციკლები მხატვარში
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Collecting Treasure with Laurel:
+              name: განძის შეგროვება ლორელთან ერთად
+            Creating Art with Code:
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+            Sticker Art with Loops:
+              name: ციკლები მხატვარში
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            If/Else with Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            While Loops with the Farmer:
+              name: While ციკლები ფერმერში
+            Harvesting with Conditionals:
+              name: მოსავლის აღება პირობითი წინადადებებით
+            Functions with Artist:
+              name: ფუნქციები მხატვარში
+            For Loops with Bee:
+              name: For ციკლები ფუტკარში
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
         pre-express-2020:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 4-8'
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          lessons:
+            Learn to Drag and Drop:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას,
+                თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში.
+                ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით,
+                შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების
+                ამოხსნაზე.
+            Sequencing with Scrat:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას,
+                თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში.
+                ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით,
+                შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების
+                ამოხსნაზე.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Programming with Rey and BB-8:
@@ -6677,8 +7859,26 @@ ka:
               name: ციკლები მხატვარში
             Loops in Artist:
               name: ციკლები მხატვარში
+            Tell a Story in Play Lab:
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება,
+                შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ
+                კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ
+                კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+            Loops with Laurel:
+              name: ციკლები შემგროვებელში
+            Drawing Gardens with Loops:
+              name: ეზოების ხატვა ციკლებით
+            On the Move with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            A Royal Battle with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
         csp1-2020:
-          stages:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
+            cspSurvey:
+              display_name: გამოკითხვა
+          lessons:
             new stage:
               name: ახალი დონე
             Representing Information:
@@ -6687,39 +7887,44 @@ ka:
               name: ორობითი რიცხვები
             Intellectual Property:
               name: ინტელექტუალური ქონება
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
         csp2-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp3-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Debugging:
               name: გამართვა
         csp6-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp8-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp9-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp10-2020:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp-march-virtual:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp3-virtual:
           description_short: პროგრამირება
-          stages:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3 თავი: შესავალი პროგრამირებაში'
+          lessons:
             The Need For Programming Languages:
               name: პროგრამირების ენების საჭიროება
             The Need for Algorithms:
@@ -6732,73 +7937,19 @@ ka:
               name: ფუნქციების შექმნა
             Looping and Random Numbers:
               name: ციკლები და შემთხვევითი რიცხვები
-        csd3-virtual:
-          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
-            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
-          stages:
-            Programming for Entertainment:
-              name: პროგრამირება გართობისათვის
-            Drawing in Game Lab:
-              name: ხატვა თამაშების ლაბორატორიაში
-              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის
-                საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს
-                ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის
-                საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი
-                შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
-              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ
-                თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას,
-                რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების
-                და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის
-                ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ
-                ვერსიას.
-            Variables:
-              name: ცვლადები
-            Sprites:
-              name: სპრაიტები
-            The Draw Loop:
-              name: ხატვის ციკლი
-            Sprite Movement:
-              name: სპრაიტების მოძრაობა
-            Conditionals:
-              name: პირობითი ბრძანებები
-            Keyboard Input:
-              name: კლავიატურიდან შეყვანილი ინფორმაცია
-            Project - Interactive Card:
-              name: პროექტი - ინტერაქტიული ბარათი
-            Velocity:
-              name: სიჩქარე
-              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
-                შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა
-                და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ
-                თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
-                side scroller ტიპის თამაშის შექმნას.
-              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
-                შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება
-                სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ
-                ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
-                side scroller ტიპის თამაშის შექმნას.
-            Collision Detection:
-              name: შეჯახების აღმოჩენა
-            Complex Sprite Movement:
-              name: სპრაიტების რთული მოძრაობა
-            Collisions:
-              name: შეჯახებები
-            Functions:
-              name: ფუნქციები
-            The Game Design Process:
-              name: თამაშის დიზაინის პროცესი
-            Using the Game Design Process:
-              name: თამაშის დიზაინის პროცესის გამოყენება
-            Project - Design a Game:
-              name: პროექტი - შექმენით თამაშის დიზაინი
         jess-test-script:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Debugging:
               name: გამართვა
         csd2-virtual:
-          stages:
+          lesson_groups:
+            csd2_1:
+              display_name: 'თავი 1: ვებ შიგთავსი და HTML'
+            csd2_2:
+              display_name: 'თავი 2: სტილის შექმნა და CSS'
+          lessons:
             Intro to HTML:
               name: შესავალი HTML-ში
             Headings:
@@ -6827,7 +7978,7 @@ ka:
             Styling Elements with CSS:
               name: ელემენტების სტილის მორგება CSS-ით
         csp5-virtual:
-          stages:
+          lessons:
             Buttons and Events:
               name: ღილაკები და მოვლენები
             Multi-screen Apps:
@@ -6865,7 +8016,12 @@ ka:
             Variables:
               name: ცვლადები
         virtual-holding-place:
-          stages:
+          lesson_groups:
+            content:
+              display_name: შიგთავსი
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+          lessons:
             Velocity:
               name: სიჩქარე
             Collision Detection:
@@ -6883,7 +8039,7 @@ ka:
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
         code-break:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
             Algorithms:
@@ -6891,11 +8047,16 @@ ka:
             Events:
               name: მოვლენები
         no-lg:
-          stages:
+          lessons:
             new stage:
               name: ახალი დონე
         csp5-virtual-part2:
-          stages:
+          lesson_groups:
+            csp5_1:
+              display_name: 'თავი 1: მოვლენებზე დაფუძნებული პროგრამირება'
+            csp5_2:
+              display_name: 'თავი 2: მონაცემთა სტრუქტურებით პროგრამირება'
+          lessons:
             Unit 5 Assessment 2:
               name: სექცია 5 დავალება 2
             While Loops:
@@ -6912,3 +8073,135 @@ ka:
               name: მასივების დამუშავება
             Unit 5 Assessment 4:
               name: სექცია 5 დავალება 4
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: ციკლები
+            Events:
+              name: მოვლენები
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Functions:
+              name: ფუნქციები
+            Variables:
+              name: ცვლადები
+            For Loops:
+              name: '"მიზნისთვის" ციკლები'
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: დაწყება
+            k5_next_steps_1:
+              display_name: მომდევნო ნაბიჯები
+        dani-june-2020-test:
+          lessons:
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+            Buttons and Events:
+              name: ღილაკები და მოვლენები
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp5_1:
+              display_name: 'თავი 1: მოვლენებზე დაფუძნებული პროგრამირება'
+        csd3-virtual:
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
+            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
+          lessons:
+            Programming for Entertainment:
+              name: პროგრამირება გართობისათვის
+            Drawing in Game Lab:
+              name: ხატვა თამაშების ლაბორატორიაში
+              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის
+                საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს
+                ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის
+                საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი
+                შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ
+                თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას,
+                რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების
+                და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის
+                ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ
+                ვერსიას.
+            Variables:
+              name: ცვლადები
+            Sprites:
+              name: სპრაიტები
+            Text:
+              name: ტექსტი
+            The Draw Loop:
+              name: ხატვის ციკლი
+            Sprite Movement:
+              name: სპრაიტების მოძრაობა
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Keyboard Input:
+              name: კლავიატურიდან შეყვანილი ინფორმაცია
+            Project - Interactive Card:
+              name: პროექტი - ინტერაქტიული ბარათი
+            Velocity:
+              name: სიჩქარე
+              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა
+                და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ
+                თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება
+                სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ
+                ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+            Functions:
+              name: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+          lesson_groups:
+            csd3_1:
+              display_name: შიგთავსი
+            csd3_2:
+              display_name: შიგთავსი
+            cspSurvey:
+              display_name: შიგთავსი
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: კურსი A
+            Course B:
+              name: კურსი B

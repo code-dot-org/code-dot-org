@@ -1,4 +1,1257 @@
 ---
 se:
-  flex_category:
-    csf_events: Dáhpáhusaid
+  errors:
+    messages:
+      not_saved: 'Divo dáid boasttuvuođaid:'
+      too_young: Dán sisdoalus lea ahkegáržžideapmi ja dása eai beasa nuorat oahppit.
+      teacher_must_accept_terms: Dán sisdoalus lea ahkegáržžideapmi ja dása eai beasa
+        nuorat oahppit. Siđa oahpaheaddji dohkkehit ođasmahtton GeavahanEavttuid addin
+        dihte dutnje beassanlobi dán sisdollui. Oahpaheaddji sáhttá dán bargat go
+        logge sisa Code Studio:i ja deaddila boalu "Geahča ođastuvvoneavttuid" lahka
+        Code Studio ruovttusiiddus bajemusas.
+      pair_programmer: Don leat juste dál ovttas programmereme ovttain ohppiin geas
+        ii leat beassanlohpi dán sisdollui. Oažžun dihte beassanlobi dán sisdollui,
+        bisset ovttas programmerema ja geahččal ođđasit.
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: lea boastut. Mearkkaš ahte juohke liŋkka sáhttá dušše oktii
+                geavahit rievdadit čoavddasáni, ja dušše ođđaseamos liŋkka doaibmá.
+      messages:
+        blank: lea dárbbašlaš
+        blank_plural: leat dárbbašlaččat
+        invalid: lea boastut
+        invalid_plural: leat boastut
+    attributes:
+      user:
+        name: ČájehanNamma
+        name_example: ČájehanNamma (omd. Kulas Ánte dahje Fávrros Ánne)
+        email: Epoasta
+        parent_email: Váhnema/oapmehačča epoasta
+        personal_email: Persovnnalaš epoastačujuhus <a href="%{url}">(deaddil dákko
+          jus dus ii leat epoastačujuhus)</a>
+        personal_email_markdown: Persovnnalaš epoastačujuhus [(deaddil dákko jus dus
+          ii leat epoastačujuhus)](%{url})
+        username: Geavaheaddjenamma
+        password: Čoavddasátni
+        password_confirmation: Čoavddasáni duođašteapmi
+        current_password: Dálá čoavddasátni
+        locale: Giella
+        age: Ahki
+        gender: Sohkabealli
+        edit_header: Divo kontodieđuid
+        finish_sign_up_header: Válbme du kontoásaheami
+        finish_sign_up_subheader: Deavdde dáid dieđuid válbmet ásahit Code.org-konto
+          <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Deavdde dáid dieđuid válbmet ásahit Code.org-konto
+          **%{email}**.
+        finish_sign_up_subheader_provider: Deavdde dáid dieđuid válbmet ásahit Code.org-konto
+          <strong>%{provider}</strong>:in <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Deavdde dáid dieđuid válbmet ásahit
+          Code.org-konto **%{provider}**:in **%{email}**:ii.
+        reset_password_token: Dat ruovttoluotta bidjat čoavddasáni liŋka maid leat
+          čuvvon
+        error:
+          future: ii sáhte nie boahtteáiggis
+  hello: Bures máilbmi
+  welcome_back: Bures boahtin ruovttoluotta, %{name}
+  your_professional_learning_plan: Du oahppanplána
+  see_your_learning_plan: Geahča iežat oahppanplána
+  unsubmit: Váldde ruovttoluotta sáddejumi
+  previous_page: Ovddit siidu
+  next_page: Boahtte siidu
+  next_resource: Boahtte resursa
+  heading_x_of_y: "%{heading} (siidu %{x} dás %{y})"
+  join_section:
+    code:
+      title: 'Searvva ovtta sekšuvdnii Code.org '
+      instructions: 'Čáles 6 bustávvakoda maid du oahpaheaddji jugii duinna (ovdamearka:
+        "ABCDEF") searvat sin sekšuvdnii.'
+      instructions_short: Deavdde du 6 bustávvasekšuvdna koda
+      submit: Searvva
+  add_hint_form:
+    placeholder: Čális iežat rávvaga dása
+    submit: Lasit rávvaga
+  appname: Code.org
+  stage: Dássi
+  stage_number: Lekšuvdna %{number}
+  puzzle: Bargobihttá
+  trophies: Vuoitomearkkat
+  courses: Kurssat
+  courses_page:
+    title_student: Oahpa DihtorDiehtaga
+    title_teacher: Oahpat DihtorDiehtaga
+  unplugged_activity: Neahtahaga Doaibma
+  of: eret
+  more: EAMBBO
+  less: UNNIT
+  try_hoc: Geahččal Kodendiimmu, deaddel dákko >>
+  try_k8intro: Geahččal min Láidehusa DiehtorDiehtaga kursii gitta 8.klássaide (15-25
+    diimmu)
+  k8intro: Láidehus DiehtorDiehtaga kursii gitta 8.klássaide (15-25 diimmu)
+  already_started: Álgán juo? Joatkke dákko >>
+  demos: 'Hálddašeaddji: Buot Geahččalanveršuvnnat'
+  prize: bálkkašupmi
+  more_info: Eambbo diehtu
+  auth:
+    continue_with: Joatkke %{provider}:in
+    sign_in_with: Logge sisa %{provider}:in
+    signed_in: Loggen sisa!
+    signed_out_markdown: "### Don leat loggen olggos [Code.org](%{url})."
+    sign_out_of_markdown: "#### Don geavahit %{provider} logget sisa. [Deaddel dákko](%{url})
+      logget olggos %{provider}."
+    already_signedup: Ráhkadan konto ovdalaččas?
+    notyet_signedup: It leat ráhkadan konto vuos?
+    google_oauth2: Google
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft
+    microsoft_v2_auth: Microsoft
+    powerschool: Powerschool
+    forgot_password: Leat go vajálduhttán iežat čoavddasáni?
+    migration_success: Sukseassa! Don leat ođastan dán min ođđa kontovásáhussii.
+    demigration_success: Ođđa kontovásáhus lea dál deaktiverejuvvon du kontos.
+    need_confirmation: It ožžon duođaštusinstrukšuvnnaid?
+    need_unlock: It ožžon rahpaninstrukšuvnnaid?
+    not_linked: Šállošan, du Code.org-konto ii leat koblejuvvon %{provider}:ii. Don
+      fertet logget sisa go čálát čoavddasáni vuolábeallái.
+    use_clever: Šállošan, du Code.org-konto ii leat koblejuvvon %{provider}:ii. Logges
+      baicca sisa Clever Portal:a čađa.
+    invalid_provider: Šállošan, %{provider}-konto ii sáhte koblejuvvot Code.org-konttoide.
+    migration_required: Šállošan, mii eat sáhte koblet dahje koblet eret konttoid
+      mat ain geavahit dan boares kontovásáhusa. Ođas nu ahte oaččut  dan ođđa kontovásáhusa.
+    unable_to_connect_provider: Ii leat vejolaš koblet Code.org-konto du %{provider}-kontoi.
+      Geahččal ođđasit.
+    disconnect_successful: Sukseassa! Mii leat koblen eret du ekstearna konto du Code.org-konttos.
+    already_in_use: Du %{provider}-konto lea juo koblejuvvon eará  Code.org-kontoi.
+    already_linked: Du %{provider}-konto lea juo liŋkejuvvon du Code.org-kontoi.
+    existing_account:
+      account_exists: Buorit ođđasat! Dus lea juo Code.org konto mii geavaha %{email}
+      sign_in: Logge sisa iežat dáláš kontoi. De beasat liŋket du %{provider} profiilla
+        du kontohuksehus-siiddus.
+      sign_up: Maid, ii leat epoasta? Áiggut go ráhkadit ođđa konto eará epoasttain?
+        Don sáhtát liŋket du %{provider} profiilla du kontohuksehus-siiddus jus válljet
+        ođđa konto ráhkadit.
+  signup_form:
+    email_signup: Ráhkat konto iežat epoastačujuhusain
+    student_count: "%{count} oahppit leat juo ráhkadan konto."
+    teacher_count: "%{count} oahpaheaddjit leat juo ráhkadan konto."
+    overview: Ráhkat konto vai oainnát iežat ovdáneami dahje administreret klássalanja.
+      <a href="/">Don sáhtát bláđet čađa iešguđet dásiid ja bargobihtáid</a> konto
+      haga, muhto don fertet ráhkadit konto jus áiggut vurket ovdáneami ja prošeavttaid.
+    overview_markdown: Ráhkat konto vai oainnát iežat dahje nu máná ovdáneami dahje
+      administreret klássalanja. [Don sáhtát bláđet čađa iešguđet dásiid ja bargobihtáid](/),
+      konto haga, muhto don fertet ráhkadit konto jus áiggut vurket ovdáneami ja prošeavttaid.
+    hoc_already_signed_up_heading: Álgge vaikko it leat loggejuvvon sisa
+    hoc_already_signed_up_content: Don leat dieđihuvvon oahpahit Kodendiimmu! Don
+      ja du  oahppit ehpet dárbbaš logget sisa Code Studio oassálastit dán dáhpáhusas.
+      Boahtit johtui, <a href="%{learn_url}">vállje neavvaga</a> du klássalanja várás
+      ja juoge liŋkka singuin.<br/> <br/>Jus it liikon Kodendiibmui ja háliidat joatkit,
+      de sáhtát ráhkadit čoavddasáni ja ránkadit Code Studio-konto vuolábealde masa
+      registreret ohppiid muhtun min <a href="%{educate_url}">guhkit kurssaide</a>.
+    hoc_already_signed_up_content_post_hoc: Giitu go lágidit Kodendiimmu. Go galggat
+      logget sisa Code Studio:i, de fertet ráhkadit čoavddasáni iežat kontoi. Dát
+      diktá du vurket du ovdáneami ja administreret du klássalanja. Don beasat ásahit
+      kurssaid du ohppiide ja čuovvut mielde sin ovdáneami. <a href="%{studio_url}">Don
+      sáhtát maiddái joatkit bláđet daid iešguđetlágan dásiid ja bargobihtáid</a>
+      váikko it ráhkat konto.
+    hoc_already_signed_up_content_post_hoc_markdown: Giitu go lágidit Kodendiimmu.
+      Go galggat logget sisa Code Studio:i, de fertet ráhkadit čoavddasáni iežat kontoi.
+      Dát diktá du vurket du ovdáneami ja administreret du klássalanja. Don beasat
+      ásahit kurssaid du ohppiide ja čuovvut mielde sin ovdáneami. [Don sáhtát maiddái
+      joatkit bláđet daid iešguđetlágan dásiid ja bargobihtáid](%{studio_url}) váikko
+      it ráhkat konto.
+    teacher_educator_guide: Geahča oahpaheaddjibagádusa
+    title: Ráhkat konto Code.org:s
+    school_name: Skuvlla namma (válljenfriddjavuohta)
+    school_address: Skuvlla Čujuhus (válljenfriddjavuohta)
+    address_placeholder: čujuhus, gávpot/báiki, fylka, poastakoda
+    gender: Sohkabealli (válljenfriddjavuohta)
+    birthday: Riegádanbeaivi (válljenfriddjavuohta)
+    age: Ahki
+    user_type: Leat go oahppi vai oahpaheaddji?
+    submit: Ráhkat konto
+    go_to_account: Mana mu kontoi
+    teacher: Leat go oahpaheaddji?
+    valid_username: Olámuttos!
+    invalid_username: Geavaheaddjenamas fertejit leat unnimusat 5 čállinmearkka
+    taken_username: Geavaheaddjenamma lea juo váldon
+    valid_password: Dohkkálaš čoavddasátni!
+    invalid_password: Čoavddasánis fertejit leat unnimusat 6 čállinmearkka
+    mismatch_password: Dát guokte čoavddasáni maid čállet eaba leat ovttaláganat
+    student_consent: Mun duođaštan ahte mun lean ožžon lobi váhnemis dahje oapmehasas
+      geavahit Code.org bálvalusaid.
+    agree_us_website: Mun dohkkehan geavahit interneahtta siiddu mii lea USA vuđđosaš.
+    my_data_to_us: Dáta maid geavahan dán neahttasiiddus sáhttá sáddejuvvot ja vurkejuvvot
+      dahje meannuduvvot USA:s.
+    student_terms_markdown: Epoastačujuhusat eai vurkejuvvo nu ahte mii sáhttit váldit
+      oktavuođa ohppiiguin. Oahppit eai oaččo goassege epoastaid Code.org:s earet
+      go čoavddasáni máhcaheamis. Geahča min [persovdnasuodjalus njuolggadusat](http://code.org/privacy)
+      main gávnnat eanet dieđuid.
+    additional_information: Mii dárbbahit lassi dieđuid ovdal go sáhttit joatkit ráhkadit
+      dutnje konto.
+    user_type_button: Ođasmahte KontoMálle
+    user_type_label: KontoMálle
+    field_is_required: lea dárbbašlaš
+    accept_terms: Don fertet dohkkehit ráhkadan dihte konto.
+    error: Okta boastuvuohta čuožžilii.
+    email_preference_question: Sáhttit go epoastta sáddet dutnje mas leat ođasmahttimat
+      min kurssaide, báikkálaš vejolašvuođat, dahje eará dihtordiehtaga ođđasat? (sullii
+      ovtta geardde mánus)
+    email_preference_required: Don fertet spesifiseret epoastta preferánssaid.
+    parent_account_checkbox: Mun lean váhnen/oapmehaš ráhkadeamen konto mu máná ovddas
+    parent_account_email_progress_permission: Sáhttit go epoastta sáddet dutnje mas
+      leat bieđggus ođasmahttimat du máná ovdáneami ja prošeavttaid ektui, ja ođasmahttimat
+      sin kurssa ja dihtordiehtaga birra. [(Geahča min persovdnasuodjalus njuolggadusaid)](%{privacy_policy_url})
+    parent_account_email_label: Váhnema/Oapmehačča Epoasta
+  school_info:
+    title: Skuvlla Dieđut (válljenfriddjavuohta)
+    school_country: Skuvlla Riika
+    select_school_type: Skuvlla Málle
+    charter: Friddjaskuvla
+    private: Priváhtta
+    public: Almmolaš
+    homeschool: Ruovttuskuvla
+    after_school: Maŋŋel Skuvlla
+    state: Fylka
+    district: Guovlu
+    other_district_not_listed: Eará guovllut mat eai leat listtus bajábeal
+    district_name: Guovllu Namma
+    school: Skuvla
+    other_school_not_listed: Eará skuvllat maid eai leat bajábeal listtus
+    school_name: Skuvlla Namma
+    school_zip: Skuvlla Poastakoda
+    school_address: Skuvlla Čujuhus
+    school_organization_name: Skuvlla/Organisašuvnna Namma
+    school_organization_zip: Skuvlla/Organisašuvnna Poastakoda
+  signin_form:
+    title: Dus lea juo konto? Logge sisa
+    login: Epoasta
+    login_username: Epoasta dahje geavaheaddjenamma
+    password: Čoavddasátni
+    remember: Muitte mu
+    submit: Logge sisa
+  signin:
+    try_heading: Háliidat go geahččalit kodet vaikko it leat loggejuvvon sisa?
+    try_hoc: Geahččal ovtta KodenDiimmu álggos
+    try_20hours: Geahččal du 20 diimmu láidehusa DihtorDiehtagii
+  signinsection:
+    welcome: Bures boahtin %{section_name}:ii
+    name: Vállje iežat nama
+    picture: Dál ozat iežat čiegus gova
+    words: Dál čálát iežat čiegus sániid
+    login: Logge sisa
+    invalid_login: Boasttu sisaloggen, geahččal vel oktii
+    pair_programming: Mus lea olmmái mu dihtoris
+    student_privacy_markdown: Oahpa eanet dan birra manne don it oainne iežat olles
+      nama [here](%{student_privacy_blog}).
+  password:
+    reset_form:
+      title: Leat go vajálduhttán iežat čoavddasáni?
+      instructions: Čális iežat epoastačujuhusa mii gullá du kontoi vuolábeal ja mii
+        sáddet dutnje instrukšuvnnaid ruovttoluotta bidjat čoavddasáni.
+      email: Epoastačujuhus
+    reset_errors:
+      captcha_required: Deavddes CAPTCHA ruovttoluotta bidjat čoavddasáni.
+      invalid_email: Orro nu ahte leat ráhkadan konto boasttu epoastačujuhusain. Sáddes
+        epoasta support@code.org oažžun dihte čoavddasáni máhcaheami liŋkka.
+    change_form:
+      title: Rievdat iežat čoavddasáni
+      new_password: Ođđa čoavddasátni
+      confirm_password: Duođaš ođđa čoavddasáni
+      submit: Rievdat mu čoavddasáni
+  welcome_email:
+    subject: Searvva mu klássii (Code.org:s)
+    body: |
+      Deaddel liŋkka vuolábeal ráhkadan dihte konto dihtordiehtagiid neavvagiidda Code.org:s (gos mun lean du  "oahpaheaddji"):
+
+      %{link}
+
+      Neavvagat leat suohttasat, visuálalaččat movttiidahtti, ja oahpaha vuođđokonseapttaid dihtordiehtagis geavahettiin álkis, speallanlágan vásáhusaid. Oahpa kodema Bill Gates:as, Mark Zuckerberg:as, Angry Birds:as, ja Plants vs. Zombies:as! :-)
+
+      %{name}
+  parent_mailer:
+    student_associated_subject: Sisa loggen diehtu Code.org:ii
+    parent_email_added_subject: Bures boahtin Code.org:ii!
+  teacher_mailer:
+    new_teacher_subject: Bures boahtin Code.org:ii!
+    delete_teacher_subject: 'Code.org diehtu: Du konto lea sihkkojuvvon'
+  section:
+    your_section:
+      one: 'Du sekšuvdna:'
+      other: 'Du sekšuvnnat:'
+    code_with_teacher: "%{section_code} %{teacher_name}:n"
+    confirm:
+      remove: Leat go sihkar ahte áiggut guođđit dán sekšuvnna?
+    default_name: Namahis Sekšuvdna
+    remove: "(sihko sekšuvnna)"
+    type:
+      picture: Govva Čoavddasátni
+      email: Epoasta
+  follower:
+    invite_sent: Bovdehus sáddejuvvon
+    added_teacher: "%{name} lea biddjon du oahpaheaddjin"
+    registered: Don leat registrerejuvvon %{section_name}:ii.
+    error:
+      signed_in: Logges olggos ovdal manat viidásit
+      username_not_found: Geavaheaddjinamma %{username} ii gávdno
+      username_in_use: "%{username} lea váldon juo, vállje eará geavaheaddjinama"
+      no_teacher: Ii gávdnon oktage gii lea loggejuvvon sisa '%{teacher_email_or_code}':in.
+        Siđa sin ráhkadit konto dáppe ja de geahččal lasihit sin fas
+      section_not_found: Ii gávdno sekšuvdna mas lea koda '%{section_code}'.
+      blank_code: Čális iežat sekšuvdna koda
+      cant_join_own_section: Ándagassii, don it sáhte searvat iežat sekšuvdnii.
+      provider_managed_section: Dán sekšuvnna hálddaša muhtin eará ja ii leat vejolaš
+        searvat dasa. Jeara iežat oahpaheaddjis lasihit du %{provider} bokte ja ođastit
+        sin sekšuvnna.
+    mail:
+      student_disassociated:
+        subject: 'Code.org diehtu: %{student_name} ii leat šat du oahppi.'
+  reports:
+    error:
+      access_denied: Dus ii leat beassanláhki dán olbmo statistihkkii
+  crud:
+    new_model: Ođđa %{model}
+    show: Čájet
+    edit: Rievdat
+    edit_model: Rievdat %{model}
+    update: Ođasmahte
+    destroy: Billis
+    back: Ruovttoluotta
+    confirm: Leat go sihkar?
+    created: "%{model} ráhkaduvvui."
+    updated: "%{model} ođasmahttojuvvui."
+    destroyed: "%{model} sihkkojuvvui."
+    access_denied: Dus ii leat beassanláhki dán %{model}:ii.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: Epoastačujuhus maid dieđihit ii heive dán
+          konto epoastačujuhussii
+        personal_login_created_email: Don leat ráhkadan persovnnalaš konto. Don sáhtát
+          dál logget sisa du kontoi du epoastačujuhusain ja čoavddasániin
+        personal_login_created_username: Don leat ráhkadan persovnnalaš konto. Don
+          sáhtát dál logget sisa du kontoi du geavaheaddjinamain (%{username})  ja
+          čoavddasániin
+  nav:
+    header:
+      finished_hoc: Mun gergen!
+      sign_in_to_save: Logge sisa vurket ovdáneami
+      course_catalog: Kursa Kataloga
+      project_gallery: Prošeavttat
+      sections: Sekšuvnnat
+      help_support: Veahkki ja doarjja
+      report_bug: Dieđit váttisvuođa
+      teacher_community: Oahpaheaddjiservodat
+      documentation: Dokumenteren
+      tutorials: Neavvagat
+      educate_overview: Oahpaheaddjivárddus
+      educate_elementary: Mánáidskuvla
+      educate_middle: Nuoraidskuvla
+      educate_high: Joatkkaskuvla
+      educate_partner: Álgge bargat minguin
+      educate_beyond: Ovddos guvlui Code.org:in
+      educate_inspire: Movttiidahte Oahppi
+      educate_community: Neahttaservodat
+      educate_tools: Reaiddut ja Videoat
+      about_us: Min birra
+      about_leadership: Jođiheapmi
+      about_donors: Addit
+      about_partners: Doaibmaoasálaččat
+      about_team: Olles Joavku
+      about_news: Ođaslatnja
+      about_evaluation: Evalueren
+      about_jobs: Barggut
+      about_contact: Váldde minguin oktavuođa
+      about_faqs: Dábálaš jearaldagat / FAQs
+      learn: Oahpa
+      help_us: Veahket min
+      teach: Oahpat
+      about: Birra
+      legal_privacy: Persovdnasuodjalus
+      legal_tos: GeavahanEavttut
+    user:
+      district_dashboard: Guovllu Čállinbeavdi
+      label: Bures %{username}
+      stats: KodenStudio
+      settings: Kontohuksehus
+      logout: Logge olggos
+      signin: Logge sisa
+      signup: Ráhkat konto
+      already_registered: Ovdalaččas registrerejuvvon?
+      pair_programming: Ovttas prográmmeren
+      team: Joavku
+      driver: Loggejuvvon sisa
+      navigator: Doaibmaoasálaš
+      artist: Dáiddár
+      calc: Rehkenastte
+      eval: Evaluere
+      flappy: Flappy
+      frozen: Jikŋon
+      makerlab: Ráhkadan Reaidokássa
+      minecraft_codebuilder: 'Minecraft: Kode Oktiičatnan'
+      minecraft_designer: Minecraft
+      playlab: Speallan-lab
+      scratch: Scratch
+      spritelab: Sprite-lab
+      starwars: Star Wars
+    popup:
+      progress_for_user: "%{name} ovdáneapmi"
+      progress: Du ovdáneapmi
+      lines: 'Oktiibuot linjját kodas: %{lines}'
+      close: GIDDE
+      mastery: Konseaptat
+      puzzle_map: Dásit
+      prizes: Čoakke visot %{total_trophies} vuoitomearkkaid ja vuoitte bálkkašumiid!
+      prize_earned: Buot %{total_trophies} vuoitomearkkat čoggon. Bálkkašupmi vuiton!
+      prize_us_only: "(dušše Amerihká ohppiide)"
+      prizes_link: eanet dieđut
+  teacher:
+    answer: Vástit
+    for_teachers_only: Dušše Oahpaheddjiide
+    title:
+      one: 'Du oahpaheaddji:'
+      other: 'Du oahpaheaddjit:'
+    remove: "(sihko oahpaheaddji)"
+    confirm:
+      remove: Leat go sihkar ahte háliidat sihkkut dán oahpaheaddji?
+    students:
+      dashboard: Mana Oahpaheaddji Čállinbeavdái
+    user_not_found: Dát oahpaheaddji ii gávdno.
+    student_teacher_disassociated: Don leat guođđán sekšuvdna %{section_code} %{teacher_name}:in.
+    panel:
+      viewing_solution: Čájehit Čovdosa
+      try_it_yourself: Geahččal ieš
+      example: Ovdamearka Čoavddus
+      example_with_number: Ovdamearka Čoavddus %{solution_number}
+      submitted_on: 'Sáddejuvvon:'
+      last_updated: 'Maŋemus ođasmahtton:'
+      unsubmit: Váldde ruovttoluotta sáddejumi
+      worked_with: Bargan Fárrolaga
+      update_lock_settings: Ođasmahte lássenhuksehusaid dáppe.
+      clear_response: Sihko máhcaheami
+  user:
+    email_confirm_needed: 'Epoastačujuhus ii leat duođaštuvvon:'
+    email_confirm_needed_required: 'Du epoastačujuhus %{email} ii leat duođaštuvvon:'
+    email_confirm_wrong_email: "(Boasttu epoastačujuhus?)"
+    email_resend_confirm: Ođđasit sáddet duođaštan instrukšuvnnaid
+    new_email_hint: "(dárkkis ahte dát epoastačujuhus sáhttá oažžut epoasttaid)"
+    new_password_hint: "(guođe guorosin jus it hálit rievdadit dán)"
+    current_password_hint: "(mii dárbbahit du dálá čoavddasáni duođaštan dihte du
+      rievdademiid)"
+    delete: Sihko Konto
+    delete_text: Jus sihkut iežat konto de dat sihkku visot dieđuid ja ovdánemiid
+      mat leat oktiičadnon dán kontoi.
+    delete_text_teacher_managed_note: Dus ii leat lohpi sihkkut dán konto go dan hálddaša
+      du oahpaheaddji. Oahpaheaddji ferte du sihkkut su sekšuvnnain ovdal go beasat
+      sihkkut iežat konto.
+    delete_text_teacher_note: 'Fuomáš: vaikko sihkut iežat konto de dat ii sihko du
+      ohppiid konttoid.'
+    delete_confirm: Leat go sihkar ahte háliidat sihkkut iežat konto?
+    deleted_user: sihkkon geavaheaddji
+    no_password_because_oauth: Ii čoavddasátni go don leat loggeme sisa goalmmat-oassebeali
+      lagideddjiin.
+    no_password_because_sponsored: 'Siđa iežat oahpaheaddji hálddašit du čoavddasáni. '
+    create_personal_login: Ráhkat persovnnalaš čoavddasáni sisaloggemii
+    create_personal_login_under_13_info: Jus háliidat joatkit geavahit iežat Code.org
+      konto váikko skuvlajahki lea nohkan, siđa iežat váhnema/oapmehačča veahkehit
+      du ráhkadit du iežat persovnnalaš sisaloggeme vuolábeal.
+    create_personal_login_under_13_username: Geavaheaddjenamma (ale fal geavat iežat
+      albma nama!)
+    create_personal_login_under_13_parent_email: Váhnema/oapmehačča Epoastačujuhus
+    create_personal_login_info: Jus háliidat joatkit geavahit Iežat Code.org konto
+      vaikko maŋŋil go skuvlajahki lea nohkan, sáhtát ráhkadit alccat sisaloggema
+      vuolábealde.
+    create_personal_login_link_account: Don sáhtát maid dan sadjái válljet čatnat
+      persovnnalaš kontoi “Hálddaš Čadnon Kontoid” oasi vuolábealde.
+    create_personal_login_terms: Go ráhkadat persovnnalaš sisaloggama, mun dohkkehan
+      ahte čatnasan Code.org <a href='%{terms_of_service_url}', target='_blank'>geavahaneavttuid</a>.
+      Mun duođaštan ahte mun lean ožžon lobi váhnemiin dahje oapmehaččain geavahit
+      Code.org bálvalusaid vaikko oahpaheaddji ii leat mielde.
+    create_personal_login_terms_markdown: Go ráhkadat persovnnalaš sisaloggama, mun
+      dohkkehan ahte čatnasan Code.org [geavahaneavttuid](%{terms_of_service_url}).
+      Mun duođaštan ahte mun lean ožžon lobi váhnemiin dahje oapmehaččain geavahit
+      Code.org bálvalusaid vaikko oahpaheaddji ii leat mielde.
+    create_personal_login_email_note: 'Fuomáš: E-poastačujuhusat eai vurkejuvvo nu
+      ahte daid mielde sáhttit váldit oktavuođa ohppiiguin. Oahppit eai goassege oaččo
+      e-poasta Code.org eará go čoavddasáni bidjama oktavuođas. Geahča eanet dieđuid
+      min <a href=''%{privacy_policy_url}'', target=''_blank''>persovdnasuodjalusnjuolggadusain</a>.'
+    create_personal_login_email_note_markdown: 'Fuomáš: E-poastačujuhusat eai vurkejuvvo
+      nu ahte daid mielde sáhttit váldit oktavuođa ohppiiguin. Oahppit eai goassege
+      oaččo e-poasta Code.org eará go čoavddasáni ođasteami oktavuođas. Geahča eanet
+      dieđuid [persovdnasuodjalusnjuolggadusain](%{privacy_policy_url}).'
+    enter_new_login_info: Čále du ođđa sisaloggen dieđuid
+    confirm_secret_words: Duođaš ahte don dat leat, dáinna ahte čálát du dálá čiegu
+      sániid
+    parent_email_label: Váhnema/oapmehačča epoastačujuhus (válljenvejolašvuohta)
+    parent_email_hint: "(dán sáhttá atnit čoavddasáni viežžamii)"
+    enter_parent_email: Čále du váhnema/oapmehačča epoastačujuhusa (čoavddasáni viežžamii)
+    update: Ođas Konto
+    account_successfully_updated: Konto lea ođastuvvon.
+    auth_option_saved: Don leat liŋkejuvvon iežat %{provider} kontoi epoasttain %{email}.
+    auth_option_saved_no_email: Don leat liŋkejuvvon iežat %{provider} kontoi.
+    update_email: Ođasmahte
+    for_parents_and_guardians: Váhnemiidda ja Oapmehaččaide
+    link_a_parent_email: Liŋke váhnema/oapmehačča epoastačujuhussii dán kontoi vai
+      beasat oaidnit iežat máná ovdáneami ja prošeavttaid birra. Don maiddái sáhtát
+      geavahit dán epoastačujuhusa go čoavddasáni áiggut viežžat.
+    parent_guardian_email_label: Váhnema/oapmehačča epoasta
+    remove_parent_email_label: Váldde eret
+    only_one_parent_email_supported_warning: 'Fuomáš: mii beassat dušše doarjut ovtta
+      váhnema/oapmehačča epoastačujuhusa juohke oahppái juste dál.'
+  user_level:
+    completed: Válbmejuvvon
+    tried: Geahččaluvvon
+  home:
+    title: KodenStudio
+    all_courses: Várddus Kurssain 1, 2 ja 3
+    lesson_plans: Lekšuvdna plánat
+    signin_message: Juo registrerejuvvon? %{link}
+    student_reg_link: Oahppi Ráhkada Konto
+    teacher_reg_link: Oahpaheaddji Ráhkada Konto
+    signin_directions: Geavat konto čuovvut ovdáneami.<br/> Oahpaheaddjit, čuovo olles
+      klássa.
+    teacher_dashboard: Geahča dashboard ovdáneami
+    teacher_student_count_one: Dus lea %{count} oahppi.
+    teacher_student_count: Dus leat %{count} oahppi.
+    teacher_averages: Gaskamearálaččat du oahppit leat dinen %{trophy_average} dán
+      %{trophy_max} "Konseapta Máhttin" Vuoitomearkkain.
+    teacher_print_certificates: Čálit sertifikáhtaid ohppiide geat válbmejit dán kurssa
+    teacher_read_blog: Loga ođđasiid ja ođas materiálaid min Oahpaheaddji Bloggas
+    classroom: Du klássalatnja
+    student_progress: Du oahppanovdáneapmi
+    student_stats: Don leat dinen %{trophy_count} dás %{trophy_max} "Konseapta Máhttin"
+      Vuoitomearkka.
+    student_left_off: 'Doppe gos heitet:'
+    student_finished: Don válbmejit buot Code.org neavvagiid. Vállje eará klássa %{online_link}
+      dahje %{local_school_link}.
+    local_school: báikkálaš skuvla
+    online: neahtas
+    see_details: Geahča detaljjaid
+    view_course: Čájet Kurssa
+    prize_info: 'Vuoitu oassálastimis (dušše U.S. almmolaš skuvllaid oahpaheddjiide):
+      gitta $1,000 klássalanjavuoittu.'
+    tryfirst: 'Dahje don sáhtát geahččalit álggos, ja maŋŋil ráhkadit konto:'
+    trynow: Geahččal dál
+    add_hint_help: Veahket min lasihit smárttas rávvagiid Code.org neavvagiidda
+    20hour_overview: Dát 20-diibmosaš kursa láidesta guovddáš DihtorDiehtagii ja prográmmerema
+      vuođđodoahpagiidda. Kursa lea ráhkaduvvon geavahuvvot klássalanjas 5.klássas
+      ja bajás, muhto lea somá oahppat juohke agis.
+    test_videos_help: Geahččal min ođđa videospealli iežat skuvllas
+    try_beta_courses: Ođas! Geahččal min betakurssa mánáidskuvlla ohppiide
+    use_as_teacher: Geavat dán siiddu oahpaheaddjin
+    heading_elementary_markdown: |-
+      ## 20 diibmosaš kursa dása
+      # DihtorDiehtaga Vuođut (buot agit)
+    your_gallery: Galleriija
+    no_primary_course: Geahččal Code Studio kurssa
+    choose_next_course: Geahččal Code Studio kurssa válljemiiguin mat leat dás vuolábealde
+    print_certificate: Čálit Sertifikáhta
+  move_students:
+    new_section_dne: Ándagassii, muhto dát sekšuvdna %{new_section_code} ii gávdno.
+      Vállje eará sekšuvnna koda.
+    section_code_cant_be_current_section: Dát sekšuvdna ii sáhte leat seammá go ođđa
+      sekšuvdna.
+    current_section_dne: Ándagassii, muhto dát sekšuvdna %{current_section_code} ii
+      gávdno. Vállje eará sekšuvnna koda.
+    student_ids_not_entered: Bija student_ids.
+    student_not_found: Okta dahje eanet oahppit eai gávdno.
+    all_students_must_be_in_current_section: Buot oahppit galget juste dál dieđihuvvot
+      du sekšuvdnii.
+    already_enrolled_in_new_section: Don it sáhte sirdit dáid ohppiid danne go dát
+      leat juo dan ođđa sekšuvnnas.
+    third_party_login: Don it sáhte sirdit dáid ohppiid danne go dát sekšuvdna lea  synkroniserejuvvon
+      eará oassálaččaid reaidduin.
+  share:
+    title: Oahpa Code Studio:s
+    description: Juohkehaš sáhttá oahppat  DihtorDiehtaga. Ráhkadit spealuid, app:id
+      ja dáidaga kodemiin.
+    try_hour_of_code: Geahccal KodenDiimmu!
+  gender:
+    male: Bárdni
+    female: Nieida
+    non_binary: Ii-binára
+    not_listed: Válljejuvvon sátni ii leat biddjon
+    none: Vállje nu ahte it vástit
+  footer:
+    thank_you: Mii giitit min <a href="https://code.org/about/donors">donoraid</a>,
+      <a href="https://code.org/about/partners">ovttasbargoguimmiid</a>, min <a href="https://code.org/about/team">viiddiduvvon
+      joavkku</a>, min videojoavkku, ja min <a href="https://code.org/about/advisors">oahpahus
+      bagadeddjiid</a> sin doarjaga ovddas ráhkadettiin Code Studio.
+    help_from_html: Mii háliidit earenoamážiid loktet ingenevrraid geat gullet Amazon:ii,
+      Google:ii, ja Microsoft:ii geat veahkehe ráhkadit dáid materiálaid.
+    help_from_html_old: Ingenevrrat geat gullet Amazon:ii, Google:ii, ja Microsoft:ii
+      veahkehe ráhkadit dáid materiálaid.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Buot Vuoigavuođat
+      Reserverejuvvon.<br />Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm.
+      Buot Vuoigavuođat Reserverejuvvon.<br />Jikŋon&#8482; &copy; %{current_year}
+      Disney. Buot Vuoigavuođat Reserverejuvvon.<br />Jiekŋa Áigi&#8482; &copy; %{current_year}
+      20th Century Fox. Buot Vuoigavuođat Reserverejuvvon.<br />Angry Birds&#8482;
+      &copy; 2009-%{current_year} Rovio Entertainment Ltd. Buot Vuoigavuođat Reserverejuvvon.<br
+      />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Buot
+      Vuoigavuođat Reserverejuvvon.<br />The Amazing World of Gumball lea gálvomearka
+      ja &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Buot Vuoigavuođat
+      Reserverejuvvon. Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm.
+      Buot Vuoigavuođat Reserverejuvvon. Jikŋon&#8482; &copy; %{current_year} Disney.
+      Buot Vuoigavuođat Reserverejuvvon. Jiekŋa Áigi&#8482; &copy; %{current_year}
+      20th Century Fox. Buot Vuoigavuođat Reserverejuvvon. Angry Birds&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Buot Vuoigavuođat Reserverejuvvon.
+      Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Buot Vuoigavuođat
+      Reserverejuvvon. The Amazing World of Gumball lea gálvomearka ja &copy; %{current_year}
+      Cartoon Network.
+    code_from_html: Code.org geavaha p5.play, mii lea liseansa dás <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
+    powered_by_aws: Jođihuvvon Amazon Web Services
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo ja
+      KodenDiibmu&reg; leat gálvomearkkat Code.org."
+    copyright: Dahkkivuoigatvuohta
+    feedback: Atte ruovttoluottadieđu
+    translate: Eaktodáhtolaččat jorgalit min sisdoalu
+    support: Doarjja
+    tos_short: Eavttut
+    tos: GeavahanEavttut
+    privacy: Persovdnasuodjalus
+    secure: Sihkkaris Veršuvdna
+    report_abuse: Dieđit Boasttugeavaheami
+    built_on_code_studio: Huksejuvvon Code Studio:s
+    make_my_own_app: Ráhkat mu iežan app:a
+    how_it_works: Movt Doaibmá (Čájet Code)
+    try_hour_of_code: Geahccal KodenDiimmu!
+  reference_area:
+    title: Dárbbašat go veahki?
+    subtitle: Geahča dáid videoid ja rávvagiid
+    teacher: Geahča ovtta čovdosa
+    teacher_no_solution: Ale šat geahča čovdosa
+    auth_error: Dus ii leat vuoigatvuohta geahččat čovdosa.
+    submit: Ođastuvvon Neavttár Sadji
+    direction: Guovlu go álgá (grádaiguin)
+  video:
+    tab: Video.
+    notes: Ii leat video? Čájet notáhtaid.
+    notes_coming_soon: Notáhtat dán video váras bohtet fargga.
+    autoplay_option: Čuojat videoid automáhtalaččat
+    download: Viečča Video
+    show_notes: Čájet Notáhtaid
+    show_video: Čájet Video
+  compatibility:
+    upgrade:
+      unsupported_message: Du neahttalohkki ii dorjojuvvo. Ođas du neahttalohkki dása
+        [ovtta min dorjojuvvon neahttalohkkiide](%{supported_browsers_url}). Don sáhtát
+        geahččalit geahččat siiddu, muhto fertet vuordit ahte funkšunálitehta sáhttá
+        billohuvvot.
+      applab_unsupported_tablet: App Lab doaibmá buoremusat stášuneara dahje mátkedihtoris
+        mas lea sáhpán ja boallobeavdi. Don soaittát bártidit go geavahat dán reaiddu
+        du dálá reaiddus.
+      gamelab_unsupported_tablet: Speallan Lab doaibmá buoremusat stášuneara dahje
+        mátkedihtoris mas lea sáhpán ja boallobeavdi. Don soaittát bártidit go geavahat
+        dán reaiddu du dálá reaiddus.
+      oceans_unsupported_browser: Dát neahttalohkki ii dorjojuvvo dán neavvagii. Geahččal
+        finihit dán siiddus geavahettiin Edge, Chrome, Firefox, dahje eará modearna
+        neahttalohkki.
+      weblab_unsupported_browser: Dađibahábut mis leat juste dál váttisvuođat lástet
+        Web Lab dán neahttalohkkis. Soaitá buoremus ahte geahččalat eará neahttalohkki
+        dassážii go dát lea čovdojuvvon. Šállošit dán.
+      weblab_unsupported_locale_storage: Don soaittát vásihit váttisvuođaid geavahit
+        Web Lab du Priváhta Neahttalohkki modusas. Laste ođđasit du prošeavtta normála
+        modusis. Šállošit dán.
+  slow_loading: Dát ádjána guhkit go dábálaččat...
+  try_reloading: Geahččal ođđasit lástet dán siiddu
+  next_stage: Válmmas! Joatkke boahtte dássái
+  download_pdf: Raba BargoPlána
+  lesson_plan: BargoPlána
+  view_lesson_plan: Čájet BargoPlána
+  pdf_download: Viečča PDF
+  download_coming_soon: Viežžan doaimmat bohtet fargga.
+  video_coming_soon: Video boahtá fargga!
+  share_code:
+    title: Deaddil 'Bija mannat' geahččat mu prográmma doaimmas
+    bounce_og_title: Iskka mu Bounce Game
+    flappy_og_title: Iskka mu Flappy Game
+    studio_og_title: Iskka mu Speallan Lab App:a
+    check_out_what_i_made: Iskka maid mun ráhkadin
+    og_description: Mun čállen koda ieš Code.org:in
+    phone_number_not_allowed: Orro nu ahte dies lea telefuvdnanummar. Geahččal rievdadit
+      teavstta.
+    address_not_allowed: Orro nu ahte dies lea čujuhus. Geahččal rievdadit teavstta.
+    email_not_allowed: Orro nu ahte dies lea epoastačujuhus. Geahččal rievdadit teavstta.
+    profanity_not_allowed: Orro nu ahte dies lea garrosátni. Geahččal rievdadit teavstta.
+  builder:
+    created: Don ráhkadit ođđa skripta.
+    destroyed: Don billistit skripta.
+    manage: Hukse Dásiid
+    view: Čájet
+    back: Máhca skriptaide
+    success: Don leat rievdadan blohkaid.
+    level:
+      create: Ráhkat ođđa dási
+      current: Dálá Dásit
+      unused: Geavakeahtes Dásit
+  upsell:
+    applab:
+      body: App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat
+        app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge
+        app:a jođánit.
+      body_short: Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat,
+        ja de juoge app:a jođánit.
+      audience: Agit 13+
+      cta: Oahpa movt
+    hoc:
+      title: Klassikalaš Labirynta
+      body: Geahččal vuođđoDihtorDiehtaga. Millijovnnat leat juo geahččalan.
+    flappy:
+      title: Flappy Koda
+      body: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min Flappy Koda
+        neavvaga!
+    20-hour:
+      title: Akselerejuvvon Kursa
+      body: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid
+        kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat
+        oažžut ollislaš vásáhusa!
+      body_short: Oahpa vuođđodihtordiehtaga akselerejuvvon veršuvnnain kurssain 2-4.
+    hoc2014:
+      try_new_tutorial: Geahččal min ođđa KodenDiimmu neavvaga beta hámis
+      try_frozen: Dáiddár Annain ja Elsain, Jikŋon filmmas
+    gallery:
+      title: Galleriija
+      body: Geahča app:a ja dáiddárgovvagalleriijas maid min geavaheaddjit leat ráhkadan
+    gamelab:
+      body: Speallan Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis animašuvnnaid
+        ja spealuid main leat objeavttat ja speallanfigurat mat doibmet nubbi nuppiin.
+      audience: Agit 13+
+      cta: Oahpa movt
+    hoc-encryption:
+      body: Oahppit ohppet teknihkaid ráhkadit ja čoavdit krypterejuvvon dieđuid.
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis  neahttasiidduid
+        geavahemiin HTML ja CSS. Ráhkat iežat neahttasiiddu ja juoge dan jođánit.
+      audience: Agit 13+
+      cta: Oahpa movt
+    frozen:
+      title: Jikŋon
+    starwars:
+      title: Star Wars
+    infinity:
+      title: Infinitiija Speallan-lab
+      body: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija
+        figurat leat mielde.
+    minecraft:
+      title: Minecraft
+      body: Guorahala Minecraft máilmmi kodemiin.
+    minecraft2016:
+      title: Minecraft
+      body: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat Minecraft-veršuvnnas.
+    aquatic:
+      title: Minecraft
+    hero:
+      title: Minecraft
+    sports:
+      body: Ráhkat Gorespábba-spealu dahje seagut falástallansurggiid.
+    text-compression:
+      title: TeakstaKomprimeren
+      body: Dán lekšuvnnas oahppit geavahit Teakstakomprimeren Modula komprimeret
+        teavstta molsumiin minstariid ja symbolaid.
+    unplugged:
+      title: Neahtahaga lekšuvnnat
+      audience: Agit 4+
+      body: Mii leat čohkken listtu mas leat ovttastahtton lekšuvnnat maid sáhtát
+        atnit klássalanjas. Dál sáhtát oahppat vuođđoDihtorDiehtaga, leaš dál dihtorat
+        klássalanjas vai eai! Geahččal geavahit dáid lekšuvnnaid friddja kursan dahje
+        dievasmahtton lekšuvdnan juohke DihtorDiehtaga kursii.
+      body_short: Jus dus eai leat dihtorat, geahččal dáid neahtahaga lekšuvnnaid
+        du klássalanjas.
+    unplugged_conditionals:
+      body: Oahpa algoritmmaid dahje  evttolaš dadjamiid dán “neahtahaga” doaimmas
+        go geavahat speallankoarttaid.
+    widgets:
+      title: Modulat
+      body: Oahppit sáhttet suokkardallat konseaptaid dihtodiehtaga prinsihppakurssas,
+        ja geavahit dáid digitála reaidduid. Geavat modulaid ieš, dahje ráhkat okta-konsepta
+        lekšuvnna du klássii.
+      audience: Agit 14+
+      cta: Oahpa movt
+  landing:
+    prerelease_tutorial: Dát neava lea ** beta **. Dán geahččaladdame ja dát rievdaduvvo
+      go oažžut vástádusaid.
+    report_bug: Dieđit Vigi
+    support: Oza Veahki
+    help_resources: Veahkki ja Resurssat
+    help_support: Veahkki ja doarjja
+    documentation: Dokumenteren
+    tutorials: Neavvagat
+  free_response:
+    placeholder: Čále du vástádusa dása
+  multi:
+    wrong_title: Boasttu vástádus
+    wrong_body: Vástádus maid leat čállán ii leat riekta. Geahččal ođđasit!
+    correct_title: Riekta
+    correct_body: Dá lea rievttes vástádus.
+  multi-submittable:
+    wrong_body: Giitu go sáddejit sisa vástádusa.
+    correct_body: Giitu go sáddejit sisa vástádusa.
+  level_group:
+    wrong_body: Giitu go sáddejit sisa vástádusaid.
+    correct_body: Giitu go sáddejit sisa vástádusaid.
+    hide_survey_last_answer: Dát iskkadeapmi lea anonyma. Fina geahččame oahpaheaddji  čohkkejuvvon
+      bohtosiid várdosa. Fuomáš ahte bohtosat oidnojit dušše jus unnimus vihtta oahppi
+      leat vástidan iskkadeami.
+    survey_submission_thankyou: Giitu go vástidit dán iskkadeami! Dát iskkadeapmi
+      lea sihkkojuvvon nu ahte du vástádusat leat ain anonyma. Fuomáš ahte du oahpaheaddji
+      gal ain beassá oaidnit olles klássa vástádusaid, muhto namaid haga.
+  level_group-submittable:
+    wrong_body: Giitu go sáddejit sisa vástádusaid.
+    correct_body: Giitu go sáddejit sisa vástádusaid.
+    unsubmit-title: Gease ruovttoluotta du árvvoštallama
+    unsubmit-body: Jus geasát ruovttoluotta du árvvoštallamiid, de dát rievdada ruovttoluotta
+      diimmu ja dáhtona. Leat go sihkar?
+    submit-incomplete-title: Sádde du árvvoštallama
+    submit-incomplete-body: Don guđđet muhtun jearaldagaid rabasin.  Don it sáhte
+      rievdadit du vástádusaid maŋŋil go leat sádden sisa.  Leat go sihkar?
+    submit-complete-title: Sádde du árvvoštallama
+    submit-complete-body: Don it sáhte rievdadit du vástádusaid maŋŋil go leat sádden
+      sisa.  Leat go sihkar?
+  match:
+    wrong_title: Boasttu čoavddus
+    wrong_body: Čovdosa maid leat čállán ii leat riekta.  Geahččal  ođđasit!
+    correct_title: Riekta
+    correct_body: Dá lea rievttes vástádus.
+  contract_match:
+    wrong_title: Boasttu vástádus
+    badname: Du šiehtadusas lea boasttu namma.
+    badname_case: Funkšuvnnanamain leat erohusat stuora ja smávva bustávain. Geahččal
+      rievadit du šiehtadusnama.
+    badrange: Du šiehtadusas lea boasttu sadji
+    baddomainsize: Du šiehtadusas ii leat rievttes elemeantta lohku domenas.
+    baddomainname: Okta dahje eanet du domena elemeanttain lea boasttu namma.
+    baddomaintype: Okta dahje eanet du domena elemeanttain lea boasttu málle, dahje
+      leat boastut maŋŋálaga.
+  text_match:
+    placeholder: Čále du vástádusa dása
+    open_response_title: Giitu
+    open_response_body: Giitu du responssa ovddas!
+    correct_title: Riekta
+    correct_body: Dá lea rievttes vástádus.
+  lesson_extras:
+    bonus_level: Bonus Dássi
+  dialog:
+    startover_body: Dát rievdada ruovttoluotta bargobihtá álggudássái ja buot dátaid
+      maid leat lasihan dahje rievdadan.
+  time:
+    hour: 1 diibmu
+    day: beaivi
+    week: vahkku
+  age_interstitial:
+    age: Du ahki
+    header: Kontodieđuid Ođasteapmi
+    warning: Mii leat ođasteame min vásáhusaid addin dihte dutnje buoret persovdnasuodjalusa.
+      Go dán bargat, de dárbbašit ahte dálá geavaheaddjit devdet sin agi dása.
+    disclaimer: Nu go dábálaččat, de code.org ii goassege láigot, vuovdde dahje juoge
+      dáid dieđuid eará oassálaččaiguin.
+    sign_out_markdown: Jus it hálit muitalit du agi, sáhtát [logget olggos](%{url}).
+  terms_interstitial:
+    title: Ođastuvvon Geavahaneavttut ja Persovdnasuodjaleapmi
+    intro_desc: 'Mii leat ođastan Geavahaneavttuid ja Persovdnasuodjaleami, nu go
+      čájehit vuolábealde. Rievdadusat doaibmagohtet borgemánu  24. beaivvi 2016.  Stuorimus
+      rievdadusat leat: mii eat  <i>šat vurke ohppiidkontoid epoastačujuhusaid Code
+      Studios.</i> Dát lea midjiide dehálaš ášši, ja mii sávvat ahte dát bidjá ođđa
+      standarda ohppiid persovdnasudjaleapmái oahpahus teknologiijas. Mii leat sádden
+      dutnje čoahkkáigeasu eará rievdadusaid birra epoastta bokte.'
+    intro_desc_markdown: 'Mii leat ođastan Geavahaneavttuid ja Persovdnasuodjaleami,
+      nu go čájehit vuolábealde. Rievdadusat doaibmagohtet borgemánu  24. beaivvi
+      2016.  Stuorimus rievdadusat leat: mii eat *šat vurke ohppiidkontoid epoastačujuhusaid
+      Code Studios.* Dát lea midjiide dehálaš ášši, ja mii sávvat ahte dát bidjá ođđa
+      standarda ohppiid persovdnasudjaleapmái oahpahus teknologiijas. Mii leat sádden
+      dutnje čoahkkáigeasu eará rievdadusaid birra epoastta bokte.'
+    intro_instructions: Don fertet dohkkehit dáid ođđa eavttuid ohppiid ovddas geat
+      leat vuollel 13 jagi du klássalanjas vai beasat oažžut ođđaseamos funkšuvnnaid
+      mat leat Code Studios. Go leat registreren konto oahppái gii lea vuollel 13
+      jagi, de fertet duođaštit ahte du skuvllas leat váhnemat miehtan čohkket ohppiid
+      persovnnalaš dieđuid geavahit skuvllas, maiddái oahpahusprográmmas nugo Code
+      Studio.
+    tos: GeavahanEavttut
+    privacy: Persovdnasuodjalus
+    privacy_notice: Persovdnasuodjalus Dieđiheapmi
+    accept_label: Mun dohkkehan  <a href="%{tos_url}" target="_blank">Geavahaneavttuid</a>
+      ja <a href="%{privacy_url}" target="_blank">Persovdnasuodjaleami</a>.
+    accept_label_markdown: Mun dohkkehan [Geavahaneavttuid](%{tos_url}) ja [Persovdnasuodjaleami](%{privacy_url}).
+    accept_tos: Go registreret Code.org, de don dohkkehat min [Geavahaneavttuid](%{tos_url})
+      and [Persovdnasuodjaleami](%{privacy_url}).
+    accept: Dohkket
+    reminder_desc: 'Mii leat ođastan min <a href="%{tos_url}" target="_blank">Geavahaneavttuid</a>
+      ja <a href="%{privacy_url}" target="_blank">Persovdnasuodjaleami</a>. Loga dáid
+      dárkilit ovdalgo dohkkehat daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript
+      eai soaitte leat olatmuttos ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon
+      eavttuid. '
+    reminder_desc_markdown: Mii leat ođastan min [Geavahaneavttuid](%{tos_url}) ja
+      Persovdnasuodjaleami](%{privacy_url}). Loga dáid dárkilit ovdalgo dohkkehat
+      daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos
+      ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid.
+    review_terms: Loga ođastuvvon eavttuid
+  donor_interstitial:
+    title: Du nuvttá CS kurssaid lea dahkan vejolažžan...
+    subtitle: Mii háliidit giitit daid árvvas skeŋkejeddjiid geaid doarjagat leat
+      dahkan Code.org lihkostuvvama vejolažžan. Mii leat geatnegahtton doalahit Code.org
+      nuvttá skuvllaide ja ohppiide, globálalaččat, giitu joatkás árvvasvuhtii min
+      [skeŋkejeaddjit](%{donors_url})!
+    local_supporters: Báikkálaš Doarjjaolbmot
+    global_supporters: Globála Doarjjaolbmot
+    support_codeorg_1: Juohke ruhta mii skeŋkejuvvo Code.org:i addá vejolašvuođaid
+      eanet ohppiide.
+    support_codeorg_2: "[Skeŋke dál](%{donate_url}) doarjun dihte Code.org."
+    get_started: Boađe johtui Code.org:s
+  school_info_interstitial:
+    title: Mii hálidit buktit DihtorDiehtaga juohke oahppái  - veahket min oaidnit
+      min ovdáneami!
+    message: Čális iežat skuvlla birra dieđuid vuolábeallái.
+    message_with_suggestion: Dárkkis ahte dát dieđut leat riekta, dahje ođas daid
+      dárbbu mielde.
+  race_interstitial:
+    title: 'Válljenvejolašvuohta: Veahket min oaidnit min ovdáneami buoridan dihte
+      DihtorDiehtaga girjáivuođa'
+    message: Muital iežat etnisitehta birra (Merke visot mat heivejit)
+    races:
+      white: Vilges
+      black: Sevdnjesvarat dahje Afrihkálaš Amerihkálaš
+      hispanic: Latiidna Amerihkálaš
+      asian: Asiáhtalaš
+      hawaiian: Hawaia dahje Jaskkesmeara Sulluid Eamiálbmogat
+      american_indian: Amerihka dahje Alaska Eamiálbmogat
+      opt_out: In hálit muitalit
+  zendesk_too_young_message: Šállošit, nuorat geavageaddjit eai sáhte logget sisa
+    min doarjjasiidui. Don fertet bláđet <a href="http://support.code.org">support.code.org</a>
+    sisaloggema haga dahje bivdit du váhnemiid dahje oahpaheaddji minguin váldit oktavuođa.
+  zendesk_too_young_message_markdown: Šállošit, nuorat geavageaddjit eai sáhte logget
+    sisa min doarjjasiidui. Don fertet bláđet [support.code.org](http://support.code.org)
+    sisaloggema haga dahje bivdit du váhnemiid dahje oahpaheaddji minguin váldit oktavuođa.
+  progress:
+    not_started: ii álgán
+    in_progress: proseassa vuolde
+    completed_too_many_blocks: válbmejuvvon, beare ollu blohkat
+    completed_perfect: válbmejuvvon, áibbas buorre
+    furthest_level_attempted: alimus dássi geahččaluvvon
+    assessment: árvvoštallan
+    submitted: sisa addán
+  studio:
+    courses_working_on: Kurssat maiguin don leat bargame
+    completed_courses: Válbmejuvvon kurssat
+    all_courses: Buot kurssat
+  project:
+    projects: Prošeavttat
+    create: Ráhkat Prošeavtta
+    create_a_project: 'Ráhkat ođđa prošeavtta:'
+    new: Ráhkat Ođđa
+    exit: Máhca Kursii
+    project_gallery: Prošeavttat
+    publish: Almmut
+    unpublish: Váldde eret almmuheami
+    share_title: Juoge iežat prošeavtta
+    share_copy_link: 'Kopiere liŋkka:'
+    share_embed_description: Don sáhtát liibmet sisa sisahuksejuvvon koda muhtun HTML-siidui
+      nu ahte čájehit prošeavtta neahttasiiddus.
+    share_u13_warning: Jeara oahpaheaddjis ovdal juogát. Juoge dušše earáiguin du
+      skuvllas.
+    embed: Sisahuksejuvvon
+    advanced_share: Čájet avanserta válljenvejolašvuođaid
+    no_projects: Dus eai leat juste dál prošeavttat. Deaddil muhtun boalu bajábealde
+      álggahit prošeavtta.
+    updated: Ođastuvvon
+    project_type: Prošeakta Málle
+    help_text: Deaddil <strong>Ráhkat App:a</strong> dahje <strong>Tevdne Juoidá</strong>
+      vuolábeallái álggahit ođđa prošeavtta!<br/>Sáhtát máhccat dása fas ja bargat
+      iežat prošeavttain vaikko goas.
+    need_help: Geahččal dáid kurssaid veahkehan dihte du álggahit iežat ođđa prošeavtta
+    thumbnail_help: It go oainne rievttes unnagovaža du prošeavttas? Bija mannat du
+      app:a genereret ođđa unnagovaža. Fuomáš ahte sáhttá mannat moadde diimmu ovdal
+      unnagovaš lea juohkesajis ođastuvvon.
+    not_saved: Ii leat vurkejuvvon
+    view_all: Čájet Mu Prošeavttaid
+    edit_project: Divo Prošeavtta
+    sharing_disabled: Šállošit, dán prošeavtta ii sáhte vel juogadit. Jus dát lea
+      du prošeakta dahje muhtun eará oahppi prošeakta <a href='https://studio.code.org/users/sign_in'>logge
+      sisa</a> du kontoi geahččat prošeavtta.
+    abuse:
+      tos: Dát prošeakta lea dieđihuvvon ahte lea rihkkon Code.org:a <a href='http://code.org/tos'>Geavahaneavttuid</a>
+        ja dan ii sáhte juogadit earáiguin.
+      policy_violation: Dát prošeakta sisttisdoallá dieđuid maid ii sáhte juogadit
+        earáiguin. Váldde oktavuođa app:a eaiggádin nu ahte divvu sisdoalu su app:as.
+      contact_us: Jus jáhkát dát lea boasttuvuohta, de <a href='https://code.org/contact'>váldde
+        oktavuođa minguin.</a>
+      go_to_code_studio: Mana Code Studio
+      report_abuse_form:
+        intro: Jus leat vásihan unohis sisdoalu, áitagiid, neahttahárdima, trakasserma
+          dahje vuoigatvuođa rihkkuma sisdollui maid don eaiggádat app:ain mat leat
+          ráhkaduvvon Code Studi:os, de sáhtát deavdit skovi mii lea vuolábealde.
+          Mii váldit du raportta duođas, ja guorahallat ja bidjat heivvolaš doaimmaid
+          johtui.
+        validation:
+          email: Čále Epoastačujuhusa
+          age: Čále agi
+          abuse_type: Vástit movt dát sisdoallu rihkku Geavahaneavttuid
+          abuse_detail: Atte dárkilit dieđuid sisdoalu birra maid raporteret
+        abusive_url: URL sisdoalu váste maid raporteret
+        abuse_type:
+          question: Movt dát sisdoallu rihkku %{link_start}Geavahaneavttuid%{link_end}?
+          harassment: Áitagat, neahttahárdin, trakasseren
+          offensive: Loavkiduvvon sisdoallu
+          infringement: Vuoigatvuođa Rihkkun
+        detail: Atte nu ollu go vejolaš dárkilis dieđuid sisdoalu birra maid raporteret
+        acknowledge: Go dán sisdoalu sáddet sisa, don dohkkehat ahte dát meannuduvvo
+          eavttuid vuođul mat leat %{link_start_privacy}Persovdnasuodjaleami%{link_end}
+          ja %{link_start_tos}Geavaheaddjeeavttuid%{link_end} vuođul.
+  peer_review:
+    accepted:
+      name: Dohkkehuvvon
+      description_markdown: "**Juo**, dát sisasádden **deavdá** gáibádusaid"
+    rejected:
+      name: Ii dohkkehuvvon
+      description_markdown: "**Aa**, dát sisasádden **ii deavdde** gáibádusaid"
+    escalated:
+      name: Eskalerejuvvon
+      description: Mun háliidan ahte bagadeaddji galgá guorahallat dán sisabuktima
+    instructor_feedback: Dieđuid máhcaheapmi Bagadeaddjis
+    peer_feedback: Dieđuid máhcaheapmi eará Oahppis
+    outdated: Dát dieđuid máhcaheapmi lea biddjon ovddit sisaaddojuvvon veršuvdnii
+    peer_review: Eará Oahppi Árvvoštallan
+  external_links:
+    disclaimer: Ii váldde ovddasvástádusa
+    leaving_domain: Don leat dál guođđime dán domeana, manname dakkár siidui maid
+      Code.org ii doaimmat.
+    disclaimer_text: Dán siiddus soitet leat eará persovdnasuodjaleamit go dan mat
+      Code.org leat. Mii leat válljen dáid goalmmát-oassebeliid danne go mii jáhkkit
+      dát sáhttet leat ávkin dutnje. Mii eat leat njuolgut ovddasvástideaddjit dán
+      neahttasiiddu sisdoalu ovddas, lea ge siivui <a href='%{support_url}'>váldde
+      oktavuođa geavaheaddjidoarjuin</a> jus du mielas lea sisdoallu eahpeheivvolaš,
+      dahje jus čatnon siidu ii leat šat olámuttos.
+  hoc_download:
+    title: KodenDiibmu viežžamat
+    capsule_title: Lea go dus interneahtta?
+    capsule_desc: Geavat neahta, neahtta-heivehuvvon [%{app_name}](%{url}).
+    instructions_headline: Ii leat interneahtta?
+    instructions: 'Instrukšuvnnat oahpaheddjiide: jus dus lea njoazes/fuones interneahtta,
+      dát KodenDiibmu neavvagat leat olámuttos viežžan dihte ja installeren dihte
+      neahtahaga geavaheapmái. Vállje giela ja vuođu, viečča ja installere dan visot
+      dihtoriidda klássalanjas. Ávžžuhuvvo geavahit USB-bunci masa vieččat dan ja
+      installeret visot dihtoriidda. Fuomáš: oahppit eai sáhte logget sisa Code Studio:i,
+      vurket ovdáneami, dahje čálihit sertifikáhtaid. Oahpaheaddjit sáhttet čálihit
+      ovdagihtii sertifikáhtaid [dáppe](%{url}).'
+    minecraft_name: Minecraft KodenDiibmu
+    starwars_blocks_name: 'Náste Soahti: Hukse Galáksa Kodemiin (Blohkat)'
+    starwars_javascript_name: 'Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)'
+    download_message: Viečča %{app_name} geavahan dihte neahtahaga (136MB)
+    download_in_Albanian: 'Viečča Albaniagillii:'
+    download_in_Arabic: 'Viečča Arabiskagillii:'
+    download_in_Azerbaijani: 'Viečča Aserbajdsjanagillii:'
+    download_in_Basque: 'Viečča Baskkalašgillii:'
+    download_in_Bosnian: 'Viečča Bosniagillii:'
+    download_in_Bulgarian: 'Viečča Bulgariagillii:'
+    download_in_Catalan: 'Viečča Katalanagillii:'
+    download_in_Chinese-Taiwan: 'Viečča Kiinnálaš-Taiwanagillii:'
+    download_in_Chinese: 'Viečča Kiinnálašgillii:'
+    download_in_Croatian: 'Viečča Kroatiagillii:'
+    download_in_Czech: 'Viečča Tsjekkiagillii:'
+    download_in_Danish: 'Viečča Dánskkagillii:'
+    download_in_Dutch: 'Viečča Hollándalašgillii:'
+    download_in_English: 'Viečča Eŋgelasgillii:'
+    download_in_Finnish: 'Viečča Suomagillii:'
+    download_in_French: 'Viečča Fránskkagillii:'
+    download_in_German: 'Viečča Duiskkagillii:'
+    download_in_Greek: 'Viečča Greikkalašgillii:'
+    download_in_Hebrew: 'Viečča Hebreagillii:'
+    download_in_Hungarian: 'Viečča Ungáragillii:'
+    download_in_Icelandic: 'Viečča Islándalašgillii:'
+    download_in_Indonesian: 'Viečča Indonesiagillii:'
+    download_in_Irish: 'Viečča Iralašgillii:'
+    download_in_Italian: 'Viečča Itálialašgillii:'
+    download_in_Japanese: 'Viečča Japánalašgillii:'
+    download_in_Korean: 'Viečča Korealašgillii:'
+    download_in_Latvian: 'Viečča Latviagillii:'
+    download_in_Lithuanian: 'Viečča Litauengillii:'
+    download_in_Norwegian: 'Viečča Dárogillii:'
+    download_in_Norwegian-Nynorsk: 'Viečča Ođđa-Dárogillii:'
+    download_in_Polish: 'Viečča Polskalašgillii:'
+    download_in_Portuguese-Brazil: 'Viečča Portugalálaš-Brasilialašgillii:'
+    download_in_Portuguese: 'Viečča Portugalálašgillii:'
+    download_in_Romanian: 'Viečča Romanigillii:'
+    download_in_Russian: 'Viečča Ruoššagillii:'
+    download_in_Serbian: 'Viečča Serbiagillii:'
+    download_in_Slovenian: 'Viečča Sloveniagillii:'
+    download_in_Spanish: 'Viečča Espánnjagillii:'
+    download_in_Swedish: 'Viečča Ruoŧagillii:'
+    download_in_Turkish: 'Viečča Turkalašgillii:'
+    download_in_Ukrainian: 'Viečča Ukrainagillii:'
+    download_in_Vietnamese: 'Viečča Vietnamagillii:'
+    windows: Windows (64-bit)
+    mac: Mac OS X
+  locked_stage: Sisdoallu dán dásis ii oidno danne go dat lea juste dal lássejuvvon.
+    Du oahpaheaddji sáhttá rahpat dán dási dalle g lea áigi bargat dainna dahje geahččat
+    du vástádusaid.
+  hidden_stage: Du oahpaheaddji ii vuordán ahte don leat dáppe. Jeara oahpaheaddjis
+    makkár lekšuvnnas don galggat leat.
+  hidden_script: Du oahpaheaddji ii vuordán ahte don leat dáppe. Jeara oahpaheaddjis
+    makkár unit:s don galggat leat.
+  no_course_access_student: Dus ii leat beassanláhki dán kursii. Jeara oahpaheaddjis
+    makkár kurssas don galggat leat.
+  no_course_access_teacher: Dus ii leat beassanláhki dán kursii. Jus don meinet ahte
+    dus galgá leat beassanláhki dán kursii, čális support@code.org nu ahte mii sáhttit
+    ordnet dán dili.
+  no_script_access_student: Dus ii leat beassanláhki dán unit:ii. Jeara oahpaheaddjis
+    makkár unit:s don galggat leat.
+  no_script_access_teacher: Dus ii leat beassanláhki dán unit:ii. Jus don meinet ahte
+    dus galgá leat beassanláhki dán unit:ii, čális support@code.org nu ahte mii sáhttit
+    ordnet dán dili.
+  return_unit_overview: Mana unit várdui
+  return_course_overview: Mana kursa várdui
+  view_all_units: Čájet buot unit:id
+  pd:
+    form_labels:
+      first_name: Ovdanamma
+      first_name_preferred: Válljejuvvon Ovdanamma
+      last_name: Goargu
+      email: Epoasta
+      email_alternate: Eará Epoastačujuhus
+      gender: Sohkabeali Identitehta
+      school_name: Skuvlla Namma
+      school_country: Skuvlla Riika
+      colombian_school_department: Skuvla Ossodat
+      colombian_school_municipality: Skuvla Suohkan
+      colombian_school_name: Skuvlla Namma
+      ages: Makkár ahkahaččaid oahpahat don  dán jagi?
+      subjects: Makkár fágaid oahpahat don dán jagi?
+      resources: Guđe čuovvovaš CS oahpporesurssaid geavahat don?
+      robotics: Guđe čuovvovaš robotihkkaresurssaid geavahat don?
+      workshop_organizer: Bargobaji Plánejeaddji
+      workshop_facilitator: Bargobaji Heiveheaddji
+      workshop_course: Bargobaji Kursa
+      email_opt_in: Sáhttit go mii sáddet epoasttaid dutnje Code.org internášunála
+        prográmma birra, min kurssaid ođasmahttimiid birra, dahje eará dihtordiehtaga
+        ođđasiid?
+      legal_opt_in: 'Jus sáddet dán skovi, don dohkkehat ahte suovat Code.org juohkit
+        informašuvnna movt don geavahat Code.org ja Profeššunealla oahppanresurssaid
+        Code.org Internationála Doaibmaoasálaččaiguin du riikkas, skuvlla guovllus,
+        ja heiveheddjiin. Mii juohkit doaibmaoasálaččaiguin du oktavuođadieđuid, makkár
+        kurssaid/unit:id don geavahat ja čohkkejuvvon dáta du klássaid birra. Dát
+        fátmmasta galle oahppi du klássas leat, demográfalaš juohku du klássalanjas,
+        ja du skuvlla namma ja guovlu. Mii eat juoge makkárge dieđuid min doaibmaoasálaččaide
+        eaŋkilohppiid birra: buot oahppidieđut anonymiserejuvvo ja aggregerejuvvo.
+        Min Internationála Doaibmaoasálaččat ja heiveheaddjit leat kontrávtta bokte
+        geatnegahtton gieđahallat dáid dieđuid seamma konfedensiealladásis go Code.org. '
+    form_entries:
+      gender:
+        male: Bárdni
+        female: Nieida
+        non_binary: Ii-binára
+        not_listed: Válljejuvvon sátni ii leat biddjon
+        none: Vállje nu ahte it vástit
+      school_country:
+        canada: Canada
+        chile: Chile
+        colombia: Colombia
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 jagi boaris"
+        ages_7_8: 7-8 jagi boaris
+        ages_9_10: 9-10 jagi boaris
+        ages_11_12: 11-12 jagi boaris
+        ages_13_14: 13-14 jagi boaris
+        ages_15_16: 15-16 jagi boaris
+        ages_17_18: 17-18 jagi boaris
+        ages_19_over: 19+ jagi boaris
+      subjects:
+        ict: DGT
+        history: Historjá / Servodatfága
+        efl: Engelasgiella amasgiellan
+        music: Musihkka
+        art: Dáidda
+        other: 'Eará:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Eará:'
+      robotics:
+        grok: Grok Learning
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Eará:'
+      workshop_course:
+        csf_af: CS Vuođut (Kurssat A-F)
+        csf_express: CS Vuođut (Pre-Ekspreassa or Ekspreassa)
+        csd: CS Fuomášumit
+        csp: CS Prinsihpat
+        not_applicable: Ii leat guoskevaš
+    international_opt_in:
+      title: Bargobaji Oassalasttit
+      intro: 'Giitu go váldet áiggi oažžut hárjehallama Code.org lohkanmearis. Min
+        mihttu lea addit dihtordieđaoahpu vejolašvuođaid buot mánáide/nuoraide buot
+        skuvllain miehtá máilmmi ii livčče vejolaš olahit du haga. '
+      instructions: Deavddes skovi vuolábealde dadjan dihte ahte 1) don oassálastet
+        hárjehallan bargobajis maid okta dain Code.org internationála doaibmaoasálaš
+        čađaha, ja 2) don dohkkehat juogadit informašuvnna min internationála doaibmaoasálaččaiguin
+        du riikkas nu ahte sii sáhttet veahkehit doarjut du, du reaissu dihtordieđaoahpaheaddjin.
+      thanks_markdown: Giitu go sáddejit! Mii illudit doarjut du seammás go don oahpásnuvat
+        Code.org lohkanmeriin ja reaidduiguin. Joatkke juogadit iežat jearaldagaid
+        ja dieđuid máhcahemiid minguin dan bokte ahte čálát midjiide dáppe [support@code.org](%{support_email_url})
+        dahje postet deike [oahpaheaddji forum](%{teacher_forum_url})!
+      facilitator_not_listed: Mu heiveheaddji ii leat listtus
+      facilitator_not_applicable: Ii leat guoskevaš
+      organizer_not_listed: Mu organiserejeaddji ii leat listtus
+    logged_out:
+      heading: Giitu du beroštumi Profeššunealla Oahppoprográmmii!
+      body: Boahtit johtui, de fertet loggen sisa iežat Code.org kontoi. Jus háliidat
+        eambbo dieđuid dan prográmma birra ovdal go álggat iežat applikašuvnna, geahčes
+        <a href="%{url}">Profeššunealla Oahppoprográmma várddus</a>.
+    not_teacher:
+      body_markdown: Giitu du beroštumi ovddas Code.org Profeššunealla Oahppoprográmmii!
+        Don leat juste dál oahppikonttoin loggen sisa. Ráhkat oahpaheaddjikonto dahje
+        [mana iežat geavaheaddji huksehussii](%{user_settings}) ođasmahttit iežat
+        konto oahppikonttos oahpaheaddjikonttoi.
+      more_markdown: Jus háliidat eambbo dieđuid dan prográmma birra ovdal go álggat
+        iežat applikašuvnna, geahčes [Profeššunealla Oahppoprográmma várddus](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Du kontos ii leat epoastačujuhus. Mana [fina iežat kontohuksehusas](%{user_registration})
+        bidjan dihte iežat epoastačujuhusa ovdal go gárvet dán skovi.
+  courses_category: Ollislaš Kurssat
+  cookie_banner:
+    message: Jus joatkát geavahit min neahttasiiddu dahje deaddilat "Mun dohkkehan,"
+      don dohkkehat ahte diehtočoahkut vurkejuvvojit du dihtorii dahje reidui.
+    more_information: Geahča Code.org Persovdnasuodjaleami.
+  gdpr_dialog:
+    heading: Dohkkehat go geavahit neahttasiidu mas lea vuođđu Ámerihkás?
+    message: Data du geavaheamis dán siiddus sáhttá sáddejuvvot ja vurkejuvvot dahje
+      gieđahallot Ámerihkás.
+    link_intro: Detáljaid dihte, geahča min
+    privacy_policy: persovdnasuodjaleapmi
+    logout: Logge olggos
+  maker:
+    google_oauth:
+      login_with_google: Logge sisa Maker App:i Google:in
+      enter_code: Čális čoavddasáni mii lea addon go leat loggen sisa Google:in geavahettiin
+        du válljejuvvon neahttalohkki.
+      copy_code: Kopiere ja liibmes dán čoavddasáni Maker App:i nu ahte logget sisa
+        Code.org.
+      error_token_expired: Token ii leat šat anihahtti. Logge sisa ođđa token:a oažžut.
+      error_wrong_provider: Boasttu fuolaheaddji. Dárkkis ahte logget sisa Google:in.
+      error_invalid_user: Boasttu geavaheaddji id. Geahččal ođđasit logget sisa.
+      error_no_code: Čális iežat sisaloggen čoavddasáni.
+  parent_email_banner:
+    text: "**Leat go váhnen dahje oapmehaš?** Čana du epoasta dán kontoi beasat oažžut
+      ođastumiid du máná ovdáneamis  ja prošeavttaid!"
+    link_your_email: Čana iežat epoasta
+    not_now: Ii dál
+  behaviors:
+    this_sprite: dát sprite
+  unit_prefix: Unit %{n}

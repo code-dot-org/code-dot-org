@@ -402,6 +402,8 @@ ga:
       help_us: Cabhraigh Linn
       teach: Múineadh
       about: Maidir Linn
+      legal_privacy: Polasaí Príobháideachais
+      legal_tos: Téarmaí Seirbhíse
     user:
       classroom: Leathanach Baile do Mhúinteoirí
       district_dashboard: Painéal an Scoilcheantair
@@ -857,25 +859,6 @@ ga:
         nó cruthaigh ceacht a chlúdaíonn coincheap amháin.
       audience: Aois 14+
       cta: Foghlaim anois
-  gallery:
-    students_drew_these_with_code: Tharraing daltaí na pictiúir seo le cód!
-    students_made_these_with_code: Rinne daltaí iad seo le cód!
-    picture_count: Sna <b>%{days}</b> lá seo caite, tharraing daltaí <b>%{count}</b>
-      pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach ceann
-      acu a fheiceáil i ngníomh.
-    activity_count: Sna <b>%{days}</b> lá seo caite, rinne daltaí <b>%{count}</b>
-      aip agus pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach
-      ceann acu a fheiceáil i ngníomh.
-    want_to_make_your_own: Ar mhaith leat do cheann féin a dhéanamh?
-    how_to_save: Ar an leibhéal deireanach de na cúrsaí teagaisc seo, cliceáil "Críochnaigh"
-      agus "Sábháil" le do chuid oibre a shábháil sa ghailearaí.
-    more: Tuilleadh →
-    caption_by_name_age: le %{name}, aois %{age}
-    caption_time_ago: "%{time_ago} ó shin"
-    header: Gailearaí
-    header_playlab: Scéalta agus cluichí
-    header_artist: Ealaín chódála
-    report_abuse: Déan Tuairisc ar Mhí-Úsáid
   landing:
     prerelease_tutorial: Is cúrsa teagaisc **béite** é seo. Seans go bhfeabhsófar
       é amach anseo, bunaithe ar aiseolas ón phobal.
@@ -1129,93 +1112,7 @@ ga:
     instructor_feedback: Aiseolas ó Mhúinteoir
     peer_feedback: Aiseolas ó Scoláirí Eile
     outdated: Baineann an t-aiseolas seo le seanleagan
-  flex_category:
-    required: Foramharc
-    content: Ábhar
-    practice: Cleachtais Mhúinteoireachta
     peer_review: Athbhreithniú Comhghleacaithe
-    ramp_up: Réamhullmhúchán
-    main_course: Príomhchúrsa
-    extra_course_content: Ábhar Breise
-    csf_e_1: Réamhullmhúchán do Chúrsa E (Roghnach)
-    csf_e_2: Ábhar Cúrsa E
-    csf_f_1: Réamhullmhúchán do Chúrsa F (Roghnach)
-    csf_f_2: Ábhar Cúrsa F
-    csf_digcit: Saoránacht Dhigiteach
-    csf_jigsaw: Míreanna Mearaí
-    csf_sequencing: Seicheamhú
-    csf_loops: Lúba
-    csf_events: Teagmhais
-    csf_online_safety: Slándáil ar líne
-    csf_binary: Dénártha
-    csf_conditionals: Coinníollacha
-    csf_sprites: Sprideanna
-    csf_spritelab: Saotharlann na Sprideanna
-    csf_nested_loops: Lúba Neadaithe
-    csf_functions: Feidhmeanna
-    csf_variables: Athróga
-    csf_for_loops: Lúba "Do Gach"
-    csf_internet: An tIdirlíon
-    csf_warmup: Réamhchleachtadh
-    csd1_1: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
-    csd1_2: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
-    csd1_3: Ceachtanna Malartacha
-    csd2_1: 'Caibidil 1: Ábhar Gréasáin agus HTML'
-    csd2_2: 'Caibidil 2: Stíleáil agus CSS'
-    csd3_1: 'Caibidil 1: Íomhánna agus Beochan'
-    csd3_2: 'Caibidil 2: Tógáil Cluichí'
-    csd4_1: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
-    csd4_2: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
-    csd5_1: 'Caibidil 1: Léiriú Sonraí'
-    csd5_2: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
-    csd6_1: 'Caibidil 1: Ríomhchlárú le Crua-Earraí'
-    csd6_2: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
-    csd_survey: Suirbhé Iarchúrsa
-    csp1_1: 'Caibidil 1: Léiriú agus Traschur Sonraí'
-    csp1_2: 'Caibidil 2: Airgeadh an Idirlín'
-    csp2_1: 'Caibidil 1: Ionchódú agus Comhbhrú Sonraí Casta'
-    csp2_2: 'Caibidil 2: Láimhseáil agus Léirshamhlú Sonraí'
-    csp3_1: 'Caibidil 1: Teangacha Ríomhchlárúcháin agus Algartaim'
-    csp4_1: 'Caibidil 1: Olltiomsú Sonraí agus Criptiú'
-    csp5_1: 'Caibidil 1: Ríomhchlárú Bunaithe ar Theagmhais'
-    csp5_2: 'Caibidil 2: Struchtúir Sonraí sa Ríomhchlárú'
-    cspSurvey: Suirbhé
-    cspAssessment: Measúnú Caibidle
-    csp_ap_1: 'Caibidil 1: Socrú Teicneolaíochta AP'
-    csp_ap_2: 'Caibidil 2: Tasc Taiscéalaíoch AP'
-    csp_ap_3: 'Caibidil 3: Tasc Cruthaitheach AP'
-    csp_postap_1: 'Caibidil 1: Láimhseáil agus Léirshamhlú Sonraí'
-    csp_postap_2: 'Caibidil 2: Aipeanna agus Bunachair Sonraí'
-    csp2_1_2018: 'Aonad 2: Faisnéis dhigiteach'
-    csp3_1_2018: 'Aonad 3: Buneolas ar Ríomhchlárú'
-    csp4_1_2018: 'Aonad 4: Mórshonraí agus an Príobháideachas'
-    csp_variables: Athróga
-    csp_conditionals: Coinníollacha
-    csp_functions: Feidhmeanna
-    csp_project: Tionscadal
-    csp_lists: Liostaí
-    csp_loops: Lúba
-    csp_traversals: Trasnáil
-    csp_libraries: Leabharlanna
-    csp_parameters_return_values: Paraiméadair agus Luachanna Athfhillte
-    csp_unit1_2020: 'Aonad 1: Faisnéis Dhigiteach'
-    csp_unit3_2020: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
-    csp_unit8_2020: 'Aonad 8: Ullmhú don Tasc Cruthaitheach'
-    csp_unit10_2020: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
-    dlp: Ábhar Machnaimh
-    time4cs_c1: 'Bailiúchán 1: Na Everglades agus a nÉiceachórais'
-    time4cs_c2: 'Bailiúchán 2: Biashlabhraí (sna Everglades)'
-    time4cs_c3: 'Bailiúchán 3: Speicis Dhúchasacha (sna Everglades)'
-    time4cs_c4: 'Bailiúchán 4: An tionchar a imríonn Speicis Ionracha (ar na Everglades)'
-    time4cs_c5: 'Bailiúchán 5: Saoránaigh i mbun Gníomhaíochta'
-    time4cs_c6: Ráitis Choinníollacha (athbhreithniú)
-    k5_csf_intro: Cuir eolas ar na cúrsaí Buntús na Ríomheolaíochta
-    k5_coding_concepts: Coincheapa Códála agus Straitéis Múinteoireachta
-    k5_basic_concepts: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
-    k5_diving_deeper: 'Níos Doimhne: Cúrsaí E agus F'
-    web_lab_projects: Tionscadail i Saotharlann an Ghréasáin
-    game_lab_projects: Tionscadail sa tSaotharlann Cluichíochta
-    app_lab_projects: Tionscadail i Saotharlann na nAipeanna
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt
@@ -1319,6 +1216,8 @@ ga:
       school_name: Ainm na Scoile
       school_city: Cathair na Scoile
       school_country: Tír na Scoile
+      colombian_school_city: Cathair na Scoile
+      colombian_school_name: Ainm na Scoile
       ages: Cad iad na haoiseanna atá tú ag múineadh i mbliana?
       subjects: Cad iad na hábhair atá tú ag múineadh i mbliana?
       resources: Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann

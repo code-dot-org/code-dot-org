@@ -976,6 +976,14 @@ zh-CN:
         text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: 在 {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': " 秒"
+            '"frames"': 帧
+      gamelab_bounceOff:
+        text: "{SPRITE} 弹开 {TARGET}"
       gamelab_changePropBy:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
@@ -997,6 +1005,8 @@ zh-CN:
         text: 点击 {SPRITE}
       gamelab_comment:
         text: 注释： {COMMENT}
+      gamelab_countByAnimation:
+        text: "{SPRITE} 的数量"
       gamelab_createNewSprite:
         text: "制作一个新的精灵图 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       gamelab_destroy:
@@ -1005,6 +1015,8 @@ zh-CN:
         text: 可拖拽
       gamelab_edgesDisplace:
         text: 边缘模块阻止了 {SPRITE} 移动
+      gamelab_getAllSprites:
+        text: 所有精灵图
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1021,10 +1033,53 @@ zh-CN:
           CHOICE:
             '"this"': 这
             '"other"': 其他
+      gamelab_getTime:
+        text: 在{UNIT}中的时间
+        options:
+          UNIT:
+            '"seconds"': " 秒"
+            '"frames"': 帧
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
+      gamelab_isKeyPressed:
+        text: "{KEY} 是否被按下"
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} 正在触碰边缘"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} 正在触碰 {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
       gamelab_keyPressed:
@@ -1075,6 +1130,8 @@ zh-CN:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
+      gamelab_makeNumSprites:
+        text: 做{NUM}新{ANIMATION_NAME}精灵图
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -1097,6 +1154,10 @@ zh-CN:
             '"West"': 西
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
+      gamelab_objectSpritePointer:
+        text: 点击 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: 上移和下移
       gamelab_playSound:
         text: 播放音效{SOUND}
       gamelab_pointInDirection:
@@ -1176,6 +1237,10 @@ zh-CN:
           CONDITION:
             '"when"': 当
             '"while"': 当
+      gamelab_subjectSpritePointer:
+        text: 点击 {SPRITE}
+      gamelab_tumbling:
+        text: 旋转
       gamelab_turn:
         text: "{SPRITE} 转 {DIRECTION} {N} 度"
         options:
@@ -1603,9 +1668,16 @@ zh-CN:
       aalab_setupStory:
         text: 设置故事
       aalab_starwars_playSound:
+        text: 播放{OPTION}音轨
         options:
           OPTION:
             '"random"': 随机
+            '"R2-D2 random"': R2-D2随机
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

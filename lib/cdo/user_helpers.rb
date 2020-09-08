@@ -84,6 +84,7 @@ SQL
   # Return the highest age range for the given birthday, e.g.
   # 18+, 13+, 8+ or 4+
   def self.age_range_from_birthday(birthday)
+    return "unknown" unless birthday
     age = age_from_birthday(birthday)
     age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
     age_cutoff ? "#{age_cutoff}+" : nil

@@ -1,0 +1,79 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+BON HOMME HIGH SCHOOL - 01,SD-04002-01,460740000065,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOONSOCKET HIGH SCHOOL - 01,SD-55004-01,468019000790,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IPSWICH HIGH SCHOOL - 01,SD-22006-01,463606000333,unspecified,App building,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SCOTLAND HIGH SCHOOL - 01,SD-04003-01,466518000569,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BH COLONY ALTERNATIVE HIGH SCHOOL - 19,SD-04002-19,460740001188,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTERVILLE HIGH SCHOOL - 01,SD-60001-01,461176000116,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHESTER AREA CYBER SCHOOL - 39,SD-39001-39,461230001269,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHESTER HIGH SCHOOL - 01,SD-39001-01,461230000130,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGH PLAINS - 06,SD-39001-06,461230001295,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EUREKA HIGH SCHOOL - 01,SD-44001-01,462256000196,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GAYVILLE-VOLIN HIGH SCHOOL - 01,SD-63001-01,462649000227,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE PRESTON HIGH SCHOOL - 01,SD-38003-01,463999000368,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LENNOX HIGH SCHOOL - 01,SD-41004-01,464155000387,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEOLA HIGH SCHOOL - 01,SD-44002-01,464164000391,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON HIGH SCHOOL - 01,SD-39002-01,463960000363,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MITCHELL HIGH SCHOOL - 01,SD-17002-01,464839000442,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T F RIGGS HIGH SCHOOL - 01,SD-32002-01,465526000500,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TRI-VALLEY HIGH SCHOOL - 01,SD-49006-01,464494000405,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST CENTRAL HIGH SCHOOL - 01,SD-49007-01,463171000274,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH SCHOOL - 41,SD-51004-41,465982000529,unspecified,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILMOT HIGH SCHOOL - 01,SD-54007-01,460000300758,unspecified,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRIDGEWATER-EMERY HIGH SCHOOL - 01,SD-30003-01,462142000074,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOLAND HIGH SCHOOL - 01,SD-56002-01,461917000171,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCCOOK CENTRAL HIGH SCHOOL - 01,SD-43007-01,460102601026,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLACK HILLS ACADEMY AT CANYON HILLS HIGH SCHOOL - 10,SD-40002-10,466693001347,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AVON HIGH SCHOOL - 01,SD-04001-01,460427000029,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEA AREA HIGH SCHOOL - 03,SD-41005-03,460005201235,10015,PLTW Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WATERTOWN HIGH SCHOOL - 01,SD-14004-01,467662000717,10015,PLTW Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DAKOTA VALLEY HIGH SCHOOL - 01,SD-61008-01,463699000345,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EDGEMONT HIGH SCHOOL - 01,SD-23001-01,462085000182,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALCESTER-HUDSON HIGH SCHOOL - 01,SD-61001-01,460002800014,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLOW LAKE HIGH SCHOOL - 01,SD-12003-01,467935000756,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROOKINGS HIGH SCHOOL - 01,SD-05001-01,460852000082,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PINE RIDGE SCHOOL,SD-D06A16-D06A16,590008000117,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANISTOTA HIGH SCHOOL - 01,SD-43001-01,461032000105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEUBROOK HIGH SCHOOL - 01,SD-05006-01,467830000012,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST FRANCIS INDIAN SCHOOL,SD-D07A09-D07A09,590009100134,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WHITE LAKE HIGH SCHOOL - 01,SD-01003-01,467851000746,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STEVENS HIGH SCHOOL - 42,SD-51004-42,465982000525,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRITTON-HECLA HIGH SCHOOL - 01,SD-45004-01,460004101141,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BELLE FOURCHE HIGH SCHOOL - 01,SD-09001-01,460561000038,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOBRIDGE HIGH SCHOOL - 01,SD-62006-01,468044100449,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH SCHOOL - 01,SD-49005-01,466627000610,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WARNER HIGH SCHOOL - 01,SD-06005-01,467602000709,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW UNDERWOOD HIGH SCHOOL - 01,SD-51003-01,465067000464,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RUTLAND HIGH SCHOOL - 01,SD-39004-01,466414000563,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DELL RAPIDS HIGH SCHOOL - 01,SD-49003-01,461812000165,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN HIGH SCHOOL - 02,SD-49005-02,466627000600,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ETHAN HIGH SCHOOL - 01,SD-17001-01,462250000194,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROSHOLT HIGH SCHOOL - 01,SD-54004-01,466336000557,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LANGFORD AREA HIGH SCHOOL - 01,SD-45005-01,464086000370,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUMMIT HIGH SCHOOL - 01,SD-54006-01,467014000663,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLORENCE HIGH SCHOOL - 01,SD-14001-01,462454000209,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAGNER HIGH SCHOOL - 01,SD-11004-01,467542000695,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLATTE - GEDDES HIGH SCHOOL - 01,SD-11005-01,468043801248,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIBORG-HURLEY HS - 01,SD-60006-01,467452000693,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JONES COUNTY HIGH SCHOOL - 01,SD-37003-01,461958000803,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OUR HOME ASAP - 12,SD-02002-12,463548000570,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ESTELLINE HIGH SCHOOL - 01,SD-28002-01,462241000192,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAVERLY-SOUTH SHORE HS - 01,SD-14005-01,467674000722,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEMMON HIGH SCHOOL - 01,SD-52004-01,464152000382,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOUGLAS HIGH SCHOOL - 03,SD-51001-03,461941000174,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIOSPA ZINA TRIBAL SCHOOL,SD-D09A05-D09A05,590012900022,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHEYENNE-EAGLE BUTTE SCHOOL,SD-D01A12-D01A12,590005100004,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SIOUX VALLEY HIGH SCHOOL - 01,SD-05005-01,466630000612,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LITTLE WOUND SCHOOL,SD-D06A05-D06A05,590017300115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STURGIS BROWN HIGH SCHOOL - 01,SD-46001-01,466993000633,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRANDON VALLEY HIGH SCHOOL - 01,SD-49002-01,460795000071,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREGORY HIGH SCHOOL - 01,SD-26004-01,462988000239,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BALTIC HIGH SCHOOL - 01,SD-49001-01,460468000036,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OELRICHS HIGH SCHOOL - 01,SD-23003-01,465277000482,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLANDREAU HIGH SCHOOL - 01,SD-50003-01,462439000206,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARKER HIGH SCHOOL - 01,SD-60004-01,465427000488,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARTY INDIAN SCHOOL,SD-D07A12-D07A12,590005500132,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOWARD HIGH SCHOOL - 01,SD-48003-01,460002500305,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLANDREAU INDIAN BOARDING SCHOOL,SD-D70F02-D70F02,590002700084,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROOSEVELT HIGH SCHOOL - 03,SD-49005-03,466627001063,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEBSTER AREA HIGH SCHOOL - 01,SD-18005-01,467699000724,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

@@ -68,11 +68,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const codeWorkspaceHeight = this.codeWorkspaceContainer
       .getWrappedInstance()
       .getRenderedHeight();
-    if (codeWorkspaceHeight === 0) {
-      // We haven't initialized the codeWorkspace yet. No need to change the
-      // max height of instructions
-      return;
-    }
+
+    // Continue here even if the workspace height is measured at zero. Workspace
+    // height at zero is a somewhat common case after rotating the screen on
+    // mobile. Especially when using an Android device in blockly labs where
+    // there is a dismissable message in the instructions.
 
     const totalHeight = instructionsHeight + codeWorkspaceHeight;
     let maxInstructionsHeight = totalHeight - DEBUGGER_RESERVE - EDITOR_RESERVE;

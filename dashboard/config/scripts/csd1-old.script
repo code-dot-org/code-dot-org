@@ -1,23 +1,23 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
-stage 'Intro to Problem Solving'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
 level 'Unit 1 Lesson 1 Overview', named: true
 
-stage 'The Problem Solving Process'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
 level 'Unit 1 Lesson 2 Overview', named: true
 
-stage 'Exploring Problem Solving'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
 level 'Unit 1 Lesson 3 Overview', named: true
 
-stage 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
 level 'Unit 1 Lesson 4 Overview', named: true
 
-stage 'Representing Information'
+lesson 'Representing Information', display_name: 'Representing Information'
 level 'Unit 1 Lesson 5 Overview', named: true
 
-stage 'Processing with Bits'
+lesson 'Processing with Bits', display_name: 'Processing with Bits'
 level 'Unit 1 Lesson 6 Overview', named: true
 level 'CSD U1 - PixFilter 1x1 intro'
 level 'CSD U1 - PixFilter Filter Intro'
@@ -27,10 +27,10 @@ level 'CSD U1 - PixFilter Mario'
 level 'CSD U1 - PixFilter UnFilter'
 level 'CSD U1 - PixFilter FreePlay'
 
-stage 'Human vs Computer Processing'
+lesson 'Human vs Computer Processing', display_name: 'Human vs Computer Processing'
 level 'Unit 1 Lesson 7 Overview', named: true
 
-stage 'Processing with Apps'
+lesson 'Processing with Apps', display_name: 'Processing with Apps'
 level 'Unit 1 Lesson 8 Overview', named: true
 level 'CSD U1 Input Output Intro'
 level 'CSD U1 Input Output C1'
@@ -38,5 +38,6 @@ level 'CSD U1 Input Output C2'
 level 'CSD U1 Input Output C3'
 level 'CSD U1 Input Output C4'
 
-stage 'Project: Apps and Problem Solving'
+lesson 'Project: Apps and Problem Solving', display_name: 'Project: Apps and Problem Solving'
 level 'Unit 1 Lesson 9 Overview', named: true
+

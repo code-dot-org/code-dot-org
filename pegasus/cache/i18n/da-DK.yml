@@ -1555,6 +1555,8 @@ da-DK:
   header_about: Om
   header_teacher_community: Lærer-fælleskab
   header_report_bug: Rapporter fejl
+  header_legal_privacy: Privatlivspolitik
+  header_legal_tos: Termer
   user_header_label: Hej %{username}
   user_header_team: Hold
   user_header_settings: Min konto

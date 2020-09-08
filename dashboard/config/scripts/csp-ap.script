@@ -1,30 +1,31 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 script_announcements [{"notice"=>"This unit is being replaced....", "details"=>"As part of improving Performance Task prep, this unit has been split into separate units \"Explore PT Prep\" and \"Create PT Prep\" which can now be found in the pull down menu where you assign units to one of your sections.  Please go there and assign your section to the appropriate unit to see improved activities and resources.  The lesson plan for the Explore PT prep will link to the new lessons. Click the Learn More button to read about the changes and updates.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/52", "type"=>"bullhorn"}]
 
 lesson_group 'csp_ap_1', display_name: 'Chapter 1: AP Tech Setup'
-stage 'Tech Setup - Your AP Digital Portfolio and Other Tools', flex_category: 'csp_ap_1'
+lesson 'Tech Setup - Your AP Digital Portfolio and Other Tools', display_name: 'Tech Setup - Your AP Digital Portfolio and Other Tools'
 level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'AP Performance Task Tech Setup - Student Links'
 
 lesson_group 'csp_ap_3', display_name: 'Chapter 3: AP Create Performance Task'
-stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
+lesson 'Create PT Prep - Reviewing the Task', display_name: 'Create PT Prep - Reviewing the Task'
 level 'U6 Create PT Review - Student Links', progression: 'Create PT -  Review - Student Links'
 
-stage 'Create PT Prep - Making a Plan', flex_category: 'csp_ap_3'
+lesson 'Create PT Prep - Making a Plan', display_name: 'Create PT Prep - Making a Plan'
 level 'U6 Create PT - Make a Plan - Student Links', progression: 'Create PT - Make a Plan - Student Links'
 
-stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
 level 'U6 Create PT - Complete the Task - Student Links', progression: 'Create PT - Complete the Task - Student Links'
 
 lesson_group 'csp_ap_2', display_name: 'Chapter 2: AP Explore Performance Task'
-stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
+lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task'
 level 'U6 Explore PT Review - Student Links', progression: 'Explore PT - Review - Student Links'
 
-stage 'Explore PT - Making a Plan', flex_category: 'csp_ap_2'
+lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan'
 level 'U6 Explore PT - Make a Plan - Student Links', progression: 'Explore PT - Make a Plan - Student Links'
 
-stage 'Explore PT - Complete the Task', flex_category: 'csp_ap_2'
+lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task'
 level 'U6 Explore PT - Complete the Task - Student Links', progression: 'Explore PT - Complete the Task - Student Links'
+

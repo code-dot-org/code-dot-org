@@ -12,6 +12,24 @@ ur:
   campaign_date_full: 4-10 دسمبر
   campaign_date_year: '2017'
   campaign_date_full_year: 4-10، 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: کمپیوٹر سائینس سیکھیے اوردنیا بدلیے
   hoc2019_header_line1_mobile: کمپیوٹر سائینس سیکھیے
   hoc2019_header_line2_mobile: دنیا بدلیے
@@ -174,8 +192,10 @@ ur:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -3257,7 +3277,6 @@ ur:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: ایچ ٹی ایم ایل اور سی ایس ایس سیکھنا شروع کرنا
     اس ڈیجیٹل پوسٹ کارڈ کے ساتھ آسان اور مزہ ہے. دوستوں اور خاندان کے ساتھ اشتراک
     کرنے کے لئے چھٹی کارڈ یا سالگرہ کا جشن تخلیق کرنے کیلئے عنوانات، پیراگراف، تصاویر
@@ -7411,7 +7430,7 @@ ur:
   tutorial_groklearningpython_string_platforms: جدید براؤزر
   tutorial_htmltimetravel_string_platforms: جدید براؤزر
   tutorial_hp_flappy_string_platforms: واپس اوپر
-  tutorial_appytappin_string_platforms: غیر منسلک
+  tutorial_appytappin_string_platforms: جدید براؤزر
   tutorial_icipher_string_platforms: غیر منسلک
   tutorial_iguess_string_platforms: لوڈ، اتارنا Android کی گولی، لوڈ، اتارنا Android
     فون
@@ -9408,8 +9427,8 @@ ur:
     ٹیبلٹ، رکن
   tutorial_scratchcartoon_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android
     ٹیبلٹ، رکن
-  tutorial_codemonkeyjr_string_platforms: لوڈ، اتارنا Android کی گولی، رکن، لوڈ، اتارنا
-    Android فون، آئی فون
+  tutorial_codemonkeyjr_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن، لوڈ، اتارنا Android فون، آئی فون
   tutorial_bananatales_string_platforms: جدید براؤزر
   tutorial_scratchtales_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     رکن
@@ -9795,3 +9814,4 @@ ur:
   some: کچھ
   all: سب
   dont_know: مجھ نہیں پتہ
+  language_label: Language

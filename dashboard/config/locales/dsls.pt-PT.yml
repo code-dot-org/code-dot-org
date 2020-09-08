@@ -511,6 +511,8 @@ pt-PT:
         content1: descrição
       Begin planning your project_2018_2019:
         content1: descrição
+      Begin planning your project_2018_2019_2020:
+        content1: descrição
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -1358,7 +1360,65 @@ pt-PT:
         content1: descrição
       New Challenge Introduction:
         content1: descrição
+      OPD-K5 Reviewing Reflections:
+        content1: descrição
       OPD-K5 Stage3aGo:
+        content1: descrição
+      OPD-K5 Stage3aGo_copy:
+        content1: descrição
+      OPD-K5 conditionals introduced:
+        content1: descrição
+      OPD-K5 debugging:
+        content1: descrição
+      OPD-K5 diving deeper intro:
+        content1: descrição
+      OPD-K5 events introduced:
+        content1: descrição
+      OPD-K5 for loops:
+        content1: descrição
+      OPD-K5 for loops intro:
+        content1: descrição
+      OPD-K5 for loops introduction:
+        content1: descrição
+      OPD-K5 functions introduced:
+        content1: descrição
+      OPD-K5 journaling:
+        content1: descrição
+      OPD-K5 lesson implementation planning:
+        content1: descrição
+      OPD-K5 lesson plans:
+        content1: descrição
+      OPD-K5 loops introduced:
+        content1: descrição
+      OPD-K5 project:
+        content1: descrição
+      OPD-K5 projects introduction:
+        content1: descrição
+      OPD-K5 role_of_teacher:
+        content1: descrição
+      OPD-K5 sequencing introduced:
+        content1: descrição
+      OPD-K5 sprite lab:
+        content1: descrição
+      OPD-K5 sprite lab introduction:
+        content1: descrição
+      OPD-K5 sprite lab unplugged:
+        content1: descrição
+      OPD-K5 sprite lab video:
+        content1: descrição
+      OPD-K5 types of lessons:
+        content1: descrição
+      OPD-K5 using lesson plans:
+        content1: descrição
+      OPD-K5 variables:
+        content1: descrição
+      OPD-K5 variables introduction:
+        content1: descrição
+      OPD-K5 variables unplugged:
+        content1: descrição
+      OPD-K5 where to next:
+        content1: descrição
+      OPD-K5-projects-1:
         content1: descrição
       Prepare for your presentation:
         content1: descrição
@@ -1406,7 +1466,25 @@ pt-PT:
         - feedback: Incorreto
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - feedback: Incorreto
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - feedback: Incorreto
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1434,6 +1512,15 @@ pt-PT:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1472,6 +1559,16 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Certo!
+        - text: '15'
+        - text: Eu não sei.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1499,31 +1596,57 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
-      courseC_multi_maze_programming8_predict1:
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
           feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1553,6 +1676,15 @@ pt-PT:
         - text: Eu não sei
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1572,6 +1704,15 @@ pt-PT:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1652,6 +1793,30 @@ pt-PT:
           <br/>
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+          feedback: Certo!
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1673,6 +1838,16 @@ pt-PT:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+          feedback: Certo!
+        - text: B
+        - text: C
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
@@ -1709,6 +1884,24 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
@@ -1728,6 +1921,15 @@ pt-PT:
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - correct: true
           feedback: Certo!
@@ -1763,6 +1965,15 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -1784,6 +1995,16 @@ pt-PT:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Certo!
+        - text: '12'
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1829,6 +2050,15 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1865,6 +2095,15 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1884,6 +2123,15 @@ pt-PT:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1919,10 +2167,20 @@ pt-PT:
         - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.
@@ -1931,7 +2189,8 @@ pt-PT:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.
@@ -1940,7 +2199,18 @@ pt-PT:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.
@@ -1990,6 +2260,15 @@ pt-PT:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -2014,6 +2293,22 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -2024,6 +2319,15 @@ pt-PT:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -2051,6 +2355,15 @@ pt-PT:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -2087,6 +2400,15 @@ pt-PT:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
           feedback: Certo!
@@ -2140,6 +2462,15 @@ pt-PT:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2183,6 +2514,15 @@ pt-PT:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: 'Inquérito aos Estudantes do Fim do Curso de CS Discoveries '
       csd-post-survey-levelgroup-2018:
@@ -2196,6 +2536,12 @@ pt-PT:
           ## Recursos
 
           * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia da Atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Documento do Google](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: descrição
+      csf_password_power-up:
+        content1: descrição
+      csf_putting_a_stop_to_online_meanness:
+        content1: descrição
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2215,6 +2561,15 @@ pt-PT:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

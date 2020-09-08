@@ -2,9 +2,12 @@
  * Utilities for initializing MicroBit board components
  */
 import MicroBitButton from './MicroBitButton';
-import LedMatrix from './LedMatrix';
+import LedScreen from './LedScreen';
 import Accelerometer from './Accelerometer';
 import MicroBitThermometer from './MicroBitThermometer';
+import Compass from './Compass';
+import LightSensor from './LightSensor';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Initializes a set of components for the currently
@@ -17,9 +20,11 @@ export function createMicroBitComponents(board) {
   return Promise.resolve({
     buttonA: new MicroBitButton({mb: board, pin: 1}),
     buttonB: new MicroBitButton({mb: board, pin: 2}),
-    ledMatrix: new LedMatrix({mb: board}),
+    ledScreen: new LedScreen({mb: board}),
     tempSensor: new MicroBitThermometer({mb: board}),
-    accelerometer: new Accelerometer({mb: board})
+    accelerometer: new Accelerometer({mb: board}),
+    compass: new Compass({mb: board}),
+    lightSensor: new LightSensor({mb: board})
   });
 }
 
@@ -30,12 +35,17 @@ export function createMicroBitComponents(board) {
  *   createMicroBitComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
+ * @param {Object} dynamicComponents - array of dynamic components, from MicroBitBoard
  * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
  *   components, or just reset to their initial state.
  */
-export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
-  if (components.ledMatrix) {
-    components.ledMatrix.clear();
+export function cleanupMicroBitComponents(
+  components,
+  dynamicComponents,
+  shouldDestroyComponents
+) {
+  if (components.ledScreen) {
+    components.ledScreen.clear();
   }
 
   if (components.tempSensor) {
@@ -48,12 +58,31 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     components.accelerometer.stop();
   }
 
+  if (components.compass) {
+    components.compass.state = {x: 0, y: 0};
+    components.compass.stop();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.stop();
+    components.lightSensor.reset();
+  }
+
+  dynamicComponents.forEach(component => {
+    if (component instanceof CapacitiveTouchSensor) {
+      component.stop();
+      component.connected = false;
+    }
+  });
+
   if (shouldDestroyComponents) {
-    delete components.ledMatrix;
+    delete components.ledScreen;
     delete components.buttonA;
     delete components.buttonB;
     delete components.accelerometer;
     delete components.tempSensor;
+    delete components.compass;
+    delete components.lightSensor;
   }
 }
 
@@ -70,6 +99,14 @@ export function enableMicroBitComponents(components) {
   if (components.tempSensor) {
     components.tempSensor.start();
   }
+
+  if (components.compass) {
+    components.compass.start();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.start();
+  }
 }
 
 /**
@@ -78,7 +115,9 @@ export function enableMicroBitComponents(components) {
  */
 export const componentConstructors = {
   MicroBitButton,
-  LedMatrix,
+  LedScreen,
   Accelerometer,
-  MicroBitThermometer
+  MicroBitThermometer,
+  Compass,
+  LightSensor
 };

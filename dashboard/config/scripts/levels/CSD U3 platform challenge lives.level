@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Lives\r\n\r\nAdd a variable that keeps track of how many lives the player has, and end the game if the player runs out.\r\n\r\n# Do This\r\n- Create a variable that records the number of lives the player has\r\n  - Initialize this to some number like 3\r\n- Each time the player falls off the screen, subtract one of the lives and restart the game",
+    "long_instructions": "# Adding Lives\r\n\r\nYou can add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\r\n\r\n# Do This\r\n- Create a variable such as a `lives` and give it a starting value like 3.\r\n- Draw text to the screen to show the label `\"Lives: \"` and the value of `lives`.\r\n- Check for the player's y position to be off the screen (`player.y > 400`) and subtract one from the score.\r\n- Extra challenge: Check for 0 lives left and change the sprites or background to show the game has ended.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,14 +34,14 @@
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template_2020",
     "all_animations_single_frame": "false",
-    "encrypted_examples": "CLp70Nl1O85yhw/TdOPhX98ssoTAl+vJ+baCh01rfFCdECQ/gI0sHjy4gpzw\nLgCg\n",
+    "encrypted_examples": "vKVh+6ERxjSzoFZUJM5y9GJvaCthg/gQoJ5g1ITOTkA0cUubGyoe7P3WGmQY\nImKytRCO8houUWKs0nvuei0b7g==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_in_animation_tab": "false",
     "show_debug_watch": "true",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "display_name": "Lives",
+    "display_name": "Adding Lives",
     "parent_level_id": 23124,
     "name_suffix": "_2020",
     "reference_links": [
@@ -67,13 +67,13 @@
     "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
     "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program.",
     "libraries_enabled": "false",
-    "bubble_choice_description": "Add a variable that keeps track of how many lives the player has, and end the game if the player runs out",
-    "preload_asset_list": null,
-    "thumbnail_url": "https://images.code.org/05b480769ca5119c45bd54b346e96ac0-image-1585851310029.14.07 AM.png"
+    "bubble_choice_description": "Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.",
+    "thumbnail_url": "https://images.code.org/22ca23b360d6d97a4e33394516faca2a-image-1589998441607.gif",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 13:46:17 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 17:46:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:51:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:54:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:58:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:15:57 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 13:46:17 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 17:46:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:51:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:54:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 17:58:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 18:15:57 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-12 23:44:33 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-20 18:14:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-20 18:15:06 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

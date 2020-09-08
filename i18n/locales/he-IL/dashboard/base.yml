@@ -316,6 +316,8 @@ he:
       help_us: "עזור לנו"
       teach: "למד"
       about: "אודות"
+      legal_privacy: "הצהרת פרטיות"
+      legal_tos: "תנאים"
     user:
       classroom: 'דף הבית של המורה'
       district_dashboard: 'לוח ניהול מחוזי'
@@ -346,6 +348,7 @@ he:
       iceage: 'עידן הקרח'
       infinity: 'אינסוף'
       minecraft_adventurer: 'הרפתקן מיינקראפט'
+      minecraft_aquatic: 'מיינקראפט ימי'
       minecraft_designer: 'מיינקראפט'
       minecraft_hero: 'גיבור מיינקרפט'
       playlab: 'מעבדת הצעצועים'
@@ -628,20 +631,6 @@ he:
       body: "תלמידים יכולים להרחיב אופקים מקורסי העקרונות במדעי המחשב שלנו ולהתנסות בעזרת הכלים הדיגיטליים שלנו. השתמש בווידג'טים לבדם או צור שיעור מבוסס עיקרון יחיד לכיתתך."
       audience: "גילאי 14+"
       cta: "למד כיצד"
-  gallery:
-    students_drew_these_with_code: "תלמידים ציירו את אלה בעזרת קוד!"
-    students_made_these_with_code: "תלמידים יצרו את אלה בעזרת קוד!"
-    picture_count: "בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד."
-    activity_count: "בימים<b>%{days}</b> האחרונים, תלמידים יצרו <b>%{count}</b> אפליקציות ותמונות בעזרת כתיבת תוכנות מחשב משלהם. לחץ על כל תמונה וצילום מסך כדי לראות את ההתקדמות של כל אחד."
-    want_to_make_your_own: "רוצה להכין אחד משלך?"
-    how_to_save: "בשלב האחרון של מדריכים אלו, לחץ \"סיים\" ו \"שמור\" כדי לשמור את העבודה שלך בגלריה."
-    more: "עוד &rarr;"
-    caption_by_name_age: "מאת %{name}, גיל %{age}"
-    caption_time_ago: "%{time_ago} לפני"
-    header: "גלריה"
-    header_playlab: "סיפורים ומשחקים"
-    header_artist: "אמן"
-    report_abuse: "דווח על התעללות"
   landing:
     report_bug: "דווח על באג"
     support: "קבל עזרה"
@@ -816,54 +805,6 @@ he:
       description: 'אני מבקש שמדריך יבדוק את הטופס'
     instructor_feedback: 'התייחסות המדריך'
     outdated: 'משוב זה נוסף לגרסה הקודמת שנשלחה'
-  flex_category:
-    required: 'סקירה'
-    ramp_up: 'העלה רמה'
-    main_course: 'קורס ראשי'
-    extra_course_content: 'תוכן נוסף של הקורס'
-    csf_e_1: 'המשך אל קורס ה (רשות)'
-    csf_e_2: 'תכני קורס ה'
-    csf_f_1: 'המשך אל קורס ו (רשות)'
-    csf_f_2: 'תכני קורס ו'
-    csf_jigsaw: 'פאזל'
-    csf_loops: 'חזרות'
-    csf_events: 'אירועים'
-    csf_online_safety: 'בטיחות ברשת'
-    csf_binary: 'בינארי'
-    csf_conditionals: 'תנאים'
-    csf_functions: 'פונקציות'
-    csf_variables: 'משתנים'
-    csf_for_loops: 'בשביל לולאות'
-    csf_internet: 'אינטרנט'
-    csf_warmup: 'חימום'
-    csd1_1: 'פרק 1: הדרך לפתרון תהליך'
-    csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
-    csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
-    csd2_2: 'פרק 2: עיצוב ו-CSS'
-    csd3_1: 'פרק 1: תמונות ואנימציות'
-    csd3_2: 'פרק 2: יצירת משחקים'
-    csd4_1: 'פרק 1: עיצוב מכוון משתמש'
-    csd4_2: 'פרק 2: תכנון אפליקציה'
-    csd5_1: 'פרק 1: ייצוג מידע'
-    csd5_2: 'פרק 2: פתרון בעיות נתונים'
-    csd6_1: 'פרק 1: תכנות עם חומרה'
-    csd6_2: 'פרק 2: יצור אב טיפוס פיזי'
-    csd_survey: 'סקר שלאחר הקורס'
-    csp1_1: 'פרק 1: ייצוג ושליחת מידע'
-    csp1_2: 'פרק 2: המצאת האינטרנט'
-    csp2_1: 'פרק 1: קידוד וכיווץ מידע מורכב'
-    csp3_1: 'פרק 1: שפות תכנות ואלגוריתמים'
-    cspSurvey: 'סקר'
-    cspAssessment: 'הערכה לפרק'
-    csp_postap_2: 'פרק 2: אפליקציות ומסדי נתונים'
-    csp3_1_2018: 'יחידה 3: מבוא לתכנות'
-    csp_variables: 'משתנים'
-    csp_conditionals: 'תנאים'
-    csp_functions: 'פונקציות'
-    csp_project: 'פּרוֹיֶקט'
-    csp_lists: 'רשימות'
-    csp_loops: 'חזרות'
-    k5_next_steps: 'השלבים הבאים'
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.
@@ -938,6 +879,8 @@ he:
       school_name: 'שם בית הספר'
       school_city: 'יישוב בית הספר'
       school_country: 'ארץ בית הספר'
+      colombian_school_city: 'יישוב בית הספר'
+      colombian_school_name: 'שם בית הספר'
       ages: 'איזה גיל(אים) אתה מלמד השנה?'
       subjects: 'איזה נושא(אים) אתה מלמד השנה?'
       resources: 'באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?'

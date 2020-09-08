@@ -112,7 +112,9 @@ class LibraryTable extends React.Component {
 
               {datasetInfo.docUrl && (
                 <span style={{display: 'block'}}>
-                  <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
+                  <a target="_blank" href={datasetInfo.docUrl}>
+                    {msg.moreInfo()}
+                  </a>
                 </span>
               )}
 

@@ -7,6 +7,7 @@ hi:
           बदलता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -60,6 +61,7 @@ hi:
         text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -125,6 +127,7 @@ hi:
         text: "{GROUP} {PROPERTY} के {VAL} तक बदलें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -148,6 +151,7 @@ hi:
         text: "{GROUP} एक बार {MOVE} {DIR} करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -310,6 +314,7 @@ hi:
         text: "{GROUP} से {LOCATION} पर जाएं"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -337,6 +342,7 @@ hi:
         text: "{GROUP} को {FORMAT} के रूप में लेआउट दें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -568,6 +574,7 @@ hi:
         text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -641,6 +648,7 @@ hi:
         text: "{GROUP} {PROPERTY} को {VAL} पर सेट करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -676,6 +684,7 @@ hi:
         text: "{GROUP} {PROPERTY} को बेतरतीब करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -702,6 +711,7 @@ hi:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -718,6 +728,7 @@ hi:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -742,6 +753,7 @@ hi:
         text: "{THIS} दृश्यता को {VISIBILITY} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -776,6 +788,7 @@ hi:
         text: "{GROUP} {PROPERTY} निम्न {RANGE} पर शुरू करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -820,6 +833,7 @@ hi:
         text: "{GROUP} {PROPERTY} निम्न {RANGE} पर रोकता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -952,6 +966,10 @@ hi:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंड
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
@@ -998,8 +1016,46 @@ hi:
           CHOICE:
             '"this"': यह
             '"other"': अन्य
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंड
       gamelab_hideTitleScreen:
         text: शीर्षक स्क्रीन छुपाएं
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
+            '"space"': अंतरिक्ष
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} किनारों को छू रहा है"
       gamelab_jumpTo:
@@ -1072,6 +1128,8 @@ hi:
             '"West"': पश्चिम
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
         text: प्लेसाउंड {SOUND}
       gamelab_pointInDirection:
@@ -1153,6 +1211,8 @@ hi:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} डिग्रियां बदलें"
         options:
@@ -1257,11 +1317,13 @@ hi:
         text: "{SELECT} {COSTUME} को {COSTUME2} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupChangePropBy:
         text: "{SELECT} {COSTUME} की {PROPERTY} को  {VAL} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
           PROPERTY:
             '"scale"': आकार
@@ -1286,6 +1348,7 @@ hi:
         text: "{SELECT} {COSTUME} हटाएं"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupDisplace:
         text: सभी {COSTUME} {COSTUME2} को मूव होने से रोकते हैं
@@ -1307,21 +1370,25 @@ hi:
         text: "{SELECT} {COSTUME} व्यवहार रोकें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} {BEHAVIOR} को रोकता है"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveTint:
         text: "{SELECT} {COSTUME} से रंग हटाएं"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupSetProp:
         text: "{SELECT} {COSTUME} की {PROPERTY} को {VAL} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
           PROPERTY:
             '"scale"': आकार
@@ -1333,6 +1400,7 @@ hi:
         text: "{SELECT} {COSTUME} के रंग को {COLOR} से बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupWhenClickedOn:
         text: जब {COSTUME} पर क्लिक किया

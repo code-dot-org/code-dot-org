@@ -3,5 +3,6 @@ login_required true
 has_verified_resources true
 
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
-stage 'CSD post-course survey', flex_category: 'csdSurvey'
+lesson 'CSD post-course survey', display_name: 'CSD post-course survey'
 level 'csd-post-survey-2017-levelgroup-2018-2nd-semester', progression: 'CS Discoveries Post-course Survey', assessment: true
+

@@ -1,0 +1,27 @@
+# What is this file?
+# This is a backup of the crontab configuration running on the i18n-dev server.
+#
+# How was this file created?
+# ```
+# ssh -t aws ssh -t i18n-dev
+# crontab -l > i18n-dev.crontab
+# ```
+#
+# How can I load this file into the i18n-dev server?
+# ```
+# ssh -t aws ssh -t i18n-dev
+# crontab i18n-dev.crontab
+# ```
+#
+# Where can I ask a question about this config?
+# Reach out to the #i18n slack channel.
+
+PATH=/home/ubuntu/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOME=/home/ubuntu
+
+0 */4 * * * cd /home/ubuntu/code-dot-org && CI_ONLY_BUILD=true bundle exec ./bin/cronjob ./aws/ci_build >>/tmp/cronlog 2>&1
+
+# Sync is scheduled for 12:30 AM PST every Monday; run around midnight so the
+# sync is hopefully finished by start of day on Monday, offset by 30 minutes so
+# we don't conflict with the ci_build which runs on the hour.
+30 8 * * 1 (cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/sync-all.rb -yip | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error) >>/tmp/cronlog 2>&1

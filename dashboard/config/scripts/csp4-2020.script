@@ -1,22 +1,25 @@
+hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit4/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit4/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit4/{LESSON}'
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}'
+script_announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_variables', display_name: 'Variables'
-stage 'Variables Explore', flex_category: 'csp_variables'
+lesson 'Variables Explore', display_name: 'Variables Explore'
 level 'CSP U4L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'
 level 'U4 L01 Thermostat App', progression: 'Sample Apps'
 level 'U1 L02 CYU MC', progression: 'Check For Understanding', assessment: true
 
-stage 'Variables Investigate', flex_category: 'csp_variables'
+lesson 'Variables Investigate', display_name: 'Variables Investigate'
 level 'CSP U4L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L02 Thermostat App v1', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
@@ -25,7 +28,7 @@ level 'U4 L02 Thermostat App v3', progression: 'Thermostat App v3'
 level 'U4 L02 Thermostat App v3 pt2', progression: 'Thermostat App v3'
 level 'U4 L02 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-stage 'Variables Practice', flex_category: 'csp_variables'
+lesson 'Variables Practice', display_name: 'Variables Practice'
 level 'CSP U4L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L03 Variables numbers practice 1', progression: 'Assigning Numbers and Strings'
 level 'U4 L03 Variables numbers practice 4', progression: 'Assigning Numbers and Strings'
@@ -40,18 +43,18 @@ level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
 level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U4L3 CFU Variables Randomness Psuedocode', progression: 'Check for Understanding: AP Practice', assessment: true
 
-stage 'Variables Make', flex_category: 'csp_variables'
+lesson 'Variables Make', display_name: 'Variables Make'
 level 'CSP U4L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L04 Variables Make Project_2020', progression: 'Try the Photo Liker App'
 level 'U4 L04 Variables Make Project Submit_2020', progression: 'Make the Photo Liker App', assessment: true
 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
-stage 'Conditionals Explore', flex_category: 'csp_conditionals'
+lesson 'Conditionals Explore', display_name: 'Conditionals Explore'
 level 'CSP U4L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
 level 'U4 L05 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-stage 'Conditionals Investigate', flex_category: 'csp_conditionals'
+lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate'
 level 'CSP U4L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
 level 'U4 L06 Lemon Hunter App v1 Code', progression: 'If-Statements'
@@ -63,7 +66,7 @@ level 'U4 L06 Lemon Hunter App v3 Code', progression: 'Logical Operators: AND OR
 level 'Checking Multiple Conditions with If-elseif', progression: 'Patterns: If-else-if'
 level 'U4 L06 CYU Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
-stage 'Conditionals Practice', flex_category: 'csp_conditionals'
+lesson 'Conditionals Practice', display_name: 'Conditionals Practice'
 level 'CSP U4L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L07 Conditionals Practice 1', progression: 'Boolean expressions'
 level 'U4 L07 Conditionals Practice 2', progression: 'Boolean expressions'
@@ -78,13 +81,13 @@ level 'U4 L07 Conditionals Practice 8', progression: 'Logical Operators'
 level 'U4L10 CFU Conditionals Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U4L10 CFU Conditionals Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Conditional Make', flex_category: 'csp_conditionals'
+lesson 'Conditional Make', display_name: 'Conditional Make'
 level 'CSP U4L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L08 Conditionals Make Project Sample_2020', progression: 'Try to the Museum Ticket Generator App'
 level 'U4L08 Museum Ticket Generator_2020', progression: 'Make the Museum Ticket Generator App', assessment: true
 
 lesson_group 'csp_functions', display_name: 'Functions'
-stage 'Functions Explore / Investigate', flex_category: 'csp_functions'
+lesson 'Functions Explore / Investigate', display_name: 'Functions Explore / Investigate'
 level 'CSP U4L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L09 Functions Song', progression: 'Explore Functions'
 level 'U4L09 Intro to Functions Video', progression: 'Declaring and Calling Functions'
@@ -93,7 +96,7 @@ level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
 level 'CSP U4 L09 CFU Exit Ticket_2020', progression: 'Check Your Understanding', assessment: true
 
-stage 'Functions Practice', flex_category: 'csp_functions'
+lesson 'Functions Practice', display_name: 'Functions Practice'
 level 'CSP U4L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L10 Functions Practice Calling Functions 1', progression: 'Declare and Call Functions'
 level 'U4 L10 Functions Practice 1', progression: 'Declare and Call Functions'
@@ -106,29 +109,30 @@ level 'When to Make Functions Map', progression: 'When to Declare Functions'
 level 'U4 L10 Making Functions Practice', progression: 'When to Declare Functions'
 level 'U4L10 CFU Functions Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Functions Make', flex_category: 'csp_functions'
+lesson 'Functions Make', display_name: 'Functions Make'
 level 'CSP U4L11 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L11 Functions Make 1 2020', progression: 'Quote Maker App'
 level 'U4 L11 Functions Make 2020', progression: 'Make the Quote Maker App', assessment: true
 
 lesson_group 'csp_project', display_name: 'Project'
-stage 'Project - Decision Maker App Part 1', flex_category: 'csp_project'
+lesson 'Project - Decision Maker App Part 1', display_name: 'Project - Decision Maker App Part 1'
 level 'CSP U4L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L12 Practice PT 1', progression: 'Sample Apps'
 level 'U4 L12 Practice PT 2', progression: 'Sample Apps'
 
-stage 'Project - Decision Maker App Part 2', flex_category: 'csp_project'
+lesson 'Project - Decision Maker App Part 2', display_name: 'Project - Decision Maker App Part 2'
 level 'CSP U4L13 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L13 Practice PT 1', progression: 'Create the Screens'
 level 'U4 L13 Practice PT 2', progression: 'Create the Variables'
 level 'U4 L13 Practice PT 3', progression: 'Create the Function'
 level 'U4 L13 Practice PT 4', progression: 'Add onEvents'
 
-stage 'Project - Decision Maker App Part 3', flex_category: 'csp_project'
+lesson 'Project - Decision Maker App Part 3', display_name: 'Project - Decision Maker App Part 3'
 level 'CSP U4L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', assessment: true
 
-stage 'Lesson 15: Assessment Day', lockable: true
+lesson 'Lesson 15: Assessment Day', display_name: 'Lesson 15: Assessment Day', lockable: true
 level 'CSP U4L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 4 Assessment', progression: 'Unit 4 Exam', assessment: true
+

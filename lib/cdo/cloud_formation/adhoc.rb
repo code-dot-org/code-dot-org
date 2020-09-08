@@ -46,7 +46,7 @@ module Cdo::CloudFormation
                 resource_record_set: {
                   name: domain_name,
                   resource_records: [{value: public_ip_address}],
-                  ttl: DNS_TTL,
+                  ttl: CdoApp::DNS_TTL,
                   type: "A"
                 }
               }
@@ -61,7 +61,7 @@ module Cdo::CloudFormation
         route53_client.wait_until(:resource_record_sets_changed, {id: change_id})
         change_status = route53_client.get_change({id: change_id}).change_info.status
         log.info "DNS update status - #{change_status}"
-        log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
+        log.info "Wait up to the configured Time To Live (#{CdoApp::DNS_TTL} seconds) to lookup new IP address."
       end
       stack.outputs.each do |output|
         log.info "#{output.output_key}: #{output.output_value}"

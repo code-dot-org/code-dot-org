@@ -1,7 +1,0 @@
-:scss
-  .script_text textarea { width: 100%; height: 100px }
-
-- if @level.filename
-  = "Filename: #{@level.filename}"
-.script_text
-  = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))

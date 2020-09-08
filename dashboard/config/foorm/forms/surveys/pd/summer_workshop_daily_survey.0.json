@@ -1,0 +1,93 @@
+{
+ "pages": [
+  {
+   "name": "page_1",
+   "elements": [
+    {
+     "type": "html",
+     "name": "environment131",
+     "html": "<p><span style=\"font-size: 18pt;\"><strong><span style=\"font-family: arial, helvetica, sans-serif;\">{workshop_course} Summer Workshop - Day {day}</span></strong></span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">We're eager to hear how you're doing and what your facilitator(s) can do to improve, so we ask that you please take 5-10 minutes to complete this survey. Your feedback will be shared with your facilitator(s), {regional_partner_name} and the Code.org staff.</span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">Thank you for your time and honesty!</span></p>"
+    },
+    {
+     "type": "rating",
+     "name": "feel_prepared",
+     "title": "I feel more prepared to teach {workshop_course} than I did at the beginning of the day.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "rating",
+     "name": "teacher_comfort",
+     "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "rating",
+     "name": "teacher_community",
+     "title": "I feel like I am connected to a community of teachers in my {workshop_course} workshop.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "rating",
+     "name": "excited_about_tomorrow",
+     "title": "I am excited about what we will do next time in this workshop.",
+     "rateMax": 7,
+     "minRateDescription": "Strongly Disagree",
+     "maxRateDescription": "Strongly Agree"
+    },
+    {
+     "type": "comment",
+     "name": "what_supported",
+     "title": "What supported your learning the most today and why?",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "comment",
+     "name": "what_detracted",
+     "title": "What detracted from your learning today and why?",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "comment",
+     "name": "discuss_tomorrow",
+     "title": "What is one thing you hope to discuss or learn more about the next time we meet?",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "html",
+     "name": "question2",
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Please be thoughtful in your responses for each individual.</p>"
+    },
+    {
+     "type": "paneldynamic",
+     "name": "facilitators",
+     "title": "Facilitators",
+     "templateElements": [
+      {
+       "type": "comment",
+       "name": "facilitator_feedback_FR",
+       "title": "Do you have any feedback about today for {panel.facilitator_name}?",
+       "rows": 2
+      }
+     ],
+     "templateTitle": "Facilitator {panel.facilitator_position} - {panel.facilitator_name}",
+     "allowAddPanel": false,
+     "allowRemovePanel": false
+    },
+    {
+     "type": "html",
+     "name": "question1",
+     "html": "<p> Thank you for the feedback and for participating today!</p>"
+    }
+   ]
+  }
+ ]
+}

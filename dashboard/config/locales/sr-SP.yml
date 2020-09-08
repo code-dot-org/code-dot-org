@@ -265,6 +265,8 @@ sr:
       about_faqs: Често постављана питања
       learn: Научи
       help_us: Помози нам
+      legal_privacy: Политика приватности
+      legal_tos: Услови коришћења
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: Регионална огласна табла
@@ -449,11 +451,6 @@ sr:
       body: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
     unplugged_conditionals:
       title: Кондиционали
-  gallery:
-    header: Галерија
-    header_playlab: Играоница
-    header_artist: Уметник
-    report_abuse: Пријави злоупотребу
   multi-submittable:
     wrong_title: Хвала
     correct_title: Хвала
@@ -486,28 +483,13 @@ sr:
       report_abuse_form:
         abuse_type:
           other: Други
-  flex_category:
-    required: Преглед
-    csf_digcit: Дигитално држављанство
-    csf_jigsaw: Слагалица
-    csf_loops: Петље
-    csf_events: Догађаји
-    csf_conditionals: Кондиционали
-    csf_functions: Функције
-    csf_variables: Променљиве
-    csf_for_loops: Бројачке петље
-    csf_internet: Интернет
-    csp_variables: Променљиве
-    csp_conditionals: Кондиционали
-    csp_functions: Функције
-    csp_lists: Листе
-    csp_loops: Петље
   hoc_download:
     minecraft_name: Мајнкрафт час програмирања
   pd:
     form_labels:
       email: Електронска пошта
       school_name: Име школе
+      colombian_school_name: Име школе
     form_entries:
       gender:
         male: Мушко

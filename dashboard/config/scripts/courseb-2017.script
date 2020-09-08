@@ -1,7 +1,7 @@
-tts true
+is_course true
 hidden false
-hideable_stages true
-stage_extras_available true
+hideable_lessons true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}'
 project_widget_visible true
@@ -10,19 +10,20 @@ new_name 'courseb-2017'
 family_name 'courseb'
 version_year '2017'
 is_stable true
-supported_locales ["es-ES", "es-MX", "hi-IN", "it-IT", "sk-SK"]
+supported_locales ["ar-SA", "cs-CZ", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "sk-SK", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
+tts true
 
-stage 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 
-stage 'Persistence & Frustration: Stevie and the Marbles'
+lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence: Stevie and the Big Project'
 level 'courseA_video_Stevie'
 
-stage 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-stage 'Learn to Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Sequencing with Drag and Drop'
 level 'elementary_video_pairProgramming'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
@@ -61,13 +62,13 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
-stage 'Your Digital Footprint'
+lesson 'Your Digital Footprint', display_name: 'Digital Citizenship: My Digital Footprint'
 level 'DigitalFootprint'
 
-stage 'Programming: My Robotic Friends'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends'
 level 'courseB_unplugged_MRF'
 
-stage 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze'
 level 'courseAB_video_NewIntro'
 level 'courseB_maze_seq1'
 level 'courseB_video_debuggingOrg'
@@ -85,7 +86,7 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1'
 bonus 'courseB_maze_seq_challenge2'
 
-stage 'Programming with Rey and BB-8'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8'
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'
 level 'courseB_starWars_prog3'
@@ -98,10 +99,10 @@ level 'courseB_starWars_prog9'
 level 'courseB_starWars_prog10'
 level 'courseB_starWars_prog11'
 
-stage 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
-stage 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops in Collector'
 level 'courseAB_video_collector'
 level 'courseB_collector_loops1'
 level 'courseB_collector_loops2'
@@ -118,7 +119,7 @@ level 'courseB_collector_loops11'
 bonus 'courseB_collector_loops_challenge1'
 bonus 'courseB_collector_loops_challenge2a'
 
-stage 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist'
 level 'courseB_video_ArtistIntro'
 level 'courseB_artist_loops1'
 level 'courseB_video_artistLoops'
@@ -134,10 +135,10 @@ level 'courseB_artist_loops10'
 bonus 'courseB_artist_loops_challenge1'
 bonus 'courseB_artist_loops_challenge2'
 
-stage 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
 level 'BigEvent'
 
-stage 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab'
 level 'courseA_video_events'
 level 'courseB_playLab_events1'
 level 'courseB_playlab_events2'
@@ -149,3 +150,4 @@ level 'courseB_playlab_events7'
 level 'courseB_playlab_eventsFP'
 bonus 'courseB_playlab_events_challenge1'
 bonus 'courseB_playlab_events_challenge2'
+

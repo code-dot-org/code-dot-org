@@ -12,6 +12,6 @@ if File.basename($0) != 'rake' &&
   Script.script_level_cache
   Script.level_cache
   Script.script_family_cache
-  Course.course_cache_to_cache
-  Course.course_cache
+  UnitGroup.course_cache_to_cache
+  UnitGroup.course_cache
 end

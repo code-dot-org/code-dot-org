@@ -1316,6 +1316,8 @@
   header_teacher_community: "მასწავლებელთა კოლექტივი"
   header_help_support: 'დახმარება და მხარდაჭერა '
   header_report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
+  header_legal_privacy: "კონფიდენციალურობის პოლიტიკა"
+  header_legal_tos: "მომსახურების პირობები"
   header_tutorials: "ტუტორიალები"
   header_documentation: "დოკუმენტაცია"
   user_header_label: "გამარჯობა %{username}"

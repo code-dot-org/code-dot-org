@@ -237,6 +237,8 @@ sl:
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
+      legal_privacy: "Izjava o zasebnosti"
+      legal_tos: "Pogoje storitve"
     user:
       classroom: 'Učiteljeva domača stran'
       district_dashboard: 'Nadzorna plošča za okrožje'
@@ -480,19 +482,6 @@ sl:
       audience: "Starost 4+"
     unplugged_conditionals:
       title: "Pogoji"
-  gallery:
-    students_drew_these_with_code: "Učenci so to narisali s svojimi programi!"
-    students_made_these_with_code: "Učenci so to ustvarili s svojimi programi!"
-    picture_count: "V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>) slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa."
-    activity_count: "V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>) aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa."
-    want_to_make_your_own: "Bi poskusil/a še sam/a?"
-    more: "Več &rarr;"
-    caption_by_name_age: "po %{name}, %{age} starosti"
-    caption_time_ago: "pred %{time_ago}"
-    header: "Galerija"
-    header_playlab: "Zgodbe in igre"
-    header_artist: "Umetnik"
-    report_abuse: "Prijavi zlorabo"
   landing:
     report_bug: "Sporoči napako"
     support: "Pomoč"
@@ -610,24 +599,6 @@ sl:
           infringement: 'Kršitev avtorskih pravic'
           other: 'Drugi'
         detail: 'Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.'
-  flex_category:
-    required: 'Pregled'
-    content: 'Vsebina'
-    csf_digcit: 'Digitalno državljanstvo'
-    csf_jigsaw: 'Sestavljanka'
-    csf_loops: 'Zanke'
-    csf_events: 'Dogodki'
-    csf_binary: 'Binarno'
-    csf_conditionals: 'Pogoji'
-    csf_nested_loops: 'Gnezdenje zank'
-    csf_functions: 'Funkcije'
-    csf_variables: 'Spremenljivke'
-    csf_internet: 'Internet'
-    csp_variables: 'Spremenljivke'
-    csp_conditionals: 'Pogoji'
-    csp_functions: 'Funkcije'
-    csp_lists: 'Seznami'
-    csp_loops: 'Zanke'
   hoc_download:
     minecraft_name: 'Minecraft Ura za kodo'
     download_in_Albanian: 'Prenesi v albanskem jeziku:'
@@ -640,6 +611,7 @@ sl:
     form_labels:
       email: 'Elektronska pošta'
       school_name: 'Ime šole'
+      colombian_school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'

@@ -1,84 +1,133 @@
 ---
-title: எவ்வாறு செய்வது வழிகாட்டி
+title: How-to Guide for Hour of Code
 ---
 
 {{signup_button}}
 
-# ஒரு வகுப்பின் ஒரு மணி நேரத்தை உங்கள் வகுப்பில் எப்படி கற்பிக்க வேண்டும்
+# How to plan your Hour of Code
 
-### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! உதவ கூடுதல் கைகளின் தொகுப்பை நீங்கள் விரும்பினால், உங்கள் வகுப்பில் ஒரு மணிநேர குறியீட்டை இயக்க உதவும் [ உள்ளூர் தன்னார்வலரை ](== {urls/volunteer_local }==) காணலாம்.
+### Join the movement and introduce your students to computer science with these steps.
 
-### உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் [ பங்கேற்பு வழிகாட்டியைப் பாருங்கள் ](=== localized_files/participation_guide }ibl).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் [ பங்கேற்பு வழிகாட்டியைப் பாருங்கள் ](=== localized_files/participation_guide }ibl).
+
+An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+- [1. Watch the Hour of Code how-to video](#how-to-video)
+- [2. Explore activities and tutorials](#explore-activities)
+- [3. Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
 
-## 1. எப்படி செய்வது என்று காட்டும் காணொளியை பார்க்க <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. பயிற்சியை தேர்வு செய்க
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-எல்லா வயதினருக்கும் அனுபவ நிலைகளுக்கும் பலவிதமான வேடிக்கைகளை, [ மாணவர் வழிகாட்டும் பயிற்சிகள் ](== {urls/learn }a>) வழங்குகிறோம். மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கின்றனர், ஆனால் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களை உள்ளடக்கியிருந்தாலும், நீங்கள் விவாதத்தை வழிகாட்டும் அல்லது நடவடிக்கைகளை நீட்டிக்க (நீங்கள் நடவடிக்கைகளை கிளிக் செய்யும் போது நீங்கள் இணைப்பைக் காணலாம்). [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+* * *
 
-## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
+<a id="explore-activities"></a>
 
-இந்த கருவிகளைக் கொண்டு உங்கள் மணிநேர குறியீட்டை  ஊக்குவிக்கவும், மற்றவர்கள் தங்கள் சொந்த நிகழ்வுகளை நடத்த ஊக்குவிக்கவும்.</p> 
+## 2. Explore activities and tutorials
 
-## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
+எல்லா வயதினருக்கும் அனுபவ நிலைகளுக்கும் பலவிதமான வேடிக்கைகளை, [ மாணவர் வழிகாட்டும் பயிற்சிகள் ](== {urls/learn }a>) வழங்குகிறோம். It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
-கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். மணிநேர நிரலாக்கம் சொல்லிக் கொடுக்கப்படும் ஒவ்வொரு குழந்தைக்கும் ஒரு கணினி இருக்க **தேவையில்லை**. ஒரு கணினி கூட இல்லாமலும் சொல்லித்தர முடியும்.
+Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். ** குறைவான பட்டையகலம் உள்ளதா? ** அனைத்து மாணவருக்கும் சேர்த்து வகுப்பின் முன், வீடியோக்களைக் காட்ட திட்டம் செய்க. அப்படி செய்வதால் ஒவ்வொரு மாணவரும் தங்கள் சொந்த வீடியோக்களை பதிவிறக்கம் செய்யவில்லை. அல்லது unplugged / அகல்நிலை பயிற்சிகளையும் முயற்சிக்கவும்.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-ஒலியோடு சிறந்த இயங்கும் பயிற்சியை நீங்கள் தேர்ந்து எடுத்தால், வகுப்பிற்கான காதணிபாடிகள் நீங்களே வழங்கலாம் அல்லது மாணவர்கள் தங்கள் சொந்தமாக காதணிபாடிகளை கொண்டு வரும்படியும் கேட்கலாம்.
+* * *
 
-** போதுமான சாதனங்கள் இல்லையா? </ strong> [ ஜோடி நிரலாக்க ](https://www.youtube.com/watch?v=vgkahOzFH2Q) என்பதைப் பயன்படுத்துக. மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</p> 
+<a id="create-your-plan"></a>
 
-<img src="/images/fit-350/group_ipad.jpg" />
+## 3. Create your plan for the day
 
-## 5. எழுச்சியூட்டும் பேச்சாளரோடோ அல்லது காணொளியொடோ உங்கள் மணிநேர நிரலாக்கத்தை தொடங்கவும்
+### Think about your technology needs - computers are optional!
 
-** கணினி அறிவியலின் சாத்தியக்கூறுகளின் அகலத்தைப் பற்றி பேசுவதன் மூலம் உங்கள் மாணவர்களை ஊக்குவிக்க [ உள்ளூர் தன்னார்வலரை ](== {urls/volunteer_local }sex) அழைக்கவும். </ strong> சுற்றி ஆயிரக்கணக்கான தன்னார்வலர்கள் உள்ளனர் வகுப்பறை வருகை அல்லது உங்கள் மாணவர்களுடன் வீடியோ அரட்டை மூலம் உங்கள் குறியீட்டு நேரத்திற்கு உதவ உலகம் தயாராக உள்ளது!</p> 
+- கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
+- மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- ஒலியோடு சிறந்த இயங்கும் பயிற்சியை நீங்கள் தேர்ந்து எடுத்தால், வகுப்பிற்கான காதணிபாடிகள் நீங்களே வழங்கலாம் அல்லது மாணவர்கள் தங்கள் சொந்தமாக காதணிபாடிகளை கொண்டு வரும்படியும் கேட்கலாம்.
+- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.
 
-**ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
+<img src="/images/fit-600/group_ipad.jpg" />
+
+### Pick a day and time
+
+People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
+
+## 4. Promote your Hour of Code
+
+Now that you've planned your event, it's time to start promoting it!
+
+### Tell your School and Community
+
+Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+
+### Let Volunteers Know by Registering Your Event
+
+When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+
+### Get your Students Excited
+
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+
+{{ promote_new_posters }}
+
+Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+
+* * *
+
+<a id="promote-your-hour"></a>
+
+## 5. Start your Hour of Code Strong
+
+Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+
+Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+
+ஒரு தூண்டுதலாக வீடியோவை காட்டு:
 
 - அசல் Code.org வெளியீட்டு வீடியோ, பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நட்சத்திர கிறிஸ் போஷ் ஆகியவற்றைக் கொண்டது. [ 1 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 நிமிடம் </a>, மற்றும் [ 9 நிமிட ](https://www.youtube.com/watch?v=dU1xS07N-FA) பதிப்புகளில் கிடைக்கும்)
 - மேலும் உத்வேகம் தரும் <a href="== {url / inspire} "
 
-**நீங்கள் மற்றும் உங்கள் மாணவர்கள் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
+It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).
 - ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.
 - கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க [ இங்கே ](a> {urls/girls }a>).
 
-## 6. கோட்!
+* * *
 
-**நடவடிக்கைக்கு நேரடி மாணவர்கள்**
+## 6. Get Coding!
 
-- டுடோரியல் இணைப்பை ஒரு வெள்ளை பலகையில் எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் நீங்கள் தேர்ந்தெடுத்த டுடோரியலுக்கான [ தகவல் ](== {urls/learn }ibl) இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.
+நடவடிக்கைக்கு நேரடி மாணவர்கள்
 
-**உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:**
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+
+உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:
 
 - "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
 - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
 - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
 
-**ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?**
+ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?
 
 - மாணவர்கள் அனைத்து டுடோரியல்களையும் பார்க்கலாம் மற்றும் [ மற்றொரு மணிநேர குறியீடு செயல்பாட்டை முயற்சிக்கவும் ](a> {urls/learn }a>).
 - அல்லது, நடவடிக்கைகளைத் தொந்தரவு செய்யும் வகுப்புத் தோழர்களுக்கு உதவ ஆரம்பிக்கிற மாணவர்களைக் கேட்கவும்.
 
-[வண்ணம்-33]
+* * *
 
-![](/images/fit-250/highschoolgirls.jpeg)
-
-9/5000 [/ நெடுவரிசை-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## 7. கொண்டாடுங்கள்
+## 7. Celebrate your Students' Success
 
 [வண்ணம்-33]
 
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 9/5000 [/ நெடுவரிசை-33]
 
@@ -88,14 +137,7 @@ title: எவ்வாறு செய்வது வழிகாட்டி
     
     - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 
     
-    [வண்ணம்-33]
-    
-    ![](/images/fit-260/highlight-certificates.jpg)
-    
-    9/5000 [/ நெடுவரிசை-33]
-
-<p style="clear:both">&nbsp;</p>
-
+    * * *
     
     ## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி:...
     
@@ -104,9 +146,6 @@ title: எவ்வாறு செய்வது வழிகாட்டி
     
     ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
     
-    தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும்.
-    
-    - [ ஆன்லைனில் கற்றுக்கொள்ள ]({{urls/learn_beyond }a>) தொடர மாணவர்களை ஊக்குவிக்கவும்.
-    - ஒரு அனுபவமிக்க கணினி அறிவியல் வசதியாளரிடமிருந்து அறிவுறுத்தலைப் பெற [ கலந்து கொள்ளுங்கள் ]({{urls/professional_development_workshops }ibl) 1 நாள், நேரில் பயிலரங்கில் கலந்து கொள்ளுங்கள். (அமெரிக்க கல்வியாளர்கள் மட்டும்)
+    Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
     
     {{signup_button}}

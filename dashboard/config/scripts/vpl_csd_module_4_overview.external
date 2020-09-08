@@ -1,0 +1,26 @@
+name 'VPL - CSD Module 4 Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 4: CS Discoveries Virtual Professional Learning
+
+## Module 4 Overview
+
+Welcome to the asynchronous work for Module 4 for CS Discoveries!  
+
+Module 4 is a continuation of Unit 4 - The Design Process and continues with the theme of the "Role of the Student". The asynchronous work here will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+Module 4 focuses on investigating and reflecting how to implement Unit 4 lessons with students. Although it does not cover all unit content, core concepts are highlighted. As you progress through this asynchronous work, consider how you will support students to play an active role in their learning.
+
+**During this asynchronous work you will:**
+
+* Review key vocabulary 
+* Identify resources to reference throughout the lessons
+* Become familiar with the Design Mode features within App Lab
+* Reflect on the role of the student and active learning
+
+
+### Let's get started!
+MARKDOWN

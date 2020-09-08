@@ -19,7 +19,10 @@ import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  sectionCode,
+  sectionName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -28,7 +31,8 @@ import {
   editAll,
   TransferStatus,
   TransferType,
-  ParentLetterButtonMetricsCategory
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -38,6 +42,8 @@ import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   headerName: {
@@ -140,6 +146,7 @@ class ManageStudentsTable extends Component {
     // Provided by redux
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
@@ -209,6 +216,41 @@ class ManageStudentsTable extends Component {
   };
 
   // Cell formatters.
+
+  passwordHeaderFormatter = () => {
+    const {loginType} = this.props;
+    const passwordLabels = {};
+    passwordLabels[SectionLoginType.picture] = i18n.picturePassword();
+    passwordLabels[SectionLoginType.word] = i18n.secretWords();
+    passwordLabels[SectionLoginType.email] = i18n.password();
+    const passwordTooltips = {};
+    passwordTooltips[
+      SectionLoginType.picture
+    ] = i18n.editSectionLoginTypePicDesc();
+    passwordTooltips[
+      SectionLoginType.word
+    ] = i18n.editSectionLoginTypeWordDesc();
+    passwordTooltips[
+      SectionLoginType.email
+    ] = i18n.editSectionLoginTypeEmailDesc();
+    return (
+      <span style={styles.verticalAlign}>
+        <div data-for="password" data-tip="" id="password-header">
+          {passwordLabels[loginType]}
+        </div>
+        <ReactTooltip
+          id="password"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>{passwordTooltips[loginType]}</div>
+        </ReactTooltip>
+      </span>
+    );
+  };
 
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
@@ -395,8 +437,6 @@ class ManageStudentsTable extends Component {
 
   getColumns = sortable => {
     const {loginType} = this.props;
-    const passwordLabel =
-      loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
     let dataColumns = [
       {
         property: 'name',
@@ -467,7 +507,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'password',
         header: {
-          label: passwordLabel,
+          formatters: [this.passwordHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -550,14 +590,32 @@ class ManageStudentsTable extends Component {
   };
 
   copySectionCode = () => {
-    const {sectionCode, studioUrlPrefix} = this.props;
+    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'copy-section-code-join-link',
+        data_json: JSON.stringify({
+          sectionId: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
     this.setState({showCopiedMsg: true});
     setTimeout(() => {
       this.setState({showCopiedMsg: false});
     }, 5000);
     clearTimeout();
+  };
+
+  onPrintLoginCards = () => {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    window.open(url, '_blank');
   };
 
   render() {
@@ -586,7 +644,9 @@ class ManageStudentsTable extends Component {
       transferStatus,
       transferData,
       sectionId,
-      sectionCode
+      sectionName,
+      sectionCode,
+      studentData
     } = this.props;
     return (
       <div>
@@ -631,7 +691,13 @@ class ManageStudentsTable extends Component {
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.button}>
-              <PrintLoginCards sectionId={this.props.sectionId} />
+              <PrintLoginCards
+                sectionId={this.props.sectionId}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                }
+                onPrintLoginCards={this.onPrintLoginCards}
+              />
             </div>
           )}
           <div style={styles.button}>
@@ -674,6 +740,8 @@ class ManageStudentsTable extends Component {
         </Table.Provider>
         <ManageStudentsLoginInfo
           sectionId={sectionId}
+          sectionName={sectionName}
+          studentData={studentData}
           loginType={loginType}
           sectionCode={this.props.sectionCode}
           studioUrlPrefix={this.props.studioUrlPrefix}
@@ -689,6 +757,7 @@ export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
     sectionCode: sectionCode(state, state.sectionData.section.id),
+    sectionName: sectionName(state, state.sectionData.section.id),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
     editingData: state.manageStudents.editingData,

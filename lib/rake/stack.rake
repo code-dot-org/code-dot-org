@@ -8,7 +8,7 @@ namespace :stack do
     @cfn = AWS::CloudFormation.new(
       stack: (@stack = Cdo::CloudFormation::CdoApp.new(
         filename: ENV['TEMPLATE'],
-        stack_name: ENV['STACK_NAME'],
+        stack_name: ENV['STACK_NAME'].dup,
         frontends: ENV['FRONTENDS'],
         domain: ENV['DOMAIN'],
         cdn_enabled: ENV['CDN_ENABLED'],
@@ -17,6 +17,7 @@ namespace :stack do
       log: CDO.log,
       verbose: ENV['VERBOSE'],
       quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
     )
   end
 
@@ -63,6 +64,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
           log: CDO.log,
           verbose: ENV['VERBOSE'],
           quiet: ENV['QUIET'],
+          import_resources: ENV['IMPORT_RESOURCES'],
         )
       end
 

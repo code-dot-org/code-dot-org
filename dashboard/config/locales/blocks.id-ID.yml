@@ -975,6 +975,10 @@ id:
         text: sprite {SPRITE} dimulai {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_changePropBy:
         text: ubah {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -1020,8 +1024,47 @@ id:
         options:
           CHOICE:
             '"this"': ini
+            '"other"': lainnya
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': spasi
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} menyentuh tepi"
       gamelab_jumpTo:
@@ -1096,6 +1139,8 @@ id:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} menuju {TARGET}
+      gamelab_objectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1175,6 +1220,8 @@ id:
           CONDITION:
             '"when"': ketika
             '"while"': Selagi
+      gamelab_subjectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_turn:
         text: belok {SPRITE} {DIRECTION} {N} derajat
         options:
@@ -1477,10 +1524,10 @@ id:
         text: ketika {KEY} ditekan
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1488,10 +1535,10 @@ id:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1507,10 +1554,10 @@ id:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
       Mikelab_xLocationOf:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:

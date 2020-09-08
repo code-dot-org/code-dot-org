@@ -28,6 +28,7 @@ Resources:
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
+              - !Ref ChefConfig
 <% if database -%>
               - !Ref DatabaseSecret
 <% end -%>
@@ -71,13 +72,15 @@ Resources:
             Resource:
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.dcdo_table_name%>"
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.gatekeeper_table_name%>"
-          # Write analysis events to Firehose.
+          # Write to our Firehose streams
           # TODO: Import resources into stack.
           - Effect: Allow
             Action:
             - 'firehose:PutRecord'
             - 'firehose:PutRecordBatch'
-            Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+            Resource:
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/i18n-string-tracking-events"
           # S3 access for student-libraries bucket
           - Effect: Allow
             Action:
@@ -278,6 +281,11 @@ Resources:
                 Action:
                   - 'cloudformation:UpdateStack'
                   - 'cloudformation:DescribeStacks'
+                  - 'cloudformation:CreateChangeSet'
+                  - 'cloudformation:DescribeChangeSet'
+                  - 'cloudformation:ExecuteChangeSet'
+                  - 'cloudformation:DeleteChangeSet'
+                  - 'cloudformation:GetTemplateSummary'
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
               - Effect: Allow
                 Action: iam:PassRole
@@ -329,13 +337,16 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - cloudformation:DescribeStacks
-                  - cloudwatch:GetMetricStatistics
                   - ec2:DescribeInstances
+                  - ec2:DescribeInstanceAttribute
                 Resource: '*'
               - Effect: Allow
-                Action: cloudformation:DescribeStackResource
-                Resource: '*'
+                Action:
+                  - ec2:StopInstances
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    ec2:ResourceTag/environment: adhoc
         - PolicyName: RDSBackup
           PolicyDocument:
             Statement:
@@ -399,6 +410,9 @@ Resources:
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
+<% if @daemon_instance_id -%>
+    DeletionPolicy: Retain
+<% end -%>
     CreationPolicy:
       ResourceSignal:
         Timeout: PT2H
@@ -453,6 +467,14 @@ Resources:
 <% if database-%>
 <%=  component 'database'%>
 <% end -%>
+  ChefConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
+      Name: !Sub "CfnStack/${AWS::StackName}/chef"
+      # Update this secret manually after the stack is created to customize Chef configuration.
+      # The value should never be changed in the stack itself, since it would clobber all other changes.
+      SecretString: '{}'
 Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"
@@ -463,6 +485,6 @@ Outputs:
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:
-    Value: <%=cdn_enabled ? subdomain('origin') : subdomain%>
+    Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
     Description: SSH server name
 <%end-%>

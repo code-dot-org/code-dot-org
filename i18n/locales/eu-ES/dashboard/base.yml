@@ -193,6 +193,8 @@ eu:
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
       about: "Code.org-i buruz"
+      legal_privacy: "Pribatutasun politika"
+      legal_tos: "Erabilera baldintzak"
     user:
       classroom: 'Irakasleen sarrera orria'
       district_dashboard: 'Hezkuntza distritua'
@@ -421,19 +423,6 @@ eu:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Baldintzak"
-  gallery:
-    students_drew_these_with_code: "Ikasleek hauek irudikatu dituzte kodea erabiliz!"
-    students_made_these_with_code: "Ikasleek hauek egin dituzte kodearekin!"
-    picture_count: "Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan programak martxan ikusteko."
-    activity_count: "Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> app eta irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan eta pantaila-argazkietan programa bakoitza martxan ikusteko."
-    want_to_make_your_own: "Zurea egin nahi duzu?"
-    more: "Gehiago &rarr;"
-    caption_by_name_age: "%{name}, adina %{age}"
-    caption_time_ago: "orain dela %{time_ago}"
-    header: "Galeria"
-    header_playlab: "Istorio eta jokoak"
-    header_artist: "Arte kodea"
-    report_abuse: "Erabilera okerra jakinarazi"
   landing:
     report_bug: "Akatsa jakinarazi"
     support: "Lortu laguntza"
@@ -547,25 +536,6 @@ eu:
           other: 'Beste bat'
         detail: 'Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun gehien eman.'
         acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'
-  flex_category:
-    required: 'Bista orokorra'
-    csf_digcit: 'Hiritartasun digitala'
-    csf_jigsaw: 'Buruhaustea'
-    csf_loops: 'Itzuliak'
-    csf_events: 'Gertaerak'
-    csf_binary: 'Bitarra'
-    csf_data: 'Datu'
-    csf_conditionals: 'Baldintzak'
-    csf_nested_loops: 'Kabiatutako begiztak'
-    csf_functions: 'Funtzioak'
-    csf_variables: 'Aldagaiak'
-    csf_for_loops: 'For begiztak'
-    csf_internet: 'Internet'
-    csp_variables: 'Aldagaiak'
-    csp_conditionals: 'Baldintzak'
-    csp_functions: 'Funtzioak'
-    csp_lists: 'Zerrendak'
-    csp_loops: 'Itzuliak'
   hoc_download:
     minecraft_name: 'Minecraft Kode Ordua'
   pd:

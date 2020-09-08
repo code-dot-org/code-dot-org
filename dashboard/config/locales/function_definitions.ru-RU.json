@@ -1,0 +1,3001 @@
+{
+  "ru-RU": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "детали"
+          },
+          "draw eyebrow": {
+            "name": "нарисовать бровь"
+          },
+          "draw pupil": {
+            "name": "нарисовать зрачок"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a car": {
+            "name": "нарисовать машину"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "draw_rect",
+            "parameters": {
+              "width": "ширина",
+              "height": "высота"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "width": "ширина",
+              "height": "высота"
+            }
+          },
+          "jump to middle": {
+            "name": "перейти к центру"
+          },
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a button": {
+            "name": "нарисовать кнопку"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "нарисовать левую ногу"
+          },
+          "draw right leg": {
+            "name": "нарисовать правую ногу"
+          },
+          "draw body and arms": {
+            "name": "нарисовать туловище и руки"
+          },
+          "draw a head": {
+            "name": "нарисовать голову"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "нарисовать правую ногу"
+          },
+          "draw head": {
+            "name": "нарисовать голову"
+          },
+          "draw arms": {
+            "name": "нарисовать руки"
+          },
+          "draw left leg": {
+            "name": "нарисовать левую ногу"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "нарисовать О"
+          },
+          "draw D": {
+            "name": "нарисовать Д"
+          },
+          "draw E": {
+            "name": "нарисовать Е"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "нарисовать цветок"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "нарисовать снежинку"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "собрать нектар х2"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "собрать фиолетовый нектар"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "двигаться и собирать нектар"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "нарисовать цветок"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "нарисовать дерево"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw triangle": {
+            "name": "нарисовать треугольник"
+          },
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a car": {
+            "name": "нарисовать машину"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "нарисовать окружность"
+          },
+          "draw goal": {
+            "name": "нарисовать цель"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "проверить фиолетовый цветок"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "проверить цветок, сделать мёд"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "собрать нектар или сделай мед"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "сделать мед х3"
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": "собрать нектар х5"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "сделать весь мёд"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "игра выиграна"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "конец ведьмы"
+          },
+          "story": {
+            "name": "история"
+          },
+          "starting path": {
+            "name": "начальный путь"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "собрать нектар х5"
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "собрать нектар х5"
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "name": "собрать много нектара"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "name": "собери нектар сделай мед",
+            "parameters": {
+              "honey": "мед"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "прыгнуть"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "level_up": {
+            "name": "перейти_на_новый_уровень"
+          },
+          "score_points": {
+            "name": "засчитывать_очки",
+            "parameters": {
+              "points": "очки"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "прыгнуть"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "прыгнуть",
+            "parameters": {
+              "height": "высота",
+              "actor": "персонаж"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "patrol": {
+            "name": "проверка"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж",
+              "speed": "скорость"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж",
+              "speed": "скорость"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "name": "засчитывать_очки",
+            "parameters": {
+              "points": "очки"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "задать счет"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "задать счет"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник"
+          },
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "собрать нектар",
+            "parameters": {
+              "counter": "счетчик"
+            }
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          },
+          "draw octagons": {
+            "name": "нарисовать восьмиугольники"
+          },
+          "draw an octagon": {
+            "name": "нарисовать восьмиугольник"
+          }
+        },
+        "Course 4 SCF 3": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw an octagon": {
+            "name": "нарисовать восьмиугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "Find the Wizard": {
+          "check guess": {
+            "name": "проверить догадку"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "FoodFight": {
+          "level_up": {
+            "name": "перейти_на_новый_уровень"
+          },
+          "score_points": {
+            "name": "засчитывать_очки",
+            "parameters": {
+              "points": "очки"
+            }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "построить мост"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "построить мост"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "построить мост"
+          }
+        },
+        "Geometric Sun": {
+          "draw a door": {
+            "name": "нарисовать дверь"
+          },
+          "draw grass": {
+            "name": "нарисовать траву"
+          },
+          "draw windows": {
+            "name": "нарисовать окна"
+          },
+          "rectangle": {
+            "name": "прямоугольник"
+          },
+          "sun": {
+            "name": "солнце"
+          },
+          "diamond": {
+            "name": "алмаз"
+          },
+          "window": {
+            "name": "окно"
+          },
+          "draw a house": {
+            "name": "нарисовать дом"
+          },
+          "triangle": {
+            "name": "треугольник"
+          },
+          "square": {
+            "name": "квадрат"
+          }
+        },
+        "Geometric Sun_2018": {
+          "draw a door": {
+            "name": "нарисовать дверь"
+          },
+          "draw grass": {
+            "name": "нарисовать траву"
+          },
+          "draw windows": {
+            "name": "нарисовать окна"
+          },
+          "rectangle": {
+            "name": "прямоугольник"
+          },
+          "sun": {
+            "name": "солнце"
+          },
+          "diamond": {
+            "name": "алмаз"
+          },
+          "window": {
+            "name": "окно"
+          },
+          "draw a house": {
+            "name": "нарисовать дом"
+          },
+          "triangle": {
+            "name": "треугольник"
+          },
+          "square": {
+            "name": "квадрат"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "проверить догадку"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "name": "фигура с n сторонами",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a loop": {
+            "name": "нарисовать цикл",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw spiral circle": {
+            "name": "Нарисовать спиральный круг ",
+            "parameters": {
+              "size": "размер"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "name": "нарисовать цикл",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "n-sided shape": {
+            "name": "фигура с n сторонами"
+          },
+          "draw spiral circle": {
+            "name": "Нарисовать спиральный круг ",
+            "parameters": {
+              "size": "размер"
+            }
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "нарисовать крышу"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "нарисовать прямоугольник"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "нарисовать прямоугольник"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "очистить путь"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "очистить путь"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "очистить путь"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "исправить длинный путь"
+          },
+          "fix short path": {
+            "name": "исправить короткий путь"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "исправить длинный путь"
+          },
+          "fix short path": {
+            "name": "исправить короткий путь"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "исправить длинный путь"
+          },
+          "fix short path": {
+            "name": "исправить короткий путь"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "построить короткий мост"
+          },
+          "build long bridge": {
+            "name": "построить длинный мост"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "построить короткий мост"
+          },
+          "build long bridge": {
+            "name": "построить длинный мост"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "построить короткий мост"
+          },
+          "build long bridge": {
+            "name": "построить длинный мост"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "empty function": {
+            "name": "пустая функция"
+          },
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "Draw a triangle": {
+            "name": "Нарисовать треугольник"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "do something": {
+            "name": "выполнить что-то",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "name": "нарисовать край спирали",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "нарисовать звезду",
+            "parameters": {
+              "points": "очки",
+              "length": "длина"
+            }
+          },
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a pinwheel": {
+            "name": "нарисовать вертушку",
+            "parameters": {
+              "length": "длина",
+              "repeat": "повторить"
+            }
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисовать фигуру",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a house": {
+            "name": "нарисовать дом",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "description": "нарисовать треугольник"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "name": "нарисовать пятиугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a sqaure": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "прыгнуть",
+            "parameters": {
+              "height": "высота",
+              "actor": "персонаж"
+            }
+          },
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж",
+              "speed": "скорость"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "нарисовать звезду",
+            "parameters": {
+              "points": "очки",
+              "length": "длина"
+            }
+          },
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a pinwheel": {
+            "name": "нарисовать вертушку",
+            "parameters": {
+              "length": "длина",
+              "repeat": "повторить"
+            }
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисовать фигуру",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a house": {
+            "name": "нарисовать дом",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "прыгнуть",
+            "parameters": {
+              "height": "высота",
+              "actor": "персонаж"
+            }
+          },
+          "patrol": {
+            "name": "проверка",
+            "parameters": {
+              "actor": "персонаж",
+              "speed": "скорость"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "нарисовать голову"
+          },
+          "draw eye": {
+            "name": "нарисовать глаз"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "нарисовать голову"
+          },
+          "draw eye": {
+            "name": "нарисовать глаз"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "нарисовать цветок"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "нарисовать фигуру"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "моя функция"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"простое\" решение"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "возможное решение"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          },
+          "row of nectar": {
+            "name": "ряд нектара"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          },
+          "row of nectar": {
+            "name": "ряд нектара"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "move and check": {
+            "name": "переместиться и проверить"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "выиграть игру"
+          },
+          "lose game": {
+            "name": "проиграть игру"
+          },
+          "keep playing": {
+            "name": "продолжить игру"
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "нарисовать вертушку"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "нарисовать фон",
+            "parameters": {
+              "color": "цвет"
+            }
+          },
+          "draw a polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "собрать ряд",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "собрать ряд",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"простое\" решение"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "возможное решение"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "возможное решение"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "возможное решение"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "возможное решение"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "name": "нарисовать пламя\n",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "нарисовать огонь"
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "name": "нарисовать пламя\n",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "нарисовать огонь"
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "name": "нарисовать пламя\n",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "нарисовать огонь"
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "name": "нарисовать пламя\n",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "нарисовать огонь"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "ускоритель"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "ускоритель"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "ускоритель"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "ускоритель"
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "нарисовать вертушку"
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": "нарисовать вертушку"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "нарисовать звезду"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a window": {
+            "name": "нарисовать окно"
+          },
+          "draw a house": {
+            "name": "нарисовать дом"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a window": {
+            "name": "нарисовать окно"
+          },
+          "draw a house": {
+            "name": "нарисовать дом"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "нарисовать окно"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a window": {
+            "name": "нарисовать окно"
+          },
+          "draw a house": {
+            "name": "нарисовать дом"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "draw square": {
+            "name": "нарисовать квадрат"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw triangle": {
+            "name": "нарисовать треугольник"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw hexagon": {
+            "name": "нарисовать шестиугольник"
+          },
+          "staggered squares": {
+            "name": "квадраты в шахматном порядке\n"
+          },
+          "draw square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "draw line of polygons": {
+            "name": "нарисовать ряд многоугольников\n"
+          },
+          "draw polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "draw line of polygons": {
+            "name": "нарисовать ряд многоугольников\n"
+          },
+          "draw polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "draw line of polygons": {
+            "name": "нарисовать ряд многоугольников\n"
+          },
+          "draw polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "draw line of polygons": {
+            "name": "нарисовать ряд многоугольников\n"
+          },
+          "draw polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "медовый нектар"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "двигаться и делать мёд"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "двигаться и делать мёд"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "собрать нектар х2"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "двигаться и собирать нектар"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "собрать весь нектар"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "собрать весь нектар"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "проверить и собрать\n"
+          },
+          "find pumpkin": {
+            "name": "найти тыкву"
+          },
+          "wander path": {
+            "name": "прогулочная дорожка\n"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get produce": {
+            "name": "собирать овощи\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get produce": {
+            "name": "собирать овощи\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "pumpkin square": {
+            "name": "тыквенный прямоугольник\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get produce": {
+            "name": "собирать овощи\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check for corn": {
+            "name": "проверить на наличие кукурузы\n"
+          },
+          "corn rectangle": {
+            "name": "кукурузный прямоугольник\n"
+          },
+          "lettuce stairs": {
+            "name": "салатная лестница\n"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check for corn": {
+            "name": "проверить на наличие кукурузы\n"
+          },
+          "corn rectangle": {
+            "name": "кукурузный прямоугольник\n"
+          },
+          "lettuce stairs": {
+            "name": "салатная лестница\n"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check for corn": {
+            "name": "проверить на наличие кукурузы\n"
+          },
+          "corn rectangle": {
+            "name": "кукурузный прямоугольник\n"
+          },
+          "lettuce stairs": {
+            "name": "салатная лестница\n"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "кукуруза и тыква"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "кукуруза и тыква"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "pick along path": {
+            "name": "собирать вдоль пути\n"
+          },
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "проверить квадратик на наличие кукурузы\n"
+          },
+          "get all pumpkins": {
+            "name": "собрать все тыквы\n"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "кукуруза и тыква"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "кукуруза и тыква"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "кукуруза и тыква"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "огородный квадрат\n"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "выиграть игру"
+          },
+          "lose game": {
+            "name": "проиграть игру"
+          },
+          "keep playing": {
+            "name": "продолжить игру"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          },
+          "checker": {
+            "name": "проверщик",
+            "parameters": {
+              "size": "размер",
+              "color": "цвет"
+            }
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "Make gingham": {
+            "name": "Сделать зонтик",
+            "parameters": {
+              "size": "размер"
+            }
+          },
+          "black outline": {
+            "name": "черный контур",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "description": "нарисовать квадрат с параметром \"длина\"",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "checker": {
+            "name": "проверщик",
+            "parameters": {
+              "size": "размер",
+              "color": "цвет"
+            }
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "Make gingham": {
+            "name": "Сделать зонтик",
+            "parameters": {
+              "size": "размер"
+            }
+          },
+          "black outline": {
+            "name": "черный контур",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "description": "нарисовать квадрат с параметром \"длина\"",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square2": {
+            "name": "нарисовать квадрат2",
+            "parameters": {
+              "size": "размер"
+            }
+          },
+          "filled square": {
+            "name": "заполненный квадрат",
+            "parameters": {
+              "size": "размер",
+              "color": "цвет"
+            }
+          },
+          "black outline": {
+            "name": "черный контур",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "name": "нарисовать край спирали",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "name": "нарисовать край спирали",
+            "parameters": {
+              "length": "длина",
+              "min": "минимум"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "name": "нарисовать край спирали",
+            "parameters": {
+              "length": "длина",
+              "min": "минимум"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "нарисовать звезду",
+            "parameters": {
+              "points": "очки",
+              "length": "длина"
+            }
+          },
+          "draw a circle": {
+            "name": "нарисовать круг"
+          },
+          "draw a pinwheel": {
+            "name": "нарисовать вертушку",
+            "parameters": {
+              "length": "длина",
+              "repeat": "повторить"
+            }
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисовать фигуру",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a house": {
+            "name": "нарисовать дом",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a spiral edge": {
+            "name": "нарисовать край спирали",
+            "parameters": {
+              "length": "длина",
+              "min": "минимум"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "нарисовать фон",
+            "parameters": {
+              "color": "цвет"
+            }
+          },
+          "draw a polygon": {
+            "name": "нарисовать многоугольник"
+          },
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "draw a square 20": {
+            "name": "нарисовать квадрат 20"
+          },
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "draw an octagon": {
+            "name": "нарисовать восьмиугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "переместиться и проверить"
+          },
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "получить только нектар"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "только делать мед"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "переместиться и проверить"
+          },
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "переместиться и проверить"
+          },
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+            "name": "собери нектар сделай мед"
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+            "name": "собери нектар сделай мед"
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "выполнить что-то"
+          },
+          "get nectar make honey": {
+            "name": "собери нектар сделай мед"
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+            "name": "собери нектар сделай мед"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "ряд нектара"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "move and check": {
+            "name": "переместиться и проверить"
+          },
+          "check nectar or honey": {
+            "name": "проверить на наличие нектара или меда"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "width": "ширина"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "width": "ширина"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ширина"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ширина"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ширина"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "собрать ряд",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "собрать ряд",
+            "parameters": {
+              "length": "длина"
+            }
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "собирать с ряда\n"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "собирать с лестницы\n"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "собирать с лестницы\n"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "собирать с лестницы\n"
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "move and increment": {
+            "name": "движение и прирост\n"
+          },
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "move and increment": {
+            "name": "движение и прирост\n"
+          },
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "move and increment": {
+            "name": "движение и прирост\n"
+          },
+          "collect": {
+            "name": "собрать"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "нарисовать"
+          }
+        }
+      }
+    }
+  }
+}

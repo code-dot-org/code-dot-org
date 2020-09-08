@@ -1,6 +1,5 @@
 professional_learning_course 'true'
 
 lesson_group 'bad_module_type', display_name: 'Bad Module Type'
-stage 'Sample Module',
-  flex_category: 'bad_module_type'
+lesson 'Sample Module', display_name: 'Sample Module'
 level 'Level 1'

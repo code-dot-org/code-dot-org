@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
   stubStudioApp,
@@ -104,6 +104,50 @@ describe('StudioApp', () => {
         });
 
         expect(listener).to.have.been.calledOnce;
+      });
+    });
+
+    describe('The StudioApp.report function', () => {
+      let clock, studio, onAttemptSpy;
+      beforeEach(() => {
+        clock = sinon.useFakeTimers();
+        studio = studioApp();
+        studio.feedback_ = {
+          canContinueToNextLevel: () => {},
+          getNumBlocksUsed: () => {}
+        };
+
+        onAttemptSpy = sinon.spy();
+        studio.onAttempt = onAttemptSpy;
+      });
+
+      afterEach(() => {
+        clock.restore();
+      });
+
+      it('sets the milestoneStartTime to the current time', () => {
+        studio.milestoneStartTime = 0;
+        clock.tick(2000);
+
+        studio.report({});
+
+        expect(studio.milestoneStartTime).to.equal(2000);
+      });
+
+      it('calculates the timeSinceLastMilestone', () => {
+        studio.milestoneStartTime = 1000;
+        studio.initTime = 1000;
+        clock.tick(3000);
+
+        studio.report({});
+
+        expect(onAttemptSpy).to.have.been.calledWith({
+          pass: undefined,
+          time: 2000,
+          timeSinceLastMilestone: 2000,
+          attempt: 0,
+          lines: undefined
+        });
       });
     });
   });
@@ -292,8 +336,15 @@ describe('StudioApp', () => {
   });
 
   describe('addChangeHandler', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+    });
 
     it('calls a handler in response to a blockly change', () => {
       let changed = false;

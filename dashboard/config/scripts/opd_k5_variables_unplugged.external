@@ -4,11 +4,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Unplugged Lesson: Envelope Variables
 
-> An **event** is a placeholder for a piece of information that can change.
+> A **variable** is a placeholder for a piece of information that can change.
 
 ***
 
-## **1. Review "<a href="https://curriculum.code.org/csf-19/coursef/6/" target="blank">Envelope Variables</a>" Lesson Plan from Course F.**
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank">Envelope Variables</a>" Lesson Plan from Course F.**
 <br/>
 Course F is meant for students in Grade 5. This is the only place where variables come up in Courses A-F.
 <br/><br/>
@@ -18,5 +18,5 @@ Course F is meant for students in Grade 5. This is the only place where variable
 This is a video that you would show your students to help introduce the concept of variables and kick off the unplugged lesson.
 
 ***
-<a href="https://curriculum.code.org/csf-19/coursef/6/" target="blank">![](https://images.code.org/ff686377c1ba9bcd153a01cbfb24af35-image-1573086630947.29.50 PM.png)</a>
+<a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank">![](https://images.code.org/ff686377c1ba9bcd153a01cbfb24af35-image-1573086630947.29.50 PM.png)</a>
 MARKDOWN

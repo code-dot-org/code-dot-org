@@ -137,6 +137,10 @@ th:
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
     email_preference_yes: ใช่
     email_preference_no: ไม่ใช่
+    parent_account_checkbox: ฉันเป็นผู้ปกครอง/ผู้พิทักษ์ ลงชื่อในนามของบุตรหลานของฉัน
+    parent_account_email_progress_permission: เราสามารถส่งอีเมลถึงคุณเพื่ออัปเดตเป็นครั้งคราวเกี่ยวกับความคืบหน้าและโครงการของบุตรหลานของคุณ
+      และการอัปเดตเกี่ยวกับหลักสูตรและวิทยาการคอมพิวเตอร์ของพวกเขาได้หรือไม่? [(ดูนโยบายความเป็นส่วนตัวของเรา)]%{privacy_policy_url}
+    parent_account_email_label: อีเมลของผู้ปกครอง/ผู้พิทักษ์
   school_info:
     title: ข้อมูลโรงเรียน (ไม่บังคับ)
     school_country: ประเทศของโรงเรียน
@@ -251,6 +255,8 @@ th:
       help_us: ช่วยเรา
       teach: สอน
       about: เกี่ยวกับ
+      legal_privacy: นโยบายความเป็นส่วนตัว
+      legal_tos: เงื่อนไขการให้บริการ
     user:
       classroom: หน้าแรกของคุณครู
       label: สวัสดี %{username}
@@ -322,8 +328,12 @@ th:
     create_personal_login_under_13_username: ชื่อผู้ใช้ (ห้ามใช้ชื่อจริง!)
     create_personal_login_under_13_parent_email: ที่อยู่อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
     update_email: อัพเดท
+    for_parents_and_guardians: สำหรับผู้ปกครองและผู้พิทักษ์
+    link_a_parent_email: เชื่อมต่ออีเมลของผู้ปกครอง/ผู้พิทักษ์ ไปยังบัญชีนี้ เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ
+      คุณจะสามารถใช้ที่อยู่อีเมลนี้ในการกู้คืนรหัสผ่านได้
     parent_guardian_email_label: อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
     none: ไม่มี
+    only_one_parent_email_supported_warning: 'หมายเหตุ: ในขณะนี้ เราสามารถรองรับที่อยู่อีเมลของผู้ปกครอง/ผู้พิทักษ์ได้เพียงหนึ่งอีเมลต่อหนึ่งบัญชีนักเรียนเท่านั้น'
   user_level:
     completed: เสร็จแล้ว
   home:
@@ -474,11 +484,6 @@ th:
       title: 'เงื่อนไข '
     widgets:
       audience: อายุ 14+
-  gallery:
-    header: แกลเลอรี่
-    header_playlab: เรื่องราวและเกม
-    header_artist: ศิลปิน
-    report_abuse: รายงานการละเมิด
   landing:
     support: ขอความช่วยเหลือ
     help_support: การช่วยเหลือและสนับสนุน
@@ -564,28 +569,6 @@ th:
           other: อาชีพอื่น ๆ
   peer_review:
     review_in_progress: พร้อมพื่อทบทวน
-  flex_category:
-    required: ภาพรวม
-    csf_digcit: พลเมืองดิจิทัล
-    csf_jigsaw: จิ๊กซอว์
-    csf_loops: ลูป
-    csf_events: เหตุการณ์
-    csf_conditionals: 'เงื่อนไข '
-    csf_nested_loops: ลูปซ้อนลูป
-    csf_functions: ฟังก์ชัน
-    csf_variables: ตัวแปร
-    csf_for_loops: การวนรอบ
-    csf_internet: อินเทอร์เน็ต
-    csf_warmup: อุ่นเครื่อง
-    csd3_1: 'บทที่ 1: ภาพและการเคลื่อนไหว'
-    csd3_2: 'บทที่ 2: การสร้างเกม'
-    cspSurvey: แบบสำรวจ
-    csp_variables: ตัวแปร
-    csp_conditionals: 'เงื่อนไข '
-    csp_functions: ฟังก์ชัน
-    csp_project: โปรเจกต์
-    csp_lists: รายการ
-    csp_loops: ลูป
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
   view_teacher_guide: ดูคำแนะนำสำหรับครู
@@ -594,6 +577,7 @@ th:
       email: อีเมล
       school_name: ชื่อโรงเรียน
       school_country: ประเทศของโรงเรียน
+      colombian_school_name: ชื่อโรงเรียน
     form_entries:
       gender:
         male: ชาย
@@ -632,3 +616,7 @@ th:
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
   page_not_found_button: กลับไปที่หน้าแรก
   copy: คัดลอก
+  parent_email_banner:
+    text: "**คุณเป็นผู้ปกครองหรือผู้พิทักษ์หรือไม่ ** เชื่อมต่ออีเมลของคุณเข้ากับบัญชีนี้เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ!"
+    link_your_email: เชื่อมต่ออีเมลของคุณ
+    not_now: ไม่ใช่ตอนนี้

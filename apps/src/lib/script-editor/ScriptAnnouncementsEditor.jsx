@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   announcement: {
@@ -142,12 +143,16 @@ export default class ScriptAnnouncementsEditor extends Component {
           name="script_announcements"
           value={JSON.stringify(announcements)}
         />
-        <h4>Script Announcements</h4>
-        <div>
-          This can be used to provide one or more announcements that will show
-          up for signed in teachers, students, or teachers and students on the
-          script overview page.
-        </div>
+        <h4>
+          Script Announcements
+          <HelpTip>
+            <p>
+              This can be used to provide one or more announcements that will
+              show up for signed in teachers, students, or teachers and students
+              on the script overview page.
+            </p>
+          </HelpTip>
+        </h4>
         {announcements.map((announce, index) => (
           <Announce
             key={index}

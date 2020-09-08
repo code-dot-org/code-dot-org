@@ -1442,6 +1442,8 @@
   header_teacher_community: "Kennarasamfélag"
   header_help_support: 'Hjálp og stuðningur '
   header_report_bug: "Tilkynna galla"
+  header_legal_privacy: "Persónuverndarstefna"
+  header_legal_tos: "Skilmálar"
   header_tutorials: "Kennslutímar"
   app_lab_documentation: "Upplýsingar um Appsmiðju"
   app_lab_tutorials: "Kennsluefni Appsmiðju"
@@ -1632,3 +1634,4 @@
   homepage_slot_text_link_code_break: "Taktu kóðapásu"
   homepage_slot_text_link_do_hoc: "Gerðu Klukkustund kóðunar"
   homepage_slot_text_link_express_course: "Prófaðu hraðnámskeið"
+  page_not_available_button: "Aftur á heimasíðu"

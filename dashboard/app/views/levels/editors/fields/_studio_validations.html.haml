@@ -1,0 +1,27 @@
+- unless @level.is_a?(Flappy)
+  .field
+    = f.label :timeout_failure_tick, 'Timeout failure tick'
+    %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.
+    - if @level.is_a?(Studio)
+      %p Step speed (above) controls the length of a tic
+    = f.number_field :timeout_failure_tick
+- if @level.is_a?(Studio)
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :timeout_after_when_run, description: "Timeout after all blocks run"}
+    %p When set, if the only event block that had children is when_run, and those commands are finished executing, don't wait for the timeout. If we have additional event blocks that DO have children, we keeping running until timeoutFailureTick or a success/failure condition is met
+.field
+  = f.label :success_condition, 'Success condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
+  - if @level.is_a?(Bounce)
+    %p For both this and failure condition, you can reference several state values, including (but not limited to):
+    %ul
+      %li Bounce.playerScore
+      %li Bounce.opponentScore
+      %li Bounce.ballCount
+      %li Bounce.ballX
+      %li Bounce.ballY
+  = f.text_area :success_condition, rows: 4
+.field
+  = f.label :failure_condition, 'Failure condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
+  = f.text_area :failure_condition, rows: 4

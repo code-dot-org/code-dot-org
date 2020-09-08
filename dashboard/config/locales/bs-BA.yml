@@ -218,6 +218,8 @@ bs:
       about_jobs: Poslovi
       help_us: Pomogni nam
       teach: Podučavaj
+      legal_privacy: Pravila Privatnosti
+      legal_tos: Uvjeti
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte
@@ -487,23 +489,6 @@ bs:
       title: Uvjeti
     widgets:
       cta: Nauči kako
-  gallery:
-    students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
-    students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
-    picture_count: U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b>
-      slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli
-      svaki program na djelu.
-    activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
-      aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
-      i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: Želite li napraviti svoj vlastiti?
-    more: Više &rarr;
-    caption_by_name_age: od %{name}, dob %{age}
-    caption_time_ago: prije %{time_ago}
-    header: Galerija
-    header_playlab: Play Lab
-    header_artist: Umjetnik
-    report_abuse: Prijava zloupotrebe
   landing:
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
@@ -663,26 +648,6 @@ bs:
       name: Prihvaćeno
     rejected:
       name: Odbijeno
-  flex_category:
-    required: Pregled
-    csf_digcit: Digitalno Državljanstvo
-    csf_jigsaw: Slagalica
-    csf_loops: Petlje
-    csf_events: Događaji
-    csf_binary: Binarno
-    csf_conditionals: Uvjeti
-    csf_nested_loops: Ugniježdene Petlje
-    csf_functions: Funkcije
-    csf_variables: Varijable
-    csf_for_loops: Od-Do-Za Petlje
-    csf_internet: Internet
-    csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
-    csp_variables: Varijable
-    csp_conditionals: Uvjeti
-    csp_functions: Funkcije
-    csp_lists: Liste
-    csp_loops: Petlje
-    k5_next_steps: Slijedeći Koraci
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
       strane Code.org-a.

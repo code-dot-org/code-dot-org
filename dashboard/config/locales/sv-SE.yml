@@ -141,6 +141,11 @@ sv:
       lokala erbjudanden eller andra nyheter i ämnet datavetenskap?
     email_preference_yes: Ja
     email_preference_no: Nej
+    parent_account_checkbox: Jag är en förälder / målsman som anmäler mitt barn
+    parent_account_email_progress_permission: Har vi tillstånd att skicka dig e-post
+      då och då för att uppdatera dig om ditt barns framsteg och projekt samt om deras
+      kurs och datavetenskap? [(Se vår integritetspolicy)] (%{privacy_policy_url})
+    parent_account_email_label: Förälder/vårdnadshavare
   school_info:
     school_country: Skolans land
     select_school_type: Skoltyp
@@ -275,6 +280,8 @@ sv:
       help_us: Hjälp oss
       teach: Undervisa
       about: Om
+      legal_privacy: Sekretesspolicy
+      legal_tos: Villkor
     user:
       classroom: Lärare hemsida
       district_dashboard: Distriktets kontrollpanel
@@ -365,8 +372,15 @@ sv:
     parent_email_label: Förälder/vårdnadshavares emailadress (valfritt)
     update: Uppdatera konto
     update_email: Uppdatera
+    for_parents_and_guardians: För föräldrar och vårdnadshavare
+    link_a_parent_email: Koppla en e-post adress till förälder / vårdnadshavare till
+      det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt.
+      Du kommer också att kunna använda den här e-postadressen för återställning av
+      lösenord.
     parent_guardian_email_label: Förälder/vårdnadshavares e-postadress
     none: Ingen
+    only_one_parent_email_supported_warning: Obs! Vi kan för närvarande endast stödja
+      en e-postadress till förälder / vårdnadshavare per konto.
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -619,25 +633,6 @@ sv:
       title: Villkor
     widgets:
       cta: Läs mer
-  gallery:
-    students_drew_these_with_code: Elever ritade dessa med kod!
-    students_made_these_with_code: Elever gjorde dessa med kod!
-    picture_count: Under de senaste <b>%{days}</b> dagarna, har elever ritat <b>%{count}</b>
-      bilder genom att skriva egna datorprogram. Klicka på bilderna för att se varje
-      program i aktion.
-    activity_count: Under de senaste <b>%{days}</b> dagarna, har selever gjort <b>%{count}</b>
-      appar och bilder genom att skriva egna datorprogram. Klicka på bilderna och
-      skärmdumparna för att se varje program i aktion.
-    want_to_make_your_own: Vill du göra din egen?
-    how_to_save: På den sista nivån av dessa uppgifter, klicka på "Finish" (Avsluta)
-      och "Save" (Spara) för att spara ditt arbete i galleriet.
-    more: Mer &rarr;
-    caption_by_name_age: av %{name}, ålder %{age}
-    caption_time_ago: "%{time_ago} tid sedan"
-    header: Galleri
-    header_playlab: Spel-labb
-    header_artist: Konstnären
-    report_abuse: Rapportera missbruk
   landing:
     report_bug: Rapportera bugg
     support: Få hjälp
@@ -857,36 +852,7 @@ sv:
     instructor_feedback: Återkoppling till instruktör
     peer_feedback: Din feedback
     outdated: Denna feedback skapades för en tidigare skickad version
-  flex_category:
-    required: Översikt
-    content: Innehåll
-    practice: Undervisningsmetoder
     peer_review: Din recension
-    csf_digcit: Digitalt medborgarskap
-    csf_jigsaw: Pussel
-    csf_loops: loopar
-    csf_events: Händelser
-    csf_binary: Binära
-    csf_conditionals: Villkor
-    csf_nested_loops: Kapslade slingor(loopar)
-    csf_functions: funktioner
-    csf_variables: variabler
-    csf_for_loops: "'För' loopar"
-    csf_internet: Internet
-    csf_warmup: Uppvärmning
-    csd1_1: 'Kapitel 1: Problemlösnings-processen'
-    csd1_2: 'Kapitel 2: Datorer och Problemlösning'
-    csd3_1: 'Kapitel 1: Bilder och Animationer'
-    csd3_2: 'Kapitel 2: Bygga Spel'
-    csp1_2: 'Kapitel 2: Uppfinna Internet'
-    csp_variables: variabler
-    csp_conditionals: Villkor
-    csp_functions: funktioner
-    csp_project: Projekt
-    csp_lists: Listor
-    csp_loops: loopar
-    csp_libraries: Bibliotek
-    k5_next_steps: Nästa steg
   external_links:
     disclaimer: Varning
   hoc_download:
@@ -955,6 +921,7 @@ sv:
       email: E-post
       school_name: Skolnamn
       school_country: Skolans land
+      colombian_school_name: Skolnamn
     form_entries:
       gender:
         male: Man
@@ -992,3 +959,8 @@ sv:
     logout: Logga ut
     true: Ja
   copy: Kopiera
+  parent_email_banner:
+    text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här
+      kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"
+    link_your_email: Koppla din e-postadress
+    not_now: Inte nu

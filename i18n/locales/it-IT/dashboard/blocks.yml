@@ -980,6 +980,10 @@ it:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': secondi
       gamelab_changePropBy:
         text: modifica la {PROPERTY} di {SPRITE} di {VAL}
         options:
@@ -1025,8 +1029,46 @@ it:
           CHOICE:
             '"this"': questo
             '"other"': altro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secondi
       gamelab_hideTitleScreen:
         text: nascondi schermata introduttiva
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spazio
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} sta toccando i bordi"
       gamelab_jumpTo:
@@ -1099,6 +1141,8 @@ it:
             '"West"': Ovest
       gamelab_moveToward:
         text: sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} cliccato"
       gamelab_playSound:
         text: riproduci il suono {SOUND}
       gamelab_pointInDirection:
@@ -1176,6 +1220,8 @@ it:
           CONDITION:
             '"when"': quando
             '"while"': mentre
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} cliccato"
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} gradi"
         options:

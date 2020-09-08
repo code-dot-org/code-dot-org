@@ -92,9 +92,11 @@ class HomeController < ApplicationController
   def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
+
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:stageExtrasScriptIds] = Script.stage_extras_script_ids
+    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
@@ -158,22 +160,6 @@ class HomeController < ApplicationController
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
       elsif donor_banner_name
-        teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
-
-        donor_teacher_banner_options = {}
-        donor_teacher_banner_options[:teacherFirstName] = current_user.short_name
-        donor_teacher_banner_options[:teacherSecondName] = current_user.second_name
-        donor_teacher_banner_options[:teacherEmail] = current_user.email
-        donor_teacher_banner_options[:ncesSchoolId] = teachers_school.id
-        donor_teacher_banner_options[:schoolAddress1] = teachers_school.address_line1
-        donor_teacher_banner_options[:schoolAddress2] = teachers_school.address_line2
-        donor_teacher_banner_options[:schoolAddress3] = teachers_school.address_line3
-        donor_teacher_banner_options[:schoolCity] = teachers_school.city
-        donor_teacher_banner_options[:schoolState] = teachers_school.state
-        donor_teacher_banner_options[:schoolZip] = teachers_school.zip
-
-        @homepage_data[:donorTeacherBannerOptions] = donor_teacher_banner_options
-
         @homepage_data[:teacherId] = current_user.id
       end
     else

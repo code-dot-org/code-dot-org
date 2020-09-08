@@ -219,7 +219,7 @@ NetSim.prototype.init = function(config) {
     return page({
       data: {
         localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
-        instructions: this.level.instructions
+        instructions: this.level.shortInstructions
       }
     });
   }.bind(this);

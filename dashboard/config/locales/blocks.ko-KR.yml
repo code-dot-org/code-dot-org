@@ -916,7 +916,7 @@ ko:
             '"left"': 왼쪽으로
             '"down"': 아래로
             '"right"': 오른쪽으로
-            '"space"': 우주
+            '"space"': 스페이스바
             '"enter"': 입력
             '"a"': a
             '"b"': b
@@ -969,6 +969,10 @@ ko:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
       gamelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -1013,8 +1017,46 @@ ko:
         options:
           CHOICE:
             '"this"': 이
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} 은 접하는 가장자리입니다."
       gamelab_jumpTo:
@@ -1087,6 +1129,8 @@ ko:
             '"West"': 서쪽
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
+      gamelab_objectSpritePointer:
+        text: 클릭 {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1165,6 +1209,8 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
+      gamelab_subjectSpritePointer:
+        text: 클릭 {SPRITE}
       gamelab_turn:
         text: 설정 {SPRITE} {DIRECTION} {N} 도
         options:

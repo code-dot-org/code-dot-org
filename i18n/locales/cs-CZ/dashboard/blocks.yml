@@ -371,7 +371,7 @@ cs:
             '"plus"': plus
             '"random"': náhodně
       Dancelab_makeAnonymousDanceSprite:
-        text: vytvořit nový {COSTUME} v {LOCATION}
+        text: vytvoř nový {COSTUME} na {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
@@ -492,9 +492,11 @@ cs:
       Dancelab_randomColor:
         text: náhodná barva
       Dancelab_setBackground:
-        text: nastavit barvu pozadí {COLOR}
+        text: nastav barvu pozadí {COLOR}
       Dancelab_setBackgroundEffect:
-        text: nastavit efekt pozadí {EFFECT}
+        text: |-
+          nastav efekt pozadí
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Žádný
@@ -526,7 +528,7 @@ cs:
             '"vintage"': Retro
             '"warm"': Červené
       Dancelab_setBackgroundEffectWithPalette:
-        text: nastavit efekt pozadí {PALETTE} {EFFECT}
+        text: nastav efekt pozadí {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Žádný
@@ -774,7 +776,7 @@ cs:
             'true': viditelný
             'false': neviditelný
       Dancelab_startMapping:
-        text: "{SPRITE} začne {PROPERTY} podle {RANGE}"
+        text: "{SPRITE} začni {PROPERTY} podle {RANGE}"
         options:
           PROPERTY:
             '"scale"': velikost
@@ -967,9 +969,13 @@ cs:
       Dancelab_whenSetup2:
         text: nastavení
       gamelab_addBehaviorSimple:
-        text: Sprite {SPRITE} Začíná {BEHAVIOR}
+        text: postava {SPRITE} začni {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -980,7 +986,7 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} dotkne {SPRITE2}"
+        text: "{CONDITION} se {SPRITE1} dotkne {SPRITE2}"
         options:
           CONDITION:
             '"when"': když
@@ -988,13 +994,13 @@ cs:
       gamelab_clickedOn:
         text: po klepnutí na {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klikl na {SPRITE}
+        text: klik na {SPRITE}
       gamelab_comment:
         text: 'komentář: {COMMENT}'
       gamelab_createNewSprite:
-        text: "vytvořit novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n kde {LOCATION}"
+        text: "vytvoř novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n na {LOCATION}"
       gamelab_destroy:
-        text: odstranit {THIS}
+        text: odstraň {THIS}
       gamelab_draggable:
         text: přetažení
       gamelab_edgesDisplace:
@@ -1014,14 +1020,52 @@ cs:
         options:
           CHOICE:
             '"this"': tento
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skrýt titulní obrazovku
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} se dotýká hran"
       gamelab_jumpTo:
         text: "{SPRITE} skoč na {LOCATION}"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} stisknuto"
+        text: "{CONDITION} stiskneš {KEY} "
         options:
           CONDITION:
             '"when"': když
@@ -1067,7 +1111,7 @@ cs:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: Vytvoření nového {ANIMATION_NAME} Pohyblivý symbol na {LOCATION}
+        text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} tvář {DIRECTION}"
         options:
@@ -1081,27 +1125,29 @@ cs:
       gamelab_moveForward:
         text: posunout {SPRITE} {DISTANCE} pixelů dopředu
       gamelab_moveInDirection:
-        text: přesunout {SPRITE} {DISTANCE} pixelů {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelů na {DIRECTION}
         options:
           DIRECTION:
-            '"North"': Severní
-            '"East"': Na východ
-            '"South"': Jižní
-            '"West"': Na západ
+            '"North"': sever
+            '"East"': východ
+            '"South"': jih
+            '"West"': západ
       gamelab_moveToward:
-        text: přesunout {SPRITE} pixelů {DISTANCE} k {TARGET}
+        text: pohni {SPRITE} o {DISTANCE} pixelů směrem k {TARGET}
+      gamelab_objectSpritePointer:
+        text: klik na {SPRITE}
       gamelab_playSound:
-        text: PlaySound {SOUND}
+        text: přehraj zvuk {SOUND}
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
           DIRECTION:
-            '"North"': Severní
-            '"East"': Na východ
-            '"South"': Jižní
-            '"West"': Na západ
+            '"North"': sever
+            '"East"': východ
+            '"South"': jih
+            '"West"': západ
       gamelab_printText:
-        text: tisk {TEXT}
+        text: vypiš {TEXT}
       gamelab_randColor:
         text: náhodná barva
       gamelab_randomColor:
@@ -1111,15 +1157,15 @@ cs:
       gamelab_removeAllBehaviors:
         text: "{SPRITE} vše zastaví"
       gamelab_removeBehaviorSimple:
-        text: postava {SPRITE} zastaví {BEHAVIOR}
+        text: postava {SPRITE} zastav {BEHAVIOR}
       gamelab_removeTint:
-        text: odstranit barvu z {THIS}
+        text: odstraň barvu z {THIS}
       gamelab_setAnimation:
-        text: Změnit {THIS} kostým k {ANIMATION}
+        text: změň kostým {THIS} na {ANIMATION}
       gamelab_setBackground:
-        text: nastavit barvu pozadí {COLOR}
+        text: nastav barvu pozadí {COLOR}
       gamelab_setBackgroundImage:
-        text: nastavit pozadí na {IMG}
+        text: nastav pozadí na {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jeskyně
@@ -1135,7 +1181,7 @@ cs:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žádný
       gamelab_setProp:
-        text: sada {SPRITE} {PROPERTY} na {VAL}
+        text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
           PROPERTY:
             '"scale"': velikost
@@ -1151,7 +1197,7 @@ cs:
             '"width"': šířka
             '"height"': výška
       gamelab_setTint:
-        text: změnit barvu {THIS} na {COLOR}
+        text: změň barvu {THIS} na {COLOR}
       gamelab_setupSim:
         text: |-
           simulace nastavení
@@ -1162,11 +1208,13 @@ cs:
       gamelab_showTitleScreen:
         text: zobrazit titulní obrazovku {BREAK} titul {TITLE} text {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} klikl"
+        text: "{CONDITION} klikneš na {SPRITE} "
         options:
           CONDITION:
             '"when"': když
             '"while"': dokud
+      gamelab_subjectSpritePointer:
+        text: klik na {SPRITE}
       gamelab_turn:
         text: otoč {SPRITE} {DIRECTION} {N} stupňů
         options:
@@ -1195,13 +1243,13 @@ cs:
       gamelab_whenRightArrow:
         text: když stisknete šipku vpravo
       gamelab_whenTouching:
-        text: když {SPRITE1} dotkne {SPRITE2}
+        text: když se {SPRITE1} dotkne {SPRITE2}
       gamelab_whenUpArrow:
         text: když stisknete šipku nahoru
       gamelab_whileDownArrow:
         text: zatímco šipka dolů stisknutá
       gamelab_whileKey:
-        text: zatímco {KEY} stisknuto
+        text: při stisknutí  {KEY}
         options:
           KEY:
             '"up"': nahoru
@@ -1226,7 +1274,7 @@ cs:
       gamelab_yLocationOf:
         text: y souřadnice {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: Sprite {SPRITE} Začíná {BEHAVIOR}
+        text: postava {SPRITE} začni {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'Přidání tréninkových dat: {NAME},{LOCATION}'
         options:
@@ -1287,7 +1335,7 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
       Mikelab_groupCreateNewSprite:
-        text: vytvořit nový {COSTUME} v {LOCATION}
+        text: vytvoř nový {COSTUME} na {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": nahoře
@@ -1300,7 +1348,7 @@ cs:
             "{x: 100, y: 300}": vlevo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_groupDestroy:
-        text: odstranit {SELECT} {COSTUME}
+        text: odstraň {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': vše
@@ -1334,7 +1382,7 @@ cs:
             '"all"': vše
             '"this"': tento
       Mikelab_groupRemoveTint:
-        text: odstranit barvu z {SELECT} {COSTUME}
+        text: odstraň barvu z {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': vše
@@ -1352,15 +1400,15 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
       Mikelab_groupSetTint:
-        text: změnit barvu {SELECT} {COSTUME} na {COLOR}
+        text: změň barvu {SELECT} {COSTUME} na {COLOR}
         options:
           SELECT:
             '"all"': vše
             '"this"': tento
       Mikelab_groupWhenClickedOn:
-        text: když {COSTUME} kliklo
+        text: když klikneš na {COSTUME}
       Mikelab_groupWhenXTouchesY:
-        text: když{COSTUME} dotkne {COSTUME2}
+        text: když se {COSTUME} dotkne {COSTUME2}
       Mikelab_groupWhileClicked:
         text: při kliknutí na {COSTUME}
       Mikelab_groupWhileTouchingAny:
@@ -1370,7 +1418,7 @@ cs:
       Mikelab_hasBehavior:
         text: "{SPRITE} je nyní {BEHAVIOR}"
       Mikelab_hideFish:
-        text: odstranit {TRASH}
+        text: odstraň {TRASH}
         options:
           TRASH:
             object: objekt
@@ -1423,13 +1471,13 @@ cs:
       Mikelab_randomColor:
         text: náhodná barva
       Mikelab_removeBehaviorSimple:
-        text: postava {SPRITE} zastaví {BEHAVIOR}
+        text: postava {SPRITE} zastav {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: opakuj do nekonečna
       Mikelab_sendBad:
         text: přesunout objekt doleva
       Mikelab_sendGood:
-        text: přesunout objekt doprava
+        text: posuň objekt doprava
       Mikelab_setBG:
         options:
           BG:
@@ -1488,7 +1536,7 @@ cs:
       Mikelab_whenMouseClicked:
         text: když kliknete myší
       Mikelab_whenYesNoClicked:
-        text: když {KEY} kliklo
+        text: když klikneš na {KEY}
         options:
           KEY:
             '"yes"': ano
@@ -1514,8 +1562,8 @@ cs:
         text: Sprite {SPRITE} Říct {TEXT} Pro {SECONDS} Sekund
       Vector_createSpriteWith:
         text: |-
-          vytvořit sprite
-          dělat{STATEMENT}
+          vytvoř postavu
+          dělej {STATEMENT}
       Vector_log:
         text: zpráva protokolu {MESSAGE}
       Vector_positionCenter:
@@ -1538,11 +1586,11 @@ cs:
           PROPERTY:
             "'shapeColor'": barva
       aalab_addBehaviorForDuration:
-        text: aalab pohyblivý symbol {SPRITE} Začíná {BEHAVIOR} Pro {SECONDS} Sekund
+        text: aalab sprite {SPRITE} začni {BEHAVIOR} na {SECONDS} sekundy
       aalab_addBehaviorUntilBoolean:
-        text: Sprite {SPRITE} Začíná {BEHAVIOR} Dokud {CONDITION}
+        text: postava {SPRITE} začni {BEHAVIOR} až do momentu {CONDITION}
       aalab_createNewSpriteAnonReturn2:
-        text: nový pohyblivý symbol pojmenovaný{SPRITE_NAME} s kostýmů{ANIMATION_NAME} na místě{LOCATION}
+        text: nová postava s názvem {SPRITE_NAME} s kostýmem {ANIMATION_NAME} na místě{LOCATION}
       aalab_goToScene:
         text: jít na scénu {SCENE}
         options:
@@ -1551,13 +1599,13 @@ cs:
             '2': '2'
             '3': '3'
       aalab_moveInDirection:
-        text: přesunout {SPRITE} {DISTANCE} pixelů {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelů na {DIRECTION}
         options:
           DIRECTION:
-            '"North"': Severní
-            '"East"': Na východ
-            '"South"': Jižní
-            '"West"': Na západ
+            '"North"': sever
+            '"East"': východ
+            '"South"': jih
+            '"West"': západ
       aalab_prompt:
         text: ptát {MESSAGE}
       aalab_scene:
@@ -1570,9 +1618,16 @@ cs:
       aalab_setupStory:
         text: příběh o nastavení
       aalab_starwars_playSound:
+        text: přehraj zvuk {OPTION}
         options:
           OPTION:
             '"random"': náhodně
+            '"R2-D2 random"': R2-D2 náhodný
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:
@@ -1604,7 +1659,7 @@ cs:
       binary_gridSize:
         text: velikost mřížky {SIZE}
       binary_move:
-        text: přesunout {DIR}
+        text: posuň {DIR}
         options:
           DIR:
             '"up"': nahoru
@@ -1690,7 +1745,7 @@ cs:
       craft_placePrismarine:
         text: polož prismarine
       craft_placeTorch:
-        text: umístni pochodeň
+        text: umísti pochodeň
       craft_repeatUntilConduit:
         text: |-
           opakuj dokud není dokončeno

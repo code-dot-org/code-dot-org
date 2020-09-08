@@ -161,10 +161,16 @@ my:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"x"': "×"
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
           KEY:
             '"x"': "×"
       gamelab_randColor:
@@ -175,6 +181,7 @@ my:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -213,6 +220,16 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"a"': က
+            '"d"': ဃ
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"a"': က
+            '"d"': ဃ
       aalab_goToScene:
         options:
           SCENE:

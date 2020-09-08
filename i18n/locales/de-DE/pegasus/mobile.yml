@@ -14,10 +14,22 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen</a>'
   csedweek_banner_teachers_text: "Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen"
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
+  try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten wird</h3>"
+  try_hoc_num_served_markdown: |-
+    # Veruche eine
+
+    ## Hour of Code
+
+    ### %{num} mal genutzt #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Jeder kann es lernen."
   learn_now: "Jetzt lernen"
   petition_message: "Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik zu lernen"
   petition_sign_message: 'Tragen Sie sich in der Liste ein, wenn Sie auch dieser Meinung sind. Werden Sie einer von # Unterstützern.'
+  petition_sign_message_num: "Wenn du uns unterstützen möchtest, unterschreibe und schließe dich den %{num} anderen Unterstützern an."
   petition_join_others: 'Tritt # anderen bei'
   petition_join_others_num: "Schließe dich %{num} anderen an"
   name: "Name"
@@ -44,6 +56,7 @@
   hoc2014_support: "Unterstütze es ▾"
   hoc2014_whatishoc: "Was ist die Hour of Code?"
   csedweek_map_header: "#CSEdWeek / Hour of Code Veranstaltungen weltweit"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code Veranstaltungen auf der ganzen Welt"
   csedweek_map_signup: "Veranstaltung anmelden"
   csedweek_map_search_placeholder: "Hour of Code Veranstaltungen suchen"
   csedweek_map_search_search: "Suche"
@@ -150,9 +163,17 @@
   thanks_for_submitting: "Danke für's Mitmachen!"
   if_you_enjoyed: "Wenn Ihnen das Programmieren Spaß gemacht hat, empfehlen Sie es Ihren Freunden weiter! Wir möchten, dass die ganze Welt Programmieren lernt."
   personalize_certificate: "Urkunde personalisieren"
+  print_batch_certificates: "Drucke einen Stapel von Zertifikaten"
   print_certificates: "Zeugnisse drucken"
+  certificate_sponsor_message: "%{sponsor_name} machte das großzügige Geschenk, um dein Lernerfolg zu fördern."
+  print_ice_art_from_frozen: "Drucken der Eis Kunst von Frozen Tutorials"
+  want_a_blank_certificate_template: "Möchten Sie eine leere Zertifikatsvorlage um im Namen Ihrer Schüler zu schreiben?"
+  landscape_recommended_certificates: "Es wird empfohlen, beim Drucken der Zertifikate **Querformat** zu wählen."
+  print_one_here_certificates: "Drucke eines hier aus."
+  enter_certificate_names: "Geben Sie bis zu 30 Namen ein, **einen pro Zeile**. Es wird dann eine druckbare Seite mit personalisierten %{script_name} -Zertifikaten generiert."
   share_achievement: "Teilen Sie Ihren Erfolg"
   beyond_hour_message: "Machen Sie weiter mit unseren <a href='http://studio.code.org'>anderen Kursen</a> oder <a href='/learn/beyond'>￼Erweitern Sie Ihr Wissen</a>."
+  beyond_hour_message_markdown: "Fahren Sie mit unseren [anderen Kursen](http://studio.code.org) fort oder sehen Sie sich weitere Optionen für [Mehr als eine Stunde lernen](/learn/beyond) an."
   leaderboards_for_hoc: "Rangliste der Hour of Code"
   support_url: "http://support.code.org/"
   country: "Land"
@@ -188,12 +209,12 @@
   continue_learning_header: "￼Erweitern Sie Ihr Wissen"
   continue_learning_body: "Es gibt unzählige Optionen. Du kannst online lernen, an einer örtlichen Schule oder in einem Feriencamp."
   learn_code_studio: "Probieren Sie Code.org's Kurse"
-  learn_next_level: "Weiter zum nächsten Level"
+  learn_next_level: "Weiter zum nächsten Code Studio Kurs"
   learn_online: "Probiere andere Kurse online"
   learn_classes: "Finde Kurse in deiner Nähe."
   learn_back_to_minecraft: "Lerne mehr mit Minecraft"
   hoc_is_here: 'Die #HourOfCode kommt wieder: Dezember 5-11. https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
+  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - schau mal vorbei! @codeorg'
   just_did_course1: "Ich habe gerade Kurs 1 beendet - schau dir das an! @codeorg"
   just_did_course2: "Ich habe gerade Kurs 2 beendet - schau dir das an! @codeorg"
   just_did_course3: "Ich habe gerade Kurs 3 beendet - schau dir das an! @codeorg"
@@ -227,8 +248,11 @@
   stats_nina: '"Jeder einzelne Tag ergab dasselbe Ergebnis – 100% Engagement." – Nina Nichols Peery, Lehrerin'
   stats_student: '"Für mich war es eine <b>einmalige</b> Chance." - Mariana Alzate, 5. Klasse'
   stats_michael: '"Ich habe meine Schüler<b>noch niemals</b> so begeistert lernen sehen." – Michael Clark, Lehrer'
+  stats_nina_markdown: '"Jeder einzelne Tag brachte die gleichen Ergebnisse - 100% Engagement." - Nina Nichols Peery, Lehrerin'
+  stats_student_markdown: '"Ich wusste, dass dies eine **einmalige** Chance war." - Mariana Alzate, 5. Klasse'
+  stats_michael_markdown: '"Ich habe meine Schüler **noch nie** so begeistert beim Lernen gesehen." - Frank Martinez, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: "Entdecke das Code Studio"
+  studiobar_title_nolink: "Entdecke Code.org-Kurse"
   studiobar_elementary_title: "Grundkurse"
   studiobar_elementary_body: "Unsere drei neuen Kurse für Grundschüler"
   studiobar_dance_title: "Tanzparty"
@@ -388,7 +412,9 @@
   class_submission_level_vocational: "Berufliche"
   class_submission_languages_other: "Andere Sprache(n)"
   videos_more: "Mehr <a href='%{inspiring_videos_playlist}'>inspirative Videos</a> über Vorbilder und Prominente"
+  videos_more_markdown: "Weitere [inspirierende Videos](%{inspiring_videos_playlist}) mit Vorbildern und Prominenten"
   careers_page_more: "Mehr <a href='%{careers_url}' target='_blank'>inspirative Videos</a> mit Profis aus dem Technologiebereich"
+  careers_page_more_markdown: "Mehr [inspirierende Videos](%{careers_url}) mit Profis aus dem Technologiebereich"
   playlab_choose_theme: "Wähle dein Spielelabor-Thema"
   playlab_classic_title: "Klassisch"
   playlab_gumball_title: "Die fantastische Welt von Gumball"
@@ -408,6 +434,7 @@
   mc_gradelevel: "Ab 6 Jahren"
   mc_platformtext: "Moderne Browser, Smartphones, Tablets"
   mc_specs: "Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106"
+  minecraft_agent: "Minecraft Helden Reise"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Abenteurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
@@ -493,9 +520,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} Lehrer brauchen Freiwillige.<br>%{num_volunteers} Freiwillige haben sich angemeldet. Machen Sie auch mit!"
   volunteer_engineer_submission_intro_background: "Hour of Code ist eine globale Bewegung, die erste Schritte in der Informatik fördert. Millionen von Schülern in über 180 Ländern machen mit. Beteiligen auch Sie sich während der Informatikwoche vom 7. bis 13. Dezember"
   volunteer_engineer_submission_intro_recruit: 'Viele Lehrer brauchen <span style="font-family: ''Gotham 7r'', sans-serif;">Informatikbegeisterte</span>, die im Unterricht helfen möchten oder <span style="font-family: ''Gotham 7r'', sans-serif;">Schüler inspirieren</span>, indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Viele Lehrer brauchen **Informatikbegeisterte**, die im Unterricht helfen möchten oder Schüler **inspirieren**, indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat)."
   volunteer_engineer_submission_intro_guide: "Erfahre mehr über unser <a href=\"%{volunteer_guide}\">Volunteerprogramm hier</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Mehr Informationen über unser [Freiwilligen Programm hier](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Wenn Sie Informatikstudent oder Softwareexperte sind, geben Sie bitte folgende Informationen ein. Die mit <span class=\"form-required-field\">*</span> markierten Felder sind obligatorisch."
+  volunteer_engineer_submission_intro_signup_markdown: "Bitte geben Sie die folgenden Informationen ein, wenn Sie Informatikstudent oder Softwareprofi sind. Sie müssen mindestens 18 Jahre alt sein, um sich als Freiwilliger anmelden zu können. Beachten Sie, dass alle Felder, die Sie in diesem Abschnitt ausfüllen, für alle öffentlich zugänglich sind, die sich die [Unterstützerkarte](/volunteer/Local) ansehen. Die mit _*_ gekennzeichneten Felder sind Pflichtfelder."
   volunteer_engineer_submission_intro_links: "Suchen Sie Freiwillige? Finden Sie Freiwillige vor Ort auf unserer <a href=\"%{volunteer_local}\">Unterstützerkarte</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Sind die Lehrer und suchen Freiwillige? Finden Sie Freiwillige vor Ort auf unserer [Unterstützerkarte](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Aktualisieren Sie Ihre Daten"
   volunteer_engineer_submission_header_shared: "Mit Lehrern geteilte Informationen auf der Unterstützerkarte"
   volunteer_engineer_submission_field_name: "Name"
@@ -529,6 +560,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Ich bestätige, dass ich mindestens 18 Jahre alt bin."
   volunteer_engineer_submission_submit: "Absenden"
   volunteer_engineer_submission_thankyou: "Vielen Dank für Ihre Anmeldung als Freiwilliger. Lehrer verwenden <a href=\"%{url}\">diese Karte</a>, um nach Ihnen und anderen Freiwilligen zu suchen."
+  volunteer_engineer_submission_thankyou_markdown: "Vielen Dank! Ihre Informationen als Freiwilliger wurden erfolgreich übermittelt. Lehrer verwenden [diese Karte](%{url}), um nach Ihnen und anderen Freiwilligen zu suchen und zu kontaktieren. Bis ihre Informationen angezeigt werden dauert dies bis zu 48 Stunden."
   volunteer_engineer_submission_commitment_uncertain: "Unsicher"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 Stunde pro Woche"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 Stunden pro Woche"
@@ -632,6 +664,8 @@
   dashboard_navigation_all_sections: "Schülerkonten und Fortschritt"
   dashboard_navigation_view_progress: "Fortschritt"
   dashboard_navigation_view_text_responses: "Text-Antworten"
+  dashboard_navigation_view_assessments: "Bewertung"
+  dashboard_navigation_view_assessments_surveys: "Bewertungen/Umfragen"
   dashboard_navigation_add_students: "Schüler hinzufügen"
   dashboard_navigation_manage_students: "Schüler verwalten"
   dashboard_navigation_lesson_plans_resources: "Unterrichtspläne und Material"
@@ -685,6 +719,7 @@
   dashboard_error_none_selected: "Du hast keine Schüler zum Verschieben ausgewählt. Bitte wählen Sie mindestens einen Schüler aus."
   dashboard_error_other_section: "Wenn Sie Schüler zwischen Ihren eigenen Abschnitten verschieben, wählen Sie Ihren Abschnitt aus der Dropdown-Liste aus. Wählen Sie nur \"Anderer Abschnitt\", um Ihre Schüler in einen anderen Lehrerabschnitt zu verschieben."
   dashboard_students_add_multiple: 'Geben Sie die Namen Ihrer Schüler ein, einer pro Zeile:'
+  dashboard_students_new_google_classroom_section: "Um Schüler hinuzuzufügen verwende <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> und klicke auf den <b>Sync students from Google Classroom</b> Eintrag darüber."
   dashboard_students_new_section: "Sie haben eine neue Lerngruppe erstellt! Verwenden Sie zum Hinzufügen Ihrer Schüler die Schaltflächen <b>Schüler hinzufügen</b> und <b>mehrere Schüler hinzufügen</b>."
   dashboard_students_name: 'Name'
   dashboard_students_progress: "Fortschritt"
@@ -725,6 +760,7 @@
   dashboard_pre-express: 'Leseanfänger-Expresskurs: '
   dashboard_express: 'Expresskurs: '
   dashboard_unplugged: "Wenn du keine Computer zur Verfügung hast, versuche <a href='%{unplugged_url}'>diese \"unplugged\" Lerneinheiten</a> in deinem Klassenzimmer."
+  dashboard_unplugged_markdown: "Wenn Sie keine Computer zur Verfügung haben, [probieren Sie diese Offline Lektionen] (%{unplugged_url}) in Ihrem Klassenzimmer."
   dashboard_tools: 'Werkzeuge: '
   dashboard_curriculum: "Lehrplan"
   dashboard_curriculum_overview: "Vor- und Grundschullehrplan Übersicht"
@@ -932,12 +968,14 @@
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   express-2020_name: Expresskurs (2019)
+  pre-express-2020_name: Leseanfänger-Expresskurs (2020)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: "Beschleunigter Kurs"
   express_name: "Expresskurs (2018)"
   pre-express_name: Leseanfänger-Expresskurs
   20-hour_name: Beschleunigter Kurs
+  algebra_name: "Computer Wissenschaft im umfangreichen Algebra Kurs"
   AlgebraA_name: "CS in Algebra Kurs A"
   AlgebraB_name: "CS in Algebra Kurs B"
   gumball_name: "Gumball"
@@ -1412,6 +1450,10 @@
   header_teacher_community: "Lehrer Community"
   header_help_support: 'Hilfe und Support '
   header_report_bug: "Einen Fehler melden"
+  header_report_abuse: "Missbrauch melden"
+  header_legal: "Privatsphäre und Rechtliches"
+  header_legal_privacy: "Datenschutzerklärung"
+  header_legal_tos: "AGBs"
   header_tutorials: "Einführungen"
   app_lab_documentation: "App Lab Dokumentation"
   app_lab_tutorials: "App Lab Tutorials"
@@ -1432,6 +1474,7 @@
   user_header_gamelab: "Spielelabor"
   user_header_playlab: "Spielelabor"
   user_header_dance: "Tanzparty"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Alle Projekte anzeigen..."
@@ -1441,6 +1484,7 @@
   view_section: "Bereich anzeigen"
   view_named_section: "Zeige %{section_name}"
   privacy_doc_explanation: "Klicken Sie hier für unser Privatsphäre-Dokument, das geteilt oder für Ihre Schüler ausgedruckt werden kann."
+  signing_in: "Anmeldung"
   sign_in_overview: 'Ihre Schüler können sich bei ihren Code.org-Konten anmelden, indem sie diesen Schritten folgen:'
   sign_in_instruct_website: "Gehe zu %{code_org_url}."
   sign_in_instruct_code: 'Geben Sie ihren Abschnittscode ein: %{section_code}.'
@@ -1463,10 +1507,13 @@
   syncing_students: "Synchronisieren Ihrer Schüler"
   syncing_students_instructions: 'Wenn Ihr Code.org-Abschnitt mit Ihrer Liste der Schüler in Google Classroom veraltet ist, klicken Sie auf die Schaltfläche "Schüler aus Google Classroom synchronisieren" auf der Registerkarte "Schüler verwalten":'
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto" auswählen:'
+  hero_name: 'Minecraft: Hero’s Journey'
+  applab-intro_name: App Labor Einführung
   applab_tile_title: "Einführung ins App-Labor (ab 13 Jahren)"
   applab_tile_subtitle: "Erstelle deine eigene App in JavaScript mit Blöcken. Oder nimm die Herausforderung an und erlerne textbasierte Programmation. (Nur Englisch)"
   applab_tile_start_tutorial: "Start"
   applab_tile_teacher_guide: "Lehrer-Leitfaden anzeigen"
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
   account_sign_up_child_accept_terms: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
   hoc_overview_dance_title: "Tanzparty"
@@ -1474,6 +1521,7 @@
   hoc_overview_dance_2019_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!"
   hoc_overview_title: "Hour of Code Aktivitäten von Code.org"
   hoc_overview_subtitle: "Die <a href=\"https://hourofcode.com\">Hour of Code</a> ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht. Jeder kann, egal wo, ein Hour of Code Veranstaltung organisieren oder eines der über 200 einstündigen Tutorials versuchen, verfügbar in über 45 Sprachen."
+  hoc_overview_subtitle_markdown: "Die [Hour of Code] (https://hourofcode.com) ist eine globale Bewegung, die einige Millionen Studenten in über 180 Ländern erreicht. Jeder kann ein \"Hour of Code\"-Event organisieren oder eines der über 500 einstündigen Tutorials ausprobieren, die in über 45 Sprachen verfügbar sind."
   hoc_overview_partner_activities_title: "Weitere Aktivitäten von Partnern"
   hoc_overview_partner_activities_body: "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden."
   hoc_overview_partner_activities_link: "Aktivitäten anzeigen"
@@ -1493,8 +1541,10 @@
   hoc2018_mc_page_title: "Minecraft Hour of Code Tutorials"
   hoc2018_mc_details: "Viele Sprachen | Moderne Browser und Tablets | Klasse 2+"
   hoc2018_mc_aquatic_announcement: "Registrieren Sie sich in ihrer Klasse, um eine der über 150 NEUEN Aktivitäten für die Hour of Code (3.-9. Dezember) auszuprobieren. Schauen Sie sich unbedingt unsere brandneue Minecraft-Aktivität für 2018 an, die Voyage Aquatic! Melden Sie sich noch heute für Ihren Kurs an."
+  hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
   hoc2018_mc_aquatic_description: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2019_mc_aquatic_description: "Erkunde und baue Unterwasserwelten mit Code."
+  hoc2018_mc_hero_title: "Minecraft Helden Reise"
   hoc2018_mc_hero_description: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_designer_description: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
@@ -1507,10 +1557,13 @@
   hoc2018_mc_educators_box1_title: "Programmieren mit Minecraft"
   hoc2018_mc_educators_box1_desc: 'Minecraft: Die Education Edition bietet einen standardkonformen Lehrplan, Training und Programmierung in Minecraft.'
   hoc2018_mc_educators_box1_button: "Jetzt loslegen"
+  hoc2018_mc_educators_box2_title: "Laden Sie den Facilitator Guide herunter"
   hoc2018_mc_educators_box2_desc: "Dieses Toolkit hilft Ihnen, eine Hour of Code zu veranstalten und Ihre Schüler für die Informatik zu begeistern."
   hoc2018_mc_educators_box2_button: "Herunterladen"
   hoc2018_mc_educators_box3_title: "Teilnahme an einem kostenlosen Schülerworkshop"
   hoc2018_mc_educators_box3_desc: "Besuche einen Microsoft Store in Deiner Nähe für einen kostenlosen Hour of Code Workshop. Für Teilnehmer aller Leistungsstufen, ab sechs Jahren."
+  hoc2018_mc_educators_box3_button: "Finde einen Workshop"
+  hoc2018_mc_educators_box4_title: "Zugriff auf mehr Computer Wissenschafts-Ressourcen"
   hoc2018_mc_educators_box4_desc: "Sorgen Sie für Veränderungen in Ihrer Community mit digitalen Fähigkeiten und den Ressourcen für die Informatikausbildung von Microsoft."
   hoc2018_mc_educators_box4_button: "Ressourcen erkunden"
   hoc2018_mc_watch_videos: "Bevor du loslegst, sieh dir eines dieser inspirierenden Videos an"
@@ -1536,6 +1589,7 @@
   hoc2018_mc_homepage_watch_video: "Video ansehen"
   hoc2018_mc_homepage_join_us: "Mitmachen"
   hoc2018_mc_homepage_try_it: "Ausprobieren"
+  hoc2018_mc_back: "Minecraft ist zurück - mit einer brandneuen Aktivität für Hour of Code!"
   hoc2018_mc_back_journey: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
   hoc2018_mc_teacher_guide: "Lehrer-Leitfaden anzeigen"
   hoc2018_mc_minecraft_education: "Minecraft Education"
@@ -1545,6 +1599,8 @@
   hoc2018_mc_short_description_shorter: "Nutze deine Kreativität und Problemlösungsfähigkeiten, um mittels Code Unterwasserwelten zu erforschen und aufzubauen."
   hoc2018_mc_journey: "Reise durch Minecraft mit Code."
   hoc2018_dance_party_main_heading: "Tanzparty"
+  hoc2018_dance_party_landing_title: "Tanz"
+  hoc2018_dance_party_subheading: "Hilf mit bei der Übersetzung von Dance Party"
   hoc2018_dance_create_your_own_dance_title: "Erstelle deine eigene Tanzparty"
   hoc2018_dance_party_box_title: "Tanzparty"
   hoc2018_dance_party_box_description: "Programmiere eine Tanzparty, um sie mit deinen Freunden zu teilen!"
@@ -1565,21 +1621,30 @@
   hoc2018_dance_video_title_what_is_creativity: "Was ist Kreativität?"
   hoc2018_dance_view_creativity_video_playlist: "Was ist Kreativität? Vollständige Serie anzeigen (Dauer: 5 Minuten)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "In Zusammenarbeit mit"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* ist ein umfassendes Kinder-Karriere Programm, mit dem einkommensschwache und andere benachteiligte Kinder und Jugendliche für Berufe in der Informatik inspiriert und ausgebildet werden sollen. <a href='%{amazon_future_engineer_link}' target='_blank'>Weitere Informationen</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* ist ein umfassendes Kinder-Karriere Programm, mit dem einkommensschwache und andere benachteiligte Kinder und Jugendliche für Berufe in der Informatik inspiriert und ausgebildet werden sollen. [Weitere Informationen] (%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Erfahren Sie mehr über Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Über Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Erfahre mehr über das Karriereprogramm des Amazon Kindergartens, um den Zugang zur Informatikausbildung zu verbessern. Hier findest du Informationen darüber, wie du dich an unseren Sommercamps, High School CS-Kursen, Stipendien und Praktika beteiligen kannst."
   hoc2018_dance_amazon_about_future_engineer_button: "Mehr erfahren"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Versuche \"Programmiere diesen Sommer\""
   hoc2018_dance_amazon_try_coding_this_summer_description: "Nimm an den kostenlosen, unterhaltsamen und inklusiven Computer Science Camps von Amazon Future Engineer teil! Sommercamps sind für Schüler vom Kindergarten bis zur 8. Klasse an verschiedenen Orten in den USA für den Sommer 2019 verfügbar."
   hoc2018_dance_amazon_try_coding_this_summer_button: "Einem Camp beitreten"
   hoc2018_dance_amazon_scholarship_programs_title: "Stipendienprogramme"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon bietet Stipendien in Höhe von 10.000 USD pro Jahr für unterversorgte Studenten an, die einen AP Computer Wissenschaften-Kurs erfolgreich abgeschlossen haben oder derzeit eingeschrieben sind und beabsichtigen, einen Computer Wissenschaften-Abschluss an einem 4-jährigen College oder einer Universität in den USA zu studieren."
   hoc2018_dance_amazon_scholarship_programs_button: "Jetzt bewerben!"
   hoc2018_dance_amazon_internships_title: "Komme als Praktikant zu Amazon"
   hoc2018_dance_amazon_internships_description: "Die Bewerbungen für das Praktikum im Sommer 2019 bei Amazon Future Engineer sind ab sofort möglich. Praktikanten werden mit einem Manager, einem technischen Mentor und anderen Praktikanten zusammenarbeiten, um Innovationen zu entwickeln und neue Funktionen und Dienstleistungen für Amazon-Kunden zu entwickeln. Praktika sind in den USA und Kanada möglich."
   hoc2018_dance_amazon_internships_button: "Einen Praktikumsplatz finden"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 Programme"
   hoc2018_dance_amazon_funding_title: "Erhalte Mittel für Deinen Informatik-Abschluss"
   hoc2018_dance_amazon_future_engineer_footer: "* Die Künstler deren Musik in diesem Tutorial vorkommt, sponsern oder unterstützen Amazon nicht durch die Lizensierung ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: "Takt"
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_aquatic_video1: "Minecraft Voyage Aquatic - Einführung"
+  hoc2018_aquatic_video2: "Minecraft Voyage Aquatic - Schleifen"
+  hoc2018_aquatic_video3: "Minecraft Voyage Aquatic - Bedingungen"
+  hoc2018_aquatic_video4: "Minecraft Voyage Aquatic - Herzlichen Glückwunsch"
   hoc2018_dance_video1: "Tanzparty - Einführung"
   hoc2018_dance_video2: "Tanzparty - Ereignisse"
   hoc2018_dance_video3: "Tanzparty - Eigenschaften"
@@ -1593,4 +1658,11 @@
   hoc2019_mc_mee_title: "Minecraft AI für Gott"
   hoc2019_mc_mee_description1: 'Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft verfügbar: Education Edition für Windows, Mac und iPad. Lernen Sie die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'
   hoc2019_mc_mee_description2: "Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen."
+  hoc2019_mc_more_coding_resources: "Mehr Quellcode Ressourcen"
+  hoc2019_dance_previous_versions: "Möchtest du eine frühere Version von Dance Party?\nKlicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten."
   homepage_slot_text_title_at_home: "Zu Hause lernen"
+  homepage_slot_text_blurb_at_home: "Diese Ressource machen es einfacher"
+  homepage_slot_text_link_code_break: "Mache eine Programmierpause"
+  homepage_slot_text_link_do_hoc: "Probiere die Hour of Code aus (deutsch \"Stunde des Codes\")"
+  homepage_slot_text_link_express_course: "Versuche einen Express-Kurs"
+  page_not_available_button: "Zurück zur Homepage"

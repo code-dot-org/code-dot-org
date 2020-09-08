@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "",
   "reinfFeedbackMsg": "",
   "shareGame": "আপনার খেলা শেয়ার করুন:",

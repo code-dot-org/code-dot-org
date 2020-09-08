@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     blocks:
       Dancelab_alternateMoves:
@@ -974,6 +974,10 @@ pt-BR:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         text: alterar {SPRITE} {PROPERTY} por {VAL}
         options:
@@ -1020,8 +1024,46 @@ pt-BR:
           CHOICE:
             '"this"': este
             '"other"': outro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: esconder a tela do título
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+            '"space"': espaço
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
       gamelab_jumpTo:
@@ -1096,6 +1138,8 @@ pt-BR:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} distância {DISTANCE} em direção a {TARGET}
+      gamelab_objectSpritePointer:
+        text: clique {SPRITE}
       gamelab_playSound:
         text: reproduzir som {SOUND}
       gamelab_pointInDirection:
@@ -1175,6 +1219,8 @@ pt-BR:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      gamelab_subjectSpritePointer:
+        text: clique {SPRITE}
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} graus"
         options:

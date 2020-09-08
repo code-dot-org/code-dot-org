@@ -3,28 +3,29 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Welcome', flex_category: 'required'
+lesson 'Welcome', display_name: 'Welcome'
 level 'welcome-csp-novice', named: true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Tuesday'
+lesson 'Tuesday', display_name: 'Tuesday'
 level 'csp-tuesday-unit', progression: 'Unit Reflection'
 level 'csp-tuesday-unit2', progression: 'Unit Reflection'
 level 'csp-tuesday-pedagogy', named: true
 level 'csp-tuesday-facilitation', named: true
 
-stage 'Wednesday'
+lesson 'Wednesday', display_name: 'Wednesday'
 level 'csp-wednesday-unit', progression: 'Unit Reflection'
 level 'csp-wednesday-unit2', progression: 'Unit Reflection'
 level 'csp-wednesday-pedagogy', named: true
 level 'csp-wednesday-facilitation', named: true
 
-stage 'Thursday'
+lesson 'Thursday', display_name: 'Thursday'
 level 'csp-thursday-unit', progression: 'Unit Reflection'
 level 'csp-thursday-unit2', progression: 'Unit Reflection'
 level 'csp-thursday-pedagogy', progression: 'Pedagogy Reflection'
 level 'csp-thursday-pedagogy2', progression: 'Pedagogy Reflection'
 level 'csp-thursday-facilitation', named: true
 
-stage 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up'
 level 'csp-novice-congrats', named: true
+

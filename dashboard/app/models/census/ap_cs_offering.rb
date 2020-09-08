@@ -28,35 +28,45 @@ class Census::ApCsOffering < ApplicationRecord
 
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
 
-  def self.seed_from_csv(course, school_year, filename)
+  def self.seed_from_csv(course, school_year, filename, dry_run = false)
+    succeeded = 0
+    skipped = 0
+
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
-        raw_school_code = row.to_hash['School Code']
-        raw_school_name = row.to_hash['School Name']
+        raw_school_code = row.to_hash['School Code']  # College Board attending institution (AI) code
         next unless raw_school_code
         normalized_school_code = Census::ApSchoolCode.normalize_school_code(raw_school_code)
-        unless normalized_school_code == '000000'
-          begin
-            ap_school_code = Census::ApSchoolCode.find([normalized_school_code, school_year])
+        next if normalized_school_code == '000000'
+
+        begin
+          ap_school_code = Census::ApSchoolCode.find([normalized_school_code, school_year])
+          unless dry_run
             Census::ApCsOffering.find_or_create_by!(
               ap_school_code: ap_school_code,
               course: course,
               school_year: school_year
             )
-          rescue ActiveRecord::RecordNotFound
-            # We don't have mapping for every school code so skip over any that
-            # can't be found in the database.
-            CDO.log.warn "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
           end
+          succeeded += 1
+        rescue ActiveRecord::RecordNotFound
+          # We don't have mapping for every school code so skip over any that
+          # can't be found in the database.
+          raw_school_name = row.to_hash['School Name']
+          CDO.log.warn "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
+          skipped += 1
         end
       end
     end
+
+    CDO.log.info "AP CS Offering seeding: done processing #{course}-#{school_year} data. "\
+      "#{succeeded} rows succeeded, #{skipped} rows skipped."
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
-  def self.construct_object_key(course, school_year)
-    "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
+  def self.construct_object_key(course, school_year, file_extension = 'csv')
+    "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.#{file_extension}"
   end
 
   def self.seed_from_s3
@@ -78,6 +88,31 @@ class Census::ApCsOffering < ApplicationRecord
         end
       end
     end
+  end
+
+  # Test seeding an object from S3 to find issues.
+  # This method does not check if the object had been seeded before
+  # and does not write to the database.
+  #
+  # @example:
+  #   Census::ApCsOffering.dry_seed_s3_object('CSP', 2017)
+  #   will seed from ap_cs_offerings/CSP-2017-2028.csv object.
+  #
+  #   Census::StateCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
+  #   will seed from ap_cs_offerings/CSA-2019-2020.txt object.
+  #
+  # @note: A CSV file with a right format name in S3 will be automatically
+  # picked up by the +seed_from_s3+ method as part of the build seeding process.
+  # To prevent that, use a different file extension such as .test or .txt.
+  def self.dry_seed_s3_object(course, school_year, file_extension = 'csv')
+    object_key = construct_object_key(course, school_year, file_extension)
+    AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+      seed_from_csv(course, school_year, filename, true)
+    end
+  rescue Aws::S3::Errors::NoSuchKey
+    CDO.log.warn "AP CS Offering seeding: Object #{object_key} not found in S3."
+  ensure
+    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   def self.seed

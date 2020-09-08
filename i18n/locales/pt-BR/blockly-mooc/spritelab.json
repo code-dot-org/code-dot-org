@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Parece que estamos com problemas para carregar sua animação \"{animationName}\". Verifique se você tem uma boa conexão com a Internet e tente recarregar a página. Se esse problema persistir, é possível que essa animação seja interrompida. Nesse caso, talvez seja necessário continuar removendo a animação.",
   "reinfFeedbackMsg": "Você terminou! Clique em \"Continuar\" para passar para o próximo nível.",
   "shareGame": "Compartilhe seu jogo:",

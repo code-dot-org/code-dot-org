@@ -16,7 +16,7 @@ zh-CN:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
-  csedweek_banner_teachers_text: 你是电脑科学课的老师吗？看其他的电脑科学教育周的资料吧
+  csedweek_banner_teachers_text: 你是计算机科学课的老师吗？看看其他的计算机科学教育周的资料吧
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
   try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
   try_hoc_num_served_markdown: |-
@@ -168,6 +168,7 @@ zh-CN:
     以外 </a> '
   get_a_certificate_message_after: 请通过单击以下载或打印证书。现在，请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过
     <a href='/learn/beyond'>《一小时以外编程》</a>查看更多的选择。
+  get_a_certificate_message_after_markdown: 点击以打印或下载认证书。现在继续学校我们[其他课程](http://studio.code.org)，或获得更多在[学多于一小时]选项(/learn/beyond)。
   thanks_for_submitting: 感谢提交！
   if_you_enjoyed: 如果你喜欢这个课程，让你的朋友也试一试！我们想要全世界都来学习。
   personalize_certificate: 个性化你的证书
@@ -1509,6 +1510,8 @@ zh-CN:
   header_teacher_community: 教师社区
   header_help_support: '帮助和支持 '
   header_report_bug: 报告错误
+  header_legal_privacy: 隐私政策
+  header_legal_tos: 使用条款
   header_tutorials: 教程
   app_lab_documentation: 应用程序实验室文档
   app_lab_tutorials: 应用程序实验室说明
@@ -1727,3 +1730,5 @@ zh-CN:
   hoc2019_dance_previous_versions: |-
     虚招以前版本的舞蹈派对？
     电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
+  homepage_slot_text_title_at_home: 在家学习
+  page_not_available_button: 返回主页

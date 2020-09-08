@@ -180,6 +180,10 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -193,6 +197,19 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"x"': এক্স
       gamelab_keyPressed:
         options:
           CONDITION:

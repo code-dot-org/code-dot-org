@@ -14,9 +14,7 @@ export default class Results extends React.Component {
     thisWorkshop: PropTypes.object.isRequired,
     workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
-    // TODO: add rollups once they are sent by the backend
     workshopRollups: PropTypes.object
-    // facilitatorRollups: PropTypes.object
   };
 
   render() {
@@ -60,7 +58,6 @@ export default class Results extends React.Component {
           >
             <SurveyRollupTableFoorm
               workshopRollups={this.props.workshopRollups[GENERAL]}
-              questions={this.props.questions}
               courseName={this.props.courseName}
               isPerFacilitator={false}
               facilitators={this.props.facilitators}
@@ -76,7 +73,6 @@ export default class Results extends React.Component {
           >
             <SurveyRollupTableFoorm
               workshopRollups={this.props.workshopRollups[FACILITATOR]}
-              questions={this.props.questions}
               courseName={this.props.courseName}
               isPerFacilitator={true}
               facilitators={this.props.facilitators}

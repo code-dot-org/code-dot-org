@@ -22,7 +22,6 @@
  *
  * Shared
  *= require user-menu
- *= require user-progress
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -140,8 +139,9 @@ img.video_thumbnail {
 
 .header-wrapper {
   padding-top: 0;
-  min-height: 60px;
+  min-height: 50px;
   position: relative;
+  user-select: none;
 
   .header {
     position: absolute;
@@ -187,8 +187,6 @@ img.video_thumbnail {
   }
 
   .project_info {
-    padding-top: 7px;
-
     .header_text, .header_button {
       float: left;
     }
@@ -211,7 +209,10 @@ img.video_thumbnail {
 
   .header_text {
     font-size: 16px;
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   @media screen and (min-width: 971px) {
@@ -234,7 +235,6 @@ img.video_thumbnail {
 
   .headerlinks {
     margin-top: 12px;
-    margin-left: 74px;
 
     .headerlink {
       font-family: 'Gotham 4r', sans-serif;
@@ -253,7 +253,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 350px;
+      padding-right: 30px;
     }
   }
 
@@ -273,6 +273,7 @@ img.video_thumbnail {
     box-sizing: border-box;
     float: left;
     cursor: pointer;
+    white-space: nowrap;
     a:hover {
       text-decoration: none;
       background-color: $orange;
@@ -344,20 +345,69 @@ img.video_thumbnail {
 }
 
 #header-banner {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 320px;
-  z-index: -1000;
-  background-position: 90% 10%;
   background-size: cover;
+  background-position: 90% 30%;
+  display: flex;
+  justify-content: center;
 
-  &.header-banner-short {
-    height: 180px;
+  .bannerContent {
+    max-width: 60%;
   }
 
-  &.header-banner-courses {
-    background-position: 75% 10%;
+  /*
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+   */
+  html[dir=rtl] & {
+    transform: scaleX(-1);
+    /*
+      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+      layout is not backwards
+     */
+    .bannerContentContainer {
+      transform: scaleX(-1);
+    }
+  }
+
+  #projects-page & {
+    margin-bottom: 16px;
+  }
+}
+
+#header-banner-overflow {
+  margin: 16px;
+}
+
+#header-banner, #header-banner-overflow {
+  .children {
+    margin-top: 16px;
+  }
+}
+
+.bannerContentContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px;
+}
+#courses-container {
+  #header-banner {
+    background-position: 75% 40%;
+  }
+
+  .announcements {
+    margin-top: 16px;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .content {
+      width: 100%;
+      margin: 0 16px;
+    }
   }
 }
 
@@ -456,37 +506,66 @@ $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #copyright-flyout, #more-menu {
-  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
-  color: $light_gray;
+  background-color: $background_gray;
+  color: $dimgray;
   font-size: 14px;
   a {
     font-family: $gotham-bold;
     font-weight: normal;
     &:link {
-      color: $light_gray;
+      color: $charcoal;
       text-decoration: none;
     }
     &:visited {
-      color: $light_gray;
+      color: $charcoal;
       text-decoration: none;
     }
     &:hover {
-      color: $dark_charcoal;
+      color: $charcoal;
       background-color: transparent;
-      text-decoration: underline;
+      text-decoration: none;
     }
     &:active {
-      color: $light_gray;
+      color: $charcoal;
       background-color: transparent;
       text-decoration: none;
     }
   }
 
+  h4 {
+    color: $dimgray;
+  }
+
   .dark & {
     background-color: $dark-charcoal;
+    border: 0;
+    color: $light_gray;
+    justify-content: flex-end;
+    margin: 0;
     a {
-      &:hover {
+      &:link {
         color: $lightest_gray;
+      }
+      &:visited {
+        color: $lightest_gray;
+      }
+      &:hover {
+        color: $white;
+      }
+      &:active {
+        color: $white;
+      }
+    }
+
+    .more-link {
+      margin: 0 $small-footer-horizontal-margin;
+      background-color: $dark-charcoal;
+      border: 0;
+      color: $light_gray;
+      font-size: 14px;
+      padding: 0;
+      &:hover {
+        box-shadow: none;
       }
     }
   }
@@ -501,9 +580,12 @@ $small-footer-standard-width: 400px;
 .small-footer-base {
   position: absolute;
   bottom: 0;
-  width: $small-footer-standard-width;
-  overflow: hidden;
-  padding-left: $codeApp-left-margin;
+  margin: 0 $codeApp-left-margin;
+  display: flex;
+  border-top: 1px solid $lighter_gray;
+  padding: 6px 0 3px 0;
+  width: 100%;
+  max-width: $small-footer-standard-width;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -511,25 +593,57 @@ $small-footer-standard-width: 400px;
    */
   margin-top: 5px;
 
-  form {
-    float: left;
-    margin-right: $small-footer-horizontal-margin;
-  }
-
   select {
+    color: $charcoal;
     width: 80px;
     font-size: 11px;
     height: 18px;
-    margin-bottom: 0;
+    margin: 0;
+    line-height: 18px;
+    padding: 0;
+    border: 0;
   }
 
-  small {
-    display: block;
-    float: right;
-    margin-right: $small-footer-horizontal-margin;
-    padding-top: 3px;
-    white-space: nowrap;
+  .copyright-button, .i18n-dropdown-container, .globe-icon {
+    align-self: center;
   }
+
+  .copyright-button {
+    margin: 0 10px;
+    button {
+      padding: 3px;
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0;
+      border: 1px solid $lighter_gray;
+      background-color: $background-gray;
+    }
+  }
+
+  .globe-icon {
+    color: $charcoal;
+    font-size: 18px;
+    margin: 0 1px;
+  }
+
+  .i18n-dropdown-container {
+    display: flex;
+    border: 1px solid $lighter_gray;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 0 0 0 4px;
+    margin: 0;
+  }
+
+  .i18n-dropdown-container:dir(rtl) {
+    padding: 0 4px 0 0;
+  }
+}
+
+#copyright-scroll-area {
+  overflow-y: auto;
+  padding: 0.8em;
+  border-bottom: 1px solid $lighter_gray;
 }
 
 .responsive-content-mobile-footer {
@@ -549,7 +663,6 @@ $small-footer-standard-width: 400px;
     }
   }
 }
-
 
 #more-menu {
   display: none;
@@ -580,6 +693,18 @@ $small-footer-standard-width: 400px;
         color: $dark_charcoal;
       }
     }
+  }
+}
+
+.dark {
+  #copyright-flyout {
+    background-color: $dark-charcoal;
+  }
+  #copyright-scroll-area {
+    background-color: $dark-charcoal;
+  }
+  .small-footer-base {
+    font-size: 12px;
   }
 }
 
@@ -643,6 +768,7 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0 25px 25px 25px;
 }
+
 body.embedded_iframe {
   .full_container {
     padding-left: 0;
@@ -652,7 +778,6 @@ body.embedded_iframe {
 .responsive_full_container {
   padding: 0 10px 10px 10px;
 }
-
 
 $default-modal-width: 640px;
 
@@ -831,12 +956,11 @@ $default-modal-width: 640px;
 }
 
 .header_left {
-  position: absolute;
-  left: 25px;
+  display: flex;
+  float: left;
   z-index: 2;
-  .header_button, .header_input, .header_text {
-    margin-left: 10px;
-  }
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .header_left, .header_right {
@@ -866,6 +990,11 @@ $default-modal-width: 640px;
   }
   .project_name_wrapper {
     min-width: 160px;
+
+    html[dir=rtl] & {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   .project_name_wrapper .header_text {
     float: left;
@@ -942,12 +1071,24 @@ $default-modal-width: 640px;
   }
 }
 
+@keyframes header_fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header_middle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  .header_button {
-    margin-top: 3px;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
+  float: left;
+
+  .header_button, .header_input {
+    margin-left: 10px;
   }
 }
 
@@ -958,21 +1099,35 @@ $default-modal-width: 640px;
 }
 
 .header_level {
-  padding-top: 2px;
-  padding-bottom: 0;
-  text-align: center;
   font-size: 150%;
   cursor: default;
-  white-space: nowrap;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .progress_container {
-    display: inline-block;
+    overflow: hidden;
   }
 }
 
+.script_name_container {
+  overflow: hidden;
+  padding-right: 5px;
+}
+
 .header_right {
-  position: absolute;
-  right: 16px;
+  float: right;
+  margin-right: 13px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sign_in_or_user {
+  float: left;
 }
 
 input.header_input {
@@ -989,8 +1144,8 @@ input.header_input {
 }
 
 .header_popup {
-  display: none;
   position: absolute;
+  text-align: left;
   // Set to have a 4 px gap with the bottom of the header
   top: 48px;
   right: 0;
@@ -1020,47 +1175,29 @@ input.header_input {
   color: $charcoal;
 
   .loading {
-    height: 400px;
     margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 }
 
-.header_popup_link {
-  min-width: 40px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  height: 26px;
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
+  overflow: hidden;
+  padding-left: 5px;
+  box-sizing: border-box;
+
+  a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_finished_link:hover {
   background-color: transparent;
   text-decoration: underline;
-}
-
-.header_popup_link:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.header_popup_link_glyph {
-  font-size: 22px;
-  color: $orange;
-  line-height: 10px;
-}
-
-.header_popup_link_text {
-  font-size: 10px;
-  color: $header_text;
-  display: inline-block;
-  line-height: 20px;
 }
 
 #alert {
@@ -1085,6 +1222,24 @@ input.header_input {
     position: relative;
     top: -230px;
   }
+}
+
+body.iframe_embed_app_and_code {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .full_container {
+    padding: 0;
+  }
+
+  #codeApp {
+    height: 100%;
+  }
+
 }
 
 #codeApp.pin_bottom {
@@ -1399,35 +1554,6 @@ a.download-video {
       color: $cyan;
       padding: 2px 4px;
       border: 1px solid $cyan;
-    }
-  }
-}
-
-.gallery {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 890px;
-
-  .pagination {
-    float: left;
-    font-size: 30px;
-    line-height: 154px;
-    margin: 10px 5px;
-    width: 25px;
-    text-align: center;
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  .gallery_activity {
-    margin: 10px 5px;
-    box-sizing: border-box;
-    height: 154px;
-    width: 154px;
-    img {
-      border: 2px solid $lighter_gray;
-      background-color: $white;
     }
   }
 }
@@ -2234,7 +2360,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 25px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -2311,44 +2437,6 @@ a.download-video {
   }
   .block-checkbox {
     float: left;
-  }
-}
-
-div.gallery_activity {
-  $img_size: 154px;
-  $img_border_size: 10px;
-  $img_total_size: $img_size + 2 * $img_border_size;
-  float: left;
-  width: $img_total_size;
-  margin: 10px 5px;
-  img {
-    width: $img_size;
-    height: $img_size;
-    border: $img_border_size groove $light_gray;
-  }
-  .caption {
-    color: $charcoal;
-    margin: 0 auto;
-    clear: both;
-    max-width: $img_size;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
-}
-
-div.mini_gallery_activity {
-  $img_size: 54px;
-  $img_border_size: 4px;
-  $img_total_size: $img_size + 2 * $img_border_size;
-  float: left;
-  width: $img_total_size;
-  margin: 0 5px;
-  img {
-    width: $img_size;
-    height: $img_size;
-    border: $img_border_size groove $light_gray;
   }
 }
 
@@ -3168,6 +3256,10 @@ code {
   }
 }
 
+.breadcrumb-header {
+  margin-top: 10px;
+}
+
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
@@ -3272,19 +3364,37 @@ h2.danger {
 }
 
 .foorm-adjust-matrix {
+  table-layout: fixed;
+
   th {
-    font-size: 100%;
+    font-size: 12px;
     text-align: center;
+    font-family: 'Gotham 4r', sans-serif;
+    font-weight: normal !important;
   }
 
-  tr td:not(:first-child) {
-    text-align: center;
-    width: 10%;
+  @media (min-width: 601px) {
+    tr td:first-child {
+      width: 40%;
+    }
+
+    tr td:not(:first-child) {
+      text-align: center;
+    }
   }
 
   td {
     min-width: 0 !important;
   }
+}
+
+.foorm-adjust-rating {
+  text-align: center;
+}
+
+.foorm-adjust-row {
+  background-color: $white !important;
+  border-color: $white !important;
 }
 
 .foorm-button {
@@ -3299,6 +3409,17 @@ h2.danger {
 
 .foorm-button-right {
   float: right;
+}
+
+.foorm-survey-rating-question-sample {
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
 }
 
 #parent-email-banner {
@@ -3316,8 +3437,7 @@ h2.danger {
   color: $white;
   border-top: 1px solid $white;
 
-  /* Make sure we're in front of the AnswerDash icon in the lower-right corner. */
-  z-index: 2000000200;
+  z-index: 1030;
 
   .banner-content {
     max-width: 970px;
@@ -3410,5 +3530,38 @@ h2.danger {
   /* mobile */
   @media screen and (min-width: 0px) and (max-width: 970px) {
     display: none;
+  }
+}
+
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
   }
 }

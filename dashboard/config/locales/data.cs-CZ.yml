@@ -38,6 +38,7 @@ cs:
         NetSim: Simulátor Internetu
         Custom: Umělec
         CustomStudio: Play Lab
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronz
@@ -371,9 +372,9 @@ cs:
         studio_playlab_8: Můžeš přidat blok ke skórování bodu a blok k přehrání zvuku,
           když jednorožec narazí do čaroděje a pak je přesouvej je pomocí šipek, dokud
           skóruješ?
-        studio_playlab_9: Nastavit pozadí pro Mimozemskou invazi a pomož Spacebotovi
-          dostat mimozemšťana rychleji změnou jeho rychlosti. Přesuňjej kurzorovými
-          klávesami se dostat k Spacebotovi a varovat všechny ostatní
+        studio_playlab_9: Nastav pozadí pro mimozemskou invazi a pomoz Spacebotovi
+          rychleji dostat mimozemšťana tak, že změníš jeho rychlost. Pomocí šipek
+          jej přesuň k mimozemšťanovi a varuj všechny ostatní.
         studio_playlab_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
         studio_iceage_hello1: Sid chce shromáždit všechny na nové dobrodružství. Pomůžeš
@@ -403,8 +404,8 @@ cs:
           udělal, oba si přehrají zvuk a skórují bod, když Sid a Granny se srazí?
           Stiskni Run k zahrání hry.
         studio_iceage_warn_ice_age: Každý se musí pohybovat rychleji, protože se blíží
-          doba ledová! Změna pozadí na "ledy" a nastavit rychlost Sida na rychle,
-          pak stiskni tlačítko Run a přesuň je k Diegovi, aby jej varoval.
+          doba ledová! Změn pozadí na "ledy" a nastav rychlost Sida na rychlou, pak
+          stiskni tlačítko Spustit a přesuň je k Diegovi, aby jej varoval.
         studio_iceage_throw_hearts: Sid se chce nechat svou babičku, aby babička věděla,
           že ji má moc rád. Použije povel "actor throw" na Sida (actor 1), aby hodil
           srdce na babičku (actor 2)! Nastav náladu Granny na spojenost, když se jí
@@ -522,7 +523,7 @@ cs:
         C1_maze_loops: Cykly v bludišti
         C1_playlab_storytelling: 'Hravá laboratoř: Vytvoř příběh'
         C1_planting_seed: Sázení semínka
-        C1_building_foundation: Budování nadace
+        C1_building_foundation: Budování základů
         C1_going_places_safely: Cestování bezpečně
         C2_maze_intro: Úvod Bludiště
         C2_artist_intro: Úvod Malíř
@@ -647,6 +648,7 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
+        applab_intro_welcome: App Lab - začínáme
         CSF_skinOverview_Harvester: Zahradnice
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -736,7 +738,7 @@ cs:
         playlab_drag_say: Přetáhni sem blok "say" a zadej "Ahoj"
         playlab_use_twice: Použij tento blok dvakrát a nezapomeň změnit číslo aktéra
         playlab_move_girl: Použij blok "doprava", aby přesunoul tenistku
-        playlab_play_sound: Přidej sem blok "přehrát zvuk"
+        playlab_play_sound: Sem přidej blok "přehraj zvuk"
         playlab_arrow_keys: Nezapomeň použít tyto k přesunutí čarodějnice po klepnutí
           na Run
         playlab_add_move: Přidej "přesunout" bloky uvnitř tohoto k opakování bloků

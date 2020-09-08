@@ -533,7 +533,34 @@ sk-SK:
           sa svojho plánu pre tvorbu aplikácie\n1. **Vyhodnoť a Uprav**\n   * Vymeňte
           si navzájom aplikácie a pomôžte ich vylepšiť\n1. **Prezentuj**\n   * Predveď
           svoj finálny produkt!"
+      Begin planning your project_2018_2019:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
+      Begin planning your project_2018_2019_2020:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       BigEvent-Unplugged:
+        markdown: |-
+          Veľká udalosť
+
+          V informatike sú udalosti akcie, ktoré počítač monitoruje. V tejto lekcii budeš reagovať inak v závislosti od toho, ktoré tlačidlo stlačíš.
+      BigEvent-Unplugged_2020:
         markdown: |-
           Veľká udalosť
 
@@ -610,43 +637,49 @@ sk-SK:
         - {}
       CSD U3 - conditionals - Matching:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
           # Zastav sa
@@ -664,30 +697,57 @@ sk-SK:
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
       CSD U3 Boolean MC:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Boolean MC_2018:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Card Examples_2018:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
@@ -697,6 +757,34 @@ sk-SK:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+      CSD U3 Collisions SFLP:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní, ako sa používa blok „isTouching“, budete diskutovať o nových spôsoboch interakcie medzi dvoma „sprite“ objektmi. Potom použijete „isTouching“ na posunutie jedného „sprite” objektu druhým, a následne si precvičíte štyri bloky kolízie (collide, displace, bounce, and bounceOff).
+
+          ## Slovná zásoba
+
+          * **Abstrakcia** – zjednodušená reprezentácia niečoho komplexnejšieho. Abstrakcie umožňujú nedbať na detaily, čo napomáha pri zvládnutí komplexity. Vďaka nim sa vieme zamerať na podstatnejšie koncepty, a uvažovať nad problémami na vyššej úrovni.
+
+          ## Nový kód
+
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Prehľad
+
+          Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+
+
+          ## Zdroje
+
+          * [Project Guide - Defender Game - Project Guide](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
         markdown: |+
           # Začni svoj prieskum
@@ -713,49 +801,288 @@ sk-SK:
 
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+      CSD U3 Functions SFLP:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej, abstraktnejšej úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
+
+          ## Slovník
+
+          * **Funkcia** – Pomenovaná skupina programovacích inštrukcií. Funkcie sú opakovane použiteľné abstrakty, ktoré znižujú náročnosť písania a údržby programov.
+
+          ## Nový kód
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none = Definuj funkciu
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/) = Zavolaj funkciu
       CSD U3 Keypress Matching:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
+        content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
+          Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Je pravda len raz, v momente stlačenia klávesy.
+        - text: Je pravda len raz, v momente pustenia klávesy.
+        - text: Je pravda po celý čas, čo je klávesa stlačená, alebo držaná.
+        title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
+        content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
+          Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Je pravda len raz, v momente stlačenia klávesy.
+        - text: Je pravda len raz, v momente pustenia klávesy.
+        - text: Je pravda po celý čas, čo je klávesa stlačená, alebo držaná.
+        title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
+        content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
+          Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Je pravda len raz, v momente stlačenia klávesy.
+        - text: Je pravda len raz, v momente pustenia klávesy.
+        - text: Je pravda po celý čas, čo je klávesa stlačená, alebo držaná.
+        title: 'Spájanie: odpovede na stlačenie kláves'
+      CSD U3 Lesson Overview 1:
+        markdown: |-
+          #Prehľad
+
+          Na začiatku nášho kurzu sa zamyslíme nad „problémami“ nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
+
+          ##Zdroje
+
+          *[Informatika v zábavnom priemysle - Pracovný list] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+      CSD U3 Lesson Overview 10:
+        markdown: |-
+          # Prehľad
+
+          V tejto lekcii si vysvetlíme logické výrazy a taktiež podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie logických (pravda/nepravda) výrokov s použitím osobných vlastností (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to, ako sa dajú spolu s podmienkami použiť pri programovaní.
+          ## Slovník
+
+          * **Logický výraz** - hodnota, ktorá buď platí alebo neplatí.
+          * **Podmienky** - výroky, ktoré platia len za splnení určitých podmienok.
+          * **Výraz** - akákoľvek časť kódu, ktorej výsledkom je hodnota.
+
+
+          ## Zdroje
+
+          * [Pracovný zošit](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
+      CSD U3 Lesson Overview 11:
+        markdown: "# Prehľad\n\nV tejto lekcii použijeme logické výrazy na porovnanie
+          aktuálnej hodnoty vlastnosti „sprite“ objektu s jej cieľovou hodnotou. Toto
+          porovnanie použijeme na určenie toho, či „sprite“ dosiahol určený bod na
+          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu.
+          Nakoniec pridáme podmienkové výroky, \"if\", v ktorých logické výrazy použíjeme
+          ako základ pre rozhodovanie\n\n## Slovník\n\n* **Logický výraz** - v programovaní
+          ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu. \n* **Podmienkový
+          výrok („If“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
+          Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/) –
+          „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+          – znamienko „menší ako“\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
+          – znamienko „nerovná sa“\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
+          – znamienko „menší alebo rovný ako“\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
+          – znamienko „väčší ako“\n* [Equality operator](//studio.code.org/docs/gamelab/equalityOperator/)
+          – znamienko „rovná sa“\n* [Greater than or equal operator](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)
+          – znamienko „väčší alebo rovný ako“"
+      CSD U3 Lesson Overview 12:
+        markdown: |
+          # Prehľad
+
+          Po úvode do logických výrazov a podmieňovacích („if“) výrazoch si predstavíme nový blok nazvaný keyDown(). Tento blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch, pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie si študenti napíšu program, ktorý bude na základe stlačenia klávesy ovládať objekty na obrazovke.
+
+          ## Nový kód
+
+          * [keyDown()](//studio.code.org/docs/gamelab/keyDown/)
+
+          ## Zdroje
+
+          * [Logické výrazy](https://youtu.be/y3rCKJNOwpA) - Video ([Stiahnuť](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
+      CSD U3 Lesson Overview 13:
+        markdown: "# Prehľad\n\nDnes pokračujeme s podmieňovacími výrazmi pre zaznamenávanie
+          vstupov od užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa
+          naučili naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
+          aj príkazy zadávané myšou. \n\n## Slovník\n\n* **Podmieňovacie výrazy**
+          - Výrazy, ktoré sa spustia iba pri splnení určitých podmienok.\n\n## Nový
+          kód\n\n* [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)\n* [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)\n*
+          [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)\n* [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)\n*
+          [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)\n* [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)\n*
+          [sprite.visible](//studio.code.org/docs/gamelab/visible/)\n* [If/else statement](//studio.code.org/docs/gamelab/ifElseBlock/)\n\n"
+      CSD U3 Lesson Overview 14:
+        markdown: "# Prehľad\n\nTrieda navrhne a vytvorí interaktívnu pohľadnicu s
+          využitím všetkých programovacích techník, ktoré sa dosiaľ naučila. \n\n##
+          Zdroje\n\n* [Interaktívna pohľadnica – Plánovací hárok projektu] (https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)\n*
+          [Interaktívna pohľadnica – Hodnotenie svojho zadania] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)\n*
+          [Interaktívna pohľadnica – Hodnotiaci hárok učiteľa] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)"
+        teacher_markdown: |
+          * [Interactive Card](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Interactive Card](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+      CSD U3 Lesson Overview 2:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si precvičíme komunikáciu inštrukcií na kreslenie tvarov na želanom mieste. Využijeme pritom interaktívny nástroj Game Labu, ktorý nám umožní vkladanie tvarov do mriežky 400x400. Žiaci sa vystriedajú pri komunikácii inštrukcií na nakreslenie skrytého obrázku a pri jeho kreslení podľa vypočutých inštrukcií. Tým si priblížia viacero z výziev programovania v Game Labe.
+
+          ## Zdroje
+
+          * [Kreslenie tvarov - Sprievodca aktivitou](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Prehľad
+
+          V tejto lekcii sa oboznámíme s programovacím prostredím Game Labu. Na úvod sa naučíme umiestniť tvary na konkrétne miesto mriežky. Ďalej sa oboznámime s dôležitosťou správnej postupnosti príkazov, vyskúšame si hľadanie a opravovanie chýb a naučíme sa niekoľko jednoduchých príkazov. Na konci hodiny vytvoríme online verziu obrázku navrhnutého v predchádzajúcej lekcii.
+
+          ## Slovná zásoba
+
+          * **Chyba** - časť programu, ktorý nefunguje správne (angl. Bug).
+          * **Oprava chýb** - nájdenie a odstránenie problémov v algoritme alebo programe (angl. Debugging).
+          * **Program** - algoritmus naprogramovaný tak, aby ho vedel vykonať počítač.
+
+          ## Nový kód
+
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: "# Prehľad \n\nV tejto lekcii vylepšíme naše kreslenie pomocou určovania
+          šírky a výšky tvarov a naučíme sa generovať náhodné čísla. Pomocou parametrov
+          výška a šírka  nakreslíme obdĺžniky a kruhy rôznej veľkosti a pomocou príkazu`background()`
+          vyfarbíme celé pozadie obrazovky. Na konci lekcie si predstavíme príkaz
+          `randomNumber()` a pomocou nových blokov nakreslíme dúhového hada náhodného
+          tvaru.\n\n## Slovník\n\n* **Parameter** - Dodatočná informácia pomocou ktorej
+          upravíme funkciu na dosiahnutie požadovaného výsledku.\n\n## Nový kód\n\n*
+          [background()](//studio.code.org/docs/gamelab/background/)\n* [ellipse()](//studio.code.org/docs/gamelab/ellipse/)\n*
+          [rect()](//studio.code.org/docs/gamelab/rect/)\n* [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)\n\n"
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si predstavíme premenné ako spôsob na označenie čísla, alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. Premenné použijeme na uloženie náhodného čísla, čo nám umožní rovnakú hodnotu použiť na rôznych miestach nášho programu.
+
+          ## Slovník
+
+          * **Variable** - premenná. Slúži na uschovanie hodnoty, pričom samotná hodnota sa môže zmeniť..
+
+          ## Nový kód
+
+          * [Deklarácia premennej](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Deklarácia premennej a priradenie hodnoty](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Zdroje
+
+          * [Predstavenie premenných](https://youtu.be/G41G_PEWFjE) - Video ([stiahnuť](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 Lesson Overview 6:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si predstavíme objekt "sprite", ktorý nám umožní vytvárať zaujímavejšie a detailnejšie obrázky. Každému "sprite" objektu  môžeme prideliť obrázok, ktorý bude zobrazovať. „Sprite“ objekty tiež zaznamenávajú viaceré hodnoty, čo sa nám zíde pri vytváraní animácií. Na konci lekcie si každý pomocou "sprite" objektov vytvorí vlastnú scénu.
+
+          ## Slovná zásoba
+
+          * **Charakteristika (property)** - atribúty, vlastnosti, ktoré popisujú daný objekt
+          * **Sprite** - grafický objekt na obrazovke s charakteristikami, ktoré popisujú jeho umiestnenie, pohyb a vzhľad.
+
+          ## Nový kód
+
+          * [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale](//studio.code.org/docs/gamelab/scale/)
+          * [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)
+
+          ## Zdroje
+
+          * [Plánovanie scény so "sprite" objektami - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+      CSD U3 Lesson Overview 7:
+        markdown: |+
+          # Prehľad
+
+          V tejto lekcii si predstavíme cyklus kreslenia - jednu z hlavných programovacích paradigiem Game Labu. Cyklus kreslenia spojíme s náhodnými číslami na vytvorenie jednoduchých animácií s bodkami a potom so „sprite“ objektami. Následne nové vedomosti využijeme na vylepšenie scény so "sprite" objektami z predchádzajúcej lekcie.
+
+          ## Slovná zásoba
+
+          * **Animácia ** - séria obrázov, ktoré vytvárajú ilúziu pohybu tým, že sa zobrazujú rýchlo jeden po druhom
+          * **Snímka** - jeden obrázok v rámci animácie
+          * **Frame Rate** - rýchlosť zobrazovania snímok v animácii, najčastejšie meraná v snímkach za sekundu
+
+          ## Nový kód
+
+          * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
+          * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
+
+      CSD U3 Project Build a Game SFLP:
+        markdown: "# Prehľad\n\nV tejto lekcii si pomocou Sprievodcu projektom a postupu
+          z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
+          na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru
+          odprezentujeme pred triedou. \n\n## Zdroje\n\n* [Vytvor svoju vlastnú hru
+          - Sprievodca projektom](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)\n*
+          [Vytvor svoju vlastnú hru - Hotnotiace kritéria](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)\n*
+          [Vytvor svoju vlastnú hru - Spätná väzba](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
+      CSD U3 SFLP Velocity:
+        markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
+          používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti, ktoré
+          priamo určujú jeho rýchlosť a spôsob otáčania sa. Používaním týchto vlastností
+          sa naučíš všetko potrebné na vytvorenie jednoduchej plošinovky. \n\n## Nový
+          kód\n* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)\n*
+          [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)\n* [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)\n"
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -787,7 +1114,7 @@ sk-SK:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
       CSD U3 Sprites intro predict multi_2018:
         answers:
         - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
@@ -796,7 +1123,7 @@ sk-SK:
         - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
         - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
@@ -805,7 +1132,17 @@ sk-SK:
         - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
         - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # Prehľad
+
+          V tejto viacdennej lekcii budeme aplikovať proces riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme ukážku hry. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+
+
+          ## Zdroje
+
+          * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
       CSD U3 drawSprites placement match:
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -849,41 +1186,41 @@ sk-SK:
             AM.png">
         title: drawSprites
       CSD U3 game intro:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 game intro_2018:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 game intro_2018_2019:
-        markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
-          je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
-          Môžete spolu premýšľať o hrách, ktoré ste už videli alebo sa pozrieť na
-          niektoré dalšie vzorové hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
           style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
           PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
-          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
-          na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
-          cvičeniach začneš na svojej hre pracovať.\n"
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
       CSD U3 platform intro:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
@@ -946,6 +1283,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -954,6 +1292,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -962,6 +1301,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 tugowar stop:
         markdown: |
           # Zastav sa
@@ -1147,6 +1487,16 @@ sk-SK:
           * Keď tvoríte aplikáciu, ktorá je dostupná pre ľudí so znevýhodnením, vlastne ju vylepšujete aj pre všetkých ostatných!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Dizajn, ktorý je dostupný
+
+          * Vo svete informatiky **dostupnosť** znamená tvorbu technológií pre ľudí so znevýhodnením.
+          * Znevýhodnenie môže byť fyzické, zrakové, sluchové a mnohé ďalšie.
+          * Existujú rôzne typy znevýhodnenia a všetky majú vplyv na to ako ľudia so znevýhodnením používajú technológie, napr. **smartfónové aplikácie**.
+          * Keď tvoríte aplikáciu, ktorá je dostupná pre ľudí so znevýhodnením, vlastne ju vylepšujete aj pre všetkých ostatných!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       GoingPlacesSafely-unplugged:
         markdown: |-
           Bezpečné surfovanie po internete
@@ -1157,7 +1507,17 @@ sk-SK:
           Veselé cykly
 
           V tejto lekcii sa naučíš niečo o cykloch!
+      HappyLoops-Unplugged_2020:
+        markdown: |-
+          Veselé cykly
+
+          V tejto lekcii sa naučíš niečo o cykloch!
       HappyMaps-Unplugged:
+        markdown: |-
+          Veselé mapy
+
+          Vytvor algoritmus, aby si presunul postavu cez bludisko.
+      HappyMaps-Unplugged_2020:
         markdown: |-
           Veselé mapy
 
@@ -1357,11 +1717,27 @@ sk-SK:
         questions:
         - text: Ktoré slovo je vyhláskované?
         title: Vyber správnu odpoveď
+      OPD-K5-projects-1:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička | Mimozemský príbeh|
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       PowerOfWords-Unplugged:
         markdown: |-
           # Sila slov
 
           Dnes sa naučíš, čo treba robiť, ak je niekto v online priestore nepríjemný.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # Sila slov
+
+          ## Čo by sme mali spraviť, keď niekto na internete použije zlomyseľný, útočný, alebo nenávistný jazyk?
       Prepare for your presentation:
         markdown: |-
           # Prezentácia projektov
@@ -1379,12 +1755,25 @@ sk-SK:
           Na tejto hodine sa naučíte, aký je rozdiel medzi tým čo je a nie je bezpečné zdielať na internete. Lekciu pripravili Common Sense Education.
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Súkromné a osobné informácie
+
+          ## Ktoré tvoje osobné informácie je v poriadku zdieľať online?
       SimonSays-Unplugged:
         markdown: |-
           # Simon vraví
 
           Zahraj si hru a porozmýšľaj aké príkazu sú potrebné na dosiahnutie správnych výsledkov.
+      SimonSays-Unplugged_2020:
+        markdown: |-
+          # Simon vraví
+
+          Zahraj si hru a porozmýšľaj aké príkazu sú potrebné na dosiahnutie správnych výsledkov.
       Songwriting-Unplugged:
+        markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
+          naučia definovanie a vyvolanie funkcií. "
+      Songwriting-Unplugged_2020:
         markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
           naučia definovanie a vyvolanie funkcií. "
       behaviors 1 predict:
@@ -1397,7 +1786,29 @@ sk-SK:
         questions:
         - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
+      behaviors 1 predict_2020:
+        answers:
+        - feedback: Nesprávne.
+        - correct: true
+          feedback: Správne!
+        - feedback: Nesprávne.
+        - feedback: Nesprávne
+        questions:
+        - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
+            Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 4 predict:
+        answers:
+        - text: Vľavo, a potom dole
+          feedback: Nesprávne.
+        - text: Diagonálne
+          correct: true
+          feedback: Správne!
+        - {}
+        - text: Dole, a potom vľavo
+          feedback: Nesprávne
+        questions:
+        - text: Odhadni, čo sa bude diať. Ktorým smerom pôjde satelit ku galaxii?
+      behaviors 4 predict_2020:
         answers:
         - text: Vľavo, a potom dole
           feedback: Nesprávne.
@@ -1448,6 +1859,19 @@ sk-SK:
           feedback: Umelec nakreslí štvorec.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: Umelec nakreslí trojuholník s tromi rovnakými stranami.
+          feedback: Nesprávne. Umelec nakreslí štvorec.
+        - text: Umelec nakreslí jednu čiaru.
+          feedback: Nesprávne. Umelec nakreslí štvorec.
+        - text: Umelec nakreslí štvorec.
+          correct: true
+          feedback: Správne!
+        - text: Neviem.
+          feedback: Umelec nakreslí štvorec.
+        questions:
+        - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1483,6 +1907,23 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
             na "Spustiť"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+            krát 3 je 12!
+        - text: '12'
+          correct: true
+          feedback: Správne!
+        - text: '15'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+            krát 3 je 12!
+        - text: Neviem.
+          feedback: Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3
+            je 12!
+        questions:
+        - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
+            na "Spustiť"?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
@@ -1547,6 +1988,22 @@ sk-SK:
         questions:
         - text: 'Pozri sa pozorne na tento kód.  Aká je prvá chyba, kvôli ktorej tento
             program zlyhá? '
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
+          feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
+        - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
+          correct: true
+          feedback: Správne!
+        - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
+          feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
+            smerom.
+        - text: Neviem.
+          feedback: 'Prvá chyba je, že Scrat pôjde zlým smerom po svojom poslednom
+            otočení. '
+        questions:
+        - text: 'Pozri sa pozorne na tento kód.  Aká je prvá chyba, kvôli ktorej tento
+            program zlyhá? '
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Vták skončí jeden krok pred prasiatkom.
@@ -1586,6 +2043,19 @@ sk-SK:
           feedback: Tento kód dostane vtáka rovno k prasiatku.
         questions:
         - text: Prezri si nasledujúci kód veľmi pozorne. Čo sa stane keď stlačíš "Spustiť"?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: Vták skončí jeden krok pred prasiatkom.
+          feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
+        - text: Vták sa dostane až k prasiatku.
+          correct: true
+          feedback: Správne!
+        - text: Vták narazí do TNT.
+          feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
+        - text: Neviem.
+          feedback: Tento kód dostane vtáka rovno k prasiatku.
+        questions:
+        - text: Prezri si nasledujúci kód veľmi pozorne. Čo sa stane keď stlačíš "Spustiť"?
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 sa nepohne.
@@ -1613,6 +2083,19 @@ sk-SK:
         questions:
         - text: Čo si myslíš, že sa stane potom ako klikneš "Spustiť"?
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - text: BB-8 sa nepohne.
+          feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
+        - text: BB-8 sa posunie iba o jeden krok
+          feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
+        - text: BB-8 sa pohne 5 krát a pozbiera všetok šrot
+          correct: true
+          feedback: Správne!
+        - text: Neviem
+          feedback: Opakovací blok posunie BB-8 dopredu 5-krát.
+        questions:
+        - text: Čo si myslíš, že sa stane potom ako klikneš "Spustiť"?
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 sa nepohne.
           feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
@@ -1676,6 +2159,71 @@ sk-SK:
             sa posunúť o 3.
         questions:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 zájde v prvom opakovaní príliš ďaleko.
+          feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
+            ale potrebuje sa posunúť o 3.
+        - text: BB-8 v prvom opakovaní nedôjde dostatočne ďaleko nato, aby pozbieral
+            všetok kovový šrot.
+          correct: true
+          feedback: Správne!
+        - text: BB-8 pozbiera všetok šrot, bez akýchkoľvek problémov.
+          feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
+            ale potrebuje sa posunúť o 3.
+        - text: Neviem.
+          feedback: Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky, ale potrebuje
+            sa posunúť o 3.
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_EOC_2020:
+        description: Práve si na poslednej úlohe kurzu D! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
+      courseD_external_binary1:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1687,6 +2235,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
@@ -1700,6 +2263,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1713,6 +2291,49 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: Nesprávne.
+        - text: B
+          feedback: Nesprávne.
+        - text: C
+          feedback: Nesprávne.
+        - text: D
+          correct: true
+          feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1:
@@ -1760,6 +2381,28 @@ sk-SK:
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+          feedback: Správne!
+        - text: B
+          feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+            ho 4-krát zopakuje.
+        - text: C
+          feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+            ho 4-krát zopakuje.
+        - text: Neviem.
+          feedback: Vnútorný cyklus nakreslí päťuholník a ten vonkajší ho 4-krát zopakuje.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
@@ -1844,6 +2487,48 @@ sk-SK:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
             kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
+            na to, čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
+            ním kvet.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
+            čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár ak je pod oblakom kvet.
+        - text: Neviem.
+          feedback: Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár,
+            len ak je pod oblakom kvet.
+        questions:
+        - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
+            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
+            na to, čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
+            ním kvet.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
+            čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár ak je pod oblakom kvet.
+        - text: Neviem.
+          feedback: Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár,
+            len ak je pod oblakom kvet.
+        questions:
+        - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
+            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
@@ -1882,13 +2567,30 @@ sk-SK:
             *jeden* kvet.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: '"Včela dostane nektár pri každej kvetine a pri každom plástve vytvorí
+            med."'
+          correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
         - text: Neviem.
         questions:
-        - {}
+        - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet."'
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - text: '"Včela dostane nektár pri každej kvetine a pri každom plástve vytvorí
+            med."'
+          correct: true
+          feedback: Správne!
+        - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
+        - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+        - text: Neviem.
+        questions:
+        - text: '"Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet."'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
@@ -1940,6 +2642,23 @@ sk-SK:
         questions:
         - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
             "Spustiť"?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: Včela sa pohne dopredu a vezme 1 nektár.
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+            vo vnorenom cykle, čím vyrieši úlohu.
+        - text: Včela zozbiera len 2 nektáre.
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+            vo vnorenom cykle, čím vyrieši úlohu.
+        - text: Včela zozbiera všetok nektár.
+          correct: true
+          feedback: Správne!
+        - text: Neviem.
+          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
+            cykle, čím vyrieši úlohu.
+        questions:
+        - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
+            "Spustiť"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -1963,6 +2682,17 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Správne!
+        - text: '12'
+        - text: Neviem.
+        questions:
+        - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
+            "Spustiť"?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -2032,6 +2762,25 @@ sk-SK:
           <br/>
         questions:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: Záhradníčka pozberá všetky plodiny.
+          feedback: Nesprávne. Kód na zber tekvice tu nie je.
+        - text: Záhradníčka po ceste nepozbiera žiadne plodiny.
+          feedback: Nesprávne. S týmto kódom bude pestovateľka chodiť hore dole a
+            bude zbierať všetok šalát a kukuricu, na ktoré narazí, ale nebude zbierať
+            tekvicu.
+        - text: Pestovateľka pozbiera všetky plodiny okrem tekvice.
+          correct: true
+          feedback: Správne!
+        - text: Neviem.
+          feedback: S týmto kódom bude pestovateľka chodiť hore dole a bude zbierať
+            všetok šalát a kukuricu, na ktoré narazí, ale nebude zbierať tekvicu.
+        markdown: |
+          V tejto úlohe je výhonok rastliny buď kukurica alebo šalát.
+          <br/>
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -2064,6 +2813,17 @@ sk-SK:
         questions:
         - text: Dobre si prezri tento kód. Čo zostane na konci úlohy?
       courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - text: Nič. Tento kód zanechá rovnú zem.
+          feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
+        - text: Tento kód sa hromady ani nedotkne.
+          correct: true
+          feedback: Správne!
+        - text: Tento kód sa jám ani nedotkne.
+        - text: Neviem.
+        questions:
+        - text: Dobre si prezri tento kód. Čo zostane na konci úlohy?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nič. Tento kód zanechá rovnú zem.
           feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
@@ -2125,12 +2885,29 @@ sk-SK:
             keď hromada zmizne
         questions:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: Nestane sa nič.
+          feedback: Nesprávne. Farmárka bude odstraňovať hlinu pokiaľ tam je hromada
+            a zastaví, keď hromada zmizne
+        - text: Farmárka bude donekonečna odstraňovať hlinu.
+          feedback: Nesprávne. Farmárka bude odstraňovať hlinu pokiaľ tam je hromada
+            a zastaví, keď hromada zmizne
+        - text: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď
+            hromada zmizne.
+          correct: true
+          feedback: Správne!
+        - text: Neviem.
+          feedback: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví,
+            keď hromada zmizne
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: '"Zombík sa dostane k slnečnici."'
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
         - text: Neviem.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
@@ -2139,9 +2916,11 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: '"Zombík sa dostane k slnečnici."'
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
           feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
@@ -2153,9 +2932,27 @@ sk-SK:
         - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
           correct: true
           feedback: Správne!
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: '"Zombík sa dostane k slnečnici."'
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
-        - feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        - text: Neviem.
+          feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        questions:
+        - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
+          correct: true
+          feedback: Správne!
+        - text: '"Zombík sa dostane k slnečnici."'
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        - text: Zombík sa na prvej ceste otočí doprava a navždy bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
             hore dole.
         - text: Neviem.
           feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
@@ -2204,6 +3001,20 @@ sk-SK:
         questions:
         - text: Pozri sa pozorne na tento kód. Čo si myslíš, že sa stane, keď klikneš
             "Spustiť"?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: Vták sa nepohne.
+        - text: Vták sa dostane až k prasiatku.
+          correct: true
+          feedback: Správne!
+        - text: Vták sa posunie dopredu a narazí do TNT.
+        - text: Neviem.
+          feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
+            cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
+            prasiatku!
+        questions:
+        - text: Pozri sa pozorne na tento kód. Čo si myslíš, že sa stane, keď klikneš
+            "Spustiť"?
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -2212,7 +3023,29 @@ sk-SK:
         - {}
         - text: Neviem.
         questions:
-        - {}
+        - text: Tento kód používa nový blok. Čo si myslíš, že sa stane, keď stlačíš
+            "Spustiť"?
+      courseD_project_exemplars_2020_2021:
+        content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
+
+          | Náhodná rýchlosť s bounce (Basketbal) | Množenie Stormtrooperov (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa Stormtrooperom lebo sa rozmnožia! |
+
+
+          | Panika na diskotéke (Tanečná Párty) | Scéna z pláže (Umelec) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Tvoji vedľajší tanečníci neustále menia svoje pohyby! | Vyskúšaj pridať nejakú farbu a zmeniť pozadie tejto scény! |
+      courseE_EOC_2020:
+        description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -2263,48 +3096,127 @@ sk-SK:
             otočí a pôjde späť až dokiaľ nezoberie šalát.
         questions:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: Záhradníčka zoberie dve tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        - text: Záhradníčka pozbiera všetky tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        - text: Záhradníčka pozbiera šalát.
+          correct: true
+          feedback: Správne!
+        - text: Záhradníčka pozbiera kukuricu.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        questions:
+        - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
+        questions:
+        - text: Čo sa stane ak stlačíš "Spustiť"?
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
+        questions:
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
-        markdown: |-
+        markdown: |
           # Príklady projektov
 
-          Práve sa ideš pustiť do svojho finálneho projektu. Predým ako začneš, prezri si niekoľko príkladov projektov.
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
 
           ## Sprite Lab
 
-          | Tanec príšer (Sprite Lab) | Košíčková hra (Sprite Lab) |
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
           |---|---|
           | [![Monster Dance(Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
           | Skús do tejto hry pridať text alebo skóre! | Skús do tejto hry pridať text alebo skóre! |
 
           ## Umelec
 
-          | Postup (Artist) | Kvetiny s funkciami (Arist) |
+          | Vzory (Umelec) | Kvetiny s funkciami (Umelec) |
           |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |
+      courseE_project_exemplars_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: "#  Príklady projektov \n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov. \n\n## Sprite Lab\n\n|
+          Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |\n|---|---|\n| [![Monster
+          Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Skús ku hre pridať text alebo skóre! | Skús ku hre pridať text alebo
+          skóre! |\n\n## Umelec\n\n| Vzory (Artist) | Snehové vločky (Ľadové kráľovstvo)
+          |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |\n"
+      courseExpress_EOC_2020:
+        description: 'Si na poslednej úlohe Zrýchleného kurzu! Vyber si, aký projekt
+          vytvoríš. '
+        display_name: Záverečný projekt
+      courseExpress_project_exemplars_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Panika na diskotéke (Tanečná párty) | Na pláži (Umelec) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Rozpáľ tanečníkov a roztoč to na tejto diskotéke! | Skús ku tejto scéne pridať viac farieb a pozadie! |
+
+          | Snehové vločky (Ľadové kráľovstvo) | Lietadlo (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Zabav sa s funkciami! | Skús ku hre pridať text, alebo skóre! |
+
+      courseF_EOC_2020:
+        description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
+        display_name: Záverečný projekt
       courseF_bee_variables_8a_2018:
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
@@ -2337,36 +3249,60 @@ sk-SK:
         questions:
         - text: Pozri sa na kód dole. Koľko jednotiek nektáru pozbiera včela na konci?
         title: Multi premenná s včelou
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
+          feedback: Nesprávne. Názoy tvojej premennej nemá vlyv na jej hodnotu.
+        - text: Včela pozbiera iba 2 nektáre.
+          correct: true
+          feedback: Správne!
+        - text: Včela pozbiera všetok nektár.
+          feedback: 'Nesprávne. Pred poslednými dvoma funkciami sa premenná vráti
+            na 0. '
+        - text: Neviem.
+          feedback: Pred poslednými dvoma funkciami sa premenná vráti na 0, kde sa
+            zakaždým pridá 1. Včela potom pozbiera 2 nektáre.
+        questions:
+        - text: Pozri sa na kód dole. Koľko jednotiek nektáru pozbiera včela na konci?
+        title: Multi premenná s včelou
       courseF_external_variableConstant_2018:
         markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve si
-          sa naučil výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
+          sa naučili výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
           premennú ako konštantu, hodnota, ktorú jej prvýkrát priradíš sa bude v programe
           opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
           ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
           v rámci programu.</h3>"
       courseF_external_variableConstant_2018_2019:
         markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve si
-          sa naučil výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
+          sa naučili výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
+          premennú ako konštantu, hodnota, ktorú jej prvýkrát priradíš sa bude v programe
+          opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
+          ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
+          v rámci programu.</h3>"
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
+          sa naučili výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
           premennú ako konštantu, hodnota, ktorú jej prvýkrát priradíš sa bude v programe
           opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
           ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
           v rámci programu.</h3>"
       courseF_markdown_algorithms_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"algoritmy\"!**  \n\n\n\n### **Algoritmus
-          je zoznam krokov na splnenie úlohy**. Na algoritmoch je zábavné, že sám
-          rozhoduješ čo sa stane krok po kroku.\n\n### Algoritmus, ktorý píšeš pre
-          počítač sa volá **program**.  \n\n---\n\n## **Nauč sa slovíčka**\n\n* ###
-          **Algoritmus** - Zoznam krokov na splnenie úlohy\n\n* ### **Program** -
-          \ Algoritmus, ktorý bol nakódovaný tak, aby ho mohol používať počítač"
+        markdown: "# **Práve sme sa naučili \"algoritmy\"!**  \n\n\n\n### **Algoritmus
+          je zoznam krokov na splnenie úlohy**. Na algoritmoch je zábavné to, že rozhodnutie,
+          čo sa stane v jednotlivých krokoch je na tebe.\n\n### Algoritmus, ktorý
+          píšeš pre počítač sa volá **program**.  \n\n---\n\n## **Nauč sa slovíčka**\n\n*
+          ### **Algoritmus** - Zoznam krokov na splnenie úlohy\n\n* ### **Program**
+          -  Algoritmus, ktorý bol nakódovaný tak, aby ho mohol používať počítač"
       courseF_markdown_algorithms_intro:
         content1: Strana učebnice s obodovaním testu
         markdown: |-
           # **Na tejto hodine...**
 
-          ### Chcel by si hovoriť druhým čo majú robiť? A vždy ťa počúvajú?
+          ### Máš niekedy chuť ostatným hovoriť, čo majú robiť? A počúvajú ťa vždy, či len niekedy?
 
           ### Dnes budeš krok po kroku hovoriť počítaču čo má robiť - a bude ťa počúvať.
 
@@ -2381,14 +3317,14 @@ sk-SK:
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"podmieňovanie\"!**\n\n### Podmieňovanie
+        markdown: "# **Práve sme sa naučili \"podmieňovanie\"!**\n\n### Podmieňovanie
           je v informatike veľmi užitočné. Predstav si, že sa prihlásiš na svoju obľúbenú
-          webstránku a napíšeš heslo. Webstránka musí použiť podmieňovanie, aby si
-          overila *či* heslo ktoré si napísal pasuje s heslom, ktoré je uložené pri
-          tvojom užívateľskom mene. \n\n### `Ak` pasuje, tak sa prihlásiš! \n\n###
-          `Inak` ti vyhodí chybu.  \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Podmienka**
-          - Niečo čo si program overí, predtým ako povolí činnosť\n\n* ### **Podmieňovanie**
-          - Príkazy, ktoré fungujú len za určitých podmienok"
+          webstránku a napíšeš heslo. Webstránka musí použiť podmienku, aby si overila
+          *či* je použité heslo zhodné s heslom, ktoré je uložené pri tvojom užívateľskom
+          mene. \n\n### `Ak` pasuje, tak sa prihlásiš! \n\n### `Inak` ti vyhodí chybu.
+          \ \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Podmienka** - Niečo čo si
+          program overí, predtým ako povolí činnosť\n\n* ### **Podmieňovanie** - Príkazy,
+          ktoré fungujú len za určitých podmienok"
       courseF_markdown_conditionals_intro:
         content1: Strana učebnice s obodovaním testu
         markdown: "# **Na tejto hodine...**\n\n### **Podmienky** sú veci, ktoré môžu
@@ -2397,24 +3333,25 @@ sk-SK:
           **Nauč sa bloky**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)"
       courseF_markdown_debugging_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"debugging\"!**\n\n### **Bug je niečo,
+        markdown: "# **Práve sme sa naučili \"debugging\"!**\n\n### **\"Bug\" je niečo,
           čo nefunguje správne.** Je to chyba v programe. Keď hľadáš a opravuješ chyby,
-          vykonávaš **debugging** problému.\n\n### Potrebuješ sa naučiť **vytrvalosti**,
-          inými slovami, nevzdať sa, až kým nenájdeš a neopravíš všetky chyby. \n\n---\n\n##
-          **Nauč sa slovíčka**\n\n* ### **Bug** - Časť programu, ktorá nefunguje,
-          chyba\n\n* ### **Debbuging** - Hľadanie a odstraňovanie problémov v algoritmoch
-          alebo programe, odstraňovanie chýb\n\n* ### **Vytrvalosť** - Nevzdávať sa"
+          vykonávaš **\"debugging\"** problému.\n\n### Potrebuješ cvičiť svoju  **vytrvalosť**,
+          inými slovami schopnosť nevzdať sa, až kým nenájdeš a neopravíš všetky chyby.
+          \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Bug** - Časť programu, ktorá
+          nefunguje, chyba\n\n* ### **Debbuging** - Hľadanie a odstraňovanie problémov
+          v algoritmoch alebo programe, odstraňovanie chýb\n\n* ### **Vytrvalosť**
+          - Nevzdávať sa"
       courseF_markdown_debugging_intro:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# Na tejto hodine...\n\n### Čo ťa napadne pri slovíčku bug, v angličtine
-          chrobák? \n\n### V informatike bug neznamená chrobák, ale aj tak spôsobuje
-          nepríjemnosti, chyby.\n\n### Úlohy z tejto hodiny už boli vyriešené! Ale
-          nie tak týchlo, zdá sa, že tam niečo nefunguje, Môžu za tým byť dáke bugy?\n\n---\n\n##
-          Nauč sa bloky\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
+        markdown: "# Na tejto hodine...\n\n### Čo ťa napadne pri slovíčku \"bug\",
+          v angličtine chrobák? \n\n### V informatike \"bug\" neznamená chrobák, ale
+          aj tak spôsobuje nepríjemnosti, chyby.\n\n### Úlohy z tejto hodiny už boli
+          vyriešené! Ale nie tak týchlo, zdá sa, že tam niečo nefunguje, Môžu za tým
+          byť dáke \"bugy\"?\n\n---\n\n## Nauč sa bloky\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
       courseF_markdown_forloops_end:
         content1: Strana učebnice s obodovaním testu
         markdown: |+
-          # **Práve si sa naučil "cyklus for"!**
+          # **Práve sme sa naučili "cyklus for"!**
 
           ### **Cykly for sú cykly, kde nastavíš hodnoty pre začiatok, koniec a krok.**
 
@@ -2431,7 +3368,24 @@ sk-SK:
       courseF_markdown_forloops_end_2019:
         content1: Strana učebnice s obodovaním testu
         markdown: |+
-          # **Práve si sa naučil "cyklus for"!**
+          # **Práve sme sa naučili "cyklus for"!**
+
+          ### **Cykly for sú cykly, kde nastavíš hodnoty pre začiatok, koniec a krok.**
+
+          ### Tento nový typ cyklu `opakuj` ti dáva väčšiu kontrolu, kedy tvoj cyklus začne, kedy skončí, a o koľko sa má zvýšiť po každom zbehnutí.
+
+          ### Väčšia kontrola znamená, že môžeš úlohy vyriešiť oveľa rýchlejšie!
+
+          ---
+
+          ## **Pojem na zapamätanie**
+
+          ### **Cyklus for** - Cykly for sú cykly, ktoré majú prednastavený začiatok, koniec, a prírastok (veľkosť kroku)
+
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # **Práve sme sa naučili "cyklus for"!**
 
           ### **Cykly for sú cykly, kde nastavíš hodnoty pre začiatok, koniec a krok.**
 
@@ -2469,9 +3423,21 @@ sk-SK:
           ### *Tento nový cyklus ti našťastie uľahčí riešenie úloh ako je táto!
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # **Na tejto hodine...**
+
+          ### Dnes sa naučíš o novom druhu `opakujúceho sa ` cyklu. Tu si môžeš prezrieť blok, ktorý budeš používaš:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Tento nový cyklus ti našťastie uľahčí riešenie úloh ako je táto!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
       courseF_markdown_loops_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"cykly\"!**  \n\n### **Cyklus je činnosť,
+        markdown: "# **Práve sme sa naučili \"cykly\"!**  \n\n### **Cyklus je činnosť,
           ktorá sa vykonáva znovu a znovu.** Iné slovo pre takúto činnosť je opakovanie.
           \n\n### Cykly sú užitočné pre opakovanie vzorov. Možno by ti pomohlo najskôr
           napísať program bez cyklov, a potom skúsiť nájsť vzor správania. \n\n###
@@ -2488,10 +3454,10 @@ sk-SK:
           Nauč sa bloky\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
       courseF_markdown_nestedloops_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"vnorené cykly\"!**\n\n### **Vnorený cyklus
-          je cyklus vložený v inom cykle.** Predstav si ho ako vonkajší cyklus s iným
-          cyklom, ktorý sa v ňom udomácnil. \n\n### Vložené cykly sú výborné na opakovanie
-          vzorov správania. Ak sa správne použijú, vedia byť veľmi užitočné!\n\n---\n\n##
+        markdown: "# **Práve sme sa naučili \"vnorené cykly\"!**\n\n### **Vnorený
+          cyklus je cyklus vložený v inom cykle.** Predstav si ho ako vonkajší cyklus
+          s iným cyklom, ktorý sa v ňom udomácnil. \n\n### Vložené cykly sú výborné
+          na opakovanie vzorov správania. Ak sa správne použijú, vedia byť veľmi užitočné!\n\n---\n\n##
           **Nauč sa slovíčka**\n\n### __Vnorené cykly__ - cyklus vložený  v inom cykle"
       courseF_markdown_nestedloops_intro:
         content1: Strana učebnice s obodovaním testu
@@ -2501,14 +3467,21 @@ sk-SK:
           cyklus vo vnútri iného cyklu? Poďme to zistiť!\n\n---\n\n## **Nauč sa bloky**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)"
       courseF_markdown_variables_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"premenné\"!**\n\n### Premenná musí mať
+        markdown: "# **Práve sme sa naučili \"premenné\"!**\n\n### Premenná musí mať
           pridelený názov a hodnotu na to aby sa mohla použiť. Názoy ostáva nemenný,
           ale hodnota sa môže meniť. Týmto spôsobom môžeš použiť premenné ako náhradu,
           kedykoľvek to v programe potrebuješ.! \n\n---\n\n## **Nauč sa slovíčka**\n\n###
           **Premenná** - Náhrada za informáciu, ktorá sa môže zmeniť"
       courseF_markdown_variables_end_2019:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"premenné\"!**\n\n### Premenná musí mať
+        markdown: "# **Práve sme sa naučili \"premenné\"!**\n\n### Premenná musí mať
+          pridelený názov a hodnotu na to aby sa mohla použiť. Názoy ostáva nemenný,
+          ale hodnota sa môže meniť. Týmto spôsobom môžeš použiť premenné ako náhradu,
+          kedykoľvek to v programe potrebuješ.! \n\n---\n\n## **Nauč sa slovíčka**\n\n###
+          **Premenná** - Náhrada za informáciu, ktorá sa môže zmeniť"
+      courseF_markdown_variables_end_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: "# **Práve sme sa naučili \"premenné\"!**\n\n### Premenná musí mať
           pridelený názov a hodnotu na to aby sa mohla použiť. Názoy ostáva nemenný,
           ale hodnota sa môže meniť. Týmto spôsobom môžeš použiť premenné ako náhradu,
           kedykoľvek to v programe potrebuješ.! \n\n---\n\n## **Nauč sa slovíčka**\n\n###
@@ -2527,6 +3500,19 @@ sk-SK:
 
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
       courseF_markdown_variables_intro_2019:
+        content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # **Na tejto hodine...**
+
+          ### *Premenné* sú náhradou za informácie, ktoré sa môžu zmeniť. S použitím náhrady môžeš napísať program, aj keď ešte nepoznáš všetky hodnoty, ktoré tam budú!
+
+
+          ---
+
+          ## **Nauč sa bloky**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+      courseF_markdown_variables_intro_2019_2020:
         content1: Strana učebnice s obodovaním testu
         markdown: |-
           # **Na tejto hodine...**
@@ -2584,6 +3570,21 @@ sk-SK:
           `for` cyklu.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+            jednej strany hracej plochy ku druhej.
+        - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
+            čiara bude dlhšia a tenšía. '
+        - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
+            bude dlhšia a hrubšia.
+          correct: true
+          feedback: Správne!
+        - text: Neviem.
+        markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
+          `for` cyklu.  '
+        questions:
+        - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
@@ -2614,6 +3615,16 @@ sk-SK:
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
+          correct: true
+          feedback: Správne!
+        - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
+        - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
+        - text: Neviem.
+        questions:
+        - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
           correct: true
@@ -2695,6 +3706,20 @@ sk-SK:
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
         - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+        - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
+            jedného.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
+        - text: 'Neviem. '
+          feedback: "`for` cyklus pošle včelu pozbierať správne množstvo nektáru,
+            ale nastavenie platí len pre 4 kvety."
+        markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
+        questions:
+        - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2713,35 +3738,83 @@ sk-SK:
         - {}
       courseF_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          ## Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Skús ku hre pridať text, alebo skóre! | Skús ku hre pridať text, alebo skóre! |
+
+          ## Umelec
+
+          | Kvety (Umelec) | Špirála (Umelec) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Let's get creative with variables! | Let's get creative with For Loops! |
+
+      courseF_project_exemplars_2019_2020:
+        content1: Strana učebnice s obodovaním testu
+        markdown: "# Príklady projektov\n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov.\n\n## Sprite Lab\n\n|
+          Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n|
+          [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Skús ku tejto hre pridať text, alebo skóre! | Skús ku tejto hre pridať
+          text, alebo skóre! |\n\n## Umelec\n\n| Flowers (Artist) | Spiral (Artist)
+          |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Zabav s s premennými! | Zabav sa s cyklami \"for\"! |\n\n"
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
+          feedback: Správne!
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
+        questions:
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
+        title: 'Objavujeme informatiku: Záverečný dotazník pre žiakov'
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: |+
           # Objavujeme informatiku - Záverečný dotazník
@@ -2751,9 +3824,9 @@ sk-SK:
           * pochopenie tvojej skúsenosti s týmto kurzom
           * vylepšenie kurzu
 
-          Ďakujeme, že si si našiel/našla čas na vylepšenie kurzu Objavujeme informatiku!
+          Ďakujeme za tvoj čas a ochotu pomôcť pri vylepšovaní kurzu Objavujeme informatiku!
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">Klikni sem na otvorenie dotatzníka</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">Klikni sem na otvorenie dotazníka</a>
 
           <br>
 
@@ -2762,73 +3835,109 @@ sk-SK:
 
 
       csd-post-survey-levelgroup-2018:
-        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
+        title: 'Objavujeme informatiku: Záverečný dotazník pre žiakov'
       csd-pulse-check-survey-1-levelgroup U1Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
+      csf_be_a_super_digital_citizen:
+        markdown: |-
+          #  Skvelý digitálny občan
+
+          ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+      csf_digital_trails:
+        markdown: |-
+          # Nasleduj digitálnu stopu
+
+          ## Aké informácie je v poriadku mať vo svojej digitálnej stope?
+      csf_password_power-up:
+        markdown: |-
+          # Posilni svoje heslo
+
+          ## Tipy pre heslá na zapamätanie
+
+          * Začni s ľahko zapamätateľnou **frázou**.
+          * Len tvoji **rodičia** by mali poznať tvoje heslo.
+          * Nikdy nepoužívaj ako heslo svoje **osobné** údaje.
+          * Vytváraj si heslá, ktoré máju aspoň **osem** znakov.
+          * Vo svojom hesle použi písmená, číslice a **znaky**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        markdown: |
+          # STOP zlomyseľnosti
+
+          ## Čo urobiť ak je k vám niekto zlomyseľný v online svete?
+
+          * **S**túp preč.
+          * **T**oto všetko povedz nejakému dospelákovi.
+          * **O**verené stránky najprv.
+          * **P**očkaj a popremýšľaj.
+      csf_safety_in_my_online_neighborhood:
+        markdown: "# Moje online susedstvo\n\n##  Ako sa bezpečne presúvať na miesta
+          v online svete? "
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
@@ -2866,6 +3975,24 @@ sk-SK:
         - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
             programu?
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
+          feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
+            nie je a to spôsobuje chybu.
+        - text: Laurel sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to
+            spôsobí chybu.
+          correct: true
+          feedback: Správne!
+        - text: Laurel pozbiera všetky drahokamy.
+          feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
+            nie je a to spôsobuje chybu.
+        - text: Neviem.
+          feedback: Laurel sa pokúša zobrať drahokam na mieste, kde žiadny nie je
+            a to spôsobuje chybu.
+        questions:
+        - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
+            programu?
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
           feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny

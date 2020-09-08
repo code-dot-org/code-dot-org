@@ -474,6 +474,8 @@ nl-NL:
         content1: beschrijving hier
       Begin planning your project_2018_2019:
         content1: beschrijving hier
+      Begin planning your project_2018_2019_2020:
+        content1: beschrijving hier
       CSD Header Size MC:
         answers:
         - {}
@@ -1196,14 +1198,215 @@ nl-NL:
         content1: beschrijving hier
       New Challenge Introduction:
         content1: beschrijving hier
+        markdown: "### Nieuwe uitdaging: Kraak een \"willekeurig substitutiecijfer\"...
+          met een nieuwe widget\n\nWat als we, in plaats van het hele alfabet te verschuiven,
+          elke letter in het alfabet vervangen door een willekeurige andere letter
+          van het alfabet? Dit heet een \"willekeurig substitutiecijfer\".\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNu
+          krijg je berichten die niet versleuteld zijn met een simpele alfabetische
+          verschuiving, maar met een **willekeurig substitutiecijfer**.\n\n\n\nDit
+          is veel moeilijker om te kraken en vereist een geavanceerder gereedschap,
+          dus...\n\nAls je op volgende klikt zie je een **nieuwe, geavanceerdere versie
+          van het encryptie tool** die je veel verschillende dingen laat zien.\n\nMaar
+          wat het doet is een beetje een mysterie!  \n\n### Je taak:\n\n * Zoek uit
+          wat er gebeurt in dit tool\n * Wat voor informatie wordt getoond?\n * Zoek
+          uit wat het tool je laat doen\n * Zoals gewoonlijk: je kan het niet stuk
+          maken. Dus, klik op dingen, en probeer maar wat.\n * Als je het door hebt
+          ben je misschien in staat om een boodschap te ontsleutelen die gebruik maakt
+          van willekeurige vervanging.\n \n### Tip\n\n* Wist je dat de letter **E**
+          de meest voorkomende letter is?\n\n### Kom opnieuw bijeen en bespreek\nNa
+          een tijdje er mee gespeeld te hebben, overleg met iemand - partner, keine
+          groep, hele klas - om te bespreken wat je uitgevonden hebt en controleer
+          dat je weet hoe het werkt en wat de verschillende manieren om het tool te
+          gebruiken zijn.\n\n\n"
+      OPD-K5 Participation:
+        markdown: |-
+          # Aan de slag > Je deelname plannen
+
+          Denk, voordat je begint, even na over je leerbehoeften, doelen en de unieke ervaring van leren in een online omgeving in je eigen tempo - vooral als dit je eerste online cursus is!
+
+          ## Jij bent de baas
+
+          Deze online cursus op eigen tempo is ontworpen om jou achter het stuur te plaatsen en jou controle te geven over je eigen leerproces. *** Neem de tijd en werk deze cursus in je eigen tempo door. Voor elke fase worden voorgestelde tijden gegeven. *** Als je merkt dat je meer of minder tijd nodig hebt, hoef je je geen zorgen te maken! Ons belangrijkste doel is om plezier te hebben, de basis te leren en wat je leert toe te passen in je lessen op de manier die het beste bij je past.
+
+          ## Wordt verbonden
+
+          Een manier om gemotiveerd en gefocust te blijven tijdens het leren, is door actief te worden in ons <a href="http://forum.code.org/c/plc" target="_new">Professional Learning Community (PLC) forum </a>.
+          Begin met jezelf daar voor te stellen in onze <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">"Introductions" thread</a>. Tijdens de cursus gebruik je het forum om je gedachten, leermomenten en vragen te delen met anderen die hier ook aan werken.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank"> <button class = "plc">Introduceer jezelf nu >></button></a><br>
+
+          ## Hulp vinden wanneer je het nodig hebt
+
+          Als je tijdens de cursus vastloopt, ga dan naar [support.code.org] (http://support.code.org) en bekijk [onze forums](https://support.code.org/hc/communities/public/topics). Daar vind je waarschijnlijk het antwoord op je vraag. Als je nog steeds vastzit, kun je een e-mail sturen naar [teacher@code.org](mailto: teacher@code.org) en een medewerker van Code.org neemt zo snel mogelijk contact met je op.
+
+          ## Maatje!
+
+          Houd er rekening mee dat we een klein team zijn en vanwege de omvang van onze inspanningen, kunnen we niet op alle verzoeken om ondersteuning reageren op dezelfde manier als een instructeur voor een persoonlijke cursus. Daarom raden we je aan om aan deze online cursus ***te werken met een partner of een groep collega's***.
+
+          Code.org erkent de kracht van samen leren en samenwerking. In feite is "Pair Programming" een geweldige praktijk die we in Stage 8 zullen onderzoeken als een best practice in de klas. Als je denkt dat je beter zult leren met een partner of in een groep, waarom zou je de cursus dan niet voltooien met een maatje of een collega? Als je in het echt niemand kent die interesse heeft om met je samen te werken, ga dan naar [het PLC-forum](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411), [Twitter](https://twitter.com/teachcode) of [Facebook](https://www.facebook.com/groups/1457214714576953/) en zoek iemand van de Code.org community die wil samenwerken.
+
+          ## Zoek de leerervaring die voor jou werkt
+
+          Tenslotte is online leren niet voor iedereen. Deze cursus heeft geen instructeur of een ingebouwd mechanisme om direct met je collega's te communiceren. Als je merkt dat je meer één-op-één-aandacht nodig hebt of als je weet dat je beter leert in een klaslokaal in de echte wereld waar er meer gelegenheid is voor samenwerking en betrokkenheid, raden we je aan een van onze persoonlijke ontwikkelingstrajecten te proberen.
+
+          <a href="http://code.org/professional-development-workshops" target="blank"><button> Zoek een persoonlijke workshop bij jou in de buurt >></button></a>
+
+          * * *
+
+          ## Wat is jouw plan?
+
+          Neem even de tijd om na te denken over hoe en wanneer je deze online cursus voltooit, zodat je het meeste uit de ervaring haalt. Als je een goed plan hebt uitgetekend, duik dan in fase 1.
+      OPD-K5 Puzzles:
+        markdown: "# Vooruitblik > Over puzzels\n\nIn de volgende stappen gebruik
+          je Code.org om de basis van programmeren te leren. Je krijgt een aantal
+          puzzels om op te lossen. Om dat te doen moet je programma's schrijven met
+          verschillende karakters om veschillende doelen te bereiken. We oefenen met
+          de eerste puzzel in stap 3. Maar eerst hebben we een overzicht van de soorten
+          puzzels die jij en je studenten tegen zullen komen:\n\n## Voorbeeld doolhof
+          puzzels\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nJe
+          moet de Angry Bird bij het varken krijgen en je moet de zombie bij de zonnebloem
+          krijgen.\n\n## Voorbeeld kunstenaar puzzel\n\n![](//code.org/images/artist.png)\n\nJe
+          moet de kunstenaar over de grijze lijnen laten teken door hem over het canvas
+          te laten bewegen. Hij tekent een lijn waar hij loopt.\n\n## Voorbeeld bij
+          puzzel\n\n![](//code.org/images/bee.png)\n\nJe moet de bij zo bewegen dat
+          hij al het nectar ophaalt en alle honing maakt. Hoeveel honing en nectar
+          nodig is voor een puzzel staat rechtsonder de bloem of honingraat.\n\n##
+          Play Lab\n\n![](//code.org/images/playlab.png)\n\nIn Play Lab maak je spellen
+          en verhalen, gebaseerd op verschillende doelen.\n\n## Flappy\n\n![](//code.org/images/flappy.png)\n\nIn
+          Flappy maak je je eigen Flappy bird spel.\nDe puzzels die toewerken naar
+          het maken van het spel helpen je de verschillende stukken code te begrijpen,
+          die je nodig hebt voor het spel.\n\n## Bounce\n\n![](//code.org/images/bounce.png)\n\nIn
+          Bounce maak je je eigen spel. \nNet als bij Flappy  helpen de puzzels je
+          de stukken code te begrijpen die nodig zijn voor het spel.\n\n* * *\n\nIn
+          deze serie introduceren we je de puzzels van [CS Fundamentals] (http://code.org/educate/k5).
+          Deze puzzels zijn online tutorials en helpen studenten concepten zoals lussen,
+          gebeurtenissen, condities en functies te leren.\n\nTijdens deze les zullen
+          we verschillende soorten puzzels afwisselen, waardoor je vertrouwd kunt
+          raken met de programmeerconcepten in CS Fundamentals en de personages waar
+          je studenten verliefd op zullen worden. Tijdens deze cursus merk je dat
+          je snel tussen verschillende omgevingen beweegt; of het nu de boze vogel
+          naar het varken brengt, een tekening maakt of een bij nectar laat verzamelen.
+          Deze overgangen gaan vrij snel in deze cursus om u zo te laten zien welke
+          puzzels worden aangeboden in CS Fundamentals. Uw studenten zullen meer tijd
+          krijgen.\n\nAls je meer wilt weten over de studentenervaring, kun je altijd
+          op elk gewenst moment de cursussen [CS Fundamentals] (http://studio.code.org/)
+          volgen. Maar deze cursus geeft je een goed beeld van wat je kunt verwachten
+          door in korte tijd een aantal van de meest fundamentele puzzels en lessen
+          te tonen.\n"
+      OPD-K5 Reviewing Reflections:
+        content1: beschrijving hier
       OPD-K5 Stage3aGo:
+        content1: beschrijving hier
+      OPD-K5 Stage3aGo_copy:
+        content1: beschrijving hier
+      OPD-K5 conditionals introduced:
+        content1: beschrijving hier
+      OPD-K5 debugging:
+        content1: beschrijving hier
+      OPD-K5 diving deeper intro:
+        content1: beschrijving hier
+      OPD-K5 events introduced:
+        content1: beschrijving hier
+      OPD-K5 for loops:
+        content1: beschrijving hier
+      OPD-K5 for loops intro:
+        content1: beschrijving hier
+      OPD-K5 for loops introduction:
+        content1: beschrijving hier
+      OPD-K5 functions introduced:
+        content1: beschrijving hier
+      OPD-K5 journaling:
+        content1: beschrijving hier
+      OPD-K5 lesson implementation planning:
+        content1: beschrijving hier
+      OPD-K5 lesson plans:
+        content1: beschrijving hier
+      OPD-K5 loops introduced:
+        content1: beschrijving hier
+      OPD-K5 project:
+        content1: beschrijving hier
+      OPD-K5 projects introduction:
+        content1: beschrijving hier
+      OPD-K5 role_of_teacher:
+        content1: beschrijving hier
+      OPD-K5 sequencing introduced:
+        content1: beschrijving hier
+      OPD-K5 sprite lab:
+        content1: beschrijving hier
+      OPD-K5 sprite lab introduction:
+        content1: beschrijving hier
+      OPD-K5 sprite lab unplugged:
+        content1: beschrijving hier
+      OPD-K5 sprite lab video:
+        content1: beschrijving hier
+      OPD-K5 types of lessons:
+        content1: beschrijving hier
+      OPD-K5 using lesson plans:
+        content1: beschrijving hier
+      OPD-K5 variables:
+        content1: beschrijving hier
+      OPD-K5 variables introduction:
+        content1: beschrijving hier
+      OPD-K5 variables unplugged:
+        content1: beschrijving hier
+      OPD-K5 where to next:
+        content1: beschrijving hier
+      OPD-K5-projects-1:
         content1: beschrijving hier
       Prepare for your presentation:
         content1: beschrijving hier
       'Technique: Frequency Analysis':
         content1: beschrijving hier
+        markdown: "# Het kraken van een versleuteling op basis van willekeurige vervanging\n\nDe
+          beste techniek voor het kraken van een sleutel op basis van willekeurige
+          vervanging heet **frequentie analyse**.\n\nGeparafraseerd van: [wikipedia](https://nl.wikipedia.org/wiki/Frequentieanalyse_(cryptoanalyse))\n\n*
+          **Frequentieanalyse** is het onderzoek naar de frequentie van letters of
+          groepen van letters van een versleutelde tekst. \n* Met \"frequentie\" wordt
+          bedoelt hoe vaak een bepaalde letter voorkomt in een tekst.\n* De methode
+          is gebaseerd op het feit dat binnen elke geschreven taal er frequentie waar
+          te nemen is van bepaalde letters of lettercombinaties. * Frequentieanalyse
+          vereist een basiskennis van de karakteristieken van een bepaalde taal, zo
+          komen in het Nederlands de e, n en a het meeste voor.\n\n\nDe widget op
+          de vorige pagina is bedoeld om je te helpen bij **het kraken van een versleuteling
+          op basis van willekeurige vervanging door middel van frequentieanalyse**.\n\nDoor
+          het analyzeren van de frequentie van de letters in de versleutelde boodschap
+          en dat te vergelijken met de frequentie van letters in een standaard stukje
+          (onversleutelde) tekst, kun je bepalen wat sommige van de letter vervangingen
+          zouden kunnen zijn. \n\nHet tool toont je wat de frequentie is van letters
+          in de versleutelde booschap (oranje) en hoe dat vergelijkt met de frequenties
+          van letters in de standaard tekst (blauw).\n\n### Tip: Hoe te starten?\n\n1.
+          Vind korte woorden en \"kraak\" die eerst.  Hoe veel een-letter woorden
+          ken je? (\"o\", \"u\").  Een veel voorkomend tweeletter woord is \"de\".\n2.
+          Dan heb je vervangingen voor sommige van de meest voorkomende letters. Gebruik
+          je intuïtie om naar andere woorden met die letters te kjiken en probeer
+          te raden wat de rest van de letters moeten zijn.\n3. Nadat je - na hard
+          werken - deze eerste groep van letters gevonden hebt, komt de rest een stuk
+          gemakkelijker..\n4. Het vergelijken van frequenties van letters geeft veel
+          hulp bij het verstandig raden van letters.\n\n### Probeer dit:\nDe animatie
+          hieronder toont iemand die net begon. Hier is wat die heeft geprobeerd\n\n*
+          Eerst sorteer je de letters op frequentie. \n* Identificeer een groep letters
+          die af te beelden is op het woord 'de' ('the' in het engels). Dat is een
+          goed begin!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Is willekeurige vervanging goed?\n* Na een tijdje oefenen, hoe lang heb
+          je nodig om een versleuteling op basis van willekeurige vervanging te kraken?\n*
+          Is dit goed of niet?\n\n"
       Terminology Recap:
         content1: beschrijving hier
+        markdown: "# Pauze en samenvatting\n\nBerichten versleuteld met de **Caesar
+          versleuteling** zijn eenvoudig te kraken, in het bijzonder met een computer.
+          Nu je een beetje ervaring hebt met een versleuteling op basis van alfabetisch
+          verschuiven zullen we eens iets moeilijkers proberen.\n\n**Samenvatting
+          van termen:**\n\n* **Encryptie** - een process waarbij berichten versleuteld
+          worden om ze geheim te houden, zodat allen \"geauthorizeerde\" partijen
+          het kunnen lezen.\n* **Decryptie** - een process dat encryptie ongedaan
+          maakt; pak een geheim - versleuteld - bericht en haal daar de oorspronkelijke
+          tekst uit.\n* **Sleutel/cijfertekst** - de generieke term voor een techniek
+          (of algorithme) die een versleuteling verzorgt.\n* **Caesar's sleutel**
+          - een techniek voor encryptie waarbij het alfabet een aantal karakters verschoven
+          wordt.\n* **Kaken van encryptie** - Wanneer je een geheim bericht probeert
+          te decoderen \"zonder\" te weten wat de sleutel is, probeer je de encryptie
+          te **kraken**. \n\n\nDruk op volgende om de **Volgende uitdaging** te zien...\n\n
+          \n"
       behaviors 1 predict:
         answers:
         - {}
@@ -1212,7 +1415,23 @@ nl-NL:
         - feedback: Incorrect
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Incorrect
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Incorrect
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1237,6 +1456,14 @@ nl-NL:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1271,6 +1498,15 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1288,6 +1524,14 @@ nl-NL:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1319,6 +1563,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1336,6 +1588,14 @@ nl-NL:
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ik weet het niet
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1367,6 +1627,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1386,6 +1654,15 @@ nl-NL:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
@@ -1421,6 +1698,15 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1438,6 +1724,22 @@ nl-NL:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1469,6 +1771,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1486,6 +1796,14 @@ nl-NL:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1512,6 +1830,15 @@ nl-NL:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1552,6 +1879,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1584,6 +1919,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1601,6 +1944,14 @@ nl-NL:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1632,6 +1983,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1649,6 +2008,14 @@ nl-NL:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1696,6 +2063,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1720,6 +2095,22 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1729,6 +2120,14 @@ nl-NL:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1753,6 +2152,14 @@ nl-NL:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1785,6 +2192,14 @@ nl-NL:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -1832,6 +2247,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1872,6 +2295,25 @@ nl-NL:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: beschrijving hier
+      csf_password_power-up:
+        content1: beschrijving hier
+      csf_putting_a_stop_to_online_meanness:
+        content1: beschrijving hier
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Mijn Online Woonwijk
+
+          ## Hoe maak je veilig gebruik van internet?
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1889,6 +2331,14 @@ nl-NL:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

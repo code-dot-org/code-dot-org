@@ -2187,6 +2187,8 @@ fil-PH:
   header_teacher_community: Komunidad ng mga Guro
   header_help_support: 'Tulong at suporta '
   header_report_bug: I-report ang problema
+  header_legal_privacy: Patakaran sa Pagkapribado
+  header_legal_tos: Mga Alituntunin ng Serbisyo
   header_tutorials: Mga Tutorial
   header_documentation: Dokumentasyon
   user_header_label: Mabuhay %{username}

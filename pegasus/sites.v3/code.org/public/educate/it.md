@@ -9,8 +9,9 @@ theme: responsive
 
 - We recommend at least a 15 MBit/sec Internet connection for your school.
 - The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses, CS Discoveries and CS Principles. iPads (including with a keyboard attachment) or other tablets are not supported for CS Discoveries or CS Principles.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks, in addition to all other modern laptop or desktop computers.
+- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
+- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+- Looking for mobile device support details? Read below.
 
 ## Supported Browsers and Platforms
 
@@ -23,7 +24,6 @@ Code.org takes a tiered approach to the level of support we provide for differen
 | Internet Explorer 11 and higher | Windows 7 and higher <br><br> macOS 10.6 and higher|
 | Microsoft Edge | Windows 10 and higher |
 | Firefox 25.x and higher | Windows 7 and higher |
-**Note that all CS Principles and CS Discoveries courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on Macbooks) are required. Chromebooks are compatible. iPads or other tablets with a keyboard attachment are not compatible.**
 
 ## Sites to Unblock
 
@@ -39,6 +39,18 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **To use Code.org hosted videos**                                                  | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
 | **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
 | **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
+
+## Mobile and Tablet Support Details
+
+All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+- Microsoft Surface Pro with an external keyboard
+- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+
+### Mobile Phones
+
+Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
 
 ## Videos
 

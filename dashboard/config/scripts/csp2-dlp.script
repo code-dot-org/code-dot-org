@@ -4,14 +4,15 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview'
 level 'deeper learning', progression: 'Background'
 level 'csp deeper learning timeline', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csp', progression: 'Resource Recommendations'
 level 'peer review recommendations', progression: 'Guidelines For Peer Review'
 
 lesson_group 'content', display_name: 'Content'
-stage 'Complete Unit 2 Deeper Learning Reflections'
+lesson 'Complete Unit 2 Deeper Learning Reflections', display_name: 'Complete Unit 2 Deeper Learning Reflections'
 level 'csp2dlp-lessons', progression: 'Lesson Connections and Philosophy'
 level 'csp2dlp-tools', progression: 'Tool Philosophy and Use'
 level 'csp2dlp-assessment', progression: 'Assessment'
+

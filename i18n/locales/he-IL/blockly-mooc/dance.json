@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "לחצתם על מקש, אבל הרקדן שלכם לא הגיב.",
   "danceFeedbackNeedTwoDancers": "עליכם ליצור שני רקדנים.",
   "danceFeedbackOnlyOneDancerMoved": "רק אחד מהרקדנים שלכם זז.",
-  "danceFeedbackNeedLead": "עליכם גם ליצור רקדן מוביל אחד עם הבלוק\n<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "עליכם גם ליצור רקדן מוביל אחד עם הבלוק\n<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם הבלוק\n<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
   "danceFeedbackSetSize": "עליכם לשנות את גודלו של אחד מהרקדנים אחרי שהמוזיקה מתחילה להתנגן.",
   "measure": "תיבה:"

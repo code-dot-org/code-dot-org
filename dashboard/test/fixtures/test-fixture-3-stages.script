@@ -1,10 +1,10 @@
-stage 'stage1'
+lesson 'lesson1', display_name: 'lesson1'
 level 'Level 1'
 level 'Level 2'
 
-stage 'stage2'
+lesson 'lesson2', display_name: 'lesson2'
 level 'Level 3'
 
-stage 'stage3'
+lesson 'lesson3', display_name: 'lesson3'
 level 'Level 4'
 level 'Level 5'

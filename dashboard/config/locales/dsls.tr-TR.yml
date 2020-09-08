@@ -466,11 +466,13 @@ tr-TR:
         - text: Hangi bloklar yapbozu çözer?
         title: Labirent çoktan seçmeli
       Begin planning your project:
-        content1: açıklama burada
+        content1: açıklama buraya
       Begin planning your project_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       Begin planning your project_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
+      Begin planning your project_2018_2019_2020:
+        content1: açıklama buraya
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -563,13 +565,13 @@ tr-TR:
           * [Uygulamalar ve Problem Çözümü - Eş Gözden Geçirme](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Uygulamalar ve Problem Çözümü - Değerlendirme Tablosu](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 Design Project_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 Design Project_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 L1 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: |
           # Genel Bakış
 
@@ -585,7 +587,7 @@ tr-TR:
         teacher_markdown: "* [Web Sitesinin Amaçları - Örnek](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: "# Genel Bakış\n\nBu ders web sitelerini kişisel ifade aracı olarak
           tanıtır. Bu ders öncelikle insanların ilgi alanlarını ve fikirlerini ifade
           etmenin ve paylaşmanın farklı yollarını tartışır, ardından önceki bir dersten
@@ -599,7 +601,7 @@ tr-TR:
           - Örnek ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: |
           # Genel Bakış
 
@@ -620,7 +622,7 @@ tr-TR:
           * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
           * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: "# Genel Bakış\n\nBu ders, bu sefer başlıklarla HTML etiketlerini
           tanıtmaya devam eder. Sınıf sayfa ve bölüm başlığı yaratmak için başlık
           etiketlerini kullanarak uygulama yapar ve farklı başlık ögelerinin varsayılan
@@ -630,7 +632,7 @@ tr-TR:
           belgenin bir bölümü için başlık veya özet \n\n## Tanıtılan Kod\n\n*  **[Heading](//studio.code.org/docs/weblab/h/)**
           - `<h1></h1>`[Heading]\n\n"
       CSD U2 L5 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: |
           # Genel Bakış
 
@@ -649,7 +651,7 @@ tr-TR:
           * [Sosyal Detektif](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Etkinlik Rehberi ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
 
       CSD U2 L6 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
         markdown: |+
           # Genel Bakış
 
@@ -663,7 +665,7 @@ tr-TR:
           *  **[Sıralı List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
 
       CSD U2 Lesson 6 Overview:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 Top Websites:
         markdown: |-
           # ABD'deki En İyi Web Siteleri
@@ -678,11 +680,11 @@ tr-TR:
           4. Yahoo.com - Bir arama motoru, e-posta sağlayıcısı ve haber kaynağı
           5. Wikipedia.org - Kullanıcılar tarafından oluşturulan içeriğe sahip ücretsiz bir ansiklopedi
       CSD U2 expand project:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 expand project_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 expand project_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 image debug match:
         answers:
         - {}
@@ -778,11 +780,11 @@ tr-TR:
             AM.png
         title: Hızlı Liste Taraması
       CSD U2 project guide:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 project guide_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U2 project guide_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -850,9 +852,9 @@ tr-TR:
         - {}
         title: başlık
       CSD U3 Card Examples_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 Card Examples_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -951,11 +953,11 @@ tr-TR:
         questions:
         - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 combining rep:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 combining rep_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 combining rep_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -979,55 +981,55 @@ tr-TR:
         - {}
         - {}
       CSD U3 game intro:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 game intro_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 game intro_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 platform intro:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 platform intro_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U3 platform intro_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 1:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 1_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 1_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 2:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 2_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 Encryption 2_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 L13 SFLP Interpreting Data:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 crosstab warmup:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 crosstab warmup_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 crosstab warmup_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 data visualization:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 data visualization_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 data visualization_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 student record:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 student record_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U5 student record_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 LED create intro:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 LED create intro_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 LED create intro_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 array multi:
         answers:
         - {}
@@ -1053,11 +1055,11 @@ tr-TR:
         questions:
         - {}
       CSD U6 final intro:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 final intro_2018:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 final intro_2018_2019:
-        content1: açıklama burada
+        content1: açıklama buraya
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -1200,11 +1202,11 @@ tr-TR:
 
           </div>"
       Internet Simulator Setup:
-        content1: açıklama burada
+        content1: açıklama buraya
       Internet Simulator Setup 2:
-        content1: açıklama burada
+        content1: açıklama buraya
       Internet Simulator Setup 3:
-        content1: açıklama burada
+        content1: açıklama buraya
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1404,17 +1406,75 @@ tr-TR:
         - text: Hangi kelime hecelenmiş?
         title: Çoktan Seçmeli
       Multi-Screen Apps:
-        content1: açıklama burada
+        content1: açıklama buraya
       New Challenge Introduction:
-        content1: açıklama burada
+        content1: açıklama buraya
+      OPD-K5 Reviewing Reflections:
+        content1: açıklama buraya
       OPD-K5 Stage3aGo:
-        content1: açıklama burada
+        content1: açıklama buraya
+      OPD-K5 Stage3aGo_copy:
+        content1: açıklama buraya
+      OPD-K5 conditionals introduced:
+        content1: açıklama buraya
+      OPD-K5 debugging:
+        content1: açıklama buraya
+      OPD-K5 diving deeper intro:
+        content1: açıklama buraya
+      OPD-K5 events introduced:
+        content1: açıklama buraya
+      OPD-K5 for loops:
+        content1: açıklama buraya
+      OPD-K5 for loops intro:
+        content1: açıklama buraya
+      OPD-K5 for loops introduction:
+        content1: açıklama buraya
+      OPD-K5 functions introduced:
+        content1: açıklama buraya
+      OPD-K5 journaling:
+        content1: açıklama buraya
+      OPD-K5 lesson implementation planning:
+        content1: açıklama buraya
+      OPD-K5 lesson plans:
+        content1: açıklama buraya
+      OPD-K5 loops introduced:
+        content1: açıklama buraya
+      OPD-K5 project:
+        content1: açıklama buraya
+      OPD-K5 projects introduction:
+        content1: açıklama buraya
+      OPD-K5 role_of_teacher:
+        content1: açıklama buraya
+      OPD-K5 sequencing introduced:
+        content1: açıklama buraya
+      OPD-K5 sprite lab:
+        content1: açıklama buraya
+      OPD-K5 sprite lab introduction:
+        content1: açıklama buraya
+      OPD-K5 sprite lab unplugged:
+        content1: açıklama buraya
+      OPD-K5 sprite lab video:
+        content1: açıklama buraya
+      OPD-K5 types of lessons:
+        content1: açıklama buraya
+      OPD-K5 using lesson plans:
+        content1: açıklama buraya
+      OPD-K5 variables:
+        content1: açıklama buraya
+      OPD-K5 variables introduction:
+        content1: açıklama buraya
+      OPD-K5 variables unplugged:
+        content1: açıklama buraya
+      OPD-K5 where to next:
+        content1: açıklama buraya
+      OPD-K5-projects-1:
+        content1: açıklama buraya
       Prepare for your presentation:
-        content1: açıklama burada
+        content1: açıklama buraya
       'Technique: Frequency Analysis':
-        content1: açıklama burada
+        content1: açıklama buraya
       Terminology Recap:
-        content1: açıklama burada
+        content1: açıklama buraya
       Unit 1 Lesson 2 Overview:
         markdown: |-
           # Genel bakış
@@ -1446,672 +1506,1673 @@ tr-TR:
           * [Bilgisayar Nedir - Etkinlik Rehberi](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
-        - {}
+        - feedback: Yanlış.
         - correct: true
+          feedback: Doğru!
+        - feedback: Yanlış.
+        - feedback: Yanlış
+        questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - feedback: Yanlış.
+        - correct: true
+          feedback: Doğru!
+        - feedback: Yanlış.
         - feedback: Yanlış
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
+        - feedback: Yanlış.
         - correct: true
+          feedback: Doğru!
+        - {}
+        - feedback: Yanlış
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - feedback: Yanlış.
+        - correct: true
+          feedback: Doğru!
         - {}
         - feedback: Yanlış
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist bir kare çiziyor.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Artist bir kare çiziyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
         - correct: true
-        - {}
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Artist bir kare çiziyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
         - correct: true
-        - {}
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Artist bir kare çiziyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Artist bir kare çiziyor.
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
         - text: '12'
           correct: true
+          feedback: Doğru!
         - text: '15'
-        - {}
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: Bilmiyorum.
+          feedback: Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak. 4 kere
+            3, 12 eder.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda çiftçi kaç
+            balkabağı toplayacak?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
         - text: '12'
           correct: true
+          feedback: Doğru!
         - text: '15'
-        - {}
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: Bilmiyorum.
+          feedback: Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak. 4 kere
+            3, 12 eder.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda çiftçi kaç
+            balkabağı toplayacak?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
         - text: '12'
           correct: true
+          feedback: Doğru!
         - text: '15'
-        - {}
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: Bilmiyorum.
+          feedback: Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak. 4 kere
+            3, 12 eder.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda çiftçi kaç
+            balkabağı toplayacak?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: '12'
+          correct: true
+          feedback: Doğru!
+        - text: '15'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: Bilmiyorum.
+          feedback: Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak. 4 kere
+            3, 12 eder.
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda çiftçi kaç
+            balkabağı toplayacak?
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program başarısız olmayacak. Scrat, meşe palamuduna ulaşacak.
+          feedback: Yanlış. Scrat, son dönüşünden sonra yanlış yöne gidiyor.
+        - text: " Scrat, son dönüşünden sonra yanlış yöne gidecek."
+          correct: true
+          feedback: Doğru!
+        - text: Scrat çok az adım atıyor ve meşe palamuduna varamadan duruyor.
+          feedback: Yanlış. Çok az adım atması, Scrat'in yanlış yöne dönüşünden sonra
+            gerçekleşiyor.
+        - text: Bilmiyorum.
+          feedback: 'İlk hata, Scrat''in son dönüşünden sonra yanlış yöne gitmesi. '
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. Bu programın başarısız olmasına
+            neden olacak ilk hata nedir?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program başarısız olmayacak. Scrat, meşe palamuduna ulaşacak.
+          feedback: Yanlış. Scrat, son dönüşünden sonra yanlış yöne gidiyor.
+        - text: " Scrat, son dönüşünden sonra yanlış yöne gidecek."
+          correct: true
+          feedback: Doğru!
+        - text: Scrat çok az adım atıyor ve meşe palamuduna varamadan duruyor.
+          feedback: Yanlış. Çok az adım atması, Scrat'in yanlış yöne dönüşünden sonra
+            gerçekleşiyor.
+        - text: Bilmiyorum.
+          feedback: 'İlk hata, Scrat''in son dönüşünden sonra yanlış yöne gitmesi. '
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. Bu programın başarısız olmasına
+            neden olacak ilk hata nedir?
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program başarısız olmayacak. Scrat, meşe palamuduna ulaşacak.
+          feedback: Yanlış. Scrat, son dönüşünden sonra yanlış yöne gidiyor.
+        - text: " Scrat, son dönüşünden sonra yanlış yöne gidecek."
+          correct: true
+          feedback: Doğru!
+        - text: Scrat çok az adım atıyor ve meşe palamuduna varamadan duruyor.
+          feedback: Yanlış. Çok az adım atması, Scrat'in yanlış yöne dönüşünden sonra
+            gerçekleşiyor.
+        - text: Bilmiyorum.
+          feedback: 'İlk hata, Scrat''in son dönüşünden sonra yanlış yöne gitmesi. '
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. Bu programın başarısız olmasına
+            neden olacak ilk hata nedir?
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: Program başarısız olmayacak. Scrat, meşe palamuduna ulaşacak.
+          feedback: Yanlış. Scrat, son dönüşünden sonra yanlış yöne gidiyor.
+        - text: " Scrat, son dönüşünden sonra yanlış yöne gidecek."
+          correct: true
+          feedback: Doğru!
+        - text: Scrat çok az adım atıyor ve meşe palamuduna varamadan duruyor.
+          feedback: Yanlış. Çok az adım atması, Scrat'in yanlış yöne dönüşünden sonra
+            gerçekleşiyor.
+        - text: Bilmiyorum.
+          feedback: 'İlk hata, Scrat''in son dönüşünden sonra yanlış yöne gitmesi. '
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. Bu programın başarısız olmasına
+            neden olacak ilk hata nedir?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş, domuza bir adım kala duracak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş, TNT'ye çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Bilmiyorum.
+          feedback: Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş, domuza bir adım kala duracak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş, TNT'ye çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Bilmiyorum.
+          feedback: Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş, domuza bir adım kala duracak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş, TNT'ye çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Bilmiyorum.
+          feedback: Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: Kuş, domuza bir adım kala duracak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş, TNT'ye çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Bilmiyorum.
+          feedback: Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        questions:
+        - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 hareket etmez.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca bir birim ilerler
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
+          correct: true
+          feedback: Doğru!
         - text: Bilmiyorum
+          feedback: Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 hareket etmez.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca bir birim ilerler
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
+          correct: true
+          feedback: Doğru!
         - text: Bilmiyorum
+          feedback: Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 hareket etmez.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca bir birim ilerler
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
+          correct: true
+          feedback: Doğru!
         - text: Bilmiyorum
+          feedback: Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8 hareket etmez.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca bir birim ilerler
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum
+          feedback: Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        questions:
+        - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 ilk döngüde çok uzağa gidecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: 'BB-8 ilk döngüde tüm metal parçalarını toplayacak kadar uzağa gitmeyecek. '
+          correct: true
+          feedback: Doğru!
+        - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: Bilmiyorum.
+          feedback: " İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca 2 birim
+            gitmesini sağlar."
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 ilk döngüde çok uzağa gidecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: 'BB-8 ilk döngüde tüm metal parçalarını toplayacak kadar uzağa gitmeyecek. '
+          correct: true
+          feedback: Doğru!
+        - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: Bilmiyorum.
+          feedback: " İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca 2 birim
+            gitmesini sağlar."
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 ilk döngüde çok uzağa gidecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: 'BB-8 ilk döngüde tüm metal parçalarını toplayacak kadar uzağa gitmeyecek. '
+          correct: true
+          feedback: Doğru!
+        - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: Bilmiyorum.
+          feedback: " İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca 2 birim
+            gitmesini sağlar."
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 ilk döngüde çok uzağa gidecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: 'BB-8 ilk döngüde tüm metal parçalarını toplayacak kadar uzağa gitmeyecek. '
+          correct: true
+          feedback: Doğru!
+        - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: Bilmiyorum.
+          feedback: " İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca 2 birim
+            gitmesini sağlar."
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          feedback: Yanlış.
         - text: B
+          feedback: Yanlış.
         - text: C
+          feedback: Yanlış.
         - text: D
           correct: true
+          feedback: Doğru!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
+            resmi oluşturacak?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          feedback: Yanlış.
         - text: B
+          feedback: Yanlış.
         - text: C
+          feedback: Yanlış.
         - text: D
           correct: true
+          feedback: Doğru!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
+            resmi oluşturacak?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          feedback: Yanlış.
         - text: B
+          feedback: Yanlış.
         - text: C
+          feedback: Yanlış.
         - text: D
           correct: true
+          feedback: Doğru!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
+            resmi oluşturacak?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: Yanlış.
+        - text: B
+          feedback: Yanlış.
+        - text: C
+          feedback: Yanlış.
+        - text: D
+          correct: true
+          feedback: Doğru!
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra hangi
+            resmi oluşturacak?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
+          feedback: Doğru!
         - text: B
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
         - text: C
-        - {}
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: Bilmiyorum.
+          feedback: İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu dört
+            kez tekrar ederek bir çembere dönüştürüyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
+            hangisini oluşturacak?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Doğru!
         - text: B
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
         - text: C
-        - {}
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: Bilmiyorum.
+          feedback: İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu dört
+            kez tekrar ederek bir çembere dönüştürüyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
+            hangisini oluşturacak?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Doğru!
         - text: B
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
         - text: C
-        - {}
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: Bilmiyorum.
+          feedback: İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu dört
+            kez tekrar ederek bir çembere dönüştürüyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
+            hangisini oluşturacak?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: Doğru!
+        - text: B
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: C
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: Bilmiyorum.
+          feedback: İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu dört
+            kez tekrar ederek bir çembere dönüştürüyor.
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
+            hangisini oluşturacak?
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
-        - {}
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
-        - {}
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
-        - {}
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
+        questions:
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
+        questions:
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Arı her çiçekte nektar ve her petekte bal alır.
+          correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar ve her petekte
+            bal almasını sağlar.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            ve her petekte bal almasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Çiçekteyse" bloğu, arının her çiçekte nektar ve her petekte
+            bal almasını sağlar.'
         questions:
-        - {}
+        - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
+            ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
+            çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Arı her çiçekte nektar ve her petekte bal alır.
+          correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar ve her petekte
+            bal almasını sağlar.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            ve her petekte bal almasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Çiçekteyse" bloğu, arının her çiçekte nektar ve her petekte
+            bal almasını sağlar.'
         questions:
-        - {}
+        - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
+            ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
+            çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+        - text: Bilmiyorum.
+        questions:
         - {}
-        - {}
-        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+        - text: Bilmiyorum.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, yalnızca 2 birim nektar alır.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, nektarın tamamını alır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
         questions:
-        - {}
+        - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
+            ne olacak?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, yalnızca 2 birim nektar alır.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, nektarın tamamını alır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
         questions:
-        - {}
+        - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
+            ne olacak?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, yalnızca 2 birim nektar alır.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, nektarın tamamını alır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
         questions:
-        - {}
+        - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
+            ne olacak?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, yalnızca 2 birim nektar alır.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, nektarın tamamını alır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        questions:
+        - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
+            ne olacak?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         - text: '8'
           correct: true
+          feedback: Doğru!
         - text: '12'
-        - {}
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: Bilmiyorum.
+          feedback: |-
+            Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda arı ne
+            kadar bal yapacak?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         - text: '8'
           correct: true
+          feedback: Doğru!
         - text: '12'
-        - {}
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: Bilmiyorum.
+          feedback: |-
+            Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda arı ne
+            kadar bal yapacak?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         - text: '8'
           correct: true
+          feedback: Doğru!
         - text: '12'
-        - {}
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: Bilmiyorum.
+          feedback: |-
+            Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda arı ne
+            kadar bal yapacak?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: '8'
+          correct: true
+          feedback: Doğru!
+        - text: '12'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: Bilmiyorum.
+          feedback: |-
+            Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda arı ne
+            kadar bal yapacak?
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel kare yaparken yanlış yöne dönecek.
+          feedback: Yanlış. Bu kısmen doğruydu fakat döngü de hazinenin tamamını toplayacak
+            kadar çalışmıyor.
+        - text: 'Döngü, Laurel''ın hazinenin tamamını toplayabileceği kadar çalışmıyor. '
+          feedback: Yanlış. Bu kısmen doğruydu fakat arı bir kare yapmaya çalışırken
+            yanlış yöne dönüyor.
+        - text: Laurel yanlış yöne dönüyor *ve* döngü Laurel'ın hazinenin tamamını
+            toplayabileceği kadar çalışmıyor.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Laurel yanlış yöne dönüyor *ve* döngü Laurel'ın hazinenin tamamını
+            toplayabileceği kadar çalışmıyor.
         questions:
-        - {}
+        - text: 'Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda Laurel neden
+            hazinenin tamamını toplamayacak? Uyarı: Bu hileli bir soru, cevaplamadan
+            önce seçeneklerin hepsini okuduğunuzdan emin olun!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Çiftçi ürünün tamamını hasat edecek.
+          feedback: Yanlış. Burada balkabağı toplamak için kod yok.
+        - text: Çiftçi gittiği yolda ürünlerin hiçbirini toplamayacak.
+          feedback: Yanlış. Kod, çiftçinin bir merdiven deseni izlemesini ve her denk
+            geldiği her mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
+        - text: Çiftçi, ürünün tamamını toplayacak. Balkabağı hariç.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Kod, çiftçinin bir merdiven deseni izlemesini ve her denk geldiği
+            her mısırı veya marulu toplamasını sağlayacak. Balkabağı toplamayacak.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - {}
+        - text: Çiftçi ürünün tamamını hasat edecek.
         - {}
         - correct: true
-        - {}
+          feedback: Doğru!
+        - text: Bilmiyorum.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - {}
+        - text: Çiftçi ürünün tamamını hasat edecek.
         - {}
         - correct: true
-        - {}
+          feedback: Doğru!
+        - text: Bilmiyorum.
         questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: Çiftçi ürünün tamamını hasat edecek.
         - {}
+        - correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_farmer_ramp13:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Çiftçi, yolun sonuna kadar yürüyecek ve balkabağı hasadı yapacak.
+          feedback: Yanlış. "Balkabağı topla" bloğu döngünün içinde, demek ki çiftçi
+            sadece sonda değil her adımda balkabağı toplamaya çalışacak.
+        - text: Çiftçi her karede balkabağı toplamaya çalışacak fakat balkabağına
+            ulaşamayacak.
+          correct: true
+          feedback: Doğru!
+        - text: Çiftçi dört birim yürüyecek, sonra bir balkabağı toplamaya çalışacak.
+          feedback: Yanlış. "Balkabağı topla" bloğu döngünün içinde, demek ki çiftçi
+            sadece sonda değil her adımda balkabağı toplamaya çalışacak.
+        - text: Bilmiyorum.
+          feedback: '"Balkabağı topla" bloğu döngünün içinde, demek ki çiftçi sadece
+            sonda değil her adımda balkabağı toplamaya çalışacak.'
+        markdown: Bu, daha önce gördüğünüze benzer bloklar kullanan yeni bir bulmaca
+          türü. Aşağıdaki kodu çalıştırdığınızda ne olacağına dair bir varsayımda
+          bulunabilir misiniz?
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Hiçbir şey. Bu kod dümdüz bir arazi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod yığınları olduğu gibi bırakacak.
+          correct: true
+          feedback: Doğru!
+        - text: Bu kod çukurları olduğu gibi bırakacak.
+          feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
+            yığından toprak almak için bir kod yok.
+        - text: Bilmiyorum.
+          feedback: '"While" döngüsü, her boyutta döngüyü çalıştırabilir fakat yığından
+            toprak almak için bir kod yok.'
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Hiçbir şey. Bu kod dümdüz bir arazi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod yığınları olduğu gibi bırakacak.
+          correct: true
+          feedback: Doğru!
+        - text: Bu kod çukurları olduğu gibi bırakacak.
+          feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
+            yığından toprak almak için bir kod yok.
+        - text: Bilmiyorum.
+          feedback: '"While" döngüsü, her boyutta döngüyü çalıştırabilir fakat yığından
+            toprak almak için bir kod yok.'
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Hiçbir şey. Bu kod dümdüz bir arazi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod yığınları olduğu gibi bırakacak.
+          correct: true
+          feedback: Doğru!
+        - text: Bu kod çukurları olduğu gibi bırakacak.
+          feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
+            yığından toprak almak için bir kod yok.
+        - text: Bilmiyorum.
+          feedback: '"While" döngüsü, her boyutta döngüyü çalıştırabilir fakat yığından
+            toprak almak için bir kod yok.'
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: Hiçbir şey. Bu kod dümdüz bir arazi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod yığınları olduğu gibi bırakacak.
+          correct: true
+          feedback: Doğru!
+        - text: Bu kod çukurları olduğu gibi bırakacak.
+          feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
+            yığından toprak almak için bir kod yok.
+        - text: Bilmiyorum.
+          feedback: '"While" döngüsü, her boyutta döngüyü çalıştırabilir fakat yığından
+            toprak almak için bir kod yok.'
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi toprak atmaya hep devam edecek.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi toprak atmaya hep devam edecek.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi toprak atmaya hep devam edecek.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi toprak atmaya hep devam edecek.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_maze_until10_predict2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombi anında sağa dönecek ve orada takılıp kalacak.
+          correct: true
+          feedback: Doğru!
+        - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: |-
+            Yanlış. Bu kodda, düz gidip gidemeyeceğine bakmadan *önce* sağa dönüş arar.
+            Bu yüzden bulmaca başarısız olur.
+        - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi yalnızca bir sağa dönüş veya düz yol arar. Hiç sola
+            dönüş aramadığından anında takılıp kalır.
+        - text: Bilmiyorum.
+          feedback: |-
+            Bu kodda, düz gidip gidemeyeceğine bakmadan *önce* sağa dönüş arar.
+            Bu yüzden bulmaca başarısız olur.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
+            olacak?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: Doğru!
+        - text: Zombi, ayçiçeğine ulaşacak.
+        - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+        - text: Bilmiyorum.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
+            olacak?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: Doğru!
+        - text: Zombi, ayçiçeğine ulaşacak.
+        - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+        - text: Bilmiyorum.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
+            olacak?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Doğru!
+        - text: Zombi, ayçiçeğine ulaşacak.
+        - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+        - text: Bilmiyorum.
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
+            olacak?
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş kıpırdamayacak.
+          feedback: Yanlış. Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini
+            sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş ilerleyecek ve TNT'ye çarpacak.
+          feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
+            dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Bilmiyorum.
+          feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+            Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
+            olacak?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş kıpırdamayacak.
+          feedback: Yanlış. Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini
+            sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş ilerleyecek ve TNT'ye çarpacak.
+          feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
+            dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Bilmiyorum.
+          feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+            Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
+            olacak?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kuş kıpırdamayacak.
+          feedback: Yanlış. Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini
+            sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş ilerleyecek ve TNT'ye çarpacak.
+          feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
+            dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Bilmiyorum.
+          feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+            Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
+            olacak?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: Kuş kıpırdamayacak.
+          feedback: Yanlış. Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini
+            sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş ilerleyecek ve TNT'ye çarpacak.
+          feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
+            dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Bilmiyorum.
+          feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+            Bunu, domuza ulaşana kadar yapmaya devam eder!
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
+            olacak?
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Bir şey olmadı. Scrat hareket etmeyecek.
+          feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
+            üç kez ilerler.
+        - text: Scrat üç kez ilerleyecek, dönecek, sonra üç kez daha ilerleyecek ve
+            meşe palamuduna ulaşacak.
+          correct: true
+          feedback: Doğru!
+        - text: Scrat ilerleyecek, sonra dönecek ve çarpacak.
+          feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
+            üç kez ilerler.
+        - text: Bilmiyorum.
+          feedback: '"İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat üç
+            kez ilerler. Sonra döner ve üç kez daha ilerler ve meşe palamuduna ulaşır.'
         questions:
-        - {}
+        - text: Bu kod yeni bir blok kullanmaktadır. "Çalıştır"a bastığınızda sizce
+            ne olacak?
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Aynı program bu bulmacayı çözmenize yardımcı olacak.
+          correct: true
+          feedback: Doğru! Bal miktarının farklı olması bir şeyi değiştirmez. Fonksiyon
+            bunu halledecek biçimde programlanmış.
+        - text: Arı, yeterince bal yapmayacak.
+          feedback: Yanlış. Fonksiyon, bal miktarı 0'dan büyük olduğu sürece çalışacak
+            biçimde programlanmış.
+        - text: Arı gereğinden fazla bal yapmaya çalışacak.
+          feedback: Yanlış. Fonksiyon, bal miktarı 0'dan büyük olduğu sürece çalışacak
+            biçimde programlanmış.
+        - text: Bilmiyorum.
+          feedback: Program bu bulmacayı çözmeye yardımcı olacak. Bal miktarı 0'dan
+            büyük olduğu sürece çalışacak biçimde programlanmış.
         questions:
-        - {}
+        - text: Bu, bir önceki bulmacadaki programın aynısı fakat bu bulmacada toplanacak
+            bal sayısı değişmiş. "Çalıştır"a bastığınızda ne olacak?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Çiftçi iki balkabağı toplayacak.
+          feedback: Yanlış. Çiftçi, mısıra varana dek "yokla ve topla" kodunu çağırmıyor.
+        - text: Çiftçi balkabaklarının tamamını toplayacak.
+          feedback: Yanlış. Çiftçi, mısıra varana dek "yokla ve topla" kodunu çağırmıyor.
+        - text: Çiftçi marulu toplayacak.
+          feedback: Yanlış. Çiftçi yalnızca bir kez dönüp mısırda duruyor.
+        - text: Çiftçi mısırı toplayacak.
+          correct: true
+          feedback: Doğru!
         questions:
-        - {}
+        - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Çiftçi iki balkabağı toplayacak.
+        - text: Çiftçi balkabaklarının tamamını toplayacak.
+        - text: Çiftçi marulu toplayacak.
+          correct: true
+          feedback: Doğru!
+        - text: Çiftçi mısırı toplayacak.
         questions:
-        - {}
+        - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Çiftçi iki balkabağı toplayacak.
+        - text: Çiftçi balkabaklarının tamamını toplayacak.
+        - text: Çiftçi marulu toplayacak.
+          correct: true
+          feedback: Doğru!
+        - text: Çiftçi mısırı toplayacak.
         questions:
-        - {}
+        - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: Çiftçi iki balkabağı toplayacak.
+        - text: Çiftçi balkabaklarının tamamını toplayacak.
+        - text: Çiftçi marulu toplayacak.
+          correct: true
+          feedback: Doğru!
+        - text: Çiftçi mısırı toplayacak.
+        questions:
+        - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
         questions:
-        - {}
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
+        questions:
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
+        questions:
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
       courseF_bee_variables_8a_2018:
         answers:
         - {}
         - correct: true
+          feedback: Doğru!
         - {}
-        - {}
+        - text: Bilmiyorum.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Doğru!
         - {}
-        - {}
+        - text: Bilmiyorum.
         questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Doğru!
+        - {}
+        - text: Bilmiyorum.
+        questions:
+        - {}
+      courseF_external_variableConstant:
+        markdown: "<h2>Değişkenler Hakkında</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Artık, bir
+          değişkeni en iyi şekilde kullanmak için bir yol öğrendiniz: Sabit!  \nDeğişkeni
+          bir sabit olarak kullandığınızda bir değer belirleyip ardından *aynı* değeri
+          \"Çalıştır\"a tıkladıktan sonra değiştirmeden programınızda birçok kez kullanırsınız.
+          \ </h3>\n<br/><hr/>\n<h3>Serinin diğer bölümlerinde, program içerisinde
+          *değişen* değişkenlerle kod yazacaksınız.</h3>\n\n"
       courseF_multi_artist_for10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+            düz bir çizgi çizecek.
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve incelir. '
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve kalınlaşır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
         questions:
-        - {}
+        - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+            düz bir çizgi çizecek.
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve incelir. '
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve kalınlaşır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
         questions:
-        - {}
+        - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+            düz bir çizgi çizecek.
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve incelir. '
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve kalınlaşır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
         questions:
-        - {}
+        - text: '"Çalıştır"a tıkladığınızda ne olacak?'
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+            düz bir çizgi çizecek.
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve incelir. '
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+            gittikçe uzar ve kalınlaşır.
+          correct: true
+          feedback: Doğru!
+        - text: Bilmiyorum.
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
+            daha kalın bir çizgi çizer.
+        questions:
+        - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Sanatçı, iki farklı boyutta kutu çizmek için aynı fonksiyonu kullanacak.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, iki farklı boyutta kutu çizmek için iki farklı fonksiyon
+            kullanacak.
+          feedback: Yanlış. Parametreler sayesinde, farklı sonuçlar elde eden tek
+            bir fonksiyon kullanırsınız.
+        - text: Sanatçı, aynı boyutta kutuyu iki kez çizmek için iki farklı fonksiyon
+            kullanacak.
+          feedback: Yanlış. Parametreler sayesinde, farklı sonuçlar elde eden tek
+            bir fonksiyon kullanırsınız.
+        - text: Bilmiyorum.
+          feedback: Program, iki farklı boyutta kutu çizmesi için tek bir fonksiyondan
+            faydalanmak için parametreleri kullanır.
+        markdown: '"Bir kare çiz" fonksiyonuna parametreler ekledik. Fonksiyon tanımının
+          tamamını görmek için mavi renkteki "düzenle" düğmesine tıklayın.'
         questions:
-        - {}
+        - text: Bu programı çalıştırdığınızda ne olacak?
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
+            olması gerekir.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
+            gerekir.
+        - text: Bilmiyorum.
+          feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
-        - {}
+        - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
+            ne olacak?'
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
+            olması gerekir.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
+            gerekir.
+        - text: Bilmiyorum.
+          feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
-        - {}
+        - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
+            ne olacak?'
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
+            olması gerekir.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
+            gerekir.
+        - text: Bilmiyorum.
+          feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
-        - {}
+        - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
+            ne olacak?'
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
+            olması gerekir.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
+            gerekir.
+        - text: Bilmiyorum.
+          feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
+        questions:
+        - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
+            ne olacak?'
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
+        markdown: 'Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+          Çiçek varsa arı "bir kez" nektar almalı. '
         questions:
-        - {}
+        - text: Çiçek yoksa arı bir şey yapmamalı. Aşağıdaki kodu iyice inceleyin.
+            "Çalıştır"a tıkladıktan sonra sizce ne olacak?
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Arı her çiçekte nektar alır, aksi durumda bal yapar.
+          correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının her çiçekten nektar almasını
+            ve çiçek yoksa (yani bir petekse) bal yapmasını sağlar.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının her çiçekten nektar ve
+            her petekten bal almasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının her çiçekten nektar almasını
+            ve aksi durumda bal yapmasını sağlar.'
+        markdown: 'Bulutlar kimi zaman bir çiçeği kimi zaman da bir peteği saklar!
+          Her durumda, her bir bulutun altında ya **bir** çiçek ya da **bir** petek
+          olacaktır. '
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra sizce
+            ne olacak?
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak, biri
+            hariç.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: 'Arı ilerleyecek ve çiçeklerdeki nektardan daha fazlasını toplamaya
+            çalışacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         questions:
-        - {}
+        - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak, biri
+            hariç.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         - {}
         questions:
-        - {}
+        - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak, biri
+            hariç.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         - {}
         questions:
+        - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak, biri
+            hariç.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         - {}
+        questions:
+        - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Arı nektar veya bal toplamayacak.
+          feedback: Yanlış. Fonksiyon, bir parametreden geçerken mümkün olduğunca
+            çok nektar veya bal toplamaya ayarlı.
+        - text: 'Arı, önce üç nektar veya bal, ardından basamak deseni ile iki nektar
+            ve bal toplayacak.  '
+          correct: true
+          feedback: Doğru! Fonksiyon, bir parametreden geçerken mümkün olduğunca çok
+            nektar veya bal toplamaya ayarlı.
+        - text: 'Arı, döngü her yinelendiğinde yalnızca bir nektar veya bal toplayacak. '
+          feedback: Yanlış. Fonksiyon, bir parametreden geçerken mümkün olduğunca
+            çok nektar veya bal toplamaya ayarlı.
+        - text: Bilmiyorum.
+          feedback: Fonksiyonu incelemek için tıkladığınızda bir parametreden geçerken
+            mümkün olduğunca çok nektar veya bal toplamaya ayarlı olduğunu gösterir.
+        markdown: Bu bulutların altında ya bir nektarlı bir çiçek ya da bir ballı
+          bir petek var. Aşağıdaki soruyu cevaplamadan önce, içinde ne olduğunu görmek
+          için fonksiyondaki mavi "düzenle" düğmesine tıklayın.
         questions:
-        - {}
+        - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Korsan, "Tanıştığımıza memnun oldum, Ali." diyecek. Bu kadar.
+          correct: true
+          feedback: 'Doğru. '
+        - text: Korsan, "Tanıştığımıza memnun oldum." diyecek. Bu kadar.
+          feedback: Yanlış. "Birleştir" bloğunun, verilen ismi korsanın cümlesine
+            eklediğine dikkat edin.
+        - text: Korsan, "Ali." diyecek. Bu kadar.
+          feedback: Yanlış. "Birleştir" bloğunun, verilen ismi korsanın cümlesine
+            eklediğine dikkat edin.
+        - text: Bilmiyorum.
+        markdown: "**Bu bulmaca \"sor\" bloğu denen yeni bir blok kullanıyor.**\n\n\"Sor\"
+          bloğu programı durdurur ve kullanıcının bir metin girmesini ister. \n\nKullanıcının
+          girdiği metin, \"sor\" bloğunun sonunda gösterilen değişkene kaydedilir.
+          Bu durumda değişken, \"isim\"dir."
         questions:
-        - {}
+        - text: Kullanıcı "Ali" ismini girseydi ne olacaktı?
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artist, bulmacayı doğru çözecek.
+          feedback: Yanlış. Döngü, "çokgen satırı çiz" değil "çokgen çiz" fonksiyonu
+            kullanıyor.
+        - text: Artist, bir pencere deseninde dört kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Artist tek bir kare satırı çizecek.
+          feedback: Yanlış. Program, "poligon satırı çiz" fonksiyonunu çağırmıyor.
+        - text: Artist, üst üste binen dört kare çizecek.
+          feedback: Yanlış. Döngü, "çokgen çiz" fonksiyonları arasında 90 derece döner.
         questions:
-        - {}
+        - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artist, bulmacayı doğru çözecek.
+          feedback: Yanlış. Döngü, "çokgen satırı çiz" değil "çokgen çiz" fonksiyonu
+            kullanıyor.
+        - text: Artist, bir pencere deseninde dört kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Artist tek bir kare satırı çizecek.
+          feedback: Yanlış. Program, "poligon satırı çiz" fonksiyonunu çağırmıyor.
+        - text: Artist, üst üste binen dört kare çizecek.
+          feedback: Yanlış. Döngü, "çokgen çiz" fonksiyonları arasında 90 derece döner.
         questions:
-        - {}
+        - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artist, bulmacayı doğru çözecek.
+          feedback: Yanlış. Döngü, "çokgen satırı çiz" değil "çokgen çiz" fonksiyonu
+            kullanıyor.
+        - text: Artist, bir pencere deseninde dört kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Artist tek bir kare satırı çizecek.
+          feedback: Yanlış. Program, "poligon satırı çiz" fonksiyonunu çağırmıyor.
+        - text: Artist, üst üste binen dört kare çizecek.
+          feedback: Yanlış. Döngü, "çokgen çiz" fonksiyonları arasında 90 derece döner.
         questions:
-        - {}
+        - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: Artist, bulmacayı doğru çözecek.
+          feedback: Yanlış. Döngü, "çokgen satırı çiz" değil "çokgen çiz" fonksiyonu
+            kullanıyor.
+        - text: Artist, bir pencere deseninde dört kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Artist tek bir kare satırı çizecek.
+          feedback: Yanlış. Program, "poligon satırı çiz" fonksiyonunu çağırmıyor.
+        - text: Artist, üst üste binen dört kare çizecek.
+          feedback: Yanlış. Döngü, "çokgen çiz" fonksiyonları arasında 90 derece döner.
+        questions:
+        - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
       csd-post-survey-levelgroup-2018:
@@ -2128,27 +3189,91 @@ tr-TR:
           *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
           (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
           (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: açıklama buraya
+      csf_password_power-up:
+        content1: açıklama buraya
+      csf_putting_a_stop_to_online_meanness:
+        content1: açıklama buraya
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Laurel, hazine olmayan yerde hazine toplamaya çalışacak ve bu hataya
+            neden olur.
+          correct: true
+          feedback: Doğru!
+        - text: Laurel hazinenin tamamını toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Bilmiyorum.
+          feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
+            hataya neden oluyor.
         questions:
-        - {}
+        - text: Aşağıdaki kodu dikkatle inceleyin. Kod sonuna kadar (hataları yok
+            sayarak) çalışırsa Laurel kaç parça hazine toplar?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Laurel, hazine olmayan yerde hazine toplamaya çalışacak ve bu hataya
+            neden olur.
+          correct: true
+          feedback: Doğru!
+        - text: Laurel hazinenin tamamını toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Bilmiyorum.
+          feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
+            hataya neden oluyor.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Laurel, hazine olmayan yerde hazine toplamaya çalışacak ve bu hataya
+            neden olur.
+          correct: true
+          feedback: Doğru!
+        - text: Laurel hazinenin tamamını toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Bilmiyorum.
+          feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
+            hataya neden oluyor.
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Laurel, hazine olmayan yerde hazine toplamaya çalışacak ve bu hataya
+            neden olur.
+          correct: true
+          feedback: Doğru!
+        - text: Laurel hazinenin tamamını toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Bilmiyorum.
+          feedback: Laurel, hazine olmayan yerde hazine toplamaya çalışıyor ve bu
+            hataya neden oluyor.
+        questions:
+        - {}
+      gradek1_activity_beNice:
+        markdown: "# Bilgisayar Laboratuvarındaki Davranışlar\n  \n<br/><br/>    \n
+          \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nDers planına git\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Devam Et</a>\n"
+      courseD_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseE_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseExpress_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseF_EOC_2020:
+        display_name: Ders Projesinin Sonu

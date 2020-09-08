@@ -49,7 +49,6 @@ export default storybook => {
             }
           ]}
           text="Unplugged Activity"
-          fontSize={12}
         />
       )
     }

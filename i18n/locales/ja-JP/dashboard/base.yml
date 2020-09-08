@@ -147,6 +147,9 @@ ja:
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
     email_preference_required: "メール設定を指定しなくてはなりません。"
+    parent_account_checkbox: "私は私の子供を代理して登録する親/保護者です。"
+    parent_account_email_progress_permission: "お子様の進み具合、プロジェクト、コース、コンピューターサイエンスについての最新情報をメールで送付してもよろしいでしょうか。[（プライバシーポリシーを参照）](%{privacy_policy_url})\n\n"
+    parent_account_email_label: "親/保護者のメール"
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -308,6 +311,8 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+      legal_privacy: "プライバシー ポリシー"
+      legal_tos: "利用規約"
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'
@@ -325,6 +330,7 @@ ja:
       algebra_game: '代数'
       applab: 'アプリ ラボ'
       artist: 'アーティスト'
+      artist_k1: "アーティスト (就学前)\n"
       basketball: 'バスケットボール'
       bounce: 'バウンド'
       dance: 'ダンスパーティー'
@@ -337,8 +343,11 @@ ja:
       infinity: 'インフィニティ'
       makerlab: "Makerツールキット\n"
       minecraft_adventurer: 'Minecraftアドベンチャー'
+      minecraft_aquatic: "マインクラフト アクアティック\n"
       minecraft_designer: 'マインクラフト'
+      minecraft_hero: "マインクラフト ヒーロー\n"
       playlab: 'プレイラボ'
+      playlab_k1: "プレイラボ (就学前)\n"
       sports: 'スポーツ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
@@ -411,8 +420,12 @@ ja:
     enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
     update: "アカウントを更新"
     update_email: "更新"
+    for_parents_and_guardians: "親と保護者用"
+    link_a_parent_email: "このアカウントに親/保護者のメールアドレスをリンクさせて、お子様の進み具合とプロジェクトについての最新情報を受け取ります。また、このメールアドレスを用いてパスワードの復旧を行うこともできます。\n\n\n"
     parent_guardian_email_label: "親/保護者Eメール"
     none: "設定なし"
+    only_one_parent_email_supported_warning: "注：現在、学生アカウント1件につきサポートできるのは1名の親/保護者のメールアドレスのみです。"
+    encrypted: "暗号化済み\n"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -622,20 +635,6 @@ ja:
       body: "これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。"
       audience: "14才以上"
       cta: "もっと知る"
-  gallery:
-    students_drew_these_with_code: "これらの作品は、生徒たちがコードを使って描きました！"
-    students_made_these_with_code: "これらの作品は、生徒たちがコードを使って創りました！"
-    picture_count: "コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。"
-    activity_count: "コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。"
-    want_to_make_your_own: "自分でも創ってみたいですか？"
-    how_to_save: "これらのチュートリアルの最終レベルでは、「完了」と「保存」をクリックし、ギャラリーにあなたの作品を保存してください。"
-    more: "つづきを読む &rarr;"
-    caption_by_name_age: "作成者： %{name} (%{age} 才)"
-    caption_time_ago: "%{time_ago} 前"
-    header: "ギャラリー"
-    header_playlab: "プレイラボ"
-    header_artist: "アーティスト"
-    report_abuse: "不正を報告"
   landing:
     report_bug: "バグを報告"
     support: "説明を見る"
@@ -810,52 +809,7 @@ ja:
     instructor_feedback: 'インストラクターからのフィードバック'
     peer_feedback: 'ピア ・ フィードバック'
     outdated: 'このフィードバックは、以前提出したバージョンに追加されました'
-  flex_category:
-    required: '概要'
-    content: '内容'
-    practice: '授業実践'
     peer_review: 'ピア ・ レビュー'
-    ramp_up: 'ランアップ'
-    main_course: 'メイン コース'
-    extra_course_content: '追加のコース内容'
-    csf_e_1: 'コースEへの強化（オプション）'
-    csf_e_2: 'コースEの内容'
-    csf_f_1: 'コースFへの強化（オプション）'
-    csf_f_2: 'コースFの内容'
-    csf_jigsaw: 'ジグソーパズル'
-    csf_sequencing: 'シークエンス'
-    csf_loops: 'くりかえし'
-    csf_events: 'イベント'
-    csf_binary: '２しんすう'
-    csf_conditionals: '条件'
-    csf_nested_loops: '入れ子のループ'
-    csf_functions: '関数(かんすう) '
-    csf_variables: '変数（へんすう）'
-    csf_for_loops: 'ループ用'
-    csf_internet: 'インターネット'
-    csf_warmup: 'ウォームアップ'
-    csd1_1: '第 1章: 問題解決プロセス'
-    csd1_2: '第 2 章コンピューターと問題解決'
-    csd2_1: '第 1 章： Web コンテンツと HTML'
-    csd2_2: '第 2 章：スタイルと CSS'
-    csd3_1: '第 1 章: 画像とアニメーション'
-    csd3_2: '第2章: ゲームを作る'
-    csd4_1: '第 1 章：ユーザーを中心にしたデザイン'
-    csd4_2: '第 2 章：アプリのプロトタイピング'
-    csd5_1: '第1章：情報を表現する'
-    csd5_2: '第 2 章：データ問題を解決'
-    csd6_1: '第 1 章：ハードウェア出力'
-    csd6_2: '第 2 章：ハードウェア入力'
-    csd_survey: 'コース終了後アンケート'
-    csp3_1: '章 1: プログラミング言語とアルゴリズム'
-    cspSurvey: 'アンケート'
-    csp2_1_2018: '第 2 章: デジタル情報'
-    csp_variables: '変数（へんすう）'
-    csp_conditionals: '条件'
-    csp_functions: '関数(かんすう) '
-    csp_lists: 'リスト'
-    csp_loops: 'くりかえし'
-    csp_unit1_2020: '(old) Unit 1: デジタル情報'
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。
@@ -925,6 +879,8 @@ ja:
       school_name: '学校名'
       school_city: '学校の市町村名'
       school_country: '学校のある国'
+      colombian_school_city: '学校の市町村名'
+      colombian_school_name: '学校名'
     form_entries:
       gender:
         male: '男性'
@@ -957,3 +913,7 @@ ja:
     logout: 'ログアウト'
     yes: 'はい'
   copy: 'コピー'
+  parent_email_banner:
+    text: "**あなたは親または保護者ですか?** このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
+    link_your_email: "あなたのメールをリンクさせる"
+    not_now: "後から"

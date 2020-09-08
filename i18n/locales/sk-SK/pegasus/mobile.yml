@@ -632,9 +632,9 @@
   dashboard_assessments_none_part2: "Ak vyučujete kurz pre 2.stupeň ZŠ, alebo pre stredné školy, máme pre vás na code.org k dispozícii testovacie otázky, ktoré študentom pomôžu pripraviť sa na AP testy (pozn: testy v USA ako príprava na vstup na univerzitu). Ak chcete tieto testy využiť, najprv priraďte vašej tride daný kurz a potom tento kurz vyberte z možností vyššie. Tu uvidíte odpovede vašich študentov."
   dashboard_assessments_summaries: "Zhrnutia hodnotení"
   dashboard_assessments_answers: "Všetky odpovede"
-  dashboard_surveys_answers: "Anketa"
+  dashboard_surveys_answers: "Dotazníky"
   dashboard_percent: "Percento"
-  dashboard_filter_by_stage: 'Filter podľa vedomostného stupňa:'
+  dashboard_filter_by_stage: 'Filter:'
   dashboard_filter_all: "Všetko"
   dashboard_download_csv: "Stiahnuť CSV"
   dashboard_navigation_home_page: "Domovská stránka učiteľa"
@@ -947,7 +947,9 @@
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
+  pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: "Zrýchlený kurz"
@@ -1393,6 +1395,8 @@
   header_teacher_community: "Komunita učiteľov"
   header_help_support: 'Pomoc a podpora '
   header_report_bug: "Nahlásiť chybu"
+  header_legal_privacy: "Zásady ochrany súkromia"
+  header_legal_tos: "Podmienky používania služby"
   header_tutorials: "Návody"
   header_documentation: "Dokumentácia"
   user_header_label: "Ahoj %{username}"
@@ -1407,6 +1411,7 @@
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "Tanečná Párty"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Zobraziť všetky projekty..."
@@ -1559,7 +1564,7 @@
   hoc2018_dance_measure_colon: 'Takt:'
   hoc2018_aquatic_video1: "Minecraft Vodné Dobrodružstvo - Gratulujeme"
   hoc2018_aquatic_video2: "Minecraft Vodné Dobrodružstvo - Cykly"
-  hoc2018_aquatic_video3: "Minecraft Vodné Dobrodružstvo - Podmienky"
+  hoc2018_aquatic_video3: "Minecraft Vodné dobrodružstvo - podmienky"
   hoc2018_aquatic_video4: "Minecraft Vodné Dobrodružstvo - Gratulujeme"
   hoc2018_dance_video1: "Tanečná Párty - Úvod"
   hoc2018_dance_video2: "Tanečná Párty - Udalosti"
@@ -1570,3 +1575,4 @@
   page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
   page_not_found_button: "Späť na domovskú stránku"
   hoc2018_mc_with_microsoft: "V spolupráci s"
+  page_not_available_button: "Späť na domovskú stránku"

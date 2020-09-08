@@ -1,6 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
@@ -13,31 +13,31 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp4_1', display_name: 'Chapter 1: The World of Big Data and Encryption'
-stage 'What is Big Data?', flex_category: 'csp4_1'
+lesson 'What is Big Data?', display_name: 'What is Big Data?'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U4L1 - MC moores law', progression: 'Check Your Understanding', assessment: true
 level 'U4L1 - MC big data def', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-5-levelgroup-U4Ch1', progression: 'Quick Check-In', assessment: true
 
-stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1'
+lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations'
 level 'Unit 4 Lesson 2 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Video - Data and Medicine', progression: 'Data and Medicine'
 level 'Video - CS is Changing Everything', progression: 'CS is Changing Everything'
 level 'U4L2 - FR Practice AP response about data', progression: 'Check Your Understanding', assessment: true
 
-stage 'Identifying People with Data', flex_category: 'csp4_1'
+lesson 'Identifying People with Data', display_name: 'Identifying People with Data'
 level 'Unit 4 Lesson 3 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U4-AP-Practice-Choose-The-Data-Concern', named: true
 level 'U4L3 - FR Identifying people', progression: 'Check Your Understanding', assessment: true
 
-stage 'The Cost of Free', flex_category: 'csp4_1'
+lesson 'The Cost of Free', display_name: 'The Cost of Free'
 level 'Unit 4 Lesson 4 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Video - The Future of Big Data', progression: 'The Future of Big Data', named: true
 level 'U4-AP-Practice-Justify-the-Score', named: true
 level 'U4L4 - MC cost of free', progression: 'Check Your Understanding', assessment: true
 level 'U4L4 - FR cost of free', progression: 'Check Your Understanding', assessment: true
 
-stage 'Simple Encryption', flex_category: 'csp4_1'
+lesson 'Simple Encryption', display_name: 'Simple Encryption'
 level 'Unit 4 Lesson 5 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Crack a Caesar Cipher', progression: 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap', progression: 'Terminology Recap', named: true
@@ -51,7 +51,7 @@ level 'U2L13 Assessment4', progression: 'Check Your Understanding', assessment: 
 level 'U2L13 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 level 'U2L14 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-stage 'Encryption with Keys and Passwords', flex_category: 'csp4_1'
+lesson 'Encryption with Keys and Passwords', display_name: 'Encryption with Keys and Passwords'
 level 'Unit 4 Lesson 6 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'The Vigenere Cipher Widget', progression: 'The Vigenere Cipher Widget', named: true
 level 'How Secure Is Your Password?', progression: 'How Secure Is Your Password?', named: true
@@ -62,7 +62,7 @@ level 'U2L14 Free Response Wrap Up', progression: 'Check Your Understanding', as
 level 'U2L14 Assessment2', progression: 'Check Your Understanding', assessment: true
 level 'U2L15 Assessment1', progression: 'Check Your Understanding', assessment: true
 
-stage 'Public Key Crypto', flex_category: 'csp4_1'
+lesson 'Public Key Crypto', display_name: 'Public Key Crypto'
 level 'Unit 4 Lesson 7 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Video - Encryption and Public Keys', progression: 'Encryption and Public Keys', named: true
 level 'Cups and Beans Activity', progression: 'Cups and Beans Activity', named: true
@@ -77,15 +77,15 @@ level 'U2L19 mutlichoice 20 mod 15', progression: 'Check Your Understanding', as
 level 'U2L19 multichoice 13 MOD 17', progression: 'Check Your Understanding', assessment: true
 level 'U2L19 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-stage 'Rapid Research - Cybercrime', flex_category: 'csp4_1'
+lesson 'Rapid Research - Cybercrime', display_name: 'Rapid Research - Cybercrime'
 level 'Unit 4 Lesson 8 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Video - Cybersecurity and Crime', progression: 'Cybersecurity and Crime', named: true
 
-stage 'Practice PT - Big Data and Security Dilemmas', flex_category: 'csp4_1'
+lesson 'Practice PT - Big Data and Security Dilemmas', display_name: 'Practice PT - Big Data and Security Dilemmas'
 level 'Unit 4 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resources'
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-stage 'Unit 4 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+lesson 'Unit 4 Chapter 1 Assessment', display_name: 'Unit 4 Chapter 1 Assessment', lockable: true
 variants
   level 'csp_affirmation_control_4', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_4', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
@@ -93,6 +93,7 @@ endvariants
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'Post-Course Survey', flex_category: 'cspSurvey'
+lesson 'Post-Course Survey', display_name: 'Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'
+

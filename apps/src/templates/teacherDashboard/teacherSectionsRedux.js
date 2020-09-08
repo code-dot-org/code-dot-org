@@ -263,9 +263,16 @@ export const finishEditingSection = () => (dispatch, getState) => {
 };
 
 export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
     submitEditingSection(dispatch, getState)
       .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
         reload();
       })
       .fail((jqXhr, status) => {
@@ -377,6 +384,15 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 
 /** Abandon the import process, closing the RosterDialog. */
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
+
+/**
+ * Start the process of importing a section from Google Classroom by opening
+ * the RosterDialog and loading the list of classrooms available for import.
+ */
+export const beginGoogleImportRosterFlow = () => dispatch => {
+  dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+  dispatch(beginImportRosterFlow());
+};
 
 /**
  * Import the course with the given courseId from a third-party provider
@@ -725,6 +741,7 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       initialCourseId: initialSectionData.courseId,
       initialScriptId: initialSectionData.scriptId,
+      initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -750,7 +767,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -794,6 +811,22 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    if (section.loginType !== state.initialLoginType) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'edit-section-details',
+          event: 'change-login-type',
+          data_json: JSON.stringify({
+            sectionId: section.id,
+            initialLoginType: state.initialLoginType,
+            updatedLoginType: section.loginType
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+
     let assignmentData = {
       section_id: section.id,
       section_creation_timestamp: section.createdAt,
@@ -810,12 +843,15 @@ export default function teacherSections(state = initialState, action) {
       !(typeof assignmentData.script_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
-      firehoseClient.putRecord({
-        study: 'assignment',
-        study_group: 'v1',
-        event: newSection ? 'create_section' : 'edit_section_details',
-        data_json: JSON.stringify(assignmentData)
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'assignment',
+          study_group: 'v1',
+          event: newSection ? 'create_section' : 'edit_section_details',
+          data_json: JSON.stringify(assignmentData)
+        },
+        {includeUserId: true}
+      );
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -982,7 +1018,7 @@ export function assignedScriptName(state) {
 
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
-  return (allSections || []).filter(s => !s.hidden);
+  return sortSectionsList(allSections || []).filter(section => !section.hidden);
 }
 
 /**
@@ -1008,6 +1044,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -1019,7 +1059,7 @@ export const sectionFromServerSection = serverSection => ({
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
@@ -1054,7 +1094,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
@@ -1135,33 +1175,48 @@ export function editedSectionId(state) {
 }
 
 /**
+ * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
 export function sectionsNameAndId(state) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name
-  }));
+  return sortSectionsList(
+    state.sectionIds.map(id => ({
+      id: parseInt(id, 10),
+      name: state.sections[id].name
+    }))
+  );
 }
 
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ */
 export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
   onCourseOverview
 ) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name,
-    scriptId: state.sections[id].scriptId,
-    courseId: state.sections[id].courseId,
+  return sortedSectionsList(state.sections).map(section => ({
+    ...section,
     isAssigned:
-      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null &&
-        state.sections[id].courseId === courseId &&
-        onCourseOverview)
+      (scriptId !== null && section.scriptId === scriptId) ||
+      (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }
+
+/**
+ * @param {object} sectionsObject - an object containing sections keyed by id
+ * Converts an unordered dictionary of sections into a sorted array
+ */
+export const sortedSectionsList = sectionsObject =>
+  sortSectionsList(Object.values(sectionsObject));
+
+/**
+ * @param {array} sectionsList - an array of section objects
+ * Sorts an array of sections by descending id
+ */
+export const sortSectionsList = sectionsList =>
+  sectionsList.sort((a, b) => b.id - a.id);
 
 /**
  * @param {object} state - Full state of redux tree

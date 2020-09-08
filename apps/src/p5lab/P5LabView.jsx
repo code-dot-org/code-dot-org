@@ -42,6 +42,10 @@ class P5LabView extends React.Component {
     spriteLab: PropTypes.bool.isRequired
   };
 
+  state = {
+    libraryManifest: {}
+  };
+
   getChannelId() {
     if (dashboard && dashboard.project) {
       return dashboard.project.getCurrentId();
@@ -51,6 +55,13 @@ class P5LabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+    const locale = window.appOptions.locale;
+    const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
+    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
+      .then(response => response.json())
+      .then(libraryManifest => {
+        this.setState({libraryManifest});
+      });
   }
 
   renderCodeMode() {
@@ -90,6 +101,9 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
+              libraryManifest={this.state.libraryManifest}
+              hideUploadOption={this.props.spriteLab}
+              hideAnimationNames={this.props.spriteLab}
             />
           )}
         </div>
@@ -113,7 +127,12 @@ class P5LabView extends React.Component {
     const {allowAnimationMode, interfaceMode} = this.props;
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
-      <AnimationTab channelId={this.getChannelId()} />
+      <AnimationTab
+        channelId={this.getChannelId()}
+        libraryManifest={this.state.libraryManifest}
+        hideUploadOption={this.props.spriteLab}
+        hideAnimationNames={this.props.spriteLab}
+      />
     ) : (
       undefined
     );

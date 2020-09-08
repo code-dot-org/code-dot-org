@@ -83,7 +83,6 @@ describe('entry tests', () => {
     'netsim',
     'studio',
     'turtle',
-    'scratch',
     'weblab'
   ];
 
@@ -180,12 +179,7 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/media/skins/fish'
         },
-        {
-          expand: true,
-          cwd: 'node_modules/scratch-blocks/media',
-          src: ['**'],
-          dest: 'build/package/media/scratch-blocks'
-        },
+
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
         // we include them in our build and access them via static (non-fingerprinted)
@@ -352,7 +346,8 @@ describe('entry tests', () => {
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
-          ]
+          ],
+          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -426,12 +421,6 @@ describe('entry tests', () => {
           nocache: true
         },
         {
-          pattern: 'test/scratch/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
           pattern: 'test/storybook/**/*',
           watched: false,
           included: false,
@@ -478,15 +467,6 @@ describe('entry tests', () => {
       }),
       files: [{src: ['test/integration-tests.js'], watched: false}]
     },
-    scratch: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/scratch'
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'scratch.xml'
-      }),
-      files: [{src: ['test/scratch-tests.js'], watched: false}]
-    },
     storybook: {
       coverageIstanbulReporter: {
         dir: 'coverage/storybook'
@@ -514,7 +494,6 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -527,15 +506,18 @@ describe('entry tests', () => {
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
     'layouts/_parent_email_banner':
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     'layouts/_school_info_interstitial':
       './src/sites/studio/pages/layouts/_school_info_interstitial.js',
+    'layouts/_small_footer':
+      './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_thank_donors_interstitial':
+      './src/sites/studio/pages/layouts/_thank_donors_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -568,11 +550,11 @@ describe('entry tests', () => {
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
+    'report_abuse/report_abuse_form':
+      './src/sites/studio/pages/report_abuse/report_abuse_form.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
-    'shared/_header_progress':
-      './src/sites/studio/pages/shared/_header_progress.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js',
@@ -592,20 +574,30 @@ describe('entry tests', () => {
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
+    'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_blockly':
-      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_droplet':
-      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_blockly':
+      './src/sites/studio/pages/levels/editors/fields/_blockly.js',
+    'levels/editors/fields/_callouts':
+      './src/sites/studio/pages/levels/editors/fields/_callouts.js',
+    'levels/editors/fields/_droplet':
+      './src/sites/studio/pages/levels/editors/fields/_droplet.js',
+    'levels/editors/fields/_grid':
+      './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_preload_assets':
+      './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+    'levels/editors/fields/_special_level_types':
+      './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+    'levels/editors/fields/_video':
+      './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
@@ -643,6 +635,10 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
+    'code.org/views/amazon_future_engineer':
+      './src/sites/code.org/pages/views/amazon_future_engineer.js',
+    'code.org/views/amazon_future_engineer_eligibility':
+      './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -706,7 +702,10 @@ describe('entry tests', () => {
       './src/sites/studio/pages/peer_reviews/dashboard.js',
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
-    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js'
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
+    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js',
+    'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
@@ -716,6 +715,11 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    // The blockly dependency is huge, so we currently control when it is
+    // loaded explicitly via script tags rather than via normal imports.
+    blockly: './src/sites/studio/pages/blockly.js',
+    googleblockly: './src/sites/studio/pages/googleblockly.js',
+
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
@@ -739,9 +743,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
-
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };
 
   // Create a config for each of our bundles
@@ -1124,8 +1126,7 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact',
-        'donorTeacherBanner'
+        'regionalPartnerMiniContact'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
@@ -1133,7 +1134,7 @@ describe('entry tests', () => {
           '/*' +
           item +
           '*/ ' +
-          'module.exports = window.blockly.' +
+          'module.exports = window.locales.' +
           localeType +
           ';';
         fs.writeFileSync(path.join(current, item + '.js'), localeString);
@@ -1249,9 +1250,6 @@ describe('entry tests', () => {
   grunt.registerTask('storybookTest', ['karma:storybook']);
 
   grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
-
-  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
-  grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

@@ -3,6 +3,7 @@ th:
   data:
     script:
       category:
+        csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         hoc_category_name: ช่วงเวลาของ Code
         math_category_name: คำนวณ
       name:
@@ -14,7 +15,7 @@ th:
             ซึ่งพวกเขาสามารถแชร์ได้ แนะนำหลักสูตรนี้สำหรับเด็กชั้นอนุบาลจนถึงชั้นประถมหนึ่ง
           description_short: คอร์ส 1 is designed for early readers.
           description_audience: อายุ 4-6 ปี
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'ศิลปิน: ลูป (Loops)'
             'Artist: Sequence':
@@ -57,7 +58,7 @@ th:
             นักเรียนจะได้สร้างโปรแกรมในการแก้ปัญหาและพัฒนาเกมแบบโต้ตอบหรือเรื่องราวที่พวกเขาสามารถแบ่งปันได้
             แนะนำสำหรับเกรด 2-5
           description_short: คอร์ส 2 is designed for students who can read.
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'ศิลปิน: การดีบั๊ก'
             'Artist: Loops':
@@ -94,7 +95,7 @@ th:
           title: คอร์ส 3
           description_short: คอร์ส 3 is a follow-up to คอร์ส 2.
           description_audience: อายุ 8-18 ปี
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
             'Artist: Functions':
@@ -131,16 +132,16 @@ th:
           title: ศิลปิน
           description: Draw cool pictures and designs with the ศิลปิน!
           description_short: Draw cool pictures and designs with the ศิลปิน!
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
         hourofcode:
-          stages:
+          lessons:
             Maze:
               name: เขาวงกต
         frozen:
           description_short: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
         course4:
@@ -148,7 +149,7 @@ th:
           description_short: Students taking คอร์ส 4 should have already taken คอร์ส
             2 and 3.
           description_audience: อายุ 10-18 ปี
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
             Artist Binary:
@@ -173,7 +174,7 @@ th:
             คอร์ส 2 and 3.
           description_short: A brief rampup of concepts for students who have not
             taken คอร์ส 2 and 3.
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'ศิลปิน: Functions'
             'Artist: Loops':
@@ -193,7 +194,7 @@ th:
             'Maze: Sequence':
               name: 'เขาวงกต: การจัดลำดับ'
         usability:
-          stages:
+          lessons:
             For Loops:
               name: การวนรอบ
             Functions and Functions with Parameters:
@@ -203,13 +204,13 @@ th:
             Variables:
               name: ตัวแปร
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: เงื่อนไข
             'Eval: Strings and Images':
               name: สายอักขระและรูปภาพ
         infinity:
-          stages:
+          lessons:
             Infinity:
               name: ไม่จำกัด
         netsim:
@@ -222,7 +223,7 @@ th:
           description_short: This 20-hour คอร์ส covers the core computer science and
             programming concepts in คอร์ส 2-4.
           description_audience: อายุ 10-18 ปี
-          stages:
+          lessons:
             Abstraction:
               name: Abstraction
             Algorithms:
@@ -267,7 +268,7 @@ th:
           title: แก้ไข Code
           description: แก้ไข Code
           description_short: แก้ไข Code
-          stages:
+          lessons:
             The Artist:
               name: ศิลปิน
             The Maze:
@@ -276,45 +277,45 @@ th:
           title: อีเวนท์
           description: อีเวนท์
           description_short: เหตุการณ์
-          stages:
+          lessons:
             Bounce:
               name: กระเด้ง
         flappy:
           description_short: เขียนเกม Flappy ของตัวเองใน 10 นาที
         jigsaw:
           title: จิ๊กซอว์
-          stages:
+          lessons:
             Jigsaw:
               name: จิ๊กซอว์
         step:
           title: เป็นขั้นตอน
-          stages:
+          lessons:
             Step:
               name: เป็นขั้นตอน
         algPDmiami:
-          stages:
+          lessons:
             Strings and Images:
               name: สายอักขระและรูปภาพ
         algebraPD3:
-          stages:
+          lessons:
             Strings and Images:
               name: สายอักขระและรูปภาพ
         sciencePD2:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         cspunit2:
-          stages:
+          lessons:
             The Internet:
               name: อินเทอร์เน็ต
         algebraPD2a:
-          stages:
+          lessons:
             Free Play:
               name: เล่นฟรี
             Strings and Images:
               name: สายอักขระและรูปภาพ
         allthethings:
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
             Bee:
@@ -330,13 +331,13 @@ th:
             Minecraft:
               name: ไมน์คราฟท์
         algebraPD2b:
-          stages:
+          lessons:
             Defining Functions:
               name: กำหนดฟังก์ชัน
             Strings and Images:
               name: สายอักขระและรูปภาพ
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: แอ๊ปแล็บ
             Internet Simulator:
@@ -344,11 +345,11 @@ th:
             Welcome!:
               name: ยินดีต้อนรับ!
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         ECSPD2:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -360,23 +361,23 @@ th:
             Wrap-up:
               name: Wrap-up
         algebraPD2:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         sciencePD2b:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         science-PD2:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         sciencePD2b-iZone:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         ECSPD2-iZone:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -388,7 +389,7 @@ th:
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -400,7 +401,7 @@ th:
             Wrap-up:
               name: Wrap-up
         asUnplugged:
-          stages:
+          lessons:
             Building a Foundation:
               name: สร้างพื้นฐาน
             Getting Loopy:
@@ -416,19 +417,19 @@ th:
             The Big Event:
               name: อีเวนท์ใหญ่
         ECSPD3-Unit5:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         ECSPD3-Unit6:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         CSPPD3-Unit2:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         Special Fun:
@@ -436,86 +437,117 @@ th:
         SpecialSeries:
           description_audience: อายุ 10-18 ปี
         CSPPD3-Unit3:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         starwars:
           title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
-          stages:
+          lessons:
             Hour of Code 2015:
               name: ชั่วโมงของรหัส 2015
         starwarsblocks:
           title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
-          stages:
+          lessons:
             Hour of Code 2015:
               name: ชั่วโมงของรหัส 2015
         mc:
           title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
           description: ใช้บล็อกของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์ผจญภัยไปในโลกของไมน์คราฟท์นี้
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
-          stages:
+          lessons:
             Hour of Code 2015:
               name: ชั่วโมงของรหัส 2015
         CSPPD3-Unit3-pt2:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         CSPPD3-Unit4:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         CSPPD3-Unit5:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         csp1-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             The Internet:
               name: อินเทอร์เน็ต
+        csp2-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp3-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp4-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp5-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: ฟังก์ชัน
         CSF_Secret_Sample:
           description_audience: อายุ 8-18 ปี
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: เกมแล๊บ (Game Lab)
         csp-facilitators:
-          stages:
+          lessons:
             Introduction to Text Compression:
               name: การบีบอัดข้อความเบื้องต้น
         CSDU2-Draft:
-          stages:
+          lessons:
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
             Introduction to HTML:
               name: HTML เบื้องต้น
         MikeTest:
-          stages:
+          lessons:
             Artist Functions:
               name: ฟังก์ชั่น ศิลปิน
         artistExemplar:
           description_audience: อายุ 8-18 ปี
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'ผึ้ง: เงื่อนไข'
         gradeKinder:
-          stages:
+          lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
             Events:
-              name: อีเวนท์
+              name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':
               name: 'จิ๊กซอว์: เรียนรู้วิธีการลากและวาง'
             Loops:
@@ -525,15 +557,15 @@ th:
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
         grade1:
-          stages:
+          lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
             Events:
-              name: อีเวนท์
+              name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':
               name: 'จิ๊กซอว์: เรียนรู้วิธีการลากและวาง'
             Loops:
@@ -545,7 +577,7 @@ th:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'ศิลปิน: ลูปแบบเงื่อนไข (For Loops)'
             'Artist: Functions with Parameters':
@@ -553,13 +585,13 @@ th:
             'Artist: Variables':
               name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: 'ผึ้ง: ลูป(For Loops)'
+              name: 'ผึ้ง: ลูป (For Loops)'
             'Bee: Functions with Parameters':
               name: 'ผึ้ง: ฟังก์ชั่นที่มากับพารามิเตอร์'
             Digital Citizenship:
               name: พลเมืองดิจิทัล
         ecs-unit1:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -571,15 +603,15 @@ th:
             Wrap-up:
               name: Wrap-up
         ecs-unit5:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         ecs-unit6:
-          stages:
+          lessons:
             Share out and Submit:
               name: แชร์กันและส่งคำตอบ
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             Bee Debugging:
@@ -590,8 +622,19 @@ th:
               name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             'Maze: Nested Loops':
               name: 'เขาวงกต: ลูปซ้อนลูป (Nested Loops)'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         csd3-2017:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Functions:
               name: ฟังก์ชัน
             Variables:
@@ -599,7 +642,7 @@ th:
             Conditionals:
               name: เงื่อนไข
         grade2:
-          stages:
+          lessons:
             Getting Loopy with Puppy:
               name: มาวนลูปกันกับลูกสุนัข
             'Real-life Algorithms: Paper Planes':
@@ -607,11 +650,11 @@ th:
             The Big Event:
               name: อีเวนท์ใหญ่
         k5concepts:
-          stages:
+          lessons:
             Conditionals:
               name: เงื่อนไข
             Events:
-              name: อีเวนท์
+              name: เหตุการณ์
             For Loops:
               name: การวนรอบ
             Functions:
@@ -625,28 +668,44 @@ th:
             Variables:
               name: ตัวแปร
         algebrapdnext:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         basketball:
-          stages:
+          lessons:
             Bounce:
               name: กระเด้ง
         csd2-2017:
-          stages:
+          lessons:
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
             Lists:
               name: รายการ
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         minecraft:
           title: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
           description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
-          stages:
+          lessons:
             Minecraft Hour of Code Designer:
               name: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
         coursea-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
             Loops in Collector:
@@ -660,7 +719,7 @@ th:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
         courseb-draft:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             Sequence & Algorithms:
@@ -674,7 +733,7 @@ th:
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
             Programming in Artist:
@@ -690,7 +749,7 @@ th:
             Loops in Harvester:
               name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
         coursed-draft:
-          stages:
+          lessons:
             Nested Loops in Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops in Artist:
@@ -718,7 +777,7 @@ th:
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
         coursee-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Internet:
@@ -728,7 +787,7 @@ th:
             Conditionals:
               name: เงื่อนไข
         coursef-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             For Loop Fun:
@@ -738,27 +797,43 @@ th:
             Introduction:
               name: บทเกริ่นนำ
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         sciencepd4:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
         sciencepd5:
-          stages:
+          lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csppostap-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: รายการ
             For Loops:
@@ -768,15 +843,15 @@ th:
             Functions with Parameters:
               name: ฟังก์ชันกับพารามิเตอร์
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
             Conditionals:
@@ -784,7 +859,7 @@ th:
             'Real Life Algorithms: Dice Race':
               name: 'อัลกอริทึมในชีวิตจริง: การแข่งลูกเต๋า'
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: รายการ
             For Loops:
@@ -794,7 +869,7 @@ th:
             Functions with Parameters_:
               name: ฟังก์ชันกับพารามิเตอร์
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -802,17 +877,17 @@ th:
             Functions:
               name: ฟังก์ชัน
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: ฟังก์ชัน
         csd2-draft:
-          stages:
+          lessons:
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
             Lists:
               name: รายการ
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -822,15 +897,19 @@ th:
             'null':
               name: ไม่ใช่
         coursef-ramp:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csd2-old:
-          stages:
+          lessons:
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
         artist-and-bb8:
-          stages:
+          lessons:
             F5 Minecraft:
               name: F5 ไมน์คราฟท์
             Programming with BB-8:
@@ -838,7 +917,11 @@ th:
             Bounce:
               name: กระเด้ง
         coursea-2017:
-          stages:
+          title: คอร์ส A
+          assignment_family_title: คอร์ส A
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
               description_teacher: 'บทเรียนนี้จะช่วยนักเรียนเรียนรู้ขั้นตอนของการตรวจแก้จุดบกพร่องหรือการดีบั๊ก
@@ -853,9 +936,9 @@ th:
                 ก็สามารถใช้เวลาให้เต็มที่ได้เลย"
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
-              description_teacher: "ในบทเรียนนี้นักเรียนจะนำเอาแนวคิดของอัลกอริทึมให้เกี่ยวพันกับกิจกรรมที่เกี่ยวข้องชีวิตจริงในแต่ละวันด้วยการปลูกเมล็ดพันธุ์พีชจริงๆ
+              description_teacher: "ในบทเรียนนี้นักเรียนจะนำเอาแนวคิดของอัลกอริทึมมาเกี่ยวพันกับกิจกรรมที่เกี่ยวข้องชีวิตจริงในแต่ละวันด้วยการปลูกเมล็ดพันธุ์พีชจริงๆ
                 ลงไปในดิน เป้าหมายที่นี่คือการเริ่มต้นการสร้างทักษะในการแปลงสถานการณ์จริงบนโลกให้เป็นเรื่องราวออนไลน์
-                รวมทั้งสามารถทำในทางกลับกันได้อีกด้วย \r\n"
+                รวมทั้งสามารถทำได้ในทางกลับกันอีกด้วย \r\n"
             Learn to Drag and Drop:
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
@@ -895,12 +978,12 @@ th:
               name: อีเวนต์กับเพลย์แลป
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
-          title: คอร์ส A
-          assignment_family_title: คอร์ส A
+        courseb-2017:
+          title: คอร์ส B
+          assignment_family_title: คอร์ส B
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-        courseb-2017:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
@@ -913,12 +996,10 @@ th:
               name: อีเวนต์กับเพลย์แลป
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
-          title: คอร์ส B
-          assignment_family_title: คอร์ส B
-          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
-            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         coursec-2017:
-          stages:
+          title: คอร์ส C
+          assignment_family_title: คอร์ส C
+          lessons:
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             'Real-life Algorithms: Paper Planes':
@@ -933,10 +1014,10 @@ th:
               name: อีเวนต์กับเพลย์แลป
             Loops in Artist:
               name: ลูปกับศิลปิน
-          title: คอร์ส C
-          assignment_family_title: คอร์ส C
         coursed-2017:
-          stages:
+          title: คอร์ส D
+          assignment_family_title: คอร์ส D
+          lessons:
             Nested Loops:
               name: ลูปซ้อนลูป
             Nested Loops in Artist:
@@ -956,10 +1037,10 @@ th:
               name: ลูปซ้อนลูป ในเกม Frozen
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
-          title: คอร์ส D
-          assignment_family_title: คอร์ส D
         coursee-2017:
-          stages:
+          title: คอร์ส E
+          assignment_family_title: คอร์ส E
+          lessons:
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
@@ -980,10 +1061,10 @@ th:
               name: ลูปซ้อนลูป
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
-          title: คอร์ส E
-          assignment_family_title: คอร์ส E
         coursef-2017:
-          stages:
+          title: คอร์ส F
+          assignment_family_title: คอร์ส F
+          lessons:
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
             Sequence in Maze:
@@ -998,10 +1079,58 @@ th:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
-          title: คอร์ส F
-          assignment_family_title: คอร์ส F
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         express-2017:
-          stages:
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
             Loops in Artist:
@@ -1022,20 +1151,16 @@ th:
               name: ลูป For ในเรื่องผึ้ง
             Nested Loops Project in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
-            'Common Sense Education: Digital Citizenship':
-              name: 'พลเมืองดิจิทัล: การฝึกหัดเพื่อเป็นพลเมืองดิจิทัล'
-            'Common Sense Education: Screen Out the Mean':
-              name: 'พลเมืองดิจิทัล: กลั่นกรองค่าเฉลี่ย'
             Building a Foundation:
               name: สร้างพื้นฐาน
             Nested Loops:
               name: ลูปซ้อนลูป
             Conditionals & Loops in Harvester:
               name: เงื่อนไขและลูปกับเรื่องเกษตรกร
+        pre-express-2017:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-        pre-express-2017:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
@@ -1048,14 +1173,16 @@ th:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
-          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
-            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: ขอบคุณ
+        csp3-research-mxghyt:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         e-f-ramp:
-          stages:
+          lessons:
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
@@ -1077,7 +1204,7 @@ th:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
         new-d:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
             Nested Loops:
@@ -1105,7 +1232,7 @@ th:
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         new-express:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
             Debugging in Collector:
@@ -1121,13 +1248,13 @@ th:
             Nested Loops:
               name: ลูปซ้อนลูป
         new-stages-sept-2017:
-          stages:
+          lessons:
             Loops in Artist:
               name: ลูปกับศิลปิน
             Sequences with Scrat:
               name: การจัดลำดับก่อนหลังกับ Scrat
         new-e:
-          stages:
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1145,7 +1272,7 @@ th:
             Internet:
               name: อินเทอร์เน็ต
         new-f:
-          stages:
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1163,14 +1290,22 @@ th:
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
           title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
           description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
             มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
+          lessons:
+            Minecraft Hour of Code:
+              name: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         course-e-2018:
-          stages:
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1192,7 +1327,7 @@ th:
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
         course-f-2018:
-          stages:
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1212,13 +1347,20 @@ th:
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: รายการ
             For Loops:
               name: การวนรอบ
         csd3-1819draft:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -1226,7 +1368,14 @@ th:
             Functions:
               name: ฟังก์ชัน
         csd3-2018:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -1234,7 +1383,10 @@ th:
             Functions:
               name: ฟังก์ชัน
         csd2-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Lists:
               name: รายการ
             Clean Code and Debugging:
@@ -1243,7 +1395,7 @@ th:
           assignment_family_title: คอร์ส A
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: บั๊กที่รอดหูรอดตาไป
               description_teacher: 'บทเรียนนี้จะช่วยนักเรียนเรียนรู้ขั้นตอนของการตรวจแก้จุดบกพร่องหรือการดีบั๊ก
@@ -1314,7 +1466,7 @@ th:
         express-2018:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
             Introduction:
@@ -1365,7 +1517,7 @@ th:
           assignment_family_title: คอร์ส B
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
@@ -1381,7 +1533,7 @@ th:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops)
             ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว
             ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
             Introduction:
@@ -1420,7 +1572,7 @@ th:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
         coursec-2018:
           assignment_family_title: คอร์ส C
-          stages:
+          lessons:
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Maze:
@@ -1438,12 +1590,15 @@ th:
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
         csd6-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Functions with Parameters:
               name: ฟังก์ชันกับพารามิเตอร์
         coursee-2018:
           assignment_family_title: คอร์ส E
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: เพื่อนหุ่นยนต์
             Sequence in Maze:
@@ -1472,11 +1627,11 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
         coursef-2018:
           assignment_family_title: คอร์ส F
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: เพื่อนหุ่นยนต์
             Sequence in Maze:
-              name: การเขียนโค้ดด้วยการใช้หมายเหตุ
+              name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
@@ -1498,13 +1653,120 @@ th:
             Functions in Minecraft:
               name: ฟังก์ชั่นกับไมน์คราฟท์
         csp1-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             The Internet:
               name: อินเทอร์เน็ต
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp3-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         pre-express-2018:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: บั๊กที่รอดหูรอดตาไป
             'Persistence & Frustration: Stevie and the Marbles':
@@ -1521,46 +1783,69 @@ th:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: สตีวี่และโครงการใหญ่
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
         dance:
-          stages:
-            Dance Party:
-              name: Dance Party
           title: งานเต้นรำ
           description_short: ฟีเจอริ่งกับ Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara และอีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
+          lessons:
+            Dance Party:
+              name: Dance Party
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: ศิลปิน
         aquatic:
-          stages:
-            Aquatic:
-              name: สัตว์น้ำ
           title: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
           description_short: ใช้ความคิดสร้างสรรค์และทักษะต่างๆ ในการแก้ปัญหาเพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
           description: ไมน์คราฟท์กลับมาพร้อมกับกิจกรรมใหม่เอี่ยม! ใช้ความคิดสร้างสรรค์และทักษะการแก้ปัญหาของคุณ
             เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด
+          lessons:
+            Aquatic:
+              name: สัตว์น้ำ
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: Dance Party
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: Dance Party
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
         dance-extras:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+            csf_internet:
+              display_name: อินเทอร์เน็ต
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1588,16 +1873,25 @@ th:
             Internet:
               name: อินเทอร์เน็ต
         dance-low:
-          stages:
-            Dance Party:
-              name: Dance Party
           description_short: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ
             ของคุณ! (เวอร์ชั่นนี้สำหรับการเชื่อมต่อสัญญาณที่ไม่รวดเร็ว)
+          lessons:
+            Dance Party:
+              name: Dance Party
         coursed-2019:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops)
             ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว
             ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: เหตุการณ์
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
             Relay Programming:
@@ -1630,7 +1924,14 @@ th:
             Dance Party:
               name: Dance Party
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_nested_loops:
+              display_name: ลูปซ้อนลูป
+            csf_functions:
+              display_name: ฟังก์ชัน
+          lessons:
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
@@ -1660,7 +1961,20 @@ th:
         express-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_warmup:
+              display_name: อุ่นเครื่อง
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_functions:
+              display_name: ฟังก์ชัน
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+          lessons:
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Relay Programming:
@@ -1695,15 +2009,29 @@ th:
               name: อินเทอร์เน็ต
             Dance Party:
               name: Dance Party
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+          lessons:
             'null':
               name: ไม่ใช่
         dance-extras-gallery:
           title: สร้างโค้ดเต้นรำกันต่อไป
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursec-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Debugging in Maze:
@@ -1720,12 +2048,23 @@ th:
               name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         gamelab:
           title: เกมแล๊บ (Game Lab)
         coursea-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             'Programming: Happy Maps':
               name: แผนที่แห่งความสุข
               description_teacher: "สิ่งที่เชื่อมโยงอัลกอริธึมไปยังการเขียนโปรแกรมนั้น
@@ -1780,7 +2119,14 @@ th:
         courseb-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Move It, Move It:
               name: ขยับหน่อยสิ ขยับหน่อย
             Programming with Rey and BB-8:
@@ -1789,8 +2135,6 @@ th:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Loops in Collector:
               name: ลูปไปกับลอเรล
-            Loops in Artist:
-              name: ลูปกับศิลปิน
             'Events: The Big Event':
               description_teacher: อีเวนท์เป็นวิธีที่ยอดเยี่ยมในการเพิ่มความหลากหลายให้กับอัลกอริทึมที่เขียนไว้ล่วงหน้า
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
@@ -1811,7 +2155,12 @@ th:
         pre-express-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             Move It, Move It:
@@ -1831,39 +2180,108 @@ th:
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
         removed19:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
         csd2-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Lists:
               name: รายการ
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
         csd3-2019:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
               name: เงื่อนไข
             Functions:
               name: ฟังก์ชัน
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csd6-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Functions with Parameters:
               name: ฟังก์ชันกับพารามิเตอร์
         csp4-pilot:
-          stages:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+            required:
+              display_name: ภาพรวม
+          lessons:
             Surveys:
               name: แบบสำรวจ
         csp1-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             The Internet:
               name: อินเทอร์เน็ต
+        csp2-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp3-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+            required:
+              display_name: ภาพรวม
         time4csdemo:
-          stages:
+          lessons:
             Conditionals with Cards:
               name: เงื่อนไข
             Sequence in Maze:
@@ -1882,18 +2300,136 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: รายการ
+            csp_loops:
+              display_name: ลูป
+            csp_project:
+              display_name: โปรเจกต์
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: การเขียนกระดาษกราฟ
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: รายการ
+            csp_loops:
+              display_name: ลูป
+            csp_project:
+              display_name: โปรเจกต์
+            required:
+              display_name: ภาพรวม
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csd2-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Lists:
               name: รายการ
             Clean Code and Debugging:
               name: โค้ดที่หมดจดและการดีบั๊ก
         csd3-pilot:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -1901,19 +2437,71 @@ th:
             Functions:
               name: ฟังก์ชัน
         csp3-pilot:
-          stages:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+          lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
         csl-vn:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         peru-2019:
-          stages:
+          lessons:
             Introduction:
               name: บทเกริ่นนำ
             Debugging in Collector:
@@ -1924,13 +2512,17 @@ th:
               name: ลูปซ้อนลูป
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
         dance-2019:
-          stages:
+          description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
+          lessons:
             Dance Party:
               name: Dance Party
-          description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
             Loops:
@@ -1947,12 +2539,31 @@ th:
               name: การวนรอบ
         dance-extras-2019:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: เงื่อนไข
         time4cs-control-unit-2:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_nested_loops:
+              display_name: ลูปซ้อนลูป
+            csf_functions:
+              display_name: ฟังก์ชัน
+          lessons:
             Conditionals with Cards:
               name: เงื่อนไข
             Nested Loops in Bee:
@@ -1966,7 +2577,7 @@ th:
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
         time4cs-experiment-unit-2:
-          stages:
+          lessons:
             Nested Loops in Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Fancy Shapes using Nested Loops:
@@ -1978,19 +2589,85 @@ th:
             Functions with Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
         time4cs-control-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_events:
+              display_name: เหตุการณ์
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+          lessons:
             Conditionals:
               name: เงื่อนไข
         time4cs-experiment-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_events:
+              display_name: เหตุการณ์
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+          lessons:
             Conditionals:
               name: เงื่อนไข
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: ภาพรวม
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: รายการ
+            csp_loops:
+              display_name: ลูป
+            csp_project:
+              display_name: โปรเจกต์
+        csd2-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csd6-2020:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Functions with Parameters:
               name: ฟังก์ชันกับพารามิเตอร์
         csd3-2020:
-          stages:
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+          lessons:
             Variables:
               name: ตัวแปร
             Conditionals:
@@ -2002,7 +2679,14 @@ th:
         coursea-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Going Places Safely:
               name: ไปที่ไหนให้ปลอดภัย
               description_teacher: ด้วยความร่วมมือกับ [r common-sense-media] บทเรียนนี้จะช่วยให้นักเรียนได้เรียนรู้ว่าเว็บไซต์จำนวนมากนั้นมีการขอข้อมูลที่เป็นส่วนตัว
@@ -2047,7 +2731,14 @@ th:
         courseb-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Move It, Move It:
               name: ขยับหน่อยสิ ขยับหน่อย
             Sequencing in Maze:
@@ -2070,7 +2761,14 @@ th:
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
                 นั่นคือการที่อีเวนท์มีไว้ใช้เพื่อทำอะไร
         coursec-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Debugging in Maze:
@@ -2085,7 +2783,16 @@ th:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops)
             ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว
             ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: เหตุการณ์
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
             Relay Programming:
@@ -2114,7 +2821,14 @@ th:
             Dance Party:
               name: Dance Party
         coursee-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_nested_loops:
+              display_name: ลูปซ้อนลูป
+            csf_functions:
+              display_name: ฟังก์ชัน
+          lessons:
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops in Artist:
@@ -2126,7 +2840,14 @@ th:
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
         coursef-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+          lessons:
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Nested Loops in the Maze:
@@ -2140,7 +2861,20 @@ th:
         express-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_warmup:
+              display_name: อุ่นเครื่อง
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข
+            csf_functions:
+              display_name: ฟังก์ชัน
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+          lessons:
             Dance Party:
               name: Dance Party
             Debugging in Maze:
@@ -2163,10 +2897,41 @@ th:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming with Angry Birds:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              name: ลูป For ในเรื่องผึ้ง
         pre-express-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+          lessons:
+            Learn to Drag and Drop:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
+                มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
+                แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
+            Sequencing with Scrat:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
+                มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
+                แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Spelling Bee:
@@ -2177,35 +2942,92 @@ th:
               name: ใช้ลูปกับนักสะสม
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+              description_teacher: กลับมาในเรื่องที่เกี่ยวกับลูป ผู้เรียนจะได้เรียนรู้ที่จะวาดภาพโดยการทำลูปกับลำดับขั้นตอนของคำสั่งอย่างง่ายๆ
+                โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ
+                ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Tell a Story in Play Lab:
+              description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
+                ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            Loops with Laurel:
+              name: ลูปไปกับลอเรล
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csp3-2020:
-          stages:
+          lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
-        csd3-virtual:
-          stages:
-            Variables:
-              name: ตัวแปร
-            Conditionals:
-              name: เงื่อนไข
-            Functions:
-              name: ฟังก์ชัน
         jess-test-script:
-          stages:
+          lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
         csp5-virtual:
-          stages:
+          lessons:
             Variables:
               name: ตัวแปร
         virtual-holding-place:
-          stages:
+          lesson_groups:
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+          lessons:
             Functions:
               name: ฟังก์ชัน
         code-break:
-          stages:
+          lessons:
             Algorithms:
               name: อัลกอริทึม
             Events:
               name: เหตุการณ์
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: ลูป
+            Events:
+              name: เหตุการณ์
+            Conditionals:
+              name: เงื่อนไข
+            Functions:
+              name: ฟังก์ชัน
+            Variables:
+              name: ตัวแปร
+            For Loops:
+              name: การวนรอบ
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: ตัวแปร
+            Text:
+              name: ข้อความ
+            Conditionals:
+              name: เงื่อนไข
+            Functions:
+              name: ฟังก์ชัน
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: บทเรียน
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: คอร์ส A
+            Course B:
+              name: คอร์ส B

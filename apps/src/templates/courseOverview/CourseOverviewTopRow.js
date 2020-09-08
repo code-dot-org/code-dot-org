@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import {stringForType, resourceShape} from './resourceType';
+import {resourceShape} from './resourceType';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   main: {
     marginBottom: 10,
     position: 'relative'
+  },
+  dropdown: {
+    display: 'inline-block'
   }
 };
 
@@ -25,17 +28,9 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main}>
-        {resources.map(({type, link}) => (
-          <Button
-            __useDeprecatedTag
-            key={type}
-            style={{marginRight: 10}}
-            text={stringForType[type]}
-            href={link}
-            target="blank"
-            color={Button.ButtonColor.blue}
-          />
-        ))}
+        {resources.length > 0 && (
+          <TeacherResourcesDropdown resources={resources} unitGroupId={id} />
+        )}
         <SectionAssigner
           sections={sectionsForDropdown}
           showAssignButton={showAssignButton}

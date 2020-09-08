@@ -172,6 +172,9 @@ sk:
     email_preference_yes: "Áno"
     email_preference_no: "Nie"
     email_preference_required: "Musíte zadať emailové preferencie."
+    parent_account_checkbox: "Som rodič/právny zástupca, ktorý sa prihlasuje v mene svojho dieťaťa."
+    parent_account_email_progress_permission: "Môžeme vám poslať e-mail s príležitostnými aktualizáciami o pokroku a projektoch vášho dieťaťa a aktualizáciami o kurze a informatike? [(Pozrite si naše pravidlá ochrany osobných údajov)]%{privacy_policy_url}"
+    parent_account_email_label: "E-mail rodiča/zákonného zástupcu"
   school_info:
     title: 'Informácie o škole (voliteľné)'
     school_country: 'Krajina'
@@ -336,6 +339,8 @@ sk:
       help_us: "Pomôžte nám"
       teach: "Vyučujte"
       about: "O nás"
+      legal_privacy: "Zásady ochrany súkromia"
+      legal_tos: "Podmienky používania služby"
     user:
       classroom: 'Domovská stránka učiteľa'
       district_dashboard: 'Prehľad pre školský okres'
@@ -378,6 +383,7 @@ sk:
       playlab_k1: 'Play Lab (predškolský vek)'
       scratch: 'Scratch'
       sports: 'Športy'
+      spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bloky)'
       starwarsblocks_hour: 'Star Wars (Bloky)'
@@ -457,8 +463,11 @@ sk:
     auth_option_saved: "Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom %{email}."
     auth_option_saved_no_email: "Úspešne si si prepojil/a svoj %{provider} účet."
     update_email: "Aktualizovať"
+    for_parents_and_guardians: "Pre rodičov a zákonných zástupcov"
+    link_a_parent_email: "Prepojte tento účet s e-mailovou adresou rodiča/zákonného zástupcu, aby ste boli informovaní o pokroku a projektoch vášho dieťaťa. Túto e-mailovú adresu budete môcť použiť aj na obnovenie hesla."
     parent_guardian_email_label: "Email rodiča/zákonného zástupcu"
     none: "Žiadne"
+    only_one_parent_email_supported_warning: "Poznámka: V súčasnosti sme schopní na jednom študentskom účte podporiť len jednu e-mailovú adresu rodiča/zákonného zástupcu."
     encrypted: "šifrované"
   user_level:
     completed: 'Dokončené'
@@ -605,7 +614,7 @@ sk:
   upsell:
     applab:
       title: 'App Lab'
-      body: "App Lab je programovacie prostredie, kde si môžeš vytvoriť jednoduché aplikácie. Navrhni aplikáciu, naprogramuj ju pomocou blokov alebo JavaScriptu tak aby to fungovala, potom zdieľaj aplikáciu v priebehu niekoľkých sekúnd."
+      body: "App Lab je programovacie prostredie, v ktorom si môžeš vytvoriť jednoduché aplikácie. Navrhni vlastnú appku, naprogramuj ju pomocou blokov alebo JavaScriptu a zdieľaj ju v priebehu niekoľkých sekúnd."
       body_short: "Navrhni aplikáciu, naprogramuj ju pomocou blokov alebo JavaScriptu tak aby to fungovala, potom zdieľaj aplikáciu v priebehu niekoľkých sekúnd."
       audience: 'Vek 13+'
       cta: 'Nauč sa ako'
@@ -678,20 +687,6 @@ sk:
       body: "Študenti môžu použitím týchto digitálnych nástrojovpreskúmať koncepty z našich kurzov Základov informatiky priamo na vlas tnej koži. Použite widgety podľa vlastnej vôle alebo vytvorte lekciu zameranú na konkrétny koncept pre Vašu triedu."
       audience: "Vek 14+"
       cta: "Nauč sa ako"
-  gallery:
-    students_drew_these_with_code: "Študenti nakreslili tieto obrázky pomocou kódu!"
-    students_made_these_with_code: "Študenti vytvorili tieto výtvory pomocou kódu!"
-    picture_count: "V posledných <b>%{days}</b> dňoch, študenti nakreslili <b>%{count}</b> obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky a uvidíte každý program v akcii."
-    activity_count: "V posledných <b>%{days}</b> dňoch, študenti vytvorili<b>%{count}</b> appiek a obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky a uvidíte každý program v akcii."
-    want_to_make_your_own: "Chceš vytvoriť svoj vlastný?"
-    how_to_save: "Na konci všetkých návodov klikni na \"Ukončiť\" a \"Uložiť\", pre uloženie svojej práce do galérie."
-    more: "Viac &rarr;"
-    caption_by_name_age: "podľa %{name}, vek %{age}"
-    caption_time_ago: "%{time_ago} v minulosti"
-    header: "Galéria"
-    header_playlab: "Príbehy a hry"
-    header_artist: "Code umenie"
-    report_abuse: "Nahlásenie zneužitia"
   landing:
     prerelease_tutorial: "Tento tutoriál je v **beta** verzii a je predmetom revízie a vylepšení, ktoré sú vykonané na základe pripomienok."
     report_bug: "Nahlásiť chybu"
@@ -702,7 +697,7 @@ sk:
     documentation: "Dokumentácia"
     tutorials: "Návody"
   free_response:
-    placeholder: "Zadajte vašu odpoveď"
+    placeholder: "Sem napíš odpoveď"
   multi:
     wrong_title: "Nesprávna odpoveď"
     wrong_body: "Zadaná odpoveď je nesprávna.  Prosím skúste to znova!"
@@ -718,8 +713,8 @@ sk:
     wrong_body: "Ďakujeme za odoslanie odpovedí."
     correct_title: "Ďakujem"
     correct_body: "Ďakujeme za odoslanie odpovedí."
-    hide_survey_last_answer: "Tento prieskum je anonymný. Pre súhrnné informácie o výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu budú zobrazené pri účasti minimálne piatich študentov."
-    survey_submission_thankyou: "Ďakujeme vám za vyplnenie ankety! Formulár bol vymazaný, aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede za celú triedu, avšak bez konkrétnych mien."
+    hide_survey_last_answer: "Tento dotazník je anonymný.  Výsledky sú dostupné v prehľade triedy, na záložke \"Hodnotenia/dotazníky\". Výsledky dotazníku budú zobrazené pri účasti minimálne piatich študentov."
+    survey_submission_thankyou: "Ďakujeme za vyplnenie ankety! Formulár bol vymazaný, aby sme mohli odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede za celú triedu, avšak bez konkrétnych mien."
   level_group-submittable:
     wrong_title: "Ďakujem"
     wrong_body: "Ďakujeme za odoslanie odpovedí."
@@ -728,9 +723,9 @@ sk:
     unsubmit-title: "Zrušiť zaslané odpovede"
     unsubmit-body: "Zrušenie zaslaných odpovedí vynuluje čas a dátum odoslania.  Si si istý?"
     submit-incomplete-title: "Odoslať odpovede"
-    submit-incomplete-body: "Niektoré otázky si nechal nevyplnené. Po odoslaní svoje odpovede už nemôžeš upravovať. Si si istý?"
+    submit-incomplete-body: "Niektoré otázky si zostali nevyplnené. Po odoslaní svoje odpovede už nemôžeš upravovať. Si si istý/-á?"
     submit-complete-title: "Odoslať odpovede"
-    submit-complete-body: "Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý?"
+    submit-complete-body: "Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý/á?"
   match:
     wrong_title: "Nesprávne riešenie"
     wrong_body: "Zadané riešenie nie je správne.  Prosím skúste to znova!"
@@ -745,11 +740,13 @@ sk:
     baddomainname: "Jedna alebo viac doménových položiek má nesprávny názov."
     baddomaintype: "Jedna alebo viac doménových položiek má nesprávny typ alebo sú v nesprávnom poradí."
   text_match:
-    placeholder: "Zadajte vašu odpoveď"
+    placeholder: "Sem napíš odpoveď"
     open_response_title: "Vďaka"
     open_response_body: "Ďakujeme za Vašu reakciu!"
     correct_title: "Správne"
     correct_body: "To je správna odpoveď."
+  lesson_extras:
+    bonus_level: "Tekvica označuje miesto, kde by si mal :otočiť sa vpravo\". V opačnom prípade pokračuj ďalej, ale nezabudni pozbierať všetok šalát alebo kukuricu.\n*Každá skrytá plodina má iba jednu kukuricu alebo šalát.*"
   dialog:
     ok: "ok"
     startover_title: "Naozaj chceš začať odznova?"
@@ -809,7 +806,7 @@ sk:
     completed_too_many_blocks: dokončené, príliš veľa blokov
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
-    assessment: ocenenie
+    assessment: hodnotenie
     submitted: predložené
   studio:
     courses_working_on: "Kurzy na ktorých pracuješ"
@@ -824,8 +821,8 @@ sk:
     project_gallery: "Projekty"
     publish: "Publikovať"
     unpublish: "Zrušiť publikovanie"
-    share_title: Zdieľajte svoj projekt
-    share_copy_link: "Skopírujte odkaz:"
+    share_title: Zdieľaj svoj projekt
+    share_copy_link: "Skopíruj a nazdieľaj tento odkaz:"
     share_embed_description: "Môžete vložiť kód do HTML stránky pre zobrazenie projektu na webovej stránke."
     share_u13_warning: "Opýtaj sa učiteľa predtým, ako niečo zdieľaš. Zdieľaj len v rámci školy."
     embed: "Vložiť"
@@ -876,89 +873,7 @@ sk:
     instructor_feedback: 'Spätná väzba inštruktora'
     peer_feedback: 'Spätná väzba spoluriešiteľa'
     outdated: 'Táto spätná väzba bola pridaná k predchádzajúcej verzii'
-  flex_category:
-    required: 'Prehľad'
-    content: 'Obsah'
-    practice: 'Učiteľské cvičenia'
     peer_review: 'Recenzia'
-    ramp_up: 'Príprava'
-    end_of_course_project: 'Záverečný projekt'
-    main_course: 'Hlavný kurz'
-    extra_course_content: 'Doplnkové lekcie'
-    csf_e_1: 'Príprava na Kurz E (voliteľné)'
-    csf_e_2: 'Obsah kurzu E'
-    csf_f_1: 'Príprava na Kurz F (voliteľné)'
-    csf_f_2: 'Obsah kurzu F'
-    csf_digcit: 'Digitálne občianstvo'
-    csf_jigsaw: 'Skladačka'
-    csf_sequencing: 'Postupnosť'
-    csf_loops: 'Cykly'
-    csf_events: 'Udalosti'
-    csf_online_safety: 'Bezpečnosť na internete'
-    csf_binary: 'Binárny'
-    csf_conditionals: 'Podmienky'
-    csf_sprites: 'Postavy'
-    csf_nested_loops: 'Vnorené cykly'
-    csf_functions: 'Funkcie'
-    csf_variables: 'Premenné'
-    csf_for_loops: 'Cykly "For"'
-    csf_internet: 'Internet'
-    csf_impacts: 'Vplyv Informatiky'
-    csf_warmup: 'Úvodná aktivita'
-    csd1_1: 'Kapitola 1: Proces riešenia problémov'
-    csd1_2: 'Kapitola 2: Počítače a riešenie problémov'
-    csd2_1: 'Kapitola 1: Obsah webu a HTML'
-    csd2_2: 'Kapitola 2: Dizajn a CSS'
-    csd3_1: 'Kapitola 1: Obrázky a animácie'
-    csd3_2: 'Kapitola 2: Tvorba hier'
-    csd4_1: 'Kapitola 1: Užívateľsky orientovaný dizajn'
-    csd4_2: 'Kapitola 2: Prototypovanie aplikácií'
-    csd5_1: 'Kapitola 1: Prezentácia informácií'
-    csd5_2: 'Kapitola 2: Riešenie problémov s dátami'
-    csd6_1: 'Kapitola 1: Programovanie s hardvérom'
-    csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
-    csd_survey: 'Hodnotenie kurzu'
-    csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
-    csp1_2: 'Kapitola 2: Vymýšľanie internetu'
-    csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
-    csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
-    csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'
-    csp4_1: 'Kapitola 1: Svet Big Data a šifrovania'
-    csp5_1: 'Kapitola 1: Udalosťami riadené programovanie'
-    csp5_2: 'Kapitola 2: Programovanie s dátovými štruktúrami'
-    cspSurvey: 'Anketa'
-    cspAssessment: 'Hodnotenie kapitoly'
-    csp_ap_1: 'Kapitola 1: AP technické nastavenie'
-    csp_ap_2: 'Kapitola 2: AP zoznám sa s výkonovými úlohami'
-    csp_ap_3: 'Kapitola 3: AP vytvor výkonové úlohy'
-    csp_postap_1: 'Kapitola 1: Manipulácia a vizualizácia dát'
-    csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
-    csp2_1_2018: 'Lekcia 2: Digitálne informácie'
-    csp3_1_2018: 'Kapitola 3: Úvod do programovania'
-    csp4_1_2018: 'Kurz 4: "Veľké" dáta a Súkromie'
-    csp_variables: 'Premenné'
-    csp_conditionals: 'Podmienky'
-    csp_functions: 'Funkcie'
-    csp_project: 'Projekt'
-    csp_lists: 'Zoznamy'
-    csp_loops: 'Cykly'
-    csp_traversals: 'Prechody'
-    csp_libraries: 'Knižnice'
-    csp_parameters_return_values: 'Parametre a Hodnoty návratnosti'
-    csp_unit1_2020: 'Lekcia 1: Digitálne informácie'
-    dlp: 'Výzvy na zhodnotenie'
-    time4cs_c1: 'Everglades a jeho ekosystémy'
-    time4cs_c2: 'Potravové reťazce v Everglades'
-    time4cs_c3: 'Život v Everglades'
-    time4cs_c4: 'Invazívne vplyvy na Everglades'
-    time4cs_c5: 'Občania ovplyvňujú zmeny v Everglades'
-    time4cs_c6: 'Podmienky (posúdenie)'
-    k5_getting_started: 'Začíname'
-    k5_csf_intro: 'Spoznať základné kurzy CS'
-    k5_coding_concepts: 'Programovacie koncepty a učiteľské taktiky'
-    k5_next_steps: 'Ďalšie kroky'
-    k5_basic_concepts: 'Základné programovacie koncepty a učiteľské taktiky'
-    k5_diving_deeper: 'Ponárame sa hlbšie: Kurzy E a F'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.
@@ -1039,6 +954,8 @@ sk:
       school_name: 'Názov školy'
       school_city: 'Mesto'
       school_country: 'Krajina'
+      colombian_school_city: 'Mesto'
+      colombian_school_name: 'Názov školy'
       ages: 'Ktoré ročníky vyučujute tento rok?'
       subjects: 'Ktoré predmety vyučujute tento rok?'
       resources: 'Ktoré z nasledovných zdrojov používate pri výučbe informatiky?'
@@ -1144,3 +1061,7 @@ sk:
       login_with_google: 'Prihláste sa do aplikácie Maker s Googlom'
       enter_code: 'Prosím zadajte kód, ktorý ste dostali po prihlásení sa cez Google na vašom domovskom prehliadači.'
       copy_code: 'Na prihlásenie do Code.org prosím skopírujte a prilepte tento kód do aplikácie Maker.'
+  parent_email_banner:
+    text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
+    link_your_email: "Prepojte svoj e-mail"
+    not_now: "Teraz nie"

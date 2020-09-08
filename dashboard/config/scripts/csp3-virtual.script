@@ -1,19 +1,19 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
 project_sharing true
 
 lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
-stage 'Using Simple Commands', flex_category: 'csp3_1_2018'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands'
 level 'csp_applab_turtle_virtual', named: true
 level 'U3L2 Using Simple Commands_virtual', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right_virtual', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid_virtual', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
 level 'CSP U3L1 Virtual CFU', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating Functions', flex_category: 'csp3_1_2018'
+lesson 'Creating Functions', display_name: 'Creating Functions'
 level 'csp_applab_functions_virtual', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround_virtual', progression: 'Using Functions With Turtle Commands'
@@ -26,7 +26,7 @@ level 'U3L04 - snowflake_virtual', progression: 'Using Functions with Turtle Com
 level 'U3L04 - 3 by 3 with functions_virtual', progression: 'Using Functions with Turtle Commands'
 level 'CSP U3L2 Virtual CFU', progression: 'Check Your Understanding', assessment: true
 
-stage 'APIs and Function Parameters', flex_category: 'csp3_1_2018'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters'
 level 'U3L06 - moveForwardwithParams_virtual', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle_virtual', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 2 purple square_virtual', progression: 'Introduction to Parameters'
@@ -38,7 +38,7 @@ level 'U3L06 Challenge 7 smiley face_virtual', progression: 'Introduction to Par
 level 'U3L06 Challenge 8 make your own_virtual', progression: 'Make Your Own Turtle Drawing'
 level 'U3L06 Assessment2_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating functions with Parameters', flex_category: 'csp3_1_2018'
+lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters'
 level 'csp_applab_functions_parameters_virtual', progression: 'Functions with Parameters'
 level 'U3L08 - drawSquareWithParam_virtual', progression: 'Drawing Shapes With Parameters'
 level 'U3L07 - createTriangleParam_virtual', progression: 'Drawing Shapes With Parameters'
@@ -55,7 +55,7 @@ level 'U3L08 - randomInput_virtual', progression: 'Under the Sea Drawing with Pa
 level 'U3L08 - freePlay_virtual', progression: 'Challenge: Continue Your Drawing With More Functions'
 level 'CSP U3L4 Virtual CFU', progression: 'Check Your Understanding', assessment: true
 
-stage 'Looping and Random Numbers', flex_category: 'csp3_1_2018'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers'
 level 'csp_applab_loops_virtual', progression: 'Using Loops'
 level 'U3L07 - introSquare_virtual', progression: 'Introduction to Loops'
 level 'U3L07 - randomSquare_virtual', progression: 'Introduction to Loops'
@@ -70,5 +70,6 @@ level 'U3L07 - allSeaGrass_virtual', progression: 'Using Loops to Add Detail to 
 level 'U3L07 - sunBeams_virtual', progression: 'Using Loops to Add Detail to Your Drawing'
 level 'U3L07 - Free Play Loops and Random_virtual', progression: 'Project: Under the Sea'
 
-stage 'Make your own Digital Scene', flex_category: 'csp3_1_2018'
+lesson 'Make your own Digital Scene', display_name: 'Make your own Digital Scene'
 level 'Free_play_digital_scene_virtual', progression: 'Personal Digital Scene'
+

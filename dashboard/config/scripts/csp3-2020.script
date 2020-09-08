@@ -1,15 +1,18 @@
+hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit3/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit3/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit3/{LESSON}'
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}'
+script_announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_unit3_2020', display_name: 'Unit 3: Intro to App Design'
-stage 'Introduction to Apps', flex_category: 'csp_unit3_2020'
+lesson 'Introduction to Apps', display_name: 'Introduction to Apps'
 level 'CSP U3L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Water Conservation Sample App', progression: 'App Exploration'
 level 'CSP U3 Bird Quiz App', progression: 'App Exploration'
@@ -24,7 +27,7 @@ level 'CSP U3 Four Square App Investigation', progression: 'App Investigation'
 level 'CSP U3 Monarch Butterfly App Investigation', progression: 'App Investigation'
 level 'CSP U3 L1 Input Output Matching', progression: 'Check For Understanding', assessment: true
 
-stage 'Introduction to Design Mode', flex_category: 'csp_unit3_2020'
+lesson 'Introduction to Design Mode', display_name: 'Introduction to Design Mode'
 level 'CSP U3L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Hamilton Township Design Mode', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode Themes', progression: 'Design Mode Exploration'
@@ -35,20 +38,20 @@ level 'CSP U3 L2 Design Mode ids', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Copy an App', progression: 'Copy an App'
 level 'U3L2 CSP CFU ID names', progression: 'Check For Understanding', assessment: true
 
-stage 'Project - Designing an App Part 1', flex_category: 'csp_unit3_2020'
+lesson 'Project - Designing an App Part 1', display_name: 'Project - Designing an App Part 1'
 level 'CSP U3L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L3 Check Your Understanding', progression: 'Check For Understanding', assessment: true
 
-stage 'Project - Designing an App Part 2', flex_category: 'csp_unit3_2020'
+lesson 'Project - Designing an App Part 2', display_name: 'Project - Designing an App Part 2'
 level 'CSP U3L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Bird Quiz Storyboard', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
 
-stage 'The Need for Programming Languages', flex_category: 'csp_unit3_2020'
+lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages'
 level 'CSP U3L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3L5 CSP CFU natural language', progression: 'Check For Understanding', assessment: true
 
-stage 'Intro to Programming', flex_category: 'csp_unit3_2020'
+lesson 'Intro to Programming', display_name: 'Intro to Programming'
 level 'CSP U3L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'
@@ -57,7 +60,7 @@ level 'U3 Program Investigate Event-Driven 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 3', progression: 'Code Investigation'
 level 'U3L6 CSP CFU Sequential vs Event Driven', progression: 'Check for Understanding', assessment: true
 
-stage 'Debugging', flex_category: 'csp_unit3_2020'
+lesson 'Debugging', display_name: 'Debugging'
 level 'CSP U3L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 Program Practice Pt 1', progression: 'Debugging'
 level 'U3 Program Practice Pt 2', progression: 'Debugging'
@@ -68,18 +71,19 @@ level 'U3 Program Practice Pt 6', progression: 'Debugging'
 level 'U3 Program Practice Pt 8', progression: 'Debugging'
 level 'U3L7 CSP CFU What was confusing', progression: 'Check for Understanding', assessment: true
 
-stage 'Project - Designing an App Part 3', flex_category: 'csp_unit3_2020'
+lesson 'Project - Designing an App Part 3', display_name: 'Project - Designing an App Part 3'
 level 'CSP U3L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 L08 Pair Programming Video', progression: 'Pair Programming'
 level 'CSP U3 L4 Add Code', progression: 'Add Code'
 
-stage 'Project - Designing an App Part 4', flex_category: 'csp_unit3_2020'
+lesson 'Project - Designing an App Part 4', display_name: 'Project - Designing an App Part 4'
 level 'CSP U3L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 
-stage 'Project - Designing an App Part 5', flex_category: 'csp_unit3_2020'
+lesson 'Project - Designing an App Part 5', display_name: 'Project - Designing an App Part 5'
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
 
-stage 'Lesson 11: Assessment Day', lockable: true
+lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true
 level 'CSP Unit 3 MC Assessment _2020', progression: 'Unit 3 Exam', assessment: true
+

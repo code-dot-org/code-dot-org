@@ -34,9 +34,9 @@ describe('firebaseUtils', () => {
 
     it('rejects forbidden symbols', done => {
       try {
-        validateFirebaseKey('a.b');
+        validateFirebaseKey('a$b');
       } catch (e) {
-        expect(e.message.toLowerCase()).to.contain('illegal character "."');
+        expect(e.message.toLowerCase()).to.contain('illegal character "$"');
         done();
       }
     });
@@ -53,11 +53,15 @@ describe('firebaseUtils', () => {
     it('allows unicode', () => {
       validateFirebaseKey('☃');
     });
+
+    it('allows periods', () => {
+      validateFirebaseKey('a.b.c.d');
+    });
   });
 
   describe('fixFirebaseKey', () => {
     it('preserves legal characters', () => {
-      expect(fixFirebaseKey('foo')).to.equal('foo');
+      expect(fixFirebaseKey('foo.bar')).to.equal('foo.bar');
     });
 
     it('preserves url escape sequences', () => {
@@ -65,11 +69,11 @@ describe('firebaseUtils', () => {
     });
 
     it('replaces illegal characters', () => {
-      expect(fixFirebaseKey('foo.bar')).to.equal('foo-bar');
+      expect(fixFirebaseKey('foo$bar')).to.equal('foo-bar');
     });
 
     it('replaces multiple illegal characters', () => {
-      expect(fixFirebaseKey('a.b#c$d[e]f/g')).to.equal('a-b-c-d-e-f-g');
+      expect(fixFirebaseKey('a.b#c$d[e]f/g')).to.equal('a.b-c-d-e-f-g');
     });
   });
 });

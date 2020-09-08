@@ -53,7 +53,7 @@ def snapshot_csf_intro_post_workshop_from_pegasus
 
   survey_reports = {}
 
-  facilitators.first(10).each do |id, f|
+  facilitators.each do |id, f|
     all_their_workshops = Pd::Workshop.facilitated_by(f)
     all_their_completed_workshops = all_their_workshops.where(course: course, subject: subject).in_state(Pd::Workshop::STATE_ENDED).exclude_summer
 
@@ -124,7 +124,7 @@ def snapshot_summer_workshops_from_jotform(course)
 
   survey_reports = {}
 
-  facilitators.first(10).each do |id, f|
+  facilitators.each do |id, f|
     all_their_workshops = Pd::Workshop.facilitated_by(f)
     all_their_completed_workshops = all_their_workshops.where(course: course, subject: subject).in_state(Pd::Workshop::STATE_ENDED)
 
@@ -150,7 +150,7 @@ def snapshot_summer_workshops_from_jotform(course)
   end
 
   # delete all existing
-  Pd::LegacySurveySummary.where(facilitator_id: nil).where(course: course, subject: subject).delete_all
+  Pd::LegacySurveySummary.where(course: course, subject: subject).delete_all
 
   # write all entries
   survey_reports.each_pair do |id, report|

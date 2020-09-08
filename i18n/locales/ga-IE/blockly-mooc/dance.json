@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Bhrúigh tú eochair, ach ní dhearna an damhsóir aon rud mar fhreagra.",
   "danceFeedbackNeedTwoDancers": "Caithfidh tú beirt damhsóirí a chruthú.",
   "danceFeedbackOnlyOneDancerMoved": "Níor bhog ach damhsóir amháin.",
-  "danceFeedbackNeedLead": "Caithfidh tú príomhdhamhsóir amháin a chruthú leis an mbloc <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Caithfidh tú príomhdhamhsóir amháin a chruthú leis an mbloc <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Caithfidh tú grúpa damhsóirí tionlacain a chruthú leis an mbloc <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"AONBHEANNACH\"</title><title name=\"LAYOUT\">\"ciorcal\"</title></block></xml>.",
   "danceFeedbackSetSize": "Caithfidh tú méid damhsóra amháin ar a laghad a athrú tar éis go dtosaíonn an ceol.",
   "measure": "Tomhas:"

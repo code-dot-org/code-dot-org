@@ -1,4 +1,4 @@
-stage 'Artist'
+lesson 'Artist', display_name: 'Artist'
 level 'frozen line'
 level 'frozen perpendicular'
 level 'frozen square iterative'
@@ -19,3 +19,4 @@ level 'frozen snowflower'
 level 'frozen snowflake branch'
 level 'frozen snowflake full'
 level 'frozen freeplay'
+

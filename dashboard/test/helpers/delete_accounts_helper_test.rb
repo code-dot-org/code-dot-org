@@ -39,6 +39,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     # Skip real Firebase operations
     FirebaseHelper.stubs(:delete_channel)
+    FirebaseHelper.stubs(:delete_channels)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -444,7 +445,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
-  # Table: dashboard.gallery_activities
   # Table: dashboard.assessment_activities
   #
 
@@ -465,20 +465,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
-
-  test 'disconnects gallery activities from level sources' do
-    user = create :student
-    gallery_activity = create :gallery_activity, user: user
-
-    refute_nil gallery_activity.level_source_id
-
-    purge_user user
-    gallery_activity.reload
-
-    assert_nil gallery_activity.level_source_id
-
-    assert_logged "Cleaned 1 GalleryActivity"
-  end
 
   test 'disconnects assessment activities from level sources' do
     user = create :student
@@ -1806,14 +1792,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       with_channel_for student do |storage_app_id_b, storage_id|
         storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
 
+        student_channels = [storage_encrypt_channel_id(storage_id, storage_app_id_a),
+                            storage_encrypt_channel_id(storage_id, storage_app_id_b)]
         FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
-        FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
+          expects(:delete_channels).
+          with(student_channels)
 
         purge_user student
+        assert_logged "Deleting Firebase contents for 2 channels"
       end
     end
   end
@@ -1872,6 +1858,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         refute_empty contact_rollups.where(id: contact_rollups_id_b)
       end
     end
+  end
+
+  #
+  # contact rollups V2
+  #
+
+  test "account deletion stages email for removal from pardot via purge_user" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_user teacher
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
+  end
+
+  test "account deletion stages email for removal from pardot via purge_all_accounts_with_email" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_all_accounts_with_email teacher_email
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
   end
 
   #

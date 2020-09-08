@@ -1,44 +1,13 @@
-#page-small-footer
-
 :ruby
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
-
-  menu_items = [
-    {
-      key: 'report-abuse',
-      text: I18n.t('footer.report_abuse'),
-      link: '/report_abuse',
-      newWindow: true
-    },
-    {
-      key: 'help-support',
-      text: I18n.t('landing.help_support'),
-      link: "https://support.code.org",
-      newWindow: true
-    },
-    {
-      key: 'translate',
-      text: I18n.t('footer.translate'),
-      link: "https://code.org/translate",
-      newWindow: true
-    },
-    {
-      key: 'tos',
-      text: I18n.t('footer.tos'),
-      link: "https://code.org/tos",
-      newWindow: true
-    }
-  ]
-
   reactProps = {
     i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     privacyPolicyInBase: true,
     copyrightInBase: true,
-    basePrivacyPolicyString: I18n.t('footer.privacy'),
     baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
-    menuItems: menu_items,
+    menuItems: [],
     copyrightStrings: build_copyright_strings,
     # false because we're not rendering into a phone wireframe here
     phoneFooter: false,
@@ -46,7 +15,5 @@
     channel: channel
   }
 
-:javascript
-  // Render the footer on the non-share pages
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, #{reactProps.to_json}),
-    document.getElementById('page-small-footer'));
+#page-small-footer
+%script{src: webpack_asset_path('js/layouts/_small_footer.js'), data: {smallfooter: reactProps.to_json}}

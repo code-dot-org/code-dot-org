@@ -1,5 +1,5 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
@@ -7,13 +7,13 @@ pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_lists', display_name: 'Lists'
-stage 'Lists Explore', flex_category: 'csp_lists'
+lesson 'Lists Explore', display_name: 'Lists Explore'
 level 'CSP U5L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
 level 'csp-20-21-u5-assess-lists', progression: 'Check For Understanding', assessment: true
 
-stage 'Lists Investigate', flex_category: 'csp_lists'
+lesson 'Lists Investigate', display_name: 'Lists Investigate'
 level 'CSP U5L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'Introduction to Lists - Part 4_2018', progression: 'Accessing Lists'
 level 'U5 Lists Investigate Outfitly Code', progression: 'Accessing Lists'
@@ -23,7 +23,7 @@ level 'U5 Lists Investigate Partnersly Code', progression: 'Changing Lists'
 level 'Random List Access Pattern', progression: 'List Patterns'
 level 'List Scrolling Pattern', progression: 'List Patterns'
 
-stage 'Lists Practice', flex_category: 'csp_lists'
+lesson 'Lists Practice', display_name: 'Lists Practice'
 level 'CSP U5L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
 level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
@@ -39,25 +39,25 @@ level 'U5 L03 Lists Practice 6', progression: 'List Operations'
 level 'U5L3 CFU Lists Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U5L3 CFU Lists Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Lists Make', flex_category: 'csp_lists'
+lesson 'Lists Make', display_name: 'Lists Make'
 level 'CSP U5L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Lists Make Project Sample App 2020', progression: 'Try the Reminders App'
 level 'U5 Lists Make Project 2020', progression: 'Make the Reminders App', assessment: true
 
 lesson_group 'csp_loops', display_name: 'Loops'
-stage 'Loops Explore', flex_category: 'csp_loops'
+lesson 'Loops Explore', display_name: 'Loops Explore'
 level 'CSP U5L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
 level 'U3L5 CSP CFU Looping', progression: 'Check For Understanding', assessment: true
 
-stage 'Loops Investigate', flex_category: 'csp_loops'
+lesson 'Loops Investigate', display_name: 'Loops Investigate'
 level 'CSP U5L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Investigate Coin Flipper Predict', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Coin Flipper', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Font Tester', progression: 'Font Tester App'
 level 'U3L6 CSP CFU Element Looping', progression: 'Check For Understanding', assessment: true
 
-stage 'Loops Practice', flex_category: 'csp_loops'
+lesson 'Loops Practice', display_name: 'Loops Practice'
 level 'CSP U5L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Practice Part 1', progression: 'While Loop Practice'
 level 'U5 Loops Practice Part 2', progression: 'While Loop Practice'
@@ -70,18 +70,18 @@ level 'U5 Loops Practice Dice Roller', progression: 'Loops and Screen Elements'
 level 'U5L7 CFU Loops Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Loops Make', flex_category: 'csp_loops'
+lesson 'Loops Make', display_name: 'Loops Make'
 level 'CSP U5L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Make Wallpaper App Example 2020', progression: 'Try the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App 2020', progression: 'Make the Lock Screen Maker', assessment: true
 
 lesson_group 'csp_traversals', display_name: 'Traversals'
-stage 'Traversals Explore', flex_category: 'csp_traversals'
+lesson 'Traversals Explore', display_name: 'Traversals Explore'
 level 'CSP U5L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
 level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-stage 'Traversals Investigate', flex_category: 'csp_traversals'
+lesson 'Traversals Investigate', display_name: 'Traversals Investigate'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'Full Year Pilot Experiments Dashboard', progression: 'Turn on Data Library'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
@@ -91,7 +91,7 @@ level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
 level 'CSP U5L10 CFU Traversals', progression: 'Check For Understanding', assessment: true
 
-stage 'Traversals Practice', flex_category: 'csp_traversals'
+lesson 'Traversals Practice', display_name: 'Traversals Practice'
 level 'CSP U5L11 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Practice Part 1', progression: 'Traversal Practice'
 level 'U5 Traversals Practice Part 2', progression: 'Traversal Practice'
@@ -103,44 +103,44 @@ level 'U5 Traversals Practice Part 6', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 7', progression: 'App Practice'
 level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Traversals Make', flex_category: 'csp_traversals'
+lesson 'Traversals Make', display_name: 'Traversals Make'
 level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Make Project Sample App 2020', progression: 'Try the Random Forecaster App'
 level 'U5 Traversals Make Project 2020', progression: 'Make the Random Forecaster App', assessment: true
 
 lesson_group 'csp_project', display_name: 'Project'
-stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
+lesson 'Semester Hackathon Part 1', display_name: 'Semester Hackathon Part 1'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Semester Hackathon Part 2', flex_category: 'csp_project'
+lesson 'Semester Hackathon Part 2', display_name: 'Semester Hackathon Part 2'
 level 'CSP U5L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 2', progression: 'Hackathon Project'
 
-stage 'Semester Hackathon Part 3', flex_category: 'csp_project'
+lesson 'Semester Hackathon Part 3', display_name: 'Semester Hackathon Part 3'
 level 'CSP U5L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 3', progression: 'Hackathon Project'
 
-stage 'Semester Hackathon Part 4', flex_category: 'csp_project'
+lesson 'Semester Hackathon Part 4', display_name: 'Semester Hackathon Part 4'
 level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 4', progression: 'Hackathon Project'
 
-stage 'Semester Hackathon Part 5', flex_category: 'csp_project'
+lesson 'Semester Hackathon Part 5', display_name: 'Semester Hackathon Part 5'
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
 
-stage 'Lesson 18: Assessment Day', lockable: true
+lesson 'Lesson 18: Assessment Day', display_name: 'Lesson 18: Assessment Day', lockable: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Unit 5 STUDENT Survey', lockable: true, flex_category: 'required'
+lesson 'Unit 5 STUDENT Survey', display_name: 'Unit 5 STUDENT Survey', lockable: true
 level 'CSP U5 20-21 Student Pilot Survey', progression: 'Unit 5 STUDENT Survey', assessment: true
 
-stage 'Unit 5 TEACHER Survey', lockable: true, flex_category: 'required'
+lesson 'Unit 5 TEACHER Survey', display_name: 'Unit 5 TEACHER Survey', lockable: true
 level 'CSP U5 20-21 Teacher Pilot Survey', progression: 'Unit 5 TEACHER Survey', assessment: true
 
 lesson_group 'optional_stages', display_name: 'Optional Stages'
-stage '[OLD] Lists Make', flex_category: 'optional_stages'
+lesson '[OLD] Lists Make', display_name: '[OLD] Lists Make'
 level 'U5 Lists Make Project Sample App', progression: 'Try the Reminders App'
 level 'U5 Lists Make Project Step 1', progression: 'Build the Reminders App'
 level 'U5 Lists Make Project Step 2', progression: 'Build the Reminders App'
@@ -149,7 +149,7 @@ level 'U5 Lists Make Project Step 4', progression: 'Build the Reminders App'
 level 'U5 Lists Make Project Step 5', progression: 'Build the Reminders App'
 level 'U5 Lists Make Project Step 6', progression: 'Build the Reminders App', assessment: true
 
-stage '[OLD] Loops Make', flex_category: 'optional_stages'
+lesson '[OLD] Loops Make', display_name: '[OLD] Loops Make'
 level 'U5 Loops Make Wallpaper App Example', progression: 'Try the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 2', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 3', progression: 'Build the Lock Screen Maker'
@@ -157,7 +157,7 @@ level 'U5 Loops Make Wallpaper App Step 4', progression: 'Build the Lock Screen 
 level 'U5 Loops Make Wallpaper App Step 5', progression: 'Build the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App Step 6', progression: 'Build the Lock Screen Maker', assessment: true
 
-stage '[OLD] Traversals Make', flex_category: 'optional_stages'
+lesson '[OLD] Traversals Make', display_name: '[OLD] Traversals Make'
 level 'U5 Traversals Make Project Sample App', progression: 'Try the Poem Personalizer'
 level 'U5 Traversals Make Project Step 1', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 2', progression: 'Build the Poem Personalizer'
@@ -165,3 +165,4 @@ level 'U5 Traversals Make Project Step 3', progression: 'Build the Poem Personal
 level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
+

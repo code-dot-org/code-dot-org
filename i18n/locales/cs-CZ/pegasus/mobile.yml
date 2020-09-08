@@ -750,6 +750,7 @@
   dashboard_curriculum_csins: 'Informatika ve vědě:'
   dashboard_curriculum_csp: 'AP ® Informatika principy:'
   dashboard_curriculum_ecs: 'Zkoumání informatiky:'
+  dashboard_curriculum_csd: 'Objevování informatiky: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Ostatní"
   dashboard_login_word: "Slovo"
@@ -941,6 +942,7 @@
   hoc-encryption_name: Jednoduché šifrování
   text-compression_name: Komprese textu
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Vytvoř basketbalovou hru"
   sports_name: "Naprogramuj svoji vlastní sportovní hru"
   applab_gradelevel: "Věk 13 +"
@@ -1382,6 +1384,8 @@
   header_teacher_community: "Komunita učitelů"
   header_help_support: 'Nápověda a podpora '
   header_report_bug: "Nahlásit chybu"
+  header_legal_privacy: "Zásady ochrany osobních údajů"
+  header_legal_tos: "Podmínky"
   header_tutorials: "Návody"
   header_documentation: "Dokumentace"
   user_header_label: "Ahoj %{username}"
@@ -1392,6 +1396,7 @@
   user_header_signin: "Přihlásit se"
   user_header_create: 'Vytvoř '
   user_header_artist: 'Umělec '
+  user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "Taneční večírek"
   user_header_minecraft: "Minecraft"
@@ -1429,6 +1434,7 @@
   hoc2018_mc_no_internet: "Nemáš internet?"
   hoc2018_mc_download_adventurer: "Stáhni si offline verzi Minecraft Adventurer."
   hoc2018_mc_educators: "Pro učitele"
+  hoc2018_mc_educators_box1_button: "Začněte"
   hoc2018_mc_educators_box2_button: "Stáhnout"
   hoc2018_mc_educators_box3_button: "Najdi workshop"
   hoc2018_mc_watch_videos: "Než začnete, podívejte se na jedno z následujících inspirativních videí"
@@ -1493,3 +1499,6 @@
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_button: "Zpět domů"
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link}) z minulého roku."
+  homepage_slot_text_title_at_home: "Učte se doma"
+  homepage_slot_text_blurb_at_home: "S těmito podklady to bude hračka"
+  page_not_available_button: "Zpět domů"

@@ -48,6 +48,7 @@
   "courses": "خولەكان",
   "create": "ez",
   "dancePartyButton": "دەستپێبکە",
+  "dataLibrarySearchPlacholder": "بگەڕێ",
   "delete": "بسڕەوە",
   "deleteConfirm": "بسڕێتەوە؟",
   "description": "باسکردن",
@@ -69,6 +70,7 @@
   "justDidHourOfCode": "هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری بکەی",
   "learnMore": "زیاتر فێرببە",
   "lessAllCaps": "کەمتر",
+  "loginExportHeader_studentName": "ناوی قوتابی",
   "manageLinkedAccounts_actions": "کردەوەکان",
   "manageLinkedAccounts_google_oauth2": "هەژماری گووگڵ",
   "manageLinkedAccounts_microsoft": "هەژماری مایکڕۆسۆفت",
@@ -130,5 +132,6 @@
   "tos": "بڕگەکان",
   "tryIt": "تاقیبکەوە",
   "unpluggedActivity": "خولی بێ كۆمپیوتەر",
+  "versionHistory_ajaxFailure": "هەڵەیەك ڕوویدا.",
   "viewCourse": "ئەم خولە پشانبدە"
 }

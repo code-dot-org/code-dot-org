@@ -1,0 +1,22 @@
+name 'OPD-K5 Stage2Go_copy_2020'
+skip_dialog true
+markdown <<MARKDOWN
+# Reflection
+
+<img src="https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg" class="level-image">
+
+## Pause and reflect
+We hope that, up until now, this course has given you a sense of what computer science is, why it is important, and how Computer Science Fundamentals is structured to teach elementary school students basic concepts of computer science. Take a moment to pause and reflect on what you feel like you have learned from this course so far, and go back to any parts you may have had questions on.
+
+Remember that you can always reference the <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview" target="blank">Computer Science Fundamentals curriculum guide</a> for more information.
+
+## Things to remember
+As you go forward in this course, keep in mind: 
+- As with any discipline, the path towards mastery in computer science is infinite. From novices to veterans, **everyone has something to learn.** 
+- Programming becomes more comfortable every time you come back to it. **You're not going to be an expert your first time.**
+- There's no way around it, the act of programming and **learning to program takes time, but anyone can do it!**
+
+<br/>
+
+> **Key Takeway:** The goal of the next several lessons is not to turn you into a computer scientist, but to instead help you feel comfortable enough with the core concepts that you are excited to share your knowledge with your students.
+MARKDOWN

@@ -1,8 +1,8 @@
 import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
-  countByAnimation(animation) {
-    let sprites = coreLibrary.getSpriteArray({costume: animation});
+  countByAnimation(spriteArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     return sprites.length;
   },
   destroy(spriteArg) {
@@ -40,10 +40,14 @@ export const commands = {
   getThisSprite(which, extraArgs) {
     if (extraArgs) {
       if (which === 'this') {
-        return {id: extraArgs.sprite};
+        if (extraArgs.clickedSprite !== undefined) {
+          return {id: extraArgs.clickedSprite};
+        } else if (extraArgs.subjectSprite !== undefined) {
+          return {id: extraArgs.subjectSprite};
+        }
       }
       if (which === 'other') {
-        return {id: extraArgs.target};
+        return {id: extraArgs.objectSprite};
       }
     }
   },

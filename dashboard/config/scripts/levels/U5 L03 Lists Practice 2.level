@@ -38,8 +38,8 @@
     "mini_rubric": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
-      "/docs/concepts/app-lab/patterns/random-list-access/"
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": "4+2DmwJgFmX4euqvqPsU5HChI7woa3Gja1ELor+LjJkwYE0/EeZxXeUyb4l/\n0xwWgJS0kvDg4IGjx7ipqYOwbQ==\n",

@@ -8,59 +8,113 @@ te:
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: ఈవెంట్లు
         grade1:
-          stages:
+          lessons:
             Events:
               name: ఈవెంట్లు
         k5concepts:
-          stages:
+          lessons:
             Events:
               name: ఈవెంట్లు
         dance:
-          stages:
+          title: డాన్స్ పార్టీ
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
-          title: డాన్స్ పార్టీ
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         express-2019:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         dance-2019:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Events:
               name: ఈవెంట్లు
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         coursed-2020:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         express-2020:
-          stages:
+          lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         code-break:
-          stages:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        k5-onlinepd-2020:
+          lessons:
             Events:
               name: ఈవెంట్లు

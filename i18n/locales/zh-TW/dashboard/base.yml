@@ -173,6 +173,9 @@ zh-TW:
     email_preference_yes: "是"
     email_preference_no: "否"
     email_preference_required: "你必須指定一個信箱地址。"
+    parent_account_checkbox: "我是一名家長/監護人，代表我的孩子注册"
+    parent_account_email_progress_permission: "我們可以給你寄送電郵，不時地告訴你孩子的進度和項目，以及他們的課程和計算機科學的最新情况嗎？[(查閱我們的隱私權政策)]（%{privacy_policy_url}）"
+    parent_account_email_label: "家長/監護人電子信箱"
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -308,6 +311,7 @@ zh-TW:
       sections: "學習小組"
       help_support: "幫助與支援"
       report_bug: "回報問題"
+      report_abuse: "檢舉濫用"
       teacher_community: "教師社群"
       professional_learning: "專業學習"
       documentation: "說明文件"
@@ -343,6 +347,9 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+      legal: "法律與隱私權"
+      legal_privacy: "隱私政策"
+      legal_tos: "服務條款"
     user:
       classroom: '教師主頁'
       district_dashboard: '分區控制台'
@@ -465,8 +472,11 @@ zh-TW:
     auth_option_saved: "你已成功連結至%{provider}的帳戶，電子郵件地址是 %{email}。"
     auth_option_saved_no_email: "你已成功連結至%{provider}的帳戶。"
     update_email: "更新"
+    for_parents_and_guardians: "針對家長和監護人"
+    link_a_parent_email: "將一位家長/監護人的電郵地址連結到此帳戶，以便隨時瞭解你孩子的進度和項目。你還可以使用此電郵地址恢復密碼。"
     parent_guardian_email_label: "家長/監護人電子信箱"
     none: "無"
+    only_one_parent_email_supported_warning: "注：目前，針對每個學生帳戶我們僅支援新增一個家長/監護人電郵地址。"
     encrypted: "已加密"
   user_level:
     completed: '已完成'
@@ -688,20 +698,6 @@ zh-TW:
       body: "學生可以親身使用這些電子工具，探索計算機科學原理課程中會學到的概念。讓他們使用那些元件去學習，又或者為你的班級建立「單一概念」的課堂。"
       audience: "14 歲以上"
       cta: "學習如何做"
-  gallery:
-    students_drew_these_with_code: "學生是用程式畫出這些圖案的喔！"
-    students_made_these_with_code: "學生是用程式做出這些玩意的喔！"
-    picture_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
-    activity_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了 <b>%{count}</b> 個 App 以及圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
-    want_to_make_your_own: "想要自己創作嗎？"
-    how_to_save: "在這些教程的最後一關裡單擊「完成」和「儲存」，你創作的作品就會像它們一樣留在藝廊裡。"
-    more: "更多 →"
-    caption_by_name_age: "%{name}, %{age} 歲"
-    caption_time_ago: "%{time_ago} 前"
-    header: "藝廊"
-    header_playlab: "故事與遊戲"
-    header_artist: "代碼藝術"
-    report_abuse: "檢舉濫用"
   landing:
     prerelease_tutorial: "這個教程仍在 **測試階段**，或會根據收到的意見、作出改善而有所修改。"
     report_bug: "臭蟲回報"
@@ -760,6 +756,8 @@ zh-TW:
     open_response_body: "感謝您的回應！"
     correct_title: "正確"
     correct_body: "答對囉，太棒啦。"
+  lesson_extras:
+    bonus_level: "獎勵關卡"
   dialog:
     ok: "確定"
     startover_title: "你確定要重新開始嗎？"
@@ -886,95 +884,7 @@ zh-TW:
     instructor_feedback: '教師回饋'
     peer_feedback: '同伴反饋'
     outdated: '這是先前版本的回饋內容'
-  flex_category:
-    required: '概覽'
-    content: '內容'
-    practice: '老師的做法'
     peer_review: '同儕審查'
-    ramp_up: '提升'
-    optional_stages: '可選階段'
-    main_course: '主要課程'
-    extra_course_content: '額外的課程內容'
-    csf_e_1: '提升至課程 E（可選）'
-    csf_e_2: '課程 E 內容'
-    csf_f_1: '提升至課程 F（可選）'
-    csf_f_2: '課程 F 內容'
-    csf_digcit: '數位公民'
-    csf_jigsaw: '拼圖'
-    csf_sequencing: '序列'
-    csf_loops: '迴圈'
-    csf_events: '事件'
-    csf_online_safety: '網上安全'
-    csf_binary: '二進制（Binary）'
-    csf_data: '數據'
-    csf_conditionals: '條件判斷（Conditionals）'
-    csf_sprites: '角色'
-    csf_spritelab: 'Sprite Lab'
-    csf_nested_loops: '巢狀迴圈'
-    csf_functions: '函式'
-    csf_variables: '變數'
-    csf_for_loops: '計次迴圈（For Loops）'
-    csf_internet: '網際網路 Internet'
-    csf_warmup: '熱身'
-    csd1_1: '第 1 章：解決問題的流程'
-    csd1_2: '第 2 章：計算機與問題解決能力'
-    csd2_1: '第 1 章：網站內容和 HTML'
-    csd2_2: '第 2 章：樣式和 CSS'
-    csd3_1: '第 1 章：圖像和動畫'
-    csd3_2: '第 2 章：創建遊戲'
-    csd4_1: '第 1 章：用戶為中心的設計'
-    csd4_2: '第 2 章︰ 應用程式原型'
-    csd5_1: '第 1 章：表達信息'
-    csd5_2: '第 2 章：解決數據問題'
-    csd6_1: '第 1 章：硬體輸出'
-    csd6_2: '第 2 章：建立物理原型'
-    csd_survey: '課後調查'
-    csp1_1: '第 1 章：表示及傳輸資訊'
-    csp1_2: '第 2 章：研發互聯網'
-    csp2_1: '第 3 章：編碼及壓縮複雜資訊'
-    csp2_2: '第 2 章：數據操作和可視化'
-    csp3_1: '第 1 章：程式語言及演算法'
-    csp4_1: '第 1 章：大數據及加密的世界'
-    csp5_1: '第 1 章：事件驅動的程式設計'
-    csp5_2: '第 2 章：資料結構程式設計'
-    cspSurvey: '問卷'
-    cspAssessment: '章節測驗'
-    csp_ap_1: '第 1 章：AP 技術設置'
-    csp_ap_2: '第 2 章：AP 探索效能任務'
-    csp_ap_3: '第 3 章：AP 建立效能任務'
-    csp_postap_1: '第 1 章：數據操作和可視化'
-    csp_postap_2: '第 2 章：App 和數據庫'
-    csp2_1_2018: '單元 2：數位資訊'
-    csp3_1_2018: '單元 3：程式設計簡介'
-    csp4_1_2018: '單元 4：大數據與私隱'
-    csp_variables: '變數'
-    csp_conditionals: '條件判斷（Conditionals）'
-    csp_functions: '函式'
-    csp_project: '專案'
-    csp_lists: '清單'
-    csp_loops: '迴圈'
-    csp_traversals: '尋訪'
-    csp_libraries: '程式庫'
-    csp_parameters_return_values: '參數及函數回傳值'
-    csp_unit1_2020: '（舊）單元 1：數位資訊'
-    csp_unit2_2020: '（舊）單元 2：網際網路'
-    csp_unit3_2020: '單元 3：應用程式設計簡介'
-    csp_unit6_2020: '單元 6：演算法'
-    csp_unit8_2020: '單元 8：建立表現任務 (PT) 準備'
-    csp_unit10_2020: '單元 10：網路安全與全球影響'
-    dlp: '反思提問'
-    time4cs_c1: '系列 1：佛羅里達大沼澤地和生態系統'
-    time4cs_c2: '系列 2：食物鏈（佛羅里達大沼澤地）'
-    time4cs_c3: '系列 3：原生物種（佛羅里達大沼澤地）'
-    time4cs_c4: '系列 4：入侵物種的影響（佛羅里達大沼澤地）'
-    time4cs_c5: '系列 5：市民來採取行動'
-    time4cs_c6: '條件判斷（複習）'
-    k5_getting_started: '新手上路'
-    k5_csf_intro: '了解計算機科學基礎課程'
-    k5_coding_concepts: '編程概念和教學策略'
-    k5_next_steps: '下一步'
-    k5_basic_concepts: '基本編程概念和教學練習'
-    k5_diving_deeper: '深造：課程 E 和 F'
   external_links:
     disclaimer: 免責聲明
     leaving_domain: 你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。
@@ -1055,6 +965,8 @@ zh-TW:
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
+      colombian_school_city: '學校所在城市'
+      colombian_school_name: '學校名稱'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'
@@ -1164,3 +1076,7 @@ zh-TW:
       error_wrong_provider: '提供者錯誤。請確保你以 Google 登入。'
       error_invalid_user: '使用者 ID 無效。請嘗試再次登入。'
       error_no_code: '請輸入你的登入代碼。'
+  parent_email_banner:
+    text: "**你是一名父母還是監護人？**將你的電郵連結到此帳戶，以便隨時瞭解你孩子的進度和項目！"
+    link_your_email: "連結您的電子信箱"
+    not_now: "現在不要"

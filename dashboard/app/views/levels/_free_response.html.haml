@@ -1,11 +1,10 @@
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_free_response.js')}
-
-- level ||= @level
-- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
-- in_level_group ||= false
-- left_align = local_assigns[:left_align]
-- is_contained_level ||= false
+:ruby
+  js_data = {}
+  level ||= @level
+  last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+  in_level_group ||= false
+  left_align = local_assigns[:left_align]
+  is_contained_level ||= false
 
 - if level.solution.present? && is_contained_level && can_view_teacher_markdown?
   %div{id: "containedLevelAnswer0"}
@@ -37,20 +36,17 @@
     %h1= title
   - long_instructions = level.get_property("long_instructions")
   - if long_instructions
-    %div.serverside-render= render(inline: long_instructions, type: :md)
     / Markdown will be rendered clientside by _free_response.js
-    .markdown-container{data: {markdown: long_instructions}, style: 'display: none'}
+    .markdown-container{data: {markdown: long_instructions}}
 
   - if level.allow_user_uploads?
     %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
     %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
-    :javascript
-      dashboard.project.getCurrentId = function () {
-        return appOptions.channel;
-      };
-
-      ReactDOM.render(React.createElement(dashboard.Attachments, {showUnderageWarning: !appOptions.is13Plus, readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
+    :ruby
+      js_data[:attachments_props] = {
+        readonly: !!@view_options.readonly_workspace
+      }
 
   - height = level.height || '80'
   - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
@@ -59,3 +55,6 @@
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}

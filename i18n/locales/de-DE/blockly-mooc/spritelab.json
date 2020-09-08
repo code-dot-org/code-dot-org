@@ -1,10 +1,16 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Es scheint als gäb es ein Problem deine Animation \"{animationName}\" zu laden. Stelle sicher, dass du eine gute Internetverbindung hast und versuche die Seite erneut zu laden. Wenn das Problem bestehen bleibt, dann ist deine Animation vermutlich unbrauchbar. In diesem Fall müsstest du die Animation entfernen und ohne weiter machen.",
   "reinfFeedbackMsg": "Du bist fertig! Klicke auf \"Weiter\" um zum nächsten Level zu gelangen.",
   "shareGame": "Teile dein Spiel:",
   "spritelabFeedbackCreateFishWithBehavior": "Du musst mindestens einen Fisch-Sprite erstellen und diesem ein Verhalten zuweisen.",
   "spritelabFeedbackMoveFishLeftRight": "Dein Fisch-Sprite muss nach links oder rechts bewegt werden. Versuche das Verhalten zu ändern.",
-  "spritelabFeedbackChangeBackgroundColor": "Du musst deinen Hintergrund in irgendetwas außer Weiß ändern.",
+  "spritelabFeedbackChangeBackgroundColor": "Du musst deinen Hintergrund zu irgendetwas außer Weiß ändern.",
   "spritelabFeedbackCreateTwoSprites": "Du benötigst genauch zwei Sprites.",
   "spritelabFeedbackTwoSpritesWithCostumes": "Deine beiden Sprites benötigen unterschiedliche Kostüme.",
   "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Du musst zwei verschiedene Sprites mit unterschiedlichen Kostümen erstellen, von denen beide ein Verhalten zugewiesen haben.",
@@ -12,7 +18,7 @@
   "spritelabFeedbackUseSpinningBehavior": "Dein Sprite sollte beginnen sich zu drehen. Versuche das Verhalten zu verändern.",
   "spritelabFeedbackPinkAlienBehavior": "Dein Sprite des rosa Außerirdischen hat sein Verhalten nicht begonnen.",
   "spritelabFeedbackCreateThreeAliens": "Du musst einen blauen, einen rosa-farbenen und einen gelben Außerirdischen erstellen.",
-  "spritelabFeedbackAliensNotInLine": "Deine drei Sprites eines Außerirdischen müssen in einer horizontalen Linie (innerhalb von 50 Pixeln) angeordnet sein.",
+  "spritelabFeedbackAliensNotInLine": "Deine drei Sprites müssen in einer horizontalen Linie (innerhalb von 50 Pixeln) angeordnet sein.",
   "spritelabFeedbackYellowAlienBehavior": "Der gelbe Außerirdische hat sein Verhalten nicht begonnen.",
   "spritelabFeedbackNoAlienColor": "Mindestens einer deiner Außerirdischen hat seine Farbe nicht geändert.",
   "spritelabFeedbackNeedAlienStopBehavior": "Deine Sprites der Außerirdischen müssen all ihr Verhalten stoppen.",
@@ -22,5 +28,5 @@
   "spritelabFeedbackMoveUpNotDown": "Dein Sprite muss sich nach oben (Norden) bewegen, anstelle von nach unten (Süden).",
   "spritelabFeedbackRobotFasterThanRover": "Der Roboter hat die rechte Seite des Bildschirms vor dem Rover erreicht.",
   "spritelabFeedbackDifferentStarRotation": "Sprites mit beiden Sternenkostümen müssen sich um den selben Wert drehen.",
-  "spritelabFeedbackAstronautMoveToCorner": "Das Astronauten Sprite sollte sich in eine der vier Ecken bewegen."
+  "spritelabFeedbackAstronautMoveToCorner": "Das Astronauten-Sprite sollte sich in eine der vier Ecken bewegen."
 }

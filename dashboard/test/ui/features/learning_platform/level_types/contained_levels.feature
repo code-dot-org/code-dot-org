@@ -94,8 +94,9 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   Then I see no difference for "initial load"
   And I press keys "Here is my response!" for element ".response"
   And I see no difference for "answer entered"
-  # Check that answer shows in instructions tab
-  And element ".uitest-teacherOnlyTab" is not visible
+  # Check that answer shows in teacher only tab
+  Then I press the first ".uitest-teacherOnlyTab" element
+  And I wait to see ".editor-column"
   And element ".editor-column" contains text "For Teachers Only"
   And I see no difference for "free response answer for teacher"
   Then I press "runButton"

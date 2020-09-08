@@ -1,4 +1,4 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import LibraryPublisher, {
@@ -92,6 +92,24 @@ describe('LibraryPublisher', () => {
       ).to.equal(libraryName);
     });
 
+    it('filters invalid functions from selectedFunctions', () => {
+      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
+        [
+          {functionName: 'invalidFunc', comment: ''},
+          {functionName: 'validFunc', comment: 'hey'}
+        ]
+      );
+      libraryDetails.selectedFunctions = {
+        invalidFunc: true,
+        validFunc: true
+      };
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+
+      assert.deepEqual({validFunc: true}, wrapper.state('selectedFunctions'));
+    });
+
     it('disables checkbox for items without comments', () => {
       libraryDetails.sourceFunctionList.push({
         functionName: 'bar',
@@ -102,8 +120,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.first().prop('disabled')).to.be.false;
-      expect(checkboxes.last().prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
 
     it('disables checkbox for functions with duplicate names', () => {
@@ -118,8 +136,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(0).prop('disabled')).to.be.false;
-      expect(checkboxes.at(1).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
 
     it('checks checkboxes of selected functions', () => {
@@ -137,12 +155,12 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(0).prop('disabled')).to.be.false;
       expect(checkboxes.at(1).prop('disabled')).to.be.false;
-      expect(checkboxes.at(2).prop('disabled')).to.be.true;
-      expect(checkboxes.at(0).prop('checked')).to.be.false;
-      expect(checkboxes.at(1).prop('checked')).to.be.true;
-      expect(checkboxes.at(2).prop('checked')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.false;
+      expect(checkboxes.at(3).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('checked')).to.be.false;
+      expect(checkboxes.at(2).prop('checked')).to.be.true;
+      expect(checkboxes.at(3).prop('checked')).to.be.false;
     });
   });
 
@@ -336,6 +354,96 @@ describe('LibraryPublisher', () => {
       );
       expect(onUnpublishSuccess.called).to.be.false;
       console.warn.restore();
+    });
+  });
+
+  describe('isFunctionValid', () => {
+    it('is false if the function does not have a comment', () => {
+      let wrapper = shallow(<LibraryPublisher {...DEFAULT_PROPS} />);
+      const isValid = wrapper
+        .instance()
+        .isFunctionValid({functionName: 'invalidFunc', comment: ''});
+      expect(isValid).to.be.false;
+    });
+
+    it('is false if the function is a duplicate', () => {
+      const duplicateFunction = {functionName: 'duplicate', comment: 'comment'};
+      libraryDetails.sourceFunctionList = [
+        {...duplicateFunction},
+        {...duplicateFunction}
+      ];
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      const isValid = wrapper.instance().isFunctionValid(duplicateFunction);
+      expect(isValid).to.be.false;
+    });
+
+    it('is true if the function has a comment and is not a duplicate', () => {
+      const validFunction = {functionName: 'validFunc', comment: 'hey'};
+      libraryDetails.sourceFunctionList = [validFunction];
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      const isValid = wrapper.instance().isFunctionValid(validFunction);
+      expect(isValid).to.be.true;
+    });
+  });
+
+  describe('allFunctionsSelected', () => {
+    beforeEach(() => {
+      libraryDetails.sourceFunctionList = [
+        {functionName: 'foo', comment: 'comment'},
+        {functionName: 'bar', comment: 'comment'},
+        {functionName: 'invalidFunc'}
+      ];
+    });
+
+    it('is false if any valid functions are not selected', () => {
+      libraryDetails.selectedFunctions = {foo: true};
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      expect(wrapper.instance().allFunctionsSelected()).to.be.false;
+    });
+
+    it('is true if all valid functions are selected', () => {
+      libraryDetails.selectedFunctions = {foo: true, bar: true};
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      expect(wrapper.instance().allFunctionsSelected()).to.be.true;
+    });
+  });
+
+  describe('toggleAllFunctionsSelected', () => {
+    beforeEach(() => {
+      libraryDetails.sourceFunctionList = [
+        {functionName: 'foo', comment: 'comment'},
+        {functionName: 'bar', comment: 'comment'},
+        {functionName: 'invalidFunc'}
+      ];
+    });
+
+    it('empties selectedFunctions in state if all functions are selected', () => {
+      libraryDetails.selectedFunctions = {foo: true, bar: true};
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      wrapper.instance().toggleAllFunctionsSelected();
+      assert.deepEqual({}, wrapper.state('selectedFunctions'));
+    });
+
+    it('selects all valid functions if not all functions are selected', () => {
+      libraryDetails.selectedFunctions = {foo: true};
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+      wrapper.instance().toggleAllFunctionsSelected();
+      assert.deepEqual(
+        {foo: true, bar: true},
+        wrapper.state('selectedFunctions')
+      );
     });
   });
 });

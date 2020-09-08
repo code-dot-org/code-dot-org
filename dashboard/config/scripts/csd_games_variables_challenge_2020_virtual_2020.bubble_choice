@@ -1,0 +1,9 @@
+name 'CSD Games variables challenge_2020_virtual_2020'
+display_name 'Variables Challenges'
+description 'Expand your variables skills with these challenges.'
+
+sublevels
+level 'CSD U3 Variables Draw Challenge_virtual_2020'
+level 'CSD U3 Variables Challenge_virtual_2020'
+level 'CSD U3 Variables String Challenge_virtual_2020'
+level 'CSD U3 L5 Freeplay_virtual_2020'

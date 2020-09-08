@@ -1,30 +1,31 @@
-tts true
+is_course true
 hidden false
-hideable_stages true
+hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursec/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
-stage_extras_available true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course C!", "link"=>"https://curriculum.code.org/csf-19/coursec", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursec'
 version_year '2019'
 is_stable true
+supported_locales ["cs-CZ", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-stage 'Screen Out the Mean', flex_category: 'csf_digcit'
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean'
 level 'ScreenOutTheMean-Unplugged'
 
-stage 'Powerful Passwords', flex_category: 'csf_digcit'
+lesson 'Powerful Passwords', display_name: 'Powerful Passwords'
 level 'PowerfulPasswords-Unplugged'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-stage 'Programming: My Robotic Friends', flex_category: 'csf_sequencing'
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.'
 level 'MyRoboticFriends-Unplugged'
 
-stage 'Programming in Maze', flex_category: 'csf_sequencing'
+lesson 'Programming in Maze', display_name: 'Programming with Angry Birds'
 level 'courseC_video_maze_2019', progression: 'Maze Intro: Programming with Blocks'
 level 'courseC_maze_programming1_2019', progression: 'Practice'
 level 'courseC_maze_programming2_2019', progression: 'Practice'
@@ -39,7 +40,7 @@ level 'courseC_maze_programming9_2019', progression: 'Practice'
 bonus 'courseC_maze_programming_challenge1_2019'
 bonus 'courseC_maze_programming_challenge2_2019'
 
-stage 'Debugging in Maze', flex_category: 'csf_sequencing'
+lesson 'Debugging in Maze', display_name: 'Debugging in Maze'
 level 'courseC_video_debugging_2019', progression: 'Debugging with the Step Button'
 level 'courseC_maze_debugging1_2019', progression: 'Practice'
 level 'courseC_maze_debugging2_2019', progression: 'Practice'
@@ -53,7 +54,7 @@ level 'courseC_maze_debugging9_2019', progression: 'Practice'
 bonus 'courseC_maze_debugging_challenge1_2019'
 bonus 'courseC_maze_debugging_challenge2_2019'
 
-stage 'Programming in Collector', flex_category: 'csf_sequencing'
+lesson 'Programming in Collector', display_name: 'Collecting Treasure with Laurel'
 level 'courseC_video_collector_2019', progression: 'The Collector'
 level 'courseC_collector_prog1_2019', progression: 'Practice'
 level 'courseC_collector_prog2_2019', progression: 'Practice'
@@ -70,7 +71,7 @@ level 'grade2_collector_10_2019', progression: 'Practice'
 bonus 'courseC_collector_prog_challenge1_2019', progression: 'Lesson Extras'
 bonus 'courseC_collector_prog_challenge2_2019', progression: 'Lesson Extras'
 
-stage 'Programming in Artist', flex_category: 'csf_sequencing'
+lesson 'Programming in Artist', display_name: 'Creating Art with Code'
 level 'courseC_video_artist_2019', progression: 'Artist Intro with JR Hildebrand'
 level 'courseC_artist_prog1_2019', progression: 'Practice'
 level 'courseC_artist_prog2_2019', progression: 'Practice'
@@ -85,14 +86,14 @@ bonus 'courseC_artist_prog_challenge1_2019'
 bonus 'courseC_artist_prog_challenge2a_2019'
 
 lesson_group 'csf_binary', display_name: 'Binary'
-stage 'Binary Bracelets', flex_category: 'csf_binary'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets'
 level 'BinaryBracelets-Unplugged'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_loops'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.'
 level 'MyLoopyRoboticFriends-Unplugged'
 
-stage 'Loops with Rey and BB-8', flex_category: 'csf_loops'
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8'
 level 'bb8_skinOverview_C-F_video_2019', progression: 'Programming with Rey and BB-8'
 level 'courseC_starWars_loops1_2019', progression: 'Practice'
 level 'courseC_starWars_loops1_predict1_2019', progression: 'Predict'
@@ -110,7 +111,7 @@ level 'courseC_starWars_loops11_2019', progression: 'Practice'
 bonus 'courseC_maze_loops_challenge1a_2019'
 bonus 'courseC_collector_loops_challenge2_2019'
 
-stage 'Loops in Harvester', flex_category: 'csf_loops'
+lesson 'Loops in Harvester', display_name: 'Harvesting Crops with Loops'
 level 'harvester_skinOverview_video_2019', progression: 'The Harvester'
 level 'courseC_harvester_loops1_2019', progression: 'Practice'
 level 'courseC_harvester_loops2_2019', progression: 'Practice'
@@ -127,7 +128,7 @@ level 'courseC_harvester_loops11_predict1_2019', progression: 'Predict'
 bonus 'courseC_harvester_loops_challenge1a_2019'
 bonus 'courseC_harvester_loops_challenge2_2019'
 
-stage 'Looking Ahead', flex_category: 'csf_loops'
+lesson 'Looking Ahead', display_name: 'Looking Ahead with Minecraft'
 level 'Overworld Move to Sheep_2019', progression: 'Practice'
 level 'Overworld Chop Tree_2019', progression: 'Practice'
 level 'Overworld Shear Sheep_2019', progression: 'Practice'
@@ -143,7 +144,7 @@ level 'Underground If Statements_2019', progression: 'Challenge', challenge: tru
 level 'Overworld Powered Minecart_2019', progression: 'Practice'
 level 'Overworld Free Play 20x20_2019', progression: 'Free Play'
 
-stage 'Sticker Art with Loops', flex_category: 'csf_loops'
+lesson 'Sticker Art with Loops', display_name: 'Sticker Art with Loops'
 level 'courseC_artist_loops1a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops1b_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops2a_2019', progression: 'Mini-project: Sticker Design'
@@ -155,10 +156,10 @@ level 'courseC_artist_loops7a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops8a_2019', progression: 'Free Play'
 
 lesson_group 'csf_events', display_name: 'Events'
-stage 'Events: The Big Event', flex_category: 'csf_events'
+lesson 'Events: The Big Event', display_name: 'The Big Event'
 level 'BigEvent-Unplugged'
 
-stage 'Build a Flappy Game', flex_category: 'csf_events'
+lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2019', progression: 'Code Your Own Flappy Game'
 level 'courseC_flappy_events1_2019', progression: 'Practice'
 level 'courseC_flappy_events2_2019', progression: 'Practice'
@@ -171,7 +172,7 @@ level 'courseC_flappy_events8_2019', progression: 'Mini-project: Flappy Game'
 level 'courseC_flappy_events9_2019', progression: 'Mini-project: Flappy Game'
 level 'courseC_flappy_events10_2019', progression: 'Mini-project: Flappy Game'
 
-stage 'Events in Play Lab', flex_category: 'csf_events'
+lesson 'Events in Play Lab', display_name: 'Chase Game with Events'
 level 'courseC_PlayLab_events1_2019', progression: 'Practice'
 level 'courseC_PlayLab_events2_2019', progression: 'Practice'
 level 'courseC_PlayLab_events3_2019', progression: 'Practice'
@@ -187,12 +188,12 @@ level 'courseC_PlayLab_eventsFP_2019', progression: 'Free Play'
 bonus 'courseC_PlayLab_events_challenge1_2019'
 
 lesson_group 'csf_data', display_name: 'Data'
-stage 'Picturing Data', flex_category: 'csf_data'
+lesson 'Picturing Data', display_name: 'Picturing Data'
 level 'PicturingData-Unplugged'
 level 'courseC_data wizard'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-stage 'End of Course Project: Create a Play Lab Game', flex_category: 'end_of_course_project'
+lesson 'End of Course Project: Create a Play Lab Game', display_name: 'End of Course Project'
 level 'Begin planning your project_2018_2019', progression: 'Project'
 level 'courseC19_playLab_EOC1', progression: 'Project'
 level 'courseC19_playLab_EOC2', progression: 'Project'
@@ -200,3 +201,4 @@ level 'courseC19_playLab_EOC3', progression: 'Project'
 level 'courseC19_playLab_EOC4', progression: 'Project'
 level 'courseC19_playLab_EOC5', progression: 'Project'
 level 'courseC19_playLab_EOC6', progression: 'Project'
+

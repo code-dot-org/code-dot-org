@@ -217,6 +217,8 @@ ne:
       project_gallery: Projects
       educate_hoc: Hour of Code
       stats: Stats
+      legal_privacy: Privacy Policy
+      legal_tos: Terms of Service
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -533,25 +535,6 @@ ne:
       title: Conditionals
     widgets:
       cta: Learn how
-  gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
-    header: Gallery
-    header_playlab: Stories and games
-    header_artist: Code art
-    report_abuse: Report Abuse
   landing:
     report_bug: Report Bug
     support: Get Help
@@ -760,29 +743,7 @@ ne:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
-  flex_category:
-    required: Overview
-    content: Content
-    practice: Teaching Practices
     peer_review: Peer Review
-    csf_digcit: Digital Citizenship
-    csf_jigsaw: Jigsaw
-    csf_loops: Loops
-    csf_events: 'कार्य '
-    csf_binary: Binary
-    csf_conditionals: Conditionals
-    csf_nested_loops: Nested Loops
-    csf_functions: Functions
-    csf_variables: Variables
-    csf_for_loops: For Loops
-    csf_internet: Internet
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp_variables: Variables
-    csp_conditionals: Conditionals
-    csp_functions: Functions
-    csp_lists: Lists
-    csp_loops: Loops
-    csp_unit1_2020: "(old) Unit 1: Digital Information"
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

@@ -75,6 +75,14 @@ zh-CN:
         questions:
         - text: 根据游戏规则，哪一组卡片的得分是正确的？
         title: 选择题
+        teacher_markdown: |-
+          ##老师们：
+
+          学生们也许会误解如何做，而这里是一个很好的改正的机会。假如学生认为这里**没有**正确的答案，他们也许有一个对条件语的误解。
+
+          这是一个能帮忙解释的视频：
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -573,7 +581,24 @@ zh-CN:
           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | 尝试给这个游戏增加一些声音! | 尝试为这个游戏增加一幕情节! |
 
+      Begin planning your project_2018_2019_2020:
+        content1: 描述
+        markdown: |+
+          # 项目案例
+
+          你即将开始你最终的项目。 在开始之前，花一些时间查看示例项目。
+
+          | 饥饿的松鼠Hungry Squirrel |外星人传奇Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 尝试给这个游戏增加一些声音! | 尝试为这个游戏增加一幕情节! |
+
       BigEvent-Unplugged:
+        markdown: |
+          # 大事件
+
+          在计算机科学中，事件是计算机监控的行动。这节课中，当按钮按下时，会用不同的方法来响应。
+      BigEvent-Unplugged_2020:
         markdown: |
           # 大事件
 
@@ -585,7 +610,19 @@ zh-CN:
           创建一个二进制手镯，在一个计算机能够理解的系统中代表你的名字。
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # 二进制手镯
+
+          创建一个二进制手镯，在一个计算机能够理解的系统中代表你的名字。
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
+        markdown: |
+          # 二进制图片
+
+          如何只用两个简单的值通讯，来重新创建出图片。
+      BinaryImages-Unplugged_2020:
         markdown: |
           # 二进制图片
 
@@ -3252,6 +3289,11 @@ zh-CN:
           # 纸牌和条件语句
 
           玩纸牌，创建一些这样的规则： "如果拿到红牌，获得 1 分" 以及 "如果拿到黑牌，你得 1 分"。
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |
+          # 纸牌和条件语句
+
+          玩纸牌，创建一些这样的规则： "如果拿到红牌，获得 1 分" 以及 "如果拿到黑牌，你得 1 分"。
       Crowdsourcing-Unplugged:
         markdown: |
           # 众包
@@ -3468,6 +3510,16 @@ zh-CN:
           * 设计适合残疾人士使用的应用程序，也会使这些应用程序对其他所有人都更好！
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          # 无障碍设计
+
+          * 在计算机科学的世界中，**无障碍访问（accessibility）** 表示如何让残疾人访问的技术。
+          * 残障人士包括身体上，听觉，视觉以及其它类型。
+          * 残障人士的各方面都会受到影响，包括他们如何使用 **智能电话的应用**。
+          * 设计适合残疾人士使用的应用程序，也会使这些应用程序对其他所有人都更好！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
         markdown: |
           # 数字公民
@@ -3483,7 +3535,17 @@ zh-CN:
           # 数字共享
 
           这节课会思考尊重所有权和版权的挑战和好处，特别是在数字环境中。
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          # 数字共享
+
+          这节课会思考尊重所有权和版权的挑战和好处，特别是在数字环境中。
       EnvelopeVariables-Unplugged:
+        markdown: |
+          # 信封变量
+
+          在计算机科学中，变量带来了很大的自由度。本课会解释变量是什么，如何用不同的方法来使用它们。
+      EnvelopeVariables-Unplugged_2020:
         markdown: |
           # 信封变量
 
@@ -3527,7 +3589,17 @@ zh-CN:
           # 有趣的计数循环
 
           学习了循环能重复做一些事情后，现在要学习如何使用有额外的结构的循环。
+      ForLoopFun-Unplugged_2020:
+        markdown: |
+          # 有趣的计数循环
+
+          学习了循环能重复做一些事情后，现在要学习如何使用有额外的结构的循环。
       GettingLoopy-Unplugged:
+        markdown: |
+          # 循环吧
+
+          这节课会通过舞蹈活动，来介绍编程中循环的概念。
+      GettingLoopy-Unplugged_2020:
         markdown: |
           # 循环吧
 
@@ -3544,6 +3616,11 @@ zh-CN:
           # 画图纸编程
 
           写下算法，让同学能用来画图。
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |
+          # 画图纸编程
+
+          写下算法，让同学能用来画图。
       HappyLoops-Unplugged:
         markdown: |
           # 快乐的循环
@@ -3551,7 +3628,19 @@ zh-CN:
           这节课会学习循环！
 
           ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # 快乐的循环
+
+          这节课会学习循环！
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
+        markdown: |
+          # 快乐地图
+
+          创建算法来移动角色通过迷宫。
+      HappyMaps-Unplugged_2020:
         markdown: |
           # 快乐地图
 
@@ -3604,6 +3693,11 @@ zh-CN:
 
           <a class="btn btn-large btn-primary next-stage submitButton">继续</a>
       Internet-Unplugged:
+        markdown: |
+          # 互联网
+
+          在班级里只用纸来构建自己的互联网。
+      Internet-Unplugged_2020:
         markdown: |
           # 互联网
 
@@ -3841,6 +3935,11 @@ zh-CN:
           # 移动它，移动它
 
           用地图和给出的命令来到达目标。
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # 移动它，移动它
+
+          用地图和给出的命令来到达目标。
       Multi-Screen Apps:
         content1: 描述
         markdown: |
@@ -3929,12 +4028,26 @@ zh-CN:
           <strong>主要思想：多个屏幕 - 一个代码工作区。</strong> 这是处理 "click" 事件的代码，来设置为<em>有不同图片的另一个屏幕</em> - <em>goodbyeScreen</em>。现在不能看到那张图片或屏幕，因为没有选择那个屏幕。无论如何，它的代码可以写在这里。</p>
 
           </div>
+        teacher_markdown: |-
+          #### 卡到屏幕
+
+          团队可以假设在纸质原型中的每张卡是一个在软件实验室中的一个屏幕，以简略实验过程。事实上，多个相似的屏幕可以由一个屏幕组成，但是屏幕中所含的东西按实际情况切换。在下节课中，学生将会学习这是则么做成的，但是，这是不在本活动应该预计学生使用这种方法。
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # 我的循环机器人朋友们Jr.
 
           将假装您的同学是机器人，但这次使用循环把你的程序变短。
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # 我的循环机器人朋友们Jr.
+
+          将假装您的同学是机器人，但这次使用循环把你的程序变短。
       MyRoboticFriends-Unplugged:
+        markdown: |
+          # 我的机器人朋友
+
+          将假装您的同学是机器人，并对它们进行编程以构建堆叠杯子的模式。
+      MyRoboticFriends-Unplugged_2020:
         markdown: |
           # 我的机器人朋友
 
@@ -4258,6 +4371,8 @@ zh-CN:
           弹球\n\n![](//code.org/images/bounce.png)\n\n在弹球游戏中，要创建自己的游戏。 \n和像素鸟类似，此游戏的难题，会帮助学习创建自己游戏所需要的代码。\n\n*
           * *\n\n本系列中，将介绍 [计算机科学基础](http://code.org/educate/k5) 中的难题。这些难题可作为在线教程，帮助学生学习循环，事件，条件和函数等概念。\n\n在此专业发展体验中，将穿插一些难题的过程，使得有机会熟悉计算机科学基础中的编程概念以及学生会喜欢的角色。在本课程中，会注意到在不同的环境之间快速切换；是让愤怒的小鸟抓到猪，画图，或者让蜜蜂收集花蜜。在本课程中，这些切换会很快，以展示计算机科学基础中提供的一系列难题。学生将在每种环境上花费更多的时间。\n\n如果要更熟悉学生的体验，随时可以自行完成
           [计算机科学基础](http://studio.code.org/) 课程。但本课程通过提供一些最基本的难题和课程，将在短时间内提供很好预期的结果。\n"
+      OPD-K5 Reviewing Reflections:
+        content1: 描述
       OPD-K5 Stage10Start:
         markdown: |
           # 下一步 > 开始回顾
@@ -4363,6 +4478,8 @@ zh-CN:
           ## 反思\n> 如何像学生解释编程的概念（包括顺序和算法）？在<a href=\"http://forum.code.org/t/teaching-sequencing/408\">论坛上</a>分享。\n\n>
           <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button
           class=\"plc\">在论坛上讨论 >></button></a>\n\n在论坛中发表评论后，返回此处，然后点击下面的继续。\n\n下个阶段，会增加循环来让程序更复杂一些。\n"
+      OPD-K5 Stage3aGo_copy:
+        content1: 描述
       OPD-K5 Stage4Go:
         markdown: "# 循环 > 线下课程\n\n在这个阶段中，会看到将循环添加到有重复动作的程序中，会多么有效率。下个阶段，会编码 **如果语句**
           和其它条件语句。  \n<br/>\n\n**1. 观看 2 年级的课程 C \"[开始循环](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)\"
@@ -4722,6 +4839,60 @@ zh-CN:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">发布自己的计划 >></button></a>
 
           在论坛中发表评论后，返回此处，然后单击下面的按钮继续。
+      OPD-K5 conditionals introduced:
+        content1: 描述
+      OPD-K5 debugging:
+        content1: 描述
+      OPD-K5 diving deeper intro:
+        content1: 描述
+      OPD-K5 events introduced:
+        content1: 描述
+      OPD-K5 for loops:
+        content1: 描述
+      OPD-K5 for loops intro:
+        content1: 描述
+      OPD-K5 for loops introduction:
+        content1: 描述
+      OPD-K5 functions introduced:
+        content1: 描述
+      OPD-K5 journaling:
+        content1: 描述
+      OPD-K5 lesson implementation planning:
+        content1: 描述
+      OPD-K5 lesson plans:
+        content1: 描述
+      OPD-K5 loops introduced:
+        content1: 描述
+      OPD-K5 project:
+        content1: 描述
+      OPD-K5 projects introduction:
+        content1: 描述
+      OPD-K5 role_of_teacher:
+        content1: 描述
+      OPD-K5 sequencing introduced:
+        content1: 描述
+      OPD-K5 sprite lab:
+        content1: 描述
+      OPD-K5 sprite lab introduction:
+        content1: 描述
+      OPD-K5 sprite lab unplugged:
+        content1: 描述
+      OPD-K5 sprite lab video:
+        content1: 描述
+      OPD-K5 types of lessons:
+        content1: 描述
+      OPD-K5 using lesson plans:
+        content1: 描述
+      OPD-K5 variables:
+        content1: 描述
+      OPD-K5 variables introduction:
+        content1: 描述
+      OPD-K5 variables unplugged:
+        content1: 描述
+      OPD-K5 where to next:
+        content1: 描述
+      OPD-K5-projects-1:
+        content1: 描述
       OPD-Stage3Start:
         markdown: |
           # 展望 > 阶段概述
@@ -4863,6 +5034,13 @@ zh-CN:
           使用Play Lab 项目，搜集数据并进行预测。
 
           ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          # 描绘数据
+
+          使用Play Lab 项目，搜集数据并进行预测。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
       PowerOfWords-Unplugged:
         markdown: |
           # 语言的力量
@@ -4894,6 +5072,11 @@ zh-CN:
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
+        markdown: |
+          # 接力编程
+
+          分成小组，一起来写出能画图的程序。
+      RelayProgramming-Unplugged_2020:
         markdown: |
           # 接力编程
 
@@ -4954,12 +5137,26 @@ zh-CN:
 
           ### 接下来就要试试了！
 
+        teacher_markdown: "#### 事实：\n\n这节课有很多要学，但是许多关于事件是如何在应用实验室中运行是对于这节课是完全不需要的，假如学生对编程在应用实验室中完成的，在这些重点上要清楚：\n\n*没有“画”永久循环\n*`onEvent()`（当事件发生时）模块需要：\n
+          \   *元素标识\n    *一个事件（如“······被点击”或“鼠标在······”）\n    *程序在某事件发生时（这种句子叫做匿名函数，由绿色模块表示）\n
+          \   *在`onEvent()`（当事件发生时）中的程序会在任何时间运行，只要驱动性的事件发生。\n\n####与游戏实验室对比：\n\n在游戏实验室中，我们会用以下方式检测按钮是否被点击并反应：\n\n
+          \   function draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t//
+          Do something\n       \t}\n    }\n\n在应用实验室中,我们会用本方式检测假如一个按钮是否被点击并做什么作为反应：\n\n
+          \   onEvent(\"button\", \"click\", function () {\n    \t// Do something\n
+          \   });\n\n在应用实验室示例中，函数是另一种在onEvent（当事件发生时）函数的成分，只是成分必须是函数本身。我们可以另外建立一个函数然后这样写：\n\n
+          \   function doSomething() {\n    \t// Do something\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\n在第二个示例中，注意我们有给予函数`doSomething`（做什么）到`onEvent`（当事件发生时）函数，我们不加入闭合符带后面。这是因为我们没有设定函数作为物品。"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
 
           今天你将学习，如果网络上有些事情使您感到愤怒，悲伤或害怕，该怎么做。
       SimonSays-Unplugged:
+        markdown: |
+          # 西蒙说
+
+          玩一玩游戏，想想需要什么命令来获得正确的结果。
+      SimonSays-Unplugged_2020:
         markdown: |
           # 西蒙说
 
@@ -4999,6 +5196,11 @@ zh-CN:
           # 写歌
 
           用歌曲中副歌的概念，来学习定义和调用函数。
+      Songwriting-Unplugged_2020:
+        markdown: |
+          # 写歌
+
+          用歌曲中副歌的概念，来学习定义和调用函数。
       'Technique: Frequency Analysis':
         content1: 描述
         markdown: "# 破解替换加密\n\n破解随机替换加密的最佳技术称为 **频率分析**\n\n解释来自：[维基百科](https://zh.wikipedia.org/wiki/%E9%A2%91%E7%8E%87%E5%88%86%E6%9E%90)\n\n*
@@ -5018,6 +5220,15 @@ zh-CN:
           - 一种通过对字母进行位移来实现加密的加密方法。\n* **破解加密** - 当你尝试在不知道加密法的所有细节时解码被加密过的消息，你就是在尝试
           **破解** 这个加密。 \n\n\n单击 继续 去 **下一个挑战**...\n\n\n"
       TheRightAppMarkdownLevel_2019:
+        markdown: |
+          # 正确的应用
+
+          * 如今每个人都在使用计算机，尤其是智能手机。
+          * 智能手机上的应用，能帮助人们做很多事情，例如与朋友聊天、听音乐、购物或浏览互联网。
+          * 对于开发者而言，站在其他人的角度上，并从他们的需求出发来设计应用是颇为重要的！
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
         markdown: |
           # 正确的应用
 
@@ -5134,7 +5345,33 @@ zh-CN:
           feedback: 错误
         questions:
         - text: 点击 "编辑" 按钮来看看 `神秘的行为` 是如何工作的。学习内部的代码，然后预测一下。
+      behaviors 1 predict_2020:
+        answers:
+        - text: 精灵图会旋转
+          feedback: 错误。
+        - text: 精灵图会缩小。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 精灵图会移动。
+          feedback: 错误。
+        - text: 精灵图会变化颜色。
+          feedback: 错误
+        questions:
+        - text: 点击 "编辑" 按钮来看看 `神秘的行为` 是如何工作的。学习内部的代码，然后预测一下。
       behaviors 4 predict:
+        answers:
+        - text: 往左，再往下
+          feedback: 错误。
+        - text: 对角线
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 之字形
+          feedback: '错误。 '
+        - text: 往下，再往左
+          feedback: 错误
+        questions:
+        - text: 预测一下。卫星会沿着那条路到达星系？
+      behaviors 4 predict_2020:
         answers:
         - text: 往左，再往下
           feedback: 错误。
@@ -5186,6 +5423,19 @@ zh-CN:
           feedback: 艺术家画了一个正方形。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家将会画一个正方形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -5213,6 +5463,19 @@ zh-CN:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: '12'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: '15'
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
+        questions:
+        - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
           feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
@@ -5264,6 +5527,19 @@ zh-CN:
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
         - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: 这个程序不会失败。松鼠会到达橡子的位置。
+          feedback: 不正确。斯奎特在最后转向时走错了路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+          feedback: 不正确。在斯奎特转向错误的方向后，走的步数太少。
+        - text: 我不知道。
+          feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
+        questions:
+        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -5291,6 +5567,19 @@ zh-CN:
         questions:
         - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - text: 这只鸟最终会比猪少走一步。
+          feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        - text: 小鸟会到达猪的位置。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 这只鸟将撞上 TNT 炸药。
+          feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        - text: 我不知道。
+          feedback: 这段代码会把小鸟完美地移动到猪的位置。
+        questions:
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: 这只鸟最终会比猪少走一步。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
@@ -5342,6 +5631,19 @@ zh-CN:
           feedback: 循环模块将使 BB-8 向前移动5次。
         questions:
         - text: 当您单击 "运行" 时, 会发生什么情况？
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8 将不会移动。
+          feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        - text: BB-8 将只移动一格.
+          feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        - text: BB-8 将移动 5次, 并得到所有的废金属
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不了解
+          feedback: 循环模块将使 BB-8 向前移动5次。
+        questions:
+        - text: 当您单击 "运行" 时, 会发生什么情况？
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8将在第一个循环中走得太远。
@@ -5381,6 +5683,19 @@ zh-CN:
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8将在第一个循环中走得太远。
+          feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        - text: BB-8在第一个循环中走得不够远, 无法获得所有的废金属。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: BB-8将会毫无困难地收集所有的废金属。
+          feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        - text: 我不知道。
+          feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_external_binary1:
         markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
           <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
@@ -5398,6 +5713,14 @@ zh-CN:
           align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
           float=\"left\"/><h3>这里有个可以遍历的 \"像素\" 网格，通过将某些正方形像素设置为开，来画出图形。</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018_2019:
+        markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
+          <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>这里有个可以遍历的 \"像素\" 网格，通过将某些正方形像素设置为开，来画出图形。</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
         markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
           <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
           src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
@@ -5489,6 +5812,34 @@ zh-CN:
 
         questions:
         - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: 错误。
+        - text: B
+          feedback: 错误。
+        - text: C
+          feedback: 错误。
+        - text: D
+          correct: true
+          feedback: 叮咚！答对啦！
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -5530,6 +5881,26 @@ zh-CN:
         questions:
         - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: B
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        - text: C
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        - text: 我不知道。
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
@@ -5591,6 +5962,34 @@ zh-CN:
         questions:
         - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
             “运行” 后会发生什么？
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        - text: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        - text: 我不知道。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        questions:
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        - text: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        - text: 我不知道。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        questions:
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
@@ -5619,11 +6018,40 @@ zh-CN:
         - text: 仔细查看下面的代码，在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: '蜜蜂会在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+          correct: true
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          feedback: '错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          feedback: '错误。错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
         - text: 我不知道。
+          feedback: "“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。\n"
+        questions:
+        - text: 仔细查看下面的代码。在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - text: '蜜蜂会在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          feedback: '错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+        - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          feedback: '错误。错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+        - text: 我不知道。
+          feedback: "“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。\n"
         questions:
         - text: 仔细查看下面的代码。在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_nestedLoops2_predict1:
@@ -5653,6 +6081,19 @@ zh-CN:
         questions:
         - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
+          feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        - text: 蜜蜂只能得到2个花蜜。
+          feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        - text: 蜜蜂将会得到所有的花蜜。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不知道。
+          feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
+        questions:
+        - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
@@ -5698,6 +6139,22 @@ zh-CN:
         questions:
         - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        - text: '8'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: '12'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        - text: 我不知道。
+          feedback: 蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        questions:
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
           feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
@@ -5774,6 +6231,22 @@ zh-CN:
           <br/>
         questions:
         - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: 收割者将收获所有的农作物。
+          feedback: 错误。没有收割南瓜的代码。
+        - text: 收割者将不会收割她路过的农作物。
+          feedback: 错误。代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
+        - text: 收割者将收获到除了南瓜以外的所有农作物。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不知道。
+          feedback: 代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
+        markdown: |
+          这一关中的幼苗会是玉米或莴苣。
+          <br/>
+        questions:
+        - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
       courseD_multi_farmer_ramp13:
         answers:
         - text: 农夫会走到路的尽头，并且收割南瓜。
@@ -5830,6 +6303,19 @@ zh-CN:
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: 没东西了。代码只会剩下平地。
+          feedback: 错误。没有任何代码用来清除土堆。
+        - text: 代码将对土堆不产生任何影响。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 代码将对地上的坑不产生任何影响。
+          feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
+        - text: 我不知道。
+          feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
+        questions:
+        - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: 什么都不会发生。
@@ -5857,6 +6343,19 @@ zh-CN:
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        - text: 农夫永远不停止地清除土堆。
+          feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不知道。
+          feedback: 只要有土堆，农夫就会一直移除土，直到土堆消失。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: 什么都不会发生。
           feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
@@ -5908,6 +6407,19 @@ zh-CN:
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: 僵尸会通过正确的路径, 最终会永远的来回走动。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 僵尸会到达向日葵。
+          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
+        - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
+          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
+        - text: 我不知道。
+          feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until2_predict1:
         answers:
         - text: 小鸟不会移动。
@@ -5947,6 +6459,19 @@ zh-CN:
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
         - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: 小鸟不会移动。
+          feedback: 错误。当有路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
+        - text: 小鸟会到达猪的位置。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 小鸟会撞上TNT炸药。
+          feedback: 错误。当有安全的路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
+        - text: 我不知道。
+          feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
+        questions:
+        - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
       courseD_multi_scrat_predict1:
         answers:
         - text: 什么也没发生。斯奎特完全不会动。
@@ -5960,6 +6485,8 @@ zh-CN:
           feedback: 将 '向前移动' 模块放到 '重复' 模块中会让斯奎特向前移动 3 次。然后转向并再向前移动 3 次，就能到达橡子了！
         questions:
         - text: 此代码使用了一个新模块。你认为在你按下“运行”时会发生什么？
+      courseD_project_exemplars_2020_2021:
+        content1: 测试Markdown文本页面
       courseE_multi_bee_functions_predict1:
         answers:
         - text: 同样的程序也会通过这一关。
@@ -6012,6 +6539,19 @@ zh-CN:
           feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
         questions:
         - text: 看看下面的函数定义。收获者会采摘什么？
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: 收获者会采摘两个南瓜。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        - text: 收获者会采摘所有的南瓜。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        - text: 收获者会采摘莴苣。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 收获者会采摘玉米。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        questions:
+        - text: 看看下面的函数定义。收获者会采摘什么？
       courseE_prediction_artistFunction1:
         answers:
         - text: 什么都没有发生，函数没有被调用。
@@ -6051,6 +6591,32 @@ zh-CN:
           feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
         questions:
         - text: 当您单击“运行”时，会发生什么情况？
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: 什么都没有发生，函数没有被调用。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家只会绘制一个正方形。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家将绘制两个部分重叠的正方形。
+          feedback: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        - text: 艺术家将绘制两个正方形，中间有空隙隔开。
+          correct: true
+          feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: 什么都没有发生，函数没有被调用。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家只会绘制一个正方形。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家将绘制两个部分重叠的正方形。
+          feedback: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        - text: 艺术家将绘制两个正方形，中间有空隙隔开。
+          correct: true
+          feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
       courseE_project_exemplars_2019:
         content1: 测试Markdown文本页面
         markdown: |+
@@ -6072,6 +6638,10 @@ zh-CN:
           | [![图案 (小艺术家)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "图案 (小艺术家)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![函数的花 (小艺术家)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "函数的花 (小艺术家)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | 用嵌套循环来创造！ | 用函数来创造！ |
 
+      courseE_project_exemplars_2019_2020:
+        content1: 测试Markdown文本页面
+      courseExpress_project_exemplars_2019_2020:
+        content1: 测试Markdown文本页面
       courseF_bee_variables_8a_2018:
         answers:
         - text: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
@@ -6087,6 +6657,20 @@ zh-CN:
         - text: 仔细查看下面的代码。蜜蜂最后会收集多少个花蜜？
         title: 小蜜蜂——多变量的应用
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - text: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
+          feedback: 错误。变量的名称不会影响它的值。
+        - text: 蜜蜂只会收集到2个花蜜。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂将会得到所有的花蜜。
+          feedback: 错误。在最后两个函数调用之前，变量被设置回0。
+        - text: 我不知道。
+          feedback: 在最后两个函数调用之前，变量被设置为 0，而在函数内每次都会加 1。所以最后蜜蜂会收集 2 个花蜜。
+        questions:
+        - text: 仔细查看下面的代码。蜜蜂最后会收集多少个花蜜？
+        title: 小蜜蜂——多变量的应用
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
           feedback: 错误。变量的名称不会影响它的值。
@@ -6122,6 +6706,17 @@ zh-CN:
           <h3>在这个系列接下来的部分，会使用在程序中能 *变化* 的变量。</h3>
 
       courseF_external_variableConstant_2018_2019:
+        markdown: |+
+          <h2>变量的更多介绍</h2>
+
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>刚刚学习了使用变量的好办法……当作常量！
+          将变量当作常量使用时，只用在程序中设置一次变量，点击 "运行" 后，就可以多次使用 *同样* 的值。</h3>
+          <br/><hr/>
+          <h3>在这个系列接下来的部分，会使用在程序中能 *变化* 的变量。</h3>
+
+      courseF_external_variableConstant_2018_2019_2020:
         markdown: |+
           <h2>变量的更多介绍</h2>
 
@@ -6198,32 +6793,32 @@ zh-CN:
         markdown: "# **刚刚学会了 \"计数循环\"！**\n\n### **计数循环是能够设置开始、结束、步长值的循环。**\n\n###
           这种新的 `重复` 循环能在循环运行的开始，结束，每次增加多少上，有更多的控制。\n\n### 更多的控制，意味着能更快的解决一些难题！ \n\n---\n\n##
           **要知道的词汇**\n\n### **计数循环（for loop）** - 计数循环是能够预定开始、结束和增量（步长）的循环\n\n"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: 测试Markdown文本页面
+        markdown: "# **刚刚学会了 \"计数循环\"！**\n\n### **计数循环是能够设置开始、结束、步长值的循环。**\n\n###
+          这种新的 `重复` 循环能在循环运行的开始，结束，每次增加多少上，有更多的控制。\n\n### 更多的控制，意味着能更快的解决一些难题！ \n\n---\n\n##
+          **要知道的词汇**\n\n### **计数循环（for loop）** - 计数循环是能够预定开始、结束和增量（步长）的循环\n\n"
       courseF_markdown_forloops_intro:
         content1: 测试Markdown文本页面
-        markdown: |+
-          # **在这节课中...**
-
-          ### 今天要学习一种新的 `重复` 循环。这是要用的模块：
-
-          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
-
-          ### 好消息是，新循环会非常容易解决这样的问题！
-
-          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
-
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   \n\n! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019:
         content1: 测试Markdown文本页面
-        markdown: |+
-          # **在这节课中...**
-
-          ### 今天要学习一种新的 `重复` 循环。这是要用的模块：
-
-          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
-
-          ### 好消息是，新循环会非常容易解决这样的问题！
-
-          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
-
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   \n\n! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: 测试Markdown文本页面
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   \n\n! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_loops_end:
         content1: 测试Markdown文本页面
         markdown: "# **刚刚学会了 \"循环\"！**  \n\n### **循环是不断重复做某件事情。** 另一种说法是重复。\n\n###
@@ -6255,12 +6850,28 @@ zh-CN:
           如果一个普通循环就能对重复的规律很有用了，那么循环套上循环会怎样呢？让我们试试吧！\n\n---\n\n## **要知道的模块**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
         content1: 测试Markdown文本页面
-        markdown: "# **刚刚学会了 \"变量\"！**\n\n### 要使用变量，需要一个名字和一个值。名字不能改变，但值可以。这样，可以在程序的任何位置，将名字作为值的占位符！
-          \n\n---\n\n## **要知道的词汇**\n\n### **变量（variable）** - 一些可以变化的信息的占位符\n\n"
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_end_2019:
         content1: 测试Markdown文本页面
-        markdown: "# **刚刚学会了 \"变量\"！**\n\n### 要使用变量，需要一个名字和一个值。名字不能改变，但值可以。这样，可以在程序的任何位置，将名字作为值的占位符！
-          \n\n---\n\n## **要知道的词汇**\n\n### **变量（variable）** - 一些可以变化的信息的占位符\n\n"
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
+      courseF_markdown_variables_end_2019_2020:
+        content1: 测试Markdown文本页面
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_intro:
         content1: 测试Markdown文本页面
         markdown: |+
@@ -6277,6 +6888,21 @@ zh-CN:
 
 
       courseF_markdown_variables_intro_2019:
+        content1: 测试Markdown文本页面
+        markdown: |+
+          # **在这节课中...**
+
+          ### *变量* 是一些能改变的信息的占位符。有了占位符，才能在稍后才能知道值得情况下，写出程序！
+
+
+          ---
+
+          ## **要知道的模块**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+      courseF_markdown_variables_intro_2019_2020:
         content1: 测试Markdown文本页面
         markdown: |+
           # **在这节课中...**
@@ -6342,6 +6968,23 @@ zh-CN:
 
         questions:
         - text: 当您单击“运行”时，会发生什么情况？
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: 艺术家将绘制一条直线，从画布的一侧到另一侧，同时线逐渐变粗。
+          feedback: 错误。艺术家在“for”循环的迭代之间往返。
+        - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更细。
+          feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
+        - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 我不知道。
+          feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
+        markdown: |+
+          使用 `计数循环` 中的计数器来改变此图形上笔刷的宽度。
+
+
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
       courseF_multi_artist_fwp2_predict1:
         answers:
         - text: 小艺术家会用同一个函数画两个不同大小的盒子。
@@ -6386,6 +7029,19 @@ zh-CN:
         questions:
         - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - text: 艺术家将会绘制一个边长为50像素的三角形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 艺术家将绘制一个有50条边的多边形，其中每条边长为3个像素。
+          feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
+        - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
+          feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
+        - text: 我不知道。
+          feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
+        questions:
+        - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - text: 艺术家将会绘制一个边长为50像素的三角形。
           correct: true
@@ -6481,6 +7137,23 @@ zh-CN:
 
         questions:
         - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
+          feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        - text: 蜜蜂将向前移动，并收集花朵中所有的花蜜，但是会有一朵花收集不到。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂将向前移动，并在每朵花中收集一个花蜜。
+          feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        - text: 我不知道。
+          feedback: "“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。"
+        markdown: |+
+          啊！ 使用 `计数循环` 让这一关简单多了！
+
+
+        questions:
+        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: 蜜蜂不会采集任何花蜜或蜂蜜。
@@ -6533,6 +7206,8 @@ zh-CN:
           | [![花丛 (小艺术家)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![螺旋 (小艺术家)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
           | 用变量发挥创意！ | 用循环发挥创意！ |
 
+      courseF_project_exemplars_2019_2020:
+        content1: 测试Markdown文本页面
       coursee_prediction_artistfunction2:
         answers:
         - text: 艺术家将正确解决谜题。
@@ -6560,6 +7235,19 @@ zh-CN:
         questions:
         - text: 点击 "运行" 按钮后会发生什么？
       coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - text: 艺术家将正确解决谜题。
+          feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
+        - text: 这位艺术家将在窗户形状内画四个正方形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 艺术家只画正方形的一条边。
+          feedback: 不正确。该程序不调用“画一列多边形”。
+        - text: 这位艺术家将画四个互相重叠的正方形。
+          feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
+        questions:
+        - text: 点击 "运行" 按钮后会发生什么？
+      coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -6670,6 +7358,39 @@ zh-CN:
         title: 计算机科学发现快速问卷！
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
         title: 计算机科学发现快速问卷！
+      csf_be_a_super_digital_citizen:
+        content1: 描述
+        markdown: |-
+          # 超级电子公民
+
+          ## 我们应该在有网络霸凌时怎么做？
+      csf_password_power-up:
+        content1: 描述
+        markdown: |-
+          # 加强你的密码
+          ## 密码小窍门：
+
+          *使用你记得住的**短语**。
+          *只有**家长**能知道你的密码。
+          *绝对不能使用你的**私人资料**作为密码。
+          *密码必须要是**八字节**长。
+          *在密码中用字母，数字和**符号**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        content1: 描述
+        markdown: |
+          # STOP 意思
+
+          ## 假如有人在网上对你不友好，你应该怎么做？
+          ***S**离开（Step away）
+          ***T**告诉可信的成年人 （Tell a trusted adult）
+          ***O**
+          ***P**暂停然后在网上想   (Pause and thing online
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          我的网上邻居
+          你是如何在网上安全地浏览信息
       grade2_multi_collector_A_predict1:
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝
@@ -6709,7 +7430,49 @@ zh-CN:
           feedback: 罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - text: 用这段代码让罗瑞尔收集4个宝贝
+          feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        - text: 罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 罗瑞尔要收集所有宝藏。
+          feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        - text: 我不知道。
+          feedback: 罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        questions:
+        - text: 仔细观察代码。你认为程序运行时会发生什么？
       gradek1_activity_beNice:
         markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
           btn-large btn-primary next-stage submitButton\">继续</a>\n"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # 个人资料和隐私
+
+          ## 你可以在网上分享什么信息？
+      courseD_EOC_2020:
+        description: 你已经完成了课程D！点击以创建项目。
+      courseE_EOC_2020:
+        description: 你已经完成了课程E！点击以创建项目。
+      csf_digital_trails:
+        markdown: |-
+          # 顺着电子线索
+          ##什么东西是可以在你的电子足迹
+      OPD-K5 About_copy:
+        markdown: "#欢迎到“如何教育计算机科学基础”\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n##这个在线课程是做什么的？ \n这个在线课程时计划用于向老师们介绍 Code.org 的计算机科学基础教纲和资料。以阅读，观看视频，完成互动性难题和回顾学习进程，你会发展属于你自己对计算机科学基础教学的理解。\n\n##这个在线课程是给谁的？\n这个在线课程时设计给**计划教计算机科学基础的小学老师**。这意味着从一般教师到理工科教师到图使馆管理员及在中间的某类职业。\n\n假如你是<a
+          href=\"https://code.org/educate/csd\" target=\"blank\">中学</a>或<a href=\"https://code.org/educate/csp\"
+          target=\"blank\">高中</a>的老师， 我们建议您参考以下资料<a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\">深入性，更专业性的职业成长机会</a>。\n\n##我可以从这个在线课程中学习计算机科学吗？\n虽然这里有机会了解和练习基本编程理论，并了解它们是如何向学生展示的。这不是一个专门性的对成年人开发的课程。不过，在课程的结尾，我们会为您提供其他资料以更深入钻研计算机科学理论。\n\n##为上这个网上课程我需要用经验吗？\n没有过往编程或计算机科学教学经历在写该课程时已经考虑了。
+          \n\n##这个在线课程需要多长时间? \n完成这个课程大概需要4至6小时。\n\n##我可以切换这个课程字的大小吗？\n我们知道并承认文本在此平台可能会有点小！
+          \n\n是文本变大：\n- 在苹果平台上，点击“命令”和“+”；\n- 在Windows系统上，点击“控制（Ctrl）”和“+”。\n\n使文本变小：
+          \n- 在苹果平台上，点击“命令”和“-”；\n- 在Windows系统上，点击“控制（Ctrl）”和“-”。"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # 语言的力量
+
+          ## 在有人在网上用攻击性的语言时，你应该做什么？
+      courseF_EOC_2020:
+        description: 你已经完成了课程F！点击以创建项目。

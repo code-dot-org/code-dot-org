@@ -1,7 +1,5 @@
 {
   "pages": {
-    "/home": "teacher-apps-open-2020",
-    "/courses": "teacher-apps-open-2020",
     "/projects": "home-learning-2020"
   },
   "banners": {
@@ -28,6 +26,15 @@
       "buttonText": "Nominate a Teacher",
       "buttonUrl": "https://code.org/nominate",
       "buttonId": "teacher-apps-nominate-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "teacher-apps-stillon-2020": {
+      "image": "/images/fill-970x562/professional-learning-2019-3.png",
+      "title": "Professional Learning is still on!",
+      "body": "Workshops are now virtual in most states! 98% of teachers recommend our engaging professional learning programs to teach computer science. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-stillon-2020-button",
       "backgroundColor": "#59b9dc"
     },
     "home-learning-2020": {

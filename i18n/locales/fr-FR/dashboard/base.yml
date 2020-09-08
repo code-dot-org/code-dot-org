@@ -27,8 +27,8 @@ fr:
       messages:
         blank: "est obligatoire"
         blank_plural: "sont obligatoires"
-        invalid: "n'est pas valide"
-        invalid_plural: "ne sont pas valides"
+        invalid: "est invalide"
+        invalid_plural: "sont invalides"
     attributes:
       user:
         name: 'Nom à afficher'
@@ -36,7 +36,7 @@ fr:
         email: 'E-mail'
         parent_email: 'E-mail du parent/tuteur'
         personal_email: "Adresse email personnelle<a href=\"%{url}\">(cliquer ici si vous n’avez pas d'adresse e-mail)</a>"
-        personal_email_markdown: "Adresse email personnel [(cliquez ici si vous n'avez pas d'adresse email)](%{url})"
+        personal_email_markdown: "Adresse email personnelle [(cliquer ici si vous n'avez pas d'adresse email)](%{url})"
         username: 'nom d''utilisateur'
         password: 'Mot de passe'
         password_confirmation: 'Confirmation du mot de passe'
@@ -45,12 +45,12 @@ fr:
         age: 'Age'
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
-        finish_sign_up_header: 'Terminer la création de votre profil'
-        finish_sign_up_subheader: 'Remplir les informations suivantes pour finir de créer un compte Code.org pour <strong>%{email}</strong>.'
+        finish_sign_up_header: 'Terminez la création de votre compte'
+        finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour **%{email}**.'
-        finish_sign_up_subheader_provider: 'Remplir les informations suivantes pour finir de créer un compte Code.org avec <strong>%{provider}</strong> pour <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> de <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec **%{provider}** de **%{email}**.'
-        reset_password_token: "Le lien que vous avez suivi pour réinitialiser le mot de passe"
+        reset_password_token: "Le lien de réinitialisation du mot de passe que vous avez suivi"
         error:
           future: ne peut pas être dans le futur
   beta: "beta"
@@ -86,7 +86,7 @@ fr:
   courses_page:
     title_student: "Apprends avec Code Studio"
     title_teacher: "Enseigner l'informatique"
-  unplugged_activity: 'Activité manuelle'
+  unplugged_activity: 'Activité "Déconnectée"'
   of: "de"
   more: "PLUS"
   less: "MOINS"
@@ -115,18 +115,18 @@ fr:
     powerschool: 'Powerschool'
     forgot_password: 'Mot de passe oublié ?'
     migration_success: 'Succès ! Vous pouvez maintenant profiter de notre nouvelle expérience de compte.'
-    demigration_success: 'La nouvelle expérience de compte est à présent désactivée sur votre compte.'
+    demigration_success: 'La nouvelle expérience de compte est désormais désactivée sur votre compte.'
     need_confirmation: "Pas reçu les instructions de confirmation ?"
     need_unlock: "Pas reçu les instructions de déverrouillage?"
     not_linked: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez vous identifier en tapant votre mot de passe, ci-dessous."
     use_clever: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de vous connecter via Clever Portal."
     unable_to_connect_provider: "Impossible de connecter votre compte Code.org à votre compte %{provider}. Veuillez réessayer."
-    already_in_use: "Votre compte %{provider} est déjà connecté à un autre compte de Code.org."
+    already_in_use: "Votre compte %{provider} est déjà connecté à un autre compte Code.org."
     already_linked: "Votre compte %{provider} est déjà lié à votre compte de Code.org."
     existing_account:
       account_exists: "Bonnes nouvelles ! Tu as déjà un compte Code.org qui utilise %{email}"
-      sign_in: "Veuillez vous connecter et nous lierons votre %{provider} profil."
-      sign_up: "Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte avec une adresse électronique différente ? Nous lierons votre %{provider} profil si vous choisissez de créer un nouveau compte."
+      sign_in: "Veuillez vous connecter et nous lierons votre profil %{provider}."
+      sign_up: "Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte avec une adresse électronique différente ? Nous lierons votre profil %{provider} si vous choisissez de créer un nouveau compte."
   signup_form:
     email_signup: 'Inscrivez-vous avec votre adresse e-mail'
     student_count: '%{count} élèves se sont déjà inscrits.'
@@ -147,7 +147,7 @@ fr:
     age: 'Age'
     user_type: 'Êtes-vous un élève ou un enseignant ?'
     submit: 'S’inscrire'
-    go_to_account: 'Me rendre à mon compte'
+    go_to_account: 'Aller à mon compte'
     teacher: 'Êtes-vous un enseignant?'
     valid_username: "Disponible !"
     invalid_username: "Le nom d'utilisateur doit contenir au moins 5 caractères"
@@ -173,6 +173,7 @@ fr:
     email_preference_no: "Non"
     email_preference_required: "Vous devez spécifier une adresse e-mail préférée."
     parent_account_checkbox: "Je suis un parent/tuteur qui s'inscrit au nom de mon enfant"
+    parent_account_email_progress_permission: "Pouvons-nous vous envoyer des e-mails pour vous informer, occasionnellement, sur la progression de votre enfant, sur ses projets, sur son cours ou sur l'informatique? [(Consultez notre politique de confidentialité)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail du parent/tuteur"
   school_info:
     title: 'Informations de l’école (facultatif)'
@@ -313,12 +314,12 @@ fr:
       professional_learning: "Apprentissage professionnel"
       documentation: "Documentation"
       tutorials: "Didacticiels"
-      app_lab_documentation: "Documentation du Laboratoire d'Applications"
-      app_lab_tutorials: "Tutoriels sur le Laboratoire d'Applications"
-      game_lab_documentation: "Documentation du Laboratoire de Jeux"
-      game_lab_tutorials: "Tutoriels sur le Laboratoire de Jeux"
-      sprite_lab_documentation: "Documentation du Laboratoire de Lutins"
-      sprite_lab_tutorials: "Tutoriels sur le Laboratoire de Lutins"
+      app_lab_documentation: "Documentation sur le Labo des Applis"
+      app_lab_tutorials: "Tutoriels du Labo des Applis"
+      game_lab_documentation: "Documentation sur le Labo des Jeux"
+      game_lab_tutorials: "Tutoriels du Labo des Jeux"
+      sprite_lab_documentation: "Documentation sur le Labo des Lutins"
+      sprite_lab_tutorials: "Tutoriels du Labo des Lutins"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -344,6 +345,8 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
+      legal_privacy: "Politique de confidentialité"
+      legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
       district_dashboard: 'Tableau de bord du district'
@@ -467,10 +470,10 @@ fr:
     auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
     for_parents_and_guardians: "Pour les Parents et Tuteurs"
-    link_a_parent_email: "Associez une adresse e-mail parent/tuteur à ce compte pour rester au courant sur les progrès et les projets de votre enfant"
+    link_a_parent_email: "Associez une adresse e-mail parent/tuteur à ce compte pour rester informé sur les progrès et les projets de votre enfant"
     parent_guardian_email_label: "E-mail du parent/tuteur"
     none: "Aucun"
-    only_one_parent_email_supported_warning: "Remarque : nous ne pouvons prendre en charge qu'une seule adresse e-mail parent / tuteur par compte étudiant pour le moment."
+    only_one_parent_email_supported_warning: "Remarque : nous ne pouvons prendre en charge qu'une seule adresse e-mail parent/tuteur par compte étudiant pour le moment."
     encrypted: "chiffré"
   user_level:
     completed: 'Terminé'
@@ -692,20 +695,6 @@ fr:
       body: "Les élèves peuvent découvrir les concepts de notre cours pratique sur les Principes de l'Informatique en utilisant ces outils numériques. Utilisez les widgets directement, ou bien créez une leçon focalisant sur un seul concept, pour votre classe."
       audience: "14 ans et +"
       cta: "Apprendre comment"
-  gallery:
-    students_drew_these_with_code: "Les élèves les ont dessiné avec du code!"
-    students_made_these_with_code: "Les élèves les ont réalisé avec du code !"
-    picture_count: "Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b> des images en écrivant leurs propres programmes informatiques. Clique sur les images pour voir chaque programme en action."
-    activity_count: "Ces <b>%{days}</b> derniers jours, les élèves ont développer <b>%{count}</b> des applications et des images en écrivant leurs propres programmes informatiques. Clique sur les images et les captures d'écran pour voir chaque programme en action."
-    want_to_make_your_own: "Tu veux faire le tien?"
-    how_to_save: "Dans le dernier niveau de ces tutoriels, cliquez sur « Terminer » et « Enregistrer » pour enregistrer votre travail dans la Galerie."
-    more: "Plus &rarr;"
-    caption_by_name_age: "par %{name}, %{age} ans"
-    caption_time_ago: "il y a %{time_ago} heures/jours"
-    header: "Galerie"
-    header_playlab: "Histoires et jeux"
-    header_artist: "L’art du code"
-    report_abuse: "Signaler un abus"
   landing:
     prerelease_tutorial: "Ce didacticiel est en version **beta**. Il est sujet à révision, en fonction des commentaires, et des améliorations sont ensuite apportées."
     report_bug: "Signaler un bogue"
@@ -768,6 +757,8 @@ fr:
     open_response_body: "Merci pour ta réponse !"
     correct_title: "Correct"
     correct_body: "C'est la bonne réponse."
+  lesson_extras:
+    bonus_level: "Niveau bonus"
   dialog:
     ok: "OK"
     startover_title: "Es-tu certain(e) de vouloir recommencer ?"
@@ -894,99 +885,7 @@ fr:
     instructor_feedback: 'Commentaires de l’instructeur'
     peer_feedback: 'Commentaire par les pairs'
     outdated: 'Ce commentaire a été émis pour une version précédente'
-  flex_category:
-    required: 'Aperçu'
-    content: 'Contenu'
-    practice: 'Pratiques de l’enseignant'
     peer_review: 'Commentaire par un pair'
-    ramp_up: 'Progression'
-    main_course: 'Cours Principal'
-    extra_course_content: 'Contenu du Cours Supplémentaire'
-    csf_e_1: 'Progression jusqu''au cours E (facultatif)'
-    csf_e_2: 'Contenu du cours E'
-    csf_f_1: 'Progression jusqu''au cours F (facultatif)'
-    csf_f_2: 'Contenu du cours F'
-    csf_digcit: 'Citoyenneté numérique'
-    csf_jigsaw: 'Puzzle'
-    csf_sequencing: 'Séquençage'
-    csf_loops: 'boucles'
-    csf_events: 'Événements'
-    csf_online_safety: 'Sécurité en ligne'
-    csf_binary: 'Binaire'
-    csf_conditionals: 'Instructions conditionnelles'
-    csf_sprites: 'Les Lutins'
-    csf_spritelab: 'Le Labo des Lutins'
-    csf_nested_loops: 'Boucles Imbriquées'
-    csf_functions: 'fonctions'
-    csf_variables: 'variables'
-    csf_for_loops: 'Boucles « Pour »'
-    csf_internet: 'Internet'
-    csf_impacts: 'Les Impacts de l''Informatique'
-    csf_warmup: 'Échauffement'
-    csd1_1: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
-    csd1_2: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
-    csd1_3: 'Leçons alternatives'
-    csd2_1: 'Chapitre 1 : Contenu Web et HTML'
-    csd2_2: 'Chapitre 2 : Styles et CSS'
-    csd3_1: 'Chapitre 1 : Images et Animations'
-    csd3_2: 'Chapitre 2 : Construction de Jeux'
-    csd4_1: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
-    csd4_2: 'Chapitre 23 : Prototypage d''Applications'
-    csd5_1: 'Chapitre 1 : Représentation de l''information'
-    csd5_2: 'Chapitre 2 : Résolution des Problèmes de données'
-    csd6_1: 'Chapitre 1 : Programmation avec du Matériel'
-    csd6_2: 'Chapitre 2 : Construction de Prototypes Physiques'
-    csd_survey: 'Suivi d''après cours'
-    csp1_1: 'Chapitre 1 : Représentation et Transmission de l''Information'
-    csp1_2: 'Chapitre 2 : Inventer l''Internet'
-    csp2_1: 'Chapitre 1 : Codage et Compression d’Informations Complexes'
-    csp2_2: 'Chapitre 2 : Manipulation et Visualisation de Données'
-    csp3_1: 'Chapitre 1 : Langages de Programmation et Algorithmes'
-    csp4_1: 'Chapitre 1 : Le Monde des Mégadonnées et du Chiffrement'
-    csp5_1: 'Chapitre 1 : La Programmation Événementielle'
-    csp5_2: 'Chapitre 2 : Programmation avec des Structures de Données'
-    cspSurvey: 'Enquête'
-    cspAssessment: 'Évaluation du Chapitre'
-    csp_ap_1: 'Chapitre 1 : Cours Avancé AP : Configuration Technique'
-    csp_ap_2: 'Chapitre 2 : Cours Avancé AP : Explorer l''Évaluation des Connaissances'
-    csp_ap_3: 'Chapitre 3 : Cours Avancé AP : Créer une Évaluation des Connaissances'
-    csp_postap_1: 'Chapitre1 : Manipulation et Visualisation des Données'
-    csp_postap_2: 'Chapitre 2 : Applications et Bases de Données'
-    csp2_1_2018: 'Unité 2 : L’Information Numérique'
-    csp3_1_2018: 'Unité 3 : Introduction à la Programmation'
-    csp4_1_2018: 'Unité 4 : Mégadonnées et Confidentialité'
-    csp_variables: 'variables'
-    csp_conditionals: 'Instructions conditionnelles'
-    csp_functions: 'fonctions'
-    csp_project: 'Projet'
-    csp_lists: 'Listes'
-    csp_loops: 'boucles'
-    csp_traversals: 'Parcours'
-    csp_libraries: 'Bibliothèques'
-    csp_parameters_return_values: 'Paramètres et Valeurs de Retour'
-    csp_unit1_2020: 'Unité 1: L’Information numérique'
-    csp_unit2_2020: 'Unité 2: L''Internet'
-    csp_unit3_2020: 'Unité 3: Introduction à la conception d''applications'
-    csp_unit6_2020: 'Unité 6 : Les Algorithmes'
-    csp_unit8_2020: 'Unité 8: Créer une préparation PT ( Tâche de performance )'
-    csp_unit9_2020: 'Unité 9 : Les Données'
-    csp_unit10_2020: ' Unité 10: Cyber sécurité et impacts mondiaux'
-    dlp: 'Sujets de Réflexion'
-    time4cs_c1: 'Collection 1 : Les Everglades et ses Écosystèmes'
-    time4cs_c2: 'Collection 2 : Les Chaînes Alimentaires (dans les Everglades)'
-    time4cs_c3: 'Collection 3 : Les Espèces Indigènes (dans les Everglades)'
-    time4cs_c4: 'Collection 4 : L’Impact des Espèces Invasives (sur les Everglades)'
-    time4cs_c5: 'Collection 5 : Les Citoyens Passent à l’Action'
-    time4cs_c6: 'Conditions (révision)'
-    k5_getting_started: 'La Mise en Route'
-    k5_csf_intro: 'Familiarisez-vous avec les cours sur les Fondamentaux de l''Informatique'
-    k5_coding_concepts: 'Concepts de Codage et Stratégies D''Enseignement'
-    k5_next_steps: 'Prochaines étapes'
-    k5_basic_concepts: 'Concepts de Codage de Base et Pratiques D''enseignement'
-    k5_diving_deeper: 'Immersion Totale : Cours E et F'
-    web_lab_projects: 'Projets de laboratoire réseau'
-    game_lab_projects: 'Projets de laboratoire de jeu'
-    app_lab_projects: 'Projets de laboratoire d''application'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.
@@ -1067,6 +966,8 @@ fr:
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
+      colombian_school_city: 'Ville de l’École'
+      colombian_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1162,9 +1063,9 @@ fr:
     privacy_policy: 'politique de confidentialité'
     logout: 'Déconnexion'
     yes: 'Oui'
-  page_not_found_title: "Page introuvable"
-  page_not_found_header: '404 : Page introuvable'
-  page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
+  page_not_found_title: "Page Introuvable"
+  page_not_found_header: '404 : Page Introuvable'
+  page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse Web et réessayez, ou retournez à notre page d’accueil."
   page_not_found_button: "Retourner à la page d’accueil"
   copy: 'Copier'
   maker:
@@ -1173,8 +1074,10 @@ fr:
       enter_code: 'Veuillez entrer le code fourni lors de votre connexion via Google sur votre navigateur par défaut.'
       copy_code: 'Veuillez copier et coller ce code à l''intérieur de l''application Maker pour vous connecter à Code.org.'
       error_token_expired: 'Le jeton est expiré. Veuillez vous reconnectez pour un nouveau jeton.'
+      error_wrong_provider: 'Mauvais fournisseur. Veuillez vous assurez que vous vous connectez avec Google.'
       error_invalid_user: 'Identifiant invalide. Veuillez vous reconnecter.'
       error_no_code: 'Veuillez entrer votre code de connexion.'
   parent_email_banner:
+    text: "**Êtes-vous un parent ou un tuteur?** Relier votre e-mail à ce compte pour rester informé sur la progression et les projets de votre enfant!"
     link_your_email: "Associez votre e-mail"
     not_now: "Plus tard"

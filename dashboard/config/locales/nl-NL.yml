@@ -173,6 +173,11 @@ nl:
     email_preference_privacy: "(Zie ons privacy beleid)"
     email_preference_yes: Ja
     email_preference_no: Nee
+    parent_account_checkbox: Ik ben een ouder/voogd die zich aanmeld namens mijn kind.
+    parent_account_email_progress_permission: Kunnen wij u af en toe e-mailen over
+      de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus
+      en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})
+    parent_account_email_label: E-mail ouder/voog
   school_info:
     title: Schoolinformatie (optioneel)
     school_country: Land van de school
@@ -327,6 +332,8 @@ nl:
       help_us: Help ons
       teach: Onderwijzen
       about: Over
+      legal_privacy: Privacybeleid
+      legal_tos: Gebruiksvoorwaarden
     user:
       classroom: Startpagina voor de leerkracht
       district_dashboard: Regio-overzicht
@@ -359,6 +366,7 @@ nl:
       iceage: Ice Age
       infinity: Oneindig
       minecraft_adventurer: Minecraft avonturier
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Held
       playlab: Speel Lab
@@ -429,8 +437,15 @@ nl:
     update: Account bijwerken
     account_successfully_updated: Account succesvol bijgewerkt.
     update_email: Bijwerken
+    for_parents_and_guardians: Voor ouders en voogden
+    link_a_parent_email: Koppel het e-mailadres van een ouder/voogd aan dit account
+      om op de hoogte te blijven van de voorgang van uw kind en de projecten. U kunt
+      dit e-mailadres ook gebruiken om wachtwoorden te herstellen.
     parent_guardian_email_label: E-mail van de ouder/voogd
     none: Geen
+    only_one_parent_email_supported_warning: 'Opmerking: wij kunnen op dit moment
+      slechts één e-mailadres van een ouder/voogd per account ondersteunen.'
+    encrypted: Versleuteld
   user_level:
     completed: Voltooid
     tried: Geprobeerd
@@ -685,23 +700,6 @@ nl:
       title: Widgets
       audience: Leeftijd 14+
       cta: Leer hoe
-  gallery:
-    students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
-    students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
-    picture_count: In het afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b>
-      afbeeldingen getekend door hun eigen computerprogramma te schrijven. Klik op
-      de afbeeldingen om elk programma uit te voeren.
-    activity_count: In de afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b>
-      apps en plaatjes gemaakt door hun eigen computerprogramma's te schrijven. Klik
-      op de plaatjes en screenshots om ieder programma in actie te zien.
-    want_to_make_your_own: Wil je dit zelf doen?
-    more: Meer &rarr;
-    caption_by_name_age: door %{name}, %{age} jaar
-    caption_time_ago: "%{time_ago} geleden"
-    header: Galerij
-    header_playlab: Speel Lab
-    header_artist: Kunstenaar
-    report_abuse: Misbruik Melden
   landing:
     report_bug: Meld Bug
     support: Help
@@ -882,33 +880,6 @@ nl:
     escalated:
       name: Gëscaleerd
       description: Ik wil dat een instructeur deze inschrijving herziet
-  flex_category:
-    required: Overzicht
-    content: Content
-    practice: Leraarpraktijken
-    main_course: Hoofdcursus
-    extra_course_content: Extra cursusinhoud
-    csf_digcit: Digitaal Burgerschap
-    csf_jigsaw: Legpuzzel
-    csf_loops: Lussen
-    csf_events: Gebeurtenissen
-    csf_binary: Binaire
-    csf_conditionals: Voorwaardelijke instructies
-    csf_nested_loops: Genestelde lussen
-    csf_functions: Functies
-    csf_variables: Variabelen
-    csf_for_loops: For-lussen
-    csf_internet: Internet
-    csd6_1: 'Hoofdstuk 1: Hardware uitgang'
-    csd6_2: 'Hoofdstuk 2: Hardware Input'
-    csp1_2: 'Hoofdstuk 2: Uitvinden van het Internet'
-    cspSurvey: Vragenlijst
-    csp_variables: Variabelen
-    csp_conditionals: Voorwaardelijke instructies
-    csp_functions: Functies
-    csp_lists: Lijsten
-    csp_loops: Lussen
-    k5_next_steps: Volgende stappen
   external_links:
     disclaimer: Disclaimer
   hoc_download:
@@ -929,6 +900,8 @@ nl:
       school_name: Naam van de school
       school_city: School Stad
       school_country: Land van de school
+      colombian_school_city: School Stad
+      colombian_school_name: Naam van de school
     form_entries:
       gender:
         male: Man
@@ -965,3 +938,8 @@ nl:
     true: Ja
   page_not_found_title: Pagina niet gevonden
   copy: Kopieër
+  parent_email_banner:
+    text: Bent u een ouder of voogd? Koppel uw e-mailadres aan dit account om op de
+      hoogte te blijven van de voortgang van uw kind en projecten.
+    link_your_email: Koppel uw e-mailadres
+    not_now: Niet nu

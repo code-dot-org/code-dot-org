@@ -263,6 +263,10 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': 'y'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -280,6 +284,20 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:

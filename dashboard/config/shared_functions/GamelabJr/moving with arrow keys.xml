@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<block type="behavior_definition" deletable="false" movable="false" editable="false">
+  <mutation>
+    <arg name="this sprite" type="Sprite"/>
+    <description/>
+  </mutation>
+  <title name="NAME">moving with arrow keys</title>
+  <statement name="STACK">
+    <block type="controls_if">
+      <value name="IF0">
+        <block type="gamelab_isKeyPressed">
+          <title name="KEY">"up"</title>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="gamelab_moveInDirection">
+          <title name="DIRECTION">"North"</title>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
+          <value name="DISTANCE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="controls_if">
+          <value name="IF0">
+            <block type="gamelab_isKeyPressed">
+              <title name="KEY">"down"</title>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed">
+                  <title name="KEY">"left"</title>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection">
+                  <title name="DIRECTION">"West"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed">
+                      <title name="KEY">"right"</title>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection">
+                      <title name="DIRECTION">"East"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </statement>
+</block>

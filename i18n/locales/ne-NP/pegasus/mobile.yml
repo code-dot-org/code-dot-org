@@ -1224,6 +1224,8 @@
   header_project_gallery: "Projects"
   header_educate_hoc: "Hour of Code"
   header_stats: "Stats"
+  header_legal_privacy: "Privacy Policy"
+  header_legal_tos: "Terms of Service"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"
   user_header_settings: "My account"

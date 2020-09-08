@@ -729,39 +729,6 @@ class UserTest < ActiveSupport::TestCase
     refute follower.student_user.reload.admin?
   end
 
-  test "gallery" do
-    user = create(:user)
-    assert_equal [], user.gallery_activities
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga2 = nil
-    assert_creates(GalleryActivity) do
-      user_level2 = create(:user_level, user: user)
-      ga2 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level2
-      )
-    end
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga4 = nil
-    assert_creates(GalleryActivity) do
-      user_level4 = create(:user_level, user: user)
-      ga4 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level4
-      )
-    end
-
-    assert_equal [ga4, ga2], user.reload.gallery_activities
-  end
-
   test "short name" do
     assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
     assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
@@ -1040,11 +1007,13 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when most recent level is only followed by unplugged levels' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     script_levels = [
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
     ]
     create :user_script, user: user, script: script
 
@@ -1065,12 +1034,14 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when most recent level not a progression level' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     script_levels = [
-      create(:script_level, script: script, levels: [create(:maze)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
-      create(:script_level, script: script, levels: [create(:unplugged)]),
-      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:unplugged)]),
+      create(:script_level, script: script, lesson: lesson, levels: [create(:maze)]),
     ]
     create :user_script, user: user, script: script
 
@@ -1090,9 +1061,11 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level when we have no progress' do
     user = create :user
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
-    create(:script_level, script: script, levels: [create(:maze)])
-    create(:script_level, script: script, levels: [create(:maze)])
+    create(:script_level, script: script, lesson: lesson, levels: [create(:maze)])
+    create(:script_level, script: script, lesson: lesson, levels: [create(:maze)])
     create :user_script, user: user, script: script
 
     # User's most recent progress is on unplugged level, that is followed by another
@@ -1100,17 +1073,27 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
+  def create_level_group(sub_level_name)
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+
+      page
+      level '#{sub_level_name}'
+    DSL
+    LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+  end
+
   test 'can get next_unpassed_progression_level when last updated user_level is inside a level group' do
     user = create :user
     script = create :script
+    sub_level_name = 'sublevel1'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
-    sub_level1 = create :text_match, name: 'sublevel1'
-    create :text_match, name: 'sublevel2'
+    sub_level1 = create :text_match, name: sub_level_name
+    level_group = create_level_group(sub_level_name)
 
-    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
-
-    create(:script_level, script: script, levels: [level_group])
+    create(:script_level, script: script, levels: [level_group], lesson: lesson)
     create :user_script, user: user, script: script
 
     # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
@@ -1136,6 +1119,58 @@ class UserTest < ActiveSupport::TestCase
 
     next_script_level = user.next_unpassed_progression_level(script)
     refute next_script_level.nil?
+  end
+
+  test 'track_level_progress does not record quiz or survey responses for partner when pairing' do
+    user = create :user
+    partner = create :user
+    script = create :script
+    sub_level_name = 'sublevel1'
+
+    sub_level1 = create :text_match, name: sub_level_name
+    level_group = create_level_group(sub_level_name)
+
+    script_level = create(:script_level, script: script, levels: [level_group])
+    create :user_script, user: user, script: script
+
+    # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
+    UserLevel.create(
+      user: user,
+      level: level_group,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now - 1
+    )
+
+    UserLevel.create(
+      user: user,
+      level: sub_level1,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now
+    )
+
+    track_progress(user.id, script_level, 100, pairings: [partner.id])
+
+    user_level = UserLevel.find_by(user: user, script: script_level.script, level: script_level.level)
+    assert_equal 100, user_level.best_result
+    partner_level = UserLevel.find_by(user: partner, script: script_level.script, level: script_level.level)
+    assert_equal nil, partner_level
+  end
+
+  test 'track_level_progress records progress for partner when pairing' do
+    user = create :user
+    partner = create :user
+    script_level = Script.get_from_cache('20-hour').script_levels.third
+
+    track_progress(user.id, script_level, 100, pairings: [partner.id])
+
+    user_level = UserLevel.find_by(user: user, script: script_level.script, level: script_level.level)
+    assert_equal 100, user_level.best_result
+    partner_level = UserLevel.find_by(user: partner, script: script_level.script, level: script_level.level)
+    assert_equal 100, partner_level.best_result
   end
 
   test 'user is created with secret picture and word' do
@@ -1627,11 +1662,11 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_password? is true for user with or without a password' do
     student1 = create :student
-    refute_empty student1.encrypted_password
+    refute_nil student1.encrypted_password
     assert student1.can_edit_password?
 
-    student1 = create :student, encrypted_password: ''
-    assert_empty student1.encrypted_password
+    student1 = create :student, :without_encrypted_password
+    assert_nil student1.encrypted_password
     assert student1.can_edit_password?
   end
 
@@ -1646,12 +1681,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for student without a password' do
-    student = create :student, encrypted_password: ''
+    student = create :student, :without_encrypted_password
     assert student.can_edit_password?
   end
 
   test 'can_edit_password? is true for teacher without a password' do
-    teacher = create :teacher, encrypted_password: ''
+    teacher = create :teacher, :without_encrypted_password
     assert teacher.can_edit_password?
   end
 
@@ -1730,11 +1765,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'cannot delete own account if teacher-managed student' do
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    user = create(:student, encrypted_password: '')
-    create(:follower, student_user: user, section: picture_section)
-    user.reload
-
+    user = create :student_in_picture_section
     assert user.teacher_managed_account?
     refute user.can_delete_own_account?
   end
@@ -1798,7 +1829,7 @@ class UserTest < ActiveSupport::TestCase
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     [picture_section, word_section].each do |section|
-      student_without_password = create(:student, encrypted_password: '')
+      student_without_password = create(:student, :without_encrypted_password)
       create(:follower, student_user: student_without_password, section: section)
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
@@ -1828,11 +1859,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
-    student = create :student, encrypted_password: nil
-    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    section.students << student
-    student.reload
-
+    student = create :student, :migrated_imported_from_google_classroom
     assert student.roster_managed_account?
   end
 
@@ -2476,8 +2503,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     User.expects(:track_proficiency).once
     track_progress(user.id, csf_script_level, 100)
@@ -2548,8 +2576,9 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
     csf_script = create :csf_script
-    csf_script_level = create :csf_script_level
-    csf_script.script_levels << csf_script_level
+    csf_lesson_group = create(:lesson_group, script: csf_script)
+    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
+    csf_script_level = create(:script_level, script: csf_script)
 
     UserLevel.create!(
       user: user,
@@ -2803,6 +2832,37 @@ class UserTest < ActiveSupport::TestCase
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10
+  end
+
+  test 'first_sign_in returns time of first sign in' do
+    now = DateTime.now.utc.iso8601
+
+    student = create :student
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: now,
+      sign_in_count: 1
+    )
+
+    assert_equal now, student.first_sign_in_date.utc.iso8601
+  end
+
+  test 'days_since_first_sign_in returns days for student who has signed in' do
+    student = create :student
+
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: DateTime.now - 10,
+      sign_in_count: 1
+    )
+
+    assert_equal 10, student.days_since_first_sign_in
+  end
+
+  test 'days_since_first_sign_in returns nil for student who has not signed in' do
+    student = create :student
+
+    assert_nil student.days_since_first_sign_in
   end
 
   test 'new users must have valid email addresses' do
@@ -3117,12 +3177,12 @@ class UserTest < ActiveSupport::TestCase
   class AssignedCoursesAndScripts < ActiveSupport::TestCase
     setup do
       @student = create :student
-      @course = create :course, name: 'course'
+      @unit_group = create :unit_group, name: 'course'
     end
 
     test "it returns assigned courses" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
 
       assigned_courses = @student.assigned_courses
@@ -3165,14 +3225,14 @@ class UserTest < ActiveSupport::TestCase
 
     test "it checks for assigned courses and scripts, assigned course" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       assert @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       visible_script = create :script, name: 'visible-script'
       @student.assign_script(visible_script)
@@ -3210,14 +3270,14 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'csd'
-      create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
+      unit_group = create :unit_group, name: 'csd'
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd2'), position: 2
 
       other_script = create :script, name: 'other'
       @student.assign_script(other_script)
 
-      section = create :section, user_id: teacher.id, course: course
+      section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
     end
 
@@ -3250,15 +3310,15 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'testcourse'
-      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
-      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+      unit_group = create :unit_group, name: 'testcourse'
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1'), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2'), position: 2
+      create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
       other_script = create :script, name: 'otherscript'
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
-      section = create :section, user_id: teacher.id, course: course
+      section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
       courses_and_scripts = student.recent_courses_and_scripts(true)
@@ -3274,10 +3334,10 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       @teacher = create :teacher
       @grand_teacher = create :teacher
-      @course = create :course, name: 'csd'
+      @unit_group = create :unit_group, name: 'csd'
     end
     test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, course: @course
+      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @unit_group
       Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
 
       courses = @teacher.section_courses
@@ -3286,7 +3346,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, course: @course
+      section = create :section, user_id: @teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @teacher.section_courses
@@ -3295,7 +3355,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, course: @course
+      section = create :section, user_id: @teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @student.section_courses
@@ -3313,12 +3373,12 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
     single_script = create :script
     (create :section, script: single_script).students << student
-    course_script = create :script
-    course_with_script = create :course
-    create :course_script, course: course_with_script, script: course_script, position: 1
-    (create :section, course: course_with_script).students << student
+    unit_group_unit = create :script
+    course_with_script = create :unit_group
+    create :unit_group_unit, unit_group: course_with_script, script: unit_group_unit, position: 1
+    (create :section, unit_group: course_with_script).students << student
 
-    assert_equal [single_script, course_script], student.section_scripts
+    assert_equal [single_script, unit_group_unit], student.section_scripts
   end
 
   test "last_joined_section returns the most recently joined section" do
@@ -3438,23 +3498,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'password_required? is false if user is not creating their own account' do
-    user = create :user
+    user = create :student, :without_encrypted_password
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
-  test 'password_required? is true for new users with no encrypted password' do
-    user = create :user, encrypted_password: nil
-    user.expects(:managing_own_credentials?).returns(true)
-    assert user.encrypted_password.nil?
-    assert user.password_required?
+  test 'new users require a password if no authentication provided' do
+    assert_raises(ActiveRecord::RecordInvalid) do
+      user = create :user, password: nil
+      assert !user.errors[:password].empty?
+    end
   end
 
   test 'password_required? is true for user changing their password' do
     user = create :user
     user.password = "mypassword"
     user.password_confirmation = "mypassword"
-    user.expects(:managing_own_credentials?).returns(true)
     assert user.password_required?
   end
 
@@ -3543,9 +3602,9 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'stage_extras_enabled?' do
-    script = create :script, stage_extras_available: true
-    other_script = create :script, stage_extras_available: true
+  test 'lesson_extras_enabled?' do
+    script = create :script, lesson_extras_available: true
+    other_script = create :script, lesson_extras_available: true
     teacher = create :teacher
     student = create :student
 
@@ -3556,75 +3615,75 @@ class UserTest < ActiveSupport::TestCase
     section3 = create :section, stage_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
-    assert student.stage_extras_enabled?(script)
-    refute student.stage_extras_enabled?(other_script)
+    assert student.lesson_extras_enabled?(script)
+    refute student.lesson_extras_enabled?(other_script)
 
-    assert teacher.stage_extras_enabled?(script)
-    assert teacher.stage_extras_enabled?(other_script)
+    assert teacher.lesson_extras_enabled?(script)
+    assert teacher.lesson_extras_enabled?(other_script)
 
-    refute (create :student).stage_extras_enabled?(script)
-    assert (create :teacher).stage_extras_enabled?(script)
+    refute (create :student).lesson_extras_enabled?(script)
+    assert (create :teacher).lesson_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
 
-      @script = create(:script, hideable_stages: true)
-      @stage1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
-      @stage2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
-      @stage3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')
+      @script = create(:script, hideable_lessons: true)
+      @lesson1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
+      @lesson2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
+      @lesson3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')
       @custom_s1_l1 = create(
         :script_level,
         script: @script,
-        lesson: @stage1,
+        lesson: @lesson1,
         position: 1
       )
       @custom_s2_l1 = create(
         :script_level,
         script: @script,
-        lesson: @stage2,
+        lesson: @lesson2,
         position: 1
       )
       @custom_s2_l2 = create(
         :script_level,
         script: @script,
-        lesson: @stage2,
+        lesson: @lesson2,
         position: 2
       )
-      create(:script_level, script: @script, lesson: @stage3, position: 1)
+      create(:script_level, script: @script, lesson: @lesson3, position: 1)
 
       # explicitly disable LB mode so that we don't create a .course file
       Rails.application.config.stubs(:levelbuilder_mode).returns false
-      @course = create :course
+      @unit_group = create :unit_group
 
       @script2 = create :script
       @script3 = create :script
-      create :course_script, position: 1, course: @course, script: @script
-      create :course_script, position: 2, course: @course, script: @script2
-      create :course_script, position: 2, course: @course, script: @script3
+      create :unit_group_unit, position: 1, unit_group: @unit_group, script: @script
+      create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script2
+      create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script3
     end
 
-    def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
+    def put_student_in_section(student, teacher, script, unit_group=nil)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: unit_group.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
 
-    # Helper method that sets up some hidden stages for our two sections
-    def hide_stages_in_sections(section1, section2)
-      # stage 1 hidden in both sections
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
+    # Helper method that sets up some hidden lessons for our two sections
+    def hide_lessons_in_sections(section1, section2)
+      # lesson 1 hidden in both sections
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @lesson1.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @lesson1.id)
 
-      # stage 2 hidden in section 1
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
+      # lesson 2 hidden in section 1
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @lesson2.id)
 
-      # stage 3 hidden in section 2
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
+      # lesson 3 hidden in section 2
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @lesson3.id)
     end
 
-    # Same thing as hide_stages_in_sections, but hides scripts instead of stages
+    # Same thing as hide_lessons_in_sections, but hides scripts instead of lessons
     def hide_scripts_in_sections(section1, section2)
       # script hidden in both sections
       SectionHiddenScript.create(section_id: section1.id, script_id: @script.id)
@@ -3642,7 +3701,7 @@ class UserTest < ActiveSupport::TestCase
       teacher = create :teacher
       twenty_hour = Script.twenty_hour_script
 
-      # User completed the second stage
+      # User completed the second lesson
       twenty_hour.lessons[1].script_levels.each do |sl|
         UserLevel.create(
           user: student,
@@ -3653,16 +3712,16 @@ class UserTest < ActiveSupport::TestCase
         )
       end
 
-      # Hide the fifth lesson/stage
-      SectionHiddenStage.create(
+      # Hide the fifth lesson/lesson
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 5
       )
 
-      # Find the seventh stage, since the 5th is hidden and 6th is unplugged
-      next_visible_stage = twenty_hour.lessons.find {|stage| stage.relative_position == 7}
+      # Find the seventh lesson, since the 5th is hidden and 6th is unplugged
+      next_visible_lesson = twenty_hour.lessons.find {|lesson| lesson.relative_position == 7}
 
-      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      assert_equal(next_visible_lesson.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
 
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
@@ -3678,16 +3737,16 @@ class UserTest < ActiveSupport::TestCase
         best_result: Activity::MINIMUM_PASS_RESULT
       )
 
-      # Hide the first lesson/stage
-      SectionHiddenStage.create(
+      # Hide the first lesson/lesson
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 1
       )
 
-      # Find the second stage, since the 1st is hidden
-      next_visible_stage = twenty_hour.lessons.find {|stage| stage.relative_position == 2}
+      # Find the second lesson, since the 1st is hidden
+      next_visible_lesson = twenty_hour.lessons.find {|lesson| lesson.relative_position == 2}
 
-      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      assert_equal(next_visible_lesson.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
 
     test "user in two sections, both attached to script" do
@@ -3696,59 +3755,59 @@ class UserTest < ActiveSupport::TestCase
       section1 = put_student_in_section(student, @teacher, @script)
       section2 = put_student_in_section(student, @teacher, @script)
 
-      hide_stages_in_sections(section1, section2)
+      hide_lessons_in_sections(section1, section2)
 
       # when attached to script, we should hide only if hidden in every section
-      assert_equal [@stage1.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id], student.get_hidden_stage_ids(@script.name)
 
       # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@lesson2.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@lesson3.script_levels.first)
     end
 
     test "user in two sections, both attached to course" do
       student = create :student
 
-      section1 = put_student_in_section(student, @teacher, @script, @course)
-      section2 = put_student_in_section(student, @teacher, @script, @course)
+      section1 = put_student_in_section(student, @teacher, @script, @unit_group)
+      section2 = put_student_in_section(student, @teacher, @script, @unit_group)
 
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
+      assert_equal [], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, both attached to course but no script" do
       student = create :student
 
-      section1 = put_student_in_section(student, @teacher, nil, @course)
-      section2 = put_student_in_section(student, @teacher, nil, @course)
+      section1 = put_student_in_section(student, @teacher, nil, @unit_group)
+      section2 = put_student_in_section(student, @teacher, nil, @unit_group)
 
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
+      assert_equal [], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3758,15 +3817,15 @@ class UserTest < ActiveSupport::TestCase
       section1 = put_student_in_section(student, @teacher, unattached_script)
       section2 = put_student_in_section(student, @teacher, unattached_script)
 
-      hide_stages_in_sections(section1, section2)
+      hide_lessons_in_sections(section1, section2)
 
       # when not attached to script, we should hide when hidden in any section
-      assert_equal [@stage1.id, @stage2.id, @stage3.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id, @lesson2.id, @lesson3.id], student.get_hidden_stage_ids(@script.name)
 
       # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage3.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson2.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson3.script_levels.first)
     end
 
     test "user in two sections, neither attached to course" do
@@ -3779,7 +3838,7 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(section1, section2)
 
       # when not attached to course, we should hide when hidden in any section
-      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, one attached to script one not" do
@@ -3788,27 +3847,27 @@ class UserTest < ActiveSupport::TestCase
       attached_section = put_student_in_section(student, @teacher, @script)
       unattached_section = put_student_in_section(student, @teacher, create(:script))
 
-      hide_stages_in_sections(attached_section, unattached_section)
+      hide_lessons_in_sections(attached_section, unattached_section)
 
-      # only the stages hidden in the attached section are considered hidden
-      assert_equal [@stage1.id, @stage2.id], student.get_hidden_stage_ids(@script.name)
+      # only the lessons hidden in the attached section are considered hidden
+      assert_equal [@lesson1.id, @lesson2.id], student.get_hidden_stage_ids(@script.name)
 
       # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal true, student.script_level_hidden?(@lesson2.script_levels.first)
+      assert_equal false, student.script_level_hidden?(@lesson3.script_levels.first)
     end
 
     test "user in two sections, one attached to course one not" do
       student = create :student
 
-      attached_section = put_student_in_section(student, @teacher, @script, @course)
+      attached_section = put_student_in_section(student, @teacher, @script, @unit_group)
       unattached_section = put_student_in_section(student, @teacher, create(:script))
 
       hide_scripts_in_sections(attached_section, unattached_section)
 
       # only the scripts hidden in the attached section are considered hidden
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in no sections" do
@@ -3817,7 +3876,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal [], student.get_hidden_stage_ids(@script.name)
     end
 
-    test "teacher gets hidden stages for sections they own" do
+    test "teacher gets hidden lessons for sections they own" do
       teacher = create :teacher
       teacher_teacher = create :teacher
       student = create :student
@@ -3826,20 +3885,20 @@ class UserTest < ActiveSupport::TestCase
       teacher_owner_section2 = put_student_in_section(student, teacher, @script)
       teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
 
-      # stage 1 is hidden in the first section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
+      # lesson 1 is hidden in the first section owned by the teacher
+      SectionHiddenLesson.create(section_id: teacher_owner_section.id, stage_id: @lesson1.id)
 
-      # stage 1 and 2 are hidden in the second section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
+      # lesson 1 and 2 are hidden in the second section owned by the teacher
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @lesson1.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @lesson2.id)
 
-      # stage 3 is hidden in the section in which the teacher is a member
-      SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
+      # lesson 3 is hidden in the section in which the teacher is a member
+      SectionHiddenLesson.create(section_id: teacher_member_section.id, stage_id: @lesson3.id)
 
-      # only the stages hidden in the owned section are considered hidden
+      # only the lessons hidden in the owned section are considered hidden
       expected = {
-        teacher_owner_section.id => [@stage1.id],
-        teacher_owner_section2.id => [@stage1.id, @stage2.id]
+        teacher_owner_section.id => [@lesson1.id],
+        teacher_owner_section2.id => [@lesson1.id, @lesson2.id]
       }
       assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
     end
@@ -3849,18 +3908,18 @@ class UserTest < ActiveSupport::TestCase
       teacher_teacher = create :teacher
       student = create :student
 
-      teacher_owner_section = put_student_in_section(student, teacher, @script, @course)
-      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @course)
-      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @course)
+      teacher_owner_section = put_student_in_section(student, teacher, @script, @unit_group)
+      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @unit_group)
+      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @unit_group)
 
-      # stage 1 is hidden in the first section owned by the teacher
+      # lesson 1 is hidden in the first section owned by the teacher
       SectionHiddenScript.create(section_id: teacher_owner_section.id, script_id: @script.id)
 
-      # stage 1 and 2 are hidden in the second section owned by the teacher
+      # lesson 1 and 2 are hidden in the second section owned by the teacher
       SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script.id)
       SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script2.id)
 
-      # stage 3 is hidden in the section in which the teacher is a member
+      # lesson 3 is hidden in the section in which the teacher is a member
       SectionHiddenScript.create(section_id: teacher_member_section.id, script_id: @script3.id)
 
       # only the scripts hidden in the owned section are considered hidden
@@ -3868,13 +3927,13 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@script.id],
         teacher_owner_section2.id => [@script.id, @script2.id]
       }
-      assert_equal expected, teacher.get_hidden_script_ids(@course)
+      assert_equal expected, teacher.get_hidden_script_ids(@unit_group)
     end
 
     test "script_hidden?" do
       teacher = create :teacher
       student = create :student
-      section = put_student_in_section(student, teacher, @script, @course)
+      section = put_student_in_section(student, teacher, @script, @unit_group)
       SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
 
       # returns true for student
@@ -3888,16 +3947,17 @@ class UserTest < ActiveSupport::TestCase
   test 'generate_progress_from_storage_id' do
     # construct our fake applab-intro script
     script = create :script
-    stage = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     regular_level = create :level
-    create :script_level, script: script, lesson: stage, levels: [regular_level]
+    create :script_level, script: script, lesson: lesson, levels: [regular_level]
 
     # two different levels, backed by the same template level
     template_level = create :level
     template_backed_level1 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, lesson: stage, levels: [template_backed_level1]
+    create :script_level, script: script, lesson: lesson, levels: [template_backed_level1]
     template_backed_level2 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, lesson: stage, levels: [template_backed_level2]
+    create :script_level, script: script, lesson: lesson, levels: [template_backed_level2]
 
     # Whether we have a channel for a regular level in the script, or a template
     # level, we generate a UserScript

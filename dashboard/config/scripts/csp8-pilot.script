@@ -1,18 +1,19 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/create-20-21/create-pt-prep/{LESSON}/'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
-stage 'Create PT - Review the Task'
+lesson 'Create PT - Review the Task', display_name: 'Create PT - Review the Task'
 level 'CSP U8L1 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Create PT - Make a Plan'
+lesson 'Create PT - Make a Plan', display_name: 'Create PT - Make a Plan'
 level 'CSP U8L2 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Create PT - Complete the Task'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
 level 'CSP U8L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp-pt-tech-setup-and-tools_2020', progression: 'Tech Setup and Tools for Create PT'
 level 'Create PT Workspace 2020', progression: 'Create PT Coding Workspace'
+

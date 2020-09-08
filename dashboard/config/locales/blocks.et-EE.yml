@@ -790,6 +790,10 @@ et:
         text: seadistus
       Dancelab_whenSetup2:
         text: seadistus
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundit
       gamelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
@@ -814,6 +818,36 @@ et:
             '"y"': y asukoht
             '"direction"': liikumise suund
             '"tint"': toon
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundit
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} hüppavad {LOCATION}"
       gamelab_keyPressed:

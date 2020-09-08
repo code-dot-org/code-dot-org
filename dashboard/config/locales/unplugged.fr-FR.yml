@@ -4,15 +4,14 @@ fr:
     unplugged:
       Unplug1:
         title: Introduction à l'informatique
-        desc: Cette leçon vise à introduire le concept des sciences informatiques
-          et expliquer en quoi consiste un informaticien.  Elle donnera également
-          aux élèves l'occasion d'assumer le rôle d'informaticien.  À la fin de l'activité,
-          chaque élève aura un pense-bête à emporter à la maison, au sujet ce ce qu'il
-          ou elle aura appris.  Vous pourriez être tenté d’omettre l’enseignement
-          aux jeunes enfants des mots de vocabulaire qui sont associés aux leçons
-          qui suivent. Cependant, les leur présenter de manière amusante et ludique
-          à ce stade sera peut-être beaucoup plus productif que d'attendre des occasions
-          futures.
+        desc: Cette leçon vise à introduire le concept de l’informatique et expliquer
+          ce que fait un informaticien. Elle donnera également aux élèves l'occasion
+          d'assumer le rôle d'un informaticien. À la fin de l'activité, chaque élève
+          repartira à la maison avec un résumé de ce qu'il ou elle aura appris. Vous
+          pourriez être tenté d’omettre l’enseignement aux jeunes enfants des mots
+          de vocabulaire qui sont associés aux leçons qui suivent. Cependant, les
+          leur présenter de manière amusante et ludique à ce stade est beaucoup plus
+          productif que d'attendre des occasions plus avancées futures.
       Unplug2:
         title: Algorithmique
         desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
@@ -36,40 +35,40 @@ fr:
           leurs propres images.
       Unplug4:
         title: Algorithmes
-        desc: Cette leçon traite des algorithmes.  Le premier exercice se fait à l'aide
-          de formes de Tangram et de papier millimétré. Il sert à démontrer combien
-          il est important de rendre chaque instruction aussi claire et non équivoque
-          que possible.  Par la suite, la classe explorera les façons de plier un
-          morceau de papier en rectangle, en notant comment certaines méthodes peuvent
-          prendre plus ou moins de plis que d'autres.
+        desc: Cette leçon traite des algorithmes. Le premier exercice se fait à l'aide
+          de formes de tangram et de papier millimétré. Il sert à démontrer combien
+          il est important de rendre chaque instruction aussi claire et la moins équivoque
+          possible. Par la suite, la classe explorera les différentes façons de plier
+          un morceau de papier en rectangle, en notant comment certaines méthodes
+          peuvent requérir plus ou moins de plis que d'autres.
       Unplug5:
         title: fonctions
-        desc: Dans cette leçon, les élèves feront un capteur de soleil à l’aide de
-          cordes, de perles et d’un objet fétiche particulier. Les élèves suivront
+        desc: Dans cette leçon, les élèves fabriqueront un capteur de soleil à l’aide
+          de ficelle, de perles et d’un objet fétiche particulier. Les élèves suivront
           une série d’étapes répétitives, et il leur sera alors demandé d'identifier
-          certains ensembles de «compétences» qui sont reproduites plusieurs fois.
+          certains ensembles de « compétences » qui sont reproduits plusieurs fois.
           Ces compétences étant définies, elles seront appelées depuis un programme
           principal et tout le merveilleux processus de création sera enregistré sur
           une seule feuille de papier. Le programme final vise la classe entière,
-          quel que soit leur type de cordes, de perles et d’objet fétiche. Pour permettre
-          cela de manière efficace, les élèves devront «résumer» les détails de leurs
-          matériaux spécifiques et créer des termes vagues pour les fournitures personnelles.  Cette
-          utilisation d'espaces réservés génériques est une merveilleuse introduction
+          quel que soit le type de ficelle, de perles et d’objets fétiches. Pour plus
+          d’efficacité, les élèves devront « retirer » les détails de leurs matériaux
+          spécifiques et créer des termes vagues pour les fournitures personnelles.
+          Cette utilisation d'espaces réservés génériques est une merveilleuse introduction
           aux variables.
       Unplug6:
         title: Conditions
-        desc: Il s'agit d'un jeu s’adressant à toute la classe.  Après avoir introduit
-          la notion d’instructions conditionnelles, d’instructions «Si» et de boucles,
-          la classe peut s'entrainer ensemble à l'aide d'un programme pré-écrit, d'un
-          paquet de cartes et d'un tirage au sort.
+        desc: Il s'agit d'un jeu s’adressant à toute la classe. Après avoir introduit
+          la notion de conditions, de déclarations « si » et de boucles, la classe
+          peut s'entrainer ensemble, à l'aide d'un programme pré-écrit, d'un paquet
+          de cartes et d'un tirage au sort.
       Unplug7:
         title: Ecriture de chanson
         desc: Lire les paroles d’une chanson est une entreprise très intuitive pour
-          la plupart des élèves.  Nous allons prendre une activité qui fait déjà partie
+          la plupart des élèves. Nous allons prendre une activité qui fait déjà partie
           du savoir collectif et la transformer en une solide formation sur la définition
-          et l'appel de fonctions. Lorsque les élèves comprennent le processus de
-          définition/appel, nous allons ajouter les fonctionnalités supplémentaires
-          qui s’ajoutent aux paramètres lors des appels de fonction.
+          et l'appel de fonctions. Une fois que les élèves ont compris le processus
+          de définition/appel, nous ajoutons les fonctionnalités supplémentaires qui
+          accompagnent le passage des paramètres lors des appels de fonction.
       Unplug8:
         title: Abstraction
         desc: Cette activité associe le quotidien de vos élèves et un jeu de réflexion
@@ -78,85 +77,86 @@ fr:
       Unplug9:
         title: Relayer la programmation
         desc: Cette leçon emprunte une idée d'une activité précédente (4. La programmation
-          sur papier millimétré) et utilise ses compétences pour insister sur l'importance
+          sur papier millimétré) et utilise ces compétences pour insister sur l'importance
           de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement
-          ces programmes pour y repérer les «bogues».
+          ces programmes pour y repérer les « bogues ».
       Unplug10:
         title: Internet et les réseaux connectés
         desc: Dans cette leçon, les élèves vont faire semblant de naviguer sur Internet,
-          tout en apprenant les adresses Web, les adresses IP et les DNS.
+          tout en apprenant ce que sont les adresses Web, les adresses IP et les DNS.
       Unplug11:
-        title: Conclusions
+        title: Conclusion
         desc: La conclusion de cette première série de 20 heures aidera la classe
-          à revivre ses moments préférés, tout en lui annonçant des étapes à suivre
-          en solo, afin de poursuivre la découverte de l'informatique.
+          à revivre ses moments préférés, tout en lui annonçant des étapes à suivre,
+          en solo, si elle souhaite poursuivre la découverte de l'informatique.
       UnplugHappyMaps:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
       MoveIt:
-        title: Déplace-le, déplace-le
+        title: Déplace-le, Déplace-le
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
       PlantASeed:
-        title: 'Algorithmes du monde réel: Planter une graine'
+        title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
+          une graine. Elle se concentre également sur l'informatique en général, et
+          le rôle essentiel que jouent les algorithmes.
       BuildingAFoundation:
-        title: Construire une fondation
+        title: Construire une Fondation
         desc: Les élèves construisent une structure en utilisant uniquement les éléments
           fournis. Les structures doivent accomplir une tâche (atteindre une certaine
           hauteur ou soutenir un certain poids), et les élèves discutent du fait de
           persévérer lorsque les choses se compliquent.
       GettingLoopy:
-        title: Tourner en rond
+        title: Tourner en Rond
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       RelayProgramming:
         title: Programmation de relais
-        desc: Les élèves courent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme basé sur une image de « Programmation
-          sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour
+        desc: Les élèves effectuent une course de relais, où ils traversent rapidement
+          le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
+          sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
+          la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour
           retourner à ce point.
       Conditionals:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
+          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
+          ».
       BigEvent:
-        title: Le Grand Evénement
+        title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
+          en fonction du bouton choisi.
       GoingPlacesSafely:
-        title: Se déplacer en toute sécurité
+        title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+          présentent comment rester en sécurité durant la navigation sur Internet.
       GraphPaperProgramming:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
+          reproduction d’un dessin.
       PaperPlanes:
-        title: 'Algorithmes du monde réel: Avions en papier'
+        title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
+          en papier. Cette leçon se concentre également sur l'informatique, en général,
+          et le rôle essentiel que jouent les algorithmes.
       BinaryBracelets:
         title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
       DigitalFootprint:
-        title: Ton empreinte numérique
+        title: Ton Empreinte Numérique
         desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
+          des informations personnelles crée une empreinte numérique, ou « trace »,
           qui a des conséquences.
       ComputationalThinking:
         title: Algorithmique
@@ -164,17 +164,16 @@ fr:
           recherche de motifs, abstraction, algorithme) pour découvrir comment jouer
           à un jeu livré sans instructions.
       FunctionalSuncatchers:
-        title: Vitraux fonctionnels
+        title: Capteurs de Soleil Fonctionnels
         desc: Les élèves créent un algorithme avec des variables et des fonctions
-          (portions de code que vous voulez utiliser encore et encore) pour créer
-          des vitraux en utilisant des cordes et des perles.
+          (portions de code que l’on utilise encore et encore) pour créer des capteurs
+          de soleil à l’aide de ficelles et de perles.
       SongwritingParameters:
         title: Écriture de chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+          ce que sont la définition et l’appel de fonctions.
       DiceRace:
-        title: 'Les algorithmes du monde réel: La course de dés'
+        title: 'Algorithmes du Monde Réel : La Course de Dés'
         desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
           dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
           écrire l'algorithme d'un jeu de courses de dés.
@@ -183,64 +182,63 @@ fr:
         desc: Les élèves envoient des messages représentant diverses méthodes de transmission
           Internet à l'aide de bouts de papier.
       Crowdsourcing:
-        title: Financement participatif
+        title: Production Participative
         desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
-          et plus efficacement que si un élève l'avait tentée en solo.
+          de problèmes répandue en informatique, et toute la classe accomplit ainsi
+          une tâche plus efficacement que si un élève l'avait tentée seul.
       DigitalCitizenship:
-        title: Citoyenneté numérique
-        desc: Les élèves explorent la différence entre l'information privée et l'information
-          personnelles, en distinguant ce qui peut et ne peut pas être partagé sans
-          risque en ligne.
+        title: Citoyenneté Numérique
+        desc: Les élèves explorent la différence entre les informations privées et
+          les informations personnelles, en distinguant ce qui est sûr de ce qui est
+          risqué de partager, en ligne.
       TangramAlgorithms:
-        title: Les algorithmes de Tangram
-        desc: Cette leçon nous démontre quelque chose d'important sur les algorithmes.
+        title: Algorithmes de Tangram
+        desc: Cette leçon nous démontre quelque chose d'important à propos des algorithmes.
           Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaiter que tout le monde termine avec la même chose, alors votre
+          Si vous souhaitez que tout le monde termine avec la même chose, alors votre
           algorithme a besoin de plus de détails.
       EnvelopeVariables:
-        title: Les variables de l'enveloppe
-        desc: Les variables permettent une grande liberté en informatique.  Cette
-          leçon permet d'expliquer ce que sont les variables et comment nous pouvons
-          les utiliser de différentes manières. Utilisez cette activité avant (ou
-          avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
+        title: Variables de l'Enveloppe
+        desc: Les variables offrent une grande liberté en informatique. Cette leçon
+          permet d'expliquer ce que sont les variables et les différentes manières
+          dont nous pouvons les utiliser. Utilisez cette activité avant (ou avec)
+          la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
           le concept.
       MadGlibs:
         title: Mad Glibs
         desc: L’abstraction est l'une des compétences les plus importantes que doit
-          comprendre un informaticien.  Vos élèves analyseront des histoires pour
-          en extraire les différences afin de pouvoir en faire abstraction. Ces histoires
-          abstraites deviennent des modèles pour de nouvelles histoires folles et
-          amusantes.
+          comprendre un informaticien. Vos élèves analyseront des histoires, en particulier
+          leurs différences, afin de pouvoir en faire abstraction. Ces histoires abrégées
+          deviennent des modèles pour de nouvelles histoires folles et amusantes.
       ForLoopFun:
-        title: Jouons avec les boucles « Pour »
+        title: Jouer avec les Boucles « Pour »
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
       SongwritingWithParameters:
         title: Composition de chansons avec des paramètres
-        desc: Une des structures les plus magnifiques dans le monde de l’informatique
-          est la fonction.  Les fonctions (parfois appelées procédures) sont des minis
-          programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus
-          grand programme. Cette leçon aidera les élèves à comprendre intuitivement
-          pourquoi associer des morceaux de code à des fonctions est une pratique
-          très utile.
+        desc: Une des structures vraiment formidables, dans le monde de l’informatique,
+          est la fonction. Les fonctions (parfois appelées procédures) sont de mini-programmes
+          que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme.
+          Cette leçon aidera les élèves à comprendre intuitivement pourquoi le fait
+          d’associer des morceaux de code à des fonctions est une pratique tellement
+          utile.
       BinaryImages:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+        title: Images Binaires
+        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
           des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          informations peuvent être représentées dans une variété d'options binaires.
+          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       VideoGamesCoordinatePlanes:
-        title: Les jeux vidéos et les plans de coordonnées
-        desc: Découvrez comment les jeux vidéo auxquels vous aimez jouer sont vraiment
-          dirigés par l'algèbre ! Explorez comment des expressions algébriques et
-          le plan des coordonnées peuvent aider à comprendre le fonctionnement des
-          jeux vidéo, puis commencez à planifier la création d’un jeu vidéo.
+        title: Les Jeux Vidéos et les Plans de Coordonnées
+        desc: Découvre comment les jeux vidéo auxquels tu aimes jouer sont en réalité
+          dirigés par l'algèbre ! Explore comment des expressions algébriques et le
+          plan de coordonnées peuvent aider à comprendre le fonctionnement des jeux
+          vidéo, puis commence à planifier la création d’un jeu vidéo.
       Contracts:
-        title: Contrats, domaine et gamme
+        title: Contrats, Domaine et Gamme
         desc: Les contrats nous donnent un moyen de comprendre et de discuter des
           fonctions. Dans cette leçon, nous verrons comment les contrats peuvent nous
           aider à comprendre un nouveau langage de programmation ou une nouvelle fonction.
@@ -248,95 +246,95 @@ fr:
         title: La Recette de Conception
         desc: Lors de la dernière étape, les élèves ont écrit quelques fonctions très
           simples - mais des fonctions plus sophistiquées exigent une approche plus
-          réfléchie. La recette de conception est une approche structurée servant
-          à écrire des fonctions qui incluent la rédaction de scénarios de test s'assurant
-          que la fonction s’exécute comme prévu.
+          réfléchie. La Recette de Conception est une approche structurée servant
+          à écrire des fonctions, et qui inclut la rédaction de scénarios de test
+          pour s'assurer que la fonction s’exécute comme prévu.
       Booleans:
-        title: Les valeurs booléennes et la logique
+        title: Les Booléens et la Logique
         desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
           dans ce cours. Dans le cadre de cette activité, vous apprendrez ce que sont
           les booléens, et comment ceux-ci permettent d’écrire des fonctions qui pensent
           logiquement.
       ConditionalsPiecewiseFunctions:
-        title: Les instructions conditionnelles et les fonctions par morceaux
-        desc: Les paramètres que nous transmettons aux fonctions font que les résultats
-          varient selon un schéma très rigide. Supposons que nous voulons des paramètres
-          avec certaines valeurs pour créer des résultats utilisant un motif, mais
-          d’autres valeurs pour utiliser un motif différent. C'est dans ces cas que
-          les instructions conditionnelles deviennent nécessaires...
+        title: Conditions et Fonctions par Morceaux
+        desc: Les paramètres que nous transmettons aux fonctions amènent les résultats
+          à varier selon un schéma très rigide. Supposons que nous voulons des paramètres
+          avec des valeurs pour créer des résultats utilisant un schéma, mais d’autres
+          valeurs pour utiliser un schéma différent. C'est dans ces cas que les conditions
+          deviennent nécessaires...
       CollisionDetection:
-        title: La détection de collision et le théorème de Pythagore
-        desc: Déterminer quand les objets sur l'écran se touchent est un aspect important
-          de la plupart des jeux. Dans le cadre de cette leçon, nous verrons comment
-          le Théorème de Pythagore et la formule de distance peuvent servir à mesurer
-          la distance entre deux points sur le plan et décider ensuite si ces deux
-          points (ou les personnages du jeu) se touchent.
+        title: La Détection de Collision et le Théorème de Pythagore
+        desc: Déterminer le moment où les objets sur l'écran se touchent est un aspect
+          important de la plupart des jeux. Dans le cadre de cette leçon, nous verrons
+          comment le Théorème de Pythagore et la Formule de Distance peuvent servir
+          à mesurer la distance entre deux points sur le plan et déciderons ensuite
+          si ces deux points (ou les personnages du jeu) se touchent.
       courseA_unplugged_loops:
         title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Dans cette leçon, tu "programmeras" tes amis!
       courseB_unplugged_loopyMRF:
-        title: Activité manuelle
-        desc: Tout comme dans "Mon ami robotisé", vous allez programmé vos amis, mais
-          cette fois avec des boucles!
+        title: Activité "Déconnectée"
+        desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis
+          mais, cette fois, avec des boucles !
       courseC_Unplugged_ScreenOutTheMean:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
+          méchant en ligne.
       courseD_unplugged_digitalCitizenship:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
-        title: 'Education au sens commun : information privée et personnelle '
-        desc: Aujourd'hui, tu apprendras la différence entre l'information privée
-          et personnelle!
+        title: 'Common Sense Education : Information Privée et Personnelle '
+        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
+          méchant en ligne.
       courseF_unplugged_powerOfWords:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
+          méchant en ligne.
       deeper learning description:
         desc: 'traduction manquante : en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: 'Algorithmes du monde réel: Planter une graine'
+        title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
+          une graine. Elle se concentre également sur l'informatique en général, et
+          le rôle essentiel que jouent les algorithmes.
       courseA_unplugged_happyMaps:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
       courseA_unplugged_goingPlacesSafely:
-        title: Se déplacer en toute sécurité
+        title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+          présentent comment rester en sécurité durant la navigation sur Internet.
       courseABC_unplugged_bigEvent:
-        title: Le Grand Evénement
+        title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
+          en fonction du bouton choisi.
       courseB_unplugged_digitalFootprint:
-        title: Ton empreinte numérique
+        title: Ton Empreinte Numérique
         desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
+          des informations personnelles crée une empreinte numérique, ou « trace »,
           qui a des conséquences.
       courseC_unplugged_buildingAFoundation:
-        title: Construire une fondation
+        title: Construire une Fondation
         desc: Les élèves construisent une structure en utilisant uniquement les éléments
           fournis. Les structures doivent accomplir une tâche (atteindre une certaine
           hauteur ou soutenir un certain poids), et les élèves discutent du fait de
           persévérer lorsque les choses se compliquent.
       courseC_unplugged_paperPlanes:
-        title: 'Algorithmes du monde réel: Avions en papier'
+        title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
+          en papier. Cette leçon se concentre également sur l'informatique, en général,
+          et le rôle essentiel que jouent les algorithmes.
       courseC_unplugged_gettingLoopy:
-        title: Tourner en rond
+        title: Tourner en Rond
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -348,78 +346,77 @@ fr:
       courseD_unplugged_graphPaperProgramming:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
+          reproduction d’un dessin.
       courseD_unplugged_relayProgramming:
         title: Programmation de relais
-        desc: Les élèves courent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme basé sur une image de « Programmation
-          sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour
+        desc: Les élèves effectuent une course de relais, où ils traversent rapidement
+          le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
+          sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
+          la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour
           retourner à ce point.
       courseD_unplugged_conditionalsCards:
         title: Instructions conditionnelles avec des cartes
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
+          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
+          ».
       courseD_unplugged_binaryImages:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+        title: Images Binaires
+        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
           des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          informations peuvent être représentées dans une variété d'options binaires.
+          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       courseE_unplugged_diceRace:
-        title: 'Les algorithmes du monde réel : La course de dés'
+        title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
           dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
           écrire l'algorithme d'un jeu de courses de dés.
       courseE_unplugged_songwritingParameters:
         title: La composition de chansons avec des paramètres
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+          ce que sont la définition et l’appel de fonctions.
       courseE_unplugged_internet:
         title: Internet
         desc: Les élèves envoient des messages représentant diverses méthodes de transmission
           Internet à l'aide de bouts de papier.
       courseE_unplugged_crowdsourcing:
-        title: Financement participatif
+        title: Production Participative
         desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
-          et plus efficacement que si un élève l'avait tentée en solo.
+          de problèmes répandue en informatique, et toute la classe accomplit ainsi
+          une tâche plus efficacement que si un élève l'avait tentée seul.
       courseE_unplugged_songwriting:
         title: Écriture de chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+          ce que sont la définition et l’appel de fonctions.
       courseF_unplugged_tangrams:
-        title: Les algorithmes de Tangram
-        desc: Cette leçon nous démontre quelque chose d'important sur les algorithmes.
+        title: Algorithmes de Tangram
+        desc: Cette leçon nous démontre quelque chose d'important à propos des algorithmes.
           Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaiter que tout le monde termine avec la même chose, alors votre
+          Si vous souhaitez que tout le monde termine avec la même chose, alors votre
           algorithme a besoin de plus de détails.
       courseF_unplugged_envelopeVariables:
-        title: Les variables de l'enveloppe
-        desc: Les variables permettent une grande liberté en informatique.  Cette
-          leçon permet d'expliquer ce que sont les variables et comment nous pouvons
-          les utiliser de différentes manières. Utilisez cette activité avant (ou
-          avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
+        title: Variables de l'Enveloppe
+        desc: Les variables offrent une grande liberté en informatique. Cette leçon
+          permet d'expliquer ce que sont les variables et les différentes manières
+          dont nous pouvons les utiliser. Utilisez cette activité avant (ou avec)
+          la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
           le concept.
       courseF_unplugged_forLoopFun:
-        title: Jouons avec les boucles « Pour »
+        title: Jouer avec les Boucles « Pour »
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
       courseF_unplugged_songwritingParameters:
         title: Composition de chansons avec des paramètres
-        desc: Une des structures les plus magnifiques dans le monde de l’informatique
-          est la fonction.  Les fonctions (parfois appelées procédures) sont des minis
-          programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus
-          grand programme. Cette leçon aidera les élèves à comprendre intuitivement
-          pourquoi associer des morceaux de code à des fonctions est une pratique
-          très utile.
+        desc: Une des structures vraiment formidables, dans le monde de l’informatique,
+          est la fonction. Les fonctions (parfois appelées procédures) sont de mini-programmes
+          que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme.
+          Cette leçon aidera les élèves à comprendre intuitivement pourquoi le fait
+          d’associer des morceaux de code à des fonctions est une pratique tellement
+          utile.
       swipeRightPassThrough:
         title: Séance scénarios de recrutement
         desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
@@ -459,7 +456,7 @@ fr:
           enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
           vous êtes connecté."
       brad-repro-bug-000:
-        title: Brad reproduction de bug 000
+        title: Brad Reproduction de Bug 000
         desc: "# Brad reproduction de bug 000\r\n## Tentative de recréer un bug rapporté
           par Brooke\r\nle processus est le suivant :\r\n1. commencer avec un niveau
           « déconnecté ». peupler d'informations. sauvegarder et publier.\r\n2. «
@@ -467,68 +464,69 @@ fr:
           et le même nom. sauvegarder et publier"
       courseB_unplugged_MRF_2018:
         title: Mes amis les robots
-        desc: Apprenez à programmer en écrivant du code pour vos amis !
+        desc: Apprends à programmer en écrivant du code pour tes amis !
       PlantASeed_2018:
-        title: 'Algorithmes du monde réel: Planter une graine'
+        title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
+          une graine. Elle se concentre également sur l'informatique en général, et
+          le rôle essentiel que jouent les algorithmes.
       UnplugHappyMaps_2018:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
       GoingPlacesSafely_2018:
-        title: Se déplacer en toute sécurité
+        title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+          présentent comment rester en sécurité durant la navigation sur Internet.
       courseA_unplugged_loops_2018:
-        title: Les Boucles Débranchées
+        title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       BigEvent_2018:
-        title: Le Grand Evénement
+        title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
+          en fonction du bouton choisi.
       GraphPaperProgramming_2018:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
+          reproduction d’un dessin.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
+          méchant en ligne.
       Conditionals_2018:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
+          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
+          ».
       DigitalFootprint_2018:
-        title: Ton empreinte numérique
+        title: Ton Empreinte Numérique
         desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
+          des informations personnelles crée une empreinte numérique, ou « trace »,
           qui a des conséquences.
       BinaryImages_2018:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+        title: Images Binaires
+        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
           des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          informations peuvent être représentées dans une variété d'options binaires.
+          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       PaperPlanes_2018:
-        title: 'Algorithmes du monde réel: Avions en papier'
+        title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
+          en papier. Cette leçon se concentre également sur l'informatique, en général,
+          et le rôle essentiel que jouent les algorithmes.
       GettingLoopy_2018:
-        title: Tourner en rond
+        title: Tourner en Rond
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -540,15 +538,15 @@ fr:
       MoveItMoveIt_2018:
         title: Bouge, Bouge
       courseB_unplugged_CnC_2018:
-        title: C'est bien de créer et de jouer équitablement
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+        title: C'est Super de Créer et de Jouer Équitablement
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
           processus créatif de partage et d'inspiration. Parallèlement à cela vient
           la promotion de l'expression créative et le besoin d'être juste avec le
           travail créatif.
       courseE_unplugged_CnC_2018:
-        title: Partage numérique
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+        title: Partage Numérique
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
           en particulier dans les environnements numériques. Les étudiants devraient
@@ -556,13 +554,13 @@ fr:
           élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
         title: Programmation de relais
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
-          puis passera rapidement à une course contre la montre pendant que les élèves
-          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
-          instruction par instruction.
+        desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
+          puis passera rapidement à une course contre la montre, pendant laquelle
+          les élèves formeront des équipes et travailleront ensemble à la rédaction
+          d'un programme, instruction par instruction.
       courseB_unplugged_MRF_2019:
         title: Mes amis les robots
-        desc: Apprenez à programmer en écrivant du code pour vos amis !
+        desc: Apprends à programmer en écrivant du code pour tes amis !
       BuildingAFoundation_2019:
         title: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -571,9 +569,10 @@ fr:
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
+          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
+          ».
       courseF_unplugged_powerOfWords_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
@@ -586,36 +585,36 @@ fr:
       GraphPaperProgramming_2019:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
+          reproduction d’un dessin.
       RelayProgramming_2018_2019:
         title: Programmation de relais
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
-          puis passera rapidement à une course contre la montre pendant que les élèves
-          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
-          instruction par instruction.
+        desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
+          puis passera rapidement à une course contre la montre, pendant laquelle
+          les élèves formeront des équipes et travailleront ensemble à la rédaction
+          d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       BinaryImages_2019:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+        title: Images Binaires
+        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
           des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          informations peuvent être représentées dans une variété d'options binaires.
+          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       courseE_unplugged_privateInformation_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        desc: Développée par Common Sense Éducation, cette leçon traite de la différence
+        desc: Développée par Common Sense Education, cette leçon traite de la différence
           entre les informations qui peuvent être partagées, en toute sécurité, en
-          ligne, et les informations qui ne le sont pas
+          ligne, et les informations qui ne le peuvent pas.
       SongwritingParameters_2019:
         title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
-        title: Partage numérique
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+        title: Partage Numérique
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
           en particulier dans les environnements numériques. Les étudiants devraient
@@ -625,79 +624,82 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.Internet_2018.desc'
       Crowdsourcing_2019:
-        title: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title'
+        title: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title
+
+'
         desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Tourner en rond
+        title: Tourner en Rond
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        title: Activité "Déconnectée"
+        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
+          méchant en ligne.
       BigEvent_2019:
-        title: Le Grand Evénement
+        title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
+          en fonction du bouton choisi.
       BinaryBracelets_2019:
         title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
       PaperPlanes_2019:
-        title: 'Algorithmes du monde réel: Avions en papier'
+        title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
+          en papier. Cette leçon se concentre également sur l'informatique, en général,
+          et le rôle essentiel que jouent les algorithmes.
       test-uid-passthrough:
-        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
-          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
-          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
-          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
-          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
-          à votre cours de CS Principes. \r \n\r \n## Comment ça marche \r\nLorsque
-          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
-          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
-          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+        desc: "# Session de Scénarios de Recrutement\r\r## Swipe Right for CS \rPour
+          cette session, nous utiliserons un outil appelé « Swipe Right for CS » qui
+          a été développé par nos partenaires du MIT. Dans Swipe Right for CS, vous
+          lirez certains profils d'étudiants et envisagerez des déclarations spécifiques
+          que vous pourriez utiliser pour les convaincre de s'inscrire à votre cours
+          sur les Principes de l’Informatique. \r\r## Comment ça marche\rLorsque vous
+          jouerez à Swipe Right for CS, vous verrez une série de citations que vous
+          pourriez dire à chaque étudiant. Vous glisserez vers la droite sur les citations
+          qui, selon vous, seraient efficaces pour convaincre cet étudiant, en particulier,
           de s'inscrire au cours et glisserez vers la gauche sur les déclarations
-          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
-          en groupe de vos réflexions sur les types de déclarations les plus efficaces
-          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
-          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.\r\n<br><br><br><br>\r\n\r\n<span
-          style=\"display:none\">submitButton next-stage</span>\r\n\r \n<a class=\"btn
-          btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid
-          = < user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< /a> \r \n\r"
+          qui, selon vous ne seraient pas efficaces. Au cours de la session, nous
+          discuterons en groupe de vos réflexions sur les types de déclarations les
+          plus efficaces pour amener un étudiant à s'inscrire en Informatique, et
+          vous aurez l'occasion de voir comment d'autres personnes de votre atelier
+          ont glissé sur chacun des arguments.\r<br><br><br><br>\r\r<span style=\"display:none\">submitButton
+          next-stage</span>\r\r <a class=\"btn btn-large btn-primary submitButton\"
+          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid = <
+          user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< /a> \r \r"
       PlantASeed_2019:
-        title: 'Algorithmes du monde réel: Planter une graine'
+        title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
+          une graine. Elle se concentre également sur l'informatique en général, et
+          le rôle essentiel que jouent les algorithmes.
       UnplugHappyMaps_2019:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
       GoingPlacesSafely_2019:
-        title: Se déplacer en toute sécurité
+        title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+          présentent comment rester en sécurité durant la navigation sur Internet.
       courseA_unplugged_loops_2019:
-        title: Les Boucles Débranchées
+        title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       MoveItMoveIt_2019:
         title: Bouge, Bouge
       DigitalFootprint_2019:
-        title: Ton empreinte numérique
+        title: Ton Empreinte Numérique
         desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
+          des informations personnelles crée une empreinte numérique, ou « trace »,
           qui a des conséquences.
       courseB_unplugged_CnC_2019:
-        title: C'est bien de créer et de jouer équitablement
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+        title: C'est Super de Créer et de Jouer Équitablement
+        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
           processus créatif de partage et d'inspiration. Parallèlement à cela vient
           la promotion de l'expression créative et le besoin d'être juste avec le
@@ -711,26 +713,28 @@ fr:
         title: 'Capacité d''Accès
 
 '
-        desc: Découvre l’accessibilité et la valeur de l’empathie, grâce à un remue-méninges
-          et à la conception de solutions accessibles pour les applications hypothétiques
+        desc: Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion
+          en groupes et à la conception de solutions accessibles pour les applications
+          hypothétiques
       courseE_simon_says_2019:
-        title: Jacques a dit
-        desc: "Jouez à un jeu et réfléchissez aux commandes nécessaires pour obtenir
-          le bon résultat.\r \n\\ r\n![image de test] (https://code.org/images/logo.png)"
+        title: Jacques A Dit
+        desc: "Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le
+          bon résultat.\r \\ r![image de test] (https://code.org/images/logo.png)"
       courseB_unplugged_passwords_2019:
-        title: Mots de Passe Fort
-        desc: Explore pourquoi les gens utilisent des mots de passe, apprennent les
-          avantages de l’utilisation des mots de passe, et découvrent des stratégies
-          pour créer et garder des mots de passe forts et sécurisés
+        title: Mots de Passe Puissant
+        desc: Découvre pourquoi les gens utilisent des mots de passe, apprends les
+          avantages de l’utilisation des mots de passe, et découvre des stratégies
+          pour créer et garder des mots de passe forts et sûrs.
       timeforcs_demo_crowdsourcing:
-        title: Financement participatif
-        desc: '_Note de Josh : Contrairement à la première leçon, j’ai formaté celle-ci,
-          simplement, comme une leçon débranchée typique._'
+        title: Production Participative
+        desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci,
+          simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
+          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
+          ».
       TheRightApp_2019:
         title: La Bonne Application
         desc: "* Tout le monde utilise des ordinateurs ces jours-ci, en particulier

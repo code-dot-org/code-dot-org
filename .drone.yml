@@ -36,6 +36,8 @@ steps:
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     restore: true
     filename: unit-tests-cache.tar
@@ -75,6 +77,8 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     rebuild: true
     filename: unit-tests-cache.tar
@@ -143,6 +147,8 @@ steps:
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     restore: true
 
@@ -187,6 +193,8 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     rebuild: true
     mount:
@@ -208,88 +216,7 @@ trigger:
   event:
   - pull_request
 ---
-# We run unit tests only on commits to staging to upload coverage reports.
-
-kind: pipeline
-name: staging-codecov
-
-clone:
-  disable: true
-
-steps:
-- name: clone
-  image: docker:git
-  commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 100 $DRONE_GIT_HTTP_URL .
-  - git reset --hard $DRONE_COMMIT
-  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
-  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
-  - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Create empty commit with tag to force all tests to run
-  - git config user.name "Drone"
-  - git config user.email "drone-fake-user@code.org"
-  - git commit --allow-empty -m "[test all]"
-
-- name: restore-cache
-  image: plugins/s3-cache
-  settings:
-    pull: true
-    restore: true
-    filename: staging-codecov-cache.tar
-
-- name: unit-tests
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  - name: mysql
-    path: /var/lib/mysql
-  environment:
-    CLOUDFRONT_KEY_PAIR_ID:
-      from_secret: CLOUDFRONT_KEY_PAIR_ID
-    CLOUDFRONT_PRIVATE_KEY:
-      from_secret: CLOUDFRONT_PRIVATE_KEY
-    CODECOV_TOKEN:
-      from_secret: CODECOV_TOKEN
-  commands:
-  # If running on EC2, get hostname from ec2 metadata
-  - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
-  - sudo chown -R circleci:circleci .
-  # cache is restored to source directory, so we need to copy it into the right place
-  - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-  - rm -rf "$(pwd)/home/circleci/.rbenv"
-  # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-  # Set this to current commit, which is the empty commit we created during the clone step with the "test all" tag
-  - export CIRCLE_SHA1=$(git rev-parse HEAD)
-  - /entrypoint.sh docker/unit_tests.sh
-
-- name: update-cache
-  image: plugins/s3-cache
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  settings:
-    pull: true
-    rebuild: true
-    filename: staging-codecov-cache.tar
-    mount:
-    - /home/circleci/.rbenv
-
-volumes:
-- name: rbenv
-  temp: {}
-- name: mysql
-  temp: {}
-
-trigger:
-  branch:
-  - staging
-  event:
-  - push
-
----
 kind: signature
-hmac: 01ee6c1bbb77b26fa4056b0077f005ce737a8c5070ee7e50131c8adcc22f9c57
+hmac: c4b01d2892b7314cb674278450cd30e012f01b3d5289eed1d6a2c933947ec623
 
 ...

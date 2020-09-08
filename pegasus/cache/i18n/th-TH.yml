@@ -1200,6 +1200,8 @@ th-TH:
   header_help_us: ช่วยเรา
   header_about: เกี่ยวกับ
   header_teacher_community: ชุมชนครูผู้สอน
+  header_legal_privacy: นโยบายความเป็นส่วนตัว
+  header_legal_tos: เงื่อนไขการให้บริการ
   user_header_label: สวัสดี %{username}
   user_header_team: ทีม
   user_header_settings: บัญชีของฉัน
@@ -1284,3 +1286,4 @@ th-TH:
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
   page_not_found_button: กลับไปที่หน้าแรก
   hoc2018_mc_with_microsoft: 'ด้วยความร่วมมือกับ: '
+  page_not_available_button: กลับไปที่หน้าแรก

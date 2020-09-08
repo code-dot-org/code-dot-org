@@ -111,7 +111,10 @@ zh-CN:
     need_unlock: 未收到解锁指令吗？
     not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
     use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。
+    invalid_provider: 对不起，%{provider} 的账号不可以被连接到 Code.org 账号。
+    migration_required: 对不起，我们不能链接或断接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
+    disconnect_successful: 我们成功将你的第三方账号从你的Code.org 账号中移除。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
     existing_account:
@@ -167,6 +170,9 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
+    parent_account_checkbox: 我是一名家长/监护人，代表我的孩子注册
+    parent_account_email_progress_permission: 我们可以给你发电子邮件，不时地告诉你孩子的进度和项目，以及他们的课程和计算机科学的最新情况吗？[(查看我们的隐私权政策)](%{privacy_policy_url})
+    parent_account_email_label: 父母/监护人电子邮箱
   school_info:
     title: 学校信息（选填）
     school_country: 学校所在国家
@@ -337,6 +343,8 @@ zh-CN:
       help_us: 帮助我们
       teach: 教学
       about: 关于
+      legal_privacy: 隐私政策
+      legal_tos: 使用条款
     user:
       classroom: 教师主页
       district_dashboard: 分区信息
@@ -463,8 +471,12 @@ zh-CN:
     auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
     auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
     update_email: 更新
+    for_parents_and_guardians: 针对家长和监护人
+    link_a_parent_email: 将一位父母/监护人的电子邮箱地址链接到此帐户，以便随时了解你孩子的进度和项目。你还可以使用此电子邮箱地址恢复密码。
     parent_guardian_email_label: 父母/监护人电子邮箱
+    remove_parent_email_label: 移除
     none: 没有
+    only_one_parent_email_supported_warning: 注：目前，针对每个学生帐户我们仅支持添加一个父母/监护人电子邮箱地址。
     encrypted: 已加密
   user_level:
     completed: 已完成
@@ -701,20 +713,6 @@ zh-CN:
       body: 学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。
       audience: 14 岁或以上
       cta: 了解操作方法
-  gallery:
-    students_drew_these_with_code: 学生使用代码画了这些图案!
-    students_made_these_with_code: 学生使用代码做了这些内容！
-    picture_count: 在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。
-    activity_count: 在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。
-    want_to_make_your_own: 想要做你自己的作品？
-    how_to_save: 在这些教程的最后一个级别，单击"完成"和"保存"以在画廊里保存您的作品。
-    more: 更多 →
-    caption_by_name_age: "%{name}，%{age} 岁"
-    caption_time_ago: "%{time_ago}之前"
-    header: 作品
-    header_playlab: 游戏实验室
-    header_artist: 艺术家
-    report_abuse: 举报滥用
   landing:
     prerelease_tutorial: 本教程为 **beta** 版，将根据反馈信息对其进行改进和修订。
     report_bug: 报告错误
@@ -775,6 +773,8 @@ zh-CN:
     open_response_body: 感谢您的回复！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+  lesson_extras:
+    bonus_level: 更多关卡
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？
@@ -811,6 +811,14 @@ zh-CN:
     reminder_desc_markdown: 我们更新了[服务条款](%{tos_url})和[隐私政策](%{privacy_url})。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，学生可能不能使用
       JavaScript 工具。
     review_terms: 查看更新后的条款
+  donor_interstitial:
+    title: 你的免费计算机科学课程是由...创造的。
+    subtitle: 我们想向能使 Code.org 成功的捐赠人表示感谢。我们下决心要使 Code.org 向所有地区的学校和学生免费开放，感谢您[donors]的（%{donors_url}）！
+    local_supporters: 地区支持者
+    global_supporters: 全球支持者
+    support_codeorg_1: 您所给予 Code.org 的每一元给予了更多学生机会。
+    support_codeorg_2: "[现在捐赠](%{donate_url})以支持 Code.org 。"
+    get_started: '开始使用 Code.org '
   school_info_interstitial:
     title: 我们想将计算机科学带给每一个学生——帮助我们记录进度！
     message: 请在下方输入您的学校信息。
@@ -907,95 +915,7 @@ zh-CN:
     instructor_feedback: 教师反馈
     peer_feedback: 同伴反馈
     outdated: 这个反馈是添加给以前提交的版本
-  flex_category:
-    required: 概览
-    content: 内容
-    practice: 教学训练
     peer_review: 互相检查
-    ramp_up: 热身
-    main_course: 主要课程
-    extra_course_content: 额外的课程内容
-    csf_e_1: 提升到课程E（可选）
-    csf_e_2: 课程E的内容
-    csf_f_1: 提升到课程F（可选）
-    csf_f_2: 课程F的内容
-    csf_digcit: 数字公民
-    csf_jigsaw: 拼图
-    csf_sequencing: 序列
-    csf_loops: 循环
-    csf_events: 事件
-    csf_online_safety: 在线安全
-    csf_binary: 二进制
-    csf_conditionals: 条件语句
-    csf_sprites: 精灵图
-    csf_spritelab: 精灵图实验室
-    csf_nested_loops: 循环嵌套
-    csf_functions: 函数
-    csf_variables: 变量
-    csf_for_loops: 计数循环
-    csf_internet: 互联网
-    csf_impacts: 计算的影响
-    csf_warmup: 热身
-    csd1_1: 第 1 章︰ 解决问题的流程
-    csd1_2: 第 2 章︰ 计算机和解决问题的能力
-    csd2_1: 第 1 章︰ 网站内容和 HTML
-    csd2_2: 第 2 章︰ 样式和 CSS
-    csd3_1: 第 1 章︰图像和动画
-    csd3_2: 第 2 章︰ 创建游戏
-    csd4_1: 第 1 章︰ 用户为中心的设计
-    csd4_2: 第 2 章︰ 应用程序原型
-    csd5_1: 第 1 章︰ 表达信息
-    csd5_2: 第 2 章︰ 解决数据问题
-    csd6_1: 第 1 章︰ 用硬件编程
-    csd6_2: 第 2 章︰ 创建物理原型
-    csd_survey: 课后问卷
-    csp1_1: 第一章：表达和传输信息
-    csp1_2: 第二章：发明互联网
-    csp2_1: 第一章：编码和压缩复杂信息
-    csp2_2: 第二章：使用和可视化数据
-    csp3_1: 第一章：编程语言和算法
-    csp4_1: 第一章：大数据和加密的世界
-    csp5_1: 第一章：事件驱动编程
-    csp5_2: 第二章：用数据结构编程
-    cspSurvey: 调查
-    cspAssessment: 章节测验
-    csp_ap_1: 第一章：安装
-    csp_ap_2: 第二章：浏览成绩工具
-    csp_ap_3: 第三章：创建性能工具
-    csp_postap_1: 第一章：使用和可视化数据
-    csp_postap_2: 第二章：应用程序和数据库
-    csp2_1_2018: 第2单元︰ 数字信息
-    csp3_1_2018: 单元3：编程入门
-    csp4_1_2018: 单元4 - 大数据和隐私
-    csp_variables: 变量
-    csp_conditionals: 条件语句
-    csp_functions: 函数
-    csp_project: 项目
-    csp_lists: 列表
-    csp_loops: 循环
-    csp_traversals: 遍历
-    csp_libraries: 库
-    csp_parameters_return_values: 参数和返回值
-    csp_unit1_2020: 单元 1︰ 数字信息
-    csp_unit2_2020: 单元 2︰ 互联网
-    csp_unit3_2020: 第3单元：应用设计简介
-    csp_unit6_2020: '单元 6: 算法'
-    csp_unit8_2020: '单元 8: 创建 PT准备'
-    csp_unit9_2020: '单元 9: 数据'
-    csp_unit10_2020: 第10单元：网络安全和全球影响
-    dlp: 反思提示
-    time4cs_c1: 集合 1：湿地及其生态系统
-    time4cs_c2: 集合 2：湿地里的食物链
-    time4cs_c3: 集合 3：生活在湿地
-    time4cs_c4: 集合 4：对湿地的入侵影响
-    time4cs_c5: 集合 5：市民对湿地变化的影响
-    time4cs_c6: 条件（复查）
-    k5_getting_started: 开始
-    k5_csf_intro: 了解 CS 基础课程
-    k5_coding_concepts: 编程概念和教学策略
-    k5_next_steps: 下一步
-    k5_basic_concepts: 基本编程概念和教学策略
-    k5_diving_deeper: 深入学习：课程 E 和 F
   external_links:
     disclaimer: 免责声明
     leaving_domain: 你现在正在离开 Code.org，访问一个不由我们创建的站点。
@@ -1078,6 +998,10 @@ zh-CN:
       school_name: 学校名称
       school_city: 学校所在城市
       school_country: 学校所在国家
+      colombian_school_city: 学校所在城市
+      colombian_school_department: 学校部门
+      colombian_school_municipality: 学校政府
+      colombian_school_name: 学校名称
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
       resources: 您使用以下哪种计算机科学教育资源？
@@ -1099,6 +1023,7 @@ zh-CN:
       school_country:
         canada: 加拿大
         chile: 智利
+        colombia: 哥伦比亚
         israel: 以色列
         malaysia: 马来西亚
         mexico: 墨西哥
@@ -1147,6 +1072,7 @@ zh-CN:
         csf_express: 计算机科学基础课程（预快速或快速）
         csd: 计算机科学发现
         csp: 计算机科学原理
+        not_applicable: 不适用
       email_opt_in:
         opt_in_yes: 对
         opt_in_no: 不
@@ -1156,6 +1082,9 @@ zh-CN:
       instructions: 请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。
       thanks_markdown: 感谢提交！我们期待着能帮您熟悉 Code.org 的课程和教学工具。如有任何问题和反馈，请及时告知我们，可向 [support@code.org](%{support_email_url})
         发邮件或在[教师论坛](%{teacher_forum_url})发帖！
+      facilitator_not_listed: 我的主持人没有出现在此列表中
+      facilitator_not_applicable: 不适用
+      organizer_not_listed: 我的组织者没有出现在列表中
     logged_out:
       heading: 感谢您对专业学习计划的兴趣！
       body: 开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。
@@ -1184,4 +1113,16 @@ zh-CN:
   maker:
     google_oauth:
       login_with_google: 登录到Google的制作者应用
+      enter_code: 当你使用默认浏览器并使用Google账号登入时，请输入提示的代码
+      copy_code: 复制这段代码并粘贴到 Maker App 来登录到 Code.org
+      error_token_expired: 验证已过期，请重新登录获取一个新的验证码。
+      error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
+      error_invalid_user: 无效的用户ID，请重新登录。
       error_no_code: 请输入您的登录代码。
+  parent_email_banner:
+    text: "**你是一名父母还是监护人？**将你的电子邮箱链接到此帐户，以便随时了解你孩子的进度和项目！"
+    link_your_email: 填写电子邮箱
+    not_now: 以后再说
+  behaviors:
+    this_sprite: 这个精灵
+  unit_prefix: 单位%{n}

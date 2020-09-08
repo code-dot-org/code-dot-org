@@ -68,7 +68,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     allowedAttributes: false,
     allowedSchemes: allSchemes,
     // Use transformTags to ignore certain attributes, since allowedAttributes
-    // can only accept a whitelist not a blacklist.
+    // can only accept an allowlist not a denylist.
     transformTags: {
       '*': function(tagName, attribs) {
         for (var i = 0; i < ignoredAttributes.length; i++) {
@@ -98,7 +98,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
  * @returns {boolean} Whether the element id is valid.
  */
 function isIdAvailable(elementId) {
-  // We only care if an ID is blacklisted or already in use in this case.
+  // We only care if an ID is denylisted or already in use in this case.
   var options = {
     allowCodeElements: false,
     allowDesignElements: true,
@@ -111,7 +111,7 @@ function isIdAvailable(elementId) {
 }
 
 /**
- * Sanitize html using a whitelist of tags and attributes.
+ * Sanitize html using a allowlist of tags and attributes.
  * see default options at https://www.npmjs.com/package/sanitize-html
  * @param {string} unsafe Unsafe html to sanitize.
  * @param {function(removed, unsafe, safe, warnings)} warn Optional function
@@ -200,7 +200,10 @@ export default function sanitizeHtml(
       'placeholder',
       'step',
       'type',
-      'value'
+      'value',
+      'accept',
+      'hidden',
+      'capture'
     ]),
     select: standardAttributes.concat(['multiple', 'size'])
   };

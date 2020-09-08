@@ -948,6 +948,10 @@ ur:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
@@ -989,8 +993,46 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_hideTitleScreen:
         text: عنوان کی سکرین چھپائیں
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
+            '"space"': خلاء
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': وائے
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} چھونے کناروں ہے"
       gamelab_jumpTo:
@@ -1063,6 +1105,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_objectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
@@ -1140,6 +1184,8 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_subjectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_turn:
         text: باری {SPRITE} {DIRECTION} {N} ڈگری
         options:

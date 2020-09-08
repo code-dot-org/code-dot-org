@@ -303,8 +303,10 @@ hu-HU:
           correct: true
         - text: _____ _____ egy _____.
         - text: Eugene egy _____ város.
+        content1: Itt látsz három mondatot. Az alábbi sablonok közül melyik segítségével
+          lehetne előállítani a három példamondatot?
         questions:
-        - text: Seattle egy nagy város.<br/>Eugene egy közepes város<br/>Hillview
+        - text: Seattle egy nagy város. <br/>Eugene egy közepes város. <br/>Hillview
             egy kis város.
         title: Feleletválasztós
       4-5 Crowdsourcing Multi 1:
@@ -478,7 +480,14 @@ hu-HU:
         content1: a leírás itt található
       Begin planning your project_2018_2019:
         content1: a leírás itt található
+      Begin planning your project_2018_2019_2020:
+        content1: a leírás itt található
       BigEvent-Unplugged:
+        markdown: |
+          # A nagy esemény
+
+          A számítástechnikában az események a akciók, amit a számítógép kijelez. Ebben a leckében a gép másképp reagál, attól függően, hogy melyik gombot nyomod meg.
+      BigEvent-Unplugged_2020:
         markdown: |
           # A nagy esemény
 
@@ -1007,6 +1016,11 @@ hu-HU:
           Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
           őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
           előtt (vagy együtt), hogy igazán érthető legyen.\n"
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# A változók nagyon sok szabadságot biztosítanak a számítástechnikában.
+          Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
+          őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
+          előtt (vagy együtt), hogy igazán érthető legyen.\n"
       GoingPlacesSafely-unplugged:
         markdown: "# Helyek biztonságos felkeresése \n\nAz internet nagyon hasznos,
           de néha veszélyes hely is tud lenni. Figyel a biztonságra az internet használata
@@ -1018,7 +1032,19 @@ hu-HU:
           Ebben a leckében a ciklusokról fogunk tanulni.
 
           ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # Boldog ciklusok
+
+          Ebben a leckében a ciklusokról fogunk tanulni.
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
+        markdown: |
+          # Boldog térképek
+
+          Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
+      HappyMaps-Unplugged_2020:
         markdown: |
           # Boldog térképek
 
@@ -1228,7 +1254,65 @@ hu-HU:
         content1: a leírás itt található
       New Challenge Introduction:
         content1: a leírás itt található
+      OPD-K5 Reviewing Reflections:
+        content1: a leírás itt található
       OPD-K5 Stage3aGo:
+        content1: a leírás itt található
+      OPD-K5 Stage3aGo_copy:
+        content1: a leírás itt található
+      OPD-K5 conditionals introduced:
+        content1: a leírás itt található
+      OPD-K5 debugging:
+        content1: a leírás itt található
+      OPD-K5 diving deeper intro:
+        content1: a leírás itt található
+      OPD-K5 events introduced:
+        content1: a leírás itt található
+      OPD-K5 for loops:
+        content1: a leírás itt található
+      OPD-K5 for loops intro:
+        content1: a leírás itt található
+      OPD-K5 for loops introduction:
+        content1: a leírás itt található
+      OPD-K5 functions introduced:
+        content1: a leírás itt található
+      OPD-K5 journaling:
+        content1: a leírás itt található
+      OPD-K5 lesson implementation planning:
+        content1: a leírás itt található
+      OPD-K5 lesson plans:
+        content1: a leírás itt található
+      OPD-K5 loops introduced:
+        content1: a leírás itt található
+      OPD-K5 project:
+        content1: a leírás itt található
+      OPD-K5 projects introduction:
+        content1: a leírás itt található
+      OPD-K5 role_of_teacher:
+        content1: a leírás itt található
+      OPD-K5 sequencing introduced:
+        content1: a leírás itt található
+      OPD-K5 sprite lab:
+        content1: a leírás itt található
+      OPD-K5 sprite lab introduction:
+        content1: a leírás itt található
+      OPD-K5 sprite lab unplugged:
+        content1: a leírás itt található
+      OPD-K5 sprite lab video:
+        content1: a leírás itt található
+      OPD-K5 types of lessons:
+        content1: a leírás itt található
+      OPD-K5 using lesson plans:
+        content1: a leírás itt található
+      OPD-K5 variables:
+        content1: a leírás itt található
+      OPD-K5 variables introduction:
+        content1: a leírás itt található
+      OPD-K5 variables unplugged:
+        content1: a leírás itt található
+      OPD-K5 where to next:
+        content1: a leírás itt található
+      OPD-K5-projects-1:
         content1: a leírás itt található
       Prepare for your presentation:
         content1: a leírás itt található
@@ -1244,7 +1328,23 @@ hu-HU:
         - {}
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1269,6 +1369,14 @@ hu-HU:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1303,6 +1411,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1327,6 +1444,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1344,6 +1469,14 @@ hu-HU:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1376,6 +1509,18 @@ hu-HU:
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
+        - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 nem fog megmozdulni.
           feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
@@ -1432,6 +1577,21 @@ hu-HU:
             kellene.
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1451,6 +1611,15 @@ hu-HU:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
@@ -1486,6 +1655,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1503,6 +1681,22 @@ hu-HU:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1534,6 +1728,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1551,6 +1753,14 @@ hu-HU:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1577,6 +1787,15 @@ hu-HU:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1617,6 +1836,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1649,6 +1876,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1666,6 +1901,14 @@ hu-HU:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1697,6 +1940,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1714,6 +1965,14 @@ hu-HU:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1766,6 +2025,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1790,6 +2057,22 @@ hu-HU:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1799,6 +2082,14 @@ hu-HU:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1823,6 +2114,14 @@ hu-HU:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1855,6 +2154,14 @@ hu-HU:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -1902,6 +2209,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1942,6 +2257,20 @@ hu-HU:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: a leírás itt található
+      csf_password_power-up:
+        content1: a leírás itt található
+      csf_putting_a_stop_to_online_meanness:
+        content1: a leírás itt található
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1959,6 +2288,14 @@ hu-HU:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

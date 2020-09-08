@@ -202,6 +202,11 @@ fi:
     email_preference_yes: Kyllä
     email_preference_no: Ei
     email_preference_required: Sinun on määriteltävä haluatko sähköpostia.
+    parent_account_checkbox: Olen lapseni puolesta ilmoittautuva vanhempi/huoltaja
+    parent_account_email_progress_permission: Voimmeko lähettää sinulle satunnaisia
+      päivityksiä sähköpostitse lapsesi edistymisestä ja projekteista sekä päivityksiä
+      lapsesi kurssista ja tietotekniikasta? [(Katso tietosuojakäytäntömme)] (%{privacy_policy_url})
+    parent_account_email_label: Vanhemman/Huoltajan sähköpostiosoite
   school_info:
     title: Koulun tiedot (valinnainen)
     school_country: Koulun maa
@@ -375,6 +380,8 @@ fi:
       help_us: Auta meitä
       teach: Opeta
       about: Tietoja
+      legal_privacy: Tietosuojakäytäntö
+      legal_tos: Käyttöehdot
     user:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli
@@ -507,8 +514,14 @@ fi:
     update: Päivitä tili
     account_successfully_updated: Käyttäjätili päivitettiin onnistuneesti.
     update_email: Päivitä
+    for_parents_and_guardians: Vanhemmille ja Huoltajille
+    link_a_parent_email: Liitä vanhemman/huoltajan sähköpostiosoite tähän tiliin saadaksesi
+      päivityksiä lapsesi edistymisestä ja projekteista. Voit käyttää tätä sähköpostiosoitetta
+      myös salasanan palautukseen.
     parent_guardian_email_label: Huoltajan sähköpostiosoite
     none: Ei mitään
+    only_one_parent_email_supported_warning: 'Huomaa: Voimme tällä hetkellä tukea
+      vain yhden vanhemman/huoltajan sähköpostiosoitetta oppilasta kohti.'
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -747,23 +760,6 @@ fi:
       title: Pienoisohjelmat
       audience: Yli 14-vuotiaille
       cta: Lisätietoja
-  gallery:
-    students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
-    students_made_these_with_code: Oppilaat tekivät nämä koodilla!
-    picture_count: Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat piirtäneet
-      <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia
-      nähdäksesi kunkin ohjelman toiminnassa.
-    activity_count: Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat tehneet <b>%{count}</b>
-      sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia
-      ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.
-    want_to_make_your_own: Haluatko tehdä omasi?
-    more: Lisää →
-    caption_by_name_age: "%{name} tekemä, ikä %{age}"
-    caption_time_ago: "%{time_ago} sitten"
-    header: Galleria
-    header_playlab: Pelilabra
-    header_artist: Taiteilija
-    report_abuse: Ilmoita väärinkäytöksestä
   landing:
     report_bug: Raportoi ongelma
     support: Katso ohjeet
@@ -949,39 +945,6 @@ fi:
     instructor_feedback: Ohjaajan palaute
     peer_feedback: Kanssaoppijan palaute
     outdated: Palaute on lisätty aiemmin lähetettyyn versioon
-  flex_category:
-    required: Yleiskatsaus
-    main_course: Pää kurssi
-    extra_course_content: Lisäkurssin sisältö
-    csf_digcit: Digitaalinen kansalaisuus
-    csf_jigsaw: Palapeli
-    csf_loops: Silmukat
-    csf_events: Tapahtumat
-    csf_binary: Binääri
-    csf_conditionals: Ehtolausekkeet
-    csf_nested_loops: Sisäkkäiset silmukat
-    csf_functions: Funktiot
-    csf_variables: Muuttujat
-    csf_for_loops: Silmukat
-    csf_internet: Internet
-    csd1_1: 'Luku 1: Ongelmanratkaisu prosessi'
-    csd1_2: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
-    csd2_1: 'Luku 1: Web-sisältö ja HTML'
-    csd2_2: 'Luku 2: Muotoilu ja CSS'
-    csd3_1: 'Luku 1: Kuvia ja animaatioita'
-    csd3_2: 'Luku 2: Pelien rakentaminen'
-    csd4_1: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
-    csd4_2: 'Luku 2: Apsin prototypointi'
-    csd5_1: 'Luku 1: Tiedon esittäminen'
-    csd5_2: 'Luku 2: Tieto-ongelmien ratkaisu'
-    csd6_1: 'Luku 1: Laitteiston palaute'
-    csd6_2: 'Luku 2: Laitteiston syöte'
-    cspSurvey: Kysely
-    csp_variables: Muuttujat
-    csp_conditionals: Ehtolausekkeet
-    csp_functions: Funktiot
-    csp_lists: Listat
-    csp_loops: Silmukat
   external_links:
     disclaimer: Vastuuvapauslauseke
   hoc_download:
@@ -1011,6 +974,7 @@ fi:
       email: Sähköposti
       school_name: Koulun nimi
       school_country: Koulun maa
+      colombian_school_name: Koulun nimi
     form_entries:
       gender:
         male: Mies
@@ -1039,3 +1003,8 @@ fi:
     message: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä Yhdysvalloissa.
     true: Kyllä
   copy: Kopioi
+  parent_email_banner:
+    text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin
+      pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"
+    link_your_email: Liitä sähköpostiosoitteesi
+    not_now: Ei nyt

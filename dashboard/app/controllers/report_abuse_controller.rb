@@ -90,7 +90,6 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      csrfToken: form_authenticity_token,
       name: (current_user.name unless current_user.nil?),
       email: (current_user.email unless current_user.nil?),
       age: (current_user.age unless current_user.nil?),

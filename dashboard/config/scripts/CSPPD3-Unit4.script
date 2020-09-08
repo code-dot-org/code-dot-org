@@ -1,19 +1,19 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
-stage ‘Getting Started'
-level ’CSPPD3-u4 Welcome'
+lesson 'Getting Started', display_name: 'Getting Started'
+level 'CSPPD3-u4 Welcome'
 level 'CSPPD3-u4 overview'
 level 'PD check your progress'
 level 'CSPPD3-u4 tips for prep'
 level 'CSPPD3-u2 plan'
 
-stage 'Unit 4 Overview' 
+lesson 'Unit 4 Overview', display_name: 'Unit 4 Overview'
 level 'CSPPD3-u4 unit 4 overview'
 level 'CSPPD3-u4 breakdown of u4 chunks'
 level 'CSPPD3-u4 unit overview checkin'
 
-stage ‘Chapter 1 Overview’
+lesson 'Chapter 1 Overview', display_name: 'Chapter 1 Overview'
 level 'CSPPD3-u4 chapter 1 concepts'
 level 'CSPPD3-u4 chapter 1 resources'
 level 'CSPPD3-u4 chapter 1 resources pt2'
@@ -21,17 +21,17 @@ level 'CSPPD3-u4 chapter 1 resources pt3'
 level 'CSPPD3-u4 chapter 1 resources pt4'
 level 'CSPPD3-u4 chapter 1 checkin'
 
-stage ‘Chapter 2 Overview’ 
+lesson 'Chapter 2 Overview', display_name: 'Chapter 2 Overview'
 level 'CSPPD3-u4 chapter 2 concepts'
 level 'CSPPD3-u4 chapter 2 chunk 1'
 level 'CSPPD3-u4 chapter 2 chunk 2'
 level 'CSPPD3-u4 chapter 2 checkin'
 
-stage 'Practice Performance Tasks’
-level ‘CSPPD3-u4 practice PT’
+lesson 'Practice Performance Tasks', display_name: 'Practice Performance Tasks'
+level 'CSPPD3-u4 practice PT'
 level 'CSPPD3-u4 pause and reflect'
 
-stage ‘Challenge Overview’ 
+lesson 'Challenge Overview', display_name: 'Challenge Overview'
 level 'CSPPD3-u4 challenge overview'
 level 'CSPPD3-u4 what is a challenge'
 level 'CSPPD3-u4 completing the challenge'
@@ -39,15 +39,16 @@ level 'CSPPD3-u4 list of challenges'
 level 'CSPPD3-u2 expectations'
 level 'CSPPD3-u4 pick a challenge'
 
-stage 'Complete the Challenge' 
+lesson 'Complete the Challenge', display_name: 'Complete the Challenge'
 level 'CSPPD3-u4 complete the challenge overview'
 level 'CSPPD3-u4 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 
-stage 'Share out and Submit' 
+lesson 'Share out and Submit', display_name: 'Share out and Submit'
 level 'CSPPD3-u4 share out overview'
 level 'CSPPD3-u4 post to forum'
 level 'CSPPD3-u4 submit forum link'
 level 'CSPPD3-u2 final progress check'
 level 'CSPPD3-u4 post survey'
+

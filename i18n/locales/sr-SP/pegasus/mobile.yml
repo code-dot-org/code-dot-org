@@ -783,6 +783,8 @@
   header_help_us: "Помози нам"
   header_teacher_community: "Заједница учитеља"
   header_report_bug: "Пријави проблем"
+  header_legal_privacy: "Политика приватности"
+  header_legal_tos: "Услови коришћења"
   user_header_label: "Здраво %{username}"
   user_header_team: "Тим"
   user_header_settings: "Мој налог"

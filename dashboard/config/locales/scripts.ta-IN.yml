@@ -15,7 +15,7 @@ ta:
             விளையாட்டு அல்லது அவர்கள் பகிர முடியும் கதை. தரங்களாக K-1 பரிந்துரைக்கப்படும்.
           description_short: தொடங்கும் தொடர் கோவை 1-அதிகாலை படிப்பான்கள்.
           description_audience: வயது 4-6
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'கலைஞர்: சுழற்சிகளும்'
             'Artist: Sequence':
@@ -27,7 +27,7 @@ ta:
             'Bee: Sequence':
               name: 'அதுபோல: வரிசை முறை'
         course2:
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'கலைஞர்: சுழற்சிகளும்'
             'Artist: Sequence':
@@ -37,7 +37,7 @@ ta:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
         course3:
-          stages:
+          lessons:
             Computational Thinking:
               name: கணினிபூர்வமான சிந்தனை
             Songwriting:
@@ -45,23 +45,23 @@ ta:
         course4:
           description_audience: வயது 9-18
         Course4pre:
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'கலைஞர்: சுழற்சிகளும்'
             'Artist: Sequence':
               name: 'கலைஞர்: வரிசை முறை'
         usability:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
         infinity:
-          stages:
+          lessons:
             Infinity:
               name: முடிவிலி
         netsim:
           title: இணைய மாதிரி
         20-hour:
-          stages:
+          lessons:
             Abstraction:
               name: நுண்புல
             Algorithms:
@@ -100,7 +100,7 @@ ta:
           title: குறியீட்டை திருத்து
           description: குறியீட்டை திருத்து
           description_short: குறியீட்டை திருத்து
-          stages:
+          lessons:
             The Artist:
               name: கலைஞர்
             The Maze:
@@ -111,55 +111,55 @@ ta:
           description_short: நிகழ்வுகள்
         step:
           title: அடி
-          stages:
+          lessons:
             Step:
               name: அடி
         cspunit2:
-          stages:
+          lessons:
             The Internet:
               name: இணையம்
         cspfacilitator:
-          stages:
+          lessons:
             Internet Simulator:
               name: இணைய மாதிரி
         asUnplugged:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
             Songwriting:
               name: பாடல் எழுதுதல்
         csp1-2017:
-          stages:
+          lessons:
             The Internet:
               name: இணையம்
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: செயல்பாடுகள்
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         grade4:
-          stages:
+          lessons:
             Songwriting:
               name: பாடல் எழுதுதல்
         grade1:
-          stages:
+          lessons:
             Events:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         csd3-2017:
-          stages:
+          lessons:
             Functions:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
         k5concepts:
-          stages:
+          lessons:
             Events:
               name: நிகழ்வுகள்
             Functions:
@@ -169,37 +169,37 @@ ta:
             Variables:
               name: மாறிலிகள்
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         coursef-draft:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: செயல்பாடுகள்
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
@@ -207,43 +207,43 @@ ta:
             'null':
               name: வெறுமை
         coursee-2017:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         express-2017:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         new-f:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         course-f-2018:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
             'Functions: Songwriting':
@@ -253,101 +253,215 @@ ta:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
         coursee-2018:
-          stages:
+          lessons:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
         coursef-2018:
-          stages:
+          lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         csp1-2018:
-          stages:
+          lessons:
             The Internet:
               name: இணையம்
         dance:
-          stages:
+          lessons:
             Dance Party:
               name: நடன விருந்து
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: நடன விருந்து
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: நடன விருந்து
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: மாறிலிகள்
+          lessons:
             The Artist:
               name: கலைஞர்
             Internet:
               name: இணையம்
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: நடன விருந்து
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: நிகழ்வுகள்
+            csf_loops:
+              display_name: சுழற்சிகள்
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
             Dance Party:
               name: நடன விருந்து
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_functions:
+              display_name: செயல்பாடுகள்
+          lessons:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
             Songwriting:
               name: பாடல் எழுதுதல்
         express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_functions:
+              display_name: செயல்பாடுகள்
+            csf_variables:
+              display_name: மாறிலிகள்
+          lessons:
             Dance Party:
               name: நடன விருந்து
         andrea-test:
-          stages:
+          lessons:
             'null':
               name: வெறுமை
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
         csp1-2019:
-          stages:
+          lessons:
             The Internet:
               name: இணையம்
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: பட்டியல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: பட்டியல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: பட்டியல்கள்
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
         dance-2019:
-          stages:
+          lessons:
             Dance Party:
               name: நடன விருந்து
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Loops:
               name: சுழற்சிகள்
             Events:
@@ -356,49 +470,137 @@ ta:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_functions:
+              display_name: செயல்பாடுகள்
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: பட்டியல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
         csd3-2020:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
             Text:
               name: உரை
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
         coursed-2020:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: நிகழ்வுகள்
+            csf_loops:
+              display_name: சுழற்சிகள்
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
             Dance Party:
               name: நடன விருந்து
         coursee-2020:
-          stages:
+          lesson_groups:
+            csf_functions:
+              display_name: செயல்பாடுகள்
+          lessons:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
         coursef-2020:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: மாறிலிகள்
+          lessons:
             Internet:
               name: இணையம்
         express-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_functions:
+              display_name: செயல்பாடுகள்
+            csf_variables:
+              display_name: மாறிலிகள்
+          lessons:
             Dance Party:
               name: நடன விருந்து
-        csd3-virtual:
-          stages:
-            Variables:
-              name: மாறிலிகள்
-            Functions:
-              name: செயல்பாடுகள்
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
         csp5-virtual:
-          stages:
+          lessons:
             Variables:
               name: மாறிலிகள்
         virtual-holding-place:
-          stages:
+          lessons:
             Functions:
               name: செயல்பாடுகள்
         code-break:
-          stages:
+          lessons:
             Algorithms:
               name: வழிமுறைகள்
             Events:
               name: நிகழ்வுகள்
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: மாறிலிகள்
+            Text:
+              name: உரை
+            Functions:
+              name: செயல்பாடுகள்
