@@ -23,7 +23,7 @@ use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
   # Add HSTS header to all HTTPS responses in all environments.
-  hsts: {expires: 31_536_000, subdomains: false},
+  hsts: true,
   # HTTPS redirect is handled at the HTTP-cache layer (CloudFront/Varnish).
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',

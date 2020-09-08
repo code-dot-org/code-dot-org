@@ -21,8 +21,9 @@ use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']
 
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
-  # Add HSTS header to all HTTPS responses in all environments.
-  hsts: {expires: 31_536_000, subdomains: false},
+  # Add HSTS header to all HTTPS responses in all environments,
+  # adding `preload` directive to the root domain.
+  hsts: {preload: rack_env?(:production)},
   # HTTPS redirect is handled at the HTTP-cache layer (CloudFront/Varnish).
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
