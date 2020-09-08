@@ -199,6 +199,8 @@ class ActivityCard extends Component {
   }
 }
 
+export const UnconnectedActivityCard = ActivityCard;
+
 export default connect(
   state => ({}),
   {

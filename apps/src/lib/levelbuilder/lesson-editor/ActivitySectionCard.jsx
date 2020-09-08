@@ -444,6 +444,8 @@ class ActivitySectionCard extends Component {
   }
 }
 
+export const UnconnectedActivitySectionCard = ActivitySectionCard;
+
 export default connect(
   state => ({}),
   {

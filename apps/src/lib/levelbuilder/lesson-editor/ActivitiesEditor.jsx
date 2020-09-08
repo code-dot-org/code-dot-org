@@ -109,6 +109,8 @@ class ActivitiesEditor extends Component {
   }
 }
 
+export const UnconnectedActivitiesEditor = ActivitiesEditor;
+
 export default connect(
   state => ({
     activities: state.activities
