@@ -88,9 +88,6 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} κάνε {MOVE} {DIR} για πάντα"
         options:
@@ -109,9 +106,6 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
@@ -188,9 +182,6 @@ el:
             MOVES.XArmsUp: Τεντώσου
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} κάνε {MOVE} {DIR} μία φορά"
         options:
@@ -219,9 +210,6 @@ el:
             MOVES.XArmsUp: Τεντώσου
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
@@ -1101,6 +1089,13 @@ el:
             '"z"': ζ
       gamelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Βοράς
+            '"East"': Ανατολή
+            '"South"': Νότος
+            '"West"': Δυτικά
       gamelab_locationMouse:
         text: θέση ποντικιού
       gamelab_locationOf:
