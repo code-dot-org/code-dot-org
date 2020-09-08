@@ -832,6 +832,7 @@
   "iDontKnow": "I don't know",
   "ifCode": "if",
   "ignore": "Ignore",
+  "imageURLInputExample": "Need an example? Paste in the following: https://code.org/images/logo.png",
   "import": "Import",
   "importFromGoogleClassroom": "Import section from Google Classroom",
   "importFromClever": "Import section from Clever",

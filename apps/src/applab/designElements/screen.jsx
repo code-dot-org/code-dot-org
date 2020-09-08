@@ -65,6 +65,7 @@ class ScreenProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
           elementId={elementUtils.getId(element)}
         />
