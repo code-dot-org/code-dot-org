@@ -3,12 +3,18 @@
     "general": [
       {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
       {"question_id": "overall_success", "header_text": "Overall Success"}
+    ],
+    "facilitator": [
+      {"question_id":  "facilitator_effectiveness", "header_text":  "Facilitator Effectiveness"}
     ]
   },
   "CS Discoveries": {
     "general": [
       {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
       {"question_id": "overall_success", "header_text": "Overall Success"}
+    ],
+    "facilitator": [
+      {"question_id":  "facilitator_effectiveness", "header_text":  "Facilitator Effectiveness"}
     ]
   },
   "CS Fundamentals": {

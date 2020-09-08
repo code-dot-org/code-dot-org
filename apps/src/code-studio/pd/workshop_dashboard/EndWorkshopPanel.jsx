@@ -4,6 +4,35 @@ import PropTypes from 'prop-types';
 import {Button} from 'react-bootstrap';
 import WorkshopPanel from './WorkshopPanel';
 import ConfirmationDialog from '../components/confirmation_dialog';
+import color from '@cdo/apps/util/color';
+
+const warningStyle = {
+  color: color.red,
+  fontWeight: 'bold'
+};
+
+const earlyCloseWarning = (
+  <div>
+    <span style={warningStyle}>Warning: </span>There are still sessions
+    remaining for this workshop. Once you end a workshop:
+    <ul>
+      <li>The post-workshop survey is automatically sent to attendees.</li>
+      <li>Surveys can’t be unsent and will not be resent.</li>
+      <li>Attendance is locked.</li>
+    </ul>
+    Are you sure you want to end this workshop now?
+  </div>
+);
+
+const normalCloseWarning = (
+  <div>
+    Ending this workshop will close the attendance and send the end of workshop
+    survey to participants.
+    <br />
+    <br />
+    Are you sure you want to end this workshop now?
+  </div>
+);
 
 export default class EndWorkshopPanel extends React.Component {
   static propTypes = {
@@ -72,16 +101,10 @@ export default class EndWorkshopPanel extends React.Component {
           <ConfirmationDialog
             show={this.state.showEndWorkshopConfirmation}
             onOk={this.handleEndWorkshopConfirmed}
-            okText={isReadyToClose ? 'OK' : 'Yes, end this workshop'}
+            okText={'Yes, end this workshop'}
             onCancel={this.handleEndWorkshopCancel}
-            headerText="End Workshop and Send Survey"
-            bodyText={
-              isReadyToClose
-                ? 'Are you sure? Once ended, the workshop cannot be restarted.'
-                : 'There are still sessions remaining in this workshop. ' +
-                  'Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. ' +
-                  'Are you sure you want to end this workshop?'
-            }
+            headerText="End workshop and send survey"
+            bodyText={isReadyToClose ? normalCloseWarning : earlyCloseWarning}
             width={isReadyToClose ? 500 : 800}
           />
         </div>

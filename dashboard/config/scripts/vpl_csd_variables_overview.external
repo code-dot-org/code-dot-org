@@ -1,0 +1,19 @@
+name 'VPL - CSD - Variables Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#New Unit 3 Content
+**Goal:** Develop empathy for the student experience while learning about variables and random numbers in Game Lab. *(Estimated Time: 35 minutes)*
+
+## Overview
+
+During the synchronous workshop we will do a model lesson on Unit 3 Lesson 7 Sprites. In preparation for that lesson, you will complete activities from Lessons 5 and 6 of Unit 3. These lessons introduce variables and random numbers.
+
+## Role of the Teacher
+
+As you work through the following activities, consider your role as the teacher. As lead learner, the teacher's role is to model and encourage effective learning strategies. Part of this is helping students find, develop, and use resources to support their learning. As you move through the following activities, think about where your students might struggle and how you might connect them with resources to solve their problems and find success.
+
+![](https://images.code.org/948cdf98c2d8fb637dc69008bfab16b5-image-1594340882396.27.51 PM.png)
+MARKDOWN

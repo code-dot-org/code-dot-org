@@ -1,0 +1,11 @@
+name 'CSD U3 samples_virtual_2020'
+display_name 'Sample Programs'
+description 'These projects were all created in Game Lab! Try them out to get a feel for what you will be able to create with these lessons.'
+
+sublevels
+
+level 'CSD U3 Entertainment Sample 4_virtual_2020'
+level 'CSD U3 Entertainment Sample 3_virtual_2020'
+level 'CSD U3 Entertainment Sample 1_virtual_2020'
+level 'CSD U3 Entertainment Sample 2_virtual_2020'
+level 'CSD U3 Plotting Shapes Shape Lab_virtual_2020'

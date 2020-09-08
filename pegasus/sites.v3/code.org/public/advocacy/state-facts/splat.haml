@@ -43,7 +43,7 @@ state-facts: true
       Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the
       %b
         number 1 source of all new wages in the U.S.
-      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 45% of U.S. high schools teach any computer science courses and only 11% of STEM bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 45% of U.S. high schools teach any computer science courses and only 11% of bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
 
@@ -90,9 +90,9 @@ state-facts: true
         %b
           = format_integer_with_commas(state_info[:cs_graduates_i])
           - if state_info[:cs_graduates_i] == 1
-            STEM bachelor's degrees in Computer Science
+            bachelor's degrees in Computer Science
           - else
-            STEM bachelor's degrees in Computer Science
+            bachelor's degrees in Computer Science
         in 2018;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
@@ -110,7 +110,7 @@ state-facts: true
           %b
             = succeed "%" do
               = state_info[:count_schools_teach_cs_i]
-            of all public high schools teach computer science.
+            of all public high schools teach a foundational computer science course.
       %li
         - if state_info[:ap_cs_exams_i] == 0
           %b
@@ -149,11 +149,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_hispanic_i])
           - if state_info[:ap_hispanic_i] == 1
-            exam was taken by Hispanic or Latino students
+            exam was taken by Hispanic/Latino/Latina students
           - else
-            exams were taken by Hispanic or Latino students
+            exams were taken by Hispanic/Latino/Latina students
         - else
-          no exams were taken by Hispanic or Latino students;
+          no exams were taken by Hispanic/Latino/Latina students;
         - if state_info[:ap_hispanic_i] != 0
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_hispanic_i])
@@ -164,11 +164,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_black_i])
           - if state_info[:ap_black_i] == 1
-            exam was taken by Black students
+            exam was taken by Black/African American students
           - else
-            exams were taken by Black students
+            exams were taken by Black/African American students
         - else
-          no exams were taken by Black students;
+          no exams were taken by Black/African American students;
         - if state_info[:ap_black_i] != 0
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_black_i])
@@ -179,11 +179,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by American Indian or Alaska Native students
+            exam was taken by Native American/Alaskan students
           - else
-            exams were taken by American Indian or Alaska Native students
+            exams were taken by Native American/Alaskan students
         - else
-          no exams were taken by American Indian or Alaska Native students;
+          no exams were taken by Native American/Alaskan students;
         - if state_info[:ap_native_american_i] != 0
           = precede "(" do
             = state_info[:ap_csa_native_american_i]
@@ -194,11 +194,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_hawaiian_i])
           - if state_info[:ap_hawaiian_i] == 1
-            exam was taken by Native Hawaiian or Pacific Islander students
+            exam was taken by Native Hawaiian/Pacific Islander students
           - else
-            exams were taken by Native Hawaiian or Pacific Islander students
+            exams were taken by Native Hawaiian/Pacific Islander students
         - else
-          no exams were taken by Native Hawaiian or Pacific Islander students.
+          no exams were taken by Native Hawaiian/Pacific Islander students.
         - if state_info[:ap_hawaiian_i] != 0
           = precede "(" do
             = state_info[:ap_csa_hawaiian_i]
@@ -219,7 +219,7 @@ state-facts: true
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered an AP Computer Science course in 2017-2018
+          schools with AP programs) offered an AP Computer Science course in 2018-2019
           = surround "(", "%" do
             = state_info[:percent_schools_ap_csa_i]
           offered AP CS A and
@@ -236,14 +236,14 @@ state-facts: true
         - else
           No schools in
           = state_info[:state_code_s]
-          offered an AP Computer Science course in 2017-2018.
+          offered an AP Computer Science course in 2018-2019.
         - if state_param != 'AK' && state_param != 'AL' && state_param != 'AR' && state_param != 'CA' && state_param != 'FL' && state_param != 'IL' && state_param != 'LA' && state_param != 'MD' && state_param != 'MI' && state_param != 'MN' && state_param != 'MT' && state_param != 'ND' && state_param != 'NE' && state_param != 'NH' && state_param != 'NJ' && state_param != 'NY' && state_param != 'OH' && state_param != 'PA' && state_param != 'RI' && state_param != 'VA'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li
-        Universities in
+        Teacher preparation programs in
         = state_info[:state_name_s]
         - if state_info[:preservice_prepared_i] == 0
-          did not graduate a single new teacher prepared to teach computer science in 2017.
+          did not graduate a single new teacher prepared to teach computer science in 2018.
         - else
           only graduated
           = state_info[:preservice_prepared_i]
@@ -252,7 +252,7 @@ state-facts: true
             teacher
           - else
             teachers
-          prepared to teach computer science in 2017.
+          prepared to teach computer science in 2018.
 
       - if state_info[:principals_core_i] != 0
         %li
@@ -281,9 +281,6 @@ state-facts: true
 
   %div
     %ul
-      %li
-        Nominate a teacher for professional learning:
-        %a{href:"https://code.org/nominate"} www.code.org/nominate
       %li
         Send a letter:
         %ul
@@ -390,7 +387,7 @@ state-facts: true
           %li
             = succeed "%" do
               = state_info[:urm_codeorg_i]
-            are underrepresented minority students (Black/African American, Hispanic/Latino, American Indian, or Hawaiian)
+            are students from marginalized racial and ethnic groups underrepresented in computer science (Black/African American, Hispanic/Latino/Latina, Native American/Alaskan, or Native Hawaiian/Pacific Islander)
       %li
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
           Code.org has
@@ -615,7 +612,7 @@ state-facts: true
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. Find out how other states allow computer science to count towards graduation at
+            allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation by students from marginalized racial and ethnic groups underrepresented in computer science. Find out how other states allow computer science to count towards graduation at
             = succeed "." do
               %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
         - elsif state_info[:cs_counts_t] == 'Other'
@@ -657,5 +654,5 @@ state-facts: true
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
-      %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+      %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented youth. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for parent demand, the 2018 Computer Science Access Report for schools that offer computer science, and Code.org for its own courses, professional learning programs, and participation data.

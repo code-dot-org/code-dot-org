@@ -5,7 +5,6 @@ import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
@@ -428,10 +427,7 @@ class AdvancedShareOptions extends React.Component {
         ShareOptions.EMBED,
         i18n.embed()
       );
-      if (
-        experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
-        librariesEnabled
-      ) {
+      if (librariesEnabled) {
         libraryTab = this.renderAdvancedListItem(
           ShareOptions.LIBRARY,
           i18n.shareLibrary()

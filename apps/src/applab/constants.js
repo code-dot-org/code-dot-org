@@ -41,29 +41,173 @@ export const themeOptions = [
   'glowInTheDark',
   'bubblegum',
   'millennial',
-  'robot'
+  'robot',
+  'coralReef',
+  'mintChip',
+  'lavender',
+  'cherryVanilla',
+  'berryPatch',
+  'cucumber',
+  'crushedVelvet',
+  'playtime',
+  'underTheSea',
+  'blueAndGold',
+  'blueSteel',
+  'darkscheme',
+  'twoTone',
+  'pastel',
+  'peachy'
 ];
 
-export const themeDisplayNames = [
-  'Default',
-  'Classic',
-  'Orange',
-  'Citrus',
-  'Ketchup and Mustard',
-  'Lemonade',
-  'Forest',
-  'Watermelon',
-  'Area 51',
-  'Polar',
-  'Glow in the Dark',
-  'Bubblegum',
-  'Millennial',
-  'Robot'
-];
+const THEME_ICON_BASE_URL = '/blockly/media/applab/theme_dropdown/';
 
-if (themeOptions.length !== themeDisplayNames.length) {
-  throw new Error('themeOptions length must equal themeDisplayNames length');
-}
+export const themeOptionsForSelect = [
+  {
+    option: 'default',
+    displayName: 'Default',
+    icon: THEME_ICON_BASE_URL + 'default.png'
+  },
+  {
+    option: 'classic',
+    displayName: 'Classic',
+    icon: THEME_ICON_BASE_URL + 'classic.png'
+  },
+  {
+    option: 'orange',
+    displayName: 'Orange',
+    icon: THEME_ICON_BASE_URL + 'orange.png'
+  },
+  {
+    option: 'citrus',
+    displayName: 'Citrus',
+    icon: THEME_ICON_BASE_URL + 'citrus.png'
+  },
+  {
+    option: 'ketchupAndMustard',
+    displayName: 'Ketchup and Mustard',
+    icon: THEME_ICON_BASE_URL + 'ketchup_and_mustard.png'
+  },
+  {
+    option: 'lemonade',
+    displayName: 'Lemonade',
+    icon: THEME_ICON_BASE_URL + 'lemonade.png'
+  },
+  {
+    option: 'forest',
+    displayName: 'Forest',
+    icon: THEME_ICON_BASE_URL + 'forest.png'
+  },
+  {
+    option: 'watermelon',
+    displayName: 'Watermelon',
+    icon: THEME_ICON_BASE_URL + 'watermelon.png'
+  },
+  {
+    option: 'area51',
+    displayName: 'Area 51',
+    icon: THEME_ICON_BASE_URL + 'area_51.png'
+  },
+  {
+    option: 'polar',
+    displayName: 'Polar',
+    icon: THEME_ICON_BASE_URL + 'polar.png'
+  },
+  {
+    option: 'glowInTheDark',
+    displayName: 'Glow in the Dark',
+    icon: THEME_ICON_BASE_URL + 'glow_in_the_dark.png'
+  },
+  {
+    option: 'bubblegum',
+    displayName: 'Bubblegum',
+    icon: THEME_ICON_BASE_URL + 'bubblegum.png'
+  },
+  {
+    option: 'millennial',
+    displayName: 'Millennial',
+    icon: THEME_ICON_BASE_URL + 'millennial.png'
+  },
+  {
+    option: 'robot',
+    displayName: 'Robot',
+    icon: THEME_ICON_BASE_URL + 'robot.png'
+  },
+  {
+    option: 'coralReef',
+    displayName: 'Coral Reef',
+    icon: THEME_ICON_BASE_URL + 'coral_reef.png'
+  },
+  {
+    option: 'mintChip',
+    displayName: 'Mint Chip',
+    icon: THEME_ICON_BASE_URL + 'mint_chip.png'
+  },
+  {
+    option: 'lavender',
+    displayName: 'Lavender',
+    icon: THEME_ICON_BASE_URL + 'lavender.png'
+  },
+  {
+    option: 'cherryVanilla',
+    displayName: 'Cherry Vanilla',
+    icon: THEME_ICON_BASE_URL + 'cherry_vanilla.png'
+  },
+  {
+    option: 'berryPatch',
+    displayName: 'Berry Patch',
+    icon: THEME_ICON_BASE_URL + 'berry_patch.png'
+  },
+  {
+    option: 'cucumber',
+    displayName: 'Cucumber',
+    icon: THEME_ICON_BASE_URL + 'cucumber.png'
+  },
+  {
+    option: 'crushedVelvet',
+    displayName: 'Crushed Velvet',
+    icon: THEME_ICON_BASE_URL + 'crushed_velvet.png'
+  },
+  {
+    option: 'playtime',
+    displayName: 'Playtime',
+    icon: THEME_ICON_BASE_URL + 'playtime.png'
+  },
+  {
+    option: 'underTheSea',
+    displayName: 'Under the Sea',
+    icon: THEME_ICON_BASE_URL + 'under_the_sea.png'
+  },
+  {
+    option: 'blueAndGold',
+    displayName: 'Blue and Gold',
+    icon: THEME_ICON_BASE_URL + 'blue_and_gold.png'
+  },
+  {
+    option: 'blueSteel',
+    displayName: 'Blue Steel',
+    icon: THEME_ICON_BASE_URL + 'blue_steel.png'
+  },
+  {
+    option: 'darkscheme',
+    displayName: 'Darkscheme',
+    icon: THEME_ICON_BASE_URL + 'darkscheme.png'
+  },
+  {
+    option: 'twoTone',
+    displayName: 'Two Tone',
+    icon: THEME_ICON_BASE_URL + 'two_tone.png'
+  },
+  {
+    option: 'pastel',
+    displayName: 'Pastel',
+    icon: THEME_ICON_BASE_URL + 'pastel.png'
+  },
+  {
+    option: 'peachy',
+    displayName: 'Peachy',
+    icon: THEME_ICON_BASE_URL + 'peachy.png'
+  }
+];
 
 export const fontFamilyOptions = [
   'Arial',

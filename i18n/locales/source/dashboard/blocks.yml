@@ -993,6 +993,12 @@ en:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
+      gamelab_atTime:
+        text: at [N][0] [UNIT][1]
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1013,9 +1019,11 @@ en:
       gamelab_clickedOn:
         text: when [SPRITE][0] clicked
       gamelab_clickedSpritePointer:
-        text: clicked [SPRITE][0]
+        text: "[SPRITE][0]"
       gamelab_comment:
         text: 'comment: [COMMENT][0]'
+      gamelab_countByAnimation:
+        text: number of [SPRITE][0]
       gamelab_createNewSprite:
         text: "make a new sprite \n called [NAME][0] \n with costume [COSTUME][1] \n at [LOCATION][2]"
       gamelab_destroy:
@@ -1024,6 +1032,8 @@ en:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block [SPRITE][0] from moving
+      gamelab_getAllSprites:
+        text: all sprites
       gamelab_getProp:
         text: "[SPRITE][0] [PROPERTY][1]"
         options:
@@ -1040,8 +1050,49 @@ en:
           CHOICE:
             '"this"': this
             '"other"': other
+      gamelab_getTime:
+        text: time in [UNIT][0]
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_isKeyPressed:
+        text: "[KEY][0] is pressed"
+        options:
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "[SPRITE][0] is touching edges"
       gamelab_isTouchingSprite:
@@ -1096,6 +1147,8 @@ en:
         text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
+      gamelab_makeNumSprites:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites
       gamelab_mirrorSprite:
         text: "[SPRITE][0] face [DIRECTION][1]"
         options:
@@ -1118,6 +1171,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
+      gamelab_objectSpritePointer:
+        text: "[SPRITE][0]"
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
@@ -1208,13 +1263,15 @@ en:
           collecting
           [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: show title screen [BREAK][0] title [TITLE][1] text [SUBTITLE][2]
+        text: show title screen [BREAK][0] title [TITLE][1] subtitle [SUBTITLE][2]
       gamelab_spriteClicked:
         text: "[CONDITION][0] [SPRITE][1] clicked"
         options:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_subjectSpritePointer:
+        text: "[SPRITE][0]"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:

@@ -8,12 +8,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
+import objectFitImages from 'object-fit-images';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import {singleton as studioApp} from '../StudioApp';
-import {KeyCodes} from '../constants';
+import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
 import * as applabConstants from './constants';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
@@ -22,7 +23,6 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
-import {applabObjectFitImages} from './applabObjectFitImages';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 
@@ -895,7 +895,7 @@ function duplicateScreen(element) {
       Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert(NOTIFICATION_ALERT_TYPE, alert);
 
   return newScreenId;
 }
@@ -949,7 +949,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
       <b>{elementUtils.getId(duplicateElement)}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert(NOTIFICATION_ALERT_TYPE, alert);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -1403,9 +1403,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  setTimeout(() => {
-    applabObjectFitImages();
-  }, 0);
+  setTimeout(() => objectFitImages(), 0);
 }
 
 /**
@@ -1709,7 +1707,12 @@ designMode.renderDesignWorkspace = function(element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    screenIds: designMode.getAllScreenIds()
+    screenIds: designMode.getAllScreenIds(),
+    currentTheme: elementLibrary.getCurrentTheme(designMode.activeScreen()),
+    handleScreenChange: designMode.onPropertyChange.bind(
+      this,
+      designMode.activeScreen()
+    )
   };
   ReactDOM.render(
     <Provider store={getStore()}>

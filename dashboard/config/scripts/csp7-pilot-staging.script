@@ -2,10 +2,10 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
-stage 'Parameters and Return Values Explore', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Values Explore', display_name: 'Parameters and Return Values Explore'
 level 'U7 L01 More with Functions', progression: 'More with Functions'
 
-stage 'Parameters and Return Values Investigate', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Values Investigate', display_name: 'Parameters and Return Values Investigate'
 level 'U7 Param Return Investigate Thermostat Embed', progression: 'App Investigation'
 level 'U7 Param Return Investigate Rock Embed', progression: 'App Investigation'
 level 'U7 Param Return Investigate Weather Embed', progression: 'App Investigation'
@@ -13,7 +13,7 @@ level 'U7 Param Return Investigate Thermostat', progression: 'Code Investigation
 level 'U7 Param Return Investigate Rock', progression: 'Code Investigation'
 level 'U7 Param Return Investigate Weather', progression: 'Code Investigation'
 
-stage 'Parameters and Return Values Practice', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Values Practice', display_name: 'Parameters and Return Values Practice'
 level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
 level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
 level 'U7 Param Return Practice Part 4', progression: 'console.log Practice'
@@ -23,23 +23,24 @@ level 'U7 Param Investigate Calculator App', progression: 'App Practice'
 level 'U7 Param Practice App 2', progression: 'App Practice'
 
 lesson_group 'csp_libraries', display_name: 'Libraries'
-stage 'Libraries Explore', flex_category: 'csp_libraries'
+lesson 'Libraries Explore', display_name: 'Libraries Explore'
 level 'U7 L04 Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
-stage 'Libraries Investigate', flex_category: 'csp_libraries'
+lesson 'Libraries Investigate', display_name: 'Libraries Investigate'
 level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
 level 'U7 Libraries List Math Library', progression: 'Code Investigation'
 level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
 
-stage 'Libraries Project', flex_category: 'csp_libraries'
+lesson 'Libraries Project', display_name: 'Libraries Project'
 level 'U7 Libraries Explanation Video', progression: 'Video: Libraries'
 level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
 level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
 level 'CSP Pilot U7 Libraries Make Pt 4', progression: 'Libraries Playground'
 
-stage 'Student Survey (Libraries)', lockable: true
+lesson 'Student Survey (Libraries)', display_name: 'Student Survey (Libraries)', lockable: true
 level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true
 
-stage 'Teacher Survey (Libraries)', lockable: true
+lesson 'Teacher Survey (Libraries)', display_name: 'Teacher Survey (Libraries)', lockable: true
 level 'Teacher Late Spring Pilot Survey Libraries', progression: 'Teacher Survey (Libraries)', assessment: true
+

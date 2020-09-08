@@ -13,49 +13,7 @@
     :text=> I18n.t(:"just_did_course_donor", donor_twitter: get_random_donor_twitter, course: course_name)
   }
 
-  rec_code_studio = {
-    "course1" => "course2",
-    "course2" => "course3",
-    "course3" => "course4",
-    "accelerated" => "course4",
-    "course4" => "applab",
-
-    ScriptConstants::COURSEA_NAME => ScriptConstants::COURSEB_NAME,
-    ScriptConstants::COURSEB_NAME => ScriptConstants::COURSEC_NAME,
-    ScriptConstants::PRE_READER_EXPRESS_NAME => ScriptConstants::COURSEC_NAME,
-    ScriptConstants::COURSEC_NAME => ScriptConstants::COURSED_NAME,
-    ScriptConstants::COURSED_NAME => ScriptConstants::COURSEE_NAME,
-    ScriptConstants::COURSEE_NAME => ScriptConstants::COURSEF_NAME,
-    ScriptConstants::COURSEF_NAME => "applab",
-    ScriptConstants::EXPRESS_NAME => "applab",
-
-    ScriptConstants::COURSEA_2018_NAME => ScriptConstants::COURSEB_2018_NAME,
-    ScriptConstants::COURSEB_2018_NAME => ScriptConstants::COURSEC_2018_NAME,
-    ScriptConstants::PRE_READER_EXPRESS_2018_NAME => ScriptConstants::COURSEC_2018_NAME,
-    ScriptConstants::COURSEC_2018_NAME => ScriptConstants::COURSED_2018_NAME,
-    ScriptConstants::COURSED_2018_NAME => ScriptConstants::COURSEE_2018_NAME,
-    ScriptConstants::COURSEE_2018_NAME => ScriptConstants::COURSEF_2018_NAME,
-    ScriptConstants::COURSEF_2018_NAME => "applab",
-    ScriptConstants::EXPRESS_2018_NAME => "applab",
-
-    ScriptConstants::COURSEA_2019_NAME => ScriptConstants::COURSEB_2019_NAME,
-    ScriptConstants::COURSEB_2019_NAME => ScriptConstants::COURSEC_2019_NAME,
-    ScriptConstants::PRE_READER_EXPRESS_2019_NAME => ScriptConstants::COURSEC_2019_NAME,
-    ScriptConstants::COURSEC_2019_NAME => ScriptConstants::COURSED_2019_NAME,
-    ScriptConstants::COURSED_2019_NAME => ScriptConstants::COURSEE_2019_NAME,
-    ScriptConstants::COURSEE_2019_NAME => ScriptConstants::COURSEF_2019_NAME,
-    ScriptConstants::COURSEF_2019_NAME => "applab",
-    ScriptConstants::EXPRESS_2019_NAME => "applab",
-
-    ScriptConstants::COURSEA_2020_NAME => ScriptConstants::COURSEB_2020_NAME,
-    ScriptConstants::COURSEB_2020_NAME => ScriptConstants::COURSEC_2020_NAME,
-    ScriptConstants::COURSEC_2020_NAME => ScriptConstants::COURSED_2020_NAME,
-    ScriptConstants::COURSED_2020_NAME => ScriptConstants::COURSEE_2020_NAME,
-    ScriptConstants::COURSEE_2020_NAME => ScriptConstants::COURSEF_2020_NAME,
-    ScriptConstants::COURSEF_2020_NAME => "applab",
-    ScriptConstants::EXPRESS_2020_NAME => "applab",
-    ScriptConstants::PRE_READER_EXPRESS_2020_NAME => ScriptConstants::COURSEC_2020_NAME
-  }
+  rec_code_studio = ScriptConstants.csf_next_course_recommendation(course)
 
   rec_third_party = {
     "course1" => "course1_next",
@@ -119,10 +77,9 @@
   %h1= I18n.t(:congrats_third_party_title)
   = view :"#{rec_third_party[course]}"
 
-  - rec_code_studio.each do |current_course, next_course|
-    - if current_course.eql? course
-      %h1= I18n.t(:congrats_next_tutorials_title)
-      = view :course_block, id: next_course
+  - if rec_code_studio
+    %h1= I18n.t(:congrats_next_tutorials_title)
+    = view :course_block, id: rec_code_studio
 
   %div{:style=>'clear: both; height:30px;'}
   %h1= I18n.t(:congrats_guest_speaker_title)

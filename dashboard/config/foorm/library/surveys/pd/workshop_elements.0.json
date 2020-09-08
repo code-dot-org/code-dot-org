@@ -19,8 +19,137 @@
               "text": "Yo"
             }
           ]
-        }
-      ]
+        },
+        {
+         "type": "html",
+         "name": "survey_preamble_header_and_text",
+         "html": "<h2>{workshop_course} Academic Year Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed a Code.org {workshop_course} Academic Year Workshop!</strong></p>\n<p>This survey asks questions about your experience today.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+       },
+       {
+         "type": "html",
+         "name": "thank_you_heading",
+         "html": "<h2>Thank you!</h2>"
+       },
+       {
+        "type": "html",
+        "name": "workshop_experience_header",
+        "html": "<h2>Your {workshop_course} Workshop Experience</h2>"
+       },
+       {
+        "type": "matrix",
+        "name": "overall_success",
+        "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+        "columns": [
+         {
+          "value": "1",
+          "text": "Strongly Disagree"
+         },
+         {
+          "value": "2",
+          "text": "Disagree"
+         },
+         {
+          "value": "3",
+          "text": "Slightly Disagree"
+         },
+         {
+          "value": "4",
+          "text": "Neutral"
+         },
+         {
+          "value": "5",
+          "text": "Slightly Agree"
+         },
+         {
+          "value": "6",
+          "text": "Agree"
+         },
+         {
+          "value": "7",
+          "text": "Strongly Agree"
+         }
+        ],
+        "rows": [
+         {
+          "value": "more_prepared",
+          "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+         },
+         {
+          "value": "know_where_to_get_help",
+          "text": "I know where to go if I need help preparing to teach this material."
+         },
+         {
+          "value": "suitable_for_my_level",
+          "text": "This professional development was suitable for my level of experience with teaching CS."
+         },
+         {
+          "value": "connected_to_community",
+          "text": "I feel connected to a community of computer science teachers."
+         },
+         {
+          "value": "recommend_to_others",
+          "text": "I would recommend this professional development to others."
+         },
+         {
+          "value": "absolute_best",
+          "text": "This was the absolute best professional development I have ever participated in."
+         }
+        ]
+       },
+       {
+        "type": "matrix",
+        "name": "teacher_engagement",
+        "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
+        "columns": [
+         {
+          "value": "1",
+          "text": "Strongly Disagree"
+         },
+         {
+          "value": "2",
+          "text": "Disagree"
+         },
+         {
+          "value": "3",
+          "text": "Slightly Disagree"
+         },
+         {
+          "value": "4",
+          "text": "Neutral"
+         },
+         {
+          "value": "5",
+          "text": "Slightly Agree"
+         },
+         {
+          "value": "6",
+          "text": "Agree"
+         },
+         {
+          "value": "7",
+          "text": "Strongly Agree"
+         }
+        ],
+        "rows": [
+         {
+          "value": "activities_engaging",
+          "text": "I found the activities we did in this workshop interesting and engaging."
+         },
+         {
+          "value": "highly_active",
+          "text": "I was highly active and participated a lot in the workshop activities."
+         },
+         {
+          "value": "talk_about_workshop",
+          "text": "When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others."
+         },
+         {
+          "value": "will_use_in_classroom",
+          "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
+         }
+        ]
+       }
+     ]
     }
   ]
 }

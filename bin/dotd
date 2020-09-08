@@ -52,10 +52,17 @@ def check_for_cdo_keys
 end
 
 # Prints the script intro to the console.
-def puts_script_intro
-  puts <<-EOS.unindent
+def puts_script_intro(dotd_name)
+  puts <<~EOS
 
-    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+    #{bold "Hi #{dotd_name}! Welcome to Robo-Dev-of-the-Day!"}
+  EOS
+
+  if dotd_name == ENV['USER']
+    puts dim '(Customize your name with the CDODEV_DOTD_NAME environment variable.)'
+  end
+
+  puts <<~EOS
 
     #{bold 'Documentation'}
 
@@ -340,26 +347,6 @@ def flush_and_gets
   gets
 end
 
-# Prompts the user for their name, returning it.
-# @return [String] The name of the user.
-def ask_for_name
-  name = ''
-  until name != ''
-    print 'Who are you? '
-    name = flush_and_gets.chomp
-  end
-
-  puts <<-EOS.unindent_with_indent(2)
-
-    Hi #{name}!
-
-  EOS
-
-  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DOTD")
-
-  name
-end
-
 # Prompts the user whether block should be executed by asking question,
 # executing the block, doing nothing, or exiting the program depending on user
 # response.
@@ -499,11 +486,13 @@ def main
   Slack.join_room('infra-staging')
   Slack.join_room('infra-test')
   Slack.join_room('infra-production')
+  Slack.join_room('infra-honeybadger')
   Slack.join_room('levelbuilder')
 
-  puts_script_intro
-  dotd_name = ask_for_name
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
+  puts_script_intro(dotd_name)
   loop do
     dotd_menu(dotd_name)
   end

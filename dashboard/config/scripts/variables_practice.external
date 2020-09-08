@@ -7,12 +7,12 @@ The following links provide opportunities for you to practice using variables to
 
 
 ### Stage 4
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/4" target=_blank> Create a variable and assign a value to that variable <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/5" target=_blank> Variables - Debugging <i class="fa fa-external-link-square"></i></a> -Debug one of the most common variables issues found in programmers' code.
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/7" target=_blank> Initialize a Variable <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/10" target=_blank> Variables and arithmetic expressions <i class="fa fa-external-link-square"></i></a> - **Note:** A variable does not store an expression, rather it evaluates the expression for a solution and stores that solution.
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/15" target=_blank> Variables and User Input <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/19" target=_blank> Variable Reassignment <i class="fa fa-external-link-square"></i></a> - Change the value stored in a particular variable
-- <a href = “https://studio.code.org/s/csp5/stage/4/puzzle/21" target=_blank> Memory Challenge <i class="fa fa-external-link-square"></i></a> - For this challenge, do not change the lines of code that exist.  Rather add your own manipulation of the variables to make the print statement at the end correct.
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/4" target=_blank> Create a variable and assign a value to that variable <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/5" target=_blank> Variables - Debugging <i class="fa fa-external-link-square"></i></a> -Debug one of the most common variables issues found in programmers' code.
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/7" target=_blank> Initialize a Variable <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/10" target=_blank> Variables and arithmetic expressions <i class="fa fa-external-link-square"></i></a> - **Note:** A variable does not store an expression, rather it evaluates the expression for a solution and stores that solution.
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/15" target=_blank> Variables and User Input <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/19" target=_blank> Variable Reassignment <i class="fa fa-external-link-square"></i></a> - Change the value stored in a particular variable
+- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/21" target=_blank> Memory Challenge <i class="fa fa-external-link-square"></i></a> - For this challenge, do not change the lines of code that exist.  Rather add your own manipulation of the variables to make the print statement at the end correct.
 
 MARKDOWN

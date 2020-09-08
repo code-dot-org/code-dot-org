@@ -33,4 +33,22 @@ class PardotHelpersTest < Minitest::Test
 
     assert_nil PardotHelpersTest.send(:raise_if_response_error, pardot_ok)
   end
+
+  def test_try_with_exponential_backoff_one_retry
+    try_counter = 0
+    max_tries = 2
+    assert_raises RuntimeError do
+      PardotHelpersTest.try_with_exponential_backoff(max_tries, [RuntimeError]) do
+        try_counter += 1
+        raise RuntimeError
+      end
+    end
+    assert try_counter == max_tries
+  end
+
+  def test_try_with_exponential_backoff_no_retry
+    try_counter = 0
+    PardotHelpersTest.try_with_exponential_backoff(3, [RuntimeError]) {try_counter += 1}
+    assert try_counter == 1
+  end
 end

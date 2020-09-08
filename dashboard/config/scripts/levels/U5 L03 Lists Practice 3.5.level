@@ -47,10 +47,10 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"playScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><img src=\"//levelbuilder-studio.code.org/media?u=https%3A%2F%2Fimages.code.org%2Fcaf1d702e8cc3a64915c4cc858193144-image-1557246788657.png\" data-canonical-image-url=\"https://images.code.org/caf1d702e8cc3a64915c4cc858193144-image-1557246788657.png\" data-object-fit=\"contain\" id=\"magic8Ball\" style=\"height: 310px; width: 310px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 2.22045e-16px; top: 60px; margin: 0px;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgba(0, 0, 0, 0); border-radius: 0px; border-width: 0px; border-color: rgb(153, 153, 153); color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 16px; width: 75px; height: 70px; position: absolute; left: 120px; top: 175px; text-align: center; text-rendering: optimizespeed;\" id=\"answerOutput\">Don't even think about it!</label></div></div>",
-    "map_reference": "/docs/concepts/app-lab/patterns/random-list-access/",
+    "map_reference": "/docs/concepts/patterns/random-list-access/",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
-      "/docs/concepts/app-lab/patterns/random-list-access/"
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

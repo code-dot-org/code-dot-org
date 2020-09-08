@@ -1,43 +1,43 @@
+hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
-family_name 'csd1'
-version_year '2020'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true
 level 'csd-pre-survey-levelgroup_2019_2020', assessment: true
 
 lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
-stage 'Intro to Problem Solving', flex_category: 'csd1_1'
-level 'CSD U1L01 TFMD_2020', named: true
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
+level 'CSD U1L01 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'The Problem Solving Process', flex_category: 'csd1_1'
-level 'CSD U1L02 TFMD_2020', named: true
-level 'CSD Problem Solving Process Video_2020', named: true
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
+level 'CSD U1L02 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD Problem Solving Process Video_2020', progression: 'Video: Problem Solving Process'
 
-stage 'Exploring Problem Solving', flex_category: 'csd1_1'
-level 'CSD U1L03 TFMD_2020', named: true
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
+level 'CSD U1L03 TFMD_2020', progression: 'Lesson Overview'
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
-stage 'What is a Computer?', flex_category: 'csd1_2'
-level 'CSD U1L04 TFMD_2020', named: true
-level 'CSD What Makes a Computer a Computer Video_2020', named: true
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
+level 'CSD U1L04 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD What Makes a Computer a Computer Video_2020', progression: 'Video: What Makes a Computer, a Computer?'
 
-stage 'Input and Output', flex_category: 'csd1_2'
-level 'CSD U1L05 TFMD_2020', named: true
-level 'CSD U1 IO Pet Chooser', named: true
-level 'CSD U1 IO Story', named: true
-level 'CSD U1 IO Pet Chooser 2', named: true
+lesson 'Input and Output', display_name: 'Input and Output'
+level 'CSD U1L05 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U1 IO Pet Chooser', progression: 'App: Pet Chooser'
+level 'CSD U1 IO Story', progression: 'App: Story Creator'
+level 'CSD U1 IO Pet Chooser 2', progression: 'App: Improved Pet Chooser'
 
-stage 'Processing', flex_category: 'csd1_2'
-level 'CSD U1L06 TFMD_2020', named: true
+lesson 'Processing', display_name: 'Processing'
+level 'CSD U1L06 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U1 processing bday', progression: 'App: Is It Your Birthday?'
 level 'CSD U1 processing npark', progression: 'App: National Park Quiz'
 level 'CSD U1 processing countries', progression: 'App: How Many Countries...'
@@ -47,32 +47,33 @@ level 'CSD U1 processing fastest', progression: 'App: The Fastest Finger'
 level 'CSD U1 processing guess', progression: 'App: Guess the Number'
 level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
-stage 'Apps and Storage', flex_category: 'csd1_2'
-level 'CSD U1L07 TFMD_2020', named: true
-level 'CSD U1 storage outfit', named: true
-level 'CSD U1 storage friends', named: true
-level 'CSD U1 storage movies', named: true
-level 'CSD U1 storage video', named: true
+lesson 'Storage', display_name: 'Storage'
+level 'CSD U1L07 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U1 storage outfit', progression: 'App: Outfit Picker'
+level 'CSD U1 storage friends', progression: 'App: Friend Finder'
+level 'CSD U1 storage movies', progression: 'App: Kids Movie Recommender'
+level 'CSD U1 storage video', progression: 'Video: IOSP Model'
 
-stage 'Project - Propose an App', flex_category: 'csd1_2'
-level 'CSD U1L09 TFMD_2020', named: true
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
+level 'CSD U1L09 TFMD_2020', progression: 'Lesson Overview'
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
 level 'CSD U1 Test_2020', assessment: true
 
 lesson_group 'csd1_3', display_name: 'Alternate Lessons'
-stage 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', flex_category: 'csd1_3'
-level 'CSD U1L01.1 TFMD_2020', named: true
+lesson 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)'
+level 'CSD U1L01.1 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', flex_category: 'csd1_3'
-level 'CSD U1L01.2 TFMD_2020', named: true
+lesson 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)'
+level 'CSD U1L01.2 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', flex_category: 'csd1_3'
-level 'CSD U1L01.3 TFMD_2020', named: true
+lesson 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)'
+level 'CSD U1L01.3 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L12 TFMD_2020', named: true
+lesson 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)'
+level 'CSD U1L12 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L13 TFMD_2020', named: true
+lesson 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)'
+level 'CSD U1L13 TFMD_2020', progression: 'Lesson Overview'
+

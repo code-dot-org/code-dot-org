@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Unit 4 Overview', flex_category: 'required'
+lesson 'Unit 4 Overview', display_name: 'Unit 4 Overview'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 4', named: true
 level 'Unit 4 Tool Talk', named: true
@@ -12,7 +12,7 @@ level 'Unit 4: Practice PT highlights', named: true
 level 'Unit 4 Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Lessons 1 - 4: Data in the Real World', flex_category: 'content'
+lesson 'Lessons 1 - 4: Data in the Real World', display_name: 'Lessons 1 - 4: Data in the Real World'
 level '4.1 - 4.4 Lesson Connections', named: true
 level 'What is "Big" Data?', named: true
 level 'Website: Data Breaches', named: true
@@ -20,7 +20,7 @@ level 'Raw Data Podcast: Gold or Pyrite', named: true
 level 'Big Data in the CSP Framework', named: true
 level 'U4 L1 - 4: Teaching and Student Support Plan', named: true
 
-stage 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption', flex_category: 'content'
+lesson 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption', display_name: 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
 level '4.5 - 4.7 Lesson Connections', named: true
 level 'Encryption in CS', named: true
 level 'Crack a Caesar Cipher', named: true
@@ -33,36 +33,37 @@ level 'Looking at More Encryption Algorithms', named: true
 level 'Raw Data Podcast: Data Confidential', named: true
 level 'U4 L5 - 7: Teaching and Student Support Plan', named: true
 
-stage 'Lessons 8 - 9: Practice PT', flex_category: 'content'
+lesson 'Lessons 8 - 9: Practice PT', display_name: 'Lessons 8 - 9: Practice PT'
 level '4.8 - 4.9 Lesson Connections', named: true
 level 'A Closer Look at the Final Practice for the Explore PT', named: true
 level 'U4 L8 - 9: Teaching and Student Support Plan', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-stage 'Group Work and Peer Learning', flex_category: 'practice'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
 level 'The Official Peer Instruction Blog', named: true
 level 'the Journal of Peer Learning', named: true
 level 'Unit 4 Teaching Practice Plan: Group Work and Peer Learning', named: true
 
-stage 'Balancing Teachers and Tools', flex_category: 'practice'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Balancing Teacher and Tools in Unit 4', named: true
 level 'Classroom Management Tips for School Computer Labs', named: true
 level 'Considerations for the 1-to-1 Classroom', named: true
 level 'Unit 4 Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
-stage 'Discovery Learning', flex_category: 'practice'
+lesson 'Discovery Learning', display_name: 'Discovery Learning'
 level 'Overview: Discovery Learning', named: true
 level 'Discovery learning definition and history', named: true
 level 'Discovery learning techniques', named: true
 level 'Unit 4 Teaching Practice Plan: Discovery Learning', named: true
 
-stage 'Measuring Student Learning', flex_category: 'practice'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
 level 'Overview: Capturing Student Learning', named: true
 level 'Assessing Student Learning in Unit 4', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Designing Assessment Questions', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Unit 4 Teaching Practice Plan: Assessing Student Learning', named: true
+

@@ -6,7 +6,7 @@ module.exports = {
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_string', null, {
-      VAL: '1234'
+      VAL: '123'
     }),
     requiredBlocks: '',
     freePlay: false
@@ -28,7 +28,7 @@ module.exports = {
       },
       xml:
         '<xml>' +
-        blockUtils.mathBlockXml('functional_string', null, {VAL: '1234'}) +
+        blockUtils.mathBlockXml('functional_string', null, {VAL: '123'}) +
         '</xml>'
     },
     {
@@ -39,7 +39,7 @@ module.exports = {
       },
       xml:
         '<xml>' +
-        blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1234}) +
+        blockUtils.mathBlockXml('functional_math_number', null, {NUM: 123}) +
         '</xml>'
     },
     {
@@ -52,7 +52,7 @@ module.exports = {
         '<xml>' +
         blockUtils.mathBlockXml('functional_text', {
           TEXT: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: '1234'
+            VAL: '123'
           }),
           SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
             NUM: 10

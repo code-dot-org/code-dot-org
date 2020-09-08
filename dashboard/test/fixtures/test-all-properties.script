@@ -1,12 +1,15 @@
-hideable_stages true
+family_name 'csd1'
+
+hideable_lessons true
 project_widget_visible true
 student_detail_progress_view true
-stage_extras_available true
+lesson_extras_available true
 has_verified_resources true
 has_lesson_plan true
 is_stable true
 tts true
 project_sharing true
+is_course true
 
 peer_reviews_to_complete 1
 curriculum_path 'fake_curriculum_path'

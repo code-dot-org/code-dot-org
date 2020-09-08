@@ -15,7 +15,7 @@
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @script_level
-  - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.course&.name }
+  - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name }
   %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
@@ -57,8 +57,6 @@
         = render partial: "levels/#{@level.class.to_s.underscore}"
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
-    - elsif @level.is_a?(Scratch)
-      = render partial: 'levels/scratch', locals: {app: @game.app}
     - else
       = render partial: 'levels/blockly'
 

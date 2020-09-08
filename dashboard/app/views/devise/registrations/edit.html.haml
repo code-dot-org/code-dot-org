@@ -103,12 +103,17 @@
   %div#add-parent-email
     %hr
     %h2= t('user.for_parents_and_guardians')
-    %p= "#{t('user.link_a_parent_email')}:"
+    %p= t('user.link_a_parent_email')
     %p
       %b= "#{t('user.parent_guardian_email_label')}:"
       %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
       (
-      %a#add-parent-email-link{href: '#'}= t('user.update_email')
+      %a#add-parent-email-link{href: '#', role: 'button'}
+        = t('user.update_email')
+      - if current_user.parent_email&.present?
+        = t('or')
+        %a#remove-parent-email-link{href: '', role: 'button'}
+          = t('user.remove_parent_email_label')
       )
     %p= t('user.only_one_parent_email_supported_warning')
 
@@ -214,6 +219,12 @@
     = f.hidden_field :parent_email
     = f.hidden_field :parent_email_preference_opt_in
     = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_CHANGE
+  = form_for(resource,
+      as: resource_name,
+      :url => registration_path(resource_name),
+      html: { id: 'remove-parent-email-form', :method => :put },
+    ) do |f|
+    = f.hidden_field :parent_email, value: nil
 
 :ruby
   script_data = {
@@ -226,7 +237,7 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      studentCount: current_user.students.count
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

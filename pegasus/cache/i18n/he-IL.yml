@@ -21,11 +21,15 @@ he-IL:
     none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
   csedweek_banner_teachers_text: 'האם אתה מורה למדעי המחשב? ראה עוד משאבים של '
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
+  try_hoc_num_served: "<h1>נסו</h1><h2>שעה של קוד</h2><h3>%{num} הוגשו"
   anybody_can_learn: כל אחד יכול ללמוד.
   learn_now: למד עכשיו
   petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
   petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
+  petition_sign_message_num: אם את/ה מסכים/ה, חתמי/חתום בשמך כדי להצטרף לרשימת התפוצה
+    ביחד עם %{num} נוספות/ים
   petition_join_others: 'הצטרף #לאחרים'
+  petition_join_others_num: הצטרפו לעוד %{num}
   name: שם
   email: דואר אלקטרוני
   zipcode: מיקוד או מדינה
@@ -34,6 +38,7 @@ he-IL:
   twentyhours_text: גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה.
   og_title: לכל ילד מגיע הזדמנות
+  og_title_soon: השעה של הקוד מגיעה
   og_title_here: שעה של קוד הגיעה!
   og_description: כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
     It's changing everything.
@@ -123,6 +128,10 @@ he-IL:
   third_party_tynker_btn_curriculum: נסו את תוכנית הלימודים של Tynker עבור גילאי ראשית
     קריאה
   third_party_tynker_btn_site: בקר ב - Tynker
+  third_party_scratchjr_btn_site: בקרו בסקראץ' ג'וניור
+  third_party_scratch_btn_forum: פורום המורים של סקראץ'
+  third_party_scratch_btn_site: בקרו בסקראץ'
+  third_party_lightbot_btn_site: בקרו את לייטבוט
   third_party_khan_btn_forum: פורום מדעי המחשב האקדמיה של קהאן
   third_party_codehs_btn_try: מבוא למדעי המחשב מידע נוסף עבור בתי ספר
   third_party_codecademy_btn_curriculum: הורד את תוכנית הלימודים של Codecademy
@@ -131,10 +140,12 @@ he-IL:
   third_party_curriculum: תוכנית לימוד
   third_party_pricing: מחירים
   third_party_cost_free: חינם לתלמידים ולמורים
+  third_party_cost_5permonth: "$5/חודש לכיתה"
   third_party_cost_299: 2.99 $/ להורדה
   third_party_cost_free_399: נסיון חינם, $399 לכיתה
   third_party_cost_free_2: נסיון חינם, $2 לסטודנט
   third_party_cost_free_10: נסיון חינם, $9.99 לחודש
+  third_party_desc_5_4to8: בערך חמישה שיעורים, המיועדים לכיתות ד-ח.
   third_party_desc_20_2to8: כ- 20 שיעורים, המיועדות לכיתות ב' עד ח'
   enter_valid_age: בבקשה, בחר את גילך
   enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
@@ -188,11 +199,19 @@ he-IL:
   learn_next_level: המשך לשלב הבא
   learn_online: נסה קורסים אחרים באינטרנט
   learn_classes: מצא כיתות מקומיות
+  learn_back_to_minecraft: המשיכו ללמוד עם מיינקראפט
   hoc_is_here: "#HourOfCode מגיעה שוב בדצמבר 5-11. https://youtu.be/KsOIlDT145A."
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - בואו תראו! codeorg@
   just_did_course1: סיימתי עכשיו את קורס 1 - נסו אותו! @codeorg
   just_did_course2: סיימתי עכשיו את קורס 2 - נסו אותו! @codeorg
+  just_did_course3: סיימתי עכשיו את מסלול 3 - נסו אותו! @codeorg
+  just_did_course4: סיימתי עכשיו את מסלול 4 - נסו אותו! @codeorg
+  just_did_coursea: סיימתי עכשיו את מסלול A - נסו אותו! @codeorg
+  just_did_courseb: סיימתי עכשיו את מסלול B - נסו אותו! @codeorg
+  just_did_coursec: סיימתי עכשיו את מסלול C, נסו אותו! @codeorg
   just_did_coursed: בדיוק עכשיו סיימתי את קורס ד' - בואו תראו! codeorg@
+  just_did_coursee: סיימתי עכשיו את מסלול E - נסו אותו! @codeorg
+  just_did_coursef: סיימתי עכשיו את מסלול F - נסו אותו! @codeorg
   learn_hoc: למד שעת קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -267,12 +286,16 @@ he-IL:
   homepage_hero_text_stat_loc: "#loc שורות קוד שכתבו התלמידים"
   homepage_hero_text_stat_students: "#student_count תלמידים רשומים בCode Studio"
   homepage_hero_text_stat_served: 'שעת קוד #served הוגשה'
+  homepage_hero_hoc_is_coming: השעה של הקוד מגיעה
+  homepage_hero_hoc_is_here: השעה של הקוד כאן
   homepage_slot_text_hoc: שעה של קוד
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
+  homepage_slot_text_teacher: לוח בקרה למורה
   homepage_slot_text_studio: כל המדריכים שלנו
   homepage_slot_text_course4: מסלול 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
+  homepage_action_text_hoc: שעה של קוד לכל תלמיד.
   homepage_action_text_num_served: "# למדו"
   homepage_action_text_join_us: הצטרף אלינו
   homepage_action_text_sign_up: הירשם
@@ -284,24 +307,31 @@ he-IL:
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
   homepage_signpetition_dropdown_text: מסכים
+  homepage_banner_text_prizes: 'השעה של הקוד חוזרת, דצמבר 7-13. '
+  homepage_banner_link_prizes: 'הצטרפו לאירוע הלמידה הגדול בהיסטוריה. '
   homepage_banner_text_main: Code.org והנהלת המכללה יוצרים ברית לשפר את המגוון במדעי
     המחשב.
   homepage_banner_text_link: למד עוד
   homepage_banner_privacy_link: למד עוד
   homepage_banner_20k_teachers_link: למד עוד
+  homepage_banner_emailprivacy_link: קראו עוד
   homepage_banner_40k_teachers_link: למד עוד
   homepage_slot_text_title_hoc: שעה של קוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
+  homepage_slot_text_link_about_hoc: אודות שעה של קוד
   homepage_slot_text_link_host: ארח שעת קוד
   homepage_slot_text_link_hocserved: "# למדו"
+  homepage_solot_text_link_volunteer: התנדבו לשעה של קוד
   homepage_slot_text_title_students: תלמידים
   homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
+  homepage_slot_text_blurb_students_courses: גלו את המסלולים שלנו
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
   homepage_slot_text_link_othercourses: קורסים אחרים באינטרנט
   homepage_slot_text_title_educators: מחנכים
   homepage_slot_text_blurb_educators: למד את התלמידים שלך
+  homepage_slot_text_link_elementary: בית ספר יסודי
   homepage_slot_text_link_middle: חטיבת הביניים
   homepage_slot_text_link_high: בית ספר תיכון
   homepage_slot_text_link_k5: קורסים לגילאי גן חובה-כיתה ה'
@@ -312,6 +342,8 @@ he-IL:
   homepage_slot_text_link_stats: ראה סטטיסטיקה
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
+  homepage_slot_text_link_administrators: הביאו את מדעי המחשב לבית הספר שלכם
+  homepage_gallery_header: מעל %{project_count} מיליון פרויקטי Code.org נוצרו
   homepage_header_donors: code.org מודה לתומכיו
   homepage_donors_seall: לכל הפעילויות
   homepage_donors_donate: תרום
@@ -379,6 +411,7 @@ he-IL:
   minecraft_adventurer: הרפתקן מיינקראפט
   minecraft_tutorials: מדריכי שעה של קוד - מיינקראפט
   minecraft_specs: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
+  minecraft_start_tutorial: התחלת מדריך
   minecraft_agent_button: התחל
   minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
     משלך.
@@ -387,11 +420,22 @@ he-IL:
   minecraft_adventurer_button: התחל
   minecraft_no_internet: אין אינטרנט?
   minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
+  minecraft_host_event: ארחו אירוע שעת קוד של מיינקראפט
+  minecraft_future: עזרו לכל הצעירות והצעירים להיות מוכנים לעתיד
+  sports_page_title: שעה של קוד ספורט
   sports_watch_video: צפה בסרטון
+  sports_basketball_title: צרו משחק כדורסל
   video_title_steph_curry: שעה של קוד עם סטף קרי
+  video_1min: דקה אחת
   video_2min: 2 דק'
+  video_3min: שלוש דקות
+  video_5min: חמש דקות
+  speak_another_language: מדבר/ת שפה אחרת?
+  help_translate: עזרו לנו לתרגם.
   no_internet: אין אינטרנט?
   are_you_teacher: האם אתה מורה?
+  volunteer_engineer_submission_subtitle_generic: '100,000 מורות ומורים יקיימו שעה
+    של קוד בכיתות השנה, דצבמר 7-13, 2015. הן/ם רוצות/ים לעזור! '
   volunteer_engineer_submission_intro_signup: אנא הכנס את הפרטים הבאים אם אתה סטודנט
     למחשבים או מומחה תוכנה. עליך להיות לפחות בן 18 כדי להירשם כמתנדב. שים לב שכל השדות
     אשר תמלא בחלק זה יהיו זמינים לכל מי שיצפה ב - <a href="/volunteer/local">מפת המתנדבים</a>.
@@ -740,6 +784,7 @@ he-IL:
   minecraft_name: מיינקראפט
   applab_name: מעבדת היישומים
   gamelab_name: מעבדת המשחקים
+  basketball_name: צרו משחק כדורסל
   applab_gradelevel: גילאי 13+
   codeorg_gradelevel: גילאי 4-104
   codeintl_gradelevel: גילאי 4-104
@@ -1205,6 +1250,8 @@ he-IL:
   header_about: אודות
   header_teacher_community: קהילת המורים
   header_report_bug: דווח תקלה
+  header_legal_privacy: הצהרת פרטיות
+  header_legal_tos: תנאים
   header_tutorials: מדריכים
   header_documentation: מסמכים
   user_header_label: היי %{username}
@@ -1273,7 +1320,10 @@ he-IL:
   hoc2018_mc_no_internet: אין אינטרנט?
   hoc2018_mc_educators: למורים
   hoc2018_mc_educators_box2_button: הורד
+  hoc2018_mc_video_1min: דקה אחת
   hoc2018_mc_video_2min: 2 דק'
+  hoc2018_mc_video_3min: שלוש דקות
+  hoc2018_mc_video_5min: חמש דקות
   hoc2018_mc_video_title_steph_curry: שעה של קוד עם סטף קרי
   hoc2018_mc_homepage_what_create: מה אתם תיצרו?
   hoc2018_mc_homepage_join_us: הצטרף אלינו

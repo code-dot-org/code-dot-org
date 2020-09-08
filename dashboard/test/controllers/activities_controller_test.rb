@@ -6,10 +6,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   include UsersHelper
 
   def stub_firehose
-    FirehoseClient.instance.stubs(:put_record).with do |args|
+    FirehoseClient.instance.stubs(:put_record).with do |stream, args|
       @firehose_record = args
+      @firehose_stream = stream
       true
     end
+  end
+
+  def teardown
+    @firehose_record = nil
+    @firehose_stream = nil
   end
 
   setup do
@@ -50,6 +56,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       result: 'true',
       testResult: '100',
       time: '1000',
+      timeSinceLastMilestone: '20000',
       app: 'test',
       program: '<hey>'
     }
@@ -151,6 +158,47 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "milestone updates existing user_level with time_spent" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params
+    params[:script_level_id] = @script_level.id
+
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 30)
+
+    assert_does_not_create(UserLevel) do
+      post :milestone, params: params
+    end
+
+    assert_response :success
+    user_level.reload
+    assert_equal 50, user_level.time_spent
+  end
+
+  test "milestone records a maximum time_spent of one hour" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params.dup
+    params[:script_level_id] = @script_level.id
+    params[:timeSinceLastMilestone] = 4_000_000
+
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
+
+    assert_does_not_create(UserLevel) do
+      post :milestone, params: params
+    end
+
+    assert_response :success
+    user_level.reload
+    assert_equal 3600, user_level.time_spent
   end
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
@@ -712,7 +760,6 @@ class ActivitiesControllerTest < ActionController::TestCase
         post :milestone,
           params: @milestone_params.merge(
             user_id: 0,
-            save_to_gallery: 'true',
             image: Base64.encode64(@good_image)
           )
       end
@@ -779,6 +826,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'OpenURI::HTTPError: something broke'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal :analysis, @firehose_stream
   end
 
   test 'sharing program with IO::EAGAINWaitReadable error logs' do
@@ -801,6 +849,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'IO::EAGAINWaitReadable: Resource temporarily unavailable'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal :analysis, @firehose_stream
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
@@ -889,10 +938,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:stages])
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
     last_level_in_first_stage = script.lessons.first.script_levels.last
     post :milestone,
@@ -941,6 +990,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 2) do # both get a UserLevel
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -958,6 +1008,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairings = 3.times.map {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 4) do # all 4 people
       assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
@@ -978,6 +1029,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
 
@@ -990,6 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_navigator_user_level.reload
     assert_equal 100, existing_navigator_user_level.best_result
+    assert_equal 20, existing_navigator_user_level.time_spent
 
     assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
   end
@@ -998,6 +1051,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
 
@@ -1010,8 +1064,31 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
+    assert_equal 20, existing_driver_user_level.time_spent
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings stops updating levels when pairing is disabled" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
+    section.update!(pairing_allowed: false)
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_no_difference('UserLevel.count') do # no new UserLevel is created
+      assert_no_difference('PairedUserLevel.count') do # no PairedUserLevel is created
+        post :milestone, params: @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 
   test "milestone fails to update locked/readonly level" do
@@ -1024,9 +1101,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     script = create :script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 
@@ -1137,5 +1213,42 @@ class ActivitiesControllerTest < ActionController::TestCase
       level_id: multi_sublevel.id
     )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
+  end
+
+  test "milestone_for_bubble_choice_sublevel_also_stores_progress_for_parent_level" do
+    sublevel1 = create :applab, name: 'choice_1'
+    sublevel2 = create :gamelab, name: 'choice_2'
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+
+    milestone_params = {
+      user_id: @user.id,
+      script_level_id: script_level.id,
+      level_id: sublevel1.id,
+      program: '<hey>',
+      app: 'applab',
+      result: 'true',
+      pass: 'true',
+      testResult: '100',
+      submitted: false
+    }
+
+    post :milestone, params: milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    refute_nil user_level
+    assert_equal 100, user_level.best_result
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+
+    parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+    refute_nil parent_user_level
+    assert_equal 100, parent_user_level.best_result
   end
 end

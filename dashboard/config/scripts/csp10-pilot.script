@@ -1,61 +1,62 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
-stage 'Project - Innovation Simulation Part 1'
+lesson 'Project - Innovation Simulation Part 1', display_name: 'Project - Innovation Simulation Part 1'
 level 'CSP U10L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L01 CFU innovations', progression: 'Check For Understanding', assessment: true
 
-stage 'Project - Innovation Simulation Part 2'
+lesson 'Project - Innovation Simulation Part 2', display_name: 'Project - Innovation Simulation Part 2'
 level 'CSP U10L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L02 CFU innovations part 2', progression: 'Check For Understanding', assessment: true
 
-stage 'Data Policies and Privacy'
+lesson 'Data Policies and Privacy', display_name: 'Data Policies and Privacy'
 level 'CSP U10L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10L3 CFU Why Collect PII', progression: 'Check For Understanding', assessment: true
 
-stage 'The Value of Privacy'
+lesson 'The Value of Privacy', display_name: 'The Value of Privacy'
 level 'CSP U10L4 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Project - Innovation Simulation Part 3'
+lesson 'Project - Innovation Simulation Part 3', display_name: 'Project - Innovation Simulation Part 3'
 level 'CSP U10L5 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Security Risks Part 1'
+lesson 'Security Risks Part 1', display_name: 'Security Risks Part 1'
 level 'CSP U10L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Keylogging', progression: 'Keylogging'
 level 'CSP 20-21 Phishing', progression: 'Phishing'
 level 'CSP 20-21 Rogue Access Points', progression: 'Malware'
 level 'U10 L07 CFU security risks', progression: 'Check For Understanding', assessment: true
 
-stage 'Security Risks Part 2'
+lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2'
 level 'CSP U10L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L08 CFU security risks', progression: 'Check For Understanding', assessment: true
 
-stage 'Project: Innovation Simulation Part 4'
+lesson 'Project: Innovation Simulation Part 4', display_name: 'Project: Innovation Simulation Part 4'
 level 'CSP U10L8 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Protecting Data Part 1'
+lesson 'Protecting Data Part 1', display_name: 'Protecting Data Part 1'
 level 'CSP U10L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Crack a Caesar Cipher_2020', progression: 'Encryption Widgets'
 level 'Crack Random Substitution_2020', progression: 'Encryption Widgets'
 level 'U10L9 CFU public key', progression: 'Check For Understanding', assessment: true
 
-stage 'Protecting Data Part 2'
+lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2'
 level 'CSP U10L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10L10 CFU MFA', progression: 'Check For Understanding', assessment: true
 
-stage 'Project: Innovation Simulation Part 5'
+lesson 'Project: Innovation Simulation Part 5', display_name: 'Project: Innovation Simulation Part 5'
 level 'CSP U10L11 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Project: Innovation Simulation Part 6'
+lesson 'Project: Innovation Simulation Part 6', display_name: 'Project: Innovation Simulation Part 6'
 level 'CSP U10L12 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Project: Innovation Simulation Part 7'
+lesson 'Project: Innovation Simulation Part 7', display_name: 'Project: Innovation Simulation Part 7'
 level 'CSP U10L13 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Lesson 14: Unit Assessment Day'
+lesson 'Lesson 14: Unit Assessment Day', display_name: 'Lesson 14: Unit Assessment Day', lockable: true
 level 'CSP U10L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 10 Assessment', progression: 'Unit 10 Exam', assessment: true
+

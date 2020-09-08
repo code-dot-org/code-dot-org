@@ -7,7 +7,7 @@
 # - Better branch names:
 #   - Set checkout branch to remote track the corresponding remote branch with the same name.
 #   - Support switching to a new checkout branch after the initial clone.
-module CDO
+module Cdo
   module Provider
     class Git < Chef::Provider::Git
       def initialize(new_resource, run_context)

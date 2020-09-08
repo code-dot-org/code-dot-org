@@ -1,0 +1,30 @@
+name 'Episode 7 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Fun with Flow Charts
+
+Complete the [Challenge Guide](https://docs.google.com/document/d/1u2pWGQu2urYrAVYAEfAsjCuBDqDVpPNjvJ4hNA88HdE/edit?usp=sharing) to build your own fun flow chart, and challenge your family to follow all the branches!
+
+![](https://images.code.org/59d28f6c688d16c0889e600af670a82d-image-1588607985888.png)
+
+### If-Statements in App Lab
+
+On the following levels, choose the challenges you'd like to complete. 
+
+* Modify the Magic 8 Ball app and make it your own. Add more options and fun statements. Go into Design Mode and change the look of the app.
+* Modify the Dice Roller. Add new features:
+
+	* Change the look and feel of the app. Play with different themes, change the colors or the font. 
+    * Make it two player. When the button is clicked, both dice are rolled and one player is declared the winner.
+    * Add more dice! When the dice are rolled, they are added together and a winner is displayed. 
+    	* Looking for the dice images? Download them from [this folder](https://drive.google.com/drive/folders/1yDbv9EypwETULl8SSDWY29HEFHAnpstS?usp=sharing). 
+
+![](https://images.code.org/ad18e49b1011f9f8533d75d5ed2b1ee2-image-1588602135848.gif) ![](https://images.code.org/9faf1ca02c20c9f39d93a2972a6336bd-image-1588602058715.gif) ![](https://images.code.org/a55759cb5c305d130cbaedc423b9cdb9-image-1588601989792.gif)
+MARKDOWN

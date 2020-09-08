@@ -5,10 +5,8 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/StageProgress.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
-import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
@@ -76,8 +74,9 @@ progress.showDisabledBubblesAlert = function() {
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  */
-progress.renderStageProgress = function(
+progress.generateStageProgress = function(
   scriptData,
+  lessonGroupData,
   stageData,
   progressData,
   currentLevelId,
@@ -95,7 +94,8 @@ progress.renderStageProgress = function(
     store,
     {
       name,
-      stages: [stageData],
+      lessonGroups: lessonGroupData,
+      lessons: [stageData],
       disablePostMilestone,
       age_13_required,
       id: stageData.script_id
@@ -123,13 +123,6 @@ progress.renderStageProgress = function(
   if (progressData.isVerifiedTeacher) {
     store.dispatch(setVerified());
   }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <StageProgress />
-    </Provider>,
-    document.querySelector('.progress_container')
-  );
 };
 
 /**
@@ -138,7 +131,7 @@ progress.renderStageProgress = function(
  * @param {boolean} scriptData.plc
  * @param {object[]} scriptData.stages
  * @param {string} scriptData.name
- * @param {boolean} scriptData.hideable_stages
+ * @param {boolean} scriptData.hideable_lessons
  * @param {boolean} scriptData.isHocScript
  * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
@@ -162,7 +155,7 @@ progress.renderCourseProgress = function(scriptData) {
     store.dispatch(setSections(scriptData.sections));
   }
 
-  store.dispatch(setPageType, pageTypes.scriptOverview);
+  store.dispatch(setPageType(pageTypes.scriptOverview));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -191,33 +184,8 @@ progress.renderCourseProgress = function(scriptData) {
   );
 };
 
-/**
- * @param {HTMLElement} element - DOM element we want to render into
- * @param {string} scriptName - name of current script
- * @param {string} currentLevelId - Level that we're current on.
- * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
- * @param {bool} student_detail_progress_view - Should we default to progress view
- *   user has
- */
-progress.renderMiniView = function(
-  element,
-  scriptName,
-  currentLevelId,
-  linesOfCodeText,
-  student_detail_progress_view
-) {
+progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  if (student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <MiniView linesOfCodeText={linesOfCodeText} />
-    </Provider>,
-    element
-  );
-
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
@@ -300,8 +268,9 @@ function initializeStoreWithProgress(
       currentLevelId: currentLevelId,
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-      stages: scriptData.stages,
-      peerReviewStage: scriptData.peerReviewStage,
+      stages: scriptData.lessons,
+      lessonGroups: scriptData.lessonGroups,
+      peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
@@ -326,7 +295,7 @@ function initializeStoreWithProgress(
     );
   }
 
-  if (scriptData.hideable_stages) {
+  if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }

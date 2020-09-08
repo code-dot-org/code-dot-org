@@ -16,25 +16,12 @@ title: Learning computer science when schools are closed in response to Covid19
 
 <br>
 
-<div class="breakoutquote" style="padding: 18px">
+## Code Break: Learn from the Code.org team and special guests!
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
 
-<div class="col-25">
-<a href="https://code.org/break"><img src="/images/athome/code-break-stacked.png" style="max-width: 85%; padding-left:25px"></a></div>
-
-<div class="col-70" style="padding-right:25px">
-
-<p style="border: 0;">Take a Code Break with Hadi Partovi and the Code.org team</p>
-<p style="font-size: 14px; border: 0">With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live, weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers.</p>
-<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Tune in</a> Wednesdays at 10am PT / 1pm ET. Learn more at <a href="https://code.org/break">code.org/break</a></p>
-<a href="/break"><button>Learn more</button></a>
-
-</div>
-
-<div class="clearboth">
-
-</div>
-
-</div>
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 ## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
@@ -46,36 +33,13 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 * And many [more tutorials](https://code.org/hourofcode/overview)!
 
 <p><a href="#top">[Back to top]</a></p>
+
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 ## Videos: Watch these easy 3-5 minute educational videos
 
-<div class="col-33" style="padding-right: 20px;">
+{{ athome_videos }}
 
-{{ athome_vid_howcomputers }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank")>How Computers Work</a>: With an introduction by Bill Gates, <a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank")>this series</a> of six short videos is designed to be approachable for everyone and easy to understand.  The series explains what makes a computer a computer, how digital information is represented in 1s and 0s, how computer circuits work to manipulate digital information, and how a central processing unit (CPU) and operating system control the inputs, outputs, memory, and hardware of a computer.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-<div class="col-33" style="padding-right: 20px;">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank")>How the Internet Works</a>: This series of  <a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank")>eight short videos</a> features Vint Cerf, the inventor of TCP/IP, David Karp the founder of Tumblr to explain HTTP and HTML, Google's "Security Princess" to explain SSL and cybersecurity, and engineers from Microsoft.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-[Visit our video library.](https://code.org/educate/resources/videos)
 <br>
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
@@ -101,23 +65,9 @@ A great option for students getting started on their own. You'll learn the funda
 
 <hr>
 
-### **Turtle Programming in App Lab**
+{{ athome_olderstudents }}
 
-<div class="col-25" style="padding-right: 20px;">
-
-<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
-
-</div>
-
-<div class="col-75">
-
-<p>Adapted from our CS Principles course, this short, self-paced JavaScript module for 6th-12th graders is a great way to learn concepts that span all programming languages and tools. Ages 13+.</p>
-<a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
-
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
+<div style="clear: both; margin-bottom: 30px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
@@ -172,31 +122,30 @@ A great option for students getting started on their own. You'll learn the funda
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them. 
+## Support for teachers in virtual or socially-distanced classrooms
+Please visit <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> to view resources and suggestions for teachers in virtual or socially-distanced classroom environments. Course-specific resources can be accessed by clicking the links below.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr>
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

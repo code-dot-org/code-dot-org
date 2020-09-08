@@ -1582,6 +1582,8 @@ ko-KR:
   header_teacher_community: 교사 커뮤니티
   header_help_support: 도움말 및 지원
   header_report_bug: 버그 보고
+  header_legal_privacy: 개인정보보호 정책
+  header_legal_tos: 이용 약관
   header_tutorials: 튜토리얼
   header_documentation: 문서
   user_header_label: 안녕하세요? %{username} 님
@@ -1673,3 +1675,4 @@ ko-KR:
   hoc2018_dance_measure: 마디
   hoc2018_dance_measure_colon: '마디:'
   page_not_found_title: 페이지를 찾을 수 없습니다.
+  homepage_slot_text_title_at_home: 가정 학습

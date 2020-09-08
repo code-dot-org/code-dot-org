@@ -1,174 +1,175 @@
+hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
-family_name 'csd2'
-version_year '2020'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
 
-lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
-stage 'Exploring Web Pages', flex_category: 'csd2_1'
-level 'CSD U2L01 TFMD_2020', named: true
-level 'CSD Web Sample Pages_2020', named: true
+lesson_group 'csd2_1v2', display_name: 'Chapter 1: Creating Webpages'
+lesson 'Exploring Web Pages', display_name: 'Exploring Web Pages'
+level 'CSD U2L01 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD Web Sample Pages_2020', progression: 'Sample Personal Web Pages'
 
-stage 'Intro to HTML', flex_category: 'csd2_1'
-level 'CSD U2L02 TFMD_2020', named: true
+lesson 'Intro to HTML', display_name: 'Intro to HTML'
+level 'CSD U2L02 TFMD_2020', progression: 'Lesson Overview'
 level 'CSDU2 - Type Anything_2020', progression: 'Experiment with Web Lab'
-level 'Intro to Web Lab - Part 1_2020', named: true
-level 'CSD U2 Inspector Warm Up_2020', named: true
-level 'Intro to Web Lab - Part 2_2020', named: true
-level 'CSD U2 HTML Adding Paragraphs_2020', progression: 'Using HTML Tags'
-level 'CSD U2 HTML Adding Paragraphs pt 2_2020', progression: 'Using HTML Tags', assessment: true
-level 'CSD U2 HTML Debug Paragraphs_2020', progression: 'Using HTML Tags'
+level 'Intro to Web Lab - Part 1_2020', progression: 'Video: Intro to Web Lab - Part 1'
+level 'CSD U2 Inspector Warm Up_2020', progression: 'Explore HTML'
+level 'Intro to Web Lab - Part 2_2020', progression: 'Video: Intro to Web Lab - Part 2'
+level 'CSD U2 HTML Adding Paragraphs_2020', progression: 'Practice'
+level 'CSD U2 HTML Adding Paragraphs pt 2_2020', progression: 'Assessment', assessment: true
+level 'CSD U2 HTML Debug Paragraphs_2020', progression: 'Challenge'
 
-stage 'Headings', flex_category: 'csd2_1'
-level 'CSD U2L03 TFMD_2020', named: true
-level 'CSD U2 Pair Programming Video_2020', named: true
-level 'CSD U2 Heading debug_2020', progression: 'Headings'
-level 'CSD U2 Heading Demo_2020', progression: 'Headings'
-level 'CSD U2 Heading Sizes_2020', progression: 'Headings'
+lesson 'Headings', display_name: 'Headings'
+level 'CSD U2L03 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Pair Programming Video_2020', progression: 'Video: Pair Programming'
+level 'CSD U2 Heading debug_2020', progression: 'Skill Building'
+level 'CSD U2 Heading Demo_2020', progression: 'Skill Building'
+level 'CSD U2 Heading Sizes_2020', progression: 'Skill Building'
+level 'CSD Header Size MC_2018_2019_pilot_2020', progression: 'Quick Check', assessment: true
 level 'CSD Web Debugging_2020', progression: 'Video: Debugging'
-level 'CSD Web Headings practice_2020', progression: 'Headings'
-level 'CSD Header Size MC_2018_2019_pilot_2020', progression: 'Headings', assessment: true
-level 'CSD U2 Heading Test_2020', progression: 'Headings', assessment: true
-level 'CSD Web Headings challenge_2020', named: true
+level 'CSD Web Headings practice_2020', progression: 'Practice'
+level 'CSD U2 Heading Test_2020', progression: 'Assessment', assessment: true
+level 'CSD Web Headings challenge_2020', progression: 'Challenges'
 
-stage 'Mini-Project: HTML Web Page', flex_category: 'csd2_1'
-level 'CSD U2L04a TFMD_2020', named: true
-level 'CSD HTML project Review', progression: 'HTML Review'
-level 'CSD HTML project Lists', progression: 'HTML Lists'
+lesson 'Mini-Project: HTML Web Page', display_name: 'Mini-Project: HTML Web Page'
+level 'CSD U2L04a TFMD_2020', progression: 'Lesson Overview'
+level 'CSD HTML project Review', progression: 'Review: HTML'
+level 'CSD HTML project Lists', progression: 'Challenge: Lists'
 level 'CSD web HTML project HTML', progression: 'Code Your Page'
 level 'CSD web HTML project check', progression: 'Review Your Page'
 
-stage 'Digital Footprint', flex_category: 'csd2_1'
-level 'CSD U2L04 TFMD_2020', named: true
-level 'Social Sleuth_2018_2019_pilot_2020', named: true
+lesson 'Digital Footprint', display_name: 'Digital Footprint'
+level 'CSD U2L04 TFMD_2020', progression: 'Lesson Overview'
+level 'Social Sleuth_2018_2019_pilot_2020', progression: 'Social Sleuth'
 
-stage 'Styling Text with CSS', flex_category: 'csd2_1'
-level 'CSD U2L05 TFMD_2020', named: true
-level 'CSD U2 Sample CSS text', named: true
-level 'CSD U2 CSS explore CSS_2020', named: true
-level 'Video: Intro to CSS_2020', named: true
-level 'CSD U2 text style h1_2020', progression: 'Styling Text'
-level 'CSD U2 text style h3_2020', progression: 'Styling Text'
-level 'CSD U2 text style size_2020', progression: 'Styling Text'
-level 'Video: Intro to CSS Part 2_2020', named: true
-level 'CSD U2 add file_2020', progression: 'Styling your Website'
-level 'CSD U2 CSS practice_pilot_2020', progression: 'Styling Text'
-level 'CSD Web CSS Assessment_2020', progression: 'Styling Text', assessment: true
-level 'CSD U2 CSS challenge_pilot_2020', progression: 'Styling Text'
+lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS'
+level 'CSD U2L05 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Sample CSS text', progression: 'Sample Website'
+level 'CSD U2 CSS explore CSS_2020', progression: 'Exploration'
+level 'Video: Intro to CSS_2020', progression: 'Video: Intro to CSS - Part 1'
+level 'CSD U2 text style h1_2020', progression: 'Skill Building'
+level 'CSD U2 text style h3_2020', progression: 'Skill Building'
+level 'CSD U2 text style size_2020', progression: 'Skill Building'
+level 'Video: Intro to CSS Part 2_2020', progression: 'Video: Intro to CSS - Part 2'
+level 'CSD U2 add file_2020', progression: 'Skill Building'
+level 'CSD U2 CSS practice_pilot_2020', progression: 'Practice'
+level 'CSD Web CSS Assessment_2020', progression: 'Assessment', assessment: true
+level 'CSD U2 CSS challenge_pilot_2020', progression: 'Challenges'
 
-stage 'Mini-Project: Your Personal Style', flex_category: 'csd2_1'
-level 'CSD U2L07a TFMD_2020', named: true
-level 'CSD CSS project Review', progression: 'CSS Review'
-level 'CSD CSS project RGB', progression: 'RGB Colors'
-level 'CSD web CSS project HTML', progression: 'Code Your Page'
-level 'CSD web CSS project CSS', progression: 'Style Your Page'
+lesson 'Mini-Project: Your Personal Style', display_name: 'Mini-Project: Your Personal Style'
+level 'CSD U2L07a TFMD_2020', progression: 'Lesson Overview'
+level 'CSD CSS project Review', progression: 'Review: CSS'
+level 'CSD CSS project RGB', progression: 'Challenge: RGB Colors'
+level 'CSD web CSS project HTML', progression: 'Add Content and Structure to Your Page'
+level 'CSD web CSS project CSS', progression: 'Add Style to Your Page'
 level 'CSD web CSS project check', progression: 'Review Your Page'
 
-stage 'Intellectual Property', flex_category: 'csd2_1'
-level 'CSD U2L06 TFMD_2020', named: true
+lesson 'Intellectual Property', display_name: 'Intellectual Property'
+level 'CSD U2L06 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Images', flex_category: 'csd2_1'
-level 'CSD U2L07 TFMD_2020', named: true
-level 'CSD U2 Image Tag 1_2020', progression: 'Adding Images'
-level 'CSD U2 Image Credit_2020', progression: 'Adding Images'
-level 'CSD U2 Image Tag Debug_2020', progression: 'Adding Images'
-level 'CSD U2 Image choose name_2020', progression: 'Adding Images'
-level 'CSD U2 Image Tag 2_2020', progression: 'Adding Images'
-level 'CSD U2 Image practice_pilot_2020', progression: 'Adding Images'
-level 'CSD U2 Image assessment_2020', progression: 'Adding Images', assessment: true
-level 'CSD U2 Image challenge_pilot_2020', progression: 'Adding Images Challenges', named: true
+lesson 'Using Images', display_name: 'Using Images'
+level 'CSD U2L07 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Image Tag 1_2020', progression: 'Skill Building'
+level 'CSD U2 Image Credit_2020', progression: 'Skill Building'
+level 'CSD U2 Image Tag Debug_2020', progression: 'Skill Building'
+level 'CSD U2 Image choose name_2020', progression: 'Skill Building'
+level 'CSD U2 Image Tag 2_2020', progression: 'Skill Building'
+level 'CSD U2 Image practice_pilot_2020', progression: 'Practice'
+level 'CSD U2 Image assessment_2020', progression: 'Assessment', assessment: true
+level 'CSD U2 Image challenge_pilot_2020', progression: 'Challenges'
 
-stage 'Websites for Expression ', flex_category: 'csd2_1'
-level 'CSD U2L08 TFMD_2020', named: true
-level 'CSD U2 Expression Exemplars_2018_2019_pilot_2020', named: true
+lesson 'Websites for Expression ', display_name: 'Websites for Expression '
+level 'CSD U2L08 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Expression Exemplars_2018_2019_pilot_2020', progression: 'Sample Personal Websites'
 
-stage 'Styling Elements with CSS', flex_category: 'csd2_1'
-level 'CSD U2L09 TFMD_2020', named: true
-level 'CSD U2 Sample CSS layout', named: true
-level 'CSD U2 layout style sample_2020', progression: 'Exploring more CSS'
-level 'CSD U2 layout style bgcolor_2020', progression: 'Exploring more CSS'
-level 'CSD U2 layout style body_2020', progression: 'Layout with CSS'
-level 'CSD U2 layout style float_2020', progression: 'Layout with CSS'
-level 'CSD U2 layout style width_2020', progression: 'Layout with CSS'
-level 'CSD U2 layout style practice_pilot_2020', progression: 'Layout with CSS'
-level 'CSD U2 add style_2020', progression: 'Layout with CSS', assessment: true
-level 'CSD U2 layout style challenge_pilot_2020', progression: 'Layout with CSS'
+lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS'
+level 'CSD U2L09 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Sample CSS layout', progression: 'Sample Website'
+level 'CSD U2 layout style sample_2020', progression: 'Exploration'
+level 'CSD U2 layout style bgcolor_2020', progression: 'Skill Building'
+level 'CSD U2 layout style body_2020', progression: 'Skill Building'
+level 'CSD U2 layout style float_2020', progression: 'Skill Building'
+level 'CSD U2 layout style width_2020', progression: 'Skill Building'
+level 'CSD U2 layout style practice_pilot_2020', progression: 'Practice'
+level 'CSD U2 add style_2020', progression: 'Assessment', assessment: true
+level 'CSD U2 layout style challenge_pilot_2020', progression: 'Challenges'
 
-stage 'Your Web Page - Prepare', flex_category: 'csd2_1'
-level 'CSD U2L10 TFMD_2020', named: true
+lesson 'Your Web Page - Prepare', display_name: 'Your Web Page - Prepare'
+level 'CSD U2L10 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'Project - Building a Webpage', flex_category: 'csd2_1'
-level 'CSD U2L11 TFMD_2020', named: true
-level 'CSD U2 project guide_2018_2019_pilot_2020', named: true
+lesson 'Project - Personal Web Page', display_name: 'Project - Personal Web Page'
+level 'CSD U2L11 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 project guide_2018_2019_pilot_2020', progression: 'Project Guide'
 level 'CSD U2 upload images_2020', progression: 'Website Project'
 level 'CSD U2 add content_2020', progression: 'Website Project'
 level 'CSD U2 CSS_2020', progression: 'Website Project'
 level 'CSD U2 project review_2020', progression: 'Website Project'
-level 'CSD U2 publish video_2020', named: true
-level 'CSD U2 project share_2020', progression: 'Publishing Your Website', named: true
+level 'CSD U2 publish video_2020', progression: 'Video: Publishing Your Website'
+level 'CSD U2 project share_2020', progression: 'Publishing Your Website'
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
-lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
-stage 'Purpose of a  Websites', flex_category: 'csd2_2'
-level 'CSD U2L12 TFMD_2020', named: true
-level 'CSD U2 Top Websites_2018_2019_pilot_2020', named: true
+lesson_group 'csd2_2v2', display_name: 'Chapter 2: Multi-page Websites'
+lesson 'Websites for a Purpose', display_name: 'Websites for a Purpose'
+level 'CSD U2L12 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Top Websites_2018_2019_pilot_2020', progression: 'Top Websites'
 
-stage 'Team Problem Solving', flex_category: 'csd2_2'
-level 'CSD U2L13 TFMD_2020', named: true
+lesson 'Team Problem Solving', display_name: 'Team Problem Solving'
+level 'CSD U2L13 TFMD_2020', progression: 'Lesson Overview'
 level 'csd web teamwork video', progression: 'Video: Teamwork'
 level 'csd web disagreement video', progression: 'Video: Managing Disagreement'
 
-stage 'Sources and Research', flex_category: 'csd2_2'
-level 'CSD U2L14 TFMD_2020', named: true
+lesson 'Sources and Research', display_name: 'Sources and Research'
+level 'CSD U2L14 TFMD_2020', progression: 'Lesson Overview'
 
-stage 'CSS Classes', flex_category: 'csd2_2'
-level 'CSD U2L15 TFMD_2020', named: true
-level 'CSD U2 classes sample_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes modify_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes spring_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes summer_2020', progression: 'Styling with Classes', assessment: true
-level 'CSD U2 RGB intro_2020', named: true
+lesson 'CSS Classes', display_name: 'CSS Classes'
+level 'CSD U2L15 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 Sample classes', progression: 'Sample Web Page'
+level 'CSD U2 classes waterfalls', progression: 'Exploration'
+level 'CSD U2 classes humors', progression: 'Skill Building'
+level 'CSD web classes practice', progression: 'Practice'
+level 'CSD U2 classes haikus', progression: 'Assessment', assessment: true
+level 'CSD web classes challenge', progression: 'Challenges'
 
-stage 'Planning a Multi-page Website', flex_category: 'csd2_2'
-level 'CSD U2L16 TFMD_2020', named: true
+lesson 'Planning a Multi-page Website', display_name: 'Planning a Multi-page Website'
+level 'CSD U2L16 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD web upload images multi_2020', progression: 'Upload Your Images'
 
-stage 'Linking and Navigation', flex_category: 'csd2_2'
-level 'CSD U2L17 TFMD_2020', named: true
-level 'CSD U2 link demo_2020', progression: 'Exploring Links'
-level 'CSD U2 making links_2020', progression: 'Links and Navigation'
-level 'CSD U2 naming links_2020', progression: 'Links and Navigation'
-level 'CSD U2 nav bar_2020', progression: 'Links and Navigation'
+lesson 'Linking Pages', display_name: 'Linking Pages'
+level 'CSD U2L17 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U2 link demo_2020', progression: 'Exploration'
+level 'CSD U2 making links_2020', progression: 'Skill Building'
+level 'CSD U2 naming links_2020', progression: 'Skill Building'
+level 'CSD U2 naming pages_2020', progression: 'Skill Building'
+level 'CSD U2 nav bar_2020', progression: 'Practice'
 level 'CSD U2 adding pages_2020', progression: 'Adding Pages', assessment: true
-level 'CSD U2 naming pages_2020', progression: 'Adding Pages'
-level 'CSD web create pages project', progression: 'Your Team Project'
-level 'CSD U2 links challenge', progression: 'Links Challenges'
+level 'CSD U2 links challenge', progression: 'Challenges'
 
-stage 'Project - Website for a Purpose', flex_category: 'csd2_2'
-level 'CSD U2L18 TFMD_2020', named: true
-level 'CSD U2 create page_2020', progression: 'Double Check Images and Pages'
-level 'CSD web add html_2020', progression: 'Add Content'
+lesson 'Project - Website for a Purpose', display_name: 'Project - Website for a Purpose'
+level 'CSD U2L18 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD web create pages project', progression: 'Your Team Project'
+level 'CSD web add html_2020', progression: 'Add Content and HTML'
 level 'CSD web share html_2020', progression: 'Share Your Pages'
 level 'CSD web add CSS_2020', progression: 'Add Style'
-level 'CSD web share CSS_2020', progression: 'Share Your Styles'
+level 'CSD web share CSS_2020', progression: 'Share Your Stylesheets'
 level 'CSD web check_2020', progression: 'Check Your Work'
 
-stage 'Peer Review and Final Touches', flex_category: 'csd2_2'
-level 'CSD U2L19 TFMD_2020', named: true
-level 'CSD Web incorporate feedback_2020', named: true
+lesson 'Peer Review and Final Touches', display_name: 'Peer Review and Final Touches'
+level 'CSD U2L19 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD Web incorporate feedback_2020', progression: 'Final Website'
 level 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd2_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
 level 'CSD Web Development Post-Project Test_pilot_2020', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
 level 'csd-post-survey-intro-2019_pilot_2020'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020', assessment: true
 

@@ -1,9 +1,10 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CSD post-course survey', flex_category: 'cspSurvey'
+lesson 'CSD post-course survey', display_name: 'CSD post-course survey'
 level 'csd-post-survey-levelgroup-2018', progression: 'CS Discoveries Post-Course Survey', assessment: true
+

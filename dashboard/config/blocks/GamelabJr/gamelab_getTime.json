@@ -1,0 +1,23 @@
+{
+  "category": "World",
+  "config": {
+    "func": "getTime",
+    "blockText": "time in {UNIT}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "seconds",
+            "\"seconds\""
+          ],
+          [
+            "frames",
+            "\"frames\""
+          ]
+        ]
+      }
+    ]
+  }
+}

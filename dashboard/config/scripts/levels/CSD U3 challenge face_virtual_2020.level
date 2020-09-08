@@ -1,0 +1,87 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-06-30T19:18:43.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
+      "fill": null,
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "text_mode_at_start": "blocks",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[]",
+    "long_instructions": "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n\r\n# Challenge: Face\r\n\r\nWrite a program that uses `rect`, `ellipse`, and `fill` to create the face on the right. The colors used are \"lightblue\", \"red\", and \"lightgreen\".\r\nOnce you've finished, add your own personal touches to the image.\r\n",
+    "display_name": "Challenge: Face",
+    "encrypted_examples": "23nGJ6bRP3DWuY2/eVzLcYv/nekcsilICE8c90kvIwYR1agjBlNN9TjvA26S\nt1G/7BnD94VfEm8qgGYgMPRm4Q==\n",
+    "parent_level_id": 18447,
+    "name_suffix": "_virtual_2020",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/dc2fe4a471457d7b81e282b53d45b025-image-1528743215634.28.17 PM.png",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Make a face out of shapes.",
+    "libraries_enabled": "false",
+    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:11:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:21:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 19:38:05 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:33:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:52:27 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 23:31:49 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:38 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-22 16:45:59 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-11 18:53:48 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 00:00:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-09 03:09:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-26 22:40:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-26 22:40:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-28 17:10:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

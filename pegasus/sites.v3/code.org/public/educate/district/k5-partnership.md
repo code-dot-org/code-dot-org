@@ -2,6 +2,7 @@
 title: K-5 Program
 nav: educate_nav
 theme: responsive
+noindex: true
 ---
 # Partner with Code.org to bring K-5 computer science to your district (at no cost)
 

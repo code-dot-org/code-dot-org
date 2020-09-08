@@ -11,6 +11,11 @@ export const ParentLetterButtonMetricsCategory = {
   BELOW_TABLE: 'below-table'
 };
 
+export const PrintLoginCardsButtonMetricsCategory = {
+  MANAGE_STUDENTS: 'manage-students',
+  LOGIN_INFO: 'section-login-info'
+};
+
 // Response from server after adding a new student to the section.
 export const AddStatus = {
   SUCCESS: 'success',

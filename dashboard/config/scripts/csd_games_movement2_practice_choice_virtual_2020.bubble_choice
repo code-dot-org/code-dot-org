@@ -1,0 +1,7 @@
+name 'CSD games movement2 practice choice_virtual_2020'
+display_name 'Sprite Movement Practice'
+description 'Practice using the new ways to move sprites.'
+
+sublevels
+level 'CSD U3 abstraction accelerateY up_virtual_2020'
+level 'CSD U3 practice deceleration_virtual_2020'

@@ -1,89 +1,90 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 pilot_experiment 'time4cs-experiment'
 editor_experiment 'broward'
 
 lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
-stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
+lesson 'Introduction to the Problem', display_name: 'Introduction to the Problem'
 level 'BrowardTestMarkdownLevel'
 level 'BrowardTestMarkdownLevel2'
 
-stage 'Crowdsourcing (Integrated lesson)', flex_category: 'time4cs_c1'
+lesson 'Crowdsourcing (Integrated lesson)', display_name: 'Crowdsourcing (Integrated lesson)'
 level 'BrowardTestMarkdownLevel'
 level 'BrowardTestMarkdownLevel2'
 
-stage 'Everglades Habitats', flex_category: 'time4cs_c1'
+lesson 'Everglades Habitats', display_name: 'Everglades Habitats'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Evaluating a Project in Sprite Lab', flex_category: 'time4cs_c1'
+lesson 'Evaluating a Project in Sprite Lab', display_name: 'Evaluating a Project in Sprite Lab'
 level 'BrowardTestMarkdownLevel'
 
 lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
-stage 'Food Chains', flex_category: 'time4cs_c2'
+lesson 'Food Chains', display_name: 'Food Chains'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals with Cards (Integrated Lesson)- Part 1', flex_category: 'time4cs_c2'
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 1', display_name: 'Conditionals with Cards (Integrated Lesson)- Part 1'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Alligator Holes', flex_category: 'time4cs_c2'
+lesson 'Alligator Holes', display_name: 'Alligator Holes'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Food Chain Game', flex_category: 'time4cs_c2'
+lesson 'Food Chain Game', display_name: 'Food Chain Game'
 level 'BrowardTestMarkdownLevel'
 
 lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
-stage 'Invasive Species', flex_category: 'time4cs_c3'
+lesson 'Invasive Species', display_name: 'Invasive Species'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals with Cards (Integrated Lesson)- Part 2', flex_category: 'time4cs_c3'
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 2', display_name: 'Conditionals with Cards (Integrated Lesson)- Part 2'
 level 'BrowardTestMarkdownLevel'
 
-stage 'I am in Big Trouble', flex_category: 'time4cs_c3'
+lesson 'I am in Big Trouble', display_name: 'I am in Big Trouble'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals in Sprite Lab', flex_category: 'time4cs_c3'
+lesson 'Conditionals in Sprite Lab', display_name: 'Conditionals in Sprite Lab'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Nested Loops in Maze', flex_category: 'time4cs_c3'
+lesson 'Nested Loops in Maze', display_name: 'Nested Loops in Maze'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Fancy Shapes using Nested Loops', flex_category: 'time4cs_c3'
+lesson 'Fancy Shapes using Nested Loops', display_name: 'Fancy Shapes using Nested Loops'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Nested Loops with Frozen', flex_category: 'time4cs_c3'
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen'
 level 'BrowardTestMarkdownLevel'
 
 lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
-stage 'Fishy Business', flex_category: 'time4cs_c4'
+lesson 'Fishy Business', display_name: 'Fishy Business'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Songwriting (Integrated Lesson)', flex_category: 'time4cs_c4'
+lesson 'Songwriting (Integrated Lesson)', display_name: 'Songwriting (Integrated Lesson)'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions in Minecraft', flex_category: 'time4cs_c4'
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions with Harvester', flex_category: 'time4cs_c4'
+lesson 'Functions with Harvester', display_name: 'Functions with Harvester'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions with Artist', flex_category: 'time4cs_c4'
+lesson 'Functions with Artist', display_name: 'Functions with Artist'
 level 'BrowardTestMarkdownLevel'
 
 lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
-stage 'Pythons impacting native populations', flex_category: 'time4cs_c5'
+lesson 'Pythons impacting native populations', display_name: 'Pythons impacting native populations'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions in Sprite Lab', flex_category: 'time4cs_c5'
+lesson 'Functions in Sprite Lab', display_name: 'Functions in Sprite Lab'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Python Problem- Current Solutions', flex_category: 'time4cs_c5'
+lesson 'Python Problem- Current Solutions', display_name: 'Python Problem- Current Solutions'
 level 'BrowardTestMarkdownLevel'
 
-stage 'End of Course Project (integrated- project planning lesson)', flex_category: 'time4cs_c5'
+lesson 'End of Course Project (integrated- project planning lesson)', display_name: 'End of Course Project (integrated- project planning lesson)'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Debate- Pythons impacting native populations', flex_category: 'time4cs_c5'
+lesson 'Debate- Pythons impacting native populations', display_name: 'Debate- Pythons impacting native populations'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Work on Project', flex_category: 'time4cs_c5'
+lesson 'Work on Project', display_name: 'Work on Project'
 level 'BrowardTestMarkdownLevel'
+

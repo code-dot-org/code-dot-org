@@ -64,7 +64,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/f4c78598af1ce2fa3d368bcd9498a0d2-image-1585729468198.gif\" style=\"float: right;\">\r\n# Sprite Interactions\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen, and the obstacles should push the player across the screen.\r\n\r\n# Do This\r\n\r\n* Find the code comment `SPRITE INTERACTIONS` and read the comments in that section\r\n* Create a conditional that checks whether the player is touching the target, and moves the target to the random place if it's true.\r\n* Create two new collisions that make the two obstacles push the player across the screen.\r\n* Test your code to make sure it works.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/f4c78598af1ce2fa3d368bcd9498a0d2-image-1585729468198.gif\" style=\"float: right;\">\r\n\r\n# Sprite Interactions\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen, and the obstacles should push the player across the screen.\r\n\r\n# Do This\r\n\r\n* Find the code comment `SPRITE INTERACTIONS` and read the comments in that section.\r\n* Create a conditional that checks whether the player is touching the target, and moves the target to the random place if it's true.\r\n* Create two new collisions that make the two obstacles push the player across the screen.\r\n* Test your code to make sure it works.\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -72,7 +72,7 @@
     "project_template_level_name": "CSD U3 abstraction jumping template_2020",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "TihFnYP+qZ2CwtjqpDNkIBdXCwpkKrH9R6qreGpv7xuHxNz/BUbwvb8Cth+L\nHvVx\n",
+    "encrypted_examples": "fgXLdCDxcOcvWa66XhyKOHAirpv8tVKDNCC0fagWp7VOApwcYkHNWp41fRH9\nbAmET7A2keywrrKMYBongT9TH/VTxUAbQjyRJ3RhWK+BnUtw1KaAan92x3Js\ngz3l5NWi\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -81,21 +81,24 @@
     "parent_level_id": 18643,
     "name_suffix": "_2020",
     "reference_links": [
+      "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
+      "/docs/concepts/game-lab/sprites/collision-detection/",
       "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/collision-detection/"
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
-    "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:45:40 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 21:07:50 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:41:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 08:25:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:45:40 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 21:07:50 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:41:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 08:25:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-19 20:27:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-26 22:22:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-28 18:01:04 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import color from '@cdo/apps/util/color';
 
 $(document).ready(function() {
   const makerBlocks = {
@@ -62,7 +63,19 @@ $(document).ready(function() {
     }
   });
 
+  const styles = {
+    optgroup: {
+      color: color.light_gray
+    },
+    option: {
+      color: color.black
+    }
+  };
+
   const data = getScriptData('applabOptions');
+  const categories = (data.dataset_library_manifest.categories || []).filter(
+    category => category.published
+  );
   const tableNames = data.dataset_library_manifest.tables.map(
     table => table.name
   );
@@ -114,14 +127,21 @@ $(document).ready(function() {
             value={this.state.value}
             multiple={true}
             onChange={this.handleChange}
+            size={20}
           >
-            {tableNames.map(name => {
-              return (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              );
-            })}
+            {categories.map(category => (
+              <optgroup
+                label={category.name}
+                key={category.name}
+                style={styles.optgroup}
+              >
+                {category.datasets.map(name => (
+                  <option key={name} value={name} style={styles.option}>
+                    {name}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
           </select>
         </div>
       );

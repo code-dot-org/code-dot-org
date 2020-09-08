@@ -51,8 +51,16 @@ class FirebaseHelper
     return records, columns
   end
 
+  def escape_table_name(table_name)
+    return URI.escape(table_name).gsub('.', '%252E')
+  end
+
+  def unescape_table_name(table_name)
+    return table_name.gsub('%2E', '.')
+  end
+
   def delete_shared_table(table_name)
-    escaped_table_name = URI.escape(table_name)
+    escaped_table_name = escape_table_name(table_name)
     response = @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
     return response unless response.success?
     response = @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
@@ -61,7 +69,7 @@ class FirebaseHelper
   end
 
   def upload_shared_table(table_name, records, columns)
-    escaped_table_name = URI.escape(table_name)
+    escaped_table_name = escape_table_name(table_name)
     response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
     return response unless response.success?
     response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
@@ -85,7 +93,7 @@ class FirebaseHelper
   end
 
   def get_shared_table(table_name)
-    escaped_table_name = URI.escape(table_name)
+    escaped_table_name = escape_table_name(table_name)
     columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
     columns = columns_response.body ? columns_response.body.map {|_, value| value['columnName']} : []
 
@@ -97,7 +105,8 @@ class FirebaseHelper
 
   def get_shared_table_list
     response = @firebase.get("/v3/channels/shared/counters/tables")
-    response.body
+    return response unless response.success?
+    response.body.transform_keys {|table_name| unescape_table_name(table_name)}
   end
 
   def get_library_manifest
@@ -109,6 +118,13 @@ class FirebaseHelper
   # Changes made using this function will be visible immediately in all environments (including prod)
   def set_library_manifest(manifest)
     @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
+  end
+
+  def self.delete_channels(encrypted_channel_ids)
+    firebase_client = create_client
+    encrypted_channel_ids.each do |encrypted_channel_id|
+      firebase_client.delete "/v3/channels/#{encrypted_channel_id}/"
+    end
   end
 
   def self.delete_channel(encrypted_channel_id)

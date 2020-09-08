@@ -25,6 +25,11 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {ARROW_KEY_NAMES} from '../utils';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -264,10 +269,8 @@ export default class Craft {
             }
 
             dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-            $('#soft-buttons')
-              .removeClass('soft-buttons-none')
-              .addClass('soft-buttons-' + 4);
-            $('.arrow').prop('disabled', false);
+            $('#soft-buttons').addClass('soft-buttons-' + 4);
+            getStore().dispatch(showArrowButtons());
 
             const resetButton = document.getElementById('resetButton');
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
@@ -313,6 +316,15 @@ export default class Craft {
             });
             mc.on('pressup', () =>
               Craft.gameController.codeOrgAPI.clickUp(() => {})
+            );
+
+            // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
+            Craft.gameController.game.device.whenReady(
+              () => {
+                Craft.gameController.game.scale.compatibility.scrollTo = false;
+              },
+              this,
+              false
             );
           },
           twitter: {
@@ -382,6 +394,10 @@ export default class Craft {
   }
 
   static onArrowButtonDown(e, btn) {
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      store.dispatch(dismissSwipeOverlay('buttonPress'));
+    }
     Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
     e.preventDefault(); // Stop normal events so we see mouseup later.
   }
@@ -601,13 +617,6 @@ export default class Craft {
     return Craft.gameController && Craft.gameController.levelModel;
   }
 
-  /**
-   * Base's `studioApp().resetButtonClick` will be called first.
-   */
-  static resetButtonClick() {
-    $('.arrow').prop('disabled', false);
-  }
-
   static isPreAnimationFailure(testResult) {
     switch (testResult) {
       case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
@@ -628,6 +637,16 @@ export default class Craft {
   static runButtonClick() {
     if (!Craft.phaserLoaded()) {
       return;
+    }
+
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      window.addEventListener('keydown', function hideOverlay(e) {
+        if (ARROW_KEY_NAMES.includes(e.key)) {
+          store.dispatch(dismissSwipeOverlay('keyPress'));
+          window.removeEventListener('keydown', hideOverlay);
+        }
+      });
     }
 
     studioApp().toggleRunReset('reset');

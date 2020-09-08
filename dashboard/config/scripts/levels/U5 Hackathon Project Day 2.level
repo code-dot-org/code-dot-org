@@ -31,9 +31,9 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/",
-      "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
-      "/docs/concepts/app-lab/patterns/random-list-access/"
+      "/docs/concepts/patterns/update-screen-pattern/",
+      "/docs/concepts/patterns/when-to-make-a-function/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
     "map_reference": "/docs/concepts/patterns/list-filter-pattern/",
     "widget_mode": "false",

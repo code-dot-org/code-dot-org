@@ -126,7 +126,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
 
   getText() {
     if (this.props.useSignUpText) {
-      return 'Sign up for Professional Learning! Applications are now open for Middle and High School teachers.';
+      return 'Professional Learning is still on! Applications are open for Middle and High School teachers!';
     } else if (this.props.nominated) {
       return 'CONGRATULATIONS! You’ve been nominated for a scholarship!';
     } else {
@@ -179,7 +179,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Apply Now
+                    Join us
                   </button>
                 </div>
               </div>
@@ -189,7 +189,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Apply Now
+                    Join us
                   </button>
                 </div>
               </div>

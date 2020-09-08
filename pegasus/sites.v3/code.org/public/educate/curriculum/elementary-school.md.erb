@@ -27,63 +27,45 @@ CS Fundamentals for Elementary Schools
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
 </div>
 
-<div class="col-55">
+<div class="col-50">
 <div>
-Computer science fosters creativity and teaches students critical thinking skills to become proactive learners, so elementary school is the ideal time for students to be introduced to CS.
+Computer science fosters creativity and <a href="#research">teaches students critical thinking skills</a> to become proactive learners, so elementary school is the ideal time for students to be introduced to CS.
 <br>
 <br>
 Our six Computer Science Fundamentals courses are flexibly designed for teachers new to CS who want to offer accessible and equitable introductory CS courses to their students.
 <br>
 <br>
-How you teach these courses is up to you - as part of your classroom schedule, weekly lab or library time, supporting lessons for math and language arts, or to make creative projects. Knowing how important these 21st century skills are for students, teachers tell us they find creative and clever ways to make room to teach CS!
+How you teach these courses is up to you - as part of your classroom schedule, weekly lab or library time, supporting lessons for math and language arts, or to make creative projects. Our network of facilitators and <a href="https://code.org/educate/professional-learning/about-partners">Regional Partners</a> offer professional learning workshops across the country to help you get started!
+</div>
 </div>
 
 <div style="clear: both;"></div>
 
+<a href="https://code.org/professional-development-workshops"><button>Learn more about professional learning!</button></a>
+
 ***
-## Support for teachers
 
-<div class="col-50" style="padding-right: 25px;">
-<br>
+# Why CS Fundamentals?
 
-New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Join local teachers for inspiring and hands-on support to implement computer science in your classroom.
+<a id="research"></a>
+## It’s backed by research.
 
-Our Regional Partners offer high-quality, one-day Code.org workshops for individual teachers or for schoolwide PD. Sign up for a professional development workshop near you!
-<br/>
-<a href="/professional-development-workshops" style='text-decoration:none'>
-  <button>Find a workshop</button>
-</a>
+[Six different studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are 17% more likely to attend college.
 
-</div>
-<div class="col-50">
-  <img src="/images/fill-400x200/teacherconatl.jpg" style="padding-top:25px;">
-</div>
-
-
-
-
-<div style="clear: both;"></div>
-***
-<h1 class="backgroundimage" style="color:white;">
-Why CS Fundamentals?
-</h1>
-
-## It’s aligned to standards and backed by research.
-
-CS Fundamentals is aligned to the 2017 [Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards). [Lesson plans](https://curriculum.code.org/csf-19/) identify connections to CSTA standards and provide opportunities to support learning in other subjects. [Click here](https://curriculum.code.org/csf-19/standards/) for the comprehensive list of CS Fundamentals standards alignments.
-
-Recent research demonstrates positive links between learning computer science with CS Fundamentals and reading comprehension, problem-solving, and planning skills. Students in CS Fundamentals classes with resourceful teachers [scored higher on standardized reading comprehension exams](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e). CS Fundamentals students also [outperformed other STEM students at problem-solving executive function and planning skills](https://www.sciencedirect.com/science/article/abs/pii/S0360131520300099?dgcid=author).
+Recent research also demonstrates positive links between learning computer science *with CS Fundamentals* and reading comprehension, problem-solving, and planning skills. Students with resourceful teachers [scored higher on standardized reading comprehension exams](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) when they did extra CS Fundamentals activities. CS Fundamentals students also [outperformed other STEM students at problem-solving executive function and planning skills](https://www.sciencedirect.com/science/article/abs/pii/S0360131520300099?dgcid=author).
 
 ## It's easy to get started.
 
 Each course includes comprehensive lesson plans, plugged and unplugged activities, and support resources for teachers. You don't even need a user account to [try it out](https://curriculum.code.org/csf). Once you get a feel for the courses and lesson plans, [sign up as a teacher](https://studio.code.org/users/sign_up) to join the teacher community forums and engage with all the resources at your fingertips. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view student progress and manage accounts. Then celebrate your students' learning by printing certificates they can bring home.
 
+CS Fundamentals is aligned to the 2017 [Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards). [Lesson plans](https://curriculum.code.org/csf/) identify connections to CSTA standards and provide opportunities to support learning in other subjects. [Click here](https://curriculum.code.org/csf/standards/) for the comprehensive list of CS Fundamentals standards alignments.
+
 ## And, did we mention that it's fun!?
 
 Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Every course includes  "unplugged" activities that teach computational thinking and digital citizenship skills without computers. See some awesome student creations below!
-
 
 [col-33]
 
@@ -111,6 +93,14 @@ Your students will create their own games, art, and digital stories that they ca
 
 <p style="clear:both"></p>
 
+## Our professional-learning workshops are designed for new-to-CS teachers.
+
+<img src="/images/teacherconatlbrighter.png" style="float:right; width:25%; margin-left:25px">
+
+New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Join local teachers for inspiring and hands-on support to implement computer science in your classroom. Our Regional Partners offer high-quality, one-day Code.org workshops for individual teachers or for schoolwide PD. Sign up for a professional development workshop near you!
+
+<a href="https://code.org/professional-development-workshops"><button>Find a workshop</button></a>
+
 <h1 class="backgroundimage" style="color:white;">
 Selecting the right course
 </h1>
@@ -124,27 +114,13 @@ The progression of [Courses A-F](https://curriculum.code.org/csf) build upon eac
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursea'), img: '/images/458x70/orange.png', title: 'Course A', ages: 'Kindergarten (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, and events.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursea'), img: '/images/458x70/orange.png', title: 'Course A', ages: 'Kindergarten (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, and events.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/courseb'), img: CDO.code_org_url('/images/458x70/light-orange.png'), title: 'Course B', ages: '1st grade (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, impacts of computing, and events.'%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursec'), img: CDO.code_org_url('/images/458x70/green.png'), title: 'Course C', ages: '2nd grade', description: '18 lessons, ~18 hours to complete. Concepts include digital citizenship, sequencing, binary, loops, events, and data.'%>
-
-[/col-50]
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursed'), img: CDO.code_org_url('/images/458x70/teal.png'), title: 'Course D', ages: '3rd grade', description: '18 lessons, ~18 hours to complete. Concepts include sequencing, events, loops, conditionals, binary, and digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb'), cta_text: 'View course', lesson_plans: curriculum_url('csf/courseb'), img: CDO.code_org_url('/images/458x70/light-orange.png'), title: 'Course B', ages: '1st grade (Supports pre-readers)', description: '12 lessons, ~12 hours to complete. Concepts include digital citizenship, sequencing, loops, impacts of computing, and events.'%>
 
 [/col-50]
 
@@ -152,13 +128,27 @@ The progression of [Courses A-F](https://curriculum.code.org/csf) build upon eac
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursee'), img: CDO.code_org_url('/images/458x70/blue.png'), title: 'Course E', ages: '4th grade', description: '18 lessons, ~18-20 hours to complete. Concepts include sprites, digital citizenship, impacts of computing, nested loops, and functions.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursec'), img: CDO.code_org_url('/images/458x70/green.png'), title: 'Course C', ages: '2nd grade', description: '18 lessons, ~18 hours to complete. Concepts include digital citizenship, sequencing, binary, loops, events, and data.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef-2019'), cta_text: 'View course', lesson_plans: curriculum_url('csf-19/coursef'), img: CDO.code_org_url('/images/458x70/purple.png'), title: 'Course F', ages: '5th grade', description: '20 lessons, ~20-22 hours to complete. Concepts include variables, data, for loops, the Internet, sprites, and digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursed'), img: CDO.code_org_url('/images/458x70/teal.png'), title: 'Course D', ages: '3rd grade', description: '19 lessons, ~19 hours to complete. Concepts include sequencing, events, loops, conditionals, binary, and digital citizenship.' %>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursee'), img: CDO.code_org_url('/images/458x70/blue.png'), title: 'Course E', ages: '4th grade', description: '19 lessons, ~19-21 hours to complete. Concepts include sprites, digital citizenship, impacts of computing, nested loops, and functions.' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/images/458x70/purple.png'), title: 'Course F', ages: '5th grade', description: '19 lessons, ~19-21 hours to complete. Concepts include variables, data, for loops, the Internet, sprites, and digital citizenship.' %>
 
 [/col-50]
 
@@ -178,10 +168,10 @@ Go ahead, cut the cord (for awhile)! CS education does not always need to be in 
 ## No time? No problem!
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express') %>" target=_"blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%" target=_"blank"></a>
+  <a href="<%= CDO.studio_url('/s/express') %>" target=_"blank"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%" target=_"blank"></a>
 </div>
 
 [col-50]
@@ -200,7 +190,7 @@ Thanks to a global community of volunteer translators, Courses A-F and the Expre
 <br/>
 
 ## Looking for third party courses?
-Check out our full list of recommendations on our [professional learning page](https://code.org/professional-development-workshops).
+Check out our full list of recommendations on our [3rd Party Educator Resources page](https://code.org/educate/curriculum/3rd-party).
 <br/>
 <br/>
 <br/>

@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FlexGroup from './FlexGroup';
-import StageDescriptions from './StageDescriptions';
+import LessonGroups from './LessonGroups';
+import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
-import ResourceType, {
-  resourceShape,
-  stringForType
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import LessonExtrasEditor from './LessonExtrasEditor';
+import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -21,13 +20,20 @@ const styles = {
     padding: '4px 6px',
     color: '#555',
     border: '1px solid #ccc',
-    borderRadius: 4
+    borderRadius: 4,
+    margin: 0
   },
   checkbox: {
     margin: '0 0 0 7px'
   },
   dropdown: {
     margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
   }
 };
 
@@ -47,7 +53,7 @@ export default class ScriptEditor extends React.Component {
     hidden: PropTypes.bool,
     isStable: PropTypes.bool,
     loginRequired: PropTypes.bool,
-    hideableStages: PropTypes.bool,
+    hideableLessons: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
     professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
@@ -55,8 +61,8 @@ export default class ScriptEditor extends React.Component {
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    stageExtrasAvailable: PropTypes.bool,
-    stageLevelData: PropTypes.string,
+    lessonExtrasAvailable: PropTypes.bool,
+    lessonLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
     curriculumPath: PropTypes.string,
@@ -72,24 +78,19 @@ export default class ScriptEditor extends React.Component {
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
-    tts: PropTypes.bool
+    tts: PropTypes.bool,
+    hasCourse: PropTypes.bool,
+    isCourse: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      hidden: this.props.hidden,
-      pilotExperiment: this.props.pilotExperiment,
-      curriculumUmbrella: this.props.curriculumUmbrella
+      curriculumUmbrella: this.props.curriculumUmbrella,
+      description: this.props.i18nData.description
     };
   }
-
-  handleClearProjectWidgetSelectClick = () => {
-    $(this.projectWidgetSelect)
-      .children('option')
-      .removeAttr('selected', true);
-  };
 
   handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect)
@@ -104,7 +105,7 @@ export default class ScriptEditor extends React.Component {
 
   presubmit = e => {
     const videoKeysBefore = (
-      this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []
+      this.props.lessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
     const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
@@ -121,20 +122,32 @@ export default class ScriptEditor extends React.Component {
     }
   };
 
+  handleDescriptionChange = event => {
+    this.setState({description: event.target.value});
+  };
+
   render() {
     const {betaWarning} = this.props;
-    const textAreaRows = this.props.stageLevelData
-      ? this.props.stageLevelData.split('\n').length + 5
+    const textAreaRows = this.props.lessonLevelData
+      ? this.props.lessonLevelData.split('\n').length + 5
       : 10;
     return (
       <div>
-        <h2>I18n Strings</h2>
         <label>
           Title
           <input
             name="title"
             defaultValue={this.props.i18nData.title}
             style={styles.input}
+          />
+        </label>
+        <label>
+          Unit URL (Slug)
+          <input
+            type="text"
+            value={this.props.name}
+            style={styles.input}
+            disabled={true}
           />
         </label>
         <label>
@@ -147,6 +160,12 @@ export default class ScriptEditor extends React.Component {
         </label>
         <label>
           Short Description
+          <HelpTip>
+            <p>
+              This description is used when space is limited such as on the
+              Teacher and Student homepage for the course cards.
+            </p>
+          </HelpTip>
           <input
             name="description_short"
             defaultValue={this.props.i18nData.descriptionShort}
@@ -157,145 +176,25 @@ export default class ScriptEditor extends React.Component {
           Description
           <textarea
             name="description"
-            defaultValue={this.props.i18nData.description}
+            defaultValue={this.state.description}
             rows={5}
             style={styles.input}
+            onChange={this.handleDescriptionChange}
           />
+          <MarkdownPreview markdown={this.state.description} />
         </label>
-        <StageDescriptions
-          scriptName={this.props.name}
-          currentDescriptions={this.props.i18nData.stageDescriptions}
-        />
-        <ScriptAnnouncementsEditor
-          defaultAnnouncements={this.props.announcements}
-          inputStyle={styles.input}
-        />
         <h2>Basic Settings</h2>
-
-        {this.props.isLevelbuilder && (
-          <div>
-            <label>
-              Is this script part of one of the core courses?
-              <select
-                name="curriculum_umbrella"
-                style={styles.dropdown}
-                defaultValue={this.props.curriculumUmbrella}
-                onChange={this.handleUmbrellaSelectChange}
-              >
-                <option value="">(None)</option>
-                {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
-                  <option key={curriculumUmbrella} value={curriculumUmbrella}>
-                    {curriculumUmbrella}
-                  </option>
-                ))}
-              </select>
-              <p>
-                By selecting one of the above, this script will have a property,
-                curriculum_umbrella, specific to that course regardless of
-                version.
-              </p>
-              <p>
-                If you select CSF, CSF-specific elements will show in the
-                progress tab of the teacher dashboard. For example, the progress
-                legend will include a separate column for levels completed with
-                too many blocks and there will be information about CSTA
-                Standards.
-              </p>
-              <ProgressLegend
-                excludeCsfColumn={this.state.curriculumUmbrella !== 'CSF'}
-              />
-            </label>
-            <label>
-              Family Name
-              <select
-                name="family_name"
-                defaultValue={this.props.familyName}
-                style={styles.dropdown}
-              >
-                <option value="">(None)</option>
-                {this.props.scriptFamilies.map(familyOption => (
-                  <option key={familyOption} value={familyOption}>
-                    {familyOption}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
-              Version Year
-              <select
-                name="version_year"
-                defaultValue={this.props.versionYear}
-                style={styles.dropdown}
-              >
-                <option value="">(None)</option>
-                {this.props.versionYearOptions.map(year => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <VisibleInTeacherDashboard
-              checked={!this.state.hidden}
-              disabled={!!this.state.pilotExperiment}
-              onChange={e => this.setState({hidden: !e.target.checked})}
-            />
-            <label>
-              Can be recommended (aka stable)
-              <input
-                name="is_stable"
-                type="checkbox"
-                defaultChecked={this.props.isStable}
-                style={styles.checkbox}
-              />
-              <p>
-                If checked, this unit will be eligible to be the recommended
-                version of the unit. The most recent eligible version will be
-                the recommended version.
-              </p>
-            </label>
-            <PilotExperiment
-              value={this.state.pilotExperiment}
-              onChange={e => this.setState({pilotExperiment: e.target.value})}
-            />
-          </div>
-        )}
         <label>
-          Display project sharing column in Teacher Dashboard
-          <input
-            name="project_sharing"
-            type="checkbox"
-            defaultChecked={this.props.projectSharing}
-            style={styles.checkbox}
-          />
-          <p>
-            If checked, the "Sharing" column in the "Manage Students" tab of
-            Teacher Dashboard will be displayed by default for sections assigned
-            to this script.
-          </p>
-        </label>
-        <label>
-          Login Required
+          Require Login To Use
           <input
             name="login_required"
             type="checkbox"
             defaultChecked={this.props.loginRequired}
             style={styles.checkbox}
           />
-          <p>Require users to log in before viewing this script.</p>
-        </label>
-        <label>
-          Hideable Stages
-          <input
-            name="hideable_stages"
-            type="checkbox"
-            defaultChecked={this.props.hideableStages}
-            style={styles.checkbox}
-          />
-          <p>
-            Allow teachers to toggle whether or not specific stages in this
-            script are visible to students in their section.
-          </p>
+          <HelpTip>
+            <p>Require users to log in before viewing this script.</p>
+          </HelpTip>
         </label>
         <label>
           Default Progress to Detail View
@@ -305,164 +204,42 @@ export default class ScriptEditor extends React.Component {
             defaultChecked={this.props.studentDetailProgressView}
             style={styles.checkbox}
           />
-          <p>
-            By default students start in the summary view. When this box is
-            checked, we instead stick everyone into detail view to start for
-            this script.
-          </p>
+          <HelpTip>
+            <p>
+              By default students start in the summary view. When this box is
+              checked, we instead stick everyone into detail view to start for
+              this script.
+            </p>
+          </HelpTip>
         </label>
         <label>
-          Lesson Extras Available
+          Display project sharing column in Teacher Dashboard
           <input
-            name="stage_extras_available"
+            name="project_sharing"
             type="checkbox"
-            defaultChecked={this.props.stageExtrasAvailable}
+            defaultChecked={this.props.projectSharing}
             style={styles.checkbox}
           />
-          <p>
-            If also enabled by the teacher, show the lesson extras page at the
-            end of each stage.
-          </p>
+          <HelpTip>
+            <p>
+              If checked, the "Sharing" column in the "Manage Students" tab of
+              Teacher Dashboard will be displayed by default for sections
+              assigned to this script.
+            </p>
+          </HelpTip>
         </label>
         <label>
-          Verified Resources
-          <input
-            name="has_verified_resources"
-            type="checkbox"
-            defaultChecked={this.props.hasVerifiedResources}
-            style={styles.checkbox}
-          />
-          <p>
-            Check if this course has resources for verified teachers, and we
-            want to notify non-verified teachers that this is the case.
-          </p>
-        </label>
-        <label>
-          Lesson Plan
-          <input
-            name="has_lesson_plan"
-            type="checkbox"
-            defaultChecked={this.props.hasLessonPlan}
-            style={styles.checkbox}
-          />
-          <p>
-            Check if this course has lesson plans (on Curriculum Builder or in
-            PDF form) that we should provide links to.
-          </p>
-        </label>
-        <label>
-          Text-to-Speech
+          Enable Text-to-Speech
           <input
             name="tts"
             type="checkbox"
             defaultChecked={this.props.tts}
             style={styles.checkbox}
           />
-          <p>Check to enable text-to-speech for this course.</p>
+          <HelpTip>
+            <p>Check to enable text-to-speech for this script.</p>
+          </HelpTip>
         </label>
-        {this.props.isLevelbuilder && (
-          <label>
-            Editor Experiment. If specified, users with this experiment on the
-            levelbuilder machine will be able to edit this script.
-            <input
-              name="editor_experiment"
-              defaultValue={this.props.editorExperiment}
-              style={styles.input}
-            />
-          </label>
-        )}
-        <label>
-          Curriculum Path
-          <input
-            name="curriculum_path"
-            defaultValue={this.props.curriculumPath}
-            style={styles.input}
-          />
-        </label>
-        {this.props.isLevelbuilder && (
-          <label>
-            Professional Learning Course. When filled out, the course unit
-            associated with this script will be associated with the course named
-            in this box. If the course unit does not exist, and if the course
-            does not exist it will be created.
-            <input
-              name="professional_learning_course"
-              defaultValue={this.props.professionalLearningCourse}
-              style={styles.input}
-            />
-          </label>
-        )}
-        <label>
-          Peer Reviews to Complete. Currently only supported for professional
-          learning courses
-          <input
-            name="peer_reviews_to_complete"
-            defaultValue={this.props.peerReviewsRequired}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Wrap-up Video
-          <input
-            name="wrapup_video"
-            defaultValue={this.props.wrapupVideo}
-            style={styles.input}
-          />
-        </label>
-
-        <h3>Project widget options</h3>
-        <label>
-          Project widget visible
-          <input
-            name="project_widget_visible"
-            type="checkbox"
-            defaultChecked={this.props.projectWidgetVisible}
-            style={styles.checkbox}
-          />
-          <p>
-            If checked this script will have the projects widget (recent
-            projects and new project buttons) visible in stage extras.
-          </p>
-        </label>
-        <label>
-          Project widget new project types
-          <p>
-            Select up to 4 project type options to appear in the 'Start a new
-            project' section. Select
-            <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
-            or shift-click or cmd-click to select multiple.
-          </p>
-          <select
-            name="project_widget_types[]"
-            multiple
-            defaultValue={this.props.projectWidgetTypes}
-            ref={select => (this.projectWidgetSelect = select)}
-          >
-            <option value="playlab">Play Lab</option>
-            <option value="playlab_k1">Play Lab K1</option>
-            <option value="artist">Artist</option>
-            <option value="artist_k1">Artist K1</option>
-            <option value="applab">App Lab</option>
-            <option value="gamelab">Game Lab</option>
-            <option value="weblab">Web Lab</option>
-            <option value="calc">Calc</option>
-            <option value="eval">Eval</option>
-            <option value="frozen">Frozen</option>
-            <option value="minecraft_adventurer">Minecraft Adventurer</option>
-            <option value="minecraft_designer">Minecraft Designer</option>
-            <option value="minecraft_hero">Minecraft Hero</option>
-            <option value="starwars">Star Wars</option>
-            <option value="starwarsblocks">Star Wars Blocks</option>
-            <option value="flappy">Flappy</option>
-            <option value="sports">Sports</option>
-            <option value="basketball">Basketball</option>
-            <option value="bounce">Bounce</option>
-            <option value="infinity">Infinity</option>
-            <option value="iceage">Ice Age</option>
-            <option value="gumball">Gumball</option>
-          </select>
-        </label>
-
         <label>
           Supported locales
           <p>
@@ -485,34 +262,267 @@ export default class ScriptEditor extends React.Component {
               ))}
           </select>
         </label>
+        {this.props.isLevelbuilder && (
+          <label>
+            Editor Experiment
+            <HelpTip>
+              <p>
+                If specified, users with this experiment on the levelbuilder
+                machine will be able to edit this script.
+              </p>
+            </HelpTip>
+            <input
+              name="editor_experiment"
+              defaultValue={this.props.editorExperiment}
+              style={styles.input}
+            />
+          </label>
+        )}
+        <label>
+          Wrap-up Video
+          <input
+            name="wrapup_video"
+            defaultValue={this.props.wrapupVideo}
+            style={styles.input}
+          />
+        </label>
+        <ScriptAnnouncementsEditor
+          defaultAnnouncements={this.props.announcements}
+          inputStyle={styles.input}
+        />
+        <h2>Publishing Settings</h2>
+        {this.props.isLevelbuilder && (
+          <div>
+            <label>
+              Core Course
+              <select
+                name="curriculum_umbrella"
+                style={styles.dropdown}
+                defaultValue={this.props.curriculumUmbrella}
+                onChange={this.handleUmbrellaSelectChange}
+              >
+                <option value="">(None)</option>
+                {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                    {curriculumUmbrella}
+                  </option>
+                ))}
+              </select>
+              <HelpTip>
+                <p>
+                  By selecting, this script will have a property,
+                  curriculum_umbrella, specific to that course regardless of
+                  version.
+                </p>
+                <p>
+                  If you select CSF, CSF-specific elements will show in the
+                  progress tab of the teacher dashboard. For example, the
+                  progress legend will include a separate column for levels
+                  completed with too many blocks and there will be information
+                  about CSTA Standards.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Family Name
+              <select
+                name="family_name"
+                defaultValue={this.props.familyName}
+                style={styles.dropdown}
+                disabled={this.props.hasCourse}
+              >
+                <option value="">(None)</option>
+                {this.props.scriptFamilies.map(familyOption => (
+                  <option key={familyOption} value={familyOption}>
+                    {familyOption}
+                  </option>
+                ))}
+              </select>
+              {this.props.hasCourse && (
+                <HelpTip>
+                  <p>
+                    This field cannot be edited because this script belongs to a
+                    course, and redirecting to the latest version of a specific
+                    unit within a course is deprecated. Please go to the course
+                    page to edit this field.
+                  </p>
+                </HelpTip>
+              )}
+            </label>
+            <label>
+              Version Year
+              <select
+                name="version_year"
+                defaultValue={this.props.versionYear}
+                style={styles.dropdown}
+                disabled={this.props.hasCourse}
+              >
+                <option value="">(None)</option>
+                {this.props.versionYearOptions.map(year => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+              {this.props.hasCourse && (
+                <HelpTip>
+                  <p>
+                    This field cannot be edited because this script belongs to a
+                    course, and redirecting to the latest version of a specific
+                    unit within a course is deprecated. Please go to the course
+                    page to edit this field.
+                  </p>
+                </HelpTip>
+              )}
+            </label>
+            <label>
+              Can be recommended (aka stable)
+              <input
+                name="is_stable"
+                type="checkbox"
+                defaultChecked={this.props.isStable}
+                style={styles.checkbox}
+              />
+              <HelpTip>
+                <p>
+                  If checked, this unit will be eligible to be the recommended
+                  version of the unit. The most recent eligible version will be
+                  the recommended version.
+                </p>
+              </HelpTip>
+            </label>
+            <VisibleAndPilotExperiment
+              visible={!this.props.hidden}
+              pilotExperiment={this.props.pilotExperiment}
+            />
+            <label>
+              Is a Standalone Course
+              <input
+                name="is_course"
+                type="checkbox"
+                defaultChecked={this.props.isCourse}
+                style={styles.checkbox}
+              />
+              <HelpTip>
+                <p>
+                  (Still in development) If checked, indicates that this Unit
+                  represents a standalone course. Examples of such Units include
+                  CourseA-F, Express, and Pre-Express.
+                </p>
+              </HelpTip>
+            </label>
+          </div>
+        )}
 
+        <h2>Lesson Settings</h2>
+        <label>
+          Show Lesson Plan Links
+          <input
+            name="has_lesson_plan"
+            type="checkbox"
+            defaultChecked={this.props.hasLessonPlan}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Check if this script has lesson plans (on Curriculum Builder or in
+              PDF form) that we should provide links to.
+            </p>
+          </HelpTip>
+        </label>
+        <label>
+          Curriculum Path
+          <input
+            name="curriculum_path"
+            defaultValue={this.props.curriculumPath}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Allow Teachers to Hide Lessons
+          <input
+            name="hideable_lessons"
+            type="checkbox"
+            defaultChecked={this.props.hideableLessons}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Allow teachers to toggle whether or not specific lessons in this
+              script are visible to students in their section.
+            </p>
+          </HelpTip>
+        </label>
+        <LessonExtrasEditor
+          lessonExtrasAvailable={this.props.lessonExtrasAvailable}
+          projectWidgetTypes={this.props.projectWidgetTypes}
+          projectWidgetVisible={this.props.projectWidgetVisible}
+        />
+        <LessonDescriptions
+          scriptName={this.props.name}
+          currentDescriptions={this.props.i18nData.stageDescriptions}
+        />
+        <h2>Teacher Resources Settings</h2>
+        <label>
+          Has Resources for Verified Teachers
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Check if this script has resources for verified teachers, and we
+              want to notify non-verified teachers that this is the case.
+            </p>
+          </HelpTip>
+        </label>
         <div>
           <h4>Teacher Resources</h4>
           <div>
             Select the Teacher Resources buttons you'd like to have show up on
-            the top of the course overview page
+            the top of the script overview page
           </div>
           <ResourcesEditor
             inputStyle={styles.input}
             resources={this.props.teacherResources}
-            maxResources={Object.keys(ResourceType).length}
-            renderPreview={resources => (
-              <DropdownButton
-                text="Teacher resources"
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link}>
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
-            )}
           />
         </div>
-        <h2>Stages and Levels</h2>
+        <h2>Professional Learning Settings</h2>
+        {this.props.isLevelbuilder && (
+          <label>
+            Professional Learning Course
+            <HelpTip>
+              <p>
+                When filled out, the course unit associated with this script
+                will be associated with the course named in this box. If the
+                course unit does not exist, and if the course does not exist it
+                will be created.
+              </p>
+            </HelpTip>
+            <input
+              name="professional_learning_course"
+              defaultValue={this.props.professionalLearningCourse}
+              style={styles.input}
+            />
+          </label>
+        )}
+        <label>
+          Number of Peer Reviews to Complete
+          <HelpTip>
+            <p>Currently only supported for professional learning courses</p>
+          </HelpTip>
+          <input
+            name="peer_reviews_to_complete"
+            defaultValue={this.props.peerReviewsRequired}
+            style={styles.input}
+          />
+        </label>
+
+        <h2>Lessons and Levels</h2>
         {this.props.beta ? (
-          <FlexGroup />
+          <LessonGroups />
         ) : (
           <div>
             {betaWarning || (
@@ -526,8 +536,8 @@ export default class ScriptEditor extends React.Component {
               rows={textAreaRows}
               style={styles.input}
               defaultValue={
-                this.props.stageLevelData ||
-                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new stage'\n"
+                this.props.lessonLevelData ||
+                "lesson_group 'lesson group', display_name: 'display name'\nlesson 'new lesson'\n"
               }
               ref={textArea => (this.scriptTextArea = textArea)}
             />
@@ -545,47 +555,3 @@ export default class ScriptEditor extends React.Component {
     );
   }
 }
-
-const VisibleInTeacherDashboard = props => (
-  <label style={props.disabled ? {opacity: 0.5} : {}}>
-    Visible in Teacher Dashboard
-    <input
-      name="visible_to_teachers"
-      type="checkbox"
-      disabled={props.disabled}
-      checked={props.checked && !props.disabled}
-      onChange={props.onChange}
-      style={styles.checkbox}
-    />
-    <p>
-      If checked this script will show up in the dropdown on the Teacher
-      Dashboard, for teachers to assign to students.
-      {props.disabled && (
-        <em> Disabled because a pilot experiment has been specified below.</em>
-      )}
-    </p>
-  </label>
-);
-VisibleInTeacherDashboard.propTypes = {
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
-};
-
-const PilotExperiment = props => (
-  <label>
-    Pilot Experiment. If specified, this script will only be accessible to
-    levelbuilders, or to classrooms whose teacher has this user experiment
-    enabled.
-    <input
-      name="pilot_experiment"
-      value={props.value || ''}
-      style={styles.input}
-      onChange={props.onChange}
-    />
-  </label>
-);
-PilotExperiment.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func.isRequired
-};

@@ -1,41 +1,45 @@
+hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit6/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit6/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit6/{LESSON}'
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit6/{LESSON}'
+script_announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_unit6_2020', display_name: 'Unit 6: Algorithms'
-stage 'Algorithms Solve Problems', flex_category: 'csp_unit6_2020'
+lesson 'Algorithms Solve Problems', display_name: 'Algorithms Solve Problems'
 level 'CSP U6L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U6 L01 Algorithms vs Problems', progression: 'Check For Understanding', assessment: true
 
-stage 'Algorithm Efficiency', flex_category: 'csp_unit6_2020'
+lesson 'Algorithm Efficiency', display_name: 'Algorithm Efficiency'
 level 'CSP U6L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U6L2 Ticket Generator', progression: 'Widget: Ticket Generator'
 level 'U6L2 CFU Binary Search Steps', progression: 'Check For Understanding', assessment: true
 level 'U6L2 CFU Efficiency and Algorithms', progression: 'Check For Understanding', assessment: true
 
-stage 'Unreasonable Time', flex_category: 'csp_unit6_2020'
+lesson 'Unreasonable Time', display_name: 'Unreasonable Time'
 level 'CSP U6L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U6L3 CFU Reasonable vs Unreasonable', progression: 'Check For Understanding', assessment: true
 level 'U6 L03 Evaluate Reasonable or Not', progression: 'Check For Understanding', assessment: true
 
-stage 'The Limits of Algorithms', flex_category: 'csp_unit6_2020'
+lesson 'The Limits of Algorithms', display_name: 'The Limits of Algorithms'
 level 'CSP U6L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U6L4 Traveling Salesman', progression: 'Widget: Traveling Salesman'
 level 'CSP U6L4 Random Traveling Salesman', progression: 'Widget: Traveling Salesman - Random Nodes'
 level 'U6L4 CFU Reason for Heuristics', progression: 'Check For Understanding', assessment: true
 level 'U6 L04 Unreasonable vs Undecidable', progression: 'Check For Understanding', assessment: true
 
-stage 'Parallel and Distributed Algorithms', flex_category: 'csp_unit6_2020'
+lesson 'Parallel and Distributed Algorithms', display_name: 'Parallel and Distributed Algorithms'
 level 'CSP U6L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U6L5 CFU Calculate Speedup', progression: 'Check For Understanding', assessment: true
 level 'U6 L05 Speedup Forever', progression: 'Check For Understanding', assessment: true
 
-stage 'Lesson 6: Assessment Day', lockable: true
+lesson 'Lesson 6: Assessment Day', display_name: 'Lesson 6: Assessment Day', lockable: true
 level 'CSP U6L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 6 AP-Style Assessment _2020', progression: 'Unit 6 Exam', assessment: true
+

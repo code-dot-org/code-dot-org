@@ -506,11 +506,6 @@ module.exports = class Maze {
 
     this.animating_ = true;
 
-    if (studioApp().isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
-
     this.controller.animationsController.stopIdling();
 
     // Speeding up specific levels
@@ -771,10 +766,6 @@ module.exports = class Maze {
         stepButton.removeAttribute('disabled');
       } else {
         this.animating_ = false;
-        if (studioApp().isUsingBlockly()) {
-          // reenable toolbox
-          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-        }
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now

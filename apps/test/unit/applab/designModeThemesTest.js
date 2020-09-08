@@ -306,12 +306,12 @@ describe('themes: ', () => {
         designMode.activeScreen().style.display = 'none';
         getPrefixedElementById(screenId).style.display = 'block';
       });
-      sinon.stub(studioApp(), 'displayPlayspaceNotification');
+      sinon.stub(studioApp(), 'displayPlayspaceAlert');
     });
 
     afterEach(() => {
       designMode.changeScreen.restore();
-      studioApp().displayPlayspaceNotification.restore();
+      studioApp().displayPlayspaceAlert.restore();
     });
 
     it('copies element from a screen with one theme to a screen with a different theme', () => {
@@ -329,7 +329,7 @@ describe('themes: ', () => {
       );
 
       expect(designMode.changeScreen).to.be.called;
-      expect(studioApp().displayPlayspaceNotification).to.be.called;
+      expect(studioApp().displayPlayspaceAlert).to.be.called;
 
       expect(getPrefixedElementById('text_input2')).not.to.be.null;
       // Should have the background color appropriate for the theme of screen2 (watermelon)

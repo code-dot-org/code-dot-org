@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # If run with the "interactive" flag, runs all steps necessary for a full i18n
 # update:
@@ -20,7 +22,6 @@
 # the full sync
 
 require_relative '../../deployment'
-require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
 
 require_relative 'i18n_script_utils'
@@ -29,12 +30,11 @@ require_relative 'sync-in'
 require_relative 'sync-up'
 require_relative 'sync-down'
 require_relative 'sync-out'
-require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
 
-IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d')}".freeze
-DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d')}".freeze
+IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d-%Y')}".freeze
+DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d-%Y')}".freeze
 
 class I18nSync
   def initialize(args)
@@ -48,9 +48,8 @@ class I18nSync
       sync_up if should_i "sync up"
       create_in_up_pr if @options[:with_pull_request]
       sync_down if should_i "sync down"
-      sync_out if should_i "sync out"
+      sync_out(true) if should_i "sync out"
       create_down_out_pr if @options[:with_pull_request]
-      upload_i18n_stats if should_i "upload translation stats"
       checkout_staging
     elsif @options[:command]
       case @options[:command]
@@ -68,7 +67,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out
+        sync_out(true)
         if @options[:with_pull_request]
           create_down_out_pr
         end
@@ -175,6 +174,13 @@ class I18nSync
 
     I18nScriptUtils.git_add_and_commit(
       [
+        "i18n/locales/source/animations"
+      ],
+      "animation library i18n sync"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
         "i18n/locales/source/hourofcode/",
       ],
       "hoc i18n sync"
@@ -204,6 +210,13 @@ class I18nSync
 
     I18nScriptUtils.git_add_and_commit(
       [
+        "bin/i18n/crowdin/*etags.json"
+      ],
+      "etags updates"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
         "pegasus/cache",
         "i18n/locales/*-*/pegasus",
       ],
@@ -224,6 +237,7 @@ class I18nSync
       next if locale == 'en-US'
       I18nScriptUtils.git_add_and_commit(
         [
+          "dashboard/config/locales/*#{locale}.json",
           "dashboard/config/locales/*#{locale}.yml",
           "i18n/locales/#{locale}/dashboard",
         ],
@@ -245,6 +259,13 @@ class I18nSync
         "i18n/locales/*-*/blockly-core",
       ],
       "blockly i18n updates"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
+        "i18n/locales/*-*/animations"
+      ],
+      "animation library i18n updates"
     )
 
     I18nScriptUtils.git_add_and_commit(
@@ -277,4 +298,4 @@ class I18nSync
   end
 end
 
-I18nSync.new(ARGV).run if only_one_running?(__FILE__)
+I18nSync.new(ARGV).run

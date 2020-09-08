@@ -1,5 +1,5 @@
 lesson_group 'required', display_name: 'Overview'
-stage 'Unit 5 Overview', flex_category: 'required'
+lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 5', named: true
 level 'Unit 5 Teaching Philosophy and Commentary', named: true
@@ -7,35 +7,35 @@ level 'Unit 5 Concepts and AP Assessments', named: true
 level 'Practice Performance Task in Unit 5', named: true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Event Driven Programming', flex_category: 'content'
+lesson 'Event Driven Programming', display_name: 'Event Driven Programming'
 level '5.1 - 5.3 Lesson Connections', named: true
 level 'Design Mode Overview', named: true
 level 'Events Overview', named: true
 level 'Project Breakdown: Multi-Screen App', named: true
 level 'U5 L1 - 3: Teaching and Student Support Plan', named: true
 
-stage 'Variables and Strings', flex_category: 'content'
+lesson 'Variables and Strings', display_name: 'Variables and Strings'
 level '5.4 - 5.6 Lesson Connections', named: true
 level 'Variables Overview', named: true
 level 'Project Breakdown: Clicker Game', named: true
 level 'Strings Overview', named: true
 level 'U5 L4 - 6: Teaching and Student Support Plan', named: true
 
-stage 'Conditionals and Boolean Logic', flex_category: 'content'
+lesson 'Conditionals and Boolean Logic', display_name: 'Conditionals and Boolean Logic'
 level '5.7- 5.10 Lesson Connections', named: true
 level 'Boolean Logic and Expression Overview', named: true
 level 'Conditionals Overview', named: true
 level 'Project Breakdown: Color Sleuth', named: true
 level 'U5 L7 - 10: Teaching and Student Support Plan', named: true
 
-stage 'While Loops and Introduction to Arrays', flex_category: 'content'
+lesson 'While Loops and Introduction to Arrays', display_name: 'While Loops and Introduction to Arrays'
 level '5.11 - 5.14 Lesson Connections', named: true
 level 'While Loops Overview', named: true
 level 'Arrays Overview', named: true
 level 'Project Breakdown: Image Scroller', named: true
 level 'U5 L11 - 14: Teaching and Student Support Plan', named: true
 
-stage 'Processing Arrays and Functions with Return Values', flex_category: 'content'
+lesson 'Processing Arrays and Functions with Return Values', display_name: 'Processing Arrays and Functions with Return Values'
 level '5.15 - 5.17 Lesson Connections', named: true
 level 'Processing Arrays', named: true
 level 'Functions that Return Values', named: true
@@ -43,28 +43,29 @@ level 'Project Breakdown: Building a Canvas Painter', named: true
 level 'U5 L15 - 17: Teaching and Student Support Plan', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-stage 'Group Work and Peer Learning', flex_category: 'practice'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
 level 'The Official Peer Instruction Blog', named: true
 level 'the Journal of Peer Learning', named: true
 level 'Unit 5 Teaching Practice Plan: Group Work and Peer Learning', named: true
 
-stage 'Balancing Teachers and Tools', flex_category: 'practice'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Classroom Management Tips for School Computer Labs', named: true
 level 'Considerations for the 1-to-1 Classroom', named: true
 level 'Unit 5 Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
-stage 'Discovery Learning', flex_category: 'practice'
+lesson 'Discovery Learning', display_name: 'Discovery Learning'
 level 'Overview: Discovery Learning', named: true
 level 'Discovery learning definition and history', named: true
 level 'Discovery learning techniques', named: true
 level 'Unit 5 Teaching Practice Plan: Discovery Learning', named: true
 
-stage 'Measuring Student Learning', flex_category: 'practice'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
 level 'Overview: Capturing Student Learning', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Designing Assessment Questions', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Unit 5 Teaching Practice Plan: Assessing Student Learning', named: true
+

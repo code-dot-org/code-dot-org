@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2018-03-15T05:20:29.000Z",
+  "created_at": "2019-06-23T19:34:38.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -40,12 +40,11 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2Fd19383c3-9b64-482d-811d-07f8997533ea.png%3Fversion%3Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/ObqhC6m3YYUSu8X0NiA-GQ/215c6306-73d7-4a48-8a6b-40eae22a2a0e.png?version=LTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\"\r\n    }\r\n  }\r\n}",
     "custom_helper_library": "function addBehaviorSimple(sprite, name, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction gravity() {\r\n  var behavior = function(sprite) {\r\n    sprite.maxVelocity = 5;\r\n    if (sprite.velocityY < sprite.maxVelocity) {\r\n      sprite.velocityY = sprite.velocityY + 0.1;\r\n    }\r\n  }\r\n  behavior.name=\"gravity\";\r\n  return behavior;\r\n}\r\n\r\nfunction flowLeft() {\r\n  var behavior = function(sprite) {\r\n    sprite.x = sprite.x - 5;\r\n  }\r\n  behavior.name=\"flowLeft\";\r\n  return behavior;\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"gravity\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"gravity\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"setVelocity\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"args\": [\n      {\n        \"name\": \"X\"\n      },\n      {\n        \"name\": \"Y\"\n      }\n    ],\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\n    \"methodCall\": true\n  }\n]\n",
     "parent_level_id": 11146,
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

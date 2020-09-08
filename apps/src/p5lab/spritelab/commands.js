@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
+  },
+
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
@@ -117,6 +121,10 @@ export const commands = {
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
@@ -134,6 +142,10 @@ export const commands = {
     return locationCommands.locationAt(x, y);
   },
 
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
+  },
+
   locationMouse() {
     return locationCommands.locationMouse.apply(this);
   },
@@ -147,8 +159,8 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {
@@ -179,6 +191,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },
@@ -186,6 +206,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {

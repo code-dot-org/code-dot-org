@@ -1,0 +1,12 @@
+name 'CodeBreak E11 Practice'
+editor_experiment ''
+display_name 'Practice'
+description 'Work through the puzzles of your choice to practice building simulations and working with data. When you are ready for the challenge click "Continue."'
+
+sublevels
+level 'CodeBreak E05 Beg Practice'
+level 'CodeBreak E05 AppLab Practice 1'
+
+markdown <<MARKDOWN
+
+MARKDOWN

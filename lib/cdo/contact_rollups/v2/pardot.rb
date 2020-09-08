@@ -5,75 +5,110 @@ class PardotV2
 
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
+  PROSPECT_READ_URL = "#{API_V4_BASE}/do/read/email".freeze
+  PROSPECT_DELETION_URL = "#{API_V4_BASE}/do/delete/id".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
   BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
 
+  # Map from contact fields to Pardot prospect fields
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
-    email: {field: :email},
-    pardot_id: {field: :id},
-  }
+    email: :email,
+    pardot_id: :id,
+    # Note: db_* fields are sorted alphabetically
+    city: :db_City,
+    country: :db_Country,
+    form_roles: :db_Form_Roles,
+    forms_submitted: :db_Forms_Submitted,
+    hoc_organizer_years: :db_Hour_of_Code_Organizer,
+    postal_code: :db_Postal_Code,
+    professional_learning_attended: :db_Professional_Learning_Attended,
+    professional_learning_enrolled: :db_Professional_Learning_Enrolled,
+    roles: :db_Roles,
+    state: :db_State,
+  }.freeze
 
-  def initialize
+  # Pardot multi-value or multi-select fields
+  MULTI_VALUE_PROSPECT_FIELDS = [
+    :db_Hour_of_Code_Organizer,
+    :db_Professional_Learning_Attended,
+    :db_Professional_Learning_Enrolled,
+    :db_Roles
+  ].to_set
+
+  def initialize(is_dry_run: false)
     @new_prospects = []
     @updated_prospects = []
     @updated_prospect_deltas = []
+
+    # Relevant only during dry runs
+    @dry_run = is_dry_run
+    @dry_run_api_endpoints_hit = []
   end
 
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Array<String>] a list of fields. Must have 'id' the list. Field names must be url-safe.
-  # @param [Integer] limit maximum number of prospects to retrieve
+  # @param [Array<String>] fields url-safe prospect field names. Must have 'id' the list.
+  # @param [Integer] limit the maximum number of prospects to retrieve
+  # @param [Boolean] only_deleted get deleted prospects (default false). Note this is in place of non-deleted prospects, not in addition to.
   # @return [Integer] number of results retrieved
   #
   # @yieldreturn [Array<Hash>] an array of hash of prospect data
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
-  def self.retrieve_prospects(last_id, fields, limit = nil)
+  def self.retrieve_prospects(last_id, fields, limit = nil, only_deleted = false)
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
+    # Limit the number of prospects retrieved in each API call if the overall limit is less than 200.
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#manipulating-the-result-set
+    limit_in_query = limit && limit < 200 ? limit : nil
+
     # Run repeated requests querying for prospects above our highest known Pardot ID.
+    # Stop when receiving no prospects or reaching the download limit.
     loop do
-      url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
-      url += "&limit=#{limit}" if limit
-      doc = post_with_auth_retry(url)
+      url = build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
+      doc = try_with_exponential_backoff(3) do
+        post_with_auth_retry url
+      end
       raise_if_response_error(doc)
 
-      # Pardot returns the count total available prospects (not capped to 200),
-      # although the data for a max of 200 are contained in the response.
-      # The total prospects count changes in each loop iteration because the url we
-      # send to Pardot also changes.
-      # @see http://developer.pardot.com/kb/api-version-4/prospects/#xml-response-format
-      total_results = doc.xpath('/rsp/result/total_results').text.to_i
-
-      results_in_response = 0
       prospects = []
       doc.xpath('/rsp/result/prospect').each do |node|
-        prospect = {}
-        fields.each do |field|
-          value = node.xpath(field).text
-          prospect.merge!({field => value})
-        end
+        prospect = extract_prospect_from_response(node, fields)
         prospects << prospect
-
         last_id = prospect['id']
-        results_in_response += 1
       end
+      break if prospects.empty?
 
       yield prospects if block_given?
-      log "Retrieved #{results_in_response}/#{total_results} new Pardot IDs. Last Pardot ID = #{last_id}."
 
-      # Stop if all the remaining results were in this response or we reached the download limit.
-      total_results_retrieved += results_in_response
-      break if results_in_response == total_results ||
-        (limit && total_results_retrieved >= limit)
+      total_results_retrieved += prospects.length
+      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}."\
+        " #{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
+      break if limit && total_results_retrieved >= limit
     end
 
     total_results_retrieved
+  end
+
+  # Creates URL and query string for use with Pardot prospect query API
+  # @param id_greater_than [String, Integer]
+  # @param fields [Array<String>]
+  # @param limit [String, Integer]
+  # @param deleted [Boolean]
+  # @return [String]
+  def self.build_prospect_query_url(id_greater_than, fields, limit, deleted)
+    # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
+    url = "#{PROSPECT_QUERY_URL}?output=bulk&sort_by=id"
+    url += "&id_greater_than=#{id_greater_than}" if id_greater_than
+    url += "&fields=#{fields.join(',')}" if fields
+    url += "&limit=#{limit}" if limit
+    url += "&deleted=true" if deleted
+    url
   end
 
   # Compiles a batch of prospects and batch-create them in Pardot when batch size
@@ -94,6 +129,9 @@ class PardotV2
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
 
+    # Creating new prospects is not a retriable action because it could succeed
+    # on the Pardot side and we just didn't receive a response. If we try again,
+    # it would create duplicate prospects.
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
@@ -121,12 +159,14 @@ class PardotV2
     return [], [] unless delta.present?
 
     email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = new_prospect_data.merge email_pardot_id
+    prospect = email_pardot_id.merge new_prospect_data
     @updated_prospects << prospect
-    prospect_delta = delta.merge email_pardot_id
+    prospect_delta = email_pardot_id.merge delta
     @updated_prospect_deltas << prospect_delta
 
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    end
     return [], [] unless delta_submissions.present?
 
     # As an optimization, we only send the deltas to Pardot. However, as far as
@@ -139,7 +179,9 @@ class PardotV2
   # Immediately batch-update the remaining prospects in Pardot.
   # @return [Array<Array>] @see process_batch method
   def batch_update_remaining_prospects
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    delta_submissions, errors = self.class.try_with_exponential_backoff(3) do
+      process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    end
     return [], [] unless delta_submissions.present?
 
     full_submissions = @updated_prospects
@@ -165,9 +207,25 @@ class PardotV2
     url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      #   Use an instance variable to remember the number of failures.
-      errors = self.class.submit_batch_request api_endpoint, prospects
+      if @dry_run
+        # During a dry run, we want to display two example batch of prospects.
+        # One for newly created prospects, and one for updated prospects.
+        # If we did not include this limit, the entire batch would be displayed,
+        # which could be overwhelming for debugging purposes.
+        unless @dry_run_api_endpoints_hit.include? api_endpoint
+          self.class.log "Prospects in sample batch to sync to Pardot: #{prospects.length}"
+          self.class.log "Query string for sample batch:\n#{url}"
+          self.class.log 'Prospects to be synced in sample batch:'
+          prospects.each do |prospect|
+            self.class.log prospect
+          end
+
+          @dry_run_api_endpoints_hit << api_endpoint
+        end
+      else
+        errors = self.class.submit_batch_request api_endpoint, prospects
+      end
+
       submissions = prospects.clone
       prospects.clear
     end
@@ -175,26 +233,74 @@ class PardotV2
     [submissions, errors]
   end
 
+  # Deletes all prospects with the same email address from Pardot.
+  # @param email [String]
+  # @return [Boolean] all prospects are deleted or not
+  def self.delete_prospects_by_email(email)
+    pardot_ids = retrieve_pardot_ids_by_email(email)
+
+    success = true
+    pardot_ids.each do |id|
+      success = false unless delete_prospect_by_id(id)
+    end
+    success
+  end
+
+  # Deletes a prospect from Pardot using Pardot Id.
+  # This method only runs in the production environment to avoid accidentally deleting prospect.
+  # @param [Integer, String] pardot_id of the prospects to be deleted.
+  # @return [Boolean] deletion succeeds or not
+  def self.delete_prospect_by_id(pardot_id)
+    if CDO.rack_env != :production
+      log "#{__method__} only runs in production. The current environment is #{CDO.rack_env}."
+      return false
+    end
+
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
+    post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
+    true
+  rescue StandardError => e
+    # If the input pardot_id does not exist, Pardot will response with
+    # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
+    return false if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
+  end
+
+  # Finds prospects using email address and extract their Pardot ids.
+  # @param email [String]
+  # @return [Array<String>]
+  def self.retrieve_pardot_ids_by_email(email)
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
+    doc.xpath('//prospect/id').map(&:text)
+  rescue StandardError => e
+    # If the input email does not exist, Pardot will response with
+    # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
+    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
+  end
+
   # Converts contact keys and values to Pardot prospect keys and values.
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
-  # @param [Hash] contact
-  # @return [Hash]
+  # @param contact [Hash] a hash with symbol keys
+  # @return [Hash] a hash with symbol keys
   def self.convert_to_pardot_prospect(contact)
     prospect = {}
 
-    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |key, prospect_info|
-      next unless contact.key?(key)
+    CONTACT_TO_PARDOT_PROSPECT_MAP.each do |contact_field, prospect_field|
+      next unless contact.key? contact_field
 
-      if prospect_info[:multi]
-        # For multi data fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+      if MULTI_VALUE_PROSPECT_FIELDS.include? prospect_field
+        # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # Also sort its values to keep consistent order.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
-        contact[key].split(',').each_with_index do |value, index|
-          prospect["#{prospect_info[:field]}_#{index}"] = value
+        contact[contact_field].split(',').sort.each_with_index do |value, index|
+          split_key = "#{prospect_field}_#{index}".to_sym
+          prospect[split_key] = value
         end
       else
-        prospect[prospect_info[:field]] = contact[key]
+        prospect[prospect_field] = contact[contact_field]
       end
     end
 
@@ -204,7 +310,36 @@ class PardotV2
       prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
 
+    prospect[:db_Has_Teacher_Account] = 'true' if contact[:user_id]
+
     prospect
+  end
+
+  # Extracts prospect info from a prospect node in a Pardot's XML response.
+  # @see test method for example.
+  # @param [Nokogiri::XML::Element] prospect_node
+  # @param [Array<String>] fields
+  # @return [Hash]
+  def self.extract_prospect_from_response(prospect_node, fields)
+    {}.tap do |prospect|
+      fields.each do |field|
+        # Collect all text values for this field
+        field_node = prospect_node.xpath(field)
+        values = field_node.children.map(&:text)
+        next if values.empty?
+
+        if MULTI_VALUE_PROSPECT_FIELDS.include? field.to_sym
+          # For a multi-value field, to be consistent with how we update it to Pardot,
+          # set key names as [field]_0, [field]_1 etc., and sort its values.
+          # @see +convert_to_pardot_prospect+ method and its tests.
+          values.sort.each_with_index do |value, index|
+            prospect["#{field}_#{index}"] = value
+          end
+        else
+          prospect[field] = values.first
+        end
+      end
+    end
   end
 
   # Create a batch request URL containing one or more prospects in its query string.
@@ -261,14 +396,14 @@ class PardotV2
     end
   end
 
-  # Calculates what needs to change to transform an old data to a new data.
+  # Identifies additional information that is in new data but not in old data.
   # Example:
-  #   old_data = {key1: 1, key2: 2, key3: nil}
-  #   new_data = {key1: 1.1, k4: 4}
-  #   delta output = {key1: 1.1, key2: nil, key4: 4}
-  #   The output means to transform old_data into new_data, we have to reset value for key1,
-  #   unset key2 value (i.e. set it to nil), ignore key3 (because its old value was nil)
-  #   and set key4.
+  #   old_data = {key1: 'v1', key2: 'v2', key3: nil}
+  #   new_data = {key1: 'v1.1', key2: 'v2', key4: 'v4'}
+  #   delta output = {key1: 'v1.1', key4: 'v4'}
+  #   The output means there is a new value for key1,
+  #   key2 and key3 are ignored (no new information about these keys in new_data),
+  #   and set key4 for the first time.
   #
   # @param [Hash] old_data
   # @param [Hash] new_data
@@ -277,17 +412,10 @@ class PardotV2
     return new_data unless old_data.present?
 
     # Set key-value pairs that exist only in the new data
-    delta = {}
-    new_data.each_pair do |key, val|
-      delta[key] = val unless old_data.key?(key) && old_data[key] == val
+    {}.tap do |delta|
+      new_data.each_pair do |key, val|
+        delta[key] = val unless old_data.key?(key) && old_data[key] == val
+      end
     end
-
-    # Unset entries that exist only in the old data and not in the new data.
-    # Ignore entries with values are nil.
-    old_data.each_pair do |key, val|
-      delta[key] = nil unless new_data.key?(key) || val.nil?
-    end
-
-    delta
   end
 end

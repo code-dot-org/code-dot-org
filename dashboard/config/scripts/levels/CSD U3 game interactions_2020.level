@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 21 Puzzle 17](../../21/puzzle/17) and `displaceEnemies` in [Lesson 20 Puzzle 15](../../20/puzzle/15) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
+    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 26 Puzzle 17](../../26/puzzle/17) and `displaceEnemies` in [Lesson 25 Puzzle 12](../../25/puzzle/12) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -63,11 +63,14 @@
     ],
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-06 17:43:17 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-08-04 18:59:06 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:19 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-03 19:13:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-06 17:43:17 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-08-04 18:59:06 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:11:19 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-03 19:13:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-26 19:01:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-26 19:07:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

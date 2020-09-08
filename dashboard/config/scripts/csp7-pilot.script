@@ -1,5 +1,5 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}'
@@ -7,17 +7,17 @@ pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
-stage 'Parameters and Return Explore', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Explore', display_name: 'Parameters and Return Explore'
 level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L1 CFU Return', progression: 'Check For Understanding', assessment: true
 
-stage 'Parameters and Return Investigate', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Investigate', display_name: 'Parameters and Return Investigate'
 level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
 level 'U7 Param Investigate Poetry App', progression: 'App Investigation'
 level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding', assessment: true
 
-stage 'Parameters and Return Practice', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Practice', display_name: 'Parameters and Return Practice'
 level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
 level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
@@ -29,24 +29,24 @@ level 'U7 Param Practice App 2', progression: 'App Practice'
 level 'U7 Param Return Practice MOD', progression: 'MOD Practice'
 level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Practice', assessment: true
 
-stage 'Parameters and Return Make', flex_category: 'csp_parameters_return_values'
+lesson 'Parameters and Return Make', display_name: 'Parameters and Return Make'
 level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
 
 lesson_group 'csp_libraries', display_name: 'Libraries'
-stage 'Libraries Explore', flex_category: 'csp_libraries'
+lesson 'Libraries Explore', display_name: 'Libraries Explore'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-stage 'Libraries Investigate', flex_category: 'csp_libraries'
+lesson 'Libraries Investigate', display_name: 'Libraries Investigate'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'Full Year Pilot Experiments Dashboard - Libraries', progression: 'Turn On Student Created Libraries'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
 
-stage 'Libraries Practice', flex_category: 'csp_libraries'
+lesson 'Libraries Practice', display_name: 'Libraries Practice'
 level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Practice 3', progression: 'Using Libraries'
 level 'U7 Libraries Practice 5', progression: 'Using Libraries'
@@ -54,35 +54,36 @@ level 'U7 Libraries Practice 2', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 1', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
 
-stage 'Project - Make a Library Part 1', flex_category: 'csp_libraries'
+lesson 'Project - Make a Library Part 1', display_name: 'Project - Make a Library Part 1'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 1', progression: 'Build Your Library'
 
-stage 'Project - Make a Library Part 2', flex_category: 'csp_libraries'
+lesson 'Project - Make a Library Part 2', display_name: 'Project - Make a Library Part 2'
 level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 2', progression: 'Build Your Library'
 level 'U7 Libraries Project Test a Library', progression: 'Test a Classmate\'s Library'
 
-stage 'Project - Make a Library Part 3', flex_category: 'csp_libraries'
+lesson 'Project - Make a Library Part 3', display_name: 'Project - Make a Library Part 3'
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
 
-stage 'Lesson 11: Assessment Day', lockable: true
+lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Unit 7 STUDENT Survey', lockable: true, flex_category: 'required'
+lesson 'Unit 7 STUDENT Survey', display_name: 'Unit 7 STUDENT Survey', lockable: true
 level 'CSP U7 20-21 Student Pilot Survey', progression: 'Unit 7 STUDENT Survey', assessment: true
 
-stage 'Unit 7 TEACHER Survey', lockable: true, flex_category: 'required'
+lesson 'Unit 7 TEACHER Survey', display_name: 'Unit 7 TEACHER Survey', lockable: true
 level 'CSP U7 20-21 Teacher Pilot Survey', progression: 'Unit 7 TEACHER Survey', assessment: true
 
 lesson_group 'optional_stages', display_name: 'Optional Stages'
-stage '[OLD] Parameters and Return Make', flex_category: 'optional_stages'
+lesson '[OLD] Parameters and Return Make', display_name: '[OLD] Parameters and Return Make'
 level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true
+

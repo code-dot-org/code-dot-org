@@ -7,7 +7,10 @@ import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from './boards/FakeBoard';
 import * as commands from './commands';
-import * as dropletConfig from './dropletConfig';
+import dropletConfig, {
+  configMicrobit,
+  configCircuitPlayground
+} from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
@@ -17,10 +20,11 @@ import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
-import experiments from '@cdo/apps/util/experiments';
+import project from '../../../code-studio/initApp/project';
+import {MB_API} from './boards/microBit/MicroBitConstants';
 
 // Re-export some modules so consumers only need this 'toolkit' module
-export {dropletConfig, MakerError};
+export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
  * @type {CircuitPlaygroundBoard} The current board controller, populated when
@@ -158,7 +162,7 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    if (experiments.isEnabled(experiments.BETT_DEMO)) {
+    if (project.getMakerAPIs() === MB_API) {
       //TODO - break out the applicable parts of findPortWithViableDevice
       return findPortWithViableDevice().then(() => new MicroBitBoard());
     } else {

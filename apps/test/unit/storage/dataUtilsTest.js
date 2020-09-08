@@ -9,7 +9,6 @@ import {
   isBoolean,
   toBoolean
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {
@@ -166,11 +165,9 @@ describe('castValue', () => {
     expect(castValue('1')).to.equal(1);
     expect(castValue('0.2')).to.equal(0.2);
     expect(castValue('1.2345e3')).to.equal(1234.5);
-    expect(castValue('123abc')).to.equal('123abc');
-    expect(castValue('NaN')).to.equal('NaN');
   });
 
-  it('converts "null" to null', () => {
+  it("converts 'null' to null", () => {
     expect(castValue('null')).to.equal(null);
   });
 
@@ -180,56 +177,23 @@ describe('castValue', () => {
     expect(castValue('"true"')).to.equal('true');
   });
 
-  it('parses arrays', () => {
-    expect(castValue('[1,2,3]')).to.deep.equal([1, 2, 3]);
+  it('does not allow objects or arrays', () => {
+    expect(() => castValue('[1, 2, 3]')).to.throw(/Invalid entry type: object/);
+    expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).to.throw(
+      /Invalid entry type: object/
+    );
   });
 
-  it('parses objects', () => {
-    expect(castValue('{"a":1}')).to.deep.equal({a: 1});
+  it('converts "undefined" to undefined', () => {
+    expect(castValue('undefined')).to.equal(undefined);
   });
 
-  it('parses nested arrays and objects', () => {
-    expect(
-      castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')
-    ).to.deep.equal({
-      a: [2, '3', {d: 'true'}],
-      x: {y: false}
-    });
-  });
-
-  it('leaves other strings unchanged', () => {
-    expect(castValue('foo')).to.equal('foo');
-    expect(castValue('undefined')).to.equal('undefined');
-    expect(castValue('"foo')).to.equal('"foo');
-    expect(castValue('""foo""')).to.equal('""foo""');
-  });
-
-  describe('with applabDatasets experiment enabled', () => {
-    beforeEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
-    });
-    afterEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
-    });
-    it('does not allow objects or arrays', () => {
-      expect(() => castValue('[1, 2, 3]')).to.throw(
-        /Invalid entry type: object/
-      );
-      expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).to.throw(
-        /Invalid entry type: object/
-      );
-    });
-
-    it('converts "undefined" to undefined', () => {
-      expect(castValue('undefined')).to.equal(undefined);
-    });
-
-    it('only allows unquoted strings if allowUnquotedStrings is true', () => {
-      expect(castValue('abc', /* allowUnquotedStrings */ true)).to.equal('abc');
-      expect(() => castValue('abc', /* allowUnquotedStrings */ false)).to.throw(
-        /JSON Parse error/
-      );
-    });
+  it('only allows unquoted strings if allowUnquotedStrings is true', () => {
+    expect(castValue('abc', /* allowUnquotedStrings */ true)).to.equal('abc');
+    expect(() => castValue('abc', /* allowUnquotedStrings */ false)).to.throw(
+      //      PhantomJS|Chrome
+      /JSON Parse error|Unexpected token/
+    );
   });
 });
 
@@ -237,30 +201,21 @@ describe('editableValue', () => {
   it('doesnt put quotes around numbers', () => {
     expect(editableValue(1)).to.equal('1');
   });
+
   it('puts quotes around numerical strings', () => {
     expect(editableValue('1')).to.equal('"1"');
   });
+
   it('puts quotes around boolean strings', () => {
     expect(editableValue('true')).to.equal('"true"');
   });
+
   it('doesnt puts quotes around other strings', () => {
-    expect(editableValue('foo')).to.equal('foo');
-  });
-  it('stringifies objects and arrays', () => {
-    expect(editableValue({a: 1})).to.equal('{"a":1}');
-    expect(editableValue([1, 2])).to.equal('[1,2]');
+    expect(editableValue('foo')).to.equal('"foo"');
   });
 
-  describe('with applabDatasets experiment enabled', () => {
-    beforeEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
-    });
-    afterEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
-    });
-    it('shows undefined', () => {
-      expect(editableValue(undefined)).to.equal('undefined');
-    });
+  it('shows undefined', () => {
+    expect(editableValue(undefined)).to.equal('undefined');
   });
 });
 
@@ -268,22 +223,27 @@ describe('what happens if you edit and then immediately save a value', () => {
   it('preserves numbers', () => {
     expect(castValue(editableValue(1))).to.equal(1);
   });
+
   it('preserves booleans', () => {
     expect(castValue(editableValue(false))).to.equal(false);
     expect(castValue(editableValue(true))).to.equal(true);
   });
+
   it('preserves numerical strings', () => {
     expect(castValue(editableValue('2'))).to.equal('2');
   });
+
   it('preserves boolean strings', () => {
     expect(castValue(editableValue('false'))).to.equal('false');
     expect(castValue(editableValue('true'))).to.equal('true');
   });
+
   it('preserves other strings', () => {
     expect(castValue(editableValue('foo'))).to.equal('foo');
   });
-  it('converts null to the empty string', () => {
-    expect(castValue(editableValue(null))).to.equal('');
+
+  it('preserves null', () => {
+    expect(castValue(editableValue(null))).to.equal(null);
   });
 });
 
@@ -292,9 +252,6 @@ describe('what we show based on what the user enters', () => {
     it('shows numbers and booleans without quotes', () => {
       expect(displayableValue(castValue('1'))).to.equal('1');
       expect(displayableValue(castValue('true'))).to.equal('true');
-    });
-    it('shows quotes around other string values', () => {
-      expect(displayableValue(castValue('foo'))).to.equal('"foo"');
     });
   });
 
@@ -311,31 +268,6 @@ describe('what we show based on what the user enters', () => {
       expect(displayableValue(castValue('"\\"foo\\""'))).to.equal(
         '"\\"foo\\""'
       );
-    });
-  });
-
-  describe('when the user enters unmatching quotes', () => {
-    it('adds quotes around and escapes mismatched quotes', () => {
-      // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('"foo'))).to.equal('"\\"foo"');
-      expect(displayableValue(castValue('"1'))).to.equal('"\\"1"');
-    });
-    it('adds quotes around and escapes multiple sets of quotes', () => {
-      // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('""foo""'))).to.equal(
-        '"\\"\\"foo\\"\\""'
-      );
-    });
-  });
-
-  describe('when the user enters JSON', () => {
-    it('recognizes well-formed objects and arrays', () => {
-      expect(displayableValue(castValue('{"a":1}'))).to.equal('{"a":1}');
-      expect(displayableValue(castValue('[1,2]'))).to.equal('[1,2]');
-    });
-    it('treats malformed objects and arrays as strings', () => {
-      expect(displayableValue(castValue('{a:1}'))).to.equal('"{a:1}"');
-      expect(displayableValue(castValue('[1,2'))).to.equal('"[1,2"');
     });
   });
 });

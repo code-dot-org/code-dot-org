@@ -1,10 +1,10 @@
 name 'CSP Pre-survey'
 css 'unplugged'
 markdown <<MARKDOWN
-## Before we get started... 
-In order to improve the curriculum and better meet your needs, we have a short survey that will help us better understand how you feel about computer science coming into the course. Your answers in this survey are private. We will share whole-class information with your teacher, but it will always be on the aggregate, so nobody will know who your answers are coming from. Completing this survey is optional, but we hope that you will help us improve this course by taking it! 
+## Before we get started...
+In order to improve the curriculum and better meet your needs, we have a short survey that will help us better understand how you feel about computer science coming into the course. Your answers in this survey are private. We will share whole-class information with your teacher, but it will always be on the aggregate, so nobody will know who your answers are coming from. Completing this survey is optional, but we hope that you will help us improve this course by taking it!
 
 <h2>
-<a href = "https://levelbuilder-studio.code.org/s/csp1/lockable/1/puzzle/1/page/1" target=_blank>Access Pre-survey here >> </a>
+<a href = "https://studio.code.org/s/csp1-2019/lockable/1/puzzle/1/page/1" target=_blank>Access Pre-survey here >> </a>
 </h2>
 MARKDOWN

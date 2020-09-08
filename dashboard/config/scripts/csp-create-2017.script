@@ -1,6 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-create/standards/"]]
 has_verified_resources true
@@ -13,17 +13,18 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_ap_3', display_name: 'Chapter 3: AP Create Performance Task'
-stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
+lesson 'Create PT Prep - Reviewing the Task', display_name: 'Create PT Prep - Reviewing the Task'
 level 'U6 Create PT Review - Student Links', progression: 'Create PT -  Review - Student Links'
 level 'csp-pt-tech-setup-and-tools', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
-stage 'Create PT Prep - Making a Plan', flex_category: 'csp_ap_3'
+lesson 'Create PT Prep - Making a Plan', display_name: 'Create PT Prep - Making a Plan'
 level 'U6 Create PT - Make a Plan - Student Links', progression: 'Create PT - Make a Plan - Student Links'
 
-stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
 level 'U6 Create PT - Complete the Task - Student Links', progression: 'Create PT - Complete the Task - Student Links'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'Post-Course Survey', flex_category: 'cspSurvey'
+lesson 'Post-Course Survey', display_name: 'Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'
+

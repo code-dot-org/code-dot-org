@@ -13,6 +13,7 @@ dashboard/brakeman_security_report.htm
 .tmputils
 .rakeTasks
 .idea/
+jsconfig.json
 /bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache

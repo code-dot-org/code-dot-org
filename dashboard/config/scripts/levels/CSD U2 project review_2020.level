@@ -13,18 +13,27 @@
     "parent_level_id": 18322,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
       "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
     "encrypted": "false",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 23:44:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:13:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:37:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 23:44:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:13:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:37:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:19:10 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

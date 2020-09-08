@@ -1,12 +1,10 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/deprecatedChai';
 import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
-import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -148,37 +146,38 @@ describe('ManageLinkedAccounts', () => {
     expect(googleEmailCell).to.include.text('Oh no!');
   });
 
-  it('navigates to provider endpoint if authentication option is not connected', () => {
-    sinon.stub(utils, 'navigateToHref');
+  it('posts form data to connect endpoint if authentication option is not connected', () => {
     const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
-    wrapper
-      .find('BootstrapButton')
-      .at(0)
-      .simulate('click');
-    expect(utils.navigateToHref).to.have.been.calledOnce.and.calledWith(
-      '/users/auth/google_oauth2/connect'
+    const form = wrapper.find('form').at(0);
+    expect(form.prop('method')).to.equal('POST');
+    expect(form.prop('action')).to.equal(
+      '/users/auth/google_oauth2?action=connect'
     );
-    utils.navigateToHref.restore();
   });
 
-  it('calls disconnect if authentication option is connected', () => {
+  it('posts form data to disconnect endpoint if authentication option is connected', () => {
     const authOptions = {
       1: {id: 1, credentialType: 'google_oauth2', email: 'student@email.com'},
       2: {id: 2, credentialType: 'facebook', email: 'student@email.com'}
     };
-    const disconnect = sinon.stub();
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
         authenticationOptions={authOptions}
-        disconnect={disconnect}
       />
     );
-    wrapper
-      .find('BootstrapButton')
-      .at(0)
-      .simulate('click');
-    expect(disconnect).to.have.been.calledOnce;
+
+    const forms = wrapper.find('form');
+    const expected = [
+      '/users/auth/1/disconnect',
+      '/users/auth/microsoft_v2_auth?action=connect',
+      '/users/auth/clever?action=connect',
+      '/users/auth/2/disconnect'
+    ];
+    forms.forEach((form, i) => {
+      expect(form.prop('method')).to.equal('POST');
+      expect(form.prop('action')).to.equal(expected[i]);
+    });
   });
 
   it('disables disconnecting from google if user is in a google classroom section', () => {

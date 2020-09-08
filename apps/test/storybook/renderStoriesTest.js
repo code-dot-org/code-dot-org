@@ -12,7 +12,7 @@ import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
 // Add story files here to exclude them from the storybook render tests.
-const BLACKLIST = [
+const DENYLIST = [
   // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
 ];
 
@@ -35,11 +35,11 @@ describe('react-storybook stories render without errors or warnings', function()
     window.Audio = windowAudio;
   });
 
-  // Test all the *.story.jsx files that aren't blacklisted
+  // Test all the *.story.jsx files that aren't denylisted
   const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
   context
     .keys()
-    .filter(storyFile => !BLACKLIST.some(taboo => storyFile.includes(taboo)))
+    .filter(storyFile => !DENYLIST.some(taboo => storyFile.includes(taboo)))
     .forEach(storyFile => {
       describe(storyFile, () => {
         testStorybook(context(storyFile));

@@ -203,9 +203,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/5/puzzle/5": {
@@ -216,8 +223,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/5/puzzle/6": {
@@ -1189,7 +1198,7 @@
     "long_instructions": "Now, Pirate Pegleg has some questions for Brian.\n\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \n\nPut the variables in the correct places to create this conversation.",
     "authored_hints": {
       "courseF_playlab_variables4b_a": "You don’t need any more blocks from the toolbox here.",
-      "courseF_playlab_variables4b_b": "Put the two `age` variables and one `name` variable where they make the most sense in the conversation."
+      "courseF_playlab_variables4b_b": "Put the two `age` variables and the two `name` variables where they make the most sense in the conversation."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/17/puzzle/6": {
@@ -1386,8 +1395,10 @@
   "https://studio.code.org/s/coursef-2017/stage/19/extras?level_name=courseF_bee_for_challenge1": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/19/extras?level_name=courseF_bee_for_challenge2": {
@@ -1594,9 +1605,13 @@
     "callouts": {
       "courseF_bee_conditionals2_2": "The toolbox is now in category mode.  All of the blocks you need are beneath these labels!"
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/4": {
@@ -1695,8 +1710,10 @@
     "callouts": {
       "courseF_bee_functions2_1": "This block calls a function.  Click this \"edit\" button to see what is inside!"
     },
-    "function_names": {
-      "get only nectar": "get only nectar"
+    "function_definitions": {
+      "get only nectar": {
+        "name": "get only nectar"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/13": {
@@ -1708,8 +1725,10 @@
       "courseF_bee_functions3_c": "Use the green `only make honey` block to call your function.",
       "courseF_bee_functions3_d": "Check out this path."
     },
-    "function_names": {
-      "only make honey": "only make honey"
+    "function_definitions": {
+      "only make honey": {
+        "name": "only make honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/14": {
@@ -1719,8 +1738,10 @@
       "courseF_bee_functions3a_a": "Your function for this puzzle only needs to get nectar or make honey, it shouldn't have any `move forward` or `turn` blocks in it. ",
       "courseF_bee_functions3a_b": "Use a stairstep pattern to check the first four clouds."
     },
-    "function_names": {
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/15": {
@@ -1730,9 +1751,13 @@
       "courseF_bee_functions4_a": "Your function should travel down the side paths and return the bee back to the main road.  You don't need to add that part to your main program.",
       "courseF_bee_functions4_b": "Try building the program and using the function blocks as you expect the function to behave, then create the function."
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/16": {
@@ -1743,9 +1768,13 @@
       "courseF_bee_functions5a_b": "Use a `while` loop to travel down all of the main paths, since they are different lengths.",
       "courseF_bee_functions5a_c": "Within your `while` loop, make sure to move forward, then use your function to check for a path."
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/17": {
@@ -1762,8 +1791,10 @@
     "callouts": {
       "courseF_bee_functions6_1": "Don't forget to look in here for more blocks that might help make this easier!"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/19": {
@@ -1774,8 +1805,10 @@
       "courseF_bee_functions7_b": "Remember to build code inside of the green function block.\n\n[blockly block][0]",
       "courseF_bee_functions7_c": "Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/20": {
@@ -1785,8 +1818,10 @@
       "courseF_bee_functions7_a": "You can look back at the last puzzle to see your function.",
       "courseF_bee_functions7_b": "Try drawing a path through this maze with your finger. Where will the bee have to make a decision?"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/puzzle/21": {
@@ -1796,9 +1831,13 @@
       "courseF_bee_functions8a_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseF_bee_functions8a_b": "Remember to build code inside of the function editor."
     },
-    "function_names": {
-      "do something": "do something",
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/extras?level_name=courseF_bee_functions_challenge1": {
@@ -1811,10 +1850,16 @@
       "courseF_bee_functions_challenge1_1": "What code should you put in this function?",
       "courseF_bee_functions_challenge1_2": "The \"check nectar or honey\" function can be used here if edit it to make honey multiple times."
     },
-    "function_names": {
-      "row of nectar": "row of nectar",
-      "rowOfNectar": "rowOfNectar",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "row of nectar": {
+        "name": "row of nectar"
+      },
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/22/extras?level_name=courseF_bee_functions_challenge2": {
@@ -1824,10 +1869,16 @@
       "courseF_bee_functions_challenge2_a": "If there is a path to the right, you should do the following:\n\n-   Get any nectar or make any honey.\n-   Turn right towards the side path.\n-   Move to the end of the side path.\n-   Turn right.\n\nIf you repeat the above actions twice, you will be ready to move back down the main path.\n\n**Only click for another hint if you want to see the full solution!**",
       "courseF_bee_functions_challenge2_b": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar",
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      },
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/1": {
@@ -1841,19 +1892,45 @@
     "callouts": {
       "courseF_artist_fwp1_1": "Click the \"edit\" button to change the code inside the function."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "checker": "checker",
-      "do something": "do something",
-      "Make gingham": "Make gingham",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "checker": {
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "Make gingham": {
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/3": {
     "short_instructions": "Edit the function to accept a parameter called `length`.",
     "long_instructions": "Edit the function to accept a parameter called `length`.  \n\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draw a square with a length parameter",
+        "parameters": {
+          "length": "length"
+        }
+      }
     },
     "contained levels": [
       {
@@ -1897,12 +1974,36 @@
       "courseF_artist_fwp2_a": "You need to click the \"edit\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!",
       "courseF_artist_fwp2_b": "When calling your function, use a `for loop` for the best possible code!"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "checker": "checker",
-      "do something": "do something",
-      "Make gingham": "Make gingham",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draw a square with length parameter\n",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "checker": {
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "Make gingham": {
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/6": {
@@ -1912,11 +2013,32 @@
       "courseF_artist_fwp3_a": "This gets easier if you put it all in a `for` loop.",
       "courseF_artist_fwp3_b": "Be sure to turn 90 degrees between each square!\n\n[][0]"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw a square2": "draw a square2",
-      "filled square": "filled square",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square2": {
+        "name": "draw a square2",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "filled square": {
+        "name": "filled square",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/7": {
@@ -1929,8 +2051,15 @@
     "callouts": {
       "courseF_artist_fwp4_1": "To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees."
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/8": {
@@ -1945,8 +2074,14 @@
     "callouts": {
       "courseF_artist_fwp5_1": "You will find the polygon function in here."
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/9": {
@@ -1956,8 +2091,14 @@
       "courseF_artist_fwp6_a": "It's okay to run the program a few times to figure out how the function works with different parameters.",
       "courseF_artist_fwp6_b": "You don't need to add any `move` or `turn` blocks to finish this code."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/10": {
@@ -1967,8 +2108,15 @@
       "courseF_artist_fwp7_a": "Feeling lost after trying a couple of ideas? Try clicking the \"Start over\" button in the upper right-hand corner.",
       "courseF_artist_fwp7_b": "Your new `min` variable should go in the first slot in your `for` loop, inside the function."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/11": {
@@ -1978,8 +2126,15 @@
       "courseF_artist_fwp8_a": "If your function is correct, you shouldn't need to change it for this puzzle.",
       "courseF_artist_fwp8_b": "The only thing you should need to do between function calls is change the color of the line."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/puzzle/12": {
@@ -1988,15 +2143,63 @@
     "authored_hints": {
       "courseF_artist_fwp9_a": "Try one of these drawings.\n[][0]"
     },
-    "function_names": {
-      "draw a star": "draw a star",
-      "draw a circle": "draw a circle",
-      "draw a pinwheel": "draw a pinwheel",
-      "draw a triangle": "draw a triangle",
-      "draw a shape": "draw a shape",
-      "draw a house": "draw a house",
-      "draw a square": "draw a square",
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star",
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
+      },
+      "draw a circle": {
+        "name": "draw a circle",
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
+      },
+      "draw a pinwheel": {
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a shape": {
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a house": {
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/extras?level_name=courseF_artist_fwp_challenge1": {
@@ -2006,11 +2209,26 @@
       "courseF_artist_fwp_challenge1_b": "This is a series of polygons with sides that are counter pixels long.",
       "courseF_artist_fwp_challenge1_c": "Each polygon is called from inside a for loop that goes from 3 down to 6 by an increment of 1. What shapes is it making?"
     },
-    "function_names": {
-      "draw background": "draw background",
-      "draw a polygon": "draw a polygon",
-      "draw a square 20": "draw a square 20",
-      "do something": "do something"
+    "function_definitions": {
+      "draw background": {
+        "name": "draw background",
+        "parameters": {
+          "color": "color"
+        }
+      },
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides"
+        }
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/23/extras?level_name=courseF_artist_fwp_challenge2": {
@@ -2024,10 +2242,20 @@
       "courseF_artist_fwp_challenge1_e": "Both the color of each octagon and the width of the pen are controlled by the `counter` variable.",
       "courseF_artist_fwp_challenge1_f": "**Solution:**\n\n[Solution Blocks][0]"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "do something": "do something",
-      "draw an octagon": "draw an octagon"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "draw an octagon": {
+        "name": "draw an octagon",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/1": {
@@ -2050,8 +2278,10 @@
     "callouts": {
       "courseF_bee_fwp2_a": "The block that calls your function lives in here."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/3": {
@@ -2065,8 +2295,10 @@
     "callouts": {
       "courseF_bee_fwp3_1": "This same function can be used when checking for empty spaces as well as clouds."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/4": {
@@ -2079,8 +2311,13 @@
     "callouts": {
       "courseF_bee_fwp4_1": "Press the \"edit\" button to add a parameter to this function."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/5": {
@@ -2090,8 +2327,13 @@
       "courseF_bee_fwp5_a": "Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.",
       "courseF_bee_fwp5_a_b": "Remember to turn between each function call."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/6": {
@@ -2101,8 +2343,13 @@
       "courseF_bee_fwp6_a": "Which block automatically increments a variable that you could use as a parameter?",
       "courseF_bee_fwp6_b": "Try using a `for` loop to solve this puzzle."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/7": {
@@ -2112,8 +2359,13 @@
       "courseF_bee_fwp7_a": "You don't need a second parameter for this function, only a second `if` statement.",
       "courseF_bee_fwp7_b": "Add an `if` statement in your function so the bee checks for both honeycombs and flowers."
     },
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/8": {
@@ -2122,14 +2374,24 @@
       "courseF_bee_fwp8_a": "How could a `for` loop help in this puzzle?",
       "courseF_bee_fwp8_b": "Since the spiral gets smaller as you go in, your `for` loop should count down."
     },
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/puzzle/9": {
     "short_instructions": "Use your new function to solve this puzzle.",
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     },
     "contained levels": [
       {
@@ -2178,8 +2440,13 @@
       "courseF_bee_fwp_challenge1_d2": "After the `for loop` you can just `move backward` **length times**.",
       "courseF_bee_fwp_challenge1_e": "**Here is the solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/24/extras?level_name=courseF_bee_fwp_challenge2": {
@@ -2194,8 +2461,13 @@
     "callouts": {
       "courseF_bee_fwp_challenge2_callout1": "This function will do a good job with corn, but what about the other vegetables?"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/25/puzzle/1": {
@@ -2207,31 +2479,69 @@
     "callouts": {
       "InspirationalArtwork_1": "Try using the new `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "n-sided shape": "n-sided shape",
-      "draw a loop": "draw a loop",
-      "draw spiral circle": "draw spiral circle"
+    "function_definitions": {
+      "n-sided shape": {
+        "name": "n-sided shape",
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length ",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a loop": {
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      },
+      "draw spiral circle": {
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/25/puzzle/3": {
     "short_instructions": "This is an example of a game you can make in play lab.",
-    "function_names": {
-      "level_up": "level_up",
-      "score_points": "score_points"
+    "function_definitions": {
+      "level_up": {
+        "name": "level_up",
+        "description": "Increase \"level\" by 1, reset points to 0, increase enemy speed, and choose a random background."
+      },
+      "score_points": {
+        "name": "score_points",
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/25/puzzle/4": {
     "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
-    "function_names": {
-      "check guess": "check guess"
+    "function_definitions": {
+      "check guess": {
+        "name": "check guess",
+        "parameters": {
+          "theGuess": "theGuess"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/25/puzzle/5": {
     "short_instructions": "You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.",
-    "function_names": {
-      "witch ending": "witch ending",
-      "story": "story",
-      "starting path": "starting path"
+    "function_definitions": {
+      "witch ending": {
+        "name": "witch ending"
+      },
+      "story": {
+        "name": "story"
+      },
+      "starting path": {
+        "name": "starting path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/26/puzzle/1": {

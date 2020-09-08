@@ -110,15 +110,14 @@ DSL
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     assert_nil summary[:previous_level_url]
-    assert_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
 
     @script_level.stubs(:previous_level).returns(create(:script_level))
-    @script_level.stubs(:next_level).returns(create(:script_level))
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     refute_nil summary[:previous_level_url]
-    refute_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
   end
 
@@ -198,5 +197,64 @@ DSL
     assert_empty BubbleChoice.parent_levels("sublevel") # contained by sublevel names above
     assert_empty BubbleChoice.parent_levels("sublevel_12") # contains sublevel name above
     assert_empty BubbleChoice.parent_levels("nonexistent level name")
+  end
+
+  test 'clone with suffix copies sublevels' do
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    sublevel3 = create :level, name: 'sublevel_3'
+
+    # clone_with_suffix needs to be able to access the level object as well as
+    # its DSL text. Rather than create an actual DSL file, we stub the level's
+    # dsl_text method to return the DSL text. Since we've got the DSL text
+    # handy, also use it (rather than factories) to create the level itself.
+    # This approach also helps validate that the DSL text is correct and avoid
+    # any unintended inconsistencies between DSL text and factory calls.
+    input_dsl = <<~DSL
+      name 'bubble choice'
+
+      sublevels
+      level 'sublevel_1'
+      level 'sublevel_2'
+      level 'sublevel_3'
+    DSL
+
+    copy_dsl = <<~DSL
+      name 'bubble choice_copy'
+
+      sublevels
+      level 'sublevel_1_copy'
+      level 'sublevel_2_copy'
+      level 'sublevel_3_copy'
+    DSL
+
+    # Access a translation, to trigger any file reads, before we stub File.read.
+    # According to https://guides.rubyonrails.org/i18n.html, The translation
+    # files are lazy-loaded when a translation is looked up for the first time.
+    I18n.t('auth.signed_in')
+
+    File.stubs(:exist?).returns(true)
+    File.stubs(:read).with {|filepath| filepath.to_s.end_with?('bubble_choice.bubble_choice')}.returns(input_dsl).once
+
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
+
+    assert_equal [sublevel1, sublevel2, sublevel3], bubble_choice.sublevels
+
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'bubble_choice_copy.bubble_choice' &&
+        copy_dsl == actual_dsl
+    end.once
+
+    bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
+
+    expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
+    assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)
+  end
+
+  test 'all_descendant_levels includes template levels of sublevels' do
+    template = create :artist, name: 'template'
+    artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
   end
 end

@@ -1,14 +1,14 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 project_sharing true
 
 lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
-stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
+lesson 'Unit 5 Assessment 2', display_name: 'Unit 5 Assessment 2', lockable: true
 level 'CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual', assessment: true
 
 lesson_group 'csp5_2', display_name: 'Chapter 2: Programming with Data Structures'
-stage 'While Loops', flex_category: 'csp5_2'
+lesson 'While Loops', display_name: 'While Loops'
 level 'CSP U5L11 SFLP_virtual', named: true
 level 'CSPU5_U3 - Loops - 1_virtual', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2_virtual', progression: 'Loops'
@@ -32,7 +32,7 @@ level 'CSPU5_U3 - Loops - 14_virtual', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15_virtual', progression: 'Loops Continued'
 level 'csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual', progression: 'Quick Check-In', assessment: true
 
-stage 'Loops and Simulations', flex_category: 'csp5_2'
+lesson 'Loops and Simulations', display_name: 'Loops and Simulations'
 level 'CSP U5L12 SFLP_virtual', named: true
 level 'Make a Hypothesis_2018_2019_virtual', progression: 'Make a Hypothesis'
 level 'CSPU5_U3 - Simulation - 1_virtual', progression: 'Introduction to Simulations'
@@ -46,7 +46,7 @@ level 'CSPU5_U3 - Simulation - 5_virtual', progression: 'Simulation Practice'
 level 'Update your Hypothesis - Part 2_2018_2019_virtual', progression: 'Update your Hypothesis - Part 2'
 level 'CSPU5_U3 - Simulation - 6_virtual', progression: 'Experiment With Simulation'
 
-stage 'Introduction to Arrays', flex_category: 'csp5_2'
+lesson 'Introduction to Arrays', display_name: 'Introduction to Arrays'
 level 'CSP U5L13 SFLP_virtual', named: true
 level 'Introduction to Lists - Part 1_virtual', progression: 'Introduction to Lists - Part 1'
 level 'CSPU5_U3 - Arrays - createFirstArray_virtual', progression: 'List Basics'
@@ -79,7 +79,7 @@ level 'CSPU5_U3 - Arrays - favThings keepPlaying_virtual', progression: 'Using L
 level 'CSPU5_U3 - Arrays - Wrap Up 1_virtual', progression: 'Array Reflection Questions'
 level 'CSPU5_U3 - Arrays - Wrap Up 2_virtual', progression: 'Array Reflection Questions'
 
-stage 'Building an App: Image Scroller', flex_category: 'csp5_2'
+lesson 'Building an App: Image Scroller', display_name: 'Building an App: Image Scroller'
 level 'CSP U5L14 SFLP_virtual', named: true
 level 'CSPU5_U3 - Keys - Demo App_virtual', progression: 'My Favorite Things Demonstration'
 level 'CSPU5_U3L25 - drag out key event_virtual', progression: 'Key Event'
@@ -92,10 +92,10 @@ level 'CSPU5_U3 - Keys - Add Image URLs_virtual', progression: 'Adding Images Us
 level 'Project - Final Image Scroller_virtual', progression: 'Project: Image Scroller', assessment: true
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual', progression: 'My Favorite Things Reflection Question'
 
-stage 'Unit 5 Assessment 3', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 3', display_name: 'Unit 5 Assessment 3', lockable: true
 level 'CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual', assessment: true
 
-stage 'Processing Arrays', flex_category: 'csp5_2'
+lesson 'Processing Arrays', display_name: 'Processing Arrays'
 level 'CSP U5L15 SFLP_virtual', named: true
 level 'Processing Lists with Loops_virtual', progression: 'Processing Lists with Loops'
 level 'CSPU5_U3 - Loops And Arrays - Intro For Loop_virtual', progression: 'Introduction to for Loops'
@@ -112,7 +112,7 @@ level 'CSPU5_U3 - Loops And Arrays - Make it a Function - add list pa_virtual', 
 level 'CSPU5_U3 - Loops And Arrays - General Search Param_virtual', progression: 'Arrays and Functions'
 level 'CSPU5_U3 - Loops And Arrays - Find Min_virtual', progression: 'Arrays and Functions'
 
-stage 'Functions with Return Values', flex_category: 'csp5_2'
+lesson 'Functions with Return Values', display_name: 'Functions with Return Values'
 level 'CSP U5L16 SFLP_virtual', named: true
 level 'Using Output from Functions: The return Command_2018_2019_virtual', progression: 'The Return Command'
 level 'CSPU5_U3 - Return Values - useMinVal_virtual', progression: 'Using minVal'
@@ -122,7 +122,7 @@ level 'CSPU5_U3 - Return Values - debuggingConstrain_virtual', progression: 'Wri
 level 'CSPU5_U3 - Return Values - constrainTurtle_virtual', progression: 'Return Values in Apps'
 level 'CSPU5_U3 - Return Values - wrapTurtle_virtual', progression: 'Return Values in Apps'
 
-stage 'Building an App: Canvas Painter', flex_category: 'csp5_2'
+lesson 'Building an App: Canvas Painter', display_name: 'Building an App: Canvas Painter'
 level 'CSPU5_U3 - Canvas - introCanvas_virtual', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - 200dots_virtual', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - transparentDots_virtual', progression: 'Canvas Painter Introduction'
@@ -143,8 +143,9 @@ level 'CSPU5_U3 - Canvas - sprayPaint_virtual', progression: 'Adding More Featur
 level 'CSPU5_U3 - Canvas - sketch_virtual', progression: 'Using Stored Information'
 level 'CSPU5_U3 - Canvas - freePlay_virtual', progression: 'Project: Canvas Painter', assessment: true
 
-stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 4', display_name: 'Unit 5 Assessment 4', lockable: true
 level 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual', assessment: true
 
-stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', display_name: 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
 level 'CSP Cumulative Assess A_2018_2019_virtual', assessment: true
+

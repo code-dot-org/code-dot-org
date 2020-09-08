@@ -1,6 +1,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 require 'cgi'
 require 'fileutils'
 require 'psych'
@@ -24,11 +24,11 @@ CROWDIN_PROJECTS = {
 
 class I18nScriptUtils
   # Because we log many of the i18n operations to slack, we often want to
-  # explicitly force stdout to operate syncronously, rather than buffering
+  # explicitly force stdout to operate synchronously, rather than buffering
   # output and dumping a whole lot of output into slack all at once.
   #
   # See the sync_up and sync_down methods in particular for usage.
-  def self.with_syncronous_stdout
+  def self.with_synchronous_stdout
     old_sync = $stdout.sync
     $stdout.sync = true
     yield
@@ -93,7 +93,14 @@ class I18nScriptUtils
 
   def self.upload_malformed_restorations(locale)
     return if @malformed_restorations.blank?
-    Google::Drive.new.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+    if CDO.gdrive_export_secret
+      begin
+        @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
+        @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+      rescue
+        puts "Failed to upload malformed restorations for #{locale}"
+      end
+    end
     @malformed_restorations = nil
   end
 

@@ -1,6 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_lesson_plan true
@@ -8,19 +8,19 @@ script_announcements [{"notice"=>"Check out the CSP mid-course survey", "details
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
-stage 'The Need For Programming Languages', flex_category: 'csp3_1'
+lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L01 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U3L01 Assessment3', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In', assessment: true
 
-stage 'The Need for Algorithms', flex_category: 'csp3_1'
+lesson 'The Need for Algorithms', display_name: 'The Need for Algorithms'
 level 'v2 U3L02 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-stage 'Creativity in Algorithms', flex_category: 'csp3_1'
+lesson 'Creativity in Algorithms', display_name: 'Creativity in Algorithms'
 level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-stage 'Using Simple Commands', flex_category: 'csp3_1'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands'
 level 'SG U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG csp_applab_turtle', progression: 'Turtle Programming'
 level 'SG U3L2 Using Simple Commands part 1', progression: 'Introducing Simple Commands and Subgoals'
@@ -34,7 +34,7 @@ level 'U3L02 Free Response Getting Started', progression: 'Check Your Understand
 level 'csp_U3_square_v_rect_FR', progression: 'Check Your Understanding', assessment: true
 level 'U3L02 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating Functions', flex_category: 'csp3_1'
+lesson 'Creating Functions', display_name: 'Creating Functions'
 level 'SG v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG csp_applab_functions', progression: 'Defining and Calling Functions'
 level 'SG U3L03 Define and use turnAround', progression: 'Using Functions With Turtle Commands'
@@ -50,7 +50,7 @@ level 'U3L03 Assessment', progression: 'Check Your Understanding', assessment: t
 level 'U3L03 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 level 'csp_U3_plan_code_FR', progression: 'Check Your Understanding', assessment: true
 
-stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
+lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design'
 level 'SG v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG U3L04 - snowflake', progression: 'Using Functions with Turtle Commands'
 level 'SG U3L04 - 3 by 3 with functions', progression: 'Using Functions with Turtle Commands'
@@ -59,7 +59,7 @@ level 'U3L04 Assessment1', progression: 'Check Your Understanding', assessment: 
 level 'U3L04 Assessment2', progression: 'Check Your Understanding', assessment: true
 level 'U3L04 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-stage 'APIs and Function Parameters', flex_category: 'csp3_1'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters'
 level 'SG v2 U3L07 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG U3L06 - moveForwardwithParams', progression: 'Introduction to Parameters'
 level 'SG U3L06 Challenge 1 triangle', progression: 'Introduction to Parameters'
@@ -77,7 +77,7 @@ level 'U3L06-API-multichoice', progression: 'Check Your Understanding', assessme
 level 'U3L06 Assessment', progression: 'Check Your Understanding', assessment: true
 level 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating functions with Parameters', flex_category: 'csp3_1'
+lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters'
 level 'SG v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG csp_applab_functions_parameters', progression: 'Functions with Parameters'
 level 'SG U3L08 - drawSquareWithParam', progression: 'Drawing Shapes With Parameters'
@@ -99,7 +99,7 @@ level 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice Resp
 level 'U3L08 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U3L08 Assessment2', progression: 'Check Your Understanding', assessment: true
 
-stage 'Looping and Random Numbers', flex_category: 'csp3_1'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers'
 level 'SG v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'SG csp_applab_loops', progression: 'Using Loops'
 level 'SG U3L07 - introSquare', progression: 'Introduction to Loops'
@@ -120,14 +120,14 @@ level 'U3L07 - MC remove line of code loops', progression: 'Check Your Understan
 level 'U3L07 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 level 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding', assessment: true
 
-stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
+lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene'
 level 'SG v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'U3L08 - individualCode', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates', named: true
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true
 variants
   level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
@@ -135,5 +135,6 @@ endvariants
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'Please complete the CSP Mid-course survey', lockable: true, flex_category: 'cspSurvey'
+lesson 'Please complete the CSP Mid-course survey', display_name: 'Please complete the CSP Mid-course survey', lockable: true
 level 'csp-post-survey-2017-levelgroup', assessment: true
+

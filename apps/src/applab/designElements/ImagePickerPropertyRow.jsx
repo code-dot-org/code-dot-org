@@ -96,7 +96,9 @@ export default class ImagePickerPropertyRow extends React.Component {
             style={rowStyle.input}
           />
           &nbsp;
-          <a onClick={this.handleButtonClick}>Choose...</a>
+          <a style={rowStyle.link} onClick={this.handleButtonClick}>
+            Choose...
+          </a>
         </div>
       </div>
     );

@@ -1,16 +1,24 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/contact_rollups_v2'
-require 'cdo/only_one'
-require 'cdo/log_collector'
 
 def main
-  log_collector = LogCollector.new "Build contact rollups V2"
+  # To avoid accidentally syncing bad data to Pardot, this script should run
+  # only in production. In other environments, it has to be in dry-run mode.
+  force_dry_run = !CDO.rack_env?(:production)
+  if force_dry_run
+    puts "Contact Rollups V2 will run in DRY-RUN mode in #{CDO.rack_env} environment."
+  else
+    puts "Contact Rollups V2 will run in NORMAL mode and will send updates to Pardot!"
+  end
 
-  # Build new daily table of contact rollups
-  ContactRollupsV2.build_contact_rollups(log_collector)
-  puts log_collector.to_s
+  contact_rollups = ContactRollupsV2.new(is_dry_run: force_dry_run)
+  contact_rollups.build_and_sync
+ensure
+  contact_rollups.report_results
 end
 
-main if only_one_running?(__FILE__)
+main

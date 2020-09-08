@@ -1,0 +1,46 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Big Piney High School,WY-1809000-1809055,560126000041,Computer Science Principles,10011,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Buffalo High School,WY-1001000-1001055,560377000187,AP Computer Science A,10157,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Buffalo High School,WY-1001000-1001055,560377000187,Computer Programming,10152,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burns Jr & Sr High School,WY-1102000-1102056,560412000209,Computer Science Principles,10011,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,WY-1101000-1101055,560198000090,AP Computer Science A,10157,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High School,WY-1101000-1101055,560198000090,Visual Basic (VB) Programming,10153,unspecified,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chugwater High School,WY-1601000-1601055,560509000391,Computer Programming,10152,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High School,WY-1101000-1101056,560198000091,Computer Programming,10152,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High School,WY-1101000-1101056,560198000091,Visual Basic (VB) Programming,10153,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High School,WY-1101000-1101056,560198000091,AP Computer Science A,10157,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High School,WY-1101000-1101056,560198000091,IB Computer Science,10159,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East High School,WY-1101000-1101056,560198000091,IB Computer Science,10159,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evanston High School,WY-2101000-2101055,560276000152,C++ Programming,10154,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ft. Washakie High School,WY-0721000-0721056,560282000552,Exploring Computer Science,10012,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glendo High School,WY-1601000-1601056,560509000392,Computer Programming,10152,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hot Springs County High School,WY-0901000-0901055,560331000180,Computer Programming,10152,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jackson Hole High School,WY-2001000-2001055,560583000335,AP Computer Science Principles,10019,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kaycee School,WY-1001000-1001049,560377000449,AP Computer Science A,10157,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,Computer Science Principles,10011,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,Visual Basic (VB) Programming,10153,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,Visual Basic (VB) Programming,10153,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,Visual Basic (VB) Programming,10153,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,C++ Programming,10154,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelly Walsh High School,WY-1301000-1301055,560451000229,Computer Programming - Other Language,10156,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kemmerer Junior Senior High School,WY-1201000-1201057,560403000557,Computer Programming,10152,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lander Valley High School,WY-0701000-0701055,560287000163,AP Computer Science Principles,10019,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laramie High School,WY-0101000-0101055,560073000001,AP Computer Science A,10157,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,WY-2104000-2104055,560450000227,Computer Programming,10152,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Natrona County High School,WY-1301000-1301057,560451000231,Exploring Computer Science,10012,unspecified,87,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Niobrara County High School,WY-1401000-1401055,560423000214,Computer Science Principles,10011,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine Bluffs Jr & Sr High School,WY-1102000-1102057,560412000210,Computer Science Principles,10011,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powell High School,WY-1501000-1501055,560516000278,Computer Programming,10152,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powell High School,WY-1501000-1501055,560516000278,C++ Programming,10154,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powell High School,WY-1501000-1501055,560516000278,Computer Programming,10152,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverton High School,WY-0725000-0725056,560522000286,Computer Gaming and Design,10205,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverton High School,WY-0725000-0725056,560522000286,Computer Gaming and Design,10205,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rocky Mountain High School,WY-0201000-0201056,560142000046,Java Programming,10155,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rocky Mountain High School,WY-0201000-0201056,560142000046,Computer Science Principles,10011,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheridan High School,WY-1702000-1702057,560569500360,Computer Programming,10152,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheridan High School,WY-1702000-1702057,560569500360,Computer Programming - Other Language,10156,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheridan High School,WY-1702000-1702057,560569500360,Computer Programming - Other Language,10156,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South High School,WY-1101000-1101058,560198000448,Visual Basic (VB) Programming,10153,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South High School,WY-1101000-1101058,560198000448,AP Computer Science A,10157,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upton High School,WY-2307000-2307055,560609000401,Computer Science Principles,10011,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Indian High School,WY-0714000-0714055,560445000441,Java Programming,10155,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

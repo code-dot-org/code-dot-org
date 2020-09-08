@@ -1,6 +1,7 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -12,15 +13,26 @@ const styles = {
   alert: {
     color: color.red,
     width: '90%',
-    paddingTop: 8
+    paddingTop: 8,
+    fontStyle: 'italic'
+  },
+  functionSelector: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '10px 10px 10px 0'
   },
   largerCheckbox: {
     width: 20,
-    height: 20,
-    marginLeft: 0,
-    marginRight: 10,
-    marginTop: 10,
-    marginBottom: 10
+    height: 20
+  },
+  selectAllFunctionsLabel: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  functionLabel: {
+    margin: 0,
+    fontSize: 20
   },
   info: {
     fontSize: 12,
@@ -68,15 +80,29 @@ export default class LibraryPublisher extends React.Component {
     onShareTeacherLibrary: PropTypes.func
   };
 
-  state = {
-    publishState: PublishState.DEFAULT,
-    libraryName: libraryParser.suggestName(
-      this.props.libraryDetails.libraryName
-    ),
-    libraryDescription: this.props.libraryDetails.libraryDescription,
-    selectedFunctions: this.props.libraryDetails.selectedFunctions,
-    profaneWords: null
-  };
+  constructor(props) {
+    super(props);
+
+    // Filter out already-published functions that are now invalid.
+    const initialSelectedFunctions = props.libraryDetails.selectedFunctions;
+    let validSelectedFunctions = {};
+    props.libraryDetails.sourceFunctionList.forEach(sourceFunction => {
+      if (
+        initialSelectedFunctions[sourceFunction.functionName] &&
+        this.isFunctionValid(sourceFunction)
+      ) {
+        validSelectedFunctions[sourceFunction.functionName] = true;
+      }
+    });
+
+    this.state = {
+      publishState: PublishState.DEFAULT,
+      libraryName: libraryParser.suggestName(props.libraryDetails.libraryName),
+      libraryDescription: props.libraryDetails.libraryDescription,
+      selectedFunctions: validSelectedFunctions,
+      profaneWords: null
+    };
+  }
 
   setLibraryName = event => {
     const {libraryName} = this.state;
@@ -190,6 +216,7 @@ export default class LibraryPublisher extends React.Component {
     const {libraryDescription} = this.state;
     return (
       <textarea
+        id="ui-test-library-description"
         rows="2"
         cols="200"
         style={{...styles.textInput, ...styles.description}}
@@ -205,7 +232,32 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
-  boxChecked = name => {
+  hasComment = sourceFunction => {
+    return (sourceFunction.comment || '').length > 0;
+  };
+
+  duplicateFunction = sourceFunction => {
+    const {sourceFunctionList} = this.props.libraryDetails;
+    const {functionName} = sourceFunction;
+    return (
+      sourceFunctionList.filter(source => source.functionName === functionName)
+        .length > 1
+    );
+  };
+
+  isFunctionValid = sourceFunction => {
+    return (
+      this.hasComment(sourceFunction) && !this.duplicateFunction(sourceFunction)
+    );
+  };
+
+  boxChecked = sourceFunction => {
+    // No-op if function is invalid
+    if (!this.isFunctionValid(sourceFunction)) {
+      return;
+    }
+
+    const name = sourceFunction.functionName;
     this.setState(state => {
       state.selectedFunctions[name] = !state.selectedFunctions[name];
       return state;
@@ -217,36 +269,29 @@ export default class LibraryPublisher extends React.Component {
     const {sourceFunctionList} = this.props.libraryDetails;
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
-      const noComment = comment.length === 0;
-      const duplicateFunction =
-        sourceFunctionList.filter(
-          source => source.functionName === functionName
-        ).length > 1;
-      const shouldDisable = noComment || duplicateFunction;
-      let checked = selectedFunctions[functionName] || false;
-      if (shouldDisable && checked) {
-        checked = false;
-        this.setState(state => {
-          state.selectedFunctions[functionName] = false;
-          return state;
-        });
-      }
+      const checked = selectedFunctions[functionName] || false;
+      const functionId = _.uniqueId(`${functionName}-`);
+
       return (
         <div key={functionName}>
-          <input
-            style={styles.largerCheckbox}
-            type="checkbox"
-            disabled={shouldDisable}
-            name={functionName}
-            checked={checked}
-            onChange={() => this.boxChecked(functionName)}
-          />
-          <span>{functionName}</span>
-          <br />
-          {noComment && (
+          <div style={styles.functionSelector}>
+            <input
+              style={styles.largerCheckbox}
+              type="checkbox"
+              id={functionId}
+              disabled={!this.isFunctionValid(sourceFunction)}
+              name={functionName}
+              checked={checked}
+              onChange={() => this.boxChecked(sourceFunction)}
+            />
+            <label htmlFor={functionId} style={styles.functionLabel}>
+              {functionName}
+            </label>
+          </div>
+          {!this.hasComment(sourceFunction) && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
           )}
-          {duplicateFunction && (
+          {this.duplicateFunction(sourceFunction) && (
             <p style={styles.alert}>
               {i18n.libraryExportDuplicationFunctionError()}
             </p>
@@ -305,9 +350,43 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
+  allFunctionsSelected = () => {
+    const {sourceFunctionList} = this.props.libraryDetails;
+    const {selectedFunctions} = this.state;
+
+    let allSelected = true;
+    sourceFunctionList.forEach(sourceFunction => {
+      // If any *valid* functions are not selected, set allSelected to false.
+      if (
+        !selectedFunctions[sourceFunction.functionName] &&
+        this.isFunctionValid(sourceFunction)
+      ) {
+        allSelected = false;
+      }
+    });
+
+    return allSelected;
+  };
+
+  toggleAllFunctionsSelected = () => {
+    if (this.allFunctionsSelected()) {
+      this.setState({selectedFunctions: {}});
+    } else {
+      const {sourceFunctionList} = this.props.libraryDetails;
+      let selectedFunctions = {};
+      sourceFunctionList.forEach(sourceFunction => {
+        if (this.isFunctionValid(sourceFunction)) {
+          selectedFunctions[sourceFunction.functionName] = true;
+        }
+      });
+      this.setState({selectedFunctions});
+    }
+  };
+
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
     const {onShareTeacherLibrary} = this.props;
+    const selectAllCheckboxId = _.uniqueId('func-select-all-');
 
     return (
       <div>
@@ -316,11 +395,27 @@ export default class LibraryPublisher extends React.Component {
         <Heading2>{i18n.description()}</Heading2>
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
+        <div style={styles.functionSelector}>
+          <input
+            style={styles.largerCheckbox}
+            type="checkbox"
+            id={selectAllCheckboxId}
+            checked={this.allFunctionsSelected()}
+            onChange={this.toggleAllFunctionsSelected}
+          />
+          <label
+            htmlFor={selectAllCheckboxId}
+            style={styles.selectAllFunctionsLabel}
+          >
+            {i18n.selectAllFunctions()}
+          </label>
+        </div>
         {this.displayFunctions()}
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
             __useDeprecatedTag
+            id="ui-test-publish-library"
             style={{marginTop: 20}}
             onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
@@ -328,6 +423,7 @@ export default class LibraryPublisher extends React.Component {
           {onShareTeacherLibrary && (
             <Button
               __useDeprecatedTag
+              id="ui-test-manage-libraries"
               style={{marginTop: 20, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
               text={i18n.manageLibraries()}
@@ -337,6 +433,7 @@ export default class LibraryPublisher extends React.Component {
           {alreadyPublished && (
             <Button
               __useDeprecatedTag
+              id="ui-test-unpublish-library"
               style={styles.unpublishButton}
               onClick={this.unpublish}
               text={i18n.unpublish()}

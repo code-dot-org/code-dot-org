@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
-import cookies from 'js-cookie';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -19,7 +19,6 @@ export default class SmallFooter extends React.Component {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
     i18nDropdown: PropTypes.string,
-    privacyPolicyInBase: PropTypes.bool.isRequired,
     copyrightInBase: PropTypes.bool.isRequired,
     copyrightStrings: PropTypes.shape({
       thank_you: PropTypes.string.isRequired,
@@ -29,7 +28,6 @@ export default class SmallFooter extends React.Component {
       powered_by_aws: PropTypes.string.isRequired,
       trademark: PropTypes.string.isRequired
     }),
-    basePrivacyPolicyString: PropTypes.string,
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
     baseStyle: PropTypes.object,
@@ -105,17 +103,6 @@ export default class SmallFooter extends React.Component {
       // row that aren't on those particular items
       return;
     }
-
-    this.clickBaseMenu();
-  };
-
-  clickBasePrivacyPolicy = () => {
-    if (this.props.privacyPolicyInBase) {
-      // When we have multiple items in our base row, ignore clicks to the
-      // row that aren't on those particular items
-      return;
-    }
-
     this.clickBaseMenu();
   };
 
@@ -160,8 +147,6 @@ export default class SmallFooter extends React.Component {
         fontSize: this.props.fontSize
       },
       base: {
-        paddingBottom: 3,
-        paddingTop: 3,
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
       },
@@ -170,45 +155,24 @@ export default class SmallFooter extends React.Component {
         width: '100%',
         boxSizing: 'border-box'
       },
-      privacy: {
-        color: '#0094ca'
-      },
       copyright: {
-        display:
-          this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
+        display: this.state.menuState === MenuState.COPYRIGHT ? 'flex' : 'none',
         position: 'absolute',
         bottom: 0,
-        left: 0,
         width: 650,
         maxWidth: '50%',
         minWidth: this.state.baseWidth
       },
       copyrightScrollArea: {
-        overflowY: 'auto',
         maxHeight: this.props.phoneFooter ? 210 : undefined,
-        padding: '0.8em',
-        borderBottom: 'solid thin #e7e8ea',
-        marginBottom: this.state.baseHeight
+        marginBottom: this.state.baseHeight - 1
       },
       moreMenu: {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
         width: this.state.baseWidth
-      },
-      listItem: {
-        height: this.props.rowHeight,
-        // account for padding (3px on top and bottom) and bottom border (1px)
-        // on bottom border on child anchor element
-        lineHeight: this.props.rowHeight
-          ? this.props.rowHeight - 6 - 1 + 'px'
-          : undefined
       }
     };
-
-    const caretIcon =
-      this.state.menuState === MenuState.EXPANDED
-        ? 'fa fa-caret-down'
-        : 'fa fa-caret-up';
 
     const combinedBaseStyle = {
       ...styles.base,
@@ -224,26 +188,13 @@ export default class SmallFooter extends React.Component {
           style={combinedBaseStyle}
           onClick={this.clickBase}
         >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: decodeURIComponent(this.props.i18nDropdown)
-            }}
-          />
-          <small>
-            {this.renderPrivacy(styles)}
-            {this.renderCopyright()}
-            <a
-              className="more-link"
-              href="javascript:void(0)"
-              onClick={this.clickBaseMenu}
-            >
-              {this.props.baseMoreMenuString + ' '}
-              <i className={caretIcon} />
-            </a>
-          </small>
+          {this.renderI18nDropdown()}
+          {this.renderCopyright()}
+          {this.renderMoreMenuButton()}
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
+            <h4>{this.props.baseCopyrightString}</h4>
             <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.thank_you
@@ -273,21 +224,19 @@ export default class SmallFooter extends React.Component {
     );
   }
 
-  renderPrivacy(styles) {
-    if (this.props.privacyPolicyInBase) {
+  renderI18nDropdown() {
+    if (this.props.i18nDropdown) {
       return (
-        <span>
-          <a
-            className="privacy-link"
-            href="https://code.org/privacy"
-            target="_blank"
-            style={styles.privacy}
-            onClick={this.clickBasePrivacyPolicy}
-          >
-            {this.props.basePrivacyPolicyString}
-          </a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-        </span>
+        <div className="i18n-dropdown-container">
+          <span className="globe-icon">
+            <i className="fa fa-globe" aria-hidden="true" />
+          </span>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: decodeURIComponent(this.props.i18nDropdown)
+            }}
+          />
+        </div>
       );
     }
   }
@@ -295,26 +244,44 @@ export default class SmallFooter extends React.Component {
   renderCopyright() {
     if (this.props.copyrightInBase) {
       return (
-        <span>
-          <a
-            className="copyright-link"
-            href="#"
+        <span className="copyright-button">
+          <button
+            className="copyright-link no-mc"
+            type="button"
             onClick={this.clickBaseCopyright}
           >
-            {this.props.baseCopyrightString}
-          </a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
+            &copy;
+          </button>
         </span>
       );
     }
   }
 
-  renderMoreMenu(styles) {
-    const userAlreadyReportedAbuse =
-      cookies.get('reported_abuse') &&
-      _.includes(JSON.parse(cookies.get('reported_abuse')), this.props.channel);
+  renderMoreMenuButton() {
+    let menuItems = this.props.menuItems;
+    if (menuItems && menuItems.length > 0) {
+      const caretIcon =
+        this.state.menuState === MenuState.EXPANDED
+          ? 'fa fa-caret-down'
+          : 'fa fa-caret-up';
+      // FND-1169: Copyright should be a <button>, not a <a>
+      return (
+        <button
+          type="button"
+          className="more-link"
+          onClick={this.clickBaseMenu}
+        >
+          {this.props.baseMoreMenuString}&nbsp;
+          <i className={caretIcon} />
+        </button>
+      );
+    }
+  }
 
-    if (userAlreadyReportedAbuse) {
+  renderMoreMenu(styles) {
+    const channelId = this.props.channel;
+    const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+    if (alreadyReportedAbuse) {
       _.remove(this.props.menuItems, function(menuItem) {
         return menuItem.key === 'report-abuse';
       });
@@ -347,6 +314,3 @@ export default class SmallFooter extends React.Component {
     );
   }
 }
-
-window.dashboard = window.dashboard || {};
-window.dashboard.SmallFooter = SmallFooter;

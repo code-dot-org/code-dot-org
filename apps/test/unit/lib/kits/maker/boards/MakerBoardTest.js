@@ -2,10 +2,9 @@
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/deprecatedChai';
-import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -13,32 +12,6 @@ import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
  * @interface MakerBoard
  * @extends EventEmitter
  */
-
-const CP_CONSTRUCTOR_COUNT = 13;
-const CP_COMPONENT_COUNT = 16;
-const MB_CONSTRUCTOR_COUNT = 4;
-const MB_COMPONENT_COUNT = 6;
-const CP_COMPONENTS = [
-  'Led',
-  'Board',
-  'NeoPixel',
-  'PlaygroundButton',
-  'Switch',
-  'Piezo',
-  'Sensor',
-  'Thermometer',
-  'Pin',
-  'Accelerometer',
-  'Animation',
-  'Servo',
-  'TouchSensor'
-];
-const MB_COMPONENTS = [
-  'LedMatrix',
-  'MicroBitButton',
-  'Accelerometer',
-  'MicroBitThermometer'
-];
 
 /**
  * Run the set of interface conformance tests on the provided class.
@@ -120,266 +93,6 @@ export function itImplementsTheMakerBoardInterface(
       it(`doesn't return anything`, () => {
         const retVal = board.installOnInterpreter(jsInterpreter);
         expect(retVal).to.be.undefined;
-      });
-
-      describe('adds component constructors', () => {
-        beforeEach(() => {
-          board.installOnInterpreter(jsInterpreter);
-        });
-
-        it(`correct number of them`, () => {
-          let constructorCount =
-            BoardClass === MicroBitBoard
-              ? MB_CONSTRUCTOR_COUNT
-              : CP_CONSTRUCTOR_COUNT;
-          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
-            constructorCount
-          );
-        });
-
-        let components =
-          BoardClass === MicroBitBoard ? MB_COMPONENTS : CP_COMPONENTS;
-
-        components.forEach(constructor => {
-          it(constructor, () => {
-            expect(jsInterpreter.globalProperties).to.have.ownProperty(
-              constructor
-            );
-            expect(jsInterpreter.globalProperties[constructor]).to.be.a(
-              'function'
-            );
-            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
-              call => call[0].instance
-            );
-            expect(passedObjects).to.include(
-              jsInterpreter.globalProperties[constructor]
-            );
-          });
-        });
-      });
-
-      describe('adds components', () => {
-        beforeEach(() => {
-          board.installOnInterpreter(jsInterpreter);
-        });
-
-        it(`correct number of them`, () => {
-          let globalPropsCount =
-            BoardClass === MicroBitBoard
-              ? MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT
-              : CP_CONSTRUCTOR_COUNT + CP_COMPONENT_COUNT;
-          expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
-            globalPropsCount
-          );
-        });
-
-        // Board-specific tests
-        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-          describe('led', () => {
-            function expectLedToHaveFunction(fnName) {
-              expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
-                'function'
-              );
-            }
-
-            // Set of required functions derived from our dropletConfig
-            ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
-              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-            });
-          });
-
-          describe('colorLeds[]', () => {
-            function expectEachColorLedToHaveFunction(fnName) {
-              jsInterpreter.globalProperties.colorLeds.forEach(led => {
-                expect(led[fnName]).to.be.a('function');
-              });
-            }
-
-            it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
-              expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
-                .be.true;
-              expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
-                N_COLOR_LEDS
-              );
-            });
-
-            // Set of required functions derived from our dropletConfig
-            [
-              'on',
-              'off',
-              'toggle',
-              'blink',
-              'stop',
-              'intensity',
-              'color'
-            ].forEach(fnName => {
-              it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
-            });
-          });
-
-          describe('buzzer', () => {
-            function expectBuzzerToHaveFunction(fnName) {
-              expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
-                'function'
-              );
-            }
-
-            // Set of required functions derived from our dropletConfig
-            ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
-              it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
-            });
-          });
-
-          describe('toggleSwitch', () => {
-            it('isOpen', () => {
-              expect(
-                jsInterpreter.globalProperties.toggleSwitch.isOpen
-              ).to.be.a('boolean');
-            });
-          });
-
-          ['soundSensor', 'lightSensor'].forEach(sensorName => {
-            describe(sensorName, () => {
-              let component;
-
-              beforeEach(() => {
-                component = jsInterpreter.globalProperties[sensorName];
-              });
-
-              it('start()', () => {
-                expect(component.start).to.be.a('function');
-              });
-
-              it('value', () => {
-                expect(component).to.have.property('value');
-              });
-
-              it('getAveragedValue()', () => {
-                expect(component.getAveragedValue).to.be.a('function');
-                expect(component.getAveragedValue()).to.be.a('number');
-              });
-
-              it('setScale()', () => {
-                expect(component.setScale).to.be.a('function');
-              });
-
-              it('threshold', () => {
-                expect(component.threshold).to.be.a('number');
-              });
-            });
-          });
-
-          ['buttonL', 'buttonR'].forEach(button => {
-            describe(button, () => {
-              let component;
-
-              beforeEach(() => {
-                component = jsInterpreter.globalProperties[button];
-              });
-
-              it('isPressed', () =>
-                expect(component.isPressed).to.be.a('boolean'));
-              it('holdtime', () =>
-                expect(component.holdtime).to.be.a('number'));
-            });
-          });
-
-          describe('Constants', () => {
-            it('INPUT', () => {
-              expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
-            });
-
-            it('OUTPUT', () => {
-              expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
-            });
-
-            it('ANALOG', () => {
-              expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
-            });
-
-            it('PWM', () => {
-              expect(jsInterpreter.globalProperties.PWM).to.equal(3);
-            });
-
-            it('SERVO', () => {
-              expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
-            });
-          });
-        }
-
-        // Board-specific tests
-        if (BoardClass === MicroBitBoard) {
-          ['buttonA', 'buttonB'].forEach(button => {
-            describe(button, () => {
-              let component;
-
-              beforeEach(() => {
-                component = jsInterpreter.globalProperties[button];
-              });
-
-              it('isPressed', () =>
-                expect(component.isPressed).to.be.a('boolean'));
-              it('holdtime', () =>
-                expect(component.holdtime).to.be.a('number'));
-            });
-          });
-
-          describe('ledMatrix', () => {
-            function expectLedToHaveFunction(fnName) {
-              expect(jsInterpreter.globalProperties.ledMatrix[fnName]).to.be.a(
-                'function'
-              );
-            }
-
-            // Set of required functions derived from our dropletConfig
-            [
-              'on',
-              'off',
-              'toggle',
-              'clear',
-              'scrollString',
-              'scrollNumber'
-            ].forEach(fnName => {
-              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-            });
-          });
-        }
-
-        describe('tempSensor', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.tempSensor;
-          });
-
-          it('F', () => {
-            expect(component).to.have.property('F');
-          });
-
-          it('C', () => {
-            expect(component).to.have.property('C');
-          });
-        });
-
-        describe('accelerometer', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.accelerometer;
-          });
-
-          it('start()', () => expect(component.start).to.be.a('function'));
-          it('getOrientation()', () =>
-            expect(component.getOrientation).to.be.a('function'));
-          it('getAcceleration()', () =>
-            expect(component.getAcceleration).to.be.a('function'));
-        });
-
-        describe('board', () => {
-          it('exists', () => {
-            expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
-          });
-        });
       });
     });
 
@@ -537,5 +250,32 @@ export function itImplementsTheMakerBoardInterface(
         expect(button).to.have.property('holdtime');
       });
     });
+
+    if (BoardClass === MicroBitBoard) {
+      /**
+       * @function
+       * @name MakerBoard#createCapacitiveTouchSensor
+       * @param {number} pin
+       * @return {EventEmitter} a newly constructed CapTouch component
+       */
+      describe(`createCapacitiveTouchSensor(pin)`, () => {
+        // Example code:
+        // var newSensor = createCapacitiveTouchSensor(2);
+        // onBoardEvent(newSensor, "down", function() {
+        //   console.log("pressed");
+        // });
+
+        beforeEach(() => {
+          return board.connect();
+        });
+
+        it(`returns an Event Emitter with isPressed property`, () => {
+          const button = board.createCapacitiveTouchSensor(2);
+          // Check the basic button shape
+          expect(button).to.be.an.instanceOf(EventEmitter);
+          expect(button).to.have.property('isPressed');
+        });
+      });
+    }
   });
 }

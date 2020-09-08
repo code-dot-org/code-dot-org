@@ -3,63 +3,66 @@ require 'test_helper'
 class CourseUnitModuleSelectionTest < ActionView::TestCase
   setup do
     @user = create :teacher
-    course = create :plc_course
+    plc_course = create :plc_course
 
-    @course_unit = create(:plc_course_unit, plc_course: course)
+    @course_unit = create(:plc_course_unit, plc_course: plc_course)
 
-    @stage_cliffs = create(:lesson, name: 'Cliff stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ornithology = create(:lesson, name: 'Ornithology stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ignorance = create(:lesson, name: 'Ignorance stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_blue = create(:lesson, name: 'Blue stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @course_unit.script)
+    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @course_unit.script)
 
-    @stage_honesty = create(:lesson, name: 'Honesty stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
-    @stage_no_nickname = create(:lesson, name: 'No nickname stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @lesson_cliffs = create(:lesson, name: 'Cliff lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
+    @lesson_ornithology = create(:lesson, name: 'Ornithology lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
+    @lesson_ignorance = create(:lesson, name: 'Ignorance lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
+    @lesson_blue = create(:lesson, name: 'Blue lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
 
-    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_cliffs)
-    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_ornithology)
-    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_ignorance)
-    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_blue)
+    @lesson_honesty = create(:lesson, name: 'Honesty lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
+    @lesson_no_nickname = create(:lesson, name: 'No nickname lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
 
-    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, lesson: @stage_honesty)
-    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, lesson: @stage_no_nickname)
+    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: @lesson_cliffs.lesson_group.key, lesson: @lesson_cliffs)
+    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: @lesson_ornithology.lesson_group.key, lesson: @lesson_ornithology)
+    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: @lesson_ignorance.lesson_group.key, lesson: @lesson_ignorance)
+    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: @lesson_blue.lesson_group.key, lesson: @lesson_blue)
+
+    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: @lesson_honesty.lesson_group.key, lesson: @lesson_honesty)
+    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: @lesson_no_nickname.lesson_group.key, lesson: @lesson_no_nickname)
 
     q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'
       question 'What is your name?'
-      answer 'Sir Lancelot', weight: 1, stage_name: '#{@stage_honesty.name}'
-      answer 'Sir Robin', weight: 1, stage_name: '#{@stage_no_nickname.name}'
-      answer 'Sir Galahad', weight: 1, stage_name: '#{@stage_honesty.name}'
-      answer 'King Arthur', weight: 1, stage_name: '#{@stage_honesty.name}'
+      answer 'Sir Lancelot', weight: 1, stage_name: '#{@lesson_honesty.name}'
+      answer 'Sir Robin', weight: 1, stage_name: '#{@lesson_no_nickname.name}'
+      answer 'Sir Galahad', weight: 1, stage_name: '#{@lesson_honesty.name}'
+      answer 'King Arthur', weight: 1, stage_name: '#{@lesson_honesty.name}'
       answer 'Mr Edgecase'
     DSL
 
     q2_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 2'
       question 'What is your quest?'
-      answer 'I seek the grail', weight: 1, stage_name: '#{@stage_honesty.name}'
-      answer 'Yes, yes, I seek the Grail', weight: 1, stage_name: '#{@stage_no_nickname.name}'
+      answer 'I seek the grail', weight: 1, stage_name: '#{@lesson_honesty.name}'
+      answer 'Yes, yes, I seek the Grail', weight: 1, stage_name: '#{@lesson_no_nickname.name}'
       answer 'I seek something else'
     DSL
 
     q3_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 3'
       question 'What is your favorite color?'
-      answer 'Blue', weight: 1, stage_name: '#{@stage_blue.name}'
-      answer 'Yellow - no, blue', weight: 1, stage_name: '#{@stage_cliffs.name}'
+      answer 'Blue', weight: 1, stage_name: '#{@lesson_blue.name}'
+      answer 'Yellow - no, blue', weight: 1, stage_name: '#{@lesson_cliffs.name}'
       answer 'No preference'
     DSL
 
     q4_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 4'
       question 'What is the capital of Assyria?'
-      answer 'I dont know that!', weight: 1, stage_name: '#{@stage_ignorance.name}'
+      answer 'I dont know that!', weight: 1, stage_name: '#{@lesson_ignorance.name}'
       answer 'Nineveh'
     DSL
 
     q5_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 5'
       question 'What is the airspeed velocity of an unladen swallow?'
-      answer 'What do you mean, an African or European Swallow?', weight: 1, stage_name: '#{@stage_ornithology.name}'
+      answer 'What do you mean, an African or European Swallow?', weight: 1, stage_name: '#{@lesson_ornithology.name}'
       answer '15 m/s'
     DSL
 
@@ -83,7 +86,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     DSL
 
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
-    create(:script_level, script: @course_unit.script, levels: [@evaluation])
+    create(:script_level, script: @course_unit.script, levels: [@evaluation], lesson: @lesson_honesty)
     @user_level = create(:user_level, user: @user, script: @course_unit.script, level: @evaluation)
     @activity = create(:activity, user: @user, level: @evaluation)
     @user_level = create(:user_level, user: @user, level: @evaluation)

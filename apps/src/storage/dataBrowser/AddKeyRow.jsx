@@ -4,7 +4,6 @@ import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import experiments from '@cdo/apps/util/experiments';
 import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
 import {WarningType} from '../constants';
@@ -24,8 +23,6 @@ class AddKeyRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
-  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
-
   handleKeyChange = event => {
     this.setState({key: event.target.value});
   };
@@ -36,9 +33,7 @@ class AddKeyRow extends React.Component {
 
   handleAdd = () => {
     if (this.state.key) {
-      if (this.inExperiment) {
-        this.props.hideError();
-      }
+      this.props.hideError();
       try {
         this.setState({isAdding: true});
         const value = castValue(
@@ -62,10 +57,8 @@ class AddKeyRow extends React.Component {
           }
         );
       } catch (e) {
-        if (this.inExperiment) {
-          this.setState({isAdding: false});
-          this.props.showError();
-        }
+        this.setState({isAdding: false});
+        this.props.showError();
       }
     }
   };

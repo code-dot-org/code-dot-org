@@ -8,7 +8,8 @@ export default class EnumPropertyRow extends React.Component {
     displayOptions: PropTypes.arrayOf(PropTypes.string),
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
-    desc: PropTypes.node
+    desc: PropTypes.node,
+    containerStyle: PropTypes.object
   };
 
   state = {
@@ -32,7 +33,7 @@ export default class EnumPropertyRow extends React.Component {
       );
     });
     return (
-      <div style={rowStyle.container}>
+      <div style={this.props.containerStyle || rowStyle.container}>
         <div style={rowStyle.description}>{desc}</div>
         <select
           className="form-control"

@@ -1,18 +1,15 @@
-hidden 'false'
+hidden false
 
-stage 'Ice Age Play Lab'
-skin 'iceage'
-video_key_for_next_level 'iceage_intro'
+lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab'
 level 'iceage_hello1'
 level 'iceage_hello2'
 level 'iceage_move_to_flag'
 level 'iceage_move_to_actor'
-video_key_for_next_level 'iceage_repeat'
 level 'iceage_repeat'
-video_key_for_next_level 'iceage_events'
 level 'iceage_click_hello'
 level 'iceage_move_events'
 level 'iceage_sound_and_points'
 level 'iceage_warn_ice_age'
 level 'iceage_throw_hearts'
 level 'iceage_free_play'
+

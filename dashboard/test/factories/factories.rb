@@ -3,10 +3,33 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :course_script do
+  factory :course_offering do
+    sequence(:key) {|n| "bogus-course-offering-#{n}"}
+    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
   end
 
-  factory :course do
+  factory :course_version do
+    sequence(:key) {|n| "202#{n - 1}"}
+    sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    with_unit_group
+
+    trait :with_unit_group do
+      association(:content_root, factory: :unit_group)
+    end
+
+    trait :with_unit do
+      association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_course_offering do
+      association :course_offering
+    end
+  end
+
+  factory :unit_group_unit do
+  end
+
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
@@ -29,7 +52,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_stage do
+  factory :section_hidden_lesson do
     section
     lesson
   end
@@ -280,6 +303,16 @@ FactoryGirl.define do
       trait :without_email do
         email ''
         hashed_email nil
+      end
+    end
+
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
       end
     end
 
@@ -641,12 +674,6 @@ FactoryGirl.define do
     level_source
   end
 
-  factory :gallery_activity do
-    user
-    user_level {create(:user_level)}
-    level_source {create(:level_source, :with_image, level: user_level.level)}
-  end
-
   factory :assessment_activity do
     user
     script
@@ -654,7 +681,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script do
+  factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
 
     factory :csf_script do
@@ -742,10 +769,15 @@ FactoryGirl.define do
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
+
+    position do |lesson_group|
+      (lesson_group.script.lesson_groups.maximum(:position) || 0) + 1
+    end
   end
 
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
+    sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     script
 
     absolute_position do |lesson|
@@ -855,11 +887,8 @@ FactoryGirl.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
-        lg.properties['pages'] = [
-          {levels: [sublevels[0].name, sublevels[1].name]},
-          {levels: [sublevels[2].name]}
-        ]
+        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end
   end
@@ -1072,6 +1101,8 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).next).to_s}
+    address_line1 "123 Sample St"
+    address_line2 "attn: Main Office"
     city "Seattle"
     state "WA"
     zip "98122"
@@ -1249,11 +1280,6 @@ FactoryGirl.define do
   factory :teacher_score do
     association :user_level
     association :teacher
-  end
-
-  factory :validated_user_level do
-    time_spent 10
-    user_level_id 1
   end
 
   factory :donor_school

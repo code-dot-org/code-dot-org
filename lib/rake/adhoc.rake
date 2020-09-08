@@ -6,14 +6,18 @@ namespace :adhoc do
     require 'cdo/aws/cloud_formation'
     require 'cdo/cloud_formation/cdo_app'
     @cfn = AWS::CloudFormation.new(
-      stack_name: ENV['STACK_NAME'],
-      template: ENV['TEMPLATE'] || 'cloud_formation_stack.yml.erb',
       stack: (@template = Cdo::CloudFormation::CdoApp.new(
-        frontends: ENV['FRONTENDS']
+        filename: ENV['TEMPLATE'],
+        stack_name: ENV['STACK_NAME'].dup,
+        branch: ENV['BRANCH'] || ENV['branch'],
+        database: ENV['DATABASE'],
+        frontends: ENV['FRONTENDS'],
+        cdn_enabled: ENV['CDN_ENABLED']
       )),
       log: CDO.log,
       verbose: ENV['VERBOSE'],
       quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
     )
   end
 
@@ -63,8 +67,8 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   end
 
   namespace :cdn do
-    task :environment do
-      ENV['CDN_ENABLED'] = '1'
+    task environment: 'adhoc:environment' do
+      @template.options[:cdn_enabled] = true
     end
 
     desc 'Launch an adhoc server, with CloudFront CDN enabled.

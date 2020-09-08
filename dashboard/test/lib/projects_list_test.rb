@@ -316,11 +316,11 @@ class ProjectsListTest < ActionController::TestCase
       @storage_id => 4,
       @teacher_storage_id => 6
     }
-    User = Struct.new(:id, :name, :user_type)
-    teacher = User.new(6, teacher_name, 'teacher')
-    student = User.new(4, student_name, 'student')
-    Section = Struct.new(:students, :user, :id)
-    section = Section.new([student], teacher, 321)
+    User = Struct.new(:id, :name)
+    teacher = User.new(6, teacher_name)
+    student = User.new(4, student_name)
+    Section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = Section.new([student], teacher, 321, 'sectionName', teacher.id)
 
     PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
 
@@ -331,6 +331,42 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal gamelab_lib_name, lib_response[1][:name]
     assert_equal description, lib_response[0][:description]
     assert_equal student_name, lib_response[0][:userName]
+  end
+
+  test 'fetch_section_libraries returns libraries owned by teachers' do
+    applab_lib_name = 'applab_library'
+    description = 'library description'
+    section_owner_name = 'section owner'
+    section_participant_name = 'section participant'
+    stub_projects = [
+      {
+        name: applab_lib_name,
+        properties: {}.to_json,
+        birthday: 25.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 1,
+        project_type: 'applab',
+        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        state: 'active'
+      }
+    ]
+    stub_users = {
+      @storage_id => 4
+    }
+    User = Struct.new(:id, :name, :user_type)
+    section_owner = User.new(6, section_owner_name, 'teacher')
+    section_participant = User.new(4, section_participant_name, 'teacher')
+    Section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = Section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
+
+    PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
+
+    StorageApps.stubs(:get_published_project_data).returns({})
+    lib_response = ProjectsList.send(:fetch_section_libraries, section)
+    assert_equal 1, lib_response.length
+    assert_equal applab_lib_name, lib_response[0][:name]
+    assert_equal description, lib_response[0][:description]
+    assert_equal section_participant_name, lib_response[0][:userName]
   end
 
   test 'fetch_section_libraries fetches libraries shared by teachers' do
@@ -363,10 +399,10 @@ class ProjectsListTest < ActionController::TestCase
     stub_users = {
       @storage_id => 4
     }
-    User = Struct.new(:id, :name, :user_type)
-    teacher = User.new(4, teacher_name, 'teacher')
-    Section = Struct.new(:students, :user, :id)
-    section = Section.new([], teacher, 321)
+    User = Struct.new(:id, :name)
+    teacher = User.new(4, teacher_name)
+    Section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = Section.new([], teacher, 321, 'sectionName', teacher.id)
 
     PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
 

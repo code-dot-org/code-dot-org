@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-07-08T02:55:38.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "video_key": "csd_gamelab_draw_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Drawing in Game Lab - Part 1",
+    "parent_level_id": 20641,
+    "name_suffix": "_2020",
+    "long_instructions": "## Questions to Consider\r\n* Where can you find more information about how to use the blocks?\r\n* What’s an advantage of using block mode?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\". \r\n\r\nAs students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version.  Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.  \r\n\r\n(Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.)",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-15 05:35:31 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-08 02:55:45 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

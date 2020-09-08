@@ -1,6 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-explore/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-explore/standards/"]]
 has_verified_resources true
@@ -13,16 +13,17 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_ap_2', display_name: 'Chapter 2: AP Explore Performance Task'
-stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
+lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task'
 level 'CSP ExploreL01 SFLP', named: true
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
-stage 'Explore PT - Making a Plan', flex_category: 'csp_ap_2'
+lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan'
 level 'CSP ExploreL02 SFLP_2018', named: true
 
-stage 'Explore PT - Complete the Task', flex_category: 'csp_ap_2'
+lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task'
 level 'CSP ExploreL03 SFLP', named: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

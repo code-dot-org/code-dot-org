@@ -10,23 +10,25 @@ export const J5_CONSTANTS = {
   SERVO: 4
 };
 
-export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
-export const BUTTON_VARS = ['buttonL', 'buttonR'];
+export const CP_API = 'circuitPlayground';
+
+export const CP_SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
+export const CP_BUTTON_VARS = ['buttonL', 'buttonR'];
 const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
 
 const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
 const TOUCH_EVENTS = ['down', 'up'];
 
-export const COMPONENT_EVENTS = {
+export const CP_COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close', 'change'],
   accelerometer: ['change', 'data', 'shake']
 };
-SENSOR_VARS.forEach(s => (COMPONENT_EVENTS[s] = SENSOR_EVENTS));
+CP_SENSOR_VARS.forEach(s => (CP_COMPONENT_EVENTS[s] = SENSOR_EVENTS));
 if (experiments.isEnabled('maker-captouch')) {
-  TOUCH_PAD_VARS.forEach(s => (COMPONENT_EVENTS[s] = TOUCH_EVENTS));
+  TOUCH_PAD_VARS.forEach(s => (CP_COMPONENT_EVENTS[s] = TOUCH_EVENTS));
 }
 
 export const BOARD_EVENT_ALIASES = {

@@ -6,11 +6,12 @@ import Dialog from '../../templates/Dialog';
 
 /**
  * Dialog which confirms removal of the level in the specified position
- * within the stage.
+ * within the lesson.
  */
 export class UnconnectedRemoveLevelDialog extends Component {
   static propTypes = {
-    stage: PropTypes.object.isRequired,
+    lesson: PropTypes.object.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
     // Position of level to remove. Dialog opens when this is set.
     levelPosToRemove: PropTypes.number,
     handleClose: PropTypes.func.isRequired,
@@ -21,16 +22,22 @@ export class UnconnectedRemoveLevelDialog extends Component {
   };
 
   handleConfirm = () => {
-    const {stage, levelPosToRemove, removeLevel, handleClose} = this.props;
-    removeLevel(stage.position, levelPosToRemove);
+    const {
+      lesson,
+      lessonGroupPosition,
+      levelPosToRemove,
+      removeLevel,
+      handleClose
+    } = this.props;
+    removeLevel(lessonGroupPosition, lesson.position, levelPosToRemove);
     handleClose();
   };
 
   render() {
-    const {stage, handleClose, levelPosToRemove} = this.props;
+    const {lesson, handleClose, levelPosToRemove} = this.props;
     let bodyText;
     if (levelPosToRemove) {
-      const levelId = stage.levels[levelPosToRemove - 1].activeId;
+      const levelId = lesson.levels[levelPosToRemove - 1].activeId;
       const levelName = this.props.levelKeyList[levelId];
       bodyText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
     }

@@ -1,61 +1,40 @@
 #!/usr/bin/env ruby
-require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/google_drive'
-
-# Squash an unhelpful warning that's causing a Honeybadger error
-# see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
-class WebAgent
-  class Cookie < HTTP::Cookie
-    def domain
-      original_domain
-    end
-  end
-end
+require 'cdo/google/sheet'
 
 #
 # Uses a Google Cloud service account to write summer workshop data for this year into
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
 #
+def get_rows
+  subjects = [
+    Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP,
+    Pd::SharedWorkshopConstants::SUBJECT_CSF_101,
+    Pd::SharedWorkshopConstants::SUBJECT_CSF_201
+  ]
 
-subjects = [
-  Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP,
-  Pd::SharedWorkshopConstants::SUBJECT_CSF_101,
-  Pd::SharedWorkshopConstants::SUBJECT_CSF_201
-]
+  workshops = []
 
-workshops = []
+  # The first row is an array of strings, one for each attribute name.
+  workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
 
-# The first row is an array of strings, one for each attribute name.
-workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
-
-# Subsequent rows are for each workshop.
-Pd::Workshop.where(subject: subjects).find_each do |w|
-  if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2020, 5, 15) && w.workshop_starting_date <= Date.new(2020, 8, 31)
-    workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+  # Subsequent rows are for each workshop.
+  Pd::Workshop.where(subject: subjects).find_each do |w|
+    if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2020, 5, 15) && w.workshop_starting_date <= Date.new(2020, 8, 31)
+      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+    end
   end
+
+  workshops
 end
 
-drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
-drive.update_sheet workshops, CDO.applications_2020_2021_gsheet_key, 'summer_workshops (auto)'
+def main
+  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
+  sheet.export(tab_name: 'summer_workshops', rows: get_rows)
+end
 
-# Write another tab with some information
-
-last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
-metadata = [
-  ['SUMMER WORKSHOPS AUTOMATION METADATA'],
-  [''],
-  ['The tabs "summer_workshops (auto)" and "summer_workshops_meta (auto)" are auto-generated;'],
-  ['Any edits you make to them (besides formatting) may be lost.'],
-  [''],
-  ['Last updated:', last_updated.strftime('%Y-%m-%d %l:%M%P GMT%:::z')],
-  ['Written by:', CDO.gdrive_export_secret.client_email],
-  ['Summer workshops:', workshops.length - 1],
-  [''],
-  ['Parts of this Google Sheet are auto-populated from our live application by an automated process.'],
-  ["The sheet is shared with a \"service account\" that updates it on the application's behalf."],
-]
-drive.update_sheet metadata, CDO.applications_2020_2021_gsheet_key, 'summer_workshops_meta (auto)'
+main

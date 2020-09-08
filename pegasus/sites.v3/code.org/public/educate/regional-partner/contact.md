@@ -25,7 +25,6 @@ Code.org works with many organizations around the country to bring computer scie
 | EduTech | Tabitha Teel | tabitha.teel@k12.nd.us |
 | Florida International University | Giri Narasimhan and Kip Irvine| academy-admin@cis.fiu.edu|
 | Fresno County Superintendent of Schools | Marlena Hebern| mhebern@fcoe.org |
-| George Fox University | Donna Kestek | dkestek@georgefox.edu |
 | Georgia Tech Center for Education Integrating Science, Mathematics, and Computing | Chris Thompson and Tamara pearson | chris.thompson@ceismc.gatech.edu, tamara.pearson@ceismc.gatech.edu |
 | Idaho Digital Learning Academy | Jennifer Caprile | jennifer.caprile@idla.k12.id.us|
 | Illinois Math and Science Academy | Angela Rowley | arowley@imsa.edu |
@@ -36,7 +35,8 @@ Code.org works with many organizations around the country to bring computer scie
 | Marquette University | Dennis Brylow | brylow@pd.code.org |
 | Maryland Codes | Heather Lageman and Gretchen LeGrand | heather.lageman@gmail.com, gretchen@codeintheschools.org |
 | McNeese State University | Cate Anderson | canderson@mcneese.edu |
-| mindSpark Learning | Jacki Reid| jacki@mymindsparklearning.org|
+| mindSpark Learning (Colorado) | Jacki Reid| jacki@mymindsparklearning.org|
+| mindSpark Learning (Utah) | Jacki Reid| jacki@mymindsparklearning.org|
 | Mississippi State University | Heather McCormick | heather.mccormick@rcu.msstate.edu |
 | Montana (no partner)| Sabine Thomas | sabine@code.org |
 | Mouse| Carlos Leon | educators@mouse.org |
@@ -60,7 +60,6 @@ Code.org works with many organizations around the country to bring computer scie
 | The Friday Institute | Sam Morris and Dave Frye | srmorri3@ncsu.edu, dafrye@ncsu.edu |
 | The STEM Center of Excellence at the The Citadel | Jennifer Albert and Ashley Andrews | jalbert@citadel.edum, ashley.andrews@citadel.edu |
 | Twin Cities Public Television | Alex Dexheimer | adexheimer@tpt.org |
-| UNH STEM Teachers' Collaborative | Emily Kerr | emily.kerr@unh.edu |
 | University of California San Diego CREATE | Minh Mai | mlmai@ucsd.edu |
 | University of Nebraska | Guy Trainin | gtrainin2@unl.edu |
 | University of North Florida | Betina Malhotra | batina.malhotra@unf.edu |
@@ -68,7 +67,6 @@ Code.org works with many organizations around the country to bring computer scie
 | University of Texas at Austin | Amy Carrel | acarrell@tacc.utexas.edu |
 | University of Wyoming | Andrea Burrows | Andrea.Burrows@uwyo.edu |
 | USC Viterbi VAST | Katie Mills | vast@usc.edu |
-| Utah STEM Action Center | Lynn Purdin |lpurdin@utah.gov |
 | Vermont Computer Science Alliance | Jennifer Fribush and Juniper Lovato | jfribush@neoti.org, Juniper.Lovato@uvm.edu |
 | West Shore ESD | Larry Wynn | wynlar@gvsu.org|
 | West Virginia University | Elizabeth Wiles | codewv@mail.wvu.edu|

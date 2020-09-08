@@ -1,0 +1,8 @@
+name 'CSD games movement2 challenge choice_virtual_2020'
+display_name 'Collision Challenges'
+description 'Try out these new blocks and challenges with collisions.'
+
+sublevels
+level 'CSD U3 complex sprite movement practice parabola_virtual_2020'
+level 'CSD U3 complex sprite movement practice deceleration_virtual_2020'
+level 'CSD U3 L17 Freeplay_virtual_2020'

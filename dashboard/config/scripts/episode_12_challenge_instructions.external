@@ -1,0 +1,30 @@
+name 'Episode 12 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Sprite Lab
+
+**Do This:** Add on to the Build a Computer program. Add more inputs and outputs! What about speakers, a microphone, or a webcam? For an added challenge, remake the program using a phone instead of a laptop. Remember - a phone is a computer too! Is uses input, storage, processing, and output. 
+
+![](https://images.code.org/4e27d70383c55923f10212cf6a04f76b-image-1591668733903.gif)
+
+## App Lab
+
+**Do This:** 
+
+* Purchase or borrow a [Circuit Playground Express](https://www.adafruit.com/product/3333) or [Circuit Playground Classic](https://www.adafruit.com/product/3000). 
+* Download the [Code.org Maker App](https://studio.code.org/maker/setup)
+* Sign in to Code.org on the Maker App, and come back to this level in Code Break. 
+* Work through Unit 6 in [Computer Science Discoveries](https://studio.code.org/s/csd6-2020) to learn how to program your circuit board.
+* Come back here to create your own project, adding new features to the Drawing App!
+
+![](https://images.code.org/56908a5a708aaadf11249d962534368f-image-1591669084898.gif)
+
+## No Circuit Playground?
+
+You can still learn about Physical Computing by following tutorials using a digital version of a Micro:bit at Microsoft's [MakeCode](https://makecode.microbit.org/). 
+MARKDOWN

@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview'
 level 'dlp19_overview1', progression: 'Background'
 level 'dlp19_overview2', progression: 'Process'
 level 'dlp19_overview3', progression: 'Preparation'
@@ -12,8 +12,9 @@ level 'dlp19_overview4', progression: 'Evaluation'
 level 'dlp19_overview5', progression: 'Due Dates'
 
 lesson_group 'content', display_name: 'Content'
-stage 'Understanding the Curriculum'
+lesson 'Understanding the Curriculum', display_name: 'Understanding the Curriculum'
 level 'dlp19_csp_prework-fit_content1'
 
-stage 'Demonstrating Understanding'
+lesson 'Demonstrating Understanding', display_name: 'Demonstrating Understanding'
 level 'dlp19_csp_prework-fit-prompt'
+

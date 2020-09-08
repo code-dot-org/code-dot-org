@@ -8,6 +8,9 @@
     ],
     "func": "spriteClicked",
     "blockText": "{CONDITION} {SPRITE} clicked",
+    "miniToolboxBlocks": [
+      "gamelab_clickedSpritePointer"
+    ],
     "callbackParams": [
       "extraArgs"
     ],

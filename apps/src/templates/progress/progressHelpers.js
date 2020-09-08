@@ -173,11 +173,13 @@ export const processedLevel = level => {
     url: level.url,
     name: level.name,
     progression: level.progression,
+    progressionDisplayName: level.progression_display_name,
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
-    bonus: level.bonus
+    bonus: level.bonus,
+    sublevels: level.sublevels
   };
 };

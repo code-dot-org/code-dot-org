@@ -90,7 +90,7 @@
     "expand_debugger": "true",
     "parent_level_id": 20746,
     "name_suffix": "_2020",
-    "map_reference": "/docs/csd-1718/booleans/index.html",
+    "map_reference": "/docs/concepts/javascript/if-statements/",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -100,16 +100,25 @@
     "bubble_choice_description": "Empty the soup bowl when it turns upside down.",
     "libraries_enabled": "false",
     "thumbnail_url": "https://images.code.org/3c8df2c482dc9e6e964c551a7d567978-image-1585829503858.gif",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"cdbe27a9-6ba3-42a6-a6bb-7dce12fdc251\",\r\n    \"a990745e-e123-4678-a25e-893e4f8c07a8\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"cdbe27a9-6ba3-42a6-a6bb-7dce12fdc251\": {\r\n      \"name\": \"bowl\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/t9TcKV9CXcjk6O1qhV6jMHqpU49bItSE/category_tools/bowl.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"t9TcKV9CXcjk6O1qhV6jMHqpU49bItSE\"\r\n    },\r\n    \"a990745e-e123-4678-a25e-893e4f8c07a8\": {\r\n      \"name\": \"stew\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/PmoyW.yKwS4yqPHs8Xk_nfZmoy4zE3xG/category_food/stew.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PmoyW.yKwS4yqPHs8Xk_nfZmoy4zE3xG\"\r\n    }\r\n  }\r\n}",
-    "start_blocks": "var soup =  createSprite(200,200);\r\nsoup.setAnimation(\"stew\");\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  soup.rotation = soup.rotation + 3;\r\n  drawSprites();\r\n}"
+    "start_blocks": "var soup =  createSprite(200,200);\r\nsoup.setAnimation(\"stew\");\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  soup.rotation = soup.rotation + 3;\r\n  drawSprites();\r\n}",
+    "encrypted_examples": "r8oEsGpMqW/nPxmLuCsbzRp2WYgjk82EiFaPBD9ogU1wKIw8OK/eOrchLMry\n6tHDCiUhiKTsIg7+yzPgvvdqmQ==\n",
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 01:04:33 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-19 01:05:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-01 06:06:13 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:53:01 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-31 22:53:58 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 12:05:50 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:08:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:08:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:12:27 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 01:04:33 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-19 01:05:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-01 06:06:13 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 22:53:01 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-31 22:53:58 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 12:05:50 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:08:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:08:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 12:12:27 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-05 20:55:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:37:23 +0000\",\"changed\":[\"code_functions\",\"map_reference\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

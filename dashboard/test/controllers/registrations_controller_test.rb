@@ -5,8 +5,9 @@ require 'test_helper'
 # DEPRECATION NOTICE
 #
 # Please locate new tests for RegistrationsController in files for individual
-# routes under
-#   test/controllers/registrations_controller/*_test.rb
+# routes under one of:
+#   test/integration/registration/*_test.rb
+#   test/integration/omniauth/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
@@ -183,6 +184,28 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal "parent@example.com", email_preference[:email]
     assert email_preference[:opt_in]
     assert_equal EmailPreference::PARENT_EMAIL_CHANGE, email_preference[:source]
+  end
+
+  test "sign up page saves return to url in session" do
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign in page saves return to url in session" test in
+    # sessions_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
+
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
   end
 
   test "teachers go to specified return to url after signing up" do
@@ -464,5 +487,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
 end

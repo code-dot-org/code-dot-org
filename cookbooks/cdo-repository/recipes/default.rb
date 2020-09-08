@@ -11,10 +11,10 @@ if has_ssh_key
 end
 
 home_path = node[:home]
-git_path = File.join home_path, node.chef_environment
+git_path = node.default['cdo-repository']['git_path'] = File.join(home_path, node.chef_environment)
 
 git git_path do
-  provider CDO::Provider::Git
+  provider Cdo::Provider::Git
 
   repository node['cdo-repository']['url']
   depth node['cdo-repository']['depth'] if node['cdo-repository']['depth']

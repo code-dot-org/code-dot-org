@@ -1,17 +1,21 @@
-hideable_stages true
+is_course true
+hidden false
+hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
-stage_extras_available true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course E!", "link"=>"https://curriculum.code.org/csf-20/coursee", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursee'
 version_year '2020'
+is_stable true
 curriculum_umbrella 'CSF'
 tts true
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
-stage 'Sequencing in the Maze', flex_category: 'ramp_up'
+lesson 'Sequencing in the Maze', display_name: 'Sequencing in the Maze'
 level 'courseD_video_ramp1_2020', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_2020', progression: 'Practice'
 level 'courseD_maze_ramp2_2020', progression: 'Practice'
@@ -26,7 +30,7 @@ level 'courseC_maze_debugging7_2020', progression: 'Challenge', challenge: true
 level 'courseD_maze_ramp5a_2020', progression: 'Practice'
 level 'courseD_maze_ramp5c_2020', progression: 'Practice'
 
-stage 'Programming and Loops with the Artist', flex_category: 'ramp_up'
+lesson 'Programming and Loops with the Artist', display_name: 'Drawing with Loops'
 level 'courseC_video_artist_2020', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2020', progression: 'Practice'
 level 'courseC_artist_prog2_2020', progression: 'Practice'
@@ -41,7 +45,7 @@ level 'ramp_artist_loops8_2020', progression: 'Challenge', challenge: true
 bonus 'courseC_artist_prog_challenge1_2020'
 bonus 'courseC_artist_prog_challenge2a_2020'
 
-stage 'Conditionals in Minecraft: Voyage Aquatic', flex_category: 'ramp_up'
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic'
 level 'CourseE_HOC 2018 Level_1_2020', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_2_2020', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_3_2020', progression: 'Practice'
@@ -54,7 +58,7 @@ level 'CourseE_HOC 2018 Level_9b_2020', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_10_2020', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_11_2020', progression: 'Practice'
 
-stage 'Conditionals', flex_category: 'ramp_up'
+lesson 'Conditionals', display_name: 'Conditionals with the Farmer'
 level 'courseD_video_whileIntro_2020', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_2020', progression: 'Prediction'
 level 'courseE_farmer_ramp11a_2020', progression: 'Practice'
@@ -70,10 +74,10 @@ level 'courseE_farmer_ramp12f_2020', progression: 'Challenge', challenge: true
 level 'courseE_farmer_ramp12g_2020', progression: 'Practice'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-stage 'Simon Says', flex_category: 'csf_sprites'
+lesson 'Simon Says', display_name: 'Simon Says'
 level 'SimonSays-Unplugged_2020'
 
-stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_sprites'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Swimming Fish with Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_2020', progression: 'Prediction'
 level 'Fish Tank 2-validated_2020', progression: 'Mini-Project: Swimming Fish'
@@ -83,8 +87,9 @@ level 'CourseEF_video_MakeSprite_2020', progression: 'How to Make a Sprite'
 level 'Fish Tank 5-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 6-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 7-validated_2020', progression: 'Free Play'
+bonus 'spritelab_extras_repeat'
 
-stage 'Alien Dance Party with Sprite Lab', flex_category: 'csf_sprites'
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab'
 level 'Dance Party 1-validated_2020', progression: 'Prediction'
 level 'CDEF_video_SpritesInAction_2020', progression: 'Video'
 level 'Dance Party 2_2020', progression: 'Mini-Project: Alien Dance Moves'
@@ -96,10 +101,10 @@ level 'Dance Party 7_2020', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2020', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-stage 'Private and Personal Information', flex_category: 'csf_digcit'
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information'
 level 'PrivatePersonalInformation-Unplugged_2020'
 
-stage 'About Me', flex_category: 'csf_digcit'
+lesson 'About Me', display_name: 'About Me with Sprite Lab'
 level 'courseE_aboutme_1_2020', progression: 'Free Play'
 level 'courseE_aboutme_2_2020', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_3_2020', progression: 'Mini-project: Interactive Poster'
@@ -107,11 +112,11 @@ level 'courseE_aboutme_4_2020', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_5_2020', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_6_2020', progression: 'Mini-project: Interactive Poster'
 
-stage 'Digital Sharing', flex_category: 'csf_digcit'
+lesson 'Digital Sharing', display_name: 'Digital Sharing'
 level 'DigitalSharing-Unplugged_2020'
 
 lesson_group 'csf_nested_loops', display_name: 'Nested Loops'
-stage 'Nested Loops in Bee', flex_category: 'csf_nested_loops'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze'
 level 'courseD_bee_nestedLoops1a_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2020', progression: 'Practice'
 level 'courseD_video_nestedLoops_2020', progression: 'Nested Loops with the Bee'
@@ -128,7 +133,7 @@ level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 bonus 'courseD_harvester_nested_loops_challenge1_2020'
 bonus 'courseD_collector_nested_loops_challenge2_2020'
 
-stage 'Nested Loops in Artist', flex_category: 'csf_nested_loops'
+lesson 'Nested Loops in Artist', display_name: 'Fancy Shapes using Nested Loops'
 level 'courseD_artist_nestedLoops1_2020', progression: 'Practice'
 level 'courseD_artist_nestedLoops1a_2020', progression: 'Practice'
 level 'courseD_video_nestedLoopsArtist_2020', progression: 'Video'
@@ -145,7 +150,7 @@ level 'courseD_artist_nestedLoopsFP_2020', progression: 'Free Play'
 bonus 'courseD_artist_nestedLoops_challenge1_2020'
 bonus 'courseD_artist_nestedLoops_challenge2_2020'
 
-stage 'Nested Loops in Frozen', flex_category: 'csf_nested_loops'
+lesson 'Nested Loops in Frozen', display_name: 'Nested Loops with Frozen'
 level 'courseD_artist_project1_2020', progression: 'Mini-Project: Snowflake #1'
 level 'courseD_artist_project2_2020', progression: 'Mini-Project: Snowflake #1'
 level 'courseD_artist_project3_2020', progression: 'Mini-Project: Snowflake #1'
@@ -157,10 +162,10 @@ level 'courseD_artist_project3a_2020', progression: 'Mini-Project: Snowflake #2'
 level 'courseD_artist_project4a_2020', progression: 'Mini-Project: Snowflake #2'
 
 lesson_group 'csf_functions', display_name: 'Functions'
-stage 'Functions: Songwriting', flex_category: 'csf_functions'
+lesson 'Functions: Songwriting', display_name: 'Songwriting'
 level 'Songwriting-Unplugged_2020'
 
-stage 'Functions in Minecraft', flex_category: 'csf_functions'
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft'
 level 'MC_HOC_2017_01_RETRY_2020', progression: 'Practice'
 level 'MC_HOC_2017_02_Cole_2020', progression: 'Practice'
 level 'MC_HOC_2017_03_Cole_2020', progression: 'Practice'
@@ -174,7 +179,7 @@ level 'MC_HOC_2017_10_RETRY_2020', progression: 'Practice'
 level 'MC_HOC_2017_Ali_2020', progression: 'Practice'
 level 'MC_HOC_2017_FP20x20_2020', progression: 'Free Play'
 
-stage 'Functions in Harvester', flex_category: 'csf_functions'
+lesson 'Functions in Harvester', display_name: 'Functions with Harvester'
 level 'harvester_skinOverview_video_2020', progression: 'The Harvester'
 level 'courseE_farmer_functions1_2020', progression: 'Practice'
 level 'courseE_farmer_functions1a_2020', progression: 'Practice'
@@ -190,7 +195,7 @@ level 'courseE_farmer_functions10a1_2020', progression: 'Challenge', challenge: 
 level 'courseE_farmer_functions13_2020', progression: 'Practice'
 level 'courseE_farmer_functions11_predict_2020', progression: 'Prediction'
 
-stage 'Functions in Artist', flex_category: 'csf_functions'
+lesson 'Functions in Artist', display_name: 'Functions with Artist'
 level 'courseE_artist_functions_predict1_2020', progression: 'Prediction'
 level 'courseE_artist_functions2_2020', progression: 'Practice'
 level 'courseE_artist_functions3_2020', progression: 'Practice'
@@ -208,10 +213,11 @@ bonus 'courseE_artist_functions_challenge1_2020'
 bonus 'courseE_artist_functions_challenge2_2020'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
-stage 'Designing for Accessibility', flex_category: 'csf_impacts'
+lesson 'Designing for Accessibility', display_name: 'Designing for Accessibility'
 level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-stage 'End of Course Project', flex_category: 'end_of_course_project'
+lesson 'End of Course Project', display_name: 'End of Course Project'
 level 'courseE_project_exemplars_2019_2020', progression: 'Example Projects'
 level 'courseE_EOC_2020', progression: 'Create your project'
+

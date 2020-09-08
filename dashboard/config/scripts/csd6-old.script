@@ -1,25 +1,25 @@
 login_required true
 student_detail_progress_view true
-stage_extras_available true
+lesson_extras_available true
 project_widget_visible true
 project_widget_types ["applab"]
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
-stage 'Computing Innovations', flex_category: 'csd6_1'
+lesson 'Computing Innovations', display_name: 'Computing Innovations'
 level 'CSDU6 Innovation', named: true
 
-stage 'Input Unplugged', flex_category: 'csd6_1'
+lesson 'Input Unplugged', display_name: 'Input Unplugged'
 level 'CSDU6 GameLab Input 1', progression: 'Input Examples'
 level 'CSDU6 AppLab Input 1', progression: 'Input Examples'
 
-stage 'Event Types', flex_category: 'csd6_1'
+lesson 'Event Types', display_name: 'Event Types'
 level 'CSD U6L03 Overview', named: true
 level 'CSD Review: Design Mode, IDs, and Events', named: true
 level 'CSD: Review Events', named: true
 level 'CSD: Creating Variables In App Lab', named: true
 level 'CSDU6 - UI and Inputs - event type testing', named: true
 
-stage 'Getters and Setters', flex_category: 'csd6_1'
+lesson 'Getters and Setters', display_name: 'Getters and Setters'
 level 'CSD - Getters and Setters', named: true
 level 'CSDU6 - UI and Inputs - setScreen', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - setText', progression: 'Using Getters and Setters'
@@ -37,7 +37,7 @@ level 'CSDU6 - UI and Inputs - setProperty', progression: 'UI Element Properties
 level 'Stop: Review Getters and Setters', named: true
 level 'Challenge: Input and UI', named: true
 
-stage 'The Circuit Playground', flex_category: 'csd6_1'
+lesson 'The Circuit Playground', display_name: 'The Circuit Playground'
 level 'CSD LEDs Map', named: true
 level 'CSDU6 Circuit Playground Test', progression: 'Using the LED'
 level 'CSDU6 LED basics led.on', progression: 'Using the LED'
@@ -51,7 +51,7 @@ level 'CSDU6 buzzer stop', progression: 'Using the Buzzer'
 level 'CSDU6 buzzer alarm', progression: 'Using the Buzzer'
 level 'Challenge: Buzzer and LED', named: true
 
-stage 'Lists', flex_category: 'csd6_1'
+lesson 'Lists', display_name: 'Lists'
 level 'CSD: Introduction to Lists - Part 1', named: true
 level 'CSD: Lists', named: true
 level 'CSDU6 - lists - lists 1', progression: 'Introduction to Lists'
@@ -69,7 +69,7 @@ level 'CSDU6 - Arrays - lengthMinus1', progression: 'Understanding List Length'
 level 'CSDU6 - lists - lists 5', progression: 'Understanding List Length'
 level 'Challenge: Random Button Colors', named: true
 
-stage 'Lights', flex_category: 'csd6_1'
+lesson 'Lights', display_name: 'Lights'
 level 'CSD colorLed Map', named: true
 level 'CSDU6L06 - lists and colorLeds - song list', progression: 'Using Color LEDs'
 level 'CSDU6L06 - lists and colorLeds - set color', progression: 'Using Color LEDs'
@@ -81,7 +81,7 @@ level 'CSDU6L06 - lists and colorLeds -solo light pattern', progression: 'Light 
 level 'CSDU6L06 - lists and colorLeds - light pattern off', progression: 'Light Patterns'
 level 'Challenge: Lights Picker', named: true
 
-stage 'For Loops', flex_category: 'csd6_1'
+lesson 'For Loops', display_name: 'For Loops'
 level 'CSD: For Loops', named: true
 level 'CSD: For Loop', named: true
 level 'CSDU6 - for loop - 2', progression: 'Introduction to For Loops'
@@ -89,7 +89,7 @@ level 'CSDU6 - for loop - 6', progression: 'Introduction to For Loops'
 level 'CSDU6 - for loop - predict repeat', progression: 'Introduction to For Loops'
 level 'CSDU6 - for loop - predict print', progression: 'Introduction to For Loops'
 
-stage 'Lists and For Loops', flex_category: 'csd6_1'
+lesson 'Lists and For Loops', display_name: 'Lists and For Loops'
 level 'CSD: Lists with For Loops', named: true
 level 'CSDU6 - for loop - 5', progression: 'Looping Over Lists'
 level 'CSDU6 - for loop - 10', progression: 'Looping Over Lists'
@@ -102,7 +102,7 @@ level 'Stop: Check with Teacher', named: true
 level 'CSD - for loop - on off', progression: 'For Loops and LEDs'
 level 'CSDU6 - for loops - lights picker', progression: 'For Loops and LEDs'
 
-stage 'Timed Loops', flex_category: 'csd6_1'
+lesson 'Timed Loops', display_name: 'Timed Loops'
 level 'CSD U6 - timed Loop predict for', named: true
 level 'CSD Timed Loop Map', named: true
 level 'CSD U6 - timed Loop predict timed', progression: 'Introduction to Timed Loops'
@@ -119,7 +119,7 @@ level 'CSDU6 - timed loop random sound exit', progression: 'Timed Loops and List
 level 'CSDU6 - timed loop helpers', progression: 'Timed Loops and Lists'
 level 'CSDU6 - timed loop challenge', named: true
 
-stage 'Project: Board Output', flex_category: 'csd6_1'
+lesson 'Project: Board Output', display_name: 'Project: Board Output'
 level 'CSDU6 - ch 1 exemplar LEDs', named: true
 level 'CSDU6 - ch 1 project design', progression: 'Project Work'
 level 'CSDU6 - ch 1 project events', progression: 'Project Work'
@@ -129,7 +129,7 @@ level 'CSDU6 - ch 1 project finish', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection', assessment: true
 
 lesson_group 'csd6_2', display_name: 'Chapter 2: Building Physical Prototypes'
-stage 'Physical Input', flex_category: 'csd6_2'
+lesson 'Physical Input', display_name: 'Physical Input'
 level 'CSD onBoardEvent Map', named: true
 level 'CSDU6 - button screen buttonL', progression: 'Board Events'
 level 'CSDU6 - button screen buttonR', progression: 'Board Events'
@@ -145,7 +145,7 @@ level 'CSDU6 - button tug o war right button', progression: 'Tug o War Game'
 level 'CSDU6 - button tug o war left button', progression: 'Tug o War Game'
 level 'CSDU6 - button tug o war challenge', progression: 'Tug o War game', named: true
 
-stage 'Analog Input', flex_category: 'csd6_2'
+lesson 'Analog Input', display_name: 'Analog Input'
 level 'CSDU6 - sensors experiment', named: true
 level 'CSD Board Sensors Map', named: true
 level 'CSDU6 - sensors sound', progression: 'Using Sensors'
@@ -160,7 +160,7 @@ level 'CSDU6 - sensors rgb part 3', progression: 'Displaying Sensor Values'
 level 'CSDU6 - sensors temp f c', progression: 'Displaying Sensor Values'
 level 'CSDU6 - sensors challenge', named: true
 
-stage 'Sensor Applications', flex_category: 'csd6_2'
+lesson 'Sensor Applications', display_name: 'Sensor Applications'
 level 'CSDU6 - sensor theremin demo', named: true
 level 'CSDU6 - sensors theremin 1', progression: 'Light Theremin Project'
 level 'CSDU6 - sensors theremin 2', progression: 'Light Theremin Project'
@@ -175,7 +175,7 @@ level 'CSDU6 - sensors love tester 2', progression: 'Love Tester Project'
 level 'CSDU6 - sensors love tester 3', progression: 'Love Tester Project'
 level 'CSDU6 - sensor projects challenge', named: true
 
-stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
+lesson 'Project: Prototype an Innovation', display_name: 'Project: Prototype an Innovation'
 level 'CSDU6 - final project 1', progression: 'Project Work'
 level 'CSDU6 - final project 2', progression: 'Project Work'
 level 'CSDU6 - final project 3', progression: 'Project Work'
@@ -183,3 +183,4 @@ level 'CSDU6 - final project 4', progression: 'Project Work'
 level 'CSDU6 - final project 5', progression: 'Project Work'
 level 'CSDU6 - final project 6', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection', assessment: true
+

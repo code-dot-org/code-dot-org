@@ -4,7 +4,7 @@
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section_summary
   teacher_dashboard_data[:validScripts] = Script.valid_scripts(current_user).map(&:assignable_info)
-  teacher_dashboard_data[:validCourses] = Course.valid_courses(user: @current_user)
+  teacher_dashboard_data[:validCourses] = UnitGroup.valid_course_infos(user: @current_user)
   teacher_dashboard_data[:studentScriptIds] = @section.student_script_ids
   teacher_dashboard_data[:currentUserId] = @current_user.id
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false

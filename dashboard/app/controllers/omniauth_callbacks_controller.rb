@@ -85,10 +85,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
-    return head(:bad_request) unless can_connect_provider?
+    unless current_user&.migrated?
+      flash.alert = I18n.t('auth.migration_required')
+      return redirect_to edit_user_registration_path
+    end
 
     provider = auth_hash.provider.to_s
-    return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+    unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+      flash.alert = I18n.t('auth.invalid_provider', provider: provider)
+      return redirect_to edit_user_registration_path
+    end
 
     existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
 
@@ -457,14 +463,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def should_connect_provider?
-    return current_user && session[:connect_provider].present?
-  end
-
-  def can_connect_provider?
-    return false unless current_user&.migrated?
-
-    connect_flag_expiration = session.delete :connect_provider
-    connect_flag_expiration&.future?
+    return current_user && auth_params.fetch("action", nil) == "connect"
   end
 
   def get_connect_provider_errors(auth_option)

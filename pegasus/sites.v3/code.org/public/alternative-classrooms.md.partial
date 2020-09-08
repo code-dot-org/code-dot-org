@@ -1,0 +1,197 @@
+---
+title: Resources for Virtual and Socially-Distanced Classrooms
+video_player: true
+theme: responsive
+social:
+    "og:title": "Resources for Virtual and Socially-Distanced Classrooms"
+    "og:description": "An overview of resources that teachers can use in alternative classroom environments"
+    "og:image": "http://code.org/images/athome/alt-classrooms.jpg"
+    "og:image:width": 850
+    "og:image:height": 502
+---
+# Resources for Teaching in Virtual and Socially-Distanced Classrooms
+
+<div class="col-40" style="padding-right: 20px">
+    <img src="/images/athome/alt-classrooms.jpg" style="width:100%" alt="Student interacting with her teacher virtually.">
+    <figcaption style="text-align:left;font-style:italic;font-size:12px"> Image credit: August de Richelieu </figcaption>
+</div>
+
+<div class="col-60">
+<p>While our courses are intended to be taught in-person as part of a collaborative and inclusive classroom environment, we recognize that in-person instruction won’t be possible for many, if not most, classrooms this semester. To help you pivot, we’ve developed guidance for teachers in virtual and socially-distanced classrooms (or a mix of both).</p>
+
+<p>Activities and lesson plans are designed to be flexible and suit a variety of teaching scenarios. For more detailed and course-specific introductions to the new resources for alternative teaching environments, start here:</p>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1g8loG0Lj1LLg3yAiKPIn82vXyaMTznRkIjQsIzt_LoM/edit?usp=sharing" target="_blank">Overview: Modifications for Common Teaching Practices</a></li>
+<li><a href="https://forum.code.org/t/modifications-for-virtual-and-socially-distanced-classrooms-csf/33082" target="_blank">Modifications for CS Fundamentals</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms-csd/33007" target="_blank">Modifications for CS Discoveries</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005" target="_blank">Modifications for CS Principles</a></li>
+</ul>
+
+</div>
+
+<div style="clear:both"></div>
+
+<br>
+
+We also highly recommend you watch the recorded webinar for a walkthrough of the resources, especially if you teach CS Principles or CS Discoveries:
+
+<div class="col-60">
+{{ alt_classrooms_vid }}
+<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CS Principles, and will be released for CS Discoveries in early September. To access the full video, <a href=
+https://code.zoom.us/rec/play/vpN8JLivrjk3GoeTuQSDA_5_W9Toev6shyVPr6dfmByzAHMLN1v3N-MWYuG8VL58QfLYAPsIFFbnn54k?autoplay=true" target="_blank">click here</a>.</i>
+</div>
+
+<div style="clear:both"></div>
+
+## Frequently Asked Questions
+
+Click each question to expand and see the answers. Don’t see your question answered here? Reach out to <a href="mailto:support@code.org">support@code.org</a> for additional assistance.
+
+### <strong>Setting up my classroom</strong>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">How can I easily get my students set up with Code.org accounts when they’re remote?</summary>
+	<p>
+	<br>
+<p>If your school uses Google Classroom or Clever, you can set up your Code.org classroom section to use either Google Classroom (<a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom" target="_blank">learn more</a>) or Clever logins (<a href="https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-using-Clever" target="_blank">learn more</a>) so it’s easier for your students to sign in and there’s one fewer account for them to manage.</p>
+<p>We also created a PDF letter that can be emailed to parents that contains login instructions for classrooms that use secret word, picture, or personal email logins (<a href="https://support.code.org/hc/en-us/articles/360041550072-Is-there-a-letter-I-can-send-to-parents-about-how-to-get-setup-with-Code-org-at-home-" target="_blank">learn more</a>).</p>
+<p><i>Coming soon</i> - soon you’ll be able to download all of your students’ login information into a single CSV if you use secret word or picture accounts. This will make it easier to copy and paste your students' login credentials into an email or use mail merge to send emails with login credentials directly to your students or their parents. <a href="https://support.code.org/hc/en-us/search/click?data=BAh7CjoHaWRpBHyVKww6CXR5cGVJIgxhcnRpY2xlBjoGRVQ6CHVybEkiAaBodHRwczovL3N1cHBvcnQuY29kZS5vcmcvaGMvZW4tdXMvYXJ0aWNsZXMvMjA0MTgyOTA4LUhvdy1kby1JLXZpZXctZW1haWwtb3ItcHJpbnQtc3R1ZGVudC1sb2dpbi1pbmZvcm1hdGlvbi1zby1JLWNhbi1zaGFyZS1pdC13aXRoLXBhcmVudHMtYW5kLXN0dWRlbnRzLWF0LWhvbWUtBjsHVDoOc2VhcmNoX2lkSSIpMzU3OGNlMjctNmUxNi00N2U1LWIyNTktY2NlMDIzNDNlNzBlBjsHRjoJcmFua2kI--a726266cbe0231f3c18f74e3b0a69b5216ed9661" target="_blank">Check here for updates</a> on when this feature will be ready to use.</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Does Code.org support single-sign-on (SSO)?</summary>
+	<p>
+	<br>
+<p>Yes, Code.org supports single-sign-on from Google Classroom, Microsoft, Clever, and PowerSchool (<a href="https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section" target="_blank">learn more</a>). We also support section set up/rostering through Google Classroom and Clever (learn more about <a href="https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-using-Clever" target="_blank">Clever</a> and <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom" target="_blank">Google Classroom</a>)</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Does Code.org support any kind of LMS integration?</summary>
+	<p>
+	<br>
+<p>We do not currently support any specific assignment or grading integrations with LMSes, but <i>coming soon</i> teachers will be able to assign Code.org lessons via Google Classroom directly from Code.org’s course pages: check this page for an update on when this is released.</p>
+<p>Have a specific request for LMS integration? Reach out to <a href="mailto:support@code.org">support@code.org</a> and let us know what you and your classroom need!</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Can my students use iPads, other tablets, or mobile phones with Code.org’s curriculum?</summary>
+	<p>
+	<br>
+<p>Yes, to varying degrees. Check out our <a href="https://support.code.org/hc/en-us/articles/202591743-Technical-requirements-for-Code-org" target="_blank">technical requirements article</a> to learn more.</p>
+<p>Looking for additional materials that students can work on from a mobile device? We have a few suggestions at <a href="https://code.org/athome" target="_blank">code.org/athome</a>.</p>
+<br>
+</details>
+
+### <strong>Teaching with Code.org in virtual or hybrid classrooms</strong>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Some of my students lack reliable internet access at home - what resources are available to keep them learning computer science without internet access?</summary>
+	<p>
+	<br>
+<p>Code.org offers two collections of unplugged lessons that do not require a computer or internet access:</p>
+<ol>
+	<li><a href="https://hourofcode.com/us/learn?platform=no-computers" target="_blank">Hour of Code unplugged lessons</a> from Code.org and third parties</li>
+	<li><a href="https://code.org/curriculum/unplugged" target="_blank">Unplugged lessons in our CS Fundamentals courses</a></li>
+</ol>
+<p>Please note that some of these lessons require students to work together and may need to be modified further to work in a virtual or hybrid classroom setting. If you have suggestions for how to modify these unplugged lessons, or you want to see how other teachers have recommended modifying these lessons, please check out the Code.org forum (<a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning/33134" target="_blank">CSF</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csd/33135" target="_blank">CSD</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csp/33136" target="_blank">CSP</a>)</p>
+<p>You can also check out these unplugged resources from 3rd parties:</p>
+<ul>
+	<li><a href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. (for ages 4-10)</li>
+	<li><a href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - A collection of free teaching materials that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. (for ages 5-14)</li>
+</ul>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">What are some ideas for fostering collaboration in my classroom when students are remote?</summary>
+	<p>
+	<br>
+<p>We’ve suggested modifications for common collaborative teaching practices (ex: debugging, pair programming, group work, think-pair-share, etc.) for virtual and hybrid classrooms <a href="https://docs.google.com/document/d/1g8loG0Lj1LLg3yAiKPIn82vXyaMTznRkIjQsIzt_LoM/edit?usp=sharing" target="_blank">here</a>. If you have suggestions for how to foster collaboration in a virtual or hybrid classroom, or want to see what other teachers have tried, please visit our forum (<a href="https://forum.code.org/c/csf/virtual/422" target="_blank">CSF</a>; <a href="https://forum.code.org/c/csd/virtual/412" target="_blank">CSD</a>; <a href="https://forum.code.org/c/csp/Virtual/411" target="_blank">CSP</a>)</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">How does pair programming work? Will it still work in a virtual or hybrid classroom?</summary>
+	<p>
+	<br>
+<p>Code.org’s pair programming tool is designed to be used by two students working on the same machine, side-by-side (<a href="https://support.code.org/hc/en-us/search/click?data=BAh7CjoHaWRsKwgkIqnGGgA6CXR5cGVJIgxhcnRpY2xlBjoGRVQ6CHVybEkiaGh0dHBzOi8vc3VwcG9ydC5jb2RlLm9yZy9oYy9lbi11cy9hcnRpY2xlcy8xMTUwMDIxMjI3ODgtSG93LWRvZXMtcGFpci1wcm9ncmFtbWluZy1vbi1Db2RlLW9yZy13b3JrLQY7B1Q6DnNlYXJjaF9pZEkiKTFjNTA3ZDY0LTQxYmQtNGVmNS1iZTZhLTE2OGRlMGIwMTFiNQY7B0Y6CXJhbmtpBg%3D%3D--74a957e4ddb458ee14b913e2e985b1b0aaf5d1e3" target="_blank">learn more about pair programming</a>). Unfortunately, it doesn’t allow students to collaborate with one another while they’re on different computers. Since sharing a machine is often not possible in virtual or hybrid classrooms, <a href="https://docs.google.com/document/d/1g8loG0Lj1LLg3yAiKPIn82vXyaMTznRkIjQsIzt_LoM/edit#bookmark=id.56gqu2j4hrva" target="_blank">we’ve made some recommendations</a> for how to adapt pair programming to your classroom’s setup.</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Are there resources my students can use when I’m not available to answer their questions?</summary>
+	<p>
+	<br>
+<p>Yes! The following supplemental resources are available for students to use on Code.org if they need additional information while they’re working:</p>
+<ul>
+	<li>
+		<strong>Hints on levels</strong> (CSF & Hour of Code only): Most levels in CS Fundamentals courses and Hour of Code lessons offer hints in the instructions area of the level. Remind students to look for and click on the hint lightbulb if they’re feeling stumped on a level.
+		<br>
+		<img src="/images/fit-48/athome/level_hints.png" alt="Lightbul icon">
+		<br>
+	</li>
+	<li>
+		<strong>Help & Tips</strong> (CS Discoveries and CS Principles only): The “Help & Tips” Tab (next to the Instructions area on a level) is available on many CS Discoveries and CS Principles levels and contains quick links to concept documentation and instructional videos.
+		<br>
+		<img src="/images/fit-351/athome/help_tips.png" alt="Help & Tips location in top navigation menu">
+		<br>
+	</li>
+	<li>
+		<strong>Block Documentation</strong> (<a href="https://studio.code.org/docs/spritelab/" target="_blank">Sprite Lab</a>, <a href="https://studio.code.org/docs/applab/" target="_blank">App Lab</a>, <a href="https://studio.code.org/docs/gamelab/" target="_blank">Game Lab</a>, <a href="https://studio.code.org/docs/weblab/" target="_blank">Web Lab</a>): students can learn more about how to use specific coding blocks by hovering over a code block on a level, and then tapping “See examples” in the tooltip that appears.
+		<br>
+		<img src="/images/fit-567/athome/block_doc.png" alt="Example of code block documentation">	
+		<br>	
+	</li>
+</ul>
+<br>
+</details>
+
+### <strong>Monitoring student progress and learning</strong>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">How can I see what my students are working on while they are remote?</summary>
+	<p>
+	<br>
+<p>The Progress tab of the Teacher Dashboard provides a summary of student progress on courses and units. To find the Progress tab, tap the name of a section on <a href="https://studio.code.org/home" target="_blank">studio.code.org/home</a> and then make sure “Progress” is selected in the purple tab bar that appears.</p>
+<p>From the Progress tab you can:</p>
+<ol>
+	<li><strong>See which levels and lessons a student has completed in a given course or unit</strong> (<a href="https://support.code.org/hc/en-us/search/click?data=BAh7CjoHaWRsKwjvUZPGGgA6CXR5cGVJIgxhcnRpY2xlBjoGRVQ6CHVybEkiVWh0dHBzOi8vc3VwcG9ydC5jb2RlLm9yZy9oYy9lbi11cy9hcnRpY2xlcy8xMTUwMDA2OTMyMzEtVmlld2luZy1zdHVkZW50LXByb2dyZXNzBjsHVDoOc2VhcmNoX2lkSSIpYjQ5NTA4ODctNzNhMC00YTJlLTg5MzItZjg1NzhjNGE4OWFmBjsHRjoJcmFua2kG--ea2cb35b2f9ab814a25d725a822a582d036d233b" target="_blank">learn more</a>) - Remember - most levels on CS Principles and CS Discoveries are not auto-validated by Code.org, so a green level is not necessarily ‘correct’ in those courses. Instead of checking each level for every student in those courses (which can be very time consuming), we recommend focusing on assessment opportunities (marked with a purple check-mark) to understand how students are doing. <a href="https://support.code.org/hc/en-us/articles/115002656691-Assessing-and-checking-student-understanding-in-CS-Discoveries-and-CS-Principles" target="_blank">Learn about assessment opportunities</a>.</li>
+	<li><strong>Check when a student last worked on a course or unit</strong> (<a href="https://support.code.org/hc/en-us/articles/360041051552-How-can-I-see-when-my-students-last-worked-on-an-assigned-course-" target="_blank">learn more</a>) - hover over a student’s name on the Progress tab to see the last time they ran or completed a level in the selected course or unit.</li>
+	<li><strong>Dive in to your students’ code on a specific level</strong> (<a href="https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-" target="_blank">learn more</a>) - while we can’t show you what your student is doing in real-time, you can still see and run each student’s code on a given level.</li>
+</ol>
+<p>We are currently working on more ways to provide you insight into your students’ work and progress. Stay tuned here for updates!</p>
+<br>
+</details>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">Can I leave feedback for my students on their work?</summary>
+	<p>
+	<br>
+<p>Yes! If your classroom is using CS Discoveries or CS Principles, you can leave feedback for your students on programming levels in those courses if you are a verified teacher. Students will be notified of that feedback the next time they sign in to Code.org.</p>
+<ul>
+	<li><a href="https://support.code.org/hc/en-us/search/click?data=BAh7CjoHaWRsKwiUAsvTUwA6CXR5cGVJIgxhcnRpY2xlBjoGRVQ6CHVybEkiAYZodHRwczovL3N1cHBvcnQuY29kZS5vcmcvaGMvZW4tdXMvYXJ0aWNsZXMvMzYwMDM1NTgyNjEyLUhvdy1kby1JLWxlYXZlLWZlZWRiYWNrLWZvci1teS1zdHVkZW50cy1DUy1EaXNjb3Zlcmllcy1hbmQtQ1MtUHJpbmNpcGxlcy1vbmx5LQY7B1Q6DnNlYXJjaF9pZEkiKWI4ODAwMTNmLTBjYTktNDQ4My05OGM1LTNhOGFkZmJlMjUxOAY7B0Y6CXJhbmtpBg%3D%3D--064445340e5e32ec0a0a5d8b74764bf94f4ed1af" target="_blank">Learn how to leave feedback</a></li>
+	<li><a href="https://support.code.org/hc/en-us/search/click?data=BAh7CjoHaWRsKwgzZaDGGgA6CXR5cGVJIgxhcnRpY2xlBjoGRVQ6CHVybEkif2h0dHBzOi8vc3VwcG9ydC5jb2RlLm9yZy9oYy9lbi11cy9hcnRpY2xlcy8xMTUwMDE1NTAxMzEtQmVjb21pbmctYS12ZXJpZmllZC10ZWFjaGVyLUNTLVByaW5jaXBsZXMtYW5kLUNTLURpc2NvdmVyaWVzLW9ubHktBjsHVDoOc2VhcmNoX2lkSSIpZDZkMDI1OGItZWU0ZS00NmFhLTg3N2ItYzhmZDNiZDY5NWEwBjsHRjoJcmFua2kG--5e11904ff2453eef2f98f7a04d2324abe41b2b3a" target="_blank">Learn how to become a verified teacher</a></li>
+</ul>
+<br>
+</details>
+
+### <strong>Other</strong>
+
+<details style="margin-left: 20px">
+	<summary style="font-size: 18px">How can I request a feature that would help my virtual or hybrid classroom?</summary>
+	<p>
+	<br>
+<p>Send an email with your feature request or the problem you’re facing to <a href="mailto:support@code.org">support@code.org</a>.</p>
+<br>
+</details>
+
+<br>
+
+<hr>
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>
