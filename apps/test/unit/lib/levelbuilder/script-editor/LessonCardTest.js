@@ -49,6 +49,6 @@ describe('LessonCard', () => {
     let wrapper = shallow(<LessonCard {...defaultProps} />);
     expect(wrapper.contains('Lesson 1: Lesson 1'));
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('button').length).to.equal(1);
   });
 });
