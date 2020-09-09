@@ -104,6 +104,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
+  blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
@@ -155,7 +156,29 @@ function initializeBlocklyWrapper(blocklyInstance) {
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
     onMainBlockSpaceCreated: () => {}, // TODO
-    createReadOnlyBlockSpace: () => {} // TODO
+    createReadOnlyBlockSpace: (container, xml, options) => {
+      const workspace = new Blockly.WorkspaceSvg({
+        readOnly: true
+      });
+      const svg = Blockly.utils.dom.createSvgElement(
+        'svg',
+        {
+          xmlns: 'http://www.w3.org/2000/svg',
+          'xmlns:html': 'http://www.w3.org/1999/xhtml',
+          'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+          version: '1.1',
+          class: 'readOnlyBlockSpace'
+        },
+        null
+      );
+      container.appendChild(svg);
+      svg.appendChild(workspace.createDom());
+      Blockly.Xml.domToBlockSpace(workspace, xml);
+      const bbox = svg.getBBox();
+      svg.setAttribute('height', bbox.y + bbox.height + bbox.y);
+      svg.setAttribute('width', bbox.x + bbox.width + bbox.x);
+      return workspace;
+    }
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
@@ -184,7 +207,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       ...opt_options,
       theme: CdoTheme
     };
-    blocklyWrapper.blockly_.inject(container, options);
+    return blocklyWrapper.blockly_.inject(container, options);
   };
 
   // Aliasing Google's blockToDom() so that we can override it, but still be able

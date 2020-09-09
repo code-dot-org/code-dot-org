@@ -33,5 +33,6 @@ WorkspaceSvg.prototype.blockSpaceEditor = {
   blockLimits: {
     blockLimitExceeded: () => false, // TODO
     getLimit: () => {} // TODO
-  }
+  },
+  svgResize: () => {} // TODO
 };
