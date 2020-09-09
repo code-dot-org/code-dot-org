@@ -699,9 +699,9 @@ function getFilters({robotics, mobile}) {
         {name: 'computers', text: i18n.filterPlatformComputers()},
         {name: 'android', text: i18n.filterPlatformAndroid()},
         {name: 'ios', text: i18n.filterPlatformIos()},
+        {name: 'screenreader', text: i18n.filterPlatformScreenReader()},
         {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
-        {name: 'no-computers', text: i18n.filterPlatformNoComputers()},
-        {name: 'screenreader', text: i18n.filterPlatformScreenReader()}
+        {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
       ]
     },
     {
