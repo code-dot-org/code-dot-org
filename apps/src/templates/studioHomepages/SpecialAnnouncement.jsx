@@ -40,7 +40,7 @@ export default class SpecialAnnouncement extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x300/announcement/announcement_special2020.jpg'
+          '/shared/images/fill-540x300/announcement/announcement_special_fall2020.jpg'
         )}
         subHeading={headingText}
         description={descriptionText}
