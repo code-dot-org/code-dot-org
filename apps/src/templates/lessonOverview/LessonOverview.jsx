@@ -14,10 +14,7 @@ export default class LessonOverview extends Component {
     const {displayName, overview} = this.props;
     return (
       <div>
-        {/* TODO Use real lesson number once we have it */}
-        <h1>
-          {i18n.lessonNumbered({lessonNumber: 1, lessonName: displayName})}
-        </h1>
+        <h1>{displayName}</h1>
 
         <h2>{i18n.overview()}</h2>
         <p>{overview}</p>
