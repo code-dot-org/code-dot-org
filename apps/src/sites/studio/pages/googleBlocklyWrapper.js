@@ -1,8 +1,8 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
-import BlockSvg from '@cdo/apps/blocklyAddons/blockSvg';
-import FieldDropdown from '@cdo/apps/blocklyAddons/fieldDropdown';
-import Input from '@cdo/apps/blocklyAddons/input';
-import WorkspaceSvg from '@cdo/apps/blocklyAddons/workspaceSvg';
+import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
+import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
+import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
+import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -102,10 +102,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.BlockSvg = BlockSvg;
-  blocklyWrapper.blockly_.FieldDropdown = FieldDropdown;
-  blocklyWrapper.blockly_.Input = Input;
-  blocklyWrapper.blockly_.WorkspaceSvg = WorkspaceSvg;
+  blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
+  blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.blockly_.Input = CdoInput;
+  blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
