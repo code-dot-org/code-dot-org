@@ -16,7 +16,7 @@ Scenario: Design elements are visible in local and shared projects
   Then I see no difference for "project share dialog" using stitch mode "none"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
-  Then I see no difference for "app lab share"
+  Then I see no difference for "app lab share" using stitch mode "none"
   And I close my eyes
 
 Scenario: App Lab UI elements from initial code and html
