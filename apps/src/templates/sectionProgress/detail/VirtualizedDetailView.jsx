@@ -7,7 +7,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../../styleConstants';
 import {
   getColumnWidthsForDetailView,
-  getLevels,
   setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
@@ -75,7 +74,7 @@ class VirtualizedDetailView extends Component {
     lessonOfInterest: PropTypes.number.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    getLevels: PropTypes.func,
+    levelsByLesson: PropTypes.object,
     onScroll: PropTypes.func,
     stageExtrasEnabled: PropTypes.bool
   };
@@ -92,6 +91,12 @@ class VirtualizedDetailView extends Component {
     if (this.props.scriptData.id !== nextProps.scriptData.id) {
       this.refs.detailView.recomputeGridSize();
       this.refs.detailView.measureAllCells();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
+      this.refs.detailView.forceUpdateGrids();
     }
   }
 
@@ -206,7 +211,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, getLevels, stageExtrasEnabled} = this.props;
+    const {section, levelsByLesson, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -233,7 +238,7 @@ class VirtualizedDetailView extends Component {
             sectionId={section.id}
             stageId={stageIdIndex}
             stageExtrasEnabled={stageExtrasEnabled}
-            levelsWithStatus={getLevels(student.id, stageIdIndex)}
+            levelsWithStatus={levelsByLesson[student.id][stageIdIndex]}
           />
         )}
       </div>
@@ -286,7 +291,10 @@ export default connect(
   state => ({
     columnWidths: getColumnWidthsForDetailView(state),
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
-    getLevels: (studentId, stageId) => getLevels(state, studentId, stageId)
+    levelsByLesson:
+      state.sectionProgress.levelsByLessonByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     setLessonOfInterest(lessonOfInterest) {
