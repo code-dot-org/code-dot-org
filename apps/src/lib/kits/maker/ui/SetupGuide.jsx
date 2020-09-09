@@ -299,24 +299,25 @@ class ChromebookInstructions extends React.Component {
   render() {
     return (
       <div>
-        <h2>Maker Toolkit for Chromebook</h2>
+        <h2>{i18n.makerSetupMakerAppForChromebook()}</h2>
         <p>
-          Maker Toolkit on Chromebook does not use the Code.org Maker App.
-          Instead, it depends on the{' '}
-          <a href={CHROME_APP_WEBSTORE_URL}>Code.org Serial Connector</a> Chrome
-          App.
+          <SafeMarkdown
+            markdown={i18n.makerSetupSerialConnector({
+              webstoreURL: CHROME_APP_WEBSTORE_URL
+            })}
+          />
         </p>
-        <h4>Instructions</h4>
+        <h4>{i18n.instructions()}</h4>
         <ol>
           <li>
-            Open this page (
-            <a href={MAKER_SETUP_PAGE_URL}>{MAKER_SETUP_PAGE_URL}</a>) on your
-            Chromebook.
+            <SafeMarkdown
+              markdown={i18n.makerSetupChromebookPage({
+                makerSetupPage: MAKER_SETUP_PAGE_URL
+              })}
+            />
           </li>
-          <li>
-            Follow the instructions given by the interactive setup checklist.
-          </li>
-          <li>Plug in your board to start using it with App Lab!</li>
+          <li>{i18n.makerSetupFollowInstructions()}</li>
+          <li>{i18n.makerSetupPlugInBoard()}</li>
         </ol>
       </div>
     );
