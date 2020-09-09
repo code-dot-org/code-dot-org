@@ -25,7 +25,7 @@ const CHROMEBOOK = 'chromebook';
 const style = {
   icon: {
     float: 'left',
-    padding: '5'
+    padding: '5px'
   }
 };
 
@@ -300,13 +300,11 @@ class ChromebookInstructions extends React.Component {
     return (
       <div>
         <h2>{i18n.makerSetupMakerAppForChromebook()}</h2>
-        <p>
-          <SafeMarkdown
-            markdown={i18n.makerSetupSerialConnector({
-              webstoreURL: CHROME_APP_WEBSTORE_URL
-            })}
-          />
-        </p>
+        <SafeMarkdown
+          markdown={i18n.makerSetupSerialConnector({
+            webstoreURL: CHROME_APP_WEBSTORE_URL
+          })}
+        />
         <h4>{i18n.instructions()}</h4>
         <ol>
           <li>
