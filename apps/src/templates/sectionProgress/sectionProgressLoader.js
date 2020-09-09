@@ -25,16 +25,17 @@ export function loadScript(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().sectionData.section;
 
-  // Don't load data if it's already stored in redux.
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
-  if (state.isRefreshingProgress || state.isLoadingProgress) {
-    return;
-  } else if (
+  if (
     state.studentLevelProgressByScript[scriptId] &&
     state.scriptDataByScript[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
+    if (state.isRefreshingProgress) {
+      return;
+    }
+    // Continue displaying the UI while updating the data
     getStore().dispatch(startRefreshingProgress());
   } else {
     getStore().dispatch(startLoadingProgress());
