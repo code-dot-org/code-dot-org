@@ -18,14 +18,13 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
 
     # Find the matching partner, even if it has no workshops
     partner = @partners.find_by_region(zip_code, state) || RegionalPartner.find_by_region(zip_code, state)
-    if partner.nil?
-      # TODO: should we instead render json which has the keys but nil values, to preserve previous behavior?
-      render json: {}
-    else
-      render json: partner,
-             serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
-             scope: {course: @course, subject: @subject}
-    end
+    # To preserve existing behavior after upgrading to ActiveModelSerializers 10.x,
+    # initialize partner to an object with nil values if not found.
+    partner ||= RegionalPartner.new
+
+    render json: partner,
+           serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
+           scope: {course: @course, subject: @subject}
   end
 
   # GET /api/v1/pd/regional_partner_workshops
