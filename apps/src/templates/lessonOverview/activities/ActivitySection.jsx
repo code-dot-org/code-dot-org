@@ -6,6 +6,7 @@ import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
+import i18n from '@cdo/locale';
 
 const styles = {
   activitySection: {
@@ -46,7 +47,7 @@ export default class ActivitySection extends Component {
           <div>
             <h4>
               <FontAwesome icon="microphone" />
-              <span style={styles.remarksHeader}>Remarks</span>
+              <span style={styles.remarksHeader}>{i18n.remarks()}</span>
             </h4>
           </div>
         )}

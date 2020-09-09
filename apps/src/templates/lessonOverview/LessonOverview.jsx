@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import i18n from '@cdo/locale';
 
 export default class LessonOverview extends Component {
   static propTypes = {
@@ -13,12 +14,15 @@ export default class LessonOverview extends Component {
     const {displayName, overview} = this.props;
     return (
       <div>
-        <h1>Lesson "{displayName}"</h1>
+        {/* TODO Use real lesson number once we have it */}
+        <h1>
+          {i18n.lessonNumbered({lessonNumber: 1, lessonName: displayName})}
+        </h1>
 
-        <h2>Overview</h2>
+        <h2>{i18n.overview()}</h2>
         <p>{overview}</p>
 
-        <h2>Teaching Guide</h2>
+        <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}
