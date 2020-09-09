@@ -1,5 +1,9 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
-import {BlockSvgUnused} from '@cdo/apps/blocklyAddons/blockSvgUnused';
+import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
+import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
+import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
+import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
+
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -57,6 +61,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldButton');
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
+  blocklyWrapper.wrapReadOnlyProperty('FieldDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
@@ -97,26 +102,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
+  blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.FieldDropdown = function(
-    menuGenerator,
-    opt_changeHandler,
-    opt_alwaysCallChangeHandler
-  ) {
-    let validator;
-    if (opt_changeHandler) {
-      validator = function(val) {
-        if (
-          this.getSourceBlock() &&
-          !this.getSourceBlock().isInsertionMarker_ &&
-          this.value_ !== val
-        ) {
-          opt_changeHandler(val);
-        }
-      };
-    }
-    return new blocklyWrapper.blockly_.FieldDropdown(menuGenerator, validator);
-  };
+  blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
+  blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.blockly_.Input = CdoInput;
+  blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -147,7 +138,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
-  blocklyWrapper.wrapSettableProperty('Xml');
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
@@ -163,26 +153,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     onMainBlockSpaceCreated: () => {}, // TODO
     createReadOnlyBlockSpace: () => {} // TODO
-  };
-
-  // CDO Blockly titles are equivalent to Google Blockly fields.
-  blocklyWrapper.Block.prototype.getTitles = function() {
-    let fields = [];
-    this.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        fields.push(field);
-      });
-    });
-    return fields;
-  };
-  blocklyWrapper.Block.prototype.getTitleValue =
-    blocklyWrapper.Block.prototype.getFieldValue;
-  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
-  // Google Blockly only allows you to set the hue, not saturation or value.
-  // However, they also allow you to specify the color in #RRGGBB format, so we can
-  // just map our HSV value to hex using their util function.
-  blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
-    return this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
@@ -206,86 +176,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return code.join('\n');
   };
 
-  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
-    return this.appendField(a, b);
-  };
-
-  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
-    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
-  };
-
-  // Show Unused Code UI around unattached blocks
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function(
-    helpClickFunc
-  ) {
-    if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
-    }
-    this.unusedSvg_.render(this.svgGroup_);
-  };
-
-  // Remove Unused Code UI around unattached blocks
-  blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
-    if (this.unusedSvg_) {
-      this.unusedSvg_.dispose();
-      this.unusedSvg_ = null;
-    }
-  };
-  blocklyWrapper.BlockSvg.prototype.originalRender =
-    blocklyWrapper.BlockSvg.prototype.render;
-  blocklyWrapper.BlockSvg.prototype.render = function() {
-    this.originalRender();
-    this.removeUnusedBlockFrame();
-  };
-  blocklyWrapper.BlockSvg.prototype.originalDispose =
-    blocklyWrapper.BlockSvg.prototype.dispose;
-  blocklyWrapper.BlockSvg.prototype.dispose = function() {
-    this.originalDispose();
-    this.removeUnusedBlockFrame();
-  };
-
-  // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.
-  // Overrriding the function here so we can just set the class but not add the fill pattern.
-  blocklyWrapper.blockRendering.PathObject.prototype.updateDisabled_ = function(
-    disabled
-  ) {
-    this.setClass_('blocklyDisabled', disabled);
-  };
-
-  /**
-   * Sets up the logic for tracking disabled blocks and showing our custom UI around them at runtime.
-   * @param helpClickFunc - callback to show tooltip when ? button in the unused block frame is clicked
-   */
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = helpClickFunc => {
-    // Adding this change listener enables Blockly's built-in logic for determining which blocks are unattached
-    Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
-
-    // When run button is clicked, show the unused blocks UI
-    Blockly.bindEvent_(
-      Blockly.mainBlockSpace.getCanvas(),
-      Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-      Blockly.mainBlockSpace,
-      function() {
-        this.getTopBlocks().forEach(function(block) {
-          if (block.disabled) {
-            block.addUnusedBlockFrame(helpClickFunc);
-          }
-        });
-      }
-    );
-  };
-  blocklyWrapper.Workspace.prototype.getAllUsedBlocks = function() {
-    return this.getAllBlocks().filter(block => !block.disabled);
-  };
-  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
-  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
-    blockLimits: {
-      blockLimitExceeded: () => false, // TODO
-      getLimit: () => {} // TODO
-    }
-  };
-
   // Aliasing Google's blockToDom() so that we can override it, but still be able
   // to call Google's blockToDom() in the override function.
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
@@ -296,12 +186,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     return blockXml;
   };
-
-  blocklyWrapper.Xml = {
-    ...blocklyWrapper.Xml,
-    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
-    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
+  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
+    // Switch argument order
+    return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
   };
+  blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
   return blocklyWrapper;
 }

@@ -27,7 +27,7 @@ Um mehr darüber zu erfahren, wie Sie Ihre Mitarbeiter ermutigen können und wie
 
 # Leitfaden zur Durchführung einer "Hour of Code"-Veranstaltung
 
-## 1. Promote your Hour of Code
+## 1. Ihr Hour of Code bewerben
 - Machen Sie Werbung für Ihr ["Hour of Code"-Event]({{ urls/promote }}) und ermutigen Sie auch andere, eine solche Veranstaltung durchzuführen.
 - Ermuntern Sie Ihre Programmierer ihrer Firma, regionale Klassen zu besuchen, um bei der Durchführung einer Hour of Code zu helfen und die Schüler für ein Studium der Informatik zu begeistern. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
