@@ -4,7 +4,6 @@ import {mount} from 'enzyme';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const DEFAULT_PROPS = {
-  onChange: () => {},
   label: 'Section Name',
   name: 'name',
   markdown:
