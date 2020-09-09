@@ -202,6 +202,13 @@ function updateLevelPositions(levels) {
 
 export const NEW_LEVEL_ID = -1;
 
+function getLevels(newState, action) {
+  const activitySections =
+    newState[action.activityPosition - 1].activitySections;
+
+  return activitySections[action.activitySectionPosition - 1].levels;
+}
+
 function activities(state = [], action) {
   let newState = _.cloneDeep(state);
 
@@ -209,10 +216,7 @@ function activities(state = [], action) {
     case INIT:
       return action.activities;
     case REORDER_LEVEL: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const levels =
-        activitySections[action.activitySectionPosition - 1].levels;
+      const levels = getLevels(newState, action);
       const temp = levels.splice(action.originalLevelPosition - 1, 1);
       levels.splice(action.newLevelPosition - 1, 0, temp[0]);
       updateLevelPositions(levels);
@@ -220,10 +224,7 @@ function activities(state = [], action) {
     }
     case MOVE_LEVEL_TO_ACTIVITY_SECTION: {
       //remove level from old activitySection
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const levels =
-        activitySections[action.activitySectionPosition - 1].levels;
+      const levels = getLevels(newState, action);
       const level = levels.splice(action.levelPosition - 1, 1)[0];
       updateLevelPositions(levels);
 
@@ -239,9 +240,7 @@ function activities(state = [], action) {
       const newActivitySections =
         newState[newActivityPosition - 1].activitySections;
       const newLevels =
-        newActivitySections[
-          action.newActivitySectionPosition - newActivitySections[0].position
-        ].levels;
+        newActivitySections[action.newActivitySectionPosition - 1].levels;
       newLevels.push(level);
       updateLevelPositions(newLevels);
       break;
@@ -286,48 +285,32 @@ function activities(state = [], action) {
     }
 
     case ADD_LEVEL: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const levels =
-        activitySections[action.activitySectionPosition - 1].levels;
+      const levels = getLevels(newState, action);
       levels.push(action.level);
       updateLevelPositions(levels);
       break;
     }
     case ADD_VARIANT: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      activitySections[action.activitySectionPosition - 1].levels[
-        action.levelPosition - 1
-      ].ids.push(NEW_LEVEL_ID);
+      const levels = getLevels(newState, action);
+      levels[action.levelPosition - 1].ids.push(NEW_LEVEL_ID);
       break;
     }
     case REMOVE_VARIANT: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const levelIds =
-        activitySections[action.activitySectionPosition - 1].levels[
-          action.levelPosition - 1
-        ].ids;
+      const levels = getLevels(newState, action);
+      const levelIds = levels[action.levelPosition - 1].ids;
       const i = levelIds.indexOf(action.levelId);
       levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      activitySections[action.activitySectionPosition - 1].levels[
-        action.levelPosition - 1
-      ].activeId = action.id;
+      const levels = getLevels(newState, action);
+      levels[action.levelPosition - 1].activeId = action.id;
       break;
     }
     case SET_FIELD: {
       const type = Object.keys(action.modifier)[0];
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      activitySections[action.activitySectionPosition - 1].levels[
-        action.levelPosition - 1
-      ][type] = action.modifier[type];
+      const levels = getLevels(newState, action);
+      levels[action.levelPosition - 1][type] = action.modifier[type];
       break;
     }
     case REMOVE_ACTIVITY: {
@@ -344,21 +327,14 @@ function activities(state = [], action) {
       break;
     }
     case REMOVE_LEVEL: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const levels =
-        activitySections[action.activitySectionPosition - 1].levels;
+      const levels = getLevels(newState, action);
       levels.splice(action.levelPosition - 1, 1);
       updateLevelPositions(levels);
       break;
     }
     case CHOOSE_LEVEL: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const level =
-        activitySections[action.activitySectionPosition - 1].levels[
-          action.levelPosition - 1
-        ];
+      const levels = getLevels(newState, action);
+      const level = levels[action.levelPosition - 1];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.value;
       }
@@ -366,12 +342,8 @@ function activities(state = [], action) {
       break;
     }
     case TOGGLE_EXPAND: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      const level =
-        activitySections[action.activitySectionPosition - 1].levels[
-          action.levelPosition - 1
-        ];
+      const levels = getLevels(newState, action);
+      const level = levels[action.levelPosition - 1];
       level.expand = !level.expand;
       break;
     }
