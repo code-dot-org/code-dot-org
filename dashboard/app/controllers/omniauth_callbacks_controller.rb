@@ -180,7 +180,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if user_already_exists(user)
+    if auth_already_exists(auth_hash)
+      return sign_in_user(user)
+    elsif email_already_taken(user)
       takeover_user = windows_live_takeover_if_available(user, auth_hash)
       return sign_in_user(takeover_user) if takeover_user
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
@@ -226,7 +228,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     prepare_locale_cookie user
 
-    if user_already_exists(user)
+    if auth_already_exists(auth_hash)
+      return sign_in_google_oauth2(user)
+    elsif email_already_taken(user)
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     else
       register_new_user user
@@ -484,7 +488,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_and_redirect user
   end
 
-  def user_already_exists(user)
+  def auth_already_exists(auth_hash)
+    lookup_user = User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
+    return !!lookup_user
+  end
+
+  def email_already_taken(user)
     lookup_user = User.find_by_email_or_hashed_email(user.email)
     return !!lookup_user
   end
