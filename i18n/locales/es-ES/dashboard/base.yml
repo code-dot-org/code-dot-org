@@ -467,6 +467,7 @@ es:
     for_parents_and_guardians: "Pre rodičov a zákonných zástupcov"
     link_a_parent_email: "Prepojte tento účet s e-mailovou adresou rodiča/zákonného zástupcu, aby ste boli informovaní o pokroku a projektoch vášho dieťaťa. Túto e-mailovú adresu budete môcť použiť aj na obnovenie hesla."
     parent_guardian_email_label: "Correo electrónico del padre o tutor"
+    remove_parent_email_label: "Quitar"
     none: "Ninguna"
     only_one_parent_email_supported_warning: "Poznámka: V súčasnosti sme schopní na jednom študentskom účte podporiť len jednu e-mailovú adresu rodiča/zákonného zástupcu."
     encrypted: "encriptado"
@@ -782,6 +783,14 @@ es:
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
     reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.
     review_terms: "Revisa los términos actualizados"
+  donor_interstitial:
+    title: "Tus cursos gratis de Ciencia de Computación son posible por..."
+    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
+    local_supporters: "Simpatizantes Locales"
+    global_supporters: "Simpatizantes Globales"
+    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidad a más estudiantes."
+    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
+    get_started: "Empieza en Code.org"
   school_info_interstitial:
     title: "Queremos que cada estudiante pueda acceder a las Ciencias de la Computación. ¡Ayúdanos a seguir nuestro progreso!"
     message: "Ingresa la información de la escuela a continuación."
@@ -958,6 +967,7 @@ es:
       school_city: 'Ciudad de la escuela'
       school_country: 'País en el que está la escuela'
       colombian_school_city: 'Ciudad de la escuela'
+      colombian_school_department: 'Departamento de Escuela'
       colombian_school_name: 'Nombre de la escuela'
       ages: '¿A qué grupos de edades enseñas este año?'
       subjects: '¿Qué materias enseñas este año?'
@@ -1027,6 +1037,7 @@ es:
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        not_applicable: "No aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'
@@ -1035,6 +1046,7 @@ es:
       intro: "Gracias por tomarte el tiempo de conocer el plan de estudios de Code.org. Nuestra misión de enseñar ciencias de la computación a cada niño de cada escuela alrededor del mundo no sería posible sin ti."
       instructions: "Completa el formulario a continuación para indicar que 1) asististe a un taller a cargo de uno de los socios internacionales de Code.org, y 2) estás de acuerdo en compartir tu información con nuestros socios internacionales en tu país, para que puedan ayudarte en tu viaje como docente de ciencias de la computación."
       thanks_markdown: "¡Gracias por enviarnos tu solicitud! Esperamos acompañarte mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url}) o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_applicable: "No aplicable"
     logged_out:
       heading: '¡Gracias por tu interés en el Programa de Aprendizaje Profesional!'
       body: 'Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres obtener más información acerca del programa antes de iniciar tu solicitud, echa un vistazo al <a href="%{url}">Programa de Aprendizaje Internacional</a>.'
@@ -1073,3 +1085,5 @@ es:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
     link_your_email: "Prepojte svoj e-mail"
     not_now: "Teraz nie"
+  behaviors:
+    this_sprite: "Este sprite"

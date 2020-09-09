@@ -76,6 +76,7 @@ pl:
         text: "Sterty i otwory są różnych rozmiarów, musisz więc powiedzieć rolnikowi, ile szufli ma użyć."
     flappy_intro:
       1:
+        image: 'notes/flappy01.jpg'
         text: "Witam jestem Katie! Jedną z najbardziej ekscytujących rzeczy związanych z informatyką jest to, że program komputerowy może być interaktywny."
       2:
         text: "Za każdym razem, kiedy ktoś klika, stuka lub pisze na komputerze czy telefonie, generuje tym samym ZDARZENIE i jakaś część kodu decyduje, co należy zrobić, gdy występuje ZDARZENIE."
@@ -942,6 +943,61 @@ pl:
         text: "Pierwsza grupa dokona dekompozycji zadania, które oznacza tworzenie planu gry. Jej członkowie będą poszukiwać wzorców pomiędzy potworami w katalogu. Kiedy wynajdą różnice pomiędzy potworami, będą abstrahować lub usuwać te detale Na przykład jeden z potworów w katalogu ma oczy \"vegitasa\", a drugi oczy \"spritema\". Ale oba mają oczy, zatem możemy napisać zdanie, że potwór ma puste oczy."
       4:
         text: "Zatem uczniowie będą w stanie zapisać zestaw instrukcji, zwane algorytmem, w których tworzy się listę części potworów z pustkami w miejscach, w których powinien być określony styl. Jest to zestaw instrukcji, który przekazują innym uczniom, aby odtworzyć ich swojego własnego potwora. "
+    unplug3:
+      1:
+        text: "W ramach programowania w formie wykresów na papierze pomagamy wyjaśnić, jak działa kodowanie próbując pomóc ludziom odtworzyć rysunki z użyciem wyłącznie strzałek i bazgrołów. Jedna osoba dostaje niewielki rysunek na papierze do tworzenia wykresów i musi go przestudiować używając jedynie konkretnych strzałek oraz spróbować opisać, jak można odtworzyć ten rysunek."
+      2:
+        text: "W trakcie tych zajęć jedynymi symbolami, których można użyć, są: przejdź do przodu o jeden kwadrat, cofnij się o jeden kwadrat, przejdź o jeden kwadrat w górę, przejdź o jeden kwadrat w dół, zmień na kolejny kolor oraz wypełnij kolorem swój kwadrat. Po zakodowaniu tego możemy przekazać efekt drugiej osobie, która może odczytać kod i podjąć próbę odtworzenia obrazu."
+    unplug4:
+      1:
+        text: "W ramach programowania w formie wykresów na papierze pomagamy wyjaśnić, jak działa kodowanie próbując pomóc ludziom odtworzyć rysunki z użyciem wyłącznie strzałek i bazgrołów. Jedna osoba dostaje niewielki rysunek na papierze do tworzenia wykresów i musi go przestudiować używając jedynie konkretnych strzałek oraz spróbować opisać, jak można odtworzyć ten rysunek."
+      2:
+        text: "W drugiej połowie tych zajęć zapytamy uczniów, na ile sposobów możemy złożyć kartkę papieru, aby utworzyć szesnaście identycznych prostokątów. Potem omówimy, ile różnych rozwiązań może prowadzić do tego samego efektu końcowego, oraz przyczyny, dlaczego te właśnie są lepsze w określonych sytuacjach. "
+    unplug5:
+      1:
+        text: "W ramach programowania w formie wykresów na papierze pomagamy wyjaśnić, jak działa kodowanie próbując pomóc ludziom odtworzyć rysunki z użyciem wyłącznie strzałek i bazgrołów. Jedna osoba dostaje niewielki rysunek na papierze do tworzenia wykresów i musi go przestudiować używając jedynie konkretnych strzałek oraz spróbować opisać, jak można odtworzyć ten rysunek."
+      2:
+        text: "W drugiej połowie tych zajęć zapytamy uczniów, na ile sposobów możemy złożyć kartkę papieru, aby utworzyć szesnaście identycznych prostokątów. Potem omówimy, ile różnych rozwiązań może prowadzić do tego samego efektu końcowego, oraz przyczyny, dlaczego te właśnie są lepsze w określonych sytuacjach. "
+    unplug6:
+      1:
+        text: "Te zajęcia noszą nazwę kodowania z kartami i są idealne dla osób w każdym wieku. Podobnie jak wiedza nabywana z zastosowaniem instrukcji \"jeśli\" w ramach wcześniejszych zajęć, w trakcie Blockly, instrukcje \"jeśli\" mają element, który oceniają, aby określić, czy jest prawdziwy czy fałszywy. To jest instrukcja i można jej użyć na wiele innych sposobów."
+      2:
+        text: "Korzystamy z tego tworząc programy na papierze, które uruchamia się używając przypadkowego wyciągania kart do gry. Można mieć instrukcję \"jeśli\", która stanowi coś takiego mniej więcej jak \"jeśli\" karta, którą wyciągniesz jest większa od 8, zdobywasz punkt. W przeciwnym razie Twój przeciwnik zdobywa punkt. Można to uprościć lub skomplikować w takim stopniu, jaki daje Ci poczucie komfortu."
+    unplug7:
+      1:
+        text: "Wiesz, jak to jest, gdy sprawdzasz słowa piosenki, w których na początku określony jest refren na samym początku, a potem reszta piosenki, które kierują uwagę z powrotem do refrenu? To się nazywa funkcją."
+      2:
+        text: "W trakcie tej lekcji definiujemy refren na początku naszej piosenki, a potem śpiewamy piosenkę i wracamy zauważając, że klasa nie śpiewa słowa refren, automatycznie kieruje się na początek, gdzie definiujemy refren i śpiewamy go. Używamy go, jako świetny wstęp, jak zrozumieć, co robi program, gdy go definiuje i wywołuje funkcję. "
+      3:
+        text: "Używamy znanych piosenek, w tym \"Stary Donald\", aby porozmawiać jak bez przerwy przywoływany jest refren i jak czasem refren może się zmieniać. Gdy masz piosenkę taką jak \"Stary Donald\", w której zmieniają się określone słowa, jest to świetna okazja, do wprowadzenia koncepcji parametrów. Analizując określone słowa, tak, aby była świetna informacja na potrzeby Twojej funkcji. Gdy jesteśmy pewni, że każdy zrozumiał, możesz wziąć swoje własne znane piosenki i podzielić ją na fragmenty. Zobacz, czy jesteście w stanie rozpracować to razem."
+    unplug8:
+      1:
+        text: "W naszej lekcji poświęconej abstrahowaniu używamy znajomej koncepcji kalamburów [madlibs], w której zasadniczo wprowadza się puste miejsce w opowiadaniu, które można wypełnić wieloma różnymi słowami. Korzystamy z tego pomysłu, rzucamy dzieciom wyzwanie wymyślenia własnych słów na potrzeby własnych opowiadań i wyjaśniamy koncepcję abstrahowania."
+      2:
+        text: "Całość dotyczy funkcji oraz sposobu wykorzystania funkcji tak, jak w \"Starym Donaldzie\", gdzie istnieje struktura na potrzeby refrenu, ale pojawia się drobny element, który wprowadza zmianę, a Ty abstrahujesz tę małą rzecz, która wprowadza zmianę i możesz ją, za każdym razem, wypełnić swoim własnym słowem. Czasem masz trzy słowa, które wprowadzają zmianę, zatem wypełniasz je trzema parametrami, co w dalszym ciągu jest dość pomocne."
+      3:
+        text: "Możesz mieć jedną funkcję, która dotyczy wielu różnych problemów. Wielokrotnie osoby będą pisać odrębne funkcje jako odpowiedź na te wszystkie problemy nie zdając sobie sprawy z jednej niewielkiej różnicy. Jeśli będą w stanie znaleźć sposób, jak poradzić sobie z tą jedną niewielką różnicą, mogą używać tej funkcji ponownie zamiast czternastu różnych funkcji."
+    unplug9:
+      1:
+        text: "Programowanie sztafetowe to niezwykle rozrywkowe zajęcia, w trakcie których przekazuje się ogromnie dużo wiedzy informatycznej. Czasami każdy ma słabszy dzień, a Twoją rolą jest pobudzenie takiej osoby. Te zajęcia to świetny sposób na wniesienie odrobiny życia do lekcji informatyki."
+      2:
+        text: "Dzielisz uczestników na dwie grupy, które ustawiają się w kolejce i biegają w trybie sztafety. Pierwsza osoba z każdej grupy biegnie na drugą stronę sali, gdzie jest rysunek wykresu na papierze oraz czekająca na niego pusta kartka. Zapisuje pierwszy krok tworzenia obrazu, biegnie z powrotem do linii, klepie kolejną osobę, która wraca, aby zapisać kolejny krok."
+      3:
+        text: "W ten sposób można świetnie przekazać koncepcję debugowania, konieczność uważnego przeczytania własnego tekstu oraz potrzebę sprawdzenia pracy, którą inna osoba wykonała przed Tobą. Szybko zrozumiesz, jak ważne jest to, aby zachować ostrożność przy kodowaniu, gdy cały zespół jest uzależniony od Ciebie."
+    unplug10:
+      1:
+        text: "Ta czynność wyjaśnia w łatwy do zrozumienia sposób, jak działa internet. Wyjaśniamy całą terminologię, która będzie Ci potrzebna, w łatwy sposób tak, aby uczniowie mogli symulować przesyłanie wiadomości takich jak wiadomości e-mailowe."
+      2:
+        text: "Uczniowie będą przesyłać wiadomości udając, że są jedną z trzech metod transmisji. Internetem bezprzewodowym, DSL lub światłowodem. Uczniowie, którzy wcielają się w wi-fi będą musieli przenosić przesyłane przez siebie wiadomości na głowach, ponieważ wi-fi cechuje największe prawdopodobieństwo, że upuszczą jakieś informacje."
+      3:
+        text: "Uczniowie udający, że są DSL lub przewodem będą nosić informacje na odwrocie dłoni, gdyż prawdopodobieństwo, że informacje z niej spadnie, jest nieco mniejsze. A uczniowie reprezentujący światłowód będą mogli nieść ją w obu dłoniach. Te zajęcia świetnie pozwalają zrozumieć coś, czego wielu z nas używa każdego dnia."
+    unplug11:
+      1:
+        text: "Teraz czas na to, aby nabrać trochę dystansu i spojrzeć z lotu ptaka na wszystko, co robiłeś  w ramach ostatnich dziewiętnastu lekcji. To idealny moment, aby powiedzieć uczniom, że to, co zrobili, to wielkie osiągnięcie. Na tych lekcjach dowiedzieli się o informatyce więcej, niż wie większość dorosłych."
+      2:
+        text: "Omów z klasą lub w małych grupach ich ulubione lekcje. Spojrzenie wstecz na wszystko, czego się nauczyłeś pozwala zalśnić kreatywności uczniów. Podziel ich na grupy i wydaj polecenie utworzenia własnej lekcji bez komputera. Przydziel każdej grupie kluczową koncepcję, taką jak funkcje czy algorytmy i przygotuj dla nich mnóstwo materiałów do zajęć plastyczno-technicznych do rozdania i użycia. Niech każda grupa przedstawi swoje zajęcia bez komputera,, a nawet ustal inny dzień, aby kilka osób spośród uczniów mogło przeprowadzić swoje opracowane zajęcia."
+      3:
+        text: "Sądzę, że mogę powiedzieć w imieniu każdej osoby w Code.org, że mamy nadzieję, że ŚWIETNIE się bawiliście na tym kursie. Bez względu na to, czy marzycie o utworzeniu najlepszej nowej aplikacji, używaniu programowania, aby pomóc w leczeniu chorób czy liczycie na to, że rozwiążecie jakiś problem o ogromnej skali, ten kurs stanowi pierwszy krok w realizacji tych marzeń. "
     starwars_intro:
       1:
         text: "Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens."
@@ -950,7 +1006,7 @@ pl:
       3:
         text: "W ciągu następnej godziny zbudujemy własną grę Star Wars, poznając przy okazji podstawowe pojęcia związane z programowaniem. Zwykle, programy mają postać tekstu, ale nasze programy będziemy tworzyć przeciągając i upuszczając bloki. Faktycznie, nadal piszemy kod programu. Po zapoznaniu się z podstawami z użyciem bloków, przełączysz się na JavaScript, na jeden z najpopularniejszych języków programowania w sieci."
       4:
-        text: "Będziemy pracować z Reyem, który programuje BB-8, by zebrał cały złom. Ekran jest podzielony na 3 części. Po lewej stronie jest plansza gry Star Wars, na której jest wykonywany program. Poniżej znajduje się instrukcja odpowiednia do poziomu gry."
+        text: "Będziemy pracować z Reyem, który programuje BB-8, by zebrać cały złom. Ekran jest podzielony na 3 części. Po lewej stronie jest plansza gry Star Wars, na której jest wykonywany program. Poniżej znajduje się instrukcja odpowiednia do poziomu gry."
       5:
         text: "W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8."
       6:
@@ -971,9 +1027,13 @@ pl:
       3:
         text: "W prawym górnym rogu na polu roboczym możesz kliknąć przycisk \"Pokaż kod\", aby przejść z bloków do pisania kodu."
       4:
+        text: "Na kolejnej lekcji zaczniemy wdrażać Cię w tryb pisania na klawiaturze. Teraz nadal możesz przeciągać bloki z przybornika lub wpisywać nazwę komendy na klawiaturze. W miarę wpisywania będziesz widział nazwy potencjalnych komend pokazujące się poniżej miejsca, w którym je wpisujesz. Zamiast wpisywania całej nazwy komendy możesz wybrać jedną z tych, które umożliwiają szybsze przemieszczanie się. Zamiast wpisywania całej nazwy komendy możesz wybrać jeden ze sposobów szybszego poruszania się. W swojej pracy korzystam  z funkcji automatycznego wypełniania przez cały czas pisania kodu."
       5:
+        text: "W trakcie pisania kodu komputer wymaga od Ciebie ogromnej precyzji. Musisz wpisać nazwę komendy idealnie precyzyjnie pod względem ortografii i drukowanymi literami, z uwzględnieniem nawiasów i dwukropków. Jeśli wystąpi choćby najmniejszy błąd zapisu BB-8 nie jest w stanie zrozumieć kodu i nie będzie w stanie się przemieścić."
       6:
+        text: "Jeśli popełnisz błąd w wierszu, edytor podkreśla go dla Ciebie tak, że możesz spróbować zmienić swój tekst tak, aby go naprawić."
       7:
+        text: "Jeśli coś Cię zablokuje zawsze można zacząć od nowa przy pomocy przycisku zaczynania od nowa i możesz w dowolnym momencie przełączyć się z powrotem na tryb bloku klikając w prawy górny róg. No dobrze, spróbujmy coś napisać! A jeśli popełniasz błędy, nie przejmuj się tym. Każdy musi spróbować kilka razy zanim zacznie coś robić dobrze."
     starwars_events:
       1:
         text: "Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem w Walt Disney Imagineering. Prowadzę zespoły produkujące atrakcje, którymi nasi goście mogą poeksperymentować. Cały czas szukamy sposobów, by przygotować lepsze eksperymenty dla naszych gości i technologia jest w sercu naszych działań."
@@ -994,20 +1054,36 @@ pl:
         text: "Chcemy, by R2-D2 poszedł do góry, wstawmy zatem blok goUp() wewnątrz polecenia. Podobnie możemy spowodować, by R2-D2 poszedł do dołu."
       9:
         text: "Teraz, zamiast pisać kod, by sterował naszym droidem z wyprzedzeniem, pozwalamy R2-D2, by reagował na zdarzenia polegające na naciskaniu przycisków, które przenoszą go po ekranie. Krok po kroku Wasza gra staje się coraz bardziej interaktywna."
+    starwars_congrats:
+      1:
+        text: "Cześć, nazywam się Alice i prowadzę tutaj zespoły ds. produktu i projektowania w Code.org i tworzyłam samouczek, który właśnie teraz odtwarzasz."
+      2:
+        text: "Dotarłeś do ostatniego poziomu. Gratuluję! Poznałeś wszystko, co musisz wiedzieć, aby zrobić swoją własną grę \"Gwiezdne wojny\". Teraz już nie ma żadnych poleceń, żadnych łamigłówek do rozwiązania. Możesz zrobić teraz swoją własną grę i zdecydować się, jak ma działać. Jeszcze jedna, odblokowałaś nowe dźwięki i nowe komendy, aby zrobić jeszcze więcej."
+      3:
+        text: "[uczniowie rozmawiają] No więc zrobiliśmy grę, w której dochodzi się do punktu, gdy zdobywasz świnki-rozdymki. Chodzi o to, że za każdym razem, gdy zdobywasz świnkę-rozdymkę, pojawia się szturmowiec. Tak naprawdę świnki-rozdymki wypełniają cały ekran, a gdy dotkniesz ich 10 000, wygrywasz."
+      4:
+        text: "[uczniowie rozmawiają] Zrobiliśmy grę, w której nie można przegrać, a wszystko, co zabijesz, daje Ci punkty. Na potrzeby mojego programu odwróciłem klawisze, zatem zawsze, gdy klikniesz, Twoja postać idzie w dół, a gdy obrócisz się w prawo, Twoja postać idzie w lewo. To jest naprawdę trudno! Czasem uzyskujesz przewagę, nieuczciwą przewagę, jeśli jesteś twórcą gry. Udało mi się? Taaaak!"
+      5:
+        text: "Gdy skończysz tworzyć swoją grę, wybierz opcję udostępniania, aby otrzymać łącze, które można wysyłać znajomym lub zagrać grę na telefonie. Baw się dobrze!"
     starwars_blocks_intro:
       1:
         text: "Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens."
       2:
         text: "Witam, jestem Rachel Rose. Jestem starszym inżynierem R&D w ILM i prowadzę zespół zajmujący się animacją i tworzeniem postaci. W The Force Awakens odpowiadam za pomoc artystom w doborze wyposażenia, będącego częścią postaci, dzięki czemu wyglądają bardzo wiarygodnie w galaktyce znajdującej się bardzo daleko."
       3:
+        text: "W ciągu następnej godziny zbudujemy własną grę Star Wars, która nauczy Cię podstawowych pojęć programowania. Zwykle, programowanie ma postać tekstu, ale nasze programy będziemy pisać przeciągając i upuszczając bloki. Na początek, zamierzamy pracować z Reyem programując BB-8, aby pójść zebrać cały złom."
       4:
+        text: "Ekran jest podzielony na 3 części. Po lewej stronie jest plansza gry Star Wars, na której jest wykonywany program. Instrukcje dla każdego poziomu są zapisane poniżej obszaru gry."
       5:
         text: "W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8."
       6:
         text: "Biała część po prawej stronie to pole robocze (Work space), gdzie będziemy budować nasz program."
       7:
+        text: "Co się stanie, gdy przeciągnę blok \"idź w lewo\"() na pole robocze? BB-8 przesunie się w lewo o jedno miejsce na siatce."
       8:
+        text: "A jeśli chcę, aby BB-8 zrobił coś po przeciągniemy blok \"idź w lewo\"()? Mogę dodać do naszego programu kolejny blok. Wybiorę blok \"idź do góry\" () i będę przeciągać go pod blok \"idź w lewo\" () dopóki nie pojawi się podświetlenie. Następnie upuszczę blok i oba bloki połączą się ze sobą. Gdy znów nacisnę przycisk uruchamiania, BB-8 wykona polecenia ułożone w obszarze roboczym, zaczynając od góry i posuwając się w dół. "
       9:
+        text: "Jeśli kiedyś zechcesz skasować blok, po prostu usuń go ze stosu i przesuń go z powrotem do przybornika."
       10:
         text: "Po naciśnięciu Uruchom możesz zawsze nacisnąć przycisk Reset, by powrócić z BB-8 na początek. Milego toczenia się!"
     starwars_blocks_events:
@@ -1022,8 +1098,20 @@ pl:
       5:
         text: "Tutaj chcemy, aby R2-D2 przeszedł do góry i dostarczył wiadomość Pilotowi Rebeliantów a następnie przeszedł w dół do innego pilota. Wykorzystamy zdarzenia, by się poruszał, gdy gracz używa strzałek lub przycisków do góry/do dołu."
       6:
+        text: "Użyjemy bloku zdarzenia \"gdy w górze\"() i podczepimy do niego blok \"idź do góry\"(). Gdy gracz naciska klawisz ze strzałką do góry, uruchamia kod doczepiony do bloku \"gdy w górze\"(). Podobnie możemy spowodować, by R2-D2 poruszał się do dołu. Teraz, zamiast pisania całego kodu, do sterowania z wyprzedzeniem naszego droida, możemy pozwolić R2-D2 reagować, na zdarzeń wciśnięcia przycisku, które przemieszczają go po ekranie."
       7:
         text: "Krok po kroku Twoja gra staje się coraz bardziej interaktywna."
+    starwars_blocks_congrats:
+      1:
+        text: "Cześć, nazywam się Alice i prowadzę tutaj zespoły ds. produktu i projektowania w Code.org i tworzyłam samouczek, który właśnie teraz odtwarzasz."
+      2:
+        text: "Dotarłeś do ostatniego poziomu. Gratuluję! Poznałeś wszystko, co musisz wiedzieć, aby zrobić swoją własną grę \"Gwiezdne wojny\". Teraz już nie ma żadnych poleceń, żadnych łamigłówek do rozwiązania. Możesz zrobić teraz swoją własną grę i zdecydować się, jak ma działać. Jeszcze jedna, odblokowałaś nowe dźwięki i nowe komendy, aby zrobić jeszcze więcej."
+      3:
+        text: "[uczniowie rozmawiają] No więc zrobiliśmy grę, w której dochodzi się do punktu, gdy zdobywasz świnki-rozdymki. Chodzi o to, że za każdym razem, gdy zdobywasz świnkę-rozdymkę, pojawia się szturmowiec. Tak naprawdę świnki-rozdymki wypełniają cały ekran, a gdy dotkniesz ich 10 000, wygrywasz."
+      4:
+        text: "[uczniowie rozmawiają] Zrobiliśmy grę, w której nie można przegrać, a wszystko, co zabijesz, daje Ci punkty. Na potrzeby mojego programu odwróciłem klawisze, zatem zawsze, gdy klikniesz, Twoja postać idzie w dół, a gdy obrócisz się w prawo, Twoja postać idzie w lewo. To jest naprawdę trudno! Czasem uzyskujesz przewagę, nieuczciwą przewagę, jeśli jesteś twórcą gry. Udało mi się? Taaaak!"
+      5:
+        text: "Gdy skończysz tworzyć swoją grę, wybierz opcję udostępniania, aby otrzymać łącze, które można wysyłać znajomym lub zagrać grę na telefonie. Baw się dobrze!"
     mc_intro:
       1:
         text: "Nazywam się Jens Bergensten, ale wszyscy mówią na mnie Jeb. Jestem liderem zespołu deweloperskiego gry Minecraft w mojang.com w Sztokholmie. Miałem 11, a może 12 lat, gdy zacząłem programować, ponieważ chciałem tworzyć gry. Jeden z kolegów taty powiedział, że aby robić gry, trzeba nauczyć się programowania. Od tego wszystko się zaczęło. Lubię projektować i odkrywać schematy różnych rzeczy. I to właśnie lubię w Minecrafcie. "
@@ -1093,30 +1181,426 @@ pl:
         text: "Teraz możesz zbudować, co tylko zechcesz. Baw się dobrze!"
     gumball_intro:
       1:
+        text: "Jeśli chciałbyś zrobić swoją własną grę, to jest bardzo proste. Wystarczy tylko znajomość kilku podstaw programowania i możesz zacząć grać w grę, którą właśnie utworzyłeś."
       2:
+        text: "Czy masz ulubioną grę wideo? Dzisiaj wykonamy kolejny krok w kierunku tworzenia gier taki, którego używamy w Play Lab. Dobre gry cechuje fabuła, a w każdej fabule są postaci. Postaci wykonują czynności takie, jak: mówienie, przemieszczanie się czy wchodzenie ze sobą w interakcje. Może nawet zdobywać punkty zgodnie z regułami gry. Dzisiaj będziemy się uczyć, jak robić te wszystkie rzeczy, jedną po drugiej, za pośrednictwem fajnych  postaci, a następnie będziemy budować od podstaw grę, którą można udostępniać i w którą można grać na telefonie. "
       3:
+        text: "Dzisiaj będziemy się uczyć, jak robić te wszystkie rzeczy jedną po drugiej za pośrednictwem fajnych postaci, a następnie budować od podstaw grę, którą można udostępniać i w którą można grać na telefonie."
       4:
         text: "Ekran jest podzielony na 3 części. Po lewej stronie jest miejsce, gdzie wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej."
       5:
+        text: "W środkowej części znajduje się przybornik, a każdy z tych bloków jest fragmentem kodu."
       6:
         text: "Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. "
       7:
         text: "Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do pomarańczowego bloku \"po uruchomieniu\". Można połączyć ze sobą wiele bloków przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą."
       8:
+        text: "W tej pierwszej łamigłówce sprawimy, by postaci mówiły coś poprzez połączenie bloku \"powiedz\", do bloku \"po uruchomieniu\" oraz wpisanie do swojej wiadomości. Po umieszczeniu swoich bloków na miejscu, naciśnij przycisk \"uruchom\", aby zobaczyć, co zaprogramowałeś."
       9:
+        text: "Zacznijcie i na końcu będziecie umieć utworzyć własną grę z różnego rodzaju postaciami, które mogą wchodzić w interakcje, zdobywają punkty, rzucają przedmiotami, a nawet znikają. To wszystko zależy od Ciebie!"
+    gumball_events:
+      1:
+        text: "Teraz mamy zamiar dowiedzieć się o czymś, co każdy programista gier używa na co dzień. Są to zdarzenia. Zdarzenie informuje program, by nasłuchiwał, czy coś się dzieje, a gdy się to dzieje, to program wykonuje odpowiednią akcję."
+      2:
+        text: "Przykładami zdarzeń jest nasłuchiwanie kliknięcia myszy, naciśnięcie klawisza ze strzałką w górę lub w dół lub dotknięcie ekranu."
+      3:
+        text: "Tutaj mamy zamiar spowodować, aby postać coś powiedziała, gdy gracz w niego klika. Użyjemy bloku \"po kliknięciu\" i podłączymy do niego blok \"powiedz\". Gdy gracz kliknie, to wykonane zostaną wszystkie bloki podłączone do tego bloku."
+      4:
+        text: "Istnieją również bloki \"kiedy strzałka\". Jeśli podłączysz bloki \"idź\" do tych bloków, to możesz poruszać swoimi postaciami do góry, do dołu, w lewo lub w prawo przy pomocy klawiszy ze strzałkami. Krok po kroku Twoja gra staje się coraz bardziej interaktywna."
+    gumball_repeat:
+      1:
+        text: "Czy wyobrażasz sobie, że musiałbyś powtarzać coś bez końca? Jest nadzieja, że nigdy nie będziesz musiał, ponieważ komputery naprawdę dobrze sobie radzą z powtarzającymi się rzeczami. "
+      2:
+        text: "To jest blok \"powtarzaj bez końca\". Coś, co znajduje się we wnętrzu bloku, będzie się działo bez końca w grze. Jeśli chcemy, aby postać powtarzała jakąś akcję bez interwencji gracza, to wstawimy takie bloki do wnętrza bloku \"powtarzaj w nieskończoność\"."
+      3:
+        text: "W tej następnej łamigłówce naszym celem jest pomóc postaci w realizowaniu zadania w trybie ciągłym. Nauczyliśmy się już powtarzać polecenia, pozwoli to nam zaoszczędzić mnóstwo czasu później, kiedy będziemy tworzyć własną grę."
     iceage_intro:
       1:
+        text: "Jeśli chciałbyś zrobić swoją własną grę, to jest bardzo proste. Wystarczy tylko znajomość kilku podstaw programowania i możesz zacząć grać w grę, którą właśnie utworzyłeś."
       2:
+        text: "Czy masz ulubioną grę wideo? Dzisiaj wykonamy kolejny krok w kierunku tworzenia gier taki, którego używamy w Play Lab. Dobre gry cechuje fabuła, a w każdej fabule są postaci. Postaci wykonują czynności takie, jak: mówienie, przemieszczanie się czy wchodzenie ze sobą w interakcje. Może nawet zdobywać punkty zgodnie z regułami gry. Dzisiaj będziemy się uczyć, jak robić te wszystkie rzeczy, jedną po drugiej, za pośrednictwem fajnych  postaci, a następnie będziemy budować od podstaw grę, którą można udostępniać i w którą można grać na telefonie. "
       3:
+        text: "Dzisiaj będziemy się uczyć, jak robić te wszystkie rzeczy jedną po drugiej za pośrednictwem fajnych postaci, a następnie budować od podstaw grę, którą można udostępniać i w którą można grać na telefonie."
       4:
         text: "Ekran jest podzielony na 3 części. Po lewej stronie jest miejsce, gdzie wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej."
       5:
+        text: "W środkowej części znajduje się przybornik, a każdy z tych bloków jest fragmentem kodu."
       6:
         text: "Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. "
       7:
         text: "Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do pomarańczowego bloku \"po uruchomieniu\". Można połączyć ze sobą wiele bloków przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą."
       8:
+        text: "W tej pierwszej łamigłówce sprawimy, by postaci mówiły coś poprzez połączenie bloku \"powiedz\", do bloku \"po uruchomieniu\" oraz wpisanie do swojej wiadomości. Po umieszczeniu swoich bloków na miejscu, naciśnij przycisk \"uruchom\", aby zobaczyć, co zaprogramowałeś."
       9:
+        text: "Zacznijcie i na końcu będziecie umieć utworzyć własną grę z różnego rodzaju postaciami, które mogą wchodzić w interakcje, zdobywają punkty, rzucają przedmiotami, a nawet znikają. To wszystko zależy od Ciebie!"
+    iceage_events:
+      1:
+        text: "Teraz mamy zamiar dowiedzieć się o czymś, co każdy programista gier używa na co dzień. Są to zdarzenia. Zdarzenie informuje program, by nasłuchiwał, czy coś się dzieje, a gdy się to dzieje, to program wykonuje odpowiednią akcję."
+      2:
+        text: "Przykładami zdarzeń jest nasłuchiwanie kliknięcia myszy, naciśnięcie klawisza ze strzałką w górę lub w dół lub dotknięcie ekranu."
+      3:
+        text: "Tutaj mamy zamiar spowodować, aby postać coś powiedziała, gdy gracz w niego klika. Użyjemy bloku \"po kliknięciu\" i podłączymy do niego blok \"powiedz\". Gdy gracz kliknie, to wykonane zostaną wszystkie bloki podłączone do tego bloku."
+      4:
+        text: "Istnieją również bloki \"kiedy strzałka\". Jeśli podłączysz bloki \"idź\" do tych bloków, to możesz poruszać swoimi postaciami do góry, do dołu, w lewo lub w prawo przy pomocy klawiszy ze strzałkami. Krok po kroku Twoja gra staje się coraz bardziej interaktywna."
+    iceage_repeat:
+      1:
+        text: "Czy wyobrażasz sobie, że musiałbyś powtarzać coś bez końca? Jest nadzieja, że nigdy nie będziesz musiał, ponieważ komputery naprawdę dobrze sobie radzą z powtarzającymi się rzeczami. "
+      2:
+        text: "To jest blok \"powtarzaj bez końca\". Coś, co znajduje się we wnętrzu bloku, będzie się działo bez końca w grze. Jeśli chcemy, aby postać powtarzała jakąś akcję bez interwencji gracza, to wstawimy takie bloki do wnętrza bloku \"powtarzaj w nieskończoność\"."
+      3:
+        text: "W tej następnej łamigłówce naszym celem jest pomóc postaci w realizowaniu zadania w trybie ciągłym. Nauczyliśmy się już powtarzać polecenia, pozwoli to nam zaoszczędzić mnóstwo czasu później, kiedy będziemy tworzyć własną grę."
+    mc_2016_intro:
+      1:
+        text: "Cześć, mam na imię Jens. Jestem głównym projektantem kreatywnym gry Minecraft. W kolejnej godzinie będziesz tworzyć swoją własną grę Minecraft. To wygląda jak Minecraft, ale świat się zatrzymał. Owce się nie ruszają, kury nie niosą jajek, a zomie stoją nieruchomo. Od Ciebie zależy, czy dodasz coś do kodu, aby sprawić, by świat Minecraft działał."
+      2:
+        text: "Nazywam się Melissa i jestem badaczem użytkownika gry Minecraft. Bardzo interesuję się tym, jak myślą ludzie i jak wchodzą w interakcję z technologią, a to stanowisko jest dla mnie idealne i pozwala mi na łączenie inżynierii komputerowej z psychologią: jak ludzie myślą i jak się zachowują. "
+      3:
+        text: "Zobaczysz, że ekran jest podzielony na trzy główne części. 1) Po lewej stronie jest gra Minecraft. W tej chwili świat jest zamrożony, ale zamierzamy naprawić go przy pomocy kodu."
+      4:
+        text: "2) To jest środkowa część przybornika. Każdy z tych bloków jest komendą zrozumiałą dla kur, owiec oraz innych stworzeń z gry Minecraft. "
+      5:
+        text: "3) Obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będziemy budować nasz program. "
+      6:
+        text: "Jeśli zapomnisz co masz zrobić, instrukcje dla każdego poziomu znajdują się na górze."
+      7:
+        text: "Na początek zaprogramujemy kurczaka. Przeciągnijmy komendę \"idź do przodu\" na obszar roboczy. Gdy nacisnę \"Uruchom\", kurczak idzie o jeden krok do przodu. Aby przejść dalej, przeciągnę kolejny blok \"idź do przodu\" pod pierwszym blokiem \"idź do przodu\" do momentu pojawienia się podświetlenia. Następnie opuść go, a dwa bloki połączą się ze sobą. Jeśli ponownie nacisną \"Uruchom\", kurczak wykona dwa kroki."
+      8:
+        text: "Jeśli kiedyś zechcesz skasować blok, po prostu usuń go ze stosu i przeciągnij go z powrotem do przybornika."
+      9:
+        text: "Po naciśnięciu \"Uruchom\" zawsze można nacisnąć przycisk \"Resetuj\", aby zresetować grę i rozpocząć od nowa. Teraz Twój ruch, aby stworzyć swoją własną wersję gry Minecraft. Baw się dobrze!"
+    mc_2016_loops:
+      1:
+        text: "Cześć, nazywam się Lisa. Jestem twórcą oprogramowania gry Minecraft i pracowałam nad niektórymi zwierzętami i wrogami w grze. Jednym ze zwierząt, które tworzyłam, jest ocelot. Zajmowałam się tą częścią, w której można ocelota karmić rybą i wytresować go tak, aby stał się Twoim własnym kotem."
+      2:
+        text: "Ludzie zasadniczo bardzo się nudzą, jeśli muszą robić \"w kółko\" tę samą rzecz. W komputerach fajne jest to, że mogą powtarzać tę samą rzecz miliony czy miliardy razy pod rząd, ale nie uznają tego za nudne. Takie powtarzanie nosi nazwę pętli i każde stworzenie w grze Minecraft używa pętli."
+      3:
+        text: "Wcześniej wprawialiśmy w ruch po ekranie kurę, ale potem się zatrzymała. W grze Minecraft kury przechadzają się wokół bez końca. Użyjmy pętli \"rób bez końca\" z przybornika, aby utrzymać nasze kury w ruchu bez końca. Moc pętli umożliwi Ci zaoszczędzenie mnóstwa czasu i otworzy wiele różnych rodzajów fajnych opcji w miarę budowania swojej własnej wersji gry Minecraft."
+    mc_2016_events:
+      1:
+        text: "Na tym poziomie możesz podjąć decyzję, że będziesz Stevem lub Alex. Używaj przyciski ze strzałkami na swojej klawiaturze, aby przemieszczać się w górę, w dół, w lewo lub w prawo. Teraz możesz przemieszczać się wokół na danym poziomie, gdziekolwiek chcesz. Aby użyć stworzenia po prostu do niego podejdź, odwróć się, aby stanąć z nim twarzą w twarz i naciśnij przycisk spacji."
+      2:
+        text: "Jeśli używasz ekranu dotykowego, przesuń w górę, w dół, w lewo i w prawo, aby przemieścić się dookoła. Następnie dotknij gry, aby użyć pozycji, która znajduje się przed Tobą."
+      3:
+        text: "Co jednak dzieje się, gdy tego używasz? W grze Minecraft owce zrzucają wełnę, gdy je strzyżesz, krowy uciekają, gdy je uderzysz, a Creepery eksplodują, gdy się do nich zbliżysz. Do tych reakcji dochodzi dzięki czemuś, co nosi nazwę zdarzeń. Zdarzenia nakazują Twojemu programowi słuchać lub czekać, aż coś się wydarzy. A jeśli się wydarzy, wykonuje czynność."
+      4:
+        text: "Dotychczas używałeś jednego zdarzenia. Kod, który wprowadza się w otwór \"po wykluciu\", uruchamia się po stworzeniu stworzenia lub gdy gra się rozpoczyna. Na kolejnych kilku poziomach będziesz mieć nowe otwory na potrzeby zdarzeń takich jak \"po dotknięciu\", który uruchamia się po dotknięciu stworzenia lub \"po użyciu\", na sytuacje, gdy użyjesz stworzenia. Albo, jeśli chcesz, aby Twój zombie zniknął, gdy wzejdzie słońce, wstaw to w otwór \"w ciągu dnia\"."
+    mc_2016_spawn:
+      1:
+        text: "W grach \"wykluj\" oznacza to samo, co \"utwórz\". Na tym poziomie sprawmy, by zombie wykluwały się, gdy słońce zachodzi. W tym celu użyjemy bloku \"gdy noc\"."
+      2:
+        text: "Z uwagi na fakt, że chcemy, by zombie wykluwały się nocą dodamy blok \"wykluj zombie\" poniżej bloku \"gdy noc\". Bezpośrednio po ich wykluciu, każdy zombie uruchomi kod, który wstawiasz w ich otwór zdarzenia \"po wykluciu\". Baw się dobrze wykluwając zombie!"
+    mc_2016_congrats:
+      1:
+        text: "Gratulujemy! Nauczyłeś się używać komend informatycznych, aby powołać grę Minecarft do życia. Teraz to Ty jesteś stwórcą. Odblokowałeś wszystkie komendy i wszystkie stworzenia. To Ty wybierasz, co się zdarzy."
+      2:
+        text: "Gdy skończysz tworzyć swoją grę, wybierz opcję udostępniania, aby otrzymać łącze, które można wysyłać znajomym lub zagrać grę na telefonie. Baw się dobrze! Nie mogę się doczekać gry w Twoją wersję Minecrafta."
+    applab_intro_welcome:
+      1:
+        text: "Nazywam się Mei'lani. Jestem stażystką w code.org, a przy tym studiuję informatykę. Lubię tę dziedzinę, ponieważ daje ogromne możliwości twórcze. Muszę rozwiązać problem. Muszę sprawić, by wszystko działało tak, jak ja chcę, by działało. Ale muszę też być projektantką. Muszę być artystką i podejmować wszelkie decyzje w zakresie aspektów kreatywnych."
+      2:
+        text: "Dzięki App Lat tworzenie własnych aplikacji jest proste! Bez względu na to czy jesteś nowicjuszem na polu kodowania, czy posiadasz już jakieś doświadczenie. App Lab to doskonałe narzędzie do tworzenia nowych aplikacji oraz udostępniania ich swoim znajomym."
+      3:
+        text: "To jest App Lab. Twoja aplikacja znajduje się po lewej stronie. Po prawej stronie jest kod, który ją uruchamia. Budujesz swój program przeciągając bloki z przybornika. Na początek będziesz mieć tylko jeden blok zwany \"ustawWłaściwość\"."
+      4:
+        text: "Blok ustawionych właściwości zmienia wygląd elementów na Twoim ekranie. Podobnie jak przycisków, etykiet a nawet samego ekranu. Najpierw trzeba podjąć decyzję, który element chcesz zmienić. Jeśli umieścisz kursor nad elementem w Twojej aplikacji, możesz tutaj zobaczyć nazwę lub ID. Później przejdź do wyboru tego ID z pierwszego menu rozwijanego."
+      5:
+        text: "Elementy mają wiele właściwości, które można zmieniać tak, jak kolor ich tekstu, kolor tła lub wielkość czcionki. Można zobaczyć pełną listę oraz wybrać, którą właściwość chcesz zmienić w drugim menu rozwijanym."
+      6:
+        text: "Ostatnie menu rozwijane jest tam, gdzie zapiszesz wartość, której chcesz użyć. Blok coś Ci zasugeruje. Ale zawsze możesz sam wpisać inne kolory lub liczby."
+      7:
+        text: "Gdy skończyć, treść bloku będzie brzmiała trochę jak zdanie: \"Ustaw kolor tła przycisku 1 jako zielony\". Wciśnij uruchom, aby zobaczyć zmiany, jakie budujesz w kodzie. Jeśli dokonasz resetu, możesz przyciągnąć więcej bloków, aby zmieniać inne rzeczy w swojej aplikacji. Na przykład tekst!"
+      8:
+        text: "W ramach tego samouczka będziemy pracować w trybie bloku, ale App Lab obsługuje również pracę z tekstem."
+      9:
+        text: "W każdym razie będziesz programować w JavaScript, języku sieci. Każdy poziom ma cel, instrukcje oraz obrazek, który starasz się utworzyć. "
+      10:
+        text: "Jeśli gdziekolwiek utkniesz, kliknij w ten obrazek, a on pokaże Ci  dokładnie, jak ukończyć ten poziom. Sprawdź jednak najpierw, czy jesteś w stanie zrobić to sam."
+      11:
+        text: "Po osiągnięciu celu na tym poziomie, kliknij \"Zakończ\", aby przejść dalej. To wszystko, co trzeba zrobić! Wciśnij pomarańczowy przycisk \"kontynuuj\", aby przejść do kolejnego poziomu i zacząć przygodę z App Lab!"
+    applab_intro_events:
+      1:
+        text: "Aplikacje są naprawdę świetne, ponieważ przypominają rozpoczynanie własnej działalności, musisz sam zaprojektować wszystko od zera, musisz wszystkim pokierować oraz stajesz się właścicielem tego, co właśnie stworzyłeś przy pomocy kodu."
+      2:
+        text: "Teraz, gdy możesz zmienić wygląd swojej aplikacji, niech stanie się interaktywna w wymiarze reagowania na zdarzenia! Zdarzenia są działaniami użytkownika takimi jak: kliknięcie przycisku, przewinięcie menu lub umieszczenia kursora nad obrazkiem. Aplikacje interaktywne wymagają sposobów reagowania na zdarzenia czyli wydawania dźwięku, gdy kliknę w ten przycisk. W tym celu, w aplikacji App Lab potrzebny będzie nowy blok zwany \"poZdarzeniu\"."
+      3:
+        text: "Ten program ustawia ekran w kolorze niebieskim. Chcę, aby ekran zmienił kolor na zielony, gdy kliknę ten przycisk. Najpierw muszę przyciągnąć blok \"poZdarzeniu\". Umieszczając kursor, wiem, że ID przycisku to \"dużyPrzycisk\", więc go wybieram w pierwszym menu rozwijanym. "
+      4:
+        text: "Potem wybiorę rodzaj zdarzenia. Jest wiele opcji do wyboru, ale teraz zostawię opcję starego, sprawdzonego kliknięcia."
+      5:
+        text: "W końcu dodam kod w środku \"poZdarzeniu\", co zmieni kolor tła ekranu. Ten blok można odczytywać jako zdanie: \"Po zdarzeniu polegającym na kliknięciu, uruchom cały ten kod.\""
+      6:
+        text: "Przetestujmy to. Blok poza \"poZdarzeniu\" nadal jest uruchamiany w trybie natychmiastowym, tak, że wyświetlanie ekranu rozpoczyna się od koloru niebieskiego."
+      7:
+        text: "A gdy kliknę duży przycisk, kod wewnątrz mojego \"poZdarzeniiu\" uruchamia się, a ekran staje się zielony."
+      8:
+        text: "Jeśli chcesz zmienić więcej rzeczy po zdarzeniu, na przykład tekst na ekranie, wystarczy, że dodasz więcej kody do \"poZdarzeniu\"."
+      9:
+        text: "Aby sprawić, że program będzie reagował na więcej zdarzeń, dodaj więcej bloków \"poZdarzeniu\". Sprawdź tylko, czy nie wstawiasz ich jeden wewnątrz drugiego. Teraz czas wypróbować to samemu. Baw się dobrze!"
+    applab_intro_sounds:
+      1:
+        text: "Teraz będziemy się uczyć o dodawaniu obrazków i dźwięków do Twojej aplikacji. Zacznijmy od wypróbowywania opcji dźwięku."
+      2:
+        text: "W przyborniku znajdziesz nowy blok o nazwie \"odtwarzajDźwięk\". Przeciągnij go do obszaru roboczego. Możesz wybrać dźwięk do odtworzenia poprzez klikanie menu rozwijanego, a następnie klikając \"Wybierz\"."
+      3:
+        text: "Od tego momentu możesz albo przesłać dźwięk ze swojego komputera lub wyszukaj dźwięku z biblioteki dźwięków. W bibliotece  dźwięków jest mnóstwo różnych kategorii takich jak instrumenty, muzyka lub zwierzęta w tle."
+      4:
+        text: "Po dokonaniu wyboru pożądanego dźwięku, kliknij \"Wybierz\". Gdy ten blok jest uruchomiony, będzie odtwarzał wybrany dźwięk."
+      5:
+        text: "Możesz po prostu użyć bloku \"ustawWłaściwość\" w celu dodania obrazów do swoich elementów. Wybierz właściwość obrazu w drugim menu rozwijanym."
+      6:
+        text: "Następnie wybierz \"Wybierz\" z trzeciego menu rozwijanego."
+      7:
+        text: "Od tego momentu możesz wysyłać obrazek ze swojego komputera albo możesz przeglądać wielką bibliotekę ikon w bibliotece ikon."
+      8:
+        text: "Z powrotem w trybie kodów możesz użyć bloku \"ustawWłaściwość\", aby zmienić kolor ikony swojej ikony. Po dokonaniu wyboru obrazka na swojej ikonie, którą będziesz stosować, kliknij \"Uruchom\", aby zobaczyć, jak wygląda."
+      9:
+        text: "To wszystko, co trzeba zrobić! Teraz możesz zaczynać dodawać obrazy i dźwięki, aby Twoja aplikacja stała się jeszcze bardziej wciągająca i dynamiczna."
+    applab_intro_designmode:
+      1:
+        text: "W celu zbudowania własnych aplikacji będziesz musiał zacząć projektować ekrany i elementy od zera. App Lab ułatwia to zapewniając \"Tryb projektowania\"."
+      2:
+        text: "Użyj przycisku na górnej części swojej aplikacji, aby przejść do \"Trybu projektowania\"."
+      3:
+        text: "Teraz możesz dodać nowe elementy przyciągając je na ekran. Możesz je przemieszczać w różnych kierunkach, do innych lokalizacji oraz zmieniać ich wielkość przyciągając je do prawego dolnego rogu."
+      4:
+        text: "W celu zmiany właściwości elementów, użyj środków do sterowania znajdujących się po prawej stronie. Na przykład można naprawdę łatwo zmienić tekst, kolor lub wielkość czcionki przycisku."
+      5:
+        text: "Gdy dodajesz nowy element do swojego ekranu, wytworzy on proste ID takie jak np.: przycisk 1. Warto zmienić ID przycisku na coś bardziej znamiennego np.: \"prawyPrzycisk\". Tak, aby było wiadomo, który to przycisk, gdy wchodzi się do programu."
+      6:
+        text: "Jeśli omyłkowo dodasz element do swojej aplikacji, po prostu wyciągnij ją lub naciśnij \"usuń\". "
+      7:
+        text: "Można dodawać zupełnie nowe ekrany do swojej aplikacji wciągając element ekranu."
+      8:
+        text: "Z menu rozwijanego na górze można szybko przełączyć się z tam i z powrotem pomiędzy tworzonym przez siebie ekranami."
+      9:
+        text: "W Twojej aplikacji musi być sposób przełączania się pomiędzy wszystkimi tymi ekranami tak, aby do przybornika był dodany blok \"ustawEkran\". Użyj \"ustawEkran\" wewnątrz bloku \"poZdarzeniu\", aby zmieniać ekrany za kliknięciem przycisku. "
+      10:
+        text: " Na kolejnych kilku poziomach będziemy zajmować się pojedynczym projektem. Najpierw musisz dodać przycisk, a następnie dodasz nowy ekran, a w końcu napiszesz kod tak, aby przycisk przełączał się na nowy ekran."
+    applab_intro_share:
+      1:
+        text: "Teraz, gdy poznałeś już podstawy App Lab takie jak dodawanie przycisków, dźwięków, obrazków, tekstu oraz nowych ekranów, możesz tworzyć aplikacje wszelkiego rodzaju."
+      2:
+        text: "Na kolejnym poziomie znajdziesz aplikację, którą właśnie ukończyłeś budować. Przy pewnej dozie kreatywności możesz to przekształcić w test osobowości dla znajomych, kartkę z życzeniami, którą możesz przesłać rodzinie lub grę wybierz-swoją-własną-przygodę. Wszystkie te aplikacje stanowią po prostu połączenie umiejętności, które już nabyłeś, ale założę się, że możesz wymyślić ich więcej."
+      3:
+        text: "Gdy Twoja aplikacja będzie już gotowa, możesz po prostu wysłać ją na telefon, aby zobaczyć, jak wygląda. Po prostu kliknij \"Udostępnij\" i wprowadź tutaj swój numer telefonu."
+      4:
+        text: "Otrzymasz wiadomość tekstową, która pozwoli Ci natychmiast otworzyć swoją aplikację. "
+      5:
+        text: "Możesz również udostępnić link do swojej własnej aplikacji w social mediach lub zmieścić ją w publicznej galerii code.org do zabawy i udostępniania przez innych."
+      6:
+        text: "Na razie zaledwie \"liznąłeś\" powierzchownie możliwości App Lab. Pełny App Lab cechuje się bardziej zaawansowanymi interakcjami z użytkownikami, nowymi elementami ekranu, a nawet wbudowanymi bazami danych tak, aby można było szybko zbudować pełne, wyróżniające się aplikacje. Na \"code.org/appldb\" znajdziesz pełne narzędzie oraz mnóstwo pomysłów, jeśli chcesz brnąć w to dalej."
+      7:
+        text: "Dziękuję za pierwsze wspólne chwile. Teraz idźcie tworzyć i udostępniać swoją pierwszą aplikację, a potem twórzcie aplikacje dalej z App Lab!"
+    mc_2017_agent_intro:
+      1:
+        text: "Stacy: Stampy, Lizzy, Preston - dziękuję, że zabraliście się ze mną. Coś, co chcę Wam pokazać, jest tuż nad tym górzystym płaskowyżem. Myślę, że będziecie zachwyceni. "
+      2:
+        text: "Chwileczkę - na torach jest dziura! (krzyki)"
+      3:
+        text: "Wszystko w porządku? Stampy: Ojej, mamy problem. Patrzcie! Tam była dziura w torach. Stacy: Naprawdę, Stampy? Lizzy: Może powinniśmy zebrać bloki, aby je naprawić. Preston: Ścigajmy się. Pierwszy na górze wygrywa. Stacy: Dobra! Do startu, gotowi, START! Dobra, zbiorę trochę tej terakoty. Ludzie, czekajcie. Nie jestem w stanie kopać! Preston: Ja też nie. Lizzy: Ani ja. Stacy: Ok, to jest bardzo dziwne. Stampy, jesteś w stanie kopać? Stampy: Nie! Stacy: Ok, bez paniki. Stampy: Czy gra się popsuła? Stacy: Jeśli tak, jak ja naprawmy? Lizzy: Nie wiem. Stampy: Czy ktoś wie, jak pisać kod Minecrafta?"
+      4:
+        text: "(westchnienie) Preston: Co to jest? Stampy: Nigdy czegoś takiego nie widziałem. Lizzy: To jest cudne! Stacy: Czy to jest...oswajalne? Preston: Okay, co tu jest grane? Ktoś musi wrócić do realu i naprawić to.  Wszyscy: Nie to! Stacy: Nie-t (Westchnienie.) Ok, ja pójdę."
+      5:
+        text: "O, okey, hej, not to jestem teraz w realu. Pójdę i spróbuję znaleźć biura Minecrafta."
+      6:
+        text: "Ale - będę potrzebować Waszej pomocy. Skorzystajcie z samouczka, zacznijcie uczyć się kodowania i pogadamy za kilka poziomów, ok? Trzymajcie kciuki! Chyba tędy? Ała, kaktus. W porządku!"
+      7:
+        text: "Celem wykonania zadania \"Godziny kodowania\", będziecie musieli napisać program dla agenta. Razem z agentem będziecie oczyszczać ścieżkę z przeszkód, żebyście mogli zebrać rzeczy potrzebne na wyprawę. Tylko agent ma prawo wstawiać i niszczyć bloki, a Ty możesz tylko zbierać przedmioty. Twój ekran jest podzielony na trzy główne części. Po lewej stronie jest Minecraft. "
+      8:
+        text: "Środkowy obszar to przybornik z komendami, które agent rozumie."
+      9:
+        text: "Po prawej stronie jest obszar roboczy. To tutaj wstawiasz komendy, aby budować program, który kieruje agentem."
+      10:
+        text: "Agent może iść, skręcać i aktywować płyty naciskowe. Me też niszczyć i wstawiać bloki. Wstawiając blok taki jak tory wózka górniczego, umieszcza je pod sobą. "
+      11:
+        text: "Jeśli zapomnisz co masz zrobić, instrukcje dla każdego poziomu znajdują się na górze."
+      12:
+        text: "Jeśli zechcesz spróbować jeszcze raz, możesz wcisnąć niebieski przycisk \"reset\", aby zacząć wszystko od nowa.A jeśli chcesz usunąć blok kodu, przeciągnij go ze swojego obszaru roboczego do przybornika. Pamiętaj, aby nacisnąć \"uruchom\", a wtedy agent ruszy. OK, czas wypróbować kilka pierwszych poziomów. Powodzenia!"
+    mc_2017_repeat:
+      1:
+        text: "Stampy: Ciekawe, co robi Stacy?"
+      2:
+        text: "Stacy: Wow, wygląda na to, że jestem na właściwym miejscu. To jest niesamowite."
+      3:
+        text: "Mam wrażenie, że jestem z powrotem w Minecrafcie? Halo?"
+      4:
+        text: "O creeper, Nic nie robisz, prawda? Katie: Stacy? Stacy: Cześć, Katie? Katie: Tak, witaj w Minecrafcie!"
+      5:
+        text: "Stacy: To jest niesamowite. Czyli pracujesz tu każdego dnia jako programista, prawda?  Katie: Tak, to naprawdę niesamowite. Jestem programistą w zespole rynku Minecrafta. Stacy: Ile języków programowania znasz? Katie: W mojej pracy korzystałam z ponad dwunastu. Stacy: Dwunastu? Katie: Tak. Stacy: Czy zatem wiesz coś na temat tego małego golema, który zwie się \"agentem\"?  Katie: Agent zajmuje się sprawami, których Steve ani Alex nie załatwią, jak przechodzenie przez lawę. Stacy: Chcę się nauczyć kodować i oni też chcą się nauczyć kodować, więc co jest jedną z pierwszych rzeczy, jakie musisz wiedzieć, gdy się uczysz"
+      6:
+        text: "Katie: Musisz się nauczyć, jak używać pętli. Pętle to coś, co programiści piszą, aby wydawać komputerowi polecenia, które mogą być wykonywane wiele razy. Stacy: Rozumiem, myślę, że te rzeczy pojawią się w nadchodzących poziomach, zatem zmierzmy się z pętlami."
+      7:
+        text: "W następnym poziomie możesz wykorzystać pętlę do przesunięcia agenta wzdłuż ścieżki. Przeciągnij blok \"powtarzaj\" do obszaru roboczego. i umieść blok \"idź do przodu\" wewnątrz bloku \"powtarzaj\". To każe komputerowi powtarzać to samo wiele razy z rzędu, bez potrzeby używania mnóstwa bloków. Możesz określić, ile razy coś ma być powtórzone, wpisując liczbę w bloku."
+      8:
+        text: "Do bloku powtórzeń można wstawić zakręcanie i wiele innych poleceń, ale na razie spróbuj wykorzystać powtórzenie do przesunięcia agenta o kilka kroków w przód. Pamiętaj, jeśli utkniesz w zadaniu, możesz zawsze kliknąć niebieski \"reset\" i zacząć od nowa."
+      9:
+        text: "Jeśli chciałbyś mieć taką fajną pracę jak Katie, kliknij na \"pokaż kod\" za każdym razem, gdy skończysz poziom. W ten sposób zobaczysz kod Javascript, napisany przez kogoś takiego jak Katie, gdy programuje prawdziwego Minecrafta. Tak czy siak, wielkie dzięki! Katie: Powodzenia!\n"
+    mc_2017_functions:
+      1:
+        text: "Preston: Nie chcę się chwalić, ale jestem całkiem dobry w parkour. Lizzy: Śpijmy, żeby był już dzień, gdy wróci Stacy.\n\n"
+      2:
+        text: "Stacy: OK, wróciłam z biura Minecraftu i chyba wiem, jak rozwiązać problem, który mam w mojej grze. Myślę, że mogę użyć funkcji.\nChwilkę, tylko to otworzę.\n\n\n"
+      3:
+        text: "Funkcja to specyficzny zbiór instrukcji, które pozwalają wykonać określone zadanie, trochę jak przepis kulinarny. W kilku następnych poziomach będziecie mieć dostęp do funkcji, których możecie użyć\ndo rozwiązania łamigłówek.\n"
+      4:
+        text: "Spójrz na kod funkcji, gdy jest w obszarze roboczym, żeby zobaczyć, co robi.\n"
+      5:
+        text: "Następnie znajdź blok z tą nazwą w przyborniku i przeciągnij ten blok do bloku \"po uruchomieniu\".\n"
+      6:
+        text: "Pamiętaj, że możesz użyć tej samej funkcji za każdym razem, gdy potrzebujesz wykonać ten sam zbiór instrukcji, by coś zrobić np. zbudować most. Powodzenia! \nWiem, że wam się uda!\n\n"
+    mc_2017_congratulations:
+      1:
+        text: "Preston: Gratulacje!"
+      2:
+        text: "Lizzy: Gratulacje!"
+      3:
+        text: "Stampy: Gratulacje, dałeś radę!"
+      4:
+        text: "Stacy: Gratulacje, totalnie daliście czadu! Macie już za sobą \"Godzinę z kodem\" - możecie zacząć kodowanie w Minecrafcie. Poznaliśmy pętle, funkcje oraz czym zajmuje się agent oprogramowania. \n"
+      5:
+        text: "Czas uwolnić poziom gry, w którym wy jesteście twórcami. Wykorzystajcie pozostały czas, do pisania funkcji eksploruj, wydobywaj i buduj. "
+      6:
+        text: "Można wziąć kod zapisany w tym poziomie do swojego świata na Minecraft: Edycja edukacyjna. Kliknij \"Zakończ\" i wykonaj polecenia, aby dostać link do swojego świata i koduj działania agenta.  Dobrej zabawy! Dajesz radę!"
+      7:
+        text: "Stacy: Jestem z powrotem. No dobra, to jest agent! Pokażę Wam, co on potrafi. No to patrzcie! Wykonuje polecenia! Kazałam mu wybudować schody z tych klocków z terakoty, a my możemy się po nich stąd wydostać. Patrzcie - nie chodzi tylko o schody.  Mogę kazać agentowi, by zrobił, co chcę, a on to dla mnie zrobi. "
+      8:
+        text: "Stampy: Jak ci się to udało zrobić? Stacy: To doprawdy nic trudnego. Po prostu użyłam kodu."
+    csd_concept_how_computers_work:
+      1:
+        text: "Gdziekolwiek się spojrzy widać, że komputery zmieniają świat. Na naszych biurkach, w naszych domach, naszych kieszeniach, a właściwie we wszystkich zakresach. Natomiast o ile większość z nas korzysta codziennie z tej rewolucyjnej technologii, niezbyt często zadajemy sobie pytanie: \"Jak działają komputery?\" W tej serii będziemy się uczyć, jak naprawdę działają komputery, rozpoczynając od tego, co czyni komputer komputerem. Natomiast zajmiemy się tym, w jaki sposób informacje są przedstawiane wewnątrz komputera używając małych sygnałów elektrycznych, które włączają się i wyłączają z trudnymi do ogarnięcia rozumem prędkościami."
+      2:
+        text: "Potem dowiemy się, jak komputery używają obwodów, które realizują wszystko od prostych działań matematycznych po symulowanie funkcjonowania całości wirtualnych światów. następnie spojrzymy w szerszym wymiarze i spojrzymy na różne części komputera, które umożliwiają wprowadzanie, wyprowadzanie oraz przechowywanie wszystkich informacji. W końcu przyjrzysz się, czym rzeczywiście jest kod oraz sposobowi, w jaki oprogramowanie steruje sprzętem. Zatem bez względu na to, czy jesteś po prostu ciekawy, jak wyglądają urządzenia, z których korzystasz codziennie lub chcesz projektować rozwiązania innowacyjne na przyszłość, pierwszym krokiem jest zdobycie wiedzy na temat tego, jak działają komputery."
+    csd_concept_computer:
+      1:
+        text: "Nazywam się May-Li Khoe, jestem projektantką i wynalazcą. Niektóre rzeczy, które zaprojektowałam, są w Apple, a teraz projektuję produkty do użytkowania przez dzieci, tak, aby im ułatwić życie szkolne. Dodatkowo pracuję jako DJ i tańczę."
+      2:
+        text: "Komputery są wszędzie! Są w kieszeniach ludzi, są w samochodach ludzi, ludzie noszą je na nadgarstkach! Mogą być teraz w Twoim plecaku. Co jednak sprawia, że komputer jest komputerem? Co takiego sprawia, że komputer jest komputerem? Jak działa?"
+      3:
+        text: "Cześć, nazywam się Nat! Jestem jednym z głównych projektantów Xboxa. Zajmuję się komputerami od siódmego roku życia i teraz pracuję w rzeczywistości wirtualnej. Jako ludzie zawsze budowaliśmy narzędzia, które pomagają nam rozwiązywać problemy. Narzędzia takie jak taczki, młotek lub prasa drukarska albo ciągnik siodłowy."
+      4:
+        text: "Wszystkie te wynalazki pomagały nam w wykonywaniu prac fizycznych. Z biegiem czasu ludzie zaczęli się zastanawiać, czy urządzenie można zaprojektować lub zbudować ją w taki sposób, by pomagały nam również w pracy umysłowej jak rozwiązywaniu równań lub śledzeniu gwiazd na niebie. Zamiast przemieszczania lub obracania rzeczy fizycznych takich jak błoto czy kamienie, te maszyny będą musiały być zaprojektowane w taki sposób, aby obracać informacjami. Gdy pionierzy informatyki zgłębiali sposób zaprojektowania maszyny myślącej, uświadomili sobie, musi realizować cztery różne zadania."
+      5:
+        text: "Będzie musiał przyjmować informacje na wejściu, przechowywać informacje, przetwarzać ja, a następnie produkować wyniki. To może wydawać się proste, ale te cztery rzeczy stanowią wspólny mianownik wszystkich komputerów. To sprawia, że komputer jest komputerem."
+      6:
+        text: "Na początku komputery były podstawowymi kalkulatorami, które już wówczas były świetne, ale wówczas obsługiwały liczby. Natomiast teraz możemy ich używać do prowadzenia rozmów ze sobą, możemy ich używać do rozgrywania gier, sterowania robotami i robić te wszystkie dziwne rzeczy, które można było sobie wyobrazić. Nowoczesne komputery nie wyglądają już jak te stare, toporne maszyny, ale nadal wykonuję te same cztery czynności."
+      7:
+        text: "Porozmawiajmy najpierw o danych na wejściu. Można wydawać komputerowi polecenia dotyczące tego, co można robić z klawiaturą, można im powiedzieć, co można robić przy pomocy myszki, mikrofonu, kamery. Wszystkie te cztery elementy na wejściu podają do komputera informacje, które można później przechowywać w pamięci."
+      8:
+        text: "Procesor komputera pobiera informacje z pamięci. Manipuluje nimi lub zmienia je z użyciem algorytmu, będącego po prostu szeregiem komend. A następnie przesyła przetworzone informacje po to, by potem przechowywać je ponownie z pamięci. To będzie kontynuowane do momentu, gdy przetwarzane informacje będą gotowe do wyjścia."
+      9:
+        text: "Sposób, w jaki sposób komputer przetwarza informacje, zależy od tego, jak jest zaprojektowany. Na ekranie komputera można wyświetlać tekst, zdjęcia, filmy wideo lub interaktywne gry - nawet wirtualną rzeczywistość! Wynik pracy komputera może nawet uwzględniać sygnały sterujące robotem."
+      10:
+        text: "Kto wie, jak będą wyglądały komputery jutra? Mam nadzieję, że pomożesz nam podjąć decyzję informując, jak chcesz, by wyglądały komputery jutra. Niemniej jednak wszystkie komputery, bez względu na różnorodność rodzajów wykorzystywanej technologii, wykonują zawsze te same cztery rzeczy. Przyjmują informacje, przechowują je w formie danych, przetwarzają je, a następnie wydają wyniki."
+    csd_concept_binary_data:
+      1:
+        text: "Cześć! Nazywam się Limor Fried, pracuję tu, w Adafruit Industries, na stanowisku inżyniera. Tutaj wykonuję prace inżynieryjno-projektowe, a także projektuję obwody na potrzeby mody, muzyki i technologii."
+      2:
+        text: "Nazywam się Federico Gomez Suarez, jestem projektantem oprogramowania w Microsoft Hack for Good. Rozpatruję wykorzystywanie technologii do pomocy w rozwiązywaniu pewnych istotnych problemów społecznych naszych czasów. "
+      3:
+        text: "Być może słyszałeś, że komputery działają na zasadzie zero-jedynkowej. Natomiast obecnie prawie nikt nie zajmuje się bezpośrednio tymi jedynkami i zerami. One natomiast odgrywają istotną rolę w działaniu wnętrza komputerów. "
+      4:
+        text: "W środku komputera znajdują się przewody i obwody, które przenoszą wszystkie informacje w komputerze. W jaki sposób przechowuje się informacje lub przedstawia je wykorzystując do tego energię elektryczną?"
+      5:
+        text: "Cóż, jeśli masz pojedynczy kabel, którym przepływa energia elektryczna, sygnał może być albo włączony, albo wyłączony. Wybór nie jest zbyt duży, ale na początku jest ważny. Mając do dyspozycji jeden kabel możemy przedstawić \"tak\" lub \"nie\", \"prawdę\" lub \"fałsz\", \"jedynkę\" lub \"zero\", czy też cokolwiek innego mając tylko dwie opcje. Ten pojedynczy stan włączenia/ wyłączenia pojedynczego kabla jest zwany bitem, a to jest najmniejsza wiadomość, jaką można przechowywać w komputerze. "
+      6:
+        text: "Jeśli użyjesz więcej przewodów, możesz mieć więcej bitów; więcej jedynek i zer. Im więcej bitów, tym bardziej złożone informacje możesz przedstawiać. Niemniej, aby to zrozumieć, musimy się nauczyć czegoś, co nazywa się binarnym systemem liczbowym. "
+      7:
+        text: "W dziesiętnym systemie liczbowym mamy dziesięć cyfr od zera do dziewięciu - na nich uczyliśmy się liczyć. W binarnym systemie liczbowym, mamy tylko dwie cyfry; zero i jeden. Przy pomocy tych dwóch cyfr możemy liczyć aż do dowolnej liczby. "
+      8:
+        text: "Pokazujemy jak to działa. W dziesiętnym systemie liczbowym, do którego wszyscy jesteśmy przyzwyczajeni, każde miejsce w liczbie ma inną wartość. Jest pozycja jedynkowa, dziesiętna, setna i tak dalej. Na przykład 9 w pozycji setnej to 900. W ujęciu binarnym, każda pozycja również przenosi wartość. Natomiast zamiast za każdym razem mnożyć razy 10, mnożymy razy 2. Jest pozycja 1, pozycja 2, pozycja 4, pozycja 8 i tak dalej. Na przykład liczba 9 to w ujęciu binarnym 1001. W celu wyliczenia wartości dodajemy 1 razy 8 plus zero razy 4 plus zero razy 2 plus 1 razy 1. Prawie nikt nie wykonuje tych działań, ponieważ komputer wykonuje je za nas. Ważne jest to, że każdą liczbę można przedstawić tylko przy pomocy jedynek i zer lub przez pęk kabli, które są włączone lub wyłączone. Im więcej kabli jest do dyspozycji, tym większe liczby można przechowywać. Mając 8 kabli możesz przechowywać liczby pomiędzy 0 i 255. To mając 8. Mając 32 kable możesz przechowywać od 0 do ponad 4 miliardów. Używając binarnego systemu liczbowego możesz przedstawić dowolną liczbę, jaką chcesz.\n\n"
+      9:
+        text: "A co z rodzajami informacji? Takimi jak tekst, obrazki lub dźwięk? Okazuje się, że wszystkie te rzeczy można również przedstawić przy pomocy liczb. Pomyśl o literach alfabetu. Do każdej liczby można przyporządkować liczbę. A mogłoby mieć wartość 1, B mogłoby mieć wartość 2 i tak dalej. Zatem każde słowo lub akapit można przedstawić za pomocą ciągu liczb. Jak widzimy te liczby można przechowywać w formie sygnałów włączonych i wyłączonych. Każde słowo, które się widzi na każdej stronie internetowej lub w Twoim telefonie jest przedstawiany z wykorzystaniem takiego systemu."
+      10:
+        text: "To pomówmy teraz o zdjęciach, filmach wideo oraz grafice, które widzimy na ekranie. "
+      11:
+        text: "Na wszystkie te obrazy składają maleńkie kropki zwane pikselami, a każdy piksel ma kolor. Każdy z kolorów można przedstawić za pomocą liczb. Jeśli się nad tym zastanowić, typowy obrazek składa się z milionów pikseli, a typowe wideo przedstawia 30 obrazów na sekundę,a teraz rozmawiamy tu o wielu danych. "
+      12:
+        text: "Każdy dźwięk jest zasadniczo serią wibracji w powietrzu. Wibracje można przedstawić graficznie jako kształt fali. Dowolny punkt na na tej fali można przedstawić w postaci liczby. W ten sposób dowolny dźwięk dowolny dźwięk można podzielić na serię liczb. Jeśli potrzebujesz dźwięku wyższej jakości, wybierzesz audio 32-bitowe lub audio 8-bitowe. Więcej bitów oznacza wyszczy zakres liczbowy. "
+      13:
+        text: "Gdy używasz komputera do zapisania kodu lu stworzenia własnej aplikacji, nie zajmujesz się bezpośrednio tymi jedynkami ani zerami. Będziesz zajmować się obrazami lub dźwiękiem lub filmem wideo. Jeśli chcesz zrozumieć, jak komputer działa wewnątrz, wszystko to pochodzi z tych prostych jedynek i zer oraz sygnałów elektrycznych w obwodach za nimi."
+    csd_concept_circuits_logic:
+      1:
+        text: "Jedną z najfajniejszych rzeczy, które odkryłem jeśli chodzi o obwodach jest to, że obwody można traktować jak formę sztuki. Jeśli mam jakiś twórczy pomysł, mogę wdrożyć ten twórczy pomysł przy pomocy obwodów. Zatem jeśli masz pomysły, możesz użyć technologii, aby wprowadzić te pomysły w życie."
+      2:
+        text: "Każda wprowadzona do komputera dana i uzyskany z niego wynik stanowi rodzaj informacji, którą można przedstawić przy pomocy sygnałów elektrycznych lub jedynek i zer."
+      3:
+        text: "W celu przetworzenia informacji, które wchodzą jako dane oraz wytworzenia informacji, która ma być wynikiem komputer musi modyfikować i łączyć sygnały na wejściu. W tym celu komputer wykorzystuje miliony malutkich komponentów elektronicznych, które łączą się ze sobą, aby utworzyć obwody."
+      4:
+        text: "Przyjrzyjmy się bliżej temu, jak obwody mogą modyfikować i przetwarzać informacje przedstawione w postaci zer i jedynek. Ten obwód jest niezwykle prosty. Pobiera sygnał elektryczny, włączony lub wyłączony, a potem go odwraca. Zatem, jeśli podawany przez Ciebie sygnał to 1, obwód podaje Ci 0, a jeśli Ty podajesz obwodowi 0, on daje Ci 1. Sygnał, który wchodzi, nie jest taki sam, jak sygnał, który wychodzi, zatem nazywamy ten obwód NIE."
+      5:
+        text: "Bardziej skomplikowane obwody mogą przyjmować wiele sygnałów i łączyć je, dając inny wynik. W tym przykładzie, obwód będzie przyjmować dwa sygnały elektryczny, każdy z nich może wynosić 1 lub 0. Jeśli jednym z wchodzących sygnałów jest 0, wówczas wynik również wynosi 0. Ten obwód da tylko 1,  jeśli zarówno pierwszy sygnał, jak i drugi sygnał wynosi 1, jeśli pierwszy sygnał i drugi sygnał wynosi 1, taki obwód nazywamy I."
+      6:
+        text: "Istnieje wiele podobnych małych obwodów, które wykonują podobne wyliczenia logiczne. Przy pomocy łączenia tych obwodów, możemy tworzyć obwody bardziej złożone, które wykonują bardziej złożone wyliczenia."
+      7:
+        text: "Na przykład, można utworzyć obwód, który dodaje 2 bity do siebie o nazwie \"dodawacz\". Taki obwód przyjmuje dwa odrębne bity, każdy wynosi 1 lub 0 i dodaje je do siebie, aby wyliczyć sumą. Na sumę może składać się 0 plus 0, co daje zero, 0 plus 1, co daje jeden lub 1 plus 1, co daje 2. Potrzebne są dwa przewody wychodzące, ponieważ może on przyjmować nie więcej niż dwie cyfry binarne, które przedstawiają sumę. Jeśli masz już pojedynczego \"dodawacza\", na potrzeby dodania dwóch bitów informacji, możesz połączyć krotności tych obwodów \"dodawacza\" obok siebie, aby dodawać dużo większe liczby."
+      8:
+        text: "Przykładowo, pokazujemy, jak 88-bitowy \"dodawacz\" dodaje liczby 25 i 50. Każda liczba jest przedstawiona z użyciem 8 bitw w 16 różnych sygnałach elektrycznych, które wchodzą do obwodu. Obwód na potrzeby \"dodawacza\" 8-bitowego zawiera mnóstwo małych \"dodawaczy\" w środku, które wspólnie wyliczają sumę."
+      9:
+        text: "Różne obwody elektryczne mogą wykonywać inne proste działania takie jak odejmowanie lub mnożenie. W rzeczywistości całość przetwarzania wszystkich informacji prowadzonego przez Twój komputer składa się z wielu małych operacji połączonych ze sobą. Taka jest każda operacja indywidualna realizowana przez komputer, która łatwo mogłaby być wykonywana przez człowieka, ale te obwody w komputerach działają znacznie szybciej."
+      10:
+        text: "Dawniej te obwody były duże i toporne, \"dodawacz\" 8-bitowy mogły przybierać rozmiar lodówki, a na wykonanie prostego działania potrzebowały kilku minut. Obecnie obwody komputerowe mają mikroskopijne rozmiary oraz są w stanie funkcjonować znacznie, znacznie szybciej. Dlaczego mniejsze komputery są tak dużo szybsze? Cóż, ponieważ im mniejszy obwód, tym mniejsza odległość do przebycia dla sygnału elektrycznego. Energia elektryczna przemieszcza się mniej więcej z prędkością światła, z tego względu współczesne obwody mogą wykonywać miliardy działań na sekundę."
+      11:
+        text: "Zatem zawsze, gdy rozgrywasz grę, nagrywasz film wideo lub badasz przestrzeń kosmiczną, wszystko, co możesz potencjalnie zrobić przy pomocy technologii, wymaga mnóstwa informacji do niezwykle szybkiego przetworzenia. U podstaw tej złożoności leży ogromna liczba malutkich obwodów, które zamieniają sygnały binarne na strony internetowe, filmy wideo, muzykę i gry. Te obwody mogą Ci nawet pomóc odkodować DNA w celu postawienia diagnozy i leczenia choroby. Zatem co chciałbyś zrobić przy pomocy tych wszystkich obwodów?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: "Cześć, nazywam się Madison Maxey. Mam firmę o nazwie Loomia, prowadzącą działalność w postaci wytwarzania inteligentnych materiałów na potrzeby inteligentnych ubrań i inteligentnych, miękkich, dobrych produktów. Jeśli chodzi o tkaniny limit wyznacza tylko niebo."
+      2:
+        text: "Nazywam się Danielle Applestone i jestem prezesem spółki Othermachine Company. Budujemy przenośne frezerki. Frezerka uwzględnia obrotowe urządzenie tnące i prowadzi je przez materiał, aby utworzyć obiekt 3D."
+      3:
+        text: "W skrócie, we wszystkich komputerach wykonuje się te same cztery rzecz. Wprowadza informacje na wejściu, przechowuje się je i przetwarza, a następnie tworzy informacje wynikowe. Każda z tych rzeczy jest realizowana w innej części komputera."
+      4:
+        text: "Są urządzenia przeznaczone do wprowadzania informacji, które przyjmują informacje wejściowe, które pobierają dane ze świata zewnętrznego i konwertują je na informacje binarne. Jest pamięć do przechowywania takich informacji. Jest procesor (central processing unit lub CPU), gdzie wykonuje się wszystkie działania. Ostatecznie są również urządzenia na wyjściu, które przyjmują informacje i konwertują je w wynik fizyczny."
+      5:
+        text: "Najpierw porozmawiajmy o urządzeniach wejściowych. Komputery mogą składać się z wielu różnych rodzajów urządzeń wejściowych takich jak klawiatura komputera, ekran dotykowy telefonu, kamera, mikrofon lub GPS. Nawet czujniki w samochodzie, termostat lub dron to również przykłady różnych urządzeń wejściowych."
+      6:
+        text: "Teraz zajmijmy się prostym przykładem sposobu, w jaki dane wejściowe odbywają podróż po komputerze i stają wynikiem. Gdy naciska się klawisz na klawiaturze - powiedzmy literę \"B\". Klawiatura przekształca literę w liczbę. Ta liczba jest przesyłana w formie binarnej, jedynek i zer, do komputera."
+      7:
+        text: "Począwszy od tej liczby, procesor wylicza, jak przedstawić literę \"B\" piksel po pikselu. Procesor zwraca się o instrukcje krok-po-kroku z pamięci, które mówią mu jak narysować literę \"B\". Procesor wykonuje te instrukcje i przechowuje wyniki w formie pikseli w pamięci."
+      8:
+        text: "W końcu informacje w postaci pikseli są przesyłane w ujęciu binarnym na ekran. Ten ekran jest urządzeniem wyjściowym Ekran jest urządzeniem wyjściowym, które przetwarza sygnały binarne na malutkie światełka i kolory, które tworzą to, co widać. "
+      9:
+        text: "To wszystko dzieje się tak szybko, że sprawia wrażenie czegoś natychmiastowego, ale w celu wyświetlenia każdej litery komputer wykonuje tysiące poleceń, począwszy od momentu, gdy Twój palec naciśnie punkt na klawiszu."
+      10:
+        text: "W tym przykładzie urządzeniem wyjściowym był ekran, ale jest wiele rożnych rodzajów urządzenia wynikowego, które potrzebuje sygnału binarnego od komputera i robi coś w świecie fizycznym. Na przykład głośnik odtworzy dźwięk, a drukarka 3D wydrukuje przedmiot. Urządzenia wyjściowe mogą również sterować ruchem fizycznym czegoś takiego, jak ramię robota, silnik samochodu lub urządzenie tnące frezerki, które wytwarza się w mojej firmie.  Nowe rodzaje danych i wyników umożliwiają komputerom interakcję ze światem w zupełnie nowym stylu. A to wzmacniane jest dodatkowo udoskonaleniami w zakresie prędkości i rozmiaru pamięci i procesora. "
+      11:
+        text: "Im bardziej skomplikowane zadanie oraz im więcej informacji czyli danych lub wyników, tym większe zapotrzebowanie na moc przetwarzania i pamięć. Pisanie liter na ekranie może być łatwe ale w celu wykonania skomplikowanej grafiki 3D lub nagrywania filmu cechującego się wysoką rozdzielczością, nowoczesne komputery często wyposażone są w liczne procesory, aby przetworzyć te informacje oraz pamięć o pojemności wielu gigabajtów do ich przechowywania."
+      12:
+        text: "Bez względu na to, co chcesz zrobić na komputerze każde działanie wiąże się z wprowadzaniem informacji ze świata fizycznego przechowywaniem i przetwarzaniem tych informacji oraz wprowadzaniu pewnych informacji wynikowych z powrotem do świata fizycznego."
+    csd_concept_hardware_software:
+      1:
+        text: "Cześć, nazywam się Erica Gomez i jestem kierownikiem ds. technicznych w spółce Amazon.com. Jednym z najlepszych aspektów technicznych, a w szczególności w spółce Amazon, jest to, że mogą przyprowadzać swojego psa ze sobą codziennie do pracy. Moim zadaniem jest pomoc w zapewnieniu, by wprowadzić oprogramowanie w wielki świat, a zadaniem mojego psa jest drzemka pod biurkiem, której towarzyszy głośne chrapanie."
+      2:
+        text: "Nazywam się Jerome Holman i jestem kierownikiem programu w zespole ds. Xbox i naprawdę bawię się świetnie. Zasadniczo łączę sprzęt z oprogramowaniem, aby dać Ci wszystkie gry, które kochasz, na Twój Xbox."
+      3:
+        text: "Gdy zajrzysz do wnętrza urządzenia komputerowego, zobaczysz mnóstwo obwodów, czipy, przewody, głośniki, wtyczki i mnóstwo innych rzeczy. To jest sprzęt."
+      4:
+        text: "Tym, czego nie widzisz, jest oprogramowanie. Na oprogramowanie składają się wszystkie programy komputerowe lub kod pracujący na tym urządzeniu. Oprogramowanie może być wszystkim od aplikacji po gry na stronach internetowych oraz oprogramowaniu informatycznym, które ja i moje zespoły używają w Amazonie, aby zrozumieć, jak zachowują się klienci."
+      5:
+        text: "Jak przy tym współdziałają ze sobą sprzęt i oprogramowanie? Na początek przyjrzyjmy się  procesorowi komputera (central processing unit lub CPU)."
+      6:
+        text: "Procesor jest czipem głównym, który steruje wszystkimi innymi częściami komputera. Procesor musi wykonywać różne rzeczy tak, że w środku posiada mniejsze, prostsze części, które realizują konkretne zadania. Jest wyposażony w obwody, które wykonują proste zdania matematyczne i logiczne. Jest wyposażony w inne obwody do wysyłania i otrzymywania informacji do innych części komputera i z powrotem."
+      7:
+        text: "Prawdziwa magia procesora polega na tym, skąd procesor wie, którego obwodu użyć oraz kiedy go użyć. Procesor otrzymuje proste komendy, które mówią, którego obwodu użyć do wykonania konkretnej pracy. Na przykład komenda \"dodaj\" nakazuje procesorowi użyć obwodu zewnętrznego aby wyliczyć nową liczbę. A potem komenda \"przechowuj\" każe procesorowi użyć innego obwodu do zapisania wyników w pamięci."
+      8:
+        text: "Podobnie jak w przypadku liczb, wszystkie te proste komendy mogą być reprezentowane w formie binarnych jedynek i zer lub sygnałów elektrycznych włączone i wyłączone. Komendy binarne są przechowywane w pamięci, a procesor pobiera je i wykonuje w kolejności jedna po drugiej. Taka sekwencja komend jest, w rzeczywistości, bardzo prostym programem komputerowym."
+      9:
+        text: "Kod binarny jest najbardziej podstawową formą oprogramowania i steruje całym osprzętem komputera. Obecnie nikt nie pisze oprogramowania w ujęciu binarnym. Zajęłoby to wieki!"
+      10:
+        text: "Obecnie pisane przez nas oprogramowanie wygląda bardziej jak to (Python), czy to (Ruby) lub czy nawet to (Blockly). Języki oprogramowania takie jak te pozwalają Ci wpisać komendy w czymś, co bardzo przypomina język angielski."
+      11:
+        text: "W celu narysowania prostokąta na ekranie potrzebujesz prostej komendy. Taka komenda na wysokim poziomie jest przetwarzana na setki, a nawet tysiące prostszych komend zrozumiałych dla procesora. Oprogramowanie nakazuje procesorowi co ma robić, ale gdy słuchasz muzyki i przeglądasz sieć czy rozmawiasz ze znajomym, Twój komputer uruchamia wiele części oprogramowania, wszystkie jednocześnie."
+      12:
+        text: "Zatem w jaki sposób wszystkie te programy w ogóle dostają się na komputer i w jaki sposób procesor może je wszystkie uruchamiać jednocześnie? Aby się dowiedzieć, musimy przyjrzeć się systemowi operacyjnemu."
+      13:
+        text: "System operacyjny komputera jest programem głównym, który zarządza sposobem, w jaki oprogramowanie korzysta ze sprzętu komputera. Na przykład ja pomogłem stworzyć system operacyjny Windows, który pracuje na większości komputerów osobistych."
+      14:
+        text: "System operacyjny jest programem o specjalnych możliwościach, który pozwala sterować dowolnym oprogramowaniem na komputerze. Pozwala instalować nowe programy ładując je do pamięci Twojego komputera . Decyduje, kiedy program jest uruchamiany przez procesor (Central Processing Unit) oraz czy program ma dostęp do urządzeń komputerowych na wejściu i na wyjściu. Jeśli wydaje Wam się, że komputer prowadzi jednocześnie wiele programów, w rzeczywistości, jest to system operacyjny, który szybko przełącza się pomiędzy udostępnianiem programów a procesorem (CPU) w ułamkach sekund."
+      15:
+        text: "Wewnątrz, w każdym komputerze, znajduje się system operacyjny zarządzający oprogramowaniem, które steruje sprzętem komputerowym."
+      16:
+        text: "Oprogramowanie jest serią komend utworzonych z prostego kodu binarnego, a kod binarny składa się z sygnałów elektrycznych przepływających przez miliardy małych obwodów."
+      17:
+        text: "Komputery mają potencja wykonywania różnorakich, niesamowitych rzeczy. Jedyną rzeczą, która sprawia, że komputer staje się inteligentny lub użyteczny, jesteś Ty. Ucząc się kodować musisz definiować problem, który chcesz rozwiązać i napisać oprogramowanie przekształcające koncepcje w rzeczywistość."
     hoc_dance_warmup:
       1:
         text: "Godzina Kodowania | Potańcówka: Rozgrzewka"
@@ -1201,9 +1685,132 @@ pl:
         text: "A może coś jeszcze?"
       7:
         text: "Na końcu samouczka możesz udostępnić link do swojego dzieła znajomym. Rozwiń swoją wyobraźnię i baw się dobrze!"
+    mc_2018_intro:
+      1:
+        text: "Cześć! Jesteście na czas. Witam w \"Wodnej podróży\" (Voyage Aquatic). Zaraz wejdę na pokład i rozpocznę podróż w poszukiwaniu ukrytego pod wodą skarbu i cieszę się, że chcesz mi pomóc. Kto wie co spotkamy na tych tajemniczych szlakach? Gdzieś tutaj, w porcie, poznamy naszego pierwszego przewodnika."
+      2:
+        text: "Poszukiwacze przygód, witamy! Aby ukończyć \"Wodną podróż\" (Voyage Aquatic), będziesz musiał rozwiązać szereg łamigłówek używając kodu. Pokazujemy, jak to działa. Twój ekran jest podzielony na trzy główne części."
+      3:
+        text: "Po lewej stronie, zobaczysz świat gry Minecraft."
+      4:
+        text: "Środkowy obszar to przybornik, gdzie znajdują się komendy kodujące."
+      5:
+        text: "I ten wielki obszar po prawej stronie jest Twoim obszarem roboczym. Tutaj możesz układać komendy do zbudowania Twojego programu i kierowania swoimi ruchami."
+      6:
+        text: "Instrukcje dla każdego poziomu są w górnej części strony. Kliknij znak plus, aby przechodzić pomiędzy krótkimi i długimi instrukcjami."
+      7:
+        text: "Spróbuj przeciągać bloki z przybornika do obszaru roboczego, ustawiając je jeden na drugim, a następnie kliknij przycisk \"uruchom\", aby wykonać swoje komendy."
+      8:
+        text: "Być może będziesz musiał spróbować kilka razy, zanim Ci się uda, a niektóre łamigłówki będą miały więcej niż jedno rozwiązanie, zatem poeksperymentuj, aby przekonać się, co się sprawdza."
+      9:
+        text: "Jeśli chcesz spróbować ponownie, kliknij przycisk \"resetuj\", aby wrócić tam, gdzie zacząłeś."
+      10:
+        text: "Jeśli musisz usunąć komendę, przeciągnij blok ze swojego obszaru roboczego z powrotem do przybornika. Pamiętaj, kliknij \"Uruchom\", aby zobaczyć, jak Twój kod wygląda w działaniu."
+      11:
+        text: "Dobrze, wystarczy tej zabawy, mój współowco przygód. Zaczynajmy kodować, aby znaleźć jakiś podwodny skarb."
+    MC_2018_loops:
+      1:
+        text: "Super! Złapaliśmy dorsza! Czy wiesz, że jeśli karmisz delfina dorszem, delfin poprowadzi Cię do wraku statku, gdzie może być skarb? Chyba się zbliżamy. Kolejny zestaw łamigłówek będzie jeszcze trudniejszy, warto poznać nieco więcej sekretów kodowania. A co to takiego? Jaskinia?"
+      2:
+        text: "Witam łowców przygód! Nazywam się Ośmiornica. Zauważyłam, że w kilku ostatnich kilku łamigłówkach powtarzaliście bez końca tego samego zestawu komend. To chyba było dość męczące.  Czy kiedykolwiek chcieliście mieć możliwość powtarzania czegoś bez końca, na przykład, zmywania naczyń lub szczotkowania zębów bez zmęczenia czy znudzenia? Byłoby miło, prawda?"
+      3:
+        text: "Komputery świetnie się sprawdzają w powtarzaniu tych samych czynności używając pętli kodowania. Gdy chcesz, aby Twój program wykonywał te same polecenia wiele razy, możesz użyć pętli!"
+      4:
+        text: "Blok pętli zawiera instrukcje, które powtarza się do momentu osiągnięcia celu. Gdy program zacznie pętlę \"Powtarzaj do osiągnięcia celu\", będzie powtarzał instrukcje wewnątrz, aż dojdzie do celu."
+      5:
+        text: "Sam to wypróbuj! Wstaw komendy, które chcesz powtarzać do bloku \"Powtarzaj aż do celu\", kliknij \"Uruchom\" i przyglądaj się, jak to działa!"
+      6:
+        text: "Cóż - to było dość dziwne. Kto mógł przypuszczać, że ośmiornice umieją kodować?! Nawet nie sądziłem, że mają palce. Teraz już znamy się na pętlach. Użyjmy ich, aby zdobyć dla siebie więcej skarbu."
+    mc_2018_conditionals:
+      1:
+        text: "No, no, no! Kolejne trzy łamigłówki rozwiązane! A my złapaliśmy...łososia. Może nie cieszy to aż tak, jak sterty złota, ale jak się nie ma, co się lubi, to się lubi, co się ma. Mam przeczucie, że muszla łodzika przyda się później. Ciekawe, co tam się czai w ruinach. Może kolejna wskazówka! Zajrzyjmy do środka."
+      2:
+        text: "Nazywam się Netty, witam w moich ruinach. Przez cały czas podejmujemy decyzje w oparciu o warunki. Jeśli zbiera się na deszcz, biorę parasolkę. Jeśli jesteśmy głodni, jemy przekąskę."
+      3:
+        text: "Jeśli widzimy Creepera, uciekamy w przeciwnym kierunku. Komputery również podejmują tego rodzaju decyzje. Mogą rzeczywiście odpowiadać na warunki z użyciem kodu. "
+      4:
+        text: "W celu zaprogramowania reakcji jak to użycie Twoich komend kodu, wybierz blok \"jeśli jest ścieżka\"."
+      5:
+        text: "Wybierz menu rozwijane, aby utworzyć komendę."
+      6:
+        text: "Na przykład, jeśli napiszesz komendę: \"jeśli jest ścieżka po prawej\" i umieścisz skręt w prawo wewnątrz instrukcji warunkowej, wówczas Steve dochodzi do otwartej ścieżki, on zawsze będzie skręcał w prawo. Jeśli nie ma otwarcia po prawej stronie, nie będzie skręcać w prawo. Ta instrukcja warunkowa jeśli komendy są pomocne, gdy uruchamiasz od w sytuacjach nieprzewidywalnych takich jak tajemnicze ruiny w podwodnych jaskiniach."
+      7:
+        text: "Spróbuj użyć bloków \"jeśli\" i zakręcić swoim kodem."
+      8:
+        text: "Nooo! Ruiny Netty są cudowne. Naprawdę muszę wyprowadzić się z domu rodziców. Co o tym sądzisz? Czy warunki są dla nas odpowiednie do rozwiązania końcowych łamigłówek? No to do roboty."
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: Gratulacje! Udało Ci się!"
+      2:
+        text: "Ośmiornica: Gratulacje!"
+      3:
+        text: "Netty: Udało się! Gratulacje!"
+      4:
+        text: "Tomohawk: Gratulacje!"
+      5:
+        text: "Co za wspaniały dzień! Cały dzień poszukiwania skarbu skutkował wybudowaniem kanału w grze Minecraft, znajdź muszle łodzika i znajduj skrzynki skarbów. Jestem zachwycona kolorem pryzmarynu. Nauczyliśmy się kodować z wykorzystaniem pętli i instrukcji warunkowych."
+      6:
+        text: "Mówiąc o kodowaniu, jest jeszcze jeden poziom tego poszukiwania. Jesteście gotowi, łowcy przygód?"
+      7:
+        text: "Jest to poziom zabawy i można użyć umiejętności kodowania, aby wykorzystać i zbudować coś niewiarygodnego."
+      8:
+        text: "Hmmm... czas ukryć swój skarb, podwodny zabytek, zamek z koralu? Acha, aż tyle pomysłów. Spróbuj użyć pętli, aby utworzyć czynność powtarzania, oraz instrukcje warunkowe na potrzeby tych wszystkich niewiarygodnych scenariuszy."
+      9:
+        text: "Z pewnością do tego momentu sprawdziłeś się, jako nieustraszony specjalista ds. kodowania, a ja nie mogę się doczekać, aż zobaczę, co zbudowaliście. Mamy nadzieję, że Twoje przygody z kodem nie kończą się tutaj. Szerokiej drogi!"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "Ten kurs jest podzielony na etapy."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "Na pierwszych kilku etapach wprowadzimy Was w to czym jest informatyka, jak również wprowadzimy kluczowe słownictwo."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Potem nauczymy Was kodować w taki sam sposób, w jaki będą to robić Wasi uczniowie. Na końcowych etapach kursu pomożemy Wam zaplanować prowadzenie zajęć z informatyki w Waszej klasie. W trakcie całego kursu zobaczycie przykłady lekcji z użyciem komputera - lub w trybie online- oraz lekcji w trybie \"unplugged\" realizowanych bez komputera."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "Platforma edukacyjna będzie śledzić Twoje postępy tak, abyś mógł zaczynać w miejscu, w którym w dowolnym momencie wyszedłeś z programu."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Kodowanie jest zestawem instrukcji, jakich udzielasz komputerowi. Informatyka jest dziedziną, w której ludzie korzystają z mocy komputerów do rozwiązywania dużych problemów. Informatyka obejmuje kodowanie, ale również obejmuje inne rzeczy takie, jak sposób działania Internetu i jego oddziaływania na społeczeństwo, co robić ze znaczącymi danymi oraz jak dzielić duże problemy. Informatyka polega na rozwiązywaniu problemu, krytycznym myśleniu i wytrwałość."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org używa wizualnego języka programowania na zasadzie \"przeciągnij i opuść\" zwanego Blockly. Bockly używa kolorowych instrukcji zwanych blokami do budowania programów i rozwiązywania łamigłówek."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Każda łamigłówka składa się z czterech części."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "Obszar gry znajduje się po lewej stronie, gdzie wykonywany jest program."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "Środek zajmuje obszar przybornika, który zawiera wszystkie bloki, których potrzebujesz."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "Po prawej stronie jest obszar roboczy, do którego będziesz przeciągać bloki, aby budować swój program."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Powyżej obszaru roboczego znajdują się instrukcje dla każdej łamigłówki."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Jeśli przyciągniesz zbyt wiele bloków z przybornika, przyciągnij dodatkowy blok z powrotem do przybornika. Naciśnij \"Uruchom\", aby spróbować uruchomić swój program i \"Zresetuj\", aby spróbować ponownie."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "Blok \"powtórz\" pozwala Ci zapętlić kod wewnątrz tego bloku tyle razy, ile Ci każe."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "Zdarzenie każde Twojemu programowi posłuchać, aby coś się wydarzyło. Kiedy coś określonego się dzieje, program wykonuje działanie. Komputer może nasłuchiwać kliknięcia myszki, naciśnięcia klawisza strzałki lub dotknięcia ekranu."
     lesson_planning:
       1:
+        image: 'notes/lesson_planning_1.png'
+        text: "Lekcje podstaw informatyki rozpoczynają się od wprowadzenia, które pozwoli Ci się zorientować, co będzie obejmować lekcja."
       2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Lekcje obejmują rozgrzewki, działania i podsumowania. Jeśli chcesz tworzyć własne plany lekcji, być może zechcesz mieć te wskazówki na uwadze."
       3:
         image: 'notes/lesson_planning_3.png'
         text: "1. Wypróbuj użycie układu curriculum tworzącego spiralę. Wprowadź koncepcję raz, a następnie do niej powróć."

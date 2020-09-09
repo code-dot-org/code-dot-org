@@ -79,9 +79,6 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} بەردەوام {MOVE}{DIR} تاهەتایە"
         options:
@@ -99,9 +96,6 @@ ku:
             MOVES.Clown: گانگنام
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
@@ -168,9 +162,6 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} بەردەوام {MOVE} {DIR} جارێک"
         options:
@@ -198,9 +189,6 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: 'هەموو {N} {UNIT} '
         options:
@@ -923,6 +911,13 @@ ku:
             '"z"': z
       gamelab_locationAt:
         text: 'شوێنی x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': باکوور
+            '"East"': ڕۆژهەڵات
+            '"South"': باشوور
+            '"West"': ڕۆژئاوا
       gamelab_locationMouse:
         text: شوێنی ماوس
       gamelab_locationOf:

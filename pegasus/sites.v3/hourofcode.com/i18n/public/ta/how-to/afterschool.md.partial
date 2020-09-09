@@ -1,5 +1,5 @@
 ---
-title: எவ்வாறு செய்வது வழிகாட்டி
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # பள்ளி வகுப்புகள் மற்றும் மன்றத்தில் மணிநேர நிரலாக்கம் கற்பிப்பது எப்படி
 
-### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! உதவ கூடுதல் கைகளின் தொகுப்பை நீங்கள் விரும்பினால், உங்கள் பள்ளிக்குப் பிறகு ஒரு மணிநேர குறியீட்டை இயக்க உதவும் [ உள்ளூர் தன்னார்வலரை ](== {url / volunteer_local }==) காணலாம். வகுப்பு அல்லது கிளப்.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -16,27 +22,27 @@ nav: how_to_nav
 
 ## 2. ஒரு பயிற்சியை தேர்ந்தெடுக்க
 
-பங்கேற்பாளர்களுக்காக பல்வேறு வயது கூட்டாளர்களால் உருவாக்கப்பட்ட பலவிதமான [ வேடிக்கையான, மணிநேர பயிற்சிகள் ](== {url / learn }a>) வழங்குகிறோம். [ அவற்றை முயற்சிக்கவும்! ]({{urls/learn }a>)
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-** குறியீட்டு பயிற்சிகளுக்கான அனைத்து மணிநேரமும் </ strong> அமைப்பாளர்களுக்கு குறைந்தபட்ச பிரீஃப்ட்-டைம் தேவை, சுய-வழிகாட்டுதல் தேவை - குழந்தைகள் தங்கள் சொந்த வேகத்தில் மற்றும் திறன் அளவிலான வேலை செய்ய அனுமதிக்கும்.</p> 
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-** கோட்பாட்டின் மணிநேரத்திற்கு ஒரு பாடம் திட்டமிட வேண்டுமா? </ strong> இந்த [ டெம்ப்ளேட்டை ](/files/AfterschoolEducatorLessonPlanOutline.docx) பாருங்கள்!</p> 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-இந்த கருவிகளைக் கொண்டு உங்கள் மணிநேர குறியீட்டை  ஊக்குவிக்கவும், மற்றவர்கள் தங்கள் சொந்த நிகழ்வுகளை நடத்த ஊக்குவிக்கவும்.</p> 
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
-கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். மணிநேர நிரலாக்கம் சொல்லிக் கொடுக்கப்படும் ஒவ்வொரு குழந்தைக்கும் ஒரு கணினி இருக்க **தேவையில்லை**. ஒரு கணினி கூட இல்லாமலும் சொல்லித்தர முடியும்.
+கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். ** குறைவான பட்டையகலம் உள்ளதா? ** அனைத்து மாணவருக்கும் சேர்த்து வகுப்பின் முன், வீடியோக்களைக் காட்ட திட்டம் செய்க. அப்படி செய்வதால் ஒவ்வொரு மாணவரும் தங்கள் சொந்த வீடியோக்களை பதிவிறக்கம் செய்யவில்லை. அல்லது unplugged / அகல்நிலை பயிற்சிகளையும் முயற்சிக்கவும்.
+மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ஒலியோடு சிறந்த இயங்கும் பயிற்சியை நீங்கள் தேர்ந்து எடுத்தால், வகுப்பிற்கான காதணிபாடிகள் நீங்களே வழங்கலாம் அல்லது மாணவர்கள் தங்கள் சொந்தமாக காதணிபாடிகளை கொண்டு வரும்படியும் கேட்கலாம்.
 
-** போதுமான சாதனங்கள் இல்லையா? </ strong> [ ஜோடி நிரலாக்க ](https://www.youtube.com/watch?v=vgkahOzFH2Q) என்பதைப் பயன்படுத்துக. மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</p> 
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.
 
 ## 5. கோட் ஆஃப் ஹார்ட் உங்கள் எழுச்சியூட்டும் வீடியோவுடன் தொடங்கவும்
 
@@ -49,21 +55,21 @@ nav: how_to_nav
 - [ ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - [ இங்கு ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) மேலும் தூண்டும் வீடியோக்களைக் கண்டறிக.
 
-**நீங்கள் கணினி அறிவியல் அனைத்து புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - உதாரணமாக, சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களும், வாழ்க்கையை காப்பாற்ற உதவுகிறது, மக்களை உதவுவதற்காக, மக்களை இணைக்க உதவுகிறது.
 - அன்றாட வாழ்க்கையில் குறியீட்டைப் பயன்படுத்தும் பட்டியலைக் குறிப்பிடுக.
 - கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க [ இங்கே ](a> {urls/girls }a>).
 
-** மேலும் வழிகாட்டல் வேண்டுமா? </ strong> இந்த [ டெம்ப்ளேட் பாடம் திட்டம் ](/files/AfterschoolEducatorLessonPlanOutline.docx) ஐப் பதிவிறக்குக.</p> 
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. கோட்!
 
-** நடவடிக்கைக்கு நேரடி பங்கேற்பாளர்கள் </ strong> - ஒரு whiteboard இல் பயிற்சி இணைப்பை எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் நீங்கள் தேர்ந்தெடுத்த டுடோரியலுக்கான [ தகவல் ](== {urls/learn }ibl) இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.</p> 
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் நீங்கள் தேர்ந்தெடுத்த டுடோரியலுக்கான [ தகவல் ](== {urls/learn }ibl) இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.
 
-** யாராவது சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை: </ strong> - "எனக்கு தெரியாது. இதை ஒன்றாகச் சேர்த்து விடுவோம். " - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது." - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "</p> 
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. இதை ஒன்றாகச் சேர்த்து விடுவோம். " - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது." - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
 
-** யாராவது சீக்கிரம் முடித்தால் என்ன செய்வது? </ strong> - [ hourofcode.com/learn ](=== urls/learn }a>) இல் மற்றொரு மணிநேர குறியீடு செயல்பாட்டை முயற்சிக்க பங்கேற்பாளர்களை ஊக்குவிக்கவும். - அல்லது, ஆரம்பத்தில் முடித்தவர்களிடம் சிக்கலில் உள்ள மற்றவர்களுக்கு உதவுமாறு கேளுங்கள்.</p> 
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. கொண்டாடுங்கள்
 
@@ -84,6 +90,6 @@ nav: how_to_nav
             
             ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
             
-            தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும். மாணவர்கள் தங்கள் பயணத்தைத் தொடர உதவுங்கள், மேலும் [ஆன்லைனில் மேலும் அறிய](/beyond) அவர்களை ஊக்குவிக்கவும்!
+            The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
             
             {{signup_button}}

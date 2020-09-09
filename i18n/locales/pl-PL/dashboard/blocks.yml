@@ -1131,6 +1131,13 @@ pl:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Północ
+            '"East"': Wschód
+            '"South"': Południe
+            '"West"': Zachód
       gamelab_locationMouse:
         text: pozycja myszy
       gamelab_locationOf:

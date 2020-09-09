@@ -5772,22 +5772,22 @@
           "courseD_farmer_conditionals5a_c": "5 kere ilerle. Her ilerlediğinde \"sürece yığın var\" döngüsü ile toprağı temizle."
         },
         "courseD_farmer_while6": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2018": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2019": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2020": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
@@ -5949,22 +5949,22 @@
           "courseD_maze_nestedLoops5_b": "Döngüleri nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazmayı ve bir desen bulmayı deneyin."
         },
         "courseD_maze_nestedLoops6": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2018": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2019": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2020": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
