@@ -78,25 +78,6 @@ describe('CourseEditor', () => {
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
-
-    wrapper
-      .find('textarea[name="description_student"]')
-      .simulate('change', {target: {value: '## Title 1'}});
-    expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .prop('markdown')
-    ).to.equal('## Title 1');
-    wrapper
-      .find('textarea[name="description_teacher"]')
-      .simulate('change', {target: {value: '## Title 2'}});
-    expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(1)
-        .prop('markdown')
-    ).to.equal('## Title 2');
   });
 
   describe('VisibleInTeacherDashboard', () => {

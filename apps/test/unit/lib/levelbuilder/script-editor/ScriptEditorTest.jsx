@@ -37,13 +37,6 @@ describe('ScriptEditor', () => {
       ).to.equal(
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
-
-      wrapper
-        .find('textarea[name="description"]')
-        .simulate('change', {target: {value: '## Title'}});
-      expect(
-        wrapper.find('TextareaWithMarkdownPreview').prop('markdown')
-      ).to.equal('## Title');
     });
   });
 
