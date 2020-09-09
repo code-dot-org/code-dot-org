@@ -63,8 +63,12 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          prefetched_applications = prefetch(applications, role: role)
-          render json: prefetched_applications, each_serializer: ApplicationQuickViewSerializer
+          serialized_applications = prefetch_and_serialize(
+            applications,
+            role: role,
+            serializer: ApplicationQuickViewSerializer
+          )
+          render json: serialized_applications
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -93,8 +97,13 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          prefetched_applications = prefetch(applications, role: role)
-          render json: prefetched_applications, each_serializer: serializer, scope: {user: current_user}
+          serialized_applications = prefetch_and_serialize(
+            applications,
+            role: role,
+            serializer: serializer,
+            scope: {user: current_user}
+          )
+          render json: serialized_applications
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -200,7 +209,8 @@ module Api::V1::Pd
         user: user
       )
 
-      render json: filtered_applications, each_serializer: ApplicationSearchSerializer
+      serialized_applications = filtered_applications.map {|a| ApplicationSearchSerializer.new(a).attributes}
+      render json: serialized_applications
     end
 
     private
@@ -294,10 +304,16 @@ module Api::V1::Pd
       {registered_workshop: false}
     end
 
+    def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
+      prefetch applications, role: role
+      applications.map do |application|
+        serializer.new(application, scope: scope).attributes
+      end
+    end
+
     def prefetch(applications, role: nil)
       type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
-      applications
     end
   end
 end
