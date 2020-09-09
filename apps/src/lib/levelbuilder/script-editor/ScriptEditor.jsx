@@ -87,8 +87,7 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella,
-      description: this.props.i18nData.description
+      curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
 
@@ -120,10 +119,6 @@ export default class ScriptEditor extends React.Component {
         e.preventDefault();
       }
     }
-  };
-
-  handleDescriptionChange = event => {
-    this.setState({description: event.target.value});
   };
 
   render() {
@@ -174,7 +169,6 @@ export default class ScriptEditor extends React.Component {
         </label>
         <TextareaWithMarkdownPreview
           markdown={this.state.description}
-          onChange={this.handleDescriptionChange}
           label={'Description'}
           name={'description'}
           inputRows={5}

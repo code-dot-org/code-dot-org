@@ -53,23 +53,6 @@ export default class CourseEditor extends Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      descriptionStudent: this.props.descriptionStudent,
-      descriptionTeacher: this.props.descriptionTeacher
-    };
-  }
-
-  handleTeacherDescriptionChange = event => {
-    this.setState({descriptionTeacher: event.target.value});
-  };
-
-  handleStudentDescriptionChange = event => {
-    this.setState({descriptionStudent: event.target.value});
-  };
-
   render() {
     const {
       name,
@@ -135,15 +118,13 @@ export default class CourseEditor extends Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionStudent}
-          onChange={this.handleStudentDescriptionChange}
+          markdown={this.props.descriptionStudent}
           label={'Student Description'}
           name={'description_student'}
           inputRows={5}
         />
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionTeacher}
-          onChange={this.handleTeacherDescriptionChange}
+          markdown={this.props.descriptionTeacher}
           label={'Teacher Description'}
           name={'description_teacher'}
           inputRows={5}
