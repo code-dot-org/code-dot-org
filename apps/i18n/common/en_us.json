@@ -1779,6 +1779,7 @@
   "unpublishPending": "Unpublishing...",
   "unpublishFailureTitle": "Unpublish Failed",
   "unpublishFailureBody": "We failed to unpublish your library, \"{libraryName}.\" Please check your internet connection and try again.",
+  "unusedCode": "Unused code",
   "updateFirmware": "Update Firmware",
   "updateFirmwareExplanation": "This board is not using the most up-to-date version of the firmware. ",
   "updateFirmwareExplanationClassic": "For best results, please update the firmware by clicking on the button below.",
