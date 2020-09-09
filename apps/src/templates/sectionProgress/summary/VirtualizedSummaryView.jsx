@@ -116,6 +116,10 @@ class VirtualizedSummaryView extends Component {
 
     const student = section.students[studentStartIndex];
 
+    if (!levelsByLesson[student.id]) {
+      return;
+    }
+
     return (
       <div className={progressStyles.Cell} key={key} style={style}>
         {stageIdIndex < 0 && (
@@ -151,9 +155,10 @@ class VirtualizedSummaryView extends Component {
   }
 
   render() {
-    const {section, scriptData, lessonOfInterest, onScroll} = this.props;
+    const {levelsByLesson, section, scriptData, lessonOfInterest, onScroll} = this.props;
     // Add 1 to account for the header row
-    const rowCount = section.students.length + 1;
+    // const rowCount = section.students.length + 1;
+    const rowCount = Object.keys(levelsByLesson).length + 1;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
     // Calculate height based on the number of rows
