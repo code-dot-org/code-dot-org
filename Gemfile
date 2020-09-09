@@ -99,14 +99,14 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '3.17.20'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '3.141.0'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
@@ -235,7 +235,7 @@ gem 'paranoia'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
