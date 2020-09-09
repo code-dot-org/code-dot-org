@@ -6,7 +6,7 @@ Feature: Teacher Application
 Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
-    And I wait until element "h1" contains text "2020-21 Professional Learning Program Teacher Application"
+    And I wait until element "h1" contains text "2021-22 Professional Learning Program Teacher Application"
     And I open my eyes to test "Teacher Application"
 
   # Section 1
@@ -92,7 +92,7 @@ Scenario: Basic teacher application submission
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "2020-2021 Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "2021-2022 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
   And I press keys "nonexistent" for element "#nces_school"
