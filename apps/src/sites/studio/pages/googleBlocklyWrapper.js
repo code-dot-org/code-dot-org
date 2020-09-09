@@ -2,6 +2,8 @@ import {BlocklyVersion} from '@cdo/apps/constants';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
+import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
+import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 
 /**
@@ -42,6 +44,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
@@ -53,6 +56,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
+  blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
@@ -77,11 +81,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
+  blocklyWrapper.wrapReadOnlyProperty('geras');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
-  blocklyWrapper.wrapReadOnlyProperty('inject');
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
@@ -105,6 +109,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.Input = CdoInput;
+  blocklyWrapper.geras.PathObject = CdoPathObject;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -172,6 +177,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
     return code.join('\n');
+  };
+
+  blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
+    const options = {
+      ...opt_options,
+      theme: CdoTheme
+    };
+    blocklyWrapper.blockly_.inject(container, options);
   };
 
   // Aliasing Google's blockToDom() so that we can override it, but still be able
