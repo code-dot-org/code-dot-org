@@ -6,7 +6,7 @@ import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/levelbuilder/script-editor/MarkdownPreview';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   input: {
@@ -51,23 +51,6 @@ export default class CourseEditor extends Component {
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      descriptionStudent: this.props.descriptionStudent,
-      descriptionTeacher: this.props.descriptionTeacher
-    };
-  }
-
-  handleTeacherDescriptionChange = event => {
-    this.setState({descriptionTeacher: event.target.value});
-  };
-
-  handleStudentDescriptionChange = event => {
-    this.setState({descriptionStudent: event.target.value});
   };
 
   render() {
@@ -134,28 +117,18 @@ export default class CourseEditor extends Component {
             style={styles.input}
           />
         </label>
-        <label>
-          Student Description
-          <textarea
-            name="description_student"
-            defaultValue={this.state.descriptionStudent}
-            rows={5}
-            style={styles.input}
-            onChange={this.handleStudentDescriptionChange}
-          />
-          <MarkdownPreview markdown={this.state.descriptionStudent} />
-        </label>
-        <label>
-          Teacher Description
-          <textarea
-            name="description_teacher"
-            defaultValue={this.state.descriptionTeacher}
-            rows={5}
-            style={styles.input}
-            onChange={this.handleTeacherDescriptionChange}
-          />
-          <MarkdownPreview markdown={this.state.descriptionTeacher} />
-        </label>
+        <TextareaWithMarkdownPreview
+          markdown={this.props.descriptionStudent}
+          label={'Student Description'}
+          name={'description_student'}
+          inputRows={5}
+        />
+        <TextareaWithMarkdownPreview
+          markdown={this.props.descriptionTeacher}
+          label={'Teacher Description'}
+          name={'description_teacher'}
+          inputRows={5}
+        />
         <h2>Basic settings</h2>
         <label>
           Verified Resources
