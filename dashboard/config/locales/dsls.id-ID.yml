@@ -1915,19 +1915,12 @@ id-ID:
             ini gagal?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program tidak akan gagal. Scrat akan sampai ke buah akorn.
-          feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
-        - text: Scrat akan salah jalan setelah belokan terakhirnya.
-          correct: true
-          feedback: Benar!
-        - text: Langkah Scrat kurang satu sehingga tidak sampai ke buah akorn.
-          feedback: Salah. Kekurangan satu langkah terjadi setelah Scrat salah belok.
+        - {}
+        - correct: true
+        - correct: true
         - text: Saya tidak tahu.
-          feedback: 'Kesalahan pertama itu karena Scrat salah jalan setelah belok
-            terakhirnya. '
         questions:
-        - text: Cermati kode di bawah ini. Apa bug pertama yang akan membuat program
-            ini gagal?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Burung akhirnya akan kurang satu langkah dari babi.

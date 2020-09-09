@@ -3044,7 +3044,8 @@
             "name": "dessine un carré",
             "parameters": {
               "length": "longueur"
-            }
+            },
+            "description": "dessine un carré avec paramètre de longueur"
           },
           "checker": {
             "name": "vérificateur",
@@ -3074,7 +3075,8 @@
             "name": "dessine un carré",
             "parameters": {
               "length": "longueur"
-            }
+            },
+            "description": "dessine un carré avec un paramètre de longueur"
           }
         },
         "courseF_artist_fwp3": {
