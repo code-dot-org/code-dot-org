@@ -211,7 +211,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
     if (
       this.props.data.planToTeach &&
       !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year (2020-2021)'
+        'Yes, I plan to teach this course this year'
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ')
@@ -270,9 +270,9 @@ export default class SummerWorkshop extends LabeledFormComponent {
             , including:
           </p>
           <ul>
-            <li>One summer workshop in 2020</li>
+            <li>One summer workshop in 2021</li>
             <li>
-              Up to four one-day workshops during the 2020-21 school year
+              Up to four one-day workshops during the 2021-22 school year
               (typically held on Saturdays)
             </li>
           </ul>
@@ -319,11 +319,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 <p style={{color: 'red'}}>
                   Note: To meet our implementation guidance and our scholarship
                   recommendations, you should plan to teach this course in the
-                  upcoming school year (2020-21). We suggest checking with your
+                  upcoming school year (2021-22). We suggest checking with your
                   administrators to ensure that the course will be offered in
-                  2020-21 before updating your answer to "
+                  2021-22 before updating your answer to "
                   <strong>
-                    Do you plan to personally teach this course in the 2020-21
+                    Do you plan to personally teach this course in the 2021-22
                     school year?
                   </strong>
                   " on page 3 and submitting your application.

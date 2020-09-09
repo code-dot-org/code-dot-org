@@ -45,6 +45,7 @@ class Ability
       Pd::Application::Teacher1819Application,
       Pd::Application::Teacher1920Application,
       Pd::Application::Teacher2021Application,
+      Pd::Application::Teacher2122Application,
       Pd::InternationalOptIn,
       :maker_discount,
       :edit_manifest,
