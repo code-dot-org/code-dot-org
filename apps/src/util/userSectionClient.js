@@ -24,3 +24,12 @@ export const getUserSections = function(callback) {
     }
   );
 };
+
+export const getCurrentSection = function(sectionId, callback) {
+  $.ajax({
+    dataType: 'json',
+    url: `/api/v1/sections/${sectionId}`
+  }).done(result => {
+    callback(result);
+  });
+};
