@@ -23,5 +23,10 @@ describe('TextareaWithMarkdownPreview', () => {
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
+
+    wrapper
+      .find('textarea[name="name"]')
+      .simulate('change', {target: {value: '## Title'}});
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal('## Title');
   });
 });
