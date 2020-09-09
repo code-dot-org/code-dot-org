@@ -351,10 +351,9 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    codecov (0.1.14)
+    codecov (0.2.8)
       json
       simplecov
-      url
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
@@ -850,7 +849,6 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    url (0.3.2)
     user_agent_parser (2.3.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
