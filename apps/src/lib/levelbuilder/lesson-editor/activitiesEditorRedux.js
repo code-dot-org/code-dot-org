@@ -1,5 +1,15 @@
 import _ from 'lodash';
 
+function makeActionCreator(type, ...argNames) {
+  return function(...args) {
+    const action = {type};
+    argNames.forEach((arg, index) => {
+      action[argNames[index]] = args[index];
+    });
+    return action;
+  };
+}
+
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
@@ -26,216 +36,147 @@ const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, levelKeyList) => ({
-  type: INIT,
-  activities,
-  levelKeyList
-});
+export const init = makeActionCreator(INIT, 'activities', 'levelkeyList');
+export const addActivity = makeActionCreator(
+  ADD_ACTIVITY,
+  'activityPosition',
+  'activityKey'
+);
+export const updateActivityField = makeActionCreator(
+  UPDATE_ACTIVITY_FIELD,
+  'activityPosition',
+  'fieldName',
+  'fieldValue'
+);
 
-export const addActivity = (activityPosition, activityKey) => ({
-  type: ADD_ACTIVITY,
-  activityPosition,
-  activityKey
-});
+export const updateActivitySectionField = makeActionCreator(
+  UPDATE_ACTIVITY_SECTION_FIELD,
+  'activityPosition',
+  'activitySectionPosition',
+  'fieldName',
+  'fieldValue'
+);
 
-export const updateActivityField = (
-  activityPosition,
-  fieldName,
-  fieldValue
-) => ({
-  type: UPDATE_ACTIVITY_FIELD,
-  activityPosition,
-  fieldName,
-  fieldValue
-});
+export const addActivitySection = makeActionCreator(
+  ADD_ACTIVITY_SECTION,
+  'activityPosition',
+  'activitySectionKey'
+);
 
-export const updateActivitySectionField = (
-  activityPosition,
-  activitySectionPosition,
-  fieldName,
-  fieldValue
-) => ({
-  type: UPDATE_ACTIVITY_SECTION_FIELD,
-  activityPosition,
-  activitySectionPosition,
-  fieldName,
-  fieldValue
-});
+export const toggleExpand = makeActionCreator(
+  TOGGLE_EXPAND,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition'
+);
 
-export const addActivitySection = (activityPosition, activitySectionKey) => ({
-  type: ADD_ACTIVITY_SECTION,
-  activityPosition,
-  activitySectionKey
-});
+export const removeLevel = makeActionCreator(
+  REMOVE_LEVEL,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition'
+);
 
-export const toggleExpand = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-) => ({
-  type: TOGGLE_EXPAND,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-});
+export const chooseLevel = makeActionCreator(
+  CHOOSE_LEVEL,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition',
+  'variant',
+  'value'
+);
 
-export const removeLevel = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-) => ({
-  type: REMOVE_LEVEL,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-});
+export const addVariant = makeActionCreator(
+  ADD_VARIANT,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition'
+);
 
-export const chooseLevel = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  variant,
-  value
-) => ({
-  type: CHOOSE_LEVEL,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  variant,
-  value
-});
+export const removeVariant = makeActionCreator(
+  REMOVE_VARIANT,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition',
+  'levelId'
+);
 
-export const addVariant = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-) => ({
-  type: ADD_VARIANT,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition
-});
+export const setActiveVariant = makeActionCreator(
+  SET_ACTIVE_VARIANT,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition',
+  'id'
+);
 
-export const removeVariant = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  levelId
-) => ({
-  type: REMOVE_VARIANT,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  levelId
-});
+export const setField = makeActionCreator(
+  SET_FIELD,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition',
+  'modifier'
+);
 
-export const setActiveVariant = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  id
-) => ({
-  type: SET_ACTIVE_VARIANT,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  id
-});
+export const reorderLevel = makeActionCreator(
+  REORDER_LEVEL,
+  'activityPosition',
+  'activitySectionPosition',
+  'originalLevelPosition',
+  'newLevelPosition'
+);
 
-export const setField = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  modifier
-) => ({
-  type: SET_FIELD,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  modifier
-});
+export const moveLevelToActivitySection = makeActionCreator(
+  MOVE_LEVEL_TO_ACTIVITY_SECTION,
+  'activityPosition',
+  'activitySectionPosition',
+  'levelPosition',
+  'newActivitySectionPosition'
+);
 
-export const reorderLevel = (
-  activityPosition,
-  activitySectionPosition,
-  originalLevelPosition,
-  newLevelPosition
-) => ({
-  type: REORDER_LEVEL,
-  activityPosition,
-  activitySectionPosition,
-  originalLevelPosition,
-  newLevelPosition
-});
+export const addLevel = makeActionCreator(
+  ADD_LEVEL,
+  'activityPosition',
+  'activitySectionPosition',
+  'level'
+);
 
-export const moveLevelToActivitySection = (
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  newActivitySectionPosition
-) => ({
-  type: MOVE_LEVEL_TO_ACTIVITY_SECTION,
-  activityPosition,
-  activitySectionPosition,
-  levelPosition,
-  newActivitySectionPosition
-});
+export const moveActivity = makeActionCreator(
+  MOVE_ACTIVITY,
+  'activityPosition',
+  'direction'
+);
 
-export const addLevel = (activityPosition, activitySectionPosition, level) => ({
-  type: ADD_LEVEL,
-  activityPosition,
-  activitySectionPosition,
-  level
-});
+export const moveActivitySection = makeActionCreator(
+  MOVE_ACTIVITY_SECTION,
+  'activityPosition',
+  'activitySectionPosition',
+  'direction'
+);
 
-export const moveActivity = (activityPosition, direction) => ({
-  type: MOVE_ACTIVITY,
-  activityPosition,
-  direction
-});
+export const removeActivity = makeActionCreator(
+  REMOVE_ACTIVITY,
+  'activityPosition'
+);
 
-export const moveActivitySection = (
-  activityPosition,
-  activitySectionPosition,
-  direction
-) => ({
-  type: MOVE_ACTIVITY_SECTION,
-  activityPosition,
-  activitySectionPosition,
-  direction
-});
+export const removeActivitySection = makeActionCreator(
+  REMOVE_ACTIVITY_SECTION,
+  'activityPosition',
+  'activitySectionPosition'
+);
 
-export const removeActivity = activityPosition => ({
-  type: REMOVE_ACTIVITY,
-  activityPosition
-});
+export const setActivity = makeActionCreator(
+  SET_ACTIVITY,
+  'activitySectionPosition',
+  'oldActivityPosition',
+  'newActivityPosition'
+);
 
-export const removeActivitySection = (
-  activityPosition,
-  activitySectionPosition
-) => ({
-  type: REMOVE_ACTIVITY_SECTION,
-  activityPosition,
-  activitySectionPosition
-});
-
-export const setActivity = (
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-) => ({
-  type: SET_ACTIVITY,
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-});
-
-export const addTip = (activityPosition, activitySectionPosition, tip) => ({
-  type: ADD_TIP,
-  activityPosition,
-  activitySectionPosition,
-  tip
-});
+export const addTip = makeActionCreator(
+  ADD_TIP,
+  'activityPosition',
+  'activitySectionPosition',
+  'tip'
+);
 
 function updateActivityPositions(activities) {
   for (let i = 0; i < activities.length; i++) {
