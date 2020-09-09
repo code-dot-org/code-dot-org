@@ -260,7 +260,7 @@ const FETCH_STATUS_STYLE = {
 const FetchingLatestVersionMessage = () => (
   <div style={FETCH_STATUS_STYLE}>
     <FontAwesome icon="spinner" className="fa-fw fa-spin" />{' '}
-    <em>Getting the latest version...</em>
+    <em>{i18n.makerSetupFetchingVersion()}</em>
   </div>
 );
 
@@ -272,14 +272,10 @@ const FetchingLatestVersionError = () => (
         className="fa-fw"
         style={{color: 'darkred'}}
       />{' '}
-      <strong>There was a problem getting your download link.</strong>
+      <strong>{i18n.makerSetupDownloadProblem()}</strong>
     </div>
     <div>
-      Please make sure you are connected to the internet, and{' '}
-      <a href="https://downloads.code.org/index.html">
-        https://downloads.code.org/
-      </a>{' '}
-      is reachable from your network.
+      <SafeMarkdown markdown={i18n.makerSetupCheckInternetConnection()} />
     </div>
   </div>
 );
