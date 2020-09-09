@@ -11,7 +11,7 @@ import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/levelbuilder/script-editor/MarkdownPreview';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   input: {
@@ -87,8 +87,7 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella,
-      description: this.props.i18nData.description
+      curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
 
@@ -120,10 +119,6 @@ export default class ScriptEditor extends React.Component {
         e.preventDefault();
       }
     }
-  };
-
-  handleDescriptionChange = event => {
-    this.setState({description: event.target.value});
   };
 
   render() {
@@ -172,17 +167,12 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <label>
-          Description
-          <textarea
-            name="description"
-            defaultValue={this.state.description}
-            rows={5}
-            style={styles.input}
-            onChange={this.handleDescriptionChange}
-          />
-          <MarkdownPreview markdown={this.state.description} />
-        </label>
+        <TextareaWithMarkdownPreview
+          markdown={this.props.i18nData.description}
+          label={'Description'}
+          name={'description'}
+          inputRows={5}
+        />
         <h2>Basic Settings</h2>
         <label>
           Require Login To Use
