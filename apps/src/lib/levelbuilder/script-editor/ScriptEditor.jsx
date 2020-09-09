@@ -168,7 +168,7 @@ export default class ScriptEditor extends React.Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.state.description}
+          markdown={this.props.i18nData.description}
           label={'Description'}
           name={'description'}
           inputRows={5}
