@@ -142,6 +142,10 @@ export const commands = {
     return locationCommands.locationAt(x, y);
   },
 
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
+  },
+
   locationMouse() {
     return locationCommands.locationMouse.apply(this);
   },
@@ -156,9 +160,7 @@ export const commands = {
 
   // Sprite commands
   countByAnimation(spriteArg) {
-    if (spriteArg.costume) {
-      return spriteCommands.countByAnimation(spriteArg.costume);
-    }
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {
