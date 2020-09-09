@@ -22,6 +22,13 @@ const MAC = 'mac';
 const LINUX = 'linux';
 const CHROMEBOOK = 'chromebook';
 
+const style = {
+  icon: {
+    float: 'left',
+    padding: '5'
+  }
+};
+
 export default class SetupGuide extends React.Component {
   constructor(props) {
     super(props);
@@ -141,7 +148,9 @@ class WindowsDownloads extends React.Component {
           <h4>{i18n.instructions()}:</h4>
           <ol>
             <li>{i18n.makerSetupDownloadAndInstall()}</li>
-            <li>{i18n.makerSetupWindows7Drivers()}</li>
+            <li>
+              <SafeMarkdown markdown={i18n.makerSetupWindows7Drivers()} />
+            </li>
             <li>{i18n.makerSetupSignIn()}</li>
             <li>{i18n.makerSetupPlugInBoard()}</li>
           </ol>
@@ -164,7 +173,7 @@ class MacDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>Code.org Maker App for Mac</h2>
+        <h2>{i18n.makerSetupMakerAppForMac()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -205,7 +214,7 @@ class LinuxDownloads extends React.Component {
     const debFile = this.debFile();
     return (
       <div>
-        <h2>Code.org Maker App for Linux</h2>
+        <h2>{i18n.makerSetupMakerAppForLinux()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -223,7 +232,7 @@ class LinuxDownloads extends React.Component {
         {error && <FetchingLatestVersionError />}
         <div>
           <SetupInstructions />
-          <h4>Alternative Installers</h4>
+          <h4>{i18n.makerSetupLinuxAlternative()}</h4>
           <ul>
             {debFile && (
               <li>
@@ -231,9 +240,10 @@ class LinuxDownloads extends React.Component {
               </li>
             )}
             <li>
-              <a href="https://github.com/code-dot-org/browser">
-                Install from source <FontAwesome icon="external-link" />
-              </a>
+              <FontAwesome style={style.icon} icon="external-link" />
+              <SafeMarkdown
+                markdown={i18n.makerSetupLinuxAlternativeInstall()}
+              />
             </li>
           </ul>
         </div>
