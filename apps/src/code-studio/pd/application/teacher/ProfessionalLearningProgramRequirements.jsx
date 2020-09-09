@@ -159,10 +159,10 @@ export default class SummerWorkshop extends LabeledFormComponent {
         workshop => `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSureExplain);
-      options.push(TextFields.unableToAttend2021);
+      options.push(TextFields.unableToAttend);
       const textFieldMap = {
         [TextFields.notSureExplain]: 'notSureExplain',
-        [TextFields.unableToAttend2021]: 'unableToAttend'
+        [TextFields.unableToAttend]: 'unableToAttend'
       };
 
       return (
@@ -173,7 +173,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
             textFieldMap
           )}
           {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend2021],
+            [TextFields.notSureExplain, TextFields.unableToAttend],
             this.props.data.ableToAttendMultiple
           ).length > 0 && (
             <div>
@@ -329,7 +329,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
                   " on page 3 and submitting your application.
                 </p>
               )}
-              {this.props.data.payFee === TextFields.noPayFee2021 &&
+              {this.props.data.payFee === TextFields.noPayFee &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
           )}
@@ -372,13 +372,13 @@ export default class SummerWorkshop extends LabeledFormComponent {
       requiredFields.push('payFee', 'understandFee');
     }
 
-    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee2021) {
+    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {
       requiredFields.push('scholarshipReasons');
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend],
         data.ableToAttendMultiple
       ).length > 0
     ) {
@@ -394,13 +394,13 @@ export default class SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee2021) {
+    if (data.payFee !== TextFields.noPayFee) {
       changes.scholarshipReasons = undefined;
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend],
         data.ableToAttendMultiple
       ).length === 0
     ) {

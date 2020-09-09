@@ -562,6 +562,9 @@ FactoryGirl.define do
     initialize_with {attributes.transform_keys(&ruby_to_js_style_keys)}
   end
 
+  # ------- APPLICATIONS ------- #
+
+  # ------- Facilitator ------- #
   # default to csf
   factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
     csf
@@ -769,25 +772,17 @@ FactoryGirl.define do
     end
   end
 
-  # default to csp
-  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
-    csp
-  end
+  # ------- Teacher ------- #
 
-  factory :pd_teacher1819_application_hash_common, class: 'Hash' do
+  factory :pd_teacher_application_hash_common, class: 'Hash' do
     country 'United States'
-    title 'Mr.'
     first_name 'Severus'
-    preferred_first_name 'Sevvy'
     last_name 'Snape'
     alternate_email 'ilovepotions@gmail.com'
     phone '5558675309'
-    address '123 Fake Street'
-    city 'Buffalo'
-    state 'Washington'
-    add_attribute :zip_code, '98101'
     gender_identity 'Male'
     race ['Other']
+    add_attribute :zip_code, '98101'
     association :school
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
@@ -796,20 +791,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
-    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
-    grades_teaching ['Grade 7']
-    grades_expect_to_teach ['Grade 6', 'Grade 7']
-    does_school_require_cs_license 'Yes'
-    have_cs_license 'Yes'
-    subjects_teaching ['Computer Science']
-    subjects_expect_to_teach ['Computer Science']
-    subjects_licensed_to_teach ['Computer Science']
-    taught_in_past ['CS Fundamentals']
     previous_yearlong_cdo_pd ['CS in Science']
-    cs_offered_at_school ['AP CS A']
-    cs_opportunities_at_school ['Courses for credit']
-    plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single "Yes, I'm able to attend"
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
     agree 'Yes'
@@ -821,6 +803,50 @@ FactoryGirl.define do
         hash[:school] = hash[:school].id if hash[:school].is_a? School
       end.transform_keys(&ruby_to_js_style_keys)
     end
+
+    trait :with_custom_school do
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
+    trait :with_multiple_workshops do
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
+      end
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher1819_application_hash_common, parent: :pd_teacher_application_hash_common do
+    title 'Mr.'
+    preferred_first_name 'Sevvy'
+    address '123 Fake Street'
+    city 'Buffalo'
+    state 'Washington'
+    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_teaching ['Grade 7']
+    grades_expect_to_teach ['Grade 6', 'Grade 7']
+    does_school_require_cs_license 'Yes'
+    have_cs_license 'Yes'
+    subjects_teaching ['Computer Science']
+    subjects_expect_to_teach ['Computer Science']
+    subjects_licensed_to_teach ['Computer Science']
+    taught_in_past ['CS Fundamentals']
+    cs_offered_at_school ['AP CS A']
+    cs_opportunities_at_school ['Courses for credit']
+    plan_to_teach 'Yes, I plan to teach this course'
+    able_to_attend_single "Yes, I'm able to attend"
 
     trait :csp do
       program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
@@ -839,23 +865,30 @@ FactoryGirl.define do
       csd_course_hours_per_year 'At least 100 course hours'
       csd_terms_per_year '1 quarter'
     end
+  end
 
-    trait :with_custom_school do
-      school(-1)
-      school_name 'Code.org'
-      school_address '1501 4th Ave'
-      school_city 'Seattle'
-      school_state 'Washington'
-      school_zip_code '98101'
-      school_type 'Public school'
+  factory :pd_teacher2021_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
     end
 
-    trait :with_multiple_workshops do
-      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
-
-      after(:build) do |hash|
-        hash.delete 'ableToAttendSingle'
-      end
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
     end
   end
 
@@ -873,164 +906,6 @@ FactoryGirl.define do
         application.lock!
       end
     end
-  end
-
-  # default to csp
-  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
-    csp
-  end
-
-  factory :pd_teacher2021_application_hash_common, class: 'Hash' do
-    country 'United States'
-    first_name 'Severus'
-    last_name 'Snape'
-    alternate_email 'ilovepotions@gmail.com'
-    phone '5558675309'
-    gender_identity 'Male'
-    race ['Other']
-    add_attribute :zip_code, '98101'
-    association :school
-    principal_first_name 'Albus'
-    principal_last_name 'Dumbledore'
-    principal_title 'Dr.'
-    principal_email 'socks@hogwarts.edu'
-    principal_confirm_email 'socks@hogwarts.edu'
-    principal_phone_number '5555882300'
-    current_role 'Teacher'
-    previous_yearlong_cdo_pd ['CS in Science']
-    committed 'Yes'
-    willing_to_travel 'Up to 50 miles'
-    agree 'Yes'
-    completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
-    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school will be able to pay the full program fee.'
-    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
-    interested_in_online_program 'Yes'
-
-    initialize_with do
-      attributes.dup.tap do |hash|
-        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
-        # In that case, replace it with the id from the associated model
-        hash[:school] = hash[:school].id if hash[:school].is_a? School
-      end.transform_keys(&ruby_to_js_style_keys)
-    end
-
-    trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
-      csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
-      csp_how_offer 'As an AP course'
-    end
-
-    trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
-      csd_which_grades ['6', '7']
-      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
-    end
-
-    trait :with_custom_school do
-      school(-1)
-      school_name 'Code.org'
-      school_address '1501 4th Ave'
-      school_city 'Seattle'
-      school_state 'Washington'
-      school_zip_code '98101'
-      school_type 'Public school'
-    end
-
-    trait :with_multiple_workshops do
-      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
-
-      after(:build) do |hash|
-        hash.delete 'ableToAttendSingle'
-      end
-    end
-  end
-
-  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-  end
-
-  # default to do_you_approve: other
-  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
-    approved_other
-  end
-
-  factory :pd_principal_approval2021_application_hash_common, parent: :form_data_hash do
-    title 'Dr.'
-    first_name 'Albus'
-    last_name 'Dumbledore'
-    email 'albus@hogwarts.edu'
-    confirm_principal true
-
-    trait :approved_no do
-      do_you_approve 'No'
-    end
-
-    trait :approved_yes do
-      do_you_approve 'Yes'
-      with_approval_fields
-    end
-
-    trait :approved_other do
-      do_you_approve 'Other:'
-      with_approval_fields
-    end
-
-    trait :with_approval_fields do
-      school 'Hogwarts Academy of Witchcraft and Wizardry'
-      total_student_enrollment 200
-      free_lunch_percent '50'
-      white '16'
-      black '15'
-      hispanic '14'
-      asian '13'
-      pacific_islander '12'
-      american_indian '11'
-      other '10'
-      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
-      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
-      committed_to_diversity 'Yes'
-      understand_fee 'Yes'
-      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
-    end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
-  end
-
-  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
-    association :teacher_application, factory: :pd_teacher2021_application
-    course 'csp'
-    transient do
-      approved 'Yes'
-      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
-      form_data_hash do
-        build(
-          :pd_principal_approval2021_application_hash_common,
-          "approved_#{approved.downcase}".to_sym,
-          course: course,
-          replace_course: replace_course
-        )
-      end
-    end
-    form_data {form_data_hash.to_json}
   end
 
   # default to csp
@@ -1060,12 +935,62 @@ FactoryGirl.define do
     form_data {form_data_hash.to_json}
   end
 
-  # default to do_you_approve: other
-  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
-    approved_other
+  # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
   end
 
-  factory :pd_principal_approval1920_application_hash_common, parent: :form_data_hash do
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_teacher2122_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2122Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher2122_application_hash, parent: :pd_teacher2122_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2122_application, class: 'Pd::Application::Teacher2122Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2122_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # ----- Principal ----- #
+
+  factory :pd_principal_approval_application_hash_common, parent: :form_data_hash do
     title 'Dr.'
     first_name 'Albus'
     last_name 'Dumbledore'
@@ -1086,6 +1011,109 @@ FactoryGirl.define do
       with_approval_fields
     end
 
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2122_application_hash, parent: :pd_principal_approval2122_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2122_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2122Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2122Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2122_application, class: 'Pd::Application::PrincipalApproval2122Application' do
+    association :teacher_application, factory: :pd_teacher2122_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2122_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     trait :with_approval_fields do
       plan_to_teach Pd::Application::PrincipalApproval1920Application.options[:plan_to_teach][0]
       school 'Hogwarts Academy of Witchcraft and Wizardry'
@@ -1104,16 +1132,6 @@ FactoryGirl.define do
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
-    end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
     end
   end
 
@@ -1140,26 +1158,8 @@ FactoryGirl.define do
     approved_other
   end
 
-  factory :pd_principal_approval1819_application_hash_common, parent: :form_data_hash do
-    first_name 'Albus'
-    last_name 'Dumbledore'
+  factory :pd_principal_approval1819_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     title 'Dr.'
-    email 'albus@hogwarts.edu'
-    confirm_principal true
-
-    trait :approved_no do
-      do_you_approve 'No'
-    end
-
-    trait :approved_yes do
-      do_you_approve 'Yes'
-      with_approval_fields
-    end
-
-    trait :approved_other do
-      do_you_approve 'Other:'
-      with_approval_fields
-    end
 
     trait :with_approval_fields do
       school 'Hogwarts Academy of Witchcraft and Wizardry'
@@ -1180,16 +1180,6 @@ FactoryGirl.define do
       understand_fee 'Yes'
       pay_fee 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
     end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
@@ -1209,6 +1199,9 @@ FactoryGirl.define do
     end
     form_data {form_data_hash.to_json}
   end
+
+  # ---- Teacher Con ----- #
+  # TODO: Remove all Teachercon code
 
   # default to accepted
   factory :pd_teachercon1819_registration_hash, parent: :pd_teachercon1819_registration_hash_common do
@@ -1319,6 +1312,8 @@ FactoryGirl.define do
     association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
+
+  # ----- FiT Weekend ----- #
 
   factory :pd_fit_weekend1819_registration_hash, parent: :form_data_hash do
     email "ssnape@hogwarts.edu"
