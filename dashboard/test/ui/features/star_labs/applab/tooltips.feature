@@ -76,7 +76,7 @@ Feature: Applab visualization overlay tooltips
     When I hover over element with id "design_image1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for image"
+    Then I see no difference for "tooltip for image" using stitch mode "none"
 
     When I hover over the screen at xpos 300 and ypos 200
     And I save the project
