@@ -316,29 +316,29 @@
         "dsls": {
           "answers": [
             {
-              "text": "The program won't fail. Scrat will get to the acorn.",
+              "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. Scrat goes the wrong way after his final turn."
+              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
-              "text": "Scrat will go the wrong way after his final turn.",
+              "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct!"
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
-              "text": "Scrat takes one too few steps and ends up short of the acorn.",
-              "correct": false,
-              "feedback": "Incorrect. Taking one too few steps happens after Scrat turns the wrong way."
+              "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
+              "correct": true,
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             }
           ],
           "questions": [
             {
-              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
+              "text": "Look for bugs in this code. Will Scrat reach the acorn or is there a problem?"
             }
           ]
         }

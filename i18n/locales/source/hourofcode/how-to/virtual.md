@@ -1,5 +1,5 @@
 ---
-title: How-to guide for a virtual Hour of Code
+title: Hour of Code How-To Guide for Virtual Events
 ---
 
 {{ signup_button }}
@@ -10,7 +10,9 @@ title: How-to guide for a virtual Hour of Code
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  
+While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://staging.hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+<br><br>
+
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg">]({{ urls/learn }})
 
 ## You may be apart, but you can still start together
@@ -27,13 +29,13 @@ Even if you plan for students to complete their activities independently, we rec
 ## What to prepare ahead of time
 
 ### 1. Determine your video conferencing platform 
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run-through your Hour of Code agenda prior to your event date. 
+Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date. 
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg">]({{ urls/learn }})
 
 ### 2. Plan how students will participate 
 **Self-led Hour of Code activity**<br>
-We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a>. on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open. 
+We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open. 
 
 It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on. 
 
@@ -42,7 +44,7 @@ If your class is expected to do their activity immediately after kickoff, you mi
 **Hour of Code activity together online**<br>
 If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
 
-**With Parents**<br>
+**With parents**<br>
 For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>. 
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg">](https://hourofcode.com/us/how-to/parents)

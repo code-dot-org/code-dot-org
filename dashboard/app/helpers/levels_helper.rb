@@ -349,6 +349,9 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
     default_hint_prompt_attempts_threshold = 6.5
     if @script&.hint_prompt_enabled?
       level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
