@@ -1297,7 +1297,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
 
-    assert_redirected_to 'http://test.host/users/existing_account?email=teacher_1%40code.org&provider=google_oauth2'
+    assert_redirected_to "http://test.host/users/existing_account?email=#{CGI.escape(email)}&provider=google_oauth2"
   end
 
   private
