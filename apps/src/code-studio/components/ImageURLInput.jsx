@@ -22,7 +22,7 @@ const styles = {
 };
 
 const description = `
-    Don't have a file downloaded? Provide the URL to an image on the web.
+    Don't have a file downloaded? Provide the link to an image on the web.
     This works for URLs that end with *.GIF*, *.PNG*, or *.JPG*.
     `;
 

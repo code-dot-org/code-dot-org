@@ -104,7 +104,7 @@ export default class ImagePicker extends React.Component {
             onClick={() => this.setMode('url')}
             style={styles.urlModeToggle}
           >
-            Image from URL
+            Link to Image
           </span>
           <span
             onClick={() => this.setMode('icon')}
