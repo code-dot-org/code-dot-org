@@ -40,7 +40,6 @@ export const getSelectedScriptName = state => {
 
 /* Get the user friendly name of a script(the unit or course name) */
 export const getSelectedScriptFriendlyName = state => {
-  debugger;
   const scriptId = state.scriptSelection.scriptId;
   if (!scriptId) {
     return null;
@@ -91,7 +90,6 @@ export default function scriptSelection(state = initialState, action) {
 
   // Note: This listens to the sectionData redux, not the scriptSelection redux.
   if (action.type === SET_SECTION) {
-    debugger;
     // Default the scriptId to the script assigned to the section
     const defaultScriptId = action.section.script
       ? action.section.script.id
@@ -104,7 +102,6 @@ export default function scriptSelection(state = initialState, action) {
   }
 
   if (action.type === SET_VALID_SCRIPTS) {
-    debugger;
     // Computes the set of valid scripts.
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts

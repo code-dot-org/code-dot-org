@@ -423,7 +423,9 @@ export const transferStudents = onComplete => {
             )
           );
           onComplete();
-          getCurrentSection(sectionId, section => dispatch(setSection(section)));
+          getCurrentSection(currentSectionCode, section =>
+            dispatch(setSection(section))
+          );
         }
       }
     );

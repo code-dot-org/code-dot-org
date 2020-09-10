@@ -25,6 +25,12 @@ export const getUserSections = function(callback) {
   );
 };
 
+/**
+ * Send a request to dashboard and retrieve a JSON object with
+ * the specified section's details.
+ * @param {number} sectionId The section to be queried
+ * @param {function} callback Will be called on success
+ */
 export const getCurrentSection = function(sectionId, callback) {
   $.ajax({
     dataType: 'json',

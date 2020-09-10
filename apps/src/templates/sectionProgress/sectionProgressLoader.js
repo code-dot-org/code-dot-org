@@ -24,7 +24,6 @@ const NUM_STUDENTS_PER_PAGE = 50;
 export function loadScript(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().sectionData.section;
-  debugger;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
