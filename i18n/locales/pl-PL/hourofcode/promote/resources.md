@@ -38,19 +38,29 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 ## Użyj logo Godziny Kodowania, aby ją promować
 
-[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![obraz]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Pobierz logo w wysokiej rozdzielczości](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Godzina Kodowania" jest znakiem towarowym. Nie chcemy ograniczać używania tej nazwy, ale chcemy mieć pewność, że spełnionych jest kilka warunków:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Przykład dobrego użycia**: "Weź udział w Godzinie Kodowania™ na ACMECorp.com." **Przykład złego użycia**: "Wypróbuj Godzinę Kodowania od ACME Corp."
-2. Używaj znaku "TM" jako indeksu górnego po frazie "Godzina Kodowania" w najbardziej znaczących miejscach, zarówno na Twojej stronie internetowej, jak i w opisach aplikacji.
-3. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+  </li>
+  <li>
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+  </li>
+</ul>
+
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *"Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowaniu komputerów."*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
