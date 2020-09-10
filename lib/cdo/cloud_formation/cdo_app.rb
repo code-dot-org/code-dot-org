@@ -38,7 +38,7 @@ module Cdo::CloudFormation
     # number of seconds to configure as Time To Live for DNS record
     DNS_TTL = 60
 
-    attr_reader :daemon, :daemon_instance_id
+    attr_reader :daemon
 
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
@@ -66,17 +66,6 @@ module Cdo::CloudFormation
       stack_name << "-#{branch}" if stack_name == 'adhoc'
       raise "Stack name must not include 'dashboard'" if stack_name.include?('dashboard')
 
-      # Don't provision daemon where manually-provisioned daemon instances already exist.
-      # Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
-      # TODO import manually-provisioned instances into cloudformation stacks.
-      if %w(autoscale-prod test staging levelbuilder).include? stack_name
-        @daemon_instance_id = {
-          'autoscale-prod' => 'i-08f5f8ace0a473b8d',
-          'test' => 'i-004727200191f3251',
-          'staging' => 'i-02e6cdc765421ab34',
-          'levelbuilder' => 'i-0907b146f7e6503f6'
-        }[stack_name]
-      end
       # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
       @daemon = rack_env?(:adhoc) && !frontends ?
                   'WebServer' :
