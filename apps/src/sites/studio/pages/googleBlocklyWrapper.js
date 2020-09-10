@@ -176,8 +176,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
       const bbox = svg.getBBox();
-      svg.setAttribute('height', bbox.y + bbox.height + bbox.y);
-      svg.setAttribute('width', bbox.x + bbox.width + bbox.x);
+      svg.setAttribute('height', bbox.height + bbox.y);
+      svg.setAttribute('width', bbox.width + bbox.x);
       return workspace;
     }
   };
