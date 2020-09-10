@@ -21,6 +21,7 @@ import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   checkbox: {
@@ -83,9 +84,18 @@ styles.targetActivitySectionCard = {
   padding: 16
 };
 
+/*
+An activity section is a chunk of an activity. This could be a section
+or text that explains to the teacher what to say or do to run the lesson or
+it could be a section of a lesson that shows a set of levels that are used
+at that point in the lesson (also known as a progression). ActivitySections
+can have tips attached to the beginning of their content and can be marked with
+slide or remarks as well.
+ */
+
 class ActivitySectionCard extends Component {
   static propTypes = {
-    activitySection: PropTypes.object,
+    activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
