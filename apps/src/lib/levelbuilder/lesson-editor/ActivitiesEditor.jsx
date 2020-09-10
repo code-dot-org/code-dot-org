@@ -70,7 +70,7 @@ class ActivitiesEditor extends Component {
     this.setState({targetActivitySectionPos});
   };
 
-  // To be populated with the bounding client rect of each LessonCard element.
+  // To be populated with the bounding client rect of each ActivitySectionCard element.
   activitySectionMetrics = {};
 
   setActivitySectionMetrics = (metrics, activitySectionPosition) => {
