@@ -1,5 +1,5 @@
 ---
-title: ھاؤ-ٹو-گائیڈ
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # اسکول کی جماعتوں کے بعد اور کلب میں ایک گھنٹہ کے لئے کوڈ کیسے سکھایا جائے
 
-### تحریک میں شامل ہوں اوردیے گئے اقدامات کی مدد سے، طلبا کے ایک گروپ کو کمپیوٹر سائنس کے ساتھ پہلا گھنٹہ متعارف کرایئں. کوڈ گھنٹہ چلانا آسان ہے، حتیٰ کہ مبتدی کے لیئے بھی! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -18,11 +24,11 @@ nav: how_to_nav
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-** کوڈ کا تمام گھنٹے سبق ** کو منتظمین کے لئے کم سے کم وقت کی ضرورت ہوتی ہے، اور خود ہدایت کی جاتی ہے - بچوں کو اپنی رفتار اور مہارت کی سطح پر کام کرنے کی اجازت دیتا ہے.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-** کوڈ کے قیام کے بعد آپ کے لئے ایک سبق کی منصوبہ بندی کی ضرورت ہے؟ </ strong> اس [ ٹیمپلیٹ کو چیک کریں ](/files/AfterschoolEducatorLessonPlanOutline.docx)!</p> 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. اپنے قیامت کو فروغ دینا
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں - کمپیوٹر اختیاری ہیں
 
-آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. لیکن آپ <مضبوط> نہیں </ strong> ہر ایک بچے کے لئے ایک کمپیوٹر کی ضرورت ہے، اور آپ بھی کمپیوٹر کے بغیر کوڈ کا قیام بھی کر سکتے ہیں.
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-اس بات کو یقینی بنانا کہ طالب علموں کے کمپیوٹر یا آلات پر سبق آزمائیں تاکہ وہ براؤزر پر آواز اور ویڈیو کے ساتھ مناسب طریقے سے کام کریں. ** کم بینڈوڈتھ کیا ہے؟ </ strong> کلاس کے سامنے ویڈیو دکھانے کا منصوبہ ہے، لہذا ہر طالب علم اپنی اپنی ویڈیو ڈاؤن لوڈ نہیں کررہے ہیں. یا غیر مقفل / آف لائن سبق کی کوشش کریں.</p> 
+اس بات کو یقینی بنانا کہ طالب علموں کے کمپیوٹر یا آلات پر سبق آزمائیں تاکہ وہ براؤزر پر آواز اور ویڈیو کے ساتھ مناسب طریقے سے کام کریں. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔.
 
-کافی ڈیوائسز نہیں ہیں؟ </strong> تو [پیئر پروگرامنگ](https://www.youtube.com/watch?v=vgkahOzFH2Q) استعمال کریں۔. جب اسٹوڈینٹس آپس میں پارٹنرز بنتے ہیں، تو وہ ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر کم انحصار کرتے ہیں۔. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). جب اسٹوڈینٹس آپس میں پارٹنرز بنتے ہیں، تو وہ ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر کم انحصار کرتے ہیں۔. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
 
 ## 5. ایک متاثر کن ویڈیو کے ساتھ اپنے قیامت کا کوڈ شروع کریں   شراکت | درخواست کے حوالے
 
@@ -49,19 +55,19 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [ صدر اوباما نے تمام طالب علموں کو کمپیوٹر سائنس سیکھنے کے لئے بلایا ](https://www.youtube.com/watch؟v=6XvmhE1J9PY).
 - مزید متاثر کن ویڈیوز تلاش کریں [ یہاں ](https://www.youtube.com/playlist؟list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**اگر آپ سب کمپیوٹر سائنس سے ناواقف ہیں تو اس میں کوئی حرج نہیں. یہاں آپ کو ایک-گھنٹے-کوڈ کی سرگرمی سےمتعلق کچھ تعارفی معلومات دی جائے گی:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - طریقوں کی ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے طور پر لڑکوں اور لڑکیوں دونوں کی پرواہ کریں گے (اطلاقات اور ٹیکنالوجی کے بارے میں گفتگو کریں جو زندگی کو بچانے کے لئے استعمال کیا جاتا ہے، لوگوں کی مدد کریں، لوگوں سے رابطہ قائم کریں).
 - روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-** زیادہ رہنمائی کی ضرورت ہے؟ </ strong> اس [ ٹیمپلیٹ سبق کا منصوبہ ](/files/AfterschoolEducatorLessonPlanOutline.docx) ڈاؤن لوڈ کریں.</p> 
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. کوڈ!
 
-**شرکاء سرگرمی** کو براہ راست - ٹٹوریل لنک ایک سفید تختہ پر لکھتے ہیں ۔ Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**کسی بھر میں مشکلات آتی ہے تو یہ جواب دینے کے لئے ٹھیک ہے:** - "میں نہیں جانتا ۔ چلو یہ باہر مل کر اعداد و شمار." "ٹیکنالوجی ہمیشہ جس طرح کے ہم چاہتے ہیں کہ کام نہیں کرتا."- "سیکھنے کے پروگرام کے لئے؛ ایک نئی زبان سیکھنے کی طرح ہے- آپ فوراً روانی ہو نہیں کریں گے ۔
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. چلو یہ باہر مل کر اعداد و شمار." "ٹیکنالوجی ہمیشہ جس طرح کے ہم چاہتے ہیں کہ کام نہیں کرتا."- "سیکھنے کے پروگرام کے لئے؛ ایک نئی زبان سیکھنے کی طرح ہے- آپ فوراً روانی ہو نہیں کریں گے ۔
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,6 +87,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## آور-آف-کوڈ کے بعد کیا ہو گا?
 
-ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے- Help students continue their journey and encourage them to [learn more online](/beyond)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}
