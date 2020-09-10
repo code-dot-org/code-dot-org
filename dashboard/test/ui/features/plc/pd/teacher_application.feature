@@ -23,7 +23,7 @@ Scenario: Basic teacher application submission
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
-
+  And I wait until element "#school input" is visible
   And I press keys "nonexistent" for element "#school input"
 
   # School: select other and enter manual data
