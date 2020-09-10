@@ -13,6 +13,7 @@ import {
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import ReactDOM from 'react-dom';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   activityHeader: {
@@ -60,16 +61,18 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: PropTypes.object.isRequired,
+    activity: activityShape,
     activitiesCount: PropTypes.number,
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func,
     setActivitySectionMetrics: PropTypes.func.isRequired,
     setTargetActivitySection: PropTypes.func.isRequired,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired
+    activitySectionMetrics: PropTypes.object.isRequired,
+
+    //redux
+    addActivitySection: PropTypes.func,
+    removeActivity: PropTypes.func,
+    moveActivity: PropTypes.func,
+    updateActivityField: PropTypes.func
   };
 
   constructor(props) {
