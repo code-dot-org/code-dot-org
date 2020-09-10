@@ -216,9 +216,10 @@ gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
-# Used by a build script.
+# Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
-gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+# JavaScript runtime used by ExecJS.
+gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
