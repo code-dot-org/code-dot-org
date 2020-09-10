@@ -158,7 +158,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     onMainBlockSpaceCreated: () => {}, // TODO
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
-        readOnly: true
+        readOnly: true,
+        theme: CdoTheme
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -167,7 +168,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'readOnlyBlockSpace'
+          class: 'geras-renderer modern-theme readOnlyBlockSpace'
         },
         null
       );
