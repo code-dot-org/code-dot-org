@@ -1778,6 +1778,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
  * @param {MilestoneReport} options
  */
 StudioApp.prototype.report = function(options) {
+  // We don't need to report again on reset.
   this.hasReported = true;
   const currentTime = new Date().getTime();
   // copy from options: app, level, result, testResult, program, onComplete
@@ -1843,6 +1844,7 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
  * Click the reset button.  Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
+  // If we haven't reported yet, report now.
   if (!this.hasReported) {
     this.report({
       app: getStore().getState().pageConstants.appType,
