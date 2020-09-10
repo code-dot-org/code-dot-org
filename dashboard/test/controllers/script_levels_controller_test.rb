@@ -1494,7 +1494,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     hidden = JSON.parse(response.body)
-    assert_equal [@custom_lesson_1.id.to_s], hidden
+    assert_equal [@custom_lesson_1.id], hidden
   end
 
   test "hidden_stage_ids for teacher signed in" do
