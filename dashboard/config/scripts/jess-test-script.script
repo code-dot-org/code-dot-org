@@ -73,7 +73,11 @@ level 'VPL - CSD U4 Chapter 2 Project', progression: 'Conclusions and Connection
 level 'VPL - CSD - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 5', display_name: 'Module 5'
-level 'VirtualPLOverview'
+level 'VPL - CSD Module 5 Overview', progression: 'Module 5 Overview'
+level 'VPL - CSD M5 Theme Introduction', progression: 'Theme Introduction (~5 mins)'
+level 'VPL - CSD - Module 5 - CI', progression: 'Lesson Investigation (~70 mins)'
+level 'VPL - CSD - Module 5 - CI - L1', progression: 'Lesson Investigation (~70 mins)'
+level 'VPL - CSD - Module 5 - CI - L2', progression: 'Lesson Investigation (~70 mins)'
 
 lesson 'Module 6', display_name: 'Module 6'
 level 'VirtualPLOverview'
