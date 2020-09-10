@@ -5,6 +5,7 @@ import SetupChecklist from './SetupChecklist';
 import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import applabI18n from '@cdo/applab/locale';
 import {
   isCodeOrgBrowser,
   isChromeOS,
@@ -128,7 +129,7 @@ class WindowsDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>{i18n.makerSetupMakerAppForWindows()}</h2>
+        <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -147,12 +148,12 @@ class WindowsDownloads extends React.Component {
         <div>
           <h4>{i18n.instructions()}:</h4>
           <ol>
-            <li>{i18n.makerSetupDownloadAndInstall()}</li>
+            <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
             <li>
-              <SafeMarkdown markdown={i18n.makerSetupWindows7Drivers()} />
+              <SafeMarkdown markdown={applabI18n.makerSetupWindows7Drivers()} />
             </li>
-            <li>{i18n.makerSetupSignIn()}</li>
-            <li>{i18n.makerSetupPlugInBoard()}</li>
+            <li>{applabI18n.makerSetupSignIn()}</li>
+            <li>{applabI18n.makerSetupPlugInBoard()}</li>
           </ol>
         </div>
       </div>
@@ -173,7 +174,7 @@ class MacDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>{i18n.makerSetupMakerAppForMac()}</h2>
+        <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -214,7 +215,7 @@ class LinuxDownloads extends React.Component {
     const debFile = this.debFile();
     return (
       <div>
-        <h2>{i18n.makerSetupMakerAppForLinux()}</h2>
+        <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -232,7 +233,7 @@ class LinuxDownloads extends React.Component {
         {error && <FetchingLatestVersionError />}
         <div>
           <SetupInstructions />
-          <h4>{i18n.makerSetupLinuxAlternative()}</h4>
+          <h4>{applabI18n.makerSetupLinuxAlternative()}</h4>
           <ul>
             {debFile && (
               <li>
@@ -242,7 +243,7 @@ class LinuxDownloads extends React.Component {
             <li>
               <FontAwesome style={style.icon} icon="external-link" />
               <SafeMarkdown
-                markdown={i18n.makerSetupLinuxAlternativeInstall()}
+                markdown={applabI18n.makerSetupLinuxAlternativeInstall()}
               />
             </li>
           </ul>
@@ -260,7 +261,7 @@ const FETCH_STATUS_STYLE = {
 const FetchingLatestVersionMessage = () => (
   <div style={FETCH_STATUS_STYLE}>
     <FontAwesome icon="spinner" className="fa-fw fa-spin" />{' '}
-    <em>{i18n.makerSetupFetchingVersion()}</em>
+    <em>{applabI18n.makerSetupFetchingVersion()}</em>
   </div>
 );
 
@@ -272,10 +273,10 @@ const FetchingLatestVersionError = () => (
         className="fa-fw"
         style={{color: 'darkred'}}
       />{' '}
-      <strong>{i18n.makerSetupDownloadProblem()}</strong>
+      <strong>{applabI18n.makerSetupDownloadProblem()}</strong>
     </div>
     <div>
-      <SafeMarkdown markdown={i18n.makerSetupCheckInternetConnection()} />
+      <SafeMarkdown markdown={applabI18n.makerSetupCheckInternetConnection()} />
     </div>
   </div>
 );
@@ -284,9 +285,9 @@ const SetupInstructions = () => (
   <div>
     <h4>{i18n.instructions()}:</h4>
     <ol>
-      <li>{i18n.makerSetupDownloadAndInstall()}</li>
-      <li>{i18n.makerSetupSignIn()}</li>
-      <li>{i18n.makerSetupPlugInBoard()}</li>
+      <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
+      <li>{applabI18n.makerSetupSignIn()}</li>
+      <li>{applabI18n.makerSetupPlugInBoard()}</li>
     </ol>
   </div>
 );
@@ -299,9 +300,9 @@ class ChromebookInstructions extends React.Component {
   render() {
     return (
       <div>
-        <h2>{i18n.makerSetupMakerAppForChromebook()}</h2>
+        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
         <SafeMarkdown
-          markdown={i18n.makerSetupSerialConnector({
+          markdown={applabI18n.makerSetupSerialConnector({
             webstoreURL: CHROME_APP_WEBSTORE_URL
           })}
         />
@@ -309,13 +310,13 @@ class ChromebookInstructions extends React.Component {
         <ol>
           <li>
             <SafeMarkdown
-              markdown={i18n.makerSetupChromebookPage({
+              markdown={applabI18n.makerSetupChromebookPage({
                 makerSetupPage: MAKER_SETUP_PAGE_URL
               })}
             />
           </li>
-          <li>{i18n.makerSetupFollowInstructions()}</li>
-          <li>{i18n.makerSetupPlugInBoard()}</li>
+          <li>{applabI18n.makerSetupFollowInstructions()}</li>
+          <li>{applabI18n.makerSetupPlugInBoard()}</li>
         </ol>
       </div>
     );
