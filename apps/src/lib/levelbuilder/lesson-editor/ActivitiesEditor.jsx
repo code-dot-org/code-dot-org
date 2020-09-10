@@ -47,11 +47,23 @@ class ActivitiesEditor extends Component {
   }
 
   handleAddActivity = () => {
-    //To do - figure out how we want to set the key going forward
     this.props.addActivity(
       this.props.activities.length,
-      `activity-${this.props.activities.length + 1}`
+      `activity-${this.generateActivityKey()}`
     );
+  };
+
+  generateActivityKey = () => {
+    let activityNumber = this.props.activities.length + 1;
+    while (
+      this.props.activities.some(
+        activity => activity.key === `activity-${activityNumber}`
+      )
+    ) {
+      activityNumber++;
+    }
+
+    return activityNumber;
   };
 
   setTargetActivitySection = targetActivitySectionPos => {
