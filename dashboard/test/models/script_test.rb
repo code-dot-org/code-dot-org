@@ -1165,36 +1165,36 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal course4_yml, updated['en']['data']['script']['name']['course4']
   end
 
-  test "update_i18n with metadata" do
-    # In this case, we're modifying a lesson description without changing any
-    # lesson names
-    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
-
-    # No updates to lesson names
-    lessons_i18n = {'en' => {'data' => {'name' => {}}}}
-
-    script_name = 'Report Script'
-
-    metadata = {
-      'title' => 'Report Script Name',
-      'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
-        'name' => 'Report Stage 1',
-        'descriptionStudent' => 'lesson 1 is pretty neat',
-        'descriptionTeacher' => 'This is what you should know as a teacher'
-      }].to_json
-    }
-
-    updated = Script.update_i18n(original_yml, lessons_i18n, script_name, metadata)
-
-    updated_report_script = updated['en']['data']['script']['name']['Report Script']
-
-    assert_equal 'Report Script Name', updated_report_script['title']
-    assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-stage-1', updated_report_script['lessons']['Report Stage 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Stage 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
-  end
+  # test "update_i18n with metadata" do
+  #   # In this case, we're modifying a lesson description without changing any
+  #   # lesson names
+  #   original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+  #
+  #   # No updates to lesson names
+  #   lessons_i18n = {'en' => {'data' => {'name' => {}}}}
+  #
+  #   script_name = 'Report Script'
+  #
+  #   metadata = {
+  #     'title' => 'Report Script Name',
+  #     'description' => 'This is what Report Script is all about',
+  #     stage_descriptions: [{
+  #       'name' => 'Report Stage 1',
+  #       'descriptionStudent' => 'lesson 1 is pretty neat',
+  #       'descriptionTeacher' => 'This is what you should know as a teacher'
+  #     }].to_json
+  #   }
+  #
+  #   updated = Script.update_i18n(original_yml, lessons_i18n, script_name, metadata)
+  #
+  #   updated_report_script = updated['en']['data']['script']['name']['Report Script']
+  #
+  #   assert_equal 'Report Script Name', updated_report_script['title']
+  #   assert_equal 'This is what Report Script is all about', updated_report_script['description']
+  #   assert_equal 'report-stage-1', updated_report_script['lessons']['Report Stage 1']['name']
+  #   assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Stage 1']['description_student']
+  #   assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
+  # end
 
   test "update_i18n with new lesson display name" do
     # This simulates us doing a seed after adding new lessons to multiple of
