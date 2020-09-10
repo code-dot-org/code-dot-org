@@ -191,8 +191,7 @@ Resources:
           Value: 30
 <%   unless frontends -%>
       Targets:
-        - Id: <%=daemon_instance_id%>
-          Port: 80
+        - {Id: !Ref <%=daemon%>, Port: 80}
 <%   end -%>
 <% end -%>
 
@@ -414,7 +413,7 @@ Resources:
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
-<% if @daemon_instance_id -%>
+<% unless rack_env?(:adhoc) -%>
     DeletionPolicy: Retain
 <% end -%>
     CreationPolicy:
@@ -426,7 +425,7 @@ Resources:
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
-        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : '!Ref AWS::StackName'%>}
+        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
