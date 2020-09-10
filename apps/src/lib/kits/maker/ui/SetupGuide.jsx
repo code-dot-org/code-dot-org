@@ -5,6 +5,7 @@ import SetupChecklist from './SetupChecklist';
 import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import applabI18n from '@cdo/applab/locale';
 import {
   isCodeOrgBrowser,
   isChromeOS,
@@ -21,6 +22,13 @@ const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
 const CHROMEBOOK = 'chromebook';
+
+const style = {
+  icon: {
+    float: 'left',
+    padding: '5px'
+  }
+};
 
 export default class SetupGuide extends React.Component {
   constructor(props) {
@@ -79,16 +87,16 @@ class Downloads extends React.Component {
       <div>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
-            <FontAwesome icon="windows" /> Windows
+            <FontAwesome icon="windows" /> {i18n.windows()}
           </button>
           <button type="button" value={MAC}>
-            <FontAwesome icon="apple" /> Mac
+            <FontAwesome icon="apple" /> {i18n.mac()}
           </button>
           <button type="button" value={LINUX}>
-            <FontAwesome icon="linux" /> Linux
+            <FontAwesome icon="linux" /> {i18n.linux()}
           </button>
           <button type="button" value={CHROMEBOOK}>
-            <FontAwesome icon="chrome" /> Chromebook
+            <FontAwesome icon="chrome" /> {i18n.chromebook()}
           </button>
         </ToggleGroup>
         {WINDOWS === platform && <WindowsDownloads />}
@@ -121,7 +129,7 @@ class WindowsDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>Code.org Maker App for Windows</h2>
+        <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -138,21 +146,14 @@ class WindowsDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>Instructions:</h4>
+          <h4>{i18n.instructions()}:</h4>
           <ol>
+            <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
             <li>
-              Download and install the Code.org Maker App using the download
-              button above.
+              <SafeMarkdown markdown={applabI18n.makerSetupWindows7Drivers()} />
             </li>
-            <li>
-              (Windows 7) Install the{' '}
-              <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">
-                Adafruit Windows drivers
-              </a>
-              .
-            </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
+            <li>{applabI18n.makerSetupSignIn()}</li>
+            <li>{applabI18n.makerSetupPlugInBoard()}</li>
           </ol>
         </div>
       </div>
@@ -173,7 +174,7 @@ class MacDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>Code.org Maker App for Mac</h2>
+        <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -187,17 +188,7 @@ class MacDownloads extends React.Component {
           />
         )}
         {error && <FetchingLatestVersionError />}
-        <div>
-          <h4>Instructions:</h4>
-          <ol>
-            <li>
-              Download and install the Code.org Maker App using the download
-              button above.
-            </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
-          </ol>
-        </div>
+        <SetupInstructions />
       </div>
     );
   }
@@ -224,7 +215,7 @@ class LinuxDownloads extends React.Component {
     const debFile = this.debFile();
     return (
       <div>
-        <h2>Code.org Maker App for Linux</h2>
+        <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -241,16 +232,8 @@ class LinuxDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>Instructions:</h4>
-          <ol>
-            <li>
-              Download and install the Code.org Maker App using the download
-              button above.
-            </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
-          </ol>
-          <h4>Alternative Installers</h4>
+          <SetupInstructions />
+          <h4>{applabI18n.makerSetupLinuxAlternative()}</h4>
           <ul>
             {debFile && (
               <li>
@@ -258,9 +241,10 @@ class LinuxDownloads extends React.Component {
               </li>
             )}
             <li>
-              <a href="https://github.com/code-dot-org/browser">
-                Install from source <FontAwesome icon="external-link" />
-              </a>
+              <FontAwesome style={style.icon} icon="external-link" />
+              <SafeMarkdown
+                markdown={applabI18n.makerSetupLinuxAlternativeInstall()}
+              />
             </li>
           </ul>
         </div>
@@ -277,7 +261,7 @@ const FETCH_STATUS_STYLE = {
 const FetchingLatestVersionMessage = () => (
   <div style={FETCH_STATUS_STYLE}>
     <FontAwesome icon="spinner" className="fa-fw fa-spin" />{' '}
-    <em>Getting the latest version...</em>
+    <em>{applabI18n.makerSetupFetchingVersion()}</em>
   </div>
 );
 
@@ -289,15 +273,22 @@ const FetchingLatestVersionError = () => (
         className="fa-fw"
         style={{color: 'darkred'}}
       />{' '}
-      <strong>There was a problem getting your download link.</strong>
+      <strong>{applabI18n.makerSetupDownloadProblem()}</strong>
     </div>
     <div>
-      Please make sure you are connected to the internet, and{' '}
-      <a href="https://downloads.code.org/index.html">
-        https://downloads.code.org/
-      </a>{' '}
-      is reachable from your network.
+      <SafeMarkdown markdown={applabI18n.makerSetupCheckInternetConnection()} />
     </div>
+  </div>
+);
+
+const SetupInstructions = () => (
+  <div>
+    <h4>{i18n.instructions()}:</h4>
+    <ol>
+      <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
+      <li>{applabI18n.makerSetupSignIn()}</li>
+      <li>{applabI18n.makerSetupPlugInBoard()}</li>
+    </ol>
   </div>
 );
 
@@ -309,24 +300,23 @@ class ChromebookInstructions extends React.Component {
   render() {
     return (
       <div>
-        <h2>Maker Toolkit for Chromebook</h2>
-        <p>
-          Maker Toolkit on Chromebook does not use the Code.org Maker App.
-          Instead, it depends on the{' '}
-          <a href={CHROME_APP_WEBSTORE_URL}>Code.org Serial Connector</a> Chrome
-          App.
-        </p>
-        <h4>Instructions</h4>
+        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        <SafeMarkdown
+          markdown={applabI18n.makerSetupSerialConnector({
+            webstoreURL: CHROME_APP_WEBSTORE_URL
+          })}
+        />
+        <h4>{i18n.instructions()}</h4>
         <ol>
           <li>
-            Open this page (
-            <a href={MAKER_SETUP_PAGE_URL}>{MAKER_SETUP_PAGE_URL}</a>) on your
-            Chromebook.
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupChromebookPage({
+                makerSetupPage: MAKER_SETUP_PAGE_URL
+              })}
+            />
           </li>
-          <li>
-            Follow the instructions given by the interactive setup checklist.
-          </li>
-          <li>Plug in your board to start using it with App Lab!</li>
+          <li>{applabI18n.makerSetupFollowInstructions()}</li>
+          <li>{applabI18n.makerSetupPlugInBoard()}</li>
         </ol>
       </div>
     );
