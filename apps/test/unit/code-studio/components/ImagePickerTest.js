@@ -20,14 +20,14 @@ describe('ImagePicker', () => {
     assert.equal(wrapper.find('#modeSwitch').length, 1);
   });
 
-  it('shows icons and files as options', () => {
+  it('shows icons and files and links as options', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
     const tabs = wrapper.find('#modeSwitch').find('span');
 
     assert.equal(tabs.length, 3);
     assert.equal(tabs.find('span[children="Icons"]').length, 1);
     assert.equal(tabs.find('span[children="My Files"]').length, 1);
-    assert.equal(tabs.find('span[children="Image from URL"]').length, 1);
+    assert.equal(tabs.find('span[children="Link to Image"]').length, 1);
   });
 
   it('initially shows file picker by default', () => {
@@ -43,7 +43,7 @@ describe('ImagePicker', () => {
 
   it('shows url picker when clicked', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    wrapper.find('span[children="Image from URL"]').simulate('click');
+    wrapper.find('span[children="Link to Image"]').simulate('click');
     assert.equal(wrapper.find(ImageURLInput).length, 1);
   });
 });
