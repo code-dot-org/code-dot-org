@@ -3,7 +3,7 @@
 Feature: Game Lab Eyes
 
 Scenario: Basic GameLab level
-  When I open my eyes to test "gamelab eyes" using stitch mode "none"
+  When I open my eyes to test "gamelab eyes"
   And I start a new Game Lab project
   Then I see no difference for "initial load" using stitch mode "none"
   When I switch to the animation tab
