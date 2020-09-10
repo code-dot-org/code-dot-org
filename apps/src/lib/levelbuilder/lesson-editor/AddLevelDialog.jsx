@@ -103,6 +103,7 @@ export default class AddLevelDialog extends Component {
           <div style={styles.rightColumn}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
+              {/*TODO Hook up removeLevel for the addLevelDialog*/}
               {this.props.currentLevels.map(level => (
                 <LevelToken
                   key={level.position + '_' + level.ids[0]}
