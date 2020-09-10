@@ -71,6 +71,13 @@ namespace :circle do
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
+
+    if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/config/locales/*.en.yml'])
+      raise 'Unexpected change to dashboard/config/locales/ - Make sure you running seeding locally and include those changes in your branch.'
+    end
+    if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
+      raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
+    end
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
@@ -128,6 +135,13 @@ namespace :circle do
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
+
+    if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/config/locales/*.en.yml'])
+      raise 'Unexpected change to dashboard/config/locales/ - Make sure you running seeding locally and include those changes in your branch.'
+    end
+    if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
+      raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
+    end
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
