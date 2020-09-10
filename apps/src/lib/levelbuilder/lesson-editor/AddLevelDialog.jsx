@@ -51,7 +51,9 @@ export default class AddLevelDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     currentLevels: PropTypes.array,
-    addLevel: PropTypes.func
+    addLevel: PropTypes.func,
+    activityPosition: PropTypes.number,
+    activitySectionPosition: PropTypes.number
   };
 
   constructor(props) {
@@ -108,8 +110,8 @@ export default class AddLevelDialog extends Component {
                   removeLevel={() => {
                     console.log('remove level');
                   }}
-                  activitySectionPosition={1} //todo update
-                  activityPosition={1} //todo update
+                  activitySectionPosition={this.props.activitySectionPosition}
+                  activityPosition={this.props.activityPosition}
                 />
               ))}
             </div>

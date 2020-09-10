@@ -23,6 +23,7 @@ const styles = {
 export default class ActivitySectionCardButtons extends Component {
   static propTypes = {
     activitySection: PropTypes.object,
+    activityPosition: PropTypes.number,
     addTip: PropTypes.func,
     editTip: PropTypes.func,
     addLevel: PropTypes.func
@@ -36,7 +37,7 @@ export default class ActivitySectionCardButtons extends Component {
       editingExistingTip: false,
       addResourceOpen: false,
       addLevelOpen: false,
-      tipToEdit: {type: 'teachingTip', markdown: ''}
+      tipToEdit: {key: 'tip', type: 'teachingTip', markdown: ''}
     };
   }
 
@@ -55,12 +56,25 @@ export default class ActivitySectionCardButtons extends Component {
   handleOpenAddTip = () => {
     this.setState({
       tipToEdit: {
-        key: `tip-${Math.floor(Math.random() * 100)}`,
+        key: `tip-${this.generateTipKey()}`,
         type: 'teachingTip',
         markdown: ''
       },
       addTipOpen: true
     });
+  };
+
+  generateTipKey = () => {
+    let tipNumber = this.props.activitySection.tips.length + 1;
+    while (
+      this.props.activitySection.tips.some(
+        tip => tip.key === `tip-${tipNumber}`
+      )
+    ) {
+      tipNumber++;
+    }
+
+    return tipNumber;
   };
 
   handleCloseAddTip = tip => {
@@ -139,6 +153,8 @@ export default class ActivitySectionCardButtons extends Component {
           handleConfirm={this.handleCloseAddLevel}
           currentLevels={this.props.activitySection.levels}
           addLevel={this.props.addLevel}
+          activitySectionPosition={this.props.activitySection.position}
+          activityPosition={this.props.activityPosition}
         />
       </div>
     );
