@@ -86,8 +86,22 @@ class ActivityCard extends Component {
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      `activitySection-${this.props.activity.activitySections.length + 1}`
+      `activitySection-${this.generateActivitySectionKey()}`
     );
+  };
+
+  generateActivitySectionKey = () => {
+    let activitySectionNumber = this.props.activity.activitySections + 1;
+    while (
+      this.props.activity.activitySections.some(
+        activitySection =>
+          activitySection.key === `activitySection-${activitySectionNumber}`
+      )
+    ) {
+      activitySectionNumber++;
+    }
+
+    return activitySectionNumber;
   };
 
   handleMoveActivity = direction => {
