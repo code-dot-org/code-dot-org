@@ -1001,16 +1001,6 @@ FactoryGirl.define do
       do_you_approve 'No'
     end
 
-    trait :approved_yes do
-      do_you_approve 'Yes'
-      with_approval_fields
-    end
-
-    trait :approved_other do
-      do_you_approve 'Other:'
-      with_approval_fields
-    end
-
     trait :replace_course_yes_csp do
       replace_course 'Yes'
       replace_which_course_csp ['Beauty and Joy of Computing']
@@ -1028,6 +1018,16 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval2122_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
     trait :with_approval_fields do
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
@@ -1071,6 +1071,16 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval2021_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
     trait :with_approval_fields do
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
@@ -1114,6 +1124,16 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
     trait :with_approval_fields do
       plan_to_teach Pd::Application::PrincipalApproval1920Application.options[:plan_to_teach][0]
       school 'Hogwarts Academy of Witchcraft and Wizardry'
@@ -1160,6 +1180,15 @@ FactoryGirl.define do
 
   factory :pd_principal_approval1819_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     title 'Dr.'
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
 
     trait :with_approval_fields do
       school 'Hogwarts Academy of Witchcraft and Wizardry'
