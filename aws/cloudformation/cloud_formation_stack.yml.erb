@@ -14,6 +14,14 @@ Parameters:
     Default: master
     MaxLength: 16
 <% end -%>
+<% if frontends -%>
+  DaemonInstanceType:
+    Type: String
+<% end -%>
+<% if options.console -%>
+  ConsoleInstanceType:
+    Type: String
+<% end -%>
 Resources:
   # Stack-specific IAM permissions applied to both daemon and frontends.
   CDOPolicy:
@@ -106,7 +114,7 @@ Resources:
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
-  build_ami: erb_file(aws_dir('cloudformation/bootstrap_chef_stack.sh.erb'),
+  build_ami: erb_file(BOOTSTRAP_CHEF,
     resource_id: "AMICreate#{ami}",
     node_name: 'ami-$INSTANCE_ID',
     run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
@@ -181,13 +189,9 @@ Resources:
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
-<%   if !frontends && daemon_instance_id -%>
+<%   unless frontends -%>
       Targets:
         - Id: <%=daemon_instance_id%>
-          Port: 80
-<%   elsif daemon %>
-      Targets:
-        - Id: !Ref <%=daemon%>
           Port: 80
 <%   end -%>
 <% end -%>
@@ -418,7 +422,7 @@ Resources:
         Timeout: PT2H
     Properties:
       ImageId: <%=IMAGE_ID%>
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
@@ -432,7 +436,7 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
-          <%=indent(erb_file(aws_dir('cloudformation', 'bootstrap_chef_stack.sh.erb'),
+          <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
             node_name: '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
@@ -461,6 +465,47 @@ Resources:
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
+<% if options.console -%>
+  Console:
+    Type: AWS::EC2::Instance
+    DeletionPolicy: Retain
+    CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
+    Properties:
+      ImageId: <%=IMAGE_ID%>
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref DaemonInstanceProfile
+      KeyName: <%=SSH_KEY_NAME%>
+      Tags:
+        - {Key: Name, Value: <%=environment%>-console}
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: {VolumeSize: 64, VolumeType: gp2}
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          <%=indent(erb_file(BOOTSTRAP_CHEF,
+            resource_id: 'Console',
+            node_name: '$ENVIRONMENT-console',
+            run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[console]'],
+            commit: nil, # track branch
+            daemon: false
+          ), 10)%>
+          # Signal CloudFormation resource.
+          aws cloudformation signal-resource \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --status $STATUS \
+            --region $REGION \
+            || true
+      NetworkInterfaces:
+        - DeviceIndex: 0
+          SubnetId: <%=public_subnets[1].to_json%>
+          GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
+<%   if database %>
+    DependsOn: Aurora1
+<%   end -%>      
+<% end-%>
 <% if alarms-%>
 <%=  component 'alarms'%>
 <% end -%>
