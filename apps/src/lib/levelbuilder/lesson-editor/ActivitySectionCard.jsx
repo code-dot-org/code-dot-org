@@ -299,6 +299,7 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  //TODO: Hook up editing the tip when you click on the icon
   handleEditTip = tip => {
     console.log(`edit tip ${tip}`);
   };
@@ -315,12 +316,12 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
+  //TODO: Hook up being able to actually pick a level to add instead of holding place level
   handleAddLevel = () => {
     const newLevelPosition = this.props.activitySection.levels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
-      //temporary set up where we just add a holding place level
       {
         ids: [NEW_LEVEL_ID],
         activeId: NEW_LEVEL_ID,
@@ -440,6 +441,7 @@ class ActivitySectionCard extends Component {
           addTip={this.handleAddTip}
           editTip={this.handleEditTip}
           addLevel={this.handleAddLevel}
+          activityPosition={this.props.activityPosition}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

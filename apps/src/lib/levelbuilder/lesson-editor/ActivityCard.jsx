@@ -91,7 +91,7 @@ class ActivityCard extends Component {
   };
 
   generateActivitySectionKey = () => {
-    let activitySectionNumber = this.props.activity.activitySections + 1;
+    let activitySectionNumber = this.props.activity.activitySections.length + 1;
     while (
       this.props.activity.activitySections.some(
         activitySection =>
