@@ -1,3 +1,6 @@
+-# Explicitly load the applab i18n strings here, so we can organize the
+-# relevant strings on this page into the applab bucket.
+%script{src: webpack_asset_path("js/#{js_locale}/applab_locale.js")}
 %script{src: webpack_asset_path('js/maker/setup.js')}
 
 :css
