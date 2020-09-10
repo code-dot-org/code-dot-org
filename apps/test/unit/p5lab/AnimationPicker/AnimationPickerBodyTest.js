@@ -22,8 +22,9 @@ describe('AnimationPickerBody', function() {
     categories: CostumeCategories,
     hideUploadOption: false,
     hideAnimationNames: false,
-    isBackground: false,
-    isSpriteLab: false
+    navigatable: true,
+    hideBackgrounds: false,
+    canDraw: true
   };
 
   describe('upload warning', function() {
