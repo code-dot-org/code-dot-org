@@ -87,26 +87,25 @@ describe('AnimationPickerBody', function() {
     });
   });
   describe('handleBackgrounds', () => {
-    it('does not show backgrounds if not isBackgrounds and in spritelab', function() {
+    it('does not show backgrounds if hideBackgrounds', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} isSpriteLab={true} />
+        <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
       );
       const items = body.find(AnimationPickerListItem);
       expect(items.length).to.equal(4);
     });
 
-    it('does shows backgrounds if not isBackgrounds and in gamelab', function() {
+    it('does shows backgrounds if not hideBackgrounds', function() {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
       const items = body.find(AnimationPickerListItem);
       expect(items.length).to.equal(5);
     });
 
-    it('only shows backgrounds if isBackgrounds', function() {
+    it('only shows backgrounds if defaultCategoryQuery is backgrounds', function() {
       const body = shallow(
         <AnimationPickerBody
           {...defaultProps}
-          isSpriteLab={true}
-          isBackground={true}
+          defaultCategoryQuery="backgrounds"
         />
       );
       const items = body.find(AnimationPickerListItem);
