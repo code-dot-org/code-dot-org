@@ -51,7 +51,8 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsp',
   'replaceWhichCourseCsd'
 ];
-const YEAR = '2020-21';
+const YEAR = '2021-22';
+const SUMMER_YEAR = '2021';
 const YES = 'Yes';
 
 export default class PrincipalApprovalComponent extends LabeledFormComponent {
@@ -314,7 +315,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           to the number of units they intend to teach, which include:
         </p>
         <ul>
-          <li>One summer workshop in 2020</li>
+          <li>One summer workshop in {SUMMER_YEAR}</li>
           <li>
             Up to four one-day workshops during the {YEAR} school year
             (typically held on Saturdays)

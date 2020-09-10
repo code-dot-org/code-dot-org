@@ -50,7 +50,7 @@ module Pd::Application
     end
 
     def self.year
-      YEAR_20_21
+      YEAR_21_22
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
@@ -79,7 +79,7 @@ module Pd::Application
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
           "I hope to include this course in the #{year} master schedule",
-          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2122-22)",
+          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2022-23)",
           "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
