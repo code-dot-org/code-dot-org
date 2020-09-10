@@ -52,7 +52,7 @@ class ManageStudentActionsCell extends Component {
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
-    setSection: PropTypes.func,
+    setSection: PropTypes.func
   };
 
   state = {
