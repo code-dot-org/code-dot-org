@@ -426,12 +426,11 @@ Resources:
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
-      - Key: Name
-        Value: !Ref AWS::StackName
+        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : '!Ref AWS::StackName'%>}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: 64
+            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -452,12 +451,14 @@ Resources:
             --region $REGION \
             || true
       NetworkInterfaces:
-      - AssociatePublicIpAddress: true
-        DeviceIndex: 0
-        SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+      - DeviceIndex: 0
+        SubnetId: <%=(frontends ? subnets : public_subnets).first.to_json%>
         GroupSet:
           - !ImportValue VPC-FrontendSecurityGroup
           - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
+<%  unless frontends -%>
+        AssociatePublicIpAddress: true
+<%  end -%>
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
@@ -472,8 +473,8 @@ Resources:
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
       ImageId: <%=IMAGE_ID%>
-      InstanceType: !Ref InstanceType
-      IamInstanceProfile: !Ref DaemonInstanceProfile
+      InstanceType: !Ref ConsoleInstanceType
+      IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
         - {Key: Name, Value: <%=environment%>-console}
@@ -500,7 +501,7 @@ Resources:
             || true
       NetworkInterfaces:
         - DeviceIndex: 0
-          SubnetId: <%=public_subnets[1].to_json%>
+          SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 <%   if database %>
     DependsOn: Aurora1
