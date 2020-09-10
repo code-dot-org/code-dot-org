@@ -235,7 +235,7 @@ gem 'paranoia'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
