@@ -164,6 +164,10 @@ class DeleteAccountsHelper
   end
 
   def remove_poste_data(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_poste_data' because there is a live account with this email"
+      return
+    end
     contact_ids = @pegasus_db[:contacts].where(email: email).map(:id)
     delivery_ids = @pegasus_db[:poste_deliveries].where(contact_id: contact_ids).map(:id)
     @pegasus_db[:poste_opens].where(delivery_id: delivery_ids).delete
@@ -205,6 +209,10 @@ class DeleteAccountsHelper
   # Will eventually replace current steps in account deletion process
   # that directly delete prospects via Pardot API.
   def set_pardot_deletion_via_contact_rollups(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'set_pardot_deletion_via_contact_rollups' because there is a live account with this email"
+      return
+    end
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
@@ -222,6 +230,10 @@ class DeleteAccountsHelper
   # Removes CensusSubmission records associated with this email address.
   # @param [String] email An email address
   def remove_census_submissions(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_census_submissions' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing CensusSubmission"
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
@@ -234,6 +246,10 @@ class DeleteAccountsHelper
   # Removes EmailPreference records associated with this email address.
   # @param [String] email An email address
   def remove_email_preferences(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_email_preferences' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing EmailPreference"
     record_count = EmailPreference.where(email: email).delete_all
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
@@ -316,7 +332,8 @@ class DeleteAccountsHelper
 
     # Cache user email here before destroying user; migrated users have their
     # emails stored in primary_contact_info, which will be destroyed.
-    user_email = user.email
+    # If the user account was already soft-deleted, then fallback to the :email attribute.
+    user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
 
     user.destroy
 
