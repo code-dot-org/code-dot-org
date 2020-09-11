@@ -476,9 +476,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
 
-    verified_email_credentials = AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES - [AuthenticationOption::EMAIL]
-
-    lookup_user = AuthenticationOption.where(credential_type: verified_email_credentials).find_by(hashed_email: User.hash_email(oauth_user.email))&.user || User.where(hashed_email: User.hash_email(oauth_user.email)).where(provider: verified_email_credentials).first
+    lookup_user =
+      AuthenticationOption.where(credential_type: AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES).find_by(hashed_email: User.hash_email(oauth_user.email))&.user ||
+      User.where(hashed_email: User.hash_email(oauth_user.email)).where(provider: AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES).first
     return !!lookup_user
   end
 
