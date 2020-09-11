@@ -172,7 +172,7 @@ Resources:
         - 
           Name: drone-master
           Essential: true
-          Image: drone/drone:1.0.0-rc.5
+          Image: drone/drone:1.9.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
