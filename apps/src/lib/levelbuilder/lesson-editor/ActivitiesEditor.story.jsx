@@ -6,7 +6,7 @@ import reducers, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
 
-const activities = [
+export const activities = [
   {
     key: 'activity-1',
     displayName: 'Main Activity',
@@ -140,7 +140,7 @@ const activities = [
   }
 ];
 
-const levelKeyList = {
+export const levelKeyList = {
   1: 'Level 1',
   2: 'Level 2 - 1',
   3: 'Level 2 - 2',
