@@ -4028,6 +4028,10 @@ zh-CN:
           <strong>主要思想：多个屏幕 - 一个代码工作区。</strong> 这是处理 "click" 事件的代码，来设置为<em>有不同图片的另一个屏幕</em> - <em>goodbyeScreen</em>。现在不能看到那张图片或屏幕，因为没有选择那个屏幕。无论如何，它的代码可以写在这里。</p>
 
           </div>
+        teacher_markdown: |-
+          #### 卡到屏幕
+
+          团队可以假设在纸质原型中的每张卡是一个在软件实验室中的一个屏幕，以简略实验过程。事实上，多个相似的屏幕可以由一个屏幕组成，但是屏幕中所含的东西按实际情况切换。在下节课中，学生将会学习这是则么做成的，但是，这是不在本活动应该预计学生使用这种方法。
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # 我的循环机器人朋友们Jr.
@@ -5525,17 +5529,12 @@ zh-CN:
         - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: 这个程序不会失败。松鼠会到达橡子的位置。
-          feedback: 不正确。斯奎特在最后转向时走错了路。
-        - text: 松鼠在转最后一个弯的时候，它会走错路。
-          correct: true
-          feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少，最终不会到达橡子的位置。
-          feedback: 不正确。在斯奎特转向错误的方向后，走的步数太少。
+        - {}
+        - correct: true
+        - correct: true
         - text: 我不知道。
-          feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -7456,3 +7455,19 @@ zh-CN:
         markdown: |-
           # 顺着电子线索
           ##什么东西是可以在你的电子足迹
+      OPD-K5 About_copy:
+        markdown: "#欢迎到“如何教育计算机科学基础”\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n##这个在线课程是做什么的？ \n这个在线课程时计划用于向老师们介绍 Code.org 的计算机科学基础教纲和资料。以阅读，观看视频，完成互动性难题和回顾学习进程，你会发展属于你自己对计算机科学基础教学的理解。\n\n##这个在线课程是给谁的？\n这个在线课程时设计给**计划教计算机科学基础的小学老师**。这意味着从一般教师到理工科教师到图使馆管理员及在中间的某类职业。\n\n假如你是<a
+          href=\"https://code.org/educate/csd\" target=\"blank\">中学</a>或<a href=\"https://code.org/educate/csp\"
+          target=\"blank\">高中</a>的老师， 我们建议您参考以下资料<a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\">深入性，更专业性的职业成长机会</a>。\n\n##我可以从这个在线课程中学习计算机科学吗？\n虽然这里有机会了解和练习基本编程理论，并了解它们是如何向学生展示的。这不是一个专门性的对成年人开发的课程。不过，在课程的结尾，我们会为您提供其他资料以更深入钻研计算机科学理论。\n\n##为上这个网上课程我需要用经验吗？\n没有过往编程或计算机科学教学经历在写该课程时已经考虑了。
+          \n\n##这个在线课程需要多长时间? \n完成这个课程大概需要4至6小时。\n\n##我可以切换这个课程字的大小吗？\n我们知道并承认文本在此平台可能会有点小！
+          \n\n是文本变大：\n- 在苹果平台上，点击“命令”和“+”；\n- 在Windows系统上，点击“控制（Ctrl）”和“+”。\n\n使文本变小：
+          \n- 在苹果平台上，点击“命令”和“-”；\n- 在Windows系统上，点击“控制（Ctrl）”和“-”。"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # 语言的力量
+
+          ## 在有人在网上用攻击性的语言时，你应该做什么？
+      courseF_EOC_2020:
+        description: 你已经完成了课程F！点击以创建项目。

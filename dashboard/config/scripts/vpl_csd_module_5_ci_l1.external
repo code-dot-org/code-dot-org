@@ -1,0 +1,31 @@
+name 'VPL - CSD - Module 5 - CI - L1'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 1:  Representation Matters  
+**Estimated time: 15 minutes**
+
+
+
+
+## Investigation Goals
+
+**Identify how different representations of data may affect how different problems are solved**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/1/" target="_blank">Lesson 1: Representation Matters</a>
+
+* Become familiar with the different data representations in the activity to support students during this lesson
+
+
+
+
+
+
+
+
+
+MARKDOWN

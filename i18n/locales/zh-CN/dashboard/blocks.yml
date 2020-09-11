@@ -88,9 +88,6 @@ zh-CN:
             MOVES.Kick: 踢腿
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} 一直重复 {MOVE} {DIR}"
         options:
@@ -110,9 +107,6 @@ zh-CN:
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Thriller: 僵尸
             MOVES.Rest: 没有
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
@@ -189,9 +183,6 @@ zh-CN:
             MOVES.XArmsUp: 拉伸
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} 重复 {MOVE} {DIR} 一次"
         options:
@@ -220,9 +211,6 @@ zh-CN:
             MOVES.XArmsUp: 拉伸
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: 执行 {CODE}
       Dancelab_everyMeasuresRange:
@@ -1122,6 +1110,13 @@ zh-CN:
             '"z"': z
       gamelab_locationAt:
         text: '位置 x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
       gamelab_locationMouse:
         text: 鼠标位置
       gamelab_locationOf:

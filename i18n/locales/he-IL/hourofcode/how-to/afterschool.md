@@ -1,12 +1,18 @@
 ---
-title: מדריך כיצד ל...
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # איך ללמד "שעה של קוד" בשיעורים לאחר שעות הלימודים ובמועדוניות
 
-### הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! אם תצטרכו עזרה נוספת, תוכלו למצוא [מתנדב/ת מקומי/ת]({{ urls/volunteer_local }}) שיעזור לכם/ן להעביר שעת קוד בשיעורים שלאחר שעות הלימודים ובמועדוניות.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -14,23 +20,23 @@ title: מדריך כיצד ל...
 
 ## 2. בחרו סרטון הדרכה
 
-אנחנו מציעים מגוון רחב של [מדריכים כיפיים באורך של שעה אחת]({{ urls/learn }}) למשתתפים בכל הגילאים, אשר נוצרו על ידי אנשים רבים. [נסו אותם!]({{ urls/learn }})
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**כל מדריכי 'שעה של קוד'** דורשים הכנה מזערית מצד המארגנים וכולל הסברים, מה שמאפשר לילדים לעבוד בקצב שלהם ובהתאם לרמתם.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**צריכים תוכנית לשיעור 'שעה של קוד' שלכם?** בדקו את [התבנית הזו](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. קדמו את שעת הקוד שלכם/ן
 
-קדמו את שעת הקוד שלכם/ן [עם הכלים האלו]({{ urls/promote }}) ועודדו אחרים לארח אירועים משלהם.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. תכננו את הצרכים הטכונולוגיים - מחשבים הם לא חובה
 
-The best Hour of Code experience includes Internet-connected computers. אבל **אינך** נדרש למחשב עבור כל ילד, וגם באפשרותך לבצע "שעה של קוד" ללא מחשב כלל.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **יש רוחב פס נמוך?** תכנן להציג סרטונים בפני כל הכיתה, כך שאף תלמיד לא יידרש להוריד בעצמו את הסרטונים. או נסה את המדריכים הלא מקוונים.
+ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ספק אזניות עבור הכיתה, או בקש מהתלמידים להביא את שלהם, אם המדריך אשר בחרת עובד הכי טוב עם שמע.
 
