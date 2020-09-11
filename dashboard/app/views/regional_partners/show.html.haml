@@ -20,21 +20,12 @@
 %p
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
-- %w(csd csp).each do |course|
-  - %w(teacher facilitator).each do |role|
-    - %w(open close).each do |state|
-      %p
-        %strong
-          = "Apps #{state} date for #{course.upcase} #{role.pluralize}"
-        = @regional_partner.send("apps_#{state}_date_#{course}_#{role}".to_sym)
 %p
-  %strong Apps Priority Deadline Date
-  = @regional_partner.apps_priority_deadline_date
-- %w(csd csp).each do |course|
-  %p
-    %strong
-      ="#{course.upcase} Cost"
-    = @regional_partner.send("#{course}_cost".to_sym)
+  %strong Apps open date for teachers
+  = @regional_partner.apps_open_date_teacher
+%p
+  %strong Apps close date for teachers
+  = @regional_partner.apps_close_date_teacher
 %p
   %strong
     ="Program information"
@@ -52,29 +43,8 @@
   %strong Contact Name:
   = @regional_partner.contact_name
 %p
-  %strong Ship Attention:
-  = @regional_partner.attention
-%p
-  %strong Street:
-  = @regional_partner.street
-%p
-  %strong Apartment/Suite:
-  = @regional_partner.apartment_or_suite
-%p
-  %strong City:
-  = @regional_partner.city
-%p
-  %strong State:
-  = @regional_partner.state
-%p
-  %strong Zip Code:
-  = @regional_partner.zip_code
-%p
   %strong Ship Phone Number:
   = @regional_partner.phone_number
-%p
-  %strong Notes:
-  = @regional_partner.notes
 %p
   %strong Created At:
   = @regional_partner.created_at.strftime('%F')
