@@ -168,6 +168,9 @@ Resources:
           Name: db-data
           Host:
             SourcePath: /var/lib/drone
+        - Name: /etc/drone.key
+          Host:
+            SourcePath: /var/lib/drone/drone.key
       ContainerDefinitions:
         - 
           Name: drone-master
