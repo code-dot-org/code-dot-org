@@ -7,8 +7,7 @@ import i18n from '@cdo/locale';
 const styles = {
   label: {
     paddingLeft: 16,
-    fontFamily: 'Roboto',
-    fontWeight: 700
+    textAlign: 'left'
   },
   container: {
     display: 'flex',
@@ -82,6 +81,7 @@ class GoogleClassroomShareButton extends React.Component {
   // https://developers.google.com/classroom/guides/sharebutton
   renderButton() {
     window.gapi.sharetoclassroom.render(this.props.buttonId, {
+      theme: 'light',
       url: this.props.url,
       itemtype: this.props.itemtype,
       title: this.props.title,
@@ -94,7 +94,7 @@ class GoogleClassroomShareButton extends React.Component {
     return (
       <span style={styles.container}>
         <span id={this.props.buttonId} />
-        <span style={styles.label}>{i18n.loginTypeGoogleClassroom()}</span>
+        <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
       </span>
     );
   }
