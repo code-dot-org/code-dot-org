@@ -220,6 +220,10 @@ Resources:
             -
               Name: DRONE_USER_CREATE
               Value: username:uponthesun,admin:true
+            # Non-profit license key is manually deployed to a file on the host operating system.
+            -
+              Name: DRONE_LICENSE
+              Value: /etc/drone.key
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
