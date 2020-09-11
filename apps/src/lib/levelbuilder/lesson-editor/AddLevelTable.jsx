@@ -15,6 +15,9 @@ const styles = {
   }
 };
 
+//TODO Change the table to something more dynamic like used on teacher dashboard
+//And pull in real level data
+
 export default class AddLevelTable extends Component {
   static propTypes = {
     addLevel: PropTypes.func

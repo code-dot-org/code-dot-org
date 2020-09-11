@@ -51,7 +51,9 @@ export default class AddLevelDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     currentLevels: PropTypes.array,
-    addLevel: PropTypes.func
+    addLevel: PropTypes.func,
+    activityPosition: PropTypes.number,
+    activitySectionPosition: PropTypes.number
   };
 
   constructor(props) {
@@ -101,6 +103,7 @@ export default class AddLevelDialog extends Component {
           <div style={styles.rightColumn}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
+              {/*TODO Hook up removeLevel for the addLevelDialog*/}
               {this.props.currentLevels.map(level => (
                 <LevelToken
                   key={level.position + '_' + level.ids[0]}
@@ -108,8 +111,8 @@ export default class AddLevelDialog extends Component {
                   removeLevel={() => {
                     console.log('remove level');
                   }}
-                  activitySectionPosition={1} //todo update
-                  activityPosition={1} //todo update
+                  activitySectionPosition={this.props.activitySectionPosition}
+                  activityPosition={this.props.activityPosition}
                 />
               ))}
             </div>

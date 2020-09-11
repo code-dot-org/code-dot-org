@@ -13,6 +13,9 @@ const styles = {
   }
 };
 
+//TODO Hook up the filtering system to work on the real levels
+//Selects need real data added into them
+
 export default class AddLevelFilters extends Component {
   static propTypes = {};
 

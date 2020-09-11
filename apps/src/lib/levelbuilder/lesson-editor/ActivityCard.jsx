@@ -13,6 +13,7 @@ import {
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import ReactDOM from 'react-dom';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   activityHeader: {
@@ -60,16 +61,18 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: PropTypes.object.isRequired,
+    activity: activityShape,
     activitiesCount: PropTypes.number,
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func,
     setActivitySectionMetrics: PropTypes.func.isRequired,
     setTargetActivitySection: PropTypes.func.isRequired,
     targetActivitySectionPos: PropTypes.number,
-    activitySectionMetrics: PropTypes.object.isRequired
+    activitySectionMetrics: PropTypes.object.isRequired,
+
+    //redux
+    addActivitySection: PropTypes.func,
+    removeActivity: PropTypes.func,
+    moveActivity: PropTypes.func,
+    updateActivityField: PropTypes.func
   };
 
   constructor(props) {
@@ -83,8 +86,22 @@ class ActivityCard extends Component {
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      `activitySection-${this.props.activity.activitySections.length + 1}`
+      `activitySection-${this.generateActivitySectionKey()}`
     );
+  };
+
+  generateActivitySectionKey = () => {
+    let activitySectionNumber = this.props.activity.activitySections.length + 1;
+    while (
+      this.props.activity.activitySections.some(
+        activitySection =>
+          activitySection.key === `activitySection-${activitySectionNumber}`
+      )
+    ) {
+      activitySectionNumber++;
+    }
+
+    return activitySectionNumber;
   };
 
   handleMoveActivity = direction => {
