@@ -16,5 +16,6 @@ describe('LessonEditor', () => {
     const wrapper = shallow(<LessonEditor {...defaultProps} />);
     expect(wrapper.contains('Lesson Name'));
     expect(wrapper.contains('Lesson Overview'));
+    expect(wrapper.find('ActivitiesEditor').length).to.equal(1);
   });
 });
