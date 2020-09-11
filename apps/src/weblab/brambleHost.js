@@ -4,8 +4,10 @@
  * JS to communicate between Bramble and Code Studio
  */
 
+const BRAMBLE_BASE_URL = '//downloads.computinginthecore.org/bramble_0.1.29/';
+
 window.requirejs.config({
-  baseUrl: '/blockly/js/bramble/'
+  baseUrl: BRAMBLE_BASE_URL
   // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
 });
 
@@ -534,9 +536,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url:
-      '//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file',
-    // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
+    url: BRAMBLE_BASE_URL + 'index.html?disableExtensions=bramble-move-file',
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,
     disableUIState: true,
@@ -759,6 +759,7 @@ function modalError(message, Bramble, showButtons = true) {
 
 // Load bramble.js
 requirejs(['bramble'], function(Bramble) {
+  // TODO: double-check require statement below now that bramble isn't an npm package
   // DEVMODE: requirejs(["bramble/client/main"], function (Bramble) {
   load(Bramble);
 });
