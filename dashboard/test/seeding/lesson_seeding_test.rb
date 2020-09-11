@@ -123,7 +123,7 @@ class LessonSeedingTest < ActiveSupport::TestCase
     Tempfile.create do |f|
       f << script_lessons_json
       f.rewind
-      LessonSeeding.update_lessons_from_seed_files([f.path])
+      LessonSeeding.seed_lessons([f.path])
     end
   end
 
