@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 
 const styles = {
   textarea: {
@@ -28,6 +29,8 @@ export default class LessonEditor extends Component {
             defaultValue={overview}
           />
         </label>
+
+        <ActivitiesEditor />
 
         <button className="btn btn-primary" type="submit" style={{margin: 0}}>
           Save Changes
