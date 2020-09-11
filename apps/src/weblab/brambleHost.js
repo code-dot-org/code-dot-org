@@ -4,13 +4,10 @@
  * JS to communicate between Bramble and Code Studio
  */
 
-const BRAMBLE_BASE_URL =
-  'https://downloads.computinginthecore.org/bramble_0.1.29/';
+const BRAMBLE_BASE_URL = document.querySelector('script[data-brambleurl]')
+  .dataset.brambleurl;
 
-window.requirejs.config({
-  baseUrl: BRAMBLE_BASE_URL
-  // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
-});
+window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
@@ -542,8 +539,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url: BRAMBLE_BASE_URL + 'index.html?disableExtensions=bramble-move-file',
-    // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
+    url: BRAMBLE_BASE_URL + '/index.html?disableExtensions=bramble-move-file',
     useLocationSearch: true,
     disableUIState: true,
     initialUIState: {
@@ -765,7 +761,6 @@ function modalError(message, Bramble, showButtons = true) {
 
 // Load bramble.js
 requirejs(['bramble'], function(Bramble) {
-  // TODO: double-check require statement below now that bramble isn't an npm package
   // DEVMODE: requirejs(["bramble/client/main"], function (Bramble) {
   load(Bramble);
 });
