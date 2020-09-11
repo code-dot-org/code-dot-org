@@ -350,6 +350,7 @@
   "makerSetupDownloadProblem": "There was a problem getting your download link.",
   "makerSetupFetchingVersion": "Getting the latest version...",
   "makerSetupFollowInstructions": "Follow the instructions given by the interactive setup checklist.",
+  "makerSetupInstallSerialConnector": "Please install the [Code.org Serial Connector Chrome App]({webstoreURL}).",
   "makerSetupLinuxAlternative": "Alternative Installers",
   "makerSetupLinuxAlternativeInstall": "[Install from source](https://github.com/code-dot-org/browser)",
   "makerSetupMakerAppForChromebook": "Maker Toolkit for Chromebook",
