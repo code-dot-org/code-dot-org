@@ -2049,6 +2049,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil program_manager.purged_at
   end
 
+  test 'does not delete email centric data if there is a live account with the same email' do
+    # This behaviour is desired so we don't accidentally delete data related to a live account.
+    # teacher created an account and has responded to one of our census surveys.
+    teacher_old = create :teacher
+    teacher_name = teacher_old.name
+    teacher_email = teacher_old.email
+
+    # create the email related data
+    create :census_your_school2017v0, submitter_email_address: teacher_email
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    create :email_preference, email: teacher_email
+    refute_empty EmailPreference.where(email: teacher_email)
+    Poste2.create_recipient(teacher_email, name: teacher_name, ip_address: '127.0.0.1')
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+    # Pardot should not be told to delete the email from its records
+    ContactRollupsPardotMemory.expects(:find_or_create_by).never
+
+    # teacher deletes their old account because they no longer teach CS
+    teacher_old.destroy!
+    # teacher creates a new account because they started teaching CS again.
+    create :teacher, email: teacher_email
+    # the old teacher account which was soft deleted is now purged by our automated systems.
+    purge_user teacher_old
+
+    # confirm that the email related data is still present
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    refute_empty EmailPreference.where(email: teacher_email)
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+
+    # confirm the old teacher account is purged
+    assert teacher_old.purged_at
+  end
+
   private
 
   def assert_logged(expected_message)
