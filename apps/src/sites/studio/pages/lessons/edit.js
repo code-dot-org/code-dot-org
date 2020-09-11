@@ -19,8 +19,8 @@ $(document).ready(function() {
 
   registerReducers({...reducers});
   const store = getStore();
-
   //TODO Switch to using real data once we have activity data
+
   store.dispatch(init(activities, levelKeyList));
 
   ReactDOM.render(
