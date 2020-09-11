@@ -95,6 +95,7 @@ social:
       tutorials: #{tutorials_contents.to_json.html_safe},
       locale: "#{request.locale}",
       robotics: true,
+      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
       backButton: true,
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])}
     });
