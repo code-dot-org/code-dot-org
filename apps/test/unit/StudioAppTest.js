@@ -107,6 +107,39 @@ describe('StudioApp', () => {
       });
     });
 
+    describe('The StudioApp.resetButtonClick function', () => {
+      let studio, reportSpy;
+      beforeEach(() => {
+        studio = studioApp();
+        studio.onResetPressed = () => {};
+        studio.toggleRunReset = () => {};
+        studio.clearHighlighting = () => {};
+        studio.isUsingBlockly = () => {
+          return false;
+        };
+        studio.reset = () => {};
+
+        reportSpy = sinon.spy();
+        studio.report = reportSpy;
+      });
+
+      it('Sets hasReported to false', () => {
+        studio.hasReported = true;
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.not.been.called;
+      });
+
+      it('Calls `report` if it has not yet been called', () => {
+        studio.hasReported = false;
+        studio.config = {level: {}};
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.been.calledOnce;
+        delete studio.config;
+      });
+    });
+
     describe('The StudioApp.report function', () => {
       let clock, studio, onAttemptSpy;
       beforeEach(() => {
@@ -132,6 +165,12 @@ describe('StudioApp', () => {
         studio.report({});
 
         expect(studio.milestoneStartTime).to.equal(2000);
+      });
+
+      it('sets hasReported to true', () => {
+        studio.hasReported = false;
+        studio.report({});
+        expect(studio.hasReported).to.be.true;
       });
 
       it('calculates the timeSinceLastMilestone', () => {
