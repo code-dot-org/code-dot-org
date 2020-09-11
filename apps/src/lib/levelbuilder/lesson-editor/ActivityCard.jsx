@@ -46,7 +46,7 @@ const styles = {
     marginLeft: 10
   },
   label: {
-    fontSize: 20,
+    fontSize: 18,
     marginRight: 5
   },
   input: {
@@ -55,7 +55,8 @@ const styles = {
   labelAndInput: {
     marginLeft: 5,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   }
 };
 
@@ -157,7 +158,7 @@ class ActivityCard extends Component {
             <span style={styles.label}>{`Activity:`}</span>
             <input
               value={activity.displayName}
-              style={styles.input}
+              style={{...styles.input, ...{width: 150}}}
               onChange={this.handleChangeDisplayName}
             />
           </label>
