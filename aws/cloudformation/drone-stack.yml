@@ -168,10 +168,6 @@ Resources:
           Name: db-data
           Host:
             SourcePath: /var/lib/drone
-        -
-          Name: /etc/drone.key
-          Host:
-            SourcePath: /var/lib/drone/drone.key
       ContainerDefinitions:
         - 
           Name: drone-master
@@ -224,7 +220,7 @@ Resources:
             # Non-profit license key is manually deployed to a file on the host operating system.
             -
               Name: DRONE_LICENSE
-              Value: /etc/drone.key
+              Value: /data/drone.key
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
