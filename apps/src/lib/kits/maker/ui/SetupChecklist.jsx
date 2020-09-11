@@ -20,6 +20,7 @@ import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 import Button from '@cdo/apps/templates/Button';
+import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -209,14 +210,11 @@ export default class SetupChecklist extends Component {
           stepName={'Chrome App installed' + (isChromeOS() ? '' : ' (Legacy)')}
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
-          Please install the{' '}
-          <a
-            href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg"
-            target="_blank"
-          >
-            Code.org Serial Connector Chrome App
-          </a>
-          .
+          <SafeMarkdown
+            markdown={i18n.makerSetupInstallSerialConnector({
+              webstoreURL: CHROME_APP_WEBSTORE_URL
+            })}
+          />
           <br />
           Once it is installed, come back to this page and click the "re-detect"
           button, above.
