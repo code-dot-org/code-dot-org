@@ -354,6 +354,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
