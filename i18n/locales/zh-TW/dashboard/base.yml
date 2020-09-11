@@ -311,6 +311,7 @@ zh-TW:
       sections: "學習小組"
       help_support: "幫助與支援"
       report_bug: "回報問題"
+      report_abuse: "檢舉濫用"
       teacher_community: "教師社群"
       professional_learning: "專業學習"
       documentation: "說明文件"
@@ -346,6 +347,7 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+      legal: "法律與隱私權"
       legal_privacy: "隱私政策"
       legal_tos: "服務條款"
     user:

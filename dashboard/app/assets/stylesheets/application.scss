@@ -3418,6 +3418,10 @@ h2.danger {
   text-align: center;
 }
 
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
+}
+
 #parent-email-banner {
   position: fixed;
   bottom: 0;

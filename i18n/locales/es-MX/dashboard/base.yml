@@ -470,6 +470,7 @@ es-MX:
     for_parents_and_guardians: "Para padres y tutores"
     link_a_parent_email: "Conecta tu correo electrónico como padre o tutor a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo"
     parent_guardian_email_label: "Correo electrónico del padre o tutor"
+    remove_parent_email_label: "Quitar"
     none: "Ninguna"
     only_one_parent_email_supported_warning: "Nota: en este momento sólo podemos incluir el correo electrónico de un padre o tutor por cada cuenta de estudiante. "
     encrypted: "encriptado"
@@ -785,6 +786,14 @@ es-MX:
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
     reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.
     review_terms: "Revisa los términos actualizados"
+  donor_interstitial:
+    title: "Tus cursos gratis de Ciencia de Computación son posible por..."
+    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
+    local_supporters: "Simpatizantes Locales"
+    global_supporters: "Simpatizantes Globales"
+    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidad a más estudiantes."
+    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
+    get_started: "Empieza en Code.org"
   school_info_interstitial:
     title: "Queremos que cada estudiante pueda acceder a las Ciencias de la Computación. ¡Ayúdanos a seguir nuestro progreso!"
     message: "Ingresa la información de la escuela a continuación."

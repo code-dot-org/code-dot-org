@@ -16,16 +16,10 @@ lt:
         options:
           MOVE:
             MOVES.Rest: Nė vienas
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             MOVES.Rest: Nė vienas
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -40,16 +34,10 @@ lt:
         options:
           MOVE:
             MOVES.Rest: Nė vienas
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             MOVES.Rest: Nė vienas
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -116,26 +104,6 @@ lt:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': deimantą
             '"random"': atsitiktinis
@@ -149,22 +117,6 @@ lt:
         options:
           EFFECT:
             '"none"': Nė vienas
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -432,18 +384,6 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

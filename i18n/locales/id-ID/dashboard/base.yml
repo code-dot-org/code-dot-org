@@ -162,7 +162,7 @@ id:
     additional_information: "Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran Anda"
     user_type_button: "Perbarui tipe akun"
     user_type_label: "Jenis akun"
-    user_type_teacher: "Pelajar"
+    user_type_teacher: "Guru"
     user_type_student: "siswa"
     field_is_required: "diperlukan"
     accept_terms: "Anda menyetujui untuk membuat akun"

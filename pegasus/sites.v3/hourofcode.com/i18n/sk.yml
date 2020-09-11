@@ -190,6 +190,8 @@ sk:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -363,6 +365,7 @@ sk:
   how_to_nav_companies: Pre spoločnosti
   how_to_nav_afterschool_educators: Pre mimoškolských učiteľov
   how_to_nav_volunteers: Pre dobrovoľníkov
+  how_to_nav_virtual: For virtual events
   whats_next_header: Čo ďalej?
   whats_next_description: Pošleme vám materiály a užitočné tipy pre vašu uladosť.
     <a href='http://code.org/learn'> Vyskúšajte si návody</a> pre akýkoľvek prehliadač,
@@ -8382,7 +8385,7 @@ sk:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8600,9 +8603,9 @@ sk:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9015,7 +9018,8 @@ sk:
     iPad
   tutorial_scratchcartoon_string_platforms: Všetky moderné prehliadače, Android tablet,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android telefón, iPhone
+  tutorial_codemonkeyjr_string_platforms: Všetky moderné prehliadače, Android tablet,
+    iPad, Android telefón, iPhone
   tutorial_bananatales_string_platforms: Všetky moderné prehliadače
   tutorial_scratchtales_string_platforms: Všetky moderné prehliadače, Android tablet,
     iPad
