@@ -7,6 +7,7 @@ import {
   gtChrome33,
   isChromeOS
 } from './browserChecks';
+import {detectBoardTypeFromPort} from './boardUtils';
 
 export default class SetupChecker {
   port = null;
@@ -56,10 +57,11 @@ export default class SetupChecker {
   }
 
   /**
-   * @return {Promise}
+   * Return the type of board connected to port.
+   * @return {string}
    */
   detectBoardType() {
-    return this.boardController.detectBoardType();
+    return detectBoardTypeFromPort(this.port);
   }
 
   /**
