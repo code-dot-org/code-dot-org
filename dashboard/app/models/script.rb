@@ -1134,7 +1134,7 @@ class Script < ActiveRecord::Base
         JSON.parse(stage_descriptions).each do |stage|
           stage_name = stage['name']
           stage_data = {
-            'description_student' => 'Fake Description',
+            'description_student' => stage['descriptionStudent'],
             'description_teacher' => stage['descriptionTeacher']
           }
           metadata_i18n['lessons'][stage_name] = stage_data
