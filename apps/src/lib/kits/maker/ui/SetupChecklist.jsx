@@ -216,11 +216,9 @@ export default class SetupChecklist extends Component {
             })}
           />
           <br />
-          Once it is installed, come back to this page and click the "re-detect"
-          button, above.
+          {i18n.makerSetupRedetect()}
           <br />
-          If a prompt asking for permission for Code Studio to connect to the
-          Chrome App pops up, click Accept.
+          {i18n.makerSetupAcceptPrompt()}
           {this.contactSupport()}
         </ValidationStep>
       );
