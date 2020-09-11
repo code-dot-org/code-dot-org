@@ -5,25 +5,90 @@ video_player: true
 ---
 <a id="top"></a>
 
-<p align="center"><img style="max-width: 100%" src="/images/fit-970/forum-banner.png"></p>
+<p align="center"><img style="max-width: 100%" src="/images/fit-970/2020forumbanner.png"></p>
 
 
-## Join Us September 27-28, 2018
+# Register for the Computer Science State Policy Forum
 
-The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)).
+The annual Computer Science State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year the forum goes virtual! The forum consists of two sessions. Apply by October 11, 2020.
 
-The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
+## Session 1: Policy Forum Plenary
+Join us Oct. 14 from 1:00 to 2:30 pm ET for a panel discussion of how "Computer Science is More Important Than Ever" featuring three state education chiefs. We'll also launch the **2020 State of Computer Science Education Report**.
 
-The **pre-forum** begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
+<p align="left"><img style="max-width: 70%" src="/images/fit-970/Speakers.png"></p>
 
-The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 2:30 pm on Friday, September 28.
+<p>
+<a href="https://code.zoom.us/webinar/register/WN_K9JDLUxVRf-DYgiA9zQYsw"><button>Register for the Main Session</button></a>
+</p>
+<hr>
 
-## Application Details
+## Session 2: State of Your State
+Join us later on Oct 14 or 15 for the **State of Your State Session**. Learn about and discuss the state of computer science in your state. See the chart below for the day and time of your state's session and registration link.
 
-* The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition.
-* Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**.
-* A limited number of scholarships are available based on need and can be requested in the application form.
-* Applications are currently closed.
+
+State | Date  | Time   |Link|
+--------------|------------------|-----------------|----|
+Alabama 	| Oct 15 | 1:30 - 2:30 pm ET 	|<a href=""><button>Register</button></a>|
+Alaska  	| Oct 14 | 3:00 - 4:00 pm AKT |<a href=""><button>Register</button></a>|
+Arizona	|Oct 14  | 2:30 - 3:30 pm MST| <a href=""><button>Register</button></a>|
+Arkansas	|Oct 14|4:30 - 5:30 pm CT|<a href=""><button>Register</button></a>|
+California|Oct 14|2:30 - 3:30 pm PT|Register|
+Colorado	|Oct 14|2:00 - 3:00 pm MT|Register|
+Connecticut|Oct 15|9:00 - 10:00 am ET|Register|
+Delaware	|Oct 15|3:00 - 4:00 pm ET|Register|
+District of Columbia|Oct 15|12:00 - 1:00 pm ET|Register|
+Florida	|Oct 14|2:30 - 3:30 pm ET|Register|
+Georgia	|Oct 15|3:00 - 4:00 pm ET|Register|
+Hawaii		|Oct 14|1:00 - 2:00 pm HT|Register|
+Idaho		|Oct 14|2:00 - 3:00 pm MT|Register|
+Illinois  | Oct 15  | 9:30 - 10:30 am CT|Register|
+Indiana	|Oct 14|4:00 - 5:00 pm ET|Register|
+Iowa	|Oct 14|1:30-2:30 pm CT|Register|
+Kansas	|Oct 15|3:30 - 4:30 pm CT|Register|
+Kentucky	|Oct 15|9:00 - 10:00 am ET|Register|
+Louisiana	|Oct 15|9:30 - 10:30 am CT|Register|
+Maine	|Oct 15|1:30 - 2:30 pm ET|Register|
+Maryland	|Oct 14|2:30 - 3:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJMqf-qsqj4jE9MI3ntbb97bhTMcPGqpTS-h"><button>Register</button></a>|
+Massachusetts|Oct 15|3:00 - 4:00 pm ET|Register|
+Michigan|Oct 14|2:30 - 3:30 pm ET|Register|
+Minnesota|Oct 15|4:30 - 5:30 pm CT|Register|
+Mississippi|Oct 14|3:00 - 4:00 pm CT|Register|
+Missouri|Oct 15|2:00 - 3:00 pm CT|Register|
+Montana|Oct 14|3:30 - 4:30 pm MT|Register|
+Nebraska|Oct 15|11:00 am - 12:00 pm CT|Register|
+Nevada|Oct 14|4:00 - 5:00 pm PT|Register|
+New Hampshire|Oct 15 |4:30 - 5:30 pm ET|Register|
+New Jersey|Oct 15|10:30 - 11:30 am ET|Register|
+New Mexico|Oct 15|11:30 am - 12:30 pm MT|Register|
+New York|Oct 14|2:30 - 3:30 pm ET|Register|
+North Carolina|Oct 15|12:00 - 1:00 pm ET|Register|
+North Dakota|Oct 15|12:30 - 1:30 pm CT|Register|
+Ohio|Oct 15|10:30 - 11:30 am ET|Register|
+Oklahoma|Oct 14|3:00 - 4:00 pm CT|Register|
+Oregon|Oct 15|1:30 - 2:30 pm PT|Register|
+Pennsylvania|Oct 15|1:30 - 2:30 pm Et|Register|
+Rhode Island|Oct 15|9:00 - 10:00 am ET|Register|
+South Carolina|Oct 14|4:00 - 5:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJYlf-qqrzkuE9X4582wx2QxqGbdVm2ls1ht"><button>Register</button></a>|
+South Dakota|Oct 15|2:00 - 3:00 pm CT|Register|
+Tennessee|Oct 15|11:00 am - 12:00 pm CT|Register|
+Texas|Oct 15|2:00 - 3:00 pm CT|Register|
+Utah|Oct 15|2:30 - 3:30 pm MT|Register|
+Vermont|Oct 15|4:30 - 5:30 pm ET|Register|
+Virginia|Oct 15|1:30 - 2:30 pm ET|Register|
+Washington|Oct 15|3:00 - 4:00 pm PT|Register|
+West Virginia|Oct 15|12:00 - 1:00 pm ET|Register|
+Wisconsin|Oct 15|11:00 am - 12:00 pm CT|Register|
+Wyoming|Oct 15|4:00 - 5:00 pm MT|Register|
+
+
+
+
+
+## After the Forum: Webinar Series
+
+In the weeks and months following the State Policy Forum, join us for a series of virtual sessions on a range of topics. Come back here for an update.
+
+
 
 
 ## Pictures From Previous Forums
@@ -42,131 +107,9 @@ The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 
 </div>
 <div style="clear: both;"></div>
 
-## Agenda
-<details>
-  <summary>**What is the schedule for the pre-forum?**</summary>
-  <p>
-  <br>
-### Pre-Forum Workshop (Code.org Advocacy Coalition members)
-
-The pre-forum begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
-
-* The Advocacy Year in Review and Year Ahead
-* State of Your State
-* Workshops: Funding Advocacy, Grassroots, Communications, Legislation 101
-* Networking
-* Team Planning Time
-
-Download the [agenda](https://advocacy.code.org/2018_state_policy_pre_forum_agenda.pdf).
-
-</p>
-</details>
-
-
-<details>
-  <summary>**What is the schedule for the main forum?**</summary>
-  <p>
-  <br>
-### Main Forum (All Participants)
-
-The main forum begins at 2:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 2:30 pm on Friday, September 28. Sessions include:
-
-* The State of K-12 CS
-* Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
-* Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
-* Birds of a Feather Discussions
-* Team Planning Time
-
-Download the [agenda](https://advocacy.code.org/2018_state_policy_main_forum_agenda.pdf).
-
-</p>
-</details>
-
-
-## Travel and Hotel Information
-
-<details>
-<summary>**Where is the forum located?**</summary>
-  <p>
-  <br>
-
-<a href="http://www.jwmarriottdenver.com/", target=_"blank">JW Marriott Denver Cherry Creek</a>
-<br> 150 Clayton Lane
-<br> Denver, Colorado 80206
-
-</p>
-</details>
-
-<details>
-<summary>**Should I reserve my own flights?**</summary>
-  <p>
-  <br>
-  Yes. All approved participants, unless receiving a scholarship, are responsible for booking their own flights and covering their own airfare. The Denver International Airport (airport code: DEN) is a large international airport that services non-stop flights from many cities around the nation. Forum sessions will begin on Thursday September 27 at 9:00 am for pre-forum attendees, while the main forum begins later at 3:00 pm.
-
-</p>
-</details>
-
-<details>
-<summary>**Should I reserve my own hotel?**</summary>
-  <p>
-  <br>
-  There are two options for reserving accommodations.
-  <ul>
-    <li>Code.org and the JW Marriott Denver Cherry Creek are pleased to offer a discounted rate of $199 per night (not including taxes and fees). If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
-    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li>
-  </ul>
-  <p>
-  You can indicate your accommodation preferences on the <a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target=_"blank">application form</a>.
-
-</p>
-</details>
-
-<details>
-<summary>**How do I get to the hotel?**</summary>
-  <p>
-  <br>
-The hotel is located 26 miles or about 35 min from the Denver International Airport (DEN).  Uber and Lyft both provide service in the Denver area including to/from the Denver International Airport via their mobile apps. Please call the hotel at (303) 316-2700 to inquire about town car or shuttle transportation services and fees.
-
-For more information on hotel directions or transportation, please visit the hotel's [website](http://www.jwmarriottdenver.com/Denver-Luxury-Hotel/Directions-87.html).
-</p>
-</details>
-
-<details>
-<summary>**What expenses are covered during the forum?**</summary>
-  <p>
-  <br>
-Code.org is happy to cover the costs of the following:
-
-* Registration fee for all participants accepted to the forum
-* Meals during the forum
-
-**Travel, lodging, and expenses will be the responsibility of the attendee.** A limited number of scholarships are available based on need and can be requested in the application form.
-
-</p>
-</details>
-
-## What to Pack
-<details>
-  <summary>**What kind of clothing should I pack?**</summary>
-  <p>
-  <br>
-We encourage business casual attire during the forum. All our conference sessions are indoors, and air conditioning is usually cool in hotels. We recommend that you bring layers if you get cold easily in air conditioned rooms. You can expect outside temperatures to be warm during the day. If you plan to venture outdoors during your free time, be sure to check the local forecast and plan accordingly!
-</p>
-</details>
-
-<details>
-<summary>**What devices will I need to bring?**</summary>
-  <p>
-  <br>
-Please bring your own laptop/tablet, as we will be accessing online resources. We will not have extra devices on hand for participants to borrow.
-
-</p>
-</details>
-
 
 ## Forum Resources
 
-* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/one-pager.pdf)
 * [State Policy Tracker](http://bit.ly/9policies)
 
 
