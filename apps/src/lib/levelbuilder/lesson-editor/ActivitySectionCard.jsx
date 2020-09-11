@@ -21,6 +21,7 @@ import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   checkbox: {
@@ -83,9 +84,18 @@ styles.targetActivitySectionCard = {
   padding: 16
 };
 
+/*
+An activity section is a chunk of an activity. This could be a section
+or text that explains to the teacher what to say or do to run the lesson or
+it could be a section of a lesson that shows a set of levels that are used
+at that point in the lesson (also known as a progression). ActivitySections
+can have tips attached to the beginning of their content and can be marked with
+slide or remarks as well.
+ */
+
 class ActivitySectionCard extends Component {
   static propTypes = {
-    activitySection: PropTypes.object,
+    activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     activitySectionsCount: PropTypes.number,
     activitiesCount: PropTypes.number,
@@ -289,6 +299,7 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  //TODO: Hook up editing the tip when you click on the icon
   handleEditTip = tip => {
     console.log(`edit tip ${tip}`);
   };
@@ -305,12 +316,12 @@ class ActivitySectionCard extends Component {
     e.preventDefault();
   }
 
+  //TODO: Hook up being able to actually pick a level to add instead of holding place level
   handleAddLevel = () => {
     const newLevelPosition = this.props.activitySection.levels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
-      //temporary set up where we just add a holding place level
       {
         ids: [NEW_LEVEL_ID],
         activeId: NEW_LEVEL_ID,
@@ -430,6 +441,7 @@ class ActivitySectionCard extends Component {
           addTip={this.handleAddTip}
           editTip={this.handleEditTip}
           addLevel={this.handleAddLevel}
+          activityPosition={this.props.activityPosition}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
