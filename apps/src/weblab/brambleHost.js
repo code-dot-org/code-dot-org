@@ -4,7 +4,8 @@
  * JS to communicate between Bramble and Code Studio
  */
 
-const BRAMBLE_BASE_URL = '//downloads.computinginthecore.org/bramble_0.1.29/';
+const BRAMBLE_BASE_URL =
+  'https://downloads.computinginthecore.org/bramble_0.1.29/';
 
 window.requirejs.config({
   baseUrl: BRAMBLE_BASE_URL
