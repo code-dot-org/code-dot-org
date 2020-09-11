@@ -5,6 +5,9 @@ import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/Activitie
 const styles = {
   textarea: {
     width: '100%'
+  },
+  editor: {
+    width: '100%'
   }
 };
 
@@ -17,7 +20,7 @@ export default class LessonEditor extends Component {
   render() {
     const {displayName, overview} = this.props;
     return (
-      <div>
+      <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
 
         <label>
@@ -30,6 +33,7 @@ export default class LessonEditor extends Component {
           />
         </label>
 
+        <h2>Activities & Levels</h2>
         <ActivitiesEditor />
 
         <button className="btn btn-primary" type="submit" style={{margin: 0}}>
