@@ -19,10 +19,8 @@ FactoryGirl.define do
   # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -31,10 +29,8 @@ FactoryGirl.define do
     # No contact details, no workshop application dates, and no workshops.
     contact_name nil
     contact_email nil
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher nil
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher nil
+    apps_open_date_teacher nil
+    apps_close_date_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
     pd_workshops {[]}
   end
@@ -42,20 +38,15 @@ FactoryGirl.define do
   # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
-    # CSD dates but no CSP dates.
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
