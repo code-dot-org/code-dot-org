@@ -1648,7 +1648,7 @@ class Script < ActiveRecord::Base
     script_data = data['script']
     lesson_groups_data = data['lesson_groups']
     lessons_data = data['lessons']
-    #script_levels_data = data['script_levels']
+    script_levels_data = data['script_levels']
 
     script_to_import = Script.find_by(name: script_data['name']) || Script.new
     script_to_import.assign_attributes(script_data)
@@ -1669,10 +1669,28 @@ class Script < ActiveRecord::Base
       lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first
       raise 'No lesson group found' if lesson_group_id.nil?
       lesson_to_import = Lesson.find_by(lesson_group_id: lesson_group_id, key: lesson_data['key']) || Lesson.new
-      lesson_attrs = lesson_data.except('script_name', 'lesson_group_key')
+      lesson_attrs = lesson_data.except('lesson_group_key', 'script_name')
+      lesson_attrs['script_id'] = script_id
+      lesson_attrs['lesson_group_id'] = lesson_group_id
       lesson_to_import.assign_attributes(lesson_attrs)
       lesson_to_import
     end
     Lesson.import! lessons_to_import,  on_duplicate_key_update: :all
+
+    all_lessons = Script.find_by!(name: script_data['name']).lessons
+    script_levels_to_import = script_levels_data.map do |sl_data|
+      lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first
+      raise 'No lesson group found' if lesson_group_id.nil?
+      stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}
+      # TODO: optimize this - probably can use a join
+      script_level_to_import = ScriptLevel.where(stage_id: stage_id).select {|sl| sl.levels.map(&:name) == sl_data['level_names']}.first
+      script_level_to_import ||= ScriptLevel.new
+      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key', 'script_name')
+      script_level_attrs['script_id'] = script_id
+      script_level_attrs['stage_id'] = stage_id
+      script_level_to_import.assign_attributes(script_level_attrs)
+      script_level_to_import
+    end
+    ScriptLevel.import! script_levels_to_import,  on_duplicate_key_update: :all
   end
 end
