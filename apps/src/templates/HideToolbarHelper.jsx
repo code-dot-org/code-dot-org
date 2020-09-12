@@ -105,9 +105,7 @@ export default class HideToolbarHelper extends React.Component {
     this.updateLayout();
 
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
-    window.addEventListener('orientationchange', this.updateLayoutListener);
     window.addEventListener('resize', this.updateLayoutListener);
-    window.addEventListener('scroll', this.updateLayoutListener);
   }
 
   componentWillUnmount() {
