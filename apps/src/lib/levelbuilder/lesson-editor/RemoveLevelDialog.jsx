@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import Dialog from '@cdo/apps/templates/Dialog';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 /**
  * Dialog which confirms removal of the level in the specified position
@@ -10,7 +11,7 @@ import Dialog from '@cdo/apps/templates/Dialog';
  */
 export class UnconnectedRemoveLevelDialog extends Component {
   static propTypes = {
-    activitySection: PropTypes.object.isRequired,
+    activitySection: activitySectionShape.isRequired,
     activityPosition: PropTypes.number.isRequired,
     // Position of level to remove. Dialog opens when this is set.
     levelPosToRemove: PropTypes.number,

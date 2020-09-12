@@ -59,6 +59,11 @@ const styles = {
   }
 };
 
+/*
+  Part of the Activity Editor GUI that allows you to edit all
+  the details of an Activity.
+ */
+
 class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape,
@@ -86,7 +91,7 @@ class ActivityCard extends Component {
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      `activitySection-${this.generateActivitySectionKey()}`
+      this.generateActivitySectionKey()
     );
   };
 
@@ -101,7 +106,7 @@ class ActivityCard extends Component {
       activitySectionNumber++;
     }
 
-    return activitySectionNumber;
+    return `activitySection-${activitySectionNumber}`;
   };
 
   handleMoveActivity = direction => {

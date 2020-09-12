@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TipWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/TipWithTooltip';
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   bottomControls: {
@@ -22,7 +23,7 @@ const styles = {
 
 export default class ActivitySectionCardButtons extends Component {
   static propTypes = {
-    activitySection: PropTypes.object,
+    activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
     editTip: PropTypes.func,
@@ -56,7 +57,7 @@ export default class ActivitySectionCardButtons extends Component {
   handleOpenAddTip = () => {
     this.setState({
       tipToEdit: {
-        key: `tip-${this.generateTipKey()}`,
+        key: this.generateTipKey(),
         type: 'teachingTip',
         markdown: ''
       },
@@ -74,7 +75,7 @@ export default class ActivitySectionCardButtons extends Component {
       tipNumber++;
     }
 
-    return tipNumber;
+    return `tip-${tipNumber}`;
   };
 
   handleCloseAddTip = tip => {
@@ -129,7 +130,7 @@ export default class ActivitySectionCardButtons extends Component {
             <span>
               {this.props.activitySection.tips.map(tip => {
                 return (
-                  <TipWithTooltip
+                  <LessonTipIconWithTooltip
                     tip={tip}
                     key={tip.key}
                     onClick={this.handleEditTip}
