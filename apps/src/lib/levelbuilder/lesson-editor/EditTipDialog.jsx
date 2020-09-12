@@ -8,6 +8,7 @@ import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import _ from 'lodash';
+import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   dialog: {
@@ -28,8 +29,8 @@ const styles = {
 export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
-    tip: PropTypes.object
+    tip: tipShape,
+    handleConfirm: PropTypes.func.isRequired
   };
 
   constructor(props) {

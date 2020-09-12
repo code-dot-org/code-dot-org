@@ -16,16 +16,10 @@ my:
             sprites: အားလုံး
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropEachBy:
         options:
           GROUP:
@@ -36,16 +30,10 @@ my:
             sprites: အားလုံး
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_ifDanceIs:
         options:
           DANCE:
@@ -62,26 +50,6 @@ my:
             '"diamond"': စိန်
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': စိန်
       Dancelab_randomColor:
@@ -230,18 +198,6 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       craft_ifPath:
         options:
           DIR:

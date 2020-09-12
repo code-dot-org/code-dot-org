@@ -5529,17 +5529,12 @@ zh-CN:
         - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: 这个程序不会失败。松鼠会到达橡子的位置。
-          feedback: 不正确。斯奎特在最后转向时走错了路。
-        - text: 松鼠在转最后一个弯的时候，它会走错路。
-          correct: true
-          feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少，最终不会到达橡子的位置。
-          feedback: 不正确。在斯奎特转向错误的方向后，走的步数太少。
+        - {}
+        - correct: true
+        - correct: true
         - text: 我不知道。
-          feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。

@@ -1,5 +1,5 @@
 ---
-title: Cara membimbing orang tua
+title: Hour of Code How-to Guide for parents
 ---
 
 # How to do an Hour of Code with your child
@@ -71,7 +71,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
+<h3>Have young women at home?</h3>
 
 <a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
 

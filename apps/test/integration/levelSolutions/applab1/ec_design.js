@@ -362,10 +362,23 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+      expected: [
+        {
+          // codeModeButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // resetButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // onPuzzleComplete
+          result: true,
+          testResult: TestResults.FREE_PLAY
+        }
+      ]
     },
 
     {
@@ -466,10 +479,23 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+      expected: [
+        {
+          // codeModeButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // resetButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // onPuzzleComplete
+          result: true,
+          testResult: TestResults.FREE_PLAY
+        }
+      ]
     },
 
     {
@@ -555,10 +581,18 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+      expected: [
+        {
+          // resetButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // onPuzzleComplete
+          result: true,
+          testResult: TestResults.FREE_PLAY
+        }
+      ]
     },
 
     {
@@ -1582,10 +1616,18 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+      expected: [
+        {
+          // resetButton clicked
+          result: undefined,
+          testResult: undefined
+        },
+        {
+          // onPuzzleComplete
+          result: true,
+          testResult: TestResults.FREE_PLAY
+        }
+      ]
     },
 
     {

@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
-import {sampleActivities} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ProgressionDetails', () => {
   let defaultProps;
