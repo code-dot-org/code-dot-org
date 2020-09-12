@@ -1633,59 +1633,12 @@ class Script < ActiveRecord::Base
     levels + sublevels
   end
 
-  def self.walk_tree(json_hash, model_obj, parent_scope, steps)
-    steps = steps.clone
-    next_step = steps.shift
-
-    excludes = ([next_step&.hash_key] + (next_step&.excludes || [])).compact # TODO: make this readable
-    attributes = json_hash.except(*excludes)
-
-    if model_obj
-      model_obj.assign_attributes(attributes)
-    else
-      model_obj = parent_scope.new(attributes)
-    end
-
-    return unless next_step&.hash_key
-
-    next_parent_scope = model_obj.send(next_step.hash_key)
-
-    match_on =
-      if next_step.match_on.is_a? String
-        lambda {|h, o| h[next_step.match_on] == o.send(next_step.match_on)}
-      else
-        next_step.match_on
-      end
-
-    json_hash[next_step.hash_key].each do |h|
-      next_model_obj = next_parent_scope.select {|o| match_on.call(h, o)}.first
-      walk_tree(h, next_model_obj, next_parent_scope, steps)
-    end
-
-    model_obj
-  end
-
-  Step = Struct.new(:hash_key, :match_on, :excludes)
-
-  def self.seed_from_json_file(filename)
-    script_hash = JSON.parse(File.read(filename))
-
-    # TODO: needs to handle cases where objects don't already exist
-    script = Script.find_by(name: script_hash['name'])
-    steps = [
-      Step.new('lesson_groups', 'key'),
-      Step.new('lessons', 'key'),
-      Step.new('script_levels', lambda {|h, o| h['level_names'] == o.levels.map(&:name)}),
-      Step.new(nil, nil, ['level_names'])
-    ]
-
-    script = walk_tree(script_hash, script, Script, steps)
-    script
-  end
-
   def serialize_seeding_json
-    # include: '**' allows serialization of associations recursively for any number of levels.
-    # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
-    ScriptSeed::ScriptSerializer.new(self).as_json(include: '**')
+    {
+      script: ScriptSeed::ScriptSerializer.new(self).as_json,
+      lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg).as_json},
+      lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l).as_json},
+      script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl).as_json}
+    }
   end
 end

@@ -1,49 +1,72 @@
 module ScriptSeed
   class ScriptLevelSerializer < ActiveModel::Serializer
     attributes(
+      :level_names, :lesson_key, :lesson_group_key, :script_name, # Uniquely identifying key
+      # Other attributes
       :chapter,
       :position,
       :assessment,
       :properties,
       :named_level,
-      :bonus,
-      :level_names
+      :bonus
     )
 
     def level_names
       # TODO: this creates a ton of queries. Can be greatly improved with a refactor to query for all levels at once.
       object.levels.map(&:name)
     end
+
+    def lesson_key
+      object.lesson.key
+    end
+
+    def lesson_group_key
+      object.lesson.lesson_group.key
+    end
+
+    def script_name
+      object.script.name
+    end
   end
 
   class LessonSerializer < ActiveModel::Serializer
     attributes(
+      :key, :lesson_group_key, :script_name, # Uniquely identifying key
+      # Other attributes
       :name,
       :absolute_position,
       :lockable,
       :relative_position,
-      :properties,
-      :key,
-      :script_levels
+      :properties
     )
 
-    has_many :script_levels, serializer: ScriptSeed::ScriptLevelSerializer
+    def lesson_group_key
+      object.lesson_group.key
+    end
+
+    def script_name
+      object.script.name
+    end
   end
 
   class LessonGroupSerializer < ActiveModel::Serializer
     attributes(
-      :key,
+      :key, :script_name, # Uniquely identifying key
+      # Other attributes
       :user_facing,
       :position,
       :properties
     )
 
-    has_many :lessons, serializer: ScriptSeed::LessonSerializer
+    def script_name
+      object.script.name
+    end
   end
 
   class ScriptSerializer < ActiveModel::Serializer
     attributes(
-      :name,
+      :name, # Uniquely identifying key
+      # Other attributes
       :wrapup_video_id,
       :hidden,
       :login_required,
@@ -51,7 +74,5 @@ module ScriptSeed
       :new_name,
       :family_name
     )
-
-    has_many :lesson_groups, serializer: ScriptSeed::LessonGroupSerializer
   end
 end
