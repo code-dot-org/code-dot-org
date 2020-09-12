@@ -6,10 +6,11 @@ import LessonTip, {
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class TipWithTooltip extends Component {
   static propTypes = {
-    tip: PropTypes.object,
+    tip: tipShape,
     onClick: PropTypes.func
   };
 
