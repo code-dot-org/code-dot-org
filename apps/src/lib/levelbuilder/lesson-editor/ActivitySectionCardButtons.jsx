@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import TipWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/TipWithTooltip';
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   bottomControls: {
@@ -21,7 +22,7 @@ const styles = {
 
 export default class ActivitySectionCardButtons extends Component {
   static propTypes = {
-    activitySection: PropTypes.object,
+    activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
     editTip: PropTypes.func,
