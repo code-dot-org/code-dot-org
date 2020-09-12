@@ -1,7 +1,24 @@
+require 'digest'
+
 module ScriptSeed
+  class LevelsScriptLevelSerializer < ActiveModel::Serializer
+    attributes(
+      :level_key, :script_level_seeding_id
+    )
+
+    def level_key
+      object.level.unique_key
+    end
+
+    def script_level_seeding_id
+      object.script_level.seeding_id
+    end
+  end
+
   class ScriptLevelSerializer < ActiveModel::Serializer
     attributes(
       :level_names, :lesson_key, :lesson_group_key, :script_name, # Uniquely identifying key
+      :seeding_id, # hash of the uniquely identifying key
       # Other attributes
       :chapter,
       :position,
@@ -14,7 +31,7 @@ module ScriptSeed
     def level_names
       # TODO: this creates a ton of queries. Can be greatly improved with a refactor to query for all levels at once.
       # Or maybe we can just use a join
-      object.levels.map(&:name)
+      object.levels.map(&:unique_key)
     end
 
     def lesson_key
