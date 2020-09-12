@@ -31,6 +31,12 @@ const styles = {
   }
 };
 
+/*
+ A GUI for editing activities in a lesson. Shows
+ the editing fields side by side with a preview of how they will
+ look in the lesson plan.
+ */
+
 class ActivitiesEditor extends Component {
   static propTypes = {
     //redux
@@ -49,7 +55,7 @@ class ActivitiesEditor extends Component {
   handleAddActivity = () => {
     this.props.addActivity(
       this.props.activities.length,
-      `activity-${this.generateActivityKey()}`
+      this.generateActivityKey()
     );
   };
 
@@ -63,7 +69,7 @@ class ActivitiesEditor extends Component {
       activityNumber++;
     }
 
-    return activityNumber;
+    return `activity-${activityNumber}`;
   };
 
   setTargetActivitySection = targetActivitySectionPos => {
