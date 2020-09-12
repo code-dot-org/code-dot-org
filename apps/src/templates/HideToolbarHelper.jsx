@@ -43,12 +43,11 @@ export default class HideToolbarHelper extends React.Component {
     }
   }
 
-  isiOS13() {
-    return navigator.userAgent.indexOf('iPhone OS 13') !== -1;
-  }
-
-  isiOS14() {
-    return navigator.userAgent.indexOf('iPhone OS 14') !== -1;
+  isCompatibleiOS() {
+    return (
+      navigator.userAgent.indexOf('iPhone OS 13') !== -1 ||
+      navigator.userAgent.indexOf('iPhone OS 14') !== -1
+    );
   }
 
   isHideCookieSet() {
@@ -61,24 +60,23 @@ export default class HideToolbarHelper extends React.Component {
 
   isToolbarShowing() {
     // window.innerHeight is smaller than document.body.offsetHeight when
-    // the iOS 13/14 Safari toolbar is showing.  It becomes equal when the toolbar
+    // a compatible iOS Safari toolbar is showing.  It becomes equal when the toolbar
     // is hidden.  (Interestingly, document.documentElement.clientHeight is
     // the same as document.body.offsetHeight in both cases.)
     return window.innerHeight < document.body.offsetHeight;
   }
 
   updateLayout = () => {
-    const isiOS13 = this.isiOS13();
-    const isiOS14 = this.isiOS14();
+    const isCompatibleiOS = this.isCompatibleiOS();
     const isHideCookieSet = this.isHideCookieSet();
     const isLandscape = this.isLandscape();
 
-    if (!(isiOS13 || isiOS14) || !isLandscape || isHideCookieSet) {
+    if (!isCompatibleiOS || !isLandscape || isHideCookieSet) {
       this.setState({showHelper: false});
       return;
     }
 
-    // We are on iOS 13/14, in landscape, and we haven't hidden due to a cookie.
+    // We are on a compatible iOS, in landscape, and we haven't hidden due to a cookie.
     // Let's show the helper if we think the toolbar is showing.
     const showHelper = this.isToolbarShowing();
 
