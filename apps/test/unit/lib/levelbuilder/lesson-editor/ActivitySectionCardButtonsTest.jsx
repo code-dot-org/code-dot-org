@@ -20,6 +20,7 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('AddResourceDialog').length).to.equal(1);
+    expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('EditTipDialog').length).to.equal(1);
     expect(wrapper.find('TipWithTooltip').length).to.equal(1);
   });
