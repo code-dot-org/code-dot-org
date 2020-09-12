@@ -318,7 +318,7 @@ Resources:
               SourceVolume: docker-socket
           Environment:
             -
-              Name: DRONE_RPC_SERVER 
+              Name: DRONE_RPC_HOST
               Value: 
                 !Sub 
                   - "http://${ElbDnsName}"
