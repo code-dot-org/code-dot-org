@@ -38,6 +38,7 @@ class Script < ActiveRecord::Base
   has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
+  has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
   has_many :users, through: :user_scripts
   has_many :user_scripts
@@ -1638,7 +1639,8 @@ class Script < ActiveRecord::Base
       script: ScriptSeed::ScriptSerializer.new(self).as_json,
       lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg).as_json},
       lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l).as_json},
-      script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl).as_json}
+      script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl).as_json},
+      levels_script_levels: levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl).as_json}
     }
   end
 
@@ -1649,6 +1651,7 @@ class Script < ActiveRecord::Base
     lesson_groups_data = data['lesson_groups']
     lessons_data = data['lessons']
     script_levels_data = data['script_levels']
+    levels_script_levels_data = data['levels_script_levels']
 
     script_to_import = Script.find_by(name: script_data['name']) || Script.new
     script_to_import.assign_attributes(script_data)
@@ -1692,5 +1695,10 @@ class Script < ActiveRecord::Base
       script_level_to_import
     end
     ScriptLevel.import! script_levels_to_import,  on_duplicate_key_update: :all
+
+    all_script_levels = Script.find_by!(name: script_data['name']).script_levels
+    levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
+      
+    end
   end
 end

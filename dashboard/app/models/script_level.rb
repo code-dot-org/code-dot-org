@@ -34,6 +34,7 @@ class ScriptLevel < ActiveRecord::Base
   belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
+  has_many :levels_script_levels # join table. we need this association for seeding logic
 
   validate :anonymous_must_be_assessment
 
@@ -544,5 +545,10 @@ class ScriptLevel < ActiveRecord::Base
   # prior answers
   def should_hide_survey(user, viewed_user)
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
+  end
+
+  def seeding_id
+    values = [lesson.key, lesson.lesson_group.key, script.name] + levels.map(&:unique_key)
+    HashingUtils.hash_values(values)
   end
 end
