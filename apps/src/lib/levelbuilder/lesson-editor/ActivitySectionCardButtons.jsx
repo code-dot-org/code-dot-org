@@ -55,7 +55,7 @@ export default class ActivitySectionCardButtons extends Component {
   handleOpenAddTip = () => {
     this.setState({
       tipToEdit: {
-        key: `tip-${this.generateTipKey()}`,
+        key: this.generateTipKey(),
         type: 'teachingTip',
         markdown: ''
       },
@@ -73,7 +73,7 @@ export default class ActivitySectionCardButtons extends Component {
       tipNumber++;
     }
 
-    return tipNumber;
+    return `tip-${tipNumber}`;
   };
 
   handleCloseAddTip = tip => {
