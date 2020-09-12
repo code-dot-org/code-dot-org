@@ -1069,7 +1069,7 @@ class LevelTest < ActiveSupport::TestCase
     script = create :csf_script
     assert script.hint_prompt_enabled?
     level = create :level
-    script_level = create :script_level, levels: [level], script: script
+    create :script_level, levels: [level], script: script
     assert level.hint_prompt_enabled?
   end
 
@@ -1079,8 +1079,8 @@ class LevelTest < ActiveSupport::TestCase
     no_hint_script = create :csp_script
     refute no_hint_script.hint_prompt_enabled?
     level = create :level
-    script_level = create :script_level, levels: [level], script: hint_script
-    script_level = create :script_level, levels: [level], script: no_hint_script
+    create :script_level, levels: [level], script: hint_script
+    create :script_level, levels: [level], script: no_hint_script
     assert level.hint_prompt_enabled?
   end
 
@@ -1088,7 +1088,7 @@ class LevelTest < ActiveSupport::TestCase
     no_hint_script = create :csp_script
     refute no_hint_script.hint_prompt_enabled?
     level = create :level
-    script_level = create :script_level, levels: [level], script: no_hint_script
+    create :script_level, levels: [level], script: no_hint_script
     refute level.hint_prompt_enabled?
   end
 end

@@ -16,7 +16,7 @@ steps:
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   pull: always
   commands:
     - |
@@ -43,7 +43,7 @@ steps:
     filename: unit-tests-cache.tar
 
 - name: unit-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   pull: always
   volumes:
   - name: rbenv
@@ -127,7 +127,7 @@ steps:
   - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   pull: always
   commands:
     - |
@@ -153,7 +153,7 @@ steps:
     restore: true
 
 - name: ui-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv

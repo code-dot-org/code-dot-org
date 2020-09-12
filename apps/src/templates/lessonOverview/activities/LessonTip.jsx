@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const styles = {
   tab: {
@@ -29,22 +30,22 @@ const styles = {
 
 export const tipTypes = {
   teachingTip: {
-    displayName: 'Teaching Tip',
+    displayName: i18n.teachingTip(),
     icon: 'lightbulb-o',
     color: color.orange
   },
   contentCorner: {
-    displayName: 'Content Corner',
+    displayName: i18n.contentCorner(),
     icon: 'graduation-cap',
     color: color.teal
   },
   discussionGoal: {
-    displayName: 'Discussion Goal',
+    displayName: i18n.discussionGoal(),
     icon: 'comments',
     color: color.purple
   },
   assessmentOpportunity: {
-    displayName: 'Assessment Opportunity',
+    displayName: i18n.assessmentOpportunity(),
     icon: 'check-circle',
     color: color.purple
   }
