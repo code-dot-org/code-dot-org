@@ -2072,19 +2072,12 @@ fr-FR:
             qui va faire échouer ce programme? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Le programme n'échouera pas. Scrat va atteindre le gland.
-          feedback: Incorrect. Scrat a pris le mauvais chemin après son dernier virage.
-        - text: Scrat prendra le mauvais chemin après son dernier virage.
-          correct: true
-          feedback: Correct!
-        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
-          feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
+        - {}
+        - correct: true
+        - correct: true
         - text: Je ne sais pas.
-          feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
-            après son dernier virage. '
         questions:
-        - text: 'Regarde attentivement le code ci-dessous. Quel est la première erreur
-            qui va faire échouer ce programme? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'oiseau va s'arrêter à un pas du cochon.
@@ -3209,21 +3202,21 @@ fr-FR:
           feedback: Incorrect. La fonction est programmée pour tenir compte de n'importe
             quelle dose de miel supérieur à 0.
         - text: Je ne sais pas.
-          feedback: Le programme fonctionnera pour résoudre le puzzle, aussi. C'est
-            programmé pour supporter n'importe quelle dose de miel supérieur à 0.
+          feedback: Le programme fonctionnera pour résoudre le puzzle, aussi. Il est
+            programmé pour supporter n'importe quelle dose de miel supérieure à 0.
         questions:
         - text: Voici exactement le même programme que le dernier puzzle, mais la
-            dose de miel à ramasser à changer. Que va-t-il se passer lorsque tu vas
+            dose de miel à ramasser a changé. Que va-t-il se passer lorsque tu vas
             cliquer sur "Démarrer"?
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: La fermière ramassera 2 citrouilles.
           feedback: Incorrect. La fermière n'appelle pas "Vérifier et ramasser" tant
-            qu'elle n'est pas arrivé au maïs.
+            qu'elle n'est pas arrivée au maïs.
         - text: La fermière ramassera toutes les citrouilles.
           feedback: Incorrect. La fermière n'appelle pas "Vérifier et ramasser" tant
-            qu'elle n'est pas arrivé au maïs.
-        - text: La fermière ramassera la salade.
+            qu'elle n'est pas arrivée au maïs.
+        - text: La fermière ramassera la laitue.
           feedback: Incorrect. La fermière tourne une fois et s'arrête au maïs.
         - text: La fermière va ramasser le maïs.
           correct: true
@@ -3243,7 +3236,7 @@ fr-FR:
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
-        - text: La fermière ramassera la salade.
+        - text: La fermière ramassera la laitue.
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
@@ -3266,7 +3259,7 @@ fr-FR:
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
-        - text: La fermière ramassera la salade.
+        - text: La fermière ramassera la laitue.
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
@@ -3289,7 +3282,7 @@ fr-FR:
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
-        - text: La fermière ramassera la salade.
+        - text: La fermière ramassera la laitue.
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
@@ -3302,10 +3295,10 @@ fr-FR:
             va ramasser ?
       courseE_prediction_artistFunction1:
         answers:
-        - text: Rien. La fonction n'est appelée dans le programme.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: Rien. La fonction n'est pas appelée dans le programme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera un carré simple.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
@@ -3314,13 +3307,13 @@ fr-FR:
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
         questions:
-        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+        - text: Que va-t-il se passer lorsque tu appuieras sur "démarrer?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: Rien. La fonction n'est appelée dans le programme.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: Rien. La fonction n'est pas appelée dans le programme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera un carré simple.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
@@ -3329,13 +3322,13 @@ fr-FR:
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
         questions:
-        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+        - text: Que va-t-il se passer lorsque tu appuieras sur "démarrer?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: Rien. La fonction n'est appelée dans le programme.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: Rien. La fonction n'est pas appelée dans le programme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera un carré simple.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
@@ -3344,13 +3337,13 @@ fr-FR:
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
         questions:
-        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+        - text: Que va-t-il se passer lorsque tu appuieras sur "démarrer?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - text: Rien. La fonction n'est appelée dans le programme.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: Rien. La fonction n'est pas appelée dans le programme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera un carré simple.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
@@ -3359,13 +3352,13 @@ fr-FR:
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
         questions:
-        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+        - text: Que va-t-il se passer lorsque tu appuieras sur "démarrer?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: Rien. La fonction n'est appelée dans le programme.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: Rien. La fonction n'est pas appelée dans le programme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera un carré simple.
-          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+          feedback: Incorrect, la fonction est appelée 2 fois dans le programme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
@@ -3374,7 +3367,7 @@ fr-FR:
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
         questions:
-        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+        - text: Que va-t-il se passer lorsque tu appuieras sur "démarrer?
       courseE_project_exemplars_2019:
         content1: Page du Manuel du Test Markdown
         markdown: '# Exemples de Projet   Tu es sur le point de commencer ton projet
@@ -4105,61 +4098,61 @@ fr-FR:
       coursee_prediction_artistfunction2:
         answers:
         - text: L’artiste résoudra ce problème correctement.
-          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
-            une ligne de polygones`.
+          feedback: Incorrect. La boucle utilise `dessiner un polygone` au lieu de
+            `dessiner une ligne de polygones`.
         - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
         - text: L’artiste dessinera seulement 1 ligne de carrés.
-          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+          feedback: Incorrect. Le programme n'appelle pas "dessiner ligne de polygones".
         - text: L’artiste dessinera 4 carrés les uns sur les autres.
-          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
-            "dessiner polygone".
+          feedback: Incorrect. La boucle tourne de 90 degrés entre chaque appel pour
+            "dessiner un polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       coursee_prediction_artistfunction2_2018:
         answers:
         - text: L’artiste résoudra ce problème correctement.
-          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
-            une ligne de polygones`.
+          feedback: Incorrect. La boucle utilise `dessiner un polygone` au lieu de
+            `dessiner une ligne de polygones`.
         - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
         - text: L’artiste dessinera seulement 1 ligne de carrés.
-          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+          feedback: Incorrect. Le programme n'appelle pas "dessiner ligne de polygones".
         - text: L’artiste dessinera 4 carrés les uns sur les autres.
-          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
-            "dessiner polygone".
+          feedback: Incorrect. La boucle tourne de 90 degrés entre chaque appel pour
+            "dessiner un polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - text: L’artiste résoudra ce problème correctement.
-          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
-            une ligne de polygones`.
+          feedback: Incorrect. La boucle utilise `dessiner un polygone` au lieu de
+            `dessiner une ligne de polygones`.
         - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
         - text: L’artiste dessinera seulement 1 ligne de carrés.
-          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+          feedback: Incorrect. Le programme n'appelle pas "dessiner ligne de polygones".
         - text: L’artiste dessinera 4 carrés les uns sur les autres.
-          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
-            "dessiner polygone".
+          feedback: Incorrect. La boucle tourne de 90 degrés entre chaque appel pour
+            "dessiner un polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - text: L’artiste résoudra ce problème correctement.
-          feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
-            une ligne de polygones`.
+          feedback: Incorrect. La boucle utilise `dessiner un polygone` au lieu de
+            `dessiner une ligne de polygones`.
         - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
         - text: L’artiste dessinera seulement 1 ligne de carrés.
-          feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
+          feedback: Incorrect. Le programme n'appelle pas "dessiner ligne de polygones".
         - text: L’artiste dessinera 4 carrés les uns sur les autres.
-          feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
-            "dessiner polygone".
+          feedback: Incorrect. La boucle tourne de 90 degrés entre chaque appel pour
+            "dessiner un polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       csf_be_a_super_digital_citizen:

@@ -2,26 +2,6 @@
 uz:
   data:
     blocks:
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -44,46 +24,10 @@ uz:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"random"': tasodifiy
       Dancelab_randomColor:
         text: tasodifiy rang
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
@@ -123,18 +67,6 @@ uz:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

@@ -1,5 +1,5 @@
 ---
-title: Инструкции
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # Как преподавать Час Кода на внеклассных занятиях и в кружках
 
-### Присоединяйтесь к движению и познакомьте группу учеников с их первым часом информатики с помощью этих шагов. Час Программирования легко провести - даже для новичков! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -18,11 +24,11 @@ nav: how_to_nav
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**Все уроки Часа Программирования** требуют минимального времени на подготовку для организаторов и предназначены для самостоятельной работы, позволяя детям работать в своем собственном темпе и на своем уровне подготовки.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Нужен план урока для вашего внеклассного Часа Кода?** Посмотрите этот [шаблон](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Продвигайте свой Час Программирования
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Определите вашу потребность в оборудовании - компьютеры не обязательны
 
-Час Кода лучше всего проводить с компьютерами, имеющими подключение к Интернету. Но вам **не** нужен компьютер для каждого ребенка, и даже можно провести Час Программирования вообще без компьютеров.
+Час Кода лучше всего проводить с компьютерами, имеющими подключение к Интернету. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Протестируйте пособия на компьютерах или устройствах учеников, чтобы убедиться, что они корректно работают в браузерах со звуком и видео. **Низкая скорость интернета?** Запланируйте показ видео сразу всему классу, чтобы каждый ученик не скачивал видео отдельно. Или попробуйте оффлайн учебные пособия.
+Протестируйте пособия на компьютерах или устройствах учеников, чтобы убедиться, что они корректно работают в браузерах со звуком и видео. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Обеспечьте наушниками ваш класс или попросите учеников принести свои собственные, если урок, который вы выбрали, лучше всего работает со звуком.
 
-**Не хватает устройств?** Используйте [парное программирование](https://www.youtube.com/watch?v=vgkahOzFH2Q). Когда ученики становятся партнерами, они помогают друг другу и меньше полагаются на учителя. Также они увидят, что информатика социальна и сплачивает людей.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Когда ученики становятся партнерами, они помогают друг другу и меньше полагаются на учителя. Также они увидят, что информатика социальна и сплачивает людей.
 
 ## 5. Начните ваш Час Программирования с вдохновляющего видео
 
@@ -49,19 +55,19 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [Президент Обама призывает всех учеников изучать информатику](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Найти больше вдохновляющих видео можно [здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Это нормально если вы новичок в информатике. Вот несколько идей, как начать Час Программирования:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Расскажите о том, как технология влияет на нашу жизнь, приводя примеры, которые понравятся как мальчикам, так и девочкам (Расскажите о приложениях и технологиях, используемых для того, чтобы спасти жизни, помогать людям, находить новые знакомства и т. д).
 - Составьте список вещей, немыслимых в повседневной жизни без программирования.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Нужно больше руководств?** Скачайте этот [шаблон плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Программируйте!
 
-**Направляйте участников к заданиям** - Напишите на доске ссылку на урок. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**Если кто-то столкнулся с трудностями, будет правильно ответить:** - Я не знаю. - "Давайте научимся этому вместе." - "Технология не всегда работает так, как мы хотим." - "Изучение программирования - это как изучение нового языка; вы не будете сразу свободно разговаривать."
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. - "Давайте научимся этому вместе." - "Технология не всегда работает так, как мы хотим." - "Изучение программирования - это как изучение нового языка; вы не будете сразу свободно разговаривать."
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,6 +87,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Час Кода: а что дальше?
 
-Час Программирования - это всего лишь первый шаг в освоении того, как работают технологии и как создавать приложения. Help students continue their journey and encourage them to [learn more online](/beyond)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

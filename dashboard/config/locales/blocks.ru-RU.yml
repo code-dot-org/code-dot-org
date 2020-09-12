@@ -88,9 +88,6 @@ ru:
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} делать {MOVE} {DIR} всегда"
         options:
@@ -109,9 +106,6 @@ ru:
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -188,9 +182,6 @@ ru:
             MOVES.XArmsUp: Стрейч
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} делать {MOVE} {DIR} один раз"
         options:
@@ -219,9 +210,6 @@ ru:
             MOVES.XArmsUp: Стрейч
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'повторять каждые {N} тактов после {START} '
       Dancelab_everySeconds:
@@ -1104,6 +1092,13 @@ ru:
             '"z"': Z
       gamelab_locationAt:
         text: 'местоположение x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
       gamelab_locationMouse:
         text: расположение мыши
       gamelab_locationOf:
