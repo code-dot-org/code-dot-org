@@ -1641,4 +1641,38 @@ class Script < ActiveRecord::Base
       script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl).as_json}
     }
   end
+
+  def self.seed_from_json_file(filename)
+    data = JSON.parse(File.read(filename))
+
+    script_data = data['script']
+    lesson_groups_data = data['lesson_groups']
+    lessons_data = data['lessons']
+    #script_levels_data = data['script_levels']
+
+    script_to_import = Script.find_by(name: script_data['name']) || Script.new
+    script_to_import.assign_attributes(script_data)
+    Script.import! [script_to_import], on_duplicate_key_update: :all
+
+    script_id = Script.find_by!(name: script_data['name']).id
+    lesson_groups_to_import = lesson_groups_data.map do |lg_data|
+      lesson_group_to_import = LessonGroup.find_by(script_id: script_id, key: lg_data['key']) || LessonGroup.new
+      lesson_attrs = lg_data.except('script_name')
+      lesson_attrs['script_id'] = script_id
+      lesson_group_to_import.assign_attributes(lesson_attrs)
+      lesson_group_to_import
+    end
+    LessonGroup.import! lesson_groups_to_import, on_duplicate_key_update: :all
+
+    all_lesson_groups = LessonGroup.where(script_id: script_id)
+    lessons_to_import = lessons_data.map do |lesson_data|
+      lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first
+      raise 'No lesson group found' if lesson_group_id.nil?
+      lesson_to_import = Lesson.find_by(lesson_group_id: lesson_group_id, key: lesson_data['key']) || Lesson.new
+      lesson_attrs = lesson_data.except('script_name', 'lesson_group_key')
+      lesson_to_import.assign_attributes(lesson_attrs)
+      lesson_to_import
+    end
+    Lesson.import! lessons_to_import,  on_duplicate_key_update: :all
+  end
 end
