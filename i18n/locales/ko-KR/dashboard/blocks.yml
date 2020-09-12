@@ -88,9 +88,6 @@ ko:
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
@@ -109,9 +106,6 @@ ko:
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -188,9 +182,6 @@ ko:
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
@@ -219,9 +210,6 @@ ko:
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: "{START} 후{N} 마디마다반복 "
       Dancelab_everySeconds:
@@ -1101,6 +1089,13 @@ ko:
             '"z"': z
       gamelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': 북쪽
+            '"East"': 동쪽
+            '"South"': 남쪽
+            '"West"': 서쪽
       gamelab_locationMouse:
         text: 마우스 위치
       gamelab_locationOf:
