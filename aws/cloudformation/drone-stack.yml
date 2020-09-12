@@ -261,7 +261,8 @@ Resources:
         KeyName: !Sub "winter-dev-${AWS::Region}"
         SecurityGroupIds: 
           - !Ref DroneWorkerEcsSecurityGroup
-        ImageId: ami-0c4b05c0409735671
+        # ECS Optimized AMI - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
+        ImageId: ami-04bb74f3ffa3aa3e2
         InstanceType: m5.xlarge
         Monitoring:
           Enabled: true
@@ -319,10 +320,7 @@ Resources:
           Environment:
             -
               Name: DRONE_RPC_HOST
-              Value: 
-                !Sub 
-                  - "http://${ElbDnsName}"
-                  - {ElbDnsName: !GetAtt DroneMasterELB.DNSName}
+              Value: !GetAtt DroneMasterELB.DNSName
             # Number of concurrent builds allowed on one Drone agent
             -
               Name: DRONE_RUNNER_CAPACITY
