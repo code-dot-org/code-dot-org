@@ -13,6 +13,7 @@ module ScriptSeed
 
     def level_names
       # TODO: this creates a ton of queries. Can be greatly improved with a refactor to query for all levels at once.
+      # Or maybe we can just use a join
       object.levels.map(&:name)
     end
 
