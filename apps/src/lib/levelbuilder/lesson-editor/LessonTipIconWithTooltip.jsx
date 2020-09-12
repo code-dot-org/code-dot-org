@@ -8,7 +8,7 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-export default class TipWithTooltip extends Component {
+export default class LessonTipIconWithTooltip extends Component {
   static propTypes = {
     tip: tipShape,
     onClick: PropTypes.func

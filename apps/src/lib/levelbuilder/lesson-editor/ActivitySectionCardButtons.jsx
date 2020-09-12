@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TipWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/TipWithTooltip';
+import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -129,7 +129,7 @@ export default class ActivitySectionCardButtons extends Component {
             <span>
               {this.props.activitySection.tips.map(tip => {
                 return (
-                  <TipWithTooltip
+                  <LessonTipIconWithTooltip
                     tip={tip}
                     key={tip.key}
                     onClick={this.handleEditTip}
