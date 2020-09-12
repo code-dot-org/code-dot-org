@@ -88,9 +88,6 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
@@ -109,9 +106,6 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -188,9 +182,6 @@ he:
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
         options:
@@ -219,9 +210,6 @@ he:
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
@@ -1101,6 +1089,13 @@ he:
             '"z"': z
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
