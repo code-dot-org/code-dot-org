@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -6,6 +5,8 @@ import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import i18n from '@cdo/locale';
 
 const styles = {
   activitySection: {
@@ -31,7 +32,7 @@ const styles = {
 
 export default class ActivitySection extends Component {
   static propTypes = {
-    section: PropTypes.object
+    section: activitySectionShape
   };
 
   render() {
@@ -46,7 +47,7 @@ export default class ActivitySection extends Component {
           <div>
             <h4>
               <FontAwesome icon="microphone" />
-              <span style={styles.remarksHeader}>Remarks</span>
+              <span style={styles.remarksHeader}>{i18n.remarks()}</span>
             </h4>
           </div>
         )}

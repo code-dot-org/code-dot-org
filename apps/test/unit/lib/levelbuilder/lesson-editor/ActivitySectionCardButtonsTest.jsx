@@ -22,6 +22,6 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('AddResourceDialog').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('EditTipDialog').length).to.equal(1);
-    expect(wrapper.find('TipWithTooltip').length).to.equal(1);
+    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(1);
   });
 });
