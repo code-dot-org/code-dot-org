@@ -47,6 +47,10 @@ export default class HideToolbarHelper extends React.Component {
     return navigator.userAgent.indexOf('iPhone OS 13') !== -1;
   }
 
+  isiOS14() {
+    return navigator.userAgent.indexOf('iPhone OS 14') !== -1;
+  }
+
   isHideCookieSet() {
     return cookies.get(HideToolbarHelperCookieName);
   }
@@ -57,7 +61,7 @@ export default class HideToolbarHelper extends React.Component {
 
   isToolbarShowing() {
     // window.innerHeight is smaller than document.body.offsetHeight when
-    // the iOS 13 Safari toolbar is showing.  It becomes equal when the toolbar
+    // the iOS 13/14 Safari toolbar is showing.  It becomes equal when the toolbar
     // is hidden.  (Interestingly, document.documentElement.clientHeight is
     // the same as document.body.offsetHeight in both cases.)
     return window.innerHeight < document.body.offsetHeight;
@@ -65,15 +69,16 @@ export default class HideToolbarHelper extends React.Component {
 
   updateLayout = () => {
     const isiOS13 = this.isiOS13();
+    const isiOS14 = this.isiOS14();
     const isHideCookieSet = this.isHideCookieSet();
     const isLandscape = this.isLandscape();
 
-    if (!isiOS13 || !isLandscape || isHideCookieSet) {
+    if (!(isiOS13 || isiOS14) || !isLandscape || isHideCookieSet) {
       this.setState({showHelper: false});
       return;
     }
 
-    // We are on iOS 13, in landscape, and we haven't hidden due to a cookie.
+    // We are on iOS 13/14, in landscape, and we haven't hidden due to a cookie.
     // Let's show the helper if we think the toolbar is showing.
     const showHelper = this.isToolbarShowing();
 
@@ -101,20 +106,12 @@ export default class HideToolbarHelper extends React.Component {
 
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('orientationchange', this.updateLayoutListener);
-
-    /* These two events catch all viewport changes. */
     window.addEventListener('resize', this.updateLayoutListener);
     window.addEventListener('scroll', this.updateLayoutListener);
   }
 
   componentWillUnmount() {
-    document.removeEventListener(
-      'orientationchange',
-      this.updateLayoutListener,
-      false
-    );
     document.removeEventListener('resize', this.updateLayoutListener, false);
-    document.removeEventListener('scroll', this.updateLayoutListener, false);
   }
 
   onClick = () => {
