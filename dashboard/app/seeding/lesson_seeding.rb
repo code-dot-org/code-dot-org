@@ -15,7 +15,7 @@ module LessonSeeding
   def self.serialize_lessons(script)
     # include: '**' allows serialization of associations recursively for any number of levels.
     # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
-    JSON.pretty_generate(ScriptLessons::ScriptSerializer.new(script).as_json(include: '**'))
+    JSON.pretty_generate(ScriptLessons::ScriptSerializer.new(script).as_json(include: '**')) + "\n"
   end
 
   # Seeds Lesson properties from seeding files. Done in bulk for improved performance.
@@ -42,7 +42,7 @@ module LessonSeeding
     # 3. select the lessons from those lesson groups
     # 4. insert with the updated values
 
-    script = Script.find_by(name: script_lessons_hash['name'])
+    script = Script.find_by!(name: script_lessons_hash['name'])
     lesson_group_keys_by_id = script.lesson_groups.map {|lg| [lg.id, lg.key]}.to_h
     lessons_by_full_key = script.lessons.map do |l|
       [LessonFullKey.new(l.key, lesson_group_keys_by_id[l.lesson_group_id]), l]

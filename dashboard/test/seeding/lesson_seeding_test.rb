@@ -65,25 +65,25 @@ class LessonSeedingTest < ActiveSupport::TestCase
       }
     JSON
 
-    assert_equal expected.strip, LessonSeeding.serialize_lessons(script)
+    assert_equal expected, LessonSeeding.serialize_lessons(script)
   end
 
   test 'seeding sets a new property' do
     script = create_script_with_lessons(num_lesson_groups: 1, num_lessons_per_group: 1)
 
     # Update a property, but don't save it.
-    lesson = first_lesson_from_script(script)
+    lesson = script.lessons.first
     lesson.overview = 'my overview'
 
     # Generate JSON by serializing from the script with unsaved changes, then seed from that
     seed_lessons_from_json(LessonSeeding.serialize_lessons(script))
 
-    assert_equal 'my overview', first_lesson_from_script(Script.find_by(name: script.name)).overview
+    assert_equal 'my overview', Script.find_by(name: script.name).lessons.first.overview
   end
 
   test 'seeding updates a property' do
     script = create_script_with_lessons(num_lesson_groups: 1, num_lessons_per_group: 1)
-    lesson = first_lesson_from_script(script)
+    lesson = script.lessons.first
     lesson.visible_after = '2050'
     lesson.save!
 
@@ -93,12 +93,12 @@ class LessonSeedingTest < ActiveSupport::TestCase
     # Generate JSON by serializing from the script with unsaved changes, then seed from that
     seed_lessons_from_json(LessonSeeding.serialize_lessons(script))
 
-    assert_equal '3000', first_lesson_from_script(Script.find_by(name: script.name)).visible_after
+    assert_equal '3000', Script.find_by(name: script.name).lessons.first.visible_after
   end
 
   test 'seeding unsets a property' do
     script = create_script_with_lessons(num_lesson_groups: 1, num_lessons_per_group: 1)
-    lesson = first_lesson_from_script(script)
+    lesson = script.lessons.first
     lesson.overview = 'my overview'
     lesson.visible_after = '2050'
     lesson.save!
@@ -110,13 +110,9 @@ class LessonSeedingTest < ActiveSupport::TestCase
     json = LessonSeeding.serialize_lessons(script)
     seed_lessons_from_json(json)
 
-    reloaded_lesson = first_lesson_from_script(Script.find_by(name: script.name))
+    reloaded_lesson = Script.find_by(name: script.name).lessons.first
     assert_equal nil, reloaded_lesson.overview
     assert_equal '2050', reloaded_lesson.visible_after
-  end
-
-  def first_lesson_from_script(script)
-    script.lesson_groups.map(&:lessons).flatten.first
   end
 
   def seed_lessons_from_json(script_lessons_json)
@@ -141,6 +137,8 @@ class LessonSeedingTest < ActiveSupport::TestCase
       end
     end
 
-    script
+    # Eager load the lesson_groups and lessons as well, so that script.lessons.first is the same object
+    # in memory as script.lesson_groups.first.lessons.first, which is needed for the seeding unit tests.
+    Script.includes(:lesson_groups, :lessons).find(script.id)
   end
 end
