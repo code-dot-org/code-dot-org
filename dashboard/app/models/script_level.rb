@@ -50,7 +50,7 @@ class ScriptLevel < ActiveRecord::Base
     variants
     progression
     challenge
-    level_names_hash
+    seeding_id
   )
 
   # Chapter values order all the script_levels in a script.

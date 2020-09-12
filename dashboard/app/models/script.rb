@@ -1669,24 +1669,30 @@ class Script < ActiveRecord::Base
 
     all_lesson_groups = LessonGroup.where(script_id: script_id)
     lessons_to_import = lessons_data.map do |lesson_data|
-      lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first
+      lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first&.id
       raise 'No lesson group found' if lesson_group_id.nil?
       lesson_to_import = Lesson.find_by(lesson_group_id: lesson_group_id, key: lesson_data['key']) || Lesson.new
       lesson_attrs = lesson_data.except('lesson_group_key', 'script_name')
       lesson_attrs['script_id'] = script_id
       lesson_attrs['lesson_group_id'] = lesson_group_id
+      puts lesson_attrs
       lesson_to_import.assign_attributes(lesson_attrs)
       lesson_to_import
     end
-    Lesson.import! lessons_to_import,  on_duplicate_key_update: :all
+    Lesson.import! lessons_to_import, on_duplicate_key_update: :all
 
     all_lessons = Script.find_by!(name: script_data['name']).lessons
     script_levels_to_import = script_levels_data.map do |sl_data|
-      lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first
+      lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first&.id
       raise 'No lesson group found' if lesson_group_id.nil?
-      stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}
+      stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}.first&.id
+      if stage_id.nil?
+        require 'pry'
+        binding.pry
+        raise 'No stage id found' if stage_id.nil?
+      end
       # TODO: optimize this - probably can use a join
-      script_level_to_import = ScriptLevel.where(stage_id: stage_id).select {|sl| sl.levels.map(&:name) == sl_data['level_names']}.first
+      script_level_to_import = ScriptLevel.where(stage_id: stage_id).select {|sl| sl.levels.map(&:unique_key) == sl_data['level_names']}.first
       script_level_to_import ||= ScriptLevel.new
       script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key', 'script_name')
       script_level_attrs['script_id'] = script_id
@@ -1694,11 +1700,35 @@ class Script < ActiveRecord::Base
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
     end
-    ScriptLevel.import! script_levels_to_import,  on_duplicate_key_update: :all
+    ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
 
+    #all_levels = Level.all.select(:name, :game_id, :level_num)
     all_script_levels = Script.find_by!(name: script_data['name']).script_levels
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
-      
+      level_id = Level.find_by_key(lsl_data['level_key'])&.id
+      if level_id.nil?
+        require 'pry'
+        binding.pry
+        raise 'No level found' if level_id.nil?
+      end
+      script_level_id = all_script_levels.select {|sl| sl.seeding_id == lsl_data['script_level_seeding_id']}.first&.id
+      if script_level_id.nil?
+        require 'pry'
+        binding.pry
+        raise 'No ScriptLevel found' if script_level_id.nil?
+      end
+
+      levels_script_level_attrs = {level_id: level_id, script_level_id: script_level_id}
+      levels_script_level_to_import = LevelsScriptLevel.find_by(levels_script_level_attrs)
+      unless levels_script_level_to_import
+        require 'pry'
+        binding.pry
+        raise 'Creating new LevelsScriptLevel'
+      end
+      #LevelsScriptLevel.new(level_script_level_attrs)
+      levels_script_level_to_import
     end
+
+    LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: :all
   end
 end
