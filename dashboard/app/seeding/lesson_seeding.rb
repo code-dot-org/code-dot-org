@@ -1,5 +1,3 @@
-require 'script_lessons_serializer'
-
 # Methods for serializing and seeding Lesson properties (aka SerializedProperties).
 #
 # Currently, Lessons are created / updated during Script seeding, but their properties are not.
@@ -9,13 +7,29 @@ require 'script_lessons_serializer'
 # Any future models that are under Lessons in the hierarchy should also be serialized using this approach, rather
 # than with the Script DSL. Eventually, it would be best if we can replace Script DSL entirely with this approach.
 module LessonSeeding
+  class LessonSerializer < ActiveModel::Serializer
+    attributes :key, :properties
+  end
+
+  class LessonGroupSerializer < ActiveModel::Serializer
+    attributes :key
+
+    has_many :lessons, serializer: LessonSerializer
+  end
+
+  class ScriptSerializer < ActiveModel::Serializer
+    attributes :name
+
+    has_many :lesson_groups, serializer: LessonGroupSerializer
+  end
+
   # @param script [Script] - a Script to serialize
   # @return [String] - JSON data structure of the Script, its Lesson Groups, and their Lessons. Only the name / key
   #   fields of Script and Lesson Groups are included, as context for uniquely identifying each Lesson.
   def self.serialize_lessons(script)
     # include: '**' allows serialization of associations recursively for any number of levels.
     # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
-    JSON.pretty_generate(ScriptLessons::ScriptSerializer.new(script).as_json(include: '**')) + "\n"
+    JSON.pretty_generate(ScriptSerializer.new(script).as_json(include: '**')) + "\n"
   end
 
   # Seeds Lesson properties from seeding files. Done in bulk for improved performance.
