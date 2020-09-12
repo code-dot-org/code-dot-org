@@ -49,9 +49,6 @@ const styles = {
     fontSize: 18,
     marginRight: 5
   },
-  input: {
-    marginRight: 10
-  },
   labelAndInput: {
     marginLeft: 5,
     display: 'flex',
@@ -158,17 +155,18 @@ class ActivityCard extends Component {
             <span style={styles.label}>{`Activity:`}</span>
             <input
               value={activity.displayName}
-              style={{...styles.input, ...{width: 150}}}
+              style={{width: 150}}
               onChange={this.handleChangeDisplayName}
             />
           </label>
           <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Time (mins):`}</span>
+            <span style={styles.label}>{`Time:`}</span>
             <input
               value={activity.time}
-              style={{...styles.input, ...{width: 50}}}
+              style={{width: 35}}
               onChange={this.handleChangeTime}
             />
+            <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
           <OrderControls
             name={activity.key || '(none)'}
