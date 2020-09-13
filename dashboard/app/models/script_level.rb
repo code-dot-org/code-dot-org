@@ -547,8 +547,8 @@ class ScriptLevel < ActiveRecord::Base
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  def seeding_id
-    values = [lesson.key, lesson.lesson_group.key, script.name] + levels.map(&:unique_key)
+  def self.generate_seeding_id(levels, lesson, lesson_group, script)
+    values = [lesson.key, lesson_group.key, script.name] + levels.map(&:unique_key)
     HashingUtils.hash_values(values)
   end
 end
