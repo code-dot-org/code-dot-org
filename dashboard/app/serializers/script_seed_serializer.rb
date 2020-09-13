@@ -3,14 +3,14 @@ require 'digest'
 module ScriptSeed
   def self.lesson_from_scope(scope, script_level)
     lesson = scope[:lessons].select {|l| l.id == script_level.stage_id}.first
-    raise 'No lesson found' unless lesson
+    raise "No lesson found. scope: #{scope}" unless lesson
     lesson
   end
 
   def self.lesson_group_from_scope(scope, script_level)
     lesson = lesson_from_scope(scope, script_level)
     lesson_group = scope[:lesson_groups].select {|lg| lg.id == lesson.lesson_group_id}.first
-    raise 'No lesson group found' unless lesson_group
+    raise "No lesson group found. scope: #{scope}" unless lesson_group
     lesson_group
   end
 
@@ -19,7 +19,7 @@ module ScriptSeed
     my_levels_script_levels.map do |lsl|
       # n^2, probably doesn't matter since it's in memory and not that much stuff
       level = scope[:levels].select {|l| l.id == lsl.level_id}.first
-      raise 'No level found' unless level
+      raise "No level found. scope: #{scope}" unless level
       level
     end
   end
@@ -31,14 +31,14 @@ module ScriptSeed
 
     def level_key
       my_level = @scope[:levels].select {|l| l.id == object.level_id}.first
-      raise 'No level found' unless my_level
+      raise "No level found. scope: #{scope}" unless my_level
 
       my_level.unique_key
     end
 
     def script_level_seeding_id
       my_script_level = @scope[:script_levels].select {|sl| sl.id == object.script_level_id}.first
-      raise 'No script level found' unless my_script_level
+      raise "No script level found. scope: #{scope}" unless my_script_level
 
       levels = ScriptSeed.levels_from_scope(@scope, my_script_level)
       lesson = ScriptSeed.lesson_from_scope(@scope, my_script_level)
@@ -99,7 +99,7 @@ module ScriptSeed
 
     def lesson_group_key
       lesson_group = @scope[:lesson_groups].select {|lg| lg.id == object.lesson_group_id}.first
-      raise 'No lesson group found' unless lesson_group
+      raise "No lesson group found. scope: #{scope}" unless lesson_group
       lesson_group.key
     end
 
