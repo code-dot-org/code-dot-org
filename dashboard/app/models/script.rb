@@ -1668,7 +1668,10 @@ class Script < ActiveRecord::Base
 
     script_to_import = Script.find_by(name: script_data['name']) || Script.new
     script_to_import.assign_attributes(script_data)
-    Script.import! [script_to_import], on_duplicate_key_update: :all
+    # validate: false because otherwise fails on invalid names that are already in the DB.
+    # TODO: do we need to scope this down somehow to only skipping name format validation?
+    result = Script.import [script_to_import], on_duplicate_key_update: :all, validate: false
+    raise "Some script imports failed: #{result}" if result.failed_instances.any?
 
     script_id = Script.find_by!(name: script_data['name']).id
     lesson_groups_to_import = lesson_groups_data.map do |lg_data|
@@ -1683,7 +1686,7 @@ class Script < ActiveRecord::Base
       lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first&.id
       raise 'No lesson group found' if lesson_group_id.nil?
 
-      lesson_attrs = lesson_data.except('lesson_group_key')
+      lesson_attrs = lesson_data.except('lesson_group_key', 'script_name')
       lesson_attrs['script_id'] = script_id
       lesson_attrs['lesson_group_id'] = lesson_group_id
       Lesson.new(lesson_attrs)
@@ -1697,10 +1700,15 @@ class Script < ActiveRecord::Base
       raise 'No lesson group found' if lesson_group_id.nil?
       stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}.first&.id
       raise 'No stage id found' if stage_id.nil?
-      script_level_to_import = all_script_levels.select {|sl| sl.levels.map(&:unique_key) == sl_data['level_names']}.first
-      script_level_to_import ||= ScriptLevel.new
+      matching_script_levels = all_script_levels.select do |sl|
+        # TODO: Is this the right equality condition? Extract to its own function?
+        sl.position == sl_data['position'] && sl.chapter == sl_data['chapter'] && sl.stage_id == stage_id &&
+        sl.levels.map(&:unique_key) == sl_data['level_names']
+      end
+      raise "Multiple matching script levels found while seeding script: #{script_data['name']}" if matching_script_levels.length > 1
+      script_level_to_import = matching_script_levels.first || ScriptLevel.new
 
-      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key')
+      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key', 'script_name')
       script_level_attrs['script_id'] = script_id
       script_level_attrs['stage_id'] = stage_id
       script_level_to_import.assign_attributes(script_level_attrs)
@@ -1714,7 +1722,7 @@ class Script < ActiveRecord::Base
       level_id = Level.where(Level.key_to_params(lsl_data['level_key'])).pluck(:id).first
       raise 'No level found' if level_id.nil?
       script_level_id = all_script_levels.select {|sl| sl.seeding_id == lsl_data['script_level_seeding_id']}.first&.id
-      raise 'No ScriptLevel found' if script_level_id.nil?
+      raise "No ScriptLevel found while seeding script: #{script_data['name']}" if script_level_id.nil?
 
       levels_script_level_attrs = {level_id: level_id, script_level_id: script_level_id}
       LevelsScriptLevel.new(levels_script_level_attrs)
