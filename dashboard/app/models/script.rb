@@ -1635,12 +1635,25 @@ class Script < ActiveRecord::Base
   end
 
   def serialize_seeding_json
+    eager_loaded_script_levels = ScriptLevel.includes(:levels).where(script_id: id)
+    eager_loaded_levels = eager_loaded_script_levels.map(&:levels).flatten
+
+    scope = {
+      script: self,
+      script_name: name,
+      lesson_groups: lesson_groups,
+      lessons: lessons,
+      script_levels: eager_loaded_script_levels,
+      levels: eager_loaded_levels,
+      levels_script_levels: levels_script_levels
+    }
+
     {
       script: ScriptSeed::ScriptSerializer.new(self).as_json,
-      lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg).as_json},
-      lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l).as_json},
-      script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl).as_json},
-      levels_script_levels: levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl).as_json}
+      lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg, scope: scope).as_json},
+      lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l, scope: scope).as_json},
+      script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
+      levels_script_levels: levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
     }
   end
 
@@ -1670,7 +1683,7 @@ class Script < ActiveRecord::Base
       lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first&.id
       raise 'No lesson group found' if lesson_group_id.nil?
 
-      lesson_attrs = lesson_data.except('lesson_group_key', 'script_name')
+      lesson_attrs = lesson_data.except('lesson_group_key')
       lesson_attrs['script_id'] = script_id
       lesson_attrs['lesson_group_id'] = lesson_group_id
       Lesson.new(lesson_attrs)
@@ -1687,7 +1700,7 @@ class Script < ActiveRecord::Base
       script_level_to_import = all_script_levels.select {|sl| sl.levels.map(&:unique_key) == sl_data['level_names']}.first
       script_level_to_import ||= ScriptLevel.new
 
-      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key', 'script_name')
+      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key')
       script_level_attrs['script_id'] = script_id
       script_level_attrs['stage_id'] = stage_id
       script_level_to_import.assign_attributes(script_level_attrs)
