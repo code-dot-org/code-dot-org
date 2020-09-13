@@ -1698,7 +1698,7 @@ class Script < ActiveRecord::Base
     all_script_levels = ScriptLevel.where(script_id: script_id)
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
       # TODO: maybe we can get rid of this query
-      level_id = Level.find_by_key(lsl_data['level_key'])&.id
+      level_id = Level.where(Level.key_to_params(lsl_data['level_key'])).pluck(:id).first
       raise 'No level found' if level_id.nil?
       script_level_id = all_script_levels.select {|sl| sl.seeding_id == lsl_data['script_level_seeding_id']}.first&.id
       raise 'No ScriptLevel found' if script_level_id.nil?
