@@ -5,7 +5,7 @@ import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import commonBlocks from '@cdo/apps/blocksCommon';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import logToCloud from '@cdo/apps/logToCloud';
 
 $(document).ready(() => {
@@ -15,7 +15,7 @@ $(document).ready(() => {
   Blockly.Css.inject(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
-  if (document.querySelector('script[data-associatedBlocks]')) {
+  if (hasScriptData('script[data-associatedBlocks]')) {
     const associatedBlocks = getScriptData('associatedblocks');
     try {
       // Install the custom CDO blocks for the associated level type.
