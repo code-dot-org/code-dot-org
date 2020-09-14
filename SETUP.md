@@ -33,6 +33,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         $> gem uninstall rake
         $> bundle update rake
     </details>
+    <details>
+        <summary>Troubleshoot: can't find gem bundler (>= 0.a) with executable bundle </summary>
+
+        If you have the issue "in `find_spec_for_exe': can't find gem bundler (>= 0.a) with executable bundle (Gem::GemNotFoundException)"
+
+        $> gem update --system
+    </details>
 
 1. `bundle exec rake install`
     * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
@@ -50,6 +57,17 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 ## OS-specific prerequisites
 
 ### OS X Mojave / Mavericks / Yosemite / El Capitan / Sierra
+<details>
+    <summary>Note: Additional information for those that use OS X Catalina</summary>
+
+    If you are using OS X Catalina, please note that zsh is the default shell, instead of bash.
+
+    The current OS X instructions assume that bash is the shell.
+
+    In order to use bash as the shell, please run:
+
+    chsh -s /bin/bash
+</details>
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
