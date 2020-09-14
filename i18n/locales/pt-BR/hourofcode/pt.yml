@@ -7197,7 +7197,7 @@ pt:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Todos os navegadores modernos
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Todos os navegadores modernos
   tutorial_rginter_string_platforms: Chrome, Firefox, tablet Android
   tutorial_cssgrid_string_platforms: Todos os navegadores modernos
@@ -9424,7 +9424,7 @@ pt:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Todos os navegadores modernos, iPad, sem conexão
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Todos os navegadores modernos, tablet Android,
     iPad
   tutorial_tynkermars_string_platforms: Todos os navegadores modernos, iPad, sem conexão

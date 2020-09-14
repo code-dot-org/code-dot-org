@@ -115,16 +115,16 @@ Führen Ihre Studenten zur Aktivität
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+Wenn Ihre Studenten auf Schwierigkeiten stoßen, können Sie sagen:
 
 - "Ich weiß es nicht. Lass uns das Problem gemeinsam lösen."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
 - "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
-Was mache ich, wenn ein Schüler früher fertig wird?
+Was mache ich, wenn ein Schüler früh fertig wird?
 
 - Die Schüler können alle Tutorials sehen und [eine weitere Hour of Code Aktivität versuchen]({{ urls/learn }}}).
-- Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
+- Oder Sie bitten die Schülerinnen und Schüler, die früh fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
 
 * * *
 
@@ -149,7 +149,7 @@ Was mache ich, wenn ein Schüler früher fertig wird?
 
 ## Weitere Hour of Code-Ressourcen für Unterrichtende:
 
-- Besuche das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
+- Besuchen das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
 - Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
 ### Was kommt nach der Hour of Code?

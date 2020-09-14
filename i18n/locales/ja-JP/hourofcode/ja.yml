@@ -191,8 +191,9 @@ ja:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: 'コードブレイクを行いましょう！インスピレーション、コミュニティ、コンピューター サイエンスに関する情報を毎週お届け。
+
+'
   codeorg_homepage_code_break_link_text: もっと詳しく知る
   cookie_banner_message: このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。
   cookie_banner_more_information: Code.orgのプライバシーポリシーを参照する。
@@ -6426,7 +6427,7 @@ ja:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: 最新ブラウザ
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: 最新ブラウザ
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: 最新ブラウザ
@@ -6607,7 +6608,7 @@ ja:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: 最新ブラウザ
   tutorial_csfirstname_string_platforms: 最新ブラウザ
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: 最新ブラウザ
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8593,7 +8594,7 @@ ja:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: すべてのモダンブラウザ、iPad、アンプラグ
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_tynkermars_string_platforms: すべてのモダンブラウザ、iPad、アンプラグ
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone

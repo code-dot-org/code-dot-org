@@ -198,8 +198,8 @@ fr:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: Faites un Code Break ! Votre dose hebdomadaire
+    d’inspiration, de communauté et d’informatique.
   codeorg_homepage_code_break_link_text: En savoir plus
   cookie_banner_message: En poursuivant votre navigation sur ce site ou en cliquant
     sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou
@@ -7024,7 +7024,7 @@ fr:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Tous les navigateurs actuels
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Tous les navigateurs actuels
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Tous les navigateurs actuels
@@ -7225,7 +7225,7 @@ fr:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Tous les navigateurs actuels
   tutorial_csfirstname_string_platforms: Tous les navigateurs actuels
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Tous les navigateurs actuels
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -9239,7 +9239,7 @@ fr:
   tutorial_tynkerland_string_platforms: Tous les navigateurs modernes, iPad, classes
     non connectées.
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
   tutorial_tynkermars_string_platforms: Tous les navigateurs modernes, iPad, classes
