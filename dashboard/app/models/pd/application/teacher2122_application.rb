@@ -323,7 +323,7 @@ module Pd::Application
         plan_to_teach: [
           "Yes, I plan to teach this course this year (#{year})",
           "I hope to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (2022-23)",
+          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
           "No, someone else from my school will teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
@@ -524,6 +524,10 @@ module Pd::Application
 
     def self.year
       YEAR_21_22
+    end
+
+    def self.next_year
+      YEAR_22_23_SHORT
     end
 
     # @override
