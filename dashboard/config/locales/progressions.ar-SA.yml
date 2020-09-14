@@ -2,7 +2,7 @@
 ar:
   data:
     progressions:
-      Artist Project: مشروع الفنان
+      Artist Project: مشروع الرسام
       'Artist: Variables': 'الفنان: المتغيرات'
       Binary Numbers: أرقام ثنائية
       Board Events: أحداث اللوحة
@@ -26,7 +26,7 @@ ar:
       Introduction to Arrays: مقدمة عن المجموعات الوصفية
       Keeping Data Secret: الحفاظ على سرية البيانات
       Keyboard Input: مدخلات لوحة المفاتيح
-      Lesson Extras: إضافات المرحلة
+      Lesson Extras: الدروس الإضافية
       Linking Pages: ربط الصفحات
       Linking Screens: ربط الشاشات
       Lists: القوائم
@@ -34,11 +34,13 @@ ar:
       Pair Programming: البرمجة الزوجية
       Programming with Rey and BB-8: البرمجة مع Rey وBB-8
       Project: مشروع
-      Properties: عقارات
+      Properties: 'خصائص
+
+'
       Reflection: تأملات
       Representing Images: تمثيل الصور
       Sprite Lab Project: مشروع Sprite Lab
-      The Harvester: الحصادة
+      The Harvester: عامِلة الحصاد
       Using the Repeat Block: استخدام التعليمة البرمجية "كرر"
       Velocity: السرعة
       Video: فيديو
