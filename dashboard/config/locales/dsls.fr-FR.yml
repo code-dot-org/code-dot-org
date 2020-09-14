@@ -2792,8 +2792,8 @@ fr-FR:
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
           br / >
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+            sur "Démarrer" ?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Le moissonneur ramassera toutes les plantes.
@@ -2883,7 +2883,7 @@ fr-FR:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - text: Rien. Ce code ne laissera que le sol du niveau.
+        - text: Rien. Ce code ne laissera qu’un terrain plat.
           feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -2957,7 +2957,7 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas aura disparu.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
