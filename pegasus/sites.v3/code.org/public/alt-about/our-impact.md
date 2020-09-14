@@ -168,7 +168,7 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
 <hr/>
 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
+    ![image](/images/fit-150/GuideStar_by_Candid_logo_black.png)
 </a> [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
 
 <p><a href="#top">[Back to top]</a></p>
