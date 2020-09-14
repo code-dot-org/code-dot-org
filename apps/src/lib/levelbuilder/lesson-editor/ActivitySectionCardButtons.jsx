@@ -128,15 +128,13 @@ export default class ActivitySectionCardButtons extends Component {
           </span>
           {this.props.activitySection.tips.length > 0 && (
             <span>
-              {this.props.activitySection.tips.map(tip => {
-                return (
-                  <LessonTipIconWithTooltip
-                    tip={tip}
-                    key={tip.key}
-                    onClick={this.handleEditTip}
-                  />
-                );
-              })}
+              {this.props.activitySection.tips.map(tip => (
+                <LessonTipIconWithTooltip
+                  tip={tip}
+                  key={tip.key}
+                  onClick={this.handleEditTip}
+                />
+              ))}
             </span>
           )}
         </div>
