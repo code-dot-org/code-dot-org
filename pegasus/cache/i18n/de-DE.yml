@@ -2459,7 +2459,9 @@ de-DE:
   hoc2019_dance_previous_versions: |-
     Möchtest du eine frühere Version von Dance Party?
     Klicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten.
-  homepage_slot_text_title_at_home: Zu Hause lernen
+  homepage_slot_text_title_at_home: 'Zu Hause lernen
+
+'
   homepage_slot_text_blurb_at_home: Diese Ressource machen es einfacher
   homepage_slot_text_link_code_break: Mache eine Programmierpause
   homepage_slot_text_link_do_hoc: Probiere die Hour of Code aus (deutsch "Stunde des
