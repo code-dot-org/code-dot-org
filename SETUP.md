@@ -115,7 +115,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
     </details>
 
-1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. Install the Java 8 JDK: `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
