@@ -1,7 +1,6 @@
 {
   "startButton": "شروع کریں",
   "filterOrgNames": "بذریعہ تیار کردہ",
-  "filterOrgNamesAll": "",
   "filterSortBy": "کے مطابق ترتیب دیں",
   "filterSortByDisplayWeight": "تجویز کردہ",
   "filterSortByPopularityRank": "سب سے زیادہ مقبول",
@@ -52,12 +51,9 @@
   "tutorialDetailsTeacherNotes": "اساتذہ نوٹ",
   "tutorialDetailsShortLink": "مختصر لنک",
   "tutorialDetailInternationalLanguages": "زبانیں",
-  "tutorialDetailStandards": "",
   "tutorialDetailDisabled": "اس ٹیوٹوریل کو عارضی طور پر دستیاب نہیں.",
   "headingTutorialsYourLanguage": "آپ کی زبان میں کام",
   "showAllTutorialsButton": "بہت سی زبانوں کے لئے کام دکھائیں",
   "hideAllTutorialsButton": "بہت سی زبانوں کے کاموں کو چھپائیں",
-  "noTutorialsYourLanguage": "آپ کی زبان میں کوئی کام نہیں ہیں۔ نیچے دیے گئے بٹن پر کلک کر کے دوسری زبانوں میں کاموں کو کرنے کی کوشش کریں.",
-  "bottomGuidelinesLink": "",
-  "bottomSpecialNeedsLink": ""
+  "noTutorialsYourLanguage": "آپ کی زبان میں کوئی کام نہیں ہیں۔ نیچے دیے گئے بٹن پر کلک کر کے دوسری زبانوں میں کاموں کو کرنے کی کوشش کریں."
 }

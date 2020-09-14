@@ -9,7 +9,6 @@
   "collectorCollectedEverything": "Təbriklər! Bütün {count} ədəd maddəni topladın!",
   "collectorCollectedNothing": "Kodlamağa davam et! Mümkün olduqca çox maddə toplamalısan.",
   "collectorCollectedSome": "Böyük iş! {count} ədəd maddə topladın!",
-  "collectorCollectedNotEnough": "",
   "collectorCollectedTooMany": "Burada toplamğım üçün yetərli maddə yoxdur.",
   "collectorTooManyBlocks": "Sadəcə {blockLimit} ədəd blok işlədə bilərsən. Koduna bax və yenidən yoxla!",
   "continue": "Davam et",
