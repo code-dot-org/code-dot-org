@@ -10,7 +10,9 @@ import {FormGroup} from 'react-bootstrap';
 import {
   styles as defaultStyles,
   PROGRAM_CSD,
-  PROGRAM_CSP
+  PROGRAM_CSP,
+  YEAR,
+  SUMMER_YEAR
 } from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
@@ -270,9 +272,9 @@ export default class SummerWorkshop extends LabeledFormComponent {
             , including:
           </p>
           <ul>
-            <li>One summer workshop in 2021</li>
+            <li>One summer workshop in {SUMMER_YEAR}</li>
             <li>
-              Up to four one-day workshops during the 2021-22 school year
+              Up to four one-day workshops during the {YEAR} school year
               (typically held on Saturdays)
             </li>
           </ul>
@@ -319,11 +321,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 <p style={{color: 'red'}}>
                   Note: To meet our implementation guidance and our scholarship
                   recommendations, you should plan to teach this course in the
-                  upcoming school year (2021-22). We suggest checking with your
+                  upcoming school year ({YEAR}). We suggest checking with your
                   administrators to ensure that the course will be offered in
-                  2021-22 before updating your answer to "
+                  {YEAR} before updating your answer to "
                   <strong>
-                    Do you plan to personally teach this course in the 2021-22
+                    Do you plan to personally teach this course in the {YEAR}
                     school year?
                   </strong>
                   " on page 3 and submitting your application.
