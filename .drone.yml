@@ -75,8 +75,9 @@ volumes:
 
 trigger:
   branch:
-  - 'staging'
-  - 'staging-next'
+    include:
+    - 'staging'
+    - 'staging-next'
   event:
   - pull_request
 
@@ -175,12 +176,13 @@ volumes:
 
 trigger:
   branch:
-  - 'staging'
-  - 'staging-next'
+    include:
+      - 'staging'
+      - 'staging-next'
   event:
   - pull_request
 ---
 kind: signature
-hmac: e4b671eb07dd1e1aada46ee763c66bedadb273df68d844973b45c5655f892604
+hmac: 987b8483026313672929ec7dbc67d3f1eb42d2fd473c4a66d0d92c02244c66b2
 
 ...
