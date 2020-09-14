@@ -25,3 +25,7 @@ export default function getScriptData(name) {
     throw e;
   }
 }
+
+export function hasScriptData(name) {
+  return !!document.querySelector(name);
+}
