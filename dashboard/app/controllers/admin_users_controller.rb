@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+# Change to a file to trigger dashboard unit tests.
 
 class AdminUsersController < ApplicationController
   include Pd::PageHelper
