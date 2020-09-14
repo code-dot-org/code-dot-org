@@ -25,7 +25,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
 
   render() {
     // This should be kept consistent with the calculation logic in
-    // dashboard/app/models/pd/application/teacher2021_application.rb.
+    // dashboard/app/models/pd/application/teacher2122_application.rb.
     const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes, 10);
     const csHowManyDaysPerWeek = parseInt(
       this.props.data.csHowManyDaysPerWeek,
@@ -142,7 +142,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
             Note: 50 or more hours of instruction per CS Principles section are
             strongly recommended. We suggest checking with your school
             administration to see if additional time can be allotted for this
-            course in 2020-21.
+            course in 2021-22.
           </p>
         )}
         {this.props.data.program === PROGRAM_CSD &&

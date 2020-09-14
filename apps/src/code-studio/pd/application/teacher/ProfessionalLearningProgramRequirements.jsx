@@ -159,10 +159,10 @@ export default class SummerWorkshop extends LabeledFormComponent {
         workshop => `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSureExplain);
-      options.push(TextFields.unableToAttend2021);
+      options.push(TextFields.unableToAttend);
       const textFieldMap = {
         [TextFields.notSureExplain]: 'notSureExplain',
-        [TextFields.unableToAttend2021]: 'unableToAttend'
+        [TextFields.unableToAttend]: 'unableToAttend'
       };
 
       return (
@@ -173,7 +173,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
             textFieldMap
           )}
           {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend2021],
+            [TextFields.notSureExplain, TextFields.unableToAttend],
             this.props.data.ableToAttendMultiple
           ).length > 0 && (
             <div>
@@ -211,7 +211,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
     if (
       this.props.data.planToTeach &&
       !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year (2020-2021)'
+        'Yes, I plan to teach this course this year'
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ')
@@ -270,9 +270,9 @@ export default class SummerWorkshop extends LabeledFormComponent {
             , including:
           </p>
           <ul>
-            <li>One summer workshop in 2020</li>
+            <li>One summer workshop in 2021</li>
             <li>
-              Up to four one-day workshops during the 2020-21 school year
+              Up to four one-day workshops during the 2021-22 school year
               (typically held on Saturdays)
             </li>
           </ul>
@@ -319,17 +319,17 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 <p style={{color: 'red'}}>
                   Note: To meet our implementation guidance and our scholarship
                   recommendations, you should plan to teach this course in the
-                  upcoming school year (2020-21). We suggest checking with your
+                  upcoming school year (2021-22). We suggest checking with your
                   administrators to ensure that the course will be offered in
-                  2020-21 before updating your answer to "
+                  2021-22 before updating your answer to "
                   <strong>
-                    Do you plan to personally teach this course in the 2020-21
+                    Do you plan to personally teach this course in the 2021-22
                     school year?
                   </strong>
                   " on page 3 and submitting your application.
                 </p>
               )}
-              {this.props.data.payFee === TextFields.noPayFee2021 &&
+              {this.props.data.payFee === TextFields.noPayFee &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
           )}
@@ -372,13 +372,13 @@ export default class SummerWorkshop extends LabeledFormComponent {
       requiredFields.push('payFee', 'understandFee');
     }
 
-    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee2021) {
+    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {
       requiredFields.push('scholarshipReasons');
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend],
         data.ableToAttendMultiple
       ).length > 0
     ) {
@@ -394,13 +394,13 @@ export default class SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee2021) {
+    if (data.payFee !== TextFields.noPayFee) {
       changes.scholarshipReasons = undefined;
     }
 
     if (
       _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend2021],
+        [TextFields.notSureExplain, TextFields.unableToAttend],
         data.ableToAttendMultiple
       ).length === 0
     ) {
