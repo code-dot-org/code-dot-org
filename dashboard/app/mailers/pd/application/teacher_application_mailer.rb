@@ -1,6 +1,6 @@
 module Pd::Application
   class TeacherApplicationMailer < ActionMailer::Base
-    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Liz Gauthier <liz.gauthier@code.org>'
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Jared Fritz <jared@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
