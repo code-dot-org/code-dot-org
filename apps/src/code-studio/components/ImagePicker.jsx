@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {getStore} from '@cdo/apps/redux';
-import AssetManager from './AssetManager';
+import AssetManager, {ImageMode} from './AssetManager';
 import color from '../../util/color';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
@@ -34,7 +34,7 @@ export default class ImagePicker extends React.Component {
     elementId: PropTypes.string
   };
 
-  state = {mode: 'file'};
+  state = {mode: ImageMode.FILE};
 
   getAssetNameWithPrefix = icon => {
     this.props.assetChosen(ICON_PREFIX + icon);
@@ -52,23 +52,23 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: this.state.mode === 'file' ? '"Gotham 5r"' : null,
-        color: this.state.mode === 'file' ? null : '#999',
+        fontFamily: this.state.mode === ImageMode.FILE ? '"Gotham 5r"' : null,
+        color: this.state.mode === ImageMode.FILE ? null : '#999',
         fontSize: '16px',
         cursor: 'pointer'
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        fontFamily: this.state.mode === 'icon' ? '"Gotham 5r"' : null,
-        color: this.state.mode === 'icon' ? null : '#999',
+        fontFamily: this.state.mode === ImageMode.ICON ? '"Gotham 5r"' : null,
+        color: this.state.mode === ImageMode.ICON ? null : '#999',
         cursor: 'pointer'
       },
       urlModeToggle: {
         margin: '0 20px 0 0',
         fontSize: '16px',
-        fontFamily: this.state.mode === 'url' ? '"Gotham 5r"' : null,
-        color: this.state.mode === 'url' ? null : '#999',
+        fontFamily: this.state.mode === ImageMode.URL ? '"Gotham 5r"' : null,
+        color: this.state.mode === ImageMode.URL ? null : '#999',
         cursor: 'pointer'
       },
       divider: {
@@ -95,19 +95,19 @@ export default class ImagePicker extends React.Component {
       modeSwitch = (
         <div id="modeSwitch">
           <span
-            onClick={() => this.setMode('file')}
+            onClick={() => this.setMode(ImageMode.FILE)}
             style={styles.fileModeToggle}
           >
             My Files
           </span>
           <span
-            onClick={() => this.setMode('url')}
+            onClick={() => this.setMode(ImageMode.URL)}
             style={styles.urlModeToggle}
           >
             Link to Image
           </span>
           <span
-            onClick={() => this.setMode('icon')}
+            onClick={() => this.setMode(ImageMode.ICON)}
             style={styles.iconModeToggle}
           >
             Icons
@@ -128,7 +128,7 @@ export default class ImagePicker extends React.Component {
     }
 
     const getBody = () => {
-      if (!this.props.assetChosen || this.state.mode === 'file') {
+      if (!this.props.assetChosen || this.state.mode === ImageMode.FILE) {
         return (
           <AssetManager
             assetChosen={this.props.assetChosen}
@@ -145,7 +145,7 @@ export default class ImagePicker extends React.Component {
             isStartMode={isStartMode}
           />
         );
-      } else if (this.state.mode === 'icon') {
+      } else if (this.state.mode === ImageMode.ICON) {
         return <IconLibrary assetChosen={this.getAssetNameWithPrefix} />;
       } else {
         return (
@@ -153,7 +153,7 @@ export default class ImagePicker extends React.Component {
             assetChosen={this.props.assetChosen}
             allowedExtensions={extensionFilter[this.props.typeFilter]}
             currentValue={
-              this.props.currentImageType === 'url'
+              this.props.currentImageType === ImageMode.URL
                 ? this.props.currentValue
                 : ''
             }

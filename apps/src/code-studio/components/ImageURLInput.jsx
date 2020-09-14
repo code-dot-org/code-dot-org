@@ -21,11 +21,6 @@ const styles = {
   }
 };
 
-const description = `
-    Don't have a file downloaded? Provide the link to an image on the web.
-    This works for URLs that end with *.GIF*, *.PNG*, or *.JPG*.
-    `;
-
 export default class ImageURLInput extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func,
@@ -38,7 +33,6 @@ export default class ImageURLInput extends React.Component {
   }
 
   handleSubmitWrapper = url => {
-    console.log(ABSOLUTE_REGEXP.test(url));
     if (ABSOLUTE_REGEXP.test(url)) {
       this.props.assetChosen(url, moment());
     } else {
@@ -49,9 +43,11 @@ export default class ImageURLInput extends React.Component {
   render() {
     return (
       <div>
-        <div style={styles.supportingText}>{description}</div>
+        <div style={styles.supportingText}>
+          {i18n.imageURLInputDescription()}
+        </div>
         <InputPrompt
-          question={'Image URL:'}
+          question={i18n.imageURLInputPrompt()}
           onInputReceived={this.handleSubmitWrapper}
           currentValue={this.props.currentValue}
         />

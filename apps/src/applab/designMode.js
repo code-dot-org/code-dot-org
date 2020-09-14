@@ -25,6 +25,7 @@ import * as screens from './redux/screens';
 import {getStore} from '../redux';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
+import {ImageMode} from '../code-studio/components/AssetManager';
 
 var designMode = {};
 export default designMode;
@@ -194,13 +195,13 @@ designMode.fontFamilyOptionFromStyle = function(style) {
 
 designMode.assignImageType = function(element, image_source) {
   if (ICON_PREFIX_REGEX.test(image_source)) {
-    return 'icon';
+    return ImageMode.ICON;
   } else if (HTTP_PREFIX_REGEX.test(image_source)) {
-    return 'url';
+    return ImageMode.URL;
   } else if (image_source === '') {
-    return 'default';
+    return ImageMode.DEFAULT;
   } else {
-    return 'files';
+    return ImageMode.FILE;
   }
 };
 
