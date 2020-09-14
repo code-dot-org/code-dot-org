@@ -15,6 +15,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
+require 'cdo/profanity_filter'
 require 'dynamic_config/dcdo'
 require 'open3'
 require 'tempfile'
@@ -44,6 +45,9 @@ def main
       else
         data['organization_name_s']
       end
+
+    # Skip if organization or school name contains a profanity
+    next if ProfanityFilter.find_potential_profanity_in_any_language(organization_name)
 
     coordinates = processed_data['location_p'].split(',')
     long = coordinates[1].to_f
