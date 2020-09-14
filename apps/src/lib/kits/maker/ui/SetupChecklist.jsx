@@ -245,17 +245,14 @@ export default class SetupChecklist extends Component {
   installFirmwareSketch() {
     return (
       <div>
-        You should make sure it has the right firmware sketch installed. You can{' '}
-        <a
-          href={
-            this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-              ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-              : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
-          }
-        >
-          install the Circuit Playground Firmata sketch with these instructions
-        </a>
-        .
+        <SafeMarkdown
+          markdown={i18n.makerSetupInstallFirmata({
+            firmataURL:
+              this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
+                : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+          })}
+        />
       </div>
     );
   }
