@@ -4,6 +4,7 @@ module Pd
       include ApplicationConstants
 
       APPLICATION_CURRENT_YEAR = YEAR_21_22
+      APPLICATION_CURRENT_YEAR_SHORT = YEAR_21_22_SHORT
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = Teacher2122Application
