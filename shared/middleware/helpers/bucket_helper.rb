@@ -4,6 +4,7 @@ require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
 require 'honeybadger/ruby'
 require 'cdo/firehose'
+# Trigger shared unit tests.
 
 #
 # BucketHelper

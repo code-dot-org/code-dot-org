@@ -1,5 +1,6 @@
 require 'honeybadger/ruby'
 require_relative '../helpers/hourofcode_helpers'
+# Trigger Pegasus unit tests.
 
 class HocSignup2014 < Form
   def self.normalize(data)

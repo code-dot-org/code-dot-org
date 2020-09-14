@@ -2,6 +2,7 @@ require_relative '../../../deployment'
 require 'aws-sdk-databasemigrationservice'
 require 'ostruct'
 require 'cdo/redshift_import'
+# trigger lib tests to run.
 
 module Cdo
   class DMS
