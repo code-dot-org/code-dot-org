@@ -358,6 +358,7 @@
   "makerSetupFetchingVersion": "Getting the latest version...",
   "makerSetupFollowInstructions": "Follow the instructions given by the interactive setup checklist.",
   "makerSetupInstallSerialConnector": "Please install the [Code.org Serial Connector Chrome App]({webstoreURL}).",
+  "makerSetupInstallFirmata": "You should make sure it has the right firmware sketch installed. You can [install the Circuit Playground Firmata sketch with these instructions]({firmataURL}).",
   "makerSetupLinuxAlternative": "Alternative Installers",
   "makerSetupLinuxAlternativeInstall": "[Install from source](https://github.com/code-dot-org/browser)",
   "makerSetupMakerAppForChromebook": "Maker Toolkit for Chromebook",
