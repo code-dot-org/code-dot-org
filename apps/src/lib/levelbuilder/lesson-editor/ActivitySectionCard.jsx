@@ -86,7 +86,7 @@ styles.targetActivitySectionCard = {
 
 /*
 An activity section is a chunk of an activity. This could be a section
-or text that explains to the teacher what to say or do to run the lesson or
+of text that explains to the teacher what to say or do to run the lesson or
 it could be a section of a lesson that shows a set of levels that are used
 at that point in the lesson (also known as a progression). ActivitySections
 can have tips attached to the beginning of their content and can be marked with
