@@ -1767,7 +1767,9 @@ zh-TW:
   hoc2019_dance_previous_versions: |-
     你在找之前的舞蹈派對嗎？
     這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。
-  homepage_slot_text_title_at_home: 在家學習
+  homepage_slot_text_title_at_home: '在家學習
+
+'
   homepage_slot_text_blurb_at_home: 這些資源讓它可以輕鬆達成
   homepage_slot_text_link_code_break: 來場程式休憩時刻
   homepage_slot_text_link_do_hoc: 試試「一小時玩程式」！
