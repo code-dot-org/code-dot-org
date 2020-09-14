@@ -3,5 +3,8 @@
  * include a bunch of modules that we don't want to end up in our webpack bundle
  * In those cases, we can alias to this noop export, so that something like
  * require('repl') ends up with an empty object.
+ *
+ * Trigger apps test to run.
+ *
  */
 module.exports = {};
