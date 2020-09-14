@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: unit
 
 clone:
@@ -75,14 +76,14 @@ volumes:
 
 trigger:
   branch:
-    include:
-    - 'staging'
-    - 'staging-next'
+  - 'staging'
+  - 'staging-next'
   event:
   - pull_request
 
 ---
 kind: pipeline
+type: docker
 name: ui
 
 clone:
@@ -176,13 +177,12 @@ volumes:
 
 trigger:
   branch:
-    include:
-    - 'staging'
-    - 'staging-next'
+  - 'staging'
+  - 'staging-next'
   event:
   - pull_request
 ---
 kind: signature
-hmac: f21b96080534f69497f54e49b1890090467845598767c8670e9caf4ea7028f35
+hmac: b7621086539d5bc60d621e507bab706cad6f36fdd859d8b1d1b18d9670dbe5c6
 
 ...
