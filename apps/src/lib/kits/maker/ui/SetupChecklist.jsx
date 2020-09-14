@@ -229,9 +229,7 @@ export default class SetupChecklist extends Component {
           stepName="Using a supported browser"
           stepStatus={Status.FAILED}
         >
-          Your current browser is not supported at this time. Please install the
-          latest version of{' '}
-          <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
+          <SafeMarkdown markdown={i18n.makerSetupUnsupportedBrowser()} />
         </ValidationStep>
       );
     }
