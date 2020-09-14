@@ -977,6 +977,7 @@ zh-TW:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: 在 {N} {UNIT}
         options:
           UNIT:
             '"seconds"': 秒
@@ -1013,6 +1014,8 @@ zh-TW:
         text: 可拖曳
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_getAllSprites:
+        text: 所有小怪
       gamelab_getProp:
         text: 角色 {SPRITE} 的 {PROPERTY}
         options:
