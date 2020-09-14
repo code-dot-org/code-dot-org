@@ -6,7 +6,7 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
-import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
+import {PROGRAM_CSD, PROGRAM_CSP, YEAR} from './TeacherApplicationConstants';
 
 export default class ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.chooseYourProgram;
@@ -142,7 +142,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
             Note: 50 or more hours of instruction per CS Principles section are
             strongly recommended. We suggest checking with your school
             administration to see if additional time can be allotted for this
-            course in 2021-22.
+            course in {YEAR}.
           </p>
         )}
         {this.props.data.program === PROGRAM_CSD &&
