@@ -137,7 +137,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/count"
 
-    assert_equal "0", formatted_response
+    assert_equal "0", response.body
   end
 
   test 'count is accurate when feedback is available' do
@@ -147,8 +147,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     sign_in @student
     get "#{API}/count"
-
-    assert_equal "1", formatted_response
+    assert_equal "1", response.body
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @level, @script_level, COMMENT2, PERFORMANCE2)
     sign_out @teacher
@@ -156,7 +155,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/count"
 
-    assert_equal "2", formatted_response
+    assert_equal "2", response.body
   end
 
   test 'count does not include already seen feedback' do
@@ -167,7 +166,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/count"
 
-    assert_equal "1", formatted_response
+    assert_equal "1", response.body
 
     TeacherFeedback.last.update_attribute(
       :seen_on_feedback_page_at,
@@ -175,7 +174,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     )
 
     get "#{API}/count"
-    assert_equal "0", formatted_response
+    assert_equal "0", response.body
   end
 
   test 'count does not include feedback from a not authorized teacher' do
@@ -185,7 +184,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/count"
 
-    assert_equal "0", formatted_response
+    assert_equal "0", response.body
   end
 
   test 'bad request when student_id not provided - get_feedbacks' do
@@ -294,10 +293,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   def parsed_response
     JSON.parse(@response.body)
-  end
-
-  def formatted_response
-    @response.body.delete!('\\"')
   end
 
   # Sign in as teacher and leave feedback for student on level.
