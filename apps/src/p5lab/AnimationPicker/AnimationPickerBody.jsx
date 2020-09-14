@@ -47,8 +47,8 @@ export default class AnimationPickerBody extends React.Component {
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
-    navigatable: PropTypes.bool.isRequired,
-    defaultCategoryQuery: PropTypes.string,
+    navigable: PropTypes.bool.isRequired,
+    defaultQuery: PropTypes.string,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired
   };
@@ -60,14 +60,14 @@ export default class AnimationPickerBody extends React.Component {
   };
   constructor(props) {
     super(props);
-    if (this.props.defaultCategoryQuery) {
-      const defaultCategoryQuery = this.props.defaultCategoryQuery;
+    if (this.props.defaultQuery) {
       const currentPage = 0;
-      const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-        categoryQuery: defaultCategoryQuery
-      });
+      const {results, pageCount} = this.searchAssetsWrapper(
+        currentPage,
+        this.props.defaultQuery
+      );
       this.state = {
-        categoryQuery: defaultCategoryQuery,
+        ...this.props.defaultQuery,
         currentPage,
         results,
         pageCount,
@@ -223,7 +223,7 @@ export default class AnimationPickerBody extends React.Component {
           <div style={animationPickerStyles.navigation}>
             {categoryQuery !== '' && (
               <div style={animationPickerStyles.breadCrumbs}>
-                {this.props.navigatable && (
+                {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
                     style={animationPickerStyles.allAnimations}

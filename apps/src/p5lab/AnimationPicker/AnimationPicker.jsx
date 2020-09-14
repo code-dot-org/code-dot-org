@@ -42,11 +42,13 @@ class AnimationPicker extends React.Component {
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
+    navigable: PropTypes.bool.isRequired,
+    defaultQuery: PropTypes.string,
+    hideBackgrounds: PropTypes.bool.isRequired,
+    canDraw: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool,
-    isSpriteLab: PropTypes.bool,
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
     is13Plus: PropTypes.bool,
@@ -79,10 +81,10 @@ class AnimationPicker extends React.Component {
         libraryManifest={this.props.libraryManifest}
         hideUploadOption={this.props.hideUploadOption}
         hideAnimationNames={this.props.hideAnimationNames}
-        navigatable={!this.props.isBackground}
-        defaultCategoryQuery={this.props.isBackground ? 'backgrounds' : null}
-        hideBackgrounds={!this.props.isBackground && this.props.isSpriteLab}
-        canDraw={!this.props.isBackground}
+        navigable={this.props.navigable}
+        defaultQuery={this.props.defaultQuery}
+        hideBackgrounds={this.props.hideBackgrounds}
+        canDraw={this.props.canDraw}
       />
     );
   }
@@ -123,8 +125,6 @@ class AnimationPicker extends React.Component {
 export default connect(
   state => ({
     visible: state.animationPicker.visible,
-    isBackground: state.animationPicker.isBackground,
-    isSpriteLab: state.animationPicker.isSpriteLab,
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     is13Plus: state.pageConstants.is13Plus,
