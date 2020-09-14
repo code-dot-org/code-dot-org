@@ -81,10 +81,24 @@ var LegacyDialog = (module.exports = function(options) {
       .append(header);
     if (close) {
       modalHeader.append(closeLink);
+      if (options.link) {
+        modalHeader.append(
+          $(`<div onclick="window.open('${options.link}');"></div>`).addClass(
+            'open-link'
+          )
+        );
+      }
     }
     this.div.append(modalHeader);
   } else if (close) {
     modalBody.append(closeLink);
+    if (options.link) {
+      modalBody.append(
+        $(`<div onclick="window.open('${options.link}');"></div>`).addClass(
+          'open-link'
+        )
+      );
+    }
   }
 
   modalBody.append(body);
