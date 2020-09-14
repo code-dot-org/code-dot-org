@@ -199,7 +199,7 @@ export default class SetupChecklist extends Component {
       // Maker Toolkit Standalone App
       return (
         <ValidationStep
-          stepName="Code.org Browser"
+          stepName={i18n.makerSetupBrowserTitle()}
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
@@ -207,7 +207,10 @@ export default class SetupChecklist extends Component {
       // Chromebooks - Chrome App
       return (
         <ValidationStep
-          stepName={'Chrome App installed' + (isChromeOS() ? '' : ' (Legacy)')}
+          stepName={
+            i18n.makerSetupAppInstalled() +
+            (isChromeOS() ? '' : ' (' + i18n.legacy() + ')')
+          }
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
           <SafeMarkdown
@@ -226,7 +229,7 @@ export default class SetupChecklist extends Component {
       // Unsupported Browser
       return (
         <ValidationStep
-          stepName="Using a supported browser"
+          stepName={i18n.makerSetupBrowserSupported()}
           stepStatus={Status.FAILED}
         >
           <SafeMarkdown markdown={i18n.makerSetupUnsupportedBrowser()} />
