@@ -242,6 +242,24 @@ export default class SetupChecklist extends Component {
     return <SafeMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
+  installFirmwareSketch() {
+    return (
+      <div>
+        You should make sure it has the right firmware sketch installed. You can{' '}
+        <a
+          href={
+            this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+              ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
+              : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+          }
+        >
+          install the Circuit Playground Firmata sketch with these instructions
+        </a>
+        .
+      </div>
+    );
+  }
+
   render() {
     const linuxPermissionError =
       isLinux() &&
@@ -251,7 +269,7 @@ export default class SetupChecklist extends Component {
     return (
       <div>
         <h2>
-          Setup Check
+          {i18n.makerSetupCheck()}
           <input
             style={{marginLeft: 9, marginTop: -4}}
             className="btn"
@@ -293,8 +311,7 @@ export default class SetupChecklist extends Component {
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
           >
-            We found a board but it didn't respond properly when we tried to
-            connect to it.
+            {i18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
               <div>
                 <p>
@@ -314,45 +331,17 @@ export default class SetupChecklist extends Component {
                 </p>
               </div>
             )}
-            {!linuxPermissionError && (
-              <div>
-                You should make sure it has the right firmware sketch installed.
-                You can{' '}
-                <a
-                  href={
-                    this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                      ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-                      : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
-                  }
-                >
-                  install the Circuit Playground Firmata sketch with these
-                  instructions
-                </a>
-                .
-              </div>
-            )}
+            {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
             stepName={i18n.validationStepBoardComponentsUsable()}
           >
-            Oh no! Something unexpected went wrong while verifying the board
-            components.
+            {i18n.makerSetupVerifyComponents()}
             <br />
-            You should make sure your board has the right firmware sketch
-            installed. You can{' '}
-            <a
-              href={
-                this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                  ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-                  : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
-              }
-            >
-              install the Circuit Playground Firmata sketch with these
-              instructions
-            </a>
-            .{this.contactSupport()}
+            {this.installFirmwareSketch()}
+            {this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('flash-classic') &&
             this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
