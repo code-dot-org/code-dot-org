@@ -88,9 +88,6 @@ pt:
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
             MOVES.Rest: Nenhum
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fazer {MOVE} {DIR} Sempre"
         options:
@@ -109,9 +106,6 @@ pt:
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isto ou aquilo
             MOVES.Rest: Nenhum
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: Mudar {SPRITE} {PROPERTY} Por {VAL}
         options:
@@ -188,9 +182,6 @@ pt:
             MOVES.XArmsUp: Alongar
             MOVES.ThisOrThat: Isto ou aquilo
             MOVES.Rest: Nenhum
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} fazer {MOVE} {DIR} Quando"
         options:
@@ -219,9 +210,6 @@ pt:
             MOVES.XArmsUp: Alongar
             MOVES.ThisOrThat: Isto ou aquilo
             MOVES.Rest: Nenhum
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'repetir cada {N} medidas após {START} '
       Dancelab_everySeconds:
@@ -1105,6 +1093,13 @@ pt:
             '"z"': z
       gamelab_locationAt:
         text: 'localização x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Ocidente
       gamelab_locationMouse:
         text: localização do mouse
       gamelab_locationOf:

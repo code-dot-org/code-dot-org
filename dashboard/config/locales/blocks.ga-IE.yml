@@ -88,9 +88,6 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
@@ -109,9 +106,6 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
@@ -188,9 +182,6 @@ ga:
             MOVES.XArmsUp: Síneadh
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} uair amháin
         options:
@@ -219,9 +210,6 @@ ga:
             MOVES.XArmsUp: Síneadh
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'athdhéan gach {N} tomhas tar éis {START} '
       Dancelab_everySeconds:

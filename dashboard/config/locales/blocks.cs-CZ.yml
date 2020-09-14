@@ -88,9 +88,6 @@ cs:
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} navždy"
         options:
@@ -110,9 +107,6 @@ cs:
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Thriller: Thriller
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -189,9 +183,6 @@ cs:
             MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} jednou"
         options:
@@ -220,9 +211,6 @@ cs:
             MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'opakovat každých {N} taktů po {START} '
       Dancelab_everySeconds:
@@ -1105,6 +1093,13 @@ cs:
             '"z"': z
       gamelab_locationAt:
         text: 'umístění x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': sever
+            '"East"': východ
+            '"South"': jih
+            '"West"': západ
       gamelab_locationMouse:
         text: umístění myši
       gamelab_locationOf:

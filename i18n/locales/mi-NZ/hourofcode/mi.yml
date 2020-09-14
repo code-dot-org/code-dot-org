@@ -367,6 +367,7 @@ mi:
   how_to_nav_companies: Mā ngā kamupene
   how_to_nav_afterschool_educators: Mā ngā kaiwhakaako o muri i te kura
   how_to_nav_volunteers: Mā ngā tūao
+  how_to_nav_virtual: For virtual events
   whats_next_header: He aha kei te aroaro?
   whats_next_description: Ka tukuna e mātou ētahi rauemi me ētahi kōrero āwhina mō
     tāu takunetanga.<a href='http://code.org/learn'>Whakamātauria ngā akoranga o te
@@ -8417,7 +8418,7 @@ mi:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8634,9 +8635,9 @@ mi:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding

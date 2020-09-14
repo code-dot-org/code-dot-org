@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 ---
 
 {{signup_button}}
@@ -10,15 +10,18 @@ title: How-to Guide for Hour of Code
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் [ பங்கேற்பு வழிகாட்டியைப் பாருங்கள் ](=== localized_files/participation_guide }ibl).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் [ பங்கேற்பு வழிகாட்டியைப் பாருங்கள் ](=== localized_files/participation_guide }ibl).
 
-An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
-- [1. Watch the Hour of Code how-to video](#how-to-video)
-- [2. Explore activities and tutorials](#explore-activities)
-- [3. Create your plan for the day](#create-your-plan)
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -83,9 +86,9 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 * * *
 
-<a id="promote-your-hour"></a>
+<a id="how-to-start"></a>
 
-## 5. Start your Hour of Code Strong
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -100,11 +103,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).
 - ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.
-- கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க [ இங்கே ](a> {urls/girls }a>).
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 * * *
 
-## 6. Get Coding!
+<a id="code"></a>
+
+## 6. Get coding!
 
 நடவடிக்கைக்கு நேரடி மாணவர்கள்
 
@@ -123,7 +128,9 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 * * *
 
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [வண்ணம்-33]
 
@@ -139,12 +146,17 @@ It’s okay if both you and your students are brand new to computer science. Her
     
     * * *
     
+    
+
+<a id="other-resources"></a>
+
+    
     ## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி:...
     
     - அறிவுரை, அறிவுரை மற்றும் மற்ற கல்வியாளர்களிடமிருந்து உதவி பெற [ கோட் டீச்சர் அரங்கத்தின் மணிநேரத்தை பார்வையிடவும்](http://forum.code.org/c/plc/hour-of-code).
     - [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும்.
     
-    ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
+    ### கோட் ஆஃப் ஹவர் என்ன ஆனது?
     
     Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
     
