@@ -39,7 +39,8 @@ class P5LabView extends React.Component {
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    isBackground: PropTypes.bool
   };
 
   state = {
@@ -95,6 +96,12 @@ class P5LabView extends React.Component {
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
 
+    filterBackgrounds => {
+      return {
+        categoryQuery: 'backgrounds'
+      };
+    };
+
     return (
       <div style={codeModeStyle}>
         <div
@@ -111,6 +118,12 @@ class P5LabView extends React.Component {
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
+              navigable={!this.props.isBackground}
+              defaultQuery={
+                this.props.isBackground ? this.filterBackgrounds() : null
+              }
+              hideBackgrounds={!this.props.isBackground && this.props.spriteLab}
+              canDraw={!this.props.isBackground}
             />
           )}
         </div>
@@ -165,5 +178,6 @@ export default connect(state => ({
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
-  spriteLab: state.pageConstants.isBlockly
+  spriteLab: state.pageConstants.isBlockly,
+  isBackground: state.animationPicker.isBackground
 }))(P5LabView);
