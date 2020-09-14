@@ -25,18 +25,16 @@
   for additional resources and opportunities to connect with other computer science educators.
   Thank you for supporting computer science for every student!
 
-  - if @application.regional_partner
-    %p{style: 'margin-bottom: 0'}
-      Please direct all questions or concerns to:
-      %div{style: 'padding-left: 2em'}
-        = render partial: 'partner_signature'
+- if !(@application.regional_partner)
+  %p
+    Please direct all questions or concerns to:
+    %br
+      = mail_to 'teacher@code.org'
+  %p
+    Thanks again for applying!
+- else
+  %p
+    Thanks again for applying, and let us know if you have any questions or concerns!
 
 %p
-  Thanks again for applying!
-
-%p
-  Liz Gauthier
-  %br
-  Project Manager of District & School Recruitment
-  %br
-  Code.org
+  = render partial: 'partner_signature_confirmation'

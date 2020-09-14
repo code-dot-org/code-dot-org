@@ -67,7 +67,7 @@ module Pd::Application
       @application = teacher_application
 
       mail(
-        from: 'Liz Gauthier <teacher@code.org>',
+        from: 'Jared Fritz <teacher@code.org>',
         to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
         subject: 'A principal has completed the principal approval form'
       )
