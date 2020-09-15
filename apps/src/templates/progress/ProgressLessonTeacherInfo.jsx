@@ -15,14 +15,11 @@ import {
   isStageHiddenForSection
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {
-  OAuthSectionTypes,
-  OAuthProviders
-} from '@cdo/apps/lib/ui/accounts/constants';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import GoogleClassroomShareButton from './GoogleClassroomShareButton';
+import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 
 const styles = {
   buttonContainer: {
@@ -44,12 +41,12 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     // redux provided
     section: sectionShape,
-    userProviders: PropTypes.arrayOf(PropTypes.string),
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired
+    toggleHiddenStage: PropTypes.func.isRequired,
+    showGoogleClassroomButton: PropTypes.bool.isRequired
   };
 
   onClickHiddenToggle = value => {
@@ -72,12 +69,12 @@ class ProgressLessonTeacherInfo extends React.Component {
   render() {
     const {
       section,
-      userProviders,
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
       lesson,
-      levelUrl
+      levelUrl,
+      showGoogleClassroomButton
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -86,13 +83,9 @@ class ProgressLessonTeacherInfo extends React.Component {
     const isHidden =
       scriptAllowsHiddenStages &&
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
-    const showGoogleClassroomButton =
-      section &&
-      userProviders &&
-      section.loginType === OAuthSectionTypes.google_classroom &&
-      userProviders.includes(OAuthProviders.google);
     const courseId =
       (showGoogleClassroomButton &&
+        section &&
         section.code &&
         parseInt(section.code.substring(2))) ||
       null;
@@ -148,13 +141,13 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    userProviders: state.currentUser.providers,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
+    showGoogleClassroomButton: canShowGoogleShareButton(state)
   }),
   {toggleHiddenStage}
 )(ProgressLessonTeacherInfo);
