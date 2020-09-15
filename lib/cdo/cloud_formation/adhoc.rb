@@ -11,7 +11,7 @@ module Cdo::CloudFormation
       else
         log.info "Starting Instance #{instance.id} ..."
         options[:quiet] = true
-        options[:start_inactive_instance] = true
+        stack.options[:start_inactive_instance] = true
         create_or_update
       end
       cfn_stack.outputs.each do |output|
