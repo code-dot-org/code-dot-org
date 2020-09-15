@@ -7,7 +7,12 @@ class LessonsController < ApplicationController
   def show
     @lesson_data = {
       title: @lesson.localized_title,
+      shortTitle: @lesson.short_title,
       overview: @lesson.overview,
+      assessment: @lesson.assessment,
+      unplugged: @lesson.unplugged,
+      lockable: @lesson.lockable,
+      creativeCommonsLicense: @lesson.creative_commons_license
     }
   end
 
@@ -16,7 +21,13 @@ class LessonsController < ApplicationController
     @lesson_data = {
       id: @lesson.id,
       name: @lesson.name,
+      shortTitle: @lesson.short_title,
       overview: @lesson.overview,
+      studentOverview: @lesson.student_overview,
+      assessment: @lesson.assessment,
+      unplugged: @lesson.unplugged,
+      lockable: @lesson.lockable,
+      creativeCommonsLicense: @lesson.creative_commons_license
     }
   end
 

@@ -110,7 +110,7 @@ class ActivitiesEditor extends Component {
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Activity
+            Activity
           </button>
         </div>
         <div style={styles.preview}>
