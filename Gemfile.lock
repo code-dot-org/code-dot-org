@@ -350,10 +350,9 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    codecov (0.1.14)
+    codecov (0.2.8)
       json
       simplecov
-      url
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
@@ -538,7 +537,7 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.7.2)
-    libv8 (3.16.14.15)
+    libv8 (8.4.255.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -558,6 +557,8 @@ GEM
     mini_magick (4.9.5)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
+    mini_racer (0.3.1)
+      libv8 (~> 8.4.255)
     minitest (5.11.3)
     minitest-around (0.4.1)
       minitest (~> 5.0)
@@ -722,7 +723,6 @@ GEM
       json
     redcarpet (3.3.4)
     redis (3.3.3)
-    ref (2.0.0)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -832,9 +832,6 @@ GEM
       json (>= 1.4.3)
     sysexits (1.2.0)
     temple (0.8.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -861,7 +858,6 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    url (0.3.2)
     user_agent_parser (2.3.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
@@ -986,6 +982,7 @@ DEPENDENCIES
   loofah (~> 2.2.1)
   memory_profiler
   mini_magick (>= 4.9.4)
+  mini_racer
   minitest (~> 5.5)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
@@ -1063,7 +1060,6 @@ DEPENDENCIES
   sqlite3
   sshkit
   stringex (~> 2.5.2)
-  therubyracer (~> 0.12.2)
   thin
   timecop
   twilio-ruby
