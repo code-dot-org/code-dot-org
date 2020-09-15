@@ -32,12 +32,21 @@ class VirtualizedSummaryView extends Component {
     jumpToLessonDetails: PropTypes.func.isRequired
   };
 
-  state = {
-    fixedColumnCount: 1,
-    fixedRowCount: 1,
-    scrollToColumn: 0,
-    scrollToRow: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      fixedColumnCount: 1,
+      fixedRowCount: 1,
+      scrollToColumn: 0,
+      scrollToRow: 0
+    };
+    this.summaryView = null;
+    this.setSummaryViewRef = this.setSummaryViewRef.bind(this);
+  }
+
+  setSummaryViewRef(ref) {
+    this.summaryView = ref;
+  }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {scriptData} = this.props;
@@ -137,7 +146,7 @@ class VirtualizedSummaryView extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
-      this.refs.summaryView.forceUpdateGrids();
+      this.summaryView.forceUpdateGrids();
     }
   }
 
@@ -160,7 +169,7 @@ class VirtualizedSummaryView extends Component {
           cellRenderer={this.cellRenderer}
           columnWidth={this.getColumnWidth}
           columnCount={columnCount}
-          ref="summaryView"
+          ref={this.setSummaryViewRef}
           rowHeight={ROW_HEIGHT}
           height={tableHeight}
           scrollToColumn={lessonOfInterest}

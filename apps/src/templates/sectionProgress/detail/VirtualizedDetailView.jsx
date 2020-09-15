@@ -79,25 +79,34 @@ class VirtualizedDetailView extends Component {
     stageExtrasEnabled: PropTypes.bool
   };
 
-  state = {
-    fixedColumnCount: 1,
-    fixedRowCount: 2,
-    scrollToColumn: 0,
-    scrollToRow: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      fixedColumnCount: 1,
+      fixedRowCount: 2,
+      scrollToColumn: 0,
+      scrollToRow: 0
+    };
+    this.detailView = null;
+    this.setDetailViewRef = this.setDetailViewRef.bind(this);
+  }
 
   componentWillReceiveProps(nextProps) {
     // When we replace the script, re-compute the column widths
     if (this.props.scriptData.id !== nextProps.scriptData.id) {
-      this.refs.detailView.recomputeGridSize();
-      this.refs.detailView.measureAllCells();
+      this.detailView.recomputeGridSize();
+      this.detailView.measureAllCells();
     }
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
-      this.refs.detailView.forceUpdateGrids();
+      this.detailView.forceUpdateGrids();
     }
+  }
+
+  setDetailViewRef(ref) {
+    this.detailView = ref;
   }
 
   onClickLevel = lessonOfInterest => {
@@ -278,7 +287,7 @@ class VirtualizedDetailView extends Component {
         styleTopLeftGrid={progressStyles.topLeft}
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
-        ref="detailView"
+        ref={this.setDetailViewRef}
         onScroll={onScroll}
       />
     );
