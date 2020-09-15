@@ -12,7 +12,10 @@ class LessonsController < ApplicationController
       assessment: @lesson.assessment,
       unplugged: @lesson.unplugged,
       lockable: @lesson.lockable,
-      creativeCommonsLicense: @lesson.creative_commons_license
+      creativeCommonsLicense: @lesson.creative_commons_license,
+      purpose: @lesson.purpose,
+      preparation: @lesson.preparation,
+      annoucements: @lesson.annoucements
     }
   end
 
@@ -27,7 +30,10 @@ class LessonsController < ApplicationController
       assessment: @lesson.assessment,
       unplugged: @lesson.unplugged,
       lockable: @lesson.lockable,
-      creativeCommonsLicense: @lesson.creative_commons_license
+      creativeCommonsLicense: @lesson.creative_commons_license,
+      purpose: @lesson.purpose,
+      preparation: @lesson.preparation,
+      annoucements: @lesson.annoucements
     }
   end
 
@@ -43,6 +49,16 @@ class LessonsController < ApplicationController
   def lesson_params
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
-    params.permit(:overview)
+    params.permit(
+      :overview,
+      :short_title,
+      :student_overview,
+      :assessment,
+      :unplugged,
+      :creativeCommonsLicense,
+      :lockable,
+      :purpose,
+      :preparation
+    )
   end
 end

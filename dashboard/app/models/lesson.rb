@@ -47,6 +47,9 @@ class Lesson < ActiveRecord::Base
     unplugged
     creative_commons_license
     assessment
+    purpose
+    preparation
+    annoucements
     visible_after
   )
 

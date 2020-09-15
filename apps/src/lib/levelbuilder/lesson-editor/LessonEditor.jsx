@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
 
 const styles = {
   editor: {
@@ -35,7 +37,10 @@ export default class LessonEditor extends Component {
     unplugged: PropTypes.bool,
     lockable: PropTypes.bool,
     assessment: PropTypes.bool,
-    creativeCommonsLicense: PropTypes.string
+    creativeCommonsLicense: PropTypes.string,
+    purpose: PropTypes.string,
+    preparation: PropTypes.string,
+    announcements: PropTypes.arrayOf(announcementShape)
   };
 
   render() {
@@ -43,20 +48,21 @@ export default class LessonEditor extends Component {
       displayName,
       overview,
       studentOverview,
-      title,
       shortTitle,
       unplugged,
       lockable,
       creativeCommonsLicense,
-      assessment
+      assessment,
+      purpose,
+      preparation,
+      announcements
     } = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
-
         <label>
           Title
-          <input name="title" defaultValue={title} style={styles.input} />
+          <input name="name" defaultValue={displayName} style={styles.input} />
         </label>
         <label>
           Short Title
@@ -65,6 +71,35 @@ export default class LessonEditor extends Component {
             defaultValue={shortTitle}
             style={styles.input}
           />
+        </label>
+        <h2>Lesson Settings</h2>
+        <label>
+          Lockable
+          <input
+            name="lockable"
+            type="checkbox"
+            defaultChecked={lockable}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Check this box if this lesson should be locked from teachers. Only
+              validated teachers will be able to see it and unlock the
+              materials.
+            </p>
+          </HelpTip>
+        </label>
+        <label>
+          Assessment
+          <input
+            name="assessment"
+            type="checkbox"
+            defaultChecked={assessment}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>Check this box if this lesson is an assessment or project. </p>
+          </HelpTip>
         </label>
         <label>
           Unplugged Lesson
@@ -80,8 +115,6 @@ export default class LessonEditor extends Component {
             </p>
           </HelpTip>
         </label>
-
-        <h2>Lesson Settings</h2>
         <label>
           Creative Commons Image
           <select
@@ -103,37 +136,10 @@ export default class LessonEditor extends Component {
             </p>
           </HelpTip>
         </label>
-
-        <label>
-          Lockable
-          <input
-            name="lockable"
-            type="checkbox"
-            defaultChecked={lockable}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              Check this box if this lesson should be locked from teachers. Only
-              validated teachers will be able to see it and unlock the
-              materials.
-            </p>
-          </HelpTip>
-        </label>
-
-        <label>
-          Assessment
-          <input
-            name="assessment"
-            type="checkbox"
-            defaultChecked={assessment}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>Check this box if this lesson is an assessment or project. </p>
-          </HelpTip>
-        </label>
-
+        <ScriptAnnouncementsEditor
+          defaultAnnouncements={announcements}
+          inputStyle={styles.input}
+        />
         <h2>Lesson Plan</h2>
         <TextareaWithMarkdownPreview
           markdown={overview}
@@ -147,6 +153,22 @@ export default class LessonEditor extends Component {
           name={'student_overview'}
           inputRows={5}
         />
+        <TextareaWithMarkdownPreview
+          markdown={purpose}
+          label={'Purpose'}
+          name={'purpose'}
+          inputRows={5}
+        />
+        <TextareaWithMarkdownPreview
+          markdown={preparation}
+          label={'Preparation'}
+          name={'preparation'}
+          inputRows={5}
+        />
+        {/*TODO: Add resource editor once build resources model*/}
+        <label>Resources</label>
+        {/*TODO: Add objectives editor once build objectives model*/}
+        <label>Objectives</label>
 
         <h2>Activities & Levels</h2>
         <ActivitiesEditor />
