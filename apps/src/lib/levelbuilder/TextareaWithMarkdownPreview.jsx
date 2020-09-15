@@ -26,7 +26,7 @@ const styles = {
  */
 export default class TextareaWithMarkdownPreview extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired,
+    markdown: PropTypes.string,
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     inputRows: PropTypes.number
