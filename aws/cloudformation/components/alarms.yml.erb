@@ -24,8 +24,7 @@
       AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
-        - Name: InstanceId
-          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+        - {Name: InstanceId, Value: !Ref <%=daemon%>}
       EvaluationPeriods: 5
       MetricName: MemoryUtilization
       Namespace: 'System/Linux'
