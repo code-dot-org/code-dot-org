@@ -36,7 +36,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     super(props);
 
     this.state = {
-      markdown: this.props.markdown
+      markdown: this.props.markdown || ''
     };
   }
 
