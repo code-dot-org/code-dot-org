@@ -480,7 +480,7 @@ state-facts: true
         - if state_info[:state_plan_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_plan_full]
+            = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -496,7 +496,7 @@ state-facts: true
         - if state_info[:cs_standards_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:standards_full]
+            = state_info[:standards_t]
         - elsif state_info[:cs_standards_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -514,7 +514,7 @@ state-facts: true
         - if state_info[:pd_funding_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:funding_full]
+            = state_info[:funding_t]
         - elsif state_info[:pd_funding_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -530,7 +530,7 @@ state-facts: true
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:certification_full]
+            = state_info[:certification_t]
         - elsif state_info[:cs_teacher_cert_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -546,7 +546,7 @@ state-facts: true
         - if state_info[:pre_service_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:preservice_full]
+            = state_info[:preservice_t]
         - elsif state_info[:pre_service_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -562,7 +562,7 @@ state-facts: true
         - if state_info[:state_position_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_cs_full]
+            = state_info[:state_cs_t]
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -578,7 +578,7 @@ state-facts: true
         - if state_info[:require_hs_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:hs_full]
+            = state_info[:hs_t]
         - elsif state_info[:require_hs_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -594,7 +594,7 @@ state-facts: true
         - if state_info[:cs_counts_t] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:count_full]
+            = state_info[:count_t]
             Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
@@ -611,7 +611,7 @@ state-facts: true
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:count_full]
+            = state_info[:count_t]
             Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
@@ -622,7 +622,7 @@ state-facts: true
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:higher_ed_full]
+            = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
             %i.fa.fa-square-o
