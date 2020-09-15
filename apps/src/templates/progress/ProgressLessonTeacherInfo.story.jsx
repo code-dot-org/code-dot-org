@@ -18,11 +18,10 @@ import teacherSections, {
   setSections,
   selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {setUserProviders} from '@cdo/apps/templates/currentUserRedux';
-import {
-  OAuthSectionTypes,
-  OAuthProviders
-} from '@cdo/apps/lib/ui/accounts/constants';
+import googlePlatformApi, {
+  startLoadingGapi
+} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 
 const lockableStage = {
   id: 123,
@@ -61,7 +60,7 @@ const createStore = ({
   allowHidden = true,
   showGoogleButton = false
 } = {}) => {
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, googlePlatformApi});
   const store = createStoreWithReducers();
   const stages = [
     lockableStage,
@@ -90,7 +89,7 @@ const createStore = ({
     const sections = {
       '11': {
         id: 11,
-        name: 'non-google section',
+        name: 'test section',
         lesson_extras: true,
         pairing_allowed: true,
         studentCount: 4,
@@ -124,8 +123,9 @@ const createStore = ({
     });
     store.dispatch(setSections([sections[11], sections[12]]));
     store.dispatch(setSectionLockStatus(sections));
-    const providers = showGoogleButton ? [OAuthProviders.google] : ['email'];
-    store.dispatch(setUserProviders(providers));
+    if (showGoogleButton) {
+      store.dispatch(startLoadingGapi());
+    }
     const section = showGoogleButton ? '12' : '11';
     store.dispatch(selectSection(section));
   }
