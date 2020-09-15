@@ -96,12 +96,6 @@ class P5LabView extends React.Component {
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
 
-    filterBackgrounds => {
-      return {
-        categoryQuery: 'backgrounds'
-      };
-    };
-
     return (
       <div style={codeModeStyle}>
         <div
@@ -120,7 +114,15 @@ class P5LabView extends React.Component {
               hideAnimationNames={this.props.spriteLab}
               navigable={!this.props.isBackground}
               defaultQuery={
-                this.props.isBackground ? this.filterBackgrounds() : null
+                this.props.isBackground
+                  ? {
+                      categoryQuery: 'backgrounds',
+                      searchQuery: ''
+                    }
+                  : {
+                      categoryQuery: '',
+                      searchQuery: ''
+                    }
               }
               hideBackgrounds={!this.props.isBackground && this.props.spriteLab}
               canDraw={!this.props.isBackground}
