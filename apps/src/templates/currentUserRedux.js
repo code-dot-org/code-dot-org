@@ -3,7 +3,6 @@ import {makeEnum} from '../utils';
 const SET_CURRENT_USER_ID = 'currentUser/SET_CURRENT_USER_ID';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
-const SET_USER_PROVIDERS = 'currentUser/SET_USER_PROVIDERS';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
@@ -23,10 +22,6 @@ export const setCurrentUserHasSeenStandardsReportInfo = hasSeenStandardsReport =
 export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn
-});
-export const setUserProviders = providers => ({
-  type: SET_USER_PROVIDERS,
-  providers
 });
 export const setUserType = userType => ({type: SET_USER_TYPE, userType});
 
@@ -64,12 +59,6 @@ export default function currentUser(state = initialState, action) {
       signInState: action.isSignedIn
         ? SignInState.SignedIn
         : SignInState.SignedOut
-    };
-  }
-  if (action.type === SET_USER_PROVIDERS) {
-    return {
-      ...state,
-      providers: action.providers
     };
   }
   if (action.type === SET_USER_TYPE) {
