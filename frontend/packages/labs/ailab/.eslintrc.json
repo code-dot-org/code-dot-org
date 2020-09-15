@@ -1,26 +1,64 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-    }
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "comma-dangle": "off",
+    "curly": "error",
+    "dot-location": ["error", "property"],
+    "eol-last": "error",
+    "eqeqeq": "error",
+    "jsx-quotes": "error",
+    "keyword-spacing": "error",
+    "no-array-constructor": "error",
+    "no-console": "off",
+    "no-duplicate-imports": "error",
+    "no-empty": "off",
+    "no-eval": "error",
+    "no-ex-assign": "off",
+    "no-extra-boolean-cast": "off",
+    "no-implicit-globals": "error",
+    "no-new-object": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": ["error", { "args": "none" }],
+    "no-useless-escape": "off",
+    "no-with": "error",
+    "object-curly-spacing": "off",
+    "react/button-has-type": "error",
+    "react/display-name": "off",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-curly-spacing": "error",
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-key": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-wrap-multilines": "error",
+    "react/no-danger": "error",
+    "react/no-find-dom-node": "off",
+    "react/no-render-return-value": "off",
+    "react/no-string-refs": "off",
+    "react/no-unescaped-entities": "off",
+    "react/self-closing-comp": "error",
+    "semi": "off",
+    "space-before-blocks": "error",
+    "strict": "error"
+  }
 }

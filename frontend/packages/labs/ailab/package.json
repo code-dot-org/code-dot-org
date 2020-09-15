@@ -18,18 +18,23 @@
     "babel-preset-env": "^1.7.0",
     "babelify": "^10.0.0",
     "core-js": "^3",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint": "4.18.2",
+    "eslint-plugin-react": "7.11.0",
     "react": "~15.4.0",
     "react-dom": "~15.4.0",
+    "react-papaparse": "^3.8.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^8.1.0",
-    "eslint": "^2.8.0"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1"
   }
 }
