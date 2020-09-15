@@ -13,6 +13,11 @@ module Pd::Application
       YEAR_21_22 = '2021-2022'.freeze
     ].freeze
 
+    APPLICATION_YEARS_SHORT = [
+      YEAR_21_22_SHORT = '2021-22'.freeze,
+      YEAR_22_23_SHORT = '2022-23'.freeze
+    ].freeze
+
     COURSE_NAMES = {
       csd: 'Computer Science Discoveries',
       csp: 'Computer Science Principles'
