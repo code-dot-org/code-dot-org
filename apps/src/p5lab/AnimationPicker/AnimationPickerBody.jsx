@@ -48,7 +48,7 @@ export default class AnimationPickerBody extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
-    defaultQuery: PropTypes.string,
+    defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired
   };
@@ -58,21 +58,20 @@ export default class AnimationPickerBody extends React.Component {
     categoryQuery: '',
     currentPage: 0
   };
-  constructor(props) {
-    super(props);
-    if (this.props.defaultQuery) {
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.defaultQuery !== nextProps.defaultQuery) {
       const currentPage = 0;
       const {results, pageCount} = this.searchAssetsWrapper(
         currentPage,
-        this.props.defaultQuery
+        nextProps.defaultQuery
       );
-      this.state = {
-        ...this.props.defaultQuery,
+      this.setState({
+        ...nextProps.defaultQuery,
         currentPage,
         results,
-        pageCount,
-        searchQuery: ''
-      };
+        pageCount
+      });
     }
   }
 

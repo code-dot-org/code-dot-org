@@ -43,7 +43,7 @@ class AnimationPicker extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
-    defaultQuery: PropTypes.string,
+    defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
 
