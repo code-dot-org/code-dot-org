@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import $ from 'jquery';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import color from '../../util/color';
