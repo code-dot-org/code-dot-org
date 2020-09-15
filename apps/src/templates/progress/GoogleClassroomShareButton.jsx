@@ -16,8 +16,6 @@ const styles = {
   }
 };
 
-const GooglePlatformApiId = 'GooglePlatformApiId';
-
 class GoogleClassroomShareButton extends React.Component {
   static propTypes = {
     buttonId: PropTypes.string.isRequired,
@@ -28,54 +26,29 @@ class GoogleClassroomShareButton extends React.Component {
     courseid: PropTypes.number
   };
 
+  /*
+   * The button doesn't render immediately, so we use its resize event to
+   * detect when it's rendered and wait to display the label until then.
+   */
   constructor(props) {
     super(props);
-    this.loadApi = this.loadApi.bind(this);
-    this.waitForGapi = this.waitForGapi.bind(this);
-    this.renderButton = this.renderButton.bind(this);
+    this.onButtonResize = this.onButtonResize.bind(this);
+    this.resizeObserver = new ResizeObserver(this.onButtonResize);
   }
+
+  buttonRef = null;
+  state = {
+    buttonRendered: false
+  };
 
   componentDidMount() {
-    if (this.gapiReady()) {
-      this.renderButton();
-    } else {
-      this.loadApi();
-    }
+    this.renderButton();
+    this.resizeObserver.observe(this.buttonRef);
   }
 
-  /* The Google Classroom Share Button is only available through their js api,
-   * so we have to add it to the page on load. Each instance of this
-   * component will wait until the api is ready before rendering the button,
-   * but only the first will kick of the loading process.
-   */
-  loadApi() {
-    if (!document.getElementById(GooglePlatformApiId)) {
-      window.___gcfg = {
-        parsetags: 'explicit'
-      };
-
-      const gapi = document.createElement('script');
-      gapi.src = 'https://apis.google.com/js/platform.js';
-      gapi.id = GooglePlatformApiId;
-      gapi.addEventListener('load', this.waitForGapi);
-      document.body.appendChild(gapi);
-    } else {
-      this.waitForGapi();
-    }
-  }
-
-  waitForGapi() {
-    if (this.gapiReady()) {
-      this.renderButton();
-    } else {
-      setTimeout(() => {
-        this.waitForGapi();
-      }, 100);
-    }
-  }
-
-  gapiReady() {
-    return !!window.gapi && typeof window.gapi.sharetoclassroom !== 'undefined';
+  onButtonResize() {
+    this.setState({buttonRendered: true});
+    this.resizeObserver.disconnect();
   }
 
   // https://developers.google.com/classroom/guides/sharebutton
@@ -93,8 +66,10 @@ class GoogleClassroomShareButton extends React.Component {
   render() {
     return (
       <span style={styles.container}>
-        <span id={this.props.buttonId} />
-        <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
+        <span id={this.props.buttonId} ref={elem => (this.buttonRef = elem)} />
+        {this.state.buttonRendered && (
+          <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
+        )}
       </span>
     );
   }
