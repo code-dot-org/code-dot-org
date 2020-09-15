@@ -9,7 +9,11 @@ import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher/TeacherApplicationConstants';
+import {
+  YEAR,
+  SUMMER_YEAR,
+  styles
+} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -51,8 +55,6 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsp',
   'replaceWhichCourseCsd'
 ];
-const YEAR = '2021-22';
-const SUMMER_YEAR = '2021';
 const YES = 'Yes';
 
 export default class PrincipalApprovalComponent extends LabeledFormComponent {

@@ -53,6 +53,10 @@ module Pd::Application
       YEAR_21_22
     end
 
+    def self.next_year
+      YEAR_22_23_SHORT
+    end
+
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
 
@@ -79,7 +83,7 @@ module Pd::Application
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
           "I hope to include this course in the #{year} master schedule",
-          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2022-23)",
+          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year})",
           "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
