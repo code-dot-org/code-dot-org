@@ -4,10 +4,7 @@ import Immutable from 'immutable';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
-import {
-  OAuthSectionTypes,
-  OAuthProviders
-} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 
 const MOCK_GOOGLE_SECTION = {
   id: 1,
@@ -54,6 +51,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
@@ -82,6 +80,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
@@ -105,6 +104,7 @@ describe('ProgressLessonTeacherInfo', () => {
         scriptName="My Script"
         hasNoSections={true}
         toggleHiddenStage={() => {}}
+        showGoogleClassroomButton={false}
       />
     );
 
@@ -128,6 +128,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          showGoogleClassroomButton={false}
         />
       )
     );
@@ -136,39 +137,28 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(withoutSection.find('HiddenForSectionToggle').length, 0);
   });
 
-  it('only renders google share button for google classroom and google oath', () => {
-    const [
-      withClassroomAndOauth,
-      withClassroomNoOauth,
-      withoutClassroomWithOauth,
-      withoutClassroomOrOauth
-    ] = [
-      {section: MOCK_GOOGLE_SECTION, providers: [OAuthProviders.google]},
-      {section: MOCK_GOOGLE_SECTION, providers: ['email']},
-      {section: MOCK_NON_GOOGLE_SECTION, providers: [OAuthProviders.google]},
-      {section: MOCK_NON_GOOGLE_SECTION, providers: ['email']}
-    ].map(data =>
-      shallow(
-        <ProgressLessonTeacherInfo
-          lesson={fakeLesson('Maze', 1)}
-          section={data.section}
-          userProviders={data.providers}
-          levelUrl={'code.org'}
-          scriptAllowsHiddenStages={true}
-          hiddenStageState={Immutable.fromJS({
-            stagesBySection: {11: {}}
-          })}
-          scriptName="My Script"
-          hasNoSections={false}
-          toggleHiddenStage={() => {}}
-        />
-      )
+  it('only renders google share button when showGoogleClassroomButton is true', () => {
+    const [shouldShow, shouldNotShow] = [true, false].map(
+      showGoogleClassroomButton =>
+        shallow(
+          <ProgressLessonTeacherInfo
+            lesson={fakeLesson('Maze', 1)}
+            section={MOCK_GOOGLE_SECTION}
+            levelUrl={'code.org'}
+            scriptAllowsHiddenStages={true}
+            hiddenStageState={Immutable.fromJS({
+              stagesBySection: {11: {}}
+            })}
+            scriptName="My Script"
+            hasNoSections={false}
+            toggleHiddenStage={() => {}}
+            showGoogleClassroomButton={showGoogleClassroomButton}
+          />
+        )
     );
 
     const button = 'GoogleClassroomShareButton';
-    assert.equal(withClassroomAndOauth.find(button).length, 1);
-    assert.equal(withClassroomNoOauth.find(button).length, 0);
-    assert.equal(withoutClassroomWithOauth.find(button).length, 0);
-    assert.equal(withoutClassroomOrOauth.find(button).length, 0);
+    assert.equal(shouldShow.find(button).length, 1);
+    assert.equal(shouldNotShow.find(button).length, 0);
   });
 });
