@@ -1,37 +1,152 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
-  textarea: {
-    width: '100%'
-  },
   editor: {
     width: '100%'
+  },
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
 export default class LessonEditor extends Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
-    overview: PropTypes.string
+    overview: PropTypes.string,
+    studentOverview: PropTypes.string,
+    title: PropTypes.string,
+    shortTitle: PropTypes.string,
+    unplugged: PropTypes.bool,
+    lockable: PropTypes.bool,
+    assessment: PropTypes.bool,
+    creativeCommonsLicense: PropTypes.string
   };
 
   render() {
-    const {displayName, overview} = this.props;
+    const {
+      displayName,
+      overview,
+      studentOverview,
+      title,
+      shortTitle,
+      unplugged,
+      lockable,
+      creativeCommonsLicense,
+      assessment
+    } = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
 
         <label>
-          <p>Overview</p>
-          <textarea
-            name="overview"
-            style={styles.textarea}
-            rows={5}
-            defaultValue={overview}
+          Title
+          <input name="title" defaultValue={title} style={styles.input} />
+        </label>
+        <label>
+          Short Title
+          <input
+            name="short_title"
+            defaultValue={shortTitle}
+            style={styles.input}
           />
         </label>
+        <label>
+          Unplugged Lesson
+          <input
+            name="unplugged"
+            type="checkbox"
+            defaultChecked={unplugged}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Check this box if the lesson does not require use of a device.
+            </p>
+          </HelpTip>
+        </label>
+
+        <h2>Lesson Settings</h2>
+        <label>
+          Creative Commons Image
+          <select
+            name="creative_commons_license"
+            style={styles.dropdown}
+            defaultValue={creativeCommonsLicense}
+          >
+            <option value="Creative Commons BY-NC-SA">
+              Creative Commons BY-NC-SA
+            </option>
+            <option value="Creative Commons BY-NC-ND">
+              Creative Commons BY-NC-ND
+            </option>
+          </select>
+          <HelpTip>
+            <p>
+              Controls what creative commons license applies to this material.
+              Default is Creative Commons BY-NC-SA.
+            </p>
+          </HelpTip>
+        </label>
+
+        <label>
+          Lockable
+          <input
+            name="lockable"
+            type="checkbox"
+            defaultChecked={lockable}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Check this box if this lesson should be locked from teachers. Only
+              validated teachers will be able to see it and unlock the
+              materials.
+            </p>
+          </HelpTip>
+        </label>
+
+        <label>
+          Assessment
+          <input
+            name="assessment"
+            type="checkbox"
+            defaultChecked={assessment}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>Check this box if this lesson is an assessment or project. </p>
+          </HelpTip>
+        </label>
+
+        <h2>Lesson Plan</h2>
+        <TextareaWithMarkdownPreview
+          markdown={overview}
+          label={'Overview'}
+          name={'overview'}
+          inputRows={5}
+        />
+        <TextareaWithMarkdownPreview
+          markdown={studentOverview}
+          label={'Student Overview'}
+          name={'student_overview'}
+          inputRows={5}
+        />
 
         <h2>Activities & Levels</h2>
         <ActivitiesEditor />
