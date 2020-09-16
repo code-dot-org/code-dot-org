@@ -175,6 +175,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
+      // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
       svg.setAttribute('width', bbox.width + bbox.x);
