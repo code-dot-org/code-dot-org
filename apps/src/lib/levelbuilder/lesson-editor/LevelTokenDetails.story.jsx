@@ -44,8 +44,8 @@ export default storybook => {
             setActiveVariant={action('setActiveVariant')}
             setField={action('setField')}
             level={defaultLevel}
-            lessonPosition={1}
-            lessonGroupPosition={1}
+            activitySectionPosition={1}
+            activityPosition={1}
           />
         </div>
       )
@@ -63,8 +63,8 @@ export default storybook => {
             setActiveVariant={action('setActiveVariant')}
             setField={action('setField')}
             level={blocklyLevel}
-            lessonPosition={1}
-            lessonGroupPosition={1}
+            activitySectionPosition={1}
+            activityPosition={1}
           />
         </div>
       )

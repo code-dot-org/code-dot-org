@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 import color from '@cdo/apps/util/color';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -12,7 +12,7 @@ const styles = {
 
 export default class Activity extends Component {
   static propTypes = {
-    activity: PropTypes.object
+    activity: activityShape
   };
 
   render() {
