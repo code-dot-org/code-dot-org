@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {
   announcementShape,
   VisibilityType
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+} from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const styles = {

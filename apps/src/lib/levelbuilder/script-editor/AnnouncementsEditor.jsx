@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import {
   announcementShape,
   VisibilityType
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
-import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
+} from '@cdo/apps/code-studio/announcementsRedux';
+import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Announce from '@cdo/apps/lib/levelbuilder/script-editor/Announce';
@@ -94,7 +94,7 @@ export default class AnnouncementsEditor extends Component {
         {announcements.length > 0 && (
           <div style={styles.preview}>
             <div>Preview:</div>
-            <ScriptAnnouncements announcements={announcements} />
+            <Announcements announcements={announcements} />
           </div>
         )}
       </div>

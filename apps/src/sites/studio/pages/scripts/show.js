@@ -9,9 +9,9 @@ import {registerReducers} from '@cdo/apps/redux';
 import plcHeaderReducer, {
   setPlcHeader
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import scriptAnnouncementReducer, {
+import announcementReducer, {
   addAnnouncement
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+} from '@cdo/apps/code-studio/announcementsRedux';
 import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
@@ -43,7 +43,7 @@ function initPage() {
   }
 
   if (scriptData.script_announcements) {
-    registerReducers({scriptAnnouncements: scriptAnnouncementReducer});
+    registerReducers({announcements: announcementReducer});
     scriptData.script_announcements.forEach(announcement =>
       store.dispatch(
         addAnnouncement(

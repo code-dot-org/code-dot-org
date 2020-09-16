@@ -6,7 +6,7 @@ import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/Announ
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
