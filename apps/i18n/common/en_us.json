@@ -68,6 +68,7 @@
   "animationCategory_tools": "Tools",
   "animationCategory_vehicles": "Vehicles",
   "animationMode": "Animation",
+  "animationPicker_allCategories": "All categories > ",
   "animationPicker_drawYourOwn": "Draw your own",
   "animationPicker_error": "Error: {message}",
   "animationPicker_failedToParseImage": "The image could not be parsed",
