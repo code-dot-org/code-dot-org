@@ -13,7 +13,7 @@
 class LessonActivitySection < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson_activity
+  belongs_to :activity, class_name: 'LessonActivity', foreign_key: :lesson_activity_id, inverse_of: :lesson_activity_sections
 
   # TODO(dave): add relationship to levels or script levels
 
