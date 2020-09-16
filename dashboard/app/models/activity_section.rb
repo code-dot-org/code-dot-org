@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: lesson_activity_sections
+# Table name: activity_sections
 #
 #  id                 :integer          not null, primary key
 #  lesson_activity_id :integer          not null
@@ -10,7 +10,7 @@
 #  updated_at         :datetime         not null
 #
 
-class LessonActivitySection < ApplicationRecord
+class ActivitySection < ApplicationRecord
   include SerializedProperties
 
   belongs_to :activity, class_name: 'LessonActivity', foreign_key: :lesson_activity_id, inverse_of: :sections

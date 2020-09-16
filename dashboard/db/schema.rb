@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20200916173055) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
+  create_table "activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "lesson_activity_id", null: false
+    t.integer  "position",           null: false
+    t.string   "properties"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
   create_table "ap_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_code", limit: 6, null: false
     t.string   "course",      limit: 3, null: false
@@ -526,14 +534,6 @@ ActiveRecord::Schema.define(version: 20200916173055) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id", using: :btree
-  end
-
-  create_table "lesson_activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "lesson_activity_id", null: false
-    t.integer  "position",           null: false
-    t.string   "properties"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
   end
 
   create_table "lesson_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
