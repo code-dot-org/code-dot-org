@@ -4,7 +4,7 @@ import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/Activitie
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/AnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 
 const styles = {
   editor: {
@@ -165,10 +165,6 @@ export default class LessonEditor extends Component {
           name={'preparation'}
           inputRows={5}
         />
-        {/*TODO: Add resource editor once build resources model*/}
-        <label>Resources</label>
-        {/*TODO: Add objectives editor once build objectives model*/}
-        <label>Objectives</label>
 
         <h2>Activities & Levels</h2>
         <ActivitiesEditor />
