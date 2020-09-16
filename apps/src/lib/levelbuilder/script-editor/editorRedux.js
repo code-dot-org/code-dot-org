@@ -7,7 +7,6 @@ const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
 const MOVE_LESSON = 'scriptEditor/MOVE_LESSON';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
-const SET_LESSON_LOCKABLE = 'scriptEditor/SET_LESSON_LOCKABLE';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
@@ -53,13 +52,6 @@ export const removeLesson = (groupPosition, lessonPosition) => ({
   type: REMOVE_LESSON,
   groupPosition,
   lessonPosition
-});
-
-export const setLessonLockable = (groupPosition, lessonPosition, lockable) => ({
-  type: SET_LESSON_LOCKABLE,
-  groupPosition,
-  lessonPosition,
-  lockable
 });
 
 export const setLessonGroup = (
@@ -186,14 +178,6 @@ function lessonGroups(state = [], action) {
           ? newLessons.push(curLesson)
           : newLessons.unshift(curLesson);
       }
-      updateLessonPositions(newState);
-      break;
-    }
-    case SET_LESSON_LOCKABLE: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons[action.lessonPosition - lessons[0].position].lockable =
-        action.lockable;
-
       updateLessonPositions(newState);
       break;
     }

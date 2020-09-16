@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
-  setLessonLockable,
   setLessonGroup,
   moveLesson,
   removeLesson
@@ -29,10 +28,6 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15
   },
-  lessonLockable: {
-    fontSize: 13,
-    marginTop: 3
-  },
   bottomControls: {
     height: 30
   },
@@ -47,7 +42,6 @@ const styles = {
 
 export class UnconnectedLessonCard extends Component {
   static propTypes = {
-    setLessonLockable: PropTypes.func.isRequired,
     lessonsCount: PropTypes.number.isRequired,
     lesson: PropTypes.object.isRequired,
     lessonGroupPosition: PropTypes.number.isRequired,
@@ -86,14 +80,6 @@ export class UnconnectedLessonCard extends Component {
     this.setState({editingLessonGroup: false});
   };
 
-  toggleLockable = () => {
-    this.props.setLessonLockable(
-      this.props.lessonGroupPosition,
-      this.props.lesson.position,
-      !this.props.lesson.lockable
-    );
-  };
-
   handleMoveLesson = direction => {
     if (
       (this.props.lesson.position !== 1 && direction === 'up') ||
@@ -129,16 +115,6 @@ export class UnconnectedLessonCard extends Component {
             move={this.handleMoveLesson}
             remove={this.handleRemoveLesson}
           />
-          <label style={styles.lessonLockable}>
-            Require teachers to unlock this lesson before students in their
-            section can access it
-            <input
-              checked={lesson.lockable}
-              onChange={this.toggleLockable}
-              type="checkbox"
-              style={styles.checkbox}
-            />
-          </label>
         </div>
         <div style={styles.bottomControls}>
           {!this.state.editingLessonGroup && (
@@ -182,7 +158,6 @@ export class UnconnectedLessonCard extends Component {
 export default connect(
   state => ({}),
   {
-    setLessonLockable,
     setLessonGroup,
     moveLesson,
     removeLesson
