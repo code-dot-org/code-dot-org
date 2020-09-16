@@ -279,6 +279,7 @@ export default class ScriptEditor extends React.Component {
         <AnnouncementsEditor
           defaultAnnouncements={this.props.announcements}
           inputStyle={styles.input}
+          curriculumObject={'script'}
         />
         <h2>Publishing Settings</h2>
         {this.props.isLevelbuilder && (

@@ -45,6 +45,7 @@ export default storybook => {
           <AnnouncementsEditor
             defaultAnnouncements={announcements}
             inputStyle={inputStyle}
+            curriculumObject={'script'}
           />
         )
       }
