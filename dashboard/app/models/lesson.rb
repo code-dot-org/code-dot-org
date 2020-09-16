@@ -352,4 +352,14 @@ class Lesson < ActiveRecord::Base
 
     Time.parse(visible_after) <= Time.now
   end
+
+  def seeding_key(seed_context)
+    my_key = {'lesson.key': key}
+
+    my_lesson_group = seed_context.lesson_groups.select {|lg| lg.id == lesson_group_id}.first
+    raise "No LessonGroup found for #{self.class}: #{my_key}, LessonGroup ID: #{lesson_group_id}" unless my_lesson_group
+    lesson_group_seeding_key = my_lesson_group.seeding_key(seed_context)
+
+    my_key.merge(lesson_group_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+  end
 end
