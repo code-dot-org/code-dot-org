@@ -7,88 +7,12 @@ import {
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import Announce from '@cdo/apps/lib/levelbuilder/script-editor/Announce';
 
 const styles = {
-  announcement: {
-    border: '1px solid #ccc',
-    padding: 5,
-    marginBottom: 10
-  },
   preview: {
     marginTop: 10
   }
-};
-
-const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
-  <div style={styles.announcement}>
-    <h5>Announcement #{index + 1}</h5>
-    <label>
-      Notice
-      <input
-        value={announcement.notice}
-        style={inputStyle}
-        onChange={event => onChange(index, 'notice', event.target.value)}
-      />
-    </label>
-    <label>
-      Details
-      <input
-        value={announcement.details}
-        style={inputStyle}
-        onChange={event => onChange(index, 'details', event.target.value)}
-      />
-    </label>
-    <label>
-      Link
-      <input
-        value={announcement.link}
-        style={inputStyle}
-        onChange={event => onChange(index, 'link', event.target.value)}
-      />
-    </label>
-    <label>
-      Type
-      <div>
-        <select
-          className="uitest-announcement-type"
-          value={announcement.type}
-          onChange={event => onChange(index, 'type', event.target.value)}
-        >
-          {Object.values(NotificationType).map(type => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-      </div>
-    </label>
-    <label>
-      Visibility
-      <div>
-        <select
-          className="uitest-announcement-visibility"
-          value={announcement.visibility}
-          onChange={event => onChange(index, 'visibility', event.target.value)}
-        >
-          {Object.values(VisibilityType).map(visibility => (
-            <option key={visibility} value={visibility}>
-              {visibility}
-            </option>
-          ))}
-        </select>
-      </div>
-    </label>
-    <button className="btn" type="button" onClick={() => onRemove(index)}>
-      Remove
-    </button>
-  </div>
-);
-Announce.propTypes = {
-  announcement: announcementShape,
-  inputStyle: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired,
-  onRemove: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired
 };
 
 export default class ScriptAnnouncementsEditor extends Component {
