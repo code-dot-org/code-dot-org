@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
@@ -145,6 +146,14 @@ export default class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addTipOpen}
           handleConfirm={this.handleCloseAddTip}
           tip={this.state.tipToEdit}
+        />
+        <AddLevelDialog
+          isOpen={this.state.addLevelOpen}
+          handleConfirm={this.handleCloseAddLevel}
+          currentLevels={this.props.activitySection.levels}
+          addLevel={this.props.addLevel}
+          activitySectionPosition={this.props.activitySection.position}
+          activityPosition={this.props.activityPosition}
         />
       </div>
     );
