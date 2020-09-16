@@ -802,6 +802,11 @@ FactoryGirl.define do
     lesson
   end
 
+  factory :lesson_activity_section do
+    sequence(:position)
+    lesson_activity
+  end
+
   factory :activity do
     level
     user
