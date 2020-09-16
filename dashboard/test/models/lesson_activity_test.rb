@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StageTest < ActiveSupport::TestCase
+class LessonActivityTest < ActiveSupport::TestCase
   test "lesson can contain activities" do
     lesson = create :lesson
     activity1 = create :lesson_activity, lesson: lesson
