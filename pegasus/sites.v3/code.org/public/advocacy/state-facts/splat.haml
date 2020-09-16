@@ -480,8 +480,7 @@ state-facts: true
         - if state_info[:state_plan_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has created a state plan for K-12 computer science.
+            = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -497,8 +496,7 @@ state-facts: true
         - if state_info[:cs_standards_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has established K-12 computer science standards.
+            = state_info[:standards_t]
         - elsif state_info[:cs_standards_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -516,8 +514,7 @@ state-facts: true
         - if state_info[:pd_funding_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has allocated funding for rigorous computer science professional development and course support.
+            = state_info[:funding_t]
         - elsif state_info[:pd_funding_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -533,8 +530,7 @@ state-facts: true
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has clear certification pathways for computer science teachers.
+            = state_info[:certification_t]
         - elsif state_info[:cs_teacher_cert_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -550,8 +546,7 @@ state-facts: true
         - if state_info[:pre_service_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has established programs at institutions of higher education to offer computer science to preservice teachers.
+            = state_info[:preservice_t]
         - elsif state_info[:pre_service_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -567,8 +562,7 @@ state-facts: true
         - if state_info[:state_position_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has a dedicated computer science position in the state education agency.
+            = state_info[:state_cs_t]
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -584,8 +578,7 @@ state-facts: true
         - if state_info[:require_hs_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            requires that all secondary schools offer computer science.
+            = state_info[:hs_t]
         - elsif state_info[:require_hs_s] == 'No'
           %div
             %i.fa.fa-square-o
@@ -601,8 +594,8 @@ state-facts: true
         - if state_info[:cs_counts_t] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            allows computer science to count for a core graduation requirement. Find out how
+            = state_info[:count_t]
+            Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
             = succeed "." do
@@ -618,7 +611,7 @@ state-facts: true
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:policy_7_t]
+            = state_info[:count_t]
             Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
@@ -629,8 +622,7 @@ state-facts: true
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            allows computer science to count as a core admission requirement at institutions of higher education.
+            = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
             %i.fa.fa-square-o
