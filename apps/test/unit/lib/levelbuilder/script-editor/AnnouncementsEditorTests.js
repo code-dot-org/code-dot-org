@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from '../../../../util/deprecatedChai';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/AnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 
 const sampleAnnouncement = {
   notice: 'This course has recently been updated!',
