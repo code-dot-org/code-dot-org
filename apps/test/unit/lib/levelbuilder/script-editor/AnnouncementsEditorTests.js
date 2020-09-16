@@ -35,12 +35,12 @@ describe('AnnouncementsEditor', () => {
         defaultAnnouncements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('ScriptAnnouncements').length, 1);
+    assert.equal(wrapper.find('Announcements').length, 1);
   });
 
   it('show no preview if we have no announcements', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
-    assert.equal(wrapper.find('ScriptAnnouncements').length, 0);
+    assert.equal(wrapper.find('Announcements').length, 0);
   });
 
   it('adds an empty Announce when we click add', () => {

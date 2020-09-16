@@ -6,11 +6,11 @@ import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import ScriptAnnouncements from './ScriptAnnouncements';
+import Announcements from './Announcements';
 import {
   announcementShape,
   VisibilityType
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -204,7 +204,7 @@ class ScriptOverviewHeader extends Component {
           />
         )}
         {isSignedIn && (
-          <ScriptAnnouncements
+          <Announcements
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
@@ -276,7 +276,7 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
-  announcements: state.scriptAnnouncements || [],
+  announcements: state.announcements || [],
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
