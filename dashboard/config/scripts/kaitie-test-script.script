@@ -53,7 +53,7 @@ level 'CSP AYW4 - Reflection on datasets', progression: 'Traversals and datasets
 level 'CSP - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap-Up (~10 minutes)'
 
 lesson 'Module 5', display_name: 'Module 5'
-level 'VirtualPLOverview'
+level 'CSP-PL Module 5 - Workshop Overview', progression: 'Module 5 Overview (~5 minutes)'
 level 'CSP - Module 3 Wrap Up', progression: 'Module 5 Asynchronous Wrap-Up (~10 minutes)'
 
 lesson 'Module 6', display_name: 'Module 6'
