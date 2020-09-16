@@ -802,7 +802,7 @@ FactoryGirl.define do
     lesson
   end
 
-  factory :lesson_activity_section do
+  factory :activity_section do
     sequence(:position)
     activity
   end
