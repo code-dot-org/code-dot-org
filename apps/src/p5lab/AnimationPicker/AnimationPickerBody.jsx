@@ -106,9 +106,12 @@ export default class AnimationPickerBody extends React.Component {
       scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
       (!pageCount || nextPage <= pageCount)
     ) {
-      const {results: newResults, pageCount} = this.searchAssetsWrapper(
-        nextPage
-      );
+      let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
+      if (this.props.hideBackgrounds) {
+        newResults = newResults.filter(
+          animation => !animation.categories.includes('backgrounds')
+        );
+      }
 
       this.setState({
         results: [...(results || []), ...newResults],
@@ -134,9 +137,14 @@ export default class AnimationPickerBody extends React.Component {
   onCategoryChange = event => {
     const categoryQuery = event.target.className;
     const currentPage = 0;
-    const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
+    let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
     });
+    if (this.props.hideBackgrounds) {
+      results = results.filter(
+        animation => !animation.categories.includes('backgrounds')
+      );
+    }
     this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
@@ -151,24 +159,11 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    const categories = Object.keys(this.props.libraryManifest.categories || []);
-    categories.push('all');
+    let categories = Object.keys(this.props.libraryManifest.categories || []);
     if (this.props.hideBackgrounds) {
-      return categories
-        .filter(category => category !== 'backgrounds')
-        .map(category => (
-          <AnimationPickerListItem
-            key={category}
-            label={
-              msg[`animationCategory_${category}`]
-                ? msg[`animationCategory_${category}`]()
-                : category
-            }
-            category={category}
-            onClick={this.onCategoryChange}
-          />
-        ));
+      categories = categories.filter(category => category !== 'backgrounds');
     }
+    categories.push('all');
     return categories.map(category => (
       <AnimationPickerListItem
         key={category}
@@ -200,7 +195,6 @@ export default class AnimationPickerBody extends React.Component {
       return <div>{msg.loading()}</div>;
     }
     const {searchQuery, categoryQuery, results} = this.state;
-
     const {
       hideUploadOption,
       is13Plus,
@@ -247,7 +241,7 @@ export default class AnimationPickerBody extends React.Component {
               </div>
             )}
           {((searchQuery === '' && categoryQuery === '') ||
-            (results.length === 0 && !this.props.canDraw)) && (
+            (results.length === 0 && this.props.canDraw)) && (
             <div>
               <AnimationPickerListItem
                 label={msg.animationPicker_drawYourOwn()}
