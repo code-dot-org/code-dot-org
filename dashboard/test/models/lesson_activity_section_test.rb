@@ -5,6 +5,6 @@ class LessonActivitySectionTest < ActiveSupport::TestCase
     activity = create :lesson_activity
     section1 = create :lesson_activity_section, activity: activity
     section2 = create :lesson_activity_section, activity: activity
-    assert_equal [section1, section2], activity.lesson_activity_sections
+    assert_equal [section1, section2], activity.sections
   end
 end
