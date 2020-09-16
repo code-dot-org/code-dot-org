@@ -92,9 +92,15 @@ export default class AnnouncementsEditor extends Component {
           Additional Announcement
         </button>
         {announcements.length > 0 && (
-          <div style={styles.preview}>
-            <div>Preview:</div>
-            <Announcements announcements={announcements} />
+          <div>
+            <div style={styles.preview}>
+              <div>Teacher Preview:</div>
+              <Announcements announcements={announcements} viewAs={'Teacher'} />
+            </div>
+            <div style={styles.preview}>
+              <div>Student Preview:</div>
+              <Announcements announcements={announcements} viewAs={'Student'} />
+            </div>
           </div>
         )}
       </div>
