@@ -7,6 +7,7 @@ import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import applabI18n from '@cdo/applab/locale';
 import {
   isWindows,
   isChrome,
@@ -199,7 +200,7 @@ export default class SetupChecklist extends Component {
       // Maker Toolkit Standalone App
       return (
         <ValidationStep
-          stepName={i18n.makerSetupBrowserTitle()}
+          stepName={applabI18n.makerSetupBrowserTitle()}
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
@@ -208,20 +209,20 @@ export default class SetupChecklist extends Component {
       return (
         <ValidationStep
           stepName={
-            i18n.makerSetupAppInstalled() +
-            (isChromeOS() ? '' : ' (' + i18n.legacy() + ')')
+            applabI18n.makerSetupAppInstalled() +
+            (isChromeOS() ? '' : ' (' + applabI18n.legacy() + ')')
           }
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
           <SafeMarkdown
-            markdown={i18n.makerSetupInstallSerialConnector({
+            markdown={applabI18n.makerSetupInstallSerialConnector({
               webstoreURL: CHROME_APP_WEBSTORE_URL
             })}
           />
           <br />
-          {i18n.makerSetupRedetect()}
+          {applabI18n.makerSetupRedetect()}
           <br />
-          {i18n.makerSetupAcceptPrompt()}
+          {applabI18n.makerSetupAcceptPrompt()}
           {this.contactSupport()}
         </ValidationStep>
       );
@@ -229,10 +230,10 @@ export default class SetupChecklist extends Component {
       // Unsupported Browser
       return (
         <ValidationStep
-          stepName={i18n.makerSetupBrowserSupported()}
+          stepName={applabI18n.makerSetupBrowserSupported()}
           stepStatus={Status.FAILED}
         >
-          <SafeMarkdown markdown={i18n.makerSetupUnsupportedBrowser()} />
+          <SafeMarkdown markdown={applabI18n.makerSetupUnsupportedBrowser()} />
         </ValidationStep>
       );
     }
@@ -246,7 +247,7 @@ export default class SetupChecklist extends Component {
     return (
       <div>
         <SafeMarkdown
-          markdown={i18n.makerSetupInstallFirmata({
+          markdown={applabI18n.makerSetupInstallFirmata({
             firmataURL:
               this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
                 ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
@@ -266,12 +267,12 @@ export default class SetupChecklist extends Component {
     return (
       <div>
         <h2>
-          {i18n.makerSetupCheck()}
+          {applabI18n.makerSetupCheck()}
           <input
             style={{marginLeft: 9, marginTop: -4}}
             className="btn"
             type="button"
-            value={i18n.redetect()}
+            value={applabI18n.redetect()}
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
@@ -285,14 +286,14 @@ export default class SetupChecklist extends Component {
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
             )}
-            {18n.makerSetupPlugInBoardCheck()}
+            {applabI18n.makerSetupPlugInBoardCheck()}
             <a href="#" onClick={this.redetect.bind(this)}>
-              {i18n.redetect()}
+              {applabI18n.redetect()}
             </a>
             .
             {isWindows() && (
               <SafeMarkdown
-                markdown={i18n.makerSetupAdafruitWindowsDrivers()}
+                markdown={applabI18n.makerSetupAdafruitWindowsDrivers()}
               />
             )}
             {this.contactSupport()}
@@ -301,15 +302,15 @@ export default class SetupChecklist extends Component {
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
           >
-            {i18n.makerSetupBoardBadResponse()}
+            {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
               <div>
-                <p>{i18n.makerSetupLinuxSerialport()}</p>
-                <p>{i18n.makerSetupLinuxGroupsCheck()}</p>
+                <p>{applabI18n.makerSetupLinuxSerialport()}</p>
+                <p>{applabI18n.makerSetupLinuxGroupsCheck()}</p>
                 <pre>groups $&#123;USER&#125;</pre>
-                <p>{i18n.makerSetupLinuxAddDialout()}</p>
+                <p>{applabI18n.makerSetupLinuxAddDialout()}</p>
                 <pre>sudo gpasswd --add $&#123;USER&#125; dialout</pre>
-                <p> {i18n.makerSetupLinuxRestart()} </p>
+                <p> {applabI18n.makerSetupLinuxRestart()} </p>
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
@@ -319,7 +320,7 @@ export default class SetupChecklist extends Component {
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
             stepName={i18n.validationStepBoardComponentsUsable()}
           >
-            {i18n.makerSetupVerifyComponents()}
+            {applabI18n.makerSetupVerifyComponents()}
             <br />
             {this.installFirmwareSketch()}
             {this.contactSupport()}
