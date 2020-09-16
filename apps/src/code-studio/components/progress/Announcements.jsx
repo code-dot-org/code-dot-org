@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function ScriptAnnouncements({announcements, width}) {
+export default function Announcements({announcements, width}) {
   return (
     <div>
       {announcements.map((announcement, index) => (
@@ -23,7 +23,7 @@ export default function ScriptAnnouncements({announcements, width}) {
   );
 }
 
-ScriptAnnouncements.propTypes = {
+Announcements.propTypes = {
   announcements: PropTypes.arrayOf(announcementShape).isRequired,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };

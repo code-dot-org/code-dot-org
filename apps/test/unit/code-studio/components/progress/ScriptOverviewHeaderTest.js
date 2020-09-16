@@ -3,7 +3,7 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
-import {VisibilityType} from '../../../../../src/code-studio/scriptAnnouncementsRedux';
+import {VisibilityType} from '../../../../../src/code-studio/announcementsRedux';
 import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
 
 const defaultProps = {
@@ -81,10 +81,7 @@ describe('ScriptOverviewHeader', () => {
     const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      0
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
   it('includes a single notification default for non-verified teachers', () => {
@@ -108,10 +105,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
   it('does not display old teacher announcement for student', () => {
@@ -123,10 +117,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      0
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
   it('has non-verified and provided teacher announcement if necessary', () => {
@@ -141,10 +132,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
@@ -162,10 +150,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
@@ -181,12 +166,9 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
     wrapper
-      .find('ScriptAnnouncements')
+      .find('Announcements')
       .props()
       .announcements.forEach(node => {
         expect(
@@ -207,10 +189,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
   it('has all student announcements but no teacher announcements if necessary', () => {
@@ -228,12 +207,9 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
     wrapper
-      .find('ScriptAnnouncements')
+      .find('Announcements')
       .props()
       .announcements.forEach(node => {
         expect(
