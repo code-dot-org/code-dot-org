@@ -7,7 +7,21 @@ export default class CSVReaderWrapper extends Component {
 
     this.state = {
       csvfile: undefined,
-      data: undefined
+      data: undefined,
+      labelColumn: "delicious?",
+      labels: undefined,
+      featureColumns: [
+        "chocolate",
+        "fruity",
+        "caramel",
+        "peanutyalmondy",
+        "nougat",
+        "crispedricewafer",
+        "hard",
+        "bar",
+        "pluribus"
+      ],
+      features: []
     };
   }
 
@@ -25,10 +39,30 @@ export default class CSVReaderWrapper extends Component {
     });
   };
 
+  extractLabels = row => {
+    return parseInt(row[this.state.labelColumn]);
+  };
+
+  extractFeatures = row => {
+    let featureValues = [];
+    this.state.featureColumns.forEach(featureColumn =>
+      featureValues.push(parseInt(row[featureColumn]))
+    );
+    return featureValues;
+  };
+
   updateData = result => {
     var data = result.data;
+
+    const labels = data.map(this.extractLabels);
+    console.log("labels", labels);
+    const features = data.map(this.extractFeatures);
+    console.log("features", features);
+
     this.setState({
-      data: JSON.stringify(data)
+      data: data,
+      labels: labels,
+      features: features
     });
   };
 
@@ -53,8 +87,14 @@ export default class CSVReaderWrapper extends Component {
         </button>
         {this.state.data && (
           <div>
-            <h2>Here's the data</h2>
-            <span>{this.state.data}</span>
+            <h2>Raw Data</h2>
+            <span>{JSON.stringify(this.state.data)}</span>
+            <h2>Labels based on {JSON.stringify(this.state.labelColumn)}</h2>
+            <span>{JSON.stringify(this.state.labels)}</span>
+            <h2>
+              Features based on {JSON.stringify(this.state.featureColumns)}
+            </h2>
+            <span>{JSON.stringify(this.state.features)}</span>
           </div>
         )}
       </div>
