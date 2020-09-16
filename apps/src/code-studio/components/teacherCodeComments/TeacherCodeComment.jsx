@@ -2,43 +2,34 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {hideCommentModal, setComments} from './teacherCodeCommentRedux';
+import {hideCommentModal, setComments} from './redux';
+import LineNumberDialog from './LineNumberDialog';
+import * as teacherCodeCommentPropTypes from './propTypes';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
-  container: {
-    backgroundColor: 'lightgray',
-    position: 'absolute',
-    zIndex: 9999,
-    padding: 10,
-    border: '1px solid darkgray'
-  },
   header: {
     display: 'inline-block'
   },
   input: {
     display: 'block',
-    width: '20em',
-    height: '5em'
-  },
-  button: {
-    fontSize: 14,
-    margin: 2,
-    padding: 6
+    height: '5em',
+    marginBottom: 5,
+    marginTop: 5,
+    width: '20em'
   }
 };
 
 class TeacherCodeComment extends React.Component {
   static propTypes = {
     comments: PropTypes.object,
+    hasBreakpoint: PropTypes.bool,
     hideCommentModal: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool,
     lineNumber: PropTypes.number,
-    setComments: PropTypes.func.isRequired,
-    position: PropTypes.shape({
-      left: PropTypes.number.isRequired,
-      top: PropTypes.number.isRequired
-    })
+    position: teacherCodeCommentPropTypes.position,
+    setComments: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -131,9 +122,13 @@ class TeacherCodeComment extends React.Component {
     return (
       <div>
         <span style={styles.header}>
-          {this.state.working
-            ? 'Saving ...'
-            : `Add comment to line #${this.props.lineNumber}`}
+          {this.state.working ? (
+            'Saving ...'
+          ) : (
+            <span>
+              Add comment to: <strong>Line {this.props.lineNumber + 1}</strong>
+            </span>
+          )}
         </span>
         <textarea
           cols={48}
@@ -143,36 +138,32 @@ class TeacherCodeComment extends React.Component {
           value={this.state.comment}
         />
         <fieldset>
-          <button
-            type="button"
-            style={styles.button}
-            onClick={this.handleSubmit}
-            disabled={this.state.working}
-          >
-            <i className="fa fa-save" /> submit
-          </button>
-          <button
-            type="button"
-            style={styles.button}
-            onClick={this.handleDelete}
+          <Button
+            color={Button.ButtonColor.red}
             disabled={
               this.state.working ||
               !(this.props.lineNumber in this.props.comments)
             }
-          >
-            <i className="fa fa-trash" /> delete
-          </button>
-          <button
-            type="button"
-            style={{
-              ...styles.button,
-              float: 'right'
-            }}
-            onClick={this.props.hideCommentModal}
-            disabled={this.state.working}
-          >
-            <i className="fa fa-times" /> cancel
-          </button>
+            onClick={this.handleDelete}
+            size={Button.ButtonSize.narrow}
+            text="Delete"
+          />
+          <fieldset style={{float: 'right'}}>
+            <Button
+              color={Button.ButtonColor.white}
+              disabled={this.state.working}
+              onClick={this.props.hideCommentModal}
+              size={Button.ButtonSize.narrow}
+              text="Cancel"
+            />
+            <Button
+              color={Button.ButtonColor.orange}
+              disabled={this.state.working || !this.state.comment}
+              onClick={this.handleSubmit}
+              size={Button.ButtonSize.narrow}
+              text="Submit"
+            />
+          </fieldset>
         </fieldset>
       </div>
     );
@@ -192,24 +183,18 @@ class TeacherCodeComment extends React.Component {
     }
 
     return (
-      <div
-        style={{
-          left: this.props.position.left,
-          top: this.props.position.top,
-          ...styles.container
-        }}
-      >
+      <LineNumberDialog position={this.props.position}>
         {this.props.isTeacher
           ? this.renderTeacherEditInterface()
           : this.renderStudentViewInterface()}
-      </div>
+      </LineNumberDialog>
     );
   }
 }
 
 export const UnconnectedTeacherCodeComment = TeacherCodeComment;
 export default connect(
-  state => state.teacherCodeComment,
+  state => state.teacherCodeComments,
   {
     hideCommentModal,
     setComments

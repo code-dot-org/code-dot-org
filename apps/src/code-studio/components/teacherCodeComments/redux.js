@@ -1,17 +1,18 @@
 // Action types
 
-const SHOW_COMMENT_MODAL = 'teacherCodeComment/SHOW_COMMENT_MODAL';
-const HIDE_COMMENT_MODAL = 'teacherCodeComment/HIDE_COMMENT_MODAL';
-const SET_COMMENTS = 'teacherCodeComment/SET_COMMENTS';
-const ADD_OR_UPDATE_COMMENT = 'teacherCodeComment/ADD_OR_UPDATE_COMMENT';
+const SHOW_COMMENT_MODAL = 'teacherCodeComments/SHOW_COMMENT_MODAL';
+const HIDE_COMMENT_MODAL = 'teacherCodeComments/HIDE_COMMENT_MODAL';
+const SET_COMMENTS = 'teacherCodeComments/SET_COMMENTS';
+const ADD_OR_UPDATE_COMMENT = 'teacherCodeComments/ADD_OR_UPDATE_COMMENT';
 
 // Reducer
 
 const initialState = {
+  comments: {},
+  hasBreakpoint: null,
   isOpen: false,
-  position: null,
   lineNumber: null,
-  comments: {}
+  position: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -19,16 +20,15 @@ export default function reducer(state = initialState, action) {
     case SHOW_COMMENT_MODAL:
       return {
         ...state,
+        hasBreakpoint: action.hasBreakpoint,
         isOpen: true,
         lineNumber: action.lineNumber,
         position: action.position
       };
     case HIDE_COMMENT_MODAL:
       return {
-        ...state,
-        isOpen: false,
-        lineNumber: null,
-        position: null
+        ...initialState,
+        comments: state.comments
       };
     case SET_COMMENTS:
       return {
@@ -50,8 +50,8 @@ export default function reducer(state = initialState, action) {
 
 // Action creators
 
-export function showCommentModal(lineNumber, position) {
-  return {type: SHOW_COMMENT_MODAL, lineNumber, position};
+export function showCommentModal(lineNumber, position, hasBreakpoint) {
+  return {type: SHOW_COMMENT_MODAL, lineNumber, position, hasBreakpoint};
 }
 
 export function hideCommentModal() {

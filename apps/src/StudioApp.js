@@ -2526,9 +2526,6 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     return match && match.length > 0;
   };
 
-  // set up "teacher comment" stuff
-  initializeTeacherCodeComments();
-
   $(window).on(
     'prepareforcallout',
     function(e, options) {
@@ -2608,6 +2605,10 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   if (config.afterEditorReady) {
     config.afterEditorReady();
   }
+
+  // set up "teacher comment" stuff. TODO we should probably find a
+  // specific event to attach this to.
+  initializeTeacherCodeComments(this);
 
   if (config.afterInject) {
     config.afterInject();
