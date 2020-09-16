@@ -15,4 +15,12 @@
 #
 
 class LessonActivity < ApplicationRecord
+  include SerializedProperties
+
+  belongs_to :lesson
+
+  serialized_attrs %w(
+    display_name
+    time
+  )
 end
