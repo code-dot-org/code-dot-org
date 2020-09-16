@@ -1695,41 +1695,36 @@ class Script < ActiveRecord::Base
       Lesson.new(lesson_attrs)
     end
     Lesson.import! lessons_to_import, on_duplicate_key_update: :all
-    seed_context.lessons = seed_context.script.lessons
+    seed_context.lessons = Lesson.where(script: seed_context.script)
     seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
     seed_context.levels_script_levels = seed_context.script.levels_script_levels
-    seed_context.levels = seed_context.script_levels.map(&:levels).flatten
 
+    lessons_by_seeding_key = seed_context.lessons.index_by {|l| l.seeding_key(seed_context)}
+    script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
     script_levels_to_import = script_levels_data.map do |sl_data|
-      #lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first&.id
-      #raise 'No lesson group found' if lesson_group_id.nil?
-      stage_id = seed_context.lessons.select do |l|
-        l.seeding_key(seed_context) == sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}
-      end.first&.id
-      #stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}.first&.id
-      raise 'No stage id found' if stage_id.nil?
+      stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
+      raise 'No stage found' if stage.nil?
 
-      matching_script_levels = seed_context.script_levels.select {|sl| sl.seeding_key(seed_context) == sl_data['seeding_key']}
-      raise "Multiple matching script levels found while seeding script: #{script_data['name']}" if matching_script_levels.length > 1
-      script_level_to_import = matching_script_levels.first || ScriptLevel.new
-
+      script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
       script_level_attrs = sl_data.except('seeding_key')
       script_level_attrs['script_id'] = seed_context.script.id
-      script_level_attrs['stage_id'] = stage_id
+      script_level_attrs['stage_id'] = stage.id
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
     end
     ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
+    seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
+    seed_context.levels = seed_context.script_levels.map(&:levels).flatten
 
-    all_script_levels = ScriptLevel.where(script_id: script_id)
+    levels_by_seeding_key = seed_context.levels.index_by(&:unique_key)
+    script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
-      # TODO: maybe we can get rid of this query
-      level_id = Level.where(Level.key_to_params(lsl_data['level_key'])).pluck(:id).first
-      raise 'No level found' if level_id.nil?
-      script_level_id = all_script_levels.select {|sl| sl.seeding_id == lsl_data['script_level_seeding_id']}.first&.id
-      raise "No ScriptLevel found while seeding script: #{script_data['name']}" if script_level_id.nil?
+      level = levels_by_seeding_key[lsl_data['seeding_key']['level.name']]
+      raise 'No level found' if level.nil?
+      script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.name')]
+      raise "No ScriptLevel found while seeding script: #{script_data['name']}" if script_level.nil?
 
-      levels_script_level_attrs = {level_id: level_id, script_level_id: script_level_id}
+      levels_script_level_attrs = {level_id: level.id, script_level_id: script_level.id}
       LevelsScriptLevel.new(levels_script_level_attrs)
     end
     LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: :all
