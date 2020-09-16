@@ -7,10 +7,7 @@ import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Announcements from './Announcements';
-import {
-  announcementShape,
-  VisibilityType
-} from '@cdo/apps/code-studio/announcementsRedux';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -121,35 +118,6 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
-  /*
-  Processes all of the announcements for the script and determines if they should be shown based
-  on the their visibility setting and the current view. For example a teacher should only see
-  announcements for Teacher-only or Teacher and Student.
-  Also defaults to old announcements without a visibility to be Teacher-only.
-  Lastly checks if the non-verified teacher announcement should be shown to a teacher and
-  adds the announcement if needed.
-   */
-  filterAnnouncements = currentView => {
-    const currentAnnouncements = [];
-    this.props.announcements.forEach(element => {
-      if (element.visibility === VisibilityType.teacherAndStudent) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Teacher' &&
-        (element.visibility === VisibilityType.teacher ||
-          element.visibility === undefined)
-      ) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Student' &&
-        element.visibility === VisibilityType.student
-      ) {
-        currentAnnouncements.push(element);
-      }
-    });
-    return currentAnnouncements;
-  };
-
   render() {
     const {
       plcHeaderProps,
@@ -205,8 +173,9 @@ class ScriptOverviewHeader extends Component {
         )}
         {isSignedIn && (
           <Announcements
-            announcements={this.filterAnnouncements(viewAs)}
+            announcements={this.props.announcements}
             width={SCRIPT_OVERVIEW_WIDTH}
+            viewAs={viewAs}
           />
         )}
         {userId && <StudentFeedbackNotification studentId={userId} />}
