@@ -321,15 +321,15 @@ module Pd::Application
         ],
 
         plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "I hope to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
-          "No, someone else from my school will teach this course this year (#{year})",
+          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course.",
+          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course.",
+          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year}).",
+          "No, someone else from my school will teach this course this year (#{year}).",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
         pay_fee: [
-          'Yes, my school will be able to pay the full program fee.',
+          'Yes, my school/district will be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
           "I don't know."
         ],
@@ -370,27 +370,25 @@ module Pd::Application
           TEXT_FIELDS[:i_dont_know_explain]
         ],
         csd_which_units: [
-          'Unit 0: Problem Solving',
-          'Unit 1: Web Development',
-          'Unit 2: Animations & Games',
-          'Unit 3: What is a Computer?',
+          'Unit 1: Problem Solving',
+          'Unit 2: Web Development',
+          'Unit 3: Interactive Animations & Games',
           'Unit 4: The Design Process',
-          'Unit 5: Data & Society',
-          'Unit 6: Physical Computing',
+          'Unit 5: Physical Computing',
           'All units',
           "I'm not sure"
         ],
         csp_which_units: [
           'Unit 1: Digital Information',
-          'Unit 2: Internet',
-          'Unit 3: Intro App Development',
+          'Unit 2: The Internet',
+          'Unit 3: Intro App Design',
           'Unit 4:  Variables, Conditionals, and Functions',
-          'Unit 5: Lists and Loops',
+          'Unit 5: Lists, Loops and Traversals',
           'Unit 6: Algorithms',
-          'Unit 7: Functions with Parameters, Return Values, and Libraries',
+          'Unit 7: Parameters, Return Values, and Libraries',
           'Unit 8: AP Create Performance Task',
           'Unit 9: Data',
-          'Unit 10: Cybersecurity and Global Impact',
+          'Unit 10: Cybersecurity and Global Impacts',
           'All units',
           "I'm not sure"
         ],
@@ -403,6 +401,8 @@ module Pd::Application
           'Globaloria',
           'My CS',
           'Project Lead the Way - Computer Science',
+          'CS in Algebra',
+          'CS in Science',
           'Robotics',
           'ScratchEd',
           'Typing',
@@ -771,8 +771,7 @@ module Pd::Application
       # Section 3
       if course == 'csd'
         took_csd_course =
-          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries') ||
-            responses[:previous_yearlong_cdo_pd].include?('Exploring Computer Science')
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =

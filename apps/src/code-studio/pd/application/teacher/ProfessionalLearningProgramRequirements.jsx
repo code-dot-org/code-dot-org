@@ -11,8 +11,7 @@ import {
   styles as defaultStyles,
   PROGRAM_CSD,
   PROGRAM_CSP,
-  YEAR,
-  SUMMER_YEAR
+  YEAR
 } from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
@@ -127,10 +126,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
           </p>
           <p>
             Code.org will review your application and contact you with options
-            for joining another Regional Partner program. Please note that we
-            are not able to guarantee a space for you in a different location,
-            and you will be responsible for the costs related to traveling to
-            that location.
+            for joining the program hosted by an available Regional Partner.
+            Please note that we are not able to guarantee a space for you with a
+            Regional Partner in another region, and you will be responsible for
+            the costs related to traveling to that location if a virtual option
+            is not available.
           </p>
         </div>
       );
@@ -261,23 +261,30 @@ export default class SummerWorkshop extends LabeledFormComponent {
         <div>
           <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
           <p>
-            Teachers in this program are expected to attend the minimum number
-            of workshops that{' '}
-            <a
-              href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
-              target="_blank"
-            >
-              correspond to the number of units they intend to teach
-            </a>
-            , including:
+            Code.org’s Professional Learning Program is a yearlong program
+            starting in the summer and concluding in the spring. Workshops can
+            either be held in-person, virtually, or as a combination of both
+            throughout the year.
+            {this.state.regionalPartnerName && (
+              <span>
+                Refer to the Regional Partner’s
+                <a
+                  href={
+                    pegasus(
+                      '/educate/professional-learning/program-information'
+                    ) +
+                    (!!this.props.data.schoolZipCode
+                      ? '?zip=' + this.props.data.schoolZipCode
+                      : '')
+                  }
+                  target="_blank"
+                >
+                  landing page
+                </a>
+                for more information about the schedule and delivery model.
+              </span>
+            )}
           </p>
-          <ul>
-            <li>One summer workshop in {SUMMER_YEAR}</li>
-            <li>
-              Up to four one-day workshops during the {YEAR} school year
-              (typically held on Saturdays)
-            </li>
-          </ul>
           {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
             [TextFields.noExplain]: 'other'
           })}
@@ -312,8 +319,8 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 >
                   Click here to check the fees and discounts for your program
                 </a>
-                . Let us know if your school would be able to pay the fee or if
-                you need to be considered for a scholarship.
+                . Let us know if your school or district would be able to pay
+                the fee or if you need to be considered for a scholarship.
               </label>
               {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}

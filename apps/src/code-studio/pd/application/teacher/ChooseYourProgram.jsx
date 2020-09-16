@@ -8,6 +8,9 @@ import {
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP, YEAR} from './TeacherApplicationConstants';
 
+const MIN_CSD_HOURS = 50;
+const MIN_CSP_HOURS = 100;
+
 export default class ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.chooseYourProgram;
 
@@ -45,16 +48,18 @@ export default class ChooseYourProgram extends LabeledFormComponent {
         (csHowManyMinutes * csHowManyDaysPerWeek * csHowManyWeeksPerYear) / 60;
     }
 
-    let courseNotes = null;
-    if (this.props.data.program && courseHours !== null) {
-      if (this.props.data.program.includes('Discoveries')) {
-        if (courseHours < 50) {
-          courseNotes = 'csd';
-        }
-      } else if (this.props.data.program.includes('Principles')) {
-        if (courseHours < 100) {
-          courseNotes = 'csp';
-        }
+    let belowMinCourseHours = false;
+    let minCourseHours = this.props.data.program.includes('Discoveries')
+      ? MIN_CSD_HOURS
+      : MIN_CSP_HOURS;
+    let program = this.props.data.program;
+    if (
+      program &&
+      (program.includes('Discoveries') || program.includes('Principles')) &&
+      courseHours !== null
+    ) {
+      if (courseHours < minCourseHours) {
+        belowMinCourseHours = true;
       }
     }
 
@@ -74,17 +79,6 @@ export default class ChooseYourProgram extends LabeledFormComponent {
           <strong>Course hours =</strong> (number of minutes of one class){' '}
           <strong> X </strong> (number of days per week the class will be
           offered) <strong> X </strong> (number of weeks with the class)
-        </p>
-        <p>
-          Please provide information about your course implementation plans.{' '}
-          <a
-            href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
-            target="_blank"
-          >
-            Click here
-          </a>{' '}
-          for guidance on our professional development recommendations depending
-          on the number of units you intend to teach.
         </p>
         <br />
         {this.numberInputFor('csHowManyMinutes', {
@@ -137,12 +131,12 @@ export default class ChooseYourProgram extends LabeledFormComponent {
             </Row>
           </div>
         )}
-        {courseNotes === 'csp' && (
+        {belowMinCourseHours && (
           <p style={{color: 'red'}}>
-            Note: 50 or more hours of instruction per CS Principles section are
-            strongly recommended. We suggest checking with your school
-            administration to see if additional time can be allotted for this
-            course in {YEAR}.
+            Note: {minCourseHours} or more hours of instruction per CS{' '}
+            {this.getNameForSelectedProgram()} section are strongly recommended.
+            We suggest checking with your school administration to see if
+            additional time can be allotted for this course in {YEAR}.
           </p>
         )}
         {this.props.data.program === PROGRAM_CSD &&
