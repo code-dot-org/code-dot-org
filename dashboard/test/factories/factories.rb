@@ -797,6 +797,12 @@ FactoryGirl.define do
     script_level
   end
 
+  factory :lesson_activity do
+    sequence(:key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
   factory :activity do
     level
     user
