@@ -17,7 +17,7 @@
 class LessonActivity < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson
+  belongs_to :lesson, inverse_of: :activities
 
   serialized_attrs %w(
     display_name

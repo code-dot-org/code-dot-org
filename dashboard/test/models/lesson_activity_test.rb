@@ -5,6 +5,6 @@ class StageTest < ActiveSupport::TestCase
     lesson = create :lesson
     activity1 = create :lesson_activity, lesson: lesson
     activity2 = create :lesson_activity, lesson: lesson
-    assert_equal [activity1, activity2], lesson.lesson_activities
+    assert_equal [activity1, activity2], lesson.activities
   end
 end
