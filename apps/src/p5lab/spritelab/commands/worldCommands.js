@@ -28,6 +28,7 @@ export const commands = {
     coreLibrary.background = color;
   },
 
+  // Deprecated. The new background block is setBackgroundImageAs
   setBackgroundImage(img) {
     if (this._preloadedBackgrounds && this._preloadedBackgrounds[img]) {
       let backgroundImage = this._preloadedBackgrounds[img];
