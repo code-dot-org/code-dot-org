@@ -1,5 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 
+const EMPTY_OPTION = '???';
+
 export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
   /** Turn changeHandler into validator
    * @override
@@ -24,7 +26,7 @@ export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   doClassValidation_(newValue) {
-    if (newValue === '???') {
+    if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
       return super.doClassValidation_(newValue);
@@ -35,7 +37,7 @@ export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   doValueUpdate_(newValue) {
-    if (newValue === '???') {
+    if (newValue === EMPTY_OPTION) {
       this.value_ = newValue;
       this.isDirty_ = true;
       this.selectedOption_ = ['???', ''];
