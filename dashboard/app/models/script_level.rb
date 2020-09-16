@@ -50,7 +50,6 @@ class ScriptLevel < ActiveRecord::Base
     variants
     progression
     challenge
-    seeding_idx
   )
 
   # Chapter values order all the script_levels in a script.
@@ -545,11 +544,6 @@ class ScriptLevel < ActiveRecord::Base
   # prior answers
   def should_hide_survey(user, viewed_user)
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
-  end
-
-  def self.generate_seeding_id(levels, lesson, lesson_group, script)
-    values = [lesson.key, lesson_group.key, script.name] + levels.map(&:unique_key)
-    HashingUtils.hash_values(values)
   end
 
   def seeding_key(seed_context)
