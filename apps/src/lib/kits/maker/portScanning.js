@@ -2,6 +2,7 @@
 /* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
+import applabI18n from '@cdo/applab/locale';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -39,8 +40,9 @@ export function findPortWithViableDevice() {
       } else {
         return Promise.reject(
           new ConnectionFailedError(
-            'Did not find a usable device on a serial port. ' +
-              '\n\nFound devices: ' +
+            applabI18n.noUsableDeviceOnPort() +
+              '\n\n' +
+              applabI18n.foundDevices() +
               JSON.stringify(list)
           )
         );
