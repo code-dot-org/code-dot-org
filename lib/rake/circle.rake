@@ -187,10 +187,8 @@ def start_sauce_connect
   # pin the version we use to the last working version, while we schedule the task to get the upgraded version
   # working. You can do this by replacing `sc_download_url` with a hard-coded download url.
 
-  # Temporarily pinning sauceconnect version to 4.5.4 since 4.6.0 seems to have broken us.
-  #sc_version_info = JSON.parse(Net::HTTP.get(URI('https://saucelabs.com/versions.json')))
-  #sc_download_url = sc_version_info['Sauce Connect']['linux']['download_url']
-  sc_download_url = 'https://saucelabs.com/downloads/sc-4.5.4-linux.tar.gz'
+  sc_version_info = JSON.parse(Net::HTTP.get(URI('https://saucelabs.com/versions.json')))
+  sc_download_url = sc_version_info['Sauce Connect']['linux']['download_url']
   tar_name = sc_download_url.split('/')[-1]
   dir_name = tar_name.chomp('.tar.gz')
 
