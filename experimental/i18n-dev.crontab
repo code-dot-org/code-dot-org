@@ -41,3 +41,7 @@ HOME=/home/ubuntu
 #   full sync, and also because we expect to spend Monday verifiying the
 #   results of the full sync.
 30 */2 * * SUN,TUE-SAT cd /home/ubuntu/code-dot-org && ((bundle exec ./bin/i18n/sync-all -c down && bundle exec ./bin/i18n/sync-all -c out) | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+
+# Periodically check to see if the I18n Sync PRs have been merged and attempt
+# to return to staging.
+0 */1 * * * cd /home/ubuntu/code-dot-org && git fetch && bundle exec ./bin/i18n/sync-all -c return-to-staging
