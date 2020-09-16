@@ -1657,6 +1657,8 @@ class Script < ActiveRecord::Base
     }
   end
 
+  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels)
+
   def self.seed_from_json_file(filename)
     data = JSON.parse(File.read(filename))
 
@@ -1708,7 +1710,7 @@ class Script < ActiveRecord::Base
       raise "Multiple matching script levels found while seeding script: #{script_data['name']}" if matching_script_levels.length > 1
       script_level_to_import = matching_script_levels.first || ScriptLevel.new
 
-      script_level_attrs = sl_data.except('level_names', 'lesson_key', 'lesson_group_key', 'script_name')
+      script_level_attrs = sl_data.except('lesson_key', 'lesson_group_key', 'script_name')
       script_level_attrs['script_id'] = script_id
       script_level_attrs['stage_id'] = stage_id
       script_level_to_import.assign_attributes(script_level_attrs)
@@ -1728,5 +1730,9 @@ class Script < ActiveRecord::Base
       LevelsScriptLevel.new(levels_script_level_attrs)
     end
     LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: :all
+  end
+
+  def seeding_key(seed_context)
+    {'script.name': name}
   end
 end

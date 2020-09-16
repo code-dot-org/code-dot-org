@@ -51,6 +51,7 @@ class ScriptLevel < ActiveRecord::Base
     progression
     challenge
     seeding_id
+    level_names
   )
 
   # Chapter values order all the script_levels in a script.
@@ -550,5 +551,16 @@ class ScriptLevel < ActiveRecord::Base
   def self.generate_seeding_id(levels, lesson, lesson_group, script)
     values = [lesson.key, lesson_group.key, script.name] + levels.map(&:unique_key)
     HashingUtils.hash_values(values)
+  end
+
+  def seeding_key(seed_context)
+    raise "No level names for #{self.class}" if level_names.nil_or_empty?
+    my_key = {'script_level.level_names': level_names}
+
+    my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
+    raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
+    lesson_seeding_key = my_lesson.seeding_key(seed_context)
+
+    my_key.merge(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
   end
 end
