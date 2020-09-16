@@ -73,6 +73,7 @@ export default class CSVReaderWrapper extends Component {
   };
 
   train = () => {
+    console.log("train was called");
     this.svm.train(this.state.examples, this.state.labels);
     this.setState({
       trainClicked: true
@@ -182,7 +183,7 @@ export default class CSVReaderWrapper extends Component {
                 {this.state.labelColumn}.
               </p>
             )}
-            <button type="button" onClick={this.prepareDataForML}>
+            <button type="button" onClick={this.prepareTrainingDataForML}>
               Train SVM model
             </button>
             <br />
@@ -190,13 +191,24 @@ export default class CSVReaderWrapper extends Component {
             {this.state.trainClicked && (
               <div>
                 <h2>Let's test the model!</h2>
-
+                <form>
+                  {this.state.selectedFeatures.map((feature, index) => {
+                    return (
+                      <span>
+                        <label>
+                          {feature}:
+                          <input type="text" />
+                        </label>
+                      </span>
+                    );
+                  })}
+                </form>
                 <button type="button" onClick={this.predict}>
                   Predict!
                 </button>
                 {this.state.prediction && (
                   <div>
-                    <h2> The machine learning model predicts.... </h2>
+                    <h2> The Machine Learning model predicts.... </h2>
                     <span>{JSON.stringify(this.state.prediction)}</span>
                   </div>
                 )}
