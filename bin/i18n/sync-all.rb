@@ -68,6 +68,8 @@ class I18nSync
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
+      when 'return-to-staging'
+        return_to_staging_branch
       end
     end
   end
@@ -93,7 +95,7 @@ class I18nSync
         options[:interactive] = true
       end
 
-      opts.on("-c", "--command COMMAND", %w(in up down out), "Run a single sync command") do |cmd|
+      opts.on("-c", "--command COMMAND", %w(in up down out return-to-staging), "Run a single sync command") do |cmd|
         options[:command] = cmd
       end
 
