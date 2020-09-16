@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from '../../../../util/deprecatedChai';
-import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/AnnouncementsEditor';
 
 const sampleAnnouncement = {
   notice: 'This course has recently been updated!',
@@ -16,10 +16,10 @@ const defaultProps = {
   inputStyle: {}
 };
 
-describe('ScriptAnnouncementsEditor', () => {
+describe('AnnouncementsEditor', () => {
   it('renders an Announce when we have an announcement', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
@@ -29,7 +29,7 @@ describe('ScriptAnnouncementsEditor', () => {
 
   it('shows a preview when we have at least one announcement', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
@@ -38,12 +38,12 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('show no preview if we have no announcements', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     assert.equal(wrapper.find('ScriptAnnouncements').length, 0);
   });
 
   it('adds an empty Announce when we click add', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
     assert.equal(wrapper.find('Announce').length, 1);
     assert.equal(wrapper.find('Announce').props().announcement.notice, '');
@@ -60,7 +60,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('removes announcements when we click remove', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     // had trouble getting two state updates working, so instead just call .add
@@ -92,7 +92,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates notice', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
@@ -105,7 +105,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates details', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
@@ -118,7 +118,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates link', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
@@ -131,7 +131,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates type', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
@@ -143,7 +143,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates visibility', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
@@ -163,7 +163,7 @@ describe('ScriptAnnouncementsEditor', () => {
       type: 'information'
     };
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[oldSampleAnnouncement]}
       />
@@ -180,7 +180,7 @@ describe('ScriptAnnouncementsEditor', () => {
 
   it('includes a hidden input with value for server', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
