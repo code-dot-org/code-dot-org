@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import LessonGroups from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
-import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/AnnouncementsEditor';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
@@ -276,7 +276,7 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <ScriptAnnouncementsEditor
+        <AnnouncementsEditor
           defaultAnnouncements={this.props.announcements}
           inputStyle={styles.input}
         />

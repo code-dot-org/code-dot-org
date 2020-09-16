@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-export default class ScriptAnnouncementsEditor extends Component {
+export default class AnnouncementsEditor extends Component {
   static propTypes = {
     defaultAnnouncements: PropTypes.arrayOf(announcementShape),
     inputStyle: PropTypes.object.isRequired
