@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
-import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/AnnouncementsEditor';
 
 const styles = {
   editor: {
@@ -136,7 +136,7 @@ export default class LessonEditor extends Component {
             </p>
           </HelpTip>
         </label>
-        <ScriptAnnouncementsEditor
+        <AnnouncementsEditor
           defaultAnnouncements={announcements}
           inputStyle={styles.input}
         />
