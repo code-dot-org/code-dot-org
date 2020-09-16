@@ -7,7 +7,7 @@ import {
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Announce from '@cdo/apps/lib/levelbuilder/script-editor/Announce';
+import Announce from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announce';
 
 const styles = {
   preview: {
