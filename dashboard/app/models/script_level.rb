@@ -50,7 +50,7 @@ class ScriptLevel < ActiveRecord::Base
     variants
     progression
     challenge
-    seeding_id
+    seeding_idx
   )
 
   # Chapter values order all the script_levels in a script.
@@ -553,12 +553,16 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def seeding_key(seed_context)
-    my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
-    my_levels = my_levels_script_levels.map do |lsl|
-      # n^2, probably doesn't matter since it's in memory and not that much stuff
-      level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
-      raise "No level found for #{lsl}" unless level
-      level
+    if levels.loaded?
+      my_levels = levels
+    else
+      # TODO: this series of in-memory filters is probably inefficient
+      my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
+      my_levels = my_levels_script_levels.map do |lsl|
+        level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
+        raise "No level found for #{lsl}" unless level
+        level
+      end
     end
     raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
 
