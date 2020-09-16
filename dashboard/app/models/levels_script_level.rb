@@ -28,6 +28,7 @@ class LevelsScriptLevel < ActiveRecord::Base
     raise "No ScriptLevel found for #{self.class}: #{inspect}" unless my_script_level
     script_level_seeding_key = my_script_level.seeding_key(seed_context)
 
-    my_key.merge(script_level_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.merge!(script_level_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
   end
 end

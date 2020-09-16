@@ -49,7 +49,7 @@ module ScriptSeed
       :user_facing,
       :position,
       :properties,
-      :seeding_key
+      :seeding_key,
     )
 
     def seeding_key

@@ -1663,55 +1663,58 @@ class Script < ActiveRecord::Base
     data = JSON.parse(File.read(filename))
 
     script_data = data['script']
+    script_name = script_data['seeding_key']['script.name']
     lesson_groups_data = data['lesson_groups']
     lessons_data = data['lessons']
     script_levels_data = data['script_levels']
     levels_script_levels_data = data['levels_script_levels']
+    seed_context = SeedContext.new
 
-    script_to_import = Script.find_by(name: script_data['name']) || Script.new
-    script_to_import.assign_attributes(script_data)
+    script_to_import = Script.new(script_data.except('seeding_key'))
     # validate: false because otherwise fails on invalid names that are already in the DB.
     # TODO: do we need to scope this down somehow to only skipping name format validation?
     result = Script.import [script_to_import], on_duplicate_key_update: :all, validate: false
     raise "Some script imports failed: #{result}" if result.failed_instances.any?
+    seed_context.script = Script.find_by!(name: script_name)
 
-    script_id = Script.find_by!(name: script_data['name']).id
     lesson_groups_to_import = lesson_groups_data.map do |lg_data|
-      lesson_attrs = lg_data.except('script_name')
-      lesson_attrs['script_id'] = script_id
+      lesson_attrs = lg_data.except('seeding_key')
+      lesson_attrs['script_id'] = seed_context.script.id
       LessonGroup.new(lesson_attrs)
     end
     LessonGroup.import! lesson_groups_to_import, on_duplicate_key_update: :all
+    seed_context.lesson_groups = seed_context.script.lesson_groups
 
-    all_lesson_groups = LessonGroup.where(script_id: script_id)
     lessons_to_import = lessons_data.map do |lesson_data|
-      lesson_group_id = all_lesson_groups.select {|lg| lg.key == lesson_data['lesson_group_key']}.first&.id
+      lesson_group_id = seed_context.lesson_groups.select {|lg| lg.key == lesson_data['seeding_key']['lesson_group.key']}.first&.id
       raise 'No lesson group found' if lesson_group_id.nil?
 
-      lesson_attrs = lesson_data.except('lesson_group_key', 'script_name')
-      lesson_attrs['script_id'] = script_id
+      lesson_attrs = lesson_data.except('seeding_key')
+      lesson_attrs['script_id'] = seed_context.script.id
       lesson_attrs['lesson_group_id'] = lesson_group_id
       Lesson.new(lesson_attrs)
     end
     Lesson.import! lessons_to_import, on_duplicate_key_update: :all
+    seed_context.lessons = seed_context.script.lessons
+    seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
+    seed_context.levels_script_levels = seed_context.script.levels_script_levels
+    seed_context.levels = seed_context.script_levels.map(&:levels).flatten
 
-    all_lessons = Script.find_by!(name: script_data['name']).lessons
-    all_script_levels = ScriptLevel.where(script_id: script_id).includes(:levels)
     script_levels_to_import = script_levels_data.map do |sl_data|
-      lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first&.id
-      raise 'No lesson group found' if lesson_group_id.nil?
-      stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}.first&.id
+      #lesson_group_id = all_lesson_groups.select {|lg| lg.key == sl_data['lesson_group_key']}.first&.id
+      #raise 'No lesson group found' if lesson_group_id.nil?
+      stage_id = seed_context.lessons.select do |l|
+        l.seeding_key(seed_context) == sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}
+      end.first&.id
+      #stage_id = all_lessons.select {|l| l.lesson_group_id == lesson_group_id && l.key == sl_data['lesson_key']}.first&.id
       raise 'No stage id found' if stage_id.nil?
-      matching_script_levels = all_script_levels.select do |sl|
-        # TODO: Is this the right equality condition? Extract to its own function?
-        sl.position == sl_data['position'] && sl.chapter == sl_data['chapter'] && sl.stage_id == stage_id &&
-        sl.levels.map(&:unique_key) == sl_data['level_names']
-      end
+
+      matching_script_levels = seed_context.script_levels.select {|sl| sl.seeding_key(seed_context) == sl_data['seeding_key']}
       raise "Multiple matching script levels found while seeding script: #{script_data['name']}" if matching_script_levels.length > 1
       script_level_to_import = matching_script_levels.first || ScriptLevel.new
 
-      script_level_attrs = sl_data.except('lesson_key', 'lesson_group_key', 'script_name')
-      script_level_attrs['script_id'] = script_id
+      script_level_attrs = sl_data.except('seeding_key')
+      script_level_attrs['script_id'] = seed_context.script.id
       script_level_attrs['stage_id'] = stage_id
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
@@ -1733,6 +1736,6 @@ class Script < ActiveRecord::Base
   end
 
   def seeding_key(seed_context)
-    {'script.name': name}
+    {'script.name': name}.stringify_keys
   end
 end

@@ -572,6 +572,7 @@ class ScriptLevel < ActiveRecord::Base
     raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
     lesson_seeding_key = my_lesson.seeding_key(seed_context)
 
-    my_key.merge(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
   end
 end

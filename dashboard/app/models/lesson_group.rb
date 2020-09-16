@@ -156,6 +156,7 @@ class LessonGroup < ApplicationRecord
     raise "No Script found for #{self.class}: #{my_key}" unless seed_context.script
     script_seeding_key = seed_context.script.seeding_key(seed_context)
 
-    my_key.merge(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
   end
 end
