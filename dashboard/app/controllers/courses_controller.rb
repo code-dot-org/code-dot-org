@@ -120,7 +120,9 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :unit_group_announcements).to_h
+    cp[:unit_group_announcements] = JSON.parse(cp[:unit_group_announcements]) if cp[:unit_group_announcements]
+    cp
   end
 
   def set_redirect_override
