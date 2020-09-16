@@ -36,16 +36,13 @@ export const commands = {
   },
 
   setBackgroundImageAs(img) {
-    let location = {x: 200, y: 200};
-    let animation = img;
-    var sprite = this.createSprite(location.x, location.y, 400, 400);
-    sprite.direction = 0;
-    sprite.baseScale = 1;
-    coreLibrary.addSprite(sprite, undefined);
-    sprite.setAnimation(animation);
-    sprite.depth = 0;
-    sprite.height = 400;
-    sprite.width = Math.max(400, sprite.width);
+    if (
+      this._predefinedSpriteAnimations &&
+      this._predefinedSpriteAnimations[img]
+    ) {
+      let backgroundImage = this._predefinedSpriteAnimations[img];
+      coreLibrary.background = backgroundImage;
+    }
   },
 
   showTitleScreen(title, subtitle) {
