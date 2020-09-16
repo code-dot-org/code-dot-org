@@ -1,7 +1,5 @@
 module Pd
   module Teacher2122ApplicationConstants
-    include Pd::Application::ApplicationConstants
-
     YES_NO = %w(Yes No).freeze
 
     # Remove newlines and leading whitespace from multiline strings
@@ -9,7 +7,7 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    SHORT_YEAR = YEAR_21_22_SHORT
+    SHORT_YEAR = '2021-2022'
 
     SECTION_HEADERS = {
       about_you: 'About You',
