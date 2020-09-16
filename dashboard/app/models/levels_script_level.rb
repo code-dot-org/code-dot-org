@@ -22,7 +22,7 @@ class LevelsScriptLevel < ActiveRecord::Base
     my_level = seed_context.levels.select {|l| l.id == level_id}.first
     raise "No Level found for #{self.class}: #{inspect}" unless my_level
     # TODO: make this use the SeedContext?
-    my_key = {'levels_script_level.level_name': level.unique_key}
+    my_key = {'level.name': my_level.unique_key}
 
     my_script_level = seed_context.script_levels.select {|sl| sl.id == script_level_id}.first
     raise "No ScriptLevel found for #{self.class}: #{inspect}" unless my_script_level

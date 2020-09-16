@@ -1634,30 +1634,30 @@ class Script < ActiveRecord::Base
     levels + sublevels
   end
 
+  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
+
   def serialize_seeding_json
     eager_loaded_script_levels = ScriptLevel.includes(:levels).where(script_id: id)
     eager_loaded_levels = eager_loaded_script_levels.map(&:levels).flatten
 
-    scope = {
+    seed_context = SeedContext.new(
       script: self,
-      script_name: name,
       lesson_groups: lesson_groups,
       lessons: lessons,
       script_levels: eager_loaded_script_levels,
+      levels_script_levels: levels_script_levels,
       levels: eager_loaded_levels,
-      levels_script_levels: levels_script_levels
-    }
+    )
+    scope = {seed_context: seed_context}
 
     {
-      script: ScriptSeed::ScriptSerializer.new(self).as_json,
+      script: ScriptSeed::ScriptSerializer.new(self, scope: scope).as_json,
       lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg, scope: scope).as_json},
       lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l, scope: scope).as_json},
       script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
       levels_script_levels: levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
     }
   end
-
-  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels)
 
   def self.seed_from_json_file(filename)
     data = JSON.parse(File.read(filename))
