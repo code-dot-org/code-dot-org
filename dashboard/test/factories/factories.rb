@@ -798,7 +798,6 @@ FactoryGirl.define do
   end
 
   factory :lesson_activity do
-    sequence(:key) {|n| "lesson-activity-#{n}"}
     sequence(:position)
     lesson
   end
