@@ -221,7 +221,7 @@ export default class AnimationPickerBody extends React.Component {
                     onClick={this.onClearCategories}
                     style={animationPickerStyles.allAnimations}
                   >
-                    {'All categories > '}
+                    {msg.animationPicker_allCategories()}
                   </span>
                 )}
                 <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
