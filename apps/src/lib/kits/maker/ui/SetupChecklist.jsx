@@ -271,7 +271,7 @@ export default class SetupChecklist extends Component {
             style={{marginLeft: 9, marginTop: -4}}
             className="btn"
             type="button"
-            value="re-detect"
+            value={i18n.redetect()}
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
@@ -285,22 +285,15 @@ export default class SetupChecklist extends Component {
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
             )}
-            We couldn't detect a Circuit Playground board. Make sure your board
-            is plugged in, and click{' '}
+            {18n.makerSetupPlugInBoardCheck()}
             <a href="#" onClick={this.redetect.bind(this)}>
-              re-detect
+              {i18n.redetect()}
             </a>
             .
             {isWindows() && (
-              <p>
-                If your board is plugged in, you may be missing the{' '}
-                <strong>Adafruit Windows Drivers</strong>. Follow the
-                instructions{' '}
-                <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">
-                  on this page
-                </a>{' '}
-                to install the drivers and try again.
-              </p>
+              <SafeMarkdown
+                markdown={i18n.makerSetupAdafruitWindowsDrivers()}
+              />
             )}
             {this.contactSupport()}
           </ValidationStep>
@@ -311,21 +304,12 @@ export default class SetupChecklist extends Component {
             {i18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
               <div>
-                <p>
-                  We didn't have permission to open the serialport. Please make
-                  sure you are a member of the 'dialout' group.
-                </p>
-                <p>From your terminal, check which groups you belong to:</p>
+                <p>{i18n.makerSetupLinuxSerialport()}</p>
+                <p>{i18n.makerSetupLinuxGroupsCheck()}</p>
                 <pre>groups $&#123;USER&#125;</pre>
-                <p>
-                  If you don't belong to 'dialout', you'll want to add yourself
-                  to that group:
-                </p>
+                <p>{i18n.makerSetupLinuxAddDialout()}</p>
                 <pre>sudo gpasswd --add $&#123;USER&#125; dialout</pre>
-                <p>
-                  You may need to restart your computer for changes to take
-                  effect.
-                </p>
+                <p> {i18n.makerSetupLinuxRestart()} </p>
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
