@@ -11,4 +11,17 @@
 #
 
 class LessonActivitySection < ApplicationRecord
+  include SerializedProperties
+
+  belongs_to :lesson_activity
+
+  # TODO(dave): add relationship to levels or script levels
+
+  serialized_attrs %w(
+    display_name
+    remarks
+    slide
+    text
+    tips
+  )
 end
