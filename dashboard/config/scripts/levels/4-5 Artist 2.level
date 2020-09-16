@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "short_instructions": "Loop this code using the `repeat` block to complete the square.",
+    "short_instructions": "Loop this code using the `repeat` block to complete the biggest square.",
     "x": "350",
     "y": "50",
     "start_direction": "180",
@@ -16,7 +16,7 @@
     "ideal": "4",
     "slider_speed": "0.4",
     "embed": "false",
-    "long_instructions": "Loop this code using the `repeat` block to complete the square.",
+    "long_instructions": "Loop this code using the `repeat` block to complete the biggest square.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,11 +32,21 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "hint_prompt_attempts_threshold": 4,
-    "contained_level_names": null
+    "hint_prompt_attempts_threshold": "4",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "discard_background": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-09-16 16:04:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"predraw_blocks\",\"short_instructions\",\"long_instructions\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
