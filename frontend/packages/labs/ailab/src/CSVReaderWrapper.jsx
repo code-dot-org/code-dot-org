@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Papa from "papaparse";
+const svmjs = require("svm");
 
 export default class CSVReaderWrapper extends Component {
   constructor(props) {
     super(props);
+    this.initTrainingState();
 
     this.state = {
       csvfile: undefined,
@@ -21,8 +23,13 @@ export default class CSVReaderWrapper extends Component {
         "bar",
         "pluribus"
       ],
-      features: []
+      features: [],
+      prediction: undefined
     };
+  }
+
+  initTrainingState() {
+    this.svm = new svmjs.SVM();
   }
 
   handleChange = event => {
@@ -55,14 +62,24 @@ export default class CSVReaderWrapper extends Component {
     var data = result.data;
 
     const labels = data.map(this.extractLabels);
-    console.log("labels", labels);
     const features = data.map(this.extractFeatures);
-    console.log("features", features);
 
     this.setState({
       data: data,
       labels: labels,
       features: features
+    });
+  };
+
+  train = () => {
+    this.svm.train(this.state.features, this.state.labels);
+  };
+
+  predict = () => {
+    const predictedLabel = this.svm.predict([[1, 0, 1, 0, 0, 1, 0, 1, 0]]);
+    const prediction = predictedLabel > 0 ? "delicious!" : "yuck!";
+    this.setState({
+      prediction: prediction
     });
   };
 
@@ -82,7 +99,6 @@ export default class CSVReaderWrapper extends Component {
         />
         <p />
         <button type="button" onClick={this.importCSV}>
-          {" "}
           Upload now!
         </button>
         {this.state.data && (
@@ -95,6 +111,22 @@ export default class CSVReaderWrapper extends Component {
               Features based on {JSON.stringify(this.state.featureColumns)}
             </h2>
             <span>{JSON.stringify(this.state.features)}</span>
+            <br />
+            <br />
+            <button type="button" onClick={this.train}>
+              Train SVM model
+            </button>
+            <br />
+            <br />
+            <button type="button" onClick={this.predict}>
+              Predict!
+            </button>
+            {this.state.prediction && (
+              <div>
+                <h2> The machine learning model predicts.... </h2>
+                <span>{JSON.stringify(this.state.prediction)}</span>
+              </div>
+            )}
           </div>
         )}
       </div>
