@@ -18,7 +18,8 @@ const styles = {
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
     defaultAnnouncements: PropTypes.arrayOf(announcementShape),
-    inputStyle: PropTypes.object.isRequired
+    inputStyle: PropTypes.object.isRequired,
+    curriculumObject: PropTypes.string
   };
 
   constructor(props) {
@@ -64,16 +65,16 @@ export default class AnnouncementsEditor extends Component {
       <div>
         <input
           type="hidden"
-          name="script_announcements"
+          name={`${this.props.curriculumObject}_announcements`}
           value={JSON.stringify(announcements)}
         />
         <h4>
-          Script Announcements
+          Announcements
           <HelpTip>
             <p>
               This can be used to provide one or more announcements that will
               show up for signed in teachers, students, or teachers and students
-              on the script overview page.
+              on the overview page.
             </p>
           </HelpTip>
         </h4>
