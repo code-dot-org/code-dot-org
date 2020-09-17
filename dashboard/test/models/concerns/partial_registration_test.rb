@@ -4,93 +4,121 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   # The PartialRegistration concern is only included in User, so we
   # are testing against User.
 
-  test 'in_progress? is false when session has no user attributes' do
-    refute PartialRegistration.in_progress? fake_empty_session
+  setup do
+    @session = {}
   end
 
-  test 'in_progress? is true when session has user attributes' do
-    assert PartialRegistration.in_progress? fake_session
+  test 'persist_attributes does not push empty attributes into the cache' do
+    user = build :user
+    assert user.attributes.values.any?(&:nil?)
+
+    PartialRegistration.persist_attributes @session, user
+
+    cache_contents = CDO.shared_cache.read(PartialRegistration.cache_key(user))
+    deserialized = JSON.parse cache_contents
+    refute deserialized.values.any?(&:nil?)
+  end
+
+  test 'persist_attributes pushes less than 0.5KB into the cache for a sample user' do
+    user = build :user, :google_sso_provider
+    PartialRegistration.persist_attributes @session, user
+
+    cache_key = PartialRegistration.cache_key(user)
+    cache_contents = CDO.shared_cache.read(cache_key)
+    assert (cache_key + cache_contents).length < 512,
+      "Pushed #{cache_contents.length}B into the cache, expected less than 512B"
+  end
+
+  test 'in_progress? is false when session has no user attributes' do
+    refute PartialRegistration.in_progress? @session
+  end
+
+  test 'in_progress? is true when attributes have been persisted' do
+    PartialRegistration.persist_attributes @session, build(:user)
+    assert PartialRegistration.in_progress? @session
+  end
+
+  test 'in_progress? becomes false if attributes are lost from the cache' do
+    user = build :user
+    PartialRegistration.persist_attributes @session, user
+    CDO.shared_cache.delete(PartialRegistration.cache_key(user))
+    refute PartialRegistration.in_progress? @session
   end
 
   test 'new_from_partial_registration raises unless a partial registration is available' do
     exception = assert_raise RuntimeError do
-      User.new_from_partial_registration fake_empty_session
+      User.new_from_partial_registration @session
     end
     assert_equal 'No partial registration was in progress', exception.message
   end
 
-  test 'new_from_partial_registration returns a User' do
-    user = User.new_from_partial_registration fake_session
-    assert_kind_of User, user
+  test 'new_from_partial_registration raises on a missing cache entry' do
+    user = build :student
+    PartialRegistration.persist_attributes @session, user
+    CDO.shared_cache.delete(PartialRegistration.cache_key(user))
+
+    exception = assert_raise RuntimeError do
+      User.new_from_partial_registration @session
+    end
+    assert_equal 'No partial registration was in progress', exception.message
   end
 
-  test 'new_from_partial_registration applies attributes to new User' do
-    user = User.new_from_partial_registration fake_session(
-      user_type: 'student',
-      name: 'Fake Name',
-      email: 'fake@example.com',
-      password: 'fake password',
-      age: 15,
-    )
-    assert user.student?
-    assert_equal 'Fake Name', user.name
-    assert_equal 'fake@example.com', user.email
-    assert_equal 'fake password', user.password
-    assert_equal 15, user.age
+  test 'new_from_partial_registration raises on a malformed cache entry' do
+    user = build :student
+    PartialRegistration.persist_attributes @session, user
+    CDO.shared_cache.write(PartialRegistration.cache_key(user), '{malformed_json:')
+
+    assert_raise JSON::ParserError do
+      User.new_from_partial_registration @session
+    end
+  end
+
+  test 'new_from_partial_registration returns a User' do
+    PartialRegistration.persist_attributes @session, build(:user)
+    assert_kind_of User, User.new_from_partial_registration(@session)
   end
 
   test 'new_from_partial_registration does not save the User' do
-    user = User.new_from_partial_registration fake_session(
-      user_type: 'student',
-      name: 'Fake Name',
-      email: 'fake@example.com',
-      password: 'fake password',
-      age: 15,
-    )
+    PartialRegistration.persist_attributes @session, build(:user)
+
+    user = User.new_from_partial_registration @session
     assert user.valid?
     refute user.persisted?
   end
 
   test 'new_from_partial_registration takes an optional block to modify the User' do
-    user = User.new_from_partial_registration fake_session(
-      user_type: 'student',
-      name: 'Fake Name',
-    ) do |u|
+    PartialRegistration.persist_attributes @session, build(:user, name: 'Fake Name')
+
+    user = User.new_from_partial_registration @session do |u|
       u.name = 'Different fake name'
     end
     assert_equal 'Different fake name', user.name
   end
 
-  test 'persist_attributes puts tokens in the cache' do
-    # Because some oauth tokens are quite large, we strip them from the session
-    # variables and pass them through via the cache instead - they are pulled
-    # out again in new_from_partial_registration.
-    # This avoids "cookie overflow" errors.
+  test 'round-trip preserves important attributes (email)' do
+    user = build :student
+    refute_nil user.email
+    refute_nil user.encrypted_password
+    PartialRegistration.persist_attributes @session, user
 
-    session = fake_empty_session
-    user = build :student, :google_sso_provider
-
-    PartialRegistration.persist_attributes session, user
-
-    # Tokens are in cache
-    assert_equal user.oauth_token,
-      CDO.shared_cache.read(PartialRegistration.cache_key('oauth_token', user))
-    assert_equal user.oauth_refresh_token,
-      CDO.shared_cache.read(PartialRegistration.cache_key('oauth_refresh_token', user))
-
-    # ...not in session
-    refute_equal user.oauth_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_token']
-    refute_equal user.oauth_refresh_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_refresh_token']
+    result_user = User.new_from_partial_registration @session
+    assert result_user.student?
+    assert_equal user.name, result_user.name
+    assert_equal user.email, result_user.email
+    assert_equal user.encrypted_password, result_user.encrypted_password
+    assert_equal user.age, result_user.age
   end
 
-  test 'round-trip preserves important attributes' do
-    session = fake_empty_session
+  test 'round-trip preserves important attributes (sso)' do
     user = build :user, :google_sso_provider
+    refute_nil user.provider
+    refute_nil user.uid
+    refute_nil user.oauth_token
+    refute_nil user.oauth_token_expiration
+    refute_nil user.oauth_refresh_token
+    PartialRegistration.persist_attributes @session, user
 
-    PartialRegistration.persist_attributes session, user
-
-    result_user = User.new_from_partial_registration session
-
+    result_user = User.new_from_partial_registration @session
     assert_equal user.user_type, result_user.user_type
     assert_equal user.name, result_user.name
     assert_equal user.email, result_user.email
@@ -101,26 +129,41 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal user.oauth_refresh_token, result_user.oauth_refresh_token
   end
 
-  test 'cancel ends signup tracking and deletes user attributes from the session' do
+  test 'delete removes the partial registration from the session and cache' do
     user = build :user, :google_sso_provider
-    session = fake_session user.attributes
+    cache_key = PartialRegistration.cache_key user
 
-    SignUpTracking.expects(:log_cancel_finish_sign_up)
-    SignUpTracking.expects(:end_sign_up_tracking)
-    new_session = PartialRegistration.cancel(session)
+    PartialRegistration.persist_attributes @session, user
+    refute_nil @session[PartialRegistration::SESSION_KEY]
+    assert CDO.shared_cache.exist? cache_key
 
-    assert_nil new_session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]
+    PartialRegistration.delete @session
+    assert_nil @session[PartialRegistration::SESSION_KEY]
+    refute CDO.shared_cache.exist? cache_key
   end
 
-  private
+  test 'delete can be called safely when no partial registration is in progress' do
+    # Cache#delete(nil) throws on production (where we're using memcached)
+    # but not in other environments (where we're using a file cache).
+    # Force failure if we call this method with nil.
+    CDO.shared_cache.stubs(:delete).with(nil).raises(Exception, "Can't delete nil key.")
 
-  def fake_empty_session
-    {}
+    refute PartialRegistration.in_progress? @session
+    PartialRegistration.delete @session
   end
 
-  def fake_session(user_attributes = {})
-    {
-      PartialRegistration::USER_ATTRIBUTES_SESSION_KEY => user_attributes
-    }
+  test 'get_provider returns nil when partial registration is not in progress' do
+    assert_nil PartialRegistration.get_provider @session
+  end
+
+  test 'get_provider returns nil when an email registration is in progress' do
+    PartialRegistration.persist_attributes @session, build(:user)
+    assert_nil PartialRegistration.get_provider @session
+  end
+
+  test 'get_provider returns the provider name when an sso registration is in progress' do
+    user = build :user, :google_sso_provider
+    PartialRegistration.persist_attributes @session, user
+    assert_equal user.provider, PartialRegistration.get_provider(@session)
   end
 end

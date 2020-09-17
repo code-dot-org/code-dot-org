@@ -396,7 +396,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
 
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).once
     Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
       with(Pd::Enrollment.for_user(teacher_attended).first)
 
@@ -442,7 +441,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop_29d, enrolled: true, attended: true)
 
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).once
     Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
       with(Pd::Enrollment.for_user(teacher_30d).first)
 
@@ -1062,7 +1060,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, lesson_group: script.lesson_groups.first}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, key: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
@@ -1418,6 +1416,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'academic year workshops must suppress email' do
+    workshop = build :workshop, course: COURSE_CSP
+
+    # Non-academic year workshops may suppress email or not
+    workshop.subject = SUBJECT_SUMMER_WORKSHOP
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+
+    # Academic year workshops must suppress email
+    workshop.subject = SUBJECT_CSP_WORKSHOP_1
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   test 'virtual specific subjects must be virtual' do
     workshop = build :pd_workshop,
       course: COURSE_CSP,
@@ -1434,20 +1452,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
-  test 'friday_institute workshops must be virtual' do
-    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
-    refute workshop.valid?
-
-    workshop.virtual = true
-    workshop.suppress_email = true
-    assert workshop.valid?
-  end
-
   test 'workshops third_party_provider must be nil or from specified list' do
     workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
     refute workshop.valid?
 
     workshop.third_party_provider = nil
+    assert workshop.valid?
+
+    # friday_institute is in list of approved third party providers
+    workshop.third_party_provider = 'friday_institute'
     assert workshop.valid?
   end
 

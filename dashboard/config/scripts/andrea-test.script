@@ -4,19 +4,20 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Deeper Learning Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview'
 level 'andrea_test1', progression: 'What is Deeper Learning', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Part 1'
+lesson 'Part 1', display_name: 'Part 1'
 level 'andrea-test2', progression: 'President Question'
 level 'andrea-test3', progression: 'Vice President Question'
 
-lesson 'Part 2'
+lesson 'Part 2', display_name: 'Part 2'
 variants
   level 'andrea_test1', named: true
   level 'andrea-test2', named: true
 endvariants
 
-lesson 'part 3'
+lesson 'part 3', display_name: 'part 3'
 level 'dlp-hold1', progression: 'Sandwich', named: true
+

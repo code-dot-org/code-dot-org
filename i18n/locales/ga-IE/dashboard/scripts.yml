@@ -3738,3 +3738,9 @@ ga:
           lesson_groups:
             lg_1:
               display_name: Ábhar
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Cúrsa A
+            Course B:
+              name: Cúrsa B

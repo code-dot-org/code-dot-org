@@ -707,6 +707,8 @@ mn:
               name: Апп доторх хувьсагчийг ашиглах
             While Loops:
               name: Байхад гогцоо
+            Creating Functions with Parameters:
+              name: Параметртэй функцүүдийг бүтээх
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -14389,3 +14391,9 @@ mn:
           lessons:
             Module 1:
               name: Модуль 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Хичээл А
+            Course B:
+              name: Хичээл В

@@ -3536,3 +3536,9 @@ uk:
           lesson_groups:
             lg_1:
               display_name: Зміст
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Курс А
+            Course B:
+              name: Курс Б

@@ -127,4 +127,23 @@ class BufferTest < Minitest::Test
       objects.map(&method(:buffer))
     end
   end
+
+  # Help reproduce a thread-safety bug by prepending `sleep` to several methods.
+  class ThreadSafeTestBuffer < TestBuffer
+    %w(flush batch_ready buffer).each do |m|
+      define_method(m) do |*args|
+        sleep @max_interval
+        super(*args)
+      end
+    end
+  end
+
+  def test_buffer_thread_safety
+    duration = 0.1
+    n = 500
+
+    b = ThreadSafeTestBuffer.new(max_interval: duration.to_f / (n * 2))
+    n.times {b.buffer('foo')}
+    b.flush!
+  end
 end

@@ -79,7 +79,7 @@ module.exports = function(grunt) {
     return (
       mf
         .compile(json)
-        .toString('(window.blockly = window.blockly || {}).' + namespace) + ';'
+        .toString('(window.locales = window.locales || {}).' + namespace) + ';'
     );
   }
 };

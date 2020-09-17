@@ -445,7 +445,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, queries: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -457,6 +457,7 @@ class ActionController::TestCase
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
+      name += " to #{redirected_to}"
     end
 
     test name do
@@ -476,6 +477,8 @@ class ActionController::TestCase
         send method, action, params: params
         assert_response response
       end
+
+      assert_redirected_to redirected_to if redirected_to
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block

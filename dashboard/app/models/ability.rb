@@ -225,6 +225,7 @@ class Ability
         Library,
         Game,
         Level,
+        Lesson,
         UnitGroup,
         Script,
         ScriptLevel,

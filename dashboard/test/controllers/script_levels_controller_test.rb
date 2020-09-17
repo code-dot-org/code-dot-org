@@ -20,9 +20,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
-    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
-    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
-    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
+    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
+    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
+    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
     @custom_s1_l1 = create(
       :script_level,
       script: @custom_script,
@@ -1486,7 +1486,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], hidden
   end
 
-  test "hidden_stage_ids for user signed in" do
+  test "hidden_stage_ids for student signed in" do
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @student
@@ -1494,7 +1494,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     hidden = JSON.parse(response.body)
-    assert_equal [@custom_lesson_1.id.to_s], hidden
+    assert_equal [@custom_lesson_1.id], hidden
+  end
+
+  test "hidden_stage_ids for teacher signed in" do
+    SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
+
+    sign_in @teacher
+    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    assert_response :success
+
+    hidden = JSON.parse(response.body)
+    expected = {@section.id.to_s => [@custom_lesson_1.id]}
+    assert_equal expected, hidden
   end
 
   def put_student_in_section(student, teacher, script)

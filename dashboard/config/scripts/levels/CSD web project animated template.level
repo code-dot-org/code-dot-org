@@ -42,17 +42,48 @@
     "callout_json": "[]",
     "parent_level_id": 20704,
     "name_suffix": "_2020",
-    "preload_asset_list": null,
     "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "setAnimation": null,
+      "scale": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null,
+      "rgb": null,
+      "ellipse": null,
+      "line": null,
+      "rect": null,
+      "randomNumber_min_max": null,
+      "background": null,
+      "text": null,
+      "textSize": null,
+      "declareAssign_x": null,
+      "comment_Drawing": null,
+      "comment_Math": null,
+      "comment_GameLab": null,
+      "comment_Sprites": null,
+      "draw": null,
+      "x": null,
+      "y": null,
+      "rotation": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null
+    },
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "mini_rubric": "false",
-    "libraries_enabled": "false"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-03-30 16:36:08 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-03-30 16:36:08 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-08-25 16:18:49 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2020-08-28 15:45:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

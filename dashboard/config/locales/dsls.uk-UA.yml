@@ -1565,7 +1565,7 @@ uk-UA:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - text: Не знаю.
         questions:
         - {}

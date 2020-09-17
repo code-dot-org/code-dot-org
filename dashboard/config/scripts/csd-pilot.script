@@ -1,87 +1,87 @@
-
-lesson 'Pilot Information 1'
+lesson 'Pilot Information 1', display_name: 'Pilot Information 1'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 2'
+lesson 'Pilot Information 2', display_name: 'Pilot Information 2'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 3'
+lesson 'Pilot Information 3', display_name: 'Pilot Information 3'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 4'
+lesson 'Pilot Information 4', display_name: 'Pilot Information 4'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 5'
+lesson 'Pilot Information 5', display_name: 'Pilot Information 5'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 6'
+lesson 'Pilot Information 6', display_name: 'Pilot Information 6'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 7'
+lesson 'Pilot Information 7', display_name: 'Pilot Information 7'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 8'
+lesson 'Pilot Information 8', display_name: 'Pilot Information 8'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 9'
+lesson 'Pilot Information 9', display_name: 'Pilot Information 9'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 10'
+lesson 'Pilot Information 10', display_name: 'Pilot Information 10'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 11'
+lesson 'Pilot Information 11', display_name: 'Pilot Information 11'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 12'
+lesson 'Pilot Information 12', display_name: 'Pilot Information 12'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 13'
+lesson 'Pilot Information 13', display_name: 'Pilot Information 13'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 14'
+lesson 'Pilot Information 14', display_name: 'Pilot Information 14'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 15'
+lesson 'Pilot Information 15', display_name: 'Pilot Information 15'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 16'
+lesson 'Pilot Information 16', display_name: 'Pilot Information 16'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 17'
+lesson 'Pilot Information 17', display_name: 'Pilot Information 17'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 18'
+lesson 'Pilot Information 18', display_name: 'Pilot Information 18'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 19'
+lesson 'Pilot Information 19', display_name: 'Pilot Information 19'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 20'
+lesson 'Pilot Information 20', display_name: 'Pilot Information 20'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 21'
+lesson 'Pilot Information 21', display_name: 'Pilot Information 21'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 22'
+lesson 'Pilot Information 22', display_name: 'Pilot Information 22'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 23'
+lesson 'Pilot Information 23', display_name: 'Pilot Information 23'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 24'
+lesson 'Pilot Information 24', display_name: 'Pilot Information 24'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 25'
+lesson 'Pilot Information 25', display_name: 'Pilot Information 25'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 26'
+lesson 'Pilot Information 26', display_name: 'Pilot Information 26'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 27'
+lesson 'Pilot Information 27', display_name: 'Pilot Information 27'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 28'
+lesson 'Pilot Information 28', display_name: 'Pilot Information 28'
 level 'CSD Pilot Warning Page'
 
-lesson 'Pilot Information 29'
+lesson 'Pilot Information 29', display_name: 'Pilot Information 29'
 level 'CSD Pilot Warning Page'
+

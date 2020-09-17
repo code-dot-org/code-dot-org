@@ -1,2 +1,82 @@
 {
+  "ar-SA": {
+    "data": {
+      "behavior_names": {
+        "CourseE_hoops": {
+          "being hungry": "الشعور بالجوع"
+        },
+        "Virtual Pet 1_2019": {
+          "mystery": "غموض"
+        },
+        "Virtual Pet 1_2020": {
+          "mystery": "غموض"
+        },
+        "behaviors 1": {
+          "mystery behavior": "سلوك غامِض",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 1_2020": {
+          "mystery behavior": "سلوك غامِض",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 2": {
+          "flying": "يطير",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 2_2020": {
+          "flying": "يطير",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 3": {
+          "zooming east": "تكبير/تصغير للشرق",
+          "driving east": "القيادة للشرق"
+        },
+        "behaviors 3_2020": {
+          "zooming east": "تكبير/تصغير للشرق",
+          "driving east": "القيادة للشرق"
+        },
+        "behaviors 3a": {
+          "zooming east": "تكبير/تصغير للشرق",
+          "driving east": "القيادة للشرق"
+        },
+        "behaviors 3a_2020": {
+          "zooming east": "تكبير/تصغير للشرق",
+          "driving east": "القيادة للشرق"
+        },
+        "behaviors 4": {
+          "move south and west": "حرِّك للجنوب وللغرب",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 4_2020": {
+          "move south and west": "حرِّك للجنوب وللغرب",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 6": {
+          "rolling": "لف",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 6_2020": {
+          "rolling": "لف",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 7": {
+          "rolling": "لف",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors 7_2020": {
+          "rolling": "لف",
+          "running east": "الجري نحو الشرق"
+        },
+        "behaviors free play": {
+          "spinning and growing": "يدور وينمو"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "يدور وينمو"
+        },
+        "courseF_project_1": {
+          "being hungry": "الشعور بالجوع"
+        }
+      }
+    }
+  }
 }

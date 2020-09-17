@@ -189,6 +189,11 @@ class LevelGroup < DSLDefined
     update_levels_and_texts_by_page(new_levels_and_texts_by_page)
   end
 
+  # @override
+  def all_child_levels
+    child_levels.all
+  end
+
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)
     sublevel_result = {}

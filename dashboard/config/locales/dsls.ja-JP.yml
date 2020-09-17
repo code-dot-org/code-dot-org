@@ -1765,17 +1765,12 @@ ja-JP:
         - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: プログラムは まちがっていない。スクラットは、ドングリに たどりつける。
-          feedback: ふせいかい。スクラットが さいごに まがる ほうこうが、まちがっています。
-        - text: スクラットが さいごに まがる ほうこうが、まちがっています。
-          correct: true
-          feedback: せいかい！
-        - text: スクラットは ドングリの 手前までしか いけません。
-          feedback: ふせいかい。スクラットは、まちがった ほうこうに まがってしまいます。
+        - {}
+        - correct: true
+        - correct: true
         - text: わかりません
-          feedback: 'まちがっているのは、スクラットがさいごに まがる ほうこうです。 '
         questions:
-        - text: '下のプログラムをじっくり見て、どこがまちがっているのか考えてみよう。 '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: トリさんは ブタの一歩手前まで行くことができる。
@@ -3521,5 +3516,5 @@ ja-JP:
         - text: プログラムを 実行したら どうなりますか？
       gradek1_activity_beNice:
         markdown: "# Behaving in the Computer Lab\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
-          target=\"_new\">\n<button>\nレッスン プラン\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+          target=\"_new\">\n<button>\nレッスンプランへ行く\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">続行</a>"

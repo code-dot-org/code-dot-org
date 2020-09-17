@@ -1,0 +1,111 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 255,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction moveBehavior() {\r\n  move.name = \"move\";\r\n  return move;\r\n}\r\n",
+    "custom_blocks": "[\n  {\n    \"func\": \"moveBehavior\",\n    \"blockText\": \"move\",\n    \"returnType\": \"Behavior\"\n  }\n]\n",
+    "hide_custom_blocks": "false",
+    "use_default_sprites": "false",
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 00:05:02 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:07:49 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:08:47 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:10:17 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:13:25 +0000\",\"changed\":[],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:14:01 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:12 +0000\",\"changed\":[\"disable_param_editing\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-04-11 03:03:29 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">elephant</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true">
+                  <title name="ANIMATION">"elephant"</title>
+                  <value name="X">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number">
+                      <title name="NUM">200</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_addBehaviorSimple" inline="true">
+                  <value name="BEHAVIOR">
+                    <block type="gamelab_moveBehavior"/>
+                  </value>
+                  <value name="SPRITE">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">elephant</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="sprite"/>
+          </mutation>
+          <title name="NAME">move</title>
+          <statement name="STACK">
+            <block type="gamelab_moveRight" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">sprite</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

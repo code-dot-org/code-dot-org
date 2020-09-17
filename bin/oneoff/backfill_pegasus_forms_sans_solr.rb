@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../lib/cdo/only_one'
-exit(1) unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'

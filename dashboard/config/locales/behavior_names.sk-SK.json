@@ -1016,6 +1016,10 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať"
         },
+        "courseF_extras_sim": {
+          "wandering 2": "túlanie 2",
+          "wandering 1": "túlanie 1"
+        },
         "courseF_project_1": {
           "flying south and loop": "letieť na juh a dokola",
           "drive south and loop": "jazdiť na juh a dokola",

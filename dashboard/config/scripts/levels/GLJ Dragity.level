@@ -1,0 +1,57 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": true,
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\nfunction draggable(sprite) {\r\n  var behavior = function(sprite) {\r\n  sprite.mouseActive=true;\r\n  if (sprite.mouseIsPressed) {\r\n    sprite.x=camera.mouseX;\r\n    sprite.y=camera.mouseY;\r\n  }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\nfunction danceBehavior() {\r\n    var behavior = function(sprite) {\r\n    sprite.rotation+=6;\r\n    }\r\n    behavior.name=\"dancing\";\r\n    return behavior;\r\n}",
+    "custom_blocks": "[\n  {\n    \"func\": \"draggable\",\n    \"args\": [],\n    \"blockText\": \"draggable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"danceBehavior\",\n    \"args\": [],\n    \"blockText\": \"dancing\",\n    \"returnType\": \"Behavior\"\n  }\n]\n",
+    "short_instructions": "This Corgi has been a good boy! Drag this carrot to him as a special treat.",
+    "parent_level_id": 11139,
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-13 19:57:48 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:58:33 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 20:00:37 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 18:59:40 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:00:51 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:01:26 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:02:00 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:04:18 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:04:47 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:06:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:09:01 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:12:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:14:29 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:15:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:15:48 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:17:13 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 23:18:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

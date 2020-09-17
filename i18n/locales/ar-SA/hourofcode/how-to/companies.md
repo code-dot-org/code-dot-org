@@ -1,99 +1,185 @@
 ---
-title: كيفية استضافة حدث ساعة البرمجة - الشركات
+title: Hour of Code How-To Guide for Companies
 ---
 
 {{ signup_button }}
 
-# كيف تجلب أنشطة "ساعة برمجة" إلى شركتك
+# How your company can engage with the Hour of Code
 
 ### اكتشف كيف يمكنك أنت وموظفيك إلهام الطلاب لتجربة علوم الحاسوب!
 
 * * *
 
-## تواصل مع الفصول الدراسية المحلية وتطوع في "ساعة البرمجة"
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-يقدم موقع Code.org الفرصة لموظفيك [للتواصل]({{ urls/volunteer }})مع الفصول الدراسية المحلية التي تقوم بأنشطة "ساعة البرمجة" حيث يمكنهم مشاركة خبرتهم المهنية في التكنولوجيا وإلهام الطلاب لدراسة علوم الحاسوب.
+During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
 
-[<button>سجِّل لتصبح متطوعًا!</button>]({{ urls/volunteer }}) <br /> <br />
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Connect your company with a school](#connect-with-a-school)
+- [Host your own Hour of Code event](#host-hour-of-code)
+- [الترويج لأنشطة "ساعة البرمجة"](#promote-hour-of-code)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
-لمزيد من التعليمات حول تشجيع الموظفين وتواصل الموظفين مع الفصول الدراسية، تحقق من[دليل الشركاء من الشخصيات الاعتبارية]({{ localized_files/hoc_corporate_toolkit }}).
+* * *
 
-## طرق إضافية يمكن للشركات من خلالها دعم "ساعة البرمجة"
+<a id="encourage-employees"></a>
 
-- اطلب من الرئيس التنفيذي[إرسال بريد إلكتروني على مستوى الشركة ]({{ promote/sample_emails }})للتأكيد على أهمية علوم الحاسوب وتشجيع الموظفين على تعميم الرسالة.</li> 
-    
-    - يمكنك استضافة فاعلية "ساعة ممتعة" من فاعليات "ساعة البرمجة" مع زملاء العمل لتجربة[الأنشطة]({{ urls/learn }}).
-    - يمكنك استضافة أي فعالية من فعاليات "ساعة البرمجة" لفصل دراسي محلي من الطلاب أو الشركاء غير الربحيين للقيام بأي نشاط من أنشطة "ساعة البرمجة" في مكتب شركتك. انظر دليل الفعاليات الإرشادي أدناه.</ul> 
-    
-    # كيف تستضيف حدث "ساعة من البرمجة" مع الطلاب
-    
-    ## 1. أعلن عن فعالية "ساعة البرمجة"
-    
-    - أعلن عن فعالية["ساعة البرمجة"]({{ urls/promote }}) وشجِّع الآخرين على استضافة فعاليات أخرى.
-    - شجِّع مهندسي البرمجيات في شركتك على زيارة فصل دراسي محلي للمساعدة في قيادة أنشطة "ساعة البرمجة" وإلهام الطلاب لدراسة علوم الحاسوب. يمكنهم[الاشتراك]({{ urls/volunteer engineer }}) للتواصل مع الفصل الدراسي.
-    
-    ## 2. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
-    
-    ## 3. اختر نشاطًا
-    
-    نحن نستضيف مجموعة متنوعة من[الأنشطة الممتعة لمدة ساعة واحدة]({{ urls/learn }})للمشاركين من جميع الأعمار، تم إنشاؤها بواسطة مجموعة مختلفة من الشركاء.[يمكنك تجربتها!]({{ urls/learn }})
-    
-    **تتطلب جميع أنشطة "ساعة البرمجة"</ strong>الحد الأدنى من وقت الإعداد، وهي تعتمد على الإرشاد الذاتي، مما يسمح للمشاركين بالعمل بالسرعة ومستويات المهارات الملائمة لهم.</p> 
-    
-    [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
-    
-    ## ٤. حدِّد احتياجاتك التقنية - أجهزة الحاسوب اختيارية
-    
-    تشتمل أفضل تجربة لأنشطة "ساعة البرمجة" على أجهزة كمبيوتر متصلة بالإنترنت. لكنك **لا</ strong> تحتاج إلى جهاز كمبيوتر لكل مشارك، بل يمكنك القيام بأنشطة "ساعة البرمجة" بدون جهاز كمبيوتر على الإطلاق.</p> 
-    
-    **خطط مسبقا!** قم بما يلي قبل بدء النشاط الخاص بك:
-    
-    - جرِّب الأنشطة على أجهزة الكمبيوتر أو الأجهزة الأخرى. تأكَّد من أن الصوت والفيديو يعملان بشكل صحيح في المتصفحات.
-    - يرجى توفير سماعات الرأس، أو اطلب من المشاركين إحضارها، إذا كان النشاط الذي تختاره يعمل بشكل أفضل مع الصوت.
-    - **ليس لديك ما يكفي من الأجهزة؟**استخدم [البرمجة الثنائية](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتحد المشاركون، فإنهم سيساعدون بعضهم البعض و يصبح اعتمادهم على المُنظِّم بشكل أقل. وسيدركون أيضًا أن علوم الحاسوب هي علوم اجتماعية وتعاونية.
-    - **هل لديك نطاق ترددي منخفض؟</ strong> خطِّط لعرض مقاطع الفيديو في بداية النشاط، بحيث لا يقوم كل مشارك بتنزيل مقاطع الفيديو الخاصة به. أو جرِّب الأنشطة التي لا تتطلب أجهزة إلكترونية أو التي لا تحتاج إلى اتصال بالإنترنت.</li> </ul> 
-        
-        ## 5. ابدأ نشاط "ساعة البرمجة" بمقطع فيديو ملهم
-        
-        ابدأ نشاط "ساعة البرمجة" من خلال إلهام المشاركين ومناقشة كيفية تأثير علوم الحاسوب على كل جزء من حياتنا. وشارك المزيد حول الأمور التي ألهمتك لدراسة علوم الحاسوب ودورك في شركتك.
-        
-        **عرض مقطع فيديو مُلهم:**
-        
-        - الفيديو الرسمي لإطلاق موقع Code.org، تظهر فيه ضخيات بارزة مثل بيل جيتس، ومارك زاكربيرج ونجم كرة السلة كريس بوش (هناك نسخ مدتها[دقيقة واحدة](https://www.youtube.com/watch?v=qYZF6oIZtfc), [خمس دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc) و [تسع دقائق](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-        - [الفيديو العالمي لـ "ساعة البرمجة"](https://www.youtube.com/watch?v=KsOIlDT145A)
-        - [الرئيس أوباما يدعو جميع الطلاب لتعلم علوم الحاسوب](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-        - يمكنك العثور على المزيد من مقاطع الفيديو الملهمة من [هنا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-        
-        **أفكار لتقديم نشاط "ساعة البرمجة" للطلاب:**
-        
-        - اشرح الطرق التي تؤثر بها التكنولوجيا على حياتنا، مع أمثلة يهتم بها كل من الأولاد والبنات - تحدث عن التكنولوجيا التي تنقذ الأرواح، وتساعد الناس، وتحقق التواصل بين الناس.
-        - إذا كنت تمثِّل شركة تقنية، فاستمتع بتجربة المنتجات المبتكرة التي تعمل عليها شركتك.
-        - إذا لم تكن تمثِّل شركة تقنية، ناقش طرق استخدام شركتك للتكنولوجيا لحل المشكلات وتحقيق الأهداف.
-        - قم بدعوة مهندسي البرمجيات من شركتك للتحدث عن سبب قرارهم دراسة علوم الحاسوب والمشروعات التي يعملون عليها.
-        - يمكنك الاطلاع على بعض النصائح لجعل الفتيات مهتمات بعلوم الحاسوب[هنا]({{ urls/girls }}).
-        
-        ## 6. ابدأ البرمجة!
-        
-        **المشاركون المباشرون في النشاط**
-        
-        - اكتب رابط النشاط على السبورة. ابحث عن الرابط المُدرج في[معلومات عن نشاطك المحدَّد]({{ urls/learn }})تحت عدد المشاركين.
-        - فيما يتعلق بالطلاب الصغار، قم بتحميل صفحة النشاط مُسبقًا أو احفظها كإشارة مرجعية.
-        
-        **عندما يواجه المشاركون صعوبات، فليس هناك مشكلة في الرد عليهم بما يلي:**
-        
-        - "لا أعرف، هيا نكتشف سويًا."
-        - "تعلُّم البرمجة مثل تعلم لغة جديدة، لن تتحدث بطلاقة مباشرة."
-        
-        **ما الذي يجب عليك فعله عندما ينتهي أحد المشاركين من النشاط مبكرًا؟**
-        
-        - يمكنهم تجربة نشاط آخر من انشطة "ساعة البرمجة" على hourofcode.com/learn.
-        - أو اطلب منهم مساعدة صديق يعاني من مشكلة في النشاط.
-        
-        ## 7) الإشادة والتكريم
-        
-        - [اطبع شهادات]({{ urls/certificates }}) للمشاركين والطلاب.
-        - [اطبع ملصقات مكتوب عليها "أنجزت نشاط "ساعة البرمجة"]({{ promote/resources_stickers }}) لطلابك.
-        - [اطلب قمصانًا خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لموظفيك.
-        - شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
-        
-        {{ signup_button }}
+## Encourage employees to volunteer with a classroom
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+
+[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+
+* * *
+
+<a id="connect-with-a-school"></a>
+
+## Connect your company with a school
+
+You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
+<h4><font color="00adbc"><i>"كنت سعيدًا برؤية حماس الأطفال. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+
+-Hour of Code volunteer
+
+* * *
+
+<a id="host-hour-of-code"></a>
+
+## Host your own Hour of Code event
+
+If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+
+### ١. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+### 2. Determine a date, format, and location for your event
+
+We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+
+<br />
+
+#### Sample Agenda:
+
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? مَن أو ما الذي يلهمك؟ كيف أصبحت مهتمًا بعلوم الحاسوب؟ هل لديك معلم خاص؟ اطرح أسئلة على الطلاب واترك لهم الوقت لطرح الأسئلة&والإجابة |  
+|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+
+#### Other ideas to add to your event
+
+- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- قم بدعوة مهندسي البرمجيات من شركتك للتحدث عن سبب قرارهم دراسة علوم الحاسوب والمشروعات التي يعملون عليها.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+
+### 3. Plan your technology needs
+
+[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
+
+#### Devices:
+
+تشتمل أفضل تجربة لأنشطة "ساعة البرمجة" على أجهزة كمبيوتر متصلة بالإنترنت. ولكنك لا تحتاج إلى جهاز كمبيوتر لكل طفل، بل ويمكنك الاستفادة من أنشطة وبرامج "ساعة البرمجة" بدون جهاز كمبيوتر على الإطلاق! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+
+- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
+- **Don't have enough devices?** Use pair programming. عندما يتحد الطلاب، فإنهم سيساعدون بعضهم البعض و يصبح اعتمادهم على المعلم بشكل أقل. وسيدركون أيضًا أن علوم الحاسوب هي علوم اجتماعية وتعاونية.
+- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
+- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+
+#### Virtual Events:
+
+If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+### 4. Choose an activity
+
+We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+
+Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+
+<a id="celebrate"></a>
+
+### 5. Celebrate
+
+[![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
+
+After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+
+- [اطبع شهادات]({{ urls/certificates }}) للمشاركين والطلاب.
+- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
+- شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
+
+* * *
+
+<a id="promote-hour-of-code"></a>
+
+## الترويج لأنشطة "ساعة البرمجة"
+
+One of the best ways to help is to spread the word and promote the Hour of Code.
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+### 1. Register Your Event
+
+When you sign-up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+
+### 2. Post on Social Media
+
+Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+
+#### Hour of Code general announcement
+
+- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/ 
+- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/ 
+
+#### Stats
+
+- Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
+- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
+
+#### Create your own
+
+- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
+- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
+
+#### Engineer-specific
+
+- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
+- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+
+<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+
+* * *
+
+<a id="support-hour-of-code"></a>
+
+## More ways to support the Hour of Code
+
+[![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
+
+- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
+- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
+- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
+- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
+
+For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+
+{{ signup_button }}

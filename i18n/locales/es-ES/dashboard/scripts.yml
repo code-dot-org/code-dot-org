@@ -753,6 +753,8 @@ es:
               name: Uso de variables en aplicaciones
             While Loops:
               name: Bucles Mientras
+            Creating Functions with Parameters:
+              name: Creación de funciones con parámetros
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -14673,6 +14675,8 @@ es:
           lessons:
             new stage:
               name: nueva etapa
+            Tools:
+              name: Herramientas
             Debugging:
               name: Depuración
             Module 1:
@@ -15077,3 +15081,9 @@ es:
           lessons:
             Module 1:
               name: Módulo 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curso A
+            Course B:
+              name: Curso B

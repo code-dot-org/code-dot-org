@@ -3,10 +3,12 @@ ja:
     progressions:
       Artist Project: アーティスト プロジェクト
       'Artist: Variables': 'アーティスト：変数（へんすう）'
+      Drawing: "グラフィック\n"
       Events: イベント
       For Loops: ループ用
       Functions: 関数(かんすう) 
       Functions with Parameters: パラメーター付き関数
+      Lesson Extras: "追加レッスン\n"
       Lists: リスト
       Measures: 小節
       Pair Programming: ペアプログラミング

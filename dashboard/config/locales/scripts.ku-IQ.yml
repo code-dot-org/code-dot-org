@@ -227,6 +227,10 @@ ku:
               name: لیستەکان
             Functions with Parameters:
               name: فەرمانی بە پێوەر
+        workshop-gamelab:
+          lessons:
+            Input:
+              name: داخڵکردن
         coursee-ramp:
           lessons:
             Conditionals:

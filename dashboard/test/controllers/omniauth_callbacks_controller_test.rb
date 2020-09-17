@@ -42,10 +42,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes = session['devise.user_attributes']
-
-    assert_nil attributes['email']
-    assert_nil attributes['age']
+    partial_user = User.new_from_partial_registration(session)
+    assert_empty partial_user.email
+    assert_nil partial_user.age
   end
 
   test "login: authorizing with unknown clever teacher account" do
@@ -156,9 +155,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes = session['devise.user_attributes']
-
-    assert_nil attributes['email']
+    partial_user = User.new_from_partial_registration(session)
+    assert_empty partial_user.email
   end
 
   test "login: authorizing with unknown clever student account creates student" do
@@ -723,9 +721,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Then I go to the registration page to finish signing up
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes = session['devise.user_attributes']
-    assert_equal AuthenticationOption::GOOGLE, attributes['provider']
-    assert_equal uid, attributes['uid']
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
   end
 
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration' do

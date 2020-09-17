@@ -49,7 +49,10 @@ import {
   NOTIFICATION_ALERT_TYPE
 } from './constants';
 import {assets as assetsApi} from './clientApi';
-import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
+import {
+  configCircuitPlayground,
+  configMicrobit
+} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
@@ -175,6 +178,13 @@ class StudioApp extends EventEmitter {
      * @type {?number}
      */
     this.initTime = undefined;
+
+    /**
+     * The time the last milestone was recorded. Used for recording the time a
+     * student has spent on a level.
+     * @type {?number}
+     */
+    this.milestoneStartTime = undefined;
 
     /**
      * If true, we don't show blockspace. Used when viewing shared levels
@@ -384,6 +394,7 @@ StudioApp.prototype.init = function(config) {
 
   // Record time at initialization.
   this.initTime = new Date().getTime();
+  this.milestoneStartTime = new Date().getTime();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -1768,13 +1779,21 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
  * @param {MilestoneReport} options
  */
 StudioApp.prototype.report = function(options) {
+  // We don't need to report again on reset.
+  this.hasReported = true;
+  const currentTime = new Date().getTime();
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
-    time: new Date().getTime() - this.initTime,
+    time: currentTime - this.initTime,
+    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
+
+  // After we log the reported time we should update the start time of the milestone
+  // otherwise if we don't leave the page we are compounding the total time
+  this.milestoneStartTime = currentTime;
 
   this.lastTestResult = options.testResult;
 
@@ -1826,6 +1845,14 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
  * Click the reset button.  Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
+  // If we haven't reported yet, report now.
+  if (!this.hasReported) {
+    this.report({
+      app: getStore().getState().pageConstants.appType,
+      level: this.config.level.id
+    });
+  }
+  this.hasReported = false;
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
@@ -2308,10 +2335,13 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   }
 
   // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.useMakerAPIs()) {
+  if (!project.getMakerAPIs()) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
-      makerDropletBlocks.forEach(block => {
+      configCircuitPlayground.blocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
+      configMicrobit.blocks.forEach(block => {
         delete config.level.codeFunctions[block.func];
       });
     }

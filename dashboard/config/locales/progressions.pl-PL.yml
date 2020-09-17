@@ -14,10 +14,12 @@ pl:
       Attribution: Atrybucja
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
       Binary Numbers: Liczby binarne
+      Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
       Boolean Comparison: Porównanie Logiczne
       Build a Screen: Zbuduj ekran
       Building an App: Tworzenie aplikacji
+      CS Discoveries Post-Course Survey: Ankieta po kursie "Odkrycia Informatyki"
       CS Discoveries Post-course Survey: Ankieta po kursie Odkrycia Informatyki
       Cake Defender: Obrońca Ciasta
       Challenge: Wyzwanie
@@ -31,6 +33,7 @@ pl:
       Collisions in Games: Kolizje w Grach
       Color LEDs: Kolorowe LED
       Combining Projects: Łączenie projektów
+      Combining Representations: Łączenie przedstawień
       'Conditionals: If Statements': 'Instrukcje Warunkowe: instrukcja "jeśli"'
       'Conditionals: If and If/Else Statements': 'Instrukcje Warunkowe: instrukcja
         "jeśli/w przeciwnym razie"'
@@ -47,6 +50,7 @@ pl:
       Events: Zdarzenia
       Events and Linking Screens: Zdarzenia i Ekrany z linkami
       Events and Properties: Zdarzenia i Właściwości
+      Example Projects: Projekty przykładowe
       Example projects: Przykłady projektów
       Expanding Personal Website: Rozszerzanie Osobistej Witryny Internetowej
       Expanding Your Website: Rozszerzanie Twojej Witryny Internetowej
@@ -61,16 +65,20 @@ pl:
       Functions with Parameters: Funkcje z parametrami
       Getting Properties: Właściwości getterów
       Headings: Nagłówki
+      How to Make a Sprite: Jak zrobić Duszka
       Images and Sounds: Obrazki i Dźwięki
       Input Examples: Przykłady Wejść
       Intro to For Loops: Wprowadzenie do Pętli "dla"
       Intro to Sprites: Wprowadzenie do Duszków
       Intro to Variables: Wprowadzenie do Zmiennych
+      Introducing Sprite Lab: Wprowadzenie Sprite Lab
       Introduction to Arrays: Wprowadzenie do tablic
       Iteration and Parameters: Iteracja i Parametry
+      Keeping Data Secret: Zachowywanie danych w tajemnicy
       Keyboard Input: Wejście klawiatury
       LED Apps: Aplikacje LED
       Lesson Extras: Dodatki do Lekcji
+      Linking Pages: Łączenie stron
       Linking Screens: Łączenie ekranów
       Lists: Listy
       Loops with the Artist: Pętle z Artystą
@@ -83,7 +91,9 @@ pl:
       Motorcycle: Motocykl
       Orientation: Orientacja
       Pair Programming: Programowanie w parach
+      Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
+      Project: Projekt
       Project - Background and Variables: Projekt - Tło i Zmienne
       Project - Sprites and Interactions: Projekt - Duszki i Interakcje
       Project Work: Praca Projektowa
@@ -96,6 +106,7 @@ pl:
       Repeat Blocks with the Artist: Bloki Powtarzania z Artystą
       Repeat Unit Statements: Instrukcje Powtarzaj jednostkę
       Repeat Until Statements: Instrukcje Powtarzaj aż
+      Representing Images: Przedstawianie obrazków
       Run a simulation: Uruchom symulację
       Sample Programs: Przykładowe Programy
       Screen Design: Projekt Ekranu
@@ -111,11 +122,13 @@ pl:
       Using HTML Tags: Stosując Tagi HTML
       Using Random Numbers: Stosując Losowe Liczby
       Using the LED: Stosując LED
+      Using the Repeat Block: Korzystanie z bloku powtarzania
       Using the Switch: Stosując Przełącznik
       Velocity: Prędkość
       Video: Wideo
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
+      While Loops with the Farmer: Pętle "dopóki" przy pomocy interfejsu Farmer
       Wrap-up: Podsumowanie
       Your Personal Website: Twoja Osobista Strona Internetowa
       isTouching: isTouching

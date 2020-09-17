@@ -3075,7 +3075,13 @@
         "ramp_artist_loops9": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2018": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2019": "Resolva este enigma desenhando um quadrado.",
-        "ramp_artist_loops9_2020": "Resolva este enigma desenhando um quadrado."
+        "ramp_artist_loops9_2020": "Resolva este enigma desenhando um quadrado.",
+        "courseA_playLab_events3_2019": "Ajude Jorge, o cachorro, a se mover conectando o bloco [blockly block] com o bloco [blockly block] que ja se já está na área de trabalho.Use as setas do teclado ou pressione os botões de seta para levar Jorge até a bandeira e passar de nível!",
+        "courseA_playLab_events4_2019": "Agora, adicione outro bloco de eventos para fazer Jorge se mover para a direita, quando o botão de seta para a direita for clicado. Use as setas do teclado ou pressione os botões de seta para mover Jorge para as duas bandeiras e terminar o nível!",
+        "courseA_playLab_events5_2019": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
+        "courseA_playLab_events5_2020": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
+        "courseA_playLab_events6_2019": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!",
+        "courseA_playLab_events6_2020": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!"
       }
     }
   }

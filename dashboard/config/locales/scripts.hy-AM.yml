@@ -2456,3 +2456,9 @@ hy:
           lesson_groups:
             lg_1:
               display_name: պարունակություն
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Կուրս A
+            Course B:
+              name: Կուրս B

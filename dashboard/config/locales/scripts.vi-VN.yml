@@ -152,13 +152,13 @@ vi:
             Dice Race:
               name: Vòng quay xúc sắc
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Farmer: While Loops':
               name: Nông dân - trong các vòng
             Functional Suncatchers:
               name: Chức năng của tấm hứng ánh nắng
             Internet:
-              name: Kết nối mạng
+              name: internet
             Maze:
               name: Mê cung
             'Maze: Conditionals':
@@ -747,6 +747,8 @@ vi:
               name: Sử dụng các biến số trong ứng dụng
             While Loops:
               name: Vòng lặp "trong khi"
+            Creating Functions with Parameters:
+              name: Tạo ra Chức năng với các tham số
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -2542,7 +2544,7 @@ vi:
         grade4:
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Songwriting:
               name: Sáng tác với tham số
         grade1:
@@ -2576,7 +2578,7 @@ vi:
             'Bee: Functions with Parameters':
               name: 'Ong: Chức năng với tham số'
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Final Project - Review/Revise Day:
               name: Dự án cuối cùng - Xem lại/ Sửa đổi ngày
             'Play Lab: Variables':
@@ -3241,7 +3243,7 @@ vi:
             More Programming with CS4FN:
               name: Lập trình nhiều hơn với CS4FN
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
@@ -3256,9 +3258,9 @@ vi:
               display_name: Nội dung
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Introduction:
@@ -3271,7 +3273,7 @@ vi:
               display_name: Nội dung
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -4044,9 +4046,9 @@ vi:
             Introduction:
               name: Giới thiệu
             Internet:
-              name: Kết nối mạng
+              name: internet
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -4170,7 +4172,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Bee/Zombie:
@@ -4183,7 +4185,7 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
@@ -4250,7 +4252,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         new-f:
@@ -4430,7 +4432,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         course-f-2018:
@@ -4716,7 +4718,7 @@ vi:
             Building a Foundation:
               name: Xây dựng nền tảng
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: Hình ảnh Nhị phân
             Artist Binary:
@@ -5394,9 +5396,9 @@ vi:
             csf_for_loops:
               display_name: Cho vòng lặp
             csf_internet:
-              display_name: Kết nối mạng
+              display_name: internet
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -5435,7 +5437,7 @@ vi:
             csf_binary:
               display_name: Nhị phân
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -5444,7 +5446,7 @@ vi:
             Loops in Ice Age:
               name: Vòng lặp trong Kỷ băng hà
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: Hình ảnh Nhị phân
             Artist Binary:
@@ -5454,7 +5456,7 @@ vi:
         coursee-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_nested_loops:
               display_name: Vòng lặp lồng nhau
             csf_functions:
@@ -5471,7 +5473,7 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Frozen:
@@ -5512,7 +5514,7 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Dance Party:
@@ -5554,7 +5556,7 @@ vi:
         coursec-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_binary:
@@ -5581,7 +5583,7 @@ vi:
         coursea-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -5607,7 +5609,7 @@ vi:
         courseb-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6594,7 +6596,7 @@ vi:
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_conditionals:
               display_name: Điều kiện
             csf_nested_loops:
@@ -6619,7 +6621,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
@@ -6636,7 +6638,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
@@ -6857,7 +6859,7 @@ vi:
         coursea-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6879,7 +6881,7 @@ vi:
         courseb-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6898,7 +6900,7 @@ vi:
         coursec-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_binary:
@@ -6927,7 +6929,7 @@ vi:
             csf_binary:
               display_name: Nhị phân
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -6940,13 +6942,13 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_nested_loops:
               display_name: Vòng lặp lồng nhau
             csf_functions:
@@ -6961,7 +6963,7 @@ vi:
         coursef-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_variables:
               display_name: Các biến
             csf_for_loops:

@@ -7,18 +7,19 @@
     {
      "type": "html",
      "name": "facilitator_heading",
-     "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same sets of questions for each facilitator of your workshop.  Please be thoughtful in your responses for each individual."
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same sets of questions for each facilitator of your workshop. Please be thoughtful in your responses for each individual.</p>"
    },
    {
      "type": "paneldynamic",
      "name": "facilitators",
+     "title": "Facilitators",
      "allowAddPanel": false,
      "allowRemovePanel": false,
      "templateElements": [
       {
        "type": "html",
        "name": "facilitator_name_heading",
-       "html": "<p>Below please leave feedback for <strong>{panel.facilitator_name}</strong></p>" 
+       "html": "<p>Below, please leave feedback for <strong>{panel.facilitator_name}</strong></p>"
      },
      {
        "type": "matrix",
@@ -85,12 +86,14 @@
        "type": "comment",
        "name": "facilitator_did_well_fr",
        "title": "What were two things {panel.facilitator_name} did well?",
+              "maxLength": 4000,
        "rows": 2
      },
      {
        "type": "comment",
        "name": "facilitator_could_improve_fr",
        "title": "What were two things {panel.facilitator_name} could do better?",
+              "maxLength": 4000,
        "rows": 2
      }
    ]

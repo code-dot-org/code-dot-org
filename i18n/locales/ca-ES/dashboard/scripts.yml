@@ -2112,3 +2112,9 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curs A
+            Course B:
+              name: Curs B

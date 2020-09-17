@@ -90,9 +90,6 @@ nl:
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
@@ -111,9 +108,6 @@ nl:
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -190,9 +184,6 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
@@ -221,9 +212,6 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'herhaal om om de {N} maten na {START} '
       Dancelab_everySeconds:
@@ -1103,6 +1091,13 @@ nl:
             '"z"': z
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Naar het noorden
+            '"East"': Oost
+            '"South"': Zuid
+            '"West"': West
       gamelab_locationMouse:
         text: muis-locatie
       gamelab_locationOf:

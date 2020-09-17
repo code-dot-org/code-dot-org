@@ -66,6 +66,11 @@ class HelpHeader
         url: report_url,
         id: "report-bug"
       }
+      entries << {
+        title: I18n.t("#{loc_prefix}report_abuse"),
+        url: "/report_abuse",
+        id: "report-abuse"
+      }
     else
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
@@ -73,12 +78,6 @@ class HelpHeader
         id: "report-bug"
       }
     end
-
-    entries << {
-      title: I18n.t("#{loc_prefix}report_abuse"),
-      url: "/report_abuse",
-      id: "report-abuse"
-    }
 
     if options[:user_type] == "teacher"
       entries << {

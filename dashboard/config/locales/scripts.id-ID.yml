@@ -165,7 +165,7 @@ id:
             Songwriting:
               name: Menulis lagu
             'Studio: Create a Game':
-              name: 'Studio: Membuat Permainan'
+              name: 'Play Lab: Membuat Permainan'
             'Studio: Create a Story':
               name: 'Studio: Membuat Cerita'
         playlab:
@@ -798,6 +798,8 @@ id:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
               name: Perulangan Selagi
+            Creating Functions with Parameters:
+              name: Membuat fungsi dengan parameter
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -2575,7 +2577,7 @@ id:
             Contained Levels:
               name: Tingkat yang terkandung
             Game Lab:
-              name: Laboratorium Game
+              name: Game Lab
         cspunit1-support-test:
           lessons:
             Unit 1 Overview:
@@ -2815,7 +2817,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             Persistence & Frustration:
               name: Kegigihan & Frustrasi
             Programming:
@@ -2875,7 +2877,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             More Computer Science:
               name: Ilmu Komputer Selengkapnya
             Persistence & Frustration:
@@ -3345,7 +3347,7 @@ id:
                 nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
                 nomor acak beberapa kali dalam program-program mereka.
             Sprites:
-              name: Sprite
+              name: Sprites
               description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
                 gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
                 gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
@@ -4690,7 +4692,7 @@ id:
             Loops in Collector:
               name: Loop dalam Kolektor
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             'Events: The Big Event':
               name: 'Event: Event Besar'
             Events in Play Lab:
@@ -4723,7 +4725,7 @@ id:
             Loops in Collector:
               name: Loop dalam Kolektor
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             'Events: The Big Event':
               name: 'Event: Event Besar'
             Events in Play Lab:
@@ -4775,7 +4777,7 @@ id:
             Debugging in Maze:
               name: Debugging dalam Labirin
             Loops in Harvester:
-              name: Loop dalam Pemanen
+              name: Loops in Harvester
         coursed-draft:
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita,
             dan permainan Anda sendiri.
@@ -5281,7 +5283,7 @@ id:
             Introduction:
               name: Pendahuluan
             Sprites:
-              name: Sprite
+              name: Sprites
             Input:
               name: Masukan
             'Project: Interactive Card':
@@ -6047,7 +6049,7 @@ id:
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Sprites:
-              name: Sprite
+              name: Sprites
             Plotting Shapes:
               name: Merancang Bentuk
             Sprite Movement:
@@ -6603,7 +6605,7 @@ id:
             Variables:
               name: variabel
             Sprites:
-              name: Sprite
+              name: Sprites
             The Draw Loop:
               name: Draw Loop
             The Counter Pattern Unplugged:
@@ -6769,7 +6771,7 @@ id:
             Programming with BB-8:
               name: Pemrograman dengan BB-8
             Loops with BB-8:
-              name: Loop dengan BB-8
+              name: Loops with BB-8
             D13 no If/While:
               name: D13 tidak ada If/While
             Ice Age Play Lab:
@@ -6854,7 +6856,7 @@ id:
                 Loops," tahap ini akan meminta murid menggunakan loop untuk mengumpulkan
                 harta karun dengan lebih efisien di Code.org.
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
               description_teacher: Kembali ke loop, murid belajar menggambar dengan
                 mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
                 sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
@@ -6901,7 +6903,7 @@ id:
             Loops in Collector:
               name: Loop dalam Kolektor
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             'Events: The Big Event':
               name: 'Event: Event Besar'
             Events in Play Lab:
@@ -6938,7 +6940,7 @@ id:
             Loops in Maze:
               name: Loop dalam Labirin
             Loops in Harvester:
-              name: Loop dalam Pemanen
+              name: Loops in Harvester
             'Events: The Big Event':
               name: 'Event: Event Besar'
             Build a Flappy Game:
@@ -6950,7 +6952,7 @@ id:
             Binary Bracelets:
               name: 'Melampaui Pemrograman: Gelang Binary'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loop dengan Rey dan BB-8
         coursed-2017:
@@ -7381,7 +7383,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -7644,7 +7646,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -8032,7 +8034,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops Project in Artist:
               name: Proyek Nested Loop dalam Artis
             Internet:
@@ -8149,7 +8151,7 @@ id:
             Loops in Collector:
               name: Loop dalam Kolektor
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             'Events: The Big Event':
               name: 'Event: Event Besar'
             Events in Play Lab:
@@ -8328,7 +8330,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops:
               name: Perulangan bercabang
             Nested Loops with Frozen:
@@ -8415,7 +8417,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee:
               name: Nested Loop dalam Lebah
             Loops in Ice Age:
@@ -8453,7 +8455,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops Project in Frozen:
               name: Proyek Nested Loop dalam Frozen
             'How it Works: The Internet':
@@ -8524,7 +8526,7 @@ id:
           title: Tahapan baru untuk 9/17
           lessons:
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Sequences with Scrat:
               name: Urutan dengan Scrat
             Testing Template:
@@ -8554,7 +8556,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -8616,7 +8618,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -9067,7 +9069,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops:
               name: Perulangan bercabang
             Nested Loops with Frozen:
@@ -9133,7 +9135,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -9259,7 +9261,7 @@ id:
             Variables:
               name: variabel
             Sprites:
-              name: Sprite
+              name: Sprites
             The Draw Loop:
               name: Draw Loop
             The Counter Pattern Unplugged:
@@ -9396,7 +9398,7 @@ id:
                 nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
                 nomor acak beberapa kali dalam program-program mereka.
             Sprites:
-              name: Sprite
+              name: Sprites
               description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
                 gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
                 gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
@@ -12976,7 +12978,7 @@ id:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             end_of_course_project:
@@ -12995,7 +12997,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -13521,7 +13523,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_impacts:
@@ -13546,7 +13548,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops:
               name: Perulangan bercabang
             Nested Loops with Frozen:
@@ -13869,7 +13871,7 @@ id:
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritma: Kertas Grafik Pemrograman'
@@ -14293,7 +14295,7 @@ id:
                 Loopy," tahap ini akan meminta murid menggunakan loop untuk membantu
                 BB-8 melintasi labirin dengan lebih efisien daripada sebelumnya.
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Loops in Harvester:
               name: Memanen Hasil Panen dengan Loop
               description_student: Mari gunakan loop untuk membantu pemanen memanen
@@ -14443,7 +14445,7 @@ id:
             CSP Mid-year survey:
               name: Survei Pertengahan tahun CSP
         gamelab:
-          title: Laboratorium Game
+          title: Game Lab
           description: Tutorial menghadap-guru bagi pengembangan di Game Lab.  Tutorial
             ini melampaui konsep yang dibahas dalam CSD.
           lessons:
@@ -14517,7 +14519,7 @@ id:
                 dengan loop dengan menyusuri labirin dan mengambil jagung. Di sini,
                 loop digunakan untuk mengumpulkan harta karun di kotak gua terbuka.
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
               description_teacher: Kembali ke loop, murid belajar menggambar dengan
                 mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
                 sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
@@ -15142,7 +15144,7 @@ id:
                 nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
                 nomor acak beberapa kali dalam program-program mereka.
             Sprites:
-              name: Sprite
+              name: Sprites
               description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
                 gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
                 gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
@@ -16679,7 +16681,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             time4cs_c1:
               display_name: Everglades dan Ekosistemnya
             time4cs_c2:
@@ -16720,7 +16722,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
               name: Nested Loop dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -18157,7 +18159,7 @@ id:
                 nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
                 nomor acak beberapa kali dalam program-program mereka.
             Sprites:
-              name: Sprite
+              name: Sprites
               description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
                 gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
                 gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
@@ -18835,7 +18837,7 @@ id:
             'Loops: My Loopy Robotic Friends':
               name: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops:
               name: Perulangan bercabang
             Nested Loops Project in Frozen:
@@ -19225,7 +19227,7 @@ id:
             csf_events:
               display_name: kegiatan
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_impacts:
@@ -19269,7 +19271,7 @@ id:
             csf_events:
               display_name: kegiatan
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_impacts:
@@ -21379,7 +21381,7 @@ id:
                 jenis permainan flyer yang mereka sukai, lalu menggunakan proses terstruktur
                 untuk memprogram permainan tersebut di Code Studio."
             Sprites:
-              name: Sprite
+              name: Sprites
         coursea-2020:
           title: Kursus A(2020)
           description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada
@@ -22047,7 +22049,7 @@ id:
             ramp_up:
               display_name: Jalan-Naik
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_nested_loops:
@@ -22289,7 +22291,7 @@ id:
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
           lessons:
@@ -22528,7 +22530,7 @@ id:
             csf_for_loops:
               display_name: Untuk Pengulangan
             csf_sprites:
-              display_name: Sprite
+              display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
           lessons:
@@ -22545,7 +22547,7 @@ id:
             Loops with Rey and BB-8:
               name: Loop dengan Rey dan BB-8
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
             Nested Loops in Bee:
               name: Nested Loop dalam Lebah
             Nested Loops in Frozen:
@@ -22703,7 +22705,7 @@ id:
                 murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan
                 loop.
             Loops in Artist:
-              name: Loop dalam Artis
+              name: Loops in Artist
               description_teacher: Kembali ke loop, murid belajar menggambar dengan
                 mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online
                 sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
@@ -23634,7 +23636,7 @@ id:
                 nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
                 nomor acak beberapa kali dalam program-program mereka.
             Sprites:
-              name: Sprite
+              name: Sprites
             Text:
               name: Teks
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
@@ -24034,3 +24036,9 @@ id:
           lessons:
             Module 1:
               name: Modul 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kursus A
+            Course B:
+              name: Kursus B

@@ -1,6 +1,7 @@
 require 'concurrent/scheduled_task'
 require 'concurrent/utility/native_integer'
 require 'honeybadger/ruby'
+require 'monitor'
 
 module Cdo
   # Abstract class to handle asynchronous-buffering and periodic-flushing using a thread pool.
@@ -37,6 +38,7 @@ module Cdo
         with_observer(&method(:schedule_flush))
 
       @buffer = []
+      @buffer.extend(MonitorMixin)
 
       @ruby_pid = $$
       if wait_at_exit
@@ -66,8 +68,10 @@ module Cdo
       if (size = size([object])) > @batch_size
         raise ArgumentError, "Object size (#{size}) exceeds batch size (#{@batch_size})"
       end
-      @buffer << BufferObject.new(object, now)
-      schedule_flush
+      @buffer.synchronize do
+        @buffer << BufferObject.new(object, now)
+        schedule_flush
+      end
     end
 
     # Flush existing buffered objects.
@@ -120,14 +124,16 @@ module Cdo
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
     def schedule_flush(force = false)
-      @task.reschedule {batch_ready(force)} unless @buffer.empty?
+      @buffer.synchronize do
+        @task.reschedule {batch_ready(force)} unless @buffer.empty?
+      end
     end
 
     # Determine when the next batch of existing buffered objects will be ready to be flushed.
     # @param [Boolean] force flush batch even if not full.
     # @return [Float] Seconds until the next batch can be flushed.
     def batch_ready(force)
-      return Float::INFINITY if @buffer.empty?
+      raise ArgumentError.new('Empty buffer') if @buffer.empty?
 
       # Wait until max_interval has passed since the earliest object to flush a non-full batch.
       earliest = @buffer.first.added_at
@@ -155,18 +161,22 @@ module Cdo
     # Take a single batch of objects from the buffer.
     def take_batch
       batch = []
-      batch << @buffer.shift until
-        @buffer.empty? ||
-          batch.length >= @batch_count ||
-          size((batch + [@buffer.first]).map(&:object)) > @batch_size
+      @buffer.synchronize do
+        batch << @buffer.shift until
+          @buffer.empty? ||
+            batch.length >= @batch_count ||
+            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+      end
       batch
     end
 
     def reset_if_forked
-      if $$ != @ruby_pid
-        @buffer.clear
-        @task.cancel
-        @ruby_pid = $$
+      @buffer.synchronize do
+        if $$ != @ruby_pid
+          @buffer.clear
+          @task.cancel
+          @ruby_pid = $$
+        end
       end
     end
   end

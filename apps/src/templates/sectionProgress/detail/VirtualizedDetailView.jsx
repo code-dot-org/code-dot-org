@@ -6,11 +6,10 @@ import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/detai
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../../styleConstants';
 import {
-  scriptDataPropType,
   getColumnWidthsForDetailView,
-  getLevels,
   setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../../util/color';
@@ -75,24 +74,39 @@ class VirtualizedDetailView extends Component {
     lessonOfInterest: PropTypes.number.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    getLevels: PropTypes.func,
+    levelsByLesson: PropTypes.object,
     onScroll: PropTypes.func,
     stageExtrasEnabled: PropTypes.bool
   };
 
-  state = {
-    fixedColumnCount: 1,
-    fixedRowCount: 2,
-    scrollToColumn: 0,
-    scrollToRow: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      fixedColumnCount: 1,
+      fixedRowCount: 2,
+      scrollToColumn: 0,
+      scrollToRow: 0
+    };
+    this.detailView = null;
+    this.setDetailViewRef = this.setDetailViewRef.bind(this);
+  }
 
   componentWillReceiveProps(nextProps) {
     // When we replace the script, re-compute the column widths
     if (this.props.scriptData.id !== nextProps.scriptData.id) {
-      this.refs.detailView.recomputeGridSize();
-      this.refs.detailView.measureAllCells();
+      this.detailView.recomputeGridSize();
+      this.detailView.measureAllCells();
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.levelsByLesson !== prevProps.levelsByLesson) {
+      this.detailView.forceUpdateGrids();
+    }
+  }
+
+  setDetailViewRef(ref) {
+    this.detailView = ref;
   }
 
   onClickLevel = lessonOfInterest => {
@@ -206,7 +220,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, getLevels, stageExtrasEnabled} = this.props;
+    const {section, levelsByLesson, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -233,7 +247,7 @@ class VirtualizedDetailView extends Component {
             sectionId={section.id}
             stageId={stageIdIndex}
             stageExtrasEnabled={stageExtrasEnabled}
-            levelsWithStatus={getLevels(student.id, stageIdIndex)}
+            levelsWithStatus={levelsByLesson[student.id][stageIdIndex]}
           />
         )}
       </div>
@@ -273,7 +287,7 @@ class VirtualizedDetailView extends Component {
         styleTopLeftGrid={progressStyles.topLeft}
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
-        ref="detailView"
+        ref={this.setDetailViewRef}
         onScroll={onScroll}
       />
     );
@@ -286,7 +300,10 @@ export default connect(
   state => ({
     columnWidths: getColumnWidthsForDetailView(state),
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
-    getLevels: (studentId, stageId) => getLevels(state, studentId, stageId)
+    levelsByLesson:
+      state.sectionProgress.levelsByLessonByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     setLessonOfInterest(lessonOfInterest) {

@@ -1,0 +1,321 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": true,
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function setSize(sprite,scale) {\r\n  sprite.scale = scale;\r\n}\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction spinClockwise(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction spinCounterClockwise(sprite) {\r\n  sprite.rotation-=6;\r\n}\r\n\r\nfunction moveRightWithEdges(sprite) {\r\n  if (sprite.x <=380)\r\n\t  sprite.x+=8;\r\n}\r\nfunction moveLeftWithEdges(sprite) {\r\n  if (sprite.x >=20)\r\n  \tsprite.x-=8;\r\n}\r\nfunction jump(sprite) {\r\n  if (sprite.y>339) {\r\n\t  sprite.y-=10;\r\n\t  sprite.velocity.y=-12;\r\n\t  console.log(sprite.y);\r\n  }\r\n}\r\n\r\nfunction moveForwardBehavior() {\r\n  var behavior = function(sprite) {\r\n    sprite.velocity.x = cos(sprite.rotation) * 2;\r\n    sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'alwaysMove';\r\n  return behavior;\r\n}\r\n\r\nfunction followBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // If sprite is not touching target\r\n    if (!sprite.isTouching(target)) {\r\n      // Point sprite to target\r\n      sprite.pointTo(target.x, target.y);\r\n      // Set sprite speed to 2\r\n      sprite.velocity.x = cos(sprite.rotation) * 2;\r\n      sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    } else {\r\n      // Set sprite speed to 0\r\n      sprite.velocity.x = 0;\r\n      sprite.velocity.y = 0;\r\n    }\r\n  }\r\n  behavior.name = 'follow';\r\n  return behavior;\r\n}\r\nfunction gravityBehavior() {\r\n  var behavior = function(sprite) {\r\n\tif (sprite.y <344) {\r\n      if (sprite.velocity.y < 10)\r\n\t      sprite.velocity.y+=1;\r\n      if ((sprite.y > 338) && (sprite.y < 344)) {\r\n          sprite.y=344;\r\n       \t  sprite.velocity.y=0;\r\n      }\r\n    } else {\r\n      sprite.y=344;\r\n      sprite.velocity.y=0;\r\n    }\r\n  }\r\n  behavior.name = 'gravity';\r\n  return behavior;\r\n}\r\n",
+    "custom_blocks": "[\n  {\n    \"func\": \"spinClockwise\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"spin {SPRITE} clockwise\"\n  },\n  {\n    \"func\": \"moveRightWithEdges\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"move {SPRITE} right stop at edge\"\n  },\n  {\n    \"func\": \"moveLeftWithEdges\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"move {SPRITE} left stop at edge\"\n  },\n  {\n    \"func\": \"spinCounterClockwise\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"spin {SPRITE} counterclockwise\"\n  },\n  {\n    \"func\": \"moveForwardBehavior\",\n    \"blockText\": \"always move\",\n    \"args\": [],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"gravityBehavior\",\n    \"blockText\": \"gravity\",\n    \"args\": [],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"followBehavior\",\n    \"blockText\": \"chase {TARGET}\",\n    \"args\": [\n      {\n        \"name\": \"TARGET\"\n      }\n    ],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"jump\",\n    \"blockText\": \"{SPRITE} jumps\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  }\n]\n",
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-12 21:41:53 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:42:20 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:42:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:44:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:46:04 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:48:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:51:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:55:52 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:56:41 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 21:57:41 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:02:04 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:02:37 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:08:02 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:11:59 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:13:01 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:14:50 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:15:51 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:19:16 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:25:03 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:26:37 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:28:40 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:29:40 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:32:00 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:32:37 +0000\",\"changed\":[\"custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:34:50 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:35:10 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:35:47 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:36:03 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:36:47 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:37:18 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:37:44 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:38:10 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:39:06 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:39:30 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:40:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:41:52 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:46:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:54:58 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:55:17 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:55:36 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 22:59:28 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 23:00:16 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\",\"start_animations\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 23:01:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 23:02:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-12 23:06:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 00:01:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:44:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:45:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:47:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:47:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:47:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 16:48:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:21:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:33:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:33:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_setBackground" inline="true">
+              <value name="COLOR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ccffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">doggo</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true">
+                      <title name="ANIMATION">"dog"</title>
+                      <value name="X">
+                        <block type="math_number">
+                          <title name="NUM">200</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number">
+                          <title name="NUM">200</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setSize" inline="true">
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">doggo</title>
+                        </block>
+                      </value>
+                      <value name="SCALE">
+                        <block type="math_number">
+                          <title name="NUM">0.4</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_for" inline="true">
+                          <title name="VAR">i</title>
+                          <value name="FROM">
+                            <block type="math_number">
+                              <title name="NUM">0</title>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="math_number">
+                              <title name="NUM">11</title>
+                            </block>
+                          </value>
+                          <value name="BY">
+                            <block type="math_number">
+                              <title name="NUM">1</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="sprite_variables_set" inline="false">
+                              <title name="VAR">ground</title>
+                              <value name="VALUE">
+                                <block type="gamelab_makeNewSprite" inline="true">
+                                  <title name="ANIMATION">"cat"</title>
+                                  <value name="X">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">MULTIPLY</title>
+                                      <value name="A">
+                                        <block type="sprite_variables_get">
+                                          <title name="VAR">i</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number">
+                                          <title name="NUM">36</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number">
+                                      <title name="NUM">382</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_setSize" inline="true">
+                                  <value name="SPRITE">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">ground</title>
+                                    </block>
+                                  </value>
+                                  <value name="SCALE">
+                                    <block type="math_number">
+                                      <title name="NUM">0.3</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple" inline="true">
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_gravityBehavior"/>
+                              </value>
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <title name="VAR">doggo</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenUpArrow">
+          <next>
+            <block type="gamelab_jump" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">doggo</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whileRightArrow">
+          <statement name="DO">
+            <block type="gamelab_moveRight" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">doggo</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whileLeftArrow">
+          <statement name="DO">
+            <block type="gamelab_moveLeft" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">doggo</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSprite" inline="true">
+            <title name="ANIMATION">"dog"</title>
+          </block>
+          <block type="gamelab_moveLeft" inline="true"/>
+          <block type="gamelab_moveRight" inline="true"/>
+          <block type="gamelab_displace" inline="true"/>
+          <block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="sprite_variables_get">
+            <title name="VAR">j</title>
+          </block>
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">i</title>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_whileRightArrow"/>
+          <block type="gamelab_whileLeftArrow"/>
+          <block type="gamelab_whileUpArrow"/>
+          <block type="gamelab_whileDownArrow"/>
+          <block type="gamelab_whenUpArrow"/>
+          <block type="gamelab_whenRightArrow"/>
+          <block type="gamelab_whenDownArrow"/>
+          <block type="gamelab_whenLeftArrow"/>
+          <block type="when_run"/>
+          <block type="gamelab_whenTouching" inline="true"/>
+        </category>
+        <category name="Math">
+          <block type="math_random_int" inline="true">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_change" inline="false">
+            <title name="VAR">k</title>
+            <value name="DELTA">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+          </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false"/>
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation" inline="true">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_negate" inline="false"/>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_for" inline="true">
+            <title name="VAR">m</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

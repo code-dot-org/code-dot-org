@@ -30,12 +30,14 @@ module RegistrationsControllerTests
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
+      assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT)}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
       assert_equal User.hash_email(email), created_user.hashed_email

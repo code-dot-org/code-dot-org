@@ -7,6 +7,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 import msg from '@cdo/locale';
+import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 describe('project.js', () => {
   let sourceHandler;
@@ -646,7 +647,7 @@ describe('project.js', () => {
     });
   });
 
-  describe('toggleMakerEnabled()', () => {
+  describe('setMakerEnabled()', () => {
     beforeEach(() => {
       sinon
         .stub(project, 'saveSourceAndHtml_')
@@ -659,30 +660,31 @@ describe('project.js', () => {
       project.saveSourceAndHtml_.restore();
     });
 
-    it('performs a save with maker enabled if it was disabled', () => {
+    it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(CP_API).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.true;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
+        ).to.equal(CP_API);
       });
     });
 
     it('performs a save with maker disabled if it was enabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.false;
+          .to.be.null;
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
       expect(utils.reload).not.to.have.been.called;
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(utils.reload).to.have.been.called;
       });
     });

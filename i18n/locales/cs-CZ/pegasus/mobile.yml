@@ -1501,3 +1501,4 @@
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link}) z minulého roku."
   homepage_slot_text_title_at_home: "Učte se doma"
   homepage_slot_text_blurb_at_home: "S těmito podklady to bude hračka"
+  page_not_available_button: "Zpět domů"

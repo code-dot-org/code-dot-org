@@ -1,8 +1,9 @@
 login_required true
 
-lesson 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
+lesson 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment', display_name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
 level 'CSP_Final_instructions'
 level 'CSP Culminating Assessment', assessment: true
 
-lesson 'RQB Questions test'
+lesson 'RQB Questions test', display_name: 'RQB Questions test'
 level 'RQB test levelgroup', assessment: true
+

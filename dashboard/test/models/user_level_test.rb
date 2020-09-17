@@ -332,4 +332,33 @@ class UserLevelTest < ActiveSupport::TestCase
       passing_level_counts
     )
   end
+
+  test 'calculate_total_time_spent returns 0 if no time_spent recorded' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level
+    )
+
+    assert_equal 0, ul.calculate_total_time_spent(nil)
+  end
+
+  test 'calculate_total_time_spent returns time_spent additional_time recorded' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level,
+      time_spent: 2000
+    )
+
+    assert_equal 2000, ul.calculate_total_time_spent(nil)
+  end
+
+  test 'calculate_total_time_spent returns the sum of time_spent and additional_time' do
+    ul = UserLevel.create(
+      user: @user,
+      level: @level,
+      time_spent: 2000
+    )
+
+    assert_equal 4000, ul.calculate_total_time_spent(2000)
+  end
 end

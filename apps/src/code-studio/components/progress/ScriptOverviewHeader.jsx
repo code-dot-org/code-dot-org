@@ -24,6 +24,7 @@ import AssignmentVersionSelector, {
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -258,7 +259,11 @@ class ScriptOverviewHeader extends Component {
                 />
               )}
             </div>
-            <p style={styles.description}>{scriptDescription}</p>
+            <SafeMarkdown
+              style={styles.description}
+              openExternalLinksInNewTab={true}
+              markdown={scriptDescription}
+            />
           </div>
           <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>

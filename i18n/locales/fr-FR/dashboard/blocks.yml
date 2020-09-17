@@ -88,9 +88,6 @@ fr:
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} pour toujours"
         options:
@@ -110,9 +107,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
@@ -190,9 +184,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} une fois"
         options:
@@ -222,9 +213,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: evaluer {CODE}
       Dancelab_everyMeasuresRange:
@@ -1107,6 +1095,13 @@ fr:
             '"z"': z
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': le Nord
+            '"East"': L’Est
+            '"South"': Le Sud
+            '"West"': L’Ouest
       gamelab_locationMouse:
         text: emplacement de la souris
       gamelab_locationOf:

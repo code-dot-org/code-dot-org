@@ -157,6 +157,7 @@ const initialScriptOverviewProgress = {
   currentLevelId: undefined,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
+  lessonGroups: [],
   stages: stageData,
   scriptName: 'course3'
 };
@@ -166,6 +167,7 @@ const initialPuzzlePageProgress = {
   currentLevelId: '341',
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
+  lessonGroups: [],
   // We're on a puzzle in stage 2. That is the only provided stage
   stages: [stageData[1]],
   scriptName: 'course3'
@@ -1031,6 +1033,14 @@ describe('progressReduxTest', () => {
 
     it('returns lesson group', () => {
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: 'This is a lesson group',
+            big_questions: ['Why?', 'Who?']
+          }
+        ],
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         levelProgress: {},
         focusAreaStageIds: []
@@ -1038,11 +1048,20 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.displayName, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.description, 'This is a lesson group');
     });
 
     it('returns a single group if all lessons have the same lesson group', () => {
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: 'This is a lesson group',
+            big_questions: ['Why?']
+          }
+        ],
         stages: [
           fakeLesson('Lesson Group', 'lesson1', 1),
           fakeLesson('Lesson Group', 'lesson2', 2),
@@ -1054,7 +1073,7 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.displayName, 'Lesson Group');
     });
 
     it('includes bonus levels in groups if includeBonusLevels is true', () => {
@@ -1064,6 +1083,14 @@ describe('progressReduxTest', () => {
         bonus: true
       };
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: null,
+            big_questions: null
+          }
+        ],
         stages: [
           {
             lesson_group_display_name: 'Lesson Group',

@@ -128,8 +128,8 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Stage', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Stage', lesson_group: lesson_group
+    lesson1 = create :lesson, script: script, name: 'First Stage', key: 'First Stage', lesson_group: lesson_group
+    lesson2 = create :lesson, script: script, name: 'Second Stage', key: 'Second Stage', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -618,10 +618,11 @@ class ApiControllerTest < ActionController::TestCase
       stage_position: 1,
       level_position: 1
     }
+    result = {"status" => "perfect", "result" => 100}
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal nil, body['disableSocialShare']
-    assert_equal 100, body['progress'][level.id.to_s]
+    assert_equal result, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
     assert_equal(
