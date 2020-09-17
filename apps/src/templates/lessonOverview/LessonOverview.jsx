@@ -2,18 +2,43 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import i18n from '@cdo/locale';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import Announcements from '../../code-studio/components/progress/Announcements';
+import {connect} from 'react-redux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-export default class LessonOverview extends Component {
+class LessonOverview extends Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
-    activities: PropTypes.array
+    activities: PropTypes.array,
+    studentOverview: PropTypes.string,
+    shortTitle: PropTypes.string,
+    unplugged: PropTypes.bool,
+    lockable: PropTypes.bool,
+    assessment: PropTypes.bool,
+    creativeCommonsLicense: PropTypes.string,
+    purpose: PropTypes.string,
+    preparation: PropTypes.string,
+
+    //redux
+    announcements: PropTypes.arrayOf(announcementShape),
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   render() {
-    const {displayName, overview} = this.props;
+    const {displayName, overview, isSignedIn, viewAs} = this.props;
     return (
       <div>
+        {isSignedIn && (
+          <Announcements
+            announcements={this.props.announcements}
+            width={970}
+            viewAs={viewAs}
+          />
+        )}
         <h1>{displayName}</h1>
 
         <h2>{i18n.overview()}</h2>
@@ -27,3 +52,9 @@ export default class LessonOverview extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  announcements: state.announcements || [],
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs
+}))(LessonOverview);
