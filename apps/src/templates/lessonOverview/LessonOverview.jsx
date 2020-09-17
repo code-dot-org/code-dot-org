@@ -7,6 +7,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -29,7 +30,14 @@ class LessonOverview extends Component {
   };
 
   render() {
-    const {displayName, overview, isSignedIn, viewAs} = this.props;
+    const {
+      displayName,
+      overview,
+      isSignedIn,
+      viewAs,
+      purpose,
+      preparation
+    } = this.props;
     return (
       <div>
         {isSignedIn && (
@@ -42,7 +50,14 @@ class LessonOverview extends Component {
         <h1>{displayName}</h1>
 
         <h2>{i18n.overview()}</h2>
-        <p>{overview}</p>
+        <SafeMarkdown markdown={overview} />
+
+        <h2>{i18n.purpose()}</h2>
+        <SafeMarkdown markdown={purpose} />
+        <p>{purpose}</p>
+
+        <h2>{i18n.preparation()}</h2>
+        <SafeMarkdown markdown={preparation} />
 
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
@@ -52,6 +67,8 @@ class LessonOverview extends Component {
     );
   }
 }
+
+export const UnconnectedLessonOverview = LessonOverview;
 
 export default connect(state => ({
   announcements: state.announcements || [],

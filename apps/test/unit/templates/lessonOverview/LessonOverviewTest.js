@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
+import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
@@ -10,7 +10,18 @@ describe('LessonOverview', () => {
     defaultProps = {
       displayName: 'Lesson Name',
       overview: 'Lesson Overview',
-      activities: []
+      activities: [],
+      studentOverview: 'Student Overview',
+      shortTitle: 'Lesson',
+      unplugged: false,
+      lockable: false,
+      assessment: false,
+      creativeCommonsLicense: 'Creative Commons BY-NC-SA',
+      purpose: 'The purpose of the lesson is for people to learn',
+      preparation: '- One',
+      announcements: [],
+      viewAs: 'Teacher',
+      isSignedIn: true
     };
   });
 
