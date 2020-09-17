@@ -7,7 +7,7 @@
 const START_LOADING_GAPI = 'googlePlatformApi/START_LOADING_GAPI';
 const FINISH_LOADING_GAPI = 'googlePlatformApi/FINISH_LOADING_GAPI';
 
-const startLoadingGapi = () => ({type: START_LOADING_GAPI});
+const startLoadingGapi = startTime => ({type: START_LOADING_GAPI, startTime});
 const finishLoadingGapi = success => ({type: FINISH_LOADING_GAPI, success});
 
 const GOOGLE_PLATFORM_API_ID = 'GooglePlatformApiId';
@@ -25,7 +25,7 @@ export function loadGooglePlatformApi() {
       dispatch(finishLoadingGapi(true));
     } else if (!isLoading(getState)) {
       loadApi(dispatch, getState);
-      dispatch(startLoadingGapi);
+      dispatch(startLoadingGapi(Date.now()));
     }
   };
 }
@@ -39,7 +39,7 @@ export default function googlePlatformApi(state = initialState, action) {
     return {
       ...state,
       loading: true,
-      loadStartTime: Date.now()
+      loadStartTime: action.startTime
     };
   }
   if (action.type === FINISH_LOADING_GAPI) {
