@@ -31,7 +31,7 @@ import {
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import googlePlatformApi, {
-  startLoadingGapi
+  loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 import {
@@ -348,7 +348,7 @@ function initializeStoreWithSections(store, scriptData) {
       scriptData.user_providers.includes(OAuthProviders.google)
     ) {
       registerReducers({googlePlatformApi});
-      store.dispatch(startLoadingGapi());
+      store.dispatch(loadGooglePlatformApi());
     }
   }
   store.dispatch(setSections(sections));
