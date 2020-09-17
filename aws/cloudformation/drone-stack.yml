@@ -172,7 +172,7 @@ Resources:
         - 
           Name: drone-master
           Essential: true
-          Image: drone/drone:1.0.0-rc.5
+          Image: drone/drone:1.9.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
@@ -261,7 +261,8 @@ Resources:
         KeyName: !Sub "winter-dev-${AWS::Region}"
         SecurityGroupIds: 
           - !Ref DroneWorkerEcsSecurityGroup
-        ImageId: ami-0c4b05c0409735671
+        # ECS Optimized AMI - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
+        ImageId: ami-04bb74f3ffa3aa3e2
         InstanceType: m5.xlarge
         Monitoring:
           Enabled: true
@@ -304,7 +305,7 @@ Resources:
         - 
           Name: drone-worker
           Essential: true
-          Image: drone/agent:1.0.0-rc.5
+          Image: drone/drone-runner-docker:1.5.0
           MemoryReservation: 512
           LogConfiguration:
             LogDriver: awslogs
@@ -318,11 +319,8 @@ Resources:
               SourceVolume: docker-socket
           Environment:
             -
-              Name: DRONE_RPC_SERVER 
-              Value: 
-                !Sub 
-                  - "http://${ElbDnsName}"
-                  - {ElbDnsName: !GetAtt DroneMasterELB.DNSName}
+              Name: DRONE_RPC_HOST
+              Value: !GetAtt DroneMasterELB.DNSName
             # Number of concurrent builds allowed on one Drone agent
             -
               Name: DRONE_RUNNER_CAPACITY
