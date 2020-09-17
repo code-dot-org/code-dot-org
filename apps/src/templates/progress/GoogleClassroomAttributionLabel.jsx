@@ -12,11 +12,11 @@ const style = {
 class GoogleClassroomAttributionLabel extends React.Component {
   static propTypes = {
     // redux provided
-    hidden: PropTypes.bool.isRequired
+    visible: PropTypes.bool.isRequired
   };
 
   render() {
-    if (!this.props.hidden) {
+    if (this.props.visible) {
       return <p style={style}>{i18n.googleClassroomAttribution()}</p>;
     } else {
       return null;
@@ -25,5 +25,5 @@ class GoogleClassroomAttributionLabel extends React.Component {
 }
 
 export default connect(state => ({
-  hidden: !canShowGoogleShareButton(state)
+  visible: canShowGoogleShareButton(state)
 }))(GoogleClassroomAttributionLabel);
