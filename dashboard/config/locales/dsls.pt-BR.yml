@@ -8012,7 +8012,7 @@ pt-BR:
         questions:
         - text: Se não houver flor, a abelha não deveria fazer nada. De uma boa olhada
             no código abaixo. O que você acha que irá acontecer depois de clicar em
-            "Rodar"?
+            "executar"?
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - text: A abelha irá obter o nectar de cada flor, caso contrário ela fará

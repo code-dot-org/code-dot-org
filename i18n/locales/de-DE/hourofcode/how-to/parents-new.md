@@ -68,7 +68,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
+- "Ich weiß nicht. Lassen wir zusammen es herausbekommen."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
 - "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
@@ -81,10 +81,10 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. Benutzen #HourofCode und @codeorg, damit wir auch Ihren Erfolg hervorheben können!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Was kommt nach der Hour of Code?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+Informatik muss nicht mit Hour of Code enden! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
