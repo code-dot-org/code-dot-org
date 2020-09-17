@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-export default class Announce extends Component {
+export default class Announcement extends Component {
   static propTypes = {
     announcement: announcementShape,
     inputStyle: PropTypes.object.isRequired,
