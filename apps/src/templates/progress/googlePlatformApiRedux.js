@@ -86,7 +86,7 @@ function gapiReady() {
 }
 
 function elapsedLoadTime(getState) {
-  const startTime = getState().loadStartTime;
+  const startTime = getState().googlePlatformApi.loadStartTime;
   if (startTime) {
     return Date.now() - startTime;
   } else {
@@ -95,5 +95,5 @@ function elapsedLoadTime(getState) {
 }
 
 function isLoading(getState) {
-  return getState().loading;
+  return getState().googlePlatformApi.loading;
 }
