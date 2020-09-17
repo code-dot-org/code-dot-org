@@ -11682,7 +11682,6 @@ tr:
               name: Pluralsight LevelGroup
         express-2018-vn:
           title: Vietnam için Hızlandırılmış (2018)
-          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt Nam.
           lessons:
             Graph Paper Programming:
               name: Grafik Kağıdı Programlama

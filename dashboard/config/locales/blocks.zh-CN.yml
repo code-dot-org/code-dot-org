@@ -1111,6 +1111,7 @@ zh-CN:
       gamelab_locationAt:
         text: '位置 x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{LOCATION} 的 {DIRECTION} {DISTANCE} 像素"
         options:
           DIRECTION:
             '"North"': 北
