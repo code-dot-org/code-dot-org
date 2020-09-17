@@ -7,7 +7,7 @@ import {
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Announce from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announce';
+import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 
 const styles = {
   preview: {
@@ -79,7 +79,7 @@ export default class AnnouncementsEditor extends Component {
           </HelpTip>
         </h4>
         {announcements.map((announce, index) => (
-          <Announce
+          <Announcement
             key={index}
             index={index}
             announcement={announce}
@@ -92,9 +92,15 @@ export default class AnnouncementsEditor extends Component {
           Additional Announcement
         </button>
         {announcements.length > 0 && (
-          <div style={styles.preview}>
-            <div>Preview:</div>
-            <Announcements announcements={announcements} />
+          <div>
+            <div style={styles.preview}>
+              <div>Teacher Preview:</div>
+              <Announcements announcements={announcements} viewAs={'Teacher'} />
+            </div>
+            <div style={styles.preview}>
+              <div>Student Preview:</div>
+              <Announcements announcements={announcements} viewAs={'Student'} />
+            </div>
           </div>
         )}
       </div>
