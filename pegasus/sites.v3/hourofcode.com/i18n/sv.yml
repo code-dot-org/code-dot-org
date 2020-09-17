@@ -6847,7 +6847,7 @@ sv:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Alla moderna webbläsare
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Alla moderna webbläsare
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Alla moderna webbläsare
@@ -9051,7 +9051,7 @@ sv:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_tynkermars_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad

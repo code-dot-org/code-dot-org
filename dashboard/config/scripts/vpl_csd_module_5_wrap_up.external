@@ -1,0 +1,22 @@
+name 'VPL - CSD - Module 5 Wrap Up'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Module 5 Asynchronous Wrap Up
+**Estimated Time: 10 minutes**
+
+## Engage with the Code.org Community
+
+Check out the <a href="https://forum.code.org/" target="blank">Code.org forum</a>  for ideas on implementing Unit 5. The forum is a great place to go when you are looking for additional resources, ideas, and templates to use with Code.org lessons - created and shared by teachers within the community. Share your ideas and resources too!
+
+## Next Steps
+
+1. Return to your cohort's shared slide deck for Module 5. 
+2. Add any questions you have to the "Questions from Asynchronous Work" slide. 
+3. Answer the reflection question on the "Group Reflection" slide. 
+4. Join the Module 5 Synchronous Workshop. 
+
+**Note:** As facilitators plan the upcoming synchronous workshop, they will read your questions and group reflection responses in the slides. Other participants will also be able to read your questions and reflection. Feel free to add answers and ideas to the "Answer" column for questions posed by other participants.
+MARKDOWN
