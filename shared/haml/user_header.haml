@@ -90,7 +90,8 @@
         var dataName = element.dataset.shortname;
         var id = element.dataset.id;
         if (storedName && !id) {
-          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+          // Use textContent to prevent HTML injection vulnerability
+          element.textContent = element.textContent.replace(dataName, decodeURI(storedName));
         }
       }
     }

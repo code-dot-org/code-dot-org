@@ -1,0 +1,466 @@
+Course Code,Course Name,District Code,District Name ,School Code,School Name,Section,Progrmming Included,Total Enrollment
+10011,Computer Science Principles,00350000,Boston,00350545,Boston Latin Academy,C73-002,Y,26
+10011,Computer Science Principles,00350000,Boston,00350545,Boston Latin Academy,C73-001,Y,28
+10011,Computer Science Principles,00350000,Boston,00350575,O'Bryant School Math/Science,C73-01,Y,25
+10011,Computer Science Principles,00350000,Boston,00350581,Community Academy of Science and Health,C73-001,Y,11
+10011,Computer Science Principles,00500000,Canton,00500505,Canton High,0380-01,Y,20
+10011,Computer Science Principles,00500000,Canton,00500505,Canton High,0380-02,Y,21
+10011,Computer Science Principles,01370000,Holyoke,01370505,Holyoke High,21028,Y,20
+10011,Computer Science Principles,01640000,Lynnfield,01640505,Lynnfield High,0663/01,Y,15
+10011,Computer Science Principles,01990000,Needham,01990505,Needham High,2488-1,Y,9
+10011,Computer Science Principles,02460000,Reading,02460505,Reading Memorial High,0579/01,Y,19
+10011,Computer Science Principles,02810000,Springfield,02810550,Springfield Public Day High School,604-1022004511-9C,Y,8
+10011,Computer Science Principles,02810000,Springfield,02810550,Springfield Public Day High School,604-1022004511-T2,Y,9
+10011,Computer Science Principles,02910000,Swampscott,02910505,Swampscott High,562.1-02,Y,12
+10011,Computer Science Principles,02910000,Swampscott,02910505,Swampscott High,562.1-01,Y,19
+10011,Computer Science Principles,03230000,West Bridgewater,03230505,West Bridgewater Junior/Senior,519-03,Y,*
+10011,Computer Science Principles,03230000,West Bridgewater,03230505,West Bridgewater Junior/Senior,519-01,Y,6
+10011,Computer Science Principles,03230000,West Bridgewater,03230505,West Bridgewater Junior/Senior,519-02,Y,14
+10011,Computer Science Principles,03360000,Weymouth,03360505,Weymouth High School,H16369-001,Y,*
+10011,Computer Science Principles,03430000,Winchendon,03430515,Murdock High School,21563,Y,13
+10011,Computer Science Principles,04360000,Community Charter School of Cambridge (District),04360305,Community Charter School of Cambridge,CompSciAP-2,Y,12
+10011,Computer Science Principles,04360000,Community Charter School of Cambridge (District),04360305,Community Charter School of Cambridge,CompSciAP-1,Y,17
+10011,Computer Science Principles,04830000,Rising Tide Charter Public (District),04830305,Rising Tide Charter Public School,23020,Y,17
+10011,Computer Science Principles,08510000,Northern Berkshire Regional Vocational Technical,08510605,Charles McCann Vocational Technical,242-01,Y,15
+10012,Exploring Computer Science,00100000,Arlington,00100505,Arlington High,MA7415Z-2,Y,18
+10012,Exploring Computer Science,00100000,Arlington,00100505,Arlington High,MA7407Z-1,Y,19
+10012,Exploring Computer Science,00100000,Arlington,00100505,Arlington High,MA7415Z-1,Y,19
+10012,Exploring Computer Science,00350000,Boston,00350363,William McKinley,C80-001,Y,7
+10012,Exploring Computer Science,00350000,Boston,00350505,Brighton High,C80-001,Y,26
+10012,Exploring Computer Science,00350000,Boston,00350507,Boston International High School,C80-002,Y,17
+10012,Exploring Computer Science,00350000,Boston,00350507,Boston International High School,C80-001,Y,21
+10012,Exploring Computer Science,00350000,Boston,00350522,Excel High School,C80-GE61,Y,29
+10012,Exploring Computer Science,00350000,Boston,00350522,Excel High School,C80-GE31,Y,31
+10012,Exploring Computer Science,00350000,Boston,00350537,Madison Park High,C80-01,Y,35
+10012,Exploring Computer Science,00350000,Boston,00350542,New Mission High School,C80-01,Y,9
+10012,Exploring Computer Science,00350000,Boston,00350543,Greater Egleston Community High School,C80-001,Y,8
+10012,Exploring Computer Science,00350000,Boston,00350548,Boston Adult Academy,C80-007,Y,*
+10012,Exploring Computer Science,00350000,Boston,00350548,Boston Adult Academy,C80-4R4,Y,*
+10012,Exploring Computer Science,00350000,Boston,00350549,Margarita Muniz Academy,C80-10th - P8,Y,14
+10012,Exploring Computer Science,00350000,Boston,00350549,Margarita Muniz Academy,C80-Period 3,Y,15
+10012,Exploring Computer Science,00350000,Boston,00350549,Margarita Muniz Academy,C80-P 7 - 9th,Y,17
+10012,Exploring Computer Science,00350000,Boston,00350549,Margarita Muniz Academy,C80-Period 4,Y,22
+10012,Exploring Computer Science,00350000,Boston,00350558,Boston Community Leadership Academy,C80-01,Y,20
+10012,Exploring Computer Science,00350000,Boston,00350558,Boston Community Leadership Academy,C80-94,Y,24
+10012,Exploring Computer Science,00350000,Boston,00350558,Boston Community Leadership Academy,C80-02,Y,28
+10012,Exploring Computer Science,00350000,Boston,00350558,Boston Community Leadership Academy,C80-03,Y,29
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-01,Y,17
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-02,Y,24
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-03,Y,27
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-06,Y,28
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-04,Y,29
+10012,Exploring Computer Science,00350000,Boston,00350575,O'Bryant School Math/Science,C80-05,Y,29
+10012,Exploring Computer Science,00350000,Boston,00350579,Urban Science Academy,C80-02,Y,16
+10012,Exploring Computer Science,00350000,Boston,00350579,Urban Science Academy,C80-01,Y,25
+10012,Exploring Computer Science,00350000,Boston,00350655,Lyon Upper 9-12,C80-12,Y,10
+10012,Exploring Computer Science,00350000,Boston,00350657,TechBoston Academy,C80-Citrin F,Y,13
+10012,Exploring Computer Science,00350000,Boston,00350657,TechBoston Academy,C80-Citrin C,Y,20
+10012,Exploring Computer Science,00350000,Boston,00350657,TechBoston Academy,C80-Citrin D,Y,21
+10012,Exploring Computer Science,00350000,Boston,00350657,TechBoston Academy,C80-Citrin E10,Y,25
+10012,Exploring Computer Science,00480000,Burlington,00480505,Burlington High,841-002,Y,13
+10012,Exploring Computer Science,00480000,Burlington,00480505,Burlington High,840-001,Y,20
+10012,Exploring Computer Science,00480000,Burlington,00480505,Burlington High,841-001,Y,22
+10012,Exploring Computer Science,00570000,Chelsea,00570505,Chelsea High,C833-01,Y,20
+10012,Exploring Computer Science,00570000,Chelsea,00570505,Chelsea High,C833-02,Y,22
+10012,Exploring Computer Science,00610000,Chicopee,00610510,Chicopee Comprehensive High School,29072,Y,10
+10012,Exploring Computer Science,00730000,Dedham,00730505,Dedham High,H00678-1,Y,16
+10012,Exploring Computer Science,00860000,Easthampton,00860505,Easthampton High,616-1,Y,13
+10012,Exploring Computer Science,00960000,Falmouth,00960505,Falmouth High,7551-2,Y,19
+10012,Exploring Computer Science,00960000,Falmouth,00960505,Falmouth High,7551-1,Y,20
+10012,Exploring Computer Science,01110000,Granby,01110505,Granby Jr Sr High School,0635/01,Y,20
+10012,Exploring Computer Science,01520000,Lenox,01520505,Lenox Memorial High,7015/01,Y,6
+10012,Exploring Computer Science,01580000,Littleton,01580505,Littleton High School,353-001,Y,22
+10012,Exploring Computer Science,01680000,Marblehead,01680505,Marblehead High,100706-001,Y,11
+10012,Exploring Computer Science,01870000,Millis,01870505,Millis High School,HS3163-1,Y,14
+10012,Exploring Computer Science,01990000,Needham,01990505,Needham High,2482-2,Y,14
+10012,Exploring Computer Science,01990000,Needham,01990505,Needham High,2482-3,Y,16
+10012,Exploring Computer Science,01990000,Needham,01990505,Needham High,2482-1,Y,24
+10012,Exploring Computer Science,02070000,Newton,02070505,Newton North High,5491_01,Y,14
+10012,Exploring Computer Science,02070000,Newton,02070505,Newton North High,5501_01,Y,25
+10012,Exploring Computer Science,02310000,Pembroke,02310505,Pembroke High School,296-1,Y,23
+10012,Exploring Computer Science,02310000,Pembroke,02310505,Pembroke High School,296-2,Y,23
+10012,Exploring Computer Science,02480000,Revere,02480505,Revere High,B0355FC-1,Y,15
+10012,Exploring Computer Science,02740000,Somerville,02740505,Somerville High,265-001,Y,9
+10012,Exploring Computer Science,02740000,Somerville,02740505,Somerville High,255-001,Y,18
+10012,Exploring Computer Science,02810000,Springfield,02810320,John J Duggan Middle,202-1040004511-11,Y,11
+10012,Exploring Computer Science,02810000,Springfield,02810500,Springfield Central High,101-1040004511-1,Y,12
+10012,Exploring Computer Science,02810000,Springfield,02810510,High School Of Commerce,102-1040004511-1,Y,10
+10012,Exploring Computer Science,02810000,Springfield,02810510,High School Of Commerce,102-1040004511-2,Y,22
+10012,Exploring Computer Science,02810000,Springfield,02810530,Springfield High School of Science and Technology,104-1040004511-10,Y,17
+10012,Exploring Computer Science,03090000,Ware,03090505,Ware Junior/Senior High School,335-01,Y,11
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS131-2,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-5,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS131-1,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS141-1,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS141-2,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-7,Y,*
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-2,Y,7
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-7,Y,8
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-6,Y,9
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-1,Y,9
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-3,Y,9
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-6,Y,10
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-3,Y,10
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-1,Y,10
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-2,Y,10
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-4,Y,10
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS130-4,Y,11
+10012,Exploring Computer Science,03210000,Westborough,03210505,Westborough High,CS140-5,Y,14
+10012,Exploring Computer Science,03230000,West Bridgewater,03230505,West Bridgewater Junior/Senior,520-03,Y,*
+10012,Exploring Computer Science,03230000,West Bridgewater,03230505,West Bridgewater Junior/Senior,520-05,Y,*
+10012,Exploring Computer Science,03320000,West Springfield,03320505,West Springfield High,CBS540-3,Y,13
+10012,Exploring Computer Science,03320000,West Springfield,03320505,West Springfield High,CBS540-1,Y,15
+10012,Exploring Computer Science,03320000,West Springfield,03320505,West Springfield High,CBS540-2,Y,16
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16561-002,Y,*
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16561-001,Y,*
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16521-002,Y,7
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16560-002,Y,8
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16521-001,Y,10
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16520-002,Y,11
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16560-001,Y,13
+10012,Exploring Computer Science,03360000,Weymouth,03360505,Weymouth High School,H16520-001,Y,14
+10012,Exploring Computer Science,03430000,Winchendon,03430515,Murdock High School,21365,Y,12
+10012,Exploring Computer Science,04280000,Brooke Charter School (District),04280305,Brooke Charter School,50010-3,Y,13
+10012,Exploring Computer Science,04280000,Brooke Charter School (District),04280305,Brooke Charter School,50010-1,Y,17
+10012,Exploring Computer Science,04280000,Brooke Charter School (District),04280305,Brooke Charter School,50010-2,Y,19
+10012,Exploring Computer Science,04280000,Brooke Charter School (District),04280305,Brooke Charter School,50010-4,Y,19
+10012,Exploring Computer Science,04360000,Community Charter School of Cambridge (District),04360305,Community Charter School of Cambridge,CS10-1,Y,17
+10012,Exploring Computer Science,04360000,Community Charter School of Cambridge (District),04360305,Community Charter School of Cambridge,CS10-2,Y,18
+10012,Exploring Computer Science,04360000,Community Charter School of Cambridge (District),04360305,Community Charter School of Cambridge,CS10-3,Y,19
+10012,Exploring Computer Science,06050000,Amherst-Pelham,06050505,Amherst Regional High,590-2,Y,10
+10012,Exploring Computer Science,06050000,Amherst-Pelham,06050505,Amherst Regional High,590-1,Y,11
+10012,Exploring Computer Science,06700000,Frontier,06700505,Frontier Regional,1641-01,Y,18
+10012,Exploring Computer Science,07170000,Mohawk Trail,07170505,Mohawk Trail Regional High,10012-1,Y,8
+10012,Exploring Computer Science,07170000,Mohawk Trail,07170505,Mohawk Trail Regional High,10012-2,Y,11
+10012,Exploring Computer Science,07500000,Pioneer Valley,07500505,Pioneer Valley Regional,0246/03,Y,*
+10012,Exploring Computer Science,07660000,Southwick-Tolland-Granville Regional School District,07660505,Southwick Regional School,0516/01,Y,9
+10012,Exploring Computer Science,07660000,Southwick-Tolland-Granville Regional School District,07660505,Southwick Regional School,0516/02,Y,13
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19552316-2,Y,22
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19552316-3,Y,23
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19551316-1,Y,25
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19551316-4,Y,25
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19551316-2,Y,26
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19551316-3,Y,26
+10012,Exploring Computer Science,07750000,Wachusett,07750505,Wachusett Regional High,19552316-1,Y,26
+10012,Exploring Computer Science,08290000,South Middlesex Regional Vocational Technical,08290605,Joseph P Keefe Technical High School,617-02,Y,*
+10012,Exploring Computer Science,08290000,South Middlesex Regional Vocational Technical,08290605,Joseph P Keefe Technical High School,617-01,Y,14
+10019,AP Computer Science Principles,00440000,Brockton,00440505,Brockton High,4041,Y,19
+10019,AP Computer Science Principles,00480000,Burlington,00480505,Burlington High,847-001,Y,12
+10019,AP Computer Science Principles,00610000,Chicopee,00610510,Chicopee Comprehensive High School,31570,Y,*
+10019,AP Computer Science Principles,01110000,Granby,01110505,Granby Jr Sr High School,0645/01,Y,11
+10019,AP Computer Science Principles,01110000,Granby,01110505,Granby Jr Sr High School,0646/01,Y,11
+10019,AP Computer Science Principles,01610000,Ludlow,01610505,Ludlow Senior High,50753-001,Y,13
+10019,AP Computer Science Principles,02310000,Pembroke,02310505,Pembroke High School,562-2,Y,17
+10019,AP Computer Science Principles,02310000,Pembroke,02310505,Pembroke High School,562-1,Y,18
+10019,AP Computer Science Principles,06700000,Frontier,06700505,Frontier Regional,1648-01,Y,11
+10019,AP Computer Science Principles,07250000,Nashoba,07250505,Nashoba Regional,M2012F-1,Y,17
+10019,AP Computer Science Principles,07250000,Nashoba,07250505,Nashoba Regional,M2012F-2,Y,21
+10153,VISUAL BASIC Programming,00440000,Brockton,00440505,Brockton High,6716911,Y,22
+10153,VISUAL BASIC Programming,00440000,Brockton,00440505,Brockton High,6701,Y,28
+10153,VISUAL BASIC Programming,00770000,Douglas,00770505,Douglas High School,704-03,Y,*
+10153,VISUAL BASIC Programming,00770000,Douglas,00770505,Douglas High School,704-01,Y,*
+10153,VISUAL BASIC Programming,00870000,East Longmeadow,00870505,East Longmeadow High,0291/01,Y,30
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1467-002,Y,14
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1468-002,Y,14
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1622-002,Y,16
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1621-001,Y,17
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1622-001,Y,18
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1621-002,Y,20
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1468-001,Y,21
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1614-001,Y,22
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1467-001,Y,23
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1614-002,Y,23
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1613-001,Y,23
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1613-002,Y,25
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1467-003,Y,28
+10153,VISUAL BASIC Programming,01600000,Lowell,01600505,Lowell High,1468-003,Y,29
+10153,VISUAL BASIC Programming,01670000,Mansfield,01670505,Mansfield High,251-001,Y,8
+10153,VISUAL BASIC Programming,01670000,Mansfield,01670505,Mansfield High,251-003,Y,9
+10153,VISUAL BASIC Programming,01670000,Mansfield,01670505,Mansfield High,251-002,Y,12
+10153,VISUAL BASIC Programming,01710000,Marshfield,01710505,Marshfield High,0637-04,Y,15
+10153,VISUAL BASIC Programming,01710000,Marshfield,01710505,Marshfield High,0637-03,Y,19
+10153,VISUAL BASIC Programming,01710000,Marshfield,01710505,Marshfield High,0637-02,Y,21
+10153,VISUAL BASIC Programming,01710000,Marshfield,01710505,Marshfield High,0637-01,Y,22
+10153,VISUAL BASIC Programming,02120000,North Attleborough,02120505,North Attleboro High,648-003,Y,16
+10153,VISUAL BASIC Programming,02120000,North Attleborough,02120505,North Attleboro High,648-001,Y,19
+10153,VISUAL BASIC Programming,02120000,North Attleborough,02120505,North Attleboro High,648-002,Y,23
+10153,VISUAL BASIC Programming,02290000,Peabody,02290510,Peabody Veterans Memorial High,0250-02,Y,8
+10153,VISUAL BASIC Programming,02290000,Peabody,02290510,Peabody Veterans Memorial High,0250-01,Y,14
+10153,VISUAL BASIC Programming,02650000,Seekonk,02650505,Seekonk High,0734/01,Y,24
+10153,VISUAL BASIC Programming,03070000,Walpole,03070505,Walpole High,0708-001,Y,12
+10153,VISUAL BASIC Programming,03070000,Walpole,03070505,Walpole High,0708-002,Y,23
+10153,VISUAL BASIC Programming,03420000,Wilmington,03420505,Wilmington High,4132-001,Y,11
+10154,C++ Programming,00050000,Agawam,00050505,Agawam High,0541/01,Y,9
+10154,C++ Programming,00480000,Burlington,00480505,Burlington High,843-002,Y,13
+10154,C++ Programming,00480000,Burlington,00480505,Burlington High,843-001,Y,20
+10154,C++ Programming,01000000,Framingham,01000515,Framingham High School,243.FHS-02,Y,16
+10154,C++ Programming,01000000,Framingham,01000515,Framingham High School,243.FHS-03,Y,18
+10154,C++ Programming,01000000,Framingham,01000515,Framingham High School,243.FHS-01,Y,18
+10154,C++ Programming,01530000,Leominster,01530605,Center For Technical Education Innovation,677IS-001,Y,*
+10154,C++ Programming,02430000,Quincy,02430510,North Quincy High,1098-001,Y,19
+10154,C++ Programming,02430000,Quincy,02430510,North Quincy High,1098-002,Y,21
+10154,C++ Programming,02950000,Tewksbury,02950505,Tewksbury Memorial High,656-CP-001,Y,22
+10154,C++ Programming,02950000,Tewksbury,02950505,Tewksbury Memorial High,656-CP-002,Y,28
+10154,C++ Programming,03250000,Westfield,03250505,Westfield High,CS5200-1,Y,10
+10154,C++ Programming,03420000,Wilmington,03420505,Wilmington High,4133-001,Y,*
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0509/01,Y,13
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0509/02,Y,13
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0509/03,Y,21
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0529/01,Y,21
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0529/02,Y,21
+10154,C++ Programming,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0509/04,Y,24
+10154,C++ Programming,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4931-21,Y,*
+10154,C++ Programming,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4911-21,Y,9
+10154,C++ Programming,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4911-11,Y,17
+10154,C++ Programming,07730000,Triton,07730505,Triton Regional High School,251P-001,Y,*
+10154,C++ Programming,07730000,Triton,07730505,Triton Regional High School,251-001,Y,13
+10154,C++ Programming,07730000,Triton,07730505,Triton Regional High School,251-002,Y,17
+10155,JAVA Programming,00160000,Attleboro,00160505,Attleboro High,101552-01,Y,*
+10155,JAVA Programming,00160000,Attleboro,00160505,Attleboro High,101550-01,Y,32
+10155,JAVA Programming,00170000,Auburn,00170505,Auburn Senior High,2507-2,Y,7
+10155,JAVA Programming,00170000,Auburn,00170505,Auburn Senior High,2507-1,Y,15
+10155,JAVA Programming,00230000,Bedford,00230505,Bedford High,02905-002,Y,*
+10155,JAVA Programming,00820000,Duxbury,00820505,Duxbury High,204-02,Y,13
+10155,JAVA Programming,00820000,Duxbury,00820505,Duxbury High,204-01,Y,15
+10155,JAVA Programming,01700000,Marlborough,01700505,Marlborough High,2210-01,Y,7
+10155,JAVA Programming,01700000,Marlborough,01700505,Marlborough High,ECHS51-01,Y,7
+10155,JAVA Programming,01700000,Marlborough,01700505,Marlborough High,ECHS5-01,Y,14
+10155,JAVA Programming,01700000,Marlborough,01700505,Marlborough High,2200-01,Y,16
+10155,JAVA Programming,01850000,Milford,01850505,Milford High,628-01,Y,21
+10155,JAVA Programming,01890000,Milton,01890505,Milton High,0371/01,Y,14
+10155,JAVA Programming,02070000,Newton,02070505,Newton North High,5511_03,Y,17
+10155,JAVA Programming,02070000,Newton,02070505,Newton North High,5511_01,Y,18
+10155,JAVA Programming,02070000,Newton,02070505,Newton North High,5511_02,Y,19
+10155,JAVA Programming,02070000,Newton,02070505,Newton North High,5511_04,Y,20
+10155,JAVA Programming,02070000,Newton,02070505,Newton North High,5511_05,Y,21
+10155,JAVA Programming,02070000,Newton,02070510,Newton South High,650S_01,Y,22
+10155,JAVA Programming,02070000,Newton,02070510,Newton South High,650S_02,Y,22
+10155,JAVA Programming,02070000,Newton,02070510,Newton South High,650S_03,Y,23
+10155,JAVA Programming,02290000,Peabody,02290510,Peabody Veterans Memorial High,0235-01,Y,8
+10155,JAVA Programming,02390000,Plymouth,02390515,Plymouth South High,VTE2904-01,Y,11
+10155,JAVA Programming,02390000,Plymouth,02390515,Plymouth South High,VTE2894-01,Y,17
+10155,JAVA Programming,02430000,Quincy,02430510,North Quincy High,1096-001,Y,6
+10155,JAVA Programming,02460000,Reading,02460505,Reading Memorial High,0582/02,Y,16
+10155,JAVA Programming,02460000,Reading,02460505,Reading Memorial High,0582/01,Y,24
+10155,JAVA Programming,02620000,Saugus,02620505,Saugus High,567-002,Y,*
+10155,JAVA Programming,02620000,Saugus,02620505,Saugus High,567-001,Y,8
+10155,JAVA Programming,02620000,Saugus,02620505,Saugus High,565-003,Y,10
+10155,JAVA Programming,02620000,Saugus,02620505,Saugus High,565-001,Y,11
+10155,JAVA Programming,02620000,Saugus,02620505,Saugus High,565-002,Y,14
+10155,JAVA Programming,02640000,Scituate,02640505,Scituate High School,251.SHS-01,Y,8
+10155,JAVA Programming,02710000,Shrewsbury,02710505,Shrewsbury Sr High,7320-1,Y,*
+10155,JAVA Programming,02710000,Shrewsbury,02710505,Shrewsbury Sr High,7321-2,Y,6
+10155,JAVA Programming,02710000,Shrewsbury,02710505,Shrewsbury Sr High,7321-1,Y,7
+10155,JAVA Programming,02710000,Shrewsbury,02710505,Shrewsbury Sr High,7320-2,Y,12
+10155,JAVA Programming,02810000,Springfield,02810500,Springfield Central High,101-1013004511-1,Y,16
+10155,JAVA Programming,02920000,Swansea,02920505,Joseph Case High,676-003,Y,10
+10155,JAVA Programming,02920000,Swansea,02920505,Joseph Case High,676-001,Y,14
+10155,JAVA Programming,02920000,Swansea,02920505,Joseph Case High,676-002,Y,17
+10155,JAVA Programming,03210000,Westborough,03210505,Westborough High,CS243-1,Y,6
+10155,JAVA Programming,03210000,Westborough,03210505,Westborough High,CS243-2,Y,18
+10155,JAVA Programming,03250000,Westfield,03250505,Westfield High,CS5333-1,Y,12
+10155,JAVA Programming,03260000,Westford,03260505,Westford Academy,358-02,Y,24
+10155,JAVA Programming,03260000,Westford,03260505,Westford Academy,358-01,Y,26
+10155,JAVA Programming,03300000,Weston,03300505,Weston High,390HY7010,Y,*
+10155,JAVA Programming,03300000,Weston,03300505,Weston High,390HY3010,Y,*
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16501-002,Y,*
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16501-001,Y,*
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16501-003,Y,*
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16510-001,Y,6
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16500-003,Y,7
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16500-001,Y,11
+10155,JAVA Programming,03360000,Weymouth,03360505,Weymouth High School,H16500-002,Y,15
+10155,JAVA Programming,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1932/02,Y,21
+10155,JAVA Programming,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1932/04,Y,24
+10155,JAVA Programming,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1932/03,Y,25
+10155,JAVA Programming,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1932/01,Y,26
+10155,JAVA Programming,04990000,Hampden Charter School of Science (District),04990305,Hampden Charter School of Science,Int to Pr w/JAVA,Y,12
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,952-1,Y,*
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,952-3,Y,*
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,952-2,Y,*
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,952-4,Y,*
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,358-2,Y,9
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,359-1,Y,10
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,358-1,Y,12
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,359-2,Y,14
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,357-2,Y,18
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,365-1,Y,18
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,357-1,Y,19
+10155,JAVA Programming,06000000,Acton-Boxborough,06000505,Acton-Boxborough Regional High,365-2,Y,21
+10155,JAVA Programming,06250000,Bridgewater-Raynham,06250505,Bridgewater-Raynham Regional,6906/01,Y,15
+10155,JAVA Programming,06250000,Bridgewater-Raynham,06250505,Bridgewater-Raynham Regional,6906/02,Y,17
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,733-002,Y,*
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,734A-001,Y,*
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,733H-001,Y,10
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,733-001,Y,11
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,734-001,Y,12
+10155,JAVA Programming,06400000,Concord-Carlisle,06400505,Concord Carlisle High,733H-002,Y,13
+10155,JAVA Programming,06550000,Dover-Sherborn,06550505,Dover-Sherborn Regional High,6280-01,Y,14
+10155,JAVA Programming,06550000,Dover-Sherborn,06550505,Dover-Sherborn Regional High,6280-02,Y,14
+10155,JAVA Programming,06950000,Lincoln-Sudbury,06950505,Lincoln-Sudbury Regional High,776B-07,Y,26
+10155,JAVA Programming,06950000,Lincoln-Sudbury,06950505,Lincoln-Sudbury Regional High,776A-07,Y,27
+10155,JAVA Programming,07050000,Masconomet,07050505,Masconomet Regional High School,5441-1,Y,11
+10155,JAVA Programming,07050000,Masconomet,07050505,Masconomet Regional High School,5852-1,Y,12
+10155,JAVA Programming,07800000,Whitman-Hanson,07800505,Whitman Hanson Regional,47001,Y,8
+10156,Computer Programming— Other Language,01050000,Georgetown,01050505,Georgetown High School,0664/02,Y,*
+10156,Computer Programming— Other Language,01050000,Georgetown,01050505,Georgetown High School,0664/01,Y,6
+10156,Computer Programming— Other Language,01050000,Georgetown,01050505,Georgetown High School,0663/02,Y,8
+10156,Computer Programming— Other Language,01050000,Georgetown,01050505,Georgetown High School,0663/01,Y,11
+10156,Computer Programming— Other Language,01890000,Milton,01890505,Milton High,0363/03,Y,15
+10156,Computer Programming— Other Language,01890000,Milton,01890505,Milton High,0363/01,Y,21
+10156,Computer Programming— Other Language,01890000,Milton,01890505,Milton High,0363/02,Y,26
+10156,Computer Programming— Other Language,02040000,Newburyport,02040505,Newburyport High,1199-01,Y,11
+10156,Computer Programming— Other Language,02070000,Newton,02070510,Newton South High,658S_01,Y,20
+10156,Computer Programming— Other Language,02180000,Norton,02180505,Norton High,22655,Y,22
+10156,Computer Programming— Other Language,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1967/01,Y,14
+10156,Computer Programming— Other Language,06150000,Athol-Royalston,06150505,Athol High,350-001,Y,*
+10156,Computer Programming— Other Language,06400000,Concord-Carlisle,06400505,Concord Carlisle High,732A-001,Y,17
+10156,Computer Programming— Other Language,06400000,Concord-Carlisle,06400505,Concord Carlisle High,732-001,Y,23
+10156,Computer Programming— Other Language,06800000,Hampden-Wilbraham,06800505,Minnechaug Regional High,0164-01,Y,23
+10156,Computer Programming— Other Language,06980000,Manchester Essex Regional,06980510,Manchester Essex Regional High School,461-001,Y,*
+10156,Computer Programming— Other Language,06980000,Manchester Essex Regional,06980510,Manchester Essex Regional High School,460-002,Y,7
+10156,Computer Programming— Other Language,06980000,Manchester Essex Regional,06980510,Manchester Essex Regional High School,460B-001,Y,12
+10156,Computer Programming— Other Language,06980000,Manchester Essex Regional,06980510,Manchester Essex Regional High School,460-001,Y,18
+10156,Computer Programming— Other Language,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4997-21,Y,*
+10156,Computer Programming— Other Language,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4996-21,Y,6
+10156,Computer Programming— Other Language,07600000,Silver Lake,07600505,Silver Lake Regional High,297-1,Y,12
+10156,Computer Programming— Other Language,07600000,Silver Lake,07600505,Silver Lake Regional High,297-2,Y,19
+10156,Computer Programming— Other Language,07600000,Silver Lake,07600505,Silver Lake Regional High,291-2,Y,23
+10156,Computer Programming— Other Language,07600000,Silver Lake,07600505,Silver Lake Regional High,291-3,Y,23
+10156,Computer Programming— Other Language,07600000,Silver Lake,07600505,Silver Lake Regional High,291-1,Y,24
+10158,AP Computer Science A,00090000,Andover,00090505,Andover High,MA967-001,Y,21
+10158,AP Computer Science A,00090000,Andover,00090505,Andover High,MA947-001,Y,26
+10158,AP Computer Science A,00100000,Arlington,00100505,Arlington High,MA7411Z-1,Y,17
+10158,AP Computer Science A,00140000,Ashland,00140505,Ashland High,7283-01,Y,22
+10158,AP Computer Science A,00200000,Barnstable,00200505,Barnstable High,0347-01,Y,20
+10158,AP Computer Science A,00230000,Bedford,00230505,Bedford High,02805-005,Y,*
+10158,AP Computer Science A,00240000,Belchertown,00240505,Belchertown High,BHS342-1,Y,13
+10158,AP Computer Science A,00310000,Billerica,00310505,Billerica Memorial High School,270-01,Y,9
+10158,AP Computer Science A,00400000,Braintree,00400505,Braintree High,417.1-01,Y,14
+10158,AP Computer Science A,00460000,Brookline,00460505,Brookline High,CE4700-01,Y,8
+10158,AP Computer Science A,00480000,Burlington,00480505,Burlington High,845-001,Y,12
+10158,AP Computer Science A,00490000,Cambridge,00490506,Cambridge Rindge and Latin,T505-002,Y,*
+10158,AP Computer Science A,00490000,Cambridge,00490506,Cambridge Rindge and Latin,T505-001,Y,15
+10158,AP Computer Science A,00560000,Chelmsford,00560505,Chelmsford High,17624-001,Y,12
+10158,AP Computer Science A,00560000,Chelmsford,00560505,Chelmsford High,17624-002,Y,15
+10158,AP Computer Science A,00560000,Chelmsford,00560505,Chelmsford High,17513-001,Y,22
+10158,AP Computer Science A,00720000,Dartmouth,00720505,Dartmouth High,1299-001,Y,*
+10158,AP Computer Science A,00730000,Dedham,00730505,Dedham High,H00290-1,Y,6
+10158,AP Computer Science A,00820000,Duxbury,00820505,Duxbury High,200-01,Y,9
+10158,AP Computer Science A,00870000,East Longmeadow,00870505,East Longmeadow High,0283/01,Y,9
+10158,AP Computer Science A,00950000,Fall River,00950505,B M C Durfee High,10611-0001,Y,25
+10158,AP Computer Science A,01000000,Framingham,01000515,Framingham High School,242.FHS-01,Y,12
+10158,AP Computer Science A,01010000,Franklin,01010505,Franklin High,1264-001,Y,15
+10158,AP Computer Science A,01010000,Franklin,01010505,Franklin High,1264-002,Y,25
+10158,AP Computer Science A,01010000,Franklin,01010505,Franklin High,1265-001,Y,25
+10158,AP Computer Science A,01070000,Gloucester,01070505,Gloucester High,20204,Y,9
+10158,AP Computer Science A,01100000,Grafton,01100505,Grafton High School,6604-1,Y,*
+10158,AP Computer Science A,01280000,Haverhill,01280505,Haverhill High,29233,Y,*
+10158,AP Computer Science A,01280000,Haverhill,01280505,Haverhill High,29232,Y,11
+10158,AP Computer Science A,01390000,Hopkinton,01390505,Hopkinton High,3601-02,Y,16
+10158,AP Computer Science A,01390000,Hopkinton,01390505,Hopkinton High,3602-2,Y,16
+10158,AP Computer Science A,01390000,Hopkinton,01390505,Hopkinton High,3601-01,Y,20
+10158,AP Computer Science A,01390000,Hopkinton,01390505,Hopkinton High,3602-1,Y,20
+10158,AP Computer Science A,01440000,Ipswich,01440505,Ipswich High,MTH16AP-01,Y,14
+10158,AP Computer Science A,01500000,Lee,01500505,Lee Middle/High School,TEC150-01,Y,*
+10158,AP Computer Science A,01550000,Lexington,01550505,Lexington High,3739-002,Y,21
+10158,AP Computer Science A,01550000,Lexington,01550505,Lexington High,3739-001,Y,22
+10158,AP Computer Science A,01580000,Littleton,01580505,Littleton High School,356AP-001,Y,18
+10158,AP Computer Science A,01590000,Longmeadow,01590505,Longmeadow High,389-1,Y,19
+10158,AP Computer Science A,01710000,Marshfield,01710505,Marshfield High,0663-01,Y,21
+10158,AP Computer Science A,01770000,Medway,01770505,Medway High,256-01,Y,10
+10158,AP Computer Science A,01780000,Melrose,01780505,Melrose High,865-01,Y,17
+10158,AP Computer Science A,01890000,Milton,01890505,Milton High,0370/01,Y,8
+10158,AP Computer Science A,01890000,Milton,01890505,Milton High,0377/01,Y,18
+10158,AP Computer Science A,01980000,Natick,01980505,Natick High,341-022,Y,18
+10158,AP Computer Science A,01980000,Natick,01980505,Natick High,341-002,Y,19
+10158,AP Computer Science A,01980000,Natick,01980505,Natick High,341-001,Y,23
+10158,AP Computer Science A,01980000,Natick,01980505,Natick High,341-021,Y,23
+10158,AP Computer Science A,01990000,Needham,01990505,Needham High,2481-1,Y,25
+10158,AP Computer Science A,02010000,New Bedford,02010505,New Bedford High,10158AP-001,Y,15
+10158,AP Computer Science A,02120000,North Attleborough,02120505,North Attleboro High,665-001,Y,21
+10158,AP Computer Science A,02170000,North Reading,02170505,North Reading High,0275/01,Y,7
+10158,AP Computer Science A,02290000,Peabody,02290510,Peabody Veterans Memorial High,0241-01,Y,9
+10158,AP Computer Science A,02290000,Peabody,02290510,Peabody Veterans Memorial High,0241-02,Y,10
+10158,AP Computer Science A,02310000,Pembroke,02310505,Pembroke High School,562A-1,Y,13
+10158,AP Computer Science A,02360000,Pittsfield,02360505,Pittsfield High,180P-1,Y,13
+10158,AP Computer Science A,02360000,Pittsfield,02360510,Taconic High,180T-1,Y,7
+10158,AP Computer Science A,02360000,Pittsfield,02360510,Taconic High,597T-1,Y,13
+10158,AP Computer Science A,02390000,Plymouth,02390505,Plymouth North High,TEC0151-01,Y,15
+10158,AP Computer Science A,02390000,Plymouth,02390515,Plymouth South High,TEC0151-01,Y,7
+10158,AP Computer Science A,02430000,Quincy,02430505,Quincy High,1097-001,Y,22
+10158,AP Computer Science A,02430000,Quincy,02430510,North Quincy High,1097-001,Y,12
+10158,AP Computer Science A,02460000,Reading,02460505,Reading Memorial High,0580/01,Y,18
+10158,AP Computer Science A,02460000,Reading,02460505,Reading Memorial High,0580/02,Y,18
+10158,AP Computer Science A,02480000,Revere,02480505,Revere High,B0353FA-1,Y,13
+10158,AP Computer Science A,02480000,Revere,02480505,Revere High,B0353FA-1001,Y,13
+10158,AP Computer Science A,02610000,Sandwich,02610505,Sandwich High,3031-2,Y,*
+10158,AP Computer Science A,02610000,Sandwich,02610505,Sandwich High,1630-1,Y,7
+10158,AP Computer Science A,02620000,Saugus,02620505,Saugus High,578-001,Y,19
+10158,AP Computer Science A,02640000,Scituate,02640505,Scituate High School,250.SHS-01,Y,8
+10158,AP Computer Science A,02640000,Scituate,02640505,Scituate High School,250.SHS-02,Y,11
+10158,AP Computer Science A,02740000,Somerville,02740505,Somerville High,261-001,Y,18
+10158,AP Computer Science A,02780000,South Hadley,02780505,South Hadley High,6060-1,Y,*
+10158,AP Computer Science A,02780000,South Hadley,02780505,South Hadley High,6061-1,Y,*
+10158,AP Computer Science A,02810000,Springfield,02810500,Springfield Central High,101-1022000511-2,Y,26
+10158,AP Computer Science A,02810000,Springfield,02810620,Roger L. Putnam Vocational Technical Academy,103-1022000511-3,Y,*
+10158,AP Computer Science A,02810000,Springfield,02810620,Roger L. Putnam Vocational Technical Academy,103-1022000511-1,Y,18
+10158,AP Computer Science A,02850000,Stoughton,02850505,Stoughton High,2711AP-1,Y,9
+10158,AP Computer Science A,02920000,Swansea,02920505,Joseph Case High,677-001,Y,8
+10158,AP Computer Science A,02920000,Swansea,02920505,Joseph Case High,680-001,Y,12
+10158,AP Computer Science A,02930000,Taunton,02930505,Taunton High,36988,Y,18
+10158,AP Computer Science A,02930000,Taunton,02930505,Taunton High,36989,Y,18
+10158,AP Computer Science A,03050000,Wakefield,03050505,Wakefield Memorial High,547-01,Y,21
+10158,AP Computer Science A,03080000,Waltham,03080505,Waltham Sr High,0193/02,Y,13
+10158,AP Computer Science A,03080000,Waltham,03080505,Waltham Sr High,0193/01,Y,19
+10158,AP Computer Science A,03140000,Watertown,03140505,Watertown High,H3700-1,Y,6
+10158,AP Computer Science A,03170000,Wellesley,03170505,Wellesley Sr High,363-2,Y,22
+10158,AP Computer Science A,03170000,Wellesley,03170505,Wellesley Sr High,363-1,Y,23
+10158,AP Computer Science A,03210000,Westborough,03210505,Westborough High,CS351-1,Y,20
+10158,AP Computer Science A,03250000,Westfield,03250505,Westfield High,CS4043-1,Y,*
+10158,AP Computer Science A,03260000,Westford,03260505,Westford Academy,362-02,Y,*
+10158,AP Computer Science A,03260000,Westford,03260505,Westford Academy,362-01,Y,17
+10158,AP Computer Science A,03300000,Weston,03300505,Weston High,390CY7010,Y,*
+10158,AP Computer Science A,03300000,Weston,03300505,Weston High,390CY3010,Y,6
+10158,AP Computer Science A,03300000,Weston,03300505,Weston High,390AY7010,Y,14
+10158,AP Computer Science A,03300000,Weston,03300505,Weston High,390AY3010,Y,18
+10158,AP Computer Science A,03350000,Westwood,03350505,Westwood High,2841-001,Y,22
+10158,AP Computer Science A,03360000,Weymouth,03360505,Weymouth High School,H16539-001,Y,13
+10158,AP Computer Science A,03440000,Winchester,03440505,Winchester High School,0422-01,Y,17
+10158,AP Computer Science A,03440000,Winchester,03440505,Winchester High School,0434-02,Y,18
+10158,AP Computer Science A,03440000,Winchester,03440505,Winchester High School,0434-01,Y,19
+10158,AP Computer Science A,03440000,Winchester,03440505,Winchester High School,0422-02,Y,20
+10158,AP Computer Science A,03480000,Worcester,03480512,Doherty Memorial High,1091-1-0,Y,11
+10158,AP Computer Science A,03480000,Worcester,03480605,Worcester Technical High,1091-1-0,Y,8
+10158,AP Computer Science A,03480000,Worcester,03480605,Worcester Technical High,1091-2-0,Y,16
+10158,AP Computer Science A,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1953/02,Y,13
+10158,AP Computer Science A,04300000,Advanced Math and Science Academy Charter (District),04300305,Advanced Math and Science Academy Charter School,1953/01,Y,22
+10158,AP Computer Science A,04870000,Prospect Hill Academy Charter (District),04870550,Prospect Hill Academy Charter School,4631-1,Y,20
+10158,AP Computer Science A,04870000,Prospect Hill Academy Charter (District),04870550,Prospect Hill Academy Charter School,4724-1,Y,24
+10158,AP Computer Science A,04880000,South Shore Charter Public (District),04880550,South Shore Charter Public School,5207/01,Y,12
+10158,AP Computer Science A,04940000,Pioneer Charter School of Science (District),04940205,Pioneer Charter School of Science,Q1,Y,7
+10158,AP Computer Science A,06250000,Bridgewater-Raynham,06250505,Bridgewater-Raynham Regional,5090/01,Y,13
+10158,AP Computer Science A,06450000,Dennis-Yarmouth,06450505,Dennis-Yarmouth Regional High,0515/01,Y,20
+10158,AP Computer Science A,06580000,Dudley-Charlton Reg,06580505,Shepherd Hill Regional High,23529,Y,18
+10158,AP Computer Science A,06750000,Hamilton-Wenham,06750505,Hamilton-Wenham Regional High,2665-01,Y,21
+10158,AP Computer Science A,06800000,Hampden-Wilbraham,06800505,Minnechaug Regional High,0173-01,Y,*
+10158,AP Computer Science A,06800000,Hampden-Wilbraham,06800505,Minnechaug Regional High,0172-01,Y,9
+10158,AP Computer Science A,07000000,Martha's Vineyard,07000505,Martha's Vineyard Regional High,3656/01,Y,12
+10158,AP Computer Science A,07000000,Martha's Vineyard,07000505,Martha's Vineyard Regional High,3657/01,Y,12
+10158,AP Computer Science A,07050000,Masconomet,07050505,Masconomet Regional High School,5841-1,Y,10
+10158,AP Computer Science A,07050000,Masconomet,07050505,Masconomet Regional High School,5841-2,Y,15
+10158,AP Computer Science A,07100000,Mendon-Upton,07100510,Nipmuc Regional High,135-01,Y,14
+10158,AP Computer Science A,07300000,Northboro-Southboro,07300505,Algonquin Regional High,4863-01,Y,9
+10158,AP Computer Science A,07530000,Quabbin,07530505,Quabbin Regional High School,3583-001,Y,26
+10158,AP Computer Science A,07530000,Quabbin,07530505,Quabbin Regional High School,3582-001,Y,28
+10158,AP Computer Science A,07530000,Quabbin,07530505,Quabbin Regional High School,3581-001,Y,30
+10158,AP Computer Science A,07600000,Silver Lake,07600505,Silver Lake Regional High,290-1,Y,13
+10158,AP Computer Science A,07700000,Tantasqua,07700505,Tantasqua Regional Sr High,0258-01,Y,11
+10158,AP Computer Science A,07730000,Triton,07730505,Triton Regional High School,252-001,Y,6
+10158,AP Computer Science A,08050000,Blackstone Valley Regional Vocational Technical,08050605,Blackstone Valley,360-02,Y,*
+10158,AP Computer Science A,08180000,Franklin County Regional Vocational Technical,08180605,Franklin County Technical,ITCOMPSCI4-01,Y,9
+10158,AP Computer Science A,08290000,South Middlesex Regional Vocational Technical,08290605,Joseph P Keefe Technical High School,3200-01,Y,12
+10158,AP Computer Science A,08520000,Nashoba Valley Regional Vocational Technical,08520605,Nashoba Valley Technical High School,781-A1,Y,*
+10158,AP Computer Science A,08520000,Nashoba Valley Regional Vocational Technical,08520605,Nashoba Valley Technical High School,781-A,Y,6
+10158,AP Computer Science A,08600000,Pathfinder Regional Vocational Technical,08600605,Pathfinder Vocational Technical,CS1100AP-01,Y,8
+10158,AP Computer Science A,08600000,Pathfinder Regional Vocational Technical,08600605,Pathfinder Vocational Technical,CS1200AP-01,Y,9

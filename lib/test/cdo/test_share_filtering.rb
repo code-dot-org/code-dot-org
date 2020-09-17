@@ -57,7 +57,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_profanity
-    WebPurify.stubs(:find_potential_profanity).returns('damn')
+    WebPurify.stubs(:find_potential_profanities).returns(['damn'])
 
     program = generate_program('My Profanity', 'damn')
     assert_equal(
@@ -74,7 +74,7 @@ class ShareFilteringTest < Minitest::Test
     innocent_program = generate_program('My Innocent Program', 'funny tofu')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
-    WebPurify.stubs(:find_potential_profanity).returns(nil)
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
 
     # Blocked in English
     assert_equal(
@@ -107,7 +107,7 @@ class ShareFilteringTest < Minitest::Test
     innocent_program = generate_program('My Innocent Program', 'fickle')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
-    WebPurify.stubs(:find_potential_profanity).returns(nil)
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
 
     # Blocked in English
     assert_equal(

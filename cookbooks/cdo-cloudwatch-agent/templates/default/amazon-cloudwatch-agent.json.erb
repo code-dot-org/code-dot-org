@@ -1,0 +1,81 @@
+{
+  "metrics": {
+    "append_dimensions": {
+      "AutoScalingGroupName":"${aws:AutoScalingGroupName}",
+      "InstanceId":"${aws:InstanceId}"
+    },
+    "aggregation_dimensions": [["AutoScalingGroupName"], ["Environment"]],
+    "metrics_collected": {
+      "statsd": {},
+      "cpu": {
+        "totalcpu": true,
+        "measurement": [
+          "cpu_usage_idle",
+          "cpu_usage_nice",
+          "cpu_usage_iowait",
+          "cpu_usage_system",
+          "cpu_usage_user"
+        ],
+        "metrics_collection_interval": 1,
+        "append_dimensions": {
+          "Environment": "<%=node.chef_environment%>"
+        }
+      },
+      "disk": {
+        "measurement": [
+          "free",
+          "used_percent"
+        ],
+        "ignore_file_system_types": [
+          "sysfs", "devtmpfs", "squashfs", "tmpfs"
+        ],
+        "append_dimensions": {
+          "Environment": "<%=node.chef_environment%>"
+        }
+      },
+      "swap": {
+        "measurement": [
+          "swap_used",
+          "swap_free"
+        ],
+        "append_dimensions": {
+          "Environment": "<%=node.chef_environment%>"
+        }
+      },
+      "mem": {
+        "measurement": [
+          "mem_used_percent",
+          "mem_cached",
+          "mem_total"
+        ],
+        "metrics_collection_interval": 1,
+        "append_dimensions": {
+          "Environment": "<%=node.chef_environment%>"
+        }
+      },
+      "processes": {
+        "measurement": [
+          "processes_running",
+          "processes_sleeping",
+          "processes_total",
+          "processes_dead",
+          "total_threads"
+        ],
+        "append_dimensions": {
+          "Environment": "<%=node.chef_environment%>"
+        }
+      }
+    },
+    "force_flush_interval" : 30
+  },
+  "logs": {
+    "logs_collected": {
+      "files": {
+        "collect_list": <%= node.default['cdo-cloudwatch-agent']['log_files'].map do |name, path|
+          {log_group_name: "#{node.chef_environment}-#{name}", file_path: path}
+        end.to_json %>
+      }
+    },
+    "force_flush_interval" : 15
+  }
+}

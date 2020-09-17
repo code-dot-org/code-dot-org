@@ -1,0 +1,12 @@
+name 'CSD games cake challenge choice'
+editor_experiment ''
+display_name 'Challenges'
+description '
+Make It Your Own
+You just walked through someone else\'s plan for creating a game, so now it\'s time to make it your own. What additional features or challenges do you want to create?'
+
+sublevels
+level 'CSD U3 AnimationsMulti defender background'
+level 'CSD U3 AnimationsMulti defender randomizespeed'
+level 'CSD U3 AnimationsMulti defender changevisuals'
+level 'CSD U3 AnimationsMulti defender endgame'

@@ -1,4 +1,5 @@
 name 'cspu3_assess1_functionsfalse_2018_2019'
+editor_experiment ''
 wrong 'Functions are reusable programming abstractions.'
 wrong 'Functions help reduce the complexity of writing and maintaining programs.'
 right 'Functions cannot make calls to other functions within the same program.'
@@ -18,15 +19,12 @@ This answer refers to the fact that in defining a function you can call other fu
 
 For example:
 
-```
-function drawFlower(){
-    drawpetal();
-    drawpetal();
-    drawpetal();
-    drawpetal();
-}
-```
+	function drawFlower(){
+	    drawpetal();
+	    drawpetal();
+	    drawpetal();
+	    drawpetal();
+	}
 
 Assuming that `drawpetal()` is some other function you wrote (and does something) this is an example of one function calling another.
-
 MARKDOWN

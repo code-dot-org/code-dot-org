@@ -1,0 +1,16 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+.teacher-application-logged-out
+  .paragraph
+    To get started, you need to be logged into a Code.org account.
+
+  .paragraph
+    Please sign in or create an account:
+
+  #signin
+    = link_to "/users/sign_in?user_return_to=#{request.fullpath}", class: "paragraph" do
+      %button= I18n.t('nav.user.signin')
+
+    = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
+      %button.blue-button= I18n.t('nav.user.signup')

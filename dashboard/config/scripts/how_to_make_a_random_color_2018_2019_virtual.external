@@ -1,0 +1,93 @@
+name 'How to make a random color_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to make a random color
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Hey, we can use the same technique to make a random color!</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>I was thinking the same thing.  We can use the `rgb` command with 3 random numbers</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Right, so rather than hard-coding the string like <code>var color = rgb(230, 155, 0);</code> we can make 3 random numbers between 0-255, put each in a variable, and then use them to make the <code>color</code>.  </p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Yup.  I think the code should look something like this:</p>
+
+<pre><code>var R = randomNumber(0,255);
+var G = randomNumber(0,255);
+var B = randomNumber(0,255);
+
+var color = rgb(R, G, B);
+</code></pre>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Genius!  But wait a second. Now I'm worried about making our slightly different color. For testing with the orange we just added 20 to each of the R, G, and B values.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>We can do that now, too!  If we make <code>diffColor</code> after <code>color</code> we can just add 20 to each variable before making a new string.  </p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Right, the code should look like this:</p>
+
+<pre><code>R = R+20;  //add 20 to current value of R
+G = G+20;
+B = B+20;
+
+var diffColor = rgb(R, G, B);
+
+</code></pre>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Good, but I think there's still a problem.  What about numbers that are close to 255?  For example, there's a chance that the 3 random numbers we make will come out to be something like <code>(250, 250, 250)</code>.  If we add 20 to each of those the values will be over 255.  I don't know what happens if you try to specify a color with a value greater than 255.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Well, I know that's actually not a problem.  If you try to specify a color as something like <code>rgb(270, 290, 300)</code> the actual color will end up being <code>rgb(255,255,255)</code> anyway.  It doesn't break the system, I tried it back when we were doing turtle programming.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Okay, that's good news. But I just thought of another problem... </p>
+
+<p>Even if large values for RGB don't break the system, our problem is that the color won't look very different.  The difference between <code>rgb(250,250,250)</code> and <code>rgb(255,255,255)</code> is practically nothing.  It will look basically the same and the person won't be able to play very well.</p>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Hmmm. Right. Well...here's an idea.  What if we don't generate random numbers between 0 and 255?  What if we just generate random numbers between 0 and 235?  Then no matter what, if we add 20 it can't possibly go over 255.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Brilliant!  Okay so back when we generate the random color in the first place we should do this:</p>
+
+<pre><code>var R = randomNumber(0,235);
+var G = randomNumber(0,235);
+var B = randomNumber(0,235);
+
+var color = rgb(R, G, B);
+</code></pre>
+
+<p style="text-align: center"> ALEXIS</p>
+
+<p>Right and then you can use the same thing we came up with before - adding 20 to each of the RGB values to make <code>diffColor</code>.</p>
+
+<p style="text-align: center"> MICHAEL</p>
+
+<p>Nice. Okay, let's try it.</p>
+
+## Click continue to try it
+
+MARKDOWN

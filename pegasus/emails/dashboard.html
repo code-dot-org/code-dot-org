@@ -9,12 +9,12 @@ if defined?(from) && from != nil
   end
 end
 %>
-from: <%= formatted_from.inspect %>
-subject: <%= subject.inspect %>
-reply-to: <%= reply_to&.inspect %>
-cc: <%= cc&.inspect %>
-bcc: <%= bcc&.inspect %>
+from: <%= formatted_from.inspect.html_safe %>
+subject: <%= local_assigns.fetch(:subject, nil).inspect&.html_safe %>
+reply-to: <%= local_assigns.fetch(:reply_to, nil)&.inspect&.html_safe%>
+cc: <%= local_assigns.fetch(:cc, nil)&.inspect&.html_safe%>
+bcc: <%= local_assigns.fetch(:bcc, nil)&.inspect&.html_safe %>
 ---
-<%= body %>
+<%= local_assigns.fetch(:body, "").html_safe %>
 
-<img src="<%= tracking_pixel %>"/>
+<img src="<%= local_assigns.fetch(:tracking_pixel, "") %>"/>

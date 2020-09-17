@@ -86,6 +86,7 @@ export class PersonalProjectsTableActionsCell extends Component {
         {isEditing && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.onSave}
               color={Button.ButtonColor.orange}
               text={i18n.save()}
@@ -95,6 +96,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             />
             <br />
             <Button
+              __useDeprecatedTag
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}

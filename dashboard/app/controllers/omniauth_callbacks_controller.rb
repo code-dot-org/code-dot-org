@@ -22,6 +22,39 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # POST /users/auth/maker_google_oauth2
+  def maker_google_oauth2
+    if params[:secret_code].nil_or_empty?
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_no_code')
+      return render 'maker/login_code'
+    end
+
+    secret = Encryption.decrypt_string_utf8(params[:secret_code])
+    time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
+    time_difference = (Time.now - time) / 1.minute
+
+    # Reject - code was generated more than 5 minutes ago or incorrect provider
+    if time_difference >= 5
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
+      return render 'maker/login_code'
+    elsif !secret.ends_with?('google_oauth2')
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
+      return render 'maker/login_code'
+    else
+      secret.slice!(AuthenticationOption::GOOGLE)
+    end
+
+    # Check user id all numbers
+    if secret.scan(/\D/).empty?
+      # Look up user and use devise to sign user in
+      user = AuthenticationOption.find_by(credential_type: AuthenticationOption::GOOGLE, authentication_id: secret)&.user
+      sign_in_and_redirect user
+    else
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')
+      render 'maker/login_code'
+    end
+  end
+
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
@@ -52,10 +85,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
-    return head(:bad_request) unless can_connect_provider?
+    unless current_user&.migrated?
+      flash.alert = I18n.t('auth.migration_required')
+      return redirect_to edit_user_registration_path
+    end
 
     provider = auth_hash.provider.to_s
-    return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+    unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+      flash.alert = I18n.t('auth.invalid_provider', provider: provider)
+      return redirect_to edit_user_registration_path
+    end
 
     existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
 
@@ -424,14 +463,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def should_connect_provider?
-    return current_user && session[:connect_provider].present?
-  end
-
-  def can_connect_provider?
-    return false unless current_user&.migrated?
-
-    connect_flag_expiration = session.delete :connect_provider
-    connect_flag_expiration&.future?
+    return current_user && auth_params.fetch("action", nil) == "connect"
   end
 
   def get_connect_provider_errors(auth_option)

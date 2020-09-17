@@ -1,0 +1,14 @@
+name 'CSD U5 test datacount multi_2020'
+question 'What is the most popular of the animals, according to this chart?'
+right 'dog'
+wrong 'penguin'
+wrong 'frog'
+wrong 'giraffe'
+wrong 'It\’s impossible to tell from this information.'
+
+
+markdown <<MARKDOWN
+The following chart shows the relationship between favorite animals and favorite seasons. 
+
+<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35 AM.png' width="400px">
+MARKDOWN

@@ -1,6 +1,6 @@
 %div{id: 'main-logo'}
   %div{id: 'logo-container'}
     - if current_user
-      = link_to(image_tag('logo.png'), '/home', {id: "logo-img"})
+      = link_to(image_tag('logo.svg'), '/home', {id: "logo-img"})
     - else
-      = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo-img"})
+      = link_to(image_tag('logo.svg'), CDO.code_org_url, {id: "logo-img"})

@@ -40,6 +40,7 @@ import {
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 
 const ButtonState = {
   UP: 0,
@@ -443,9 +444,8 @@ Dance.prototype.reset = function() {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 };
 

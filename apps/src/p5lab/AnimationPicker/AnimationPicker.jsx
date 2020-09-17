@@ -39,6 +39,9 @@ class AnimationPicker extends React.Component {
     // Provided externally
     channelId: PropTypes.string.isRequired,
     allowedExtensions: PropTypes.string,
+    libraryManifest: PropTypes.object.isRequired,
+    hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -71,6 +74,9 @@ class AnimationPicker extends React.Component {
         onPickLibraryAnimation={this.props.onPickLibraryAnimation}
         onUploadClick={this.onUploadClick}
         playAnimations={this.props.playAnimations}
+        libraryManifest={this.props.libraryManifest}
+        hideUploadOption={this.props.hideUploadOption}
+        hideAnimationNames={this.props.hideAnimationNames}
       />
     );
   }
@@ -86,6 +92,7 @@ class AnimationPicker extends React.Component {
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
         fullWidth={true}
+        style={styles.dialog}
       >
         <HiddenUploader
           ref="uploader"

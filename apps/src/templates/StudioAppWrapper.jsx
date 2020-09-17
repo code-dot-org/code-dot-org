@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import FixZoomHelper from '../templates/FixZoomHelper';
+import HideToolbarHelper from '../templates/HideToolbarHelper';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
 
@@ -12,8 +14,7 @@ class StudioAppWrapper extends React.Component {
     assetUrl: PropTypes.func.isRequired,
     isEmbedView: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    children: PropTypes.node,
-    rotateContainerWidth: PropTypes.number
+    children: PropTypes.node
   };
 
   requiresLandscape() {
@@ -23,11 +24,10 @@ class StudioAppWrapper extends React.Component {
   render() {
     return (
       <div>
+        <FixZoomHelper />
+        <HideToolbarHelper />
         {this.requiresLandscape() && (
-          <RotateContainer
-            assetUrl={this.props.assetUrl}
-            width={this.props.rotateContainerWidth}
-          />
+          <RotateContainer assetUrl={this.props.assetUrl} />
         )}
         {this.props.children}
         <div className="clear" />

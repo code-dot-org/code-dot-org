@@ -22,7 +22,6 @@ class Ability
       # PLC Stuff
       Plc::Course,
       Plc::LearningModule,
-      Plc::Task,
       Plc::UserCourseEnrollment,
       Plc::CourseUnit,
       # PD models
@@ -47,7 +46,9 @@ class Ability
       Pd::Application::Teacher1920Application,
       Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
-      :maker_discount
+      :maker_discount,
+      :edit_manifest,
+      :update_manifest
     ]
     cannot :index, Level
 
@@ -65,9 +66,6 @@ class Ability
       can :manage, user
 
       can :create, Activity, user_id: user.id
-      can :save_to_gallery, UserLevel, user_id: user.id
-      can :create, GalleryActivity, user_id: user.id
-      can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
@@ -106,6 +104,7 @@ class Ability
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
+        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?
@@ -226,7 +225,8 @@ class Ability
         Library,
         Game,
         Level,
-        Course,
+        Lesson,
+        UnitGroup,
         Script,
         ScriptLevel,
         Video,
@@ -240,6 +240,8 @@ class Ability
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
+
+      can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
     end
 
     if user.persisted?
@@ -268,7 +270,7 @@ class Ability
         Activity,
         Game,
         Level,
-        Course,
+        UnitGroup,
         Script,
         ScriptLevel,
         UserLevel,

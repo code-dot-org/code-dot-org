@@ -19,7 +19,7 @@ To start let's just look at Design Mode and add a single UI element (a button) t
 
 | 5 | 6 |
 | :-------------: | :-------------: |
-| You can make the text that the user sees on the button text be whatever you like. | Scroll down to see other properties for a UI element might be "hiding" down below. | 
+| You can make the text that the user sees on the button text be whatever you like. | Scroll down to see other properties for a UI element that might be "hiding" down below. | 
 
 ### Vocabulary
 **User Interface (UI)** - The "User Interface" or **UI** of an app refers to how a person (user) interacts with the computer or app.  There are common patterns to user interfaces that you probably know about just from experience:

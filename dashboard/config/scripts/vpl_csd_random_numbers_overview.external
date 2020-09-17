@@ -1,0 +1,12 @@
+name 'VPL - CSD - Random Numbers Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Random Numbers
+
+
+Lesson 6 introduces students to the randomNumbers() block. In the following activity you will practice using this block. As you practice, think about where your students might struggle. What role will you play in supporting the students who struggle? Remember that productive struggle is good, but students may begin to shut down if they reach a point of frustration. How will you strike the balance of allowing productive struggle while preventing deep frustration when supporting your students? 
+
+MARKDOWN

@@ -14,6 +14,7 @@
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
+#  time_spent       :integer
 #
 # Indexes
 #
@@ -106,6 +107,11 @@ class UserLevel < ActiveRecord::Base
 
   def paired?
     driver? || navigator?
+  end
+
+  def calculate_total_time_spent(additional_time)
+    existing_time_spent = time_spent ? time_spent : 0
+    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
   end
 
   def submitted_or_resubmitted?

@@ -40,7 +40,7 @@ export const summarizedSectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool,
   script: PropTypes.object,
   sharing_disabled: PropTypes.bool,
-  stage_extras: PropTypes.bool,
+  lesson_extras: PropTypes.bool,
   studentCount: PropTypes.number,
   students: PropTypes.array,
   teacherName: PropTypes.string

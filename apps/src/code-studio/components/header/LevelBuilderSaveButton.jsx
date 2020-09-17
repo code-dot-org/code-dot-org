@@ -33,7 +33,7 @@ class LevelBuilderSaveButton extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{display: 'flex'}}>
         <div className="project_name_wrapper header_text">
           <div className="project_name header_text">
             Levelbuilder: edit start code

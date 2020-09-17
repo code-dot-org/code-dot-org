@@ -61,6 +61,12 @@ class SecretsTest < Minitest::Test
     assert_match /Key: missing_key/, e.message
   end
 
+  def test_required_no_keys
+    secrets = Cdo::Secrets.new
+    secrets.expects(:client).never
+    assert_equal({}, secrets.required!)
+  end
+
   def test_create
     @secrets.put('test_create', 123)
     assert_equal '123', @secrets.get!('test_create')

@@ -2,13 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import Select from 'react-select';
-import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 
 export class ScholarshipDropdown extends React.Component {
   static propTypes = {
     scholarshipStatus: PropTypes.string,
+    dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool.isRequired
   };
 
   render() {
@@ -18,8 +19,9 @@ export class ScholarshipDropdown extends React.Component {
           clearable={false}
           value={this.props.scholarshipStatus}
           onChange={this.props.onChange}
-          options={ScholarshipDropdownOptions}
-          disabled={this.props.disabled}
+          options={this.props.dropdownOptions}
+          // Only workshop admins can change scholarship status now
+          disabled={this.props.disabled || !this.props.isWorkshopAdmin}
         />
       </FormGroup>
     );

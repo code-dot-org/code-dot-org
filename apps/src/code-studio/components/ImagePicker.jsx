@@ -84,7 +84,7 @@ export default class ImagePicker extends React.Component {
       !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = (
-        <div>
+        <div id="modeSwitch">
           <p onClick={this.setFileMode} style={styles.fileModeToggle}>
             My Files
           </p>

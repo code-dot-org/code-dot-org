@@ -1,0 +1,72 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:01.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": {
+        "params": [
+          "\"message\""
+        ],
+        "paletteParams": [
+          "\"message\""
+        ]
+      },
+      "declareNoAssign_x": null,
+      "assign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "var score;\r\nscore = 0;\r\nconsole.log(\"The value of score is:\");\r\nconsole.log(score);",
+    "long_instructions": "# Variables Toolbox\r\nLet's get started with the most basic example of using and controlling the computer's memory with variables. The toolbox has a couple of new commands for working with variables.\r\n\r\n<img src=\"https://images.code.org/056a735a96a603e23768d66f0de32961-image-1445462590619.png\" style=\"width: 350px; float:right\">\r\n\r\nWe've given you some starter code that does three things:\r\n\r\n1. **Creates** a variable called `score`\r\n2. **Assigns** the value *0* to `score`\r\n3. **Displays** the value of the `score` to the console (see hint below about quotes)\r\n\r\n\r\n# Do This:\r\nYou're going to add another variable, assign it a value, and then display it to the console.\r\nUse the starting code as a model for what you need to create now.\r\n<img src=\"https://images.code.org/72744382133081947777e67a5988d4ea-image-1445462803999.gif\" style=\"float: right; width: 350px\">\r\n\r\n* **Create a new variable** by dragging out the `var` block.\r\n* **Change the name of the variable** from the default `x` to `lives` (see animation at right).\r\n* **Set the value of `lives` to be 3**.\r\n* **Add** `console.log` **messages** to show the value of `lives`.\r\n\r\nThe output in the debug console should look like this:\r\n \r\n<img src=\"https://images.code.org/6405a3ed95ca3125ea1b2c9ffbdffa94-image-1445349849482.png\" style=\"border: solid 1px gray\">\r\n\r\n<details>\r\n<summary>\r\n  Debugging Tip: Displaying values of variables [click to expand]\r\n</summary>\r\n\r\n   <strong>NOTE:</strong> To print the value of a variable you *should not* use quotes.**\r\n   Notice the difference between these two statements: <br>\r\n   `console.log(\"score\")`<br>\r\n   `console.log(score)`<br>\r\n   It's subtle but important:\r\n   <br>\r\n   <li>When `console.log` sees quotation marks it thinks you want to print out the literal characters in the quotes.\r\n   <li>When `console.log` sees something **without quotation marks** it assumes you're trying to print a variable, and it goes to retrieve its value and displays that. </li>\r\n \r\n</details>",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "short_instructions": "Add another variable called \"lives\" and set the value to 3. Print the value of the variable to the console. (Click to see full instructions)",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "video_key": "csp_applab_variables_1",
+    "encrypted_examples": "V2c8ARZV5yEDk0wj1lBPB5J70Ay70xQ6TrCgcHZydJYasLC1VtRgoEIB8And\nVAOI\n",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17126,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:03:17 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 20:04:11 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 20:05:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 20:06:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 04:03:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

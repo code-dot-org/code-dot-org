@@ -1,0 +1,8 @@
+name 'CSD web keyboard challenge choice_virtual_2020'
+display_name 'Keyboard Input Challenges'
+description 'Try out these new blocks and challenges with keyboard input.'
+
+sublevels
+level 'CSD U3 - complex - key up and down_virtual_2020'
+level 'CSD U3 Direction Animations_2018_virtual_2020'
+level 'CSD U3 L12 Freeplay_virtual_2020'

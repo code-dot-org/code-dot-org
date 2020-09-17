@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
+import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -105,6 +106,89 @@ describe('StudioApp', () => {
         expect(listener).to.have.been.calledOnce;
       });
     });
+
+    describe('The StudioApp.resetButtonClick function', () => {
+      let studio, reportSpy;
+      beforeEach(() => {
+        studio = studioApp();
+        studio.onResetPressed = () => {};
+        studio.toggleRunReset = () => {};
+        studio.clearHighlighting = () => {};
+        studio.isUsingBlockly = () => {
+          return false;
+        };
+        studio.reset = () => {};
+
+        reportSpy = sinon.spy();
+        studio.report = reportSpy;
+      });
+
+      it('Sets hasReported to false', () => {
+        studio.hasReported = true;
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.not.been.called;
+      });
+
+      it('Calls `report` if it has not yet been called', () => {
+        studio.hasReported = false;
+        studio.config = {level: {}};
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.been.calledOnce;
+        delete studio.config;
+      });
+    });
+
+    describe('The StudioApp.report function', () => {
+      let clock, studio, onAttemptSpy;
+      beforeEach(() => {
+        clock = sinon.useFakeTimers();
+        studio = studioApp();
+        studio.feedback_ = {
+          canContinueToNextLevel: () => {},
+          getNumBlocksUsed: () => {}
+        };
+
+        onAttemptSpy = sinon.spy();
+        studio.onAttempt = onAttemptSpy;
+      });
+
+      afterEach(() => {
+        clock.restore();
+      });
+
+      it('sets the milestoneStartTime to the current time', () => {
+        studio.milestoneStartTime = 0;
+        clock.tick(2000);
+
+        studio.report({});
+
+        expect(studio.milestoneStartTime).to.equal(2000);
+      });
+
+      it('sets hasReported to true', () => {
+        studio.hasReported = false;
+        studio.report({});
+        expect(studio.hasReported).to.be.true;
+      });
+
+      it('calculates the timeSinceLastMilestone', () => {
+        studio.milestoneStartTime = 1000;
+        studio.initTime = 1000;
+        clock.tick(3000);
+
+        studio.report({});
+
+        expect(onAttemptSpy).to.have.been.calledWith({
+          pass: undefined,
+          time: 2000,
+          timeSinceLastMilestone: 2000,
+          attempt: 0,
+          lines: undefined
+        });
+      });
+    });
   });
 
   describe('The StudioApp.makeFooterMenuItems function', () => {
@@ -182,6 +266,36 @@ describe('StudioApp', () => {
     });
   });
 
+  describe('playAudio', () => {
+    let playStub, isPlayingStub;
+    beforeEach(() => {
+      playStub = sinon.stub(Sounds.getSingleton(), 'play');
+      isPlayingStub = sinon.stub(Sounds.getSingleton(), 'isPlaying');
+    });
+
+    afterEach(() => {
+      playStub.restore();
+      isPlayingStub.restore();
+    });
+
+    it('does not play audio over itself when noOverlap is true', () => {
+      isPlayingStub.onCall(0).returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).not.to.have.been.called;
+
+      isPlayingStub.onCall(1).returns(false);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).to.have.been.calledOnce;
+    });
+
+    it('does play audio over itself when noOverlap is false or unspecified', () => {
+      isPlayingStub.returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: false});
+      studioApp().playAudio('testAudio');
+      expect(playStub).to.have.been.calledTwice;
+    });
+  });
+
   describe('loadLibraryBlocks', () => {
     const initialConfig = {
       level: {
@@ -227,15 +341,22 @@ describe('StudioApp', () => {
       expect(config.dropletConfig.blocks).to.deep.equal(targetBlocks);
     });
 
-    it('given a library, adds all library closures to libraryCode', () => {
+    it('given a library, adds all library closures to projectLibraries', () => {
       let config = initialConfig;
-      let librarycode =
-        createLibraryClosure(sampleLibrary.libraries[0]) +
-        createLibraryClosure(sampleLibrary.libraries[1]);
+      let librarycode = [
+        {
+          name: sampleLibrary.libraries[0].name,
+          code: createLibraryClosure(sampleLibrary.libraries[0])
+        },
+        {
+          name: sampleLibrary.libraries[1].name,
+          code: createLibraryClosure(sampleLibrary.libraries[1])
+        }
+      ];
 
       config.level.libraries = sampleLibrary.libraries;
       studioApp().loadLibraryBlocks(config);
-      expect(config.level.libraryCode).to.deep.equal(librarycode);
+      expect(config.level.projectLibraries).to.deep.equal(librarycode);
     });
 
     it('given a library, adds all functions to codeFunctions', () => {
@@ -254,8 +375,15 @@ describe('StudioApp', () => {
   });
 
   describe('addChangeHandler', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+    });
 
     it('calls a handler in response to a blockly change', () => {
       let changed = false;

@@ -57,6 +57,7 @@ class StageLock extends React.Component {
       <div style={styles.main}>
         <div style={styles.buttonContainer} className="uitest-locksettings">
           <Button
+            __useDeprecatedTag
             onClick={this.openLockDialog}
             color={Button.ButtonColor.gray}
             text={saving ? i18n.saving() : i18n.lockSettings()}

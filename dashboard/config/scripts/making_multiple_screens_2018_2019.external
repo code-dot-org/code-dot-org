@@ -1,4 +1,5 @@
 name 'Making Multiple Screens_2018_2019'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -16,7 +17,7 @@ A screen is just a UI element like anything else in Design Mode.  But it has a f
 
 1. A screen is a UI element that contains other UI elements.
 2. Only one screen can be visible at a time
-3. Only elements that "belong" to a screen will visible when that screen is active.
+3. Only elements that "belong" to a screen will be visible when that screen is active.
 4. **Multiple screens, but only one coding workspace**
    * Even though your *design elements* might be spread across multiple screens, your code does not get broken up like that.
    * There is only one coding workspace, that will still house all of your code for the app.

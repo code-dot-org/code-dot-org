@@ -26,7 +26,7 @@ REPEAT 1000 TIMES
 	}
 }
 DISPLAY (fullMeal)
-DISPLAY ("full means were ordered,")
+DISPLAY ("full meals were ordered,")
 DISPLAY (sideDish)
 DISPLAY ("side dishes were ordered.")
 ```

@@ -55,8 +55,8 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/reports');
   };
 
-  handleSurveyResultsClick = () => {
-    this.context.router.push('/survey_results');
+  handleLegacySurveySummariesClick = () => {
+    this.context.router.push('/legacy_survey_summaries');
   };
 
   handleFilterClick = e => {
@@ -87,6 +87,10 @@ export class WorkshopIndex extends React.Component {
       Organizer,
       ProgramManager
     );
+    const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
+      CsfFacilitator
+    );
 
     return (
       <div>
@@ -105,9 +109,9 @@ export class WorkshopIndex extends React.Component {
               Attendance Reports
             </Button>
           )}
-          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
-            <Button onClick={this.handleSurveyResultsClick}>
-              Facilitator Survey Results
+          {canSeeLegacySurveySummaries && (
+            <Button onClick={this.handleLegacySurveySummariesClick}>
+              Legacy Facilitator Survey Summaries
             </Button>
           )}
           <Button

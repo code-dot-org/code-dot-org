@@ -9,11 +9,11 @@ module WebPurify
     'ja' => 'jp'
   }.freeze
 
-  # Returns the first instance of profanity in text (if any) or nil (if none).
+  # Returns the all profanities in text (if any) or nil (if none).
   # @param [String] text The text to search for profanity within.
   # @param [Array[String]] language_codes The set of languages to search for profanity in.
-  # @return [String, nil] The first instance of profanity (if any) or nil (if none).
-  def self.find_potential_profanity(text, language_codes = ['en'])
+  # @return [Array<String>, nil] The profanities (if any) or nil (if none).
+  def self.find_potential_profanities(text, language_codes = ['en'])
     return nil unless CDO.webpurify_key
     # Convert language codes to a list of two character codes, comma separated.
     language_codes = language_codes.
@@ -30,6 +30,7 @@ module WebPurify
     result = JSON.parse(open(url).read)
 
     expletive = result['rsp'] && result['rsp']['expletive']
-    expletive.is_a?(Array) ? expletive.first : expletive
+    return nil unless expletive
+    expletive.is_a?(Array) ? expletive : [expletive]
   end
 end

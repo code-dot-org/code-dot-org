@@ -127,10 +127,14 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+    # Make sure that the encrypted property is a boolean
+    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
     scripts = @level.script_levels.map(&:script)
     @visible = scripts.reject(&:hidden).any?
     @pilot = scripts.select(&:pilot_experiment).any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    fb = FirebaseHelper.new('shared')
+    @dataset_library_manifest = fb.get_library_manifest
   end
 
   # GET /levels/:id/get_rubric
@@ -448,18 +452,21 @@ class LevelsController < ApplicationController
   # to Firehose / Redshift.
   def log_save_error(level)
     FirehoseClient.instance.put_record(
-      study: 'level-save-error',
-      # Make it easy to count most frequent field name in which errors occur.
-      event: level.errors.keys.first,
-      # Level ids are different on levelbuilder, so use the level name. The
-      # level name can be joined on, against the levels table, to determine the
-      # level type or other level properties.
-      data_string: level.name,
-      data_json: {
-        errors: level.errors.to_h,
-        # User ids are different on levelbuilder, so use the email.
-        user_email: current_user.email,
-      }.to_json
+      :analysis,
+      {
+        study: 'level-save-error',
+        # Make it easy to count most frequent field name in which errors occur.
+        event: level.errors.keys.first,
+        # Level ids are different on levelbuilder, so use the level name. The
+        # level name can be joined on, against the levels table, to determine the
+        # level type or other level properties.
+        data_string: level.name,
+        data_json: {
+          errors: level.errors.to_h,
+          # User ids are different on levelbuilder, so use the email.
+          user_email: current_user.email,
+        }.to_json
+      }
     )
   end
 end

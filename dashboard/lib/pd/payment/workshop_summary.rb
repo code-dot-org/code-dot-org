@@ -72,6 +72,12 @@ module Pd::Payment
       teacher_summaries.select(&:qualified?).map(&:days).reduce(0, :+)
     end
 
+    # Get number of teachers attending all sessions, except for admin and counselor PD where logging in
+    # to attend is not required.
+    def num_scholarship_teachers_attending_all_sessions
+      workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(true).count : nil
+    end
+
     def generate_organizer_report_line_item(with_payment = false)
       line_item = {
         organizer_name: workshop.organizer&.name,
@@ -83,7 +89,7 @@ module Pd::Payment
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
-        num_scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
+        num_scholarship_teachers_attending_all_sessions: num_scholarship_teachers_attending_all_sessions
       }
 
       # Attendance days 1-5

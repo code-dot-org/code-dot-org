@@ -1,6 +1,7 @@
 hidden false
 has_lesson_plan true
 
-stage 'Text Compression'
+lesson 'Text Compression', display_name: 'Text Compression'
 level 'Text Compression', named: true
 level 'Widget: Text Compression', named: true
+

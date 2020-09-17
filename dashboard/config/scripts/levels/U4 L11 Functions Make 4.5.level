@@ -46,14 +46,14 @@
     "mini_rubric": "false",
     "long_instructions": "<img src=\"https://images.code.org/c9952c58beb8ef2b9c339bb168e3c778-image-1551731483418.gif\" style=\"float:right\" width=\"350\">\r\n\r\n# Do This\r\n\r\n**Step 5 - More onEvents**\r\n* Add an `onEvent` for each input (dropdowns, border picture buttons, slider). For each `onEvent`, follow these instructions:\r\n\t* Consider which variable will be updated when that `onEvent` is triggered.\r\n\t* Update the variable using `getText()` or `getNumber()` or an image URL\r\n    \t* **Hint:** To find the image URL of the border pictures, look at the buttons in Design Mode. They are each stored as a String with quotes around them.\r\n    * Add a call to the `updateScreen()` function\r\n\t* What type of action will trigger each `onEvent`? In this case, it might be \"change\", \"input\", or \"click\". Update each `onEvent` to the correct action.\r\n\t* Test each `onEvent` before adding the next one.\r\n* In each of the onEvents for the border buttons, update the `borderPictureName` variable.\r\n\t* The floral button assigns the value `\"floral\"` to `borderPictureName`\r\n    * The circles button assigns the value `\"circles\"` to `borderPictureName`\r\n* **Check:** There should be 6 total `onEvent` blocks.\r\n",
     "project_template_level_name": "U4 L11 Functions Make Template",
-    "map_reference": "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
+    "map_reference": "/docs/concepts/patterns/when-to-make-a-function/",
     "preload_asset_list": null,
     "encrypted": "false",
     "encrypted_examples": [
 
     ],
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+      "/docs/concepts/patterns/update-screen-pattern/"
     ]
   },
   "published": true,

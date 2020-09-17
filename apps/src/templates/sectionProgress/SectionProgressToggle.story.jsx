@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
-import {ViewType} from './sectionProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 
 export default storybook => {
   function isSummaryTrue() {

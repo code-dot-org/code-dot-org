@@ -7,7 +7,6 @@
 set -e
 
 function cp_in() {
-  echo "$1 => $2"
   cp $1 $2
 }
 
@@ -61,6 +60,5 @@ cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locale
 orig_dir=pegasus/cache/i18n
 loc_dir=i18n/locales/source/pegasus
 mkdir -p $loc_dir
-
 perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/en-US.yml
 cp_in $orig_dir/en-US.yml $loc_dir/mobile.yml

@@ -1,0 +1,27 @@
+name 'VPL - CSD - Module 4 - L8'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson 8:  Designing Apps for Good 
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goals
+
+**Consider how you will use the "App Design Kick Off" activity guide to support healthy dynamics in your classroom**
+
+## Investigation Tasks
+
+* Read the section of the lesson plan called <a href="https://curriculum.code.org/csd-20/unit4/8/" target="_blank">"App Design Kick Off"</a>
+* Read the <a href="https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/edit" target="_blank"> Activity Guide - App Design Kick Off</a>
+
+
+
+
+
+
+MARKDOWN

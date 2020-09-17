@@ -1,0 +1,19 @@
+name 'courseF_markdown_forloops_end_2019_2020'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "for loops"!**
+
+### **For loops are loops where you set the start, stop, and step values.**
+
+### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.
+
+### More control means you can solve puzzles a lot faster! 
+
+---
+
+## **Vocab to Know**
+
+### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)
+
+MARKDOWN

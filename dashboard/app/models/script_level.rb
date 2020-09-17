@@ -30,11 +30,10 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
+  belongs_to :script
+  belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
-  belongs_to :script, inverse_of: :script_levels
-  belongs_to :stage, inverse_of: :script_levels
   has_many :callouts, inverse_of: :script_level
-  has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
   validate :anonymous_must_be_assessment
 
@@ -51,6 +50,55 @@ class ScriptLevel < ActiveRecord::Base
     progression
     challenge
   )
+
+  # Chapter values order all the script_levels in a script.
+  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+    script_level_position = 0
+
+    raw_script_levels.map do |raw_script_level|
+      raw_script_level.symbolize_keys!
+
+      # variants are deprecated. when cloning a script, retain only the first
+      # active level in each script level, discarding any variants.
+      if new_suffix && raw_script_level[:levels].length > 1
+        remove_variants(raw_script_level)
+      end
+
+      properties = raw_script_level.delete(:properties) || {}
+
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+
+      script_level_attributes = {
+        script_id: script.id,
+        stage_id: lesson.id,
+        chapter: (counters.chapter += 1),
+        position: (script_level_position += 1),
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment],
+        properties: properties.with_indifferent_access
+      }
+      script_level = script.script_levels.detect do |sl|
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+          sl.levels == levels
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
+        sl.levels = levels
+      end
+
+      script_level.assign_attributes(script_level_attributes)
+      script_level.save! if script_level.changed?
+      script_level
+    end
+  end
+
+  def self.remove_variants(raw_script_level)
+    first_active_level = raw_script_level[:levels].find do |raw_level|
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      !(variant && variant[:active] == false)
+    end
+    raw_script_level[:levels] = [first_active_level]
+    raw_script_level[:properties].delete(:variants)
+  end
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -118,15 +166,19 @@ class ScriptLevel < ActiveRecord::Base
     !has_another_level_to_go_to?
   end
 
-  def next_level_or_redirect_path_for_user(user, extras_stage=nil)
-    if bubble_choice?
-      # Redirect user back to the BubbleChoice activity page.
+  def next_level_or_redirect_path_for_user(
+    user,
+    extras_lesson=nil,
+    bubble_choice_parent=false
+  )
+    if bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
       level_to_follow = self
     elsif valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
       # level (example: if you start a sequence of assessments associated with an
       # unplugged level you should continue on that sequence instead of skipping to
-      # next stage)
+      # next lesson)
       level_to_follow = next_progression_level(user)
     else
       # don't ever continue to a locked/hidden level
@@ -149,9 +201,9 @@ class ScriptLevel < ActiveRecord::Base
         end
       end
     elsif bonus
-      # If we got to this bonus level from another stage's stage extras, go back
-      # to that stage
-      script_stage_extras_path(script.name, (extras_stage || stage).relative_position)
+      # If we got to this bonus level from another lesson's lesson extras, go back
+      # to that lesson
+      script_stage_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -177,9 +229,10 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if stage && stage.unplugged?
+    return false if lesson && lesson.unplugged?
+    return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
-    return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
+    return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
     return false if bonus
     true
@@ -190,13 +243,13 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def locked?(user)
-    return false unless stage.lockable?
+    return false unless lesson.lockable?
     return false if user.authorized_teacher?
 
-    # All levels in a stage key their lock state off of the last script_level
-    # in the stage, which is an assessment. Thus, to answer the question of
+    # All levels in a lesson key their lock state off of the last script_level
+    # in the lesson, which is an assessment. Thus, to answer the question of
     # whether the nth level is locked, we must look at the last level
-    last_script_level = stage.script_levels.last
+    last_script_level = lesson.script_levels.last
     user_level = UserLevel.find_by(
       user: user,
       script: last_script_level.script,
@@ -205,7 +258,7 @@ class ScriptLevel < ActiveRecord::Base
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(stage)
+    user_level.nil? || user_level.locked?(lesson)
   end
 
   def previous_level
@@ -215,7 +268,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def end_of_stage?
-    stage.script_levels.to_a.last == self
+    lesson.script_levels.to_a.last == self
   end
 
   def end_of_script?
@@ -223,8 +276,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    return false unless assessment
-    !!level.properties["pages"]
+    assessment && level.is_a?(LevelGroup)
   end
 
   def anonymous?
@@ -236,26 +288,26 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def name
-    stage.localized_name
+    lesson.localized_name
   end
 
   def report_bug_url(request)
-    message = "Bug in Course #{script.name} Stage #{stage.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} lesson #{lesson.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   def level_display_text
     if level.unplugged?
       I18n.t('unplugged_activity')
-    elsif stage.unplugged?
+    elsif lesson.unplugged?
       position - 1
     else
       position
     end
   end
 
-  def stage_total
-    stage.script_levels.to_a.size
+  def lesson_total
+    lesson.script_levels.to_a.size
   end
 
   def path
@@ -298,10 +350,18 @@ class ScriptLevel < ActiveRecord::Base
       display_as_unplugged: display_as_unplugged
     }
 
-    summary[:progression] = progression if progression
+    if progression
+      summary[:progression] = progression
+      localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+      summary[:progression_display_name] = localized_progression_name
+    end
 
     if named_level
       summary[:name] = level.display_name || level.name
+    end
+
+    if bubble_choice?
+      summary[:sublevels] = level.summarize_sublevels(script_level: self)
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -317,8 +377,8 @@ class ScriptLevel < ActiveRecord::Base
     if include_prev_next
       # Add a previous pointer if it's not the obvious (level-1)
       if previous_level
-        if previous_level.stage.absolute_position != stage.absolute_position
-          summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
+        if previous_level.lesson.absolute_position != lesson.absolute_position
+          summary[:previous] = [previous_level.lesson.absolute_position, previous_level.position]
         end
       else
         # This is the first level in the script
@@ -328,7 +388,7 @@ class ScriptLevel < ActiveRecord::Base
       # Add a next pointer if it's not the obvious (level+1)
       if end_of_stage?
         if next_level
-          summary[:next] = [next_level.stage.absolute_position, next_level.position]
+          summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
           # This is the final level in the script
           summary[:next] = false
@@ -342,14 +402,14 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
-  # Given a script level summary for the last level in a stage that has already
+  # Given a script level summary for the last level in a lesson that has already
   # been determined to be a long assessment, returns an array of additional
   # level summaries.
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
     level_id = last_level_summary[:ids].first
     level = Script.cache_find_level(level_id)
-    extra_level_count = level.properties["pages"].length - 1
+    extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
@@ -361,31 +421,35 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
-      level_id: level.id,
-      name: level.display_name || level.name,
       type: level.type,
-      map: JSON.parse(level.try(:maze) || '[]'),
-      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
-      skin: level.try(:skin),
-      thumbnail_url: level.try(:thumbnail_url),
-      solution_image_url: level.try(:solution_image_url),
-      level: level.summarize_as_bonus.camelize_keys,
-    }.camelize_keys
+      description: level.try(:bubble_choice_description),
+      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
+      url: build_script_level_url(self),
+      perfect: perfect,
+      maze_summary: {
+        map: JSON.parse(level.try(:maze) || '[]'),
+        serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
+        skin: level.try(:skin),
+        level: level.summarize_as_bonus.camelize_keys
+      }.camelize_keys
+    }
   end
 
   def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
-    # Just get the most recently stage extra they worked on
-    stage_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
-    if stage_extra_user_level
+    # Just get the most recently lesson extra they worked on
+    lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
+    if lesson_extra_user_level
       {
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
-      }.merge!(stage_extra_user_level.attributes)
+      }.merge!(lesson_extra_user_level.attributes)
     else
       {
         bonus: true,
@@ -409,7 +473,7 @@ class ScriptLevel < ActiveRecord::Base
                [level]
              end
 
-    user_level = student.last_attempt_for_any(levels)
+    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 
@@ -445,14 +509,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summary_for_feedback
-    lesson_num = stage.lockable ? stage.absolute_position : stage.relative_position
+    lesson_num = lesson.lockable ? lesson.absolute_position : lesson.relative_position
 
     {
-      lessonName: stage.name,
+      lessonName: lesson.name,
       lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: stage.script.localized_title
+      unitName: lesson.script.title_for_display
     }
   end
 
@@ -464,12 +528,12 @@ class ScriptLevel < ActiveRecord::Base
     position.to_s
   end
 
-  # Is this script_level hidden for the current section, either because the stage
+  # Is this script_level hidden for the current section, either because the lesson
   # it is contained in is hidden, or the script it is contained in is hidden.
   def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil? ||
-      !SectionHiddenScript.find_by(script_id: stage.script.id, section_id: section_id).nil?
+    !SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
+      !SectionHiddenScript.find_by(script_id: lesson.script.id, section_id: section_id).nil?
   end
 
   # Given the signed-in user and an optional user that is being viewed

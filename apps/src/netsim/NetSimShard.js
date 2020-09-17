@@ -5,7 +5,7 @@
 
 import $ from 'jquery';
 var NetSimTable = require('./NetSimTable');
-var PubSubService = require('./PubSubService');
+import createPubSub from '../lib/util/PubSubService';
 
 /**
  * PubSub event key for events invalidating all tables.
@@ -28,8 +28,8 @@ var NetSimShard = (module.exports = function(shardID, pubSubConfig) {
   /** @type {string} */
   this.id = shardID;
 
-  /** @type {PubSubService} */
-  this.pubSub = PubSubService.create(pubSubConfig);
+  /** @type {IPubSubService} */
+  this.pubSub = createPubSub(pubSubConfig);
 
   /** @type {PubSubChannel} */
   this.pubSubChannel = this.pubSub.subscribe(this.id);

@@ -1,14 +1,14 @@
 ---
-title: Návod
+title: Návod jak na to
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Jak naplánovat vaši Hodinu kódu
 
-### Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu je jednoduchá i pro začátečníky! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu se snadno provádí i pro začátečníky! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
 ### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 

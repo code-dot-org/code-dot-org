@@ -1,0 +1,33 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**How does the code work?**]\r\nFor the code for the winter class to work, it needs to both create a winter class and add elements to the class.\r\n\r\nThe class is created in the style sheet, with the following code.\r\n\r\n```\r\n.winter {\r\n  color: rgb(195,230,255);\r\n}\r\n```\r\n\r\nThis code creates a class called `winter` and makes everything in the class our winter blue, which has the RGB values of (195,230,255).\r\n\r\nThe code that adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds everything inside the tag to the class.\r\n:::\r\n\r\n::: details [**How do I create a new rule-set?**]\r\n\r\nYou can create a new rule-set by following the pattern that the `winter` and `spring` classes used in the style sheet.\r\n```\r\n.winter {\r\n  color: rgb(195,230,255);\r\n}\r\n```\r\n\r\nThe selector name and the color values will be different, but the following pattern is always the same.\r\n\r\n```\r\n.classname {\r\n  property1: value1;\r\n  property2: value2;\r\n}\r\n```\r\n:::\r\n\r\n::: details [**Why does the selector have a period in front of it?**]\r\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\r\n:::\r\n\r\n::: details [**Why would a web developer use classes?**]\r\n\r\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Summer and Autumn Classes\r\n\r\n* Inside the style sheet, create a new rule-set for a \"summer\" class.\r\n* Add a rule to set the text in the summer class to a summer  color.\r\n* Add the summer class to the summer elements in the HTML page.\r\n* Do the same for the autumn class.",
+    "project_template_level_name": "CSDU2 - Seasons Template_2020",
+    "instructions_important": "false",
+    "encrypted_examples": "kyouZxIyhtpXbyaeYaPB+NEDjjkVtMw++5lWDL8Hc2Q2IWTkbHX6K2Z9pE9L\nCfdfRQtdw9ps3Xuhc4hBxIARfQ==\n",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 18372,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/"
+    ],
+    "map_reference": "/docs/concepts/css/classes/",
+    "encrypted": "false",
+    "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The summer class and rule-set are created correctly and all text in the summer section of the website is the chosen color, as indicated by the RGB code.",
+    "rubric_performance_level_2": "The summer class and rule-set are created and most text in the summer section of the website is affected by this class, but there may be a few minor errors for some parts of text.",
+    "rubric_performance_level_3": "The summer class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+    "rubric_performance_level_4": "The summer class or rule set are not created, or no website elements are put in the class."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:46:14 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-24 22:15:51 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:22:19 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-01-30 23:22:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 17:51:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 17:52:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-13 04:27:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-01 22:19:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-10-22 18:52:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+</Weblab>

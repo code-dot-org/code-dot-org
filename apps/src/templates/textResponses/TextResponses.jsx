@@ -186,6 +186,7 @@ class TextResponses extends Component {
             >
               {/* onClick functionality for Button handled by CSVLink */}
               <Button
+                __useDeprecatedTag
                 text={i18n.downloadCSV()}
                 onClick={() => {}}
                 color={Button.ButtonColor.white}

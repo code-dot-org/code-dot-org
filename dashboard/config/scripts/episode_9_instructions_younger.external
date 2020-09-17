@@ -1,0 +1,24 @@
+name 'Episode 9 Instructions younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Unplugged
+
+**Do This:** Play [The Big Event](https://curriculum.code.org/csf-19/coursec/14/) with a family member. 
+
+### Dance Party
+
+**Do This:** On the following practice levels, complete the Dance Party Hour of Code activity. 
+
+![](https://images.code.org/f91d03f71eabd7b19c583df7cda8a9bf-image-1589808114013.gif)
+
+---
+
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/stage/9/puzzle/2).*
+MARKDOWN

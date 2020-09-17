@@ -1,4 +1,5 @@
 has_lesson_plan true
 
-stage 'Frequency Analysis'
+lesson 'Frequency Analysis', display_name: 'Frequency Analysis'
 level 'Frequency Analysis'
+

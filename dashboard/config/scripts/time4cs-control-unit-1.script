@@ -1,10 +1,11 @@
 login_required true
-hideable_stages true
-stage_extras_available true
+hideable_lessons true
+lesson_extras_available true
 pilot_experiment 'time4cs-control'
 editor_experiment 'broward'
 
-stage 'Sequencing in Maze', flex_category: 'csf_sequencing'
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Sequencing in Maze', display_name: 'Sequencing in Maze'
 level 'courseD_video_ramp1_control', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_control', progression: 'Practice'
 level 'courseC_maze_debugging9_control', progression: 'Practice'
@@ -18,7 +19,8 @@ level 'courseC_maze_debugging7_control', progression: 'Challenge', challenge: tr
 level 'courseD_maze_ramp5a_control', progression: 'Practice'
 level 'courseD_maze_ramp5c_control', progression: 'Practice'
 
-stage 'Programming and Loops with the Artist', flex_category: 'csf_loops'
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Programming and Loops with the Artist', display_name: 'Programming and Loops with the Artist'
 level 'courseC_video_artist_control', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_control', progression: 'Practice'
 level 'courseC_artist_prog2_control', progression: 'Practice'
@@ -33,7 +35,8 @@ level 'ramp_artist_loops8_control', progression: 'Challenge', challenge: true
 bonus 'courseC_artist_prog_challenge1_control'
 bonus 'courseC_artist_prog_challenge2a_control'
 
-stage 'Conditionals in Minecraft: Voyage Aquatic', flex_category: 'csf_conditionals'
+lesson_group 'csf_conditionals', display_name: 'Conditionals'
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic'
 level 'CourseE_HOC 2018 Level_1_control', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_2_control', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_3_control', progression: 'Practice'
@@ -46,7 +49,7 @@ level 'CourseE_HOC 2018 Level_9b_control', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_10_control', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_11_control', progression: 'Practice'
 
-stage 'Conditionals', flex_category: 'csf_conditionals'
+lesson 'Conditionals', display_name: 'Conditionals'
 level 'courseD_video_whileIntro_control', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_control', progression: 'Prediction'
 level 'courseE_farmer_ramp11a_control', progression: 'Practice'
@@ -61,13 +64,15 @@ level 'courseE_video_BeeifElse_control', progression: '"If/Else" with the Bee'
 level 'courseE_farmer_ramp12f_control', progression: 'Challenge', challenge: true
 level 'courseE_farmer_ramp12g_control', progression: 'Practice'
 
-stage 'Events: The Big Event', flex_category: 'csf_events'
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
 level 'BigEvent-Unplugged_control'
 
-stage 'Simon Says', flex_category: 'csf_sprites'
+lesson_group 'csf_sprites', display_name: 'Sprites'
+lesson 'Simon Says', display_name: 'Simon Says'
 level 'SimonSays-Unplugged_control'
 
-stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_sprites'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprites with Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab_control', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_control', progression: 'Prediction'
 level 'Fish Tank 2-validated_control', progression: 'Mini-Project: Swimming Fish'
@@ -78,7 +83,7 @@ level 'Fish Tank 5-validated_control', progression: 'Mini-Project: Swimming Fish
 level 'Fish Tank 6-validated_control', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 7-validated_control', progression: 'Free Play'
 
-stage 'Alien Dance Party with Sprite Lab', flex_category: 'csf_sprites'
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab'
 level 'Dance Party 1-validated_control', progression: 'Prediction'
 level 'CDEF_video_SpritesInAction_control', progression: 'Video'
 level 'Dance Party 2_control', progression: 'Mini-Project: Alien Dance Moves'
@@ -89,10 +94,11 @@ level 'Dance Party 6_control', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party 7_control', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_control', progression: 'Mini-Project: Alien Dance Party'
 
-stage 'Private and Personal Information', flex_category: 'csf_digcit'
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information'
 level 'PrivatePersonalInformation-Unplugged_control'
 
-stage 'About Me', flex_category: 'csf_digcit'
+lesson 'About Me', display_name: 'About Me'
 level 'courseE_aboutme_1_control', progression: 'Free Play'
 level 'courseE_aboutme_2_control', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_3_control', progression: 'Mini-project: Interactive Poster'
@@ -100,10 +106,12 @@ level 'courseE_aboutme_4_control', progression: 'Mini-project: Interactive Poste
 level 'courseE_aboutme_5_control', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_6_control', progression: 'Mini-project: Interactive Poster'
 
-stage 'Access Ability', flex_category: 'csf_impacts'
+lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
+lesson 'Access Ability', display_name: 'Access Ability'
 level 'DesigningForAccessibilityMarkdownLevel_2019_control'
 
-stage 'Conditionals Review', flex_category: 'ramp_up'
+lesson_group 'ramp_up', display_name: 'Ramp-Up'
+lesson 'Conditionals Review', display_name: 'Conditionals Review'
 level 'courseD_video_whileIntro_control', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_control', progression: 'Prediction'
 level 'courseE_farmer_ramp11a_control', progression: 'Practice'
@@ -117,3 +125,4 @@ level 'courseE_farmer_ramp12e_control', progression: 'Practice'
 level 'courseE_video_BeeifElse_control', progression: '"If/Else" with the Bee'
 level 'courseE_farmer_ramp12f_control', progression: 'Challenge', challenge: true
 level 'courseE_farmer_ramp12g_control', progression: 'Practice'
+

@@ -25,7 +25,7 @@
 
 #homepage-container
 
-#workshop-links
+#workshop-links.container.main
   -if can? :read, Pd::Application::ApplicationBase
     %h1
       Application Dashboard
@@ -42,3 +42,17 @@
       = link_to pd_workshop_admins_path do
         %h3
           Directory for Workshop Admins
+    - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
+    -if courses_facilitated.any?
+      %h1
+        Facilitator Landing Page
+
+      -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
+        %h3
+          = link_to "CSF Facilitator Landing Page", "https://curriculum.code.org/plcsf/"
+      -if courses_facilitated.include? Pd::Workshop::COURSE_CSD
+        %h3
+          = link_to "CSD Facilitator Landing Page", "https://curriculum.code.org/plcsd/"
+      -if courses_facilitated.include? Pd::Workshop::COURSE_CSP
+        %h3
+          = link_to "CSP Facilitator Landing Page", "https://curriculum.code.org/plcsp/"

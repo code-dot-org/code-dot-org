@@ -40,6 +40,8 @@ import reducer, {
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
+  sortedSectionsList,
+  sortSectionsList,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -62,7 +64,7 @@ const sections = [
     login_type: 'picture',
     grade: '2',
     code: 'PMTKVH',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
@@ -78,7 +80,7 @@ const sections = [
     login_type: 'picture',
     grade: '11',
     code: 'DWGMFX',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -97,12 +99,12 @@ const sections = [
     login_type: 'email',
     grade: '10',
     code: 'WGYXTR',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
       id: 112,
-      name: 'csp1'
+      name: 'csp1-2017'
     },
     course_id: 29,
     createdAt: createdAt,
@@ -177,12 +179,12 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   },
   {
     id: 112,
     name: 'Unit 1: The Internet',
-    script_name: 'csp1',
+    script_name: 'csp1-2017',
     category: "'16-'17 CS Principles",
     position: 0,
     category_priority: 7
@@ -190,7 +192,7 @@ const validScripts = [
   {
     id: 113,
     name: 'Unit 2: Digital Information',
-    script_name: 'csp2',
+    script_name: 'csp2-2017',
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7
@@ -225,7 +227,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   }
 ];
 
@@ -681,7 +683,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -884,7 +886,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -1115,7 +1117,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'picture',
       grade: '2',
       code: 'PMTKVH',
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       script: null,
       course_id: 29,
@@ -1131,7 +1133,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(
         section.sharing_disabled,
@@ -1256,7 +1258,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.validAssignments,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
+      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1716,10 +1718,10 @@ describe('teacherSectionsRedux', () => {
 
   describe('getVisibleSections', () => {
     it('filters out hidden sections', () => {
-      const expectedVisibleSections = {
-        11: {id: 11, hidden: false},
-        1: {id: 1, hidden: null}
-      };
+      const expectedVisibleSections = [
+        {id: 11, hidden: false},
+        {id: 1, hidden: null}
+      ];
       const state = {
         teacherSections: {
           sections: {
@@ -1730,10 +1732,7 @@ describe('teacherSectionsRedux', () => {
       };
       const actualVisibleSections = getVisibleSections(state);
 
-      assert.deepEqual(
-        Object.values(expectedVisibleSections),
-        actualVisibleSections
-      );
+      assert.deepEqual(expectedVisibleSections, actualVisibleSections);
     });
 
     it('returns an empty array if there are no visible sections', () => {
@@ -1767,16 +1766,16 @@ describe('teacherSectionsRedux', () => {
       const state = reducer(undefined, setSections(sections));
       const expected = [
         {
-          id: 11,
-          name: 'My Section'
+          id: 307,
+          name: 'My Third Section'
         },
         {
           id: 12,
           name: 'My Other Section'
         },
         {
-          id: 307,
-          name: 'My Third Section'
+          id: 11,
+          name: 'My Section'
         }
       ];
       assert.deepEqual(sectionsNameAndId(state), expected);
@@ -1819,6 +1818,23 @@ describe('teacherSectionsRedux', () => {
         }
       ];
       assert.deepEqual(data, expected);
+    });
+  });
+
+  describe('sortedSectionsList', () => {
+    it('creates a sorted array from a dictionary object', () => {
+      const state = reducer(undefined, setSections(sections));
+      const expected = sections
+        .map(section => sectionFromServerSection(section))
+        .reverse();
+      assert.deepEqual(sortedSectionsList(state.sections), expected);
+    });
+  });
+
+  describe('sortSectionsList', () => {
+    it('sorts an array of sections by descending id', () => {
+      const expected = sections.reverse();
+      assert.deepEqual(sortSectionsList(sections), expected);
     });
   });
 });

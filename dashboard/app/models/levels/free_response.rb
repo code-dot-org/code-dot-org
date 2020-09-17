@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -61,15 +61,13 @@ class FreeResponse < Level
     # Return the default English string from the database model if we shouldn't
     # localize this property or we couldn't find a localized value.
     default = try(property_name)
-    if should_localize?
-      I18n.t(
-        name,
-        scope: [:data, property_name],
-        default: nil,
-        smart: true
-      ) || default
-    else
-      default
-    end
+    return default unless should_localize?
+
+    I18n.t(
+      name,
+      scope: [:data, property_name],
+      default: default,
+      smart: true
+    )
   end
 end

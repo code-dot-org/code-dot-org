@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -24,6 +25,8 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
+    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
+      to_return({"status" => 200, "body" => "{}", "headers" => {}})
   end
 
   test "should get rubric" do
@@ -449,6 +452,15 @@ class LevelsControllerTest < ActionController::TestCase
       game_id: level.game.id,
     )
     assert_response :forbidden
+  end
+
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: @level}
+    end
+    assert_redirected_to "/"
   end
 
   test "should not create level if not levelbuilder" do

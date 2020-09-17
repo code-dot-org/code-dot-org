@@ -23,7 +23,7 @@ export function searchAssets(
   // Example: searchQuery "bar"
   //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
   //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
+  const searchRegExp = new RegExp('(?:\\s+|_|^|-)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
   let resultSet = Object.keys(assetLibrary.aliases)
@@ -32,14 +32,12 @@ export function searchAssets(
       return resultSet.union(assetLibrary.aliases[nextAlias]);
     }, Immutable.Set());
 
-  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
-    let categoryResultSet = Object.keys(assetLibrary.aliases)
-      .filter(alias => alias === categoryQuery)
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(assetLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
+  if (categoryQuery !== '' && categoryQuery !== 'all') {
+    let categoryResultSet = Immutable.Set(
+      assetLibrary.categories[categoryQuery]
+    );
     if (searchQuery !== '') {
-      resultSet = resultSet.intersect(categoryResultSet.toArray());
+      resultSet = resultSet.intersect(categoryResultSet);
     } else {
       resultSet = categoryResultSet;
     }

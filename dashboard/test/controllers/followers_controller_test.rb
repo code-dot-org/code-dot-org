@@ -33,6 +33,14 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
   end
 
+  test "section code with preceding and trailing whitespaces should redirect to login" do
+    get :student_user_new, params: {section_code: '    ' + @word_section.code + '   '}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
+
+    get :student_user_new, params: {section_code: '    ' + @picture_section.code + '   '}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+  end
+
   test "student_user_new when not signed in" do
     get :student_user_new, params: {section_code: @chris_section.code}
 

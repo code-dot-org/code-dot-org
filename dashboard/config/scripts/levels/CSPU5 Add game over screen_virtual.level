@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
+    "long_instructions": "# Add a \"game over\" screen and finalize the game\r\n\r\n**Do this:**\r\n1. Add a new Screen with a \"game over\" message.\r\n2. Add a button to start over on your \"Game Over\" screen. \r\n3. Add an event handler for the \"Start Over\" Button to send the user back to the \"Welcome\" screen.\r\n4. In your event handler for the background image, add `setScreen` to the event handler so that when the background image is clicked, the user should be sent to the \"Game Over\" screen you just created.\r\n\r\n<img src=\"https://images.code.org/bb3c0973ee0d83d3540f5ffed797e442-image-1477405500619.gif\" style=\"float: right; width: 150px\">\r\n\r\n# Run. Test. Debug.\r\n\r\nWhen you are done, you should have a 3-screen game with:\r\n* A welcome screen\r\n* A game play screen\r\n* A \"game over\" screen\r\n* No dead-ends. The user should be able to get between all the screens appropriately, and play the game.\r\n\r\nIf it's not working:\r\n\r\n* Retrace your steps.\r\n* See if you can figure out where things are going wrong.\r\n* Add extra `console.log` statements. \r\n\r\n**Stick with it until you get it!**\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "true",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "ACkRTDFTSHSoTlmhLpQqrIKH1PBApOFKPYyOWytXkOd2MhISlsygAFNcLX6g\n9bK+\n",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null,
+      "hideElement": null,
+      "showElement": null,
+      "setSize": null,
+      "console.log": null
+    },
+    "teacher_markdown": "### Teacher NOTE:\r\n\r\nWe have marked this level as \"submittable\" but **it is not intended as a significant project**. The purpose is to give you an easy means for checking student work and that everyone made *something*.\r\n\r\nYou may choose to not have students submit it - so they can keep working on it.\r\n\r\nIf you wish to grade/score it recommend a simple check for requirements:\r\n\r\n* At least 3 screens (Welcome, Game play, Game Over)\r\n* Text, Images, Buttons are present\r\n* No Dead Ends - There is a way to navigate to each of the screens (through game-play or clicking a button).\r\n* Some effort put toward styling.\r\n",
+    "parent_level_id": 17118,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-03 20:14:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:27:26 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 17:10:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

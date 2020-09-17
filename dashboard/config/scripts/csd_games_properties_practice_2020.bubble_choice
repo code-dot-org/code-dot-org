@@ -1,0 +1,8 @@
+name 'CSD Games Properties practice_2020'
+editor_experiment ''
+display_name 'Sprite Properties'
+description 'Try out the sprite properties you have learned here'
+
+sublevels
+level 'CSD Games bubble choice properties scale'
+level 'CSD Games bubble choice properties rotation'

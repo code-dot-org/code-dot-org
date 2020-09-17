@@ -1,0 +1,20 @@
+<CurriculumReference>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:34:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Lesson Overview",
+    "reference": "/curriculum/csd-20/unit6/1/overview/index.html",
+    "parent_level_id": 16418,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "teacher_markdown": "* [Computing Innovations](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1q4Mr1m93YOqQFh6LtnF1fZZ5FhjYU88VE-lw3yfNCDo/export?format=doc))"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 22:43:36 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 22:05:07 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-07-25 21:13:55 +0000\",\"changed\":[],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+}]]></config>
+</CurriculumReference>

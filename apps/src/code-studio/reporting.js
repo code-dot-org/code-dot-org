@@ -77,7 +77,9 @@ function validateReport(report) {
         // always use that.}
         break;
       case 'callback':
-        validateType('callback', value, 'string');
+        if (value !== null) {
+          validateType('callback', value, 'string');
+        }
         break;
       case 'app':
         validateType('app', value, 'string');
@@ -143,11 +145,11 @@ function validateReport(report) {
       case 'time':
         validateType('time', value, 'number');
         break;
+      case 'timeSinceLastMilestone':
+        validateType('timeSinceLastMilestone', value, 'number');
+        break;
       case 'lines':
         validateType('lines', value, 'number');
-        break;
-      case 'save_to_gallery':
-        validateType('save_to_gallery', value, 'boolean');
         break;
       case 'attempt':
         validateType('attempt', value, 'number');
@@ -193,7 +195,8 @@ function validateReport(report) {
  * @property {number} serverLevelId - ??
  * @property {?} submitted - ??
  * @property {?} time - ??
- * @property {?} save_to_gallery - ??
+ * @property {number} timeSinceLastMilestone- The time since navigating to this page or since the last
+ * milestone was recorded, whichever is more recent. It is used to calculated time spent on a level.
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
@@ -228,8 +231,8 @@ reporting.sendReport = function(report) {
     'testResult',
     'submitted',
     'time',
+    'timeSinceLastMilestone',
     'lines',
-    'save_to_gallery',
     'attempt',
     'image'
   ];

@@ -23,6 +23,7 @@ function isIE9() {
  * @property {string} mp3
  * @property {string} ogg
  * @property {string} wav
+ * @property {bytes} bytes
  * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
@@ -339,47 +340,97 @@ Sound.prototype.getPlayableFile = function() {
   return false;
 };
 
-Sound.prototype.preload = function() {
-  var file = this.getPlayableFile();
+/**
+ * Checks if bytes were provided and we are able to play them after decoding.
+ */
+Sound.prototype.getPlayableBytes = function() {
+  try {
+    if (!window.Audio) {
+      return false;
+    }
+
+    let audioTest = new window.Audio();
+    if (
+      this.config.hasOwnProperty('bytes') &&
+      audioTest.canPlayType('audio/mp3')
+    ) {
+      return this.config.bytes;
+    }
+  } catch (e) {
+    console.warn('No bytes provided or mp3 is not supported');
+  }
+
+  return false;
+};
+
+Sound.prototype.preloadFile = function() {
+  const file = this.getPlayableFile();
   if (!file) {
     return;
   }
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    this.preloadViaWebAudio(file, function(buffer) {
+    this.preloadViaWebAudio(file, buffer => {
       self.reusableBuffer = buffer;
     });
     return;
   }
 
   if (window.Audio) {
-    var audioElement = new window.Audio(file);
-    if (!audioElement || !audioElement.play) {
-      return;
-    }
-
-    if (!isIE9()) {
-      // Pre-cache audio
-      audioElement.play();
-      audioElement.pause();
-    }
-    this.audioElement = audioElement;
-
-    // Fire onLoad as soon as enough of the sound is loaded to play it
-    // all the way through.
-    var loadEventName = 'canplaythrough';
-    var eventListener = function() {
-      this.onSoundLoaded();
-      audioElement.removeEventListener(loadEventName, eventListener);
-    }.bind(this);
-    audioElement.addEventListener(loadEventName, eventListener);
-    audioElement.addEventListener('error', () => {
-      // Indicate failure without the http status code since it is not
-      // available in this context.
-      this.handleLoadFailed();
-    });
+    let audioElement = new window.Audio(file);
+    this.preloadAudioElement(audioElement);
   }
+};
+
+Sound.prototype.preloadBytes = function() {
+  const bytes = this.getPlayableBytes();
+  if (!bytes) {
+    return;
+  }
+
+  if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
+    var self = this;
+    self.audioContext.decodeAudioData(bytes, buffer => {
+      self.reusableBuffer = buffer;
+      self.onSoundLoaded();
+    });
+    return;
+  }
+
+  if (window.Audio) {
+    const blob = new Blob([bytes], {type: 'audio/mpeg3'});
+    const url = window.URL.createObjectURL(blob);
+    const audioElement = new window.Audio(url);
+    this.preloadAudioElement(audioElement);
+  }
+};
+
+Sound.prototype.preloadAudioElement = function(audioElement) {
+  if (!audioElement || !audioElement.play) {
+    return;
+  }
+
+  if (!isIE9()) {
+    // Pre-cache audio
+    audioElement.play();
+    audioElement.pause();
+  }
+  this.audioElement = audioElement;
+
+  // Fire onLoad as soon as enough of the sound is loaded to play it
+  // all the way through.
+  var loadEventName = 'canplaythrough';
+  var eventListener = function() {
+    this.onSoundLoaded();
+    audioElement.removeEventListener(loadEventName, eventListener);
+  }.bind(this);
+  audioElement.addEventListener(loadEventName, eventListener);
+  audioElement.addEventListener('error', () => {
+    // Indicate failure without the http status code since it is not
+    // available in this context.
+    this.handleLoadFailed();
+  });
 };
 
 Sound.prototype.onSoundLoaded = function() {

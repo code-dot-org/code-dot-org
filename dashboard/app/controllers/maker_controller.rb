@@ -1,7 +1,7 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
 
   # Maker Toolkit is currently used in CSD unit 6.
   # Retrieves the current CSD unit 6 level that the user is working on.
@@ -13,38 +13,43 @@ class MakerController < ApplicationController
     current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
-      lessonName: current_level.stage.localized_title,
+      lessonName: current_level.lesson.localized_title,
       linkToOverview: script_path(csd_unit_6_script),
       linkToLesson: script_next_path(csd_unit_6_script, 'next')
     }
   end
 
+  ScriptAndCourse = Struct.new(:script, :course)
+
   def self.maker_script(for_user)
-    csd6_17 = Script.get_from_cache(Script::CSD6_NAME)
-    csd6_18 = Script.get_from_cache(Script::CSD6_2018_NAME)
-    csd6_19 = Script.get_from_cache(Script::CSD6_2019_NAME)
+    maker_unit_scripts = Script.maker_unit_scripts.
+        sort_by(&:version_year).
+        reverse.
+        freeze
+    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == UnitGroup::CSD}.freeze
+    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    # Ordered from most recent to least.
+    maker_years = maker_unit_scripts.map do |s|
+      ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
+    end.freeze
 
-    # Assigned course or script should take precedence.
+    # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
-    if assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2019)) || assigned.include?(csd6_19)
-      return csd6_19
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2018)) || assigned.include?(csd6_18)
-      return csd6_18
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2017)) || assigned.include?(csd6_17)
-      return csd6_17
+    maker_years.each do |year|
+      if assigned.include?(year.course) || assigned.include?(year.script)
+        return year.script
+      end
     end
 
-    # Otherwise, show the version with progress (defaulting to most recent).
-    progress = UserScript.lookup_hash(for_user, [Script::CSD6_NAME, Script::CSD6_2018_NAME, Script::CSD6_2019_NAME])
-    if progress[Script::CSD6_2019_NAME]
-      csd6_19
-    elsif progress[Script::CSD6_2018_NAME]
-      csd6_18
-    elsif progress[Script::CSD6_NAME]
-      csd6_17
-    else
-      csd6_19
+    # Otherwise, show the most recent version with progress.
+    script_names = maker_years.map {|sc| sc.script.name}
+    progress = UserScript.lookup_hash(for_user, script_names)
+    maker_years.each do |year|
+      return year.script if progress[year.script.name]
     end
+
+    # If none of the above applies, default to most recent.
+    maker_years.find {|y| y.script.is_stable?}.script
   end
 
   def setup
@@ -106,6 +111,21 @@ class MakerController < ApplicationController
     )
 
     render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
+  end
+
+  # GET /maker/login_code
+  # renders a page for users to enter a login key
+  def login_code
+  end
+
+  # GET /maker/display_code
+  # renders a page for users to copy and paste a login key
+  def display_code
+    # Generate encrypted code to display to user
+    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    @secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
   end
 
   # POST /maker/complete

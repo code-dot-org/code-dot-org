@@ -1,9 +1,14 @@
 {
   "https://studio.code.org/s/pre-express-2018/stage/1/puzzle/1": {
-    "display_name": "Unspotted Bugs"
+    "display_name": "Unspotted Bugs",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/q2BQ1a][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch!\n\nQ1) In this story, what do \"bugs\" do?\n\nQ2) In computer science, programmers talk about having \"bugs\" in their code.  What do you think that means?\n\nQ3) How did Jasmine and JD find the bugs that they were looking for?\n\nQ4) Can you remember this way of looking for bugs?\n\n-   Walk through step-by-step.\n-   Is everything good at the first step?\n-   Is everything good at the second step?\n-   The third?\n-   If you find something wrong, look around that place for the \"bug\".\n-   When you find the bug, give it a name, and say it out loud!"
   },
   "https://studio.code.org/s/pre-express-2018/stage/2/puzzle/1": {
-    "display_name": "Stevie and the Big Project"
+    "display_name": "Stevie and the Big Project",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/SZHo4z][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch! \n\nQ1) What two big words did Stevie learn in this story?\n\nQ2) What does it mean to be \"frustrated\"?\n\nQ3) Have you ever been frustrated?\n\nQ4) What are some things that you can do when you feel yourself getting frustrated?\n\nQ5)  What is \"persistence\"?\n\nQ6) Why is persistence a good thing?\n\nQ7) What are some things you can do to help yourself be persistent?"
+  },
+  "https://studio.code.org/s/pre-express-2018/stage/3/puzzle/1": {
+    "title": "Move It, Move It"
   },
   "https://studio.code.org/s/pre-express-2018/stage/4/puzzle/2": {
     "short_instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
@@ -50,6 +55,12 @@
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/pre-express-2018/stage/5/puzzle/1": {
+    "title": "Your Digital Footprint"
+  },
+  "https://studio.code.org/s/pre-express-2018/stage/6/puzzle/1": {
+    "title": "My Robotic Friends"
   },
   "https://studio.code.org/s/pre-express-2018/stage/7/puzzle/2": {
     "short_instructions": "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level.",
@@ -135,6 +146,9 @@
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the staircase pattern path."
     }
   },
+  "https://studio.code.org/s/pre-express-2018/stage/8/puzzle/1": {
+    "title": "It's Great to Create and Play Fair"
+  },
   "https://studio.code.org/s/pre-express-2018/stage/9/puzzle/2": {
     "short_instructions": "\"Go get the scrap metal, BB-8!\"",
     "long_instructions": "[Rey][0]_\"Go get the scrap metal, BB-8!\"_\n\nWatch out for walls and crates. Scrap metal looks like this: [picture of scrap metal][1]",
@@ -217,6 +231,9 @@
   "https://studio.code.org/s/pre-express-2018/stage/9/puzzle/12": {
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Keep going!\"_"
+  },
+  "https://studio.code.org/s/pre-express-2018/stage/10/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
   },
   "https://studio.code.org/s/pre-express-2018/stage/11/puzzle/1": {
     "short_instructions": "Help Scrat across the ice to get to the acorn!",
@@ -486,9 +503,14 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
+  },
+  "https://studio.code.org/s/pre-express-2018/stage/14/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/pre-express-2018/stage/15/puzzle/1": {
     "short_instructions": "Need a better playlab/events combo"

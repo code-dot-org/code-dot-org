@@ -1,0 +1,65 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-03-17T17:04:22.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "background": null,
+      "noStroke": null,
+      "ellipse": null,
+      "fill": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "contained_level_names": [
+      "CSD U3 Draw Loop Plugged predict 2 embed_virtual"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "start_blocks": "World.frameRate = 5;\r\n\r\nnoStroke();\r\nbackground(\"blue\");\r\nfill(\"Yellow\");\r\n\r\nfunction draw(){\r\n  background(\"Red\");\r\n  ellipse(randomNumber(0,400), randomNumber(0,400));\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "teacher_markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 16039,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:44:49 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-05 20:28:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>
