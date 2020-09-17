@@ -42,13 +42,11 @@ class RegionalPartner < ActiveRecord::Base
   serialized_attrs %w(
     cohort_capacity_csd
     cohort_capacity_csp
-    apps_open_date_csd_teacher
+    apps_open_date_teacher
+    apps_close_date_teacher
     apps_open_date_csd_facilitator
-    apps_open_date_csp_teacher
     apps_open_date_csp_facilitator
-    apps_close_date_csd_teacher
     apps_close_date_csd_facilitator
-    apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
     apps_priority_deadline_date
     applications_principal_approval
@@ -104,15 +102,11 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def summer_workshops_earliest_apps_open_date
-    if apps_open_date_csd_teacher || apps_open_date_csp_teacher
-      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
-    end
+    apps_open_date_teacher && Date.parse(apps_open_date_teacher).strftime('%B %e, %Y')
   end
 
   def summer_workshops_latest_apps_close_date
-    if apps_close_date_csd_teacher || apps_close_date_csp_teacher
-      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].compact.max).strftime('%B %e, %Y')
-    end
+    apps_close_date_teacher && Date.parse(apps_close_date_teacher).strftime('%B %e, %Y')
   end
 
   def upcoming_summer_workshops
