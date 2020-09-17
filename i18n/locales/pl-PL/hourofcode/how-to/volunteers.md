@@ -21,7 +21,7 @@ The Hour of Code is a one-hour introduction to computer science designed to demy
 - [How to prepare](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Inne sposoby wspierania Godziny Kodowania](#support-hour-of-code)
 - [Volunteer FAQ](#faq)
 
 Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
@@ -221,7 +221,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Inne sposoby wspierania Godziny Kodowania
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 

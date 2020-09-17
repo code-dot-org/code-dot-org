@@ -548,13 +548,15 @@
           "n-sided shape": {
             "name": "фигура с n сторонами",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "draw a loop": {
             "name": "нарисовать цикл",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "draw spiral circle": {
@@ -568,7 +570,8 @@
           "draw a loop": {
             "name": "нарисовать цикл",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "n-sided shape": {
@@ -757,13 +760,15 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "do something": {
             "name": "выполнить что-то",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -771,7 +776,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -779,7 +785,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -787,7 +794,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -795,7 +803,8 @@
           "draw a spiral edge": {
             "name": "нарисовать край спирали",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -805,16 +814,22 @@
             "parameters": {
               "points": "очки",
               "length": "длина"
-            }
+            },
+            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
-            "name": "нарисовать круг"
+            "name": "нарисовать круг",
+            "description": "нарисуйте круг заданного радиуса",
+            "parameters": {
+              "radius": "радиус"
+            }
           },
           "draw a pinwheel": {
             "name": "нарисовать вертушку",
             "parameters": {
               "length": "длина",
-              "repeat": "повторить"
+              "repeat": "повторить",
+              "sides": "стороны"
             }
           },
           "draw a triangle": {
@@ -826,7 +841,8 @@
           "draw a shape": {
             "name": "нарисовать фигуру",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "draw a house": {
@@ -838,7 +854,8 @@
           "draw a square": {
             "name": "нарисовать квадрат",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -927,7 +944,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -937,7 +955,8 @@
             "parameters": {
               "height": "высота",
               "actor": "персонаж"
-            }
+            },
+            "description": "блок функции прыжка с заданной высотой и актёром"
           },
           "patrol": {
             "name": "проверка",
@@ -953,16 +972,22 @@
             "parameters": {
               "points": "очки",
               "length": "длина"
-            }
+            },
+            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
-            "name": "нарисовать круг"
+            "name": "нарисовать круг",
+            "description": "нарисуйте круг заданного радиуса",
+            "parameters": {
+              "radius": "радиус"
+            }
           },
           "draw a pinwheel": {
             "name": "нарисовать вертушку",
             "parameters": {
               "length": "длина",
-              "repeat": "повторить"
+              "repeat": "повторить",
+              "sides": "стороны"
             }
           },
           "draw a triangle": {
@@ -974,7 +999,8 @@
           "draw a shape": {
             "name": "нарисовать фигуру",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "draw a house": {
@@ -1004,14 +1030,16 @@
             "parameters": {
               "height": "высота",
               "actor": "персонаж"
-            }
+            },
+            "description": "блок функции прыжка с заданной высотой и актёром"
           },
           "patrol": {
             "name": "проверка",
             "parameters": {
               "actor": "персонаж",
               "speed": "скорость"
-            }
+            },
+            "description": "функция патрулирования с параметрами скорости и актёра"
           }
         },
         "Robot Doodle": {
@@ -1139,7 +1167,10 @@
             }
           },
           "draw a polygon": {
-            "name": "нарисовать многоугольник"
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "sides": "стороны"
+            }
           },
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
@@ -2544,7 +2575,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -2552,7 +2584,8 @@
           "draw a polygon": {
             "name": "нарисовать многоугольник",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -2560,7 +2593,8 @@
           "draw a spiral edge": {
             "name": "нарисовать край спирали",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           }
         },
@@ -2569,7 +2603,8 @@
             "name": "нарисовать край спирали",
             "parameters": {
               "length": "длина",
-              "min": "минимум"
+              "min": "минимум",
+              "sides": "стороны"
             }
           }
         },
@@ -2578,7 +2613,8 @@
             "name": "нарисовать край спирали",
             "parameters": {
               "length": "длина",
-              "min": "минимум"
+              "min": "минимум",
+              "sides": "стороны"
             }
           }
         },
@@ -2588,16 +2624,22 @@
             "parameters": {
               "points": "очки",
               "length": "длина"
-            }
+            },
+            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
-            "name": "нарисовать круг"
+            "name": "нарисовать круг",
+            "description": "нарисуйте круг заданного радиуса",
+            "parameters": {
+              "radius": "радиус"
+            }
           },
           "draw a pinwheel": {
             "name": "нарисовать вертушку",
             "parameters": {
               "length": "длина",
-              "repeat": "повторить"
+              "repeat": "повторить",
+              "sides": "стороны"
             }
           },
           "draw a triangle": {
@@ -2609,7 +2651,8 @@
           "draw a shape": {
             "name": "нарисовать фигуру",
             "parameters": {
-              "length": "длина"
+              "length": "длина",
+              "sides": "стороны"
             }
           },
           "draw a house": {
@@ -2628,7 +2671,8 @@
             "name": "нарисовать край спирали",
             "parameters": {
               "length": "длина",
-              "min": "минимум"
+              "min": "минимум",
+              "sides": "стороны"
             }
           }
         },
@@ -2640,7 +2684,10 @@
             }
           },
           "draw a polygon": {
-            "name": "нарисовать многоугольник"
+            "name": "нарисовать многоугольник",
+            "parameters": {
+              "sides": "стороны"
+            }
           },
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
