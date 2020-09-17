@@ -803,7 +803,7 @@
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
           "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
-          "courseA_maze_seq13_c": "Những khối <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> sẽ giúp bạn đến gần hơn với chú lợn."
+          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nsẽ giúp đến gần chú lợn hơn."
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
@@ -977,7 +977,7 @@
           "courseA_playLab_events7_a": "Dùng khối này khi các nhân vật va vào nhau.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2018": {
-          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
+          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng các khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
           "2": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
         },
         "courseB_Scrat_ramp1_2019": {

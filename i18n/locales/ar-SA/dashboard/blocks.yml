@@ -895,7 +895,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -941,7 +941,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1055,7 +1055,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} هو لمس الحواف"
@@ -1097,7 +1097,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
@@ -1524,7 +1524,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1535,7 +1535,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenMouseClicked:
         text: عند النقر على الماوس
       Mikelab_whenYesNoClicked:

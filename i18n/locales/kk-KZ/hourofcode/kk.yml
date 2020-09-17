@@ -6857,7 +6857,7 @@ kk:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Барлық заманауи браузерлер
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Барлық заманауи браузерлер
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Барлық заманауи браузерлер
@@ -9066,7 +9066,7 @@ kk:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Барлық заманауи браузерлер, Android плашеті,
     iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
