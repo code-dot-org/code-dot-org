@@ -14,7 +14,7 @@ nav: how_to_nav
 ## Conéctate con aulas y voluntarios locales para la Hora del Código
 Con Code.org, tus empleados pueden [conectarse]({{ urls/volunteer }}) con las aulas locales que imparten la Hora del Código, compartir su experiencia profesional en tecnología e inspirar a los estudiantes a aprender ciencias de la computación.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Regístrate para ser voluntario</button>]({{ urls/volunteer }})
 <br>
 <br>
 
@@ -24,7 +24,7 @@ Para obtener más instrucciones sobre cómo alentar a tus empleados y conectarlo
 
 - Pide a tu director general que [envíe un correo electrónico a toda la empresa]({{ promote/sample_emails }}) para enfatizar la importancia de las ciencias de la computación y animar a los empleados a difundir el mensaje.
 - Organiza una Hora Feliz del Código con tus compañeros de trabajo para probar las [actividades]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Organiza un evento de la Hora del Código para un aula local de estudiantes o socios sin fines de lucro para hacer una Hora del Código en la oficina de tu empresa. Consulta la guía práctica del evento a continuación.
 
 
 # Cómo organizar una Hora del Código con estudiantes
@@ -35,30 +35,30 @@ Para obtener más instrucciones sobre cómo alentar a tus empleados y conectarlo
 
 ## 2. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+## 3. Elige una actividad
+Organizamos una variedad de [actividades divertidas de una hora]({{ urls/learn }}) para participantes de todas las edades, creadas por una variedad de socios. [¡Pruébalos!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Todas las actividades de la Hora del Código** requieren un tiempo de preparación mínimo y son autoguiadas, lo que permite a los participantes trabajar a su propio ritmo y nivel de habilidad.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planifica tus necesidades tecnológicas, las computadoras son opcionales
 
-Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero **no** necesitas una computadora para cada participante, e incluso puedes hacer la Hora del Código sin una computadora.
 
-**Plan Ahead!** Do the following before your event starts:
+**¡Planifica con anticipación!** Haz lo siguiente antes de que comience tu evento:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Prueba actividades en computadoras o dispositivos. Asegúrate de que funcionen bien en los navegadores.
 - Entrega auriculares, o pide a los participantes que traigan los suyos, si es mejor que la actividad tenga sonido.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los participantes se ayudan entre sí y dependen menos del organizador. Además verán que las ciencias de la computación son una actividad social y colaborativa.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **¿No cuentas con suficientes dispositivos?** Utiliza [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los participantes se ayudan entre sí y dependen menos del organizador. Además verán que las ciencias de la computación son una actividad social y colaborativa.
+- **¿El ancho de banda es bajo?** Planifica mostrar videos en el frente de la clase, para que el alumno no tenga que descargarlos individualmente. O pruebe las actividades desconectadas/sin conexión.
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5.  Empieza tu Hora de Código con un video motivador
 Para dar inicio a la Hora del Código, inspira a los participantes y habla acerca de cómo las ciencias de la computación tienen un impacto en cada parte de nuestras vidas. Comparte más acerca de lo que te inspiró para dedicarte a las ciencias de la computación y tu papel en tu empresa.
 
 **Muestra un video inspirador:**
 
-- El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- El video de lanzamiento original de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (hay versiones de [1 minuto ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos ](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - [Video de la Hora del Código en todo el mundo](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [El presidente Obama alienta a todos los estudiantes a aprender ciencias de la computación](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos inspiradores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
@@ -71,10 +71,10 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 - Invita a ingenieros de software de tu empresa a que hablen acerca de por qué decidieron estudiar ciencias de la computación y en qué proyectos trabajan.
 - Echa un vistazo a los [consejos]({{ urls/girls }}) para que las niñas se interesen en las ciencias de la computación.
 
-## 6. Code!
+## 6. ¡A programar!
 **Involucra a los participantes en la actividad**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Escribe el enlace al tutorial en el pizarrón. Busca el enlace que aparece en la [información de la actividad seleccionada]({{ urls/learn }}) debajo del número de participantes.
 - Para los estudiantes mas jóvenes, carga la página de la actividad con antelación o guárdala como favorita.
 
 **Si los participantes encuentran dificultades, está bien responder:**
