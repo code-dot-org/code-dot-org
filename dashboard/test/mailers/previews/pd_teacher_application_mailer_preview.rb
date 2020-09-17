@@ -1,6 +1,7 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
 class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
+  include Pd::Application::ActiveApplicationModels
 
   %w(
     confirmation
@@ -31,8 +32,8 @@ class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
     # Build user explicitly (instead of create) so it's not saved
     school_info = build :school_info, school: School.first
     user = build :teacher, email: 'rubeus@hogwarts.co.uk', school_info: school_info
-    application_hash = build :pd_teacher1920_application_hash, school: School.first
-    application = build :pd_teacher1920_application, user: user, course: 'csp', form_data: application_hash.to_json
+    application_hash = build TEACHER_APPLICATION_HASH_FACTORY, school: School.first
+    application = build TEACHER_APPLICATION_FACTORY, user: user, course: 'csp', form_data: application_hash.to_json
 
     if matched
       regional_partner = build :regional_partner, name: 'We Teach Code'
