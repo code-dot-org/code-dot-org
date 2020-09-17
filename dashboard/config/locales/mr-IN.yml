@@ -77,6 +77,8 @@ mr:
       Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता
       धोरण](%{privacy_url}) साठी संमती देता.
     print: प्रिंट
+  race_interstitial:
+    decline: Band
   project:
     projects: प्रकल्प
     project_gallery: प्रकल्प

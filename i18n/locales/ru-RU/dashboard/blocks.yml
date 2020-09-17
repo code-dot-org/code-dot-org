@@ -907,7 +907,7 @@ ru:
             '"down"': вниз
             '"right"': вправо
             '"space"': космос
-            '"enter"': Введите
+            '"enter"': Клавиша Enter
             '"a"': a
             '"b"': B
             '"c"': C
@@ -960,9 +960,13 @@ ru:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: на {N} {UNIT}
         options:
           UNIT:
             '"seconds"': секунд
+            '"frames"': кадры
+      gamelab_bounceOff:
+        text: "{SPRITE} отскакивает от {TARGET}"
       gamelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -984,6 +988,8 @@ ru:
         text: Нажал {SPRITE}
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
+      gamelab_countByAnimation:
+        text: количество {SPRITE}
       gamelab_createNewSprite:
         text: "сделать новый спрайт \n Называется {NAME} \n с костюмом {COSTUME} \n В {LOCATION}"
       gamelab_destroy:
@@ -992,6 +998,8 @@ ru:
         text: время draggable
       gamelab_edgesDisplace:
         text: блок края {SPRITE} от перемещения
+      gamelab_getAllSprites:
+        text: все спрайты
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1007,13 +1015,17 @@ ru:
         options:
           CHOICE:
             '"this"': Это
+            '"other"': другое
       gamelab_getTime:
+        text: время в {UNIT}
         options:
           UNIT:
             '"seconds"': секунд
+            '"frames"': кадры
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
       gamelab_isKeyPressed:
+        text: "{KEY} нажата"
         options:
           KEY:
             '"up"': вверх
@@ -1049,6 +1061,8 @@ ru:
             '"z"': Z
       gamelab_isTouchingEdges:
         text: "{SPRITE} трогательно края"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} касается {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} перейти к {LOCATION}"
       gamelab_keyPressed:
@@ -1092,6 +1106,7 @@ ru:
       gamelab_locationAt:
         text: 'местоположение x: {X} Y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} пикселей {DIRECTION} в {LOCATION}"
         options:
           DIRECTION:
             '"North"': Север
@@ -1106,6 +1121,8 @@ ru:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
+      gamelab_makeNumSprites:
+        text: создать {NUM} новый {ANIMATION_NAME} слайдов
       gamelab_mirrorSprite:
         text: "{SPRITE} Лицо {DIRECTION}"
         options:
@@ -1114,6 +1131,8 @@ ru:
             '"left"': влево
       gamelab_mouseLocation:
         text: расположение мыши
+      gamelab_moveBackward:
+        text: переместить {SPRITE} {DISTANCE} пикселей назад
       gamelab_moveForward:
         text: Переместить {SPRITE} {DISTANCE} пикселей вперед
       gamelab_moveInDirection:
@@ -1618,6 +1637,12 @@ ru:
         options:
           OPTION:
             '"random"': случайный
+            '"R2-D2 random"': Случайный R2-D2
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:
