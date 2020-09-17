@@ -19,7 +19,7 @@ export default class Announcements extends Component {
   Processes all of the announcements and determines if they should be shown based
   on the their visibility setting and the current view. For example a teacher should only see
   announcements for Teacher-only or Teacher and Student.
-  Also defaults to old announcements without a visibility to be Teacher-only.
+  Also defaults old announcements without a visibility to be Teacher-only.
  */
   filteredAnnouncements = () => {
     const currentAnnouncements = [];
