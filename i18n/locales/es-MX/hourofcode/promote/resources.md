@@ -42,25 +42,25 @@ title: Recursos
 
 [Descarga versiones en alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"Hour of Code" y "Hora del Código" son marcas registradas. No queremos evitar su uso, pero queremos asegurarnos de que el uso se ajuste a algunos límites:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. Cualquier referencia a "Hour of Code" u "Hora del Código" debe usarse de una manera que no sugiera que sea tu propia marca, sino que haga referencia a la Hora del Código como un movimiento de base.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>Buen ejemplo</strong>: "Participa en la Hora del Código™ en TU-COMPAÑÍA.com".
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>Mal ejemplo</strong>: "Prueba la Hora del Código por TU-COMPAÑÍA".
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Utiliza un superíndice "TM" en los lugares más destacados en los que menciones "Hora del Código" y un superíndice "Ⓡ" en los lugares más destacados en los que menciones "Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
+2. Incluye mensajes en tu página (o en el pie de página), así como enlaces a los sitios web de la Semana por la Educación en Ciencias de la Computación y de [Code.org]({{ codeorg_link }}), que digan lo siguiente:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“La 'Hora del Código™'/'Hora del Código®' es una iniciativa global de la Semana por la Educación en Ciencias de la Computación [csedweek.org] y Code.org [code.org] introducir a millones de estudiantes a una hora de ciencias de la computación y programación".*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. No se utiliza "Hour of Code" ni "Hora del Código" en los nombres de las aplicaciones.
 
 <a id="stickers"></a>
 
