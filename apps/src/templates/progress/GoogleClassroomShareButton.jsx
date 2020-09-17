@@ -3,6 +3,7 @@ import React from 'react';
 import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {isIE11} from '@cdo/apps/util/browser-detector';
 
 // https://developers.google.com/classroom/brand
 const styles = {
@@ -69,8 +70,7 @@ export default class GoogleClassroomShareButton extends React.Component {
     // The button callbacks are not supported in IE, so in IE we use click
     // events to record analytics. The button is rendered in an iframe though,
     // so to detect the click events we need to use the 'blur' event.
-    const isIE = /*@cc_on!@*/ false || !!document.documentMode;
-    if (isIE) {
+    if (isIE11) {
       window.addEventListener('blur', this.blur);
     }
   }
@@ -112,12 +112,15 @@ export default class GoogleClassroomShareButton extends React.Component {
   }
 
   logEvent(event) {
-    firehoseClient.putRecord({
-      study: 'google-classroom-share-button',
-      study_group: 'v0',
-      event: event,
-      data_json: JSON.stringify(this.props.analyticsData)
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'google-classroom-share-button',
+        study_group: 'v0',
+        event: event,
+        data_json: JSON.stringify(this.props.analyticsData)
+      },
+      {includeUserId: true}
+    );
   }
 
   // https://developers.google.com/classroom/guides/sharebutton
