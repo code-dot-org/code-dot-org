@@ -643,7 +643,7 @@
   highlights_constant_athletes_short_heading: Push yourself
 
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
-  footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
+  footer_trademark_message: 'Hour of Code™ and Hora del Código® are trademarks of Code.org.'
 
   footer_menu_partners: 'Partners and Advisors'
   footer_menu_contact: 'Contact us'

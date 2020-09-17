@@ -1576,12 +1576,13 @@ it-IT:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
         - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
             sulla sinistra?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
       K-1 Maze Loops Multi 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
