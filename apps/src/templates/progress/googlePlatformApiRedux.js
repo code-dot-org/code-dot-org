@@ -1,5 +1,3 @@
-import {getStore} from '@cdo/apps/redux';
-
 /*
  * The Google Classroom Share Button is only available through the google
  * platform api, so we have to add it to our page on load. We manage loading
@@ -9,7 +7,7 @@ import {getStore} from '@cdo/apps/redux';
 const START_LOADING_GAPI = 'googlePlatformApi/START_LOADING_GAPI';
 const FINISH_LOADING_GAPI = 'googlePlatformApi/FINISH_LOADING_GAPI';
 
-export const startLoadingGapi = () => ({type: START_LOADING_GAPI});
+const startLoadingGapi = () => ({type: START_LOADING_GAPI});
 const finishLoadingGapi = success => ({type: FINISH_LOADING_GAPI, success});
 
 const GOOGLE_PLATFORM_API_ID = 'GooglePlatformApiId';
@@ -21,25 +19,28 @@ const initialState = {
   loadStartTime: null
 };
 
+export function loadGooglePlatformApi() {
+  return (dispatch, getState) => {
+    if (gapiReady()) {
+      dispatch(finishLoadingGapi(true));
+    } else if (!isLoading(getState)) {
+      loadApi(dispatch, getState);
+      dispatch(startLoadingGapi);
+    }
+  };
+}
+
 export function canShowGoogleShareButton(state) {
   return !!state.googlePlatformApi && state.googlePlatformApi.loaded;
 }
 
 export default function googlePlatformApi(state = initialState, action) {
   if (action.type === START_LOADING_GAPI) {
-    if (gapiReady()) {
-      return {
-        ...state,
-        loaded: true
-      };
-    } else {
-      loadApi();
-      return {
-        ...state,
-        loading: true,
-        loadStartTime: Date.now()
-      };
-    }
+    return {
+      ...state,
+      loading: true,
+      loadStartTime: Date.now()
+    };
   }
   if (action.type === FINISH_LOADING_GAPI) {
     return {
@@ -51,7 +52,7 @@ export default function googlePlatformApi(state = initialState, action) {
   return state;
 }
 
-function loadApi() {
+function loadApi(dispatch, getState) {
   if (!document.getElementById(GOOGLE_PLATFORM_API_ID)) {
     window.___gcfg = {
       parsetags: 'explicit'
@@ -60,22 +61,22 @@ function loadApi() {
     const gapi = document.createElement('script');
     gapi.src = 'https://apis.google.com/js/platform.js';
     gapi.id = GOOGLE_PLATFORM_API_ID;
-    gapi.onload = waitForGapi;
-    gapi.onerror = () => getStore().dispatch(finishLoadingGapi(false));
+    gapi.onload = () => waitForGapi(dispatch, getState);
+    gapi.onerror = () => dispatch(finishLoadingGapi(false));
     document.body.appendChild(gapi);
   } else {
-    waitForGapi();
+    waitForGapi(dispatch, getState);
   }
 }
 
-function waitForGapi() {
+function waitForGapi(dispatch, getState) {
   if (gapiReady()) {
-    getStore().dispatch(finishLoadingGapi(true));
-  } else if (elapsedLoadTime() >= LOAD_TIMEOUT_MILLIS) {
-    getStore().dispatch(finishLoadingGapi(false));
-  } else if (isLoading) {
+    dispatch(finishLoadingGapi(true));
+  } else if (elapsedLoadTime(getState) >= LOAD_TIMEOUT_MILLIS) {
+    dispatch(finishLoadingGapi(false));
+  } else if (isLoading(getState)) {
     setTimeout(() => {
-      waitForGapi();
+      waitForGapi(dispatch, getState);
     }, 100);
   }
 }
@@ -84,8 +85,8 @@ function gapiReady() {
   return !!window.gapi && typeof window.gapi.sharetoclassroom !== 'undefined';
 }
 
-function elapsedLoadTime() {
-  const startTime = getStore().getState().googlePlatformApi.loadStartTime;
+function elapsedLoadTime(getState) {
+  const startTime = getState().loadStartTime;
   if (startTime) {
     return Date.now() - startTime;
   } else {
@@ -93,6 +94,6 @@ function elapsedLoadTime() {
   }
 }
 
-function isLoading() {
-  return getStore().getState().googlePlatformApi.loading;
+function isLoading(getState) {
+  return getState().loading;
 }
