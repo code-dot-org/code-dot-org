@@ -139,6 +139,7 @@ export default class LessonEditor extends Component {
         <AnnouncementsEditor
           defaultAnnouncements={announcements}
           inputStyle={styles.input}
+          curriculumObject={'lesson'}
         />
         <h2>Lesson Plan</h2>
         <TextareaWithMarkdownPreview
