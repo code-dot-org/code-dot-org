@@ -49,7 +49,7 @@ class Lesson < ActiveRecord::Base
     assessment
     purpose
     preparation
-    annoucements
+    lesson_announcements
     visible_after
   )
 
