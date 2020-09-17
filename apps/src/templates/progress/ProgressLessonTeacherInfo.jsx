@@ -41,7 +41,6 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     // redux provided
     section: sectionShape,
-    userId: PropTypes.number,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -54,20 +53,22 @@ class ProgressLessonTeacherInfo extends React.Component {
     const {scriptName, section, lesson, toggleHiddenStage} = this.props;
     const sectionId = section.id.toString();
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord({
-      study: 'hidden-lessons',
-      study_group: 'v0',
-      event: value,
-      data_json: JSON.stringify(this.firehoseData())
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-lessons',
+        study_group: 'v0',
+        event: value,
+        data_json: JSON.stringify(this.firehoseData())
+      },
+      {includeUserId: true}
+    );
   };
 
   firehoseData = () => {
-    const {userId, scriptName, section, lesson} = this.props;
+    const {scriptName, section, lesson} = this.props;
     return {
-      user_id: userId,
       script_name: scriptName,
-      section_id: section.id,
+      section_id: section && section.id,
       lesson_id: lesson.id,
       lesson_name: lesson.name
     };
@@ -149,7 +150,6 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    userId: state.currentUser.userId,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
