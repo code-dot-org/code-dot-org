@@ -22,9 +22,13 @@ describe('AnimationPickerBody', function() {
     categories: CostumeCategories,
     hideUploadOption: false,
     hideAnimationNames: false,
-    navigatable: true,
+    navigable: true,
     hideBackgrounds: false,
-    canDraw: true
+    canDraw: true,
+    defaultQuery: {
+      categoryQuery: '',
+      searchQuery: ''
+    }
   };
 
   describe('upload warning', function() {
@@ -101,13 +105,20 @@ describe('AnimationPickerBody', function() {
       expect(items.length).to.equal(5);
     });
 
-    it('only shows backgrounds if defaultCategoryQuery is backgrounds', function() {
+    it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function() {
       const body = shallow(
         <AnimationPickerBody
           {...defaultProps}
-          defaultCategoryQuery="backgrounds"
+          canDraw={false}
+          navigable={false}
         />
       );
+      body.setProps({
+        defaultQuery: {
+          categoryQuery: 'backgrounds',
+          searchQuery: ''
+        }
+      });
       const items = body.find(AnimationPickerListItem);
       expect(items.length).to.equal(1);
     });
