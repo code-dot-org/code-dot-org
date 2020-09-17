@@ -28,12 +28,6 @@ const fakeTeacherAnnouncement = {
   type: NotificationType.information,
   visibility: VisibilityType.teacher
 };
-const fakeOldTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information
-};
 const fakeStudentAnnouncement = {
   notice: 'Notice - Student',
   details: 'Students are the best',
@@ -97,45 +91,6 @@ describe('ScriptOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('displays old teacher announcement for teacher', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        announcements={[fakeOldTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
-  });
-
-  it('does not display old teacher announcement for student', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        viewAs={ViewType.Student}
-        announcements={[fakeOldTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
-  });
-
-  it('has non-verified and provided teacher announcement if necessary', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        S
-        hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        verificationCheckComplete={true}
-        announcements={[fakeTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
-    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
-  });
-
   it('has non-verified and provided teacher announcements if necessary', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
@@ -154,31 +109,7 @@ describe('ScriptOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has only teacher announcements', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        announcements={[
-          fakeStudentAnnouncement,
-          fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
-        ]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
-    wrapper
-      .find('Announcements')
-      .props()
-      .announcements.forEach(node => {
-        expect(
-          node.visibility === NotificationType.teacher ||
-            node.visibility === NotificationType.teacherAndStudent
-        );
-      });
-  });
-
-  it('has student announcement if necessary', () => {
+  it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
         {...defaultProps}
@@ -190,33 +121,6 @@ describe('ScriptOverviewHeader', () => {
       {disableLifecycleMethods: true}
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
-  });
-
-  it('has all student announcements but no teacher announcements if necessary', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        viewAs={ViewType.Student}
-        announcements={[
-          fakeStudentAnnouncement,
-          fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
-        ]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
-    wrapper
-      .find('Announcements')
-      .props()
-      .announcements.forEach(node => {
-        expect(
-          node.visibility === NotificationType.student ||
-            node.visibility === NotificationType.teacherAndStudent
-        );
-      });
   });
 
   it('passes properly-formatted versions to AssignmentVersionSelector', () => {
