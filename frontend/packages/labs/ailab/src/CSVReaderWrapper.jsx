@@ -11,12 +11,13 @@ export default class CSVReaderWrapper extends Component {
       csvfile: undefined,
       data: undefined,
       showRawData: true,
-      labelColumn: "delicious?",
-      labels: undefined,
+      labelColumn: undefined,
       features: [],
       selectedFeatures: [],
       trainClicked: false,
-      prediction: undefined
+      predictedLabel: undefined,
+      confidence: undefined,
+      testData: {}
     };
   }
 
@@ -63,28 +64,31 @@ export default class CSVReaderWrapper extends Component {
   prepareTrainingDataForML = () => {
     const examples = this.state.data.map(this.extractExamples);
     const labels = this.state.data.map(this.extractLabels);
-    this.setState(
-      {
-        examples: examples,
-        labels: labels
-      },
-      this.train
-    );
+    this.train(examples, labels);
   };
 
-  train = () => {
-    console.log("train was called");
-    this.svm.train(this.state.examples, this.state.labels);
+  train = (examples, labels) => {
+    this.svm.train(examples, labels);
     this.setState({
       trainClicked: true
     });
   };
 
+  prepareTestDataForML = () => {
+    let testValues = [];
+    this.state.selectedFeatures.forEach(feature =>
+      testValues.push(parseInt(this.state.testData[feature]))
+    );
+    return testValues;
+  };
+
   predict = () => {
-    const predictedLabel = this.svm.predict([[1, 0, 1, 0, 0, 1, 0, 1, 0]]);
-    const prediction = predictedLabel > 0 ? "delicious!" : "yuck!";
+    const testValues = this.prepareTestDataForML();
+    const predictedLabel = this.svm.predict([testValues])[0];
+    const confidence = Math.abs(this.svm.marginOne(testValues));
     this.setState({
-      prediction: prediction
+      predictedLabel: predictedLabel,
+      confidence: confidence
     });
   };
 
@@ -100,6 +104,14 @@ export default class CSVReaderWrapper extends Component {
         event.target.selectedOptions,
         item => item.value
       )
+    });
+  };
+
+  handleInput = (event, feature) => {
+    const testData = this.state.testData;
+    testData[feature] = event.target.value;
+    this.setState({
+      testData: testData
     });
   };
 
@@ -194,10 +206,14 @@ export default class CSVReaderWrapper extends Component {
                 <form>
                   {this.state.selectedFeatures.map((feature, index) => {
                     return (
-                      <span>
+                      <span key={index}>
                         <label>
                           {feature}:
-                          <input type="text" />
+                          <input
+                            type="text"
+                            value={this.state.testData[feature]}
+                            onChange={event => this.handleInput(event, feature)}
+                          />
                         </label>
                       </span>
                     );
@@ -206,10 +222,14 @@ export default class CSVReaderWrapper extends Component {
                 <button type="button" onClick={this.predict}>
                   Predict!
                 </button>
-                {this.state.prediction && (
+                {this.state.predictedLabel && (
                   <div>
                     <h2> The Machine Learning model predicts.... </h2>
-                    <span>{JSON.stringify(this.state.prediction)}</span>
+                    <span>
+                      {JSON.stringify(this.state.predictedLabel)} for{" "}
+                      {JSON.stringify(this.state.labelColumn)} with{" "}
+                      {JSON.stringify(this.state.confidence)} confidence.
+                    </span>
                   </div>
                 )}
               </div>
