@@ -16,7 +16,7 @@ const styles = {
   }
 };
 
-class GoogleClassroomShareButton extends React.Component {
+export default class GoogleClassroomShareButton extends React.Component {
   static propTypes = {
     buttonId: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -24,6 +24,11 @@ class GoogleClassroomShareButton extends React.Component {
     title: PropTypes.string,
     height: PropTypes.number,
     courseid: PropTypes.number
+  };
+
+  static defaultProps = {
+    itemtype: 'assignment',
+    height: Button.ButtonHeight.default
   };
 
   /*
@@ -74,10 +79,3 @@ class GoogleClassroomShareButton extends React.Component {
     );
   }
 }
-
-GoogleClassroomShareButton.defaultProps = {
-  itemtype: 'assignment',
-  height: Button.ButtonHeight.default
-};
-
-export default GoogleClassroomShareButton;
