@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 5 - CI - L2'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 2:  Patterns and Representation 
+**Estimated time: 15 minutes**
+
+
+
+
+## Investigation Goals
+
+**Identify what is needed to create a system of representation**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/2/" target="_blank">Lesson 2: Patterns and Recognition</a>
+* Become familiar with the vocabulary (encode, decode, binary, bit, ASCII)
+* Skim the activity guide to support students in completing the activity within this lesson
+	* **Teaching Tip:** Consider doing this activity yourself before teaching the lesson to identify where student may struggle or need clarifying directions.
+
+
+
+
+
+
+
+
+
+MARKDOWN
