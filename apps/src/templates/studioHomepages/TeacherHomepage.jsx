@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import Notification from '../Notification';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
@@ -211,6 +212,7 @@ export class UnconnectedTeacherHomepage extends Component {
               <div style={styles.clear} />
             </div>
           )}
+          {isEnglish && <SpecialAnnouncement isTeacher={true} />}
           {this.state.showCensusBanner && (
             <div>
               <CensusTeacherBanner
