@@ -32,7 +32,6 @@ export default class LessonEditor extends Component {
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
     studentOverview: PropTypes.string,
-    title: PropTypes.string,
     shortTitle: PropTypes.string,
     unplugged: PropTypes.bool,
     lockable: PropTypes.bool,
