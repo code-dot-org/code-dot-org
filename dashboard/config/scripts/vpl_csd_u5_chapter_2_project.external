@@ -4,17 +4,15 @@ display_name 'Design Your Game'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 5 Chapter 2 Project - App Presentation
+# Unit 5 - End of Chapter 2 Project
 
-Unit 5 Chapter 2 ends with the culmination of several weeks of project work.  This is an opportunity for students to showcase not only their app, but more importantly to highlight the research, design, testing, and iteration they went through.
+## Lesson 15: Project - Make a Recommendatioin
 
-## Sample Screens
-
-<img src="https://images.code.org/4b5e3f3e01eed1803ae65765a7392de2-image-1597873898625.png" style="float:center;">
+Unit 5, Chapter 2 concludes with a multi-day project in which students design a recommendation engine.  They collect, analyze, and interpret data, as well as engage in peer review before presenting their projects to the class.
 
 ## Project Resources 
 
 **Optional:** Explore the project lesson plan and accompanying resources. 
 
-><a href="https://curriculum.code.org/csd-20/unit5/16/" target="blank">Unit 5 Lesson 16: Project - App Presentation - Lesson Plan</a>
+><a href="https://curriculum.code.org/csd-20/unit5/16/" target="blank">Unit 5 Lesson 15: Project - App Presentation - Lesson Plan</a>
 MARKDOWN
