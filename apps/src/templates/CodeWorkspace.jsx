@@ -211,6 +211,7 @@ class CodeWorkspace extends React.Component {
                   : i18n.workspaceHeaderShort()}
               </span>
               <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
+                <span>: </span>
                 <ProtectedStatefulDiv
                   id="blockUsed"
                   className="block-counter-default"

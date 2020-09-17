@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:42.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Free Response: Choosing Array or Variable\n\nIn general, when do you think you should store information in an array, and when should you use a variable?\n",
+    "encrypted_solution": "mqVeA//dSso9Hsl46nsq+PDhTapRR4azAR4rxnvUx7852pywwhlnHhoIFQ57\nmiI5Sed517NfXAxSuFNafeYekoM28glebYP32NPuMl8bvijKIzDcddBopgNI\n6G7SULze6AN/ZQW/uZ4bXrh6YOvxQvmbns7O8p5VJV/3P2in2TLzqR1Bpfqu\nq50E5D3cr84n9TkYINkV9amAGNWWq7YAnpim4EuHSyPUxzTr0sSD6Wa+CCoe\nsuHfKIKqbHnoayFfdlrSRp6qsmDuKyLG4PNU7Kx62IYeRjtIp3KdGqGekyYj\n1l3PmiObyUeNgGkKs4RLNJqePHkeBdBsdqyMxtPLry3/rjly6lH4RZ8Fl+ks\naPWXpcRRwtr9eCcCfhgHWa+M24jdq+eyC30TwgxIL1r+1GHj1hEHC1B7KSxq\nRDTifbZdUfdjjKgFjDWtxoLVFwx7lxBvPrJ9FEzizquiqZARPyCcJjQK4JAr\ngrxWzs7P22NPSySh5lrROhRxMBf4QOkXvIzERpTrK56q4lwQvDZU8Q==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17361,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -27,9 +27,9 @@ Most of us have a vague idea that a knowledge of computer science will help you 
 - More than 50 percent of all math and science jobs are for computer scientists.
 - Computer science jobs are the highest-paying jobs for new graduates.
 
-Software powers our economy, but, less than 2.4 percent of college students graduate with a CS degree. That means there aren’t going to be enough graduates to fill the jobs. To make matters worse, 95 percent of our schools don’t teach programming.
+Software powers our economy, but less than 2.4 percent of college students graduate with a CS degree. That means there aren’t going to be enough graduates to fill the jobs. To make matters worse, 95 percent of our schools don’t teach programming.
 
-Fortunately, there’s something we can do about it. This December, we’re going to give students their first taste of coding by participating in a national hour of computer science instruction called the Hour of Code. The hour is part of Computer Science Education Week (Dec. 8-14), and our goal is to get kids to think, create, and have a blast -- all while learning some computer programming.
+Fortunately, there’s something we can do about it. This December, we’re going to give students their first taste of coding by participating in a national hour of computer science instruction called the Hour of Code. The hour is part of Computer Science Education Week (Dec. 7-13), and our goal is to get kids to think, create, and have a blast -- all while learning some computer programming.
 
 Students (and adults) across the country are getting involved and I’d like you to join as well. Here’s how you can help:
 
@@ -62,7 +62,7 @@ Beyond that, there are some really important reasons why I think we should host 
 
 Plus, it’s going to be a lot of fun.
 
-The Hour of Code is part of Computer Science Education Week (Dec. 8-14) -- timed to coincide with the birthday of the computer pioneer Admiral Grace Murray Hopper -- and is sponsored by Code.org.
+The Hour of Code is part of Computer Science Education Week (Dec. 7-13) -- timed to coincide with the birthday of the computer pioneer Admiral Grace Murray Hopper -- and is sponsored by Code.org.
 
 Schools across the country are getting on board. How about us?
 
@@ -109,7 +109,7 @@ Dear Parents,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and fewer students are studying it than a decade ago.
 
-That’s why our entire school joined in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 8-14), every one of our students will be amongst over 2 million worldwide spending one hour learning the basics.
+That’s why our entire school joined in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 7-13), every one of our students will be amongst over 2 million worldwide spending one hour learning the basics.
 
 Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in your outside of school, in the community. 
 
@@ -130,9 +130,9 @@ Your principal
 
 90 percent of American schools don’t teach computer science. Fewer students are learning how computers work than a decade ago. Girls and minorities are severely underrepresented. And yet, technology is increasingly shaping almost every aspect of how we live our lives. 
 
-That’s why every one of the 478 students at Washington Elementary School are joining in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 8-14), every student from kindergarten through 5th grade will spend one hour learning computer science, doing online tutorials featuring Bill Gates, Mark Zuckerberg and Angry Birds. 
+That’s why every one of the 478 students at Washington Elementary School are joining in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 7-13), every student from kindergarten through 5th grade will spend one hour learning computer science, doing online tutorials featuring Bill Gates, Mark Zuckerberg and Angry Birds. 
 
-We are writing to invite you to attend our kickoff assembly, and to see kids start the activity on Monday, Dec. 8. 
+We are writing to invite you to attend our kickoff assembly, and to see kids start the activity on Monday, Dec. 7. 
 
 The Hour of Code is a campaign to prove that regardless of age, race or gender, anyone can learn how to not just consume, but build the technologies of the future.
 
@@ -140,7 +140,7 @@ Our students are among over 2 million already planning to try one Hour of Code d
 
 **Contact:** Carol Parks, Principal, cell: (212) 555-5555
 
-**When:** Dec. 8-14, during Computer Science Education Week. Our kickoff assembly is on Monday, Dec. 8 at 1 p.m.
+**When:** Dec. 7-13, during Computer Science Education Week. Our kickoff assembly is on Monday, Dec. 7 at 1 p.m.
 
 **Where:** Washington Elementary School, 839 W. 112th Street, New York, NY 10030
 
@@ -155,7 +155,7 @@ Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that in today’s economy, there are three good, high-paying jobs waiting for every person who graduates from college with a degree in computer science?  And, computer science is important to every industry and professional pursuit.  The discipline is foundational for all students today. Yet 90% of schools don’t teach it, and fewer kids learn to program than 10 years ago. At [SCHOOL NAME], we are trying to change that. 
 
-Our entire school has joined in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 8-14), every one of our students will be amongst over 2 million worldwide who will spend one hour learning computer science.
+Our entire school has joined in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 7-13), every one of our students will be amongst over 2 million worldwide who will spend one hour learning computer science.
 
 We’re writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills.  We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
 

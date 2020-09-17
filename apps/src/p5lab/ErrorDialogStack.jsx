@@ -99,12 +99,14 @@ class ErrorDialogStack extends React.Component {
             <DialogFooter>
               {error.error_cause && (
                 <Button
+                  __useDeprecatedTag
                   text={msg.delete() + ' "' + animationName + '"'}
                   onClick={() => this.handleDeleteChoice(error.error_cause)}
                   color="red"
                 />
               )}
               <Button
+                __useDeprecatedTag
                 text={msg.reloadPage()}
                 onClick={() => this.handleReloadChoice(error.error_cause)}
               />

@@ -34,6 +34,7 @@
   "bird": "鸟",
   "calloutPutCommandsHereRunStart": "当程序开始执行时，这里的命令就会运行。",
   "calloutBlocklyPlaceGoUpHere": "放一个“向上”块在这里，用来往上走",
+  "calloutBlocklyPlaceMoveUpHere": "在这里放 \"向上移动机器人\" 模块来向上移动",
   "calloutClickEvents": "点击事件标题来查看事件函数模块",
   "calloutUseArrowButtons": "按住这些按钮或者用方向键来触发移动事件。",
   "calloutUseArrowButtonsAutoSteer": "我们已经隐藏了你的代码，但你仍然可以使用方向键来移动。",

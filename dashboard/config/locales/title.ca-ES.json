@@ -1,0 +1,52 @@
+{
+  "ca-ES": {
+    "data": {
+      "title": {
+        "BigEvent": "El gran esdeveniment",
+        "BigEvent_2018": "El gran esdeveniment",
+        "BinaryBracelets": "Polseres binàries",
+        "BinaryBracelets_2018": "Polseres binàries",
+        "BinaryImages": "Imatges binàries",
+        "BinaryImages_2018": "Imatges binàries",
+        "BuildingAFoundation": "Posant les bases",
+        "ComputationalThinking": "Pensament computacional",
+        "Conditionals": "Condicionals",
+        "Conditionals_2018": "Condicionals",
+        "Crowdsourcing": "Col·laboració oberta",
+        "DiceRace": "Algoritmes de la vida real: cursa de daus",
+        "DigitalCitizenship": "Ciutadania digital",
+        "DigitalFootprint": "La vostra empremta digital",
+        "DigitalFootprint_2018": "La vostra empremta digital",
+        "GettingLoopy": "Fent bucles",
+        "GettingLoopy_2018": "Fent bucles",
+        "GoingPlacesSafely": "Anant a llocs segurs",
+        "GoingPlacesSafely_2018": "Anant a llocs segurs",
+        "GraphPaperProgramming": "Programació de paper quadriculat",
+        "GraphPaperProgramming_2018": "Programació de paper quadriculat",
+        "Internet": "Internet",
+        "MadGlibs": "Mad Glibs",
+        "MoveIt": "Mou-te, mou-te",
+        "MoveItMoveIt_2018": "Mou-lo, Mou-lo",
+        "PaperPlanes": "Algoritmes de la vida quotidiana: Avions de paper",
+        "PaperPlanes_2018": "Algoritmes de la vida quotidiana: Avions de paper",
+        "PlantASeed": "Algoritmes reals: Planta una llavor",
+        "PlantASeed_2018": "Algoritmes reals: Planta una llavor",
+        "RelayProgramming": "Programació en relleus",
+        "RelayProgramming_2018": "Programació en relleus",
+        "SongwritingParameters": "Composició de cançons",
+        "SongwritingWithParameters": "Composició de cançons Amb Paràmetres",
+        "TangramAlgorithms": "Algoritmes de Tàngram",
+        "UnplugHappyMaps": "Mapes feliços",
+        "UnplugHappyMaps_2018": "Mapes feliços",
+        "courseB_unplugged_MRF": "Activitat sense connexió",
+        "courseB_unplugged_MRF_2018": "Els meus amics robòtics",
+        "courseB_unplugged_loopyMRF": "Activitat sense connexió",
+        "courseC_Unplugged_ScreenOutTheMean": "Activitat sense connexió",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "Activitat sense connexió",
+        "courseD_unplugged_digitalCitizenship": "Activitat sense connexió",
+        "courseD_unplugged_digitalCitizenship_2018": "Activitat sense connexió",
+        "courseF_unplugged_powerOfWords": "Activitat sense connexió"
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@ import AssignmentVersionSelector, {
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -66,6 +67,15 @@ const styles = {
  */
 class ScriptOverviewHeader extends Component {
   static propTypes = {
+    showCourseUnitVersionWarning: PropTypes.bool,
+    showScriptVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    userId: PropTypes.number,
+
+    // provided by redux
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired
@@ -80,14 +90,7 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    showCourseUnitVersionWarning: PropTypes.bool,
-    showScriptVersionWarning: PropTypes.bool,
-    showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
-    showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string,
-    locale: PropTypes.string,
-    userId: PropTypes.number
+    localeEnglishName: PropTypes.string
   };
 
   componentDidMount() {
@@ -188,7 +191,7 @@ class ScriptOverviewHeader extends Component {
     );
     setRecommendedAndSelectedVersions(
       filteredVersions,
-      this.props.locale,
+      this.props.localeEnglishName,
       selectedVersion && selectedVersion.year
     );
 
@@ -256,7 +259,11 @@ class ScriptOverviewHeader extends Component {
                 />
               )}
             </div>
-            <p style={styles.description}>{scriptDescription}</p>
+            <SafeMarkdown
+              style={styles.description}
+              openExternalLinksInNewTab={true}
+              markdown={scriptDescription}
+            />
           </div>
           <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>
@@ -278,5 +285,6 @@ export default connect(state => ({
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  localeEnglishName: state.locales.localeEnglishName
 }))(ScriptOverviewHeader);

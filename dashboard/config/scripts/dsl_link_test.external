@@ -2,5 +2,5 @@ name 'dsl link test'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-([Test](https://levelbuilder-studio.code.org/s/csd5/stage/14/puzzle/1))
+([Test](https://studio.code.org/s/csd5-2019/stage/14/puzzle/1))
 MARKDOWN

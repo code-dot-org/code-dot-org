@@ -833,7 +833,7 @@ module Api::V1::Pd
             notes_4: nil,
             notes_5: nil,
             friendly_scholarship_status:
-              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO)
+              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO, 'csp')
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end

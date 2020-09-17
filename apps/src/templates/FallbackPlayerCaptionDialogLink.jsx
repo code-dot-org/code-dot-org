@@ -83,6 +83,7 @@ class FallbackPlayerCaptionDialog extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             className="ui-test-fallback-player-caption-dialog-close"
             text={i18n.fallbackVideoClosedCaptioningDialogClose()}
             onClick={this.props.handleClose}

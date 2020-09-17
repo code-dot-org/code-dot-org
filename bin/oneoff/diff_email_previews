@@ -18,14 +18,15 @@ To diff emails in 2 folders in the current directory: './diff_email_previews dif
 # List of email previews are copied from
 # http://localhost-studio.code.org:3000/rails/mailers/pd/workshop_mailer/
 PREVIEWS = %w(
-  detail_change_notification__csf_deepdive
   detail_change_notification__admin
+  detail_change_notification__csf_deepdive
   detail_change_notification__csf_intro
   exit_survey__csd_1
   exit_survey__csd_teacher_con
   exit_survey__csf_deepdive
   exit_survey__csf_intro
   exit_survey__csp_1
+  exit_survey__csp_for_returning_teachers
   exit_survey__csp_summer_workshop
   exit_survey__general
   facilitator_detail_change_notification__csf_intro
@@ -46,12 +47,14 @@ PREVIEWS = %w(
   teacher_enrollment_receipt__csf_deepdive
   teacher_enrollment_receipt__csf_intro
   teacher_enrollment_receipt__csp_1
+  teacher_enrollment_receipt__csp_for_returning_teachers
   teacher_enrollment_receipt__csp_summer_workshop
   teacher_enrollment_receipt__ecs_phase_4
   teacher_enrollment_receipt__ecs_unit_3
   teacher_enrollment_receipt__ecs_unit_4
   teacher_enrollment_receipt__ecs_unit_5
   teacher_enrollment_receipt__ecs_unit_6
+  teacher_enrollment_receipt__facilitator
   teacher_enrollment_receipt__formatted_notes
   teacher_enrollment_receipt__phase_2
   teacher_enrollment_receipt_csd_1
@@ -65,12 +68,17 @@ PREVIEWS = %w(
   teacher_enrollment_reminder__csf_intro_3_day
   teacher_enrollment_reminder__csp_1_10_day
   teacher_enrollment_reminder__csp_1_3_day
+  teacher_enrollment_reminder__csp_for_returning_teachers_10_day
+  teacher_enrollment_reminder__csp_for_returning_teachers_3_day
   teacher_enrollment_reminder__csp_summer_workshop_10_day
   teacher_enrollment_reminder__csp_summer_workshop_3_day
+  teacher_enrollment_reminder__facilitator
   teacher_enrollment_reminder_csd_1_10_day
   teacher_enrollment_reminder_csd_1_3_day
   teacher_enrollment_reminder_csd_unit_6_3_day
   teacher_follow_up__csf_intro
+  teacher_follow_up__csf_intro_three_facilitators
+  teacher_follow_up__csf_intro_with_rp
 ).freeze
 
 def create_sub_folder(folder_name)

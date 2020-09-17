@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursef-2018/stage/1/puzzle/1": {
+    "title": "My Robotic Friends"
+  },
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/1": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
@@ -103,6 +106,9 @@
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"algorithms\"!**  \n\n\n\n### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  \n\n### When you write an algorithm for a machine, this is called a **program**.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Algorithm** - A list of steps to finish a task\n\n* ### **Program** - An algorithm that has been coded into something that can be run by a machine\n"
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/3/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/1": {
     "dsls": {
@@ -230,9 +236,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/5/puzzle/5": {
@@ -243,8 +256,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/5/puzzle/6": {
@@ -330,6 +345,9 @@
       "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/6/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/1": {
     "dsls": {
@@ -610,6 +628,9 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/10/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/1": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
@@ -769,8 +790,10 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_names": {
-      "build bridge": "build bridge"
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/9": {
@@ -782,8 +805,10 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_names": {
-      "clear path": "clear path"
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/10": {
@@ -794,9 +819,13 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_names": {
-      "fix long path": "fix long path",
-      "fix short path": "fix short path"
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/11": {
@@ -811,9 +840,13 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_names": {
-      "build short bridge": "build short bridge",
-      "build long bridge": "build long bridge"
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/12": {
@@ -823,10 +856,20 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/13/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+  },
+  "https://studio.code.org/s/coursef-2018/stage/14/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -951,14 +994,18 @@
     "callouts": {
       "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/2": {
     "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/3": {
@@ -967,40 +1014,54 @@
     "authored_hints": {
       "courseF_beevariables_3a": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/4": {
     "short_instructions": "Edit the code to work for this puzzle.",
     "long_instructions": "\"Un-BEE-lievable!\"\n\nEdit the code to make it work for this puzzle.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/5": {
     "short_instructions": "Create your own code to solve this puzzle",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/6": {
     "short_instructions": "**Challenge** Now give this puzzle a try!",
-    "function_names": {
-      "collect stairs": "collect stairs"
+    "function_definitions": {
+      "collect stairs": {
+        "name": "collect stairs"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/7": {
     "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
-    "function_names": {
-      "collect": "collect"
+    "function_definitions": {
+      "collect": {
+        "name": "collect"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/8": {
     "short_instructions": "How many nectar will the bee collect from this flower?",
-    "function_names": {
-      "move and increment": "move and increment",
-      "collect": "collect"
+    "function_definitions": {
+      "move and increment": {
+        "name": "move and increment"
+      },
+      "collect": {
+        "name": "collect"
+      }
     },
     "contained levels": [
       {
@@ -1103,6 +1164,9 @@
       "courseF_artist_variables_challenge2_c": "Using one variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.",
       "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/18/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
@@ -1245,8 +1309,10 @@
   "https://studio.code.org/s/coursef-2018/stage/19/extras?level_name=courseF_bee_for_challenge1_2018": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/19/extras?level_name=courseF_bee_for_challenge2_2018": {
@@ -1452,7 +1518,21 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/3": {
     "display_name": "How to Make a Sprite"
@@ -1471,7 +1551,20 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/7": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/8": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -1479,7 +1572,20 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other"
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/1": {
     "short_instructions": "What do you think will happen if you press \"Run\" and then click on her?",
@@ -1493,7 +1599,21 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/2": {
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
@@ -1501,19 +1621,67 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
-    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/5": {
     "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
-    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  "
+    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/6": {
     "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
-    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  "
+    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/7": {
     "short_instructions": "Freeplay: What more can you make your giraffe do? ",
-    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  "
+    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/24/puzzle/1": {
     "display_name": "Video: CS Matters"
@@ -1525,14 +1693,45 @@
     "callouts": {
       "InspirationalArtwork_1": "Try using the `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "draw a loop": "draw a loop",
-      "n-sided shape": "n-sided shape",
-      "draw spiral circle": "draw spiral circle"
+    "function_definitions": {
+      "draw a loop": {
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      },
+      "n-sided shape": {
+        "name": "n-sided shape",
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length "
+      },
+      "draw spiral circle": {
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/24/puzzle/3": {
-    "display_name": "Sprite Lab Example Project"
+    "display_name": "Sprite Lab Example Project",
+    "behavior_names": {
+      "flying south and loop": "flying south and loop",
+      "drive south and loop": "drive south and loop",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "being hungry": "being hungry",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/25/puzzle/1": {
     "dsls": {
@@ -1544,7 +1743,21 @@
     "display_name": "Course F Artist Project"
   },
   "https://studio.code.org/s/coursef-2018/stage/26/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/27/puzzle/1": {
     "display_name": "Revise Artist Project"

@@ -12,7 +12,7 @@ import {
   isWindows,
   isLinux
 } from '../util/browserChecks';
-import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
+import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
 
@@ -125,12 +125,13 @@ class WindowsDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Windows (${
               installer.version
             })`}
             icon="download"
-            color={ButtonColor.orange}
-            size={ButtonSize.large}
+            color={Button.ButtonColor.orange}
+            size={Button.ButtonSize.large}
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
@@ -176,10 +177,11 @@ class MacDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
-            color={ButtonColor.orange}
-            size={ButtonSize.large}
+            color={Button.ButtonColor.orange}
+            size={Button.ButtonSize.large}
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
@@ -226,12 +228,13 @@ class LinuxDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Linux (${
               installer.version
             })`}
             icon="download"
-            color={ButtonColor.orange}
-            size={ButtonSize.large}
+            color={Button.ButtonColor.orange}
+            size={Button.ButtonSize.large}
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />

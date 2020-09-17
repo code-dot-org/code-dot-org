@@ -1945,7 +1945,7 @@ it:
           Funzioni e parametri lavorano insieme per creare grandiosi programmi per computer (e grandiosi Sundae, naturalmente).
     C4_unplugged_variables:
       1:
-        text: Questa lezione si chiama "Variabili e Buste". Impareremo come costruire
+        text: Questa lezione si chiama "Variabili e buste". Impareremo come costruire
           una frase anche se ci mancano alcune informazioni. Molti di noi sanno cosa
           significa compilare un modulo. Facciamo qualcosa di simile, ad esempio,
           quando scriviamo il nostro nome prima di iniziare un compito. Può capitare
@@ -4015,6 +4015,8 @@ it:
         image: notes/writing_first_program_4.png
       5:
         image: notes/writing_first_program_5.png
+      6:
+        image: notes/writing_first_program_3.png
     hoc_dance_warmup_2019:
       1:
         text: 'Ora del Codice | Ballando col codice: Riscaldamento'

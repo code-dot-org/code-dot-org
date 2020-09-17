@@ -1,28 +1,30 @@
 name 'csp-7-exam1-API-algorithms-2020'
-encrypted 's8xsN1RZSAAJfe9Xj1HYwp8BX4PxQrAK0zx7fxyWx7+80phEwUPY81PudjtS
-1xvgzEiz1iQOUlRSVa9ssu46D+LAIKh6TUmN09WiTkZ/UQCflrE4yK4E7lJB
-3FaWQtU8DXVPredxEk5BRMVn13U/9WzFDawQd6mgJLfHTG861ipFwQMN1eAo
-7OuvvdCSvlBYPMSkmp/uOTP6aumEtcihpdxHRJJoh3MDSwgF1VH9seV9SCpu
-eGPtC+xsGl72QW7tNatL60nJjqRFDaWVrRN5ySPbolLgTAaOBKR92TXYiP1h
-9cT8u9MT9KenwNVTOE8fuE+e0mlSsWO4w0jZR9x3qLmG+XTaCB5eGFgotSDS
-0V4UGeyeSgSryjZi5bFH4PMQQPzTS5LLPLEEce7EbPdOd4XIIdebgrwQKw1j
-HcIKpNPDiSs0tCaB0WvOrD7a2shbVDeeRe6x6RnPdlNcODikulQY5xYkp8vX
-HtmDzLLmx3sVBmbN4HTFCSJipWGTSU8jpg/oQSEsugyBBAfCubwJbctvWP0U
-mVFliibaWcAbPI50LyLx8BTVUK4ouY77hIYReaaOP0L3ddqQ9+DLwKVJ6F5R
-ZoEVTje3WXRbhyvctt0oiHBt7gaiKVuPCONDhK/AiOZc9Ym6XnGOMWj67mM5
-qziPtN7t47rA4Ygb5lTGMBiCZjaDxdv4w3Bl6HJan9C8YzGpd4QNPdWBC/L2
-AbV15AgDftkVS20TVdR1ZHRVH+gcykoTnaVy5klv/WoFUMojWZEONiCcfOIX
-F2kfdbs2WLJ9Xu5sI3FPvAUqaWTB+UAj8cMbQj+nyHFaz7UrI9vyutq5t1c1
-wJWhv2sbx9uT8MSON/vuR1laKOc569BaH9M8XpNVSv6bCyhdQZrXGQnFOuWi
-8FcdytHLw9l5uGYhNgIGsZWPJDd91/6E+BSaysVjq9wqalgyY4jC+Ba1eo6f
-bu2CXxBTCo/Qoj0xCkO4TvMoT86VAslEwSix3V6xflSOqV5XoEVYEgRbhQtk
-2v+49l2QsB5iRVBo70SdfPShSHTIuU2y38GXqoIgaiTBdfqV7IE64YzAf6Jn
-gOWiN28wr+yxgk4GJ+HmLq7u+i6c7kz0BGdHKdMcCOXkiNMkWP5JSwxdBDFZ
-4TW8hKM/guuIe84RjcwMWI+x8Q2O4Bj81kMX8H2aOx8tY8WzRMxFAh2XhdDj
-peEUoTwMyxbZ/w8/MxUdkQm9KlgqMryFg/rFxIycz72Pc1KVhaJbfbsLverp
-yIJGV8+WeV5SPihlTvI9JpvIHdnrQsR/BBurgO1rwrjICaAxZ72obt90tkgp
-lwQTJV8cHcieKy8dO7+P5s+/3O4J/pIX3AeEaP1/b2zgn2UXCrhpLvTRE2Jy
-oU5GVphUtkmTAISa7DV56UtOozWVJBSs5lU2u2fEAvNqMYI9/IaQ3TB2DfGB
-IM7/PPxpYJYmbFurOcRR375sT3KCtaBUqztTCMkHReG05wej+E8g8sEIGH5b
-cReyYLEF58U5ZVAkm84Y8M8/d+GxXGxAgUa0
-'
+editor_experiment ''
+right '![](https://images.code.org/16955165125d5e5f3a0ece4f334d53c6-image-1581103506628.png)'
+wrong '![](https://images.code.org/9403c356fda66688a3e6bbb863a646df-image-1581103526866.png)'
+wrong '![](https://images.code.org/08f84b0a8ab2bb81b1c47dd8033dd0ce-image-1581103541918.png)'
+wrong '![](https://images.code.org/9aee866697b91e45e5b6d2cf603e6543-image-1581103554556.png)'
+
+markdown <<MARKDOWN
+Here is the API for a robot library.
+```
+// moves the robot forward
+function moveForward();
+
+// turns the robot to the left
+function rotateLeft();
+
+// turns the robot to the right
+function rototateRight
+
+// checks if a robot can move in any direction
+// direction {string} - the direction to be checked
+// return {Boolean} - true if the robot can move in that direction, otherwise returns false
+function canMove(direction);
+```
+
+Which code segment will guarantee that the robot makes it to the grey square?
+
+![](https://images.code.org/38a33896798110989862a99a7ccefe66-image-1581103498011.png)
+
+MARKDOWN

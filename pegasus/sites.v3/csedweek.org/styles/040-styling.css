@@ -742,3 +742,12 @@ label {
 .video_caption_link {
   font-family: 'Gotham 4r', sans-serif;
 }
+
+.hidden-label {
+  position: fixed;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

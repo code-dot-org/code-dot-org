@@ -88,9 +88,6 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ہمیشہ کیلئے کریں"
         options:
@@ -109,9 +106,6 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
@@ -186,9 +180,6 @@ ur:
             MOVES.XArmsUp: کھینچائی
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ایک مرتبہ"
         options:
@@ -217,9 +208,6 @@ ur:
             MOVES.XArmsUp: کھینچائی
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ہر {N} پیمائشوں کو {START} کے بعد دہرائیں '
       Dancelab_everySeconds:
@@ -948,6 +936,10 @@ ur:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
@@ -988,8 +980,46 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_hideTitleScreen:
         text: عنوان کی سکرین چھپائیں
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
+            '"space"': خلاء
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': وائے
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} چھونے کناروں ہے"
       gamelab_jumpTo:
@@ -1034,6 +1064,13 @@ ur:
             '"z"': z
       gamelab_locationAt:
         text: 'مقام ایکس: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': مشرق
+            '"South"': جنوب
+            '"West"': مغرب
       gamelab_locationMouse:
         text: ماؤس کا مقام
       gamelab_locationOf:
@@ -1062,6 +1099,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_objectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
@@ -1137,6 +1176,8 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_subjectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_turn:
         text: باری {SPRITE} {DIRECTION} {N} ڈگری
         options:
@@ -1481,6 +1522,14 @@ ur:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': مشرق
+            '"South"': جنوب
+            '"West"': مغرب
       aalab_prompt:
         text: سوال پوچھیں {MESSAGE}
       aalab_scene:
@@ -1492,8 +1541,10 @@ ur:
             '3': '3'
       aalab_setupStory:
         text: سیٹ اپ کہانی
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': بےترتیب
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}
       binary_drawBinScreen:

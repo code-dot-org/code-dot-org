@@ -34,6 +34,7 @@
   "bird": "pájaro",
   "calloutPutCommandsHereRunStart": "Pon aquí los comandos a ejecutar cuando se inicia el programa",
   "calloutBlocklyPlaceGoUpHere": "Coloca un bloque de \"subir\" aquí para subir",
+  "calloutBlocklyPlaceMoveUpHere": "Coloca un bloque de \"subir droide\" aquí para subir",
   "calloutClickEvents": "Haz clic en el encabezado de eventos para ver los bloques de funciones de eventos.",
   "calloutUseArrowButtons": "Mantén pulsados en tu teclado esos botones o las flechas de dirección para activar los eventos de movimiento",
   "calloutUseArrowButtonsAutoSteer": "Hemos escondido el código que escribiste, pero todavía puedes utilizar las teclas de flecha para moverte",

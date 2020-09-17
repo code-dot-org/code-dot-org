@@ -1,6 +1,6 @@
 import React from 'react';
 import StandardDescriptionCell from './StandardDescriptionCell';
-import {fakeStandards, lessonCompletedByStandard} from './standardsTestHelpers';
+import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';
 
 export default storybook => {
   return storybook
@@ -11,7 +11,7 @@ export default storybook => {
         description: 'See lesson completed for standard',
         story: () => (
           <StandardDescriptionCell
-            description={fakeStandards[1].description}
+            description={standardsData[1].description}
             lessonsForStandardStatus={lessonCompletedByStandard[1].lessons}
           />
         )

@@ -97,12 +97,14 @@ class SchoolInfoConfirmationDialog extends Component {
           </p>
         </div>
         <Button
+          __useDeprecatedTag
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
           id="update-button"
         />
         <Button
+          __useDeprecatedTag
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}

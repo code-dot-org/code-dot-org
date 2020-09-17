@@ -38,19 +38,29 @@ Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szere
 
 ## Használd a Kódolás órája logóját a népszerűsítéshez
 
-[![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![kép]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Töltsd le a nagy felbontású verziót](http://images.code.org/share/hour-of-code-logo.zip)
 
-**A Kódolás órája kifejezés védjeggyel biztosított. Nem szeretnénk megakadályozni a használatát, viszont szeretnénk meggyőződni arról, hogy a leírtak megfelelnek az alábbi kiritériumoknak:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. A Kódolás órájára történő bármilyen utalást csak az alábbi módokon szabad alkalmazni. **Példa helyes felhasználásra**: "Vegyél részt a Kódolás óráján™ az ACMECorp.com-on." **Példa rossz felhasználásra:**: "Próbáld ki a Kódolás óráját az ACME Corp-nál."
-2. Használd a "TM" feliratot a legfontosabb megjelenésekkor, weboldalakon vagy az alkalmazásleírásokban.
-3. Használj kapcsolódó linkeket a weboldaladon (vagy akár egy láblécben), amelyek a [ Code.org ]({{ codeorg_link }}) webhelyre vagy a Számítástechnikai Oktatási Hét honlapjára mutatnak:
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+  </li>
+  <li>
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+  </li>
+</ul>
+
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *"A Kódolás órája™ egy országos kezdeményezés, amelyet a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] közösen hívott életre, hogy több millió diákot vezessen be egy óra leforgás alatt a számítástechnika és a számítógépes programozás világába. "*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-4. Ne használd a Kódolás órája kifejezést applikációk elnevezésekor.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 

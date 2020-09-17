@@ -1,6 +1,6 @@
 require 'csv'
 require 'cdo/chat_client'
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 
 class CsvToSqlTable
   attr_reader :db, :table

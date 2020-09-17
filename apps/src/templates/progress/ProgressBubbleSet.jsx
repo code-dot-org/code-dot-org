@@ -34,6 +34,9 @@ const styles = {
     // pill has height of 18, border of 2, padding of 6, margin of 3
     top: (18 + 4 + 12 + 6 - 10) / 2
   },
+  backgroundSublevel: {
+    top: 4
+  },
   backgroundFirst: {
     left: 15
   },
@@ -71,7 +74,8 @@ class ProgressBubbleSet extends React.Component {
     hideToolTips: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    showSublevels: PropTypes.bool
   };
 
   bubbleDisabled = level => {
@@ -85,48 +89,70 @@ class ProgressBubbleSet extends React.Component {
     return false;
   };
 
-  render() {
+  renderBubble = (level, index, isSublevel) => {
     const {
       levels,
-      style,
       selectedSectionId,
       selectedStudentId,
       hideAssessmentIcon
     } = this.props;
 
     return (
+      <div style={styles.withBackground} key={index}>
+        <div
+          style={[
+            styles.background,
+            level.isConceptLevel && styles.backgroundDiamond,
+            isSublevel && styles.backgroundSublevel,
+            level.isUnplugged && styles.backgroundPill,
+            !isSublevel && index === 0 && styles.backgroundFirst,
+            !level.sublevels &&
+              index === levels.length - 1 &&
+              styles.backgroundLast
+          ]}
+        />
+        <div
+          style={[
+            styles.container,
+            level.isUnplugged && styles.pillContainer,
+            level.isConceptLevel && styles.diamondContainer
+          ]}
+        >
+          <ProgressBubble
+            level={level}
+            disabled={this.bubbleDisabled(level)}
+            smallBubble={isSublevel}
+            selectedSectionId={selectedSectionId}
+            selectedStudentId={selectedStudentId}
+            hideToolTips={this.props.hideToolTips}
+            pairingIconEnabled={this.props.pairingIconEnabled}
+            hideAssessmentIcon={hideAssessmentIcon}
+          />
+        </div>
+      </div>
+    );
+  };
+
+  render() {
+    const {levels, style, showSublevels} = this.props;
+    return (
       <div style={{...styles.main, ...style}}>
-        {levels.map((level, index) => (
-          <div style={styles.withBackground} key={index}>
-            <div
-              style={[
-                styles.background,
-                level.isConceptLevel && styles.backgroundDiamond,
-                level.isUnplugged && styles.backgroundPill,
-                index === 0 && styles.backgroundFirst,
-                index === levels.length - 1 && styles.backgroundLast
-              ]}
-            />
-            <div
-              style={[
-                styles.container,
-                level.isUnplugged && styles.pillContainer,
-                level.isConceptLevel && styles.diamondContainer
-              ]}
-            >
-              <ProgressBubble
-                level={level}
-                disabled={this.bubbleDisabled(level)}
-                smallBubble={false}
-                selectedSectionId={selectedSectionId}
-                selectedStudentId={selectedStudentId}
-                hideToolTips={this.props.hideToolTips}
-                pairingIconEnabled={this.props.pairingIconEnabled}
-                hideAssessmentIcon={hideAssessmentIcon}
-              />
-            </div>
-          </div>
-        ))}
+        {levels.map((level, index) => {
+          return (
+            <span key={index}>
+              {this.renderBubble(level, index, false)}
+              {showSublevels &&
+                level.sublevels &&
+                level.sublevels.map((sublevel, index) => {
+                  return (
+                    <span key={index}>
+                      {this.renderBubble(sublevel, index, true)}
+                    </span>
+                  );
+                })}
+            </span>
+          );
+        })}
       </div>
     );
   }

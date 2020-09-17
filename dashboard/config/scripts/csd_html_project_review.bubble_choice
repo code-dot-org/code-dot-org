@@ -1,0 +1,12 @@
+name 'CSD HTML project Review'
+editor_experiment ''
+display_name 'HTML Review'
+description 'Here are some HTML tags that you may have seen in the past couple of lessons.  You can use them to review the tags you might want for your web page.'
+
+sublevels
+level 'CSD Web Dev bubble choice p tag'
+level 'CSD Web Dev bubble choice p tag 2'
+level 'CSD Web Dev choice level p tag 3'
+level 'CSD Web Dev choice level headings 1'
+level 'CSD Web Dev choice level headings 2'
+level 'CSD Web Dev bubble choice br tag'

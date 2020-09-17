@@ -1,0 +1,26 @@
+name 'Episode 8 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+### Unplugged
+
+No computer? No problem! Print out [this worksheet](https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit?usp=sharing), then cut out the programming blocks and write a program on paper using variables! For extra fun: find some cardboard and make your own pretend computer and draw the display for your program. 
+
+![](https://images.code.org/7a77bf6e8562648ff8b693ca428e492f-image-1589205853166.png)
+
+### Sprite Lab
+
+**Do This:** Add more features to the game we programmed during this week's Code Break. What happens when the player character touches other aliens? Should there be more coins? What about more aliens? Can you change the background and sprites? 
+
+![](https://images.code.org/fcaf6fe22b811005e31b5e0a644bacb1-image-1589295794704.gif) ![](https://images.code.org/f842dd59cf3155248df0a7907354fffe-image-1589295703607.gif)
+
+### App Lab
+
+**Do This:** Make the Story Teller App your own! Add a new theme, add extra variables, and challenge yourself to add another story which uses the same variables. 
+
+![](https://images.code.org/d2eb988f1f75043479224f7f1205eb84-image-1589297864925.gif) ![](https://images.code.org/0e51189f6d3b1fcf23766463546299f5-image-1589297869563.gif)
+MARKDOWN

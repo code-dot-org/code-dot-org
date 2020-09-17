@@ -1,6 +1,12 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "",
-  "reinfFeedbackMsg": "",
+  "reinfFeedbackMsg": "완료했네요! 다음 단계로 넘어갈려면 \"계속\"을 클릭하세요.",
   "shareGame": "게임 공유하기:",
   "spritelabFeedbackCreateFishWithBehavior": "",
   "spritelabFeedbackMoveFishLeftRight": "",

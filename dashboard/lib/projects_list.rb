@@ -34,7 +34,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id)
+        project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -118,30 +118,65 @@ module ProjectsList
     end
 
     # Retrieve a class set of libraries for a specified class section
-    # @param section The section that has all students whose libraries should
+    # @param section The section that has all users whose libraries should
     #                be returned.
     # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
     def fetch_section_libraries(section)
       project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
-      section_students = section.students
+      section_users = section.students + [section.user]
+
       [].tap do |projects_list_data|
-        student_storage_ids = PEGASUS_DB[:user_storage_ids].
-          where(user_id: section_students.pluck(:id)).
+        user_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_users.pluck(:id)).
           select_hash(:id, :user_id)
-        student_storage_id_list = student_storage_ids.keys
+        user_storage_id_list = user_storage_ids.keys
         PEGASUS_DB[:storage_apps].
-          where(storage_id: student_storage_id_list, state: 'active').
+          where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
           where("value->'$.libraryName' IS NOT NULL").
           each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
-            project_owner = section_students.find {|student| student.id == student_storage_ids[project[:storage_id]]}
-            project_data = get_library_row_data(project, channel_id, project_owner)
-            projects_list_data << project_data if project_data
+            project_owner = section_users.find {|user| user.id == user_storage_ids[project[:storage_id]]}
+            project_data = get_library_row_data(project, channel_id, section.name, project_owner)
+            if project_data && (project_owner.id != section.user_id || project_data[:sharedWith].include?(section.id))
+              projects_list_data << project_data
+            end
           end
       end
+    end
+
+    # Given an array of library objects (outlined below), returns the channel_ids for
+    # libraries that have been updated since the given version.
+    #
+    # @param libraries [Array<Hash>] Should be formatted as follows:
+    #   [{channel_id: 'abc123', version: 'xyz987'}]
+    #   where `version` corresponds to an S3 version of the library.
+    # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
+    def fetch_updated_library_channels(libraries)
+      project_ids = libraries.map do |library|
+        _, id = storage_decrypt_channel_id(library['channel_id'])
+        library['project_id'] = id
+        id
+      rescue
+        nil
+      end.compact.uniq
+
+      return [] if project_ids.nil_or_empty?
+
+      updated_library_channels = []
+      PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
+        library = libraries.find {|lib| lib['project_id'] == project[:id]}
+        project_value = JSON.parse(project[:value])
+        next unless library && project_value['latestLibraryVersion']
+
+        if library['version'] != project_value['latestLibraryVersion']
+          updated_library_channels << library['channel_id']
+        end
+      end
+
+      updated_library_channels
     end
 
     def project_and_featured_project_and_user_fields
@@ -207,31 +242,42 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil)
+    def get_project_row_data(project, channel_id, student = nil, with_library = false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
-      {
+
+      row_data = {
         channel: channel_id,
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at],
-      }.with_indifferent_access
+        publishedAt: project[:published_at]
+      }
+
+      if with_library
+        row_data[:libraryName] = project_value['libraryName']
+        row_data[:libraryDescription] = project_value['libraryDescription']
+        row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
+        row_data[:sharedWith] = project_value['sharedWith'] ? project_value['sharedWith'] : []
+      end
+
+      row_data.with_indifferent_access
     end
 
-    # pull various fields out of the student and project records to populate
+    # pull various fields out of the user and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single library or a list of libraries.
-    def get_library_row_data(project, channel_id, student = nil)
+    def get_library_row_data(project, channel_id, section_name, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
+        sectionName: section_name,
         channel: channel_id,
         name: project_value['libraryName'],
         description: project_value['libraryDescription'],
-        studentName: student&.name,
+        userName: user&.name,
+        sharedWith: project_value['sharedWith'] ? project_value['sharedWith'] : []
       }.with_indifferent_access
     end
 

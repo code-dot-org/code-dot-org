@@ -9,7 +9,8 @@ export default class TextResponses extends React.Component {
     question: PropTypes.string.isRequired,
     answers: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
       .isRequired,
-    showAverage: PropTypes.bool
+    showAverage: PropTypes.bool,
+    facilitators: PropTypes.object
   };
 
   renderResponseBullets() {
@@ -46,7 +47,10 @@ export default class TextResponses extends React.Component {
 
         return (
           <li key={i}>
-            {facilitator_name}
+            {this.props.facilitators &&
+            this.props.facilitators[facilitator_name]
+              ? this.props.facilitators[facilitator_name]
+              : facilitator_name}
             <ul>{answers}</ul>
           </li>
         );

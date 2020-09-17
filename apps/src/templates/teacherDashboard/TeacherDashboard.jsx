@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
-import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+import TeacherDashboardNavigation, {
+  TeacherDashboardPath
+} from './TeacherDashboardNavigation';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
@@ -13,11 +15,11 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
+import StandardsReport from '../sectionProgress/standards/StandardsReport';
 
 class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
@@ -51,7 +53,6 @@ class TeacherDashboard extends Component {
     const {
       location,
       studioUrlPrefix,
-      pegasusUrlPrefix,
       sectionId,
       sectionName,
       studentCount
@@ -69,30 +70,39 @@ class TeacherDashboard extends Component {
       location.pathname = TeacherDashboardPath.progress;
     }
 
-    // Include header components unless we are on the /login_info page.
-    const includeHeader = location.pathname !== TeacherDashboardPath.loginInfo;
+    // Include header components unless we are on the /login_info or /standards_report page.
+    const includeHeader =
+      location.pathname !== TeacherDashboardPath.loginInfo &&
+      location.pathname !== TeacherDashboardPath.standardsReport;
 
     return (
       <div>
-        {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
+        {includeHeader && (
+          <div>
+            {/* TeacherDashboardNavigation must be outside of
+            TeacherDashboardHeader. Routing components do not work with
+            components using Connect/Redux. Library we could use to fix issue:
+            https://github.com/supasate/connected-react-router */}
+            <TeacherDashboardHeader />
+            <TeacherDashboardNavigation />
+          </div>
+        )}
         <Switch>
           <Route
             path={TeacherDashboardPath.manageStudents}
             component={props => (
-              <ManageStudents
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
             path={TeacherDashboardPath.loginInfo}
             component={props => (
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
             )}
+          />
+          <Route
+            path={TeacherDashboardPath.standardsReport}
+            component={props => <StandardsReport />}
           />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (

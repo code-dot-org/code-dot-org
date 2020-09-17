@@ -1,0 +1,58 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Dear
+  = @user.name + ','
+
+%p
+  As you are finalizing your plans for your upcoming workshop, I encourage you to take advantage of the following support resources.
+%ul
+  %li
+    Review the workshop agenda and resources posted on the
+    - if @workshop.course == 'CS Principles'
+      =link_to('facilitator landing page', 'https://code.org/facilitator/csp') + '.'
+    - else
+      =link_to('facilitator landing page', ' https://code.org/facilitator/csd') + '.'
+  %li
+    Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
+    =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')
+    channel!
+  %li
+    Want to share useful resources or engage in longer discussions with the facilitator community? Use the
+    =link_to('Facilitator Forum', 'https://forum.code.org/c/facilitators') + '!'
+  %li
+    Would you like 1:1 support? Schedule a quick check-in with Andrea via this
+    = link_to('scheduling tool', 'https://calendly.com/andrea-fac-supp/30min') + '.'
+  %li
+    Still need assistance with things like travel, scheduling, or Regional Partners? Contact us at
+    = mail_to('facilitators@code.org') + '.'
+  %li
+    For multi-day workshops, you will need to share daily survey links with your workshop participants on all
+    but the final day of the workshop. These links are already in your slide deck, but can also be found in the
+    workshop agenda and in the
+    = link_to('Facilitator Tools Guide', 'https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s') + '.'
+    %ul
+      %li
+        If more daily survey links are needed, simply increase the last number
+        in the url to match the number of the day.
+      %li
+        The post-workshop survey link is sent to teachers via email after the workshop is closed.
+        Teachers will also be able to access the survey from the
+        = link_to('My Professional Learning Page', 'https://studio.code.org/my-professional-learning') + '.'
+
+
+%p
+  Thank you for your time and energy spent preparing for an awesome professional development experience.
+  Please schedule time to take care of yourself and encourage your co-lead to do the same. Have a great workshop!
+
+%p
+Best,
+%br
+Andrea Robertson-Nottingham
+%br
+Education Programs
+%br
+Code.org

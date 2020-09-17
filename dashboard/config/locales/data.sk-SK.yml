@@ -39,6 +39,7 @@ sk:
         Custom: Umelec
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -327,8 +328,8 @@ sk:
           a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom
           ho presunúť pomocou šípok až kým neskóruje?
-        studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť,
-          nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c2_11: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_story_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c3_story_2: Viete nechať psa niečo povedať a potom nechať mačku takisto
           niečo povedať?
@@ -336,8 +337,8 @@ sk:
         studio_c3_story_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech
           mačka povie "ahoj", keď k nej pes príde?
         studio_c3_story_5: Viete pridať blok a spraviť chobotnicu šťastnou?
-        studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni
-          na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_story_6: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj",
           keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves
@@ -351,7 +352,7 @@ sk:
           do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla
           a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_c3_game_7: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
         studio_playlab_2: Jaskynný muž (postava 1) a jaskynná žena (postava 2) by
@@ -374,7 +375,7 @@ sk:
         studio_playlab_9: Nastav pozadie pre túto inváziu mimozemšťanov a pomôž Spacebotovi
           čo najrýchlejšie sa dostať k mimozemštanovi tým, že zmeníš jeho rýchlosť.
           Potom ho presuň pomocou šípiek a upozorni na inváziu aj ostatných
-        studio_playlab_10: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_playlab_10: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_iceage_hello1: Sid chce dať všetkých dokopy pre nové dobrodružstvo.
           Viete mu pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnú plochu
@@ -409,9 +410,9 @@ sk:
           ju ľúbi. Použite príkaz "postavička hodí", aby Sid (postavička č. 1) hodil
           Babičke (postavička č. 2) srdiečka! Nastavte Babičkinu náladu na šťastnú
           akonáhle dostane srdiečka.
-        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh.
-          Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti
-          na svojich telefónoch, tabletoch, alebo na počítačoch!
+        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru alebo príbeh.
+          Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
         studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Pomôžeš jej povedať
           "ahoj" tým, že presunieš blok "povedz" na pracovnú plochu a napíšeš do neho
           "ahoj"?
@@ -446,10 +447,10 @@ sk:
           "postava hoď predmet vpravo", aby Banánový Joe (postava č. 1) odhodil jedlo
           na Antona (postava č. 2)! Ak Antona zasiahne, nastav Antonovu náladu na
           nahnevanú.
-        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš
-          hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich
-          telefónoch, tabletoch, alebo na počítačoch!
-        studio_full_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh.  Keď
+          skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
+        studio_full_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo
@@ -481,7 +482,7 @@ sk:
         turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných
           nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj
           blok "šírkaPera". Prajeme veľa zábavy!'
-        studio_ec_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_ec_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
     video:
       name:
@@ -619,12 +620,18 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_draw_1: 'Video: Kreslenie v Game Labe - 1. časť'
+        csd_gamelab_draw_2: 'Video: Kreslenie v Game Labe - 2. časť'
+        csd_gamelab_variables_1: Predstavenie premenných - 1. časť
+        csd_gamelab_variables_2: Predstavenie premenných - 2. časť
         csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
         csd_weblab_css_2: Úvod do CSS - časť 2
         csd_weblab_intro_3: Úvod do Web Labu - časť 3
+        csp_applab_variables_1: Predstavenie premenných - 1. časť
+        csp_applab_variables_2: Predstavenie premenných - 2. časť
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
@@ -655,7 +662,7 @@ sk:
         applab_hoc_welcome: App Lab Hodina Kódu - Vitajte
         applab_hoc_setproperty: App Lab Hodina Kódu - setProperty
         applab_hoc_onevent: App Lab Hodina Kódu - onEvent
-        applab_hoc_designmode: App Lab Hodina Kódu - Dizajnovací mód
+        applab_hoc_designmode: Hodina kódu s App Labom - Dizajnový mód
         applab_hoc_share: App Lab Hodina Kódu - Zdieľanie
         mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
         mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
@@ -682,8 +689,8 @@ sk:
         applab_intro_welcome: App Lab - Začíname
         applab_intro_events: App Lab - Spravme to interaktívne
         applab_intro_sounds: App Lab - Obrázky a zvuky
-        applab_intro_designmode: App Lab - Dizajnovací mód
-        applab_intro_share: App Lab - Zdieľanie Appky
+        applab_intro_designmode: App Lab - Dizajnový mód
+        applab_intro_share: App Lab - Zdieľaj svoju appku
         CSF_skinOverview_Harvester: Záhradníčka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -698,7 +705,7 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Výroky Ak/Inak
+        csd_gamelab_if_else: Podmienkové výroky (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Postavy v akcii
@@ -706,7 +713,7 @@ sk:
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
         MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
-        mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
+        mc_2018_conditionals: 'Minecraft: Vodné dobrodružstvo - podmienky'
         mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
         hoc_dance_warmup: Tanečná párty - Zahrej sa
         hoc_dance_events: Tanečná Párty - Udalosti
@@ -735,7 +742,7 @@ sk:
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         CSF_Going_Places_Safely: Moja internetová štvrť
-        CSF_SpriteLab_Intro_v2: Predstavenie postavy
+        CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
         csd_debugging: Hľadanie a odstraňovanie chýb
@@ -746,8 +753,9 @@ sk:
           - Dátový blok
         u7-libraries-explanation: 'App Lab: Vytvor svoje vlastné bloky - Ako používať
           knižnice'
-        how-to-k5-workshops: 'Základy Code.org CS: Žiak otestovaný, Učiteľ schválený'
-        why-should-teach-unplugged-activities: 'FAQ: Prečo mám učiť aktivity bez počítača?'
+        how-to-k5-workshops: 'Základy informatiky s Code.org: Otestované žiakmi, schválené
+          učiteľmi'
+        why-should-teach-unplugged-activities: Prečo mám učiť aktivity bez počítača?
         cs-principles-intro-to-objects: 'CS Princípy: Úvod do Predmetov'
         oceans_machine_learning: Strojové učenie
         oceans_training_data: Tréningové dáta
@@ -757,6 +765,8 @@ sk:
         hoc_dance_events_2019: Tanečná párty 2019 - Udalosti
         hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
         hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
+        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_private_and_personal_information: Súkromné a osobné údaje
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

@@ -1,0 +1,436 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:47:15.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
+    "x": "25",
+    "y": "250",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Blocks like this: <xml>  <block type=\\\"simple_move_up_right\\\"/></xml> will let your artist move at a slant!\",\"hint_id\":\"courseB_artist_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71c1587b299877e9dea73c2447b15bec/courseB_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you finish one of the dice, `jump` to the next!\",\"hint_id\":\"courseB_artist_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e90583186a5d5d1e42438b5228fd37e8/courseB_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to `move` or `jump` over some of the same lines twice. \",\"hint_id\":\"courseB_artist_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e9f3e1e41f45c4e8e570f7829864be55/courseB_artist_loops_challenge1.mp3\"}]",
+    "ideal": "0",
+    "instructions_important": "false",
+    "images": "[\r\n\r\n]\r\n\r\n",
+    "long_instructions": "*\"It's time to toss the dice! Can you help me draw these?\"*",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0159065c730544c7961e3a8dbca232e3=levelbuilder/27784.png",
+    "parent_level_id": 15756,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:39:48 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_left"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-9">???</title>
+        </block>
+        <block type="simple_jump_up"/>
+        <block type="simple_jump_down"/>
+        <block type="simple_jump_right"/>
+        <block type="simple_jump_left"/>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff0000</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-9">2</title>
+              <statement name="DO">
+                <block type="simple_move_up">
+                  <next>
+                    <block type="simple_move_up">
+                      <next>
+                        <block type="simple_move_right">
+                          <next>
+                            <block type="simple_move_right">
+                              <next>
+                                <block type="simple_move_down">
+                                  <next>
+                                    <block type="simple_move_down">
+                                      <next>
+                                        <block type="simple_move_left">
+                                          <next>
+                                            <block type="simple_move_left">
+                                              <next>
+                                                <block type="simple_jump_right">
+                                                  <next>
+                                                    <block type="simple_jump_right">
+                                                      <next>
+                                                        <block type="simple_move_up_right">
+                                                          <next>
+                                                            <block type="simple_move_up">
+                                                            <next>
+                                                            <block type="simple_move_up">
+                                                            <next>
+                                                            <block type="simple_move_down_left">
+                                                            <next>
+                                                            <block type="simple_jump_left">
+                                                            <next>
+                                                            <block type="simple_jump_left">
+                                                            <next>
+                                                            <block type="simple_move_up_right">
+                                                            <next>
+                                                            <block type="simple_move_right">
+                                                            <next>
+                                                            <block type="simple_move_right">
+                                                            <next>
+                                                            <block type="simple_jump_down_right">
+                                                            <next>
+                                                            <block type="simple_jump_down">
+                                                            <next>
+                                                            <block type="simple_jump_down"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ff0000</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_width_inline">
+                  <title name="WIDTH">10</title>
+                  <next>
+                    <block type="jump_to_xy">
+                      <title name="XPOS">50</title>
+                      <title name="YPOS">175</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">0</title>
+                          <next>
+                            <block type="jump_to_xy">
+                              <title name="XPOS">50</title>
+                              <title name="YPOS">200</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">0</title>
+                                  <next>
+                                    <block type="jump_to_xy">
+                                      <title name="XPOS">50</title>
+                                      <title name="YPOS">225</title>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">0</title>
+                                          <next>
+                                            <block type="jump_to_xy">
+                                              <title name="XPOS">100</title>
+                                              <title name="YPOS">175</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">0</title>
+                                                  <next>
+                                                    <block type="jump_to_xy">
+                                                      <title name="XPOS">100</title>
+                                                      <title name="YPOS">200</title>
+                                                      <next>
+                                                        <block type="draw_move_by_constant">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">0</title>
+                                                          <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">100</title>
+                                                            <title name="YPOS">225</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">62.5</title>
+                                                            <title name="YPOS">137.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">100</title>
+                                                            <title name="YPOS">125</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">137.5</title>
+                                                            <title name="YPOS">112.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">137.5</title>
+                                                            <title name="YPOS">162.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">162.5</title>
+                                                            <title name="YPOS">187.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">250</title>
+                                                            <title name="YPOS">175</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">275</title>
+                                                            <title name="YPOS">200</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">250</title>
+                                                            <title name="YPOS">225</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">300</title>
+                                                            <title name="YPOS">175</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">300</title>
+                                                            <title name="YPOS">225</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">300</title>
+                                                            <title name="YPOS">125</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">337.5</title>
+                                                            <title name="YPOS">162.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">350</title>
+                                                            <title name="YPOS">175</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">362.5</title>
+                                                            <title name="YPOS">187.5</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

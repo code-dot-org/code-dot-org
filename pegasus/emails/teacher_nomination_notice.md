@@ -17,4 +17,4 @@ subject: Teacher Nominated
 
 <pre><%= message_s %></pre>
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

@@ -1,9 +1,17 @@
 {
   "https://studio.code.org/s/coursea-2017/stage/1/puzzle/1": {
-    "display_name": "Unspotted Bugs"
+    "display_name": "Unspotted Bugs",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/q2BQ1a][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch!\n\nQ1) In this story, what do \"bugs\" do?\n\nQ2) In computer science, programmers talk about having \"bugs\" in their code.  What do you think that means?\n\nQ3) How did Jasmine and JD find the bugs that they were looking for?\n\nQ4) Can you remember this way of looking for bugs?\n\n-   Walk through step-by-step.\n-   Is everything good at the first step?\n-   Is everything good at the second step?\n-   The third?\n-   If you find something wrong, look around that place for the \"bug\".\n-   When you find the bug, give it a name, and say it out loud!"
   },
   "https://studio.code.org/s/coursea-2017/stage/2/puzzle/1": {
-    "display_name": "Stevie and the Big Project"
+    "display_name": "Stevie and the Big Project",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/SZHo4z][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch! \n\nQ1) What two big words did Stevie learn in this story?\n\nQ2) What does it mean to be \"frustrated\"?\n\nQ3) Have you ever been frustrated?\n\nQ4) What are some things that you can do when you feel yourself getting frustrated?\n\nQ5)  What is \"persistence\"?\n\nQ6) Why is persistence a good thing?\n\nQ7) What are some things you can do to help yourself be persistent?"
+  },
+  "https://studio.code.org/s/coursea-2017/stage/3/puzzle/1": {
+    "title": "Real-life Algorithms: Plant a Seed"
+  },
+  "https://studio.code.org/s/coursea-2017/stage/5/puzzle/1": {
+    "title": "Happy Maps"
   },
   "https://studio.code.org/s/coursea-2017/stage/6/puzzle/2": {
     "short_instructions": "Get the bird to the bad pig!",
@@ -123,6 +131,12 @@
     "authored_hints": {
       "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
     }
+  },
+  "https://studio.code.org/s/coursea-2017/stage/7/puzzle/1": {
+    "title": "Going Places Safely"
+  },
+  "https://studio.code.org/s/coursea-2017/stage/8/puzzle/1": {
+    "title": "Loops Unplugged"
   },
   "https://studio.code.org/s/coursea-2017/stage/9/puzzle/2": {
     "short_instructions": "Move Laurel around and get as much treasure as you can!",
@@ -327,9 +341,14 @@
   "https://studio.code.org/s/coursea-2017/stage/10/extras?level_name=courseA_artist_loops_challenge1": {
     "short_instructions": "Can you draw a house? Make it look just the way you like it!",
     "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]",
-    "function_names": {
-      "\"simple\" solution": "\"simple\" solution"
+    "function_definitions": {
+      "\"simple\" solution": {
+        "name": "\"simple\" solution"
+      }
     }
+  },
+  "https://studio.code.org/s/coursea-2017/stage/11/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/coursea-2017/stage/12/puzzle/1": {
     "short_instructions": "Need a better playlab/events combo"

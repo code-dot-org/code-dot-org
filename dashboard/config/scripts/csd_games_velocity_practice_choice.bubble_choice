@@ -1,0 +1,8 @@
+name 'CSD games velocity practice choice'
+editor_experiment ''
+display_name 'Velocity Practice'
+description 'Practice using the velocity blocks with these activities.'
+
+sublevels
+level 'CSD U3 abstraction velocityY control_2020'
+level 'CSD games velocity bee'

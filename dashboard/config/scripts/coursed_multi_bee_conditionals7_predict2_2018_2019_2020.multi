@@ -1,0 +1,7 @@
+name 'courseD_multi_bee_conditionals7_predict2_2018_2019_2020'
+editor_experiment ''
+question 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud.'
+right 'The bee will get nectar at each flower and make honey at each honeycomb.', feedback: 'Correct!'
+wrong 'The bee will try to get nectar from both flowers and honeycomb.', feedback: 'Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb.'
+wrong 'The bee will try to get honey from both flowers and honeycomb.', feedback: 'Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb..'
+wrong 'I don\'t know.', feedback: 'The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb.'

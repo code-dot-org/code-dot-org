@@ -46,7 +46,7 @@
   "jump": "Hopp",
   "jumpBackward": "hopp bakover med",
   "jumpForward": "hopp fremover med",
-  "jumpToOverDown": "",
+  "jumpToOverDown": "hopp til %1 over %2 ned",
   "jumpToPosition": "hopp til den %1 posisjonen",
   "jumpByDirection": "hopp %1 med %2 piksler",
   "jumpTooltip": "Flytter kunstneren uten å tegne noe.",

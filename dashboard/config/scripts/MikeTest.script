@@ -1,28 +1,28 @@
 professional_learning_course 'Other plc course'
 
-stage 'Sample Stage'
+lesson 'Sample Stage', display_name: 'Sample Stage'
 level 'MikeTest1'
 level 'MikeTest2'
 level 'MikeTest3'
 level 'MikeAssessment1', assessment: true
-skin 'basketball'
 level 'bounce_12'
 
-stage 'Artist Functions'
+lesson 'Artist Functions', display_name: 'Artist Functions'
 level '2-3 Artist Functions 12 Mike'
 level '2-3 Artist Free Play'
 level 'Mike Pair Programming'
 level 'MikeTest3'
 level '2-3 Artist Free Play'
 
-stage 'The same thing with named levels'
+lesson 'The same thing with named levels', display_name: 'The same thing with named levels'
 level '2-3 Artist Functions 12 Mike'
 level '2-3 Artist Free Play'
 level 'Mike Pair Programming', named: true
 level 'MikeTest3'
 level '2-3 Artist Free Play'
 
-stage 'You are a coding STAR'
+lesson 'You are a coding STAR', display_name: 'You are a coding STAR'
 level 'MikeStarNested'
 level 'MikeStarHard'
 level 'MikeStar'
+

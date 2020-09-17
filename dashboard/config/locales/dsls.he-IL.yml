@@ -10,15 +10,17 @@ he-IL:
           correct: true
         - text: התחל עם ריבוע<br/>מקם מקבילית מעל הריבוע<br/>מקם משולש מימין למקבילית
         - text: התחל עם ריבוע<br/>מקם משולש מתחת לריבוע<br/>מקם מקבילית מימין למשולש
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: בחר את האלגוריתם המתאים לתמונה שצורפה.
         title: בחירה ממספר אפשרויות
       2-3 Algorithms Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         content1: התחל עם משולש<br/>מקם ריבוע מתחת למשולש<br/>מקם משולש נוסף מתחת
           לריבוע
         questions:
@@ -29,20 +31,21 @@ he-IL:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: התאם בין שילוב הכפתורים לבין תנועות הריקוד.
         questions:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: מתאם
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: השתמש במקש כדי להתאים כל קוד לאות שלה
         questions:
         - text: "<strong>N</strong>"
@@ -52,85 +55,100 @@ he-IL:
         title: מתאם
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: בהתאם לחוקי המשחק, איזו מקבוצות הקלפים מנוקדת כראוי?
         title: בחירה ממספר אפשרויות
       2-3 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: איך תפשט את רצף הפעולות הזה עם לולאות?
         title: בחירה ממספר אפשרויות
       2-3 Graph Paper Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: התאם את הרשת לתכנית.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: מתאם
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: מי מהתוכניות הבאות מייצר את התמונה הזו?
         title: בחירה ממספר אפשרויות
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: התאם את החידה לאוסף הבלוקים המתאים
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: התאמת מבוך
       2-3 Maze Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - text: איזה אוסף בלוקים יוביל אותי אל החזיר?
         title: מבוך - אפשרויות מרובות
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: איזו תוכנית **אינה** יוצרת את התמונה הזו?
         title: בחירה ממספר אפשרויות
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: איזו מן התמונה-תוכנית הבאות אינה כוללת טעויות?
         title: בחירה ממספר אפשרויות
       2-3 artist debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
-        - {}
+        - text: מה אתם צריכים לתקן כדי לגרום לקוד הזה לסיים את העיגול?
+        title: אמן ניפוי שגיאות בחירה מרובה 1
       2-3 artist functions multi 1:
         answers:
         - correct: true
@@ -141,89 +159,106 @@ he-IL:
         title: אמן - פונקציות אפשרויות מרובות
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: התאם את הלולאה אל הצורה
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: התאמת לולאות אמן 1
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: איזה מן הצורות הבאות נוצרה ע"י הלולאה הזו?
         title: האמן - לולאות אפשרויות מרובות
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: איזה צורה יוצרה ע"י התוכנית הזאת?
         title: האמן - לולאות אפשרויות מרובות
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: התאם את הצורה עם הבלוקים המשלימים אותה.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: התאמת אמן
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: איזה מן ההתניות הבאות נכונה?
+        title: התניות עם דבורה - אפשרויות מרובות 1
       2-3 bee conditionals multi 3:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: בחר את הבלוקים הכי טובים.
+        title: התניות עם דבורה - אפשרויות מרובות 2
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: איזה בלוק אוסף את כל הצוף?
         title: דבורה - לולאות עם מספר תשובות אפשריות אחד
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: התאם את החידה לאוסף הבלוקים המתאים
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: מבוך אחד מתאים
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: איזו קבוצת בלוקים היא התשובה הנכונה?
         title: מבוך - אפשרויות מרובות אחד
@@ -272,6 +307,7 @@ he-IL:
           correct: true
         - text: _____ היא _____ _____ בינונית.
         - text: יוג'ין היא עיר "____".
+        content1: לפניכם שלושה משפטים. איזה מבין התבניות הבאות מתאימה לכל המשפטים?”
         questions:
         - text: ירושלים היא עיר גדולה.<br/>הרצליה היא עיר בינונית.<br/>קצרין היא עיר
             קטנה.
@@ -442,6 +478,8 @@ he-IL:
       Begin planning your project_2018:
         content1: הוסיפו תיאור כאן
       Begin planning your project_2018_2019:
+        content1: הוסיפו תיאור כאן
+      Begin planning your project_2018_2019_2020:
         content1: הוסיפו תיאור כאן
       CSD Header Size MC:
         answers:
@@ -702,8 +740,8 @@ he-IL:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
         - correct: true
+        - {}
         - {}
         - {}
         questions:
@@ -1010,50 +1048,58 @@ he-IL:
         content1: הוסיפו תיאור כאן
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
         title: בחירה ממספר אפשרויות
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png\n"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: איזה מהבלוקים מייצרים ריבוע?
         title: בחירה ממספר אפשרויות
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: התאם את הצורה לפי סוג.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: מתאם
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: כמה צופים יש כתוצאה מהתרגיל?
         title: בחירה ממספר אפשרויות
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: כמה צופים יש כתוצאה מהתרגיל?
         title: בחירה ממספר אפשרויות
@@ -1083,9 +1129,11 @@ he-IL:
         title: מתאם
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: מי מהחיות משאירה אחריה עקבות דיגטליים שמשאירה אותה <strong>הכי פחות
             בטוחה</strong>?
@@ -1100,10 +1148,12 @@ he-IL:
         title: בחירה ממספר אפשרויות
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: איזה מן החצים לוקח את פורב (היצור) אל האוצר?
         title: בחירה ממספר אפשרויות
@@ -1117,10 +1167,12 @@ he-IL:
         title: בחירה ממספר אפשרויות
       K-1 Maze Debugging Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: איזה מן האפשרויות צריכה להיות הבלוק הסופי?
         title: בחירה ממספר אפשרויות
@@ -1142,56 +1194,65 @@ he-IL:
         title: בחירה ממספר אפשרויות
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: התאם את הפאזלים ואת הבלוקים
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: מתאם
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: איזו תשובה פותרת את השלב?
         title: מבוך
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: איזה אלגוריתם מביא את פלורב (היצור) אל הפרחים?
         title: בחירה ממספר אפשרויות
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: איזה חלק צריך לשים בתחילת האלגוריתם הזה?
         title: בחירה ממספר אפשרויות
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: איזה חלק צריך להשלים לתוך החלק הריק באלגוריתם?
         title: בחירה ממספר אפשרויות
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
         - text: איזה מהבלוקים מאיית "MOVE"?
         title: בחירה ממספר אפשרויות
@@ -1207,7 +1268,65 @@ he-IL:
         content1: הוסיפו תיאור כאן
       New Challenge Introduction:
         content1: הוסיפו תיאור כאן
+      OPD-K5 Reviewing Reflections:
+        content1: הוסיפו תיאור כאן
       OPD-K5 Stage3aGo:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 Stage3aGo_copy:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 conditionals introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 debugging:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 diving deeper intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 events introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 functions introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 journaling:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson implementation planning:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 loops introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 project:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 projects introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 role_of_teacher:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sequencing introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab video:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 types of lessons:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 using lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 where to next:
+        content1: הוסיפו תיאור כאן
+      OPD-K5-projects-1:
         content1: הוסיפו תיאור כאן
       Prepare for your presentation:
         content1: הוסיפו תיאור כאן
@@ -1223,7 +1342,23 @@ he-IL:
         - {}
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
@@ -1248,6 +1383,14 @@ he-IL:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1282,6 +1425,15 @@ he-IL:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1306,6 +1458,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1323,6 +1483,14 @@ he-IL:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1354,6 +1522,14 @@ he-IL:
         - text: אינני יודע
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: אינני יודע
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1371,6 +1547,14 @@ he-IL:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1397,6 +1581,15 @@ he-IL:
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: א
+        - text: ב
+        - text: ג
+        - text: ד
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: א
         - text: ב
@@ -1432,6 +1625,15 @@ he-IL:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: א
+          correct: true
+        - text: ב
+        - text: ג
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1449,6 +1651,22 @@ he-IL:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1480,6 +1698,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1497,6 +1723,14 @@ he-IL:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1523,6 +1757,15 @@ he-IL:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
@@ -1563,6 +1806,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1595,6 +1846,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1612,6 +1871,14 @@ he-IL:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1643,6 +1910,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1660,6 +1935,14 @@ he-IL:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1707,6 +1990,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1731,6 +2022,22 @@ he-IL:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1740,6 +2047,14 @@ he-IL:
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
@@ -1764,6 +2079,14 @@ he-IL:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1796,6 +2119,14 @@ he-IL:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
         - {}
@@ -1843,6 +2174,14 @@ he-IL:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1883,6 +2222,20 @@ he-IL:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: הוסיפו תיאור כאן
+      csf_password_power-up:
+        content1: הוסיפו תיאור כאן
+      csf_putting_a_stop_to_online_meanness:
+        content1: הוסיפו תיאור כאן
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1900,6 +2253,14 @@ he-IL:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true

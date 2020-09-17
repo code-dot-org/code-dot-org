@@ -4,6 +4,11 @@ require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
+require 'cdo/firehose'
+require 'cdo/languages'
+require 'net/http'
+require 'uri'
+require 'json'
 
 module LevelsHelper
   include ApplicationHelper
@@ -16,20 +21,20 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      if script_level.stage.lockable?
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.lesson.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
-      sublevel_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:sublevel_position])
-    elsif script_level.stage.lockable?
-      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+      sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    elsif script_level.lesson.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
+      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+      script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
   end
 
@@ -172,7 +177,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.absolute_position,
+        stage_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
         next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
       )
@@ -240,8 +245,6 @@ module LevelsHelper
         question_options
       elsif @level.is_a? Widget
         widget_options
-      elsif @level.is_a? Scratch
-        scratch_options
       elsif @level.unplugged?
         unplugged_options
       else
@@ -255,7 +258,7 @@ module LevelsHelper
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -312,6 +315,7 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: view_options[:useGoogleBlockly],
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -334,19 +338,6 @@ module LevelsHelper
     app_options
   end
 
-  def scratch_options
-    app_options = {
-      baseUrl: Blockly.base_url,
-      skin: {},
-      app: 'scratch',
-    }
-    app_options[:level] = @level.properties.camelize_keys
-    app_options[:level][:scratch] = true
-    app_options[:level][:editCode] = false
-    app_options.merge! view_options.camelize_keys
-    app_options
-  end
-
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
@@ -358,15 +349,19 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -463,10 +458,56 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
     fb_options
+  end
+
+  def azure_speech_service_options
+    speech_service_options = {}
+
+    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
+      # First, get the token
+      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+      token_http_request.use_ssl = true
+      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
+      token_response = token_http_request.request(token_request)
+      speech_service_options[:azureSpeechServiceToken] = token_response.body
+      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+
+      # Then, get the list of voices and languages
+      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_header = {'Authorization': 'Bearer ' + token_response.body}
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
+      voice_response = voice_http_request.request(voice_request)
+
+      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
+      language_dictionary = {}
+      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+      all_voices.each do |voice|
+        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+        next if native_locale_name.empty?
+        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
+        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
+        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
+      end
+
+      language_dictionary.delete_if {|_, voices| voices.length < 3}
+
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
+    end
+    speech_service_options
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
+    speech_service_options
   end
 
   # Options hash for Blockly
@@ -486,7 +527,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
@@ -581,10 +622,10 @@ module LevelsHelper
 
     # Request-dependent option
     if request
-      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+      app_options[:isUS] = request.location.try(:country_code) == 'US' ||
           (!Rails.env.production? && request.location.try(:country_code) == 'RD')
     end
-    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
+    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
     if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
@@ -687,7 +728,7 @@ module LevelsHelper
         end
       stage = @script_level.name
       position = @script_level.position
-      if @script_level.script.stages.many?
+      if @script_level.script.lessons.many?
         "#{script}: #{stage} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
@@ -786,7 +827,22 @@ module LevelsHelper
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
-      error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
+      if current_user.teachers.any?
+        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+      else
+        error_message = I18n.t("errors.messages.too_young")
+        FirehoseClient.instance.put_record(
+          :analysis,
+          {
+            study: "redirect_under_13",
+            event: "student_with_no_teacher_redirected",
+            user_id: current_user.id,
+            data_json: {
+              game: level.game.name
+            }.to_json
+          }
+        )
+      end
       redirect_to '/', flash: {alert: error_message}
       return true
     end

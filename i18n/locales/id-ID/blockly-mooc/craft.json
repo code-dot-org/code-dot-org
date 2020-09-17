@@ -2,7 +2,7 @@
   "absolute": "mutlak",
   "agentGenericFailureMessage": "Teruslah membuat kode! Ingatlah untuk menggunakan Agent untuk membantu.",
   "agentTooFewBlocksFailureMessage": "Coba tambahkan blok satu per satu untuk membawa Agent ke tempat yang tepat.",
-  "at": "pada",
+  "at": "di",
   "agentDiamondPathCongrats": "Selamat, kamu menemukan jalur berlian! Kamu telah mengambil {count, plural, one {1 diamond} other {# diamonds}} sejauh ini!",
   "blockActionAdd": "tambah",
   "blockActionAttack": "serang",

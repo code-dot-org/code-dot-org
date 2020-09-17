@@ -24,7 +24,19 @@ function inspectorOn(state, action) {
   }
 }
 
+function showError(state, action) {
+  state = state || false;
+
+  switch (action.type) {
+    case ActionType.CHANGE_SHOW_ERROR:
+      return action.showError;
+    default:
+      return state;
+  }
+}
+
 export default {
   fullScreenPreviewOn,
-  inspectorOn
+  inspectorOn,
+  showError
 };

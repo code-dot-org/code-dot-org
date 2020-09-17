@@ -13,12 +13,6 @@ end
 gem 'rails', '~> 5.0.7.2'
 gem 'rails-controller-testing'
 
-# Add CacheFile backend module.
-# Ref: https://github.com/svenfuchs/i18n/pull/423
-# Support numeric keys in Simple backend.
-# Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
-
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
@@ -64,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -106,14 +99,14 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '3.17.20'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '3.141.0'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
@@ -139,7 +132,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
@@ -179,6 +172,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 
+# Resolve CVE 2015 9284
+# see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
 # Ref: https://github.com/haml/haml/issues/940
@@ -194,7 +191,12 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
+  # Ref:
+  # https://github.com/newrelic/newrelic-ruby-agent/pull/359
+  # https://github.com/newrelic/newrelic-ruby-agent/pull/372
+  # https://github.com/newrelic/newrelic-ruby-agent/issues/340
+  github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -214,14 +216,14 @@ gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
-# Used by a build script.
+# Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
-gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+# JavaScript runtime used by ExecJS.
+gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
 gem 'codemirror-rails' # edit code in textarea
-gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
@@ -234,23 +236,24 @@ gem 'paranoia'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # AWS SDK and associated service APIs.
-gem 'aws-sdk-acm', '~> 1'
-gem 'aws-sdk-cloudformation', '~> 1'
-gem 'aws-sdk-cloudfront', '~> 1'
-gem 'aws-sdk-cloudwatch', '~> 1'
-gem 'aws-sdk-cloudwatchlogs', '~> 1'
-gem 'aws-sdk-core', '~> 3'
-gem 'aws-sdk-dynamodb', '~> 1'
-gem 'aws-sdk-ec2', '~> 1'
-gem 'aws-sdk-firehose', '~> 1.6'
-gem 'aws-sdk-glue', '~> 1'
-gem 'aws-sdk-rds', '>= 1.38.1'
-gem 'aws-sdk-route53', '~> 1'
-gem 'aws-sdk-s3', '~> 1'
-gem 'aws-sdk-secretsmanager', '~> 1'
+gem 'aws-sdk-acm'
+gem 'aws-sdk-cloudformation'
+gem 'aws-sdk-cloudfront'
+gem 'aws-sdk-cloudwatch'
+gem 'aws-sdk-cloudwatchlogs'
+gem 'aws-sdk-core'
+gem 'aws-sdk-databasemigrationservice'
+gem 'aws-sdk-dynamodb'
+gem 'aws-sdk-ec2'
+gem 'aws-sdk-firehose'
+gem 'aws-sdk-glue'
+gem 'aws-sdk-rds'
+gem 'aws-sdk-route53'
+gem 'aws-sdk-s3'
+gem 'aws-sdk-secretsmanager'
 
 # Lint tools
 group :development, :staging do
@@ -284,10 +287,11 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 0'
+gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
-gem 'bcrypt'
+# bcrypt version specified due to "Invalid Hash" error in Linux
+gem 'bcrypt', '3.1.13'
 gem 'firebase'
 gem 'firebase_token_generator'
 gem 'sshkit'
@@ -349,3 +353,7 @@ gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
 gem 'require_all', require: false
+
+gem 'dotiw'
+
+gem 'datapackage'

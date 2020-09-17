@@ -1,0 +1,8 @@
+name 'CSD U2 links challenge'
+editor_experiment ''
+display_name 'Creating Links'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 external links_2020'
+level 'CSD U2 image links_2020'

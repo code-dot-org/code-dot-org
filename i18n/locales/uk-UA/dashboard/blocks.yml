@@ -88,9 +88,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} завжди"
         options:
@@ -109,9 +106,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -188,9 +182,6 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
         options:
@@ -219,9 +210,6 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
@@ -900,6 +888,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -945,6 +934,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -971,6 +961,10 @@ uk:
         text: Спрайт {SPRITE} Починається {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -1015,8 +1009,46 @@ uk:
         options:
           CHOICE:
             '"this"': це
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: приховати заголовок екрана
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': у
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} торкається країв"
       gamelab_jumpTo:
@@ -1057,9 +1089,17 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
       gamelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
       gamelab_locationMouse:
         text: розташування миші
       gamelab_locationOf:
@@ -1088,6 +1128,8 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: Переміщення {SPRITE} Пікселів {DISTANCE} До {TARGET}
+      gamelab_objectSpritePointer:
+        text: натиснув {SPRITE}
       gamelab_playSound:
         text: ПлейЗвук {SOUND}
       gamelab_pointInDirection:
@@ -1165,6 +1207,8 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_subjectSpritePointer:
+        text: натиснув {SPRITE}
       gamelab_turn:
         text: Свою чергу {SPRITE} {DIRECTION} {N} Градусів
         options:
@@ -1546,6 +1590,14 @@ uk:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Переміщення {SPRITE} {DISTANCE} Пікселів {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
       aalab_prompt:
         text: задати питання {MESSAGE}
       aalab_scene:
@@ -1557,12 +1609,10 @@ uk:
             '3': '3'
       aalab_setupStory:
         text: історія налаштування
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': показати
-            '"hide"': приховати
+            '"random"': випадковий
       binary_drawBin:
         text: залучити двійковий {BIN}
       binary_drawBinScreen:

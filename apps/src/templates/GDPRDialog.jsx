@@ -62,12 +62,14 @@ export default class GDPRDialog extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.gdprDialogLogout()}
             href={logOutUrl}
             color={Button.ButtonColor.gray}
             className="ui-test-gdpr-dialog-logout"
           />
           <Button
+            __useDeprecatedTag
             text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
             color={Button.ButtonColor.orange}

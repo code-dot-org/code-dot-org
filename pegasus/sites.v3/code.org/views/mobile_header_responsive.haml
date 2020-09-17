@@ -10,7 +10,7 @@
     .container_responsive
       #left
         %a{:href=>'/'}
-          %img#logo{:src=>'/images/logo.png'}
+          %img#logo{:src=>'/images/logo.svg'}
 
       - if request.language == "en"
         = view :hamburger, user_type: user_type, level: nil, script_level: nil, language: request.language, show_gallery: false, loc_prefix: "header_"

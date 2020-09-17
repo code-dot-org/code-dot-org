@@ -1,0 +1,34 @@
+name 'How setPosition and screen dimensions work_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# setPosition and Screen Dimensions
+
+The `setPosition` command (now added to the Toolbox) lets you change the position (and size) of an element on the screen. The little arrows on the right side mean that some of the parameters are optional.  You can click the arrows to collapse or expand the available parameters.
+
+<img src="https://images.code.org/85555ba95bc3b3b82d1b2c8d2c54e695-image-1476887867008.gif" style="display: block; margin: auto">
+
+The numbers for `setPosition` are **x and y coordinates of the screen**.
+
+**Remember:**
+
+* 0,0 is the top left corner.
+* Specify a location by how many pixels from the **left and down** from the top of the screen it is.  
+  * Remember that the *x* and *y* properties in the `setPosition` block specify the element's **top left** corner.
+* The screen is **320 by 450 pixels**.  
+* You can **hover over the screen** to see the x,y coordinate of any point.
+
+<div style="width: 100%; text-align: center">
+<img src="https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png">
+
+<img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
+</div>
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

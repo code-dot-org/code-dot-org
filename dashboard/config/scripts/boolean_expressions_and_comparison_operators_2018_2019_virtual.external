@@ -1,0 +1,119 @@
+name 'Boolean Expressions and Comparison Operators_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unpluggged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Word Soup: Conditionals, Booleans, expressions, statements
+As you saw in the video there are a bunch of terms that generally are all talking about the same thing.
+
+**Boolean, Boolean values, Boolean expressions:**
+
+* A **Boolean value** is simply a computer science-y term that means **a true/false value**.
+* A **Boolean expression** is a statement that *evaluates* to a Boolean value (a single true/false).
+
+**Condition, Conditionals, Conditional Statements**:
+
+"Conditional" is simply a generic term for code that alters program flow based on true/false values (like an `if` statement). You might also see these similar terms:
+* Condition
+* Conditionals
+* Conditional statements
+* conditional execution
+
+
+## Comparison Operators
+
+<img src="https://images.code.org/79f2ae7d27a3fa434138aeeb17146cab-image-1479413755076.png" style="float: left; margin-left: 20px; margin-right: 20px">
+
+A common type of condition to check is a comparison of two values.  Here are 6 common **comparison operators**. Each compares a value on the left with a value on the right and returns a Boolean value -- **true** or **false**.  Most of these do what you would expect. 
+
+
+### Why these symbols: **==**, **!=**, **<=**, and **>=**?
+
+1. We use `==` because the single equal sign <code>=</code> is the assignment operator. We need something different to indicate we want to compare two values instead of assign one to the other.
+
+    **Common mistake:** writing something like `if (age = 18)`  instead of `if (age == 18)`.  We'll make sure we get this down later.
+
+2. We use `!=`, `<=`, and `>=` because they only requires ASCII symbols. Historically the mathematical symbols <code>&ne;</code>, <code>&le;</code> and <code>&ge;</code> were hard or impossible to produce on some systems.  The `!` is universally read as "not".
+
+<div style="clear: both">&nbsp;</div>
+
+## Reference: Examples
+
+Below are a bunch of examples of how you might see comparisons in code. Review them if you like or continue on and come back if you need reference.
+
+<hr>
+
+<img src="https://images.code.org/ea8cf41d0e06e6ddee31086fbb9ea2b9-image-1479232029068.png" style="float: left; margin-left: 50px; margin-right: 50px">
+
+Compares two values - numbers, strings, or other booleans - and returns *true*  if they are equal, otherwise *false*.
+
+* `"Hello" == "hello"` returns *false* -- because the strings are slightly different.
+* `"3" == 3` returns *true*  -- `==` tries to be forgiving. If it can "coerce" a string into a number it will do so to compare. <sup>1</sup> 
+* `(2+1) == 3` returns *true*  -- because the arithmetic expression evaluates to 3.
+* `x == 7` returns *true*  -- when the variable x has the value 7.
+
+<sup>1.</sup> While it is a useful feature that == will coerce a string into a number, it is considered **TRICKY** since string "3" is not the same as the integer 3 underneath the hood.  There are circumstances when you would consider these not equal.   There is a "strict" equality operator - the "triple equal" `===` which makes sure that the both the type of data and value are equal.  So ` "3" === 3 ` is false.
+
+<div style="clear:both"> </div>
+<hr>
+
+<img src="https://images.code.org/67fc10f1dec4f129c64c62d583ebf7ee-image-1479232142029.png" style="float: left; margin-left: 50px; margin-right: 50px">
+
+Compares two values - numbers, strings, or other booleans - and returns `true` if they are **not equal**, otherwise `false`.
+
+* `"Hello" != "hello"` returns *true* -- because the strings are slightly different.
+* `"3" != 3` returns *false* -- because the string 3 can be coerced into a number before comparing with 3. (see notes above about the forgiving ==).
+* `(2+1) != 3` returns *false* -- because the arithmetic expression evaluates to 3.
+* `x != 7` returns *true* -- when the variable x *is any value other than* 7.
+
+<div style="clear:both"> </div>
+<hr>
+
+<img src="https://images.code.org/536aed5657843fca3b52a044f2f3bdc7-image-1479242736018.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
+Compares two values to see if the number on the left is <em>greater than</em> the number on the right.
+
+* `4 > 3` returns *true*
+* `3 > 7` returns *false*
+* `age > 17` returns *true* -- when the value of the variable "age" is strictly greater than 17, otherwise false.
+
+<div style="clear:both"> </div>
+<hr>
+
+<img src="https://images.code.org/3c7c9336270e093bad437d69d155a8c7-image-1479242773012.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
+Compares two values to see if the number on the left is <em>less than</em> the number on the right.
+
+* `4 < 3` returns *false*
+* `3 < 7` returns *true*
+* `age < 17` returns *true* -- when the value of the variable "age" is strictly less than 17, otherwise false.
+
+<div style="clear:both"> </div>
+<hr>
+
+<img src="https://images.code.org/e899b0040a9f8ddc899b1df66773be74-image-1479242843374.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
+Compares two values to see if the number on the left is *less than or equal to* the number on the right. 
+
+* `3 <= 4` returns *true*
+* `4 <= 3` returns *false*
+* `age <= 18` returns *true* -- when the value of the variable "age" is 18 or less.
+
+
+<div style="clear:both"> </div>
+
+<hr>
+<img src="https://images.code.org/2ca857bff29bca22a2a42433c6b3981f-image-1479242807960.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
+Compares two values to see if the number on the left is *greater than or equal to* the number on the right.
+
+* `3 >= 4` returns *false*
+* `4 >= 3` returns *true*
+* `age >= 18` returns *true* -- when the value of the variable "age" is 18 or greater.
+
+<div style="clear:both"> </div>
+
+<hr>
+MARKDOWN

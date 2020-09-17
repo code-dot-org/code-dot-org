@@ -8,7 +8,8 @@ export const levelType = PropTypes.shape({
   isUnplugged: PropTypes.bool,
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
-  isConceptLevel: PropTypes.bool
+  isConceptLevel: PropTypes.bool,
+  sublevels: PropTypes.arrayOf(PropTypes.object)
 });
 
 /**
@@ -28,4 +29,19 @@ export const lessonType = PropTypes.shape({
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,
   description_teacher: PropTypes.string
+});
+
+/**
+ * @typedef {Object} LessonGroup
+ *
+ * @property {string} displayName
+ * @property {number} id
+ * @property {array} bigQuestion
+ * @property {string} description
+ */
+export const lessonGroupType = PropTypes.shape({
+  id: PropTypes.number,
+  displayName: PropTypes.string,
+  bigQuestions: PropTypes.array,
+  description: PropTypes.string
 });

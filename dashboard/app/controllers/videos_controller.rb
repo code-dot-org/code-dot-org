@@ -7,8 +7,9 @@ class VideosController < ApplicationController
 
   before_action :set_video, only: [:edit, :update]
 
+  # This page is currently deprecated, so let's redirect to related content.
   def test
-    @video = Video.first
+    redirect_to CDO.code_org_url('/educate/it')
   end
 
   def embed

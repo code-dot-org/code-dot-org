@@ -1,0 +1,6 @@
+name 'grade2_multi_collector_A_predict1_2018_2019_2020'
+question 'Look at this code carefully. What do you think will happen when the program runs?'
+wrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
+right 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'
+wrong 'Laurel will collect all of the treasure.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
+wrong 'I don\'t know.', feedback: 'Laurel tries to collect treasure where there is none and it causes an error.'

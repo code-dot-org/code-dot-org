@@ -1,0 +1,17 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "moveBackward",
+    "blockText": "move {SPRITE} {DISTANCE} pixels backward",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "DISTANCE",
+        "type": "Number"
+      }
+    ]
+  }
+}

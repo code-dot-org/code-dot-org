@@ -46,7 +46,7 @@
   "jump": "skoč",
   "jumpBackward": "skoč zpět o",
   "jumpForward": "skoč vpřed o",
-  "jumpToOverDown": "skoč na %1 cez %2 dole",
+  "jumpToOverDown": "skoč na %1 doprava %2 dolů",
   "jumpToPosition": "skoč na pozici %1",
   "jumpByDirection": "skoč %1 o %2 pixelů",
   "jumpTooltip": "Přesune malíře aniž by zanechal jakoukoliv stopu.",

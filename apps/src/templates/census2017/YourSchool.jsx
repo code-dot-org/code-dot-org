@@ -13,7 +13,6 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
-import ProfessionalLearningApplyBanner from '../ProfessionalLearningApplyBanner';
 
 const styles = {
   heading: {
@@ -124,11 +123,6 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
-        <ProfessionalLearningApplyBanner
-          nominated={false}
-          useSignUpText={true}
-          style={styles.banner}
-        />
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">

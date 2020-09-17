@@ -1,0 +1,9 @@
+name 'CSD Games variables practice_2020_virtual_2020'
+display_name 'Variables Practice'
+description 'Choose from the following activities to practice using variables.'
+
+sublevels
+level 'CSD U3 Variables change circle size_virtual_2020'
+level 'CSD U3 Variables names_virtual_2020'
+level 'CSD U3 Variables unused_virtual_2020'
+level 'CSD U3 Variables forbidden names_virtual_2020'

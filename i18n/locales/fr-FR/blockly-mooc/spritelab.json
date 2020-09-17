@@ -1,4 +1,10 @@
 {
+  "clicked": "cliqué",
+  "clickedSprite": "lutin cliqué",
+  "subject": "sujet",
+  "subjectSprite": "lutin sujet",
+  "object": "objet",
+  "objectSprite": "lutin objet",
   "errorLoadingAnimation": "Il semble que nous ayons des difficultés à charger votre animation \"{animationName}\". Assurez-vous d'avoir une bonne connexion Internet et essayez de recharger la page. Si ce problème persiste, il est possible que cette animation soit interrompue. Dans ce cas, vous devrez peut-être continuer en supprimant l'animation.",
   "reinfFeedbackMsg": "Vous avez fini! Cliquez sur \"Continuer\" pour passer au niveau suivant.",
   "shareGame": "Partage ton jeu :",

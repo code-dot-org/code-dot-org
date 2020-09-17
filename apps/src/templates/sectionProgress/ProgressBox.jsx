@@ -2,16 +2,19 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 
+const PROGRESS_BOX_SIZE = 20;
+
 const styles = {
   box: {
-    height: 20,
-    width: 20,
+    height: PROGRESS_BOX_SIZE,
+    width: PROGRESS_BOX_SIZE,
     borderWidth: 1,
     borderStyle: 'solid',
-    boxSizing: 'content-box'
+    boxSizing: 'content-box',
+    position: 'relative'
   },
   filler: {
-    width: 20,
+    width: PROGRESS_BOX_SIZE,
     position: 'absolute'
   },
   lessonNumber: {
@@ -19,7 +22,7 @@ const styles = {
     zIndex: 2,
     paddingTop: 2,
     textAlign: 'center',
-    width: 20,
+    width: PROGRESS_BOX_SIZE,
     fontFamily: '"Gotham 4r", sans-serif'
   }
 };
@@ -57,13 +60,15 @@ export default class ProgressBox extends Component {
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
-      height: perfect
+      height: perfect,
+      top: PROGRESS_BOX_SIZE - perfect
     };
 
     const assessmentLevels = {
       ...styles.filler,
       backgroundColor: color.level_submitted,
-      height: perfect
+      height: perfect,
+      top: PROGRESS_BOX_SIZE - perfect
     };
 
     const incompleteLevels = {

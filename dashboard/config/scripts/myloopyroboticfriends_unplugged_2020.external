@@ -1,0 +1,10 @@
+name 'MyLoopyRoboticFriends-Unplugged_2020'
+video_key 'CSF_my_robotic_friends'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# My Loopy Robotic Friends
+
+Make your programs more shorter using loops!
+MARKDOWN

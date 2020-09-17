@@ -6,45 +6,54 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
-import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
+import reducers, {
+  init
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
-  const stageLevelData = scriptEditorData.stageLevelData;
-  const stages = (scriptData.stages || [])
-    .filter(stage => stage.id)
-    .map(stage => ({
-      position: stage.position,
-      relativePosition: stage.relative_position,
-      flex_category: stage.flex_category,
-      lockable: stage.lockable,
-      name: stage.name,
-      // Only include the first level of an assessment (uid ending with "_0").
-      levels: stage.levels
-        .filter(level => !level.uid || /_0$/.test(level.uid))
-        .map(level => ({
-          position: level.position,
-          activeId: level.activeId,
-          ids: level.ids.slice(),
-          kind: level.kind,
-          skin: level.skin,
-          videoKey: level.videoKey,
-          concepts: level.concepts,
-          conceptDifficulty: level.conceptDifficulty,
-          progression: level.progression,
-          named: !!level.name,
-          assessment: level.assessment,
-          challenge: level.challenge
+  const lessonLevelData = scriptEditorData.lessonLevelData;
+  const lesson_groups = (scriptData.lesson_groups || [])
+    .filter(lesson_group => lesson_group.id)
+    .map(lesson_group => ({
+      key: lesson_group.key,
+      display_name: lesson_group.display_name,
+      user_facing: lesson_group.user_facing,
+      position: lesson_group.position,
+      lessons: lesson_group.lessons
+        .filter(lesson => lesson.id)
+        .map(lesson => ({
+          id: lesson.id,
+          position: lesson.position,
+          relativePosition: lesson.relative_position,
+          lockable: lesson.lockable,
+          name: lesson.name,
+          // Only include the first level of an assessment (uid ending with "_0").
+          levels: lesson.levels
+            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .map(level => ({
+              position: level.position,
+              activeId: level.activeId,
+              ids: level.ids.slice(),
+              kind: level.kind,
+              skin: level.skin,
+              videoKey: level.videoKey,
+              concepts: level.concepts,
+              conceptDifficulty: level.conceptDifficulty,
+              progression: level.progression,
+              named: !!level.name,
+              assessment: level.assessment,
+              challenge: level.challenge
+            }))
         }))
     }));
   const locales = scriptEditorData.locales;
-  const flexCategoryMap = scriptEditorData.flex_category_map;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(stages, scriptEditorData.levelKeyList, flexCategoryMap));
+  store.dispatch(init(lesson_groups));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -60,8 +69,9 @@ export default function initPage(scriptEditorData) {
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         hidden={valueOr(scriptData.hidden, true)}
+        isStable={scriptData.is_stable}
         loginRequired={scriptData.loginRequired}
-        hideableStages={scriptData.hideable_stages}
+        hideableLessons={scriptData.hideable_lessons}
         studentDetailProgressView={scriptData.student_detail_progress_view}
         professionalLearningCourse={scriptData.professionalLearningCourse}
         peerReviewsRequired={scriptData.peerReviewsRequired}
@@ -69,8 +79,8 @@ export default function initPage(scriptEditorData) {
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
-        stageExtrasAvailable={!!scriptData.stage_extras_available}
-        stageLevelData={stageLevelData}
+        lessonExtrasAvailable={!!scriptData.lesson_extras_available}
+        lessonLevelData={lessonLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
         hasLessonPlan={scriptData.has_lesson_plan}
         curriculumPath={scriptData.curriculum_path}
@@ -86,6 +96,12 @@ export default function initPage(scriptEditorData) {
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
         isLevelbuilder={scriptEditorData.is_levelbuilder}
+        tts={scriptData.tts}
+        /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
+         * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
+         * complements, but currently (August 2020) they are not, so they are separate fields for now. */
+        isCourse={scriptData.is_course}
+        hasCourse={scriptEditorData.has_course}
       />
     </Provider>,
     document.querySelector('.edit_container')

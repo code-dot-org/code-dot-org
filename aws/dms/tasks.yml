@@ -15,6 +15,7 @@ cron-pii:
 - dashboard.circuit_playground_discount_codes
 - dashboard.survey_questions
 - dashboard.survey_answers
+- dashboard.foorm_%
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
@@ -112,4 +113,6 @@ cron-user-hierarchy-pii:
 cron-user-levels:
 - dashboard.user_levels
 cron-level-sources-pii:
-- dashboard.level_sources
+- dashboard.level_sources:
+    skip_staging_table: true
+    schedule: 'weekly'

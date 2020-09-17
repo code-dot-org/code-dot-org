@@ -1,0 +1,13 @@
+name 'CSP U3L2 Virtual CFU'
+editor_experiment ''
+title 'Multiple Choice: Functions'
+description ''
+wrong '`drawLongLine()`'
+wrong '`drawLetterS()`'
+wrong '`drawShortLine()`'
+right '`drawStar()`'
+markdown <<MARKDOWN
+Consider the figure below. What function would most likely **not** be used to create this shape?
+
+![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)
+MARKDOWN

@@ -1,5 +1,7 @@
-#authored_hints
-  %label Authored Hints
+%h1.control-legend{data: {toggle: "collapse", target: "#authored_hints"}}
+  Authored Hints
+
+#authored_hints.in.collapse
   %p
     Learn how to make authored hints
     = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-an-Authored-Hint', target: '_blank'
@@ -39,27 +41,15 @@
     %div{style: '-webkit-user-select: text'}
     = f.text_area :authored_hints, rows: 4
 
+  - if @level.hint_prompt_enabled?
+    .field
+      = f.label :hint_prompt_attempts_threshold, "How many times does a student need to attempt this level before being shown the hint prompt dialog? If you leave this field blank, the default is 7 attempts."
+      %div{style: '-webkit-user-select: text'}
+      = f.select :hint_prompt_attempts_threshold, options_for_select([*1..30], @level.properties["hint_prompt_attempts_threshold"])
+
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
-      // A markdown parser that supports a subset of rules; specifically,
-      // those rules that we feel comfortable entrusting to translators
-      var limitedMarked = (function () {
-
-        var renderer = new marked.Renderer();
-        renderer.link = function (href, title, text) {
-          return text;
-        };
-
-        return function (input) {
-          return marked(input, {
-            renderer: renderer,
-            sanitize: true
-          });
-        };
-
-      })();
-
       levelbuilder.jsonEditor("#authored_hints", {
         json_textarea: '#level_authored_hints',
         add_button: '#add_authored_hint',

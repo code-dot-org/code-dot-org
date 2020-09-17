@@ -1,4 +1,6 @@
 {
   "continue": "ဆက်လုပ်ပါ",
-  "ifCode": "if"
+  "elseCode": "သို့မဟုတ်",
+  "ifCode": "if",
+  "whileMsg": "စဉ်တွင်"
 }

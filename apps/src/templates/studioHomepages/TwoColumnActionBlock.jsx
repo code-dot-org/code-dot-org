@@ -23,12 +23,6 @@ const styles = {
     minHeight: 281,
     boxSizing: 'border-box'
   },
-  textItemCyan: {
-    backgroundColor: color.light_cyan,
-    padding: 25,
-    minHeight: 281,
-    boxSizing: 'border-box'
-  },
   subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
@@ -75,7 +69,6 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
     imageExtra: PropTypes.node,
-    teacherStyle: PropTypes.bool,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
     subHeadingSmallFont: PropTypes.bool,
@@ -87,7 +80,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         target: PropTypes.string,
         id: PropTypes.string
       })
-    )
+    ),
+    backgroundColor: PropTypes.string
   };
 
   render() {
@@ -101,10 +95,16 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       subHeading,
       subHeadingSmallFont,
       description,
-      buttons
+      buttons,
+      backgroundColor
     } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = responsiveSize === 'lg' ? '50%' : '100%';
+
+    const textItemCustomBackgroundColor = {
+      ...styles.textItem,
+      backgroundColor: backgroundColor || styles.textItem.backgroundColor
+    };
 
     return (
       <div id={id} style={styles.container}>
@@ -117,11 +117,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
             </div>
           )}
           <div style={{float, width}}>
-            <div
-              style={
-                this.props.teacherStyle ? styles.textItemCyan : styles.textItem
-              }
-            >
+            <div style={textItemCustomBackgroundColor}>
               {subHeading && (
                 <div
                   style={
@@ -137,6 +133,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
+                    __useDeprecatedTag
                     href={button.url}
                     color={Button.ButtonColor.gray}
                     text={button.text}
@@ -249,10 +246,11 @@ export class SpecialAnnouncementActionBlock extends Component {
     const {announcement} = this.props;
     return (
       <TwoColumnActionBlock
-        imageUrl={announcement.image}
+        imageUrl={pegasus(announcement.image)}
         subHeading={announcement.title}
         description={announcement.body}
         buttons={this.state.buttonList}
+        backgroundColor={announcement.backgroundColor}
       />
     );
   }

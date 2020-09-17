@@ -90,8 +90,12 @@ def main
     generate_multiple_constants(
       %w(
         COURSES
+        COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
+        VIRTUAL_ONLY_SUBJECTS
+        MUST_SUPPRESS_EMAIL_SUBJECTS
+        ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
@@ -151,7 +155,7 @@ def main
 
   generate_shared_js_file(
     generate_constants(
-      'SCHOLARSHIP_DROPDOWN_OPTIONS',
+      'COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS',
       source_module: Pd::ScholarshipInfoConstants,
       transform_keys: true
     ),

@@ -1,0 +1,307 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-02-25T15:43:01.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   // return ((Studio.sprite[0].isCollidingWith(1))&&(Studio.sprite[0].value === \"hidden\"));\r\n    //Studio.sprite[1].value == \"hidden\";\r\n}",
+    "failure_condition": "function () {\r\n\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":1},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":7},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5,\"sprite\":12},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":13},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":14},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":10},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "true",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "timeout_failure_tick": "0",
+    "first_sprite_index": "0",
+    "protaganist_sprite_index": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can make a bird sing.\\n\\n<xml> \\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">2</title>\\n    <next>\\n          <block type=\\\"studio_saySprite\\\">\\n            <title name=\\\"SPRITE\\\">2</title>\\n            <title name=\\\"TEXT\\\">Tweet</title>\\n          </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/47ddd367097a16073ed9ffd53de83c23/courseA_playlab_events_challenge2_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can make a robot beep.\\n\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">6</title>\\n    <next>\\n      \\n          <block type=\\\"studio_playSound\\\">\\n            <title name=\\\"SOUND\\\">winpoint</title>\\n          </block>\\n        </next>\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4bad7c5aa52f310b560a3d32db22d2fd/courseA_playlab_events_challenge2_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can make an angry monster growl.\\n\\n<xml>  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">5</title>\\n    <next>\\n      <block type=\\\"studio_setSpriteEmotion\\\">\\n        <title name=\\\"SPRITE\\\">5</title>\\n        <title name=\\\"VALUE\\\">2</title>\\n        <next>\\n          <block type=\\\"studio_saySprite\\\">\\n            <title name=\\\"SPRITE\\\">5</title>\\n            <title name=\\\"TEXT\\\">Roar!</title>\\n            <next>\\n              <block type=\\\"studio_setSpriteEmotion\\\">\\n                <title name=\\\"SPRITE\\\">5</title>\\n                <title name=\\\"VALUE\\\">0</title>\\n              </block>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d969b65cd64883af3185e32c12672354/courseA_playlab_events_challenge2_2018.mp3\"}]",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "short_instructions": "Give everyone something to do when you click on them.",
+    "long_instructions": "Give everyone something to do when you click on them. What will the animals say? What else will happen?\r\n\r\nIn this puzzle, make sure to click for hints. The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/10354ace865b921dae1eaad2e6dd0465=levelbuilder/24830.png",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "parent_level_id": 15685,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:06:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:37:15 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 19:21:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"hardcourt"</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          <next>
+            <block type="studio_saySprite">
+              <title name="SPRITE">1</title>
+              <title name="TEXT">Meow</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked" x="340px" y="0px">
+          <title name="SPRITE">7</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">7</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">7</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setBackground">
+          <title name="VALUE">"soccer"</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Woo hoo!</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Great job!</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"hardcourt"</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">0</title>
+                  <title name="TEXT">Woof!</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">1</title>
+                  <title name="TEXT">Meow</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">2</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">2</title>
+                  <title name="TEXT">Tweet</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">3</title>
+          <next>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">3</title>
+              <title name="DIR">4</title>
+              <title name="DISTANCE">25</title>
+              <next>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">3</title>
+                  <title name="DIR">1</title>
+                  <title name="DISTANCE">25</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">4</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">4</title>
+              <title name="VALUE">2</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">4</title>
+                  <title name="TEXT">Boo!</title>
+                  <next>
+                    <block type="studio_vanish">
+                      <title name="SPRITE">4</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">5</title>
+              <title name="VALUE">2</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">5</title>
+                  <title name="TEXT">Roar!</title>
+                  <next>
+                    <block type="studio_setSpriteEmotion">
+                      <title name="SPRITE">5</title>
+                      <title name="VALUE">0</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">6</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">6</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">winpoint</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">7</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">7</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">7</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>

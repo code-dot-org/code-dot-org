@@ -88,9 +88,6 @@ da:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} udfør {MOVE} {DIR} forevigt"
         options:
@@ -109,9 +106,6 @@ da:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -186,9 +180,6 @@ da:
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} udfør {MOVE} {DIR} en gang"
         options:
@@ -217,9 +208,6 @@ da:
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'gentag hver {N} takt efter {START} '
       Dancelab_everySeconds:
@@ -887,6 +875,7 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -932,6 +921,7 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -958,6 +948,10 @@ da:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_changePropBy:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1000,8 +994,46 @@ da:
             '"tint"': toning
       gamelab_getThisSprite:
         text: "{CHOICE} figur"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_hideTitleScreen:
         text: skjul titelskærm
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} berører kanten"
       gamelab_jumpTo:
@@ -1042,9 +1074,17 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'placering x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Syd
+            '"West"': Vest
       gamelab_locationMouse:
         text: musens placering
       gamelab_locationOf:
@@ -1073,6 +1113,8 @@ da:
             '"West"': Vest
       gamelab_moveToward:
         text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
+      gamelab_objectSpritePointer:
+        text: klikket {SPRITE}
       gamelab_playSound:
         text: afspil lyd {SOUND}
       gamelab_pointInDirection:
@@ -1136,6 +1178,8 @@ da:
           CONDITION:
             '"when"': når
             '"while"': mens
+      gamelab_subjectSpritePointer:
+        text: klikket {SPRITE}
       gamelab_turn:
         options:
           DIRECTION:
@@ -1410,6 +1454,14 @@ da:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: flyt {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Syd
+            '"West"': Vest
       aalab_prompt:
         text: spørg om {MESSAGE}
       aalab_scene:
@@ -1421,12 +1473,10 @@ da:
             '3': '3'
       aalab_setupStory:
         text: opret spil
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': vis
-            '"hide"': skjul
+            '"random"': tilfældig
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:

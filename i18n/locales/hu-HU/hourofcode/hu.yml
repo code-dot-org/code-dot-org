@@ -11,6 +11,26 @@ hu:
   campaign_date_full: december 4-10
   campaign_date_year: '2017'
   campaign_date_full_year: December 4-10, 2017
+  latam_campaign_date_start_short: Okt. 1.
+  latam_campaign_date_start_long: Október 1.
+  latam_campaign_date_short: Okt. 1. - dec. 18.
+  latam_campaign_date_full: Október 1. - december 18.
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: 2020. október 1. - 2020. december 18.
+  europe_campaign_date_start_short: 'Okt. 10.
+
+'
+  europe_campaign_date_start_long: Október 10.
+  europe_campaign_date_short: Okt. 10-25.
+  europe_campaign_date_full: Október 10-25.
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: 2020. október 10-25.
+  africa_campaign_date_start_short: Okt. 1.
+  africa_campaign_date_start_long: Október 1.
+  africa_campaign_date_short: Okt. 1-31.
+  africa_campaign_date_full: Október 1-31.
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: 2020. október 1-31.
   hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
   hoc2019_header_line1_mobile: Tanulj informatikát.
   hoc2019_header_line2_mobile: Változtasd meg a világot!
@@ -29,7 +49,7 @@ hu:
   oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
     hogyan ismerjen fel halakat.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: A számtástechnika sokkal több, mint csak kódolás! Tanulj
     többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez kapcsolódó
     foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI hogyan oldhatja
@@ -37,6 +57,12 @@ hu:
     sokkal többet taníthatsz majd a mesterséges intelligenciáról! Amikor az 'MI az
     óceánokért' tevékenységet használod, egy valódi gépi tanulási modellt tanítasz.
     <a href='#behind-the-scenes'>Tudj meg többet</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Oktatói segédanyagok
   oceans_landing_teacher_resources_desc: Óratervek és gyakorlatok az MI, gépi tanulás,
     az ehhez kapcsolódó fogalmak és etikai problémák megtanításához.
@@ -59,6 +85,19 @@ hu:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -66,6 +105,13 @@ hu:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Tanulj többet a mesterséges intelligenciáról, a gépi
     tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
@@ -142,6 +188,18 @@ hu:
   hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
     a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
   codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Táncos&nbsp;bulit!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Tudj meg többet
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
   cookie_banner_more_information: Itt találod a Code.org adatvédelmi elveit.
@@ -311,6 +369,7 @@ hu:
   how_to_nav_companies: Cégeknek, vállalatoknak
   how_to_nav_afterschool_educators: Szakkörök szervezőinek
   how_to_nav_volunteers: Önkénteseknek
+  how_to_nav_virtual: For virtual events
   whats_next_header: Mi a következő lépés?
   whats_next_description: Eseményéhez elküldjük önnek a tananyagokat és hasznos tippeket
     <a href='http://code.org/learn'> próbálja ki a jelenlegi oktatóanyagok</a> bármilyen
@@ -389,6 +448,9 @@ hu:
     A Kódolás Órája egész évben elérhető. <a href='%{hoc_activities_url}'>Próbálj
     ki egy feladatot</a> vagy olvasd el az <a href='%{howto_guide_url}'>Útmutatót</a>
     és tervezz egy eseményt az osztályodnak.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Az osztályod minden év decemberében világszerte több
     millió tanulóhoz csatlakozhat, akik a Kódolás órájával ünneplik a számítástechnika
     oktatásának hetét. Az évente tartott rendezvényre októberben kezdődik a regisztráció.
@@ -486,6 +548,7 @@ hu:
   map_warning: A Kódolás Órájának térképe csak az első 200000 regisztrált eseményt
     mutatja. Minden regisztrált esemény megtekinthető<a href='%{events_url}'> az események
     oldalon.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Hamarosan itt Kódolás Órája
   meta_tag_og_description: A Kódolás Órája egy globális mozgalom, ami különböző életkorú
     tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.
@@ -502,6 +565,13 @@ hu:
   hoc_faq_what_is_hoc_a: A Kódolás Órája egy egy órás bevezetés a számítástudomány
     alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja
     az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Próbáld ki az oktatóanyagokat
   hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás Órája?
   hoc_faq_when_is_hoc_a: A Kódolás Órája minden évben megrendezésre kerül az <a href='%{csedweek_url}'>
@@ -510,17 +580,31 @@ hu:
     Órája esemény megszervezésére. Az Informatikaoktatás hetét <a href='%{grace_hopper}'>Admiral
     Grace Murray Hopper</a> születésnapja alkalmával (1906. december 9-én) rendezik
     meg.
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Miért számítástechnika?
   hoc_faq_why_cs_a: "<i>Minden</i> diáknak meg kellene kapnia a lehetőséget, hogy
     számítástechnikát tanuljon. Segít a problémamegoldó képesség, a logika és a kreativitás
     fejlesztésében. A korai kezdéssel a diákok olyan tudáshoz jutnak, ami bármilyen
     21. századi karrierpályán biztosítja a siker alapjait. További statisztikák a
     <a href='http://code.org'>Code.org</a> oldalon."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hogyan vehetek részt a Kódolás Órája eseményen?
   hoc_faq_how_participate_a: "<a href='/how-to'>Kezdd a tervezést itt </a>, tekintsd
     át az Útmutatónkat. Szervezhetsz Kódolás Órája eseményt az iskoládban vagy a közösségben
     &mdash; szakkör formájában, non-profit eseményként vagy a munkahelyen. Vagy csak
     próbáld ki egyedül, amikor %{campaign_date} eljön."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Ki áll a Kódolás Órája mögött?
   hoc_faq_behind_hoc_a: A Kódolás Órája szervezője a <a href='http://code.org'>Code.org</a>,
     egy nyilvános (501c3) non-profit szervezet. A Code.org célja, hogy a számítástechnikát
@@ -529,6 +613,11 @@ hu:
     támogatására egy <a href='http://code.org/about/partners'>példanélküli együttműködés</a>
     alakult ki olyan résztvevőkkel, mint a Microsoft, az Apple, az Amazon, a Boys
     and Girls Clubs of America és a College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?
   hoc_faq_host_a: Természetesen. A Kódolás Órájának tevékenységeit te szervezed. Annyit
     kell tenned, hogy <a href='%{codeorg_url}/learn'>kipróbálod online bemutatóinkat</a>,
@@ -536,6 +625,11 @@ hu:
     mi gondoskodunk. Lehetőséget biztosítunk minden korosztálynak és tapasztalatszintnek,
     óvodától kezdve. Kezd el megtervezni a saját eseményedet azzal, hogy elolvasod
     az <a href='/how-to'>útmutatónkat</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Milyen eszközöket kellene használni a diákjaimnak?
   hoc_faq_devices_a: 'A Code.org útmutatók minden eszközön és böngészővel működnek.
     További információkat az útmutatók technikai követelményeiről <a href=''%{codeorg_url}/educate/it''>itt</a>
@@ -543,6 +637,11 @@ hu:
     találsz bővebb információt: <a href=''%{codeorg_url}/learn''>%{partner_url}/learn</a>.
     Amennyiben az iskolád nem tudja használni ezeket, a következő, <a href=''%{unplugged_url}''>számítógépet
     nem igénylő feladatokat</a> is ajánljuk!'
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
   hoc_faq_need_computers_a: Nem. Az oktatóanyagok között van olyan, ami számítógépen,
     telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség
@@ -555,32 +654,63 @@ hu:
     Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani
     a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan
     anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Magyaroszágon lakom. Hogyan vehetek részt nemzetközileg?
   hoc_faq_international_a: Bárki, bárhol a világon szervezhet Kódolás Órája eseményt.
     Tavaly a diákok a világ minden pontjáról csatlakoztak a Kódolás Órája eseményhez.
     Tudj meg többet erről <a href='promote'>itt</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hogyan készítsek Kódolás Órája oktatóanyagot?
   hoc_faq_tutorial_a: Ha szeretnél partner lenni az oktatóanyagok kialakításában,
     akkor <a href='target-tutorial-guidelines'>nézd meg az útmutatóinkat</a>. Szeretnénk
     egy sor vonzó lehetőséget kínálni, de az elsődleges cél, hogy a számítástechnikával
     most ismerkedő diákok és tanárok számára optimalizáljuk a rendszert.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Be kell jelentkezniük a diákoknak egy fiókkal?
   hoc_faq_account_a: Nem. Semmiféle feliratkozás vagy bejelentkezés nem szükséges
     a Kódolás órájának kipróbálásához. A <a href='http://code.org/learn/beyond'>kiegészítő
     tanfolyamok</a> használatához azonban szükgéses a fiók létrehozása a tanuló előrehaladásának
     elmentéséhez.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Mely gyakorlatokat mutassam meg középiskolás diákoknak?
   hoc_faq_high_school_a: Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a>
     oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds
     vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez,
     ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a Khan Academy
     vagy a CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak
     iPadjük van, és nem laptopjuk?
   hoc_faq_scratch_a: A Scratch nem fut tableteken. Ha a diákjaid fiatalok, használhatják
     a ScratchJR iPad appot (kezdőknek). Ha elnézel a <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     oldalra, találsz olyan oktatóanyagokat is, melyek műküdnek iPad-en is a Code.org,
     Tynker, Lightbot, vagy CodeSpark felületeken.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hogyan számoljuk a Kódolt Órákat?
   hoc_faq_map_q: Miért nem látom a jelölésemet a térképen?
   hoc_faq_map_a: Sajnáljuk hogy nem látható az eseményed a Kódolás Órája térképen.
@@ -589,10 +719,22 @@ hu:
     eseményének listájához, ott megtalálod magad. Továbbá mivel több ezren jelentkeznek
     a Kódolás Órájára, a térkép eseménylistáját 48 óránként frissítjük. Nézz vissza
     később!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: A Kódolt Órák száma nem egy egzakt szám. Nem számoljuk a különböző
     diákazonosítókat, mikor a résztvevőket mérjük, hiszen nincs szükség regisztrációra
     a részvételhez. Ennek eredményeképp egyszerre becsüljük alul és felül a résztvevők
     számát. Kattints <a href='%{codeorg_url}/loc'>ide</a>, ha többet szeretnél tudni.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Mennyit lehet megtanulni egy óra alatt?
   hoc_faq_one_hour_a: A Kódolás Órájának nem célja, hogy egy óra alatt szakértőket
     képezzen. Egy óra csupán arra elég, hogy megmutassuk, a számítástechinka szórakoztató
@@ -610,25 +752,44 @@ hu:
     egy olyan téma, amelyet a diákjaik tanulni szeretnének, és a tanárok képesek is
     ezt tanítani. <br/><br/> Mindenekfelett, a legfontosabb amit minden résztvevő
     megtanul egy óra alatt az, hogy képesek vagyunk erre.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: További kérdéseid vannak?
   hoc_faq_more_questions_a: Nézz körül a <a href='http://support.code.org'>fórumban</a>,
     hátha megtalálod a kérdéseire a válaszokat.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hogyan tanuljak tovább a Kódolás Órája után?
   hoc_faq_keep_learning_a: Bárki, bármikor tarthat Kódolás Óráját. A segédanyagok
     elérhetőek egész évben. Biztos lehetsz benne, hogy az összes segédanyagunk és
     anyagunk örökké elérhető lesz. Menj a <a href='/promote'>források</a> oldalra
     további anyagokárt, melyek segítenek abban, hogy sikeres legyen az általad szervezett
     Kódolás Órája is.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Hol tudom kinyomtatni a tanúsítványokat a tanítványaimnak?
   hoc_faq_certificates_a: Menj a <a href='%{codeorg_url}/certificates'>tanúsítványok
     fülre</a>, ahol az egész osztályod számára ki tudod ezeket nyomtatni. Itt tudod
     kinyomtatni a <a href='%{codeorg_url}/certificates?course=mc'>speciális tanúsítványokat</a>
     is azoknak a diákoknak, akik a Minecraft oktatóanyagokat csinálják.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Van bármi feltétele annak, hogy a Kódolás Órája logóját vagy nevét
     használjam?
   hoc_faq_logo_a: A Kódolás Órája szabadalom alatt áll. Nem akarjuk megakadályozni
     a használatát, azonban szeretnénk, ha csak bizonyos keretek között lenne használva.
     Lesd meg az <a href='%{logo_url}'>ezzel kapcsolatos irányelveinket</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
   stats_i18n: A tanulók több, mint 45 különböző nyelven tanulnak
@@ -644,6 +805,8 @@ hu:
   stats_females: A nők aránya mindössze 20-25% a számítástechnikai gimnáziumi és egyetemi
     képzésekben és a munkaerőpiacon.
   stats_females_more: A Kódolás Órája során a <b>résztvevők 50%-a</b> nő!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.”
     - Nina Nichols Peery, tanár"
   stats_student: "„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate,
@@ -767,8 +930,11 @@ hu:
     tanárához, és kezdd el a Kódolás Óráját!
   learn_banner_beyond: Szeretnél tovább tanulni?  <a id='learn_banner_beyond'>A Kódolás
     Óráján túl</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Tanárok: <a id=''teacher_banner_host''>Tarts egy órát</a>
     vagy <a id=''teacher_banner_howto''>olvasd el az útmutatót</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
     és készíts egy jobb Kódolás Órája programot bármely korosztálynak!
@@ -1406,8 +1572,8 @@ hu:
     megoldja a puzzlet!
   tutorial_hoc_shortdescription: Az új code.org/hoc helyőrzője
   tutorial_code_shortdescription: Tanulj kódolni Mark Zuckerberggel és az Angry Birdsszel!
-  tutorial_tinspire_shortdescription: Get students started coding on their TI-Nspire
-    CX handhelds in just 10 minutes at a time.
+  tutorial_tinspire_shortdescription: A tanulók kezdjenek el programozni alkalmanként
+    csak 10 perc ráforditással TI-Nspire CX kézi számítógépükön.
   tutorial_itchbounceball_shortdescription: Használd a Scratch-et, hogy elkészítsd
     a saját pattogó labdádat
   tutorial_vidclim_shortdescription: Kombináld a számítástechinkát a környezetvédelemmel
@@ -1440,7 +1606,7 @@ hu:
     és követni fogja az utasításaid.
   tutorial_hopgeo_shortdescription: 'Építsd fel saját Geometry Jumper játékod: térj
     ki az akadályok elől ahogy feléd repülnek!'
-  tutorial_tynkermult_shortdescription: Make a fun multiplication game!
+  tutorial_tynkermult_shortdescription: Készíts egy szórakoztató szorzós játékot!
   tutorial_monster_shortdescription: Egy színes, önállóan játszható programozó kaland
     gyerekeknek.
   tutorial_tynkerapp_shortdescription: Készítsd el a kedvenc játékot egyedi változatát!
@@ -1504,7 +1670,7 @@ hu:
     a játékos irányíthat! Tartsd a levegőben a biciklit, hogy kikerüld az akadályokat!
   tutorial_kanopong_shortdescription: Változtasd meg a játékot. Szegd meg a szabályokat.
     Nyerj a kóddal.
-  tutorial_tynkerright_shortdescription: Program a quiz about the Bill of Rights!
+  tutorial_tynkerright_shortdescription: Programozz egy kvízt a Jogok Nyilatkozatáról!
   tutorial_touchdevelop_shortdescription: 'Oldj meg rejtvényeket, készíts játékokat,
     és tanulj kódolni - mindezt a telefonodon. '
   tutorial_tynkercc_shortdescription: Építsd fel és edzd hadsereged harcra!
@@ -1517,49 +1683,51 @@ hu:
   tutorial_knodsnake_shortdescription: 'Tanulj meg Kígyó játékot készíteni JavaScriptben! '
   tutorial_soccharater_shortdescription: Kódold le a te saját képpont karaktered HTML,
     CSS és JavaScript segítségével.
-  tutorial_silent_shortdescription: Discover the basic concepts of programming without
-    any word or explanation
-  tutorial_robomesh_shortdescription: Program either a virtual online robot, or a
-    real VEX IQ robot.
-  tutorial_amaze_shortdescription: Build and customize an exciting maze game with
-    with crazy physics obstacles and a grand prize!
+  tutorial_silent_shortdescription: Fedezd fel a programozás alapfogalmait egyetlen
+    szó vagy magyarázat nélkül
+  tutorial_robomesh_shortdescription: Programozz egy virtuális online robotot, vagy
+    egy igazi VEX IQ robotot.
+  tutorial_amaze_shortdescription: Építs fel és tégy egyedivé egy izgalmas labirintus
+    játékot őrült fizikájú akadályokkal és egy hatalmas nyereménnyel!
   tutorial_codestersds_shortdescription: írj egy történetet kötőszavakkal, miközben
     a számítógépekről is megtudhatsz valamit!
-  tutorial_knodtext_shortdescription: Learn to make a text adventure game in Python!
-  tutorial_alicegar_shortdescription: 'Tell stories and be creative while learning
-    to code. '
+  tutorial_knodtext_shortdescription: Tanuld meg hogyan készíts egy szöveges kalandjátékot
+    Pythonban!
+  tutorial_alicegar_shortdescription: 'Mondj el történeteket és légy kreatív miközben
+    kódolni tanulsz. '
   tutorial_codesterstransform_shortdescription: Ebben a matekos projektben felfedezheted
     és kipróbálhatod a koordináta geometriai transzformációkat.
   tutorial_flexfrog_shortdescription: A game for learning CSS flexbox
   tutorial_codemoji_shortdescription: 'Ez a feladat megtanítja a gyerekeknek az alapvető
     weboldal tervezést, és ehhez kapcsolódó programozási koncepciókat hangulatjelekkel,
     hogy a tanulók végig aktívan részt vegyenek, és észrevtlenül tanuljanak programozni. '
-  tutorial_robobii_shortdescription: 'RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. '
-  tutorial_robobm_shortdescription: 'RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. '
-  tutorial_codingrobots_shortdescription: 'RoboBlockly is designed for beginners to
-    learn coding and math with robots. '
-  tutorial_robob_shortdescription: 'RoboBlockly is designed for beginners to learn
-    robotics in Blockly. '
+  tutorial_robobii_shortdescription: 'RoboBlockly azért készült, hogy megtanítsa kezdőknek
+    hogyan kódoljanak robotokkal Blocklyban. '
+  tutorial_robobm_shortdescription: 'RoboBlockly azért készült, hogy kezdőknek matekot
+    tanítson robotokkal Blocklyban. '
+  tutorial_codingrobots_shortdescription: 'RoboBlockly azért készült, hogy megtanítsa
+    kezdőknek hogyan kódoljanak és matekozzanak robotokkal. '
+  tutorial_robob_shortdescription: 'RoboBlockly azért készült, hogy robotikát tanítson
+    kezdőknek Blocklyban. '
   tutorial_coders_shortdescription: Fedezd fel a bot programozást egy csillaghajó
     versenyben! (14 év fölött)
-  tutorial_tynkerhw_shortdescription: Solve fun coding puzzles to navigate your Hot
-    Wheels car and win the race!
-  tutorial_tynkermh_shortdescription: Solve fun coding puzzles with the ghouls of
-    Monster High.
-  tutorial_caphoto_shortdescription: Build an app that lets you customize photos with
-    stickers and filters.
-  tutorial_mozillahw_shortdescription: Learners will remix JavaScript code to change
-    the words on a website
-  tutorial_ticklep_shortdescription: With Tickle, a user-friendly coding app, you
-    can easily program Parrot Drone to swim in a number of ways by simply dragging
-    and dropping coding blocks to create a command for it to follow.
-  tutorial_bbot_shortdescription: Teach your students (ages 7 and up) programming
-    in a fun and easy way. No prior programming knowledge or experience needed!
+  tutorial_tynkerhw_shortdescription: Oldj meg szórakoztató kódolási rejtvényeket
+    hogy irányítsd Hot Wheels autódat és megnyerd a futamot!
+  tutorial_tynkermh_shortdescription: Oldj meg szórakoztató kódolási rejtvényeket
+    a Monster High szereplőivel.
+  tutorial_caphoto_shortdescription: Építs egy alkalmazást, hogy matricákkal és szűrőkkel
+    tehesd egyedivé fotóidat.
+  tutorial_mozillahw_shortdescription: A tanulók JavaScript kódokat fognak összemixelni,
+    hogy megváltoztassák a szavakat egy honlapon
+  tutorial_ticklep_shortdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    egyszerűen a kód-elemeket egymás után illesztve számos módon programozhatsz egy
+    Parrot Drónt, ami követni fogja az utasításaid.
+  tutorial_bbot_shortdescription: Tanítsd diákjaidat (7 éves kortól) programozni egy
+    egyszerű és szórakoztató módon. Nincs szükség előzetes programozó ismeretekre
+    vagy tapasztalatra!
   tutorial_scratchg_shortdescription: Tanuld meg hogyan programozz játékokat Scratch-ben
-  tutorial_roboticfriends_shortdescription: Unplugged tutorial for a group with no
-    devices
+  tutorial_roboticfriends_shortdescription: Offline oktatóanyag eszközökkel nem rendelkező
+    csoportoknak
   tutorial_sjforest_shortdescription: Használd a ScratchJr programozó alkalmazást,
     hogy készíts egy olyan programot, amiben egy sötét erdei környezetben mozognak
     különböző állatok.
@@ -1599,13 +1767,14 @@ hu:
   tutorial_bbcart_shortdescription: 'Standards-based lesson plan for levels K-5. '
   tutorial_tlcknight_shortdescription: Solve a puzzle where you must find a way for
     a knight to visit every square on a board exactly once.
-  tutorial_fufafit_shortdescription: 'Use functions to shorten the code that will
-    help the fuzzFamily build their strength! '
-  tutorial_ozodance_shortdescription: Help Ozobot learn to dance! Create and program
-    a dance routine for the Ozobot robot.
-  tutorial_codingrobotics_shortdescription: Students will focus on communication as
-    it relates to programming.
-  tutorial_box_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  tutorial_fufafit_shortdescription: 'Használj funkcókat a kód rövidítésére, ami segít
+    majd megerősíteni a fuzzCsaládot! '
+  tutorial_ozodance_shortdescription: Segíts Ozobotnak megtanulni táncolni! Készíts
+    és programozz egy tánc rutint Ozobot robotnak.
+  tutorial_codingrobotics_shortdescription: A tanulók arra fognak koncentrálni, hogy
+    a kommunikáció hogyan befolyásolja a programozást.
+  tutorial_box_shortdescription: Tegyél egy kódoló kirándulást Doboz Szigetre a bátor
+    hőssel.
   tutorial_hopgame_shortdescription: Lead a coding workshop, club, or a hackathon
     with this 6-lesson guide.
   tutorial_icontrol_shortdescription: Programming physical systems with iPads and
@@ -1788,8 +1957,8 @@ hu:
     a saját Csillagok háborúja játékodat, egy messzi, messzi galaxisban.
   tutorial_build-a-galaxy_shortdescription: Tanulj meg droidokat programozni, és készítsd
     el a saját Csillagok háborúja játékodat, egy messzi, messzi galaxisban.
-  tutorial_alicesims_shortdescription: 'Tell stories and be creative while learning
-    to code. '
+  tutorial_alicesims_shortdescription: 'Mondj el történeteket és légy kreatív miközben
+    kódolni tanulsz. '
   tutorial_tchr_shortdescription: Be inspired to design your own Hour of Code event
     with these lesson plans.
   tutorial_robogame_shortdescription: The grit, the games, the fun!
@@ -2675,12 +2844,12 @@ hu:
     Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
 
     All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.
-  tutorial_vidclim_longdescription: "Students research a fact about the Earth's climate,
+  tutorial_vidclim_longdescription: Students research a fact about the Earth's climate,
     engaging with the work of scientists and artists in response to climate change.
-    Students take their research and plan a video sharing their fact. \n\nVideos can
-    be about\nUnderstanding climate changes and its effects\nPublic responses to the
-    climate change effects\nHow climate change impacts everyday life\nWhat actions
-    can you take to make a difference"
+    Students take their research and plan a video sharing their fact. Videos can be
+    about understanding climate changes and its effects, public responses to climate
+    change, how climate change impacts everyday life, and the actions you can take
+    to make a difference.
   tutorial_matlab_longdescription: Learn to Code is an engaging, online, interactive
     tutorial where you learn how to code. Use MATLAB to find out if the closest meet-up
     location with your friends is the movies, the mall, or the cafe. Break the problem
@@ -2703,8 +2872,8 @@ hu:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2733,7 +2902,7 @@ hu:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -2915,7 +3084,6 @@ hu:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -2978,7 +3146,8 @@ hu:
     words. Students will learn about basic syntax, strings, variables, and user input.
     They will use the platform and a sprite to tell a story and lead the user through
     a variety of scene changes. '
-  tutorial_knodtext_longdescription: Learn to make a text adventure game in Python!
+  tutorial_knodtext_longdescription: Tanuld meg hogyan készíts egy szöveges kalandjátékot
+    Pythonban!
   tutorial_alicegar_longdescription: 'Follow the animation production process from
     storyboarding to programming with Alice and Garfield.  Let creativity and storytelling
     drive your learning in a drag and drop coding environment.  The project will guide
@@ -3032,9 +3201,9 @@ hu:
   tutorial_mozillahw_longdescription: Learners will remix JavaScript code to change
     the words on a website, learning about composing for the web, coding JavaScript
     values, and remixing Web content.
-  tutorial_ticklep_longdescription: With Tickle, a user-friendly coding app, you can
-    easily program Parrot Drone to swim in a number of ways by simply dragging and
-    dropping coding blocks to create a command for it to follow.
+  tutorial_ticklep_longdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    egyszerűen a kód-elemeket egymás után illesztve számos módon programozhatsz egy
+    Parrot Drónt, ami követni fogja az utasításaid.
   tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
     need any programming knowledge or experience to teach your students about programming!
     You can teach programming in a fun and easy way. Go over the activities and download
@@ -3085,7 +3254,7 @@ hu:
   tutorial_bbcgeo_longdescription: Standards-based lesson plan for grades K-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
     geometry.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3189,11 +3358,11 @@ hu:
     the clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide
-    to facilitate a game design workshop, hackathon, or in-class series. \n\nMake:
-    \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5.
-    Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation,
-    and a video tutorial. \n\nStudents can build off your instructions to customize
-    their games. No prior experience required."
+    to facilitate a game design workshop, hackathon, or in-class series. Make Cross
+    the Road, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters, and Escape
+    the Room. Each includes discussion questions, differentiation, and a video tutorial.
+    \n\nStudents can build off your instructions to customize their games. No prior
+    experience required."
   tutorial_icontrol_longdescription: |-
     This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.
 
@@ -3286,7 +3455,7 @@ hu:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3394,7 +3563,7 @@ hu:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -3916,7 +4085,7 @@ hu:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Coding in Java with CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4153,9 +4322,9 @@ hu:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4811,30 +4980,29 @@ hu:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4896,7 +5064,7 @@ hu:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -6678,7 +6846,7 @@ hu:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Minden modern böngésző
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Minden modern böngésző
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Minden modern böngésző
@@ -6810,26 +6978,38 @@ hu:
   tutorial_blockscadpizza_string_platforms: Minden modern böngésző
   tutorial_blockscadsugar_string_platforms: Minden modern böngésző
   tutorial_bsgridlight_string_platforms: Minden modern böngésző
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: Minden modern böngészőn, Android tableten, iPaden,
     Androidon, iPhoneon
@@ -6867,7 +7047,7 @@ hu:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Minden modern böngésző
   tutorial_csfirstname_string_platforms: Minden modern böngésző
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Minden modern böngésző
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -6878,7 +7058,7 @@ hu:
   tutorial_groklearningpython_string_platforms: Minden modern böngésző
   tutorial_htmltimetravel_string_platforms: Minden modern böngésző
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: Minden modern böngésző
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -8222,7 +8402,7 @@ hu:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8275,8 +8455,8 @@ hu:
   tutorial_mee_name: 'Minecraft Kódolás Órája: Az MI lehetőségei '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: MI az Óceánokért
-  tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
-    then bring it to life with Scratch!
+  tutorial_scratchimagine_longdescription: Képzelj el egy világot ahol bármi lehetséges,
+    és keltsd életre Scratch segítségével.
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
     creating your own Public Service Announcement. Choose a topic you find important
     and design you own animated or interactive PSA to share critical information about
@@ -8314,8 +8494,8 @@ hu:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Tanulj programozni alapvető parancsokkal
+    és tisztítsd meg a partot, hogy védd az óceán élővilágát.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -8323,8 +8503,8 @@ hu:
   tutorial_tynkerjavapro_longdescription: 'Part of the UN Sustainable Development
     Goals project, this coding prompt shows off a short project exploring recycling
     and reuse. Readers can create their own game by expanding the project. '
-  tutorial_grasshopperhack_longdescription: Learn coding skills to hack this game
-    to make it possible to play.
+  tutorial_grasshopperhack_longdescription: Tanulj kódolni, hogy feltörd ezt a játékot
+    és játszhatóvá tedd.
   tutorial_pbskids_longdescription: With PBS KIDS Scratch Jr, kids can create their
     own interactive stories and games through programming games and lessons. Learn
     to code through games and activities featuring characters from Odd Squad, Wild
@@ -8335,20 +8515,20 @@ hu:
     Get acquainted with the power of the PostgreSQL language, used by governments
     and businesses to manage database systems all over the world. PostgreSQL is written
     in plain English and is easy to learn. Try it out!
-  tutorial_grasshopperphoto_longdescription: Learn coding skills to create filters
-    to apply to different photos.
+  tutorial_grasshopperphoto_longdescription: Tanulj kódolni, hogy szűrőket készíthess,
+    amiket különböző fényképekre illeszthetsz.
   tutorial_tynkerpyland_longdescription: 'Part of the UN Sustainable Development Goals
     project, this Python project will have you create your own tree-planting game. '
-  tutorial_codeitimages_longdescription: Learn to program your own amazing images
-    and animations.
+  tutorial_codeitimages_longdescription: Tanuld meg hogyan programozz saját lenyűgöző
+    képeket és animációkat.
   tutorial_hyperpadenemy_longdescription: 'Learn logical thinking and programming
     by creating a platformer game enemy AI. '
   tutorial_tynkerpro_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring issues surrounding recycling
     and reuse. Beginners can play with working projects and advanced programmers can
     create their own projects from scratch. '
-  tutorial_trashtag_longdescription: 'Code your own game and raise awareness for protecting
-    our environment. '
+  tutorial_trashtag_longdescription: 'Programozd le saját játékod, és hívd fel a figyelmet
+    a környezetvédelemre. '
   tutorial_casiege_longdescription: Join Niko and Sakura on their virtual reality
     journey to Tubrosos Castle. Learn what it's like to be a gray hat hacker by helping
     the wizard elf, Cyrena find the Crown of Knowledge. You will expose the poor security
@@ -8439,9 +8619,9 @@ hu:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8483,10 +8663,10 @@ hu:
     (virtual or hardware) using a drag-and-drop interface. They will also learn about
     the important concept of loops and get practice using the Pythagorean theorem
     to traverse triangular paths.
-  tutorial_baroboobstacle_longdescription: This series of 6 activities will introduce
-    students to basic coding and robotics concepts by using a drag-and-drop interface
-    to maneuver Linkbot robots (virtual and/or hardware) through a variety of obstacle
-    courses.
+  tutorial_baroboobstacle_longdescription: Ez a 6 tevékenységből álló sorozat megismerteti
+    a tanulókat a kódolás és robotika koncepcióival 'fogd és vidd' kezelőfelületet
+    használva, miközben Linkbot robotokat (virtuális és/vagy hardver) manővereztetnek
+    különféle akadálypályákon keresztül.
   tutorial_pbstorytelling_longdescription: Dive into the world of interactive storytelling.
     Learn the basics of how to create a story in Twine. Examine different story patterns
     and structures that are unique to interactive stories. See some ways that interactive
@@ -8558,16 +8738,17 @@ hu:
     through robotics. Using a drag-and-drop programming environment and a programmable
     robotic sphere, pupils design algorithms to program a robot to hide Easter eggs.
     Includes step-by-step lesson plan, teacher/pupil resources and assessment guidance.
-  tutorial_rootunplugged_longdescription: Solve offline printable puzzles using the
-    power of programming, math and more to crack the code to where the Root Robot
-    is hiding!
+  tutorial_rootunplugged_longdescription: Oldj meg olyan kinyomtatható rejtvényeket
+    a programozás, matematika és még sok más erejével, amikhez nincs szükség internetre,
+    és amelyek segítségével feltörheted a kódot, hogy megtaláld hol rejtőzik Root
+    Robot.
   tutorial_rgtreasure_longdescription: Robo Treasure Chest is an unplugged activity
     that teaches students computational thinking and programming fundamentals in an
     easy and enjoyable way. Students will learn simple movement commands and new programming
     expressions like 'Bug' and 'Debug'. This activity also teaches multi-label scenarios
     concept.
-  tutorial_peblioportraits_longdescription: 'Learn to program animated portraits for
-    a cause you believe in. '
+  tutorial_peblioportraits_longdescription: 'Tanuld meg animált portrék programozását
+    egy olyan cél érdekékében, amiben hiszel. '
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
@@ -8593,55 +8774,61 @@ hu:
     student-guided. For efficiency, we recommend that students complete one of the
     preceding no-code Unity Creator Kits to learn the Unity interface prior to this
     activity.
-  tutorial_blockscadtarget_longdescription: Test your target-hitting abilities by
-    writing code to move triangles around in three dimensions!
-  tutorial_tcadicicles_longdescription: Combine the power of code and computer-aided
-    design (CAD) to create a 3D icicle design. Then, learn how to print your design
-    if you have access to a 3D printer!
-  tutorial_blockscadscale_longdescription: Write code to create and 3D print scale
-    models of the world's most famous buildings!
-  tutorial_tcadloops_longdescription: Learn how code and computer-aided design (CAD)
-    can be combined to create a 3D model of a bursting star.
-  tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
-    and Processing!
+  tutorial_blockscadtarget_longdescription: 'Teszteld milyen jól célzol: írj kódot,
+    ami háromszögeket mozgat három dimenzióban!'
+  tutorial_tcadicicles_longdescription: Ötvözd a kódolás és számítógéppel segített
+    tervezés (CAD) erejét, hogy 3D jégcsap dizájnt hozhass létre. Ezután tanuld meg
+    hogyan nyomtathatod ki amit létrehoztál, ha hozzáférsz egy 3D nyomtatóhoz.
+  tutorial_blockscadscale_longdescription: Írj kódot, hogy elkészítsd és 3D-ben kinyomtathasd
+    a világ leghíresebb épületeinek makettjeit.
+  tutorial_tcadloops_longdescription: Tanuld meg, hogy hogyan kombinálhatsz kódot
+    és számítógéppel segített tervezést (CAD) annak érdekében, hogy elkészülhessen
+    egy kitörő csillag 3D modellje.
+  tutorial_phidgets_longdescription: Készits egy fantasztikus hangszert Phidgetek
+    és Processing segítségével.
   tutorial_kcjmerry_longdescription: Build an interactive coding project with the
     micro:bit to celebrate coding and the holiday season. Kids will use a combination
     of block coding and physical computing to create a sparkling snow globe animation.
     The project is simple enough for teachers or parents to facilitate and it comes
     with activity cards that kids can use on their own for a further challenge.
-  tutorial_modvariables_longdescription: 'Students investigate how data flows through
-    a network using Cubelets robot blocks. This lesson assumes students are already
-    familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
-    for free "Meet Your Cubelets" lessons to introduce this computational thinking
-    tool to your students. '
-  tutorial_codestersmicro_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Use your micro:bit as a game controller to help
-    your player head a soccer ball. Don't let the ball hit the ground! Micro Ball
-    is a simple, fun game that even a beginning coder can make.
-  tutorial_codestersdata_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Learn how to collect and store data from micro:bit
-    sensors. Then graph the data as a scatter plot in Codesters. Prior knowledge of
-    loops, lists, and events is encouraged.
-  tutorial_ikodexmas_longdescription: This teacher-led activity, adapted for the Hour
-    of Code, introduces children to using a tile-based programming language to develop
-    coding skills. The children use algorithms, programming and computational thinking
-    skills to program Kodu to deliver presents on Christmas Eve. Includes step-by-step
-    lesson plan, pupil tutorial and assessment guidance.
-  tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
-    a data-logging device which can capture a range of information about its immediate
-    environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_modvariables_longdescription: 'A hallgatók megvizsgálják, hogy az adatok
+    miként áramlanak egy hálózaton a Cubelets robotblokkok segítségével. Ez a lecke
+    feltételezi, hogy a hallgatók már ismerik a Cubelets robotblokkok általános működését.
+    Látogasson el a modrobotics.com/thehub oldalra ingyenes "Találkozz Cubelets-eddel"
+    órákért, hogy megismertethesse diákjaival ezt a számítástechnikai gondolkodást
+    követő eszközt. '
+  tutorial_codestersmicro_longdescription: Csatlakoztasd micro:bit-od Codesters-hez,
+    és megnyílik előtted a lehetőségek tárháza. Használd micro:bit-ed mint egy játékkontrollert,
+    hogy segíts a focistádnak elfejelni egy focilabdát. Ne engedd, hogy a labda földet
+    érjen! A Micro Ball egy egyszerű, szórakoztató játék, ami kezdő programozóknak
+    is való.
+  tutorial_codestersdata_longdescription: Csatlakoztasd micro:bit-od Codesters-hez,
+    és megnyílik előtted a lehetőségek tárháza. Tanuld meg hogyan gyűjtsd össze és
+    tárold az adatokat a micro:bit sensorokból. Ezek után ábrázold az adatokat egy
+    'scatter plot' ábrán. Ajánlott a loopok, listák és események előzetes ismerete.
+  tutorial_ikodexmas_longdescription: Ez a tanár által vezetett tevékenység, mely
+    a Kódolás órájához lett igazitva, bevezeti a gyermekeket a csempe alapú programozási
+    nyelv használatába, hogy ezáltal tegyenek szert kódolási képességekre. A gyermekek
+    algoritmusokhoz, programozáshoz és informatikai gondolkodáshoz kapcsolódó képességeket
+    használnak, hogy arra programozzák Kodut, hogy szenteste ajándékokat szállítson
+    ki. Tartalmaz lépésről lépésre szóló tervet, tanulói bemutatót és értékelési útmutatót.
+  tutorial_rpisensehat_longdescription: Ismerje meg hogyan lehet a Sense HAT hardvert
+    felhasználni olyan adatnaplózási eszköz felépítésére, amely számos információt
+    képes rögzíteni a közvetlen környezetéről.
+  tutorial_modtraits_longdescription: 'A tanulók az informatikai gondolkodás lépéseit
+    használják jellemvonások elemzésére, és készitsenek egy olyan algoritmust, ami
+    bemutatja ezeket a vonásokat. '
   tutorial_mee_longdescription: 'A falut tűzvész fenyegeti, segítened kell egy kódolási
     megoldással! Ismerd meg kódolási segéded, a Minecraft Agentet, majd programozd
     az Agentet, hogy bejárja az erdőt és adatokat gyűjtsön a tüzek kialakulását segítő
     feltételekről. '
-  tutorial_kuborobo_longdescription: In this activity, students put their logic and
-    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
-    to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_kuborobo_longdescription: Ebben a tevékenységben a tanulók logikai és sorbarendezési
+    képességeiket tesztelhetik, miközben a TagTile-okat használva programozzák be
+    KUBO robotjukat, hogy különböző helyekre utazzon egy nyomtatott térképen.
+  tutorial_ai-oceans_longdescription: A számtástechnika sokkal több, mint csak kódolás!
+    Tanulj többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez
+    kapcsolódó foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI
+    hogyan oldhatja meg a világ problémáit!
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Magyar
   tutorial_googlehero_language: English, Spanish
@@ -8759,7 +8946,7 @@ hu:
   tutorial_tynkeren_string_detail_grades: 2-tól 8. osztályig
   tutorial_tynkerjavapro_string_detail_grades: 6. osztálytól
   tutorial_grasshopperhack_string_detail_grades: 9. osztálytól
-  tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
+  tutorial_pbskids_string_detail_grades: Óvodától 5. osztályig
   tutorial_nclabdata_string_detail_grades: 9. osztálytól
   tutorial_grasshopperphoto_string_detail_grades: 9. osztálytól
   tutorial_tynkerpyland_string_detail_grades: 6. osztálytól
@@ -8804,8 +8991,8 @@ hu:
   tutorial_baroborav_string_detail_grades: 6. osztálytól
   tutorial_baroboobstacle_string_detail_grades: 2. osztálytól
   tutorial_pbstorytelling_string_detail_grades: 6. osztálytól
-  tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
-  tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
+  tutorial_kibosnow_string_detail_grades: Óvodától 5. osztályig
+  tutorial_kibohappy_string_detail_grades: Óvodától 5. osztályig
   tutorial_rubylove_string_detail_grades: Óvodától 8. osztályig
   tutorial_spherosmiles_string_detail_grades: 2. osztálytól
   tutorial_spherobaby_string_detail_grades: Nem olvasótól 8. osztályig
@@ -8843,13 +9030,14 @@ hu:
   tutorial_modtraits_string_detail_grades: 2. osztálytól
   tutorial_mee_string_detail_grades: 2. osztálytól
   tutorial_kuborobo_string_detail_grades: Óvodától 8. osztályig
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: 3. osztálytól
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Minden modern böngésző, Android tablet,
+    iPad, Android telefon, iPhone
   tutorial_bananatales_string_platforms: Minden modern böngésző
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -8874,7 +9062,7 @@ hu:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8951,8 +9139,8 @@ hu:
   tutorial_modtraits_string_platforms: Minden modern böngésző
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: Minden modern böngésző, modern Androidos tabletek,
+    iPad-ek, modern Androidos telefonok, iPhone-ok
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9122,12 +9310,12 @@ hu:
   tutorial_baroboobstacle_string_detail_programming_languages: Blokk programozás,
     C/C++
   tutorial_pbstorytelling_string_detail_programming_languages: Twine (Harlowe variant)
-  tutorial_kibosnow_string_detail_programming_languages: Blocks, Tangible blocks (no
-    screen use)
-  tutorial_kibohappy_string_detail_programming_languages: Blocks, Tangible blocks
-    (no screen use)
-  tutorial_rubylove_string_detail_programming_languages: Blocks, Language independent
-    (can be taught in multiple languages)
+  tutorial_kibosnow_string_detail_programming_languages: Blokkok, kézzel fogható blokkok
+    (nincs képernyőhasználat)
+  tutorial_kibohappy_string_detail_programming_languages: Blokkok, kézzel fogható
+    blokkok (nincs képernyőhasználat)
+  tutorial_rubylove_string_detail_programming_languages: Blokkok, nyelvfüggetlen (több
+    nyelven tanítható)
   tutorial_spherosmiles_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_spherobaby_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
@@ -9171,7 +9359,7 @@ hu:
   tutorial_mee_string_detail_programming_languages: Blokk programozás
   tutorial_kuborobo_string_detail_programming_languages: A TagTile-k, amiket a tanulók
     összeraknak
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: MI és gépi tanulás
   school_not_found_heading: Nem találtuk meg iskoládat. Kérjük írj róla több információt!
   school_name: Iskola neve
   school_name_error: Iskolanév megadása kötelező.
@@ -9227,3 +9415,4 @@ hu:
   some: Néhány
   all: Összes
   dont_know: Nem tudom
+  language_label: Nyelv

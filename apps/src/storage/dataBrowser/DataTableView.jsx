@@ -13,7 +13,6 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
-import experiments from '../../util/experiments';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -26,19 +25,13 @@ const styles = {
   ],
   container: {
     flexDirection: 'column',
-    height: '100%',
+    height: '99%',
     minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '100%',
-    paddingLeft: experiments.isEnabled(experiments.APPLAB_DATASETS)
-      ? '8px'
-      : '0px'
+    maxWidth: '99%',
+    paddingLeft: 8
   },
   table: {
     minWidth: MIN_TABLE_WIDTH
-  },
-  tableWrapper: {
-    flexGrow: 1,
-    overflow: 'scroll'
   },
   pagination: {
     float: 'right',
@@ -68,12 +61,7 @@ class DataTableView extends React.Component {
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableListMap: PropTypes.object.isRequired,
-    // "if all of the keys are integers, and more than half of the keys between 0 and
-    // the maximum key in the object have non-empty values, then Firebase will render
-    // it as an array."
-    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired,
+    tableRecords: PropTypes.array.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
@@ -133,11 +121,7 @@ class DataTableView extends React.Component {
 
   getTableJson() {
     const records = [];
-    // Cast Array to Object
-    const tableRecords = Object.assign({}, this.props.tableRecords);
-    for (const id in tableRecords) {
-      records.push(JSON.parse(tableRecords[id]));
-    }
+    this.props.tableRecords.forEach(record => records.push(JSON.parse(record)));
     return JSON.stringify(records, null, 2);
   }
 
@@ -195,11 +179,12 @@ class DataTableView extends React.Component {
   }
 }
 
+export const UnconnectedDataTableView = DataTableView;
 export default connect(
   state => ({
     view: state.data.view,
     tableColumns: state.data.tableColumns || [],
-    tableRecords: state.data.tableRecords || {},
+    tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
     tableListMap: state.data.tableListMap || {}
   }),

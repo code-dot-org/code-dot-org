@@ -1,0 +1,44 @@
+name 'csf_20-21_course_e_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course E: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course E: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **4.SL.1** - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others’ ideas and expressing their own clearly.
+
+* **4.SL.1.a** - Come to discussions prepared, having read or studied required material; explicitly draw on that preparation and other information known about the topic to explore ideas under discussion.
+
+* **4.SL.1.b** - Follow agreed-upon rules for discussions and carry out assigned roles.
+
+* **4.SL.4** - Report on a topic or text, tell a story, or recount an experience in an organized manner, using appropriate facts and relevant, descriptive details to support main ideas or themes; speak clearly at an understandable pace.
+
+</details>
+
+## Next Generation Science Standards
+
+<details><summary>
+
+**Engineering, Technology, and Applications of Science**
+
+</summary>
+
+* **3-5-ETS1-1** - Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.
+
+* **3-5-ETS1-2** - Generate and compare multiple possible solutions  to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+
+* **3-5-ETS1-3** - Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.
+
+</details>
+
+
+MARKDOWN

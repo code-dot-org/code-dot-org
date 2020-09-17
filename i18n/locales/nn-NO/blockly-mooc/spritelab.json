@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Vi har problemer med å laste inn din animasjon \"{animationName}\". Sjekk din nettverkstilkobling og last inn siden på ny. Dersom det ikke løser problemet kan det være noe feil med animasjonen. Fjern i så fall animasjonen for å fortsette.",
   "reinfFeedbackMsg": "Du er i mål! Velg \"Continue\" for å gå til neste nivå.",
   "shareGame": "Del spelet ditt:",

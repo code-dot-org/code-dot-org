@@ -11,8 +11,10 @@ const defaultProps = {
   title: 'Computer Science Principles 2017',
   assignmentFamilyTitle: 'Computer Science Principles',
   id: 30,
-  descriptionStudent: 'Desc here',
-  descriptionTeacher: 'Desc here',
+  descriptionStudent:
+    '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
+  descriptionTeacher:
+    '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
   isTeacher: true,
@@ -40,6 +42,26 @@ const defaultProps = {
 };
 
 describe('CourseOverview', () => {
+  it('has correct course description for teacher', () => {
+    const wrapper = shallow(<CourseOverview {...defaultProps} />);
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+  });
+
+  it('has correct course description for student', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        isTeacher={false}
+        viewAs={ViewType.Student}
+      />
+    );
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+  });
+
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview {...defaultProps} isTeacher={true} />
