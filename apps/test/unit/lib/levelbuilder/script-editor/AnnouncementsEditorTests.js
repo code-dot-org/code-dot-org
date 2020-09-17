@@ -25,17 +25,17 @@ describe('AnnouncementsEditor', () => {
         defaultAnnouncements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announce').length, 1);
+    assert.equal(wrapper.find('Announcement').length, 1);
   });
 
-  it('shows a preview when we have at least one announcement', () => {
+  it('shows a preview for teacher and student when we have at least one announcement', () => {
     const wrapper = shallow(
       <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announcements').length, 1);
+    assert.equal(wrapper.find('Announcements').length, 2);
   });
 
   it('show no preview if we have no announcements', () => {
@@ -46,16 +46,16 @@ describe('AnnouncementsEditor', () => {
   it('adds an empty Announce when we click add', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
-    assert.equal(wrapper.find('Announce').length, 1);
-    assert.equal(wrapper.find('Announce').props().announcement.notice, '');
-    assert.equal(wrapper.find('Announce').props().announcement.details, '');
-    assert.equal(wrapper.find('Announce').props().announcement.link, '');
+    assert.equal(wrapper.find('Announcement').length, 1);
+    assert.equal(wrapper.find('Announcement').props().announcement.notice, '');
+    assert.equal(wrapper.find('Announcement').props().announcement.details, '');
+    assert.equal(wrapper.find('Announcement').props().announcement.link, '');
     assert.equal(
-      wrapper.find('Announce').props().announcement.type,
+      wrapper.find('Announcement').props().announcement.type,
       'information'
     );
     assert.equal(
-      wrapper.find('Announce').props().announcement.visibility,
+      wrapper.find('Announcement').props().announcement.visibility,
       'Teacher-only'
     );
   });
@@ -67,7 +67,7 @@ describe('AnnouncementsEditor', () => {
     // had trouble getting two state updates working, so instead just call .add
     // instead of a second click
     wrapper.instance().add();
-    const announce = wrapper.find('Announce');
+    const announce = wrapper.find('Announcement');
     assert.equal(announce.length, 2);
     assert.equal(
       announce
@@ -89,7 +89,7 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('button')
       .simulate('click');
-    assert.equal(wrapper.find('Announce').length, 1);
+    assert.equal(wrapper.find('Announcement').length, 1);
   });
 
   it('updates notice', () => {
@@ -97,7 +97,7 @@ describe('AnnouncementsEditor', () => {
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(0)
@@ -110,7 +110,7 @@ describe('AnnouncementsEditor', () => {
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(1)
@@ -123,7 +123,7 @@ describe('AnnouncementsEditor', () => {
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(2)
@@ -136,7 +136,7 @@ describe('AnnouncementsEditor', () => {
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-type')
       .simulate('change', {target: {value: 'bullhorn'}});
@@ -148,7 +148,7 @@ describe('AnnouncementsEditor', () => {
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
@@ -172,7 +172,7 @@ describe('AnnouncementsEditor', () => {
 
     assert.equal(wrapper.state('announcements')[0].visibility, undefined);
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
