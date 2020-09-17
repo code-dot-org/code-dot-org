@@ -15,7 +15,8 @@ const PageAction = makeEnum(
   'BrambleFilesystemResetSuccess',
   'BrambleFilesystemResetFailed',
   'JotFormFrameLoaded',
-  'JotFormLoadFailed'
+  'JotFormLoadFailed',
+  'BlockLoadFailed'
 );
 
 const MAX_FIELD_LENGTH = 4095;
