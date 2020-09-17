@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
-const ADD_ANNOUNCEMENT = 'scriptAnnouncements/ADD_ANNOUNCEMENT';
+const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
 
 export const addAnnouncement = (notice, details, link, type, visibility) => ({
   type: ADD_ANNOUNCEMENT,
@@ -26,7 +26,7 @@ export const announcementShape = PropTypes.shape({
   visibility: PropTypes.oneOf(Object.values(VisibilityType))
 });
 
-export default function scriptAnnouncements(state = [], action) {
+export default function announcements(state = [], action) {
   if (action.type === ADD_ANNOUNCEMENT) {
     return state.concat({
       notice: action.notice,
