@@ -22,26 +22,19 @@ export default class Announcements extends Component {
   Also defaults old announcements without a visibility to be Teacher-only.
  */
   filteredAnnouncements = () => {
-    const currentAnnouncements = [];
     const currentView = this.props.viewAs;
-    this.props.announcements.forEach(element => {
-      if (element.visibility === VisibilityType.teacherAndStudent) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Teacher' &&
-        (element.visibility === VisibilityType.teacher ||
-          element.visibility === undefined)
-      ) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Student' &&
-        element.visibility === VisibilityType.student
-      ) {
-        currentAnnouncements.push(element);
-      }
-    });
-    return currentAnnouncements;
+    return this.props.announcements.filter(element =>
+      this.isVisible(currentView, element)
+    );
   };
+
+  isVisible = (currentView, element) =>
+    element.visibility === VisibilityType.teacherAndStudent ||
+    (currentView === 'Teacher' &&
+      (element.visibility === VisibilityType.teacher ||
+        element.visibility === undefined)) ||
+    (currentView === 'Student' &&
+      element.visibility === VisibilityType.student);
 
   render() {
     return (
