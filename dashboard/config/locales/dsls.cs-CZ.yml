@@ -1490,7 +1490,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1505,7 +1506,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1520,7 +1522,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1535,7 +1538,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje

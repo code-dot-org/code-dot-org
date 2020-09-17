@@ -51,8 +51,8 @@ pl-PL:
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "**P**"
+        - text: "**Q**"
         title: Dopasowanie
       2-3 Conditionals Multi 1:
         answers:
@@ -2846,6 +2846,7 @@ pl-PL:
             naciśniesz "Uruchom"?
       courseE_EOC_2020:
         description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu "Kurs"
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ten sam program będzie się działał także jako rozwiązanie tej łamigłówki.
@@ -2999,6 +3000,7 @@ pl-PL:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_EOC_2020:
         description: 'Dotarłeś do końca Kursu F! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu "Kurs"
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -3497,3 +3499,7 @@ pl-PL:
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n\nPrzejdź do planu lekcji\n\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+      courseD_EOC_2020:
+        display_name: Koniec projektu "Kurs"
+      courseExpress_EOC_2020:
+        display_name: Koniec projektu "Kurs"

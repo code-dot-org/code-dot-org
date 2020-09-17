@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: unit
 
 clone:
@@ -15,24 +16,6 @@ steps:
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
 
-- name: verify-pr
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  commands:
-    - |
-      if [ -z "$DRONE_PULL_REQUEST" ]; then
-        echo "Not a pull request."
-        exit 0
-      fi
-    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
-    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
-    - echo $head_repo
-    - |
-      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
-        echo "Pull request is from fork $head_repo; exiting."
-        exit 1
-      fi
-
 - name: restore-cache
   image: plugins/s3-cache
   settings:
@@ -43,7 +26,7 @@ steps:
     filename: unit-tests-cache.tar
 
 - name: unit-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   pull: always
   volumes:
   - name: rbenv
@@ -100,6 +83,7 @@ trigger:
 
 ---
 kind: pipeline
+type: docker
 name: ui
 
 clone:
@@ -126,24 +110,6 @@ steps:
   - git config user.email "drone-fake-user@code.org"
   - git merge origin/$DRONE_TARGET_BRANCH
 
-- name: verify-pr
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  commands:
-    - |
-      if [ -z "$DRONE_PULL_REQUEST" ]; then
-        echo "Not a pull request."
-        exit 0
-      fi
-    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
-    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
-    - echo $head_repo
-    - |
-      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
-        echo "Pull request is from fork $head_repo; exiting."
-        exit 1
-      fi
-
 - name: restore-cache
   image: plugins/s3-cache
   settings:
@@ -153,7 +119,7 @@ steps:
     restore: true
 
 - name: ui-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -217,6 +183,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: c4b01d2892b7314cb674278450cd30e012f01b3d5289eed1d6a2c933947ec623
+hmac: b7621086539d5bc60d621e507bab706cad6f36fdd859d8b1d1b18d9670dbe5c6
 
 ...
