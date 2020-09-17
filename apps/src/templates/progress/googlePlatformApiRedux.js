@@ -1,3 +1,5 @@
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 /*
  * The Google Classroom Share Button is only available through the google
  * platform api, so we have to add it to our page on load. We manage loading
@@ -27,6 +29,26 @@ export function loadGooglePlatformApi() {
       loadApi(dispatch, getState);
       dispatch(startLoadingGapi(Date.now()));
     }
+  };
+}
+
+function onLoadFinished(success) {
+  return (dispatch, getState) => {
+    dispatch(finishLoadingGapi(success));
+
+    const data = {
+      success: success,
+      load_time: elapsedLoadTimeSeconds(getState)
+    };
+    firehoseClient.putRecord(
+      {
+        study: 'google-classroom-share-button',
+        study_group: 'v0',
+        event: 'api_load_finished',
+        data_json: JSON.stringify(data)
+      },
+      {includeUserId: true}
+    );
   };
 }
 
@@ -62,7 +84,7 @@ function loadApi(dispatch, getState) {
     gapi.src = 'https://apis.google.com/js/platform.js';
     gapi.id = GOOGLE_PLATFORM_API_ID;
     gapi.onload = () => waitForGapi(dispatch, getState);
-    gapi.onerror = () => dispatch(finishLoadingGapi(false));
+    gapi.onerror = () => dispatch(onLoadFinished(false));
     document.body.appendChild(gapi);
   } else {
     waitForGapi(dispatch, getState);
@@ -71,9 +93,9 @@ function loadApi(dispatch, getState) {
 
 function waitForGapi(dispatch, getState) {
   if (gapiReady()) {
-    dispatch(finishLoadingGapi(true));
-  } else if (elapsedLoadTime(getState) >= LOAD_TIMEOUT_MILLIS) {
-    dispatch(finishLoadingGapi(false));
+    dispatch(onLoadFinished(true));
+  } else if (elapsedLoadTimeMillis(getState) >= LOAD_TIMEOUT_MILLIS) {
+    dispatch(onLoadFinished(false));
   } else if (isLoading(getState)) {
     setTimeout(() => {
       waitForGapi(dispatch, getState);
@@ -85,12 +107,21 @@ function gapiReady() {
   return !!window.gapi && typeof window.gapi.sharetoclassroom !== 'undefined';
 }
 
-function elapsedLoadTime(getState) {
+function elapsedLoadTimeMillis(getState) {
   const startTime = getState().googlePlatformApi.loadStartTime;
   if (startTime) {
     return Date.now() - startTime;
   } else {
     return -1;
+  }
+}
+
+function elapsedLoadTimeSeconds(getState) {
+  const millis = elapsedLoadTimeMillis(getState);
+  if (millis >= 0) {
+    return Math.round(millis / 1000);
+  } else {
+    return null;
   }
 }
 
