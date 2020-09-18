@@ -7,9 +7,16 @@ import {
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP, YEAR} from './TeacherApplicationConstants';
+import color from '@cdo/apps/util/color';
 
 const MIN_CSD_HOURS = 50;
 const MIN_CSP_HOURS = 100;
+
+const styles = {
+  error: {
+    color: color.red
+  }
+};
 
 export default class ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.chooseYourProgram;
@@ -63,6 +70,16 @@ export default class ChooseYourProgram extends LabeledFormComponent {
           belowMinCourseHours = true;
         }
       }
+    }
+
+    let showTeachingPlansNote = false;
+    if (
+      this.props.data.planToTeach &&
+      !this.props.data.planToTeach.includes(
+        'Yes, I plan to teach this course this year'
+      )
+    ) {
+      showTeachingPlansNote = true;
     }
 
     return (
@@ -148,6 +165,20 @@ export default class ChooseYourProgram extends LabeledFormComponent {
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: 'other'
         })}
+
+        {showTeachingPlansNote && (
+          <p style={styles.error}>
+            Note: The Professional Learning Program is designed to meet the
+            needs of those teaching the course in the {YEAR} school year. Check
+            with your administrators to ensure that the course will be offered
+            in {YEAR} before updating your answer to{' '}
+            <strong>
+              "Do you plan to personally teach this course in the {YEAR} school
+              year?"
+            </strong>{' '}
+            and submitting your application.
+          </p>
+        )}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceExisting', {
           [TextFields.iDontKnowExplain]: 'other'
         })}

@@ -10,8 +10,7 @@ import {FormGroup} from 'react-bootstrap';
 import {
   styles as defaultStyles,
   PROGRAM_CSD,
-  PROGRAM_CSP,
-  YEAR
+  PROGRAM_CSP
 } from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
@@ -212,18 +211,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
   }
 
   renderContents() {
-    let showPayFeeNote = false;
-    if (
-      this.props.data.planToTeach &&
-      !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year'
-      ) &&
-      this.props.data.payFee &&
-      this.props.data.payFee.includes('No, ')
-    ) {
-      showPayFeeNote = true;
-    }
-
     if (this.props.data.program === undefined) {
       return (
         <div style={styles.error}>
@@ -282,7 +269,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
               >
                 landing page
               </a>{' '}
-              for more information about the schedule and delivery model. )}
+              for more information about the schedule and delivery model.
             </p>
           )}
           {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
@@ -321,20 +308,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
               </label>
               {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}
-              {showPayFeeNote && (
-                <p style={styles.error}>
-                  Note: To meet our implementation guidance and our scholarship
-                  recommendations, you should plan to teach this course in the
-                  upcoming school year ({YEAR}). We suggest checking with your
-                  administrators to ensure that the course will be offered in
-                  {YEAR} before updating your answer to "
-                  <strong>
-                    Do you plan to personally teach this course in the {YEAR}
-                    school year?
-                  </strong>
-                  " on page 3 and submitting your application.
-                </p>
-              )}
               {this.props.data.payFee === TextFields.noPayFee &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
