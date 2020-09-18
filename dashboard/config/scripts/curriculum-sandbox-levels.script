@@ -16,3 +16,7 @@ lesson 'Course E/F', display_name: 'Course E/F'
 level 'teacherSandboxFish'
 level 'Swimming Fish Teacher Sandbox'
 
+lesson 'CS Discoveries', display_name: 'CS Discoveries'
+level 'csd digital unplugged PSP word search big'
+level 'csd digital unplugged PSP seating big'
+
