@@ -1741,10 +1741,11 @@ class Script < ActiveRecord::Base
     levels_by_seeding_key = seed_context.levels.index_by(&:unique_key)
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
-      level = levels_by_seeding_key[lsl_data['seeding_key']['level.name']]
+      level = levels_by_seeding_key[lsl_data['seeding_key']['level.key']]
+      level ||= Level.find_by_key(lsl_data['seeding_key']['level.key'])
       raise 'No level found' if level.nil?
-      script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.name')]
-      raise "No ScriptLevel found while seeding script: #{script_data['name']}" if script_level.nil?
+      script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]
+      raise "No ScriptLevel found while seeding script: #{seed_context.script.name}" if script_level.nil?
 
       levels_script_level_attrs = {level_id: level.id, script_level_id: script_level.id}
       LevelsScriptLevel.new(levels_script_level_attrs)

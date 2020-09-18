@@ -19,11 +19,16 @@ module ScriptSeed
       :properties,
       :named_level,
       :bonus,
-      :seeding_key
+      :seeding_key,
+      :level_keys
     )
 
     def seeding_key
       object.seeding_key(@scope[:seed_context])
+    end
+
+    def level_keys
+      object.get_level_keys(@scope[:seed_context])
     end
   end
 
