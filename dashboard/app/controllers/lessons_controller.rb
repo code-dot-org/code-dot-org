@@ -16,7 +16,6 @@ class LessonsController < ApplicationController
     @lesson_data = {
       id: @lesson.id,
       name: @lesson.name,
-      shortTitle: @lesson.short_title,
       overview: @lesson.overview,
       studentOverview: @lesson.student_overview,
       assessment: @lesson.assessment,
@@ -43,7 +42,6 @@ class LessonsController < ApplicationController
     # script edit page.
     params.permit(
       :overview,
-      :short_title,
       :student_overview,
       :assessment,
       :unplugged,

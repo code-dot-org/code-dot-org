@@ -41,8 +41,6 @@ class Lesson < ActiveRecord::Base
 
   serialized_attrs %w(
     overview
-    title
-    short_title
     student_overview
     unplugged
     creative_commons_license
