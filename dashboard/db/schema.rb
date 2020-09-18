@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.string   "properties"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id", using: :btree
   end
 
   create_table "ap_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
