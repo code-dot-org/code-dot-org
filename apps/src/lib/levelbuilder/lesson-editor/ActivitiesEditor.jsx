@@ -90,19 +90,17 @@ class ActivitiesEditor extends Component {
     return (
       <div style={styles.activityEditAndPreview}>
         <div style={styles.editor}>
-          {activities.map(activity => {
-            return (
-              <ActivityCard
-                activity={activity}
-                activitiesCount={activities.length}
-                key={activity.key}
-                setActivitySectionMetrics={this.setActivitySectionMetrics}
-                setTargetActivitySection={this.setTargetActivitySection}
-                targetActivitySectionPos={this.state.targetActivitySectionPos}
-                activitySectionMetrics={this.activitySectionMetrics}
-              />
-            );
-          })}
+          {activities.map(activity => (
+            <ActivityCard
+              activity={activity}
+              activitiesCount={activities.length}
+              key={activity.key}
+              setActivitySectionMetrics={this.setActivitySectionMetrics}
+              setTargetActivitySection={this.setTargetActivitySection}
+              targetActivitySectionPos={this.state.targetActivitySectionPos}
+              activitySectionMetrics={this.activitySectionMetrics}
+            />
+          ))}
           <button
             onMouseDown={this.handleAddActivity}
             className="btn"

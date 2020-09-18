@@ -27,7 +27,7 @@ describe('ActivityCard', () => {
     expect(wrapper.contains('Activity:'));
     expect(wrapper.contains('Time (mins):'));
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    //expect(wrapper.find('ActivitySectionCard').length).to.equal(1);
+    expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
     expect(wrapper.find('button').length).to.equal(1);
   });
 });
