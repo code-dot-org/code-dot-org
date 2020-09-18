@@ -1364,6 +1364,7 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.boolean  "named_level"
     t.boolean  "bonus"
     t.integer  "activity_section_id"
+    t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end

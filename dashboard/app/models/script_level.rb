@@ -17,8 +17,9 @@
 #
 # Indexes
 #
-#  index_script_levels_on_script_id  (script_id)
-#  index_script_levels_on_stage_id   (stage_id)
+#  index_script_levels_on_activity_section_id  (activity_section_id)
+#  index_script_levels_on_script_id            (script_id)
+#  index_script_levels_on_stage_id             (stage_id)
 #
 
 require 'cdo/shared_constants'
