@@ -23,7 +23,7 @@ id-ID:
   csedweek_banner_teachers_text: Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
-  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} disajikan</h3>"
   try_hoc_num_served_markdown: |-
     # Coba
 
@@ -678,9 +678,9 @@ id-ID:
   video_title_my_name_is_aracely: Nama saya Aracely
   video_1min: 1 menit
   video_2min: 2 menit
-  video_3min: 3 min
-  video_5min: 5 min
-  speak_another_language: Berbicara bahasa lain?
+  video_3min: 3 menit
+  video_5min: 5 menit
+  speak_another_language: Berbicara dengan bahasa lain?
   help_translate: Bantuk kami menerjemahkan.
   no_internet: Tidak ada koneksi Internet?
   download_offline: Versi unduh secara offline.
@@ -938,7 +938,7 @@ id-ID:
   dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
   dashboard_navigation_section_lesson_plans: Rencana pelajaran dan sumber daya
   dashboard_navigation_section_community: Bantuan dan komunitas
-  dashboard_navigation_section_pd: Pengembangan profesional
+  dashboard_navigation_section_pd: Pengembangan Profesional
   dashboard_navigation_section_speakers: Ilmu Komputer <br/> Pembicara Tamu
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Perkembangan
@@ -969,7 +969,7 @@ id-ID:
     kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka
     respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan
     diatas.
-  dashboard_sections_new_section: Kelompok baru
+  dashboard_sections_new_section: Bagian baru
   dashboard_sections_new_google_section: Bagian impor dari ruang kelas Google
   dashboard_sections_jumbotron_instruction: Buatlah kelompok baru dan tambahkan murid
     di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil
@@ -1012,7 +1012,7 @@ id-ID:
     saat ini dan seperti bagian baru
   dashboard_sections_no_move: Tidak, Saya tidak ingin memindahkan siswa hanya untuk
     berada di bagian baru.
-  dashboard_sections_move_students: Siswa pindahan
+  dashboard_sections_move_students: Pindahkan siswa
   dashboard_sections_assign_hoc_script_desc: Berpartisipasi dalam Jam kode?
   dashboard_sections_assign_hoc_script_msg: Silahkan dicatat bahwa kami tidak akan
     dapat untuk menyimpan kemajuan dalam kursus 3- 11 Desember karena banyaknya lalu
@@ -1123,7 +1123,7 @@ id-ID:
   dashboard_correctness_unsubmitted: Tidak terkirim
   dashboard_correctness_correct: Benar
   dashboard_correctness_incorrect: Salah
-  dashboard_submission_submitted: Dikirim
+  dashboard_submission_submitted: Terkirim
   dashboard_submission_in_progress: Sedang berlangsung
   dashboard_status: Status
   dashboard_multi_correct: "# pilihan ganda yang benar"
@@ -1133,7 +1133,7 @@ id-ID:
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
     lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
-  dashboard_teacher: Pelajar
+  dashboard_teacher: Guru
   dashboard_student: Siswa
   dashboard_sections_email_question: Apakah semua murid memiliki alamat email yang
     berlaku?
@@ -1351,7 +1351,7 @@ id-ID:
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
   applab_name: Laboratorium Aplikasi
-  gamelab_name: Laboratorium Game
+  gamelab_name: Game Lab
   basketball_name: Buat sebuah permainan basket
   sports_name: Kode permainan olahraga Anda
   applab_gradelevel: Usia 13+
@@ -2217,7 +2217,7 @@ id-ID:
   user_header_create: 'Buat '
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
-  user_header_gamelab: Laboratorium Game
+  user_header_gamelab: Game Lab
   user_header_playlab: Play Lab/Lab Permainan
   user_header_dance: Pesta Tari
   user_header_spritelab: Sprite Lab
@@ -2284,8 +2284,8 @@ id-ID:
   aquatic_name: 'Minecraft: Perjalanan Air'
   account_sign_up_email_opt_in: Dapat kami email Anda tentang pembaruan kursus kami,
     peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
-  account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
-    tua atau wali hukum izin untuk menggunakan layanan Code.org.
+  account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
+    izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
   hoc_overview_dance_title: Pesta Tari
   hoc_overview_dance_subtitle: Kodekan Pesta Tari untuk dibagikan ke teman-teman Anda.
     Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 orang
@@ -2372,8 +2372,8 @@ id-ID:
     video inspiratif</a> menampilkan beberapa ahli di bidang teknologi
   hoc2018_mc_video_1min: 1 menit
   hoc2018_mc_video_2min: 2 menit
-  hoc2018_mc_video_3min: 3 min
-  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_3min: 3 menit
+  hoc2018_mc_video_5min: 5 menit
   hoc2018_mc_video_title_steph_curry: Hour of Code bersama Steph Curry
   hoc2018_mc_video_title_sports: Dorong dirimu. Setiap orang bisa belajar.
   hoc2018_mc_video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya
@@ -2426,7 +2426,7 @@ id-ID:
   hoc2018_dance_teacher_resources_tile2_title: Pesta tari dicabut
   hoc2018_dance_teacher_resources_tile2_description: Tidak perlu komputer! Belajar
     konsep koding untuk koreografi pesta dansa bersama.
-  hoc2018_dance_teacher_resources_tile2_button: Kegiatan tanpa komputer
+  hoc2018_dance_teacher_resources_tile2_button: Aktivitas Offline
   hoc2018_dance_featured_student_creations_title: Kreasi siswa ditampilkan
   hoc2018_dance_videos_section_heading: Terinspirasi
   hoc2018_dance_video_title_what_is_creativity: Apa kreatifitas itu?
@@ -2502,8 +2502,14 @@ id-ID:
   hoc2019_dance_previous_versions: |-
     Mencari Dance Party versi yang lama?
     Klik di sini untuk memulai [Bagian 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) edisi tahun lalu.
-  homepage_slot_text_title_at_home: Pelajari di Rumah
+  homepage_slot_text_title_at_home: 'Belajar di Rumah
+
+'
   homepage_slot_text_blurb_at_home: Materi pembelajaran ini memudahkan
   homepage_slot_text_link_code_break: Ambil Code Break
   homepage_slot_text_link_do_hoc: Adakan Hour of Code
   homepage_slot_text_link_express_course: Coba Kursus Kilat
+  page_not_available_title: Halaman Tidak Tersedia
+  page_not_available_description: Mohon maaf, halaman yang Anda minta tidak lagi tersedia
+    di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link}).
+  page_not_available_button: Pulang ke rumah

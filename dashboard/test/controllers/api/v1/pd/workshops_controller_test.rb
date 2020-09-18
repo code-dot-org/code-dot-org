@@ -707,7 +707,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       create :pd_enrollment, workshop: @workshop
     end
     mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).times(7)
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)

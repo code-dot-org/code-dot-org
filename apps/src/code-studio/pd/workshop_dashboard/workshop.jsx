@@ -103,8 +103,7 @@ export class Workshop extends React.Component {
             'potential_organizers',
             'created_at',
             'virtual',
-            'suppress_email',
-            'third_party_provider'
+            'suppress_email'
           ])
         });
       })

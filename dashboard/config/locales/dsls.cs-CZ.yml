@@ -1384,15 +1384,12 @@ cs-CZ:
             způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program neselže. Veverka se dostane k žaludu.
-        - text: Veverka půjde po svém posledním otočení špatným směrem.
-          correct: true
-          feedback: Správně!
-        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nevím.
         questions:
-        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
-            způsobí selhání tohoto programu?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.
@@ -1493,7 +1490,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1508,7 +1506,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1523,7 +1522,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1538,7 +1538,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1813,22 +1814,36 @@ cs-CZ:
             plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
           feedback: Správně!
         - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+          feedback: 'Nesprávně. Blok `pokud na květině` umožní včele získat nektar
+            na každé květině a med z každé plástve. '
         - text: Včela se pokusí získat med z květin i ze včelích pláství.
+          feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
         - text: Nevím.
+          feedback: 'Blok `pokud na květině` umožní včele získat nektar na každé květině
+            a med z každé plástve. '
         questions:
         - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
             zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
             plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
           feedback: Správně!
         - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+          feedback: 'Nesprávně. Blok `pokud na květině` umožní včele získat nektar
+            na každé květině a med z každé plástve. '
         - text: Včela se pokusí získat med z květin i ze včelích pláství.
+          feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
         - text: Nevím.
+          feedback: 'Blok `pokud na květině` umožní včele získat nektar na každé květině
+            a med z každé plástve. '
         questions:
         - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
             zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
@@ -2569,6 +2584,20 @@ cs-CZ:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Dotazník pro studenty ke konci kurzu Objevujeme informatiku
+      csd-post-survey-levelgroup-2018:
+        title: Dotazník pro studenty ke konci kurzu Objevujeme informatiku
+      csf_digital_trails:
+        markdown: |
+          # Sleduj digitální stopu
+
+          ## Jaké informace můžeš zanechávat ve svojí digitální stopě?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Mé online sousedství
+
+          ## Jak se bezpečně pohybovat online?
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.

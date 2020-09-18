@@ -367,7 +367,7 @@ ro:
       playlab: 'Laborator de Joacă'
       playlab_k1: 'Play Lab (Pre-cititor)'
       scratch: 'Scratch'
-      sports: 'Sporturi'
+      sports: 'Sporturi (Sports)'
       spritelab: 'Laborator Sprite'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocuri)'
@@ -649,7 +649,7 @@ ro:
     hero:
       title: "Minecraft"
     sports:
-      title: "Sporturi"
+      title: "Sporturi (Sports)"
       body: "Creați un joc de basketball sau un \"mix and match\" din toate sporturile."
     text-compression:
       body: "În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru a comprima textul prin înlocuirea modelelor cu simboluri."

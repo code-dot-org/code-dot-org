@@ -27,10 +27,14 @@ class ProjectsControllerTest < ActionController::TestCase
   test "index" do
     get :index
     assert_response :success
+  end
 
+  test "index/libraries" do
     get :index, params: {tab_name: 'libraries'}
     assert_response :success
+  end
 
+  test "index/public" do
     get :index, params: {tab_name: 'public'}
     assert_response :success
   end

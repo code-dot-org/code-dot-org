@@ -1,0 +1,26 @@
+name 'CSP - Asynch4 - Intro to Traversals'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Using traversals and datasets
+
+**Goals:** The purpose of this task is to get hands-on practice with using code to implement loops and traversals.  Additionally, the levels from the Investigate lesson utilize datasets which is a feature in App Lab you haven’t seen yet.  This task will allow you to gain experience with this feature before using it with students. *(Estimated time: ~15 minutes)*
+
+## Context
+
+You have seen parts of each of the highlighted lessons below in Unit 5.  In Module 3, you looked at U5L1 in your asynchronous work and then saw U5L2 in the synchronous workshop in a “model lesson” format.  Earlier in the module you also looked at Lessons 3 or 4 from this unit.
+
+In this set of asynchronous work, you have also seen parts of U5L5 and U5L9 which introduced you to the mental models for loops and traversals.  We are now going to spend some time digging into U5L10 which follows the last lesson you looked at - U5L9 - Traversals Explore.  
+
+In this lesson, students will practice using lists, loops, and traversals together.  This lesson also uses datasets which students will need to use in the end-of-unit project.  You will learn more about the project in your synchronous workshop for this module.
+
+![](https://images.code.org/830695060516de4356ce779b95a0354b-image-1597447891568.31.01 PM.png)
+
+## Do this
+1. Read the <a href="https://curriculum.code.org/csp-20/unit5/10/" target="blank">U5L10 lesson plan</a>.
+2. Engage with the following 3 levels in this module.  As you review the different datasets, anticipate which datasets your students will gravitate toward.
+
+
+MARKDOWN

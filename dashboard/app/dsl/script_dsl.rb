@@ -30,6 +30,7 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @is_course = false
   end
 
   integer :id
@@ -47,6 +48,7 @@ class ScriptDSL < BaseDSL
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :is_course
 
   string :wrapup_video
   string :script_announcements
@@ -79,14 +81,23 @@ class ScriptDSL < BaseDSL
       @lesson_groups << {
         key: key,
         display_name: properties[:display_name],
+        big_questions: [],
         lessons: []
       }.compact
     end
   end
 
-  def lesson(name, properties = {})
+  def lesson_group_description(description)
+    @lesson_groups.last[:description] = description
+  end
+
+  def lesson_group_question(question)
+    @lesson_groups.last[:big_questions] << question
+  end
+
+  def lesson(key, properties = {})
     # For scripts that don't use lesson groups create a blank non-user facing lesson group
-    if name
+    if key
       if @lesson_groups.empty?
         @lesson_groups << {
           key: nil,
@@ -96,7 +107,8 @@ class ScriptDSL < BaseDSL
       end
 
       @lesson_groups.last[:lessons] << {
-        name: name,
+        key: key,
+        name: properties[:display_name],
         lockable: properties[:lockable],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
@@ -148,7 +160,8 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
-      lesson_groups: @lesson_groups
+      lesson_groups: @lesson_groups,
+      is_course: @is_course
     }
   end
 
@@ -271,10 +284,13 @@ class ScriptDSL < BaseDSL
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
-        i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+        i18n_lesson_group_strings[lesson_group[:key]] = {}
+        lesson_group.select {|k, v| [:display_name, :description, :big_questions].include?(k) && !v.nil_or_empty?}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v
+        end
       end
       lesson_group[:lessons].each do |lesson|
-        i18n_lesson_strings[lesson[:name]] = {'name' => lesson[:name]}
+        i18n_lesson_strings[lesson[:key]] = {'name' => lesson[:name]}
       end
     end
 
@@ -331,6 +347,7 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'is_course true' if script.is_course
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
@@ -344,6 +361,11 @@ class ScriptDSL < BaseDSL
         t = "lesson_group '#{escape(lesson_group.key)}'"
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
+        s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
+        lesson_group.big_questions&.each do |big_question|
+          s << "lesson_group_question '#{escape(big_question)}'"
+        end
+
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)
@@ -356,7 +378,8 @@ class ScriptDSL < BaseDSL
   def self.serialize_lesson(lesson)
     s = []
 
-    t = "lesson '#{escape(lesson.name)}'"
+    t = "lesson '#{escape(lesson.key)}'"
+    t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t

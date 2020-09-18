@@ -85,7 +85,7 @@ social:
       .bannerBeyond
         != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
       .bannerTeachers
-        %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
+        %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
         != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
     #studentImage.hidden-xs.col-sm-12.col-md-6
 
@@ -134,6 +134,7 @@ social:
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');
+    img.attr('alt', '');
     img.appendTo('#studentImage');
     img.on('load', function() {
       img.fadeTo('normal', 1);

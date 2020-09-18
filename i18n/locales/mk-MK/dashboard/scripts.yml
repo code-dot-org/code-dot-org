@@ -6,122 +6,70 @@ mk:
         math_category_name: Математика
       name:
         usability:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         infinity:
-          stages:
-            Infinity:
-              name: Бесконечно
           lessons:
             Infinity:
               name: Бесконечно
         gradeKinder:
-          stages:
-            Loops:
-              name: Лупови
           lessons:
             Loops:
               name: Лупови
         grade1:
-          stages:
-            Loops:
-              name: Лупови
           lessons:
             Loops:
               name: Лупови
         csd3-2017:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         k5concepts:
-          stages:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
           lessons:
             Loops:
               name: Лупови
             Variables:
               name: Променливи
         csd2-2017:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd6-draft:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd6-2017:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd3-draft:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         csd2-draft:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd3-chapters:
-          stages:
-            Variables:
-              name: Променливи
-            'null':
-              name: 'нула'
           lessons:
             Variables:
               name: Променливи
             'null':
               name: 'нула'
         csd6-old:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         csd3-2018:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         csd2-2018:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
@@ -144,9 +92,6 @@ mk:
             csf_variables:
               display_name: Променливи
         andrea-test:
-          stages:
-            'null':
-              name: 'нула'
           lessons:
             'null':
               name: 'нула'
@@ -167,16 +112,10 @@ mk:
             csf_loops:
               display_name: Лупови
         csd2-2019:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd3-2019:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
@@ -225,16 +164,10 @@ mk:
             csp_loops:
               display_name: Лупови
         csd2-pilot:
-          stages:
-            Lists:
-              name: Листи
           lessons:
             Lists:
               name: Листи
         csd3-pilot:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
@@ -243,11 +176,6 @@ mk:
             csf_loops:
               display_name: Лупови
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
           lessons:
             Loops:
               name: Лупови
@@ -276,11 +204,6 @@ mk:
             csp_loops:
               display_name: Лупови
         csd3-2020:
-          stages:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст
           lessons:
             Variables:
               name: Променливи
@@ -317,29 +240,16 @@ mk:
             csf_loops:
               display_name: Лупови
         csp5-virtual:
-          stages:
-            Variables:
-              name: Променливи
           lessons:
             Variables:
               name: Променливи
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
           lessons:
             Loops:
               name: Лупови
             Variables:
               name: Променливи
         csd3-virtual:
-          stages:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст
           lessons:
             Variables:
               name: Променливи

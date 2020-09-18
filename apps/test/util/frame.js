@@ -8,7 +8,9 @@ function setGlobals() {
   // Initialize browser environment.
   document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
   // locale file requires Blockly as a global
-  window.Blockly = require('@code-dot-org/blockly');
+  var blockly = require('@code-dot-org/blockly');
+  var initializeCdoBlocklyWrapper = require('../../src/sites/studio/pages/cdoBlocklyWrapper');
+  window.Blockly = initializeCdoBlocklyWrapper(blockly);
   try {
     require('../../lib/blockly/en_us');
   } catch (err) {

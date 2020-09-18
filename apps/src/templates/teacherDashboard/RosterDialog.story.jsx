@@ -1,11 +1,13 @@
 import React from 'react';
 import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
 import {OAuthSectionTypes} from './shapes';
+import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
 
 export default storybook => {
   storybook = storybook
     .storiesOf('Dialogs/RosterDialog', module)
-    .addDecorator(dialogIsOpen);
+    .addDecorator(dialogIsOpen)
+    .addDecorator(railsAuthenticityTokenIsStubbed);
 
   // Add stories for every provider type
   [OAuthSectionTypes.google_classroom, OAuthSectionTypes.clever].forEach(
@@ -48,23 +50,12 @@ export default storybook => {
         .add(`${provider}: No sections found`, () => (
           <RosterDialog rosterProvider={provider} classrooms={[]} />
         ))
-        .add(`${provider}: Load error`, () => {
-          // Stub CSRF meta tags into the document so we can render the reauthorization
-          // button successfully.
-          const csrfParam = document.createElement('meta');
-          const csrfToken = document.createElement('meta');
-          csrfParam.setAttribute('name', 'csrf-param');
-          csrfToken.setAttribute('name', 'csrf-token');
-          document.head.appendChild(csrfParam);
-          document.head.appendChild(csrfToken);
-
-          return (
-            <RosterDialog
-              rosterProvider={provider}
-              loadError={{status: 403, message: 'Sample error message.'}}
-            />
-          );
-        });
+        .add(`${provider}: Load error`, () => (
+          <RosterDialog
+            rosterProvider={provider}
+            loadError={{status: 403, message: 'Sample error message.'}}
+          />
+        ));
     }
   );
   return storybook;
@@ -74,4 +65,10 @@ export default storybook => {
 // open by default when the story is viewed.
 function dialogIsOpen(story) {
   return React.cloneElement(story(), {isOpen: true});
+}
+
+// Stubs the DOM-dependent behavior of the RailsAuthenticityToken component
+function railsAuthenticityTokenIsStubbed(story) {
+  stubRailsAuthenticityToken();
+  return story();
 }

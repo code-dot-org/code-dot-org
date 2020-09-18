@@ -42,15 +42,15 @@ class ContactRollupsRaw < ApplicationRecord
       SELECT
         u.email,
         sc.properties->'$.curriculum_umbrella' AS curriculum_umbrella,
-        c.name AS course_name,
+        ug.name AS course_name,
         MAX(se.updated_at) AS updated_at
       FROM sections AS se
       JOIN users AS u ON se.user_id = u.id
       JOIN scripts AS sc ON sc.id = se.script_id
       LEFT JOIN course_scripts AS cs ON cs.script_id = se.script_id
-      LEFT JOIN courses AS c ON c.id = cs.course_id
+      LEFT JOIN unit_groups AS ug ON ug.id = cs.course_id
       WHERE u.email > ''
-      GROUP BY u.email, sc.name, c.name
+      GROUP BY u.email, sc.name, ug.name
     SQL
     source_sql += "LIMIT #{limit}" unless limit.nil?
 
@@ -60,12 +60,12 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_courses_taught(limit = nil)
     source_sql = <<~SQL
-      SELECT u.email, courses.name AS course_name, MAX(se.updated_at) AS updated_at
+      SELECT u.email, unit_groups.name AS course_name, MAX(se.updated_at) AS updated_at
       FROM users AS u
       JOIN sections AS se ON se.user_id = u.id
-      JOIN courses ON courses.id = se.course_id
+      JOIN unit_groups ON unit_groups.id = se.course_id
       WHERE u.email > ''
-      GROUP BY u.email, courses.name
+      GROUP BY u.email, unit_groups.name
     SQL
     source_sql += "LIMIT #{limit}" unless limit.nil?
 

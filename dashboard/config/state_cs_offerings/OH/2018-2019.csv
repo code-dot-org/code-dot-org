@@ -1,472 +1,447 @@
 school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
-Academy for Urban Scholars Youngstown,OH-013249-013249,390147205727,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Ada Exempted Village,OH-045187-000067,390451802113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-AKRON STEM HIGH SCHOOL,OH-043489-013231,390434805731,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ANDERSON HIGH SCHOOL,OH-047340-000687,390473402843,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Anna Local,OH-049759-000752,391000403683,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Ansonia Local,OH-046623-000778,390466202611,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Anthony Wayne Local,OH-048207-000810,390482003144,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Antwerp Local,OH-048991-000844,390489903468,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-APOLLO CAREER CENTER,OH-050773-050781,390507704051,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ARCHBOLD HIGH SCHOOL,OH-047043-000935,390470402757,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Arts & College Preparatory Academy,OH-143610-143610,390022304747,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ASHTABULA COUNTY TECHNICAL AND CAREER CAMPUS,OH-050815-050823,390508104053,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Athens City,OH-043521-001149,390435200097,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Aurora City,OH-049171-001313,390491703516,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-AURORA HIGH SCHOOL,OH-049171-001297,390491703512,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Avon Lake City,OH-048124-001388,390481203113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Avon Local,OH-048116-001370,390481103110,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-AYERSVILLE HIGH SCHOOL,OH-046706-001420,390467002626,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BADGER HIGH SCHOOL,OH-050179-001446,390501703862,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bath Local,OH-045765-001750,390457602335,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bay Village City,OH-043547-001792,390435400115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bedford City,OH-043562-002022,391001700127,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BELLEFONTAINE HIGH SCHOOL,OH-043588-002220,390435800144,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Benton Carroll Salem Local,OH-048926-030973,390489203454,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Berea City,OH-043612-024570,390436000175,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bethel-Tate Local,OH-046318-002568,390463102505,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BIG WALNUT HIGH SCHOOL,OH-046748-002709,390467402638,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Black River Local,OH-048462-002782,390484603258,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Blanchester Local,OH-046383-002840,390463802535,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BLOOM-CARROLL HIGH SCHOOL,OH-046862-004994,390468602678,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bluffton Exempted Village,OH-045211-003038,390452102125,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bowling Green City School District,OH-043638-003285,390436300185,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BOWSHER HIGH SCHOOL,OH-044909-003301,390449001773,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Bridgeport Exempted Village,OH-045237-003558,390452302128,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BRIGGS HIGH SCHOOL,OH-043802-067728,390438000595,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Brooklyn City,OH-043653-003780,390436500200,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BUCHTEL HIGH SCHOOL,OH-043489-004077,390434800051,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Buckeye Central Local,OH-046508-004085,390465002574,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Buckeye Local,OH-048470-004127,390484703262,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BUCKEYE LOCAL HIGH SCHOOL,OH-047787-111138,390477804400,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Buckeye On-Line School for Success,OH-000417-000417,390053005240,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BUCKEYE VALLEY LOCAL HIGH SCHOOL,OH-046755-004143,390467502645,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-BUTLER HIGH SCHOOL,OH-044958-004416,390449501875,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Caldwell Exempted Village,OH-045252-004564,390452502146,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CALDWELL HIGH SCHOOL,OH-045252-004556,390452502145,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CAMBRIDGE HIGH SCHOOL,OH-043695-004622,390436900225,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CAMPUS INTERNATIONAL HIGH SCHOOL,OH-043786-016886,390437805946,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Canal Winchester Local,OH-046946-004770,390469402709,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Canfield Local,OH-048314-004796,390483103203,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CANTON CITY DIGITAL ACADEMY,OH-043711-010216,390437105489,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Canton Harbor High School,OH-000525-000525,390028504617,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Canton Local,OH-049833-004812,390498303700,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cardinal Local,OH-047175-004853,390471702786,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CARDINGTON-LINCOLN HIGH SCHOOL,OH-048793-004861,390487903405,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CAREER AND TECHNOLOGY EDUCATIONAL CENTERS,OH-051201-051219,390512004073,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CARLISLE HIGH SCHOOL,OH-050419-004911,390504103935,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Carrollton Exempted Village,OH-045278-005017,390452702154,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cedar Cliff Local,OH-047258-005173,390472502821,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Centerville City,OH-043737-005322,390437300267,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Central Local,OH-046714-011288,390467102628,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Chagrin Falls Exempted Village,OH-045286-014787,390452804340,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CHAGRIN FALLS HIGH SCHOOL,OH-045286-005751,390452802159,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Champion Local,OH-050138-005819,390501303844,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Chardon Local,OH-047183-025981,390471802793,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Charles School at Ohio Dominican University,OH-007999-007999,390058605078,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CHILLICOTHE HIGH SCHOOL,OH-043745-006296,390437400281,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cincinnati Technology Academy,OH-013864-013864,390151605812,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CIRCLEVILLE HIGH SCHOOL,OH-043760-006320,390437600398,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLARK MONTESSORI HIGH SCHOOL,OH-043752-098590,390437504331,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Clark-Shawnee Local,OH-046284-030593,390462802499,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLAY HIGH SCHOOL,OH-044602-006494,390446001475,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Claymont City,OH-043778-006528,390437700405,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLEAR FORK HIGH SCHOOL,OH-049411-006551,390494103582,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Clermont Northeastern Local,OH-046326-006635,390463202508,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cleveland Heights-University Heights City,OH-043794-003251,390437900566,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLEVELAND HIGH SCHOOL FOR THE DIGITAL ARTS,OH-043786-014918,390437805831,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLEVELAND SCHOOL OF ARCHITECTURE & DESIGN,OH-043786-019406,390437805538,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLEVELAND SCHOOL OF SCIENCE & MEDICINE,OH-043786-147397,390437805561,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Clinton-Massie Local,OH-046391-006734,390463902540,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CLOVERLEAF HIGH SCHOOL,OH-048488-006759,390484803268,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-COLERAIN HIGH SCHOOL,OH-047365-006890,390473602855,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Columbiana Exempted Village,OH-045328-007062,390453202175,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-COLUMBUS NORTH INTERNATIONAL SCHOOL (7-12),OH-043802-011995,390438005592,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Conneaut Area City,OH-043810-032813,390438100750,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CONNEAUT HIGH SCHOOL,OH-043810-007211,390438100747,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Constellation Schools: Parma Community,OH-133256-133256,390006803315,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Continental Local,OH-049320-007260,390493203561,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-COSHOCTON COUNTY CAREER CENTER,OH-065227-065235,390652204126,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Crestview Local,OH-049429-007674,390494203583,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Crestwood Local,OH-049189-007724,390491803517,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CROOKSVILLE HIGH SCHOOL,OH-045351-007823,390453502186,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cuyahoga Falls City,OH-043836-007930,390438300762,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-CUYAHOGA VALLEY CAREER CENTER,OH-050922-050930,390509204058,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-D RUSSEL LEE CAREER-TECHNOLOGY CENTER,OH-050880-050898,390508804056,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DALTON HIGH SCHOOL,OH-050542-008003,390505403980,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DANBURY HIGH SCHOOL,OH-048934-008052,390489303457,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DANVILLE HIGH SCHOOL,OH-047837-008086,390478303008,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Dawson-Bryant Local,OH-047928-008219,390479203040,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-"DAYTON EARLY COLLEGE ACADEMY, INC",OH-009283-009283,390130205399,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DEFIANCE HIGH SCHOOL,OH-043869-008300,390438600841,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DELAWARE AREA CAREER CENTER SOUTH CAMPUS,OH-050989-124966,390509801492,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DIAMOND OAKS CDC,OH-051060-064980,390510604065,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Dover City,OH-043893-008722,390438900855,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DUBLIN COFFMAN HIGH SCHOOL,OH-047027-064758,390470202752,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-DUBLIN SCIOTO HIGH SCHOOL,OH-047027-120485,390470200666,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-East Cleveland City School District,OH-043901-005793,390439000862,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EAST CLINTON HIGH SCHOOL,OH-046409-008995,390464002543,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EAST COMMUNITY LEARNING CENTER,OH-043489-009498,390434800106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-East Holmes Local,OH-047688-016220,390476802938,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-East Liverpool City,OH-043919-009084,390439100870,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EAST PALESTINE HIGH SCHOOL,OH-043927-009134,390439200878,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EASTERN HIGH SCHOOL,OH-046037-010769,390460302411,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Eastern Local,OH-048512-135046,390485101428,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Eastern Local School District,OH-049122-009589,390491203499,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EASTLAND CAREER CENTER,OH-051003-009639,390510004062,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EATON HIGH SCHOOL,OH-043935-009803,390439300884,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EDGERTON HIGH SCHOOL,OH-050617-009894,390506104007,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EDGEWOOD HIGH SCHOOL,OH-045856-009936,390458502358,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Edison Local,OH-047795-018218,390477902988,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Edison Local (formerly Berlin-Milan),OH-046789-010041,390467802653,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EDON HIGH SCHOOL,OH-050625-010090,390506204009,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ELECTRONIC CLASSROOM OF TOMORROW,OH-133413-133413,390007903420,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Elgin Local,OH-048413-010173,390484103240,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ELIDA HIGH SCHOOL,OH-045773-010199,390457702339,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ELIDA MIDDLE SCHOOL,OH-045773-010082,390457704223,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Euclid City,OH-043950-010793,390439500910,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EUCLID HIGH SCHOOL,OH-043950-010819,390439500909,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-EUCLID PARK ELEMENTARY SCHOOL,OH-043786-010801,390437805641,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FAIRBANKS HIGH SCHOOL,OH-050328-010926,390503203909,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fairborn City,OH-043968-042796,390439600927,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FAIRFIELD FRESHMAN HIGH SCHOOL,OH-046102-010991,390461002430,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FAIRFIELD LOCAL HIGH SCHOOL,OH-047621-011056,390476202929,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fairfield Union Local,OH-046870-011072,390468702682,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fairland Local,OH-047936-011114,390479303044,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FAIRLESS HIGH SCHOOL,OH-049841-011171,390498403709,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fairport Harbor Exempted Village,OH-045369-011239,390453602190,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FAIRVIEW HIGH SCHOOL,OH-043976-011304,390439700934,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fayetteville-Perry Local,OH-046045-011460,390460402415,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Felicity-Franklin Local,OH-046334-011502,390463302514,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FERGUSON HALL FRESHMAN SCHOOL,OH-047241-016890,390472405960,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FIELD HIGH SCHOOL,OH-049197-011551,390491903525,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Findlay Digital Academy,OH-000402-000402,390052805238,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FINDLAY HIGH SCHOOL,OH-043984-011627,391000000944,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FINDLAY LEARNING CENTER,OH-043984-015437,391000005863,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FINNEYTOWN SECONDARY CAMPUS,OH-047332-011668,390473302840,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FIRELANDS HIGH SCHOOL,OH-048157-011684,390481503129,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FIRESTONE HIGH SCHOOL,OH-043489-011692,390434800016,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FITCH HIGH SCHOOL,OH-048298-011791,390482903189,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fostoria City,OH-043992-012039,390439900957,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-FRANKLIN HEIGHTS HIGH SCHOOL,OH-044800-012328,390448001660,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Franklinton Preparatory Academy,OH-013892-013892,390153305789,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fredericktown Local,OH-047852-012450,390478503013,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Fremont City,OH-044016-012500,390440100974,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Gallipolis City,OH-044032-012799,390440300989,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GARFIELD HEIGHTS HIGH SCHOOL,OH-044040-013136,390440400994,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GARFIELD HIGH SCHOOL,OH-043489-013128,390434800020,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GARRETT MORGAN SCHL OF SCIENCE SCHOOL,OH-043786-063461,390437804151,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GENEVA HIGH SCHOOL,OH-044057-013219,390440501003,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GEORGETOWN JR/SR HIGH SCHOOL,OH-045377-013326,390453702192,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GILBERT A. DATER HIGH SCHOOL,OH-043752-008110,390437500319,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Girard City School District,OH-044065-013482,390440601005,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GLENOAK HIGH SCHOOL,OH-049932-028365,390499303761,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GLOBAL IMPACT STEM ACADEMY,OH-013930-013930,390153505818,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Goshen Local,OH-046342-013920,390463402516,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GRAHAM HIGH SCHOOL,OH-046193-014027,390461902463,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Graham Local,OH-046193-035675,390461902464,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GRAND VALLEY HIGH SCHOOL,OH-045864-014092,390458602367,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GRANDVIEW HEIGHTS HIGH SCHOOL,OH-044073-014100,390440701011,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Great River Connections Academy,OH-017233-017233,390159905986,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GREATER OHIO VIRTUAL SCHOOL,OH-000282-000282,390048805198,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GREEN HIGH SCHOOL,OH-050013-014365,390500103797,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GREEN HIGH SCHOOL,OH-049619-014373,390496103648,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Green Local,OH-049619-122127,390496100699,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Greenfield Exempted Village,OH-045401-023424,390454002203,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GREENON HIGH SCHOOL,OH-046235-014571,390462302475,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Greenville City,OH-044099-014621,390440901028,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-GROVE CITY HIGH SCHOOL,OH-044800-061325,390448001662,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HAMILTON HIGH SCHOOL,OH-044107-036822,390441001050,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HARDIN NORTHERN HIGH SCHOOL,OH-047498-015172,390474902904,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Hardin-Houston Local,OH-049791-015156,390497903695,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HARRISON CENTRAL JR./SR. HIGH SCHOOL,OH-045245-004507,390452402133,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HICKSVILLE HIGH SCHOOL,OH-045419-016048,390454102207,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Highland Local,OH-048496-016154,390484903274,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HILLIARD DARBY HIGH SCHOOL,OH-047019-123539,390470100663,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HILLIARD DAVIDSON HIGH SCHOOL,OH-047019-016303,390470102748,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Hillsboro City,OH-044123-016345,390441201059,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HILLSDALE HIGH SCHOOL,OH-045823-016352,390458202352,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HILLTOP HIGH SCHOOL,OH-050633-016436,390506304012,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Horizon Science Acad Cleveland,OH-133629-133629,390004002939,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Horizon Science Academy Columbus,OH-133660-133660,390004202978,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Horizon Science Academy Lorain,OH-011533-011533,390136505544,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Howland Local,OH-050161-061994,390501603858,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Hubbard Exempted Village,OH-045427-017046,390454202209,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Hudson City,OH-050021-017095,390500203804,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-HUGHES STEM HIGH SCHOOL,OH-043752-011609,390437505521,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Huron City Schools,OH-044131-017194,390441301063,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-INDEPENDENCE HIGH SCHOOL,OH-046565-017285,390465602589,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-INDIAN VALLEY HIGH SCHOOL,OH-050286-017426,390502803899,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Jackson City,OH-044156-017756,390441501075,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Jackson Local,OH-049858-017772,390498503715,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-JANE ADDAMS BUSINESS CAREERS HIGH SCHOOL,OH-043786-017863,390437800481,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-JEFFERSON AREA SR HIGH SCHOOL,OH-045872-017905,390458702372,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-JEFFERSON HIGH SCHOOL,OH-043885-018184,390438800852,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-JOHN MARSHALL SCHOOL OF INFORMATION TECHNOLOGY,OH-043786-015600,390437805865,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Johnstown-Monroe Local,OH-047985-018481,390479803063,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KALIDA HIGH SCHOOL,OH-049346-018606,390493403566,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KEIFER ACADEMY,OH-044818-010421,390448100117,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KENSTON HIGH SCHOOL,OH-047191-018770,390471902796,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Kenton City,OH-044172-018846,391002501091,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KENTON RIDGE HIGH SCHOOL,OH-046250-068577,390462502488,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Kettering City School District,OH-044180-018929,390441801104,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Keystone Local,OH-048165-018960,390481603132,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KIMPTON MIDDLE SCHOOL,OH-044834-061291,390448301716,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KINGS HIGH SCHOOL,OH-050435-098640,390504304356,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KINGS JUNIOR HIGH SCHOOL,OH-050435-019075,390504303943,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-KIPP Columbus,OH-009997-009997,390133005487,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Kirtland Local,OH-047878-019216,390478703017,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKE HIGH SCHOOL,OH-049866-061812,390498603720,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Lake Local,OH-050690-019539,390506904032,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKESIDE HIGH SCHOOL,OH-043513-001123,390435100084,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKEVIEW HIGH SCHOOL,OH-050187-019661,390501803868,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Lakewood City,OH-044198-019687,390441901123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Lakewood Local,OH-047993-019695,390479903070,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKOTA EAST HIGH SCHOOL,OH-046110-123836,390461100810,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKOTA HIGH SCHOOL,OH-049569-019745,390495603634,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAKOTA WEST HIGH SCHOOL,OH-046110-019737,390461102438,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LAUREL OAKS CDC,OH-051060-064972,390510604276,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LEBANON HIGH SCHOOL,OH-044214-020032,390442101146,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LEXINGTON HIGH SCHOOL,OH-049437-020255,390494303589,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LIBERTY UNION HIGH SCHOOL,OH-046888-020420,390468802687,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LIBERTY-BENTON HIGH SCHOOL,OH-047449-020446,390474402895,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Licking Heights Local,OH-048009-020461,390480003074,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LINCOLN WEST SCHOOL OF GLOBAL STUDIES,OH-043786-016427,390437805873,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LINCOLN-WEST HIGH SCHOOL,OH-043786-062315,390437800496,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Lincolnview Local,OH-050369-020990,391002203922,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Lisbon Exempted Village,OH-045450-008136,390454502221,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LITTLE MIAMI HIGH SCHOOL,OH-050443-021113,390504403948,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LIVE OAKS CDC,OH-051060-064998,390510604277,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LORAIN HIGH SCHOOL,OH-044263-008309,390442605326,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LORDSTOWN HIGH SCHOOL,OH-050203-021477,390502003875,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Louisville City,OH-049874-021576,390498703726,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Loveland City,OH-044271-021600,390442701207,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-LOWELLVILLE HIGH SCHOOL,OH-048330-021683,390483303211,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Mad River Local,OH-048702-035956,390487003364,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Madison Local,OH-049452-009704,390494503594,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MAHONING CAREER & TECHNICAL,OH-051243-051250,390512404075,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MALVERN HIGH SCHOOL,OH-046177-022368,390461702462,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MANCHESTER HIGH SCHOOL,OH-000442-000450,390053705248,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MANCHESTER HIGH SCHOOL,OH-050005-022418,390500003793,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Manchester Local,OH-000442-000451,390053705249,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MANSFIELD SENIOR HIGH SCHOOL,OH-044297-022483,390442901220,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MAPLEWOOD CAREER CENTER,OH-051391-051409,390513904083,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MAPLEWOOD HIGH SCHOOL,OH-050211-022681,390502103877,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MARGARETTA HIGH SCHOOL,OH-046805-022764,390468002658,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Marietta City,OH-044321-022798,391001901246,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Marion Local,OH-048553-022863,391003103298,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Marlington Local,OH-049882-022947,390498803732,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Martins Ferry City,OH-044347-023036,390443401272,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MARYSVILLE HIGH SCHOOL,OH-045476-023119,390454702230,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MARYSVILLE STEM EARLY COLLEGE HIGH SCHOOL,OH-045476-014691,390454705841,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Mason City,OH-050450-041376,390504503954,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Massillon City,OH-044354-039602,390443501286,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Maumee City,OH-044362-023242,390443601292,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MAX S HAYES HIGH SCHOOL,OH-043786-023259,390437800509,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Mayfield City,OH-044370-023325,390443701297,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MC^2 STEM HIGH SCHOOL,OH-043786-010200,390437805476,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-McDonald Local,OH-050229-023515,390502203880,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MCKINLEY HIGH SCHOOL,OH-048355-023879,390483503222,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MECHANICSBURG HIGH SCHOOL,OH-045484-024026,390454802234,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MEDINA HIGH SCHOOL,OH-044388-024075,390443801306,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Meigs Local,OH-048520-024117,390485203284,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Mentor Exempted Village,OH-045492-016832,390454902241,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Miami East Local,OH-048629-024372,390486203320,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MIAMI VALLEY CTC,OH-051284-051292,390512804076,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Miamisburg City,OH-044396-024422,390443901313,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MIDVIEW HIGH SCHOOL,OH-048173-024596,390481703140,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Midview Local,OH-048173-008979,390481703138,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MILFORD SR HIGH SCHOOL,OH-045500-024745,390455002252,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MINERAL RIDGE HIGH SCHOOL,OH-050252-025023,390502503889,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MINSTER JR/SR HIGH SCHOOL,OH-045948-025114,390459402388,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MONROE CENTRAL HIGH SCHOOL,OH-048652-042085,390486503340,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MONROEVILLE HIGH SCHOOL,OH-047712-025361,390477102952,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Montpelier Exempted Village,OH-045526-025437,390455202262,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Morgan Local,OH-048777-025544,390487703401,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Mount Gilead Exempted Village,OH-045534-025783,390455302266,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-New Albany-Plain Local,OH-046995-030155,390469902734,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-New Knoxville Local,OH-045963-026765,390459602392,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-New London Local,OH-047720-026823,390477202955,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NEW PHILADELPHIA HIGH SCHOOL,OH-044487-026906,390444801400,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NEW TECHNOLOGY WEST,OH-043786-012352,390437805573,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NEWARK HIGH SCHOOL,OH-044453-027011,390444501385,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Noble Local,OH-048900-034314,390489003448,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Nordonia Hills City,OH-050047-027334,390500403812,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORMANDY HIGH SCHOOL,OH-044636-027367,390446301505,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-North Baltimore Local,OH-050708-026070,390507004037,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-North Canton City,OH-044503-016758,390445001417,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTH CENTRAL JUNIOR/HIGH SCHOOL,OH-050641-026112,390506404016,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTH COLLEGE HILL HIGH SCHOOL,OH-044511-026120,390445101425,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTH HIGH SCHOOL,OH-043489-027565,390434800046,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTH HIGH SCHOOL,OH-045104-027573,390451002005,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTH OLMSTED HIGH SCHOOL,OH-044529-026302,390445201432,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-North Royalton City,OH-044545-010660,390445401443,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-North Union Local School District,OH-050336-026393,390503303918,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Northeastern Local,OH-046722-027300,390467202633,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTHLAND HIGH SCHOOL,OH-043802-027680,390438000691,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Northmor Local,OH-048819-027722,390488103414,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Northridge Local,OH-048736-027763,390487303380,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTHWEST HIGH SCHOOL,OH-047365-064683,390473602859,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTHWEST HIGH SCHOOL,OH-049908-027862,390499003742,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Northwest Local,OH-049635-027854,390496303654,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-NORTHWESTERN HIGH SCHOOL,OH-050575-027888,391003303993,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Northwestern Local,OH-046268-027896,390462602495,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Norwalk City,OH-044560-028068,390445601457,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OAK HILL MIDDLE/HIGH SCHOOL,OH-047761-000119,390477604623,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Oak Hills Local,OH-047373-028217,390473702873,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Oakwood City,OH-044586-028373,390445801467,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OHIO HI-POINT,OH-051334-051342,390513304079,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OHIO VALLEY CAREER & TECHNICAL CENTER,OH-061903-070425,390619004234,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Ohio Virtual Academy,OH-142950-142950,390018004704,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OLD FORT HIGH SCHOOL,OH-049726-028506,391002103681,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OLENTANGY HIGH SCHOOL,OH-046763-028548,390467602648,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OLENTANGY LIBERTY HIGH SCHOOL,OH-046763-145953,390467604599,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Orange City,OH-046581-028712,391001602600,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ORANGE HIGH SCHOOL,OH-046763-009286,390467605390,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Oregon City,OH-044602-007559,390446001476,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ORRVILLE HIGH SCHOOL,OH-044610-028779,390446101485,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Otsego Local,OH-050724-028860,390507204045,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Ottawa Hills Local,OH-048215-028894,390482103150,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OTTAWA-GLANDORF HIGH SCHOOL,OH-049379-028910,390493703574,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-OYLER SCHOOL,OH-043752-029009,390437500357,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PACT @ JFK,OH-043786-014919,390437805840,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Painesville City Local,OH-044628-015560,391001501488,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PAINT VALLEY HIGH SCHOOL,OH-049510-029025,390495103617,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Pandora-Gilboa Local,OH-049395-029074,390493903579,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PARMA HIGH SCHOOL,OH-044636-029330,390446301506,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PATRICK HENRY HIGH SCHOOL,OH-047597-008433,390475902925,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Patriot Preparatory Academy,OH-012045-012045,390141705597,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PAULDING HIGH SCHOOL,OH-045575-029454,390455702284,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PEEBLES HIGH SCHOOL,OH-061903-029538,390619004108,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PENTA CAREER CENTER - ON CAMPUS,OH-051359-029603,390513504080,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Perkins Local,OH-046813-012757,390468102661,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Perry Local,OH-047902-029710,390479003037,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PICKAWAY-ROSS CAREER & TECHNOLOGY CENTER,OH-051433-051441,390514304085,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PICKERINGTON ALTERNATIVE SCHOOL,OH-046896-016945,390468905931,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PICKERINGTON HIGH SCHOOL CENTRAL,OH-046896-029876,390468902690,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PICKERINGTON HIGH SCHOOL NORTH,OH-046896-145086,390468904605,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PIKE-DELTA-YORK HIGH SCHOOL,OH-047084-008342,390470802773,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PIONEER CAREER & TECHNOLOGY,OH-051417-030080,390514104084,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Piqua City,OH-044644-030098,390446401526,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PLEASANT HIGH SCHOOL,OH-048421-030304,390484203246,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Pleasant Local,OH-048421-030205,390484203244,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Poland Local,OH-048348-030452,390483403218,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Port Clinton City,OH-044651-030841,390446501536,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PORTAGE LAKES CAREER CENTER,OH-063495-063503,390634904123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PORTSMOUTH WEST HIGH SCHOOL,OH-049650-030585,390496503665,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PUT-IN-BAY HIGH SCHOOL,OH-048975-030908,390489703466,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-PYMATUNING VALLEY HIGH SCHOOL,OH-045880-030932,390458802374,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-RAVENNA HIGH SCHOOL,OH-044685-031104,390446801563,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-"REYNOLDSBURG HS BUSINESS, EDUCATION LEADERSHIP & LAW ACADEMY",OH-047001-012516,390470005653,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-"REYNOLDSBURG HS ENCORE: ARTS, COMMUNICATION & DESIGN ACADEMY",OH-047001-012514,390470005656,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-REYNOLDSBURG HS HEALTH SCIENCES & HUMAN SERVICES ACADEMY,OH-047001-012515,390470005655,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-RHODES COLLEGE AND CAREER ACADEMY,OH-043786-016883,390437805947,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Richmond Heights Local,OH-046599-031583,390465902603,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-RIPLEY-UNION-LEWIS-HUNTINGTON HIGH SCHOOL,OH-046078-031815,390460702421,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-River View Local,OH-046482-031880,390464802570,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Riverside Local,OH-047894-004101,391001403026,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-RIVERVIEW EAST ACADEMY,OH-043752-145722,390437504274,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ROBERT A. TAFT INFORMATION TECHNOLOGY HIGH SCHOOL,OH-043752-036830,390437500382,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Rossford Exempted Village,OH-045609-032763,390456002299,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SALEM HIGH SCHOOL,OH-044735-033472,391000601593,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Sandusky City,OH-044743-033555,390447401605,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SANDY VALLEY HIGH SCHOOL,OH-049940-033563,390499403770,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SCARLET OAKS CDC,OH-051060-051078,390510604068,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SCIOTO COUNTY CAREER TECHNICAL CENTER,OH-051490-033795,390514904088,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Scioto Valley Local,OH-049130-029991,390491303503,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Seneca East Local,OH-049684-001198,390496803670,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SENTINEL CAREER & TECHNOLOGY CENTER,OH-051458-093088,390514504278,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Shelby City,OH-044776-034306,391000901629,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SHRODER PAIDEIA HIGH SCHOOL,OH-043752-034538,390437500377,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SIDNEY HIGH SCHOOL,OH-044784-034561,391000301640,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SOLON HIGH SCHOOL,OH-046607-034835,390466002609,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SOUTH CENTRAL HIGH SCHOOL,OH-047738-034918,390477302956,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-South Euclid-Lyndhurst City,OH-044792-000232,390447901642,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SOUTH POINT HIGH SCHOOL,OH-047951-033282,390479503055,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-South Range Local,OH-048363-026229,390483603223,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SOUTHERN HILLS CAREER TECHNICAL CENTER,OH-050799-050807,390507904052,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Southern Local,OH-049064-024851,390490603478,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Southwest Licking Local,OH-048041-029363,390480403096,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SPENCERVILLE HIGH SCHOOL,OH-045807-035345,390458002349,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SPRINGBORO HIGH SCHOOL,OH-050427-006593,390504203941,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SPRINGFIELD-CLARK COUNTY,OH-051532-035519,390515304089,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ST HENRY HIGH SCHOOL,OH-048587-035659,390485803305,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ST MARYS MEMORIAL HIGH SCHOOL,OH-044727-024208,390447201585,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Steubenville City,OH-044826-032433,390448201710,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-STIVERS SCHOOL FOR THE ARTS,OH-043844-036152,390438400824,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Stow-Munroe Falls City School District,OH-044834-009829,390448301712,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-STOW-MUNROE FALLS HIGH SCHOOL,OH-044834-036210,390448301717,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-STRASBURG-FRANKLIN HIGH SCHOOL,OH-050294-036244,390502903904,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-STREETSBORO HIGH SCHOOL,OH-049239-036269,390492303538,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Strongsville City,OH-044842-036277,390448401730,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-SUMMIT ACADEMY COMMUNITY SCHOOL-PARMA,OH-000302-000302,390049705207,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Swanton Local,OH-047092-006072,390470902775,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Sycamore Community City,OH-044867-036640,390448601741,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TALAWANDA HIGH SCHOOL,OH-046151-036863,390461502460,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Tallmadge City,OH-044883-036897,390448801758,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Teays Valley Local,OH-049098-036962,390490903490,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Tecumseh Local,OH-046243-036988,390462402485,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-THOMAS WORTHINGTON HIGH SCHOOL,OH-045138-042283,390451302039,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Three Rivers Local,OH-047399-042523,390473902886,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Tipp City Exempted Village,OH-045617-037291,390456102303,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TOLEDO TECHNOLOGY ACADEMY HIGH SCHOOL,OH-044909-146373,390449004560,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TOLLES CAREER & TECHNICAL CENTER,OH-063511-063529,390635104124,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TRI-RIVERS CAREER CENTER,OH-065268-065276,390652604127,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TRI-VALLEY HIGH SCHOOL,OH-048876-037515,390488703438,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Trotwood-Madison City,OH-048694-009224,390486905389,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TROTWOOD-MADISON HIGH SCHOOL,OH-048694-022186,390486903353,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TURPIN HIGH SCHOOL,OH-047340-068502,390473402850,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-TWIN VALLEY SOUTH HIGH SCHOOL,OH-049296-037705,390490003555,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Twinsburg City,OH-050070-136101,390500702802,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-U S GRANT,OH-062802-062810,390628004122,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-United Local,OH-046458-037911,390464502562,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Upper Arlington City,OH-044933-014597,390449301862,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Upper Sandusky Exempted Village,OH-045625-037952,391002402313,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-UPPER VALLEY CAREER CENTER,OH-062125-062133,390621204120,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-UTICA HIGH SCHOOL,OH-048025-038042,390480203087,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Valley View Local,OH-048744-038174,390487403386,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Van Buren Local,OH-047464-038232,391000102900,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-VANGUARD TECH CENTER,OH-051458-051466,390514504086,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-VERMILION HIGH SCHOOL,OH-046821-038349,390468202669,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-VERSAILLES HIGH SCHOOL,OH-045633-038414,390456302316,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Wadsworth City,OH-044974-038935,391002901897,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WALNUT HILLS HIGH SCHOOL,OH-043752-039073,390437500384,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WALNUT RIDGE HIGH SCHOOL,OH-043802-039107,390438000728,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WAPAKONETA HIGH SCHOOL,OH-044982-039164,390449801904,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Warren City,OH-044990-015222,390449901922,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WARREN COUNTY CAREER CENTER,OH-051474-051482,390514704087,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WARREN HIGH SCHOOL,OH-050500-039248,391001803972,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WARRENSVILLE HEIGHTS HIGH SCHOOL,OH-045005-039263,390450001930,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WASHINGTON COUNTY CC USE 051706,OH-051698-051706,390516904094,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Washington Court House City,OH-045013-039701,391001101937,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Washington-Nile Local,OH-049650-125773,390496501452,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WATERLOO HIGH SCHOOL,OH-049247-039784,390492403542,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WAUSEON HIGH SCHOOL,OH-045641-039883,390456402320,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Wayne Local,OH-050468-040055,390504603956,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Wellington Exempted Village,OH-045658-061317,390456502322,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WEST CARROLLTON HIGH SCHOOL,OH-045054-038588,390450501969,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-West Geauga Local,OH-047225-038653,390472202808,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-West Holmes Local,OH-047696-038695,390476902949,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-West Liberty-Salem Local,OH-046219-038760,390462102472,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WESTERVILLE CENTRAL HIGH SCHOOL,OH-045047-146183,390450404566,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WESTERVILLE-NORTH HIGH SCHOOL,OH-045047-067959,390450401961,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WHETSTONE HIGH SCHOOL,OH-043802-040964,390438000738,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WHITMER HIGH SCHOOL,OH-048231-041046,390482303171,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WILDWOOD ENVIRONMENTAL ACADEMY,OH-000222-000222,390013805188,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Willard City,OH-045096-041319,390450901994,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WILLIAM R BURTON,OH-051227-051235,390512204074,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Williamsburg Local,OH-046367-041442,390463602533,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WILLOUGHBY-EASTLAKE TECH CENTE,OH-045104-064634,390451002013,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WINDHAM HIGH SCHOOL,OH-045666-041723,390456602326,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WINTON WOODS HIGH SCHOOL,OH-044081-064147,390440801018,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WITHROW UNIVERSITY HIGH SCHOOL,OH-043752-146365,390437504284,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Wolf Creek Local,OH-050518-039750,390505103974,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Woodmore Local,OH-049577-042044,390495703637,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Woodridge Local,OH-049973-042051,390499703780,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WOODWARD CAREER TECHNICAL HIGH SCHOOL,OH-043752-147520,390437504416,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-WORTHINGTON KILBOURNE HIGH SCHOOL,OH-045138-112094,390451304479,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Wyoming City,OH-045146-042382,390451402047,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-YELLOW SPRINGS/MCKINNEY HIGH SCHOOL,OH-045674-042416,390456702330,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ZANESVILLE CAMPUS,OH-051300-051318,390513004078,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-ZANESVILLE HIGH SCHOOL,OH-045179-042598,390451702111,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Zenith Academy,OH-000725-000725,390039604956,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ohio Connections Academy Inc,OH-000236-000236,390025005193,145090,Game Design,,,,,,,,,,
+Ohio Connections Academy Inc,OH-000236-000236,390025005193,145060,Programming,,,,,,,,,,
+Ohio Connections Academy Inc,OH-000236-000236,390025005193,145065,Object Oriented Programming,,,,,,,,,,
+Ohio Connections Academy Inc,OH-000236-000236,390025005193,145070,Visual Programming,,,,,,,,,,
+Ohio Connections Academy Inc,OH-000236-000236,390025005193,290200,Computer Science,,,,,,,,,,
+Maritime Academy of Toledo The,OH-000770-000770,390042804987,290200,Computer Science,,,,,,,,,,
+Columbian High School,OH-044891-007054,390448901762,145090,Game Design,,,,,,,,,,
+Columbian High School,OH-044891-007054,390448901762,145060,Programming,,,,,,,,,,
+Columbian High School,OH-044891-007054,390448901762,290200,Computer Science,,,,,,,,,,
+Findlay Digital Academy,OH-000402-000402,390052805238,145020,Computer and Mobile Applications,,,,,,,,,,
+Buckeye On-Line School for Success,OH-000417-000417,390053005240,290200,Computer Science,,,,,,,,,,
+Canton Harbor High School,OH-000525-000525,390028504617,145090,Game Design,,,,,,,,,,
+Zenith Academy,OH-000725-000725,390039604956,145060,Programming,,,,,,,,,,
+Charles School at Ohio Dominican University,OH-007999-007999,390058605078,290200,Computer Science,,,,,,,,,,
+KIPP Columbus,OH-009997-009997,390133005487,290250,Computer Science Principles,,,,,,,,,,
+Horizon Science Academy Lorain,OH-011533-011533,390136505544,290250,Computer Science Principles,,,,,,,,,,
+Patriot Preparatory Academy,OH-012045-012045,390141705597,145020,Computer and Mobile Applications,,,,,,,,,,
+Academy for Urban Scholars Youngstown,OH-013249-013249,390147205727,290200,Computer Science,,,,,,,,,,
+Cincinnati Technology Academy,OH-013864-013864,390151605812,290200,Computer Science,,,,,,,,,,
+Franklinton Preparatory Academy,OH-013892-013892,390153305789,145090,Game Design,,,,,,,,,,
+Great River Connections Academy,OH-017233-017233,390159905986,145090,Game Design,,,,,,,,,,
+Great River Connections Academy,OH-017233-017233,390159905986,145070,Visual Programming,,,,,,,,,,
+Constellation Schools: Parma Community,OH-133256-133256,390006803315,290200,Computer Science,,,,,,,,,,
+Horizon Science Acad Cleveland,OH-133629-133629,390004002939,290200,Computer Science,,,,,,,,,,
+Horizon Science Acad Cleveland,OH-133629-133629,390004002939,290250,Computer Science Principles,,,,,,,,,,
+Horizon Science Acad Cleveland,OH-133629-133629,390004002939,290320,Computer Science AB,,,,,,,,,,
+Horizon Science Academy Columbus,OH-133660-133660,390004202978,290250,Computer Science Principles,,,,,,,,,,
+Ohio Virtual Academy,OH-142950-142950,390018004704,145090,Game Design,,,,,,,,,,
+Ohio Virtual Academy,OH-142950-142950,390018004704,290200,Computer Science,,,,,,,,,,
+Ohio Virtual Academy,OH-142950-142950,390018004704,145060,Programming,,,,,,,,,,
+Arts & College Preparatory Academy,OH-143610-143610,390022304747,145090,Game Design,,,,,,,,,,
+Manchester Elementary School,OH-000442-000451,390053705249,290200,Computer Science,,,,,,,,,,
+Athens High School,OH-043521-001149,390435200097,290320,Computer Science AB,,,,,,,,,,
+Bay High School,OH-043547-001792,390435400115,290310,Computer Science A,,,,,,,,,,
+Bedford High School,OH-043562-002022,391001700127,145090,Game Design,,,,,,,,,,
+Bedford High School,OH-043562-002022,391001700127,290250,Computer Science Principles,,,,,,,,,,
+Bedford High School,OH-043562-002022,391001700127,145020,Computer and Mobile Applications,,,,,,,,,,
+Berea-Midpark High School,OH-043612-024570,390436000175,290200,Computer Science,,,,,,,,,,
+Bowling Green High School,OH-043638-003285,390436300185,145060,Programming,,,,,,,,,,
+Brooklyn High School,OH-043653-003780,390436500200,145020,Computer and Mobile Applications,,,,,,,,,,
+Brooklyn High School,OH-043653-003780,390436500200,290200,Computer Science,,,,,,,,,,
+Brooklyn High School,OH-043653-003780,390436500200,145060,Programming,,,,,,,,,,
+Centerville High School,OH-043737-005322,390437300267,145060,Programming,,,,,,,,,,
+Centerville High School,OH-043737-005322,390437300267,290200,Computer Science,,,,,,,,,,
+Centerville High School,OH-043737-005322,390437300267,290250,Computer Science Principles,,,,,,,,,,
+Claymont High School,OH-043778-006528,390437700405,290200,Computer Science,,,,,,,,,,
+Boulevard Elementary School,OH-043794-003251,390437900566,290200,Computer Science,,,,,,,,,,
+Conneaut Middle School,OH-043810-032813,390438100750,290200,Computer Science,,,,,,,,,,
+Cuyahoga Falls High School,OH-043836-007930,390438300762,290200,Computer Science,,,,,,,,,,
+Cuyahoga Falls High School,OH-043836-007930,390438300762,290310,Computer Science A,,,,,,,,,,
+Dover High School,OH-043893-008722,390438900855,145020,Computer and Mobile Applications,,,,,,,,,,
+Dover High School,OH-043893-008722,390438900855,290200,Computer Science,,,,,,,,,,
+Chambers Elementary School,OH-043901-005793,390439000862,145060,Programming,,,,,,,,,,
+Chambers Elementary School,OH-043901-005793,390439000862,290250,Computer Science Principles,,,,,,,,,,
+East Liverpool High School,OH-043919-009084,390439100870,290200,Computer Science,,,,,,,,,,
+East Liverpool High School,OH-043919-009084,390439100870,145060,Programming,,,,,,,,,,
+Euclid Central Middle School,OH-043950-010793,390439500910,290200,Computer Science,,,,,,,,,,
+Fairborn High School,OH-043968-042796,390439600927,290250,Computer Science Principles,,,,,,,,,,
+Fairborn High School,OH-043968-042796,390439600927,290200,Computer Science,,,,,,,,,,
+Fostoria Junior/Senior High School,OH-043992-012039,390439900957,145060,Programming,,,,,,,,,,
+Fremont Ross High School,OH-044016-012500,390440100974,290200,Computer Science,,,,,,,,,,
+Gallia Academy High School,OH-044032-012799,390440300989,290200,Computer Science,,,,,,,,,,
+Girard Sr High School,OH-044065-013482,390440601005,145065,Object Oriented Programming,,,,,,,,,,
+Girard Sr High School,OH-044065-013482,390440601005,145060,Programming,,,,,,,,,,
+Greenville Senior High School,OH-044099-014621,390440901028,145060,Programming,,,,,,,,,,
+Hillsboro High School,OH-044123-016345,390441201059,290200,Computer Science,,,,,,,,,,
+Huron High School,OH-044131-017194,390441301063,290200,Computer Science,,,,,,,,,,
+Jackson High School,OH-044156-017756,390441501075,290200,Computer Science,,,,,,,,,,
+Kenton High School,OH-044172-018846,391002501091,145060,Programming,,,,,,,,,,
+Kenton High School,OH-044172-018846,391002501091,145065,Object Oriented Programming,,,,,,,,,,
+Kettering Fairmont High School,OH-044180-018929,390441801104,290250,Computer Science Principles,,,,,,,,,,
+Lakewood High School,OH-044198-019687,390441901123,290200,Computer Science,,,,,,,,,,
+Loveland High School,OH-044271-021600,390442701207,290310,Computer Science A,,,,,,,,,,
+Loveland High School,OH-044271-021600,390442701207,145020,Computer and Mobile Applications,,,,,,,,,,
+Loveland High School,OH-044271-021600,390442701207,290250,Computer Science Principles,,,,,,,,,,
+Loveland High School,OH-044271-021600,390442701207,290200,Computer Science,,,,,,,,,,
+Marietta High School,OH-044321-022798,391001901246,290200,Computer Science,,,,,,,,,,
+Martins Ferry High School,OH-044347-023036,390443401272,145060,Programming,,,,,,,,,,
+Washington High School,OH-044354-039602,390443501286,290200,Computer Science,,,,,,,,,,
+Maumee High School,OH-044362-023242,390443601292,290200,Computer Science,,,,,,,,,,
+Mayfield High School,OH-044370-023325,390443701297,290310,Computer Science A,,,,,,,,,,
+Mayfield High School,OH-044370-023325,390443701297,290200,Computer Science,,,,,,,,,,
+Mayfield High School,OH-044370-023325,390443701297,290250,Computer Science Principles,,,,,,,,,,
+Mayfield High School,OH-044370-023325,390443701297,145060,Programming,,,,,,,,,,
+Miamisburg High School,OH-044396-024422,390443901313,145060,Programming,,,,,,,,,,
+Hoover High School,OH-044503-016758,390445001417,290320,Computer Science AB,,,,,,,,,,
+Hoover High School,OH-044503-016758,390445001417,290200,Computer Science,,,,,,,,,,
+Hoover High School,OH-044503-016758,390445001417,145060,Programming,,,,,,,,,,
+Hoover High School,OH-044503-016758,390445001417,145090,Game Design,,,,,,,,,,
+North Royalton High School,OH-044545-010660,390445401443,290250,Computer Science Principles,,,,,,,,,,
+Norwalk High School,OH-044560-028068,390445601457,290200,Computer Science,,,,,,,,,,
+Norwalk High School,OH-044560-028068,390445601457,290310,Computer Science A,,,,,,,,,,
+Oakwood High School,OH-044586-028373,390445801467,290200,Computer Science,,,,,,,,,,
+Coy Elementary School,OH-044602-007559,390446001476,145065,Object Oriented Programming,,,,,,,,,,
+Coy Elementary School,OH-044602-007559,390446001476,145090,Game Design,,,,,,,,,,
+Coy Elementary School,OH-044602-007559,390446001476,145020,Computer and Mobile Applications,,,,,,,,,,
+Coy Elementary School,OH-044602-007559,390446001476,145060,Programming,,,,,,,,,,
+Harvey High School,OH-044628-015560,391001501488,145060,Programming,,,,,,,,,,
+Piqua High School,OH-044644-030098,390446401526,290250,Computer Science Principles,,,,,,,,,,
+Port Clinton High School,OH-044651-030841,390446501536,290200,Computer Science,,,,,,,,,,
+Sandusky High School,OH-044743-033555,390447401605,145060,Programming,,,,,,,,,,
+Sandusky High School,OH-044743-033555,390447401605,290310,Computer Science A,,,,,,,,,,
+Shelby High School,OH-044776-034306,391000901629,290200,Computer Science,,,,,,,,,,
+Adrian Elementary School,OH-044792-000232,390447901642,290200,Computer Science,,,,,,,,,,
+East Garfield Elementary School,OH-044826-032433,390448201710,145090,Game Design,,,,,,,,,,
+East Garfield Elementary School,OH-044826-032433,390448201710,145060,Programming,,,,,,,,,,
+East Garfield Elementary School,OH-044826-032433,390448201710,145020,Computer and Mobile Applications,,,,,,,,,,
+Echo Hills Elementary School,OH-044834-009829,390448301712,145060,Programming,,,,,,,,,,
+Echo Hills Elementary School,OH-044834-009829,390448301712,145065,Object Oriented Programming,,,,,,,,,,
+Strongsville High School,OH-044842-036277,390448401730,290250,Computer Science Principles,,,,,,,,,,
+Strongsville High School,OH-044842-036277,390448401730,290310,Computer Science A,,,,,,,,,,
+Sycamore High School,OH-044867-036640,390448601741,290250,Computer Science Principles,,,,,,,,,,
+Sycamore High School,OH-044867-036640,390448601741,290200,Computer Science,,,,,,,,,,
+Tallmadge High School,OH-044883-036897,390448801758,290200,Computer Science,,,,,,,,,,
+Greensview Elementary School,OH-044933-014597,390449301862,290200,Computer Science,,,,,,,,,,
+Greensview Elementary School,OH-044933-014597,390449301862,290310,Computer Science A,,,,,,,,,,
+Wadsworth High School,OH-044974-038935,391002901897,145060,Programming,,,,,,,,,,
+Warren G Harding High School,OH-044990-015222,390449901922,290200,Computer Science,,,,,,,,,,
+Washington High School,OH-044354-039602,390443501286,145060,Programming,,,,,,,,,,
+Willard High School,OH-045096-041319,390450901994,145090,Game Design,,,,,,,,,,
+Wyoming High School,OH-045146-042382,390451402047,290200,Computer Science,,,,,,,,,,
+Wyoming High School,OH-045146-042382,390451402047,290310,Computer Science A,,,,,,,,,,
+Ada High School,OH-045187-000067,390451802113,145060,Programming,,,,,,,,,,
+Bluffton High School,OH-045211-003038,390452102125,290200,Computer Science,,,,,,,,,,
+The Bridgeport School District - High School,OH-045237-003558,390452302128,145060,Programming,,,,,,,,,,
+Caldwell Elementary School,OH-045252-004564,390452502146,290200,Computer Science,,,,,,,,,,
+Carrollton High School,OH-045278-005017,390452702154,290200,Computer Science,,,,,,,,,,
+Gurney Elementary School,OH-045286-014787,390452804340,290200,Computer Science,,,,,,,,,,
+Columbiana High School,OH-045328-007062,390453202175,290200,Computer Science,,,,,,,,,,
+Fairport Harding High School,OH-045369-011239,390453602190,145060,Programming,,,,,,,,,,
+McClain High School,OH-045401-023424,390454002203,290200,Computer Science,,,,,,,,,,
+Hubbard High School,OH-045427-017046,390454202209,290200,Computer Science,,,,,,,,,,
+David Anderson Jr/Sr High School,OH-045450-008136,390454502221,290200,Computer Science,,,,,,,,,,
+Hopkins Elementary School,OH-045492-016832,390454902241,145020,Computer and Mobile Applications,,,,,,,,,,
+Hopkins Elementary School,OH-045492-016832,390454902241,145065,Object Oriented Programming,,,,,,,,,,
+Hopkins Elementary School,OH-045492-016832,390454902241,145060,Programming,,,,,,,,,,
+Hopkins Elementary School,OH-045492-016832,390454902241,145070,Visual Programming,,,,,,,,,,
+Hopkins Elementary School,OH-045492-016832,390454902241,290200,Computer Science,,,,,,,,,,
+Montpelier High School,OH-045526-025437,390455202262,290250,Computer Science Principles,,,,,,,,,,
+Mt Gilead High School,OH-045534-025783,390455302266,290200,Computer Science,,,,,,,,,,
+Rossford High School,OH-045609-032763,390456002299,145060,Programming,,,,,,,,,,
+Tippecanoe High School,OH-045617-037291,390456102303,290200,Computer Science,,,,,,,,,,
+Upper Sandusky High School,OH-045625-037952,391002402313,290200,Computer Science,,,,,,,,,,
+Wellington High School,OH-045658-061317,390456502322,290200,Computer Science,,,,,,,,,,
+Wellington High School,OH-045658-061317,390456502322,145060,Programming,,,,,,,,,,
+Bath High School,OH-045765-001750,390457602335,145020,Computer and Mobile Applications,,,,,,,,,,
+Perry High School,OH-047902-029710,390479003037,290250,Computer Science Principles,,,,,,,,,,
+New Knoxville High School,OH-045963-026765,390459602392,290200,Computer Science,,,,,,,,,,
+Eastern High School,OH-046037-010769,390460302411,290200,Computer Science,,,,,,,,,,
+Fayetteville-Perry High School,OH-046045-011460,390460402415,145090,Game Design,,,,,,,,,,
+Graham Middle School,OH-046193-035675,390461902464,290200,Computer Science,,,,,,,,,,
+West Liberty-Salem Middle/High School,OH-046219-038760,390462102472,145060,Programming,,,,,,,,,,
+Tecumseh High School,OH-046243-036988,390462402485,290200,Computer Science,,,,,,,,,,
+Possum Elementary School,OH-046284-030593,390462802499,145060,Programming,,,,,,,,,,
+Bethel Tate High School,OH-046318-002568,390463102505,290200,Computer Science,,,,,,,,,,
+Bethel Tate High School,OH-046318-002568,390463102505,145020,Computer and Mobile Applications,,,,,,,,,,
+Bethel Tate High School,OH-046318-002568,390463102505,145060,Programming,,,,,,,,,,
+Clermont Northeastern High School,OH-046326-006635,390463202508,290200,Computer Science,,,,,,,,,,
+Felicity-Franklin Local High School,OH-046334-011502,390463302514,290200,Computer Science,,,,,,,,,,
+Goshen High School,OH-046342-013920,390463402516,145060,Programming,,,,,,,,,,
+Williamsburg High School,OH-046367-041442,390463602533,290200,Computer Science,,,,,,,,,,
+Williamsburg High School,OH-046367-041442,390463602533,145060,Programming,,,,,,,,,,
+Blanchester High School,OH-046383-002840,390463802535,145020,Computer and Mobile Applications,,,,,,,,,,
+Clinton-Massie High School,OH-046391-006734,390463902540,290200,Computer Science,,,,,,,,,,
+Crestview High School,OH-049429-007674,390494203583,290250,Computer Science Principles,,,,,,,,,,
+United High School,OH-046458-037911,390464502562,290200,Computer Science,,,,,,,,,,
+River View High School,OH-046482-031880,390464802570,290200,Computer Science,,,,,,,,,,
+Buckeye Central High School,OH-046508-004085,390465002574,145060,Programming,,,,,,,,,,
+Orange High School,OH-046581-028712,391001602600,290200,Computer Science,,,,,,,,,,
+Richmond Heights High School,OH-046599-031583,390465902603,290250,Computer Science Principles,,,,,,,,,,
+Richmond Heights High School,OH-046599-031583,390465902603,290310,Computer Science A,,,,,,,,,,
+Ansonia High School,OH-046623-000778,390466202611,290250,Computer Science Principles,,,,,,,,,,
+Fairview High School,OH-046714-011288,390467102628,290310,Computer Science A,,,,,,,,,,
+Noble Elementary School,OH-043794-027250,390437900574,145060,Programming,,,,,,,,,,
+Edison High School,OH-047795-018218,390477902988,145060,Programming,,,,,,,,,,
+Furry Elementary School,OH-046813-012757,390468102661,290310,Computer Science A,,,,,,,,,,
+Furry Elementary School,OH-046813-012757,390468102661,290250,Computer Science Principles,,,,,,,,,,
+Furry Elementary School,OH-046813-012757,390468102661,290200,Computer Science,,,,,,,,,,
+Fairfield Union High School,OH-046870-011072,390468702682,145060,Programming,,,,,,,,,,
+Fairfield Union High School,OH-046870-011072,390468702682,290200,Computer Science,,,,,,,,,,
+Canal Winchester High School,OH-046946-004770,390469402709,145060,Programming,,,,,,,,,,
+New Albany High School,OH-046995-030155,390469902734,290200,Computer Science,,,,,,,,,,
+Swanton Middle School,OH-047092-006072,390470902775,290250,Computer Science Principles,,,,,,,,,,
+Cardinal High School,OH-047175-004853,390471702786,290200,Computer Science,,,,,,,,,,
+Munson Elementary School,OH-047183-025981,390471802793,290310,Computer Science A,,,,,,,,,,
+West Geauga High School,OH-047225-038653,390472202808,290310,Computer Science A,,,,,,,,,,
+Cedarville High School,OH-047258-005173,390472502821,145065,Object Oriented Programming,,,,,,,,,,
+Cedarville High School,OH-047258-005173,390472502821,290200,Computer Science,,,,,,,,,,
+Oak Hills High School,OH-047373-028217,390473702873,145090,Game Design,,,,,,,,,,
+Three Rivers Elementary,OH-047399-042523,390473902886,145090,Game Design,,,,,,,,,,
+Three Rivers Elementary,OH-047399-042523,390473902886,145060,Programming,,,,,,,,,,
+Van Buren High School,OH-047464-038232,391000102900,290200,Computer Science,,,,,,,,,,
+Hiland High School,OH-047688-016220,390476802938,145060,Programming,,,,,,,,,,
+Hiland High School,OH-047688-016220,390476802938,145090,Game Design,,,,,,,,,,
+West Holmes High School,OH-047696-038695,390476902949,290250,Computer Science Principles,,,,,,,,,,
+New London High School,OH-047720-026823,390477202955,290250,Computer Science Principles,,,,,,,,,,
+Buckeye High School,OH-048470-004127,390484703262,145060,Programming,,,,,,,,,,
+Buckeye High School,OH-048470-004127,390484703262,145020,Computer and Mobile Applications,,,,,,,,,,
+Buckeye High School,OH-048470-004127,390484703262,145090,Game Design,,,,,,,,,,
+Edison High School,OH-047795-018218,390477902988,145060,Programming,,,,,,,,,,
+Fredericktown High School,OH-047852-012450,390478503013,290200,Computer Science,,,,,,,,,,
+Kirtland High School,OH-047878-019216,390478703017,290200,Computer Science,,,,,,,,,,
+Kirtland High School,OH-047878-019216,390478703017,290310,Computer Science A,,,,,,,,,,
+Buckeye Elementary School,OH-047894-004101,391001403026,145090,Game Design,,,,,,,,,,
+Buckeye Elementary School,OH-047894-004101,391001403026,290200,Computer Science,,,,,,,,,,
+Perry High School,OH-047902-029710,390479003037,145090,Game Design,,,,,,,,,,
+Perry High School,OH-047902-029710,390479003037,145065,Object Oriented Programming,,,,,,,,,,
+Dawson-Bryant High School,OH-047928-008219,390479203040,145060,Programming,,,,,,,,,,
+Fairland High School,OH-047936-011114,390479303044,145060,Programming,,,,,,,,,,
+Fairland High School,OH-047936-011114,390479303044,290200,Computer Science,,,,,,,,,,
+Fairland High School,OH-047936-011114,390479303044,145020,Computer and Mobile Applications,,,,,,,,,,
+Johnstown High School,OH-047985-018481,390479803063,290200,Computer Science,,,,,,,,,,
+Lakewood High School,OH-044198-019687,390441901123,290250,Computer Science Principles,,,,,,,,,,
+Licking Heights High School,OH-048009-020461,390480003074,145060,Programming,,,,,,,,,,
+Licking Heights High School,OH-048009-020461,390480003074,290320,Computer Science AB,,,,,,,,,,
+Licking Heights High School,OH-048009-020461,390480003074,290200,Computer Science,,,,,,,,,,
+Northridge High School,OH-048736-027763,390487303380,145060,Programming,,,,,,,,,,
+Pataskala Elementary School,OH-048041-029363,390480403096,145020,Computer and Mobile Applications,,,,,,,,,,
+Pataskala Elementary School,OH-048041-029363,390480403096,145060,Programming,,,,,,,,,,
+Avon High School,OH-048116-001370,390481103110,290310,Computer Science A,,,,,,,,,,
+Avon High School,OH-048116-001370,390481103110,290200,Computer Science,,,,,,,,,,
+Avon Lake High School,OH-048124-001388,390481203113,290200,Computer Science,,,,,,,,,,
+Keystone High School,OH-048165-018960,390481603132,290250,Computer Science Principles,,,,,,,,,,
+Midview West Elementary School,OH-048173-008979,390481703138,145060,Programming,,,,,,,,,,
+Midview West Elementary School,OH-048173-008979,390481703138,290310,Computer Science A,,,,,,,,,,
+Midview West Elementary School,OH-048173-008979,390481703138,290200,Computer Science,,,,,,,,,,
+Anthony Wayne High School,OH-048207-000810,390482003144,290200,Computer Science,,,,,,,,,,
+Ottawa Hills High School,OH-048215-028894,390482103150,290200,Computer Science,,,,,,,,,,
+Ottawa Hills High School,OH-048215-028894,390482103150,290250,Computer Science Principles,,,,,,,,,,
+Ottawa Hills High School,OH-048215-028894,390482103150,290320,Computer Science AB,,,,,,,,,,
+Canfield High School,OH-048314-004796,390483103203,290200,Computer Science,,,,,,,,,,
+Poland Seminary High School,OH-048348-030452,390483403218,290250,Computer Science Principles,,,,,,,,,,
+South Range High School,OH-048363-026229,390483603223,290200,Computer Science,,,,,,,,,,
+Elgin High School,OH-048413-010173,390484103240,290200,Computer Science,,,,,,,,,,
+Pleasant Elementary School,OH-048421-030205,390484203244,290310,Computer Science A,,,,,,,,,,
+Black River High School,OH-048462-002782,390484603258,290320,Computer Science AB,,,,,,,,,,
+Black River High School,OH-048462-002782,390484603258,290310,Computer Science A,,,,,,,,,,
+Highland High School,OH-048496-016154,390484903274,145060,Programming,,,,,,,,,,
+Eastern Elementary School,OH-048512-135046,390485101428,290200,Computer Science,,,,,,,,,,
+Meigs High School,OH-048520-024117,390485203284,145070,Visual Programming,,,,,,,,,,
+Meigs High School,OH-048520-024117,390485203284,145060,Programming,,,,,,,,,,
+Meigs High School,OH-048520-024117,390485203284,145090,Game Design,,,,,,,,,,
+Marion Local High School,OH-048553-022863,391003103298,290200,Computer Science,,,,,,,,,,
+Miami East High School,OH-048629-024372,390486203320,290200,Computer Science,,,,,,,,,,
+Madison Park Elementary,OH-048694-009224,390486905389,290200,Computer Science,,,,,,,,,,
+Stebbins High School,OH-048702-035956,390487003364,290200,Computer Science,,,,,,,,,,
+Valley View High School,OH-048744-038174,390487403386,290200,Computer Science,,,,,,,,,,
+Morgan High School,OH-048777-025544,390487703401,145090,Game Design,,,,,,,,,,
+Morgan High School,OH-048777-025544,390487703401,145060,Programming,,,,,,,,,,
+Northmor High School,OH-048819-027722,390488103414,290250,Computer Science Principles,,,,,,,,,,
+Northmor High School,OH-048819-027722,390488103414,290200,Computer Science,,,,,,,,,,
+Northmor High School,OH-048819-027722,390488103414,290310,Computer Science A,,,,,,,,,,
+Shenandoah High School,OH-048900-034314,390489003448,290200,Computer Science,,,,,,,,,,
+R C Waters Elementary School,OH-048926-030973,390489203454,290200,Computer Science,,,,,,,,,,
+Antwerp Local High School,OH-048991-000844,390489903468,290200,Computer Science,,,,,,,,,,
+Miller High School,OH-049064-024851,390490603478,145090,Game Design,,,,,,,,,,
+Teays Valley High School,OH-049098-036962,390490903490,145060,Programming,,,,,,,,,,
+Piketon Jr/Sr High School,OH-049130-029991,390491303503,290200,Computer Science,,,,,,,,,,
+Craddock Elementary School,OH-049171-001313,390491703516,290310,Computer Science A,,,,,,,,,,
+Crestwood High School,OH-049189-007724,390491803517,290200,Computer Science,,,,,,,,,,
+Continental Local Elementary School,OH-049320-007260,390493203561,290200,Computer Science,,,,,,,,,,
+Pandora-Gilboa High School,OH-049395-029074,390493903579,290250,Computer Science Principles,,,,,,,,,,
+Pandora-Gilboa High School,OH-049395-029074,390493903579,290200,Computer Science,,,,,,,,,,
+Crestview High School,OH-049429-007674,390494203583,290200,Computer Science,,,,,,,,,,
+Eastview Elementary School,OH-049452-009704,390494503594,290310,Computer Science A,,,,,,,,,,
+Woodmore High School,OH-049577-042044,390495703637,145060,Programming,,,,,,,,,,
+Northwest High School,OH-049635-027854,390496303654,290200,Computer Science,,,,,,,,,,
+Portsmouth West Elementary School,OH-049650-125773,390496501452,145060,Programming,,,,,,,,,,
+Seneca East High School,OH-049684-001198,390496803670,290200,Computer Science,,,,,,,,,,
+Anna High School,OH-049759-000752,391000403683,290310,Computer Science A,,,,,,,,,,
+Houston High School,OH-049791-015156,390497903695,290200,Computer Science,,,,,,,,,,
+Canton South High School,OH-049833-004812,390498303700,145060,Programming,,,,,,,,,,
+Canton South High School,OH-049833-004812,390498303700,145090,Game Design,,,,,,,,,,
+Canton South High School,OH-049833-004812,390498303700,145065,Object Oriented Programming,,,,,,,,,,
+Jackson High School,OH-044156-017756,390441501075,290310,Computer Science A,,,,,,,,,,
+Jackson High School,OH-044156-017756,390441501075,290200,Computer Science,,,,,,,,,,
+Lake High School,OH-050690-019539,390506904032,145020,Computer and Mobile Applications,,,,,,,,,,
+Lake High School,OH-050690-019539,390506904032,290200,Computer Science,,,,,,,,,,
+Lake High School,OH-050690-019539,390506904032,290310,Computer Science A,,,,,,,,,,
+Lake High School,OH-050690-019539,390506904032,290250,Computer Science Principles,,,,,,,,,,
+Louisville High School,OH-049874-021576,390498703726,290200,Computer Science,,,,,,,,,,
+Marlington High School,OH-049882-022947,390498803732,145060,Programming,,,,,,,,,,
+Marlington High School,OH-049882-022947,390498803732,145090,Game Design,,,,,,,,,,
+Marlington High School,OH-049882-022947,390498803732,290200,Computer Science,,,,,,,,,,
+Northwest High School,OH-049635-027854,390496303654,145020,Computer and Mobile Applications,,,,,,,,,,
+Northwest High School,OH-049635-027854,390496303654,290250,Computer Science Principles,,,,,,,,,,
+Woodridge High School,OH-049973-042051,390499703780,290200,Computer Science,,,,,,,,,,
+Green Primary Elementary School,OH-049619-122127,390496100699,290200,Computer Science,,,,,,,,,,
+Hudson High School,OH-050021-017095,390500203804,290310,Computer Science A,,,,,,,,,,
+Hudson High School,OH-050021-017095,390500203804,290320,Computer Science AB,,,,,,,,,,
+Hudson High School,OH-050021-017095,390500203804,290200,Computer Science,,,,,,,,,,
+Nordonia High School,OH-050047-027334,390500403812,145020,Computer and Mobile Applications,,,,,,,,,,
+Twinsburg High School,OH-050070-136101,390500702802,290200,Computer Science,,,,,,,,,,
+Champion High School,OH-050138-005819,390501303844,290200,Computer Science,,,,,,,,,,
+Howland Springs Elementary School,OH-050161-061994,390501603858,145020,Computer and Mobile Applications,,,,,,,,,,
+Howland Springs Elementary School,OH-050161-061994,390501603858,290200,Computer Science,,,,,,,,,,
+McDonald High School,OH-050229-023515,390502203880,290200,Computer Science,,,,,,,,,,
+North Union High School,OH-050336-026393,390503303918,290200,Computer Science,,,,,,,,,,
+Lincolnview Jr/Sr High School,OH-050369-020990,391002203922,290250,Computer Science Principles,,,,,,,,,,
+William Mason High School,OH-050450-041376,390504503954,290200,Computer Science,,,,,,,,,,
+William Mason High School,OH-050450-041376,390504503954,290310,Computer Science A,,,,,,,,,,
+William Mason High School,OH-050450-041376,390504503954,290250,Computer Science Principles,,,,,,,,,,
+Waynesville High School,OH-050468-040055,390504603956,290200,Computer Science,,,,,,,,,,
+Waterford High School,OH-050518-039750,390505103974,145060,Programming,,,,,,,,,,
+Northwestern Junior/Senior High School,OH-046268-027896,390462602495,145060,Programming,,,,,,,,,,
+North Baltimore High School,OH-050708-026070,390507004037,145090,Game Design,,,,,,,,,,
+Otsego High School,OH-050724-028860,390507204045,290200,Computer Science,,,,,,,,,,
+NORTH HIGH SCHOOL,OH-043489-027565,390434800046,unspecified,unspecified,,,,,,,,,,
+FERGUSON HALL FRESHMAN SCHOOL,OH-047241-016890,390472405960,unspecified,unspecified,,,,,,,,,,
+CANTON CITY DIGITAL ACADEMY,OH-043711-010216,390437105489,unspecified,unspecified,,,,,,,,,,
+RIVERVIEW EAST ACADEMY,OH-043752-145722,390437504274,unspecified,unspecified,,,,,,,,,,
+CLARK MONTESSORI HIGH SCHOOL,OH-043752-098590,390437504331,unspecified,unspecified,,,,,,,,,,
+NEW TECHNOLOGY WEST,OH-043786-012352,390437805573,unspecified,unspecified,,,,,,,,,,
+JOHN MARSHALL SCHOOL OF INFORMATION TECHNOLOGY,OH-043786-015600,390437805865,unspecified,unspecified,,,,,,,,,,
+CAMPUS INTERNATIONAL HIGH SCHOOL,OH-043786-016886,390437805946,unspecified,unspecified,,,,,,,,,,
+STIVERS SCHOOL FOR THE ARTS,OH-043844-036152,390438400824,unspecified,unspecified,,,,,,,,,,
+ELIDA MIDDLE SCHOOL,OH-045773-010082,390457704223,unspecified,unspecified,,,,,,,,,,
+FINDLAY LEARNING CENTER,OH-043984-015437,391000005863,unspecified,unspecified,,,,,,,,,,
+HAMILTON HIGH SCHOOL,OH-044107-036822,390441001050,unspecified,unspecified,,,,,,,,,,
+KINGS JUNIOR HIGH SCHOOL,OH-050435-019075,390504303943,unspecified,unspecified,,,,,,,,,,
+LEBANON HIGH SCHOOL,OH-044214-020032,390442101146,unspecified,unspecified,,,,,,,,,,
+KENTON RIDGE HIGH SCHOOL,OH-046250-068577,390462502488,unspecified,unspecified,,,,,,,,,,
+NORTHWEST HIGH SCHOOL,OH-047365-064683,390473602859,unspecified,unspecified,,,,,,,,,,
+PICKERINGTON ALTERNATIVE SCHOOL,OH-046896-016945,390468905931,unspecified,unspecified,,,,,,,,,,
+"REYNOLDSBURG HS BUSINESS, EDUCATION LEADERSHIP & LAW ACADEMY",OH-047001-012516,390470005653,unspecified,unspecified,,,,,,,,,,
+KEIFER ACADEMY,OH-044818-010421,390448100117,unspecified,unspecified,,,,,,,,,,
+WHITMER HIGH SCHOOL,OH-048231-041046,390482303171,unspecified,unspecified,,,,,,,,,,
+NORTHRIDGE HIGH SCHOOL,OH-048033-027771,390480303093,unspecified,unspecified,,,,,,,,,,
+SOUTH HIGH SCHOOL,OH-045104-035089,390451002009,unspecified,unspecified,,,,,,,,,,
+SPRINGFIELD HIGH SCHOOL,OH-048371-035469,390483703229,unspecified,unspecified,,,,,,,,,,
+TOLEDO SCHOOL FOR THE ARTS,OH-133942-133942,390005603084,unspecified,unspecified,,,,,,,,,,
+TRIAD HIGH SCHOOL,OH-046201-037531,390462002469,unspecified,unspecified,,,,,,,,,,
+ZANE TRACE HIGH SCHOOL,OH-049544-042572,390495403628,unspecified,unspecified,,,,,,,,,,
+ANDERSON HIGH SCHOOL,OH-047340-000687,390473402843,unspecified,unspecified,,,,,,,,,,
+APOLLO CAREER CENTER,OH-050773-050781,390507704051,unspecified,unspecified,,,,,,,,,,
+ASHTABULA COUNTY TECHNICAL AND CAREER CAMPUS,OH-050815-050823,390508104053,unspecified,unspecified,,,,,,,,,,
+AURORA HIGH SCHOOL,OH-049171-001297,390491703512,unspecified,unspecified,,,,,,,,,,
+BRUSH HIGH SCHOOL,OH-044792-003996,390447901645,unspecified,unspecified,,,,,,,,,,
+BUCKEYE HILLS CAREER CENTER,OH-062067-062075,390620604118,unspecified,unspecified,,,,,,,,,,
+CALDWELL HIGH SCHOOL,OH-045252-004556,390452502145,unspecified,unspecified,,,,,,,,,,
+CAREER AND TECHNOLOGY EDUCATIONAL CENTERS,OH-051201-051219,390512004073,unspecified,unspecified,,,,,,,,,,
+CHAGRIN FALLS HIGH SCHOOL,OH-045286-005751,390452802159,unspecified,unspecified,,,,,,,,,,
+CONTINENTAL LOCAL HIGH SCHOOL,OH-049320-007278,390493203562,unspecified,unspecified,,,,,,,,,,
+CUYAHOGA VALLEY CAREER CENTER,OH-050922-050930,390509204058,unspecified,unspecified,,,,,,,,,,
+DUBLIN COFFMAN HIGH SCHOOL,OH-047027-064758,390470202752,unspecified,unspecified,,,,,,,,,,
+DUBLIN SCIOTO HIGH SCHOOL,OH-047027-120485,390470200666,unspecified,unspecified,,,,,,,,,,
+EHOVE CAREER CENTER,OH-051029-051037,390510204063,unspecified,unspecified,,,,,,,,,,
+FOUR COUNTY CAREER CENTER,OH-050963-012047,390509604060,unspecified,unspecified,,,,,,,,,,
+FRANKLIN HEIGHTS HIGH SCHOOL,OH-044800-012328,390448001660,unspecified,unspecified,,,,,,,,,,
+GRAHAM HIGH SCHOOL,OH-046193-014027,390461902463,unspecified,unspecified,,,,,,,,,,
+HILLIARD DAVIDSON HIGH SCHOOL,OH-047019-016303,390470102748,unspecified,unspecified,,,,,,,,,,
+HOWLAND HIGH SCHOOL,OH-050161-017004,390501603855,unspecified,unspecified,,,,,,,,,,
+LAKOTA WEST HIGH SCHOOL,OH-046110-019737,390461102438,unspecified,unspecified,,,,,,,,,,
+LORDSTOWN HIGH SCHOOL,OH-050203-021477,390502003875,unspecified,unspecified,,,,,,,,,,
+LOWELLVILLE HIGH SCHOOL,OH-048330-021683,390483303211,unspecified,unspecified,,,,,,,,,,
+MADISON HIGH SCHOOL,OH-047886-022111,390478803020,unspecified,unspecified,,,,,,,,,,
+MAPLEWOOD CAREER CENTER,OH-051391-051409,390513904083,unspecified,unspecified,,,,,,,,,,
+MARYSVILLE HIGH SCHOOL,OH-045476-023119,390454702230,unspecified,unspecified,,,,,,,,,,
+MIDVIEW HIGH SCHOOL,OH-048173-024596,390481703140,unspecified,unspecified,,,,,,,,,,
+MONROEVILLE HIGH SCHOOL,OH-047712-025361,390477102952,unspecified,unspecified,,,,,,,,,,
+NEWARK HIGH SCHOOL,OH-044453-027011,390444501385,unspecified,unspecified,,,,,,,,,,
+OLENTANGY HIGH SCHOOL,OH-046763-028548,390467602648,unspecified,unspecified,,,,,,,,,,
+OLENTANGY LIBERTY HIGH SCHOOL,OH-046763-145953,390467604599,unspecified,unspecified,,,,,,,,,,
+ORANGE HIGH SCHOOL,OH-046763-009286,390467605390,unspecified,unspecified,,,,,,,,,,
+ORRVILLE HIGH SCHOOL,OH-044610-028779,390446101485,unspecified,unspecified,,,,,,,,,,
+PERKINS HIGH SCHOOL,OH-046813-029637,390468102663,unspecified,unspecified,,,,,,,,,,
+PICKAWAY-ROSS CAREER & TECHNOLOGY CENTER,OH-051433-051441,390514304085,unspecified,unspecified,,,,,,,,,,
+PIONEER CAREER & TECHNOLOGY,OH-051417-030080,390514104084,unspecified,unspecified,,,,,,,,,,
+PLEASANT HIGH SCHOOL,OH-048421-030304,390484203246,unspecified,unspecified,,,,,,,,,,
+PORTAGE LAKES CAREER CENTER,OH-063495-063503,390634904123,unspecified,unspecified,,,,,,,,,,
+PORTSMOUTH WEST HIGH SCHOOL,OH-049650-030585,390496503665,unspecified,unspecified,,,,,,,,,,
+SCIOTO COUNTY CAREER TECHNICAL CENTER,OH-051490-033795,390514904088,unspecified,unspecified,,,,,,,,,,
+SPRINGFIELD-CLARK COUNTY,OH-051532-035519,390515304089,unspecified,unspecified,,,,,,,,,,
+STOW-MUNROE FALLS HIGH SCHOOL,OH-044834-036210,390448301717,unspecified,unspecified,,,,,,,,,,
+THOMAS WORTHINGTON HIGH SCHOOL,OH-045138-042283,390451302039,unspecified,unspecified,,,,,,,,,,
+TOLLES CAREER & TECHNICAL CENTER,OH-063511-063529,390635104124,unspecified,unspecified,,,,,,,,,,
+TRI-RIVERS CAREER CENTER,OH-065268-065276,390652604127,unspecified,unspecified,,,,,,,,,,
+TRI-VALLEY HIGH SCHOOL,OH-048876-037515,390488703438,unspecified,unspecified,,,,,,,,,,
+TURPIN HIGH SCHOOL,OH-047340-068502,390473402850,unspecified,unspecified,,,,,,,,,,
+VALLEY STEM+ME2 ACADEMY,OH-014943-014943,390156505820,unspecified,unspecified,,,,,,,,,,
+WARREN COUNTY CAREER CENTER,OH-051474-051482,390514704087,unspecified,unspecified,,,,,,,,,,
+WESTERVILLE-NORTH HIGH SCHOOL,OH-045047-067959,390450401961,unspecified,unspecified,,,,,,,,,,
+WORTHINGTON KILBOURNE HIGH SCHOOL,OH-045138-112094,390451304479,unspecified,unspecified,,,,,,,,,,
+YELLOW SPRINGS/MCKINNEY HIGH SCHOOL,OH-045674-042416,390456702330,unspecified,unspecified,,,,,,,,,,
+PRINCETON HIGH SCHOOL,OH-044677-030759,390446701554,unspecified,unspecified,,,,,,,,,,
+CENTRAL CROSSING HIGH SCHOOL,OH-044800-142018,390448004553,unspecified,unspecified,,,,,,,,,,
+MIAMI TRACE HIGH SCHOOL,OH-046920-024414,391001002702,unspecified,unspecified,,,,,,,,,,
+BELLBROOK HIGH SCHOOL,OH-047274-002154,390472702827,unspecified,unspecified,,,,,,,,,,
+BIO-MED SCIENCE ACADEMY STEM SCHOOL,OH-014231-014231,390151205794,unspecified,unspecified,,,,,,,,,,
+BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL,OH-043646-003467,390436400194,unspecified,unspecified,,,,,,,,,,
+CHARDON HIGH SCHOOL,OH-047183-005876,390471802789,unspecified,unspecified,,,,,,,,,,
+CLEVELAND HEIGHTS HIGH SCHOOL,OH-043794-015842,390437900571,unspecified,unspecified,,,,,,,,,,
+DAYTON REGIONAL STEM SCHOOL,OH-011506-011506,390137405564,unspecified,unspecified,,,,,,,,,,
+DUBLIN JEROME HIGH SCHOOL,OH-047027-146928,390470204614,unspecified,unspecified,,,,,,,,,,
+GREEN HIGH SCHOOL,OH-050013-014365,390500103797,unspecified,unspecified,,,,,,,,,,
+GROVE CITY HIGH SCHOOL,OH-044800-061325,390448001662,unspecified,unspecified,,,,,,,,,,
+HARRISON CENTRAL JR./SR. HIGH SCHOOL,OH-045245-004507,390452402133,unspecified,unspecified,,,,,,,,,,
+HIGHLAND HIGH SCHOOL,OH-048801-016162,390488003408,unspecified,unspecified,,,,,,,,,,
+HILLIARD BRADLEY HIGH SCHOOL,OH-047019-009091,390470105403,unspecified,unspecified,,,,,,,,,,
+HILLIARD DARBY HIGH SCHOOL,OH-047019-123539,390470100663,unspecified,unspecified,,,,,,,,,,
+LAKEWOOD HIGH SCHOOL,OH-047993-019695,390479903070,unspecified,unspecified,,,,,,,,,,
+LAKOTA EAST HIGH SCHOOL,OH-046110-123836,390461100810,unspecified,unspecified,,,,,,,,,,
+MADISON HIGH SCHOOL,OH-049452-022178,390494503598,unspecified,unspecified,,,,,,,,,,
+MEDINA COUNTY CAREER CENTER,OH-062109-062117,390621004119,unspecified,unspecified,,,,,,,,,,
+MENTOR HIGH SCHOOL,OH-045492-024281,390454902244,unspecified,unspecified,,,,,,,,,,
+MILLERSPORT JR/SR HIGH SCHOOL,OH-046904-039081,390469002695,unspecified,unspecified,,,,,,,,,,
+NORMANDY HIGH SCHOOL,OH-044636-027367,390446301505,unspecified,unspecified,,,,,,,,,,
+NORTH RIDGEVILLE HIGH SCHOOL,OH-044537-026336,390445301439,unspecified,unspecified,,,,,,,,,,
+OAK HARBOR HIGH SCHOOL,OH-048926-028183,390489203452,unspecified,unspecified,,,,,,,,,,
+POLARIS CAREER CENTER,OH-050948-050955,390509404059,unspecified,unspecified,,,,,,,,,,
+READING COMMUNITY HIGH SCHOOL,OH-044693-031187,390446901571,unspecified,unspecified,,,,,,,,,,
+RIVERSIDE JR/SR HIGH SCHOOL,OH-047894-031989,391001403033,unspecified,unspecified,,,,,,,,,,
+SHAKER HTS HIGH SCHOOL,OH-044750-034108,390447501616,unspecified,unspecified,,,,,,,,,,
+SHAW HIGH SCHOOL,OH-043901-034199,390439000866,unspecified,unspecified,,,,,,,,,,
+SYLVANIA NORTHVIEW HIGH SCHOOL,OH-044875-036707,390448701751,unspecified,unspecified,,,,,,,,,,
+SYLVANIA SOUTHVIEW HIGH SCHOOL,OH-044875-068551,390448701752,unspecified,unspecified,,,,,,,,,,
+TAYLOR HIGH SCHOOL,OH-047399-036954,390473902884,unspecified,unspecified,,,,,,,,,,
+TRI-STATE STEM+M EARLY COLLEGE HIGH SCHOOL,OH-015344-015344,390157705854,unspecified,unspecified,,,,,,,,,,
+TRUMBULL CAREER & TECH CENTER,OH-051631-051649,390516304091,unspecified,unspecified,,,,,,,,,,
+UPPER ARLINGTON HIGH SCHOOL,OH-044933-037945,390449301866,unspecified,unspecified,,,,,,,,,,
+UPPER VALLEY CAREER CENTER,OH-062125-062133,390621204120,unspecified,unspecified,,,,,,,,,,
+WATKINS MEMORIAL HIGH SCHOOL,OH-048041-039842,390480403097,unspecified,unspecified,,,,,,,,,,
+WESTERVILLE CENTRAL HIGH SCHOOL,OH-045047-146183,390450404566,unspecified,unspecified,,,,,,,,,,
+WESTERVILLE-SOUTH HIGH SCHOOL,OH-045047-040675,390450401962,unspecified,unspecified,,,,,,,,,,
+WESTLAND HIGH SCHOOL,OH-044800-061333,390448001679,unspecified,unspecified,,,,,,,,,,
+WICKLIFFE HIGH SCHOOL,OH-045088-041202,390450801986,unspecified,unspecified,,,,,,,,,,
+D Russel Lee Career-Technology Center,OH-050880-050898,390508804056,unspecified,unspecified,,,,,,,,,,
+Diamond Oaks Cdc,OH-051060-064980,390510604065,unspecified,unspecified,,,,,,,,,,
+Laurel Oaks Cdc,OH-051060-064972,390510604276,unspecified,unspecified,,,,,,,,,,
+Live Oaks Cdc,OH-051060-064998,390510604277,unspecified,unspecified,,,,,,,,,,
+Miami Valley Ctc,OH-051284-051292,390512804076,unspecified,unspecified,,,,,,,,,,
+Scarlet Oaks Cdc,OH-051060-051078,390510604068,unspecified,unspecified,,,,,,,,,,
+Warren High School,OH-050500-039248,391001803972,unspecified,unspecified,,,,,,,,,,
+FRANKLIN HIGH SCHOOL,OH-044008-012310,390440000963,unspecified,unspecified,,,,,,,,,,
+GREENE COUNTY CAREER CENTER,OH-051045-014464,390510404064,unspecified,unspecified,,,,,,,,,,
+GREENEVIEW HIGH SCHOOL,OH-047266-014498,390472602822,unspecified,unspecified,,,,,,,,,,
+LIFE SKILLS CTR OF YOUNGSTOWN,OH-133801-133801,390005003011,unspecified,unspecified,,,,,,,,,,
+MADISON HIGH SCHOOL,OH-046128-022087,390461202443,unspecified,unspecified,,,,,,,,,,
+NORTHMONT HIGH SCHOOL,OH-048728-027698,390487203372,unspecified,unspecified,,,,,,,,,,
+REVERE HIGH SCHOOL,OH-050054-031393,390500503818,unspecified,unspecified,,,,,,,,,,
+REVERE MIDDLE SCHOOL,OH-050054-009720,390500503816,unspecified,unspecified,,,,,,,,,,
+SOUTHEASTERN HIGH SCHOOL,OH-049528-035204,390495203623,unspecified,unspecified,,,,,,,,,,
+SPRINGFIELD HIGH SCHOOL,OH-048223-035477,390482203154,unspecified,unspecified,,,,,,,,,,
+THE ACADEMY FOR URBAN SCHOLARS,OH-012528-012528,390143305688,unspecified,unspecified,,,,,,,,,,
+VERN RIFFE CAREER TECHNOLOGY C,OH-051375-029934,390513704082,unspecified,unspecified,,,,,,,,,,
+SOLON HIGH SCHOOL,OH-046607-034835,390466002609,unspecified,unspecified,,,,,,,,,,

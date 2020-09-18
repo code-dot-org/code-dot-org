@@ -9,7 +9,7 @@ class VersionRedirectOverriderTest < ActiveSupport::TestCase
 
     @script = create :script
     @unit_group = create :unit_group
-    create :course_script, unit_group: @unit_group, script: @script, position: 1
+    create :unit_group_unit, unit_group: @unit_group, script: @script, position: 1
   end
 
   setup do

@@ -8,27 +8,6 @@ ky:
       name:
         course1:
           title: Курс 1
-          stages:
-            'Artist: Loops':
-              name: 'Сүрөтчү: циклдар'
-            'Artist: Sequence':
-              name: 'Сүрөтчү: ирет'
-            'Artist: Shapes':
-              name: 'Сүрөтчү: формалар'
-            'Bee: Loops':
-              name: 'Аары: циклдар'
-            'Bee: Sequence':
-              name: 'Аары: ирет'
-            'Maze: Debugging':
-              name: 'Лабиринт: дебаггиң'
-            'Maze: Loops':
-              name: 'Лабиринт: циклдар'
-            'Maze: Sequence':
-              name: 'Лабиринт: ирет'
-            Spelling Bee:
-              name: Spelling Bee
-            'Studio: Create a Story':
-              name: 'Play Lab: окуя түзүү'
           lessons:
             'Artist: Loops':
               name: 'Сүрөтчү: циклдар'
@@ -52,27 +31,6 @@ ky:
               name: 'Play Lab: окуя түзүү'
         course2:
           title: Курс 2
-          stages:
-            'Artist: Debugging':
-              name: 'Сүрөтчү: дебаггиң'
-            'Artist: Loops':
-              name: 'Сүрөтчү: циклдар'
-            'Artist: Nested Loops':
-              name: 'Сүрөтчү: салынган циклдар'
-            'Artist: Sequence':
-              name: 'Сүрөтчү: ирет'
-            'Bee: Loops':
-              name: 'Аары: циклдар'
-            Conditionals:
-              name: Шартуулар
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
-            'Maze: Loops':
-              name: 'Лабиринт: циклдар'
-            'Maze: Sequence':
-              name: 'Лабиринт: ирет'
-            'Studio: Create a Story':
-              name: 'Play Lab: окуя түзүү'
           lessons:
             'Artist: Debugging':
               name: 'Сүрөтчү: дебаггиң'
@@ -95,23 +53,6 @@ ky:
             'Studio: Create a Story':
               name: 'Play Lab: окуя түзүү'
         course3:
-          stages:
-            Artist:
-              name: Сүрөтчү
-            'Artist: Functions':
-              name: 'Сүрөтчү: функциялар'
-            'Artist: Nested Loops':
-              name: 'Сүрөтчү: салынган циклдар'
-            'Artist: Patterns':
-              name: 'Сүрөтчү: үлгүлөр'
-            Bounce:
-              name: Bounce
-            Computational Thinking:
-              name: Эсептөөчү ой жүгүртүү
-            Maze:
-              name: Лабиринт
-            'Studio: Create a Story':
-              name: 'Play Lab: окуя түзүү'
           lessons:
             Artist:
               name: Сүрөтчү
@@ -133,9 +74,6 @@ ky:
           title: Сүрөтчү
           description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
           description_short: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
-          stages:
-            Artist:
-              name: Сүрөтчү
           lessons:
             Artist:
               name: Сүрөтчү
@@ -145,9 +83,6 @@ ky:
             Скрат менен компүтердик илимдин негиздерин ачкыла!
           description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
             ачкыла!
-          stages:
-            Maze:
-              name: Лабиринт
           lessons:
             Maze:
               name: Лабиринт
@@ -156,27 +91,11 @@ ky:
           description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу
             үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
             кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
-          stages:
-            Artist:
-              name: Сүрөтчү
           lessons:
             Artist:
               name: Сүрөтчү
         course4:
           title: Курс 4
-          stages:
-            Artist:
-              name: Сүрөтчү
-            Artist Binary:
-              name: Сүрөтчү бинардык система
-            'Artist: For Loops':
-              name: 'Сүрөтчү: for циклдары'
-            'Artist: Functions':
-              name: 'Сүрөтчү: функциялар'
-            'Artist: Functions with Parameters':
-              name: 'Сүрөтчү: параметри бар функциялар'
-            'Artist: Variables':
-              name: 'Сүрөтчү: өзгөрмөлөр'
           lessons:
             Artist:
               name: Сүрөтчү
@@ -191,17 +110,6 @@ ky:
             'Artist: Variables':
               name: 'Сүрөтчү: өзгөрмөлөр'
         Course4pre:
-          stages:
-            'Artist: Functions':
-              name: 'Сүрөтчү: функциялар'
-            'Artist: Loops':
-              name: 'Сүрөтчү: циклдар'
-            'Artist: Nested Loops':
-              name: 'Сүрөтчү: салынган циклдар'
-            'Artist: Sequence':
-              name: 'Сүрөтчү: ирет'
-            'Maze: Sequence':
-              name: 'Лабиринт: ирет'
           lessons:
             'Artist: Functions':
               name: 'Сүрөтчү: функциялар'
@@ -214,16 +122,10 @@ ky:
             'Maze: Sequence':
               name: 'Лабиринт: ирет'
         usability:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
           lessons:
             Variables:
               name: Өзгөрмөлөр
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: Шартуулар
           lessons:
             'Eval: Conditionals':
               name: Шартуулар
@@ -233,63 +135,16 @@ ky:
             же оюн түзгүлө.
           description_short: Play Lab колдонуп, Disney Infinity каармандары катышкан
             окуя же оюн түзгүлө.
-          stages:
-            Infinity:
-              name: Чексиздик
           lessons:
             Infinity:
               name: Чексиздик
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         netsim:
           title: Интернет симулятор
         20-hour:
-          stages:
-            Abstraction:
-              name: Абстракция
-            Algorithms:
-              name: Алгоритмдер
-            Computational Thinking:
-              name: Эсептөөчү ой жүгүртүү
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
-            Introduction to Computer Science:
-              name: Компүтер илимине киришүү
-            Relay Programming:
-              name: Релени програмдоо
-            Song Writing:
-              name: Ыр жазуу
-            The Artist:
-              name: Сүрөтчү
-            The Artist 2:
-              name: 2-Сүрөтчү
-            The Artist 3:
-              name: 3-Сүрөтчү
-            The Artist 4:
-              name: 4-Сүрөтчү
-            The Artist 5:
-              name: 5-Сүрөтчү
-            The Farmer:
-              name: Фермер
-            The Farmer 2:
-              name: 2-фермер
-            The Farmer 3:
-              name: 3-фермер
-            The Internet:
-              name: Интернет
-            The Maze:
-              name: Лабиринт
-            Wrap-up:
-              name: Жыйынтыктоо
           lessons:
             Abstraction:
               name: Абстракция
@@ -332,11 +187,6 @@ ky:
             Wrap-up:
               name: Жыйынтыктоо
         edit-code:
-          stages:
-            The Artist:
-              name: Сүрөтчү
-            The Maze:
-              name: Лабиринт
           lessons:
             The Artist:
               name: Сүрөтчү
@@ -346,33 +196,21 @@ ky:
           title: Окуялар
           description: Окуялар
           description_short: Окуялар
-          stages:
-            Bounce:
-              name: Bounce
           lessons:
             Bounce:
               name: Bounce
         flappy:
           title: Flappy Code
-          stages:
-            Flappy Code:
-              name: Flappy Code
           lessons:
             Flappy Code:
               name: Flappy Code
         jigsaw:
           title: Jigsaw
-          stages:
-            Jigsaw:
-              name: Jigsaw
           lessons:
             Jigsaw:
               name: Jigsaw
         step:
           title: Кадам
-          stages:
-            Step:
-              name: Кадам
           lessons:
             Step:
               name: Кадам
@@ -382,52 +220,26 @@ ky:
             илимдин негиздерин ачкыла!
           description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
             ачкыла!
-          stages:
-            Hour of Code 2013:
-              name: Код сааты 2013
           lessons:
             Hour of Code 2013:
               name: Код сааты 2013
         algebraPD:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         algebraPD3:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         algebraPD-NexTech:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         algebraPD-iZone:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         allthethings:
-          stages:
-            Artist:
-              name: Сүрөтчү
-            Bounce:
-              name: Bounce
-            Jigsaw:
-              name: Jigsaw
-            Maze:
-              name: Лабиринт
-            Web Lab:
-              name: Web Lab
           lessons:
             Artist:
               name: Сүрөтчү
@@ -440,33 +252,16 @@ ky:
             Web Lab:
               name: Web Lab
         algebraPD2b:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         cspfacilitator:
-          stages:
-            App Lab:
-              name: App Lab
-            Internet Simulator:
-              name: Интернет симулятор
           lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
               name: Интернет симулятор
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Жыйынтыктоо
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -477,22 +272,10 @@ ky:
             Wrap-up:
               name: Жыйынтыктоо
         algebraPD2:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Жыйынтыктоо
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -503,15 +286,6 @@ ky:
             Wrap-up:
               name: Жыйынтыктоо
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Жыйынтыктоо
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -522,106 +296,59 @@ ky:
             Wrap-up:
               name: Жыйынтыктоо
         asUnplugged:
-          stages:
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
           lessons:
             Graph Paper Programming:
               name: Графикалык кагазды програмдоо
         starwars:
-          stages:
-            Hour of Code 2015:
-              name: Код сааты 2015
           lessons:
             Hour of Code 2015:
               name: Код сааты 2015
         starwarsblocks:
-          stages:
-            Hour of Code 2015:
-              name: Код сааты 2015
           lessons:
             Hour of Code 2015:
               name: Код сааты 2015
         mc:
           title: Minecraft код сааты
-          stages:
-            Hour of Code 2015:
-              name: Код сааты 2015
           lessons:
             Hour of Code 2015:
               name: Код сааты 2015
         algebraPD1:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         csp1-2017:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: Функциялар
           lessons:
             Functions:
               name: Функциялар
         algebraFacilitator:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         allthehiddenthings:
-          stages:
-            Game Lab:
-              name: Оюн лабы
           lessons:
             Game Lab:
               name: Оюн лабы
         gradeKinder:
-          stages:
-            Events:
-              name: Окуялар
-            Loops:
-              name: Циклдер
           lessons:
             Events:
               name: Окуялар
             Loops:
               name: Циклдер
         grade4:
-          stages:
-            'New Artist: Functions':
-              name: 'Жаңы сүрөтчү: функциялар'
           lessons:
             'New Artist: Functions':
               name: 'Жаңы сүрөтчү: функциялар'
         grade1:
-          stages:
-            Events:
-              name: Окуялар
-            Loops:
-              name: Циклдер
           lessons:
             Events:
               name: Окуялар
             Loops:
               name: Циклдер
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: 'Сүрөтчү: for циклдары'
-            'Artist: Functions with Parameters':
-              name: 'Сүрөтчү: параметри бар функциялар'
-            'Artist: Variables':
-              name: 'Сүрөтчү: өзгөрмөлөр'
           lessons:
             'Artist: For Loops':
               name: 'Сүрөтчү: for циклдары'
@@ -630,15 +357,6 @@ ky:
             'Artist: Variables':
               name: 'Сүрөтчү: өзгөрмөлөр'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Жыйынтыктоо
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -649,24 +367,12 @@ ky:
             Wrap-up:
               name: Жыйынтыктоо
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'Сүрөтчү: салынган циклдар'
-            Bounce:
-              name: Bounce
           lessons:
             'Artist: Nested Loops':
               name: 'Сүрөтчү: салынган циклдар'
             Bounce:
               name: Bounce
         csd3-2017:
-          stages:
-            Functions:
-              name: Функциялар
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
           lessons:
             Functions:
               name: Функциялар
@@ -675,19 +381,6 @@ ky:
             Conditionals:
               name: Шартуулар
         k5concepts:
-          stages:
-            Conditionals:
-              name: Шартуулар
-            Events:
-              name: Окуялар
-            Functions:
-              name: Функциялар
-            Functions with Parameters:
-              name: Параметри бар функциялар
-            Loops:
-              name: Циклдер
-            Variables:
-              name: Өзгөрмөлөр
           lessons:
             Conditionals:
               name: Шартуулар
@@ -702,40 +395,21 @@ ky:
             Variables:
               name: Өзгөрмөлөр
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: Мугалимдин тактасы
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
         basketball:
-          stages:
-            Bounce:
-              name: Bounce
           lessons:
             Bounce:
               name: Bounce
         hoc-encryption:
           title: 'Код сааты: кадимки шифрлөө'
-        fesbinary:
-          stages:
-            Binary Artist Puzzles:
-              name: Бинардык Сүрөтчү тапшырмалары
-          lessons:
-            Binary Artist Puzzles:
-              name: Бинардык Сүрөтчү тапшырмалары
         csd2-2017:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         minecraft:
           title: Код сааты, Minecraft дизайнери
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Код сааты, Minecraft дизайнери
           lessons:
             Minecraft Hour of Code Designer:
               name: Код сааты, Minecraft дизайнери
@@ -744,13 +418,6 @@ ky:
             байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында ага чейин
             жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10
             мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
-          stages:
-            Pre Hour of Code Survey:
-              name: Код сааты алдындагы сурамжылоо
-            Flappy Code:
-              name: Flappy Code
-            Post Hour of Code Survey:
-              name: Код саатынан кийинки сурамжылоо
           lessons:
             Pre Hour of Code Survey:
               name: Код сааты алдындагы сурамжылоо
@@ -759,34 +426,18 @@ ky:
             Post Hour of Code Survey:
               name: Код саатынан кийинки сурамжылоо
         coursea-draft:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         courseb-draft:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         coursec-draft:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
         coursed-draft:
-          stages:
-            Nested Loops in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
-            Artist Binary:
-              name: Сүрөтчү бинардык система
-            Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар долбоору
           lessons:
             Nested Loops in Artist:
               name: Сүрөтчүдөгү салынган циклдар
@@ -795,24 +446,12 @@ ky:
             Nested Loops Project in Artist:
               name: Сүрөтчүдөгү салынган циклдар долбоору
         coursee-draft:
-          stages:
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
-            Conditionals:
-              name: Шартуулар
           lessons:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
             Conditionals:
               name: Шартуулар
         coursef-draft:
-          stages:
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
           lessons:
             Variables in Artist:
               name: Сүрөтчүдөгү өзгөрмөлөр
@@ -828,13 +467,6 @@ ky:
             Zombies менен бирге ачкыла! Бул версияда Код саатын жакшыртуу максатында
             аг чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөөрүнө
             10 мүнөт калганда кийинки сурамжылоого убакыт бөлүшүн сурангыла.
-          stages:
-            Pre Hour of Code Survey:
-              name: Код сааты алдындагы сурамжылоо
-            Hour of Code 2013:
-              name: Код сааты 2013
-            Post Hour of Code Survey:
-              name: Код саатынан кийинки сурамжылоо
           lessons:
             Pre Hour of Code Survey:
               name: Код сааты алдындагы сурамжылоо
@@ -849,13 +481,6 @@ ky:
             Zombies менен бирге ачкыла! Бул версияда Код саатын жакшыртуу максатында
             аг чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөөрүнө
             10 мүнөт калганда кийинки сурамжылоого убакыт бөлүшүн сурангыла.
-          stages:
-            Pre Hour of Code Survey:
-              name: Код сааты алдындагы сурамжылоо
-            Hour of Code 2013:
-              name: Код сааты 2013
-            Post Hour of Code Survey:
-              name: Код саатынан кийинки сурамжылоо
           lessons:
             Pre Hour of Code Survey:
               name: Код сааты алдындагы сурамжылоо
@@ -864,38 +489,20 @@ ky:
             Post Hour of Code Survey:
               name: Код саатынан кийинки сурамжылоо
         csf2harvey:
-          stages:
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lessons:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
         csd6-draft:
-          stages:
-            Lists:
-              name: Тизмелер
-            Functions with Parameters:
-              name: Параметри бар функциялар
           lessons:
             Lists:
               name: Тизмелер
             Functions with Parameters:
               name: Параметри бар функциялар
         coursee-ramp:
-          stages:
-            Conditionals:
-              name: Шартуулар
           lessons:
             Conditionals:
               name: Шартуулар
         csd6-2017:
-          stages:
-            Lists:
-              name: Тизмелер
-            Functions with Parameters:
-              name: Параметри бар функциялар
-            Functions with Parameters_:
-              name: Параметри бар функциялар
           lessons:
             Lists:
               name: Тизмелер
@@ -904,13 +511,6 @@ ky:
             Functions with Parameters_:
               name: Параметри бар функциялар
         csd3-draft:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -919,29 +519,14 @@ ky:
             Functions:
               name: Функциялар
         csd3-old:
-          stages:
-            Functions:
-              name: Функциялар
           lessons:
             Functions:
               name: Функциялар
         csd2-draft:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         csd3-chapters:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-            'null':
-              name: нөл
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -952,37 +537,6 @@ ky:
             'null':
               name: нөл
         artist-and-bb8:
-          stages:
-            B8 New BB8:
-              name: B8 Жаңы BB8
-            c8 to BB8:
-              name: c8 --> BB8
-            B8 BB8:
-              name: B8 BB8
-            C9 Artist Loops:
-              name: C9 Сүрөтчү циклдары
-            C8 to BB8:
-              name: C8 --> BB8
-            D7 to Laurel:
-              name: D7 Лаурелге
-            D6 Frozen Artist:
-              name: D6 Тоңгон сүрөтчү
-            F7 add Conditionals:
-              name: F7 шарттууларды кошуу
-            F5 Minecraft:
-              name: F5 Minecraft
-            Programming with BB-8:
-              name: BB-8 менен програмдоо
-            Loops with BB-8:
-              name: BB-8 менен циклдар
-            D13 no If/While:
-              name: D13 If/While жок
-            Bounce:
-              name: Bounce
-            NewBounce:
-              name: NewBounce
-            F PlayLab Variables:
-              name: F PlayLab өзгөрмөлөр
           lessons:
             B8 New BB8:
               name: B8 Жаңы BB8
@@ -1015,14 +569,6 @@ ky:
             F PlayLab Variables:
               name: F PlayLab өзгөрмөлөр
         coursea-2017:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
@@ -1032,88 +578,22 @@ ky:
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
         courseb-2017:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         coursec-2017:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         coursed-2017:
-          stages:
-            Nested Loops in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
-            Nested Loops Project in Artist:
-              name: Тоңгондогу салынган циклдар
           lessons:
             Nested Loops in Artist:
               name: Сүрөтчүдөгү салынган циклдар
             Nested Loops Project in Artist:
               name: Тоңгондогу салынган циклдар
         coursee-2017:
-          stages:
-            Introduction:
-              description_teacher: Бул жылышта окуучулар Code.org онлайн иштактасы
-                менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу
-                мүмкүн) башташат. Интерфейстин негизги функционалын - "Аткар", "Кайта",
-                "Кадам" сыяктуу баскычтарын үйрөнүшөт. Blockly блокторун сүйрөө, жок
-                кылуу жана туташтыруу тааныштыруу виделорунда көрсөтүлөт. Тапшырмаларда
-                окуучулар Лабиринтте жана Сүрөтчүдө иреттештирүү жана дебаггиң жөндөмдөрүн
-                машыктырышат.
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки төрт сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүү үчүн өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораторисынын алдын ала курулган долбоорлорунун үлгүлөрү менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн колдонуп жеке долбоорун програмдап чыгышат. Долбоордун
-                бул бөлүгүндө, окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда
-                колдонууга аракет кылышат. Бул долбоордун төрт баскычынын тең жетектемелерин
-                биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Build Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорун иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун
-                эң узун баскычы болот деп ойлойбуз. Бул долбоордун бардык баскычтарынын
-                жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
-              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат.
-                Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз.
-                Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
-                биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
-            Present Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн програмдоо чөйрөсү катары колдонуп жеке долбоорун
-                програмдашат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында
-                көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө
-                ээ болушат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи
-                баскычтан табасыңар [here](https://curriculum.code.org/csf/coursee/12/).
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
           lessons:
             Introduction:
               description_teacher: Бул жылышта окуучулар Code.org онлайн иштактасы
@@ -1168,76 +648,6 @@ ky:
             Nested Loops with Frozen:
               name: Тоңгондогу салынган циклдар
         coursef-2017:
-          stages:
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
-                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
-                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
-                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
-                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
-                деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү
-                мүмкүнчүлүгүн алышат.
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
-                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
-                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
-                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
-                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-              description_student: Програмдоого даяр болгула. Бул тапшырмада параметри
-                бар функциялар менен Сүрөтчүдө таасирдүү сүрөттөрдү жаратасыңар.
-              description_teacher: Бул сабакта окуучулар параметри бар жана жок функциялар
-                менен иштөөнү улантышат. Окуучулар эркин оюн деңгээлинде функцияларды
-                өзгөртүп баштаардан мурун, параметрлүү жана параметрсиз чиймелерди
-                жаратуу мүмкүнчүлүгүн алышат.
-            Functions with Parameters in Bee:
-              description_teacher: Бул сабак аары чөйрөсүн көрсөтөт жана мурунку Сүрөтчү
-                баскычындагы параметри бар функциялар концептин уланатат. Окуучулар
-                татаал жолду өтүп, аары жана бал үлгүлөрүн чогултуу үчүн функцияларды
-                жазганды жана колдонгонду өздөштүрүшөт.
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки беш сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүүгө татыктуу коддун өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораториясынын үлгү долбоорлору менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Долбоорлорун тесттен өткөзүп, дагы ойлонуштуруп көрүп, кайра бир иштеп чыгышат. Аягында окуучулар ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө окуучулар дизайндоо
-                процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат.
-                Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан
-                табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Build Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорунун дизайнын иштеп чыгуу мүмкүнчүлүгү берилет.
-                Бул долбоордун эң узун баскычы болот. Бул долбоордун беш баскычынын
-                тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Revise Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоор даяр болгондо, окуучулар теңтуштарынын
-                пикирин угуп, долбоорун өзгөртүп чыгуу мүмкүнчүлүк алышат. Бул долбоордун
-                беш баскычынын тең жетектемелерин долбоордун башынан табасыңар [here](https://curriculum.code.org/csf/coursef/15/).
-            Present Your Project:
-              description_teacher: Беш сабактан турган курста, оокуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Аягында окуучулар бүткөргөн ишин теңтуштарынын
-                алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү
-                мүмкүнчүлүгүнө ээ болушат. Бул долбоордун беш баскычынын тең жетектемелерин
-                долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
           lessons:
             Variables in Artist:
               name: Сүрөтчүдөгү өзгөрмөлөр
@@ -1309,19 +719,6 @@ ky:
             Nested Loops with Frozen:
               name: Тоңгондогу салынган циклдар
         express-2017:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар долбоору
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-            Nested Loops Project in Frozen:
-              name: Тоңгондогу салынган циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
@@ -1336,28 +733,12 @@ ky:
             Nested Loops Project in Frozen:
               name: Тоңгондогу салынган циклдар
         pre-express-2017:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Spelling Bee:
-              name: Spelling Bee
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
             Spelling Bee:
               name: Spelling Bee
         e-f-ramp:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Conditionals:
-              name: Шартуулар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -1370,15 +751,6 @@ ky:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
         new-d:
-          stages:
-            Nested Loops in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
-            Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар долбоору
-            Artist Binary:
-              name: Сүрөтчү бинардык система
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Nested Loops in Artist:
               name: Сүрөтчүдөгү салынган циклдар
@@ -1389,19 +761,6 @@ ky:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         new-express:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops Project in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-            Loops in Artist (UPDATED!):
-              name: Сүрөтчүдөгү циклдер (ЖАҢЫРТЫЛГАН!)
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
@@ -1416,24 +775,10 @@ ky:
             Loops in Artist (UPDATED!):
               name: Сүрөтчүдөгү циклдер (ЖАҢЫРТЫЛГАН!)
         new-stages-sept-2017:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
         new-e:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Conditionals:
-              name: Шартуулар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -1446,19 +791,6 @@ ky:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
         new-f:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -1473,26 +805,15 @@ ky:
             Functions with Parameters in Artist:
               name: Сүрөтчүдөгү параметри бар функциялар
         pwc:
-          stages:
-            Programming - Hour of Code:
-              name: Програмдоо - Код сааты
           lessons:
             Programming - Hour of Code:
               name: Програмдоо - Код сааты
         k1hoc2017:
-          stages:
-            Collector Hour of Code 2017:
-              name: Код сааты 2017 чогултуучу
           title: Код сааты 2017, баштапкы класстар
           lessons:
             Collector Hour of Code 2017:
               name: Код сааты 2017 чогултуучу
         hero:
-          stages:
-            'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Код саатында баатырдын сапары'
-            Minecraft Hour of Code:
-              name: Minecraft код сааты
           description_short: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
           description: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код
             жазып Minecraft өткүлө.
@@ -1502,24 +823,10 @@ ky:
             Minecraft Hour of Code:
               name: Minecraft код сааты
         halloween:
-          stages:
-            Halloween Artist:
-              name: Хеллоуин Cүрөтчү
           lessons:
             Halloween Artist:
               name: Хеллоуин Cүрөтчү
         course-e-2018:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Conditionals:
-              name: Шартуулар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -1532,19 +839,6 @@ ky:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
         course-f-2018:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -1559,20 +853,10 @@ ky:
             Functions with Parameters in Artist:
               name: Сүрөтчүдөгү параметри бар функциялар
         csd6-old:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -1581,13 +865,6 @@ ky:
             Functions:
               name: Функциялар
         csd3-2018:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -1596,21 +873,10 @@ ky:
             Functions:
               name: Функциялар
         csd2-2018:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         coursea-2018:
-          stages:
-            Loops in Artist:
-              name: Океан көрүнүшү циклдар менен
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
           lessons:
             Loops in Artist:
               name: Океан көрүнүшү циклдар менен
@@ -1620,37 +886,6 @@ ky:
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Графикалык кагазды програмдоо
-            Loops in Artist:
-              name: Чаптама өнөрү циклдар менен
-            Nested Loops Project in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-            For Loops in Artist:
-              name: Сүрөтчү менен for циклдары
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Nested Loops in Frozen:
-              name: Анна жана Лиза салынган циклдар менен
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
-            Variables as Constant in Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-            Variables that Change in Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
-            Artist Binary:
-              name: Сүрөтчү менен бинардык сүрөттөр
-            Internet:
-              name: Интернет
-            Relay Programming:
-              name: Релени програмдоо
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Графикалык кагазды програмдоо
@@ -1683,28 +918,10 @@ ky:
             Graph Paper Programming:
               name: Графикалык кагазды програмдоо
         courseb-2018:
-          stages:
-            Loops in Artist:
-              name: Циклдар менен бакчаларды тартуу
           lessons:
             Loops in Artist:
               name: Циклдар менен бакчаларды тартуу
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Графикалык кагазды програмдоо
-            Loops in Artist:
-              name: Циклдар менен формаларды тартуу
-            Nested Loops in Artist:
-              name: Салынган циклдар менен укмуштуу формалар
-            Artist Binary:
-              name: Сүрөтчү менен бинардык сүрөттөр
-            Nested Loops in Frozen:
-              name: Анна жана Элза менен карчалар
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
-            Relay Programming:
-              name: Релени програмдоо
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Графикалык кагазды програмдоо
@@ -1721,75 +938,16 @@ ky:
             Relay Programming:
               name: Релени програмдоо
         coursec-2018:
-          stages:
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Loops in Artist:
-              name: Чаптама өнөрү циклдар менен
           lessons:
             Programming in Artist:
               name: Код менен Сүрөт жаратуу
             Loops in Artist:
               name: Чаптама өнөрү циклдар менен
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Параметри бар функциялар
           lessons:
             Functions with Parameters:
               name: Параметри бар функциялар
         coursee-2018:
-          stages:
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Loops in Artist:
-              name: Циклдар менен формаларды тартуу
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Introduction:
-              description_teacher: Бул жылышта окуучулар Code.org онлайн иштактасы
-                менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу
-                мүмкүн) башташат. Интерфейстин негизги функционалын - "Аткар", "Кайта",
-                "Кадам" сыяктуу баскычтарын үйрөнүшөт. Blockly блокторун сүйрөө, жок
-                кылуу жана туташтыруу тааныштыруу виделорунда көрсөтүлөт. Тапшырмаларда
-                окуучулар Лабиринтте жана Сүрөтчүдө иреттештирүү жана дебаггиң жөндөмдөрүн
-                машыктырышат.
-            Functions in Artist:
-              name: Сүрөтчү менен функциялар
-              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат.
-                Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз.
-                Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
-                биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки төрт сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүү үчүн өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораторисынын алдын ала курулган долбоорлорунун үлгүлөрү менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн колдонуп жеке долбоорун програмдап чыгышат. Долбоордун
-                бул бөлүгүндө, окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда
-                колдонууга аракет кылышат. Бул долбоордун төрт баскычынын тең жетектемелерин
-                биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Build Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорун иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун
-                эң узун баскычы болот деп ойлойбуз. Бул долбоордун бардык баскычтарынын
-                жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Present Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн програмдоо чөйрөсү катары колдонуп жеке долбоорун
-                програмдашат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында
-                көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө
-                ээ болушат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи
-                баскычтан табасыңар [here](https://curriculum.code.org/csf/coursee/12/).
-            Internet:
-              name: Интернет
-            Minecraft Hour of Code:
-              name: Minecraft код сааты
           lessons:
             Programming in Artist:
               name: Код менен Сүрөт жаратуу
@@ -1842,80 +1000,6 @@ ky:
             Minecraft Hour of Code:
               name: Minecraft код сааты
         coursef-2018:
-          stages:
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Loops in Artist:
-              name: Циклдар менен формаларды тартуу
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables in Artist:
-              name: Сүрөтчүдөгү өзгөрмөлөр
-              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
-                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
-                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
-                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
-                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
-                деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү
-                мүмкүнчүлүгүн алышат.
-            For Loops in Artist:
-              name: Сүрөтчү менен for циклдары
-              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
-                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
-                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
-                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
-                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
-            Functions with Parameters in Artist:
-              name: Сүрөтчүдөгү параметри бар функциялар
-              description_student: Програмдоого даяр болгула. Бул тапшырмада параметри
-                бар функциялар менен Сүрөтчүдө таасирдүү сүрөттөрдү жаратасыңар.
-              description_teacher: Бул сабакта окуучулар параметри бар жана жок функциялар
-                менен иштөөнү улантышат. Окуучулар эркин оюн деңгээлинде функцияларды
-                өзгөртүп баштаардан мурун, параметрлүү жана параметрсиз чиймелерди
-                жаратуу мүмкүнчүлүгүн алышат.
-            Functions with Parameters in Bee:
-              description_teacher: Бул сабак аары чөйрөсүн көрсөтөт жана мурунку Сүрөтчү
-                баскычындагы параметри бар функциялар концептин уланатат. Окуучулар
-                татаал жолду өтүп, аары жана бал үлгүлөрүн чогултуу үчүн функцияларды
-                жазганды жана колдонгонду өздөштүрүшөт.
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки беш сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүүгө татыктуу коддун өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораториясынын үлгү долбоорлору менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Долбоорлорун тесттен өткөзүп, дагы ойлонуштуруп көрүп, кайра бир иштеп чыгышат. Аягында окуучулар ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө окуучулар дизайндоо
-                процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат.
-                Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан
-                табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Build Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорунун дизайнын иштеп чыгуу мүмкүнчүлүгү берилет.
-                Бул долбоордун эң узун баскычы болот. Бул долбоордун беш баскычынын
-                тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Revise Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоор даяр болгондо, окуучулар теңтуштарынын
-                пикирин угуп, долбоорун өзгөртүп чыгуу мүмкүнчүлүк алышат. Бул долбоордун
-                беш баскычынын тең жетектемелерин долбоордун башынан табасыңар [here](https://curriculum.code.org/csf/coursef/15/).
-            Present Your Project:
-              description_teacher: Беш сабактан турган курста, оокуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Аягында окуучулар бүткөргөн ишин теңтуштарынын
-                алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү
-                мүмкүнчүлүгүнө ээ болушат. Бул долбоордун беш баскычынын тең жетектемелерин
-                долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Variables as Constant in Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-            Variables that Change in Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
           lessons:
             Programming in Artist:
               name: Код менен Сүрөт жаратуу
@@ -1991,41 +1075,24 @@ ky:
             Variables that Change in Artist:
               name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
         csp1-2018:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         pre-express-2018:
-          stages:
-            Loops in Artist:
-              name: Циклдар менен бакчаларды тартуу
-            Spelling Bee:
-              name: Spelling Bee
           lessons:
             Loops in Artist:
               name: Циклдар менен бакчаларды тартуу
             Spelling Bee:
               name: Spelling Bee
         frozen-2018:
-          stages:
-            Artist:
-              name: Сүрөтчү
           lessons:
             Artist:
               name: Сүрөтчү
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Сүрөтчү
           lessons:
             Artist:
               name: Сүрөтчү
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Сүрөтчү
           lessons:
             Artist:
               name: Сүрөтчү
@@ -2038,69 +1105,6 @@ ky:
             csp_functions:
               display_name: Функциялар
         coursef-2019:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Variables as Constant in Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
-                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-            Variables that Change in Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
-                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
-                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
-                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
-                деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү
-                мүмкүнчүлүгүн алышат.
-            For Loops in Artist:
-              name: Сүрөтчү менен for циклдары
-              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
-                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
-                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
-                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
-                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки беш сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүүгө татыктуу коддун өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораториясынын үлгү долбоорлору менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Долбоорлорун тесттен өткөзүп, дагы ойлонуштуруп көрүп, кайра бир иштеп чыгышат. Аягында окуучулар ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө окуучулар дизайндоо
-                процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат.
-                Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан
-                табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Build Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорунун дизайнын иштеп чыгуу мүмкүнчүлүгү берилет.
-                Бул долбоордун эң узун баскычы болот. Бул долбоордун беш баскычынын
-                тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            Revise Your Project:
-              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Долбоор даяр болгондо, окуучулар теңтуштарынын
-                пикирин угуп, долбоорун өзгөртүп чыгуу мүмкүнчүлүк алышат. Бул долбоордун
-                беш баскычынын тең жетектемелерин долбоордун башынан табасыңар [here](https://curriculum.code.org/csf/coursef/15/).
-            Present Your Project:
-              description_teacher: Беш сабактан турган курста, оокуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Аягында окуучулар бүткөргөн ишин теңтуштарынын
-                алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү
-                мүмкүнчүлүгүнө ээ болушат. Бул долбоордун беш баскычынын тең жетектемелерин
-                долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
-            The Artist:
-              name: Сүрөтчү
-            Internet:
-              name: Интернет
           lesson_groups:
             csf_variables:
               display_name: Өзгөрмөлөр
@@ -2168,19 +1172,6 @@ ky:
             Internet:
               name: Интернет
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Графикалык кагазды програмдоо
-            Relay Programming:
-              name: Релени програмдоо
-            Loops in Artist:
-              name: Циклдар менен формаларды тартуу
-            Nested Loops in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Artist Binary:
-              name: Сүрөтчү менен бинардык сүрөттөр
           lesson_groups:
             csf_events:
               display_name: Окуялар
@@ -2202,49 +1193,6 @@ ky:
             Artist Binary:
               name: Сүрөтчү менен бинардык сүрөттөр
         coursee-2019:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions in Artist:
-              name: Сүрөтчү менен функциялар
-              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат.
-                Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз.
-                Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
-                биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
-            Explore Project Ideas:
-              description_teacher: |-
-                Кийинки төрт сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүү үчүн өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.
-
-                Изилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораторисынын алдын ала курулган долбоорлорунун үлгүлөрү менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтө алышат.
-            The Design Process:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн колдонуп жеке долбоорун програмдап чыгышат. Долбоордун
-                бул бөлүгүндө, окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда
-                колдонууга аракет кылышат. Бул долбоордун төрт баскычынын тең жетектемелерин
-                биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Build Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке
-                долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын
-                бири менен өз долбоорлорун иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун
-                эң узун баскычы болот деп ойлойбуз. Бул долбоордун бардык баскычтарынын
-                жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
-            Present Your Project:
-              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы
-                же Сүрөтчү чөйрөсүн програмдоо чөйрөсү катары колдонуп жеке долбоорун
-                програмдашат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында
-                көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө
-                ээ болушат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи
-                баскычтан табасыңар [here](https://curriculum.code.org/csf/coursee/12/).
-            Nested Loops in Artist:
-              name: Салынган циклдар менен укмуштуу формалар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
           lesson_groups:
             csf_functions:
               display_name: Функциялар
@@ -2292,25 +1240,6 @@ ky:
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
         express-2019:
-          stages:
-            Relay Programming:
-              name: Релени програмдоо
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Loops in Artist:
-              name: Чаптама өнөрү циклдар менен
-            Nested Loops in Frozen:
-              name: Анна жана Элза менен карчалар
-            Functions in Artist:
-              name: Сүрөтчү менен функциялар
-            Variables as Constant in Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-            Variables that Change in Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
-            For Loops in Artist:
-              name: Сүрөтчү менен for циклдары
-            Artist Binary:
-              name: Сүрөтчү бинардык система
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2340,20 +1269,10 @@ ky:
             Artist Binary:
               name: Сүрөтчү бинардык система
         andrea-test:
-          stages:
-            'null':
-              name: нөл
           lessons:
             'null':
               name: нөл
         coursec-2019:
-          stages:
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Sticker Art with Loops:
-              name: Чаптама өнөрү циклдар менен
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2369,21 +1288,6 @@ ky:
         gamelab:
           title: Оюн лабы
         coursea-2019:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
-            Ocean Scene with Loops:
-              name: Океан көрүнүшү циклдар менен
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2405,9 +1309,6 @@ ky:
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
         courseb-2019:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2417,13 +1318,6 @@ ky:
             Loops in Artist:
               name: Циклдар менен бакчаларды тартуу
         pre-express-2019:
-          stages:
-            Loops in Artist:
-              name: Циклдар менен бакчаларды тартуу
-            Spelling Bee:
-              name: Spelling Bee
-            Ocean Scene with Loops:
-              name: Океан көрүнүшү циклдар менен
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2437,20 +1331,10 @@ ky:
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
         csd2-2019:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         csd3-2019:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -2459,9 +1343,6 @@ ky:
             Functions:
               name: Функциялар
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Параметри бар функциялар
           lessons:
             Functions with Parameters:
               name: Параметри бар функциялар
@@ -2474,22 +1355,10 @@ ky:
             csp_functions:
               display_name: Функциялар
         csp1-2019:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         time4csdemo:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lessons:
             Programming in Artist:
               name: Сүрөтчүдөгү програмдоо
@@ -2562,9 +1431,6 @@ ky:
             csp_functions:
               display_name: Функциялар
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Графикалык кагазды програмдоо
           lessons:
             Graph Paper Programming:
               name: Графикалык кагазды програмдоо
@@ -2575,20 +1441,10 @@ ky:
             csp_loops:
               display_name: Циклдер
         csd2-pilot:
-          stages:
-            Lists:
-              name: Тизмелер
           lessons:
             Lists:
               name: Тизмелер
         csd3-pilot:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -2597,9 +1453,6 @@ ky:
             Functions:
               name: Функциялар
         csl-vn:
-          stages:
-            Ocean Scene with Loops:
-              name: Океан көрүнүшү циклдар менен
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2609,13 +1462,6 @@ ky:
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
         peru-2019:
-          stages:
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops Project in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
           lessons:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
@@ -2624,17 +1470,6 @@ ky:
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Циклдер
-            Conditionals:
-              name: Шартуулар
-            Events:
-              name: Окуялар
-            Functions:
-              name: Функциялар
-            Variables:
-              name: Өзгөрмөлөр
           lessons:
             Loops:
               name: Циклдер
@@ -2655,20 +1490,10 @@ ky:
             csp_functions:
               display_name: Функциялар
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Шартуулар
           lessons:
             Conditionals:
               name: Шартуулар
         time4cs-control-unit-2:
-          stages:
-            Nested Loops in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
           lesson_groups:
             csf_conditionals:
               display_name: Шартуулар
@@ -2682,13 +1507,6 @@ ky:
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
         time4cs-experiment-unit-2:
-          stages:
-            Fancy Shapes using Nested Loops:
-              name: Салынган циклдар менен укмуштуу формалар
-            Nested Loops with Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions with Artist:
-              name: Сүрөтчү менен функциялар
           lessons:
             Fancy Shapes using Nested Loops:
               name: Салынган циклдар менен укмуштуу формалар
@@ -2697,9 +1515,6 @@ ky:
             Functions with Artist:
               name: Сүрөтчү менен функциялар
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Шартуулар
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2711,9 +1526,6 @@ ky:
             Conditionals:
               name: Шартуулар
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Шартуулар
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2739,22 +1551,10 @@ ky:
             csp_loops:
               display_name: Циклдер
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Параметри бар функциялар
           lessons:
             Functions with Parameters:
               name: Параметри бар функциялар
         csd3-2020:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-            Text:
-              name: Тексттер
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -2765,14 +1565,6 @@ ky:
             Text:
               name: Тексттер
         coursea-2020:
-          stages:
-            Ocean Scene with Loops:
-              name: Океан көрүнүшү циклдар менен
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2787,9 +1579,6 @@ ky:
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
         courseb-2020:
-          stages:
-            Loops in Artist:
-              name: Циклдар менен бакчаларды тартуу
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2799,11 +1588,6 @@ ky:
             Loops in Artist:
               name: Циклдар менен бакчаларды тартуу
         coursec-2020:
-          stages:
-            Programming in Artist:
-              name: Код менен Сүрөт жаратуу
-            Sticker Art with Loops:
-              name: Чаптама өнөрү циклдар менен
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2815,15 +1599,6 @@ ky:
             Sticker Art with Loops:
               name: Чаптама өнөрү циклдар менен
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Графикалык кагазды програмдоо
-            Relay Programming:
-              name: Релени програмдоо
-            Loops in Artist:
-              name: Циклдар менен формаларды тартуу
-            Artist Binary:
-              name: Сүрөтчү менен бинардык сүрөттөр
           lesson_groups:
             csf_events:
               display_name: Окуялар
@@ -2841,18 +1616,6 @@ ky:
             Artist Binary:
               name: Сүрөтчү менен бинардык сүрөттөр
         coursee-2020:
-          stages:
-            Nested Loops in Artist:
-              name: Салынган циклдар менен укмуштуу формалар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions in Artist:
-              name: Сүрөтчү менен функциялар
-              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат.
-                Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз.
-                Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
-                биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
           lesson_groups:
             csf_functions:
               display_name: Функциялар
@@ -2869,29 +1632,6 @@ ky:
                 Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
                 биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
         coursef-2020:
-          stages:
-            Variables as Constant in Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
-                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-            Variables that Change in Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
-                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
-                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
-                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
-                деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү
-                мүмкүнчүлүгүн алышат.
-            For Loops in Artist:
-              name: Сүрөтчү менен for циклдары
-              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
-                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
-                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
-                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
-                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
-            Internet:
-              name: Интернет
           lesson_groups:
             csf_variables:
               display_name: Өзгөрмөлөр
@@ -2919,31 +1659,6 @@ ky:
             Internet:
               name: Интернет
         express-2020:
-          stages:
-            Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
-            Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
-            For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
-            Creating Art with Code:
-              name: Код менен Сүрөт жаратуу
-            Sticker Art with Loops:
-              name: Чаптама өнөрү циклдар менен
-            Snowflakes with Anna and Elsa:
-              name: Анна жана Элза менен карчалар
-            Functions with Artist:
-              name: Сүрөтчү менен функциялар
-            Variables with Artist:
-              name: Сүрөтчү менен өзгөрмөлөр
-            Changing Variables with Artist:
-              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
-            For Loops with Artist:
-              name: Сүрөтчү менен for циклдары
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2979,20 +1694,6 @@ ky:
             For Loops with Artist:
               name: Сүрөтчү менен for циклдары
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Spelling Bee
-            Ocean Scene with Loops:
-              name: Океан көрүнүшү циклдар менен
-              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын
-                иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта,
-                циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
-                циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
-                колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
-            Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
-            Drawing Gardens with Loops:
-              name: Циклдар менен бакчаларды тартуу
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -3013,42 +1714,20 @@ ky:
             Drawing Gardens with Loops:
               name: Циклдар менен бакчаларды тартуу
         csp5-virtual:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
           lessons:
             Variables:
               name: Өзгөрмөлөр
         virtual-holding-place:
-          stages:
-            Functions:
-              name: Функциялар
           lessons:
             Functions:
               name: Функциялар
         code-break:
-          stages:
-            Algorithms:
-              name: Алгоритмдер
-            Events:
-              name: Окуялар
           lessons:
             Algorithms:
               name: Алгоритмдер
             Events:
               name: Окуялар
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: Циклдер
-            Events:
-              name: Окуялар
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-            Variables:
-              name: Өзгөрмөлөр
           lessons:
             Loops:
               name: Циклдер
@@ -3061,15 +1740,6 @@ ky:
             Variables:
               name: Өзгөрмөлөр
         csd3-virtual:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Text:
-              name: Тексттер
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Өзгөрмөлөр
@@ -3080,30 +1750,18 @@ ky:
             Functions:
               name: Функциялар
         ui-test-script-in-course-2017:
-          stages:
-            Lesson:
-              name: Сабак
           lessons:
             Lesson:
               name: Сабак
         ui-test-script-in-course-2019:
-          stages:
-            Lesson:
-              name: Сабак
           lessons:
             Lesson:
               name: Сабак
         ui-test-versioned-script-2017:
-          stages:
-            Lesson:
-              name: Сабак
           lessons:
             Lesson:
               name: Сабак
         ui-test-versioned-script-2019:
-          stages:
-            Lesson:
-              name: Сабак
           lessons:
             Lesson:
               name: Сабак

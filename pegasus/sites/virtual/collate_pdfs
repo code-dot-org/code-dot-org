@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
-require 'cdo/rack/rackup'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'cdo/rack/rackup'
 require 'cdo/rake_utils'
 CDO.log.level = Logger::WARN
 
@@ -13,4 +15,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

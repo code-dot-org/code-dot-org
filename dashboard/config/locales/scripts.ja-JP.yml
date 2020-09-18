@@ -26,39 +26,6 @@ ja:
             1 年生 (5-7才) におすすめのコースです。
           description_short: コース１は初心者向けです。
           description_audience: 4-6 才
-          stages:
-            'Artist: Loops':
-              name: アーティスト：ループ
-            'Artist: Sequence':
-              name: 'アーティスト: シーケンス'
-            'Artist: Shapes':
-              name: アーティスト：いろいろなかたち
-            'Bee: Loops':
-              name: 'みつばち: ループ'
-            'Bee: Sequence':
-              name: 'みつばち: シーケンス'
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Going Places Safely:
-              name: 安全な道を通って行く
-            Happy Maps:
-              name: ハッピーマップ
-            'Jigsaw: Learn to drag and drop':
-              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
-            'Maze: Debugging':
-              name: '迷路: デバッグ'
-            'Maze: Loops':
-              name: '迷路: ループ'
-            'Maze: Sequence':
-              name: '迷路: シーケンス'
-            Move it, Move it:
-              name: 動かせ！動かせ！
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Spelling Bee:
-              name: つづりみつばち
-            'Studio: Create a Story':
-              name: プレイラボ：お話を作りましょう
           lessons:
             'Artist: Loops':
               name: アーティスト：ループ
@@ -97,41 +64,6 @@ ja:
           description: コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。
           description_short: コース2は読み書きができる生徒のためのコースです。
           description_audience: 6才以上(読み書きができる)
-          stages:
-            'Artist: Debugging':
-              name: アーティスト：デバッグ
-            'Artist: Loops':
-              name: アーティスト：ループ
-            'Artist: Nested Loops':
-              name: アーティスト：入れ子のループ
-            'Artist: Sequence':
-              name: 'アーティスト: シーケンス'
-            'Bee: Conditionals':
-              name: みつばち：条件文（じょうけんぶん）
-            'Bee: Debugging':
-              name: 'みつばち: デバッグ'
-            'Bee: Loops':
-              name: 'みつばち: ループ'
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Conditionals:
-              name: 条件
-            Flappy:
-              name: フラッピー
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
-            'Maze: Loops':
-              name: '迷路: ループ'
-            'Maze: Sequence':
-              name: '迷路: シーケンス'
-            'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
-            Relay programming:
-              name: リレー プログラミング
-            'Studio: Create a Story':
-              name: プレイラボ：お話を作りましょう
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
           lessons:
             'Artist: Debugging':
               name: アーティスト：デバッグ
@@ -172,47 +104,6 @@ ja:
           description: コース3は、コース2を終えた生徒向けに作られています。生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
           description_short: コース3はコース２をがくしゅうした人のためのコースです。
           description_audience: 8-18 才
-          stages:
-            Artist:
-              name: アーティスト
-            'Artist: Functions':
-              name: アーティスト：関数
-            'Artist: Nested Loops':
-              name: アーティスト：入れ子のループ
-            'Artist: Patterns':
-              name: アーティスト：法則（ほうそく）
-            'Bee: Conditionals':
-              name: みつばち：条件文（じょうけんぶん）
-            'Bee: Debugging':
-              name: 'みつばち: デバッグ'
-            'Bee: Functions':
-              name: 'みつばち: 関数'
-            'Bee: Nested Loops':
-              name: みつばち：入れ子のループ
-            Bounce:
-              name: バウンド
-            Computational Thinking:
-              name: コンピュテーショナル・シンキング（コンピューターの様に考える）
-            Crowdsourcing:
-              name: クラウドソーシング
-            Dice Race:
-              name: 言うレース
-            'Farmer: While Loops':
-              name: '農夫: While Loops'
-            Functional Suncatchers:
-              name: 関数サンキャッチャー
-            Internet:
-              name: インターネット
-            Maze:
-              name: 迷路
-            'Maze: Conditionals':
-              name: 迷路：条件文
-            Songwriting:
-              name: 作詞作曲
-            'Studio: Create a Game':
-              name: プレイラボ：ゲームを作りましょう
-            'Studio: Create a Story':
-              name: プレイラボ：お話を作りましょう
           lessons:
             Artist:
               name: アーティスト
@@ -258,9 +149,6 @@ ja:
           title: プレイラボ
           description: プレイラボでお話やゲームを作りましょう！
           description_short: プレイラボでお話やゲームを作りましょう！
-          stages:
-            Play Lab:
-              name: プレイラボ
           lessons:
             Play Lab:
               name: プレイラボ
@@ -268,9 +156,6 @@ ja:
           title: アーティスト
           description: アーティストでかっこいい絵やデザインを描きましょう！
           description_short: アーティストでかっこいい絵やデザインを描きましょう！
-          stages:
-            Artist:
-              name: アーティスト
           lessons:
             Artist:
               name: アーティスト
@@ -278,9 +163,6 @@ ja:
           title: 古典的な迷路
           description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
-          stages:
-            Maze:
-              name: 迷路
           lessons:
             Maze:
               name: 迷路
@@ -288,9 +170,6 @@ ja:
           title: アナとエルサとコードを書く
           description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
-          stages:
-            Artist:
-              name: アーティスト
           lessons:
             Artist:
               name: アーティスト
@@ -299,51 +178,6 @@ ja:
           description: コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。
           description_short: コース4を始める前に、コース2とコース3を終わらせてください。
           description_audience: 9-18 才
-          stages:
-            Artist:
-              name: アーティスト
-            Artist Binary:
-              name: アーティスト：バイナリ
-            'Artist: For Loops':
-              name: アーティスト：ループ
-            'Artist: Functions':
-              name: アーティスト：関数
-            'Artist: Functions with Parameters':
-              name: アーティスト：関数とパラメータ
-            'Artist: Variables':
-              name: アーティスト：変数（へんすう）
-            'Bee: For Loops':
-              name: みつばち：ループ
-            'Bee: Functions with Parameters':
-              name: みつばち：パラメーター付き関数
-            Extreme Challenge - Comprehensive:
-              name: エクストリーム チャレンジ - 総合
-            Maze and Bee:
-              name: 迷路とみつばち
-            'Play Lab: For Loops':
-              name: プレイラボ：ループ
-            'Play Lab: Functions with Parameters':
-              name: プレイラボ：関数とパラメータ
-            'Play Lab: Variables':
-              name: プレイラボ：変数
-            Super Challenge - For Loops:
-              name: スーパー チャレンジ - ループ
-            Super Challenge - Functions and Parameters:
-              name: スーパー チャレンジ - 関数とパラメーター
-            Super Challenge - Variables:
-              name: スーパー チャレンジ - 変数
-            'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
-            'Unplugged: Envelope Variables':
-              name: 'アンプラグド: 変数'
-            'Unplugged: For Loop Fun':
-              name: アンプラグド：ループ
-            'Unplugged: Madlibs':
-              name: 'アンプラグド: マドリブス'
-            'Unplugged: Songwriting with Parameters':
-              name: 'アンプラグド: 作曲'
-            'Unplugged: Tangrams':
-              name: 'アンプラグド: タングラム'
           lessons:
             Artist:
               name: アーティスト
@@ -393,25 +227,6 @@ ja:
           title: コース 4 を始める前に
           description: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
           description_short: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
-          stages:
-            'Artist: Functions':
-              name: アーティスト：関数
-            'Artist: Loops':
-              name: アーティスト：ループ
-            'Artist: Nested Loops':
-              name: アーティスト：入れ子のループ
-            'Artist: Sequence':
-              name: 'アーティスト: シーケンス'
-            'Bee: Conditionals':
-              name: みつばち：条件文（じょうけんぶん）
-            'Bee: Debugging':
-              name: 'みつばち: デバッグ'
-            'Bee: Nested Loops':
-              name: みつばち：入れ子のループ
-            'Farmer: While Loops':
-              name: '農夫: While Loops'
-            'Maze: Sequence':
-              name: '迷路: シーケンス'
           lessons:
             'Artist: Functions':
               name: アーティスト：関数
@@ -432,17 +247,6 @@ ja:
             'Maze: Sequence':
               name: '迷路: シーケンス'
         usability:
-          stages:
-            Binary:
-              name: ２しんすう
-            For Loops:
-              name: forループ
-            Functions and Functions with Parameters:
-              name: 関数（かんすう）・ひきすう付きの関数（かんすう）
-            Intro:
-              name: イントロ
-            Variables:
-              name: 変数（へんすう）
           lessons:
             Binary:
               name: ２しんすう
@@ -455,23 +259,14 @@ ja:
             Variables:
               name: 変数（へんすう）
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: 条件
           lessons:
             'Eval: Conditionals':
               name: 条件
         infinity:
-          stages:
-            Infinity:
-              name: インフィニティ
           lessons:
             Infinity:
               name: インフィニティ
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
@@ -480,47 +275,6 @@ ja:
         20-hour:
           description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
           description_audience: 10-18 才
-          stages:
-            Abstraction:
-              name: 抽象化
-            Algorithms:
-              name: アルゴリズム
-            Computational Thinking:
-              name: コンピュテーショナル・シンキング（コンピューターの様に考える）
-            Conditionals:
-              name: 条件
-            Functions:
-              name: 関数(かんすう)
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
-            Introduction to Computer Science:
-              name: コンピューター・サイエンス入門
-            Relay Programming:
-              name: プログラミングをリレーする
-            Song Writing:
-              name: 作曲する
-            The Artist:
-              name: アーティスト
-            The Artist 2:
-              name: アーティスト 2
-            The Artist 3:
-              name: アーティスト 3
-            The Artist 4:
-              name: アーティスト 4
-            The Artist 5:
-              name: アーティスト 5
-            The Farmer:
-              name: 農家
-            The Farmer 2:
-              name: 農家 2
-            The Farmer 3:
-              name: 農家 3
-            The Internet:
-              name: インターネット
-            The Maze:
-              name: 迷路
-            Wrap-up:
-              name: ラップアップ
           lessons:
             Abstraction:
               name: 抽象化
@@ -566,13 +320,6 @@ ja:
           title: コードを編集します。
           description: コードを編集します。
           description_short: コードを編集します。
-          stages:
-            Play Lab:
-              name: プレイラボ
-            The Artist:
-              name: アーティスト
-            The Maze:
-              name: 迷路
           lessons:
             Play Lab:
               name: プレイラボ
@@ -584,34 +331,22 @@ ja:
           title: イベント
           description: イベント
           description_short: イベント
-          stages:
-            Bounce:
-              name: バウンド
           lessons:
             Bounce:
               name: バウンド
         flappy:
           title: フラッピー コード
           description: 10分以内で自分だけのゲームを作ってみませんか？フラッピー コードを やってみよう！
-          stages:
-            Flappy Code:
-              name: フラッピー コード
           lessons:
             Flappy Code:
               name: フラッピー コード
         jigsaw:
           title: ジグソーパズル
-          stages:
-            Jigsaw:
-              name: ジグソーパズル
           lessons:
             Jigsaw:
               name: ジグソーパズル
         step:
           title: ステップ
-          stages:
-            Step:
-              name: ステップ
           lessons:
             Step:
               name: ステップ
@@ -619,89 +354,42 @@ ja:
           title: Hour of Code 2013
           description: アングリーバードやプラント vs. ゾンビのキャラクターを使って、コンピューターサイエンスの基礎を試してみよう！
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         algebraPD:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         cspunit3:
-          stages:
-            Creating Functions:
-              name: 関数の作成
-            While Loops:
-              name: Whileループ
           lessons:
             Creating Functions:
               name: 関数の作成
             While Loops:
               name: Whileループ
         algebraPD3:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         algebraPD-NexTech:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         algebraPD-iZone:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         sciencePD2:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         cspunit2:
-          stages:
-            The Internet:
-              name: インターネット
           lessons:
             The Internet:
               name: インターネット
         allthethings:
-          stages:
-            Artist:
-              name: アーティスト
-            Bee:
-              name: みつばち
-            Bounce:
-              name: バウンド
-            Flappy:
-              name: フラッピー
-            Jigsaw:
-              name: ジグソーパズル
-            Maze:
-              name: 迷路
-            Minecraft:
-              name: マインクラフト
-            Multi:
-              name: マルチ
-            Web Lab:
-              name: ウェッブ ラボ
           lessons:
             Artist:
               name: アーティスト
@@ -722,20 +410,10 @@ ja:
             Web Lab:
               name: ウェッブ ラボ
         algebraPD2b:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         cspfacilitator:
-          stages:
-            App Lab:
-              name: アプリ ラボ
-            Internet Simulator:
-              name: インターネット シミュレータ
-            Welcome!:
-              name: ようこそ!
           lessons:
             App Lab:
               name: アプリ ラボ
@@ -744,24 +422,10 @@ ja:
             Welcome!:
               name: ようこそ!
         K5-OnlinePD:
-          stages:
-            Computer Science Fundamentals:
-              name: コンピュータ サイエンス入門
           lessons:
             Computer Science Fundamentals:
               name: コンピュータ サイエンス入門
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ようこそ!
-            Wrap-up:
-              name: ラップアップ
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -774,61 +438,30 @@ ja:
             Wrap-up:
               name: ラップアップ
         algebraPD2:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
-            Welcome!:
-              name: ようこそ!
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
             Welcome!:
               name: ようこそ!
         sciencePD2b:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         science-PD2:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         sciencePD2b-iZone:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ようこそ!
-            Wrap-up:
-              name: ラップアップ
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -841,17 +474,6 @@ ja:
             Wrap-up:
               name: ラップアップ
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ようこそ!
-            Wrap-up:
-              name: ラップアップ
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -864,21 +486,6 @@ ja:
             Wrap-up:
               name: ラップアップ
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
-            Happy Maps:
-              name: ハッピーマップ
-            Move it, Move it:
-              name: 動かせ！動かせ！
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Songwriting:
-              name: 作詞作曲
           lessons:
             Binary Bracelets:
               name: バイナリブレスレット
@@ -895,11 +502,6 @@ ja:
             Songwriting:
               name: 作詞作曲
         ScienceP3OLPT2:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
@@ -910,9 +512,6 @@ ja:
         SpecialSeries:
           description_audience: 10-18 才
         cspunit3temp:
-          stages:
-            While Loops:
-              name: Whileループ
           lessons:
             While Loops:
               name: Whileループ
@@ -920,9 +519,6 @@ ja:
           title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
           description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015　（コードの時間　２０１５）
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
@@ -930,9 +526,6 @@ ja:
           title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
           description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015　（コードの時間　２０１５）
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
@@ -940,36 +533,20 @@ ja:
           title: Minecraftプログラミング入門
           description: コードブロックでキャラクターを動かし、世界を探検します
           description_short: マインクラフトの世界を、プログラムで探検しよう
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015　（コードの時間　２０１５）
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         algebraPD1:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         csp1-2017:
-          stages:
-            The Internet:
-              name: インターネット
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -979,9 +556,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csp2-2017:
-          stages:
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -989,11 +563,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csp3-2017:
-          stages:
-            Creating Functions:
-              name: 関数の作成
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
@@ -1005,13 +574,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csp4-2017:
-          stages:
-            Simple Encryption:
-              name: 単純な暗号化
-            Post-Course Survey:
-              name: コース終了後アンケート
-            Student Post-Course Survey:
-              name: コース後の生徒たちの調査
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -1023,11 +585,6 @@ ja:
             Student Post-Course Survey:
               name: コース後の生徒たちの調査
         csp5-2017:
-          stages:
-            While Loops:
-              name: Whileループ
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -1037,11 +594,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: 関数(かんすう)
-            Velocity:
-              name: 速度
           lessons:
             Functions:
               name: 関数(かんすう)
@@ -1050,9 +602,6 @@ ja:
         CSF_Secret_Sample:
           description_audience: 8-18 才
         algebraFacilitator:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
@@ -1073,23 +622,14 @@ ja:
             practice:
               display_name: 授業実践
         allthehiddenthings:
-          stages:
-            Game Lab:
-              name: ゲーム ラボ
           lessons:
             Game Lab:
               name: ゲーム ラボ
         CSDU2-Draft:
-          stages:
-            Peer Review:
-              name: ピア ・ レビュー
           lessons:
             Peer Review:
               name: ピア ・ レビュー
         MikeTest:
-          stages:
-            Artist Functions:
-              name: アーティスト関数
           lessons:
             Artist Functions:
               name: アーティスト関数
@@ -1104,22 +644,10 @@ ja:
             practice:
               display_name: 授業実践
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: みつばち：条件文（じょうけんぶん）
           lessons:
             'Bee: Conditionals':
               name: みつばち：条件文（じょうけんぶん）
         gradeKinder:
-          stages:
-            Events:
-              name: イベント
-            'Jigsaw: Learn to drag and drop':
-              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
-            Loops:
-              name: くりかえし
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
           lessons:
             Events:
               name: イベント
@@ -1130,24 +658,10 @@ ja:
             'Real-life Algorithms: Plant a Seed':
               name: 現実のアルゴリズム：種を植えましょう
         grade4:
-          stages:
-            Songwriting:
-              name: 作詞作曲
           lessons:
             Songwriting:
               name: 作詞作曲
         grade1:
-          stages:
-            Events:
-              name: イベント
-            'Jigsaw: Learn to drag and drop':
-              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
-            Loops:
-              name: くりかえし
-            Unspotted Bugs:
-              name: 気づかれていないバグ
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
           lessons:
             Events:
               name: イベント
@@ -1160,25 +674,6 @@ ja:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: アーティスト：ループ
-            'Artist: Functions with Parameters':
-              name: アーティスト：関数とパラメータ
-            'Artist: Variables':
-              name: アーティスト：変数（へんすう）
-            'Bee: For Loops':
-              name: みつばち：ループ
-            'Bee: Functions with Parameters':
-              name: みつばち：パラメーター付き関数
-            'Play Lab: Variables':
-              name: プレイラボ：変数
-            'Unplugged: Envelope Variables':
-              name: 'アンプラグド: 変数'
-            'Unplugged: For Loop Fun':
-              name: アンプラグド：ループ
-            'Unplugged: Songwriting with Parameters':
-              name: 'アンプラグド: 作曲'
           lessons:
             'Artist: For Loops':
               name: アーティスト：ループ
@@ -1199,17 +694,6 @@ ja:
             'Unplugged: Songwriting with Parameters':
               name: 'アンプラグド: 作曲'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ようこそ!
-            Wrap-up:
-              name: ラップアップ
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1222,15 +706,6 @@ ja:
             Wrap-up:
               name: ラップアップ
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: アーティスト：入れ子のループ
-            Bee Debugging:
-              name: みつばち デバッグ
-            Bounce:
-              name: バウンド
-            'Farmer: While Loops':
-              name: '農夫: While Loops'
           lessons:
             'Artist: Nested Loops':
               name: アーティスト：入れ子のループ
@@ -1249,15 +724,6 @@ ja:
             practice:
               display_name: 授業実践
         csd3-2017:
-          stages:
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -1277,13 +743,6 @@ ja:
             Conditionals:
               name: 条件
         grade2:
-          stages:
-            Flappy:
-              name: フラッピー
-            Binary Bracelets:
-              name: バイナリブレスレット
-            'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
           lessons:
             Flappy:
               name: フラッピー
@@ -1292,27 +751,6 @@ ja:
             'Real-life Algorithms: Paper Planes':
               name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
         k5concepts:
-          stages:
-            Binary:
-              name: ２しんすう
-            Conditionals:
-              name: 条件
-            Events:
-              name: イベント
-            For Loops:
-              name: forループ
-            Functions:
-              name: 関数(かんすう)
-            Functions with Parameters:
-              name: パラメーター付き関数
-            Loops:
-              name: くりかえし
-            Nested Loops:
-              name: 入れ子のループ
-            Variables:
-              name: 変数（へんすう）
-            While Loops:
-              name: Whileループ
           lessons:
             Binary:
               name: ２しんすう
@@ -1335,11 +773,6 @@ ja:
             While Loops:
               name: Whileループ
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: 先生用のダッシュボード
-            Welcome!:
-              name: ようこそ!
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
@@ -1373,41 +806,14 @@ ja:
           title: チームをえらんで、バスケットボールのゲームを作る
           description_short: チームをえらんで、バスケットボールのゲームを作る
           description: チームをえらんで、バスケットボールのゲームを作る
-          stages:
-            Bounce:
-              name: バウンド
           lessons:
             Bounce:
               name: バウンド
         hoc-encryption:
-          stages:
-            Simple Encryption:
-              name: 単純な暗号化
           lessons:
             Simple Encryption:
               name: 単純な暗号化
-        fesbinary:
-          title: ２しんすう
-          stages:
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Binary Images:
-              name: バイナリ画像
-            Play Lab:
-              name: プレイラボ
-          lessons:
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Binary Images:
-              name: バイナリ画像
-            Play Lab:
-              name: プレイラボ
         csd2-2017:
-          stages:
-            Peer Review:
-              name: ピア ・ レビュー
-            Lists:
-              name: リスト
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -1440,46 +846,15 @@ ja:
           title: Minecraft Hour of Code デザイナー
           description_short: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
           description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code デザイナー
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code デザイナー
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: フラッピー コード
           lessons:
             Flappy Code:
               name: フラッピー コード
         coursea-draft:
           description_short: 低学年向けのコンピューター サイエンス入門
-          stages:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: スティービーとビーだま
-            'Real-life Algorithms: Plant a Seed':
-              name: アルゴリズム：タネをまく
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            'Programming: Happy Maps':
-              name: プログラミング：ハッピー マップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            'Loops: Happy Loops':
-              name: くりかえし：ハッピー ループ
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Going Places Safely:
-              name: 安全な道を通って行く
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: スティービーとビーだま
@@ -1507,27 +882,6 @@ ja:
               name: 'デバッグ: 気づかれていないバグ'
         courseb-draft:
           description_short: 低学年向けのコンピューター サイエンス入門
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: スティービーとビーだま
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -1550,21 +904,6 @@ ja:
             Your Digital Footprint:
               name: あなたのデジタルフットプリント
         coursec-draft:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            Building a Foundation:
-              name: ピラミッドをたてよう
           lessons:
             Programming in Maze:
               name: めいろ のプログラミング
@@ -1581,17 +920,6 @@ ja:
             Building a Foundation:
               name: ピラミッドをたてよう
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: カードと条件
-            'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Nested Loops:
-              name: 入れ子のループ
-            Introduction:
-              name: はじめに
           lessons:
             Conditionals with Cards:
               name: カードと条件
@@ -1604,15 +932,6 @@ ja:
             Introduction:
               name: はじめに
         coursee-draft:
-          stages:
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
-            Introduction:
-              name: はじめに
-            Conditionals:
-              name: 条件
           lesson_groups:
             content:
               display_name: 内容
@@ -1628,11 +947,6 @@ ja:
             Conditionals:
               name: 条件
         coursef-draft:
-          stages:
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
-            Introduction:
-              name: はじめに
           lesson_groups:
             content:
               display_name: 内容
@@ -1643,44 +957,25 @@ ja:
               name: はじめに
         classic-hoc-impact-study:
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         hoc-impact-study:
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         sports:
-          stages:
-            Sports:
-              name: スポーツ
           lessons:
             Sports:
               name: スポーツ
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
@@ -1703,31 +998,18 @@ ja:
             practice:
               display_name: 授業実践
         sciencepd4:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         science-pd-ol-pt-5:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
         csf2harvey:
-          stages:
-            Binary:
-              name: ２しんすう
           lesson_groups:
             content:
               display_name: 内容
@@ -1735,11 +1017,6 @@ ja:
             Binary:
               name: ２しんすう
         sciencepd5:
-          stages:
-            Welcome!:
-              name: ようこそ!
-            Wrap-Up:
-              name: まとめ
           lessons:
             Welcome!:
               name: ようこそ!
@@ -1754,9 +1031,6 @@ ja:
             practice:
               display_name: 授業実践
         csppostap-2017:
-          stages:
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             content:
               display_name: 内容
@@ -1766,13 +1040,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csd6-draft:
-          stages:
-            Lists:
-              name: リスト
-            For Loops:
-              name: forループ
-            Functions with Parameters:
-              name: パラメーター付き関数
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -1786,9 +1053,6 @@ ja:
             Functions with Parameters:
               name: パラメーター付き関数
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: はじめに
           lessons:
             Introduction:
               name: はじめに
@@ -1799,33 +1063,16 @@ ja:
             csd5_2:
               display_name: 第 2 章：データ問題を解決
         coursed-ramp:
-          stages:
-            Introduction:
-              name: はじめに
           lessons:
             Introduction:
               name: はじめに
         coursee-ramp:
-          stages:
-            Introduction:
-              name: はじめに
-            Conditionals:
-              name: 条件
           lessons:
             Introduction:
               name: はじめに
             Conditionals:
               name: 条件
         csd6-2017:
-          stages:
-            Lists:
-              name: リスト
-            For Loops:
-              name: forループ
-            Functions with Parameters:
-              name: パラメーター付き関数
-            Functions with Parameters_:
-              name: パラメーター付き関数
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -1843,15 +1090,6 @@ ja:
             Functions with Parameters_:
               name: パラメーター付き関数
         csd3-draft:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lessons:
             Variables:
               name: 変数（へんすう）
@@ -1870,35 +1108,16 @@ ja:
             csd_survey:
               display_name: コース終了後アンケート
         csd3-old:
-          stages:
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lessons:
             Velocity:
               name: 速度
             Functions:
               name: 関数(かんすう)
         csd2-draft:
-          stages:
-            Lists:
-              name: リスト
           lessons:
             Lists:
               name: リスト
         csd3-chapters:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
-            'null':
-              name: ヌル
           lessons:
             Variables:
               name: 変数（へんすう）
@@ -1911,9 +1130,6 @@ ja:
             'null':
               name: ヌル
         coursef-ramp:
-          stages:
-            Introduction:
-              name: はじめに
           lessons:
             Introduction:
               name: はじめに
@@ -1922,40 +1138,14 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd2-old:
-          stages:
-            Peer Review:
-              name: ピア ・ レビュー
           lessons:
             Peer Review:
               name: ピア ・ レビュー
         artist-and-bb8:
-          stages:
-            Bounce:
-              name: バウンド
           lessons:
             Bounce:
               name: バウンド
         coursea-2017:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            'Programming: Happy Maps':
-              name: プログラミング：ハッピー マップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            'Loops: Happy Loops':
-              name: くりかえし：ハッピー ループ
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
           title: コース A
           assignment_family_title: コース A
           description_audience: 4-7 才
@@ -1981,21 +1171,6 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         courseb-2017:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
           title: コース B
           assignment_family_title: コース B
           description_audience: 5-8 才
@@ -2016,17 +1191,6 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursec-2017:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Loops in Artist:
-              name: アーティストくりかえし
           title: コース C
           assignment_family_title: コース C
           lessons:
@@ -2041,9 +1205,6 @@ ja:
             Loops in Artist:
               name: アーティストくりかえし
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: 入れ子のループ
           title: コース D
           assignment_family_title: コース D
           description_short: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
@@ -2051,15 +1212,6 @@ ja:
             Nested Loops:
               name: 入れ子のループ
         coursee-2017:
-          stages:
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
           title: コース E
           assignment_family_title: コース E
           description_short: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
@@ -2080,11 +1232,6 @@ ja:
             Nested Loops:
               name: 入れ子のループ
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
           title: コース F
           assignment_family_title: コース F
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
@@ -2171,23 +1318,6 @@ ja:
             content:
               display_name: 内容
         express-2017:
-          stages:
-            Introduction:
-              name: はじめに
-            Loops in Artist:
-              name: アーティストくりかえし
-            Internet:
-              name: インターネット
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Conditionals with Cards:
-              name: カードと条件
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Nested Loops:
-              name: 入れ子のループ
           title: エクスプレス コース
           description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
           lesson_groups:
@@ -2211,23 +1341,6 @@ ja:
             Nested Loops:
               name: 入れ子のループ
         pre-express-2017:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Spelling Bee:
-              name: つづりみつばち
           title: 低学年エクスプレス
           description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
           lessons:
@@ -2248,16 +1361,10 @@ ja:
             Spelling Bee:
               name: つづりみつばち
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: ありがとう
           lessons:
             Thanks:
               name: ありがとう
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: 関数の作成
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
@@ -2273,19 +1380,6 @@ ja:
             csd4_2:
               display_name: 第 2 章：アプリのプロトタイピング
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
-            Conditionals:
-              name: 条件
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
           lesson_groups:
             csf_e_1:
               display_name: コースEへの強化（オプション）
@@ -2307,21 +1401,6 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         new-d:
-          stages:
-            Introduction:
-              name: はじめに
-            Nested Loops:
-              name: 入れ子のループ
-            Conditionals with Cards:
-              name: カードと条件
-            'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
           lessons:
             Introduction:
               name: はじめに
@@ -2342,17 +1421,6 @@ ja:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
         new-express:
-          stages:
-            Introduction:
-              name: はじめに
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Nested Loops:
-              name: 入れ子のループ
           lesson_groups:
             content:
               display_name: 内容
@@ -2368,24 +1436,10 @@ ja:
             Nested Loops:
               name: 入れ子のループ
         new-stages-sept-2017:
-          stages:
-            Loops in Artist:
-              name: アーティストくりかえし
           lessons:
             Loops in Artist:
               name: アーティストくりかえし
         new-e:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals:
-              name: 条件
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
           lesson_groups:
             csf_e_1:
               display_name: コースEへの強化（オプション）
@@ -2405,13 +1459,6 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         new-f:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
           lesson_groups:
             csf_f_1:
               display_name: コースFへの強化（オプション）
@@ -2437,9 +1484,6 @@ ja:
             csd4_2:
               display_name: 第 2 章：アプリのプロトタイピング
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: 関数の作成
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
@@ -2447,24 +1491,15 @@ ja:
             Creating Functions:
               name: 関数の作成
         pwc:
-          stages:
-            Simple Encryption:
-              name: 単純な暗号化
           lessons:
             Simple Encryption:
               name: 単純な暗号化
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code プログラミング入門
           description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code プログラミング入門
         csp-explore-2017:
-          stages:
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2472,9 +1507,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csp-create-2017:
-          stages:
-            Post-Course Survey:
-              name: コース終了後アンケート
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2482,21 +1514,6 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
-            Introduction:
-              name: はじめに
-            Conditionals:
-              name: 条件
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
           lesson_groups:
             csf_e_1:
               display_name: コースEへの強化（オプション）
@@ -2520,15 +1537,6 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Introduction:
-              name: はじめに
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
           lesson_groups:
             csf_f_1:
               display_name: コースFへの強化（オプション）
@@ -2544,11 +1552,6 @@ ja:
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
         csd6-old:
-          stages:
-            Lists:
-              name: リスト
-            For Loops:
-              name: forループ
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -2560,15 +1563,6 @@ ja:
             For Loops:
               name: ループ用
         csd3-1819draft:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -2586,15 +1580,6 @@ ja:
             Functions:
               name: 関数(かんすう)
         csd3-2018:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -2612,9 +1597,6 @@ ja:
             Functions:
               name: 関数(かんすう)
         csd2-2018:
-          stages:
-            Lists:
-              name: リスト
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -2629,30 +1611,6 @@ ja:
           assignment_family_title: コース A
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 気づかれていないバグ
-              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: スティーヴィーと大きなプロジェクト
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            'Programming: Happy Maps':
-              name: ハッピーマップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Going Places Safely:
-              name: 安全な道を通って行く
-            'Loops: Happy Loops':
-              name: くりかえし：ハッピー ループ
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: スティーヴィーと大きなプロジェクト
           lessons:
             'Debugging: Unspotted Bugs':
               name: 気づかれていないバグ
@@ -2679,37 +1637,6 @@ ja:
               name: スティーヴィーと大きなプロジェクト
         express-2018:
           assignment_family_title: エクスプレスコース
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: グラフ用紙のプログラミング
-            Introduction:
-              name: はじめに
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Conditionals with Cards:
-              name: カードと条件
-            'Functions: Songwriting':
-              name: 作詞作曲
-            Binary Bracelets:
-              name: バイナリブレスレット
-            'Unplugged: Binary':
-              name: バイナリ画像
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
-            Relay Programming:
-              name: プログラミングをリレーする
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
@@ -2744,27 +1671,6 @@ ja:
         courseb-2018:
           assignment_family_title: コース B
           description_audience: 5-8 才
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: スティービーとビーだま
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Move It, Move It:
-              name: 動かせ！動かせ！
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -2788,25 +1694,6 @@ ja:
               name: 動かせ！動かせ！
         coursed-2018:
           assignment_family_title: コース D
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: グラフ用紙のプログラミング
-            Introduction:
-              name: はじめに
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals with Cards:
-              name: カードと条件
-            'Unplugged: Binary':
-              name: バイナリ画像
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
-            Relay Programming:
-              name: プログラミングをリレーする
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
@@ -2828,17 +1715,6 @@ ja:
               name: プログラミングをリレーする
         coursec-2018:
           assignment_family_title: コース C
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Binary Bracelets:
-              name: バイナリブレスレット
           lessons:
             Building a Foundation:
               name: ピラミッドをたてよう
@@ -2851,9 +1727,6 @@ ja:
             Binary Bracelets:
               name: バイナリブレスレット
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: パラメーター付き関数
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -2866,25 +1739,6 @@ ja:
               name: パラメーター付き関数
         coursee-2018:
           assignment_family_title: コース E
-          stages:
-            'Programming: My Robotic Friends':
-              name: 私のロボットの友だち
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Introduction:
-              name: はじめに
-            'Functions: Songwriting':
-              name: 作詞作曲
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
-            Conditionals with Cards:
-              name: カードと条件
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code プログラミング入門
           lesson_groups:
             csf_e_1:
               display_name: コースEへの強化（オプション）
@@ -2914,19 +1768,6 @@ ja:
         coursef-2018:
           assignment_family_title: コース F
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-          stages:
-            'Programming: My Robotic Friends':
-              name: 私のロボットの友だち
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Introduction:
-              name: はじめに
-            Songwriting with Parameters:
-              name: パラメーターで歌や曲をつくる
-            Conditionals with Cards:
-              name: カードと条件
           lesson_groups:
             csf_f_1:
               display_name: コースFへの強化（オプション）
@@ -2946,9 +1787,6 @@ ja:
             Conditionals with Cards:
               name: カードと条件
         csp1-2018:
-          stages:
-            The Internet:
-              name: インターネット
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2984,9 +1822,6 @@ ja:
             csp2_1_2018:
               display_name: '第 2 章: デジタル情報'
         csp3-2018:
-          stages:
-            Creating Functions:
-              name: 関数の作成
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3002,9 +1837,6 @@ ja:
             cspSurvey:
               display_name: アンケート
         csp4-2018:
-          stages:
-            Simple Encryption:
-              name: 単純な暗号化
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3012,9 +1844,6 @@ ja:
             Simple Encryption:
               name: 単純な暗号化
         csp5-2018:
-          stages:
-            While Loops:
-              name: Whileループ
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3132,31 +1961,6 @@ ja:
             content:
               display_name: 内容
         pre-express-2018:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 気づかれていないバグ
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: スティーヴィーと大きなプロジェクト
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Spelling Bee:
-              name: つづりみつばち
-            Move It, Move It:
-              name: 動かせ！動かせ！
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: スティーヴィーと大きなプロジェクト
           lessons:
             'Debugging: Unspotted Bugs':
               name: 気づかれていないバグ
@@ -3189,23 +1993,14 @@ ja:
             content:
               display_name: 内容
         frozen-2018:
-          stages:
-            Artist:
-              name: アーティスト
           lessons:
             Artist:
               name: アーティスト
         frozen-2018-test:
-          stages:
-            Artist:
-              name: アーティスト
           lessons:
             Artist:
               name: アーティスト
         dance:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
           title: ダンスパーティー
           description_short: ケイティ・ペリー、マドンナ、J. バルヴィン、シーア、キース・アーバン、シアラ、その他25人が出演！
           description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
@@ -3213,9 +2008,6 @@ ja:
             Dance Party:
               name: ダンスパーティー
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: アーティスト
           lessons:
             Artist:
               name: アーティスト
@@ -3223,16 +2015,10 @@ ja:
           description_short: 創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう！
           description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
         dance--draft:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
           lessons:
             Dance Party:
               name: ダンスパーティー
         dance-draft:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
           lessons:
             Dance Party:
               name: ダンスパーティー
@@ -3248,19 +2034,6 @@ ja:
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursef-2019:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals with Cards:
-              name: カードと条件
-            The Artist:
-              name: アーティスト
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
           lesson_groups:
             ramp_up:
               display_name: ランアップ
@@ -3284,28 +2057,10 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         dance-low:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
           lessons:
             Dance Party:
               name: ダンスパーティー
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: グラフ用紙のプログラミング
-            Relay Programming:
-              name: プログラミングをリレーする
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals with Cards:
-              name: カードと条件
-            'Unplugged: Binary':
-              name: バイナリ画像
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Dance Party:
-              name: ダンスパーティー
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3333,23 +2088,6 @@ ja:
             Dance Party:
               name: ダンスパーティー
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
-            Conditionals with Cards:
-              name: カードと条件
-            'Functions: Songwriting':
-              name: 作詞作曲
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
-            Songwriting:
-              name: 作詞作曲
           lesson_groups:
             ramp_up:
               display_name: ランアップ
@@ -3375,29 +2113,6 @@ ja:
             Songwriting:
               name: 作詞作曲
         express-2019:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Relay Programming:
-              name: プログラミングをリレーする
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals with Cards:
-              name: カードと条件
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Binary Bracelets:
-              name: バイナリブレスレット
-            'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
-            Dance Party:
-              name: ダンスパーティー
           lesson_groups:
             csf_warmup:
               display_name: ウォームアップ
@@ -3445,9 +2160,6 @@ ja:
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
         andrea-test:
-          stages:
-            'null':
-              name: ヌル
           lesson_groups:
             required:
               display_name: 概要
@@ -3460,19 +2172,6 @@ ja:
           title: ダンスを続ける
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursec-2019:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Sticker Art with Loops:
-              name: アーティストくりかえし
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3504,25 +2203,6 @@ ja:
         coursea-2019:
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
-          stages:
-            'Programming: Happy Maps':
-              name: ハッピーマップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Going Places Safely:
-              name: 安全な道を通って行く
-            'Loops: Happy Loops':
-              name: くりかえし：ハッピー ループ
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Ocean Scene with Loops:
-              name: アーティストくりかえし
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3551,19 +2231,6 @@ ja:
               name: ドラッグ＆ドロップ
         courseb-2019:
           description_audience: 5-8 才
-          stages:
-            Move It, Move It:
-              name: 動かせ！動かせ！
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Programming in Maze:
-              name: めいろ のプログラミング
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3585,33 +2252,6 @@ ja:
             Programming in Maze:
               name: めいろ のプログラミング
         pre-express-2019:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            Move It, Move It:
-              name: 動かせ！動かせ！
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
-            Events in Play Lab:
-              name: プレイ ラボのイベント
-            Spelling Bee:
-              name: つづりみつばち
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Tell a Story in Play Lab:
-              name: プレイ ラボのイベント
-            Make a Game in Play Lab:
-              name: プレイ ラボのイベント
-            Ocean Scene with Loops:
-              name: アーティストくりかえし
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3647,20 +2287,12 @@ ja:
             Ocean Scene with Loops:
               name: アーティストくりかえし
         removed19:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
             'Real-life Algorithms: Plant a Seed':
               name: 現実のアルゴリズム：種を植えましょう
         csd2-2019:
-          stages:
-            Lists:
-              name: リスト
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -3672,15 +2304,6 @@ ja:
             Lists:
               name: リスト
         csd3-2019:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -3716,9 +2339,6 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: パラメーター付き関数
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -3730,9 +2350,6 @@ ja:
             Functions with Parameters:
               name: パラメーター付き関数
         csp4-pilot:
-          stages:
-            Surveys:
-              name: アンケート
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -3746,9 +2363,6 @@ ja:
             Surveys:
               name: アンケート
         csp1-2019:
-          stages:
-            The Internet:
-              name: インターネット
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3762,9 +2376,6 @@ ja:
             cspSurvey:
               display_name: アンケート
         csp3-2019:
-          stages:
-            Creating Functions:
-              name: 関数の作成
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3772,9 +2383,6 @@ ja:
             Creating Functions:
               name: 関数の作成
         csp4-2019:
-          stages:
-            Simple Encryption:
-              name: 単純な暗号化
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3782,9 +2390,6 @@ ja:
             Simple Encryption:
               name: 単純な暗号化
         csp5-2019:
-          stages:
-            While Loops:
-              name: Whileループ
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -3810,17 +2415,6 @@ ja:
             required:
               display_name: 概要
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: クラウドソーシング
-            Conditionals with Cards:
-              name: カードと条件
-            Building a Foundation:
-              name: ピラミッドをたてよう
-            Loops in Artist:
-              name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
           lesson_groups:
             ramp_up:
               display_name: ランアップ
@@ -3898,11 +2492,6 @@ ja:
             csp_functions:
               display_name: 関数(かんすう)
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: グラフ用紙のプログラミング
-            Programming in Maze:
-              name: めいろ のプログラミング
           lessons:
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
@@ -3945,9 +2534,6 @@ ja:
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
         csd2-pilot:
-          stages:
-            Lists:
-              name: リスト
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -3959,15 +2545,6 @@ ja:
             Lists:
               name: リスト
         csd3-pilot:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -3991,11 +2568,6 @@ ja:
             required:
               display_name: 概要
         csl-vn:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Ocean Scene with Loops:
-              name: アーティストくりかえし
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4079,13 +2651,6 @@ ja:
             required:
               display_name: 概要
         peru-2019:
-          stages:
-            Introduction:
-              name: はじめに
-            Loops in Artist:
-              name: アーティストくりかえし
-            Nested Loops:
-              name: 入れ子のループ
           lessons:
             Introduction:
               name: はじめに
@@ -4100,31 +2665,11 @@ ja:
             required:
               display_name: 概要
         dance-2019:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
           description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
           lessons:
             Dance Party:
               name: ダンスパーティー
         k5-onlinepd-2019:
-          stages:
-            Computer Science Fundamentals:
-              name: コンピュータ サイエンス入門
-            Sequencing:
-              name: シークエンス
-            Loops:
-              name: くりかえし
-            Conditionals:
-              name: 条件
-            Events:
-              name: イベント
-            Functions:
-              name: 関数(かんすう)
-            Variables:
-              name: 変数（へんすう）
-            For Loops:
-              name: ループ用
           lessons:
             Computer Science Fundamentals:
               name: コンピュータ サイエンス入門
@@ -4153,22 +2698,12 @@ ja:
             csp_functions:
               display_name: 関数(かんすう)
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: 条件
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
           lessons:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: クラウドソーシング
-            Conditionals with Cards:
-              name: カードと条件
           lesson_groups:
             csf_conditionals:
               display_name: 条件
@@ -4182,11 +2717,6 @@ ja:
             Conditionals with Cards:
               name: カードと条件
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: 条件
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4204,11 +2734,6 @@ ja:
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: 条件
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4278,9 +2803,6 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: パラメーター付き関数
           lesson_groups:
             csd6_1:
               display_name: 第 1 章：ハードウェア出力
@@ -4292,17 +2814,6 @@ ja:
             Functions with Parameters:
               name: パラメーター付き関数
         csd3-2020:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
-            Text:
-              name: テキスト
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -4324,21 +2835,6 @@ ja:
         coursea-2020:
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
-          stages:
-            Going Places Safely:
-              name: 安全な道を通って行く
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            'Programming: Happy Maps':
-              name: ハッピーマップ
-            'Loops: Happy Loops':
-              name: くりかえし：ハッピー ループ
-            Loops in Collector:
-              name: くりかえし あつめる
-            Ocean Scene with Loops:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4363,19 +2859,6 @@ ja:
               name: プレイ ラボのイベント
         courseb-2020:
           description_audience: 5-8 才
-          stages:
-            Your Digital Footprint:
-              name: あなたのデジタルフットプリント
-            Move It, Move It:
-              name: 動かせ！動かせ！
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Collector:
-              name: くりかえし あつめる
-            Loops in Artist:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4397,15 +2880,6 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursec-2020:
-          stages:
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Binary Bracelets:
-              name: バイナリブレスレット
-            Sticker Art with Loops:
-              name: アーティストくりかえし
-            Events in Play Lab:
-              name: プレイ ラボのイベント
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4425,21 +2899,6 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: グラフ用紙のプログラミング
-            Relay Programming:
-              name: プログラミングをリレーする
-            Loops in Artist:
-              name: アーティストくりかえし
-            Conditionals with Cards:
-              name: カードと条件
-            'Unplugged: Binary':
-              name: バイナリ画像
-            Artist Binary:
-              name: アーティスト：バイナリ
-            Dance Party:
-              name: ダンスパーティー
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4467,9 +2926,6 @@ ja:
             Dance Party:
               name: ダンスパーティー
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: 作詞作曲
           lesson_groups:
             ramp_up:
               display_name: ランアップ
@@ -4482,11 +2938,6 @@ ja:
               name: 作詞作曲
         coursef-2020:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-          stages:
-            Internet:
-              name: インターネット
-            Crowdsourcing:
-              name: クラウドソーシング
           lesson_groups:
             ramp_up:
               display_name: ランアップ
@@ -4500,17 +2951,6 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         express-2020:
-          stages:
-            Dance Party:
-              name: ダンスパーティー
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Loops in Artist:
-              name: アーティストくりかえし
-            Programming with Angry Birds:
-              name: めいろ のプログラミング
-            Sticker Art with Loops:
-              name: アーティストくりかえし
           lesson_groups:
             csf_warmup:
               display_name: ウォームアップ
@@ -4538,27 +2978,6 @@ ja:
             Sticker Art with Loops:
               name: アーティストくりかえし
         pre-express-2020:
-          stages:
-            Learn to Drag and Drop:
-              name: ドラッグ＆ドロップ
-            Programming in Maze:
-              name: めいろ のプログラミング
-            Spelling Bee:
-              name: つづりみつばち
-            Loops in Collector:
-              name: くりかえし あつめる
-            Ocean Scene with Loops:
-              name: アーティストくりかえし
-            Loops in Artist:
-              name: アーティストくりかえし
-            Loops with Laurel:
-              name: くりかえし あつめる
-            Drawing Gardens with Loops:
-              name: アーティストくりかえし
-            On the Move with Events:
-              name: プレイ ラボのイベント
-            A Royal Battle with Events:
-              name: プレイ ラボのイベント
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4594,12 +3013,15 @@ ja:
             cspSurvey:
               display_name: アンケート
         csp3-virtual:
-          stages:
-            Creating Functions:
-              name: 関数の作成
           lessons:
             Creating Functions:
               name: 関数の作成
+        jess-test-script:
+          lessons:
+            Tools:
+              name: 'Tools
+
+'
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4607,22 +3029,12 @@ ja:
             csd2_2:
               display_name: 第 2 章：スタイルと CSS
         csp5-virtual:
-          stages:
-            While Loops:
-              name: Whileループ
-            Variables:
-              name: 変数（へんすう）
           lessons:
             While Loops:
               name: Whileループ
             Variables:
               name: 変数（へんすう）
         virtual-holding-place:
-          stages:
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lesson_groups:
             content:
               display_name: 内容
@@ -4634,39 +3046,16 @@ ja:
             Functions:
               name: 関数(かんすう)
         code-break:
-          stages:
-            Algorithms:
-              name: アルゴリズム
-            Events:
-              name: イベント
           lessons:
             Algorithms:
               name: アルゴリズム
             Events:
               name: イベント
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Whileループ
           lessons:
             While Loops:
               name: Whileループ
         k5-onlinepd-2020:
-          stages:
-            Sequencing:
-              name: シークエンス
-            Loops:
-              name: くりかえし
-            Events:
-              name: イベント
-            Conditionals:
-              name: 条件
-            Functions:
-              name: 関数(かんすう)
-            Variables:
-              name: 変数（へんすう）
-            For Loops:
-              name: ループ用
           lessons:
             Sequencing:
               name: シークエンス
@@ -4687,17 +3076,6 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd3-virtual:
-          stages:
-            Variables:
-              name: 変数（へんすう）
-            Text:
-              name: テキスト
-            Conditionals:
-              name: 条件
-            Velocity:
-              name: 速度
-            Functions:
-              name: 関数(かんすう)
           lessons:
             Variables:
               name: 変数（へんすう）
@@ -4717,9 +3095,6 @@ ja:
             cspSurvey:
               display_name: 内容
         ui-test-script-in-course-2017:
-          stages:
-            Lesson:
-              name: レッスン
           lessons:
             Lesson:
               name: レッスン
@@ -4727,9 +3102,6 @@ ja:
             lg_1:
               display_name: 内容
         ui-test-script-in-course-2019:
-          stages:
-            Lesson:
-              name: レッスン
           lessons:
             Lesson:
               name: レッスン
@@ -4737,9 +3109,6 @@ ja:
             lg_1:
               display_name: 内容
         ui-test-versioned-script-2017:
-          stages:
-            Lesson:
-              name: レッスン
           lessons:
             Lesson:
               name: レッスン
@@ -4747,12 +3116,15 @@ ja:
             lg_1:
               display_name: 内容
         ui-test-versioned-script-2019:
-          stages:
-            Lesson:
-              name: レッスン
           lessons:
             Lesson:
               name: レッスン
           lesson_groups:
             lg_1:
               display_name: 内容
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: コース A
+            Course B:
+              name: コース B

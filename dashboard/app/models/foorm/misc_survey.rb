@@ -56,6 +56,11 @@ class Foorm::MiscSurvey < ActiveRecord::Base
         misc_form_path: 'csp_post_course_pd',
         survey_data: {course: 'CS Principles', pd: true},
         allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
+        misc_form_path: 'facilitator_post_survey',
+        allow_multiple_submissions: true
       }
     ]
   end

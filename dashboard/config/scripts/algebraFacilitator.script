@@ -1,16 +1,16 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-lesson 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD'
 level 'PDAlg Intro'
 level 'PDECS tour'
 
-lesson 'Why Computer Science belongs in Algebra'
+lesson 'Why Computer Science belongs in Algebra', display_name: 'Why Computer Science belongs in Algebra'
 level 'PDAlg functions'
 level 'PDAlg hard video'
 level 'PDAlg functional'
 
-lesson 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
 level 'PDAlg Blocks Video'
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
@@ -22,7 +22,8 @@ level 'Calc Circles of Eval 8'
 level 'Calc Circles of Eval 9'
 level 'Calc Circles of Eval Free Play'
 
-lesson 'Teacher Dashboard'
+lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard'
 level 'PDK5 Teacher Dashboard 1'
 level 'PDK5 Teacher Dashboard 2'
 level 'PDAlg Teacher Dashboard'
+

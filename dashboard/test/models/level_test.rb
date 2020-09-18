@@ -1010,6 +1010,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'contained_level_names filters blank names before validation' do
     level = build :level
+    create :level, name: 'real_name'
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
@@ -1054,5 +1055,40 @@ class LevelTest < ActiveSupport::TestCase
       position: 2
     )
     assert_equal [child1, child2, child3], parent.child_levels
+  end
+
+  test 'all_descendant_levels works on self-referential project template levels' do
+    level_name = 'project-template-level'
+    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
+    assert_equal level, level.project_template_level
+
+    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
+
+  test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
+    script = create :csf_script
+    assert script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
+    hint_script = create :csf_script
+    assert hint_script.hint_prompt_enabled?
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: hint_script
+    create :script_level, levels: [level], script: no_hint_script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: no_hint_script
+    refute level.hint_prompt_enabled?
   end
 end

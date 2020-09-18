@@ -15,43 +15,6 @@ ne:
           description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           description_short: Start with Course 1 for early readers.
           description_audience: Ages 4-6
-          stages:
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Artist: Shapes':
-              name: 'Artist: Shapes'
-            'Bee: Loops':
-              name: 'Bee: Loops'
-            'Bee: Sequence':
-              name: 'Bee: Sequence'
-            Building a Foundation:
-              name: Building a Foundation
-            Getting Loopy:
-              name: Getting Loopy
-            Going Places Safely:
-              name: Going Places Safely
-            Happy Maps:
-              name: Happy Maps
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
-            'Maze: Debugging':
-              name: 'Maze: Debugging'
-            'Maze: Loops':
-              name: 'Maze: Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
-            Move it, Move it:
-              name: Move it, Move it
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
-            The Big Event:
-              name: The Big Event
           lessons:
             'Artist: Loops':
               name: 'Artist: Loops'
@@ -94,45 +57,6 @@ ne:
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           description_short: Start with Course 2 for students who can read.
           description_audience: Ages 6+ (reading required)
-          stages:
-            'Artist: Debugging':
-              name: 'Artist: Debugging'
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Loops':
-              name: 'Bee: Loops'
-            Binary Bracelets:
-              name: Binary Bracelets
-            Conditionals:
-              name: Conditionals
-            Flappy:
-              name: Flappy
-            Getting Loopy:
-              name: Getting Loopy
-            Graph Paper Programming:
-              name: Graph Paper Programming
-            'Maze: Loops':
-              name: 'Maze: Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life Algorithms: Paper Planes'
-            Relay programming:
-              name: Relay programming
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
-            The Big Event:
-              name: The Big Event
-            Your Digital Footprint:
-              name: Your Digital Footprint
           lessons:
             'Artist: Debugging':
               name: 'Artist: Debugging'
@@ -177,49 +101,6 @@ ne:
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           description_short: Course 3 is a follow-up to Course 2.
           description_audience: Ages 8-18
-          stages:
-            Artist:
-              name: Artist
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Patterns':
-              name: 'Artist: Patterns'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Functions':
-              name: 'Bee: Functions'
-            'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
-            Bounce:
-              name: Bounce
-            Computational Thinking:
-              name: Computational Thinking
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dice Race:
-              name: Dice Race
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
-            Functional Suncatchers:
-              name: Functional Suncatchers
-            Internet:
-              name: Internet
-            Maze:
-              name: Maze
-            'Maze: Conditionals':
-              name: 'Maze: Conditionals'
-            Songwriting:
-              name: Songwriting
-            'Studio: Create a Game':
-              name: 'Play Lab: Create a Game'
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
           lessons:
             Artist:
               name: Artist
@@ -267,9 +148,6 @@ ne:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
           description_short: Create a story or make a game with Play Lab!
-          stages:
-            Play Lab:
-              name: Play Lab
           lessons:
             Play Lab:
               name: Play Lab
@@ -277,9 +155,6 @@ ne:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
           description_short: Draw cool pictures and designs with the Artist!
-          stages:
-            Artist:
-              name: Artist
           lessons:
             Artist:
               name: Artist
@@ -287,9 +162,6 @@ ne:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
-          stages:
-            Maze:
-              name: Maze
           lessons:
             Maze:
               name: Maze
@@ -297,9 +169,6 @@ ne:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
           description_short: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice.
-          stages:
-            Artist:
-              name: Artist
           lessons:
             Artist:
               name: Artist
@@ -308,51 +177,6 @@ ne:
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description_audience: Ages 9-18
-          stages:
-            Artist:
-              name: Artist
-            Artist Binary:
-              name: Artist Binary
-            'Artist: For Loops':
-              name: 'Artist: For Loops'
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
-            'Artist: Variables':
-              name: 'Artist: Variables'
-            'Bee: For Loops':
-              name: 'Bee: For Loops'
-            'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
-            Extreme Challenge - Comprehensive:
-              name: Extreme Challenge - Comprehensive
-            Maze and Bee:
-              name: Maze and Bee
-            'Play Lab: For Loops':
-              name: 'Play Lab: For Loops'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: Functions with Parameters'
-            'Play Lab: Variables':
-              name: 'Play Lab: Variables'
-            Super Challenge - For Loops:
-              name: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters:
-              name: Super Challenge - Functions and Parameters
-            Super Challenge - Variables:
-              name: Super Challenge - Variables
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
           lessons:
             Artist:
               name: Artist
@@ -402,25 +226,6 @@ ne:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          stages:
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
           lessons:
             'Artist: Functions':
               name: 'Artist: Functions'
@@ -441,17 +246,6 @@ ne:
             'Maze: Sequence':
               name: 'Maze: Sequence'
         usability:
-          stages:
-            Binary:
-              name: Binary
-            For Loops:
-              name: For Loops
-            Functions and Functions with Parameters:
-              name: Functions and Functions with Parameters
-            Intro:
-              name: Intro
-            Variables:
-              name: Variables
           lessons:
             Binary:
               name: Binary
@@ -464,9 +258,6 @@ ne:
             Variables:
               name: Variables
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: Conditionals
           lessons:
             'Eval: Conditionals':
               name: Conditionals
@@ -474,23 +265,14 @@ ne:
           title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          stages:
-            Infinity:
-              name: Infinity
           lessons:
             Infinity:
               name: Infinity
         algebrademo:
-          stages:
-            The Design Recipe:
-              name: The Design Recipe
           lessons:
             The Design Recipe:
               name: The Design Recipe
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
@@ -501,47 +283,6 @@ ne:
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           description_audience: Ages 10-18
-          stages:
-            Abstraction:
-              name: Abstraction
-            Algorithms:
-              name: Algorithms
-            Computational Thinking:
-              name: Computational Thinking
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
-            Graph Paper Programming:
-              name: Graph Paper Programming
-            Introduction to Computer Science:
-              name: Introduction to Computer Science
-            Relay Programming:
-              name: Relay programming
-            Song Writing:
-              name: Song Writing
-            The Artist:
-              name: The Artist
-            The Artist 2:
-              name: The Artist 2
-            The Artist 3:
-              name: The Artist 3
-            The Artist 4:
-              name: The Artist 4
-            The Artist 5:
-              name: The Artist 5
-            The Farmer:
-              name: The Farmer
-            The Farmer 2:
-              name: The Farmer 2
-            The Farmer 3:
-              name: The Farmer 3
-            The Internet:
-              name: The Internet
-            The Maze:
-              name: The Maze
-            Wrap-up:
-              name: Wrap-up
           lessons:
             Abstraction:
               name: Abstraction
@@ -584,13 +325,6 @@ ne:
             Wrap-up:
               name: Wrap-up
         edit-code:
-          stages:
-            Play Lab:
-              name: Play Lab
-            The Artist:
-              name: The Artist
-            The Maze:
-              name: The Maze
           lessons:
             Play Lab:
               name: Play Lab
@@ -602,15 +336,6 @@ ne:
           title: कार्य 
           description: कार्य 
           description_short: कार्य 
-          stages:
-            Bounce:
-              name: Bounce
-            Calc:
-              name: Calc
-            Eval:
-              name: Eval
-            Studio:
-              name: स्टुडियो
           lessons:
             Bounce:
               name: Bounce
@@ -624,9 +349,6 @@ ne:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
           description_short: Write your own Flappy game in less than 10 minutes!
-          stages:
-            Flappy Code:
-              name: Flappy Code
           lessons:
             Flappy Code:
               name: Flappy Code
@@ -634,9 +356,6 @@ ne:
           title: Jigsaw
           description: Try our Jigsaw tutorial
           description_short: Try our Jigsaw tutorial
-          stages:
-            Jigsaw:
-              name: Jigsaw
           lessons:
             Jigsaw:
               name: Jigsaw
@@ -644,9 +363,6 @@ ne:
           title: Step
           description: Step tutorial
           description_short: Step tutorial
-          stages:
-            Step:
-              name: Step
           lessons:
             Step:
               name: Step
@@ -654,99 +370,50 @@ ne:
           title: Hour of Code 2013
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: Puzzles
           lessons:
             Puzzles:
               name: Puzzles
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: Puzzles
           lessons:
             Puzzles:
               name: Puzzles
         algebraPD:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
         cspunit3:
-          stages:
-            Creating Functions:
-              name: Creating Functions
-            While Loops:
-              name: While Loops
           lessons:
             Creating Functions:
               name: Creating Functions
             While Loops:
               name: While Loops
         algebraPD3:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
-            The Design Recipe:
-              name: The Design Recipe
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
             The Design Recipe:
               name: The Design Recipe
         algebraPD-NexTech:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
         algebraPD-iZone:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
         sciencePD2:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         algebraPD2a:
-          stages:
-            The Design Recipe:
-              name: The Design Recipe
           lessons:
             The Design Recipe:
               name: The Design Recipe
         allthethings:
-          stages:
-            Artist:
-              name: Artist
-            Bounce:
-              name: Bounce
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Jigsaw
-            Maze:
-              name: Maze
-            Minecraft:
-              name: Minecraft
-            Studio:
-              name: स्टुडियो
           lessons:
             Artist:
               name: Artist
@@ -763,33 +430,16 @@ ne:
             Studio:
               name: स्टुडियो
         algebraPD2b:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
         cspfacilitator:
-          stages:
-            App Lab:
-              name: App Lab
-            Internet Simulator:
-              name: Internet Simulator
           lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
               name: Internet Simulator
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Wrap-up
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -800,47 +450,24 @@ ne:
             Wrap-up:
               name: Wrap-up
         algebraPD2:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
-            The Design Recipe:
-              name: The Design Recipe
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
             The Design Recipe:
               name: The Design Recipe
         sciencePD2b:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         science-PD2:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         sciencePD2b-iZone:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Wrap-up
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -851,15 +478,6 @@ ne:
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Wrap-up
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -870,25 +488,6 @@ ne:
             Wrap-up:
               name: Wrap-up
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Binary Bracelets
-            Building a Foundation:
-              name: Building a Foundation
-            Getting Loopy:
-              name: Getting Loopy
-            Graph Paper Programming:
-              name: Graph Paper Programming
-            Happy Maps:
-              name: Happy Maps
-            Move it, Move it:
-              name: Move it, Move it
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Songwriting:
-              name: Songwriting
-            The Big Event:
-              name: The Big Event
           lessons:
             Binary Bracelets:
               name: Binary Bracelets
@@ -909,9 +508,6 @@ ne:
             The Big Event:
               name: The Big Event
         ScienceP3OLPT2:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
@@ -923,16 +519,10 @@ ne:
           title: Ice Age Play Lab
           description: Create a story or make a game with Ice Age Play Lab!
           description_short: Create a story or make a game with Ice Age Play Lab!
-          stages:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
         cspunit3temp:
-          stages:
-            While Loops:
-              name: While Loops
           lessons:
             While Loops:
               name: While Loops
@@ -940,9 +530,6 @@ ne:
           title: Gumball Play Lab
           description: Create a story or make a game with Gumball Play Lab!
           description_short: Create a story or make a game with Gumball Play Lab!
-          stages:
-            Gumball Play Lab:
-              name: Gumball Play Lab
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
@@ -950,9 +537,6 @@ ne:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -960,9 +544,6 @@ ne:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -970,60 +551,36 @@ ne:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           description_short: Explore a Minecraft world through code
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
         ScienceP3OLPT3:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         algebraPD1:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
         csp1-2017:
-          stages:
-            The Internet:
-              name: The Internet
           lessons:
             The Internet:
               name: The Internet
         csp3-2017:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         csp5-2017:
-          stages:
-            While Loops:
-              name: While Loops
           lessons:
             While Loops:
               name: While Loops
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: Functions
           lessons:
             Functions:
               name: Functions
         CSF_Secret_Sample:
           description_audience: Ages 8-18
         algebraFacilitator:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
@@ -1044,16 +601,10 @@ ne:
             practice:
               display_name: Teaching Practices
         CSDU2-Draft:
-          stages:
-            Peer Review:
-              name: Peer Review
           lessons:
             Peer Review:
               name: Peer Review
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Artist Functions
           lessons:
             Artist Functions:
               name: Artist Functions
@@ -1068,22 +619,10 @@ ne:
             practice:
               display_name: Teaching Practices
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
           lessons:
             'Bee: Conditionals':
               name: 'Bee: Conditionals'
         gradeKinder:
-          stages:
-            Events:
-              name: कार्य 
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
-            Loops:
-              name: Loops
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
           lessons:
             Events:
               name: कार्य 
@@ -1094,24 +633,12 @@ ne:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
         grade4:
-          stages:
-            Digital Citizenship:
-              name: Digital Citizenship
-            Songwriting:
-              name: Songwriting
           lessons:
             Digital Citizenship:
               name: Digital Citizenship
             Songwriting:
               name: Songwriting
         grade1:
-          stages:
-            Events:
-              name: कार्य 
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
-            Loops:
-              name: Loops
           lessons:
             Events:
               name: कार्य 
@@ -1120,27 +647,6 @@ ne:
             Loops:
               name: Loops
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: 'Artist: For Loops'
-            'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
-            'Artist: Variables':
-              name: 'Artist: Variables'
-            'Bee: For Loops':
-              name: 'Bee: For Loops'
-            'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Play Lab: Variables':
-              name: 'Play Lab: Variables'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
           lessons:
             'Artist: For Loops':
               name: 'Artist: For Loops'
@@ -1163,15 +669,6 @@ ne:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Wrap-up
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1182,15 +679,6 @@ ne:
             Wrap-up:
               name: Wrap-up
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            Bee Debugging:
-              name: Bee Debugging
-            Bounce:
-              name: Bounce
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
           lessons:
             'Artist: Nested Loops':
               name: 'Artist: Nested Loops'
@@ -1209,13 +697,6 @@ ne:
             practice:
               display_name: Teaching Practices
         csd3-2017:
-          stages:
-            Functions:
-              name: Functions
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
           lessons:
             Functions:
               name: Functions
@@ -1224,15 +705,6 @@ ne:
             Conditionals:
               name: Conditionals
         grade2:
-          stages:
-            Flappy:
-              name: Flappy
-            Binary Bracelets:
-              name: Binary Bracelets
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life Algorithms: Paper Planes'
-            The Big Event:
-              name: The Big Event
           lessons:
             Flappy:
               name: Flappy
@@ -1243,27 +715,6 @@ ne:
             The Big Event:
               name: The Big Event
         k5concepts:
-          stages:
-            Binary:
-              name: Binary
-            Conditionals:
-              name: Conditionals
-            Events:
-              name: कार्य 
-            For Loops:
-              name: For Loops
-            Functions:
-              name: Functions
-            Functions with Parameters:
-              name: Functions with Parameters
-            Loops:
-              name: Loops
-            Nested Loops:
-              name: Nested Loops
-            Variables:
-              name: Variables
-            While Loops:
-              name: While Loops
           lessons:
             Binary:
               name: Binary
@@ -1286,11 +737,6 @@ ne:
             While Loops:
               name: While Loops
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: Teacher Dashboard
-            The Design Recipe:
-              name: The Design Recipe
           lessons:
             Teacher Dashboard:
               name: Teacher Dashboard
@@ -1316,34 +762,10 @@ ne:
           title: Choose your team and make a basketball game
           description_short: Choose your team and make a basketball game
           description: Choose your team and make a basketball game
-          stages:
-            Bounce:
-              name: Bounce
           lessons:
             Bounce:
               name: Bounce
-        fesbinary:
-          title: Binary
-          stages:
-            Binary Bracelets:
-              name: Binary Bracelets
-            Binary Images:
-              name: Binary Images
-            Play Lab:
-              name: Play Lab
-          lessons:
-            Binary Bracelets:
-              name: Binary Bracelets
-            Binary Images:
-              name: Binary Images
-            Play Lab:
-              name: Play Lab
         csd2-2017:
-          stages:
-            Peer Review:
-              name: Peer Review
-            Lists:
-              name: Lists
           lessons:
             Peer Review:
               name: Peer Review
@@ -1361,51 +783,26 @@ ne:
           title: Minecraft Hour of Code Designer
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
           description: Program animals and other Minecraft creatures in your own version of Minecraft.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code Designer
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Flappy Code
           lessons:
             Flappy Code:
               name: Flappy Code
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Going Places Safely:
-              name: Going Places Safely
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Going Places Safely:
               name: Going Places Safely
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Your Digital Footprint:
-              name: Your Digital Footprint
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Your Digital Footprint:
               name: Your Digital Footprint
         coursec-draft:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life Algorithms: Paper Planes'
-            Binary Bracelets:
-              name: Binary Bracelets
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Building a Foundation:
-              name: Building a Foundation
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
@@ -1416,19 +813,6 @@ ne:
             Building a Foundation:
               name: Building a Foundation
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
-            Nested Loops:
-              name: Nested Loops
-            Introduction:
-              name: Introduction
           lessons:
             Conditionals with Cards:
               name: Conditionals with Cards
@@ -1443,17 +827,6 @@ ne:
             Introduction:
               name: Introduction
         coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: Digital Citizenship
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Introduction
-            Conditionals:
-              name: Conditionals
           lesson_groups:
             content:
               display_name: Content
@@ -1469,19 +842,6 @@ ne:
             Conditionals:
               name: Conditionals
         coursef-draft:
-          stages:
-            Digital Citizenship:
-              name: Digital Citizenship
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
-            Introduction:
-              name: Introduction
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
           lesson_groups:
             content:
               display_name: Content
@@ -1500,17 +860,11 @@ ne:
               name: Ice Age Play Lab
         classic-hoc-impact-study:
           description_short: Try the basics of computer science with many fun characters!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         hoc-impact-study:
           description_short: Try the basics of computer science with many fun characters!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
@@ -1519,16 +873,10 @@ ne:
           description_short: Mix and match across sports
           description: Mix and match across sports
         2016_sciencePD-phase2b:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         2016_sciencePD_phase2b:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
@@ -1549,23 +897,14 @@ ne:
             practice:
               display_name: Teaching Practices
         sciencepd4:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         science-pd-ol-pt-5:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
         csf2harvey:
-          stages:
-            Binary:
-              name: Binary
           lesson_groups:
             content:
               display_name: Content
@@ -1573,9 +912,6 @@ ne:
             Binary:
               name: Binary
         sciencepd5:
-          stages:
-            Wrap-Up:
-              name: Wrap-Up
           lessons:
             Wrap-Up:
               name: Wrap-Up
@@ -1592,13 +928,6 @@ ne:
             content:
               display_name: Content
         csd6-draft:
-          stages:
-            Lists:
-              name: Lists
-            For Loops:
-              name: For Loops
-            Functions with Parameters:
-              name: Functions with Parameters
           lessons:
             Lists:
               name: Lists
@@ -1607,27 +936,14 @@ ne:
             Functions with Parameters:
               name: Functions with Parameters
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Introduction
           lessons:
             Introduction:
               name: Introduction
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Introduction
           lessons:
             Introduction:
               name: Introduction
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Introduction
-            Conditionals:
-              name: Conditionals
-            'Real Life Algorithms: Dice Race':
-              name: 'Real life algorithms: Dice Race'
           lessons:
             Introduction:
               name: Introduction
@@ -1636,15 +952,6 @@ ne:
             'Real Life Algorithms: Dice Race':
               name: 'Real life algorithms: Dice Race'
         csd6-2017:
-          stages:
-            Lists:
-              name: Lists
-            For Loops:
-              name: For Loops
-            Functions with Parameters:
-              name: Functions with Parameters
-            Functions with Parameters_:
-              name: Functions with Parameters
           lessons:
             Lists:
               name: Lists
@@ -1655,13 +962,6 @@ ne:
             Functions with Parameters_:
               name: Functions with Parameters
         csd3-draft:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables
@@ -1670,29 +970,14 @@ ne:
             Functions:
               name: Functions
         csd3-old:
-          stages:
-            Functions:
-              name: Functions
           lessons:
             Functions:
               name: Functions
         csd2-draft:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd3-chapters:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
-            'null':
-              name: 'null'
           lessons:
             Variables:
               name: Variables
@@ -1703,76 +988,38 @@ ne:
             'null':
               name: 'null'
         coursef-ramp:
-          stages:
-            Introduction:
-              name: Introduction
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
           lessons:
             Introduction:
               name: Introduction
             Ice Age Play Lab:
               name: Ice Age Play Lab
         csd2-old:
-          stages:
-            Peer Review:
-              name: Peer Review
           lessons:
             Peer Review:
               name: Peer Review
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-            Bounce:
-              name: Bounce
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Bounce:
               name: Bounce
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life Algorithms: Paper Planes'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: Nested Loops
           lessons:
             Nested Loops:
               name: Nested Loops
         coursee-2017:
-          stages:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
@@ -1787,9 +1034,6 @@ ne:
             Nested Loops:
               name: Nested Loops
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -1866,25 +1110,6 @@ ne:
             content:
               display_name: Content
         express-2017:
-          stages:
-            Introduction:
-              name: Introduction
-            Internet:
-              name: Internet
-            Digital Citizenship:
-              name: Digital Citizenship
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
           lesson_groups:
             content:
               display_name: Content
@@ -1908,42 +1133,20 @@ ne:
             Nested Loops:
               name: Nested Loops
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Spelling Bee:
               name: Spelling Bee
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Thanks
           lessons:
             Thanks:
               name: Thanks
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
-            Conditionals:
-              name: Conditionals
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -1956,21 +1159,6 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
         new-d:
-          stages:
-            Introduction:
-              name: Introduction
-            Nested Loops:
-              name: Nested Loops
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
-            Building a Foundation:
-              name: Building a Foundation
           lessons:
             Introduction:
               name: Introduction
@@ -1987,13 +1175,6 @@ ne:
             Building a Foundation:
               name: Building a Foundation
         new-express:
-          stages:
-            Introduction:
-              name: Introduction
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
           lesson_groups:
             content:
               display_name: Content
@@ -2005,15 +1186,6 @@ ne:
             Nested Loops:
               name: Nested Loops
         new-e:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Conditionals:
-              name: Conditionals
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -2024,17 +1196,6 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
         new-f:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -2047,33 +1208,14 @@ ne:
             Songwriting with Parameters:
               name: Songwriting with Parameters
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
-            Introduction:
-              name: Introduction
-            Conditionals:
-              name: Conditionals
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -2088,19 +1230,6 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Introduction:
-              name: Introduction
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -2115,24 +1244,12 @@ ne:
             Songwriting with Parameters:
               name: Songwriting with Parameters
         csd6-old:
-          stages:
-            Lists:
-              name: Lists
-            For Loops:
-              name: For Loops
           lessons:
             Lists:
               name: Lists
             For Loops:
               name: For Loops
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables
@@ -2141,13 +1258,6 @@ ne:
             Functions:
               name: Functions
         csd3-2018:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables
@@ -2156,59 +1266,16 @@ ne:
             Functions:
               name: Functions
         csd2-2018:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         coursea-2018:
-          stages:
-            'Programming: Happy Maps':
-              name: Happy Maps
-            Going Places Safely:
-              name: Going Places Safely
           lessons:
             'Programming: Happy Maps':
               name: Happy Maps
             Going Places Safely:
               name: Going Places Safely
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
-            Introduction:
-              name: Introduction
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
-            'Events: The Big Event':
-              name: The Big Event
-            'Loops: Getting Loopy':
-              name: Getting Loopy
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            'Functions: Songwriting':
-              name: Songwriting
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Binary Bracelets:
-              name: Binary Bracelets
-            'Unplugged: Binary':
-              name: Binary Images
-            Artist Binary:
-              name: Artist Binary
-            Internet:
-              name: The Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Relay programming
-            Graph Paper Programming:
-              name: Graph Paper Programming
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Graph Paper Programming
@@ -2245,13 +1312,6 @@ ne:
             Graph Paper Programming:
               name: Graph Paper Programming
         courseb-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Move It, Move It:
-              name: Move It, Move It
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
@@ -2260,25 +1320,6 @@ ne:
             Move It, Move It:
               name: Move It, Move It
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
-            Introduction:
-              name: Introduction
-            Building a Foundation:
-              name: Building a Foundation
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Unplugged: Binary':
-              name: Binary Images
-            Artist Binary:
-              name: Artist Binary
-            Graph Paper Programming:
-              name: Graph Paper Programming
-            Relay Programming:
-              name: Relay programming
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Graph Paper Programming
@@ -2299,15 +1340,6 @@ ne:
             Relay Programming:
               name: Relay programming
         coursec-2018:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            'Loops: Getting Loopy':
-              name: Getting Loopy
-            'Events: The Big Event':
-              name: The Big Event
-            Binary Bracelets:
-              name: Binary Bracelets
           lessons:
             Building a Foundation:
               name: Building a Foundation
@@ -2318,30 +1350,10 @@ ne:
             Binary Bracelets:
               name: Binary Bracelets
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Functions with Parameters
           lessons:
             Functions with Parameters:
               name: Functions with Parameters
         coursee-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: My Robotic Friends
-            Building a Foundation:
-              name: Building a Foundation
-            Introduction:
-              name: Introduction
-            'Functions: Songwriting':
-              name: Songwriting
-            Internet:
-              name: The Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           lessons:
             'Programming: My Robotic Friends':
               name: My Robotic Friends
@@ -2360,23 +1372,6 @@ ne:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: My Robotic Friends
-            Building a Foundation:
-              name: Building a Foundation
-            Introduction:
-              name: Introduction
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Songwriting with Parameters:
-              name: Songwriting with Parameters
-            Conditionals with Cards:
-              name: Conditionals with Cards
           lessons:
             'Programming: My Robotic Friends':
               name: My Robotic Friends
@@ -2395,9 +1390,6 @@ ne:
             Conditionals with Cards:
               name: Conditionals with Cards
         csp1-2018:
-          stages:
-            The Internet:
-              name: The Internet
           lessons:
             The Internet:
               name: The Internet
@@ -2406,16 +1398,10 @@ ne:
             csp2_1_2018:
               display_name: 'Unit 2: Digital Information'
         csp3-2018:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         csp5-2018:
-          stages:
-            While Loops:
-              name: While Loops
           lessons:
             While Loops:
               name: While Loops
@@ -2522,15 +1508,6 @@ ne:
             content:
               display_name: Content
         pre-express-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
-            Move It, Move It:
-              name: Move It, Move It
-            Your Digital Footprint:
-              name: Your Digital Footprint
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
@@ -2547,23 +1524,14 @@ ne:
             content:
               display_name: Content
         frozen-2018:
-          stages:
-            Artist:
-              name: Artist
           lessons:
             Artist:
               name: Artist
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Artist
           lessons:
             Artist:
               name: Artist
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Artist
           lessons:
             Artist:
               name: Artist
@@ -2576,21 +1544,6 @@ ne:
             csp_functions:
               display_name: Functions
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            The Artist:
-              name: The Artist
-            Internet:
-              name: The Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_variables:
               display_name: Variables
@@ -2616,19 +1569,6 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Digital Citizenship:
-              name: Digital Citizenship
-            'Unplugged: Binary':
-              name: Binary Images
-            Artist Binary:
-              name: Artist Binary
           lesson_groups:
             csf_events:
               display_name: कार्य 
@@ -2654,21 +1594,6 @@ ne:
             Artist Binary:
               name: Artist Binary
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: Building a Foundation
-            Nested Loops:
-              name: Nested Loops
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            'Functions: Songwriting':
-              name: Songwriting
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Songwriting
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -2692,25 +1617,6 @@ ne:
             Songwriting:
               name: Songwriting
         express-2019:
-          stages:
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Binary Bracelets:
-              name: Binary Bracelets
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -2742,9 +1648,6 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
         andrea-test:
-          stages:
-            'null':
-              name: 'null'
           lesson_groups:
             required:
               display_name: Overview
@@ -2754,13 +1657,6 @@ ne:
             'null':
               name: 'null'
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Real-life Algorithms: Paper Planes'
-            'Events: The Big Event':
-              name: The Big Event
-            Binary Bracelets:
-              name: Binary Bracelets
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -2778,11 +1674,6 @@ ne:
             Binary Bracelets:
               name: Binary Bracelets
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Happy Maps
-            Going Places Safely:
-              name: Going Places Safely
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -2796,13 +1687,6 @@ ne:
             Going Places Safely:
               name: Going Places Safely
         courseb-2019:
-          stages:
-            Move It, Move It:
-              name: Move It, Move It
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            'Loops: Getting Loopy':
-              name: Getting Loopy
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -2818,13 +1702,6 @@ ne:
             'Loops: Getting Loopy':
               name: Getting Loopy
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Move It, Move It
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Spelling Bee:
-              name: Spelling Bee
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -2838,27 +1715,14 @@ ne:
             Spelling Bee:
               name: Spelling Bee
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
         csd2-2019:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd3-2019:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables
@@ -2867,16 +1731,10 @@ ne:
             Functions:
               name: Functions
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Functions with Parameters
           lessons:
             Functions with Parameters:
               name: Functions with Parameters
         csp4-pilot:
-          stages:
-            Surveys:
-              name: Surveys
           lesson_groups:
             csp_variables:
               display_name: Variables
@@ -2890,9 +1748,6 @@ ne:
             Surveys:
               name: Surveys
         csp1-2019:
-          stages:
-            The Internet:
-              name: The Internet
           lessons:
             The Internet:
               name: The Internet
@@ -2901,16 +1756,10 @@ ne:
             csp2_1_2018:
               display_name: 'Unit 2: Digital Information'
         csp3-2019:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         csp5-2019:
-          stages:
-            While Loops:
-              name: While Loops
           lessons:
             While Loops:
               name: While Loops
@@ -2919,13 +1768,6 @@ ne:
             required:
               display_name: Overview
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            Building a Foundation:
-              name: Building a Foundation
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -2996,9 +1838,6 @@ ne:
             csp_functions:
               display_name: Functions
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Graph Paper Programming
           lessons:
             Graph Paper Programming:
               name: Graph Paper Programming
@@ -3023,20 +1862,10 @@ ne:
             content:
               display_name: Content
         csd2-pilot:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd3-pilot:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables
@@ -3123,11 +1952,6 @@ ne:
             required:
               display_name: Overview
         peru-2019:
-          stages:
-            Introduction:
-              name: Introduction
-            Nested Loops:
-              name: Nested Loops
           lessons:
             Introduction:
               name: Introduction
@@ -3140,19 +1964,6 @@ ne:
             required:
               display_name: Overview
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Loops
-            Conditionals:
-              name: Conditionals
-            Events:
-              name: कार्य 
-            Functions:
-              name: Functions
-            Variables:
-              name: Variables
-            For Loops:
-              name: For Loops
           lessons:
             Loops:
               name: Loops
@@ -3175,18 +1986,10 @@ ne:
             csp_functions:
               display_name: Functions
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Conditionals
           lessons:
             Conditionals:
               name: Conditionals
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Conditionals with Cards
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3202,9 +2005,6 @@ ne:
             Conditionals with Cards:
               name: Conditionals with Cards
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Conditionals
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -3218,9 +2018,6 @@ ne:
             Conditionals:
               name: Conditionals
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Conditionals
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -3252,22 +2049,10 @@ ne:
             csp_loops:
               display_name: Loops
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Functions with Parameters
           lessons:
             Functions with Parameters:
               name: Functions with Parameters
         csd3-2020:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
-            Text:
-              name: Text
           lessons:
             Variables:
               name: Variables
@@ -3278,11 +2063,6 @@ ne:
             Text:
               name: Text
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Going Places Safely
-            'Programming: Happy Maps':
-              name: Happy Maps
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3296,13 +2076,6 @@ ne:
             'Programming: Happy Maps':
               name: Happy Maps
         courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Move It, Move It:
-              name: Move It, Move It
-            'Loops: Getting Loopy':
-              name: Getting Loopy
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3318,11 +2091,6 @@ ne:
             'Loops: Getting Loopy':
               name: Getting Loopy
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: Binary Bracelets
-            'Events: The Big Event':
-              name: The Big Event
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3338,19 +2106,6 @@ ne:
             'Events: The Big Event':
               name: The Big Event
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Conditionals with Cards
-            'Unplugged: Binary':
-              name: Binary Images
-            Artist Binary:
-              name: Artist Binary
-            Digital Citizenship:
-              name: Digital Citizenship
           lesson_groups:
             csf_events:
               display_name: कार्य 
@@ -3376,9 +2131,6 @@ ne:
             Digital Citizenship:
               name: Digital Citizenship
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: Songwriting
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3390,15 +2142,6 @@ ne:
             'Functions: Songwriting':
               name: Songwriting
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: Envelope Variables
-            For Loop Fun:
-              name: For Loop Fun
-            Internet:
-              name: The Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3428,9 +2171,6 @@ ne:
             csf_for_loops:
               display_name: For Loops
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Spelling Bee
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -3444,27 +2184,16 @@ ne:
             csp_unit1_2020:
               display_name: '(old) Unit 1: Digital Information'
         csp3-virtual:
-          stages:
-            Creating Functions:
-              name: Creating Functions
           lessons:
             Creating Functions:
               name: Creating Functions
         csp5-virtual:
-          stages:
-            While Loops:
-              name: While Loops
-            Variables:
-              name: Variables
           lessons:
             While Loops:
               name: While Loops
             Variables:
               name: Variables
         virtual-holding-place:
-          stages:
-            Functions:
-              name: Functions
           lesson_groups:
             content:
               display_name: Content
@@ -3472,37 +2201,16 @@ ne:
             Functions:
               name: Functions
         code-break:
-          stages:
-            Algorithms:
-              name: Algorithms
-            Events:
-              name: कार्य 
           lessons:
             Algorithms:
               name: Algorithms
             Events:
               name: कार्य 
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: While Loops
           lessons:
             While Loops:
               name: While Loops
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: Loops
-            Events:
-              name: कार्य 
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
-            Variables:
-              name: Variables
-            For Loops:
-              name: For Loops
           lessons:
             Loops:
               name: Loops
@@ -3517,15 +2225,6 @@ ne:
             For Loops:
               name: For Loops
         csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-            Text:
-              name: Text
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
           lessons:
             Variables:
               name: Variables

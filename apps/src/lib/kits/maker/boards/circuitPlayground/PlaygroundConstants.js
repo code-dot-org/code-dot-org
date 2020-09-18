@@ -10,6 +10,8 @@ export const J5_CONSTANTS = {
   SERVO: 4
 };
 
+export const CP_API = 'circuitPlayground';
+
 export const CP_SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
 export const CP_BUTTON_VARS = ['buttonL', 'buttonR'];
 const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);

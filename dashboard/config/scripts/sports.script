@@ -1,20 +1,13 @@
-tts true
 hidden false
+tts true
 
-lesson 'Sports'
-skin 'sports'
+lesson 'Sports', display_name: 'Sports'
 level 'bounce_1_sports'
-skin 'sports'
 level 'bounce_2_sports'
-skin 'sports'
 level 'bounce_5_sports'
-skin 'sports'
 level 'bounce_6_sports'
-skin 'sports'
 level 'bounce_7_sports'
-skin 'sports'
 level 'bounce_10_sports'
-skin 'sports'
 level 'bounce_11_sports'
-skin 'sports'
 level 'bounce_12_sports'
+

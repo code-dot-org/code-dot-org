@@ -1,6 +1,6 @@
 script_announcements [{"notice"=>"This Progression is No Longer Supported", "details"=>"The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.", "link"=>"https://studio.code.org/s/express", "type"=>"failure", "visibility"=>"Teacher and student"}]
 
-lesson 'Fish Tank - Creating Sprites'
+lesson 'Fish Tank - Creating Sprites', display_name: 'Fish Tank - Creating Sprites'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
 level 'Fish Tank 3-validated'
@@ -9,7 +9,7 @@ level 'Fish Tank 5-validated'
 level 'Fish Tank 6-validated'
 level 'Fish Tank 7-validated'
 
-lesson 'Alien Dance Party - Input'
+lesson 'Alien Dance Party - Input', display_name: 'Alien Dance Party - Input'
 level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'Dance Party 3'
@@ -19,7 +19,7 @@ level 'Dance Party 6'
 level 'Dance Party 7'
 level 'Dance Party Freeplay'
 
-lesson 'Virtual Pet - Interactions'
+lesson 'Virtual Pet - Interactions', display_name: 'Virtual Pet - Interactions'
 level 'Virtual Pet 1'
 level 'Virtual Pet 2'
 level 'Virtual Pet 3'
@@ -27,3 +27,4 @@ level 'Virtual Pet 4'
 level 'Virtual Pet 5'
 level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
+

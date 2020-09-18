@@ -1,6 +1,7 @@
 require 'concurrent/scheduled_task'
 require 'concurrent/utility/native_integer'
 require 'honeybadger/ruby'
+require 'monitor'
 
 module Cdo
   # Abstract class to handle asynchronous-buffering and periodic-flushing using a thread pool.
@@ -33,8 +34,11 @@ module Cdo
       @min_interval = min_interval
       @log = log
 
-      @scheduled_flush = Concurrent::ScheduledTask.new(0.0) {}
+      @task = RescheduledTask.new(0.0, &method(:flush_batch)).
+        with_observer(&method(:schedule_flush))
+
       @buffer = []
+      @buffer.extend(MonitorMixin)
 
       @ruby_pid = $$
       if wait_at_exit
@@ -64,8 +68,10 @@ module Cdo
       if (size = size([object])) > @batch_size
         raise ArgumentError, "Object size (#{size}) exceeds batch size (#{@batch_size})"
       end
-      @buffer << BufferObject.new(object, now)
-      schedule_flush
+      @buffer.synchronize do
+        @buffer << BufferObject.new(object, now)
+        schedule_flush
+      end
     end
 
     # Flush existing buffered objects.
@@ -77,11 +83,36 @@ module Cdo
         @log.info "Flushing #{self.class}, waiting #{wait} seconds"
         schedule_flush(true)
         # Block until the pending flush is completed or timeout is reached.
-        @scheduled_flush.wait(wait.infinite? ? nil : wait)
+        @task.wait(wait.infinite? ? nil : wait)
       end
     end
 
     private
+
+    # Extend ScheduledTask to support rescheduling after being executed.
+    class RescheduledTask < Concurrent::ScheduledTask
+      # Reschedule the task using the given delay and the current time.
+      # A task can be reset from any state except `:processing`.
+      #
+      # @yieldreturn [Float] number of seconds to wait for before executing the task.
+      #   Passed as a block instead of an argument for thread-safety.
+      def reschedule
+        synchronize do
+          delay = yield
+          if compare_and_set_state(:pending, :fulfilled, :rejected, :unscheduled)
+            event.reset
+            ns_schedule(delay)
+          else
+            super(delay)
+          end
+        end
+      end
+
+      # Don't delete observers after notifying so they can be reused.
+      def notify_observers(*)
+        observers.notify_observers
+      end
+    end
 
     # Track time each object was added to the buffer.
     BufferObject = Struct.new(:object, :added_at)
@@ -93,14 +124,8 @@ module Cdo
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
     def schedule_flush(force = false)
-      delay = batch_ready(force)
-      if @scheduled_flush.pending?
-        @scheduled_flush.reschedule(delay)
-      else
-        @scheduled_flush = Concurrent::ScheduledTask.execute(delay) do
-          flush_batch
-          schedule_flush unless @buffer.empty?
-        end
+      @buffer.synchronize do
+        @task.reschedule {batch_ready(force)} unless @buffer.empty?
       end
     end
 
@@ -108,7 +133,7 @@ module Cdo
     # @param [Boolean] force flush batch even if not full.
     # @return [Float] Seconds until the next batch can be flushed.
     def batch_ready(force)
-      return Float::INFINITY if @buffer.empty?
+      raise ArgumentError.new('Empty buffer') if @buffer.empty?
 
       # Wait until max_interval has passed since the earliest object to flush a non-full batch.
       earliest = @buffer.first.added_at
@@ -136,18 +161,22 @@ module Cdo
     # Take a single batch of objects from the buffer.
     def take_batch
       batch = []
-      batch << @buffer.shift until
-        @buffer.empty? ||
-          batch.length >= @batch_count ||
-          size((batch + [@buffer.first]).map(&:object)) > @batch_size
+      @buffer.synchronize do
+        batch << @buffer.shift until
+          @buffer.empty? ||
+            batch.length >= @batch_count ||
+            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+      end
       batch
     end
 
     def reset_if_forked
-      if $$ != @ruby_pid
-        @buffer.clear
-        @scheduled_flush.cancel
-        @ruby_pid = $$
+      @buffer.synchronize do
+        if $$ != @ruby_pid
+          @buffer.clear
+          @task.cancel
+          @ruby_pid = $$
+        end
       end
     end
   end

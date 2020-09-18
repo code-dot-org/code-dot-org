@@ -39,7 +39,7 @@ module Pd
         {tag: "virt_ay_m1_1920",    form_id: "92175136628158", allow_embed: false}, # 2019-20 Virtual Academic Year Survey Module 1
         {tag: "612_f_ay_post",      form_id: "91564407894165", allow_multiple_submissions: true, allow_embed: false}, # 6-12 Facilitator Academic Year post-workshop survey
         {tag: "summer_prep_post",   form_id: "201285758257160", allow_embed: true}, # Summer Prep Sessions Post Survey
-        {tag: "facilitator_post",   form_id: "201595646393161", allow_embed: true}
+        {tag: "facilitator_post",   form_id: "201595646393161", allow_multiple_submissions: true, allow_embed: true}
       ]
     end
 

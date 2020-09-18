@@ -581,3 +581,12 @@ a.btn-default:active, a.btn-default:hover, a.btn-default:link, a.btn-default:vis
 .assign-confirm-modal .modal-buttons {
   margin-top: 15px
 }
+
+.hidden-label {
+  position: fixed;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

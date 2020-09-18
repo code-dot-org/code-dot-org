@@ -106,7 +106,7 @@ Scenario: Project Version Checkpoints
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
 
-# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+# Skip on IE due to blocked pop-ups
 @no_mobile @no_ie
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
@@ -145,7 +145,7 @@ Scenario: Project page refreshes when other client adds a newer version
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
-# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+# Skip on IE due to blocked pop-ups
 @no_mobile @no_ie
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"

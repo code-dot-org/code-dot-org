@@ -93,18 +93,18 @@ export default class SetupChecklist extends Component {
         )
       )
 
+      // What type of board is this?
+      .then(() => {
+        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        Promise.resolve();
+      })
+
       // Can we talk to the firmware?
       .then(() =>
         this.detectStep(STATUS_BOARD_CONNECT, () =>
           setupChecker.detectCorrectFirmware()
         )
       )
-
-      // What type of board is this?
-      .then(() => {
-        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
-        Promise.resolve();
-      })
 
       // Can we initialize components successfully?
       .then(() =>
@@ -321,7 +321,13 @@ export default class SetupChecklist extends Component {
               <div>
                 You should make sure it has the right firmware sketch installed.
                 You can{' '}
-                <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">
+                <a
+                  href={
+                    this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                      ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
+                      : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+                  }
+                >
                   install the Circuit Playground Firmata sketch with these
                   instructions
                 </a>

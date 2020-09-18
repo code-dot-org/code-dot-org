@@ -1,0 +1,155 @@
+{
+  "fa-IR": {
+    "data": {
+      "callouts": {
+        "CSD U6 tugowar variables 3": {
+          "CSD_U6_checkWin": "چک کن که بازیکن برنده شده است"
+        },
+        "CSD U6 tugowar variables 3_2018": {
+          "CSD_U6_checkWin": "چک کن که بازیکن برنده شده است"
+        },
+        "CSD U6 tugowar variables 3_2019": {
+          "CSD_U6_checkWin": "چک کن که بازیکن برنده شده است"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "تعداد دفعاتی که زامبی باید حرکت کند تا یک دایره کامل بسازد را وارد کنید"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "از بلوک \"repeat\" استفاده کنید و آن را دور بلوک های موجود در فضای کار بپیچید"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "شمارنده ی متغیر خود را به داخل این بلوک بکشید"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "از بلوک \"repeat\" استفاده کنید و آن را دور بلوک های موجود در فضای کار بپیچید"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "از این بلوک برای تنظیم \"طول\" به میزان درست استفاده کنید."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "از این بلوک برای تنظیم \"طول\" به میزان درست استفاده کنید."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را به درجه بدست آورید."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور برای گرفتن شهد می چرخد را تغییر دهید."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "برای تکرار دستورات بلوک ها را داخل حلقه قرار دهید"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "استفاده از فلش برای حرکت بازیگر"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "پخش صدا هنگامی که این رویداد رخ می دهد."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "وقتی فلش بالا فشرده میشود کدام بلوک بایمکس را به بالا حرکت میدهد؟",
+          "Infinity_move_directions_callout_arrow": "برای هدایت کردن از این فلش ها استفاده کنید"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "افزودن بلوک حرکت در اینجا"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "بلوک های حرکت را داخل اینجا قرار دهید"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "برای باز کردن منوی \" تابع ها\" اینجا را کلیک کنید، سپس دکمه ی \"یک تابع بساز\" را کلیک کنید."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید",
+          "add_and_drag_parameter": "نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "برای جابجایی علامت سوال طول متغیر را به اینجا بکشید"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های \"کارها\" حالا اینجا هستند."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "\"اجرا\" را بزن تا برنامه‌ات اجرا بشه"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "\"اجرا\" را بزن تا برنامه‌ات اجرا بشه"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "\"اجرا\" را بزن تا برنامه‌ات اجرا بشه"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "این آهن را استخراج کنید!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "این آهن را استخراج کنید!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "این آهن را استخراج کنید!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "استفاده از بلوک \"ایجاد یک دایره\" و تغییر سایز."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید",
+          "repeat_blocks_2": "(2) بلوک \"Repeat\" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "از منوی کشویی برای جایگزین کردن \"???\" با یک عدد استفاده کنید"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "از بلوک تکرار برای ایجاد این شکل استفاده کنید."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "از بلوک تکرار برای ایجاد این شکل استفاده کنید."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "یک بلوک \"move forward\" را بکشید و آن را زیر بلوک \"when run\" بیندازید تا السا را به جلو حرکت دهید"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "از بلوک \"Turn\" برای چرخاندن السا استفاده کنید. شماره ی منوی کشویی تعیین می کند که السا چقدر می چرخد"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "استفاده از بلوک \"ایجاد شعبه برف ریزه\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید"
+        },
+        "frozen square loop": {
+          "replace_questions": "از منوی کشویی برای جایگزین کردن \"???\" با یک عدد استفاده کنید"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "از منوی کشویی برای جایگزین کردن \"???\" با یک عدد استفاده کنید"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "از منوی کشویی برای جایگزین کردن \"???\" با یک عدد استفاده کنید"
+        }
+      }
+    }
+  }
+}

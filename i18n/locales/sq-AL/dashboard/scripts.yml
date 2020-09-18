@@ -11,43 +11,6 @@ sq:
           description: Kursi 1 është dizenjuar për të lejuar lexuesit të krijojnë programe kompjuerike që do i ndihmojnë ata të mësojnë të bashkëpunojnë me të tjerët, të zhvillojnë aftësitë për zgjidhjen e problemeve, dhe të këmbëngulin në detyra të vështira. Në fund të këtij kursi, studentët krijojnë lojën e tyre ose ngjarjen që ata mund ta shpërndajnë. Rekomanduar për klasën e parë.
           description_short: Kursi 1 është dizenjuar për lexuesit e hershëm.
           description_audience: Moshat 4-6
-          stages:
-            'Artist: Loops':
-              name: 'Artist: Ciklet'
-            'Artist: Sequence':
-              name: 'Artist: Sekuencë'
-            'Artist: Shapes':
-              name: 'Artist: Format'
-            'Bee: Loops':
-              name: 'Bletë: Ciklet'
-            'Bee: Sequence':
-              name: 'Bletë: Sekuencë'
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Getting Loopy:
-              name: Duke u Çmëndur
-            Going Places Safely:
-              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
-            Happy Maps:
-              name: Hartat e Gëzuara
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
-            'Maze: Debugging':
-              name: 'Maze: Rregullimi'
-            'Maze: Loops':
-              name: 'Maze: Ciklet'
-            'Maze: Sequence':
-              name: 'Labirinti: Sekuencë'
-            Move it, Move it:
-              name: Lëvize, Lëvize
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Spelling Bee:
-              name: Bleta Gërmëzuese
-            'Studio: Create a Story':
-              name: 'Play Lab: Krijo një Histori'
-            The Big Event:
-              name: Eventi i Madh
           lessons:
             'Artist: Loops':
               name: 'Artist: Ciklet'
@@ -90,45 +53,6 @@ sq:
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
           description_short: Kursi 2 është dizenjuar për studentët, që mund të lexojnë.
           description_audience: Moshat 6+ (lexim i kërkuar )
-          stages:
-            'Artist: Debugging':
-              name: 'Artist: Rregullimi'
-            'Artist: Loops':
-              name: 'Artist: Ciklet'
-            'Artist: Nested Loops':
-              name: 'Artisti: CIklet e Mbivendosura'
-            'Artist: Sequence':
-              name: 'Artist: Sekuencë'
-            'Bee: Conditionals':
-              name: 'Bletë: Kushtet'
-            'Bee: Debugging':
-              name: 'Bletë: Rregullimi'
-            'Bee: Loops':
-              name: 'Bletë: Ciklet'
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            Conditionals:
-              name: Kushtet
-            Flappy:
-              name: Flappy
-            Getting Loopy:
-              name: Duke u Çmëndur
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
-            'Maze: Loops':
-              name: 'Maze: Ciklet'
-            'Maze: Sequence':
-              name: 'Labirinti: Sekuencë'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
-            Relay programming:
-              name: Programim i Besueshëm
-            'Studio: Create a Story':
-              name: 'Play Lab: Krijo një Histori'
-            The Big Event:
-              name: Eventi i Madh
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
           lessons:
             'Artist: Debugging':
               name: 'Artist: Rregullimi'
@@ -173,49 +97,6 @@ sq:
           description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar për klasën 4-5.
           description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
           description_audience: Moshat 8-18
-          stages:
-            Artist:
-              name: Artisti
-            'Artist: Functions':
-              name: 'Artisti: Funksionet'
-            'Artist: Nested Loops':
-              name: 'Artisti: CIklet e Mbivendosura'
-            'Artist: Patterns':
-              name: 'Artisti: Modelet'
-            'Bee: Conditionals':
-              name: 'Bletë: Kushtet'
-            'Bee: Debugging':
-              name: 'Bletë: Rregullimi'
-            'Bee: Functions':
-              name: 'Bleta: Funksionet'
-            'Bee: Nested Loops':
-              name: 'Bleta: Ciklet e Mbivendosura'
-            Bounce:
-              name: Hidhu
-            Computational Thinking:
-              name: Te menduarit kompjuterik
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dice Race:
-              name: Gara me zar
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Farmer: While Loops':
-              name: 'Fermeri: Ciklet While'
-            Functional Suncatchers:
-              name: Suncatchers-at Funksionalë
-            Internet:
-              name: Internet
-            Maze:
-              name: Labirint
-            'Maze: Conditionals':
-              name: 'Maze: Kushtet'
-            Songwriting:
-              name: Të shkruarit e Këngëve
-            'Studio: Create a Game':
-              name: 'Play Lab - Krijo një Lojë'
-            'Studio: Create a Story':
-              name: 'Play Lab: Krijo një Histori'
           lessons:
             Artist:
               name: Artisti
@@ -263,9 +144,6 @@ sq:
           title: Play Lab
           description: Krijo një histori ose bëj një lojë me Play Lab!
           description_short: Krijo një histori ose bëj një lojë me Play Lab!
-          stages:
-            Play Lab:
-              name: Play Lab
           lessons:
             Play Lab:
               name: Play Lab
@@ -273,9 +151,6 @@ sq:
           title: Artisti
           description: Vizato figura të hatashme dhe dizenjo me Artistin!
           description_short: Vizato figura të hatashme dhe dizenjo me Artistin!
-          stages:
-            Artist:
-              name: Artisti
           lessons:
             Artist:
               name: Artisti
@@ -283,9 +158,6 @@ sq:
           title: Labirint Klasik
           description: Provo bazat e shkencës kompjuterike me karaktere nga Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
-          stages:
-            Maze:
-              name: Labirint
           lessons:
             Maze:
               name: Labirint
@@ -293,9 +165,6 @@ sq:
           title: Kodo me Ann-en dhe Elsa-n
           description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore që mund ta ndash me shokët e tu!
           description_short: Le të përdorim kodin për të bashkuar Ann-en dhe Elsa-n ndërsa ato eksplorojnë magjinë dhe bukurinë e akullit.
-          stages:
-            Artist:
-              name: Artisti
           lessons:
             Artist:
               name: Artisti
@@ -304,51 +173,6 @@ sq:
           description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
           description_short: Studentët që marrin Kursin 4 duhet të kenë marrë tashmë Kursin 2 dhe 3.
           description_audience: Moshat 10-18
-          stages:
-            Artist:
-              name: Artisti
-            Artist Binary:
-              name: Artist Binar
-            'Artist: For Loops':
-              name: 'Artisti: Ciklet For'
-            'Artist: Functions':
-              name: 'Artisti: Funksionet'
-            'Artist: Functions with Parameters':
-              name: 'Artisti: Funksionet me Parametra'
-            'Artist: Variables':
-              name: 'Artist: Variablat'
-            'Bee: For Loops':
-              name: 'Bletë: Ciklet For'
-            'Bee: Functions with Parameters':
-              name: 'Bletë: Funksionet me Parametra'
-            Extreme Challenge - Comprehensive:
-              name: Sfidë Ekstreme- Gjithëpërfshirëse
-            Maze and Bee:
-              name: Maze dhe Bletë
-            'Play Lab: For Loops':
-              name: 'Play Lab: Ciklet For'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: Funksionet me Parametra'
-            'Play Lab: Variables':
-              name: 'Play Lab: Variablat'
-            Super Challenge - For Loops:
-              name: Super sfidë- Për cikle
-            Super Challenge - Functions and Parameters:
-              name: Super sfidë-Funksione dhe Parametra
-            Super Challenge - Variables:
-              name: Super sfidë- Variabla
-            'Unplugged: Binary':
-              name: 'Unplugged: Binare'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Variablat Zarf'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: Argëtimi Ciklit For'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Të Shkruarit Këngë me Parametra'
-            'Unplugged: Tangrams':
-              name: "Unplugged: Tangrams\n"
           lessons:
             Artist:
               name: Artisti
@@ -398,25 +222,6 @@ sq:
           title: Kushtet paraprake të Kursit 4
           description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
           description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
-          stages:
-            'Artist: Functions':
-              name: 'Artisti: Funksionet'
-            'Artist: Loops':
-              name: 'Artist: Ciklet'
-            'Artist: Nested Loops':
-              name: 'Artisti: CIklet e Mbivendosura'
-            'Artist: Sequence':
-              name: 'Artist: Sekuencë'
-            'Bee: Conditionals':
-              name: 'Bletë: Kushtet'
-            'Bee: Debugging':
-              name: 'Bletë: Rregullimi'
-            'Bee: Nested Loops':
-              name: 'Bleta: Ciklet e Mbivendosura'
-            'Farmer: While Loops':
-              name: 'Fermeri: Ciklet While'
-            'Maze: Sequence':
-              name: 'Labirinti: Sekuencë'
           lessons:
             'Artist: Functions':
               name: 'Artisti: Funksionet'
@@ -439,17 +244,6 @@ sq:
         usability:
           title: Testimi i përdorueshmërisë
           description: Një përzgjedhje e niveleve të Kursit 4 për testimin e përdorueshmërisë.
-          stages:
-            Binary:
-              name: Binare
-            For Loops:
-              name: Për Ciklet
-            Functions and Functions with Parameters:
-              name: Funksionet dhe Funksionet me Parametra
-            Intro:
-              name: Hyrje
-            Variables:
-              name: variabla
           lessons:
             Binary:
               name: Binare
@@ -465,21 +259,6 @@ sq:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
-          stages:
-            'Eval: Conditionals':
-              name: Kushtet
-            'Eval: Strings and Images':
-              name: Stringet dhe Figurat
-            'Play Lab: Animation (Big Game)':
-              name: Loja e Madhe - Animacioni
-            'Play Lab: Defining Variables (Big Game)':
-              name: Loja e Madhe - Variablat
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Kushtet dhe Funksionet Piecewise'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: Receta e Dizenjimit'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
           lessons:
             'Eval: Conditionals':
               name: Kushtet
@@ -499,9 +278,6 @@ sq:
           title: Larmishmeria e lojrave ne laboratorin e Disney
           description: Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney.
           description_short: Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney.
-          stages:
-            Infinity:
-              name: Pafundësi
           lessons:
             Infinity:
               name: Pafundësi
@@ -509,17 +285,6 @@ sq:
           title: Demo e Algjebrës
           description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
           description_short: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
-          stages:
-            Defining Simple Functions:
-              name: Përcaktimi i Funksioneve të Thjeshtë
-            Defining Variables:
-              name: Përcaktimi i Variablave
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Making Pictures:
-              name: Të bërit Figura
-            The Design Recipe:
-              name: Receta e Dizenjimit
           lessons:
             Defining Simple Functions:
               name: Përcaktimi i Funksioneve të Thjeshtë
@@ -532,27 +297,6 @@ sq:
             The Design Recipe:
               name: Receta e Dizenjimit
         K5PD:
-          stages:
-            Computer Science Pedagogy:
-              name: Shkenca Kompjuterke Pedagogji
-            Introduction to PD:
-              name: Hyrje në PD
-            K-5 Courses:
-              name: K-5 Kurset
-            Next Steps:
-              name: Hapat e ardhshme
-            'Programming Concept: Conditionals':
-              name: 'Koncepti i Programimit: Kushtëzimet'
-            'Programming Concept: Events':
-              name: 'Koncepti i Programimit: Eventet'
-            'Programming Concept: Functions':
-              name: 'Koncepti i Programimit: Funksionet'
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
-            Unplugged lessons:
-              name: Mësimet unplugged
-            Writing computer programs:
-              name: Duke shkruar programe kompjuterike
           lessons:
             Computer Science Pedagogy:
               name: Shkenca Kompjuterke Pedagogji
@@ -585,47 +329,6 @@ sq:
           description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
           description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave kompjuterike dhe konceptet e programimit ne kurset 2-4.
           description_audience: Moshat 10-18
-          stages:
-            Abstraction:
-              name: Abstraksioni
-            Algorithms:
-              name: Algoritmet
-            Computational Thinking:
-              name: Te menduarit kompjuterik
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
-            Introduction to Computer Science:
-              name: Hyrje në Shkencë Kompjuterike
-            Relay Programming:
-              name: Programimi i Besuar
-            Song Writing:
-              name: Të Shkruarit Këngë
-            The Artist:
-              name: Artisti
-            The Artist 2:
-              name: Artisti 2
-            The Artist 3:
-              name: Artisti 3
-            The Artist 4:
-              name: Artisti 4
-            The Artist 5:
-              name: Artisti 5
-            The Farmer:
-              name: Fermeri
-            The Farmer 2:
-              name: Fermeri 2
-            The Farmer 3:
-              name: Fermeri 3
-            The Internet:
-              name: Interneti
-            The Maze:
-              name: Labirinti
-            Wrap-up:
-              name: Mbështjell
           lessons:
             Abstraction:
               name: Abstraksioni
@@ -671,13 +374,6 @@ sq:
           title: Ndrysho kodin
           description: Ndrysho kodin
           description_short: Ndrysho kodin
-          stages:
-            Play Lab:
-              name: Play Lab
-            The Artist:
-              name: Artisti
-            The Maze:
-              name: Labirinti
           lessons:
             Play Lab:
               name: Play Lab
@@ -689,15 +385,6 @@ sq:
           title: Ngjarje
           description: Ngjarje
           description_short: Ngjarje
-          stages:
-            Bounce:
-              name: Hidhu
-            Calc:
-              name: Llogarit
-            Eval:
-              name: Vlerëso
-            Studio:
-              name: Studio
           lessons:
             Bounce:
               name: Hidhu
@@ -711,9 +398,6 @@ sq:
           title: Kodi Flappy
           description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë Flappy Code!
           description_short: Pergatisni lojen tuaj Flappy në më pak se 10 minuta!
-          stages:
-            Flappy Code:
-              name: Kodi Flappy
           lessons:
             Flappy Code:
               name: Kodi Flappy
@@ -721,9 +405,6 @@ sq:
           title: Jigsaw
           description: Provoni tutorialet tona Jigsaw
           description_short: Provoni tutorialet tona Jigsaw
-          stages:
-            Jigsaw:
-              name: Jigsaw
           lessons:
             Jigsaw:
               name: Jigsaw
@@ -731,9 +412,6 @@ sq:
           title: Një hap
           description: Pasoje tutorialin
           description_short: Pasoje tutorialin
-          stages:
-            Step:
-              name: Një hap
           lessons:
             Step:
               name: Një hap
@@ -741,45 +419,24 @@ sq:
           title: Ora e Kodit 2013
           description: Provoni elementet baze te shkencave kompjuterike me personazhe nga Angry Birds dhe Plants vs. Zombies!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
-          stages:
-            Hour of Code 2013:
-              name: Ora e Kodit 2013
           lessons:
             Hour of Code 2013:
               name: Ora e Kodit 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: Puzzle
           lessons:
             Puzzles:
               name: Puzzle
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: Puzzle
           lessons:
             Puzzles:
               name: Puzzle
         cspunit1:
-          stages:
-            Number Systems:
-              name: Sistemi Numerik
-            Personal Innovations:
-              name: Inovacionet Personale
           lessons:
             Number Systems:
               name: Sistemi Numerik
             Personal Innovations:
               name: Inovacionet Personale
         algebraPD:
-          stages:
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Introduction to PD:
-              name: Hyrje në PD
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
@@ -788,15 +445,6 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         algPDmiami:
-          stages:
-            Booleans:
-              name: Booleans
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Strings and Images:
-              name: Stringet dhe Figurat
-            Your Game - Animation:
-              name: Loja Yte - Animacioni
           lessons:
             Booleans:
               name: Booleans
@@ -807,62 +455,30 @@ sq:
             Your Game - Animation:
               name: Loja Yte - Animacioni
         CSPPD:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         CSPLessonSamples:
-          stages:
-            Lesson 14:
-              name: Lekcioni 14
-            Lesson 15:
-              name: Lekcioni 15
           lessons:
             Lesson 14:
               name: Lekcioni 14
             Lesson 15:
               name: Lekcioni 15
         ECSPD:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         sciencePD:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         cspunit3:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
             While Loops:
               name: Përsëritjet Ndërsa
         algebraPD3:
-          stages:
-            Computer Science Pedagogy:
-              name: Shkenca Kompjuterke Pedagogji
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Next Steps:
-              name: Hapat e ardhshme
-            Strings and Images:
-              name: Stringet dhe Figurat
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
-            The Design Recipe:
-              name: Receta e Dizenjimit
           lessons:
             Computer Science Pedagogy:
               name: Shkenca Kompjuterke Pedagogji
@@ -877,27 +493,14 @@ sq:
             The Design Recipe:
               name: Receta e Dizenjimit
         ECSPD-NexTech:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         ECSPD-iZone:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         algebraPD-NexTech:
-          stages:
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Introduction to PD:
-              name: Hyrje në PD
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
@@ -906,13 +509,6 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         algebraPD-iZone:
-          stages:
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Introduction to PD:
-              name: Hyrje në PD
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
@@ -921,55 +517,28 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         sciencePD-NexTech:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         sciencePD-iZone:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         sciencePD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
         cspunit2:
-          stages:
-            The Internet:
-              name: Interneti
           lessons:
             The Internet:
               name: Interneti
         algebraPD2a:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Booleans:
-              name: Booleans
-            Defining Variables:
-              name: Përcaktimi i Variablave
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Free Play:
-              name: Lojë Falas
-            Strings and Images:
-              name: Stringet dhe Figurat
-            The Design Recipe:
-              name: Receta e Dizenjimit
           lessons:
             Booleans:
               name: Booleans
@@ -984,29 +553,6 @@ sq:
             The Design Recipe:
               name: Receta e Dizenjimit
         allthethings:
-          stages:
-            Artist:
-              name: Artisti
-            Bee:
-              name: Bletë
-            Bounce:
-              name: Hidhu
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Jigsaw
-            Match:
-              name: Përshtat
-            Maze:
-              name: Labirint
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Shumë
-            Pixelation:
-              name: Pixelation
-            Studio:
-              name: Studio
           lessons:
             Artist:
               name: Artisti
@@ -1033,23 +579,6 @@ sq:
         algebraPD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Booleans:
-              name: Booleans
-            Defining Functions:
-              name: Përcaktimi i Funksioneve
-            Defining Variables:
-              name: Përcaktimi i Variablave
-            'Eval: Conditionals':
-              name: 'Eval: Kushtet'
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Next Steps:
-              name: Hapat e ardhshme
-            Strings and Images:
-              name: Stringet dhe Figurat
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Booleans:
               name: Booleans
@@ -1068,13 +597,6 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         cspfacilitator:
-          stages:
-            App Lab:
-              name: Laboratori i Aplikacioneve
-            Internet Simulator:
-              name: Imitues Interneti
-            Welcome!:
-              name: Mirë se vini!
           lessons:
             App Lab:
               name: Laboratori i Aplikacioneve
@@ -1083,26 +605,12 @@ sq:
             Welcome!:
               name: Mirë se vini!
         K5-OnlinePD:
-          stages:
-            Next Steps:
-              name: Hapat e ardhshme
           lessons:
             Next Steps:
               name: Hapat e ardhshme
         ECSPD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-up:
-              name: Mbështjell
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1117,13 +625,6 @@ sq:
         algebraPD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
-            The Design Recipe:
-              name: Receta e Dizenjimit
-            Welcome!:
-              name: Mirë se vini!
           lessons:
             Teacher Dashboard:
               name: Dërrasa e zezë 
@@ -1134,11 +635,6 @@ sq:
         sciencePD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -1147,31 +643,18 @@ sq:
         science-PD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
         Equity-OnlinePD:
-          stages:
-            Next Steps:
-              name: Hapat e ardhshme
           lessons:
             Next Steps:
               name: Hapat e ardhshme
         sciencePD2b-iZone:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -1180,17 +663,6 @@ sq:
         ECSPD2-iZone:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-up:
-              name: Mbështjell
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1205,17 +677,6 @@ sq:
         ECSPD2-NexTech:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-up:
-              name: Mbështjell
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1228,25 +689,6 @@ sq:
             Wrap-up:
               name: Mbështjell
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Getting Loopy:
-              name: Duke u Çmëndur
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
-            Happy Maps:
-              name: Hartat e Gëzuara
-            Move it, Move it:
-              name: Lëvize, Lëvize
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Songwriting:
-              name: Të shkruarit e Këngëve
-            The Big Event:
-              name: Eventi i Madh
           lessons:
             Binary Bracelets:
               name: Byzylykët Binarë
@@ -1269,11 +711,6 @@ sq:
         cspunit4draft:
           description_short: të dhëna
         ScienceP3OLPT2:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -1287,16 +724,10 @@ sq:
           title: Laboratori i lojës Epoka e Akullnajave
           description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
           description_short: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
-          stages:
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
           lessons:
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
         cspunit3temp:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
@@ -1304,9 +735,6 @@ sq:
           title: Laboratori i Lojës Gumball
           description: Krijo një histori ose një lojë me laboratorin e Gumball!
           description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
-          stages:
-            Gumball Play Lab:
-              name: Laboratori i Lojës Gumball
           lessons:
             Gumball Play Lab:
               name: Laboratori i Lojës Gumball
@@ -1314,9 +742,6 @@ sq:
           title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
-          stages:
-            Hour of Code 2015:
-              name: Ora e Kodimit 2015
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
@@ -1324,9 +749,6 @@ sq:
           title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
-          stages:
-            Hour of Code 2015:
-              name: Ora e Kodimit 2015
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
@@ -1334,18 +756,10 @@ sq:
           title: Ora e Kodimit Minecraft
           description: Përdorini blloqe kodi për të dërguar Steve ose Alex në një aventurë përmes botës Minecraft
           description_short: Eksploro botën e Minecraft përmes kodit
-          stages:
-            Hour of Code 2015:
-              name: Ora e Kodimit 2015
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -1354,19 +768,6 @@ sq:
         AlgebraA:
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
-          stages:
-            'Calc: Defining Variables':
-              name: 'Calc: Përcaktimi i Variablave'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Blloqet e Vlerësimit'
-            'Eval: Strings and Images':
-              name: 'Eval: Stringet dhe figurat'
-            'Eval: Writing Contracts':
-              name: 'Eval: Kontratat e Shkruara'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Kontratat'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: Receta e Dizenjimit'
           lessons:
             'Calc: Defining Variables':
               name: 'Calc: Përcaktimi i Variablave'
@@ -1384,29 +785,6 @@ sq:
           title: 'Shkenëa Kompjuterike në Algjebër'
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
-          stages:
-            'Eval: Boolean Operators':
-              name: 'Eval: Operatorët Boolean'
-            'Eval: Conditionals':
-              name: 'Eval: Kushtet'
-            'Play Lab: Animation (Big Game)':
-              name: 'Play Lab: Animimi (Loja e Madhe)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Play Lab: Boolean (Loja e Madhe)'
-            'Play Lab: Booleans':
-              name: 'Play Lab: Booleans'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Play Lab: Kapja e përplasjeve (Loja e Madhe)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Play Lab: Të përcaktosh Variablat (Loja e Madhe)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Kapja e Përplasjeve dhe Formula Largësisë'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Kushtet dhe Funksionet Piecewise'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
           lessons:
             'Eval: Boolean Operators':
               name: 'Eval: Operatorët Boolean'
@@ -1431,13 +809,6 @@ sq:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
         algebraPD1:
-          stages:
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Introduction to PD:
-              name: Hyrje në PD
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
@@ -1446,13 +817,6 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         csp1-2017:
-          stages:
-            Number Systems:
-              name: Sistemi Numerik
-            Personal Innovations:
-              name: Inovacionet Personale
-            The Internet:
-              name: Interneti
           lessons:
             Number Systems:
               name: Sistemi Numerik
@@ -1461,43 +825,24 @@ sq:
             The Internet:
               name: Interneti
         csp3-2017:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         csp5-2017:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: funksione
           lessons:
             Functions:
               name: funksione
         2016_sciencePD_phase1:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
         CSF_Secret_Sample:
           description_audience: Moshat 8-18
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: Blloqet e Vlerësimit
-            Introduction to PD:
-              name: Hyrje në PD
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
           lessons:
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
@@ -1506,9 +851,6 @@ sq:
             Teacher Dashboard:
               name: Dërrasa e zezë 
         sciencePD1:
-          stages:
-            Introduction to PD:
-              name: Hyrje në PD
           lessons:
             Introduction to PD:
               name: Hyrje në PD
@@ -1529,18 +871,12 @@ sq:
             practice:
               display_name: Praktikat mësimore
         CSDU2-Draft:
-          stages:
-            Peer Review:
-              name: Rishikimi i ndërsjellë
           lessons:
             Peer Review:
               name: Rishikimi i ndërsjellë
         CSDU5-Draft:
           description_short: të dhëna
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Funksionet e Artistit
           lessons:
             Artist Functions:
               name: Funksionet e Artistit
@@ -1555,22 +891,10 @@ sq:
             practice:
               display_name: Praktikat mësimore
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Bletë: Kushtet'
           lessons:
             'Bee: Conditionals':
               name: 'Bletë: Kushtet'
         gradeKinder:
-          stages:
-            Events:
-              name: Ngjarje
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
-            Loops:
-              name: cikle 
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
           lessons:
             Events:
               name: Ngjarje
@@ -1581,24 +905,12 @@ sq:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         grade4:
-          stages:
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            Songwriting:
-              name: Të shkruarit e Këngëve
           lessons:
             Digital Citizenship:
               name: Shtetësi Dixhitale
             Songwriting:
               name: Të shkruarit e Këngëve
         grade1:
-          stages:
-            Events:
-              name: Ngjarje
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
-            Loops:
-              name: cikle 
           lessons:
             Events:
               name: Ngjarje
@@ -1607,27 +919,6 @@ sq:
             Loops:
               name: cikle 
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: 'Artisti: Ciklet For'
-            'Artist: Functions with Parameters':
-              name: 'Artisti: Funksionet me Parametra'
-            'Artist: Variables':
-              name: 'Artist: Variablat'
-            'Bee: For Loops':
-              name: 'Bletë: Ciklet For'
-            'Bee: Functions with Parameters':
-              name: 'Bletë: Funksionet me Parametra'
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Play Lab: Variables':
-              name: 'Play Lab: Variablat'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Variablat Zarf'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: Argëtimi Ciklit For'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Të Shkruarit Këngë me Parametra'
           lessons:
             'Artist: For Loops':
               name: 'Artisti: Ciklet For'
@@ -1650,17 +941,6 @@ sq:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Të Shkruarit Këngë me Parametra'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-up:
-              name: Mbështjell
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1673,15 +953,6 @@ sq:
             Wrap-up:
               name: Mbështjell
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'Artisti: CIklet e Mbivendosura'
-            Bee Debugging:
-              name: Riparimi i Bletëve
-            Bounce:
-              name: Hidhu
-            'Farmer: While Loops':
-              name: 'Fermeri: Ciklet While'
           lessons:
             'Artist: Nested Loops':
               name: 'Artisti: CIklet e Mbivendosura'
@@ -1700,13 +971,6 @@ sq:
             practice:
               display_name: Praktikat mësimore
         csd3-2017:
-          stages:
-            Functions:
-              name: funksione
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
           lessons:
             Functions:
               name: funksione
@@ -1715,15 +979,6 @@ sq:
             Conditionals:
               name: Kushtet
         grade2:
-          stages:
-            Flappy:
-              name: Flappy
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
-            The Big Event:
-              name: Eventi i Madh
           lessons:
             Flappy:
               name: Flappy
@@ -1734,27 +989,6 @@ sq:
             The Big Event:
               name: Eventi i Madh
         k5concepts:
-          stages:
-            Binary:
-              name: Binare
-            Conditionals:
-              name: Kushtet
-            Events:
-              name: Ngjarje
-            For Loops:
-              name: Për Ciklet
-            Functions:
-              name: funksione
-            Functions with Parameters:
-              name: Funksionet me parametra
-            Loops:
-              name: cikle 
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Variables:
-              name: variabla
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             Binary:
               name: Binare
@@ -1777,13 +1011,6 @@ sq:
             While Loops:
               name: Përsëritjet Ndërsa
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: Dërrasa e zezë 
-            The Design Recipe:
-              name: Receta e Dizenjimit
-            Welcome!:
-              name: Mirë se vini!
           lessons:
             Teacher Dashboard:
               name: Dërrasa e zezë 
@@ -1811,34 +1038,10 @@ sq:
           title: Realizo një lojë basketbolli
           description_short: Realizo një lojë basketbolli
           description: Realizo një lojë basketbolli
-          stages:
-            Bounce:
-              name: Hidhu
           lessons:
             Bounce:
               name: Hidhu
-        fesbinary:
-          title: Binare
-          stages:
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            Binary Images:
-              name: Imazhet Binare
-            Play Lab:
-              name: Play Lab
-          lessons:
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            Binary Images:
-              name: Imazhet Binare
-            Play Lab:
-              name: Play Lab
         csd2-2017:
-          stages:
-            Peer Review:
-              name: Rishikimi i ndërsjellë
-            Lists:
-              name: Listat
           lessons:
             Peer Review:
               name: Rishikimi i ndërsjellë
@@ -1856,51 +1059,26 @@ sq:
           title: Dizenjo Minecraft-in e Orës së Kodimit
           description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
           description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Dizenjo Minecraft-in e Orës së Kodimit
           lessons:
             Minecraft Hour of Code Designer:
               name: Dizenjo Minecraft-in e Orës së Kodimit
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Kodi Flappy
           lessons:
             Flappy Code:
               name: Kodi Flappy
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Going Places Safely:
-              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
             Your Digital Footprint:
               name: Gjurmët e Tua Dixhitale
         coursec-draft:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
-            Building a Foundation:
-              name: Krijimi i një fondacioni
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmet e Jetës-Reale: Planet në Letër'
@@ -1911,19 +1089,6 @@ sq:
             Building a Foundation:
               name: Krijimi i një fondacioni
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Unplugged: Binary':
-              name: 'Unplugged: Binare'
-            Artist Binary:
-              name: Artist Binar
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Introduction:
-              name: Hyrja
           lessons:
             Conditionals with Cards:
               name: Kushtoret me Karta
@@ -1938,17 +1103,6 @@ sq:
             Introduction:
               name: Hyrja
         coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Hyrja
-            Conditionals:
-              name: Kushtet
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -1964,19 +1118,6 @@ sq:
             Conditionals:
               name: Kushtet
         coursef-draft:
-          stages:
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
-            Introduction:
-              name: Hyrja
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -1995,17 +1136,11 @@ sq:
               name: Laboratori i lojës Epoka e Akullnajave
         classic-hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
-          stages:
-            Hour of Code 2013:
-              name: Ora e Kodit 2013
           lessons:
             Hour of Code 2013:
               name: Ora e Kodit 2013
         hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
-          stages:
-            Hour of Code 2013:
-              name: Ora e Kodit 2013
           lessons:
             Hour of Code 2013:
               name: Ora e Kodit 2013
@@ -2014,22 +1149,12 @@ sq:
           description_short: Përziej dhe përshtat sportet
           description: Përziej dhe përshtat sportet
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -2052,31 +1177,18 @@ sq:
             practice:
               display_name: Praktikat mësimore
         sciencepd4:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
         science-pd-ol-pt-5:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
         csf2harvey:
-          stages:
-            Binary:
-              name: Binare
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -2084,11 +1196,6 @@ sq:
             Binary:
               name: Binare
         sciencepd5:
-          stages:
-            Welcome!:
-              name: Mirë se vini!
-            Wrap-Up:
-              name: Mbyll
           lessons:
             Welcome!:
               name: Mirë se vini!
@@ -2107,13 +1214,6 @@ sq:
             content:
               display_name: Përmbajtja
         csd6-draft:
-          stages:
-            Lists:
-              name: Listat
-            For Loops:
-              name: Për Ciklet
-            Functions with Parameters:
-              name: Funksionet me parametra
           lessons:
             Lists:
               name: Listat
@@ -2122,27 +1222,14 @@ sq:
             Functions with Parameters:
               name: Funksionet me parametra
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Hyrja
           lessons:
             Introduction:
               name: Hyrja
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Hyrja
           lessons:
             Introduction:
               name: Hyrja
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Hyrja
-            Conditionals:
-              name: Kushtet
-            'Real Life Algorithms: Dice Race':
-              name: 'Algoritmet e jetës reale: Dice Race'
           lessons:
             Introduction:
               name: Hyrja
@@ -2151,15 +1238,6 @@ sq:
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmet e jetës reale: Dice Race'
         csd6-2017:
-          stages:
-            Lists:
-              name: Listat
-            For Loops:
-              name: Për Ciklet
-            Functions with Parameters:
-              name: Funksionet me parametra
-            Functions with Parameters_:
-              name: Funksionet me parametra
           lessons:
             Lists:
               name: Listat
@@ -2170,13 +1248,6 @@ sq:
             Functions with Parameters_:
               name: Funksionet me parametra
         csd3-draft:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla
@@ -2185,29 +1256,14 @@ sq:
             Functions:
               name: funksione
         csd3-old:
-          stages:
-            Functions:
-              name: funksione
           lessons:
             Functions:
               name: funksione
         csd2-draft:
-          stages:
-            Lists:
-              name: Listat
           lessons:
             Lists:
               name: Listat
         csd3-chapters:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
-            'null':
-              name: 'pa vlerë'
           lessons:
             Variables:
               name: variabla
@@ -2218,76 +1274,38 @@ sq:
             'null':
               name: 'pa vlerë'
         coursef-ramp:
-          stages:
-            Introduction:
-              name: Hyrja
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
           lessons:
             Introduction:
               name: Hyrja
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
         csd2-old:
-          stages:
-            Peer Review:
-              name: Rishikimi i ndërsjellë
           lessons:
             Peer Review:
               name: Rishikimi i ndërsjellë
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
-            Bounce:
-              name: Hidhu
           lessons:
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
             Bounce:
               name: Hidhu
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmet e Jetës-Reale: Planet në Letër'
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
           lessons:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
         coursee-2017:
-          stages:
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
           lessons:
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
@@ -2302,9 +1320,6 @@ sq:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2381,25 +1396,6 @@ sq:
             content:
               display_name: Përmbajtja
         express-2017:
-          stages:
-            Introduction:
-              name: Hyrja
-            Internet:
-              name: Internet
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -2423,42 +1419,20 @@ sq:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Spelling Bee:
-              name: Bleta Gërmëzuese
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
             Spelling Bee:
               name: Bleta Gërmëzuese
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Faleminderit
           lessons:
             Thanks:
               name: Faleminderit
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Conditionals:
-              name: Kushtet
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2471,21 +1445,6 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
         new-d:
-          stages:
-            Introduction:
-              name: Hyrja
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Unplugged: Binary':
-              name: 'Unplugged: Binare'
-            Artist Binary:
-              name: Artist Binar
-            Building a Foundation:
-              name: Krijimi i një fondacioni
           lessons:
             Introduction:
               name: Hyrja
@@ -2502,13 +1461,6 @@ sq:
             Building a Foundation:
               name: Krijimi i një fondacioni
         new-express:
-          stages:
-            Introduction:
-              name: Hyrja
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -2520,15 +1472,6 @@ sq:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
         new-e:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Conditionals:
-              name: Kushtet
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2539,17 +1482,6 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
         new-f:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2562,40 +1494,18 @@ sq:
             Songwriting with Parameters:
               name: Të shkruarit këngë me Parametra
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         pwc:
-          stages:
-            Personal Innovations:
-              name: Inovacionet Personale
           lessons:
             Personal Innovations:
               name: Inovacionet Personale
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Ora e Kodimit Minecraft
           lessons:
             Minecraft Hour of Code:
               name: Ora e Kodimit Minecraft
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Introduction:
-              name: Hyrja
-            Conditionals:
-              name: Kushtet
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2610,19 +1520,6 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Introduction:
-              name: Hyrja
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2637,24 +1534,12 @@ sq:
             Songwriting with Parameters:
               name: Të shkruarit këngë me Parametra
         csd6-old:
-          stages:
-            Lists:
-              name: Listat
-            For Loops:
-              name: Për Ciklet
           lessons:
             Lists:
               name: Listat
             For Loops:
               name: Për Ciklet
         csd3-1819draft:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla
@@ -2663,13 +1548,6 @@ sq:
             Functions:
               name: funksione
         csd3-2018:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla
@@ -2678,59 +1556,16 @@ sq:
             Functions:
               name: funksione
         csd2-2018:
-          stages:
-            Lists:
-              name: Listat
           lessons:
             Lists:
               name: Listat
         coursea-2018:
-          stages:
-            'Programming: Happy Maps':
-              name: Hartat e Gëzuara
-            Going Places Safely:
-              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
           lessons:
             'Programming: Happy Maps':
               name: Hartat e Gëzuara
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programimi Grafik me Letër
-            Introduction:
-              name: Hyrja
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            'Events: The Big Event':
-              name: Eventi i Madh
-            'Loops: Getting Loopy':
-              name: Duke u Çmëndur
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            'Functions: Songwriting':
-              name: Të shkruarit e Këngëve
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            'Unplugged: Binary':
-              name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
-            Internet:
-              name: Interneti
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Programimi i Besuar
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programimi Grafik me Letër
@@ -2767,13 +1602,6 @@ sq:
             Graph Paper Programming:
               name: Programimi Grafik me Letër
         courseb-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
-            Move It, Move It:
-              name: Lëvize atë, lëvize atë
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
@@ -2782,25 +1610,6 @@ sq:
             Move It, Move It:
               name: Lëvize atë, lëvize atë
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programimi Grafik me Letër
-            Introduction:
-              name: Hyrja
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Unplugged: Binary':
-              name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
-            Relay Programming:
-              name: Programimi i Besuar
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programimi Grafik me Letër
@@ -2821,15 +1630,6 @@ sq:
             Relay Programming:
               name: Programimi i Besuar
         coursec-2018:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            'Loops: Getting Loopy':
-              name: Duke u Çmëndur
-            'Events: The Big Event':
-              name: Eventi i Madh
-            Binary Bracelets:
-              name: Byzylykët Binarë
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
@@ -2840,30 +1640,10 @@ sq:
             Binary Bracelets:
               name: Byzylykët Binarë
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Funksionet me parametra
           lessons:
             Functions with Parameters:
               name: Funksionet me parametra
         coursee-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: Miqtë e mi Robotikë
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Introduction:
-              name: Hyrja
-            'Functions: Songwriting':
-              name: Të shkruarit e Këngëve
-            Internet:
-              name: Interneti
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Minecraft Hour of Code:
-              name: Ora e Kodimit Minecraft
           lessons:
             'Programming: My Robotic Friends':
               name: Miqtë e mi Robotikë
@@ -2882,23 +1662,6 @@ sq:
             Minecraft Hour of Code:
               name: Ora e Kodimit Minecraft
         coursef-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: Miqtë e mi Robotikë
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Introduction:
-              name: Hyrja
-            Ice Age Play Lab:
-              name: Laboratori i lojës Epoka e Akullnajave
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Songwriting with Parameters:
-              name: Të shkruarit këngë me Parametra
-            Conditionals with Cards:
-              name: Kushtoret me Karta
           lessons:
             'Programming: My Robotic Friends':
               name: Miqtë e mi Robotikë
@@ -2917,13 +1680,6 @@ sq:
             Conditionals with Cards:
               name: Kushtoret me Karta
         csp1-2018:
-          stages:
-            Personal Innovations:
-              name: Inovacionet Personale
-            Number Systems:
-              name: Sistemi Numerik
-            The Internet:
-              name: Interneti
           lessons:
             Personal Innovations:
               name: Inovacionet Personale
@@ -2932,16 +1688,10 @@ sq:
             The Internet:
               name: Interneti
         csp3-2018:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         csp5-2018:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
@@ -3048,15 +1798,6 @@ sq:
             content:
               display_name: Përmbajtja
         pre-express-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Spelling Bee:
-              name: Bleta Gërmëzuese
-            Move It, Move It:
-              name: Lëvize atë, lëvize atë
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
@@ -3073,23 +1814,14 @@ sq:
             content:
               display_name: Përmbajtja
         frozen-2018:
-          stages:
-            Artist:
-              name: Artisti
           lessons:
             Artist:
               name: Artisti
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Artisti
           lessons:
             Artist:
               name: Artisti
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Artisti
           lessons:
             Artist:
               name: Artisti
@@ -3104,21 +1836,6 @@ sq:
             csp_functions:
               display_name: funksione
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            The Artist:
-              name: Artisti
-            Internet:
-              name: Interneti
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_variables:
               display_name: variabla
@@ -3146,19 +1863,6 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programimi Grafik me Letër
-            Relay Programming:
-              name: Programimi i Besuar
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
-            'Unplugged: Binary':
-              name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
           lesson_groups:
             csf_events:
               display_name: Ngjarje
@@ -3184,21 +1888,6 @@ sq:
             Artist Binary:
               name: Artist Binar
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            'Functions: Songwriting':
-              name: Të shkruarit e Këngëve
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Të shkruarit e Këngëve
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3222,25 +1911,6 @@ sq:
             Songwriting:
               name: Të shkruarit e Këngëve
         express-2019:
-          stages:
-            Relay Programming:
-              name: Programimi i Besuar
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            'Unplugged: Binary':
-              name: 'Unplugged: Binare'
-            Artist Binary:
-              name: Artist Binar
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_loops:
               display_name: cikle 
@@ -3272,9 +1942,6 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
         andrea-test:
-          stages:
-            'null':
-              name: 'pa vlerë'
           lesson_groups:
             required:
               display_name: Përmbledhja
@@ -3284,13 +1951,6 @@ sq:
             'null':
               name: 'pa vlerë'
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
-            'Events: The Big Event':
-              name: Eventi i Madh
-            Binary Bracelets:
-              name: Byzylykët Binarë
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3310,11 +1970,6 @@ sq:
             Binary Bracelets:
               name: Byzylykët Binarë
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Hartat e Gëzuara
-            Going Places Safely:
-              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3328,13 +1983,6 @@ sq:
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         courseb-2019:
-          stages:
-            Move It, Move It:
-              name: Lëvize atë, lëvize atë
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
-            'Loops: Getting Loopy':
-              name: Duke u Çmëndur
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3350,13 +1998,6 @@ sq:
             'Loops: Getting Loopy':
               name: Duke u Çmëndur
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Lëvize atë, lëvize atë
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
-            Spelling Bee:
-              name: Bleta Gërmëzuese
           lesson_groups:
             csf_loops:
               display_name: cikle 
@@ -3370,27 +2011,14 @@ sq:
             Spelling Bee:
               name: Bleta Gërmëzuese
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         csd2-2019:
-          stages:
-            Lists:
-              name: Listat
           lessons:
             Lists:
               name: Listat
         csd3-2019:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla
@@ -3399,9 +2027,6 @@ sq:
             Functions:
               name: funksione
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funksionet me parametra
           lessons:
             Functions with Parameters:
               name: Funksionet me parametra
@@ -3416,13 +2041,6 @@ sq:
             required:
               display_name: Përmbledhja
         csp1-2019:
-          stages:
-            Personal Innovations:
-              name: Inovacionet Personale
-            Number Systems:
-              name: Sistemi Numerik
-            The Internet:
-              name: Interneti
           lessons:
             Personal Innovations:
               name: Inovacionet Personale
@@ -3431,23 +2049,14 @@ sq:
             The Internet:
               name: Interneti
         csp3-2019:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         csp5-2019:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
         csp1-pilot:
-          stages:
-            Number Systems:
-              name: Sistemi Numerik
           lesson_groups:
             required:
               display_name: Përmbledhja
@@ -3455,13 +2064,6 @@ sq:
             Number Systems:
               name: Sistemi Numerik
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            Building a Foundation:
-              name: Krijimi i një fondacioni
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -3532,9 +2134,6 @@ sq:
             csp_functions:
               display_name: funksione
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Programimi Grafik me Letër
           lessons:
             Graph Paper Programming:
               name: Programimi Grafik me Letër
@@ -3559,20 +2158,10 @@ sq:
             content:
               display_name: Përmbajtja
         csd2-pilot:
-          stages:
-            Lists:
-              name: Listat
           lessons:
             Lists:
               name: Listat
         csd3-pilot:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla
@@ -3659,11 +2248,6 @@ sq:
             required:
               display_name: Përmbledhja
         peru-2019:
-          stages:
-            Introduction:
-              name: Hyrja
-            Nested Loops:
-              name: Përsëritjet e Mbivendosura
           lessons:
             Introduction:
               name: Hyrja
@@ -3676,21 +2260,6 @@ sq:
             required:
               display_name: Përmbledhja
         k5-onlinepd-2019:
-          stages:
-            Next Steps:
-              name: Hapat e ardhshme
-            Loops:
-              name: cikle 
-            Conditionals:
-              name: Kushtet
-            Events:
-              name: Ngjarje
-            Functions:
-              name: funksione
-            Variables:
-              name: variabla
-            For Loops:
-              name: Për Ciklet
           lesson_groups:
             k5_next_steps:
               display_name: Hapat e ardhshme
@@ -3718,18 +2287,10 @@ sq:
             csp_functions:
               display_name: funksione
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Kushtet
           lessons:
             Conditionals:
               name: Kushtet
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Kushtoret me Karta
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3745,9 +2306,6 @@ sq:
             Conditionals with Cards:
               name: Kushtoret me Karta
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Kushtet
           lesson_groups:
             csf_loops:
               display_name: cikle 
@@ -3761,9 +2319,6 @@ sq:
             Conditionals:
               name: Kushtet
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Kushtet
           lesson_groups:
             csf_loops:
               display_name: cikle 
@@ -3795,22 +2350,10 @@ sq:
             csp_loops:
               display_name: cikle 
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Funksionet me parametra
           lessons:
             Functions with Parameters:
               name: Funksionet me parametra
         csd3-2020:
-          stages:
-            Variables:
-              name: variabla
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
-            Text:
-              name: Tekst
           lessons:
             Variables:
               name: variabla
@@ -3821,11 +2364,6 @@ sq:
             Text:
               name: Tekst
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
-            'Programming: Happy Maps':
-              name: Hartat e Gëzuara
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3839,13 +2377,6 @@ sq:
             'Programming: Happy Maps':
               name: Hartat e Gëzuara
         courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: Gjurmët e Tua Dixhitale
-            Move It, Move It:
-              name: Lëvize atë, lëvize atë
-            'Loops: Getting Loopy':
-              name: Duke u Çmëndur
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3861,11 +2392,6 @@ sq:
             'Loops: Getting Loopy':
               name: Duke u Çmëndur
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: Byzylykët Binarë
-            'Events: The Big Event':
-              name: Eventi i Madh
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3883,19 +2409,6 @@ sq:
             'Events: The Big Event':
               name: Eventi i Madh
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programimi Grafik me Letër
-            Relay Programming:
-              name: Programimi i Besuar
-            Conditionals with Cards:
-              name: Kushtoret me Karta
-            'Unplugged: Binary':
-              name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
-            Digital Citizenship:
-              name: Shtetësi Dixhitale
           lesson_groups:
             csf_events:
               display_name: Ngjarje
@@ -3921,9 +2434,6 @@ sq:
             Digital Citizenship:
               name: Shtetësi Dixhitale
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: Të shkruarit e Këngëve
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3935,15 +2445,6 @@ sq:
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: Variablat Zarf
-            For Loop Fun:
-              name: Qef me Ciklet For
-            Internet:
-              name: Interneti
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3975,9 +2476,6 @@ sq:
             csf_for_loops:
               display_name: Për Ciklet
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Bleta Gërmëzuese
           lesson_groups:
             csf_loops:
               display_name: cikle 
@@ -3987,27 +2485,16 @@ sq:
             Spelling Bee:
               name: Bleta Gërmëzuese
         csp3-virtual:
-          stages:
-            Creating Functions:
-              name: Krijimi i Funksioneve
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
         csp5-virtual:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
-            Variables:
-              name: variabla
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
             Variables:
               name: variabla
         virtual-holding-place:
-          stages:
-            Functions:
-              name: funksione
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -4015,37 +2502,16 @@ sq:
             Functions:
               name: funksione
         code-break:
-          stages:
-            Algorithms:
-              name: Algoritmet
-            Events:
-              name: Ngjarje
           lessons:
             Algorithms:
               name: Algoritmet
             Events:
               name: Ngjarje
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Përsëritjet Ndërsa
           lessons:
             While Loops:
               name: Përsëritjet Ndërsa
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: cikle 
-            Events:
-              name: Ngjarje
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
-            Variables:
-              name: variabla
-            For Loops:
-              name: Për Ciklet
           lessons:
             Loops:
               name: cikle 
@@ -4063,15 +2529,6 @@ sq:
             k5_next_steps_1:
               display_name: Hapat e ardhshme
         csd3-virtual:
-          stages:
-            Variables:
-              name: variabla
-            Text:
-              name: Tekst
-            Conditionals:
-              name: Kushtet
-            Functions:
-              name: funksione
           lessons:
             Variables:
               name: variabla

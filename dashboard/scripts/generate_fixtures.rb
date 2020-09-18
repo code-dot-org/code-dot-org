@@ -129,7 +129,7 @@ end
 
 prefix = Rails.root.join('test/fixtures/')
 
-File.new("#{prefix}courses.yml", 'w').write(yamlize(@unit_groups))
+File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))

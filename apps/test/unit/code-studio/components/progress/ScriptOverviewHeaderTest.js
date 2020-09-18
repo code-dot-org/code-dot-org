@@ -3,7 +3,7 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
-import {VisibilityType} from '../../../../../src/code-studio/scriptAnnouncementsRedux';
+import {VisibilityType} from '../../../../../src/code-studio/announcementsRedux';
 import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
 
 const defaultProps = {
@@ -16,7 +16,8 @@ const defaultProps = {
   scriptId: 99,
   scriptName: 'course1',
   scriptTitle: 'Course One',
-  scriptDescription: 'The first course',
+  scriptDescription:
+    '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: []
 };
 
@@ -26,12 +27,6 @@ const fakeTeacherAnnouncement = {
   link: '/foo/bar/teacher',
   type: NotificationType.information,
   visibility: VisibilityType.teacher
-};
-const fakeOldTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information
 };
 const fakeStudentAnnouncement = {
   notice: 'Notice - Student',
@@ -80,10 +75,7 @@ describe('ScriptOverviewHeader', () => {
     const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      0
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
   it('includes a single notification default for non-verified teachers', () => {
@@ -95,54 +87,6 @@ describe('ScriptOverviewHeader', () => {
         verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
-    );
-    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
-  });
-
-  it('displays old teacher announcement for teacher', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        announcements={[fakeOldTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
-  });
-
-  it('does not display old teacher announcement for student', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        viewAs={ViewType.Student}
-        announcements={[fakeOldTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      0
-    );
-  });
-
-  it('has non-verified and provided teacher announcement if necessary', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        S
-        hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        verificationCheckComplete={true}
-        announcements={[fakeTeacherAnnouncement]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
     );
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
@@ -161,41 +105,11 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has only teacher announcements', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        announcements={[
-          fakeStudentAnnouncement,
-          fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
-        ]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
-    wrapper
-      .find('ScriptAnnouncements')
-      .props()
-      .announcements.forEach(node => {
-        expect(
-          node.visibility === NotificationType.teacher ||
-            node.visibility === NotificationType.teacherAndStudent
-        );
-      });
-  });
-
-  it('has student announcement if necessary', () => {
+  it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
         {...defaultProps}
@@ -206,40 +120,7 @@ describe('ScriptOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      1
-    );
-  });
-
-  it('has all student announcements but no teacher announcements if necessary', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        viewAs={ViewType.Student}
-        announcements={[
-          fakeStudentAnnouncement,
-          fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
-        ]}
-      />,
-      {disableLifecycleMethods: true}
-    );
-    assert.equal(
-      wrapper.find('ScriptAnnouncements').props().announcements.length,
-      2
-    );
-    wrapper
-      .find('ScriptAnnouncements')
-      .props()
-      .announcements.forEach(node => {
-        expect(
-          node.visibility === NotificationType.student ||
-            node.visibility === NotificationType.teacherAndStudent
-        );
-      });
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
   it('passes properly-formatted versions to AssignmentVersionSelector', () => {
@@ -287,5 +168,14 @@ describe('ScriptOverviewHeader', () => {
     assert.equal(true, coursea2017.isRecommended);
     const coursea2018 = renderedVersions.find(v => v.name === 'coursea-2018');
     assert.equal(true, coursea2018.isSelected);
+  });
+
+  it('has correct unit description', () => {
+    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+    );
   });
 });

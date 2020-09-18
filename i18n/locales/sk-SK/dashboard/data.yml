@@ -390,12 +390,18 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_draw_1: 'Video: Kreslenie v Game Labe - 1. časť'
+        csd_gamelab_draw_2: 'Video: Kreslenie v Game Labe - 2. časť'
+        csd_gamelab_variables_1: Predstavenie premenných - 1. časť
+        csd_gamelab_variables_2: Predstavenie premenných - 2. časť
         csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
         csd_weblab_css_2: Úvod do CSS - časť 2
         csd_weblab_intro_3: Úvod do Web Labu - časť 3
+        csp_applab_variables_1: Predstavenie premenných - 1. časť
+        csp_applab_variables_2: Predstavenie premenných - 2. časť
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly

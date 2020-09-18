@@ -3,7 +3,8 @@ import React from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
-import {setCurrentView, ViewType} from './sectionProgressRedux';
+import {setCurrentView} from './sectionProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 

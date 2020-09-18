@@ -284,6 +284,7 @@ class Blockly < Level
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
+        set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
         if script && !script.localize_long_instructions?
           level_options.delete('longInstructions')
@@ -564,6 +565,8 @@ class Blockly < Level
       end
       mutation.set_attribute('name', localized_name) if localized_name
     end
+
+    localize_behaviors(block_xml)
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
@@ -615,6 +618,32 @@ class Blockly < Level
     Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
+  end
+
+  def localize_behaviors(block_xml)
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+        parameter.content = I18n.t('behaviors.this_sprite')
+      end
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      mutation = behavior.at_xpath('./mutation')
+      mutation.xpath('./arg').each do |arg|
+        next unless arg["name"] == I18n.t('behaviors.this_sprite', locale: :en)
+        arg["name"] = I18n.t('behaviors.this_sprite')
+      end
+      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+        parameter.content = I18n.t('behaviors.this_sprite')
+      end
+    end
+  end
+
+  def localized_shared_functions(shared_functions)
+    block_xml = Nokogiri::XML("<xml>#{shared_functions}</xml>", &:noblanks)
+    localize_behaviors(block_xml)
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   # Display translated custom block text and options

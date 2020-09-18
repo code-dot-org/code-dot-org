@@ -1,38 +1,39 @@
 professional_learning_course 'CS in Algebra Support'
-login_required 'true'
+login_required true
 
-lesson 'Welcome!'
+lesson 'Welcome!', display_name: 'Welcome!'
 level 'PDAlg P2 Welcome'
 level 'PDECS tour'
 level 'PDAlg Cirlces of Eval'
 level 'PDAlg block match'
 
-lesson 'Teaching with Puzzles'
+lesson 'Teaching with Puzzles', display_name: 'Teaching with Puzzles'
 level 'PDAlg Puzzle Tips'
 level 'PDAlg Puzzles Pre'
 
-lesson 'Teaching with the Design Recipe'
+lesson 'Teaching with the Design Recipe', display_name: 'Teaching with the Design Recipe'
 level 'PDAlg DR 1'
 level 'PDAlg DR Multi 1'
 level 'PDAlg DR Text 1'
 level 'PDAlg DR Multi 2'
 level 'PDAlg DR Match 1'
 
-lesson 'The Design Recipe'
+lesson 'The Design Recipe', display_name: 'The Design Recipe'
 level 'PDAlg Design Recipe Video'
 level 'Eval Design Recipe 3'
 level 'Eval Design Recipe 5'
 level 'Calc Design Recipe 1'
 level 'Eval Design Recipe Free Play'
 
-lesson 'Teacher Dashboard'
+lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard'
 level 'PDAlg Dashboard 1'
 level 'PDAlg Dashboard 2'
 level 'PDAlg Dashboard 3'
 level 'PDAlg Teacher Plan'
 
-lesson 'Lesson Prep'
+lesson 'Lesson Prep', display_name: 'Lesson Prep'
 level 'PDAlg Prep a Lesson'
 level 'PDAlg Prep on Paper'
 level 'PDAlg Prep Sandbox'
 level 'Lesson Prep Final'
+

@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 5 - CI - L4'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 4:  Representing Images 
+**Estimated time: 25 minutes**
+
+
+
+
+## Investigation Goals
+
+**Explore how a binary system can create pixel images**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/4/" target="_blank">Lesson 4: Representing Images Representation</a>
+* Become familiar with the Pixelation Widget in Code Studio in the next levels (click the "Continue" button to begin)
+	* Follow the instructions provided to complete each level
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

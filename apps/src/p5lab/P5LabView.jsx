@@ -42,16 +42,16 @@ class P5LabView extends React.Component {
     spriteLab: PropTypes.bool.isRequired
   };
 
+  state = {
+    libraryManifest: {}
+  };
+
   getChannelId() {
     if (dashboard && dashboard.project) {
       return dashboard.project.getCurrentId();
     }
     return undefined;
   }
-
-  getLibraryManifest = () => {
-    return this.state.libraryManifest;
-  };
 
   componentDidMount() {
     this.props.onMount();
@@ -101,7 +101,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              getLibraryManifest={this.getLibraryManifest}
+              libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
             />
@@ -129,7 +129,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        getLibraryManifest={this.getLibraryManifest}
+        libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
       />

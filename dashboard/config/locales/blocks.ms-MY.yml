@@ -87,9 +87,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} selamanya"
         options:
@@ -108,9 +105,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -185,9 +179,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} sekali"
         options:
@@ -216,9 +207,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
@@ -941,6 +929,10 @@ ms:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': saat
       gamelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -988,6 +980,39 @@ ms:
             '"seconds"': saat
       gamelab_hideTitleScreen:
         text: sembunyikan skrin tajuk
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} menyentuh tepi"
       gamelab_jumpTo:
@@ -1031,6 +1056,13 @@ ms:
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:

@@ -1,5 +1,6 @@
 require_relative '../test_helper'
 require 'cdo/buffer'
+require 'benchmark'
 
 class BufferTest < Minitest::Test
   class TestBuffer < Cdo::Buffer
@@ -81,13 +82,16 @@ class BufferTest < Minitest::Test
   end
 
   def test_min_interval
-    b = TestBuffer.new(batch_count: 1, min_interval: 0.1)
-    start = Concurrent.monotonic_time
-    4.times {b.buffer('foo')}
-    b.flush!
-    finish = Concurrent.monotonic_time
-    assert_equal 4, b.flushes
-    time_taken = finish - start
+    n = 4
+    interval = 0.1
+
+    b = TestBuffer.new(batch_count: 1, min_interval: interval)
+    time_taken = Benchmark.realtime do
+      Array.new(n) {Thread.new {b.buffer('foo')}}.each(&:join)
+      b.flush!
+    end
+    assert_equal n, b.flushes
+
     # Given a min_interval of 1 second and 4 flushes, assert the flush! takes 3-4 seconds.
     assert_operator time_taken, :>, 0.3
     assert_operator time_taken, :<, 0.4
@@ -122,5 +126,24 @@ class BufferTest < Minitest::Test
       super
       objects.map(&method(:buffer))
     end
+  end
+
+  # Help reproduce a thread-safety bug by prepending `sleep` to several methods.
+  class ThreadSafeTestBuffer < TestBuffer
+    %w(flush batch_ready buffer).each do |m|
+      define_method(m) do |*args|
+        sleep @max_interval
+        super(*args)
+      end
+    end
+  end
+
+  def test_buffer_thread_safety
+    duration = 0.1
+    n = 500
+
+    b = ThreadSafeTestBuffer.new(max_interval: duration.to_f / (n * 2))
+    n.times {b.buffer('foo')}
+    b.flush!
   end
 end

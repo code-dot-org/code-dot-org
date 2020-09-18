@@ -6,37 +6,22 @@ mt:
         flappy:
           title: Code ta' Flappy
           description: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova il-lezzjoni ta' Flappy Code!
-          stages:
-            Flappy Code:
-              name: Code ta' Flappy
           lessons:
             Flappy Code:
               name: Code ta' Flappy
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Code ta' Flappy
           lessons:
             Flappy Code:
               name: Code ta' Flappy
         csd3-chapters:
-          stages:
-            'null':
-              name: 'null'
           lessons:
             'null':
               name: 'null'
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Grazzi
           lessons:
             Thanks:
               name: Grazzi
         andrea-test:
-          stages:
-            'null':
-              name: 'null'
           lessons:
             'null':
               name: 'null'

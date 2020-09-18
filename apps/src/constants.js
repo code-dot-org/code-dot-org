@@ -187,3 +187,8 @@ export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
 export const PROFANITY_FOUND = 'profanity_found';
 
 export const NOTIFICATION_ALERT_TYPE = 'notification';
+
+export const BlocklyVersion = {
+  CDO: 'CDO',
+  GOOGLE: 'Google'
+};

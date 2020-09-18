@@ -6,7 +6,7 @@
   "object": "predmet ",
   "objectSprite": "predmet sprite",
   "errorLoadingAnimation": "Vyzerá to, že sa tvoja anmácia \"{animationName}\" nechce načítať. Uisti sa, že máš dobré internetové pripojenie a vyskúšaj stránku znova načítať. Ak tento problém pokračuje, je možné, že táto animácia nefunguje. V takom prípade ju budeš musieť pred pokračovaním odstrániť.",
-  "reinfFeedbackMsg": "Hotovo! Stlač \"Pokračovať\" aby si sa dostal/a do ďalšieho levelu.",
+  "reinfFeedbackMsg": "Hotovo! Stlač \"Pokračovať\" a prejdi na ďalšiu úlohu.",
   "shareGame": "Zdieľaj svoju hru:",
   "spritelabFeedbackCreateFishWithBehavior": "Musíš vytvoriť aspoň jednu postavičky ryby a dať jej nejaké správanie.",
   "spritelabFeedbackMoveFishLeftRight": "Tvoja ryba sa musí pohnúť doprava alebo doľava. Vyskúšaj zmeniť jej správanie.",

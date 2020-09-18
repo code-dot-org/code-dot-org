@@ -140,6 +140,100 @@ class StageTest < ActiveSupport::TestCase
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
+  test 'raise error if lesson with no levels' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+
+    raw_lessons = [
+      {
+        key: "Lesson1",
+        name: "Lesson 1",
+        script_levels: []
+      }
+    ]
+
+    counters = LessonGroup::Counters.new(0, 0, 0, 0)
+
+    raise = assert_raises do
+      Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
+    end
+    assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson 1.', raise.message
+  end
+
+  test 'raises error when creating invalid lockable lessons' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    create :level, name: 'Level1'
+    create :level, name: 'LockableAssessment1'
+
+    raw_lessons = [
+      {
+        key: "Lesson1",
+        name: "Lesson 1",
+        lockable: true,
+        script_levels: [
+          {levels: [{name: "LockableAssessment1"}], assessment: true},
+          {levels: [{name: "Level1"}]}
+        ]
+      }
+    ]
+    counters = LessonGroup::Counters.new(0, 0, 0, 0)
+
+    raise = assert_raises do
+      Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
+    end
+    assert_equal 'Expect lockable lessons to have an assessment as their last level. Lesson: Lesson 1', raise.message
+  end
+
+  test 'creates lessons correctly' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    create :level, name: 'Level1'
+    create :level, name: 'Level2'
+    create :level, name: 'Level3'
+    create :level, name: 'Level4'
+
+    raw_lessons = [
+      {
+        key: "L1",
+        name: "Lesson 1",
+        script_levels: [
+          {levels: [{name: "Level1"}]},
+          {levels: [{name: "Level2"}]}
+        ]
+      },
+      {
+        key: "L2",
+        name: "Lesson 2",
+        script_levels: [
+          {levels: [{name: "Level3"}]}
+        ]
+      },
+      {
+        key: "L3",
+        name: "Lesson 3",
+        lockable: true,
+        script_levels: [
+          {levels: [{name: "Level3"}], assessment: true}
+        ]
+      }
+    ]
+    counters = LessonGroup::Counters.new(0, 0, 0, 0)
+
+    lessons = Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
+
+    assert_equal ['L1', 'L2', 'L3'], lessons.map(&:key)
+    assert_equal ['Lesson 1', 'Lesson 2', 'Lesson 3'], lessons.map(&:name)
+    assert_equal [1, 2, 3], lessons.map(&:absolute_position)
+    assert_equal [1, 2, 1], lessons.map(&:relative_position)
+    assert_equal lesson_group, lessons[0].lesson_group
+    assert_equal 2, lessons[0].script_levels.count
+    assert_equal 1, lessons[1].script_levels.count
+    assert_equal 1, lessons[2].script_levels.count
+    assert_equal true, lessons[2].lockable
+    assert_equal LessonGroup::Counters.new(1, 2, 3, 4), counters
+  end
+
   class StagePublishedTests < ActiveSupport::TestCase
     setup do
       @student = create :student

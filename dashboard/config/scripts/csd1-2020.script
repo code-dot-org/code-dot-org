@@ -11,32 +11,32 @@ project_sharing true
 curriculum_umbrella 'CSD'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Pre-survey', lockable: true
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true
 level 'csd-pre-survey-levelgroup_2019_2020', assessment: true
 
 lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
-lesson 'Intro to Problem Solving'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
 level 'CSD U1L01 TFMD_2020', progression: 'Lesson Overview'
 
-lesson 'The Problem Solving Process'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
 level 'CSD U1L02 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD Problem Solving Process Video_2020', progression: 'Video: Problem Solving Process'
 
-lesson 'Exploring Problem Solving'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
 level 'CSD U1L03 TFMD_2020', progression: 'Lesson Overview'
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
-lesson 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?'
 level 'CSD U1L04 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD What Makes a Computer a Computer Video_2020', progression: 'Video: What Makes a Computer, a Computer?'
 
-lesson 'Input and Output'
+lesson 'Input and Output', display_name: 'Input and Output'
 level 'CSD U1L05 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U1 IO Pet Chooser', progression: 'App: Pet Chooser'
 level 'CSD U1 IO Story', progression: 'App: Story Creator'
 level 'CSD U1 IO Pet Chooser 2', progression: 'App: Improved Pet Chooser'
 
-lesson 'Processing'
+lesson 'Processing', display_name: 'Processing'
 level 'CSD U1L06 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U1 processing bday', progression: 'App: Is It Your Birthday?'
 level 'CSD U1 processing npark', progression: 'App: National Park Quiz'
@@ -47,33 +47,33 @@ level 'CSD U1 processing fastest', progression: 'App: The Fastest Finger'
 level 'CSD U1 processing guess', progression: 'App: Guess the Number'
 level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
-lesson 'Storage'
+lesson 'Storage', display_name: 'Storage'
 level 'CSD U1L07 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U1 storage outfit', progression: 'App: Outfit Picker'
 level 'CSD U1 storage friends', progression: 'App: Friend Finder'
 level 'CSD U1 storage movies', progression: 'App: Kids Movie Recommender'
 level 'CSD U1 storage video', progression: 'Video: IOSP Model'
 
-lesson 'Project - Propose an App'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
 level 'CSD U1L09 TFMD_2020', progression: 'Lesson Overview'
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
 level 'CSD U1 Test_2020', assessment: true
 
 lesson_group 'csd1_3', display_name: 'Alternate Lessons'
-lesson 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)'
 level 'CSD U1L01.1 TFMD_2020', progression: 'Lesson Overview'
 
-lesson 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)'
 level 'CSD U1L01.2 TFMD_2020', progression: 'Lesson Overview'
 
-lesson 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)'
 level 'CSD U1L01.3 TFMD_2020', progression: 'Lesson Overview'
 
-lesson 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)'
+lesson 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)'
 level 'CSD U1L12 TFMD_2020', progression: 'Lesson Overview'
 
-lesson 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)'
+lesson 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)'
 level 'CSD U1L13 TFMD_2020', progression: 'Lesson Overview'
 

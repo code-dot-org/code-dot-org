@@ -8,7 +8,8 @@ export class ScholarshipDropdown extends React.Component {
     scholarshipStatus: PropTypes.string,
     dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool.isRequired
   };
 
   render() {
@@ -19,7 +20,8 @@ export class ScholarshipDropdown extends React.Component {
           value={this.props.scholarshipStatus}
           onChange={this.props.onChange}
           options={this.props.dropdownOptions}
-          disabled={this.props.disabled}
+          // Only workshop admins can change scholarship status now
+          disabled={this.props.disabled || !this.props.isWorkshopAdmin}
         />
       </FormGroup>
     );

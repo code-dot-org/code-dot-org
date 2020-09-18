@@ -1,12 +1,18 @@
 ---
-title: Қалай жүргізу жолнұсқасы
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. Бірақ та компьютерлер әрбір оқушыда болуы **міндетті емес**, тіпті ешбір компьютерді қолданбай-ақ та сабақты өткізуіңізге болады.
+Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Егер де, сіздің көрсететін сабақ бейнеролигіңіз жақсы сапалы дыбысты талап етсе, құлаққаптарды таратып немесе қатысушыларға алдын-ала өздерінің құлаққаптарын әкелулерін сұраңыз.
 
-**Компьютер немесе басқа да электроникалық жабдық жетпей жатыр ма?</a> Ол кезде, оқушыларыңызды жұп жұппен отырғызып сабақ өткізіңіз. Қатысушылар бір-бірлерімен жұптасқанда, бір-бірлеріне көмек көрсетіп, ұйымдастырушыға көп жүк түсірмейді. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.</p> 
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Қатысушылар бір-бірлерімен жұптасқанда, бір-бірлеріне көмек көрсетіп, ұйымдастырушыға көп жүк түсірмейді. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.
 
 ## 5. Start your Hour of Code off with an inspiring video
 

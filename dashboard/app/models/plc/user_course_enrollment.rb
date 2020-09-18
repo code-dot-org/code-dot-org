@@ -37,7 +37,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   # @param course_id: course_id to enroll users in
   # @returns list of enrolled users, user_keys that did not correspond to extant users, user_keys that belonged to students, or user_emails that failed for other reasons
   def self.enroll_users(user_keys, course_id)
-    course = Plc::Course.find(course_id)
+    plc_course = Plc::Course.find(course_id)
     enrolled_users = []
     nonexistent_users = []
     nonteacher_users = []
@@ -54,7 +54,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       elsif !user.teacher?
         nonteacher_users << user_key
       else
-        enrollment = find_or_create_by(user: user, plc_course: course)
+        enrollment = find_or_create_by(user: user, plc_course: plc_course)
         if enrollment.valid?
           enrolled_users << email
         else
