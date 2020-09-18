@@ -26,7 +26,7 @@ class ActivitySection < ApplicationRecord
     display_name
     remarks
     slide
-    text
+    description
     tips
   )
 end
