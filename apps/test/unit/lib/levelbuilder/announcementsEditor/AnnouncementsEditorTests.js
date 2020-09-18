@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from '../../../../util/deprecatedChai';
-import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 
 const sampleAnnouncement = {
   notice: 'This course has recently been updated!',
@@ -13,60 +13,61 @@ const sampleAnnouncement = {
 
 const defaultProps = {
   defaultAnnouncements: [],
-  inputStyle: {}
+  inputStyle: {},
+  curriculumObject: 'script'
 };
 
-describe('ScriptAnnouncementsEditor', () => {
+describe('AnnouncementsEditor', () => {
   it('renders an Announce when we have an announcement', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announce').length, 1);
+    assert.equal(wrapper.find('Announcement').length, 1);
   });
 
-  it('shows a preview when we have at least one announcement', () => {
+  it('shows a preview for teacher and student when we have at least one announcement', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('ScriptAnnouncements').length, 1);
+    assert.equal(wrapper.find('Announcements').length, 2);
   });
 
   it('show no preview if we have no announcements', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
-    assert.equal(wrapper.find('ScriptAnnouncements').length, 0);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    assert.equal(wrapper.find('Announcements').length, 0);
   });
 
   it('adds an empty Announce when we click add', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
-    assert.equal(wrapper.find('Announce').length, 1);
-    assert.equal(wrapper.find('Announce').props().announcement.notice, '');
-    assert.equal(wrapper.find('Announce').props().announcement.details, '');
-    assert.equal(wrapper.find('Announce').props().announcement.link, '');
+    assert.equal(wrapper.find('Announcement').length, 1);
+    assert.equal(wrapper.find('Announcement').props().announcement.notice, '');
+    assert.equal(wrapper.find('Announcement').props().announcement.details, '');
+    assert.equal(wrapper.find('Announcement').props().announcement.link, '');
     assert.equal(
-      wrapper.find('Announce').props().announcement.type,
+      wrapper.find('Announcement').props().announcement.type,
       'information'
     );
     assert.equal(
-      wrapper.find('Announce').props().announcement.visibility,
+      wrapper.find('Announcement').props().announcement.visibility,
       'Teacher-only'
     );
   });
 
   it('removes announcements when we click remove', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     // had trouble getting two state updates working, so instead just call .add
     // instead of a second click
     wrapper.instance().add();
-    const announce = wrapper.find('Announce');
+    const announce = wrapper.find('Announcement');
     assert.equal(announce.length, 2);
     assert.equal(
       announce
@@ -88,15 +89,15 @@ describe('ScriptAnnouncementsEditor', () => {
       .dive()
       .find('button')
       .simulate('click');
-    assert.equal(wrapper.find('Announce').length, 1);
+    assert.equal(wrapper.find('Announcement').length, 1);
   });
 
   it('updates notice', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(0)
@@ -105,11 +106,11 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates details', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(1)
@@ -118,11 +119,11 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates link', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('input')
       .at(2)
@@ -131,11 +132,11 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates type', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-type')
       .simulate('change', {target: {value: 'bullhorn'}});
@@ -143,11 +144,11 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('updates visibility', () => {
-    const wrapper = shallow(<ScriptAnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
 
     wrapper.find('button').simulate('click');
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
@@ -163,7 +164,7 @@ describe('ScriptAnnouncementsEditor', () => {
       type: 'information'
     };
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[oldSampleAnnouncement]}
       />
@@ -171,7 +172,7 @@ describe('ScriptAnnouncementsEditor', () => {
 
     assert.equal(wrapper.state('announcements')[0].visibility, undefined);
     wrapper
-      .find('Announce')
+      .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
@@ -180,7 +181,7 @@ describe('ScriptAnnouncementsEditor', () => {
 
   it('includes a hidden input with value for server', () => {
     const wrapper = shallow(
-      <ScriptAnnouncementsEditor
+      <AnnouncementsEditor
         {...defaultProps}
         defaultAnnouncements={[sampleAnnouncement]}
       />
