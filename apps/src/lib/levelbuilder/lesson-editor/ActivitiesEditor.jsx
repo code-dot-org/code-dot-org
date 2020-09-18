@@ -114,9 +114,9 @@ class ActivitiesEditor extends Component {
         <div style={styles.preview}>
           <h2>Preview</h2>
           <div style={styles.previewBox}>
-            {activities.map(activity => {
-              return <Activity activity={activity} key={activity.key} />;
-            })}
+            {activities.map(activity => (
+              <Activity activity={activity} key={activity.key} />
+            ))}
           </div>
         </div>
       </div>
