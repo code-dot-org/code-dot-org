@@ -9,6 +9,10 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
+# Indexes
+#
+#  index_activity_sections_on_lesson_activity_id  (lesson_activity_id)
+#
 
 class ActivitySection < ApplicationRecord
   include SerializedProperties
