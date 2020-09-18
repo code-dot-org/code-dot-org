@@ -6,17 +6,29 @@ import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('ActivityCard', () => {
-  let defaultProps;
+  let defaultProps,
+    addActivitySection,
+    removeActivity,
+    moveActivity,
+    updateActivityField,
+    setActivitySectionMetrics,
+    setTargetActivitySection;
   beforeEach(() => {
+    addActivitySection = sinon.spy();
+    removeActivity = sinon.spy();
+    moveActivity = sinon.spy();
+    updateActivityField = sinon.spy();
+    setActivitySectionMetrics = sinon.spy();
+    setTargetActivitySection = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
-      addActivitySection: sinon.spy(),
-      removeActivity: sinon.spy(),
-      moveActivity: sinon.spy(),
-      updateActivityField: sinon.spy(),
-      setActivitySectionMetrics: sinon.spy(),
-      setTargetActivitySection: sinon.spy(),
+      addActivitySection,
+      removeActivity,
+      moveActivity,
+      updateActivityField,
+      setActivitySectionMetrics,
+      setTargetActivitySection,
       targetActivitySectionPos: 1,
       activitySectionMetrics: {}
     };
@@ -29,5 +41,15 @@ describe('ActivityCard', () => {
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
     expect(wrapper.find('button').length).to.equal(1);
+  });
+
+  it('adds activity section when button pressed', () => {
+    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+    expect(wrapper.find('button').length).to.equal(1);
+
+    const button = wrapper.find('button');
+    expect(button.text()).to.include('Activity Section');
+    button.simulate('mouseDown');
+    expect(addActivitySection).to.have.been.calledOnce;
   });
 });
