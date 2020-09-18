@@ -42,9 +42,9 @@ function initPage() {
     store.dispatch(setVerified());
   }
 
-  if (scriptData.script_announcements) {
+  if (scriptData.announcements) {
     registerReducers({announcements: announcementsReducer});
-    scriptData.script_announcements.forEach(announcement =>
+    scriptData.announcements.forEach(announcement =>
       store.dispatch(
         addAnnouncement(
           announcement.notice,
