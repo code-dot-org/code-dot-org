@@ -14,4 +14,3 @@ Step to get up and running:
 ```
 
 The app will be running at [http://localhost:8080](http://localhost:8080).
-
