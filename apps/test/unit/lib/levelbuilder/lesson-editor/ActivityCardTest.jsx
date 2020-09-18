@@ -52,4 +52,24 @@ describe('ActivityCard', () => {
     button.simulate('mouseDown');
     expect(addActivitySection).to.have.been.calledOnce;
   });
+
+  it('edit activity title', () => {
+    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+
+    const titleInput = wrapper.find('input').at(0);
+    titleInput.simulate('change', {target: {value: 'New Title'}});
+    expect(updateActivityField).to.have.been.calledWith(
+      1,
+      'displayName',
+      'New Title'
+    );
+  });
+
+  it('edit activity time', () => {
+    const wrapper = shallow(<ActivityCard {...defaultProps} />);
+
+    const titleInput = wrapper.find('input').at(1);
+    titleInput.simulate('change', {target: {value: '1000'}});
+    expect(updateActivityField).to.have.been.calledWith(1, 'time', '1000');
+  });
 });
