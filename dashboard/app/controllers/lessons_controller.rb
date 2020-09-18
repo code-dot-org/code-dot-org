@@ -8,7 +8,9 @@ class LessonsController < ApplicationController
     @lesson_data = {
       title: @lesson.localized_title,
       overview: @lesson.overview,
-      announcements: @lesson.announcements
+      announcements: @lesson.announcements,
+      purpose: @lesson.purpose,
+      preparation: @lesson.preparation
     }
   end
 

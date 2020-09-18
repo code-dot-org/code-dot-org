@@ -13,7 +13,9 @@ describe('LessonOverview', () => {
       activities: [],
       announcements: [],
       viewAs: 'Teacher',
-      isSignedIn: true
+      isSignedIn: true,
+      purpose: 'The purpose of the lesson is for people to learn',
+      preparation: '- One'
     };
   });
 

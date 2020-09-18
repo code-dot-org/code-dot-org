@@ -7,12 +7,31 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import LessonFrontPageLeftColumn from '@cdo/apps/templates/lessonOverview/LessonFrontPageLeftColumn';
+import LessonFrontPageRightColumn from '@cdo/apps/templates/lessonOverview/LessonFrontPageRightColumn';
+
+const styles = {
+  frontPage: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  left: {
+    flexGrow: 2
+  },
+  right: {
+    flexGrow: 1,
+    padding: 10,
+    borderLeft: 'solid 1px black'
+  }
+};
 
 class LessonOverview extends Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
     activities: PropTypes.array,
+    purpose: PropTypes.string,
+    preparation: PropTypes.string,
 
     //redux
     announcements: PropTypes.arrayOf(announcementShape),
@@ -26,7 +45,9 @@ class LessonOverview extends Component {
       overview,
       announcements,
       isSignedIn,
-      viewAs
+      viewAs,
+      purpose,
+      preparation
     } = this.props;
     return (
       <div>
@@ -39,8 +60,14 @@ class LessonOverview extends Component {
         )}
         <h1>{displayName}</h1>
 
-        <h2>{i18n.overview()}</h2>
-        <p>{overview}</p>
+        <div style={styles.frontPage}>
+          <div style={styles.left}>
+            <LessonFrontPageLeftColumn overview={overview} purpose={purpose} />
+          </div>
+          <div style={styles.right}>
+            <LessonFrontPageRightColumn preparation={preparation} />
+          </div>
+        </div>
 
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
