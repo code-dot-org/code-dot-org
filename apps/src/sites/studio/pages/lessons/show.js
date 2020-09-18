@@ -36,6 +36,8 @@ $(document).ready(function() {
         displayName={lessonData.title}
         overview={lessonData.overview}
         activities={sampleActivities} //TODO: Get real activities data getting passed here
+        purpose={lessonData.purpose}
+        preparation={lessonData.preparation}
       />
     </Provider>,
     document.getElementById('show-container')
