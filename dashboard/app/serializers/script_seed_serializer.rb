@@ -24,11 +24,11 @@ module ScriptSeed
     )
 
     def seeding_key
-      object.seeding_key(@scope[:seed_context])
+      object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
     end
 
     def level_keys
-      object.get_level_keys(@scope[:seed_context])
+      object.get_level_keys(@scope[:seed_context], use_existing_level_keys: false)
     end
   end
 
