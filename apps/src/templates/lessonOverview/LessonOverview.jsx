@@ -7,8 +7,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import LessonFrontPageLeftColumn from '@cdo/apps/templates/lessonOverview/LessonFrontPageLeftColumn';
-import LessonFrontPageRightColumn from '@cdo/apps/templates/lessonOverview/LessonFrontPageRightColumn';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   frontPage: {
@@ -62,10 +61,15 @@ class LessonOverview extends Component {
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
-            <LessonFrontPageLeftColumn overview={overview} purpose={purpose} />
+            <h2>{i18n.overview()}</h2>
+            <SafeMarkdown markdown={overview} />
+
+            <h2>{i18n.purpose()}</h2>
+            <SafeMarkdown markdown={purpose} />
           </div>
           <div style={styles.right}>
-            <LessonFrontPageRightColumn preparation={preparation} />
+            <h2>{i18n.preparation()}</h2>
+            <SafeMarkdown markdown={preparation} />
           </div>
         </div>
 
