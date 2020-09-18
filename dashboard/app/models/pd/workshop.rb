@@ -349,10 +349,10 @@ class Pd::Workshop < ActiveRecord::Base
   # 3. unprocessable location: use user-entered string
   # 4. no location address at all? use blank
   def friendly_location
-    return 'Location TBA' if location_address_tba?
-    return 'Virtual Workshop' if location_address_virtual?
+    return 'Virtual Workshop' if location_address_virtual? || virtual?
+    return 'Location TBA' if location_address_tba? || !location_address.presence
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || ''
+    return location_address
   end
 
   # Returns date and location (only date if no location specified)

@@ -59,8 +59,8 @@ module Pd
           "Which professional learning program would you like to participate in for the #{YEAR}
           school year? Note: this application is only for Computer Science Discoveries and
           Computer Science Principles. If you are interested in teaching Advanced
-          Placement CS A (in Java), visit this
-          [AP CS A overview](https://code.org/educate/curriculum/apcsa)."
+          Placement CSA (in Java), visit this
+          [AP CSA overview](https://code.org/educate/curriculum/apcsa)."
         ),
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
@@ -96,13 +96,13 @@ module Pd
       professional_learning_program_requirements:
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
-          able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
+          able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
           travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
           willing_to_travel: clean_multiline(
             'The four one-day school year workshops are typically held on Saturdays, with an approximate
            schedule of 9am - 4pm. How far would you be willing to travel to each workshop?'
           ),
-          interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
+          interested_in_online_program: 'Do you want to be considered for Code.org’s national virtual academic year workshops?',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."

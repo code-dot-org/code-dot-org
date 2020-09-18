@@ -23,6 +23,9 @@ const styles = {
   ...defaultStyles,
   error: {
     color: color.red
+  },
+  marginBottom: {
+    marginBottom: 30
   }
 };
 
@@ -148,17 +151,17 @@ export default class SummerWorkshop extends LabeledFormComponent {
   renderAssignedWorkshopList() {
     if (this.state.partnerWorkshops.length === 0) {
       return (
-        <p>
+        <p style={styles.marginBottom}>
           <strong>
-            Local summer workshop dates have not yet been finalized for your
-            region. Your Regional Partner will be in touch once workshop dates
-            and locations are known.
+            Summer Workshop dates have not yet been finalized for your region.
+            Your Regional Partner will be in touch once workshop details are
+            known.
           </strong>
         </p>
       );
     } else {
       const options = this.state.partnerWorkshops.map(
-        workshop => `${workshop.dates} in ${workshop.location}`
+        workshop => `${workshop.dates} (${workshop.location})`
       );
       options.push(TextFields.notSureExplain);
       options.push(TextFields.unableToAttend);
@@ -260,31 +263,28 @@ export default class SummerWorkshop extends LabeledFormComponent {
       return (
         <div>
           <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
-          <p>
-            Code.org’s Professional Learning Program is a yearlong program
-            starting in the summer and concluding in the spring. Workshops can
-            either be held in-person, virtually, or as a combination of both
-            throughout the year.
-            {this.state.regionalPartnerName && (
-              <span>
-                Refer to the Regional Partner’s
-                <a
-                  href={
-                    pegasus(
-                      '/educate/professional-learning/program-information'
-                    ) +
-                    (!!this.props.data.schoolZipCode
-                      ? '?zip=' + this.props.data.schoolZipCode
-                      : '')
-                  }
-                  target="_blank"
-                >
-                  landing page
-                </a>
-                for more information about the schedule and delivery model.
-              </span>
-            )}
-          </p>
+          {this.state.regionalPartnerName && (
+            <p>
+              Code.org’s Professional Learning Program is a yearlong program
+              starting in the summer and concluding in the spring. Workshops can
+              either be held in-person, virtually, or as a combination of both
+              throughout the year. Refer to the Regional Partner’s{' '}
+              <a
+                href={
+                  pegasus(
+                    '/educate/professional-learning/program-information'
+                  ) +
+                  (!!this.props.data.schoolZipCode
+                    ? '?zip=' + this.props.data.schoolZipCode
+                    : '')
+                }
+                target="_blank"
+              >
+                landing page
+              </a>{' '}
+              for more information about the schedule and delivery model. )}
+            </p>
+          )}
           {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
             [TextFields.noExplain]: 'other'
           })}
@@ -292,14 +292,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
             {this.props.data.regionalPartnerId &&
               this.renderAssignedWorkshopList()}
           </div>
-          {this.radioButtonsFor('willingToTravel')}
-          We offer a series of virtual academic year workshops for those who are
-          unable to commit to traveling to in-person academic year workshops.
-          This workshop series consists of eight, 1.5 hour live sessions
-          throughout the academic year, hosted via a video conference tool.{' '}
-          <strong>Please note</strong> that this option is only available for
-          the academic year - all participants in the Professional Learning
-          Program must attend a summer workshop.
+          Code.org <em>may</em> offer a national series of virtual academic year
+          workshops to support teachers from regions who need to join a virtual
+          academic year cohort in order to engage in the full Professional
+          Learning Program and where a regional virtual option is not offered or
+          is offered on a schedule that doesn’t work for teachers.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>
@@ -325,7 +322,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
               {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}
               {showPayFeeNote && (
-                <p style={{color: 'red'}}>
+                <p style={styles.error}>
                   Note: To meet our implementation guidance and our scholarship
                   recommendations, you should plan to teach this course in the
                   upcoming school year ({YEAR}). We suggest checking with your
