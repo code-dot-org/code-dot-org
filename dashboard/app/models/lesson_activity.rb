@@ -22,6 +22,6 @@ class LessonActivity < ApplicationRecord
 
   serialized_attrs %w(
     display_name
-    time
+    duration
   )
 end
