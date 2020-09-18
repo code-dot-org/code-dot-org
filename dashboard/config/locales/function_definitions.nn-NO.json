@@ -2588,6 +2588,11 @@
           "collect": {
             "name": "samle"
           }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "tegn en form"
+          }
         }
       }
     }

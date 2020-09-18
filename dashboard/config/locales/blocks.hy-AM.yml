@@ -6,16 +6,6 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -26,16 +16,6 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
-      Dancelab_doMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -98,47 +78,11 @@ hy:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': ադամանդ
             '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -371,18 +315,6 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

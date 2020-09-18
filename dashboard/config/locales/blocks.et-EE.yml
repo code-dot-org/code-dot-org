@@ -85,9 +85,6 @@ et:
             MOVES.Kick: Täht
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee {MOVE} {DIR} igavesti"
         options:
@@ -107,9 +104,6 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Thriller: Thriller
             MOVES.Rest: Mitte ükski
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
@@ -171,9 +165,6 @@ et:
             MOVES.Kick: Täht
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} tee {MOVE} {DIR} üks kord"
         options:
@@ -190,9 +181,6 @@ et:
             MOVES.Kick: Täht
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: 'iga {N} {UNIT} '
         options:
@@ -385,26 +373,6 @@ et:
           tee {N} uus {COSTUME}
           erkraani {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Tulnukad
             '"BEAR"': Karud
@@ -1129,18 +1097,6 @@ et:
         text: pööra paremale
       Vector_positionCenter:
         text: keskel
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

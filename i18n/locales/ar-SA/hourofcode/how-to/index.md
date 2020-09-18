@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
@@ -10,15 +10,18 @@ title: How-to Guide for Hour of Code
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. ألق نظرة على [دليل المشاركة إذا كان لديك أسئلة أخرى]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. ألق نظرة على [دليل المشاركة إذا كان لديك أسئلة أخرى]({{ localized_files/participation_guide }}).
 
-An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
-- [1. Watch the Hour of Code how-to video](#how-to-video)
-- [2. Explore activities and tutorials](#explore-activities)
-- [3. Create your plan for the day](#create-your-plan)
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
 - [ترويج "ساعة البرمجة"](#promote-your-hour)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [مصادر أخرى للمعلمين في "ساعة البرمجة"](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -83,9 +86,9 @@ An Hour of Code can also be held **remotely, online**! To get started, check out
 
 * * *
 
-<a id="promote-your-hour"></a>
+<a id="how-to-start"></a>
 
-## 5. Start your Hour of Code Strong
+## 5. How to start your Hour of Code strong
 
 بمجرد بدء احتفال "ساعة البرمجة"، تأكَّد من بدء الحدث الخاص بك بقوة باستخدام بعض هذه الأدوات والنصائح.
 
@@ -100,11 +103,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - اشرح الطرق التي تؤثر بها التكنولوجيا على حياتنا، مع أمثلة يهتم بها كل من الأولاد والبنات (تحدث عن إنقاذ الأرواح، ومساعدة الناس، وتواصل الناس، وغير ذلك).
 - بمشاركة الفصل، ضع قائمة بالأشياء التي تُستخدم فيها البرمجة في الحياة اليومية.
-- يمكنك الاطلاع على بعض النصائح لجعل الفتيات مهتمات بعلوم الحاسوب[هنا]({{ urls/girls }}).
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 * * *
 
-## 6. Get Coding!
+<a id="code"></a>
+
+## 6. Get coding!
 
 وجِّه الطلاب إلى النشاط
 
@@ -123,7 +128,9 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 * * *
 
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
@@ -138,12 +145,14 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 * * *
 
+<a id="other-resources"></a>
+
 ## مصادر أخرى عن أنشطة "ساعة البرمجة" للمعلمين:
 
 - تفضَّل بزيارة [منتدى معلمي "ساعة البرمجة"](http://forum.code.org/c/plc/hour-of-code) للحصول على المشورة والرؤية والدعم من المعلمين الآخرين.
 - يرجى الاطلاع على [ الأسئلة الشائعة عن "ساعة البرمجة"](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## ماذا بعد "ساعة البرمجة"؟
+### ماذا بعد "ساعة البرمجة"؟
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

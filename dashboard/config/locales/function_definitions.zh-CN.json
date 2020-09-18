@@ -292,7 +292,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -300,7 +303,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -308,7 +314,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -316,7 +325,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -324,7 +336,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -332,7 +347,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -340,7 +358,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -348,7 +369,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -356,7 +380,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -364,7 +391,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -375,7 +405,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -406,34 +439,52 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "获取三个花蜜"
+            "name": "获取三个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "获取三个花蜜"
+            "name": "获取三个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "获取5个花蜜"
+            "name": "获取5个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "获取5个花蜜"
+            "name": "获取5个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "获取很多花蜜"
+            "name": "获取很多花蜜",
+            "parameters": {
+              "direction": "方向",
+              "nectars": "花蜜"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "获取花蜜酿蜂蜜",
             "parameters": {
-              "honey": "蜂蜜"
+              "honey": "蜂蜜",
+              "direction": "方向",
+              "nectars": "花蜜"
             }
           }
         },
@@ -1360,7 +1411,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1368,7 +1422,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1533,7 +1590,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1541,7 +1601,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1549,7 +1612,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1557,12 +1623,18 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1570,7 +1642,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1578,7 +1653,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1586,7 +1664,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1594,7 +1675,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1602,7 +1686,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1610,7 +1697,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1618,7 +1708,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1626,7 +1719,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1634,7 +1730,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1642,7 +1741,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1650,7 +1752,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1658,7 +1763,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1666,7 +1774,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1674,7 +1785,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1682,7 +1796,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1690,7 +1807,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1698,7 +1818,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1706,7 +1829,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1714,7 +1840,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1722,7 +1851,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1730,7 +1862,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1738,7 +1873,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1746,7 +1884,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1754,7 +1895,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1762,7 +1906,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1770,7 +1917,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1778,7 +1928,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1786,7 +1939,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1794,7 +1950,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1802,7 +1961,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1810,7 +1972,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1818,7 +1983,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1826,7 +1994,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1834,7 +2005,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1842,7 +2016,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1850,7 +2027,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1858,7 +2038,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1866,7 +2049,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1874,7 +2060,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1882,7 +2071,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"

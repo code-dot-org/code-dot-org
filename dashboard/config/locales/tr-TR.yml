@@ -130,8 +130,8 @@ tr:
     use_clever: Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız
       üzerinden oturum açın.
     invalid_provider: Üzgünüz, %{provider} hesaplarınız Code.org hesaplarına bağlanamıyor.
-    migration_required: 'Üzgünüz, hala eski hesap deneyiminizi kullanan hesaplara
-      bağlanamıyoruz veya bağlantısını kesemiyoruz. '
+    migration_required: Üzgünüz, hala eski hesap deneyiminizi kullanan hesaplara bağlanamıyoruz
+      veya bağlantısını kesemiyoruz. Lütfen yeni deneyimi için güncelleyin.
     unable_to_connect_provider: Code.org hesabınız %{provider} hesabınıza bağlanamadı.
       Lütfen tekrar deneyin.
     disconnect_successful: Tebrikler! Code.org hesabınızdan dış hesabın bağlantısını
@@ -539,7 +539,7 @@ tr:
     enter_new_login_info: Oturum açma bilgilerini gir
     confirm_secret_words: Gizli kelimenizi girerek siz olduğunuzu doğrulayın
     parent_email_label: Ebeveyn/veli e-postası (isteğe bağlı)
-    parent_email_hint: "(bu, şifre şifre kurtarma için kullanılabilir)"
+    parent_email_hint: "(bu, şifre kurtarma için kullanılabilir)"
     enter_parent_email: Ebeveyn ya da velinizin elektronik posta adresini girin (şifre
       kurtarmak için)
     update: Hesabı güncelle
@@ -1211,7 +1211,7 @@ tr:
       subjects: Bu yıl hangi konuları öğretiyorsunuz?
       resources: Aşağıdaki BB eğitim kaynaklarından hangilerini kullanırsınız?
       robotics: Aşağıdaki robotik kaynaklarından hangilerini kullanırsınız?
-      workshop_organizer: Atölye Düzenleyici
+      workshop_organizer: Atölye Düzenleyicisi
       workshop_facilitator: Atölye Kolaylaştırıcı
       workshop_course: Atölye Dersi
       email_opt_in: Code.org'un uluslararası programı, derslerimize yapılan güncellemeler
@@ -1261,7 +1261,7 @@ tr:
         la: Dil Sanatları
         efl: Yabancı Dil olarak İngilizce
         music: Müzik
-        art: Resim
+        art: Sanat
         other: 'Diğer:'
       resources:
         bootstrap: Önyükleme
@@ -1276,7 +1276,7 @@ tr:
         grok: Grok
         kodable: Kodlanabilir
         lego: LEGO Eğitimi
-        microbit: Mikrobit
+        microbit: Microbit
         ozobot: Ozobot
         sphero: Sfero
         raspberry: Raspberry Pi
@@ -1295,7 +1295,7 @@ tr:
       title: Atölyeye Katılım
       intro: Code.org'un müfredatındaki eğitimi almak için zaman ayırdığınız için
         teşekkürler. Dünya çapındaki tüm okullardaki tüm öğrencilere bilgisayar bilimi
-        eğitimi olanklarını sağlamaya yönelik misyonumuzu siz olmadan yapamazdık.
+        eğitimi olanaklarını sağlamaya yönelik misyonumuzu siz olmadan yapamazdık.
       instructions: 1)Code.org'un uluslararası ortaklarından biri tarafından yürütülen
         bir eğitim atölyesine katıldığınızı ve 2) bilgisayar bilimi öğretmeni olarak
         hayat yolculuğunuzda sizi desteklemesi için ülkenizdeki uluslararası ortağımız
@@ -1317,9 +1317,9 @@ tr:
 '
     not_teacher:
       body_markdown: Code.org'un Profesyonel Öğrenim Programına ilgi gösterdiğiniz
-        için teşekkürler! Şu anda bir öğrenci hesabına oturum açtınız. Hesabınızı
-        öğrenci hesabından öğretmen hesabına yükseltmek için lütfen bir öğretmen hesabı
-        açın ya da [kullanıcı ayarlarınıza gidin](%{user_settings}).
+        için teşekkürler! Şu anda bir öğrenci hesabına oturum açtınız. Lütfen bir
+        öğretmen hesabı açın ya da hesabınızı öğrenci hesabından öğretmen hesabına
+        yükseltmek için [kullanıcı ayarlarınıza gidin](%{user_settings}).
       more_markdown: Uygulamaya başlamadan önce program hakkında daha fazla bilgi
         almak isterseniz, [Profesyonel Öğrenim Programı genel bilgilere](%{pl_overview})
         bakın.
@@ -1338,7 +1338,7 @@ tr:
     message: Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne
       gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     link_intro: Ayrıntılar için gizlilik politikamıza
-    privacy_policy: bakın
+    privacy_policy: gizlilik politikası
     logout: Oturumu Kapat
     true: Evet
   page_not_found_title: Sayfa Bulunamadı
@@ -1353,8 +1353,8 @@ tr:
       enter_code: Varsayılan tarayıcınızda Google aracılığıyla girdiğinizde sağlanan
         kodu girin.
       copy_code: Code.org'a giriş yapmak için bu kodu Maker App'e kopyalayın ve yapıştırın.
-      error_token_expired: Simge sona erdi. Lütfen yeni bir simge için yeniden giriş
-        yapın.
+      error_token_expired: Jetonun süresi sona erdi. Lütfen yeni bir jeton için yeniden
+        giriş yapın.
       error_wrong_provider: Yanlış sağlayıcı. Lütfen Google ile giriş yaptığınızdan
         emin olun.
       error_invalid_user: Geçersiz kullanıcı kimliği. Lütfen yeniden giriş yapmayı
