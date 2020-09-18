@@ -17,8 +17,8 @@
 class ActivitySection < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :activity, class_name: 'LessonActivity', foreign_key: :lesson_activity_id, inverse_of: :activity_sections
-  has_one :lesson, through: :activity
+  belongs_to :lesson_activity
+  has_one :lesson, through: :lesson_activity
 
   has_many :script_levels
 
