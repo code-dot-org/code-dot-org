@@ -32,7 +32,6 @@ export default class LessonEditor extends Component {
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
     studentOverview: PropTypes.string,
-    shortTitle: PropTypes.string,
     unplugged: PropTypes.bool,
     lockable: PropTypes.bool,
     assessment: PropTypes.bool,
@@ -47,7 +46,6 @@ export default class LessonEditor extends Component {
       displayName,
       overview,
       studentOverview,
-      shortTitle,
       unplugged,
       lockable,
       creativeCommonsLicense,
@@ -62,14 +60,6 @@ export default class LessonEditor extends Component {
         <label>
           Title
           <input name="name" defaultValue={displayName} style={styles.input} />
-        </label>
-        <label>
-          Short Title
-          <input
-            name="short_title"
-            defaultValue={shortTitle}
-            style={styles.input}
-          />
         </label>
         <h2>Lesson Settings</h2>
         <label>

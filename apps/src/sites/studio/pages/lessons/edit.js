@@ -29,7 +29,6 @@ $(document).ready(function() {
         displayName={lessonData.name}
         overview={lessonData.overview}
         studentOverview={lessonData.studentOverview}
-        shortTitle={lessonData.shortTitle}
         unplugged={lessonData.unplugged}
         lockable={lessonData.lockable}
         creativeCommonsLicense={lessonData.creativeCommonsLicense}
