@@ -1,7 +1,7 @@
 hidden false
 wrapup_video 'hoc_wrapup'
 
-lesson 'Maze'
+lesson 'Maze', display_name: 'Maze'
 skin 'birds'
 video_key_for_next_level 'maze_intro'
 concepts 'sequence'
@@ -70,3 +70,4 @@ level 'scrat 17'
 level 'scrat 18'
 level 'scrat 19'
 level 'scrat 20'
+

@@ -63,6 +63,7 @@ const PUZZLE_PAGE_NONE = -1;
  */
 header.build = function(
   scriptData,
+  lessonGroupData,
   lessonData,
   progressData,
   currentLevelId,
@@ -73,6 +74,7 @@ header.build = function(
   hasAppOptions
 ) {
   scriptData = scriptData || {};
+  lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
   progressData = progressData || {};
 
@@ -83,6 +85,7 @@ header.build = function(
   // Set up the store immediately.
   progress.generateStageProgress(
     scriptData,
+    lessonGroupData,
     lessonData,
     progressData,
     currentLevelId,

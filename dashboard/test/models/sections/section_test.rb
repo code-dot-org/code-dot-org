@@ -341,31 +341,31 @@ class SectionTest < ActiveSupport::TestCase
   test 'default_script: script and course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :unit_group
-    create :course_script, unit_group: course, script: script1, position: 1
-    create :course_script, unit_group: course, script: script2, position: 2
-    course.reload
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    unit_group.reload
 
-    section = create :section, script: script2, unit_group: course
+    section = create :section, script: script2, unit_group: unit_group
     assert_equal script2, section.default_script
   end
 
   test 'default_script: no script assigned, course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :unit_group
-    create :course_script, unit_group: course, script: script1, position: 1
-    create :course_script, unit_group: course, script: script2, position: 2
-    course.reload
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    unit_group.reload
 
-    section = create :section, script: nil, unit_group: course
+    section = create :section, script: nil, unit_group: unit_group
     assert_equal script1, section.default_script
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse'
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: nil, unit_group: course
+      section = create :section, script: nil, unit_group: unit_group
 
       expected = {
         id: section.id,
@@ -384,7 +384,7 @@ class SectionTest < ActiveSupport::TestCase
         autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
-        course_id: course.id,
+        course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
         grade: nil,
@@ -441,12 +441,12 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse'
 
     Timecop.freeze(Time.zone.now) do
       # If this were a real section, it would actually have a script that is part of
       # the provided course
-      section = create :section, script: script, unit_group: course
+      section = create :section, script: script, unit_group: unit_group
 
       expected = {
         id: section.id,
@@ -465,7 +465,7 @@ class SectionTest < ActiveSupport::TestCase
         autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
-        course_id: course.id,
+        course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
         grade: nil,

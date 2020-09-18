@@ -56,7 +56,11 @@
     = render layout: 'shared/extra_links' do
       %strong= @script.name
       %ul
-        %li= link_to "Edit", edit_script_path(@script)
+        - if Rails.application.config.levelbuilder_mode
+          %li= link_to "Edit", edit_script_path(@script)
+        - else
+          - lb_path = "https://levelbuilder-studio.code.org#{script_path(@script)}"
+          %li= link_to "View on levelbuilder", lb_path
       - unless @script.unit_groups.empty?
         = "This script is in #{@script.unit_groups.length} course#{'s' unless @script.unit_groups.length == 1}:"
         %ul

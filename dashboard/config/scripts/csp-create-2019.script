@@ -13,18 +13,19 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_ap_3', display_name: 'Chapter 3: AP Create Performance Task'
-lesson 'Create PT Prep - Reviewing the Task'
+lesson 'Create PT Prep - Reviewing the Task', display_name: 'Create PT Prep - Reviewing the Task'
 level 'CSP CreateL01 SFLP_2019', named: true
 level 'csp-pt-tech-setup-and-tools_2018_2019', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
-lesson 'Create PT Prep - Making a Plan'
+lesson 'Create PT Prep - Making a Plan', display_name: 'Create PT Prep - Making a Plan'
 level 'CSP CreateL02 SFLP_2018_2019', named: true
 
-lesson 'Create PT - Complete the Task'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
 level 'CSP CreateL03 SFLP_2019', named: true
 level 'Practice Create Performance Task_2019', progression: 'Create PT - Complete the Task'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post Course survey', lockable: true
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
+

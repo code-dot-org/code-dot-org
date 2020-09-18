@@ -1,16 +1,17 @@
 professional_learning_course 'CS in Science Legacy'
 login_required true
 
-lesson 'Welcome Back!'
+lesson 'Welcome Back!', display_name: 'Welcome Back!'
 level 'sciPDpart4_S1_L1'
 level 'sciPD2Part4_S1_L2'
 level 'sciPD2Part4_S1_L3'
 
-lesson 'The TLO'
+lesson 'The TLO', display_name: 'The TLO'
 level 'sciPD2Part4_S2_L1'
 level 'sciPD2Part4_S2_L2'
 
-lesson 'Prep With Your Modules'
+lesson 'Prep With Your Modules', display_name: 'Prep With Your Modules'
 level 'sciPD2Part4_S3_L1'
 level 'sciPD2Part4_S3_L2'
 level 'sciPD2Part4_S3_L3'
+

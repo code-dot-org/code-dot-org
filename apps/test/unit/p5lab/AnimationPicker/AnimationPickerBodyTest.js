@@ -17,7 +17,7 @@ describe('AnimationPickerBody', function() {
     onPickLibraryAnimation: emptyFunction,
     onUploadClick: emptyFunction,
     playAnimations: false,
-    getLibraryManifest: () => testAnimationLibrary,
+    libraryManifest: testAnimationLibrary,
     categories: CostumeCategories,
     hideUploadOption: false,
     hideAnimationNames: false

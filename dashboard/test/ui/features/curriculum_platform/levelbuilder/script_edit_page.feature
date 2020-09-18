@@ -26,7 +26,7 @@ Scenario: Save changes to a script
   And element ".uitest-bubble" does not contain text "1"
 
   When I view the temp script edit page
-  And I type "lesson 'My Lesson'\nlevel 'Standalone_Artist_1'\n" into "#script_text"
+  And I type "lesson 'My Lesson', display_name: 'My Lesson'\nlevel 'Standalone_Artist_1'\n" into "#script_text"
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
 

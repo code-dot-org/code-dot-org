@@ -7,7 +7,7 @@ has_verified_resources true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 project_sharing true
 
-lesson 'Drawing in Game Lab'
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab'
 level 'CSD U3 samples_virtual_2020', progression: 'Sample Programs'
 level 'CSD U3 rect_virtual_2020', progression: 'Introduction to Game Lab'
 level 'CSD: Drawing in Game Lab 1_virtual_2020', progression: 'Video: Drawing in Game Lab - Part 1'
@@ -20,7 +20,7 @@ level 'CSD U3 drawing practice choice_2020_virtual_2020', progression: 'Practice
 level 'CSD U3 debug_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD U3 drawing challenges_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Shapes and Parameters'
+lesson 'Shapes and Parameters', display_name: 'Shapes and Parameters'
 level 'CSD U3 Random Taller Rectangle_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Random Ellipse Behind_2018_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Random background_virtual_2020', progression: 'Skill Building'
@@ -30,7 +30,7 @@ level 'CSD Games parameters practice_2020_virtual_2020', progression: 'Practice'
 level 'CSD U3 Random Debug Cloud_2018_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD Games Parameters challenge_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Variables'
+lesson 'Variables', display_name: 'Variables'
 level 'CSD U3 Variables Predict Where X_virtual_2020', progression: 'Prediction'
 level 'Introduction to Variables - Part 1_virtual_2020', progression: 'Video: Introduction to Variables'
 level 'CSD U3 Variables Predict Where XY_virtual_2020', progression: 'Skill Building'
@@ -41,7 +41,7 @@ level 'CSD Games variables practice_2020_virtual_2020', progression: 'Practice'
 level 'CSD U3 Variables assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD Games variables challenge_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Random Numbers'
+lesson 'Random Numbers', display_name: 'Random Numbers'
 level 'CSD U3 Random random ellipse_2018_virtual_2020', progression: 'Exploration'
 level 'CSD U3 Random random ellipse2_2018_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Variables random with assignment_virtual_2020', progression: 'Skill Building'
@@ -50,7 +50,7 @@ level 'CSD games random practice_2020_virtual_2020', progression: 'Practice'
 level 'CSD U3 Random rainbow snake_2018_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD games random challenge_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Sprites'
+lesson 'Sprites', display_name: 'Sprites'
 level 'CSD U3 Sprites Exploration_virtual_2020', progression: 'Exploration'
 level 'CSD: Sprites in Game Lab_virtual_2020', progression: 'Video: Introduction to Sprites'
 level 'CSD U3 Sprites intro sprites_virtual_2020', progression: 'Skill Building'
@@ -63,7 +63,7 @@ level 'CSD Games Sprites practice_2020_virtual_2020', progression: 'Practice'
 level 'CSD U3 Sprites assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD Games Sprites Challenges_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Sprite Properties'
+lesson 'Sprite Properties', display_name: 'Sprite Properties'
 level 'CSD Games properties predict_virtual_2020', progression: 'Prediction'
 level 'CSD Games properties xy_virtual_2020', progression: 'Skill Building'
 level 'CSD Games properties new_virtual_2020', progression: 'Skill Building'
@@ -71,7 +71,7 @@ level 'CSD Games Properties practice_2020_virtual_2020', progression: 'Practice'
 level 'CSD Games properties assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD Games Properties challenge_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'Text'
+lesson 'Text', display_name: 'Text'
 level 'CSD web text explore_virtual_2020', progression: 'Prediction'
 level 'CSD U3 Sprites text_virtual_2020', progression: 'Skill Building'
 level 'CSD web text size_virtual_2020', progression: 'Skill Building'
@@ -79,7 +79,7 @@ level 'CSD web text practice choice_2020_virtual_2020', progression: 'Practice'
 level 'CSD web text assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web text challenge choice_2020_virtual_2020', progression: 'Challenges'
 
-lesson 'The Draw Loop'
+lesson 'The Draw Loop', display_name: 'The Draw Loop'
 level 'CSD: Introduction to the Draw Loop_virtual_2020', progression: 'Video: Introduction to the Draw Loop'
 level 'CSD U3 Draw Loop Plugged orange and green_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Draw Loop Plugged predict 2_virtual_2020', progression: 'Prediction'
@@ -89,7 +89,7 @@ level 'CSD web draw loop practice choice_virtual_2020', progression: 'Practice'
 level 'CSD U3 Draw Loop Plugged wiggle sprite y_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web draw loop challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Sprite Movement'
+lesson 'Sprite Movement', display_name: 'Sprite Movement'
 level 'CSD U3 - Simple Counter Predict_virtual_2020', progression: 'Prediction'
 level 'CSD: Animating Sprite Movement_virtual_2020', progression: 'Video: Sprite Movement'
 level 'CSD U3 Sprite Movement Right_virtual_2020', progression: 'Skill Building'
@@ -100,7 +100,7 @@ level 'CSD web movement practice choice_virtual_2020', progression: 'Practice'
 level 'CSD U3 Movement Fish_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals'
 level 'CSD U3 Boolean Predict_virtual_2020', progression: 'Prediction'
 level 'CSD U3 - Booleans Video_virtual_2020', progression: 'Video: Booleans'
 level 'CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual_2020', progression: 'Quick Check'
@@ -112,7 +112,7 @@ level 'CSD web conditionals practice choice_virtual_2020', progression: 'Practic
 level 'CSD web conditionals assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web conditionals challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Keyboard Input'
+lesson 'Keyboard Input', display_name: 'Keyboard Input'
 level 'CSD U3 Keypress Boolean_2018_virtual_2020', progression: 'Prediction'
 level 'CSD U3 keydown conditional_2018_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 UP_ARROW_2018_virtual_2020', progression: 'Skill Building'
@@ -121,7 +121,7 @@ level 'CSD web keyboard practice choice_virtual_2020', progression: 'Practice'
 level 'CSD U3 Direction Arrows_2018_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web keyboard challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Mouse Input'
+lesson 'Mouse Input', display_name: 'Mouse Input'
 level 'CSD U3 if else predict_virtual_2020', progression: 'Prediction'
 level 'CSD U3 - Conditionals Video_virtual_2020', progression: 'Video: If/Else Statements'
 level 'CSD U3 Else_virtual_2020', progression: 'Skill Building'
@@ -132,7 +132,7 @@ level 'CSD web mouse practice choice_virtual_2020', progression: 'Practice'
 level 'CSD web mouse assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD web mouse challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Velocity'
+lesson 'Velocity', display_name: 'Velocity'
 level 'CSD U3 abstraction velocityX_virtual_2020', progression: 'Skill Building'
 level 'CSD: Sprite Velocity_virtual_2020', progression: 'Video: Velocity'
 level 'CSD U3 abstraction velocityY_virtual_2020', progression: 'Skill Building'
@@ -144,7 +144,7 @@ level 'CSD games velocity practice choice_virtual_2020', progression: 'Practice'
 level 'CSD U3 abstraction velocityX control_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD games velocity challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Collision Detection'
+lesson 'Collision Detection', display_name: 'Collision Detection'
 level 'CSD U3 collisions car intro_virtual_2020', progression: 'Sample Game'
 level 'CSD U3 collisions build isTouching_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 collisions isTouching intro_virtual_2020', progression: 'Skill Building'
@@ -154,7 +154,7 @@ level 'CSD games istouching practice choice_virtual_2020', progression: 'Practic
 level 'CSD U3 collisions horse_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD games istouching challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Complex Sprite Movement'
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement'
 level 'CSD U3 Complex Movement counter prediction gamelab_virtual_2020', progression: 'Prediction'
 level 'CSD U3 abstraction accelerateX_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 abstraction accelerateY_virtual_2020', progression: 'Skill Building'
@@ -163,14 +163,14 @@ level 'CSD games movement2 practice choice_virtual_2020', progression: 'Practice
 level 'CSD U3 abstraction decelerateY_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD games movement2 challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Collisions'
+lesson 'Collisions', display_name: 'Collisions'
 level 'CSD U3 collisions displace intro_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 collisions try blocks_virtual_2020', progression: 'Skill Building'
 level 'CSD games collisions practice choice_virtual_2020', progression: 'Practice'
 level 'CSD games collisions assessment_virtual_2020', progression: 'Assessment', assessment: true
 level 'CSD games collisions challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Functions'
+lesson 'Functions', display_name: 'Functions'
 level 'CSD U3 function video_virtual_2020', progression: 'Video: Functions'
 level 'CSD U3 Functions Call Function_virtual_2020', progression: 'Skill Building'
 level 'CSD U3 Functions Order Functions_virtual_2020', progression: 'Skill Building'
@@ -181,7 +181,7 @@ level 'CSD U3 Functions Add IsTouching_virtual_2020', progression: 'Collector Ga
 level 'CSD U3 Functions Add Change Background_virtual_2020', progression: 'Collector Game', assessment: true
 level 'CSD games functions challenge choice_virtual_2020', progression: 'Challenges'
 
-lesson 'Project - Design a Game'
+lesson 'Project - Design a Game', display_name: 'Project - Design a Game'
 level 'CSD U3 game intro_2018_2019_pilot_2020_virtual_2020', progression: 'Design Your Game'
 level 'CSD U3 game variables_virtual_2020', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_virtual_2020', progression: 'Project - Background and Variables'

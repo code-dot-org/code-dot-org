@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
+import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
@@ -25,8 +26,7 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudents,
-  studentCount,
-  authenticityToken
+  studentCount
 } = scriptData;
 
 $(document).ready(() => {
@@ -60,7 +60,10 @@ $(document).ready(() => {
     link: $('#add-parent-email-link'),
     onSuccessCallback: updateDisplayedParentEmail
   });
-
+  new RemoveParentEmailController({
+    form: $('#remove-parent-email-form'),
+    link: $('#remove-parent-email-link')
+  });
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
     link: $('#edit-email-link'),
@@ -87,8 +90,7 @@ $(document).ready(() => {
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent,
-      authenticityToken
+      isCleverStudent
     );
   }
 

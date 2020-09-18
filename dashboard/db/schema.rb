@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200722061339) do
+ActiveRecord::Schema.define(version: 20200819093633) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -332,6 +332,15 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
   end
 
+  create_table "course_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                        null: false
+    t.string   "display_name",               null: false
+    t.text     "properties",   limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["key"], name: "index_course_offerings_on_key", unique: true, using: :btree
+  end
+
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "course_id",         null: false
     t.integer "script_id",         null: false
@@ -343,15 +352,18 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 
-  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
-    t.string   "key",                             null: false
-    t.string   "display_name",                    null: false
-    t.text     "properties",        limit: 65535
-    t.string   "content_root_type",               null: false
-    t.integer  "content_root_id",                 null: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                              null: false
+    t.string   "display_name",                     null: false
+    t.text     "properties",         limit: 65535
+    t.string   "content_root_type",                null: false
+    t.integer  "content_root_id",                  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "course_offering_id"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id", using: :btree
+    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true, using: :btree
+    t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id", using: :btree
   end
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1048,6 +1060,7 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "facilitator_id"
+    t.string   "workshop_agenda"
     t.index ["foorm_submission_id"], name: "index_workshop_survey_foorm_submissions_on_foorm_id", unique: true, using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id", using: :btree
@@ -1443,6 +1456,7 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
+    t.string   "key"
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
@@ -1551,6 +1565,14 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id", using: :btree
   end
 
+  create_table "unit_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.text     "properties", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name"], name: "index_unit_groups_on_name", using: :btree
+  end
+
   create_table "user_geos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                             null: false
     t.datetime "created_at",                          null: false
@@ -1579,6 +1601,7 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.boolean  "submitted"
     t.boolean  "readonly_answers"
     t.datetime "unlocked_at"
+    t.integer  "time_spent"
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
   end
 
@@ -1746,12 +1769,6 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
   end
 
-  create_table "validated_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "time_spent",    default: 0
-    t.bigint  "user_level_id",             unsigned: true
-    t.index ["user_level_id"], name: "index_validated_user_levels_on_user_level_id", unique: true, using: :btree
-  end
-
   create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "key"
     t.string   "youtube_code"
@@ -1790,14 +1807,12 @@ ActiveRecord::Schema.define(version: 20200722061339) do
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
-  add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "sections", "courses"
   add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"

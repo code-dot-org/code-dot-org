@@ -24,7 +24,8 @@ const ALL_VIEW = 'all';
 
 const style = {
   root: {
-    fontFamily: `"Gotham 4r", sans-serif`
+    fontFamily: `"Gotham 4r", sans-serif`,
+    marginTop: 10
   },
   characterViewWrapper: {
     clear: 'both',

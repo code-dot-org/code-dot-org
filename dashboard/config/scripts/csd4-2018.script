@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -12,38 +11,39 @@ version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
-lesson 'Analysis of Design'
+lesson 'Analysis of Design', display_name: 'Analysis of Design'
 level 'CSD U4L01 autoSFLP_2018', named: true
 
-lesson 'Understanding Your User'
+lesson 'Understanding Your User', display_name: 'Understanding Your User'
 level 'CSD U4L02 autoSFLP_2018', named: true
 
-lesson 'User-Centered Design Micro Activity'
+lesson 'User-Centered Design Micro Activity', display_name: 'User-Centered Design Micro Activity'
 level 'CSD U4L03 autoSFLP_2018', named: true
 
-lesson 'User Interfaces'
+lesson 'User Interfaces', display_name: 'User Interfaces'
 level 'CSD U4L04 autoSFLP_2018', named: true
 
-lesson 'Feedback and Testing'
+lesson 'Feedback and Testing', display_name: 'Feedback and Testing'
 level 'CSD U4L05 autoSFLP_2018', named: true
 
-lesson 'Identifying User Needs'
+lesson 'Identifying User Needs', display_name: 'Identifying User Needs'
 level 'CSD U4L06 autoSFLP_2018', named: true
 
-lesson 'Project - Paper Prototype'
+lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype'
 level 'CSD U4L07 autoSFLP_2018', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018', progression: 'Reflection', assessment: true
 
 lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
-lesson 'Designing Apps for Good'
+lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good'
 level 'CSD U4L08 autoSFLP_2018', named: true
 
-lesson 'Market Research'
+lesson 'Market Research', display_name: 'Market Research'
 level 'CSD U4L09 autoSFLP_2018', named: true
 
-lesson 'Paper Prototypes'
+lesson 'Paper Prototypes', display_name: 'Paper Prototypes'
 level 'CSD U4L10 autoSFLP_2018', named: true
 level 'Example App Types_2018', named: true
 level 'CSDU4 Quiz App Demo_2018', progression: 'Demo Apps'
@@ -51,10 +51,10 @@ level 'CSDU4 Decision App Demo_2018', progression: 'Demo Apps'
 level 'CSDU4 List App Demo_2018', progression: 'Demo Apps'
 level 'CSDU4 Crowdsource App Demo_2018', progression: 'Demo Apps'
 
-lesson 'Prototype Testing'
+lesson 'Prototype Testing', display_name: 'Prototype Testing'
 level 'CSD U4L11 autoSFLP_2018', named: true
 
-lesson 'Digital Design'
+lesson 'Digital Design', display_name: 'Digital Design'
 level 'CSD U4L12 autoSFLP_2018', named: true
 level 'CSD U4 Design Mode Map_2018', named: true
 level 'CSDU4 Design Mode Video_2018', named: true
@@ -69,7 +69,7 @@ level 'U4 Model Design 7_2018', progression: 'Finish a Screen'
 level 'Design a Screen for your App_2018', named: true
 level 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design', assessment: true
 
-lesson 'Linking Screens'
+lesson 'Linking Screens', display_name: 'Linking Screens'
 level 'CSD U4L13 autoSFLP_2018', named: true
 level 'CSD U4 Mult Screen Map_2018', progression: 'Adding Screens'
 level 'U4 Model Program 1_2018', progression: 'Adding Screens'
@@ -85,17 +85,18 @@ level 'U4 Model Program 5_2018', progression: 'Linking Screens'
 level 'CSDU4 Project Import_2018', named: true
 level 'CSDU4 Project Events_2018', named: true
 
-lesson 'Testing the App'
+lesson 'Testing the App', display_name: 'Testing the App'
 level 'CSD U4L14 autoSFLP_2018', named: true
 
-lesson 'Improving and Iterating'
+lesson 'Improving and Iterating', display_name: 'Improving and Iterating'
 level 'CSD U4L15 autoSFLP_2018', named: true
 level 'CSDU4 Project Bug Feature_2018', named: true
 
-lesson 'Project - App Presentation'
+lesson 'Project - App Presentation', display_name: 'Project - App Presentation'
 level 'CSD U4L16 autoSFLP_2018', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018', progression: 'Reflection', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post-Course Survey'
+lesson 'CS Discoveries Post-Course Survey', display_name: 'CS Discoveries Post-Course Survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

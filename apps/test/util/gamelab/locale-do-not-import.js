@@ -10,4 +10,4 @@
 require('../frame')();
 require('../../../build/package/js/en_us/gamelab_locale.js');
 
-module.exports = window.blockly.gamelab_locale;
+module.exports = window.locales.gamelab_locale;

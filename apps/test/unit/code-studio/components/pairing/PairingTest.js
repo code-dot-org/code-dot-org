@@ -7,13 +7,13 @@ import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
 describe('Pairing component', function() {
   function createDomElement() {
-    return mount(React.createElement(Pairing, {source: '/pairings'}));
+    return mount(<Pairing source="/pairings" />);
   }
 
-  function setupFakeAjax(response) {
+  function setupFakeAjax(response, httpCode = 200) {
     var server = sinon.fakeServer.create();
     server.respondWith('GET', '/pairings', [
-      200,
+      httpCode,
       {'Content-Type': 'application/json'},
       JSON.stringify(response)
     ]);
@@ -32,6 +32,85 @@ describe('Pairing component', function() {
     expect(component.find('select').length).to.equal(select);
     expect(component.find('.stop').length).to.equal(stop);
   }
+
+  describe('handles http errors', () => {
+    let server, component;
+    afterEach(function() {
+      teardownFakeAjax(server);
+      component = null;
+    });
+
+    it('when the GET request fails', () => {
+      server = setupFakeAjax('', 500);
+      component = createDomElement();
+      expect(component.state().loading).to.be.true;
+      server.respond();
+      component.update();
+
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
+    });
+  });
+
+  describe('handles failed PUT requests', () => {
+    let server, component;
+    let ajaxState = {
+      sections: [
+        {
+          id: 1,
+          name: 'A section',
+          students: [{id: 11, name: 'First student'}]
+        }
+      ],
+      pairings: []
+    };
+
+    beforeEach(() => {
+      server = setupFakeAjax(ajaxState);
+      server.respondWith('PUT', '/pairings', [
+        500,
+        {'Content-Type': 'application/json'},
+        ''
+      ]);
+      component = createDomElement();
+      server.respond();
+      component.update();
+    });
+
+    afterEach(() => {
+      teardownFakeAjax(server);
+      component = null;
+    });
+
+    it('in handleAddPartners', () => {
+      expect(component.state().hasError).to.be.false;
+      expect(component.state().loading).to.be.false;
+
+      component.instance().handleAddPartners([11]);
+      component.update();
+      expect(component.state().loading).to.be.true;
+      expect(component.state().hasError).to.be.false;
+      server.respond();
+      component.update();
+
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
+    });
+
+    it('in handleStop', () => {
+      expect(component.state().hasError).to.be.false;
+
+      component.instance().handleStop({preventDefault: () => {}});
+      component.update();
+      expect(component.state().loading).to.be.true;
+      expect(component.state().hasError).to.be.false;
+      server.respond();
+      component.update();
+
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
+    });
+  });
 
   describe('for student in multiple sections', function() {
     var component;
@@ -217,6 +296,11 @@ describe('Pairing component', function() {
 
     beforeEach(function() {
       server = setupFakeAjax(ajaxState);
+      server.respondWith('PUT', '/pairings', [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify({sections: [], pairings: []})
+      ]);
       component = createDomElement();
       server.respond();
       component.update();
@@ -232,6 +316,8 @@ describe('Pairing component', function() {
 
       // click on stop button
       component.find('.stop').simulate('click');
+      server.respond();
+      component.update();
       expect(component.find('.student').length).to.equal(0);
       expect(component.find('select').length).to.equal(1);
     });

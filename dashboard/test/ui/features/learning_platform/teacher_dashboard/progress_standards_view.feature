@@ -9,8 +9,6 @@ Feature: Viewing and Printing Standards Progress
     And I wait until element "#import-standards" is visible
     And I press "#import-standards" using jQuery
     And I wait until element "#alert-details" is visible
-    And element "#alert-details" contains text "Hooray!"
-    And element "#alert-details" contains text "coursea-2019"
 
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
@@ -47,7 +45,6 @@ Feature: Viewing and Printing Standards Progress
     And I wait until element "#uitest-progress-standards-table" contains text "Model daily processes by creating and following algorithms (sets of step-by-step instructions) to complete tasks."
     And I wait until element "#uitest-progress-standards-table" contains text "Available in 1 Lesson:"
     And I wait until element "#test-how-to-standards" contains text "How to use this information"
-
 
     # Generate PDF
     And I wait until element ".uitest-standards-generate-report" is visible

@@ -13,43 +13,43 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp4_1_2018', display_name: 'Unit 4: Big Data and Privacy'
-lesson 'What is Big Data?'
+lesson 'What is Big Data?', display_name: 'What is Big Data?'
 level 'CSP U4L01 SFLP_2019', named: true
 level 'U4L1 - MC moores law_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U4L1 - MC big data def_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
-lesson 'Finding Trends with Visualizations'
+lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations'
 level 'CSP U2L08 SFLP_2019', named: true
 level 'U2L8 google trends MC_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L8 google trends hypothesis_2019', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 google trends MC_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 trends as predictors_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Check Your Assumptions'
+lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions'
 level 'CSP U2L09 SFLP_2019', named: true
 level 'U2L9 What is digital divide MC_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L9 FR digital divide issue_2019', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 MC data bias_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Rapid Research - Data Innovations'
+lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations'
 level 'CSP U4L02 SFLP_2019', named: true
 level 'Video - Data and Medicine_2019', progression: 'Data and Medicine'
 level 'Video - CS is Changing Everything_2019', progression: 'CS is Changing Everything'
 level 'U4L2 - FR Practice AP response about data_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Identifying People with Data'
+lesson 'Identifying People with Data', display_name: 'Identifying People with Data'
 level 'CSP U4L03 SFLP_2019', named: true
 level 'U4-AP-Practice-Choose-The-Data-Concern_2019', named: true
 level 'U4L3 - FR Identifying people_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'The Cost of Free'
+lesson 'The Cost of Free', display_name: 'The Cost of Free'
 level 'CSP U4L04 SFLP_2019', named: true
 level 'U4-AP-Practice-Justify-the-Score_2019', named: true
 level 'U4L4 - MC cost of free_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U4L4 - FR cost of free_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Simple Encryption'
+lesson 'Simple Encryption', display_name: 'Simple Encryption'
 level 'CSP U4L05 SFLP_2019', named: true
 level 'Crack a Caesar Cipher_2019', progression: 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap_2018_2019', progression: 'Terminology Recap', named: true
@@ -63,7 +63,7 @@ level 'U2L13 Assessment4_2018_2019', progression: 'Check Your Understanding', as
 level 'U2L13 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Encryption with Keys and Passwords'
+lesson 'Encryption with Keys and Passwords', display_name: 'Encryption with Keys and Passwords'
 level 'CSP U4L06 SFLP_2019', named: true
 level 'The Vigenere Cipher Widget_2019', progression: 'The Vigenere Cipher Widget', named: true
 level 'How Secure Is Your Password?_2018_2019', progression: 'How Secure Is Your Password?', named: true
@@ -75,7 +75,7 @@ level 'U2L14 Assessment2_2019', progression: 'Check Your Understanding', assessm
 level 'U2L15 Assessment1_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'CB_Question_12_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Public Key Crypto'
+lesson 'Public Key Crypto', display_name: 'Public Key Crypto'
 level 'CSP U4L07 SFLP_2019', named: true
 level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys', named: true
 level 'Cups and Beans Activity_2018_2019', progression: 'Cups and Beans Activity', named: true
@@ -90,19 +90,20 @@ level 'U2L19 mutlichoice 20 mod 15_2018_2019', progression: 'Check Your Understa
 level 'U2L19 multichoice 13 MOD 17_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L19 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Rapid Research - Cybercrime'
+lesson 'Rapid Research - Cybercrime', display_name: 'Rapid Research - Cybercrime'
 level 'CSP U4L08 SFLP_2019', named: true
 level 'Video - Cybersecurity and Crime_2019', progression: 'Cybersecurity and Crime', named: true
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-lesson 'Unit 4 Assessment', lockable: true
+lesson 'Unit 4 Assessment', display_name: 'Unit 4 Assessment', lockable: true
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019', assessment: true
 
 lesson_group 'optional', display_name: 'Optional'
-lesson 'Optional: Data Questions', lockable: true
+lesson 'Optional: Data Questions', display_name: 'Optional: Data Questions', lockable: true
 level 'CSP 18-19 Unit 4 Data Questions', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post Course survey', lockable: true
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
+

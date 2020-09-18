@@ -36,6 +36,8 @@ class LessonGroup < ApplicationRecord
 
   serialized_attrs %w(
     display_name
+    description
+    big_questions
   )
 
   Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
@@ -64,21 +66,22 @@ class LessonGroup < ApplicationRecord
       else
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
-
-        new_lesson_group = false
+        LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
 
         lesson_group = LessonGroup.find_or_create_by(
           key: raw_lesson_group[:key],
           script: script,
           user_facing: true
-        ) do
-          # if you got in here, this is a new lesson_group
-          new_lesson_group = true
-        end
+        )
 
-        LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
-
-        lesson_group.assign_attributes(position: lesson_group_position += 1, properties: {display_name: raw_lesson_group[:display_name]})
+        lesson_group.assign_attributes(
+          position: lesson_group_position += 1,
+          properties: {
+            display_name: raw_lesson_group[:display_name],
+            description: raw_lesson_group[:description],
+            big_questions: raw_lesson_group[:big_questions]
+          }
+        )
         lesson_group.save! if lesson_group.changed?
       end
 
@@ -89,6 +92,12 @@ class LessonGroup < ApplicationRecord
       lesson_group.save!
 
       lesson_group
+    end
+  end
+
+  def self.prevent_changing_stable_i18n_key(script, raw_lesson_group)
+    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
+      raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
     end
   end
 
@@ -106,12 +115,6 @@ class LessonGroup < ApplicationRecord
     end
   end
 
-  def self.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
-    if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-      raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-    end
-  end
-
   # All lesson groups should have lessons in them
   def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
     raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
@@ -121,28 +124,28 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')
   end
 
-  # This method is not currently used outside of summarize_for_edit but will be used
-  # soon as we move the position of lessons to be based on their lesson group instead
-  # of the script (dmcavoy - May 2020)
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
-    summary = {
+  def localized_description
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: nil)
+  end
+
+  def localized_big_questions
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: nil)
+  end
+
+  def summarize
+    {
       id: id,
       key: key,
       display_name: localized_display_name,
+      description: localized_description,
+      big_questions: localized_big_questions,
       user_facing: user_facing,
       position: position
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-
-    summary
   end
 
   def summarize_for_edit
-    include_lessons = false
-    summary = summarize(include_lessons)
+    summary = summarize
     summary[:lessons] = lessons.map(&:summarize_for_edit)
     summary
   end

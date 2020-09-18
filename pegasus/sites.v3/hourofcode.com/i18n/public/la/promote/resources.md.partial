@@ -40,19 +40,29 @@ nav: promote_nav
 
 ## Usa el logo de la Hora del Código para difundir la noticia
 
-[![imagen]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![imagen]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imagen]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Descarga versiones en alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
 
-**La "Hora del Código" es una marca registrada. No queremos evitar su uso, pero queremos que quede dentro de ciertos límites:**
+**"Hour of Code" y "Hora del Código" son marcas registradas. No queremos evitar su uso, pero queremos asegurarnos de que el uso se ajuste a algunos límites:**
 
-1. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la "Hora del Código" como un movimiento colectivo. **Correcto**: "Participa en la Hora del Código™ en ACMECorp.com." **Incorrecto**: "Participa en la Hora del Código de ACME Corp."
-2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
-3. Incluye mensajes en tu página (o en el pie de página), como enlaces a la Semana por la Educación en Ciencias de la Computación y a los sitios web de[Code.org]({{ codeorg_link }}), que digan lo siguiente:
+1. Cualquier referencia a "Hour of Code" u "Hora del Código" debe usarse de una manera que no sugiera que sea tu propia marca, sino que haga referencia a la Hora del Código como un movimiento de base.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>Buen ejemplo</strong>: "Participa en la Hora del Código™ en TU-COMPAÑÍA.com".
+  </li>
+  <li>
+    <strong>Mal ejemplo</strong>: "Prueba la Hora del Código por TU-COMPAÑÍA".
+  </li>
+</ul>
+
+1. Utiliza un superíndice "TM" en los lugares más destacados en los que menciones "Hora del Código" y un superíndice "Ⓡ" en los lugares más destacados en los que menciones "Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
+2. Incluye mensajes en tu página (o en el pie de página), así como enlaces a los sitios web de la Semana por la Educación en Ciencias de la Computación y de [Code.org]({{ codeorg_link }}), que digan lo siguiente:
     
-    *"La 'Hora del Código™' es una iniciativa nacional de la Semana por la Educación en Ciencias de Computación [csedweek.org] y Code.org [code.org] para que millones de estudiantes participen en una hora de ciencias de la computación y programación."*
+    *“La 'Hora del Código™'/'Hora del Código®' es una iniciativa global de la Semana por la Educación en Ciencias de la Computación [csedweek.org] y Code.org [code.org] introducir a millones de estudiantes a una hora de ciencias de la computación y programación".*
 
-4. No uses la marca "Hora del Código" en nombres de aplicaciones.
+3. No se utiliza "Hour of Code" ni "Hora del Código" en los nombres de las aplicaciones.
 
 <a id="stickers"></a>
 

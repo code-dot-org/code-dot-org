@@ -49,8 +49,11 @@
 
 -# Blockly script dependencies
 - if use_blockly
-  %script{src: webpack_asset_path('js/blockly.js')}
-  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+  - if use_google_blockly
+    %script{src: webpack_asset_path('js/googleblockly.js')}
+  - else
+    %script{src: webpack_asset_path('js/blockly.js')}
+    %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 
 -# Common script dependencies
 %script{src: webpack_asset_path('js/common.js')}

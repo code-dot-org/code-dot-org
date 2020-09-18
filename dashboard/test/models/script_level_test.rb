@@ -43,8 +43,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 20, sl.lesson_total
 
     # new script
-    sl = create(:script_level)
-    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create(:script_level, lesson: lesson, script: script)
+    sl2 = create(:script_level, lesson: lesson, script: script)
 
     assert_equal 1, sl.position
     assert_equal 2, sl.lesson_total
@@ -54,8 +57,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with default route' do
-    sl = create(:script_level)
-    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create(:script_level, lesson: lesson, script: script)
+    sl2 = create(:script_level, lesson: lesson, script: script)
 
     summary = sl.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
@@ -82,7 +88,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'named level summarize' do
-    sl = create(:script_level)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create(:script_level, script: script, lesson: lesson)
     sl.update(named_level: true)
 
     summary = sl.summarize
@@ -93,8 +102,36 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 'Test Display Name Override', summary[:name]
   end
 
-  test 'teacher panel summarize' do
+  test 'level with progression summarize' do
     sl = create(:script_level)
+    sl.update(progression: 'progression 1')
+
+    summary = sl.summarize
+    assert_equal sl.progression, summary[:progression]
+    assert_equal sl.progression, summary[:progression_display_name]
+
+    with_locale('es-MX') do
+      custom_i18n = {
+        "data" => {
+          "progressions" => {
+            sl.progression => 'progresión 1'
+          }
+        }
+      }
+      I18n.backend.store_translations 'es-MX', custom_i18n
+
+      summary = sl.summarize
+      assert_equal sl.progression, summary[:progression]
+      assert_equal 'progresión 1', summary[:progression_display_name]
+    end
+  end
+
+  test 'teacher panel summarize' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create(:script_level, lesson: lesson, script: script)
+
     student = create :student
     create(:user_level, user: student, level: sl.level)
 
@@ -107,10 +144,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
-    sl = create(:script_level)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create(:script_level, lesson: lesson, script: script)
     student = create :student
 
-    sl_other = create(:script_level, levels: sl.levels)
+    script2 = create(:script)
+    lesson_group2 = create(:lesson_group, script: script2)
+    lesson2 = create(:lesson, lesson_group: lesson_group2, script: script2)
+    sl_other = create(:script_level, levels: sl.levels, lesson: lesson2, script: script2)
 
     User.track_level_progress(
       user_id: student.id,
@@ -130,11 +173,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize for BubbleChoice level' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+
     student = create :student
     sublevel1 = create :level, name: 'choice_1'
     sublevel2 = create :level, name: 'choice_2'
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice]
+    script_level = create :script_level, levels: [bubble_choice], lesson: lesson
 
     expected_summary = {
       contained: false,
@@ -166,11 +213,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize for contained level' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     student = create :student
     contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
-    sl2 = create :script_level, levels: [level_1]
+    sl2 = create :script_level, levels: [level_1], script: script, lesson: lesson
 
     summary2 = sl2.summarize_for_teacher_panel(student)
     assert_equal sl2.assessment, summary2[:assessment]
@@ -185,7 +235,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     student2 = create :student
 
-    sl = create :script_level
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    sl = create :script_level, lesson: lesson, script: script
     driver_ul = create(
       :user_level,
       user: student,
@@ -212,8 +265,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'teacher panel summarize for lesson extra' do
     student = create :student
-    script = create :script
-    lesson1 = create :lesson
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, lesson_group: lesson_group, script: script)
     script_level = create :script_level, lesson: lesson1, script: script, bonus: true
 
     summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script, script_level.id, student)
@@ -441,12 +495,18 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user returns to lesson extras for bonus levels' do
-    script_level = create :script_level, bonus: true
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    script_level = create :script_level, bonus: true, lesson: lesson, script: script
     assert_equal "/s/#{script_level.script.name}/stage/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
   test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
-    script_level = create :script_level, levels: [create(:bubble_choice_level)]
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    script_level = create :script_level, levels: [create(:bubble_choice_level)], lesson: lesson, script: script
     assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
@@ -493,8 +553,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'redirects back to correct lesson extras from bonus level' do
     script = create :script
-    lesson1 = create :lesson
-    lesson2 = create :lesson
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, lesson_group: lesson_group, script: script
+    lesson2 = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, lesson: lesson1, script: script, bonus: true
 
     assert_equal script_stage_extras_path(script.name, lesson2.absolute_position),
@@ -503,12 +564,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'can view my last attempt for regular levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     student = create :student
 
@@ -517,12 +580,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'can view other user last attempt for regular levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     teacher = create :teacher
     student = create :student
@@ -532,13 +597,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'student can view last attempt for anonymous levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     student = create :student
 
@@ -547,13 +614,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'teacher can view last attempt for anonymous levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     teacher = create :teacher
 
@@ -562,26 +631,30 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'anonymous can view last attempt for anonymous levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     refute script_level.should_hide_survey(nil, nil)
   end
 
   test 'can not view other user last attempt for anonymous levelgroup' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     student = create :student
     teacher = create :teacher
@@ -591,13 +664,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'anonymous levels must be assessments' do
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
     level.save!
 
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level], assessment: true
 
     assert_raises do
       script_level.assessment = false
@@ -606,13 +681,17 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'bonus levels do not appear in the normal progression' do
-    script_level = create :script_level, bonus: true
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    script_level = create :script_level, bonus: true, lesson: lesson, script: script
     assert_empty script_level.lesson.summarize[:levels]
   end
 
   test 'hidden_for_section returns true if lesson is hidden' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, script: script, lesson: lesson
     section = create :section
 
@@ -623,7 +702,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'hidden_for_section returns true if script is hidden' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, script: script, lesson: lesson
     section = create :section
 
@@ -634,7 +714,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'hidden_for_section returns false if no hidden lesson/script' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, script: script, lesson: lesson
     section = create :section
 
@@ -651,14 +732,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
       level = create :maze, name: 'visible after level', level_num: 'custom'
       script_with_visible_after_lessons = create :script
+      lesson_group = create :lesson_group, script: script_with_visible_after_lessons
 
-      lesson_future_visible_after = create :lesson, name: 'lesson future', script: script_with_visible_after_lessons, visible_after: '2020-04-01 08:00:00 -0700'
+      lesson_future_visible_after = create :lesson, name: 'lesson future', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
       @script_level_future_visible_after = create :script_level, levels: [level], lesson: lesson_future_visible_after, script: script_with_visible_after_lessons
 
-      lesson_past_visible_after = create :lesson, name: 'lesson past', script: script_with_visible_after_lessons, visible_after: '2020-03-01 08:00:00 -0700'
+      lesson_past_visible_after = create :lesson, name: 'lesson past', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-03-01 08:00:00 -0700'
       @script_level_past_visible_after = create :script_level, levels: [level], lesson: lesson_past_visible_after, script: script_with_visible_after_lessons
 
-      lesson_no_visible_after = create :lesson, name: 'lesson no', script: script_with_visible_after_lessons
+      lesson_no_visible_after = create :lesson, name: 'lesson no', script: script_with_visible_after_lessons,  lesson_group: lesson_group
       @script_level_no_visible_after = create :script_level, levels: [level], lesson: lesson_no_visible_after, script: script_with_visible_after_lessons
     end
 

@@ -10,7 +10,7 @@ class Api::V1::Pd::FoormController < ::ApplicationController
   def get_form_questions
     form_name = params[:name]
     form_version = params[:version]
-    form_questions = Foorm::Form.get_questions_for_name_and_version(form_name, form_version)
+    form_questions = JSON.parse(Foorm::Form.where(name: form_name, version: form_version).first&.questions)
     render json: form_questions
   end
 end

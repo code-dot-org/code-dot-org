@@ -80,6 +80,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    # @view_as_user is used to determine redirect path for bubble choice levels
+    view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
+    @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
+
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
@@ -477,6 +481,7 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
+      useGoogleBlockly: params[:blocklyVersion] == "Google"
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

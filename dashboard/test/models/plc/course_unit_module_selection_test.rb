@@ -3,9 +3,9 @@ require 'test_helper'
 class CourseUnitModuleSelectionTest < ActionView::TestCase
   setup do
     @user = create :teacher
-    course = create :plc_course
+    plc_course = create :plc_course
 
-    @course_unit = create(:plc_course_unit, plc_course: course)
+    @course_unit = create(:plc_course_unit, plc_course: plc_course)
 
     @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @course_unit.script)
     @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @course_unit.script)
