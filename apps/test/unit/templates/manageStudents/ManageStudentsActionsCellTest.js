@@ -4,7 +4,6 @@ import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import * as client from '@cdo/apps/util/userSectionClient';
-// import * as sectionData from '@cdo/apps/redux/sectionDataRedux';
 import {UnconnectedManageStudentActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
 const DEFAULT_PROPS = {
