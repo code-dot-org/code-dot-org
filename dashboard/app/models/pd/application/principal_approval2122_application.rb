@@ -54,7 +54,7 @@ module Pd::Application
     end
 
     def self.next_year
-      YEAR_22_23_SHORT
+      YEAR_22_23
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
