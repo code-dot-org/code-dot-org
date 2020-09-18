@@ -7,7 +7,8 @@ class LessonsController < ApplicationController
   def show
     @lesson_data = {
       title: @lesson.localized_title,
-      overview: @lesson.overview
+      overview: @lesson.overview,
+      announcements: @lesson.announcements
     }
   end
 
@@ -40,7 +41,7 @@ class LessonsController < ApplicationController
   def lesson_params
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
-    params.permit(
+    lp = params.permit(
       :overview,
       :student_overview,
       :assessment,
@@ -48,7 +49,10 @@ class LessonsController < ApplicationController
       :creativeCommonsLicense,
       :lockable,
       :purpose,
-      :preparation
+      :preparation,
+      :announcements
     )
+    lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
+    lp
   end
 end
