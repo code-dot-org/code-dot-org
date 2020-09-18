@@ -14,8 +14,7 @@ function showCourseEditor() {
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
 
-  let announcements =
-    courseEditorData.course_summary.unit_group_announcements || [];
+  let announcements = courseEditorData.course_summary.announcements || [];
 
   // Eventually we want to do this all via redux
   ReactDOM.render(

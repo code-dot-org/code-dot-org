@@ -66,7 +66,7 @@ function showCourseOverview() {
 
   const versions = courseSummary.versions;
 
-  const announcements = courseSummary.unit_group_announcements;
+  const announcements = courseSummary.announcements;
   if (announcements) {
     registerReducers({announcements: announcementReducer});
     announcements.forEach(announcement =>
