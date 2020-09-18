@@ -1,5 +1,5 @@
 import React from 'react';
-import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 
 const announcements = [
   {
@@ -36,15 +36,16 @@ const inputStyle = {
 
 export default storybook => {
   storybook
-    .storiesOf('ScriptAnnouncementsEditor', module)
+    .storiesOf('AnnouncementsEditor', module)
     .withReduxStore()
     .addStoryTable([
       {
-        name: 'ScriptAnnouncementsEditor',
+        name: 'AnnouncementsEditor',
         story: () => (
-          <ScriptAnnouncementsEditor
+          <AnnouncementsEditor
             defaultAnnouncements={announcements}
             inputStyle={inputStyle}
+            curriculumObject={'script'}
           />
         )
       }
