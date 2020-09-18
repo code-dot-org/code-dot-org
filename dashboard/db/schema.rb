@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200819093633) do
+ActiveRecord::Schema.define(version: 20200916194417) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20200819093633) do
     t.integer  "lines",           default: 0, null: false
     t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
+  end
+
+  create_table "activity_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "lesson_activity_id", null: false
+    t.integer  "position",           null: false
+    t.string   "properties"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id", using: :btree
   end
 
   create_table "ap_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -517,6 +526,15 @@ ActiveRecord::Schema.define(version: 20200819093633) do
     t.datetime "updated_at",             null: false
     t.index ["school_code"], name: "index_ib_school_codes_on_school_code", unique: true, using: :btree
     t.index ["school_id"], name: "index_ib_school_codes_on_school_id", unique: true, using: :btree
+  end
+
+  create_table "lesson_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "lesson_id",  null: false
+    t.integer  "position",   null: false
+    t.string   "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id", using: :btree
   end
 
   create_table "lesson_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1335,16 +1353,18 @@ ActiveRecord::Schema.define(version: 20200819093633) do
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "script_id",                 null: false
+    t.integer  "script_id",                         null: false
     t.integer  "chapter"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id"
     t.integer  "position"
     t.boolean  "assessment"
-    t.text     "properties",  limit: 65535
+    t.text     "properties",          limit: 65535
     t.boolean  "named_level"
     t.boolean  "bonus"
+    t.integer  "activity_section_id"
+    t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
