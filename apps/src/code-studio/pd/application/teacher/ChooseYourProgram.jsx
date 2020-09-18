@@ -49,17 +49,19 @@ export default class ChooseYourProgram extends LabeledFormComponent {
     }
 
     let belowMinCourseHours = false;
-    let minCourseHours = this.props.data.program.includes('Discoveries')
-      ? MIN_CSD_HOURS
-      : MIN_CSP_HOURS;
     let program = this.props.data.program;
-    if (
-      program &&
-      (program.includes('Discoveries') || program.includes('Principles')) &&
-      courseHours !== null
-    ) {
-      if (courseHours < minCourseHours) {
-        belowMinCourseHours = true;
+    let minCourseHours = MIN_CSP_HOURS;
+    if (program) {
+      if (program.includes('Discoveries')) {
+        minCourseHours = MIN_CSD_HOURS;
+      }
+      if (
+        (program.includes('Discoveries') || program.includes('Principles')) &&
+        courseHours !== null
+      ) {
+        if (courseHours < minCourseHours) {
+          belowMinCourseHours = true;
+        }
       }
     }
 

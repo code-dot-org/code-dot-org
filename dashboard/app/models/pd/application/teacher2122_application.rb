@@ -321,10 +321,10 @@ module Pd::Application
         ],
 
         plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course.",
-          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course.",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year}).",
-          "No, someone else from my school will teach this course this year (#{year}).",
+          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course",
+          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course",
+          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
+          "No, someone else from my school will teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
@@ -350,14 +350,6 @@ module Pd::Application
           'No (Please Explain):'
         ],
 
-        willing_to_travel: [
-          'Up to 10 miles',
-          'Up to 25 miles',
-          'Up to 50 miles',
-          'Any distance',
-          'I am unable to travel to the school year workshops'
-        ],
-
         taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
           TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
@@ -374,7 +366,8 @@ module Pd::Application
           'Unit 2: Web Development',
           'Unit 3: Interactive Animations & Games',
           'Unit 4: The Design Process',
-          'Unit 5: Physical Computing',
+          'Unit 5: Data and Society',
+          'Unit 6: Physical Computing',
           'All units',
           "I'm not sure"
         ],
@@ -382,10 +375,10 @@ module Pd::Application
           'Unit 1: Digital Information',
           'Unit 2: The Internet',
           'Unit 3: Intro App Design',
-          'Unit 4:  Variables, Conditionals, and Functions',
+          'Unit 4: Variables, Conditionals, and Functions',
           'Unit 5: Lists, Loops and Traversals',
           'Unit 6: Algorithms',
-          'Unit 7: Parameters, Return Values, and Libraries',
+          'Unit 7: Parameters, Return, and Libraries',
           'Unit 8: AP Create Performance Task',
           'Unit 9: Data',
           'Unit 10: Cybersecurity and Global Impacts',
@@ -397,15 +390,17 @@ module Pd::Application
           'Codesters',
           'Computer Applications (ex: using Microsoft programs)',
           'CS Fundamentals',
-          'Exploring Computer Science',
-          'Globaloria',
-          'My CS',
-          'Project Lead the Way - Computer Science',
           'CS in Algebra',
           'CS in Science',
+          'Exploring Computer Science',
+          'Globaloria',
+          'ICT',
+          'My CS',
+          'Project Lead the Way - Computer Science',
           'Robotics',
           'ScratchEd',
           'Typing',
+          'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],
@@ -444,7 +439,6 @@ module Pd::Application
 
         previous_yearlong_cdo_pd
 
-        willing_to_travel
         interested_in_online_program
 
         gender_identity
@@ -527,7 +521,7 @@ module Pd::Application
     end
 
     def self.next_year
-      YEAR_22_23_SHORT
+      YEAR_22_23
     end
 
     # @override
