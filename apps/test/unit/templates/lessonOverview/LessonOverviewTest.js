@@ -3,31 +3,12 @@ import {shallow} from 'enzyme';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
-import {VisibilityType} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-
-const fakeTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacher
-};
-const fakeStudentAnnouncement = {
-  notice: 'Notice - Student',
-  details: 'Students are the best',
-  link: '/foo/bar/student',
-  type: NotificationType.information,
-  visibility: VisibilityType.student
-};
-const fakeTeacherAndStudentAnnouncement = {
-  notice: 'Notice - Teacher And Student',
-  details: 'More detail here',
-  link: '/foo/bar/teacherAndStudent',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacherAndStudent
-};
+import {
+  fakeStudentAnnouncement,
+  fakeTeacherAndStudentAnnouncement,
+  fakeTeacherAnnouncement
+} from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 
 describe('LessonOverview', () => {
   let defaultProps;
