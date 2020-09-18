@@ -25,7 +25,6 @@ class LessonsController < ApplicationController
     @lesson_data = {
       id: @lesson.id,
       name: @lesson.name,
-      shortTitle: @lesson.short_title,
       overview: @lesson.overview,
       studentOverview: @lesson.student_overview,
       assessment: @lesson.assessment,
@@ -34,7 +33,7 @@ class LessonsController < ApplicationController
       creativeCommonsLicense: @lesson.creative_commons_license,
       purpose: @lesson.purpose,
       preparation: @lesson.preparation,
-      announcements: @lesson.lesson_announcements
+      announcements: @lesson.announcements
     }
   end
 
@@ -52,7 +51,6 @@ class LessonsController < ApplicationController
     # script edit page.
     lp = params.permit(
       :overview,
-      :short_title,
       :student_overview,
       :assessment,
       :unplugged,

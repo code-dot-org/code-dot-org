@@ -10,7 +10,6 @@ describe('LessonEditor', () => {
       displayName: 'Lesson Name',
       overview: 'Lesson Overview',
       studentOverview: 'Overview of the lesson for students',
-      shortTitle: 'Lesson',
       unplugged: false,
       lockable: false,
       assessment: false,
