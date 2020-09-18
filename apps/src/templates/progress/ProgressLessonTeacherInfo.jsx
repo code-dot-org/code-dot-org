@@ -53,17 +53,25 @@ class ProgressLessonTeacherInfo extends React.Component {
     const {scriptName, section, lesson, toggleHiddenStage} = this.props;
     const sectionId = section.id.toString();
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord({
-      study: 'hidden-lessons',
-      study_group: 'v0',
-      event: value,
-      data_json: JSON.stringify({
-        script_name: scriptName,
-        section_id: sectionId,
-        lesson_id: lesson.id,
-        lesson_name: lesson.name
-      })
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-lessons',
+        study_group: 'v0',
+        event: value,
+        data_json: JSON.stringify(this.firehoseData())
+      },
+      {includeUserId: true}
+    );
+  };
+
+  firehoseData = () => {
+    const {scriptName, section, lesson} = this.props;
+    return {
+      script_name: scriptName,
+      section_id: section && section.id,
+      lesson_id: lesson.id,
+      lesson_name: lesson.name
+    };
   };
 
   render() {
@@ -127,6 +135,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               url={levelUrl}
               title={lesson.name}
               courseid={courseId}
+              analyticsData={this.firehoseData()}
             />
           </div>
         )}
