@@ -24,7 +24,7 @@ class LessonsController < ApplicationController
       creativeCommonsLicense: @lesson.creative_commons_license,
       purpose: @lesson.purpose,
       preparation: @lesson.preparation,
-      announcements: @lesson.lesson_announcements
+      announcements: @lesson.announcements
     }
   end
 
