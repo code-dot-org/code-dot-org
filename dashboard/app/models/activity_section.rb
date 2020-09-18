@@ -25,7 +25,7 @@ class ActivitySection < ApplicationRecord
   has_many :script_levels
 
   serialized_attrs %w(
-    display_name
+    title
     remarks
     slide
     description

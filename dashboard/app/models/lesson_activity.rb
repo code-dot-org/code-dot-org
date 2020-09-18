@@ -23,7 +23,7 @@ class LessonActivity < ApplicationRecord
   has_many :activity_sections, dependent: :destroy
 
   serialized_attrs %w(
-    display_name
+    title
     duration
   )
 end
