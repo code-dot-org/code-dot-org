@@ -107,7 +107,7 @@ class ScriptLevelsController < ApplicationController
 
     configure_caching(@script)
 
-    @script_level = get_script_level(@script, params)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level
 
