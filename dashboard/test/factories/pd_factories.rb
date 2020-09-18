@@ -941,7 +941,7 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher2122_application_hash_common, parent: :pd_teacher_application_hash_common do
-    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    pay_fee Pd::Application::Teacher2122Application.options[:pay_fee].first
     plan_to_teach Pd::Application::Teacher2122Application.options[:plan_to_teach].first
     interested_in_online_program 'Yes'
     completing_on_behalf_of_someone_else 'No'
@@ -954,14 +954,14 @@ FactoryGirl.define do
     trait :csp do
       program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
       csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
       csp_how_offer 'As an AP course'
     end
 
     trait :csd do
       program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
-      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
+      csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
     end
   end
 

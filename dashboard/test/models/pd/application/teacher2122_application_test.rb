@@ -304,13 +304,13 @@ module Pd::Application
 
     test 'csv_header' do
       csv_header_csd = CSV.parse(Teacher2122Application.csv_header('csd'))[0]
-      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-22 school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-22 school year?"
+      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
       assert_equal 95, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2122Application.csv_header('csp'))[0]
-      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-22 school year?"
-      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-22 school year?"
+      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
+      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
       assert_equal 97, csv_header_csp.length
     end
 
@@ -495,7 +495,7 @@ module Pd::Application
       application_hash = build :pd_teacher2122_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
         csd_which_grades: ['6'],
-        csd_which_units: ['Unit 0: Problem Solving'],
+        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
