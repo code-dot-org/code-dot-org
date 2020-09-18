@@ -27,3 +27,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   on:
     branch: main
+  verbose: true
