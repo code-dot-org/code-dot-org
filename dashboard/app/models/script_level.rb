@@ -50,6 +50,7 @@ class ScriptLevel < ActiveRecord::Base
     variants
     progression
     challenge
+    level_keys
   )
 
   # Chapter values order all the script_levels in a script.
@@ -547,21 +548,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def seeding_key(seed_context)
-    if levels.loaded?
-      my_levels = levels
-    else
-      # TODO: this series of in-memory filters is probably inefficient
-      my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
-      my_levels = my_levels_script_levels.map do |lsl|
-        level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
-        raise "No level found for #{lsl}" unless level
-        level
-      end
-    end
-    raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
-
     my_key = {
-      'script_level.level_names': my_levels.map(&:unique_key),
+      'script_level.level_keys': get_level_keys(seed_context),
       'script_level.chapter': chapter,
       'script_level.position': position
     }
@@ -572,5 +560,24 @@ class ScriptLevel < ActiveRecord::Base
 
     my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key.stringify_keys
+  end
+
+  def get_level_keys(seed_context)
+    return self.level_keys unless self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
+
+    if levels.loaded?
+      my_levels = levels
+    else
+      # TODO: this series of in-memory filters is probably inefficient
+      my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
+      my_levels = my_levels_script_levels.map do |lsl|
+        level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
+        raise "No level found for #{lsl}" unless level
+        level
+      end
+      my_levels = my_levels.sort_by(&:id)
+      raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
+    end
+    my_levels.map(&:unique_key)
   end
 end
