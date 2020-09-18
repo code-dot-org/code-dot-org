@@ -105,7 +105,7 @@ export default class ActivitySectionCardButtons extends Component {
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Level
+              Level
             </button>
             <button
               onMouseDown={this.handleOpenAddTip}
@@ -114,7 +114,7 @@ export default class ActivitySectionCardButtons extends Component {
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Tip
+              Tip
             </button>
             <button
               onMouseDown={this.handleOpenAddResource}
@@ -123,7 +123,7 @@ export default class ActivitySectionCardButtons extends Component {
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Resource Link
+              Resource Link
             </button>
           </span>
           {this.props.activitySection.tips.length > 0 && (
