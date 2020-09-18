@@ -120,8 +120,8 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :unit_group_announcements).to_h
-    cp[:unit_group_announcements] = JSON.parse(cp[:unit_group_announcements]) if cp[:unit_group_announcements]
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :announcements).to_h
+    cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp
   end
 

@@ -49,7 +49,7 @@ class UnitGroup < ApplicationRecord
     is_stable
     visible
     pilot_experiment
-    unit_group_announcements
+    announcements
   )
 
   def to_param
@@ -309,7 +309,7 @@ class UnitGroup < ApplicationRecord
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
-      unit_group_announcements: unit_group_announcements
+      announcements: announcements
     }
   end
 

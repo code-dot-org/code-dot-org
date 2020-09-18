@@ -168,7 +168,6 @@ export default class CourseEditor extends Component {
         <AnnouncementsEditor
           defaultAnnouncements={announcements}
           inputStyle={styles.input}
-          curriculumObject={'unit_group'}
         />
         <h2>Publishing settings</h2>
         <label>
