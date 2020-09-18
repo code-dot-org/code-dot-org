@@ -10,9 +10,9 @@ import {Provider} from 'react-redux';
 
 //TODO Remove once we hook up real activity data
 import {
-  activities,
-  levelKeyList
-} from '../../../../lib/levelbuilder/lesson-editor/ActivitiesEditor.story';
+  levelKeyList,
+  activities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
