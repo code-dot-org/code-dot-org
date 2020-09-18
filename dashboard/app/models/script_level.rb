@@ -547,9 +547,9 @@ class ScriptLevel < ActiveRecord::Base
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  def seeding_key(seed_context)
+  def seeding_key(seed_context, use_existing_level_keys = true)
     my_key = {
-      'script_level.level_keys': get_level_keys(seed_context),
+      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
       'script_level.chapter': chapter,
       'script_level.position': position
     }
@@ -562,8 +562,8 @@ class ScriptLevel < ActiveRecord::Base
     my_key.stringify_keys
   end
 
-  def get_level_keys(seed_context)
-    return self.level_keys unless self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
+  def get_level_keys(seed_context, use_existing_level_keys = true)
+    return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
 
     if levels.loaded?
       my_levels = levels
