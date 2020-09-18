@@ -9,6 +9,7 @@ module GitUtils
 
   # Returns whether any files in this branch or locally changed from base version
   def self.changed_in_branch_or_local?(base_branch, glob_patterns)
+    puts files_changed_in_branch_or_local(base_branch, glob_patterns)
     !files_changed_in_branch_or_local(base_branch, glob_patterns).empty?
   end
 
