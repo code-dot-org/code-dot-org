@@ -17,8 +17,8 @@
 class LessonActivity < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson, inverse_of: :activities
-  has_many :activity_sections, inverse_of: :activity, dependent: :destroy
+  belongs_to :lesson
+  has_many :activity_sections, dependent: :destroy
 
   serialized_attrs %w(
     display_name

@@ -804,7 +804,7 @@ FactoryGirl.define do
 
   factory :activity_section do
     sequence(:position)
-    activity
+    lesson_activity
   end
 
   factory :activity do

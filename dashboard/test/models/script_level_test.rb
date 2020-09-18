@@ -775,8 +775,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'validates activity section lesson' do
     lesson = create :lesson
-    activity = create :lesson_activity, lesson: lesson
-    activity_section = create :activity_section, activity: activity
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
     other_lesson = create :lesson
 
     # can create script level with no activity section
