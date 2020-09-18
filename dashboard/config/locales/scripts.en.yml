@@ -18216,6 +18216,8 @@ en:
               name: Course B
             Course E/F:
               name: Course E/F
+            CS Discoveries:
+              name: CS Discoveries
           lesson_groups:
             lesson group:
               display_name: display name
