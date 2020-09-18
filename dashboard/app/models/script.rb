@@ -1660,32 +1660,34 @@ class Script < ActiveRecord::Base
   end
 
   def self.seed_from_json_file(filename)
-    data = JSON.parse(File.read(filename))
+    transaction do
+      data = JSON.parse(File.read(filename))
 
-    script_data = data['script']
-    script_name = script_data['seeding_key']['script.name']
-    lesson_groups_data = data['lesson_groups']
-    lessons_data = data['lessons']
-    script_levels_data = data['script_levels']
-    levels_script_levels_data = data['levels_script_levels']
-    seed_context = SeedContext.new
+      script_data = data['script']
+      script_name = script_data['seeding_key']['script.name']
+      lesson_groups_data = data['lesson_groups']
+      lessons_data = data['lessons']
+      script_levels_data = data['script_levels']
+      levels_script_levels_data = data['levels_script_levels']
+      seed_context = SeedContext.new
 
-    import_script(script_data)
+      import_script(script_data)
 
-    seed_context.script = Script.find_by!(name: script_name)
-    import_lesson_groups(lesson_groups_data, seed_context)
+      seed_context.script = Script.find_by!(name: script_name)
+      import_lesson_groups(lesson_groups_data, seed_context)
 
-    seed_context.lesson_groups = seed_context.script.lesson_groups
-    import_lessons(lessons_data, seed_context)
+      seed_context.lesson_groups = seed_context.script.lesson_groups
+      import_lessons(lessons_data, seed_context)
 
-    seed_context.lessons = Lesson.where(script: seed_context.script)
-    seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
-    seed_context.levels_script_levels = seed_context.script.levels_script_levels
-    import_script_levels(script_levels_data, seed_context)
+      seed_context.lessons = Lesson.where(script: seed_context.script)
+      seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
+      seed_context.levels_script_levels = seed_context.script.levels_script_levels
+      import_script_levels(script_levels_data, seed_context)
 
-    seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
-    seed_context.levels = seed_context.script_levels.map(&:levels).flatten
-    import_levels_script_levels(levels_script_levels_data, seed_context)
+      seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
+      seed_context.levels = seed_context.script_levels.map(&:levels).flatten
+      import_levels_script_levels(levels_script_levels_data, seed_context)
+    end
   end
 
   def self.import_script(script_data)
