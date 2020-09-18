@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import CSVReaderWrapper from "./CSVReaderWrapper";
+import Parent from "./Parent";
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <CSVReaderWrapper />
+        <Parent />
       </div>
     );
   }
