@@ -229,7 +229,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged?
+    return false if lesson && lesson.unplugged_lesson?
     return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
@@ -299,7 +299,7 @@ class ScriptLevel < ActiveRecord::Base
   def level_display_text
     if level.unplugged?
       I18n.t('unplugged_activity')
-    elsif lesson.unplugged?
+    elsif lesson.unplugged_lesson?
       position - 1
     else
       position
