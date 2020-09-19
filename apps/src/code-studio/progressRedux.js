@@ -62,7 +62,11 @@ const initialState = {
   isSummaryView: true,
   hasFullProgress: false,
   stageExtrasEnabled: false,
-  shouldUseDbProgress: false
+  // Note: usingDbProgress === "user is logged in". However, it is
+  // possible that we can get the user progress back from the DB
+  // prior to having information about the user login state.
+  // TODO: Use sign in state to determine where to source user progress from
+  usingDbProgress: false
 };
 
 /**
@@ -97,7 +101,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === USE_DB_PROGRESS) {
     return {
       ...state,
-      shouldUseDbProgress: true
+      usingDbProgress: true
     };
   }
 
@@ -416,8 +420,10 @@ export const clearProgress = () => ({
 });
 
 export const useDbProgress = () => {
-  clientState.clearProgress();
-  return {type: USE_DB_PROGRESS};
+  return dispatch => {
+    clientState.clearProgress();
+    dispatch({type: USE_DB_PROGRESS});
+  };
 };
 
 export const mergeProgress = levelProgress => ({
