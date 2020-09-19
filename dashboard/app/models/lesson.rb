@@ -138,7 +138,7 @@ class Lesson < ActiveRecord::Base
     relative_position.to_s
   end
 
-  def unplugged?
+  def unplugged_lesson?
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.unplugged?
@@ -150,7 +150,7 @@ class Lesson < ActiveRecord::Base
   def display_as_unplugged
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged?
+    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged_lesson?
   end
 
   def spelling_bee?
@@ -250,7 +250,7 @@ class Lesson < ActiveRecord::Base
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged?
+      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged_lesson?
 
       lesson_data
     end
