@@ -29,7 +29,17 @@ class ScriptSeedTest < ActiveSupport::TestCase
     counts_before = get_counts
 
     script.destroy!
-    Script.seed_from_json(json)
+    # This is currently:
+    #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
+    #   11 queries - two for each model, + 1 extra query for ScriptLevels
+    #   8 queries, one for each LevelsScriptLevel.
+    # LevelsScriptLevels has queries which scale linearly with the number of rows.
+    # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
+    # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
+    # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
+    assert_queries(22) do
+      Script.seed_from_json(json)
+    end
 
     assert_equal counts_before, get_counts
     script_after_seed = Script.find_by!(name: script.name)
@@ -158,11 +168,12 @@ class ScriptSeedTest < ActiveSupport::TestCase
       end
     end
 
-    script.lessons.each_with_index do |lg, m|
-      num_script_levels_per_lesson.times do |n|
-        number = m * 2 + n + 1
-        level = create :level, name: "#{name_prefix}_Level_#{number}", level_num: "1_2_#{number}"
-        create :script_level, lesson: lg, script: script, levels: [level], challenge: number.even?
+    i = 1
+    script.lessons.each do |lg|
+      num_script_levels_per_lesson.times do
+        level = create :level, name: "#{name_prefix}_Level_#{i}", level_num: "1_2_#{i}"
+        create :script_level, lesson: lg, script: script, levels: [level], challenge: i.even?
+        i += 1
       end
     end
 
