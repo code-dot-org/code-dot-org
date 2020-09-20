@@ -643,12 +643,81 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
+  test 'seeding_key without existing level_keys' do
+    script_level = create_script_level_with_ancestors
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    # With no existing level_keys property on the script_level, we need additional data from the SeedContext
+    seed_context.levels = script.levels.to_a
+    seed_context.levels_script_levels = script.levels_script_levels.to_a
+
+    seeding_key = nil
+    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
+    assert_queries(0) do
+      seeding_key = script_level.seeding_key(seed_context)
+    end
+
+    expected = {
+      "script_level.level_keys" => [script_level.levels.first.name],
+      "script_level.chapter" => 1,
+      "script_level.position" => 1,
+      "lesson.key" => script_level.lesson.key,
+      "lesson_group.key" => script_level.lesson.lesson_group.key,
+      "script.name" => script.name
+    }
+
+    assert_equal expected, seeding_key
+  end
+
+  test 'seeding_key with existing level_keys' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: [script_level.levels.first.name])
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    seed_context = create_seed_context(script_level.script)
+
+    seeding_key = nil
+    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
+    assert_queries(0) do
+      seeding_key =  script_level.seeding_key(seed_context)
+    end
+
+    assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
+  end
+
+  test 'seeding_key with use_existing_level_keys false' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: ['wrong-level-key']) # This value should be ignored in this case
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    # Since we are not using existing level_keys property on the script_level, we need additional data from the SeedContext
+    seed_context.levels = script.levels.to_a
+    seed_context.levels_script_levels = script.levels_script_levels.to_a
+
+    seeding_key = nil
+    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
+    assert_queries(0) do
+      seeding_key =  script_level.seeding_key(seed_context, false)
+    end
+
+    assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
+  end
+
   def create_script_level_with_ancestors(script_level_attributes = nil)
     script_level_attributes ||= {}
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     create :script_level, script: script, lesson: lesson, **script_level_attributes
+  end
+
+  def create_seed_context(script)
+    Script::SeedContext.new(
+      script: script,
+      lesson_groups: script.lesson_groups.to_a,
+      lessons: script.lessons.to_a
+    )
   end
 
   class ValidProgressionLevelTests < ActiveSupport::TestCase
