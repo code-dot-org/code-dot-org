@@ -1637,6 +1637,7 @@ class Script < ActiveRecord::Base
   SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
 
   def serialize_seeding_json
+    reload
     eager_loaded_script_levels = ScriptLevel.includes(:levels).where(script_id: id)
     eager_loaded_levels = eager_loaded_script_levels.map(&:levels).flatten
 
@@ -1650,18 +1651,23 @@ class Script < ActiveRecord::Base
     )
     scope = {seed_context: seed_context}
 
-    {
+    data = {
       script: ScriptSeed::ScriptSerializer.new(self, scope: scope).as_json,
       lesson_groups: lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg, scope: scope).as_json},
       lessons: lessons.map {|l| ScriptSeed::LessonSerializer.new(l, scope: scope).as_json},
       script_levels: script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
       levels_script_levels: levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
     }
+    JSON.pretty_generate(data)
   end
 
-  def self.seed_from_json_file(filename)
+  def self.seed_from_json_file(file_or_path)
+    seed_from_json(File.read(file_or_path))
+  end
+
+  def self.seed_from_json(json_string)
     transaction do
-      data = JSON.parse(File.read(filename))
+      data = JSON.parse(json_string)
 
       script_data = data['script']
       script_name = script_data['seeding_key']['script.name']
@@ -1723,6 +1729,7 @@ class Script < ActiveRecord::Base
   def self.import_script_levels(script_levels_data, seed_context)
     lessons_by_seeding_key = seed_context.lessons.index_by {|l| l.seeding_key(seed_context)}
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
+
     script_levels_to_import = script_levels_data.map do |sl_data|
       stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
       raise 'No stage found' if stage.nil?
@@ -1740,10 +1747,12 @@ class Script < ActiveRecord::Base
   def self.import_levels_script_levels(levels_script_levels_data, seed_context)
     levels_by_seeding_key = seed_context.levels.index_by(&:unique_key)
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
+
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
       level = levels_by_seeding_key[lsl_data['seeding_key']['level.key']]
       level ||= Level.find_by_key(lsl_data['seeding_key']['level.key'])
       raise 'No level found' if level.nil?
+
       script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]
       raise "No ScriptLevel found while seeding script: #{seed_context.script.name}" if script_level.nil?
 
