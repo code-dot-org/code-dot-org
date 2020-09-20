@@ -58,15 +58,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
   test 'seed updates lessons groups' do
     script = create_script_tree
     updated_lesson_group = script.lesson_groups.first
-    updated_lesson_group.big_questions = 'updated big questions'
-    updated_lesson_group.save!
+    updated_lesson_group.update!(big_questions: 'updated big questions')
     new_lesson_group = create :lesson_group, script: script, description: 'my description'
     script.freeze
     json = script.serialize_seeding_json
 
     new_lesson_group.destroy!
-    updated_lesson_group.big_questions = nil
-    updated_lesson_group.save!
+    updated_lesson_group.update!(big_questions: nil)
     Script.seed_from_json(json)
 
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
@@ -75,15 +73,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
   test 'seed updates lessons' do
     script = create_script_tree
     updated_lesson = script.lessons.first
-    updated_lesson.visible_after = 'updated visible after'
-    updated_lesson.save!
+    updated_lesson.update!(visible_after: 'updated visible after')
     new_lesson = create :lesson, lesson_group: script.lesson_groups.first, script: script, overview: 'my overview'
     script.freeze
     json = script.serialize_seeding_json
 
     new_lesson.destroy!
-    updated_lesson.visible_after = nil
-    updated_lesson.save!
+    updated_lesson.update!(visible_after: nil)
     Script.seed_from_json(json)
 
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
@@ -92,8 +88,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
   test 'seed updates script_levels' do
     script = create_script_tree
     updated_script_level = script.script_levels.first
-    updated_script_level.challenge = 'foo'
-    updated_script_level.save!
+    updated_script_level.update!(challenge: 'foo')
     new_script_level = create :script_level, lesson: script.lessons.first, script: script, challenge: true
     script.freeze
     # Eager load the levels for each script level, so they can be used in assertions even after deletion
@@ -103,8 +98,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     json = script.serialize_seeding_json
 
     new_script_level.destroy!
-    updated_script_level.challenge = nil
-    updated_script_level.save!
+    updated_script_level.update!(challenge: nil)
     Script.seed_from_json(json)
 
     reloaded_script = Script.find_by!(name: script.name)
