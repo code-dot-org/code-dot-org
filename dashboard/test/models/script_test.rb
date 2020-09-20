@@ -2536,6 +2536,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
   end
 
+  test 'seeding_key' do
+    script = create :script
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {'script.name' => script.name}
+      assert_equal expected, script.seeding_key(Script::SeedContext.new)
+    end
+  end
+
   private
 
   def has_hidden_script?(scripts)

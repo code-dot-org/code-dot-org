@@ -234,6 +234,24 @@ class StageTest < ActiveSupport::TestCase
     assert_equal LessonGroup::Counters.new(1, 2, 3, 4), counters
   end
 
+  test 'seeding_key' do
+    lesson_group = create :lesson_group
+    script = lesson_group.script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    seed_context = Script::SeedContext.new(script: script, lesson_groups: script.lesson_groups.to_a)
+    lesson.reload # clear out any already loaded association data, for verification of query counts
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'script.name' => script.name,
+        'lesson_group.key' => lesson_group.key,
+        'lesson.key' => lesson.key
+      }
+      assert_equal expected, lesson.seeding_key(seed_context)
+    end
+  end
+
   class StagePublishedTests < ActiveSupport::TestCase
     setup do
       @student = create :student
