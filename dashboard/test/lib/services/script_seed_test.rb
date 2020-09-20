@@ -26,27 +26,22 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script_levels.map(&:levels).map(&:length)
     script_levels.each(&:freeze)
     json = script.serialize_seeding_json
-    counts_before = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+    counts_before = get_counts
 
     script.destroy!
     Script.seed_from_json(json)
 
-    counts_after = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
-    assert_equal counts_before, counts_after
+    assert_equal counts_before, get_counts
     script_after_seed = Script.find_by!(name: script.name)
-    assert_attributes_equal script, script_after_seed
-    assert_lesson_groups_equal script.lesson_groups, script_after_seed.lesson_groups
-    assert_lessons_equal script.lessons, script_after_seed.lessons
-    assert_script_levels_equal script_levels, script_after_seed.script_levels
+    assert_script_trees_equal(script, script_after_seed, script_levels)
   end
 
   test 'seed with no changes is no-op' do
     script = create_script_tree
-    counts_before = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+    counts_before = get_counts
     Script.seed_from_json(script.serialize_seeding_json)
 
-    counts_after = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
-    assert_equal counts_before, counts_after
+    assert_equal counts_before, get_counts
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
   end
 
@@ -106,11 +101,18 @@ class ScriptSeedTest < ActiveSupport::TestCase
     assert_script_levels_equal script_levels, reloaded_script.script_levels
   end
 
-  def assert_script_trees_equal(s1, s2)
+  def get_counts
+    [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+  end
+
+  def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
+    script_levels1 ||= s1.script_levels
+    script_levels2 ||= s2.script_levels
+
     assert_attributes_equal s1, s2
     assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
     assert_lessons_equal s1.lessons, s2.lessons
-    assert_script_levels_equal s1.script_levels, s2.script_levels
+    assert_script_levels_equal script_levels1, script_levels2
   end
 
   def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)
