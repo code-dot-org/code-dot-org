@@ -562,6 +562,7 @@ class ScriptLevel < ActiveRecord::Base
     my_key.stringify_keys
   end
 
+  # TODO: add validation so this is always in sync?
   def get_level_keys(seed_context, use_existing_level_keys = true)
     return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
 
