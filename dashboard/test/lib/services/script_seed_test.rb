@@ -26,10 +26,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script_levels.map(&:levels).map(&:length)
     script_levels.each(&:freeze)
     json = script.serialize_seeding_json
+    counts_before = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
 
     script.destroy!
     Script.seed_from_json(json)
 
+    counts_after = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+    assert_equal counts_before, counts_after
     script_after_seed = Script.find_by!(name: script.name)
     assert_attributes_equal script, script_after_seed
     assert_lesson_groups_equal script.lesson_groups, script_after_seed.lesson_groups
@@ -39,8 +42,11 @@ class ScriptSeedTest < ActiveSupport::TestCase
 
   test 'seed with no changes is no-op' do
     script = create_script_tree
+    counts_before = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
     Script.seed_from_json(script.serialize_seeding_json)
 
+    counts_after = [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+    assert_equal counts_before, counts_after
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
   end
 
@@ -157,9 +163,6 @@ class ScriptSeedTest < ActiveSupport::TestCase
         create :script_level, lesson: lg, script: script, levels: [level], challenge: number.even?
       end
     end
-    # Eager load the lesson_groups and lessons as well, so that script.lessons.first is the same object
-    # in memory as script.lesson_groups.first.lessons.first, which is needed for the seeding unit tests.
-    #Script.includes(:lesson_groups, :lessons).find(script.id)
 
     script
   end
