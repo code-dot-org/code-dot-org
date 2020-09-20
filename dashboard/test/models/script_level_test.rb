@@ -654,9 +654,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
-    assert_queries(0) do
-      seeding_key = script_level.seeding_key(seed_context)
-    end
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
 
     expected = {
       "script_level.level_keys" => [script_level.levels.first.name],
@@ -678,9 +676,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
-    assert_queries(0) do
-      seeding_key =  script_level.seeding_key(seed_context)
-    end
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
 
     assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
   end
@@ -697,11 +693,36 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
-    assert_queries(0) do
-      seeding_key =  script_level.seeding_key(seed_context, false)
-    end
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context, false)}
 
     assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
+  end
+
+  test 'LevelsScriptLevel seeding_key' do
+    script_level = create_script_level_with_ancestors
+    script_level.update!(level_keys: [script_level.levels.first.name])
+    script_level.reload # reload to clear out any already loaded association data, to verify query counts later
+    script = script_level.script
+    seed_context = create_seed_context(script)
+    seed_context.script_levels = script.script_levels.to_a
+    seed_context.levels = script.levels.to_a
+    lsl = script_level.levels_script_levels.first
+
+    seeding_key = nil
+    # Important to not make queries in seeding_key, since it's called for each LevelsScriptLevel during seeding
+    assert_queries(0) {seeding_key = lsl.seeding_key(seed_context)}
+
+    expected = {
+      "level.key" => lsl.level.name,
+      "script_level.level_keys" => [lsl.level.name],
+      "script_level.chapter" => 1,
+      "script_level.position" => 1,
+      "lesson.key" => script_level.lesson.key,
+      "lesson_group.key" => script_level.lesson.lesson_group.key,
+      "script.name" => script.name
+    }
+
+    assert_equal expected, seeding_key
   end
 
   def create_script_level_with_ancestors(script_level_attributes = nil)
