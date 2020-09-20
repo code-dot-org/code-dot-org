@@ -2,7 +2,7 @@ require 'test_helper'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
-# - seed new script
+# - get_counts
 # - create_script_tree
 # - assert_script_trees_equal
 #
