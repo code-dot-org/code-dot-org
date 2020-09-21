@@ -25,7 +25,7 @@ export default class CollapsibleEditorSection extends Component {
     super(props);
 
     this.state = {
-      collapsed: this.props.collapsed || false //Default to open if nothing provided
+      collapsed: this.props.collapsed || false // Default to open if nothing provided
     };
   }
 
