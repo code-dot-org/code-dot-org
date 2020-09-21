@@ -11,33 +11,52 @@ require 'csv'
 require 'fileutils'
 require 'rubygems'
 require 'csv'
+require 'optparse'
 
-require_relative '../../dashboard/config/environment'
-
-# The directory where the files are in. There can be multiple folders in this folder,
-# but those must be noted in the map file below
-VIDEO_FILE_DIRECTORY = '../test-videos/'
-# CSV that maps video keys to their title and filename
-# Must have columns titled 'Folder', 'Partner filename', 'Key', and 'Video Title'
-MAP_FILE = 'test.csv'
 # Switch this to false when ready to run
 DRY_RUN = true
-LOCALE = 'fr-FR'
 
 APPLICATION_NAME = 'Dubbed Video Batch Upload'
-
-# REPLACE WITH NAME/LOCATION OF YOUR client_secrets.json FILE
-CLIENT_SECRETS_PATH = ''
 
 # This is the URI so that we can authorize from a browser. Don't change this.
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 SCOPE = Google::Apis::YoutubeV3::AUTH_YOUTUBE_UPLOAD
 
+def parse_options(args)
+  options = {}
+  opt_parser = OptionParser.new do |opts|
+    opts.banner = "Usage: upload_non_en_videos [options]"
+
+    opts.on("-c", "--client_secrets CLIENT_SECRETS_PATH", "Location of client_secrets.json file") do |client_secrets_path|
+      options[:client_secrets_path] = client_secrets_path
+    end
+
+    opts.on("-m", "--map_file MAP_CSV", "Location of csv file mapping filenames to video keys. Must have columns titled 'Folder', 'Partner filename', 'Key', and 'Video Title'") do |map_path|
+      options[:map_path] = map_path
+    end
+
+    opts.on("-l", "--locale LOCALE", "Locale for the videos, ie fr-FR") do |locale|
+      options[:locale] = locale
+    end
+
+    opts.on("-v", "--video_directory VIDEO_DIRECTORY", "Directory of the video files") do |video_directory|
+      options[:video_directory] = video_directory
+    end
+
+    opts.on('-h', '--help', 'Show command line arguments') do
+      puts opts
+      exit
+    end
+  end
+  opt_parser.parse!(args)
+  options
+end
+
 # Let's get a set of the videos we're going to upload
-def parse_video_file_paths(map_file)
+def parse_video_file_paths(map_file, video_file_directory)
   videos = CSV.read(map_file, headers: true).map do |row|
-    {key: row['Key'], file_path: File.join([VIDEO_FILE_DIRECTORY, row['Folder'], row['Partner filename']].compact), title: row['Video Title']}
+    {key: row['Key'], file_path: File.join([video_file_directory, row['Folder'], row['Partner filename']].compact), title: row['Video Title']}
   end
   videos
 end
@@ -59,8 +78,8 @@ def upload_to_s3(filename)
   end
 end
 
-def authorize
-  client_secrets = Google::APIClient::ClientSecrets.load(CLIENT_SECRETS_PATH)
+def authorize(client_secrets_path)
+  client_secrets = Google::APIClient::ClientSecrets.load(client_secrets_path)
   auth_client = client_secrets.to_authorization
   auth_client.update!(
     scope: SCOPE,
@@ -76,10 +95,10 @@ def authorize
   auth_client
 end
 
-def initialize_youtube
+def initialize_youtube(client_secrets_path)
   service = Google::Apis::YoutubeV3::YouTubeService.new
   service.client_options.application_name = APPLICATION_NAME
-  service.authorization = authorize
+  service.authorization = authorize(client_secrets_path) unless DRY_RUN
   service
 end
 
@@ -105,18 +124,25 @@ def validate_key(key, locale)
   return true unless Video.exists?(key: key, locale: locale)
 end
 
-videos = parse_video_file_paths(MAP_FILE)
-service = initialize_youtube
-uploaded_videos = 0
-videos.each do |video|
-  if validate_key(video[:key], LOCALE)
-    puts "uploading " + video[:key]
-    download = upload_to_s3(File.open(video[:file_path]))
-    youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
-    Video.merge_and_write_attributes(video[:key], youtube_code, download, LOCALE, 'dashboard/config/videos.csv')
-    uploaded_videos += 1
-  else
-    puts "Failed to validate " + video[:key]
+def main(options)
+  videos = parse_video_file_paths(options[:map_path], options[:video_directory])
+  service = initialize_youtube(options[:client_secrets_path])
+  uploaded_videos = 0
+  videos.each do |video|
+    if validate_key(video[:key], options[:locale])
+      puts "uploading " + video[:key]
+      download = upload_to_s3(File.open(video[:file_path]))
+      youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
+      Video.merge_and_write_attributes(video[:key], youtube_code, download, options[:locale], 'dashboard/config/videos.csv')
+      uploaded_videos += 1
+    else
+      puts "Failed to validate " + video[:key]
+    end
   end
+  puts "uploaded #{uploaded_videos} videos"
 end
-puts "uploaded #{uploaded_videos} videos"
+
+options = parse_options(ARGV)
+# Move this after parse_options so that --help is fast
+require_relative '../../dashboard/config/environment'
+main(options)
