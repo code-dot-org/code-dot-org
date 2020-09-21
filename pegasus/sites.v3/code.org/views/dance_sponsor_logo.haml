@@ -5,7 +5,6 @@
   .sponsor-logo-image
     %img{src:"/images/fit-250/AFE-dark-logo.png"}
 
--# Todo: Use a real AFE France url. Still waiting for Amazon France to give us that link.
-- afe_link = request.country == 'FR' ? 'https://www.amazonfutureengineer.com/faq' : 'https://www.amazonfutureengineer.com'
+- afe_link = request.country == 'FR' ? 'https://www.amazonfutureengineer.fr/' : 'https://www.amazonfutureengineer.com'
 .sponsor-subtext-description
   != I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown, markdown: :inline, amazon_future_engineer_link: afe_link)
