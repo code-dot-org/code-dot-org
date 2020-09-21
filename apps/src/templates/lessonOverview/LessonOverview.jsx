@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   frontPage: {
@@ -32,7 +33,7 @@ class LessonOverview extends Component {
     purpose: PropTypes.string,
     preparation: PropTypes.string,
 
-    //redux
+    // from redux
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired
@@ -53,7 +54,7 @@ class LessonOverview extends Component {
         {isSignedIn && (
           <Announcements
             announcements={announcements}
-            width={970}
+            width={styleConstants['content-width']}
             viewAs={viewAs}
           />
         )}
