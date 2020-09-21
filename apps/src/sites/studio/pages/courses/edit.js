@@ -14,6 +14,8 @@ function showCourseEditor() {
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
 
+  let announcements = courseEditorData.course_summary.announcements || [];
+
   // Eventually we want to do this all via redux
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -40,6 +42,7 @@ function showCourseEditor() {
         hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
+        announcements={announcements}
       />
     </Provider>,
     document.getElementById('course_editor')
