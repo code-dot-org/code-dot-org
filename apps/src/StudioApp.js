@@ -2667,12 +2667,12 @@ StudioApp.prototype.enableBreakpoints = function() {
       // inline teacher comments; we want to get a sense of how much
       // breakpoints are used and in what scenarios, so we can reason about the
       // feasibility of repurposing line number clicks for this feature.
-      const isTeacher =
-        getStore().getState().currentUser.userType === 'teacher';
+      const currentUser = getStore().getState().currentUser;
+      const userType = currentUser && currentUser.userType;
       firehoseClient.putRecord(
         {
           study: 'droplet-breakpoints',
-          study_group: isTeacher ? 'teacher' : 'student',
+          study_group: userType,
           data_json: JSON.stringify({
             levelId: this.config.serverLevelId,
             lineNumber: e.line,
