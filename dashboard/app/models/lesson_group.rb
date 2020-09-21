@@ -124,28 +124,28 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')
   end
 
-  # This method is not currently used outside of summarize_for_edit but will be used
-  # soon as we move the position of lessons to be based on their lesson group instead
-  # of the script (dmcavoy - May 2020)
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
-    summary = {
+  def localized_description
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: nil)
+  end
+
+  def localized_big_questions
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: nil)
+  end
+
+  def summarize
+    {
       id: id,
       key: key,
       display_name: localized_display_name,
+      description: localized_description,
+      big_questions: localized_big_questions,
       user_facing: user_facing,
       position: position
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-
-    summary
   end
 
   def summarize_for_edit
-    include_lessons = false
-    summary = summarize(include_lessons)
+    summary = summarize
     summary[:lessons] = lessons.map(&:summarize_for_edit)
     summary
   end

@@ -1,9 +1,11 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {getCurrentSection} from '@cdo/apps/util/userSectionClient';
 import {
   sectionCode,
   sectionName
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import $ from 'jquery';
 
 export const ParentLetterButtonMetricsCategory = {
@@ -273,6 +275,7 @@ export const saveStudent = studentId => {
           console.error(error);
         }
         dispatch(saveStudentSuccess(studentId));
+        getCurrentSection(sectionId, section => dispatch(setSection(section)));
       }
     );
   };
@@ -338,6 +341,7 @@ export const addStudents = studentIds => {
             convertStudentServerData(data, state.loginType, sectionId)
           )
         );
+        getCurrentSection(sectionId, section => dispatch(setSection(section)));
       }
     });
   };
@@ -419,6 +423,9 @@ export const transferStudents = onComplete => {
             )
           );
           onComplete();
+          getCurrentSection(currentSectionCode, section =>
+            dispatch(setSection(section))
+          );
         }
       }
     );

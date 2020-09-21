@@ -72,9 +72,6 @@ class Pd::Workshop < ActiveRecord::Base
     # subject-specific suppression of reminder emails. This is functionally
     # extremely similar (identical?) to the logic currently implemented
     # by this serialized attribute.
-    # See also WorkshopMailer.check_should_send, which suppresses ALL email
-    # for workshops with a virtual subject (note, this is different than the
-    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -431,11 +428,9 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see the serialized attribute 'suppress_email' and
-  # WorkshopMailer.check_should_send, which suppresses ALL email
-  # for workshops with a virtual subject (note, this is different than the
-  # virtual serialized attribute)
+  # Note that this is one of (at least) two mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email'
+  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [

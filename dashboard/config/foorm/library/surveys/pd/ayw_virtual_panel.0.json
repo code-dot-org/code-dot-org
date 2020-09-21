@@ -101,13 +101,14 @@
         },
         {
          "value": "adequate_internet_tech",
-         "text": "My internet connection and technology was adequate to fully participate."
+         "text": "My internet connection and technology were adequate to fully participate."
         }
        ]
       },
       {
        "type": "comment",
        "name": "virtual_feedback",
+              "maxLength": 4000,
        "title": "Do you have feedback about the virtual meeting tool or about how logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
        "rows": 2
       }

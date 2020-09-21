@@ -728,6 +728,8 @@ bg:
               name: Използване на прости команди
             While Loops:
               name: Докато цикли
+            Creating Functions with Parameters:
+              name: Създаване на функции с параметри
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране

@@ -27,17 +27,11 @@ ka:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -61,17 +55,11 @@ ka:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -177,26 +165,6 @@ ka:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': ბრილიანტი
             '"grid"': ბადე
@@ -447,6 +415,13 @@ ka:
             '"w"': w
             '"x"': x
             '"y"': 'y'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': ჩრდილოეთი
+            '"East"': აღმოსავლეთი
+            '"South"': სამრხეთი
+            '"West"': აღმოსავლეთი
       gamelab_locationMouse:
         text: თაგვის მდებარეობა
       gamelab_mirrorSprite:
@@ -719,12 +694,6 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_moveInDirection:
         options:
           DIRECTION:
@@ -732,12 +701,6 @@ ka:
             '"East"': აღმოსავლეთი
             '"South"': სამრხეთი
             '"West"': აღმოსავლეთი
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

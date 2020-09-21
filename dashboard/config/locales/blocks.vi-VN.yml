@@ -88,9 +88,6 @@ vi:
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} mãi mãi"
         options:
@@ -109,9 +106,6 @@ vi:
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -188,9 +182,6 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} {MOVE} {DIR} một lần"
         options:
@@ -219,9 +210,6 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'lặp lại sau mỗi {N} nhịp sau khi {START} '
       Dancelab_everySeconds:
@@ -1098,6 +1086,13 @@ vi:
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
       gamelab_locationMouse:
         text: vị trí chuột
       gamelab_locationOf:

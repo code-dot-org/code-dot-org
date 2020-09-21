@@ -121,7 +121,7 @@ tr:
     not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı yazarak oturum açmanız gerekecek."
     use_clever: "Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız üzerinden oturum açın."
     invalid_provider: "Üzgünüz, %{provider} hesaplarınız Code.org hesaplarına bağlanamıyor."
-    migration_required: "Üzgünüz, hala eski hesap deneyiminizi kullanan hesaplara bağlanamıyoruz veya bağlantısını kesemiyoruz. "
+    migration_required: "Üzgünüz, hala eski hesap deneyiminizi kullanan hesaplara bağlanamıyoruz veya bağlantısını kesemiyoruz. Lütfen yeni deneyimi için güncelleyin."
     unable_to_connect_provider: "Code.org hesabınız %{provider} hesabınıza bağlanamadı. Lütfen tekrar deneyin."
     disconnect_successful: "Tebrikler! Code.org hesabınızdan dış hesabın bağlantısını kestik."
     already_in_use: "%{provider} hesabınız başka bir Code.org hesabına bağlı."
@@ -310,10 +310,13 @@ tr:
       sections: "Bölümler"
       help_support: "Yardım ve Destek"
       report_bug: "Hata bildir"
+      report_abuse: "Hata Rapor Et"
       teacher_community: "Öğretmen topluluğu"
       professional_learning: "Profesyonel öğrenme"
       documentation: "Belgeler"
       tutorials: "Eğitmler"
+      app_lab_documentation: "Uygulama Laboratuvarı Belgelendirmesi"
+      app_lab_tutorials: "Uygulama Laboratuvar Eğitimleri"
       game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
       game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
       sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
@@ -343,6 +346,7 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+      legal: "Gizlilik & Hukuk"
       legal_privacy: "Gizlilik Politikası"
       legal_tos: "Şartlar"
     user:
@@ -460,7 +464,7 @@ tr:
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     parent_email_label: "Ebeveyn/veli e-postası (isteğe bağlı)"
-    parent_email_hint: "(bu, şifre şifre kurtarma için kullanılabilir)"
+    parent_email_hint: "(bu, şifre kurtarma için kullanılabilir)"
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
     update: "Hesabı güncelle"
     account_successfully_updated: "Hesap başarıyla güncellendi."
@@ -470,6 +474,7 @@ tr:
     for_parents_and_guardians: "Ebeveynler ve Veliler İçin"
     link_a_parent_email: "Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için bu hesaba bir ebeveyn/veli e-posta adresi bağlayın. Bu e-posta adresini şifre kurtarma için de kullanabilirsiniz."
     parent_guardian_email_label: "Veli e-posta"
+    remove_parent_email_label: "Kaldır"
     none: "Hiçbiri"
     only_one_parent_email_supported_warning: "Not: Şu anda öğrenci hesabı başına yalnızca bir ebeveyn/veli e-posta adresini destekleyebiliyoruz."
     encrypted: "sifrelenmis"
@@ -512,6 +517,7 @@ tr:
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
     choose_next_course: "Aşağıdaki Code Studio derslerinden birini seçerek deneyin"
     print_certificate: "Sertifikayı Yazdır"
+  certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert bir bağışta bulundu."
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
@@ -677,6 +683,7 @@ tr:
       title: "Spor"
       body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
     text-compression:
+      title: "Metin Sıkıştırma"
       body: "Bu derste, öğrenciler metin sıkıştırma aracı ile metinler yerine semboller kullanarak sıkıştır."
     unplugged:
       title: "Bağımsız dersler"
@@ -787,6 +794,8 @@ tr:
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     reminder_desc_markdown: '[Hizmet şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url}) güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
+  donor_interstitial:
+    title: "Ücretsiz Bilgisayar Bilimi kurslarınız ... tarafından sağlanmaktadır"
   school_info_interstitial:
     title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
     message: "Lütfen aşağıya okul bilgilerinizi girin."
@@ -971,7 +980,7 @@ tr:
       subjects: 'Bu yıl hangi konuları öğretiyorsunuz?'
       resources: 'Aşağıdaki BB eğitim kaynaklarından hangilerini kullanırsınız?'
       robotics: 'Aşağıdaki robotik kaynaklarından hangilerini kullanırsınız?'
-      workshop_organizer: 'Atölye Düzenleyici'
+      workshop_organizer: 'Atölye Düzenleyicisi'
       workshop_facilitator: 'Atölye Kolaylaştırıcı'
       workshop_course: 'Atölye Dersi'
       email_opt_in: 'Code.org''un uluslararası programı, derslerimize yapılan güncellemeler veya başka bilgisayar bilimi haberlerini size e-posta olarak gönderebilir miyiz?'
@@ -1009,7 +1018,7 @@ tr:
         la: 'Dil Sanatları'
         efl: 'Yabancı Dil olarak İngilizce'
         music: 'Müzik'
-        art: 'Resim'
+        art: 'Sanat'
         other: "Diğer:"
       resources:
         bootstrap: 'Önyükleme'
@@ -1024,7 +1033,7 @@ tr:
         grok: 'Grok'
         kodable: 'Kodlanabilir'
         lego: 'LEGO Eğitimi'
-        microbit: 'Mikrobit'
+        microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sfero'
         raspberry: 'Raspberry Pi'
@@ -1041,7 +1050,7 @@ tr:
         opt_in_no: 'Hayır'
     international_opt_in:
       title: 'Atölyeye Katılım'
-      intro: "Code.org'un müfredatındaki eğitimi almak için zaman ayırdığınız için teşekkürler. Dünya çapındaki tüm okullardaki tüm öğrencilere bilgisayar bilimi eğitimi olanklarını sağlamaya yönelik misyonumuzu siz olmadan yapamazdık."
+      intro: "Code.org'un müfredatındaki eğitimi almak için zaman ayırdığınız için teşekkürler. Dünya çapındaki tüm okullardaki tüm öğrencilere bilgisayar bilimi eğitimi olanaklarını sağlamaya yönelik misyonumuzu siz olmadan yapamazdık."
       instructions: "1)Code.org'un uluslararası ortaklarından biri tarafından yürütülen bir eğitim atölyesine katıldığınızı ve 2) bilgisayar bilimi öğretmeni olarak hayat yolculuğunuzda sizi desteklemesi için ülkenizdeki uluslararası ortağımız ile bilgilerinizi paylaşmayı kabul ettiğinizi göstermek için lütfen aşağıdaki formu doldurun."
       thanks_markdown: "Formu doldurduğunuz için teşekkürler! Code.org'un müfredatını ve araçlarını öğrendikçe size destek olmayı dört gözle bekliyoruz. Lütfen [support@code.org](%{support_email_url}) adresine yazarak veya [öğretmen forum](%{teacher_forum_url}) post atarak sorularınızı ve geri bildirimlerinizi bizimle paylaşın! "
       facilitator_not_listed: "Kolaylaştırıcım listelenmedi"
@@ -1051,7 +1060,7 @@ tr:
       heading: 'Profesyonel Öğrenim Programına ilgi gösterdiğiniz için teşekkürler!'
       body: "Başlamak için öncelikle Code.org hesabınıza giriş yapmanız gerekir. Uygulamanızı başlatmadan önce program ile ilgili daha fazla bilgi almak isterseniz, lütfen <a href=\"%{url}\">Profesyonel Öğrenim Programı genel bilgiler</a> kısmına bakın.\n"
     not_teacher:
-      body_markdown: 'Code.org''un Profesyonel Öğrenim Programına ilgi gösterdiğiniz için teşekkürler! Şu anda bir öğrenci hesabına oturum açtınız. Hesabınızı öğrenci hesabından öğretmen hesabına yükseltmek için lütfen bir öğretmen hesabı açın ya da [kullanıcı ayarlarınıza gidin](%{user_settings}).'
+      body_markdown: 'Code.org''un Profesyonel Öğrenim Programına ilgi gösterdiğiniz için teşekkürler! Şu anda bir öğrenci hesabına oturum açtınız. Lütfen bir öğretmen hesabı açın ya da hesabınızı öğrenci hesabından öğretmen hesabına yükseltmek için [kullanıcı ayarlarınıza gidin](%{user_settings}).'
       more_markdown: 'Uygulamaya başlamadan önce program hakkında daha fazla bilgi almak isterseniz, [Profesyonel Öğrenim Programı genel bilgilere](%{pl_overview}) bakın.'
     no_teacher_email:
       body_markdown: 'Hesabınızı e-posta adresi bulunmamaktadır. Bu formu tamamlamadan önce e-posta adresinizi eklemek için lütfen [hesap ayarlarınızı ziyaret edin](%{user_registration}).'
@@ -1064,7 +1073,7 @@ tr:
     heading: 'Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyor musunuz?'
     message: 'Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.'
     link_intro: 'Ayrıntılar için gizlilik politikamıza'
-    privacy_policy: 'bakın'
+    privacy_policy: 'gizlilik politikası'
     logout: 'Oturumu Kapat'
     yes: 'Evet'
   page_not_found_title: "Sayfa Bulunamadı"
@@ -1077,7 +1086,7 @@ tr:
       login_with_google: 'Google ile Maker App''e giriş'
       enter_code: 'Varsayılan tarayıcınızda Google aracılığıyla girdiğinizde sağlanan kodu girin.'
       copy_code: 'Code.org''a giriş yapmak için bu kodu Maker App''e kopyalayın ve yapıştırın.'
-      error_token_expired: 'Simge sona erdi. Lütfen yeni bir simge için yeniden giriş yapın.'
+      error_token_expired: 'Jetonun süresi sona erdi. Lütfen yeni bir jeton için yeniden giriş yapın.'
       error_wrong_provider: 'Yanlış sağlayıcı. Lütfen Google ile giriş yaptığınızdan emin olun.'
       error_invalid_user: 'Geçersiz kullanıcı kimliği. Lütfen yeniden giriş yapmayı deneyin.'
       error_no_code: 'Lütfen giriş kodunuzu girin.'

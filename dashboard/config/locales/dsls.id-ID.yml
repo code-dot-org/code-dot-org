@@ -549,12 +549,12 @@ id-ID:
         markdown: |
           # The Big Event
 
-          Dalam ilmu komputer, peristiwa adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
+          Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
       BigEvent-Unplugged_2020:
         markdown: |
           # The Big Event
 
-          Dalam ilmu komputer, peristiwa adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
+          Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
       BinaryBracelets-Unplugged:
         markdown: |
           #Gelang Berpasangan
@@ -990,7 +990,7 @@ id-ID:
         markdown: |
           #Urun Daya
 
-          Perhatikan cara urun daya, proses teknik umum pemecahan masalah dalam ilmu komputer, dapat membantu Anda menyelesaikan tugas bersama sebagai ruang kelas lebih efesien daripada jika Anda harus melakukannya sendiri.
+          Perhatikan Bagaimana urun daya, proses teknik umum pemecahan masalah dalam ilmu komputer, dapat membantu Anda menyelesaikan tugas bersama sebagai ruang kelas lebih efesien daripada jika Anda harus melakukannya sendiri.
       Dance_Party_extras_intro:
         markdown: |
           #Tetaplah berdansa
@@ -1163,7 +1163,7 @@ id-ID:
 
           * Dalam dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang cacat.
           * Cacat termasuk fisik, pendengaran, visual, dan banyak cacat lainnya.
-          * Cacat itu beragam dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Cacat itu beragam dan memengaruhi orang dengan berbagai cara, termasuk Bagaimana mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
           * Merancang aplikasi yang dapat diakses orang penyandang cacat membuat aplikasi tersebut lebih baik untuk semua orang juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
@@ -1173,7 +1173,7 @@ id-ID:
 
           * Dalam dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang cacat.
           * Cacat termasuk fisik, pendengaran, visual, dan banyak cacat lainnya.
-          * Cacat itu beragam dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Cacat itu beragam dan memengaruhi orang dengan berbagai cara, termasuk Bagaimana mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
           * Merancang aplikasi yang dapat diakses orang penyandang cacat membuat aplikasi tersebut lebih baik untuk semua orang juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
@@ -1201,22 +1201,22 @@ id-ID:
         markdown: |
           #Variabel sampul
 
-          Variabel memberikan banyak kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan pengertian variabel dan cara kita menggunakannya dengan berbagai cara.
+          Variabel memberikan banyak kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan pengertian variabel dan Bagaimana kita menggunakannya dengan berbagai cara.
       EnvelopeVariables-Unplugged_2020:
         markdown: |
           #Variabel sampul
 
-          Variabel memberikan banyak kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan pengertian variabel dan cara kita menggunakannya dengan berbagai cara.
+          Variabel memberikan banyak kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan pengertian variabel dan Bagaimana kita menggunakannya dengan berbagai cara.
       ForLoopFun-Unplugged:
         markdown: |
           #Untuk Lingkaran yang Menyenangkan
 
-          Kami tahu bahwa lingkaran memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari cara menggunakan lingkaran dengan struktur ekstra yang dibangun dengan tepat.
+          Kami tahu bahwa lingkaran memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari Bagaimana menggunakan lingkaran dengan struktur ekstra yang dibangun dengan tepat.
       ForLoopFun-Unplugged_2020:
         markdown: |
           #Untuk Lingkaran yang Menyenangkan
 
-          Kami tahu bahwa lingkaran memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari cara menggunakan lingkaran dengan struktur ekstra yang dibangun dengan tepat.
+          Kami tahu bahwa lingkaran memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari Bagaimana menggunakan lingkaran dengan struktur ekstra yang dibangun dengan tepat.
       GettingLoopy-Unplugged:
         markdown: |
           # Getting Loopy
@@ -1702,7 +1702,7 @@ id-ID:
         - text: Peri akan berubah warna.
           feedback: Salah
         questions:
-        - text: Klik tombol "sunting" untuk melihat cara kerja `perilaku misterius`.
+        - text: Klik tombol "sunting" untuk melihat Bagaimana kerja `perilaku misteri`.
             Pelajari kode di dalamnya, lalu buat prediksi.
       behaviors 1 predict_2020:
         answers:
@@ -1716,7 +1716,7 @@ id-ID:
         - text: Peri akan berubah warna.
           feedback: Salah
         questions:
-        - text: Klik tombol "sunting" untuk melihat cara kerja `perilaku misterius`.
+        - text: Klik tombol "sunting" untuk melihat Bagaimana kerja `perilaku misteri`.
             Pelajari kode di dalamnya, lalu buat prediksi.
       behaviors 4 predict:
         answers:
@@ -1915,19 +1915,12 @@ id-ID:
             ini gagal?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program tidak akan gagal. Scrat akan sampai ke buah akorn.
-          feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
-        - text: Scrat akan salah jalan setelah belokan terakhirnya.
-          correct: true
-          feedback: Benar!
-        - text: Langkah Scrat kurang satu sehingga tidak sampai ke buah akorn.
-          feedback: Salah. Kekurangan satu langkah terjadi setelah Scrat salah belok.
+        - {}
+        - correct: true
+        - correct: true
         - text: Saya tidak tahu.
-          feedback: 'Kesalahan pertama itu karena Scrat salah jalan setelah belok
-            terakhirnya. '
         questions:
-        - text: Cermati kode di bawah ini. Apa bug pertama yang akan membuat program
-            ini gagal?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Burung akhirnya akan kurang satu langkah dari babi.
@@ -3015,7 +3008,7 @@ id-ID:
           feedback: Salah. Peletakan blok 'move forward' ke dalam blok 'repeat' akan
             menyebabkan Scrat bergerak maju tiga kali.
         - text: Scrat akan maju tiga kali, belok, lalu maju tiga kali lagi, sampai
-            ke biji ek!
+            ke biji akorn ek!
           correct: true
           feedback: Benar!
         - text: Scrat akan maju ke depan, lalu berbelok dan menabrak.
@@ -3024,7 +3017,7 @@ id-ID:
         - text: Saya tidak tahu.
           feedback: Menaruh blok `move forward` di dalam blok `repeat` akan mengakibatkan
             Scrat untuk maju ke depan tiga kali. Lalu dia akan berbelok dan maju tiga
-            kali lagi, sampai ke biji ek!
+            kali lagi, sampai ke biji akorn ek!
         questions:
         - text: Kode ini menggunakan blok baru. Apa yang Anda kira terjadi saat Anda
             tekan "Run"?
@@ -3236,7 +3229,7 @@ id-ID:
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
             madu bunga.
         questions:
-        - text: Lihat kode di bawah. Berapa banyak unit madu bunga yang akan dikumpulkan
+        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
             lebah di akhir?
         title: Banyak Variabel Lebah
       courseF_bee_variables_8a_2018_2019:
@@ -3255,7 +3248,7 @@ id-ID:
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
             madu bunga.
         questions:
-        - text: Lihat kode di bawah. Berapa banyak unit madu bunga yang akan dikumpulkan
+        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
             lebah di akhir?
         title: Banyak Variabel Lebah
       courseF_bee_variables_8a_2018_2019_2020:
@@ -3274,7 +3267,7 @@ id-ID:
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
             madu bunga.
         questions:
-        - text: Lihat kode di bawah. Berapa banyak unit madu bunga yang akan dikumpulkan
+        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
             lebah di akhir?
         title: Banyak Variabel Lebah
       courseF_external_variableConstant:
@@ -3470,7 +3463,7 @@ id-ID:
         markdown: "#Dalam pelajaran ini...\n\n###Bayangkan Anda ingin sifat Anda bergerak
           maju **5** kali. Hal ini akan sangat mudah - cukup pindahkan keluar **5**
           blok bergerak maju. Sekarang, bayangkan Anda ingin sifat Anda bergerak maju
-          **5.000** kali! \n\n###Berapa lama waktu yang Anda butuhkan untuk memindahkan
+          **5.000** kali! \n\n###Bagaimana lama waktu yang Anda butuhkan untuk memindahkan
           keluar **5.000** blok? \n\n###Berharap ada cara mudah untuk melakukan hal
           ini? Ada!\n\n---\n\n## Blok untuk Diketahui\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
       courseF_markdown_nestedloops_end:

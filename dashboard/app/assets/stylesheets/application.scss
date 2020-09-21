@@ -2360,7 +2360,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 25px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3416,6 +3416,10 @@ h2.danger {
   max-width: 600px;
   margin: 0 auto 20px auto;
   text-align: center;
+}
+
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
 }
 
 #parent-email-banner {

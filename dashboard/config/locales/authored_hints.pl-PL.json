@@ -34,7 +34,7 @@
           "2-3_Artist_8_a": "Jeśli podzielisz 200 pikseli na pół, jaką szerokość powinien mieć każdy kwadrat?"
         },
         "2-3 Artist 9 NEW": {
-          "2-3_Artist_9_a": "Ten diament to tak na prawdę kwadrat obrócony na bok"
+          "2-3_Artist_9_a": "Ten diament to tak naprawdę kwadrat obrócony na bok"
         },
         "2-3 Artist Debugging 10": {
           "2-3_Artist_Debugging_10_a": "Pamiętaj, że chcesz by panel sterowania był o 10 pikseli _szerszy_...upewnij się, że **dodajesz** 10 do liczby, którą zmieniasz.",
@@ -107,7 +107,7 @@
           "2-3_Artist_Nested_Loops_5_a": "Spróbuj użyć bloku \"skocz do przodu\", aby przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów ma 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
         },
         "2-3 Artist Nested Loops 7": {
-          "2-3_Artist_Nested_Loops_7_a": "Jaki powinien być Twój ruch w każdej pętli?   \n\nIle to jest 360/10?"
+          "2-3_Artist_Nested_Loops_7_a": "Jaki bardzo powinieneś skręcić w każdej pętli?   \n\nIle to jest 360/10?"
         },
         "2-3 Artist Nested Loops 9": {
           "2-3_Artist_Nested_Loops_9_a": "Potrzebujesz pomocy w znalezieniu odpowiedniego kąta?\n\n \\*\\* 360 / 12 = 30 \\*\\*"
@@ -3072,19 +3072,19 @@
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2018": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2019": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2020": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops2a": {
           "courseC_artist_loops2a_a": "Wewnątrz swojej pętli być może zechcesz skoczyć o 200 nad 200 w dół, następnie przeciągnij nalepkę z ptaszkiem, a potem skręć o 30 stopni.",
@@ -3193,8 +3193,8 @@
           "courseC_artist_loopsPrePre1a_b": "Użyj tego bloku, aby przejść o 50 pikseli do przodu:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Jeżeli użyjesz bloku \"idź do przodu o 100 pikseli\", narysuję linię automatycznie.",
-          "courseC_artist_prog2_b": "Masz problem z zakrętem? Użyj bloku \"skręć w prawo o 90 stopni\"."
+          "courseC_artist_prog2_a": "Jeżeli użyjesz bloku blockly block][0], narysuję linię automatycznie.",
+          "courseC_artist_prog2_b": "Masz problem ze skrętem na rogu? Użyj bloku <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "Jeżeli użyjesz bloku blockly block][0], narysuję linię automatycznie.",
@@ -4739,7 +4739,7 @@
           "courseD_artist_project1a_b": "Te wzorce w dużym stopniu wyglądają jak kaskady z innych łamigłówek, ale używa się w nich innych kątów."
         },
         "courseD_artist_project2": {
-          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy polecenia \"skocz do przodu\" już nie.",
+          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie.",
           "courseD_artist_project2_b": "Po narysowaniu i przemieszczeniu się po raz pierwszy możesz powtórzyć kod dodając pętlę wokół na zewnątrz."
         },
         "courseD_artist_project2_2018": {
@@ -7488,7 +7488,7 @@
         "courseF_playlab_variables_challenge2": {
           "courseF_playlab_variables_challenge2_a": "Gdy sprite'y się zderzą, dodawaj i odejmuj punkty od zmiennej \"punkty\".",
           "courseF_playlab_variables_challenge2_b": "Teraz możesz zmienić odległość, na jaką możesz przemieścić swojego sprite'a za każdym razem, gdy naciśnie się jeden z klawiszy ze strzałkami.",
-          "courseF_playlab_variables_challenge2_c": "**Rozwiązanie:**\n<xml>\n<block type=\"studio_whenArrow\">\n\n<title name=\"VALUE\">up</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">1</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">down</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">4</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">8</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">right</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">2</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n</xml>"
+          "courseF_playlab_variables_challenge2_c": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_a": "Musisz pamiętać, że aby utworzyć wewnętrzny kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.",

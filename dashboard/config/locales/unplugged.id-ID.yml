@@ -267,7 +267,7 @@ id:
           antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau
           karakter game) yang menyentuh.
       courseA_unplugged_loops:
-        title: Loop Unplugged
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       courseB_unplugged_MRF:
         title: Aktivitas Offline
@@ -469,7 +469,7 @@ id:
           tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat
           melakukan navigasi Internet.
       courseA_unplugged_loops_2018:
-        title: Loop Unplugged
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       BigEvent_2018:
         title: Acara besar
@@ -527,11 +527,11 @@ id:
         title: Gerakkan itu, Gerakkan itu
       courseB_unplugged_CnC_2018:
         title: Berkreasi dan Bermain Jujur itu Hebat
-        desc: Meminjam Dasar-Dasar Ilmu Komputer oleh tim yang bekerja di bidang Hak
-          Cipta dan Kreativitas, pelajaran ini hadir untuk membantu para siswa memahami
-          proses kreatif dalam berbagi dan inspirasi.  Bersamaan dengan itu, promosi
-          ungkapan kreatif dan perlunya kejujuran dalam karya kreatif menyusul nomor
-          dua.
+        desc: Dipinjamkan ke  Computer Science Fundamentals oleh tim yang bekerja
+          di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu
+          para murid memahami proses kreatif dalam berbagi dan inspirasi.  Bersamaan
+          dengan itu, promosi ungkapan kreatif dan perlunya kejujuran dalam karya
+          kreatif menyusul nomor dua.
       courseE_unplugged_CnC_2018:
         title: Berbagi Secara Digital
         desc: Meminjam Dasar-Dasar Ilmu Komputer dari tim di bidang Hak Cipta dan
@@ -591,9 +591,9 @@ id:
           lebih rumit (seperti gambar dan warna) dalam biner, juga.
       courseE_unplugged_privateInformation_2019:
         title: Informasi Privat dan Pribadi
-        desc: Dikembangkan oleh Pendidikan Akal Sehat, pelajaran ini mengajarkan perbedaan
-          antara informasi yang aman untuk dibagikan secara online dengan informasi
-          yang tidak aman.
+        desc: Dikembangkan oleh Common Sense Education, pelajaran ini mengajarkan
+          perbedaan antara informasi yang aman untuk dibagikan secara online dengan
+          informasi yang tidak aman.
       SongwritingParameters_2019:
         title: 'terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.desc'
@@ -670,7 +670,7 @@ id:
           tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat
           melakukan navigasi Internet.
       courseA_unplugged_loops_2019:
-        title: Loop Unplugged
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       MoveItMoveIt_2019:
         title: Gerakkan itu, Gerakkan itu
@@ -681,11 +681,11 @@ id:
           memiliki konsekuensi.
       courseB_unplugged_CnC_2019:
         title: Berkreasi dan Bermain Jujur itu Hebat
-        desc: Meminjam Dasar-Dasar Ilmu Komputer oleh tim yang bekerja di bidang Hak
-          Cipta dan Kreativitas, pelajaran ini hadir untuk membantu para siswa memahami
-          proses kreatif dalam berbagi dan inspirasi.  Bersamaan dengan itu, promosi
-          ungkapan kreatif dan perlunya kejujuran dalam karya kreatif menyusul nomor
-          dua.
+        desc: Dipinjamkan ke  Computer Science Fundamentals oleh tim yang bekerja
+          di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu
+          para murid memahami proses kreatif dalam berbagi dan inspirasi.  Bersamaan
+          dengan itu, promosi ungkapan kreatif dan perlunya kejujuran dalam karya
+          kreatif menyusul nomor dua.
       GraphingData_2019:
         title: Penggambaran Data
         desc: Dalam pelajaran ini, siswa akan mengumpulkan data dari proyek Play Lab
@@ -705,7 +705,7 @@ id:
           yang kuat dan aman.
       timeforcs_demo_crowdsourcing:
         title: Sumber kerumunan
-        desc: '_Josh mencatat: berbeda dengan pelajaran pertama, saya sudah memformat
+        desc: '_Catatan Josh: berbeda dengan pelajaran pertama, saya sudah memformat
           pelajaran ini seperti unplugged lesson yang biasa._'
       timeforcs_demo_conditionals:
         title: Kondisi

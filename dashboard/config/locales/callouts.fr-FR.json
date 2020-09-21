@@ -424,7 +424,7 @@
           "behaviors_edit": "Ajoute du code à ce comportement.\n"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel)."
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "course3_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Continue ce programme en ajoutant plus de code à la fin.",
@@ -464,19 +464,19 @@
           "courseA_artist_loops4_1": "Ce nombre t'indique combien de ces blocs tu peux utiliser dans ce puzzle."
         },
         "courseA_artist_loops7": {
-          "courseA_artist_loops7_1": "Ce nombre indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
+          "courseA_artist_loops7_1": "Ce numéro indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
         },
         "courseA_artist_loops7_2018": {
-          "courseA_artist_loops7_1": "Ce nombre indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
+          "courseA_artist_loops7_1": "Ce numéro indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
         },
         "courseA_artist_loops7_2019": {
-          "courseA_artist_loops7_1": "Ce nombre indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
+          "courseA_artist_loops7_1": "Ce numéro indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
         },
         "courseA_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Ce nombre indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
+          "courseA_artist_loops7_1": "Ce numéro indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
@@ -500,19 +500,19 @@
           "courseA_collector_preLoops1_1": "Cliquez ici pour voir le code s'exécuter!"
         },
         "courseA_collector_preLoops2": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_collector_preLoops3": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_collector_preLoops4": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_collector_preLoops5": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_collector_preLoops6": {
-          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseA_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
@@ -524,58 +524,58 @@
           "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "Utilise le bouton \"Etape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
+          "courseA_maze_seqA_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
         },
         "courseA_maze_seq4": {
           "made_of_stone": "Ces blocs sont en pierre. Tu peux les déplacer, mais tu ne peux pas les effacer!"
         },
         "courseA_playLab_events4": {
-          "courseA_playlab_events4_callout1": "C'est un appel"
+          "courseA_playlab_events4_callout1": "Ceci est un appel"
         },
         "courseA_playLab_events4_2018": {
-          "courseA_playlab_events4_callout1": "C'est un appel"
+          "courseA_playlab_events4_callout1": "Ceci est un appel"
         },
         "courseA_playLab_events4_2019": {
-          "courseA_playlab_events4_callout1": "C'est un appel"
+          "courseA_playlab_events4_callout1": "Ceci est un appel"
         },
         "courseA_playLab_events4_2020": {
-          "courseA_playlab_events4_callout1": "C'est un appel"
+          "courseA_playlab_events4_callout1": "Ceci est un appel"
         },
         "courseA_playLab_events5": {
-          "courseA_playLab_events5_1": "Clique ici pour changer la direction de l'évènement flèche."
+          "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
         },
         "courseA_playLab_events5_2018": {
-          "courseA_playLab_events5_1": "Clique ici pour changer la direction de l'évènement flèche."
+          "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
         },
         "courseA_playLab_events5_2019": {
-          "courseA_playLab_events5_1": "Clique ici pour changer la direction de l'évènement flèche."
+          "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
         },
         "courseA_playLab_events5_2020": {
-          "courseA_playLab_events5_1": "Clique ici pour changer la direction de l'évènement flèche."
+          "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
         },
         "courseA_playLab_events6": {
-          "courseA_playLab_events6_1": "Cela te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras pas!"
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_1": "Cela te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras pas!"
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
         },
         "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_1": "Cela te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras pas!"
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
         },
         "courseA_playLab_events6_2020": {
-          "courseA_playLab_events6_1": "Cela te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras pas!"
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
         },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
@@ -608,7 +608,7 @@
           "courseB_artist_loops5_1": "Ce nombre signifie qu'il n'y a plus aucun de ces blocs dans la boîte à outils."
         },
         "courseB_collector_loops1": {
-          "courseB_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseB_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
@@ -620,19 +620,19 @@
           "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "Clique dans la bulle si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "Utilise le bouton \"Etape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
+          "courseB_maze_seq2_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_1": "Les blocs gris sont faits de pierre et ne peuvent pas être jetés."
@@ -704,7 +704,7 @@
           "courseC_artist_loopsPrePre1a_1": "Commence par utiliser ce bloc pour amener l'artiste au centre de l'écran."
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."
+          "courseC_collector_prog1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons te montrer comment les utiliser plus tard."
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "Vois-tu de nouveaux blocs dans la boîte à outils ? Ne t'inquiéte pas, nous te montrerons comment les utiliser dans une autre leçon."
@@ -786,19 +786,19 @@
         },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
+          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent pas être enlevés."
         },
         "courseC_maze_programming3_2018": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
+          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent pas être enlevés."
         },
         "courseC_maze_programming3_2019": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
+          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent pas être enlevés."
         },
         "courseC_maze_programming3_2020": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
+          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent pas être enlevés."
         },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "C'est ton nombre maximum de blocs. Cela te dit combien de ces blocs il te reste à utiliser."
@@ -869,7 +869,7 @@
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Tu peux modifier ce nombre.",
-          "courseD_artist_ramp11_2": "Cliques ici pour taper le nombre de fois que ce code doit se répéter."
+          "courseD_artist_ramp11_2": "Clique ici pour taper le nombre de fois que ce code doit se répéter."
         },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.",
@@ -889,16 +889,16 @@
           "4_5_Bee_Conditionals_2_2": "Besoin d'aide ? Clique ici pour une vidéo d'indice !"
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel)."
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel)."
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel)."
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel)."
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Utilise cette commande pour faire reculer l'abeille."
@@ -907,7 +907,7 @@
           "courseD_bee_debugging_challenge1_callout1": "Utilise cette commande pour faire reculer l'abeille."
         },
         "courseD_collector_ramp8": {
-          "courseD_collector_ramp8_1": "Utilise ce bloc pour ramasser un trésor.  "
+          "courseD_collector_ramp8_1": "Utilise ce bloc pour ramasser un diamant.  "
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "Tu devras utiliser le bloc `tant que chemin devant` afin de résoudre cette énigme."
@@ -956,11 +956,11 @@
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "stone_block_2": "Les blocs gris sont comme des pierres que tu ne peux pas enlever."
+          "stone_block_2": "Les blocs gris fait de pierre et tu ne peux pas les enlever."
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "stone_block_2": "Les blocs gris sont comme des pierres que tu ne peux pas enlever."
+          "stone_block_2": "Les blocs gris fait de pierre et tu ne peux pas les enlever."
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
@@ -1010,10 +1010,10 @@
           "courseD_maze_ramp6_1": "Quelque soit le code que tu mettras ici, il se répètera autant de fois que tu en donneras l’instruction, puis continuera à exécuter le reste du programme."
         },
         "courseD_playLab_condFP": {
-          "courseD_playLab_condFP_1": "nous avons organisé les blocs en catégories pour que tu aies plus de code pour jouer avec ! Appuis ici pour voir où tout se trouve."
+          "courseD_playLab_condFP_1": "nous avons organisé les blocs en catégories pour que tu aies plus de code avec lequel jouer! Appuis ici pour voir où tout se trouve."
         },
         "courseD_playLab_condFP_2018": {
-          "courseD_playLab_condFP_1": "nous avons organisé les blocs en catégories pour que tu aies plus de code pour jouer avec ! Appuis ici pour voir où tout se trouve."
+          "courseD_playLab_condFP_1": "nous avons organisé les blocs en catégories pour que tu aies plus de code avec lequel jouer! Appuis ici pour voir où tout se trouve."
         },
         "courseD_scrat_ramp1": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
@@ -1112,14 +1112,14 @@
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_1": "Tu peux modifier ce nombre.",
-          "courseE_artist_ramp8_2": "Cliques ici pour taper le nombre de fois que ce code doit se répéter."
+          "courseE_artist_ramp8_2": "Clique ici pour taper le nombre de fois que ce code doit se répéter."
         },
         "courseE_artist_ramp8_2": {
           "courseE_artist_ramp8_1": "Tu peux modifier ce nombre.",
-          "courseE_artist_ramp8_2": "Cliques ici pour taper le nombre de fois que ce code doit se répéter."
+          "courseE_artist_ramp8_2": "Clique ici pour taper le nombre de fois que ce code doit se répéter."
         },
         "courseE_farmer_functions1": {
-          "courseE_farmer_functions1_2": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition."
+          "courseE_farmer_functions1_2": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition."
         },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
@@ -1131,13 +1131,13 @@
           "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
         },
         "courseE_farmer_functions1_2018": {
-          "courseE_farmer_functions1_2": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition."
+          "courseE_farmer_functions1_2": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition."
         },
         "courseE_farmer_functions1_2019": {
-          "courseE_farmer_functions1_2": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition."
+          "courseE_farmer_functions1_2": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition."
         },
         "courseE_farmer_functions1_2020": {
-          "courseE_farmer_functions1_2": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition."
+          "courseE_farmer_functions1_2": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition."
         },
         "courseE_farmer_functions1a": {
           "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
@@ -1369,6 +1369,18 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Tu noteras que les blocs ont une nouvelle façon d'entrer des chiffres. Ces blocs `mathématiques` peuvent être retirés et déplacés !"
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
         }
       }
     }

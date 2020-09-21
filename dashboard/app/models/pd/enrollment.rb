@@ -164,15 +164,12 @@ class Pd::Enrollment < ActiveRecord::Base
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
-    # only CSF Deep Dive uses JotForm
-    jotform_enrollments, other_enrollments = enrollments.partition do |enrollment|
-      enrollment.workshop.csf_201?
-    end
-
-    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion
-    foorm_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
-      enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)
+    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
+    # CSF Deep Dive after 9/1 also uses Foorm
+    foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
+      (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
+        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
+        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
     end
 
     # Admin and Counselor still use Pegasus form
@@ -180,11 +177,10 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
     end
 
-    # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer
-    # and CSF Intro (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
+    # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
+    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
     (
-      filter_for_jotform_survey_completion(jotform_enrollments, select_completed) +
       filter_for_pegasus_survey_completion(pegasus_enrollments, select_completed) +
       filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
     )
@@ -389,21 +385,6 @@ class Pd::Enrollment < ActiveRecord::Base
                      ids_without_processed_surveys - ids_with_unprocessed_surveys
 
     enrollments.select {|e| filtered_ids.include? e.id}
-  end
-
-  private_class_method def self.filter_for_jotform_survey_completion(enrollments, select_completed)
-    completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
-      workshop = enrollment.workshop
-      begin
-        Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
-      # if we can't find the expected form id we will get a key error. Consider this to be a completed survey as there
-      # is no survey.
-      rescue KeyError
-        true
-      end
-    end
-
-    select_completed ? completed_surveys : uncompleted_surveys
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)

@@ -25,6 +25,12 @@ const ButtonSize = {
   narrow: 'narrow'
 };
 
+const ButtonHeight = {
+  default: 34,
+  large: 40,
+  narrow: 40
+};
+
 const styles = {
   main: {
     display: 'inline-block',
@@ -140,19 +146,19 @@ const styles = {
   },
   sizes: {
     [ButtonSize.default]: {
-      height: 34,
+      height: ButtonHeight.default,
       paddingLeft: 24,
       paddingRight: 24,
       lineHeight: '34px'
     },
     [ButtonSize.large]: {
-      height: 40,
+      height: ButtonHeight.large,
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
     },
     [ButtonSize.narrow]: {
-      height: 40,
+      height: ButtonHeight.narrow,
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
@@ -260,5 +266,6 @@ class Button extends React.Component {
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
+Button.ButtonHeight = ButtonHeight;
 
 export default Radium(Button);

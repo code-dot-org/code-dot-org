@@ -1600,8 +1600,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
-          feedback: Certo!
-        - {}
+        - correct: true
         - text: Eu não sei.
         questions:
         - {}

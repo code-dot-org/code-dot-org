@@ -815,13 +815,13 @@
           "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "OPD-K5-events-4": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "OPD-K5-events-6": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "OPD-K5-forloops-1": {
           "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen\\`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
@@ -3379,172 +3379,172 @@
           "courseE_playLab_scaffold4_a": "Verwende `Punkt erzielen`, um einen Punkt hinzuzufügen, und `Punkt abziehen`, um einen Punkt abzuziehen."
         },
         "courseC_PlayLab_events1": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2018": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2019": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2020": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2018": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2019": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2020": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events3": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2018": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2019": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2020": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2018": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2019": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2020": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events5": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2018": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2019": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2020": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events6": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2018": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2019": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2020": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events7": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2018": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2019": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2020": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events9": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2018": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2019": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2020": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_eventsA": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2018": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2019": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2020": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_embed_2019": {
           "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen."
@@ -3555,41 +3555,41 @@
         "courseC_PlayLab_eventsFP": {
           "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2018": {
           "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2019": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2020": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loop1": {
@@ -3677,16 +3677,16 @@
           "courseC_artist_loops4a_b": "Dein Programm sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5a": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2018": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2019": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2020": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5b": {
           "courseC_artist_loops5b_a": "Verwende diesen Block, um das Muster deiner Linien zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
@@ -4115,52 +4115,52 @@
           "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events3": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2018": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2019": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2020": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events4": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2018": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2019": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2020": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events5": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2018": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2019": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2020": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events6": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2018": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2019": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2020": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events7": {
           "courseC_flappy_events7_a": "Du kannst den Hintergrund mit Hilfe des `Szene einstellen`-Bausteins ändern. "
@@ -4175,28 +4175,28 @@
           "courseC_flappy_events7_a": "Du kannst den Hintergrund mit Hilfe des `Szene einstellen`-Bausteins ändern. "
         },
         "courseC_flappy_events8": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2018": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2019": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2020": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2018": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2019": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2020": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
@@ -5083,59 +5083,59 @@
           "courseD_artist_binary_challenge2_a": "Im Originalprogramm sind nur wenige Zeilen falsch."
         },
         "courseD_artist_nestedLoops1": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2018": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2019": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2020": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2018": {
           "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen (Tipp: benutze deinen Code aus dem letzten Rätsel, um zu beginnen). Nachdem du jedes Dreieck fertig gezeichnet hast, drehst du dich um 60 Grad und fängst das nächste Dreieck an.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops2": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2018": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2019": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2020": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops3": {
@@ -5443,9 +5443,9 @@
           "courseD_artist_project4_a": "Linien mit 2 Sechsecken und 4 Dreiecken:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_ramp11": {
-          "courseD_artist_ramp11a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
-          "courseD_artist_ramp11b": "Um 4 Seiten zu zeichnen, füge einen `um 200 Pixel vorwärts bewegen`-Block in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss nicht, dich danach zu drehen!",
-          "courseD_artist_ramp11_c": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen!"
+          "courseD_artist_ramp11a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
+          "courseD_artist_ramp11b": "Um 4 Seiten zu zeichnen, füge einen `vorwärts bewegen um 200 Pixel`-Block in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife sich 4 Mal wiederholt! \n\nVergiss das Drehen danach nicht!",
+          "courseD_artist_ramp11_c": "Denke daran, den `drehen`-Block in die Schleife einzufügen!"
         },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_a": "Du kannst entweder zuerst das Quadrat und dann das Dreieck zeichnen, oder umgekehrt!",
@@ -6030,15 +6030,15 @@
         },
         "courseD_collector_nested_loops_challenge2a": {
           "courseD_collector_nested_loops_challenge2a_a": "Vergiss nicht, dass du einen einzelnen Befehl oder ein längeres Muster `wiederholen` kannst. Du kannst sogar einen Block \"wiederholen\"!",
-          "courseD_collector_nested_loops_challenge2a_b": "Kannst du herausfinden, wie du alle vier Edelsteine erhalten können, ohne mehr Bausteine zu verwenden als für zwei Edelsteine?"
+          "courseD_collector_nested_loops_challenge2a_b": "Kannst Du herausfinden,  wie du alle vier Edelsteine kriegst, ohne mehr Blöcke zu verwenden als für zwei Edelsteine?"
         },
         "courseD_collector_ramp10": {
-          "courseD_artist_ramp10_a": "Anstatt vier `vorwärts bewegen‘ Bausteine für jede Seite zu verwenden, versuche einen 'vorwärts bewegen'-Baustein innerhalb einer`wiederholen\\`-Schleife zu platzieren, so wie hier:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
+          "courseD_artist_ramp10_a": "Anstatt vier `vorwärts bewegen‘ Blöcke für jede Seite zu verwenden, versuche einen 'vorwärts bewegen' Block innerhalb einer`wiederholen\\`-Schleife zu platzieren, so wie hier:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
           "courseD_artist_ramp10_b": "Vergiss nicht, ein Stück des Schatzes einzusammeln, und drehe dich dann, um mit einer neuen Seite des Quadrats zu beginnen!",
-          "courseD_artist_ramp10_c": "Wenn du deinen Code vereinfachen möchtest, kannst du eine `wiederholen`-Schleife in eine andere einfügen! Dies wird als eine **geschachtelte Schleife** bezeichnet."
+          "courseD_artist_ramp10_c": "Wenn du deinen Code vereinfachen möchtest, kannst du eine Schleife in eine andere einfügen! Dies wird  **geschachtelte Schleife** genannt."
         },
         "courseD_collector_ramp8": {
-          "courseD_collector_ramp8_a": "Wenn du ein Feld mit einem Schatz erreichst, verwende \"einsammeln\", um ihn aufzuheben. Für diese Aufgabe musst du mehrfach Schätze einsammeln!",
+          "courseD_collector_ramp8_a": "Wenn du zu einem Platz mit einem Schatz kommst, benutze \"Sammeln\", um ihn aufzuheben. Für dieses Rätsel musst du mehr als einmal einen Schatz sammeln!",
           "courseD_collector_ramp8_b": "Wenn du deinen Code weiter vereinfachen möchtest, kannst du tatsächlich eine `wiederhole` Schleife in eine andere einfügen! Dies wird eine **geschachtelte Schleife** genannt."
         },
         "courseD_collector_ramp9": {
@@ -6723,8 +6723,8 @@
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
-          "courseC_maze_programming6_b": "Der Vogel fängt an, mit dem Gesicht gegen eine Wand zu fliegen, also denke daran, dich umzudrehen, bevor du Dich bewegst.",
-          "courseC_maze_programming6_c": "Denke daran, dass du ein Stück des Codes auf einmal schreiben kannst, dann lass es laufen, um herauszufinden, wohin du von dort aus gehen musst."
+          "courseC_maze_programming6_b": "Zu Beginn schaut der Vogel auf eine Wand, also denke daran, ihn zu drehen, bevor er sich bewegt!",
+          "courseC_maze_programming6_c": "Denke daran, du kannst jeweils einen Teil des Codes schreiben und ihn dann laufen lassen! So kannst du herausfinden, wie du von dort weitermachen musst. "
         },
         "courseD_maze_ramp7": {
           "courseD_maze_ramp7_b": "Vergiss nicht, die \"Schritt\" Taste zu benutzen, um Block für Block nach Fehlern zu suchen!",
@@ -7226,12 +7226,12 @@
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMit diesem `springen zu`-Baustein kannst du den Zombie-Künstler zu jedem beliebigen Pixel auf dem Gittermuster bewegen, wann immer du willst. Der Baustein bewirkt, dass er sich eine Anzahl von Pixeln nach rechts und eine Anzahl von Pixeln nach unten bewegt. Die Koordinaten werden immer von der linken oberen Ecke aus gezählt, was bedeutet, dass es keine Rolle spielt, wo sich der Zombie-Künstler _vor_ dem Ausführen des Befehls befindet! \n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_ramp8": {
-          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
           "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
           "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`."
         },
         "courseE_artist_ramp8_2": {
-          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
           "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
           "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`."
         },

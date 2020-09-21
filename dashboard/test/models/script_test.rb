@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
     @script_in_unit_group = create(:script, hidden: true)
@@ -67,7 +67,7 @@ class ScriptTest < ActiveSupport::TestCase
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
     assert_equal 'Level 1', script.levels[0].name
-    assert_equal 'lesson2', script.script_levels[3].lesson.name
+    assert_equal 'Lesson Two', script.script_levels[3].lesson.name
 
     assert_equal 'MyProgression', script.script_levels[3].progression
     assert_equal 'MyProgression', script.script_levels[4].progression
@@ -1439,10 +1439,10 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.project_widget_visible
   end
 
-  test 'can unset the script_announcements attribute' do
+  test 'can unset the announcements attribute' do
     l = create :level
     old_dsl = <<-SCRIPT
-      script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
+      announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
@@ -1458,7 +1458,7 @@ class ScriptTest < ActiveSupport::TestCase
       },
       script_data[:lesson_groups]
     )
-    assert script.script_announcements
+    assert script.announcements
 
     script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
     script = Script.add_script(
@@ -1469,7 +1469,7 @@ class ScriptTest < ActiveSupport::TestCase
       script_data[:lesson_groups]
     )
 
-    refute script.script_announcements
+    refute script.announcements
   end
 
   test 'can set custom curriculum path' do
@@ -1508,7 +1508,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
-    assert_equal 1, script.script_announcements.count
+    assert_equal 1, script.announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
@@ -1517,7 +1517,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script_copy.version_year
     assert_equal false, !!script_copy.is_stable
     assert_equal true, script_copy.hidden
-    assert_nil script_copy.script_announcements
+    assert_nil script_copy.announcements
 
     # Validate levels.
     assert_equal 5, script_copy.levels.count
@@ -1533,12 +1533,18 @@ class ScriptTest < ActiveSupport::TestCase
     # Validate lessons. We've already done some validation of level contents, so
     # this time just validate their names.
     assert_equal 2, script_copy.lessons.count
+
     lesson1 = script_copy.lessons.first
-    lesson2 = script_copy.lessons.last
+    assert_equal 'lesson1', lesson1.key
+    assert_equal 'Lesson One', lesson1.name
     assert_equal(
       'Level 1_copy,Level 2_copy,Level 3_copy',
       lesson1.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
+
+    lesson2 = script_copy.lessons.last
+    assert_equal 'lesson2', lesson2.key
+    assert_equal 'Lesson Two', lesson2.name
     assert_equal(
       'Level 4_copy,Level 5_copy',
       lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
@@ -1555,7 +1561,7 @@ class ScriptTest < ActiveSupport::TestCase
     # all properties that should change
     assert script.tts
     assert script.is_stable
-    assert script.script_announcements
+    assert script.announcements
     assert script.is_course
 
     # some properties that should not change
@@ -1569,7 +1575,7 @@ class ScriptTest < ActiveSupport::TestCase
     # all properties that should change
     refute script_copy.tts
     refute script_copy.is_stable
-    refute script_copy.script_announcements
+    refute script_copy.announcements
     refute script_copy.is_course
 
     # some properties that should not change
@@ -1593,41 +1599,41 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal true, script_copy.hidden
   end
 
-  test 'clone script with inactive variant' do
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
+  test 'clone script with variants' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     scripts, _ = Script.setup([script_file])
     script = scripts[0]
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
-    assert_equal 'test-fixture-variants-copy', script_copy.name
+    assert_equal 'test-fixture-experiments-copy', script_copy.name
 
-    assert_equal 1, script_copy.script_levels.count
-    sl = script_copy.script_levels.first
+    assert_equal 4, script_copy.script_levels.count
+    script_copy.script_levels.each do |sl|
+      assert_equal 1, sl.levels.count
+      assert sl.active?(sl.levels.first)
+      refute sl.variants?
+    end
+    expected_level_names = ['Level 1_copy', 'Level 4_copy', 'Level 5_copy', 'Level 8_copy']
+    actual_level_names = script_copy.script_levels.map(&:levels).map(&:first).map(&:name)
+    assert_equal expected_level_names, actual_level_names
 
-    assert_equal 'Level 1_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
+    new_dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level 'Level 1_copy'
+      level 'Level 4_copy'
+      level 'Level 5_copy'
+      level 'Level 8_copy'
 
-    assert_equal 'Level 2_copy', sl.levels.last.name
-    refute sl.active?(sl.levels.last)
-
-    # Ignore level names, since we are just testing whether the
-    # variants / active / endvariants structure is correct.
-    new_dsl_regex = <<-SCRIPT
-lesson 'lesson1', display_name: 'lesson1'
-variants
-  level '[^']+'
-  level '[^']+', active: false
-endvariants
     SCRIPT
 
-    assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
+    assert_equal new_dsl, ScriptDSL.serialize_to_string(script_copy)
   end
 
   test 'clone with suffix and add editor experiment' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
-    assert_equal 1, script.script_announcements.count
+    assert_equal 1, script.announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')

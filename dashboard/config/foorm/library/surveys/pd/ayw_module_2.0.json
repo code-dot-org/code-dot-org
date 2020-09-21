@@ -140,7 +140,7 @@
       {
        "type": "comment",
        "name": "other_activities_m2",
-       "title": "If you participated in any other activities during this module, please describe them below.",
+       "title": "If you participated in any other activities during this workshop, please describe them below.",
        "cols": 40,
        "rows": 2
       }

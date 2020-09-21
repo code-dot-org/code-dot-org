@@ -10,7 +10,7 @@
       {
        "type": "html",
        "name": "question1",
-       "html": "<h2>How useful was Module 1?</h2>\n\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">For each activity in this module, we ask that you <strong>rate how useful that activity was to you <em>personally</em></strong> in terms of your own <strong>learning, development, teaching practice</strong>, etc. </span></p>"
+       "html": "<h2>How useful was Module 1?</h2>\n\n<p>For each activity in this module, we ask that you <strong>rate how useful that activity was to you <em>personally</em></strong> in terms of your own <strong>learning, development, teaching practice</strong>, etc.</p>"
       },
       {
        "type": "html",
@@ -136,7 +136,7 @@
       {
        "type": "comment",
        "name": "other_activities_m1",
-       "title": "If you participated in any other activities during this module, please describe them below.",
+       "title": "If you participated in any other activities during this workshop, please describe them below.",
        "cols": 40,
        "rows": 2
       }

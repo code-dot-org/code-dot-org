@@ -584,6 +584,7 @@ export class DetailViewContents extends React.Component {
         }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
+        isWorkshopAdmin={this.props.isWorkshopAdmin}
       />
     );
   };

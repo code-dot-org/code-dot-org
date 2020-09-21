@@ -737,6 +737,8 @@ is:
               name: Notkun breytna í öppum
             While Loops:
               name: Á meðan lykkjur
+            Creating Functions with Parameters:
+              name: Gerð falla með stikum
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
