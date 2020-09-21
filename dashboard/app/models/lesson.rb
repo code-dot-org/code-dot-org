@@ -41,6 +41,13 @@ class Lesson < ActiveRecord::Base
 
   serialized_attrs %w(
     overview
+    student_overview
+    unplugged
+    creative_commons_license
+    assessment
+    purpose
+    preparation
+    announcements
     visible_after
   )
 
