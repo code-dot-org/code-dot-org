@@ -132,6 +132,40 @@ class I18nScriptUtils
     URI.join("https://studio.code.org", path)
   end
 
+  # Used by get_level_from_url, for the script_level-specific case.
+  def self.get_script_level(route_params)
+    script = Script.get_from_cache(route_params[:script_id])
+    unless script.present?
+      STDERR.puts "unknown script #{route_params[:script_id].inspect} for url #{new_url.inspect}"
+      return nil
+    end
+
+    case route_params[:action]
+    when "show"
+      script_level = ScriptLevelsController.get_script_level(script, route_params)
+      script_level.level
+    when "stage_extras"
+      # Copied from ScriptLevelsController.stage_extras
+      uri = URI.parse(new_url)
+      uri_params = CGI.parse(uri.query)
+      if uri_params.key?('id')
+        script_level = Script.cache_find_script_level(uri_params['id'].first)
+        script_level.level
+      elsif uri_params.key?('level_name')
+        Level.find_by_name(uri_params['level_name'].first)
+      end
+    else
+      STDERR.puts "unknown route action #{route_params[:action].inspect} for url #{new_url.inspect}"
+      nil
+    end
+  end
+
+  # Given a code.org url, if it's a valid level url (including things like
+  # projects), return the level identified by this url.
+  #
+  # Note that this may not cover 100% of the possible different kinds of level
+  # urls; we expect to expand this function over time as new cases are
+  # discovered.
   def self.get_level_from_url(url)
     # memoize to reduce repeated database interactions
     @levels_by_url ||= Hash.new do |hash, new_url|
@@ -142,30 +176,7 @@ class I18nScriptUtils
         when "projects"
           Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[route_params[:key]][:name])
         when "script_levels"
-          script = Script.get_from_cache(route_params[:script_id])
-          unless script.present?
-            STDERR.puts "unknown script #{route_params[:script_id].inspect} for url #{new_url.inspect}"
-            next
-          end
-
-          case route_params[:action]
-          when "show"
-            script_level = ScriptLevelsController.get_script_level(script, route_params)
-            script_level.level
-          when "stage_extras"
-            # Copied from ScriptLevelsController.stage_extras
-            uri = URI.parse(new_url)
-            uri_params = CGI.parse(uri.query)
-            if uri_params.key?('id')
-              script_level = Script.cache_find_script_level(uri_params['id'].first)
-              script_level.level
-            elsif uri_params.key?('level_name')
-              Level.find_by_name(uri_params['level_name'].first)
-            end
-          else
-            STDERR.puts "unknown route action #{route_params[:action].inspect} for url #{new_url.inspect}"
-            nil
-          end
+          get_script_level(route_params)
         else
           STDERR.puts "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
         end
