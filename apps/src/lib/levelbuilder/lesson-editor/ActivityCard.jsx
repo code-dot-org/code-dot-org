@@ -46,16 +46,14 @@ const styles = {
     marginLeft: 10
   },
   label: {
-    fontSize: 20,
+    fontSize: 18,
     marginRight: 5
-  },
-  input: {
-    marginRight: 10
   },
   labelAndInput: {
     marginLeft: 5,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   }
 };
 
@@ -162,17 +160,18 @@ class ActivityCard extends Component {
             <span style={styles.label}>{`Activity:`}</span>
             <input
               value={activity.displayName}
-              style={styles.input}
+              style={{width: 150}}
               onChange={this.handleChangeDisplayName}
             />
           </label>
           <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Time (mins):`}</span>
+            <span style={styles.label}>{`Time:`}</span>
             <input
               value={activity.time}
-              style={{...styles.input, ...{width: 50}}}
+              style={{width: 35}}
               onChange={this.handleChangeTime}
             />
+            <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
           <OrderControls
             name={activity.key || '(none)'}
@@ -213,7 +212,7 @@ class ActivityCard extends Component {
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Activity Section
+            Activity Section
           </button>
         </div>
       </div>
