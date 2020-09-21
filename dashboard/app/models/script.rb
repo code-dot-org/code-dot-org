@@ -1723,10 +1723,12 @@ class Script < ActiveRecord::Base
       lesson_attrs['lesson_group_id'] = lesson_group_id
       Lesson.new(lesson_attrs)
     end
-    Lesson.import! lessons_to_import, on_duplicate_key_update: :all
 
-    # Delete any existing lessons that weren't in the imported list, return remaining
+    # Delete any existing lessons that weren't in the imported list
+    # Unlike the other models, we do this here before import, otherwise absolute_position gets messed up.
     destroy_outdated_objects(Lesson, Lesson.where(script: seed_context.script), lessons_to_import, seed_context)
+    Lesson.import! lessons_to_import, on_duplicate_key_update: :all
+    Lesson.where(script: seed_context.script)
   end
 
   def self.import_script_levels(script_levels_data, seed_context)
@@ -1748,7 +1750,7 @@ class Script < ActiveRecord::Base
     end
     ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
 
-    # Delete any existing ScriptLevels that weren't in the imported list, return remaining
+    # Delete any existing ScriptLevels that weren't in the imported list
     destroy_outdated_objects(ScriptLevel, ScriptLevel.where(script: seed_context.script), script_levels_to_import, seed_context)
   end
 
