@@ -94,8 +94,12 @@ class I18nScriptUtils
   def self.upload_malformed_restorations(locale)
     return if @malformed_restorations.blank?
     if CDO.gdrive_export_secret
-      @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
-      @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+      begin
+        @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
+        @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+      rescue
+        puts "Failed to upload malformed restorations for #{locale}"
+      end
     end
     @malformed_restorations = nil
   end

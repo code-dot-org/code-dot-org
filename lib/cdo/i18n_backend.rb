@@ -152,7 +152,7 @@ module Cdo
         separator = options[:separator] || ::I18n.default_separator
         # We don't pass in a locale because we want the union of all string keys across all locales.
         normalized_key = ::I18n.normalize_keys(nil, key, scope, separator).join(separator)
-        I18nStringUrlTracker.instance.log(normalized_key, url) if key && url
+        I18nStringUrlTracker.instance.log(normalized_key, url, 'ruby') if normalized_key && url
         result
       end
     end

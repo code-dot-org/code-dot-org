@@ -18,22 +18,9 @@ class LessonGroupTest < ActiveSupport::TestCase
   test 'should summarize lesson group' do
     script = create :script
     lesson_group = create :lesson_group, key: 'my-lesson-group', user_facing: true, position: 1, script: script
-    lesson = create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
-    create(:script_level, script: script, lesson: lesson)
 
     summary = lesson_group.summarize
-
-    assert_equal 1, summary[:lessons].count
     assert_equal 'my-lesson-group', summary[:key]
-  end
-
-  test 'summarize should exclude lessons if include_lessons is false' do
-    script = create :script
-    lesson_group = create :lesson_group, key: 'my-lesson-group', user_facing: true, position: 1, script: script
-    lesson = create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
-    create(:script_level, script: script, lesson: lesson)
-
-    assert_nil lesson_group.summarize(false)[:lessons]
   end
 
   test 'should summarize lesson groups for edit' do
@@ -47,6 +34,5 @@ class LessonGroupTest < ActiveSupport::TestCase
     assert_equal 'my-lesson-group', summary[:key]
     assert_equal 1, summary[:position]
     assert_equal true, summary[:user_facing]
-    assert_equal [lesson.summarize_for_edit], summary[:lessons]
   end
 end

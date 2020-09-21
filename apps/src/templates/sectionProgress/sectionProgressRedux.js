@@ -14,11 +14,19 @@ const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
+const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
+const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_SCRIPT = 'sectionProgress/ADD_DATA_BY_SCRIPT';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({type: FINISH_LOADING_PROGRESS});
+export const startRefreshingProgress = () => ({
+  type: START_REFRESHING_PROGRESS
+});
+export const finishRefreshingProgress = () => ({
+  type: FINISH_REFRESHING_PROGRESS
+});
 export const setLessonOfInterest = lessonOfInterest => ({
   type: SET_LESSON_OF_INTEREST,
   lessonOfInterest
@@ -41,7 +49,8 @@ const initialState = {
   studentLevelTimeSpentByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
-  isLoadingProgress: true
+  isLoadingProgress: false,
+  isRefreshingProgress: false
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -67,6 +76,18 @@ export default function sectionProgress(state = initialState, action) {
     return {
       ...state,
       isLoadingProgress: false
+    };
+  }
+  if (action.type === START_REFRESHING_PROGRESS) {
+    return {
+      ...state,
+      isRefreshingProgress: true
+    };
+  }
+  if (action.type === FINISH_REFRESHING_PROGRESS) {
+    return {
+      ...state,
+      isRefreshingProgress: false
     };
   }
   if (action.type === SET_LESSON_OF_INTEREST) {

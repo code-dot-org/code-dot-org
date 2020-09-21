@@ -31,19 +31,30 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
+  'csf-curriculum' => ['CSF'],
+  'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
+  'disco-party' => ['CSD'],
+  'foundations' => ['Accounts'],
+  'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
+  'marketing' => ['Media'],
   'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
-  'star-labs-cabal' => ['*Labs'],
-  # 'privacy' => ['Privacy'],
-  # 'user-accounts' => ['Accounts'],
+  'reaching-out' => ['Outreach'],
+  'star-labs-cabal' => ['*Labs']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
+  'Account' => '360086130792',
+  'CSD' => '83142177',
+  'CSF' => '278602768',
+  'CSP' => '45749787',
   'Developers' => '47222126',
+  'International' => '360086130812',
   'Learning Platform' => '360082967212',
+  'Media' => '47756566',
   'PLC Tools' => '114103940251',
   'Product' => '360007773991',
   '*Labs' => '301129028',

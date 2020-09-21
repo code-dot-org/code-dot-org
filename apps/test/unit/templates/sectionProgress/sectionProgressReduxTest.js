@@ -6,7 +6,9 @@ import sectionProgress, {
   startLoadingProgress,
   finishLoadingProgress,
   getCurrentProgress,
-  getCurrentScriptData
+  getCurrentScriptData,
+  startRefreshingProgress,
+  finishRefreshingProgress
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -100,6 +102,24 @@ describe('sectionProgressRedux', () => {
         finishLoadingProgress()
       );
       assert.deepEqual(nextState.isLoadingProgress, false);
+    });
+  });
+
+  describe('isRefreshingProgress', () => {
+    it('startRefreshingProgress sets isRefreshingProgress to true', () => {
+      const nextState = sectionProgress(
+        initialState,
+        startRefreshingProgress()
+      );
+      assert.deepEqual(nextState.isRefreshingProgress, true);
+    });
+
+    it('finishRefreshingProgress sets isRefreshingProgress to false', () => {
+      const nextState = sectionProgress(
+        {isLoadingProgress: true},
+        finishRefreshingProgress()
+      );
+      assert.deepEqual(nextState.isRefreshingProgress, false);
     });
   });
 

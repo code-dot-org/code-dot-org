@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events';
-import {sensor_channels, roundToHundredth} from './MicroBitConstants';
+import {SENSOR_CHANNELS, roundToHundredth} from './MicroBitConstants';
 import {ACCEL_EVENT_ID} from './MBFirmataWrapper';
 
 // Transfer the acceleration units from milli-g to meters/second^2
@@ -23,13 +23,13 @@ export default class Accelerometer extends EventEmitter {
       // If the acceleration value has changed, update the local value and
       // trigger a change event
       if (
-        this.state.x !== this.board.mb.analogChannel[sensor_channels.accelX] ||
-        this.state.y !== this.board.mb.analogChannel[sensor_channels.accelY] ||
-        this.state.z !== this.board.mb.analogChannel[sensor_channels.accelZ]
+        this.state.x !== this.board.mb.analogChannel[SENSOR_CHANNELS.accelX] ||
+        this.state.y !== this.board.mb.analogChannel[SENSOR_CHANNELS.accelY] ||
+        this.state.z !== this.board.mb.analogChannel[SENSOR_CHANNELS.accelZ]
       ) {
-        this.state.x = this.board.mb.analogChannel[sensor_channels.accelX];
-        this.state.y = this.board.mb.analogChannel[sensor_channels.accelY];
-        this.state.z = this.board.mb.analogChannel[sensor_channels.accelZ];
+        this.state.x = this.board.mb.analogChannel[SENSOR_CHANNELS.accelX];
+        this.state.y = this.board.mb.analogChannel[SENSOR_CHANNELS.accelY];
+        this.state.z = this.board.mb.analogChannel[SENSOR_CHANNELS.accelZ];
         this.emit('change');
       }
     });
@@ -66,21 +66,21 @@ export default class Accelerometer extends EventEmitter {
       x: {
         get: function() {
           return unitsFromMGToMS2(
-            this.board.mb.analogChannel[sensor_channels.accelX]
+            this.board.mb.analogChannel[SENSOR_CHANNELS.accelX]
           );
         }
       },
       y: {
         get: function() {
           return unitsFromMGToMS2(
-            this.board.mb.analogChannel[sensor_channels.accelY]
+            this.board.mb.analogChannel[SENSOR_CHANNELS.accelY]
           );
         }
       },
       z: {
         get: function() {
           return unitsFromMGToMS2(
-            this.board.mb.analogChannel[sensor_channels.accelZ]
+            this.board.mb.analogChannel[SENSOR_CHANNELS.accelZ]
           );
         }
       },
@@ -95,9 +95,9 @@ export default class Accelerometer extends EventEmitter {
   }
 
   start() {
-    this.board.mb.streamAnalogChannel(sensor_channels.accelX); // enable accelerometerX
-    this.board.mb.streamAnalogChannel(sensor_channels.accelY); // enable accelerometerY
-    this.board.mb.streamAnalogChannel(sensor_channels.accelZ); // enable accelerometerZ
+    this.board.mb.streamAnalogChannel(SENSOR_CHANNELS.accelX); // enable accelerometerX
+    this.board.mb.streamAnalogChannel(SENSOR_CHANNELS.accelY); // enable accelerometerY
+    this.board.mb.streamAnalogChannel(SENSOR_CHANNELS.accelZ); // enable accelerometerZ
   }
 
   getOrientation(orientationType) {
@@ -129,8 +129,8 @@ export default class Accelerometer extends EventEmitter {
   }
 
   stop() {
-    this.board.mb.stopStreamingAnalogChannel(sensor_channels.accelX);
-    this.board.mb.stopStreamingAnalogChannel(sensor_channels.accelY);
-    this.board.mb.stopStreamingAnalogChannel(sensor_channels.accelZ);
+    this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.accelX);
+    this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.accelY);
+    this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.accelZ);
   }
 }
