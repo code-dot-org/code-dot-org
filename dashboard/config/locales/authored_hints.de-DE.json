@@ -104,7 +104,7 @@
           "2-3_Artist_Nested_Loops_3_a": "Brauchst du Hilfe mit den Winkeln?\\\n**360/12 = 30**"
         },
         "2-3 Artist Nested Loops 5": {
-          "2-3_Artist_Nested_Loops_5_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?"
+          "2-3_Artist_Nested_Loops_5_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?"
         },
         "2-3 Artist Nested Loops 7": {
           "2-3_Artist_Nested_Loops_7_a": "Wie weit solltest du dich in jedem Schleifendurchlauf drehen?\n\nWas ist 360/10?"
@@ -1193,7 +1193,7 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -2865,7 +2865,7 @@
         },
         "courseB_maze_seq1": {
           "courseB_maze_seq1_a": "Verbinde die Blöcke mit dem Block <xml><block type=\"when_run\"/></xml>, damit sich der Vogel bewegt!",
-          "courseB_maze_seq1_b": "Ziehe drei dieser Pfeile <xml><block type=\"maze_moveSouth\"/></xml> aus und verbinde sie mit dem Block <xml><block type=\"when_run\"/></xml>, um deinen Vogel zum Schwein zu bringen."
+          "courseB_maze_seq1_b": "Ziehe drei dieser  <xml><block type=\"maze_moveSouth\"/></xml> Pfeile raus und verbinde sie mit dem  <xml><block type=\"when_run\"/></xml> Block, um deinen Vogel zum Schwein zu bringen."
         },
         "courseB_maze_seq10": {
           "courseB_maze_seq10_a": "Versuche zunächst, die Schritte auf einem Blatt Papier aufzuschreiben.",
@@ -2889,70 +2889,70 @@
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_a": "In diesem Programm fehlt ein Block. Kannst herausfinden, welcher?",
-          "courseB_maze_seq2_b": "Versuche, den Code, der dir gegeben wurde, auszuführen, damit du sehen kannst, was der Vogel als nächstes tun soll."
+          "courseB_maze_seq2_b": "Versuche den Code auszuführen, den du bekommen hast, um zu sehen, was der Vogel als nächstes tun soll."
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_a": "Einer der Blöcke bewegt den Vogel in die falsche Richtung. Kannst du herausfinden, welcher und ihn durch den richtigen Block ersetzen?",
-          "courseB_maze_seq3_b": "Versuche, mit Hilfe der Schaltfläche „Step“ herauszufinden, wo das Programm nicht richtig läuft. Liegt es am ersten Schritt? Stimmt etwas mit dem zweiten Schritt nicht?",
+          "courseB_maze_seq3_b": "Versuche, mit Hilfe der Schaltfläche „Schritt“ herauszufinden, wo das Programm nicht richtig läuft. Liegt es am ersten Schritt? Stimmt etwas mit dem zweiten Schritt nicht?",
           "courseB_maze_seq3_c": "Der Block <xml><block type=\"maze_moveWest\"/></xml> scheint den Vogel nicht in die richtige Richtung zu bewegen."
         },
         "courseB_maze_seq4": {
           "courseB_maze_seq4_a": "Versuche, eine Anweisung nach der anderen hinzuzufügen, bis du zum Schwein kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2018": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq5": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Du weißt nicht genau, wie man zum Schwein kommt? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2018": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2019": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2020": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq6": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Du bist nicht sicher, wie man zum Schwein kommt? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2019": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2020": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
@@ -2998,25 +2998,25 @@
         },
         "courseB_maze_seq9": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2019": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2020": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
@@ -5139,63 +5139,63 @@
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops3": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2018": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2019": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2020": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops4": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
           "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen!",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2018": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
           "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen!",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2019": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
           "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen!",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2020": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
           "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen!",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops5": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2018": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2019": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2020": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops7": {
@@ -5709,16 +5709,16 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",
@@ -5999,8 +5999,8 @@
           "courseD_collector_debugging9_b": "Überlege, wie du die Aufgabe lösen würdest, und versuche dann schrittweise, den Code an das, was du dir vorstellst, anzupassen."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
