@@ -292,7 +292,10 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
-  this.debouncedReport = _.debounce(this.report.bind(this), 1000);
+  this.resetClickedReport = _.debounce(options => {
+    this.report(options);
+    this.hasReported = false;
+  }, 1000);
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1848,12 +1851,11 @@ StudioApp.prototype.resetButtonClick = function() {
   if (!this.hasReported) {
     // Use the debounced version of report so we don't make dozens of
     // server calls if the user mashes the reset button
-    this.debouncedReport({
+    this.resetClickedReport({
       app: getStore().getState().pageConstants.appType,
       level: this.config.level.id
     });
   }
-  this.hasReported = false;
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
