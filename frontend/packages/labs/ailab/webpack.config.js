@@ -21,13 +21,13 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
+    publicPath: "/",
     filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: 8080,
-    publicPath: "http://localhost:8080/dist/",
+    publicPath: "http://localhost:8080/",
     hotOnly: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
