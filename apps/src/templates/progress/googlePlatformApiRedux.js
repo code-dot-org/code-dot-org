@@ -25,16 +25,25 @@ export function loadGooglePlatformApi() {
   return (dispatch, getState) => {
     if (gapiReady()) {
       dispatch(finishLoadingGapi(true));
-    } else if (!isLoading(getState)) {
-      loadApi(dispatch, getState);
+      return Promise.resolve();
+    } else {
       dispatch(startLoadingGapi(Date.now()));
+      return new Promise((resolve, reject) => {
+        const promise = {resolve: resolve, reject: reject};
+        loadApi(dispatch, getState, promise);
+      });
     }
   };
 }
 
-function onLoadFinished(success) {
+function onLoadFinished(success, promise) {
   return (dispatch, getState) => {
     dispatch(finishLoadingGapi(success));
+    if (success) {
+      promise.resolve();
+    } else {
+      promise.reject('Google Platform API failed to load.');
+    }
 
     const data = {
       success: success,
@@ -74,7 +83,7 @@ export default function googlePlatformApi(state = initialState, action) {
   return state;
 }
 
-function loadApi(dispatch, getState) {
+function loadApi(dispatch, getState, promise) {
   if (!document.getElementById(GOOGLE_PLATFORM_API_ID)) {
     window.___gcfg = {
       parsetags: 'explicit'
@@ -83,22 +92,22 @@ function loadApi(dispatch, getState) {
     const gapi = document.createElement('script');
     gapi.src = 'https://apis.google.com/js/platform.js';
     gapi.id = GOOGLE_PLATFORM_API_ID;
-    gapi.onload = () => waitForGapi(dispatch, getState);
-    gapi.onerror = () => dispatch(onLoadFinished(false));
+    gapi.onload = () => waitForGapi(dispatch, getState, promise);
+    gapi.onerror = () => dispatch(onLoadFinished(false, promise));
     document.body.appendChild(gapi);
   } else {
-    waitForGapi(dispatch, getState);
+    waitForGapi(dispatch, getState, promise);
   }
 }
 
-function waitForGapi(dispatch, getState) {
+function waitForGapi(dispatch, getState, promise) {
   if (gapiReady()) {
-    dispatch(onLoadFinished(true));
+    dispatch(onLoadFinished(true, promise));
   } else if (elapsedLoadTimeMillis(getState) >= LOAD_TIMEOUT_MILLIS) {
-    dispatch(onLoadFinished(false));
+    dispatch(onLoadFinished(false, promise));
   } else if (isLoading(getState)) {
     setTimeout(() => {
-      waitForGapi(dispatch, getState);
+      waitForGapi(dispatch, getState, promise);
     }, 100);
   }
 }
