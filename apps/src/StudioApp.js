@@ -36,6 +36,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
+import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -2660,6 +2661,29 @@ StudioApp.prototype.enableBreakpoints = function() {
       } else {
         this.editor.setBreakpoint(e.line);
       }
+
+      // Log breakpoints usage to firehose. This is part of the work to add
+      // inline teacher comments; we want to get a sense of how much
+      // breakpoints are used and in what scenarios, so we can reason about the
+      // feasibility of repurposing line number clicks for this feature.
+      const isTeacher =
+        getStore().getState().currentUser.userType === 'teacher';
+      firehoseClient.putRecord(
+        {
+          study: 'droplet-breakpoints',
+          study_group: isTeacher ? 'teacher' : 'student',
+          data_json: JSON.stringify({
+            levelId: this.config.serverLevelId,
+            lineNumber: e.line,
+            projectLevelId: this.config.serverProjectLevelId,
+            scriptId: this.config.scriptId,
+            scriptLevelId: this.config.serverScriptLevelId,
+            scriptName: this.config.scriptName,
+            url: window.location.toString()
+          })
+        },
+        {includeUserId: true}
+      );
     }.bind(this)
   );
 };
