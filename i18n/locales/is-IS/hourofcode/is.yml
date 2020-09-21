@@ -500,6 +500,7 @@ is:
     kortinu okkar
   signup_event_type_in_school: Í skóla
   signup_event_type_out_of_school: Utan skóla
+  signup_event_type_at_home: Home
   signup_submit_census_label: Staðfesta
   signup_submit_census_error_message: Við biðjumst velvirðingar en það kom upp villa.
     Reyndu að senda formið inn aftur.

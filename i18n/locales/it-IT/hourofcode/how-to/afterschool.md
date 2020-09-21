@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # Come insegnare un'Ora del Codice nel doposcuola
 
-### Join the movement and introduce your students to computer science with these steps.
+### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 

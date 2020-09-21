@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Qızlar və azlıqlar kompüter bilikləri siniflərində və texnoloji sənayedə ciddi şəkildə az təmsil olunurlar. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100-dən çox tərəfdaş bu hərəkata dəstək olmaq üçün birləşdi. Every Apple Store in the world has hosted an Hour of Code. Hətta Prezident Obama kampaniyanın bir hissəsi kimi ilk kodunu yazdı.
 
