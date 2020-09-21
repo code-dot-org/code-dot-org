@@ -140,7 +140,7 @@ class I18nScriptUtils
       level =
         case route_params[:controller]
         when "projects"
-          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[params[:key]][:name])
+          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[route_params[:key]][:name])
         when "script_levels"
           script = Script.get_from_cache(route_params[:script_id])
           unless script.present?
@@ -163,7 +163,7 @@ class I18nScriptUtils
               Level.find_by_name(uri_params['level_name'].first)
             end
           else
-            STDERR.puts "unknown route action #{params[:action].inspect} for url #{new_url.inspect}"
+            STDERR.puts "unknown route action #{route_params[:action].inspect} for url #{new_url.inspect}"
             nil
           end
         else
