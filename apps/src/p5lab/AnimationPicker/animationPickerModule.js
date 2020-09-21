@@ -57,7 +57,8 @@ export default function reducer(state, action) {
         return _.assign({}, initialState, {
           visible: true,
           goal: action.goal,
-          isBackground: true
+          isBackground: true,
+          isSpriteLab: true
         });
       }
       return state;
@@ -234,7 +235,9 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addLibraryAnimation(animation));
+      dispatch(
+        addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
+      );
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }
