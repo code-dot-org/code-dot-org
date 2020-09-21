@@ -1680,12 +1680,9 @@ class Script < ActiveRecord::Base
       import_script(script_data)
 
       seed_context.script = Script.find_by!(name: script_name)
-      import_lesson_groups(lesson_groups_data, seed_context)
+      seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
+      seed_context.lessons = import_lessons(lessons_data, seed_context)
 
-      seed_context.lesson_groups = seed_context.script.lesson_groups
-      import_lessons(lessons_data, seed_context)
-
-      seed_context.lessons = Lesson.where(script: seed_context.script)
       seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
       seed_context.levels_script_levels = seed_context.script.levels_script_levels
       import_script_levels(script_levels_data, seed_context)
@@ -1711,6 +1708,9 @@ class Script < ActiveRecord::Base
       LessonGroup.new(lesson_attrs)
     end
     LessonGroup.import! lesson_groups_to_import, on_duplicate_key_update: :all
+
+    # Delete any existing lesson groups that weren't in the imported list, return remaining
+    destroy_outdated_objects(LessonGroup, LessonGroup.where(script: seed_context.script), lesson_groups_to_import, seed_context)
   end
 
   def self.import_lessons(lessons_data, seed_context)
@@ -1724,6 +1724,9 @@ class Script < ActiveRecord::Base
       Lesson.new(lesson_attrs)
     end
     Lesson.import! lessons_to_import, on_duplicate_key_update: :all
+
+    # Delete any existing lessons that weren't in the imported list, return remaining
+    destroy_outdated_objects(Lesson, Lesson.where(script: seed_context.script), lessons_to_import, seed_context)
   end
 
   def self.import_script_levels(script_levels_data, seed_context)
@@ -1734,6 +1737,8 @@ class Script < ActiveRecord::Base
       stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
       raise 'No stage found' if stage.nil?
 
+      # Unlike the other models, we must explicitly check for an existing ScriptLevel to update, since its
+      # logical unique key is not a unique index on the table, so we can't just rely on on_duplicate_key_update: :all.
       script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
       script_level_attrs = sl_data.except('seeding_key')
       script_level_attrs['script_id'] = seed_context.script.id
@@ -1742,6 +1747,9 @@ class Script < ActiveRecord::Base
       script_level_to_import
     end
     ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
+
+    # Delete any existing ScriptLevels that weren't in the imported list, return remaining
+    destroy_outdated_objects(ScriptLevel, ScriptLevel.where(script: seed_context.script), script_levels_to_import, seed_context)
   end
 
   def self.import_levels_script_levels(levels_script_levels_data, seed_context)
@@ -1749,8 +1757,14 @@ class Script < ActiveRecord::Base
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
-      level = levels_by_seeding_key[lsl_data['seeding_key']['level.key']]
-      level ||= Level.find_by_key(lsl_data['seeding_key']['level.key'])
+      seeding_key = lsl_data['seeding_key']['level.key']
+      level = levels_by_seeding_key[seeding_key]
+      unless level
+        # TODO: we may want to get rid of this query since we make it for each new LevelsScriptLevel
+        level = Level.find_by_key(seeding_key)
+        levels_by_seeding_key[seeding_key] = level
+        seed_context.levels.append(level)
+      end
       raise 'No level found' if level.nil?
 
       script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]
@@ -1760,6 +1774,17 @@ class Script < ActiveRecord::Base
       LevelsScriptLevel.new(levels_script_level_attrs)
     end
     LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: :all
+
+    # Delete any existing LevelsScriptLevels that weren't in the imported list, return remaining
+    levels_script_levels = Script.find(seed_context.script.id).levels_script_levels
+    destroy_outdated_objects(LevelsScriptLevel, levels_script_levels, levels_script_levels_to_import, seed_context)
+  end
+
+  def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
+    objects_to_keep_by_seeding_key = imported_objects.index_by {|o| o.seeding_key(seed_context)}
+    should_keep = all_objects.group_by {|o| objects_to_keep_by_seeding_key.include?(o.seeding_key(seed_context))}
+    model_class.destroy(should_keep[false]) if should_keep.include?(false)
+    should_keep[true]
   end
 
   def seeding_key(seed_context)
