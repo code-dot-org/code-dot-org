@@ -2673,6 +2673,7 @@ StudioApp.prototype.enableBreakpoints = function() {
         {
           study: 'droplet-breakpoints',
           study_group: userType,
+          event: 'guttermousedown',
           data_json: JSON.stringify({
             levelId: this.config.serverLevelId,
             lineNumber: e.line,
