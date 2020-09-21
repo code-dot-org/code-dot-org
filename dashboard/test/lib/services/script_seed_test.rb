@@ -22,9 +22,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script = create_script_tree
     script.freeze
     # Eager load the levels for each script level, so they can be used in assertions even after deletion
-    script_levels = script.script_levels.to_a
-    script_levels.map(&:levels).map(&:length)
-    script_levels.each(&:freeze)
+    script_levels = frozen_script_levels_with_levels(script)
     json = script.serialize_seeding_json
     counts_before = get_counts
 
@@ -92,9 +90,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     new_script_level = create :script_level, lesson: script.lessons.first, script: script, challenge: true
     script.freeze
     # Eager load the levels for each script level, so they can be used in assertions even after deletion
-    script_levels = script.script_levels.to_a
-    script_levels.map(&:levels).map(&:length)
-    script_levels.each(&:freeze)
+    script_levels = frozen_script_levels_with_levels(script)
     json = script.serialize_seeding_json
 
     new_script_level.destroy!
@@ -117,10 +113,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.lessons.each_with_index {|l, i| l.update(relative_position: i + 1)}
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
-
-    script_levels_with_deletion = script_with_deletion.script_levels.to_a
-    script_levels_with_deletion.map(&:levels).map(&:length)
-    script_levels_with_deletion.each(&:freeze)
+    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
 
     Script.seed_from_json(json)
     script.reload
@@ -150,10 +143,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
-
-    script_levels_with_deletion = script_with_deletion.script_levels.to_a
-    script_levels_with_deletion.map(&:levels).map(&:length)
-    script_levels_with_deletion.each(&:freeze)
+    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
 
     Script.seed_from_json(json)
     script.reload
@@ -168,6 +158,37 @@ class ScriptSeedTest < ActiveSupport::TestCase
     expected_counts['ScriptLevel'] -= 2
     expected_counts['LevelsScriptLevel'] -= 2
     assert_equal expected_counts, get_counts
+  end
+
+  test 'seed deletes script_levels' do
+    script = create_script_tree
+    original_counts = get_counts
+
+    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+      script.script_levels.first.destroy!
+      script.reload
+      # TODO: should these be handled automatically by a callback?
+      script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
+    end
+    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
+
+    Script.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+    assert_equal (1..7).to_a, script.script_levels.map(&:chapter)
+    # Deleting the ScriptLevel should also delete its LevelsScriptLevel.
+    expected_counts = original_counts.clone
+    expected_counts['ScriptLevel'] -= 1
+    expected_counts['LevelsScriptLevel'] -= 1
+    assert_equal expected_counts, get_counts
+  end
+
+  def frozen_script_levels_with_levels(script)
+    script_levels = script.script_levels.to_a
+    script_levels.map(&:levels).map(&:length)
+    script_levels.each(&:freeze)
+    script_levels
   end
 
   def get_script_tree_and_json_with_deletion(script, &deletion_block)
