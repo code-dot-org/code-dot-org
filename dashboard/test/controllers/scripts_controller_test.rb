@@ -593,7 +593,7 @@ class ScriptsControllerTest < ActionController::TestCase
     File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
 
     # Set most of the properties.
-    # omitted: professional_learning_course, script_announcements because
+    # omitted: professional_learning_course, announcements because
     # using fake values doesn't seem to work for them.
     general_params = {
       hideable_lessons: 'on',

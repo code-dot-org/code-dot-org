@@ -24,7 +24,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
-    script_announcements: nil,
+    announcements: nil,
     new_name: nil,
     family_name: nil,
     version_year: nil,
@@ -335,15 +335,15 @@ endvariants
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], output[:teacher_resources]
   end
 
-  test 'can set script_announcements' do
+  test 'can set announcements' do
     input_dsl = <<~DSL
-      script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
+      announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
 
       lesson 'Lesson1', display_name: 'Lesson1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
+    assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:announcements]
   end
 
   test 'can set pilot_experiment' do
