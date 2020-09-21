@@ -5,6 +5,8 @@ require 'test_helper'
 # - get_counts
 # - create_script_tree
 # - assert_script_trees_equal
+# - any relevant existing deletion tests (for example, if deleting something higher in the hierarchy should
+#   also delete the objects under it of the new model)
 #
 # Also add a new test case which tests adding, creating, and deleting your new model.
 class ScriptSeedTest < ActiveSupport::TestCase
