@@ -8,6 +8,8 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 
 const styles = {
   input: {
@@ -51,7 +53,8 @@ export default class CourseEditor extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    announcements: PropTypes.arrayOf(announcementShape).isRequired
   };
 
   render() {
@@ -66,7 +69,8 @@ export default class CourseEditor extends Component {
       scriptNames,
       teacherResources,
       courseFamilies,
-      versionYearOptions
+      versionYearOptions,
+      announcements
     } = this.props;
     return (
       <div>
@@ -163,6 +167,10 @@ export default class CourseEditor extends Component {
               style={styles.checkbox}
             />
           </label>
+          <AnnouncementsEditor
+            defaultAnnouncements={announcements}
+            inputStyle={styles.input}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
