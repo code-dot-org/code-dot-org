@@ -1,3 +1,5 @@
+- afe_link = 'https://www.amazonfutureengineer.com'
+
 - if request.language == 'en'
   %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
@@ -7,7 +9,7 @@
       %img{src:"/images/fit-250/AFE-dark-logo.png"}
 
   .sponsor-subtext-description
-    != I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown, markdown: :inline, amazon_future_engineer_link: 'https://www.amazonfutureengineer.com')
+    != I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown, markdown: :inline, amazon_future_engineer_link: afe_link)
 
 - else
 
@@ -20,8 +22,8 @@
       %img{src:"/images/fit-250/AFE-dark-logo.png"}
 
   .full-resource-block{style: "margin-top: 20px;"}
-    %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
+    %a{href: afe_link, target: "_blank"}
       %img.full-resource-image{src: "/images/AFE-person-2019.jpg"}
     .tutorial-info{style: "padding: 30px;"}
       %span
-        != I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown, markdown: :inline, amazon_future_engineer_link: 'https://www.amazonfutureengineer.com')
+        != I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown, markdown: :inline, amazon_future_engineer_link: afe_link)
