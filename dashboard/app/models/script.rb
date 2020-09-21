@@ -1638,16 +1638,18 @@ class Script < ActiveRecord::Base
 
   def serialize_seeding_json
     reload
-    eager_loaded_script_levels = ScriptLevel.includes(:levels).where(script_id: id)
-    eager_loaded_levels = eager_loaded_script_levels.map(&:levels).flatten
+
+    # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
+    my_script_levels = ScriptLevel.includes(:levels).where(script_id: id)
+    my_levels = my_script_levels.map(&:levels).flatten
 
     seed_context = SeedContext.new(
       script: self,
       lesson_groups: lesson_groups,
       lessons: lessons,
-      script_levels: eager_loaded_script_levels,
+      script_levels: my_script_levels,
       levels_script_levels: levels_script_levels,
-      levels: eager_loaded_levels,
+      levels: my_levels
     )
     scope = {seed_context: seed_context}
 
