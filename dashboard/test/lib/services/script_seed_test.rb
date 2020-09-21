@@ -31,13 +31,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script.destroy!
     # This is currently:
     #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-    #   11 queries - two for each model, + 1 extra query for ScriptLevels
+    #   12 queries - two for each model, + one extra query each for ScriptLevels and LevelsScriptLevels
     #   8 queries, one for each LevelsScriptLevel.
     # LevelsScriptLevels has queries which scale linearly with the number of rows.
     # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
-    assert_queries(22) do
+    assert_queries(23) do
       Script.seed_from_json(json)
     end
 
@@ -103,6 +103,25 @@ class ScriptSeedTest < ActiveSupport::TestCase
 
     reloaded_script = Script.find_by!(name: script.name)
     assert_script_levels_equal script_levels, reloaded_script.script_levels
+  end
+
+  test 'seed deletes lesson_groups' do
+    script = create_script_tree
+    script_with_deleted_lesson_group = nil
+    json = nil
+    LessonGroup.transaction do
+      script.lesson_groups.first.destroy!
+      script_with_deleted_lesson_group = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
+      script_with_deleted_lesson_group.freeze
+      json = script_with_deleted_lesson_group.serialize_seeding_json
+
+      raise ActiveRecord::Rollback
+    end
+
+    Script.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_deleted_lesson_group, script
   end
 
   def get_counts
