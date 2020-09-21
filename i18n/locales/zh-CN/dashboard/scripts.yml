@@ -8,6 +8,7 @@ zh-CN:
         csd_2019_category_name: 计算机科学发现 (' 19-' 20)
         csf_category_name: 计算机科学基本原理
         csf_2018_category_name: 计算机科学基础课程（2018）
+        csf_2019_category_name: 计算机科学基础课程（2019）
         csf_international_category_name: 计算机基础国际版
         csf2_draft_category_name: '开发中：课程 A - F'
         csp_category_name: "15-16 计算机原理"
@@ -1142,6 +1143,8 @@ zh-CN:
               name: 欢迎！
             Wrap-up:
               name: 总结
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "第 1 单元，第 1-2 天\n什么是计算机？"
         equityPD:
           lessons:
             Equity PD:
@@ -1262,6 +1265,8 @@ zh-CN:
               name: 欢迎！
             Wrap-up:
               name: 总结
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "第 1 单元，第 1-2 天\n什么是计算机？"
         ECSPD2-NexTech:
           description: '第二阶段在线：混合的暑期学习'
           description_short: '第二阶段在线：混合的暑期学习'
@@ -1290,6 +1295,8 @@ zh-CN:
               name: 欢迎！
             Wrap-up:
               name: 总结
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "第 1 单元，第 1-2 天\n什么是计算机？"
         CSPPD2:
           lessons:
             Getting Started:
@@ -2802,6 +2809,8 @@ zh-CN:
               name: 欢迎！
             Wrap-up:
               name: 总结
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "第 1 单元，第 1-2 天\n什么是计算机？"
         ecs-unit2:
           lessons:
             Close & Next Steps:
@@ -3802,6 +3811,8 @@ zh-CN:
           lesson_groups:
             content:
               display_name: 内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -3850,6 +3861,8 @@ zh-CN:
           lesson_groups:
             content:
               display_name: 内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Digital Citizenship:
               name: 数字公民
@@ -4054,6 +4067,8 @@ zh-CN:
               name: 总结
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: 结课项目
             content:
               display_name: 内容
           lessons:
@@ -5204,6 +5219,8 @@ zh-CN:
               display_name: 提升到课程E（可选）
             csf_e_2:
               display_name: 课程E的内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -5341,6 +5358,8 @@ zh-CN:
               display_name: 提升到课程F（可选）
             csf_f_2:
               display_name: 课程F的内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Algorithms: Tangrams':
               name: '算法：七巧板'
@@ -5738,6 +5757,8 @@ zh-CN:
           lesson_groups:
             content:
               display_name: 内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: '离线编程：我的机器人朋友'
@@ -6018,6 +6039,8 @@ zh-CN:
               display_name: 提升到课程E（可选）
             csf_e_2:
               display_name: 课程E的内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6143,6 +6166,8 @@ zh-CN:
           lesson_groups:
             content:
               display_name: 内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Algorithms: Graph Paper Programming':
               name: '算法: 图纸编程'
@@ -6238,6 +6263,8 @@ zh-CN:
               display_name: 提升到课程E（可选）
             csf_e_2:
               display_name: 课程E的内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6300,6 +6327,8 @@ zh-CN:
               display_name: 提升到课程F（可选）
             csf_f_2:
               display_name: 课程F的内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -6708,6 +6737,8 @@ zh-CN:
               display_name: 提升到课程E（可选）
             csf_e_2:
               display_name: 课程E的内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6776,6 +6807,8 @@ zh-CN:
               display_name: 提升到课程F（可选）
             csf_f_2:
               display_name: 课程F的内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -7663,6 +7696,8 @@ zh-CN:
               display_name: 提升到课程E（可选）
             csf_e_2:
               display_name: 课程E的内容
+            end_of_course_project:
+              display_name: 结课项目
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -7778,6 +7813,8 @@ zh-CN:
               display_name: 提升到课程F（可选）
             csf_f_2:
               display_name: 课程F的内容
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming: My Robotic Friends':
               name: 我的机器人朋友
@@ -9056,6 +9093,8 @@ zh-CN:
               display_name: 精灵图
             csf_digcit:
               display_name: 数字公民
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -9174,6 +9213,7 @@ zh-CN:
             Data from Sprite Lab:
               name: 精灵图实验室的数据
             End of Course Project:
+              name: 结课项目
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: "接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r\n\\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它合适的界面。（这可能是项目中最长的一个阶段。）学生们会在测试和相互评审后修改代码。最终，学生们要能在同学前展示最终的作品。"
             Copyright and Creativity:
@@ -9220,6 +9260,8 @@ zh-CN:
               display_name: 二进制
             csf_digcit:
               display_name: 数字公民
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 方格纸编程
@@ -9317,6 +9359,8 @@ zh-CN:
               display_name: 循环嵌套
             csf_functions:
               display_name: 函数
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -9427,6 +9471,7 @@ zh-CN:
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             End of Course Project:
+              name: 结课项目
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: "接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r\n\\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它熟悉的界面。（这可能是项目中最长的一个阶段。）最终，要给同学们展示最终的作品。"
             Conditionals in Minecraft:
@@ -9578,6 +9623,8 @@ zh-CN:
               name: 编辑行为
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
+            Build A Project:
+              name: 结课项目
             Dance Party:
               name: 舞蹈派对
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -9702,6 +9749,8 @@ zh-CN:
               display_name: 循环
             csf_events:
               display_name: 事件
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Programming in Maze:
               name: 迷宫编程
@@ -9760,6 +9809,7 @@ zh-CN:
             Create a Design with Loops:
               name: 创建循环设计
             'End of Course Project: Create a Play Lab Game':
+              name: 结课项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
             'Programming: My Robotic Friends':
@@ -12758,6 +12808,8 @@ zh-CN:
               display_name: 循环嵌套
             csf_functions:
               display_name: 函数
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Crowdsourcing:
               name: 众包
@@ -12777,6 +12829,8 @@ zh-CN:
               name: 收割者中的函数
             Functions in Artist:
               name: 艺术家之间的功能
+            End of Course Project:
+              name: 结课项目
             Nested Loops in the Maze:
               name: 迷宫里的嵌套循环
         time4cs-experiment-unit-2:
@@ -13763,6 +13817,8 @@ zh-CN:
               display_name: 循环
             csf_events:
               display_name: 事件
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Screen Out the Mean:
               name: 筛选出平均值
@@ -13833,6 +13889,7 @@ zh-CN:
               description_student: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
               description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
             'End of Course Project: Create a Play Lab Game':
+              name: 结课项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
             Password Power-Up:
@@ -13855,6 +13912,8 @@ zh-CN:
               display_name: 二进制
             csf_digcit:
               display_name: 数字公民
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 方格纸编程
@@ -13929,6 +13988,7 @@ zh-CN:
               description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
               description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
             End of Course Project:
+              name: 结课项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
         coursee-2020:
           title: 课程 E (2019)
@@ -13948,6 +14008,8 @@ zh-CN:
               display_name: 函数
             csf_impacts:
               display_name: 计算的影响
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Sequencing in the Maze:
               name: 迷宫中的序列
@@ -14021,6 +14083,7 @@ zh-CN:
               description_student: 用函数来让复杂的图画变得更简单！
               description_teacher: 学生们会学习Code.org上的函数。小艺术家中的大部分图片都会通过函数来创造或更改。为了一些更复杂的模式，学生们会学习一个函数内部调用另一个函数的嵌套函数。
             End of Course Project:
+              name: 结课项目
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: "接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r\n\\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它熟悉的界面。（这可能是项目中最长的一个阶段。）最终，要给同学们展示最终的作品。"
             Digital Sharing:
@@ -14047,6 +14110,8 @@ zh-CN:
               display_name: 计数循环
             csf_sprites:
               display_name: 精灵图
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Functions in Minecraft:
               name: '《我的世界》中的函数'
@@ -14128,6 +14193,7 @@ zh-CN:
               description_student: '这节课中，会学到所有权和版权的挑战和利益。 '
               description_teacher: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
             End of Course Project:
+              name: 结课项目
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: "接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r\n\\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它合适的界面。（这可能是项目中最长的一个阶段。）学生们会在测试和相互评审后修改代码。最终，学生们要能在同学前展示最终的作品。"
             AI for Oceans:
@@ -14154,6 +14220,8 @@ zh-CN:
               display_name: 计数循环
             csf_sprites:
               display_name: 精灵图
+            end_of_course_project:
+              display_name: 结课项目
           lessons:
             Dance Party:
               name: 舞蹈派对
@@ -14201,6 +14269,8 @@ zh-CN:
               name: 虚拟宠物
             Swimming Fish with Sprite Lab:
               name: 在精灵图实验室学习精灵图
+            End of Course Project:
+              name: 结课项目
             Programming with Angry Birds:
               name: 迷宫编程
             Debugging with Scrat:

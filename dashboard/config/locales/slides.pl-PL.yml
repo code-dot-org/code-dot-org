@@ -1331,8 +1331,8 @@ pl:
       2:
         text: Krok polegający na przemyśleniu rozwiązania problemu prowadzi do utworzenia
           algorytmu będącego planem krok-po-kroku na potrzeby rozwiązania problemu
-          lub ukończenia zadania. W tej lekcji będziesz tworzyć algorytm dla gry w
-          "Wyścig kostek". Potem poprosisz swoich znajomych o wypróbowanie Waszego
+          lub ukończenia zadania. Na tej lekcji będziesz tworzyć algorytm dla gry
+          w "Wyścig kostek". Potem poprosisz swoich znajomych o wypróbowanie Waszego
           planu, aby przekonać się, czy są w stanie wykonać kroki w ramach rozgrywania
           gry. Gdy programista nabędzie pewności, że kroki są poprawne, czas na przełożenie
           algorytmu w program w języku zrozumiałym dla komputera.
@@ -1494,7 +1494,7 @@ pl:
           słowo "refren", czy śpiewasz słowo "refren"? Nie, patrzysz na górę strony,
           aby zobaczyć, jakie słowa tworzą refren.
       3:
-        text: W tej lekcji będziemy się uczyć piosenki zatytułowanej "Króliczek Fu-Fu".
+        text: Na tej lekcji będziemy się uczyć piosenki zatytułowanej "Króliczek Fu-Fu".
           Piosenka obejmuje refren, który śpiewa się kilka razy. Funkcja jest fragmentem
           kodu, który będzie się przywoływać i używać wielokrotnie je powtarzając.
           To ułatwia program i zwiększa jego skuteczność, tak, aby nie trzeba było
