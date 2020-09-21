@@ -197,7 +197,6 @@ class StudioApp extends EventEmitter {
 
     this.onAttempt = undefined;
     this.onContinue = undefined;
-    this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
     this.isUS = undefined;
     this.enableShowBlockCount = true;
@@ -293,6 +292,7 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
+  this.debouncedReport = _.debounce(this.report.bind(this), 1000);
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1846,13 +1846,14 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
 StudioApp.prototype.resetButtonClick = function() {
   // If we haven't reported yet, report now.
   if (!this.hasReported) {
-    this.report({
+    // Use the debounced version of report so we don't make dozens of
+    // server calls if the user mashes the reset button
+    this.debouncedReport({
       app: getStore().getState().pageConstants.appType,
       level: this.config.level.id
     });
   }
   this.hasReported = false;
-  this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
@@ -2040,7 +2041,6 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.onInitialize = config.onInitialize
     ? config.onInitialize.bind(config)
     : function() {};
-  this.onResetPressed = config.onResetPressed || function() {};
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;

@@ -150,7 +150,10 @@ export function setupApp(appOptions) {
         // already stored in the channels API.)
         delete report.program;
         delete report.image;
-      } else if (report.testResult !== TestResults.SKIPPED) {
+      } else if (
+        report.testResult !== TestResults.SKIPPED &&
+        report.program !== undefined
+      ) {
         // Only locally cache non-channel-backed levels. Use a client-generated
         // timestamp initially (it will be updated with a timestamp from the server
         // if we get a response.
@@ -199,9 +202,6 @@ export function setupApp(appOptions) {
           lastSavedProgram
         );
       }
-    },
-    onResetPressed: function() {
-      reporting.cancelReport();
     },
     onContinue: function() {
       var lastServerResponse = reporting.getLastServerResponse();
