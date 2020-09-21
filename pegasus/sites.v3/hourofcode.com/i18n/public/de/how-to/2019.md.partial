@@ -83,20 +83,20 @@ Führen Ihre Studenten zur Aktivität
 
 - Schreiben den Tutorial Link auf das Whiteboard. Den Link, der auf der Seite [Informationen für das ausgewählte Tutorial]({{ urls/learn }}) aufgeführt ist, finden Sie unter der Teilnehmerzahl.
 
-When your students come across difficulties it's okay to respond:
+Wenn Ihre Studenten auf Schwierigkeiten stoßen, können Sie sagen:
 
-- “I don’t know. Let’s figure this out together.”
+- "Ich weiß nicht. Lassen wir zusammen es herausbekommen."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
 - "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
-Was mache ich, wenn ein Schüler früher fertig wird?
+Was mache ich, wenn ein Schüler früh fertig wird?
 
 - Die Schüler können alle Tutorials sehen und [eine weitere Hour of Code Aktivität versuchen]({{ urls/learn }}}).
-- Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
+- Oder Sie bitten die Schülerinnen und Schüler, die früh fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7. Feieren den Erfolg Ihrer Studenten
 
 [col-33]
 
@@ -107,17 +107,17 @@ Was mache ich, wenn ein Schüler früher fertig wird?
 - [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Schüler.
 - [Drucken Sie "I did an hour of code!"]({{ urls/promote_stickers }}}) Aufkleber für Ihre Schüler.
 - [Bestellen Sie individuelle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre Schule.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Teilen Photos und Videos von Ihrer Hour of Code Ereignis auf Social Media. Benutzen #HourofCode und @codeorg, damit wir auch Ihren Erfolg hervorheben können!
 
 ----
 
 ## Weitere Hour of Code-Ressourcen für Unterrichtende:
 
-- Besuche das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
+- Besuchen das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
 - Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
 ## Was kommt nach der Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Informatik muss nicht mit Hour of Code enden! Unser Curriculum ist webbasiert und immer kostenlos. [ Lernen wie ](/beyond) Sie Informatik zur Schule und Studenten bringen können.
 
 {{ signup_button }}

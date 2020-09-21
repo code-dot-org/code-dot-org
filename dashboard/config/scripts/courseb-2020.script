@@ -7,7 +7,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course B!", "link"=>"https://curriculum.code.org/csf-20/courseb", "type"=>"information", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course B!", "link"=>"https://curriculum.code.org/csf-20/courseb", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'courseb'
 version_year '2020'
 is_stable true
