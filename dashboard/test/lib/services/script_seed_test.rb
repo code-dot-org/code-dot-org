@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'services/script_seed'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
@@ -17,7 +18,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script = create_script_tree('test-serialize-seeding-json')
 
     filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
-    assert_equal File.read(filename), script.serialize_seeding_json
+    assert_equal File.read(filename), ScriptSeed.serialize_seeding_json(script)
   end
 
   test 'seed new script' do
@@ -25,7 +26,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script.freeze
     # Eager load the levels for each script level, so they can be used in assertions even after deletion
     script_levels = frozen_script_levels_with_levels(script)
-    json = script.serialize_seeding_json
+    json = ScriptSeed.serialize_seeding_json(script)
     counts_before = get_counts
 
     script.destroy!
@@ -38,7 +39,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
     assert_queries(24) do
-      Script.seed_from_json(json)
+      ScriptSeed.seed_from_json(json)
     end
 
     assert_equal counts_before, get_counts
@@ -49,7 +50,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
   test 'seed with no changes is no-op' do
     script = create_script_tree
     counts_before = get_counts
-    Script.seed_from_json(script.serialize_seeding_json)
+    ScriptSeed.seed_from_json(ScriptSeed.serialize_seeding_json(script))
 
     assert_equal counts_before, get_counts
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
@@ -63,7 +64,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       create :lesson_group, script: script, description: 'my description'
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_changes, script, script_levels_with_changes
@@ -78,7 +79,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       create :lesson, lesson_group: script.lesson_groups.first, script: script, overview: 'my overview'
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_changes, script, script_levels_with_changes
@@ -96,7 +97,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       create :script_level, lesson: script.lessons.first, script: script, levels: [new_level]
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_changes, script, script_levels_with_changes
@@ -116,7 +117,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
@@ -145,7 +146,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
@@ -171,7 +172,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
 
-    Script.seed_from_json(json)
+    ScriptSeed.seed_from_json(json)
     script.reload
 
     assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
@@ -197,7 +198,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       yield
       script_with_change = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
       script_with_change.freeze
-      json = script_with_change.serialize_seeding_json
+      json = ScriptSeed.serialize_seeding_json(script_with_change)
       script_levels_with_change = frozen_script_levels_with_levels(script_with_change)
 
       raise ActiveRecord::Rollback
