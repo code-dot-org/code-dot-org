@@ -1672,16 +1672,13 @@ class Script < ActiveRecord::Base
       data = JSON.parse(json_string)
 
       script_data = data['script']
-      script_name = script_data['seeding_key']['script.name']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
       script_levels_data = data['script_levels']
       levels_script_levels_data = data['levels_script_levels']
       seed_context = SeedContext.new
 
-      import_script(script_data)
-
-      seed_context.script = Script.find_by!(name: script_name)
+      seed_context.script = import_script(script_data)
       seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
       seed_context.lessons = import_lessons(lessons_data, seed_context)
 
@@ -1689,7 +1686,6 @@ class Script < ActiveRecord::Base
       seed_context.levels_script_levels = seed_context.script.levels_script_levels
       seed_context.script_levels = import_script_levels(script_levels_data, seed_context)
 
-      #seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
       seed_context.levels = seed_context.script_levels.map(&:levels).flatten
       import_levels_script_levels(levels_script_levels_data, seed_context)
     end
@@ -1697,10 +1693,10 @@ class Script < ActiveRecord::Base
 
   def self.import_script(script_data)
     script_to_import = Script.new(script_data.except('seeding_key'))
-    # validate: false because otherwise fails on invalid names that are already in the DB.
-    # TODO: do we need to scope this down somehow to only skipping name format validation?
-    result = Script.import [script_to_import], on_duplicate_key_update: :all, validate: false
-    raise "Some script imports failed: #{result}" if result.failed_instances.any?
+    # Needed because we already have some Scripts with invalid names
+    script_to_import.skip_name_format_validation = true
+    Script.import! [script_to_import], on_duplicate_key_update: :all
+    Script.find_by!(name: script_to_import.name)
   end
 
   def self.import_lesson_groups(lesson_groups_data, seed_context)
