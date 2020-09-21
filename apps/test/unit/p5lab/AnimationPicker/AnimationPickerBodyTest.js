@@ -21,7 +21,7 @@ describe('AnimationPickerBody', function() {
     categories: CostumeCategories,
     hideUploadOption: false,
     hideAnimationNames: false,
-    navigatable: true,
+    navigable: true,
     hideBackgrounds: false,
     canDraw: true
   };
