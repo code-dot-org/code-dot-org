@@ -78,6 +78,7 @@ import {
   setFeedback
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
@@ -2679,6 +2680,7 @@ StudioApp.prototype.enableBreakpoints = function() {
             scriptId: this.config.scriptId,
             scriptLevelId: this.config.serverScriptLevelId,
             scriptName: this.config.scriptName,
+            studentUserId: queryParams('user_id'),
             url: window.location.toString()
           })
         },
