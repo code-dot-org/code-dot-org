@@ -157,6 +157,7 @@ class P5LabView extends React.Component {
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
+        hideBackgrounds={this.props.spriteLab}
       />
     ) : (
       undefined
