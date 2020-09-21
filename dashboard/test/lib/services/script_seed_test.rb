@@ -31,13 +31,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script.destroy!
     # This is currently:
     #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-    #   12 queries - two for each model, + one extra query each for ScriptLevels and LevelsScriptLevels
+    #   13 queries - two for each model, + one extra query each for Lessons, ScriptLevels and LevelsScriptLevels
     #   8 queries, one for each LevelsScriptLevel.
     # LevelsScriptLevels has queries which scale linearly with the number of rows.
     # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
-    assert_queries(23) do
+    assert_queries(24) do
       Script.seed_from_json(json)
     end
 
@@ -107,21 +107,68 @@ class ScriptSeedTest < ActiveSupport::TestCase
 
   test 'seed deletes lesson_groups' do
     script = create_script_tree
-    script_with_deleted_lesson_group = nil
-    json = nil
-    LessonGroup.transaction do
-      script.lesson_groups.first.destroy!
-      script_with_deleted_lesson_group = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
-      script_with_deleted_lesson_group.freeze
-      json = script_with_deleted_lesson_group.serialize_seeding_json
+    original_counts = get_counts
 
-      raise ActiveRecord::Rollback
+    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+      script.lesson_groups.first.destroy!
+      script.reload
+      # TODO: should these be handled automatically by callbacks?
+      script.lesson_groups.each {|lg| lg.update(position: lg.position - 1)}
+      script.lessons.each_with_index {|l, i| l.update(relative_position: i + 1)}
     end
 
     Script.seed_from_json(json)
     script.reload
 
-    assert_script_trees_equal script_with_deleted_lesson_group, script
+    assert_script_trees_equal script_with_deletion, script
+    assert_equal [1], script.lesson_groups.map(&:position)
+    assert_equal [1, 2], script.lessons.map(&:absolute_position)
+    assert_equal [1, 2], script.lessons.map(&:relative_position)
+    # Deleting the LessonGroup should also delete its two Lessons, each of their two ScriptLevels, and their LevelsScriptLevels.
+    expected_counts = original_counts.clone
+    expected_counts['LessonGroup'] -= 1
+    expected_counts['Lesson'] -= 2
+    expected_counts['ScriptLevel'] -= 4
+    expected_counts['LevelsScriptLevel'] -= 4
+    assert_equal expected_counts, get_counts
+  end
+
+  test 'seed deletes lessons' do
+    script = create_script_tree
+    original_counts = get_counts
+
+    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+      # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
+      script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
+      script.lessons.first.destroy!
+    end
+
+    Script.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_deletion, script
+    assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
+    assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
+    # Deleting the lesson should also delete its two ScriptLevels, and their LevelsScriptLevels.
+    expected_counts = original_counts.clone
+    expected_counts['Lesson'] -= 1
+    expected_counts['ScriptLevel'] -= 2
+    expected_counts['LevelsScriptLevel'] -= 2
+    assert_equal expected_counts, get_counts
+  end
+
+  def get_script_tree_and_json_with_deletion(script, &deletion_block)
+    script_with_deletion = json = nil
+    Script.transaction do
+      # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
+      yield
+      script_with_deletion = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
+      script_with_deletion.freeze
+      json = script_with_deletion.serialize_seeding_json
+
+      raise ActiveRecord::Rollback
+    end
+    return [script_with_deletion, json]
   end
 
   def get_counts
