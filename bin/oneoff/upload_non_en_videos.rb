@@ -37,7 +37,7 @@ SCOPE = Google::Apis::YoutubeV3::AUTH_YOUTUBE_UPLOAD
 # Let's get a set of the videos we're going to upload
 def parse_video_file_paths(map_file)
   videos = CSV.read(map_file, headers: true).map do |row|
-    {key: row['Key'], file_path: File.join(VIDEO_FILE_DIRECTORY, row['Folder'], row['Partner filename']), title: row['Video Title']}
+    {key: row['Key'], file_path: File.join([VIDEO_FILE_DIRECTORY, row['Folder'], row['Partner filename']].compact), title: row['Video Title']}
   end
   videos
 end
