@@ -20,8 +20,8 @@ export function setLabelColumn(labelColumn) {
 
 const initialState = {
   data: undefined,
-  selectedFeatures: [],
-  labelColumn: undefined
+  selectedFeatures: ["chocolate", "fruity", "nuts", "caramel"],
+  labelColumn: "delicious?"
 };
 
 // Reducer

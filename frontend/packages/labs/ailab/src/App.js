@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import CSVReaderWrapper from "./CSVReaderWrapper";
-import DataDisplay from "./DataDisplay";
+import CSVReaderWrapper from "./UIComponents/CSVReaderWrapper";
+import DataDisplay from "./UIComponents/DataDisplay";
+import TrainModel from "./UIComponents/TrainModel";
 
 export default class App extends Component {
   render() {
@@ -8,6 +9,7 @@ export default class App extends Component {
       <div>
         <CSVReaderWrapper />
         <DataDisplay />
+        <TrainModel />
       </div>
     );
   }

@@ -1,19 +1,16 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import train from "../train";
 
 class TrainModel extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
-    labelColumn: PropTypes.string,
-    trainingExamples: PropTypes.array,
-    trainingLabels: PropTypes.array
+    labelColumn: PropTypes.string
   };
 
-  onClickTrain = () => {
-    console.log(
-      "train clicked - there will be code here that dips into the svm model"
-    );
+  onClickTrainModel = () => {
+    train.onClickTrain();
   };
 
   render() {
@@ -25,8 +22,7 @@ class TrainModel extends Component {
           features: {this.props.selectedFeatures.join(", ")} that might help
           predict the values of the label: {this.props.labelColumn}.
         </p>
-        )}
-        <button type="button" onClick={this.onClickTrain}>
+        <button type="button" onClick={this.onClickTrainModel}>
           Train SVM model
         </button>
       </div>

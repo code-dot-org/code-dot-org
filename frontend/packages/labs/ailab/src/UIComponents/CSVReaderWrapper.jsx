@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import { setImportedData } from "./redux";
+import { setImportedData } from "../redux";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
