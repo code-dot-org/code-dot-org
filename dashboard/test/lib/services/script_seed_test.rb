@@ -53,59 +53,59 @@ class ScriptSeedTest < ActiveSupport::TestCase
     assert_script_trees_equal(script, Script.find_by!(name: script.name))
   end
 
-  test 'seed updates lessons groups' do
+  test 'seed updates lesson groups' do
     script = create_script_tree
-    updated_lesson_group = script.lesson_groups.first
-    updated_lesson_group.update!(big_questions: 'updated big questions')
-    new_lesson_group = create :lesson_group, script: script, description: 'my description'
-    script.freeze
-    json = script.serialize_seeding_json
 
-    new_lesson_group.destroy!
-    updated_lesson_group.update!(big_questions: nil)
+    script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script.lesson_groups.first.update!(big_questions: 'updated big questions')
+      create :lesson_group, script: script, description: 'my description'
+    end
+
     Script.seed_from_json(json)
+    script.reload
 
-    assert_script_trees_equal(script, Script.find_by!(name: script.name))
+    assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+    assert_equal 'updated big questions', script.lesson_groups.first.big_questions
   end
 
   test 'seed updates lessons' do
     script = create_script_tree
-    updated_lesson = script.lessons.first
-    updated_lesson.update!(visible_after: 'updated visible after')
-    new_lesson = create :lesson, lesson_group: script.lesson_groups.first, script: script, overview: 'my overview'
-    script.freeze
-    json = script.serialize_seeding_json
 
-    new_lesson.destroy!
-    updated_lesson.update!(visible_after: nil)
+    script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script.lessons.first.update!(visible_after: 'updated visible after')
+      create :lesson, lesson_group: script.lesson_groups.first, script: script, overview: 'my overview'
+    end
+
     Script.seed_from_json(json)
+    script.reload
 
-    assert_script_trees_equal(script, Script.find_by!(name: script.name))
+    assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+    assert_equal 'updated visible after', script.lessons.first.visible_after
   end
 
   test 'seed updates script_levels' do
     script = create_script_tree
-    updated_script_level = script.script_levels.first
-    updated_script_level.update!(challenge: 'foo')
-    new_script_level = create :script_level, lesson: script.lessons.first, script: script, challenge: true
-    script.freeze
-    # Eager load the levels for each script level, so they can be used in assertions even after deletion
-    script_levels = frozen_script_levels_with_levels(script)
-    json = script.serialize_seeding_json
+    new_level = create :level
 
-    new_script_level.destroy!
-    updated_script_level.update!(challenge: nil)
+    script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      updated_script_level = script.script_levels.first
+      updated_script_level.update!(challenge: 'foo')
+      updated_script_level.levels += [new_level]
+      create :script_level, lesson: script.lessons.first, script: script, levels: [new_level]
+    end
+
     Script.seed_from_json(json)
+    script.reload
 
-    reloaded_script = Script.find_by!(name: script.name)
-    assert_script_levels_equal script_levels, reloaded_script.script_levels
+    assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+    assert_equal 'foo', script.script_levels.first.challenge
   end
 
   test 'seed deletes lesson_groups' do
     script = create_script_tree
     original_counts = get_counts
 
-    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+    script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
       script.lesson_groups.first.destroy!
       script.reload
       # TODO: should these be handled automatically by callbacks?
@@ -113,7 +113,6 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.lessons.each_with_index {|l, i| l.update(relative_position: i + 1)}
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
-    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
 
     Script.seed_from_json(json)
     script.reload
@@ -136,14 +135,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script = create_script_tree
     original_counts = get_counts
 
-    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+    script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
       script.lessons.first.destroy!
       script.reload
       # TODO: should these be handled automatically by a callback? It is for absolute_position somehow.
       script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
-    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
 
     Script.seed_from_json(json)
     script.reload
@@ -164,13 +162,12 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script = create_script_tree
     original_counts = get_counts
 
-    script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
+    script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
       script.script_levels.first.destroy!
       script.reload
       # TODO: should these be handled automatically by a callback?
       script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
-    script_levels_with_deletion = frozen_script_levels_with_levels(script_with_deletion)
 
     Script.seed_from_json(json)
     script.reload
@@ -191,18 +188,19 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script_levels
   end
 
-  def get_script_tree_and_json_with_deletion(script, &deletion_block)
-    script_with_deletion = json = nil
+  def get_script_and_json_with_change_and_rollback(script, &db_write_block)
+    script_with_change = json = script_levels_with_change = nil
     Script.transaction do
       # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
       yield
-      script_with_deletion = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
-      script_with_deletion.freeze
-      json = script_with_deletion.serialize_seeding_json
+      script_with_change = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
+      script_with_change.freeze
+      json = script_with_change.serialize_seeding_json
+      script_levels_with_change = frozen_script_levels_with_levels(script_with_change)
 
       raise ActiveRecord::Rollback
     end
-    return [script_with_deletion, json]
+    [script_with_change, json, script_levels_with_change]
   end
 
   def get_counts
