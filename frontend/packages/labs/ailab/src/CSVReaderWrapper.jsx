@@ -14,8 +14,7 @@ class CSVReaderWrapper extends Component {
 
     this.state = {
       csvfile: undefined,
-      data: undefined,
-      showRawData: true
+      data: undefined
     };
   }
 
@@ -35,7 +34,6 @@ class CSVReaderWrapper extends Component {
 
   updateData = result => {
     var data = result.data;
-    console.log("data", data);
     this.props.setImportedData(data);
   };
 
