@@ -348,7 +348,7 @@ function initializeStoreWithSections(store, scriptData) {
       scriptData.user_providers.includes(OAuthProviders.google)
     ) {
       registerReducers({googlePlatformApi});
-      store.dispatch(loadGooglePlatformApi());
+      store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
     }
   }
   store.dispatch(setSections(sections));
