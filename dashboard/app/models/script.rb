@@ -138,7 +138,7 @@ class Script < ActiveRecord::Base
     has_verified_resources
     has_lesson_plan
     curriculum_path
-    script_announcements
+    announcements
     version_year
     is_stable
     supported_locales
@@ -987,7 +987,7 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
-      script_announcements: nil,
+      announcements: nil,
       is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1229,7 +1229,8 @@ class Script < ActiveRecord::Base
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
-      script_announcements: script_announcements,
+      script_announcements: announcements, #TODO: (dmcavoy) Remove after Sept 25 2020
+      announcements: announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
@@ -1411,7 +1412,7 @@ class Script < ActiveRecord::Base
       :project_widget_types,
       :lesson_extras_available,
       :curriculum_path,
-      :script_announcements,
+      :announcements,
       :version_year,
       :supported_locales,
       :pilot_experiment,

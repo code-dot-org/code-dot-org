@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd-18/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-18/unit5/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"CS Discoveries Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csd-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"CS Discoveries Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csd-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd5'
 version_year '2018'
 is_stable true
