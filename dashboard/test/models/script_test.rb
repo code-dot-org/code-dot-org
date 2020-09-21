@@ -1439,10 +1439,10 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.project_widget_visible
   end
 
-  test 'can unset the script_announcements attribute' do
+  test 'can unset the announcements attribute' do
     l = create :level
     old_dsl = <<-SCRIPT
-      script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
+      announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
@@ -1458,7 +1458,7 @@ class ScriptTest < ActiveSupport::TestCase
       },
       script_data[:lesson_groups]
     )
-    assert script.script_announcements
+    assert script.announcements
 
     script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
     script = Script.add_script(
@@ -1469,7 +1469,7 @@ class ScriptTest < ActiveSupport::TestCase
       script_data[:lesson_groups]
     )
 
-    refute script.script_announcements
+    refute script.announcements
   end
 
   test 'can set custom curriculum path' do
@@ -1508,7 +1508,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
-    assert_equal 1, script.script_announcements.count
+    assert_equal 1, script.announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
@@ -1517,7 +1517,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script_copy.version_year
     assert_equal false, !!script_copy.is_stable
     assert_equal true, script_copy.hidden
-    assert_nil script_copy.script_announcements
+    assert_nil script_copy.announcements
 
     # Validate levels.
     assert_equal 5, script_copy.levels.count
@@ -1561,7 +1561,7 @@ class ScriptTest < ActiveSupport::TestCase
     # all properties that should change
     assert script.tts
     assert script.is_stable
-    assert script.script_announcements
+    assert script.announcements
     assert script.is_course
 
     # some properties that should not change
@@ -1575,7 +1575,7 @@ class ScriptTest < ActiveSupport::TestCase
     # all properties that should change
     refute script_copy.tts
     refute script_copy.is_stable
-    refute script_copy.script_announcements
+    refute script_copy.announcements
     refute script_copy.is_course
 
     # some properties that should not change
@@ -1633,7 +1633,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone with suffix and add editor experiment' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
-    assert_equal 1, script.script_announcements.count
+    assert_equal 1, script.announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')
