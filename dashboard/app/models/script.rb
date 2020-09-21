@@ -775,7 +775,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
-    script_levels.includes(:lesson).find do |sl|
+    script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
       # first, so we only have to load lesson if it's actually necessary.
       sl.position == puzzle_position.to_i &&
