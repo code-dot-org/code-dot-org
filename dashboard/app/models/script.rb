@@ -1685,9 +1685,9 @@ class Script < ActiveRecord::Base
 
       seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
       seed_context.levels_script_levels = seed_context.script.levels_script_levels
-      import_script_levels(script_levels_data, seed_context)
+      seed_context.script_levels = import_script_levels(script_levels_data, seed_context)
 
-      seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
+      #seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
       seed_context.levels = seed_context.script_levels.map(&:levels).flatten
       import_levels_script_levels(levels_script_levels_data, seed_context)
     end
@@ -1725,7 +1725,7 @@ class Script < ActiveRecord::Base
     end
 
     # Delete any existing lessons that weren't in the imported list
-    # Unlike the other models, we do this here before import, otherwise absolute_position gets messed up.
+    # Destroy before import, otherwise absolute_position gets messed up.
     destroy_outdated_objects(Lesson, Lesson.where(script: seed_context.script), lessons_to_import, seed_context)
     Lesson.import! lessons_to_import, on_duplicate_key_update: :all
     Lesson.where(script: seed_context.script)
@@ -1748,10 +1748,12 @@ class Script < ActiveRecord::Base
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
     end
-    ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
 
     # Delete any existing ScriptLevels that weren't in the imported list
-    destroy_outdated_objects(ScriptLevel, ScriptLevel.where(script: seed_context.script), script_levels_to_import, seed_context)
+    # Destroy before import, otherwise chapter gets messed up.
+    destroy_outdated_objects(ScriptLevel, seed_context.script_levels, script_levels_to_import, seed_context)
+    ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
+    ScriptLevel.where(script: seed_context.script).includes(:levels)
   end
 
   def self.import_levels_script_levels(levels_script_levels_data, seed_context)

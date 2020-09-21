@@ -115,16 +115,22 @@ class ScriptSeedTest < ActiveSupport::TestCase
       # TODO: should these be handled automatically by callbacks?
       script.lesson_groups.each {|lg| lg.update(position: lg.position - 1)}
       script.lessons.each_with_index {|l, i| l.update(relative_position: i + 1)}
+      script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
+
+    script_levels_with_deletion = script_with_deletion.script_levels.to_a
+    script_levels_with_deletion.map(&:levels).map(&:length)
+    script_levels_with_deletion.each(&:freeze)
 
     Script.seed_from_json(json)
     script.reload
 
-    assert_script_trees_equal script_with_deletion, script
+    assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
     assert_equal [1], script.lesson_groups.map(&:position)
     assert_equal [1, 2], script.lessons.map(&:absolute_position)
     assert_equal [1, 2], script.lessons.map(&:relative_position)
-    # Deleting the LessonGroup should also delete its two Lessons, each of their two ScriptLevels, and their LevelsScriptLevels.
+    assert_equal (1..4).to_a, script.script_levels.map(&:chapter)
+    # Deleting the LessonGroup should also delete its two Lessons, their two ScriptLevels each, and their LevelsScriptLevels.
     expected_counts = original_counts.clone
     expected_counts['LessonGroup'] -= 1
     expected_counts['Lesson'] -= 2
@@ -138,17 +144,24 @@ class ScriptSeedTest < ActiveSupport::TestCase
     original_counts = get_counts
 
     script_with_deletion, json = get_script_tree_and_json_with_deletion(script) do
-      # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
-      script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
       script.lessons.first.destroy!
+      script.reload
+      # TODO: should these be handled automatically by a callback? It is for absolute_position somehow.
+      script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
+      script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
     end
+
+    script_levels_with_deletion = script_with_deletion.script_levels.to_a
+    script_levels_with_deletion.map(&:levels).map(&:length)
+    script_levels_with_deletion.each(&:freeze)
 
     Script.seed_from_json(json)
     script.reload
 
-    assert_script_trees_equal script_with_deletion, script
+    assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
     assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
     assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
+    assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
     # Deleting the lesson should also delete its two ScriptLevels, and their LevelsScriptLevels.
     expected_counts = original_counts.clone
     expected_counts['Lesson'] -= 1
