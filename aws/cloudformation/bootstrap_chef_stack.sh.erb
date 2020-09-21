@@ -20,6 +20,9 @@ export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
 <% if environment == :adhoc -%>
+<%   if options[:start_inactive_instance] -%>
+# <%= Time.now %> - trigger an EC2-instance restart by changing user-data contents.
+<%   end -%>
 # Redirect copy of stdout/stderr to a log file for later auditing.
 LOG=<%=TailLogs::LOG_NAME%>
 exec >> >(tee -i $LOG)
@@ -133,7 +136,6 @@ JSON
 # Bootstrap Chef configuration: Install Chef, run chef-client with empty run-list to create node with first-boot config.
 OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION"
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
-[ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 
 CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
 cat <<SH > $CHEF_CDO_APP
@@ -157,6 +159,7 @@ SH
 chmod +x $CHEF_CDO_APP
 # Run chef-client as root with SUDO_USER set to `ubuntu`.
 sudo -u ubuntu bash -c "sudo $CHEF_CDO_APP"
+[ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 
 <% unless daemon -%>
 # Workaround for version-controlled files modified by seed.

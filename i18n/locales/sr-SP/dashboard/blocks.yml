@@ -48,9 +48,6 @@ sr:
             '"prev"': "(Претходни)"
             '"rand"': "(Насумичан)"
             MOVES.Kick: Звезда
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -58,9 +55,6 @@ sr:
             '"prev"': "(Претходни)"
             '"rand"': "(Насумичан)"
             MOVES.Kick: Звезда
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -104,17 +98,11 @@ sr:
           MOVE:
             '"rand"': "(Насумичан)"
             MOVES.Kick: Звезда
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             '"rand"': "(Насумичан)"
             MOVES.Kick: Звезда
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -199,26 +187,6 @@ sr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': ванземаљци
             '"BEAR"': медведи
@@ -655,18 +623,6 @@ sr:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

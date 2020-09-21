@@ -279,6 +279,10 @@
         },
         "courseF_project_1": {
           "wandering": "徘徊"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "徘徊 2",
+          "wandering 1": "徘徊 1"
         }
       }
     }

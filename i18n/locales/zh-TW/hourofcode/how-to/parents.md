@@ -1,5 +1,5 @@
 ---
-title: 給家長的活動指引
+title: Hour of Code How-to Guide for parents
 ---
 
 # How to do an Hour of Code with your child
@@ -50,7 +50,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. 他們也將瞭解到電腦科學是需社交與合作的。
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. 他們也將瞭解到計算機科學是需要社交與合作的。
 
 <h3>Get the kids excited! </h3>
 
@@ -71,7 +71,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
+<h3>Have young women at home?</h3>
 
 <a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
 

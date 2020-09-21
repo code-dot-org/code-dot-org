@@ -82,9 +82,6 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
@@ -103,9 +100,6 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
@@ -163,9 +157,6 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} un cop"
         options:
@@ -182,9 +173,6 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: 'cada {N} {UNIT} '
         options:
@@ -361,26 +349,6 @@ ca:
           fer {N} nou {COSTUME}
           en una {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Extraterrestres
             '"BEAR"': Óssos
@@ -987,18 +955,6 @@ ca:
         text: gira a la dreta
       Vector_positionCenter:
         text: centre
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:

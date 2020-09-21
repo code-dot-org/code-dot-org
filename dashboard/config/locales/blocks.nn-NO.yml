@@ -85,9 +85,6 @@ nn:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller dette
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gjer {MOVE} {DIR} for alltid"
         options:
@@ -106,9 +103,6 @@ nn:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller dette
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -183,9 +177,6 @@ nn:
             MOVES.XArmsUp: Strekke
             MOVES.ThisOrThat: Dette eller dette
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} gjør {MOVE} {DIR} for alltid"
         options:
@@ -214,9 +205,6 @@ nn:
             MOVES.XArmsUp: Strekke
             MOVES.ThisOrThat: Dette eller dette
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'gjenta kvart {N} taktslag etter{START} '
       Dancelab_everySeconds:
@@ -1056,6 +1044,13 @@ nn:
             '"z"': z
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       gamelab_locationMouse:
         text: musens plassering
       gamelab_locationOf:

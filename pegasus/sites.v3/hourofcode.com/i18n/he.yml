@@ -43,130 +43,123 @@ he:
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  oceans_landing_title: אינטליגנציה מלאכותית למען האוקיינוסים
+  oceans_landing_description: למדו על למידת מכונה ועל שימוש מוסרי באינטליגנציה מלאכותית.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
+  oceans_landing_specs: זמין במעל ל־25 שפות | כיתות ג' ומעלה
+  oceans_landing_explanation: מדעי המחשב עוסקים בכל כך הרבה דברים אחרים מלבד תכנות!
+    לּמדוּ על אינטליגנציה מלאכותית (AI), למידת־מכונה, נתוני־הדרכה והטייה מחקרית, תוך
+    חקירת דילמות מוסריות והאופן שבו אינטליגנציה מלאכותית יכולה לגשת לבעיות עולמיות.
+    תיהנו מהצעד הראשון במסע חדש של Code.org ללימוד אינטליגנציה מלאכותית. כשאתם משתמשים
+    בפעילות "אינטליגנציה מלאכותית למען האוקיינוסים", אתם למעשה מדריכים מודלים אמיתיים
+    של למידת מכונה.  <a href='#behind-the-scenes'>לִמדוּ עוד</a>.
+  oceans_landing_explanation_markdown: מדעי המחשב עוסקים בכל כך הרבה דברים אחרים מלבד
+    תכנות! לּמדוּ על אינטליגנציה מלאכותית (AI), למידת־מכונה, נתוני־הדרכה והטייה מחקרית,
+    תוך חקירת דילמות מוסריות והאופן שבו אינטליגנציה מלאכותית יכולה לגשת לבעיות עולמיות.
+    תיהנו מהצעד הראשון במסע חדש של Code.org ללימוד אינטליגנציה מלאכותית. כשאתם משתמשים
+    בפעילות "אינטליגנציה מלאכותית למען האוקיינוסים", אתם למעשה מדריכים מודלים אמיתיים
+    של למידת מכונה. [לִמדוּ עוד](#מאחורי_הקלעים).
+  oceans_landing_teacher_resources: משאבים למורה
+  oceans_landing_teacher_resources_desc: מערכי שיעור ופעילויות שיסייעו לכם ללמד אינטליגנציה
+    מלאכותית, למידת מכונה, נתוני הדרכה והטייה מחקרית - תוך חקירת דילמות מוסריות.
+  oceans_landing_resource_button: ראו משאבים
+  oceans_landing_cs_for_good: מדעי המחשב למען הטוב
+  oceans_landing_cs_for_good_desc: משאבים שיעזרו לתלמידים להבין את התפקיד שמדעי המחשב
+    יכולים למלא ביצירות עולם צודק יותר.
+  oceans_landing_videos: סרטונים על אינטליגנציה מלאכותית ולמידת־מכונה
+  oceans_behind_the_scenes: 'אינטליגנציה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
+  oceans_behind_the_scenes_1: שלבים 2־4 משתמשים במודל מאומן־מראש שסופק על־ידי פרויקט
+    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> . מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשת
+    עצבית מורכבת</a> שהודרכה על־ידי <a href="http://www.image-net.org/">ImageNet</a>,
+    מערך נתונים הכולל מעל ל־14 מיליון תמונות הכוללות מילים כמו "בלון" או "תות". על־מנת
+    להתאים את המודל לנתוני ההדרכה המתוייגים שמפיק התלמיד בפעילות הזו, אנו משתמשים
+    בטכניקה הנקראת <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. כל תמונה במערך נתוני ההדרכה מוזן ל־MobileNet, כפיקסלים, על מנת להשיג
+    רשימה של הערות־הסבר שסביר להתאים אליהן. אז, עבור תמונה חדשה, אנו מזינים אותה ל־MobileNet,
+    ומשווים את רשימות הערות־ההסבר שלה לאלה מנתוני־ההדרכה. אנו מסווגים את התמונה החדשה
+    באותה התווית (למשל, "דג" או "לא דג") כמו של התמונות עם התוצאות הדומות ביותר ממערך
+    ההדרכה.
+  oceans_behind_the_scenes_1_markdown: שלבים 2-4 משתמשים במודל מאומן־מראש שסופק על־ידי
+    פרויקט TensorFlow (https://www.tensorflow.org/) MobileNet (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    . מודל MobileNet הוא [רשת עצבית מורכבת](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    שהודרכה על־ידי ImageNet (http://www.image-net.org/), מערך נתונים הכולל מעל ל־14
+    מיליון תמונות הכוללות מילים כמו "בלון" או "תות". על־מנת להתאים את המודל לנתוני
+    ההדרכה המתוייגים שמפיק התלמיד בפעילות הזו, אנו משתמשים בטכניקה הנקראת [Transfer
+    Learning](https://en.wikipedia.org/wiki/Transfer_learning). כל תמונה במערך נתוני
+    ההדרכה מוזן ל־MobileNet, כפיקסלים, על מנת להשיג רשימה של הערות־הסבר שסביר להתאים
+    אליהן. אז, עבור תמונה חדשה, אנו מזינים אותה ל־MobileNet, ומשווים את רשימות הערות־ההסבר
+    שלה לאלה מנתוני־ההדרכה. אנו מסווגים את התמונה החדשה באותה התווית (למשל, "דג" או
+    "לא דג") כמו של התמונות עם התוצאות הדומות ביותר ממערך ההדרכה.
+  oceans_behind_the_scenes_2: שלבים 6־8 עושים שימוש ב <a href="https://en.wikipedia.org/wiki/Support-vector_machine">מכונת
+    וקטורים תומכים</a> (SVM). אנו מביטים בכל מרכיב של הדג (כמו למשל עיניים, פה, או
+    גוף) ומרכיבים את כל נתוני־העל של המרכיבים (כמו מספר השיניים, או צורת הגוף) לתוך
+    וקטור של מספרים עבור כל דג. אנו משתמשים בווקטורים האלה כדי לאמן את ה־SVM. בהתבסס
+    על נתוני־ההדרכה, ה־SVM מפריד את ה"חלל" של כל הדגים האפשריים לשני חלקים, המתאימות
+    ל______ שאנו מנסים ללמוד (כמו, למשל, "כחול" או "לא כחול").<a href="https://en.wikipedia.org/wiki/Support-vector_machine">
+  oceans_behind_the_scenes_2_markdown: שלבים 6־8 עושים שימוש ב[מכונת וקטורים תומכים](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). אנו מביטים בכל מרכיב של הדג (כמו למשל עיניים, פה, או גוף) ומרכיבים את כל
+    נתוני־העל של המרכיבים (כמו מספר השיניים, או צורת הגוף) לתוך וקטור של מספרים עבור
+    כל דג. אנו משתמשים בווקטורים האלה כדי לאמן את ה־SVM. בהתבסס על נתוני־ההדרכה, ה־SVM
+    מפריד את ה"חלל" של כל הדגים האפשריים לשני חלקים, המתאימות ל______ שאנו מנסים ללמוד
+    (כמו, למשל, "כחול" או "לא כחול").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: אינטליגנציה מלאכותית למען האוקיינוסים
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_what_is_ai: מה זו אינטליגנציה מלאכותית?
+  ai_video_title_algorithm_bias: מאבק בהטיות באלגוריתמים
+  ai_video_title_phone_knows_dog: איך הטלפון שלכם יודע שזה כלב?
+  ai_video_title_what_is_ml: מה זה למידת־מכונה?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  ai_video_title_ethics_of_ai: האתיקה של האינטליגנציה המלאכותית
+  ai_video_title_ml_human_bias: למידת־מכונה והטייה אנושית
+  ai_video_title_seeing_ai: 'רואים אינטליגנציה מלאכותית: הפיכת העולם הויזואלי לנגיש
+    יותר'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
+  ai_resource_header: ללמוד וללמד על אינטליגנציה מלאכותית
   ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
+  ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, תוכנית לימודים
+    של מדעי המחשב, והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
+  ai_resource_ml_for_kids: למידת־מכונה עבור ילדים
+  ai_resource_ml_for_kids_desc: הדריכו מודל למידת־מכונה בעזרת טקסט, מספרים או תמונות,
+    והשתמשו בו כדי ליצור משחקים ב־Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: למידת־מכונה עבור ילדים'
+  ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת־מכונה
+    בפני תלמידים, דרך משחקים ופרויקטים אינטראקטיביים.
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_ecs_desc: יחידת תוכנית לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר
+    מדעי המחשב (ECS)".
+  ai_resource_elements_ai: אלמנטים של אינטליגנציה מלאכותית
+  ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שנוצרו על־ידי Reaktor
+    ואוניברסיטת הלסינקי.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על אינטליגנציה מלאכותית, ליצירת
+    משחקים, תכנות רובוטים והדרכות.
+  ai_audience_k12: K-12 (נדרשת קריאה)
+  ai_audience_hs: תיכון
   ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
+  ai_activity_seeing_ai: רואים אינטליגנציה מלאכותית
+  ai_activity_seeing_ai_desc: אפליקציה חינמית המתארת את העולם סביבנו במגוון של שפות.
+  ai_activity_quick_draw: מהר, שלפו!
+  ai_activity_quick_draw_desc: האם רשת עצבית יכולה לזהות שרבוטים?
+  ai_activity_teachable: מכונה שניתנת ללימוד
+  ai_activity_teachable_desc: הדריכו מחשב לזהות תמונות, צלילים ותנוחות שלכם.
   ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
+  ai_activity_experiments_desc: התחילו לחקור למידת־מכונה דרך תמונות, ציורים, שפה,
+    מוזיקה ועוד.
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכַּף" באמצעות זיהוי החיות האחרות
+    שבתמונות.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -190,6 +183,8 @@ he:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -360,6 +355,7 @@ he:
   how_to_nav_companies: לחברות
   how_to_nav_afterschool_educators: למדריכים בחינוך הבלתי פורמלי
   how_to_nav_volunteers: למתנדבים
+  how_to_nav_virtual: For virtual events
   whats_next_header: מה הלאה?
   whats_next_description: אנו נשלח לכם חומרי למידה ועצות מועילות עבור האירועים שלכם.
     <a href='http://code.org/learn'>למערכים כתובים</a> מתאימים לכל דפדפן, טלפון חכם
@@ -2218,8 +2214,8 @@ he:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: Teach an Artificial Intelligence robot to explore
-    a new planet!
+  tutorial_accai_shortdescription: לַמְּדוּ רובוט אינטליגנציה מלאכותית לחקור כוכב־לכת
+    חדש!
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -4421,12 +4417,10 @@ he:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: A robot is sent to an unknown planet to discover
-    if humanity could establish a new settlement. It explores the planet to find shelter
-    and discovers and interacts with the local population. As the player, you will
-    experience various Artificial Intelligence techniques to teach the robot how to
-    recognize animals and plants, understand a new language, dialogue with the inhabitants
-    etc.
+  tutorial_accai_longdescription: רובוט נשלח לכוכב־לכת לא ידוע כדי לגלות האם האנושות
+    יכולה להקים שם מושבה חדשה. הוא חוקר את הכוכב כדי למצוא מחסה, מגלה אוכלוסייה מקומית
+    ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות אינטליגנציה מלאכותית שונות כדי ללמד
+    את הרובוט איך לזהות חיות וצמחים, להבין שפה חדשה, דיאלוג עם התושבים וכו'.
   tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
     phenomena of our lives, and now we're going to simulate the solar eclipse with
     JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
@@ -5588,7 +5582,7 @@ he:
   tutorial_cacrazy_language: English only
   tutorial_cajump_language: English only
   tutorial_carest_language: English only
-  tutorial_accai_language: English, French, Italian, and Dutch
+  tutorial_accai_language: אנגלית, צרפתית, איטלקית והולנדית
   tutorial_vceclipse_language: English only
   tutorial_pmzero_language: English only
   tutorial_hsela_language: English only
@@ -6365,7 +6359,7 @@ he:
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
@@ -6441,7 +6435,7 @@ he:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: אל תציג
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6780,7 +6774,7 @@ he:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6912,26 +6906,38 @@ he:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6959,15 +6965,15 @@ he:
   tutorial_codesparkcreate_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
     וטאבלט), iPad, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: All modern browsers
   tutorial_csfirstname_string_platforms: All modern browsers
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: All modern browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -6975,7 +6981,7 @@ he:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
   tutorial_appytappin_string_platforms: All modern browsers
@@ -8326,7 +8332,7 @@ he:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8378,7 +8384,7 @@ he:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: אינטליגנציה מלאכותית למען האוקיינוסים
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8543,9 +8549,9 @@ he:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8978,7 +8984,7 @@ he:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8993,7 +8999,7 @@ he:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -9004,7 +9010,7 @@ he:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers

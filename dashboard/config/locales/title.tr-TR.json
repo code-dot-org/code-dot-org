@@ -52,7 +52,15 @@
         "courseD_unplugged_digitalCitizenship_2018": "Bilgisayarsız Etkinlik",
         "courseE_unplugged_CnC_2018": "Dijital Paylaşım",
         "courseE_unplugged_privateInformation": "Common Sense Education: Özel ve Kişisel Bilgi ",
-        "courseF_unplugged_powerOfWords": "Bilgisayarsız Etkinlik"
+        "courseF_unplugged_powerOfWords": "Bilgisayarsız Etkinlik",
+        "BuildingAFoundation_2018": "eksik çeviri: en-US.data.unplugged.BuildingAFoundation_2018.title",
+        "Crowdsourcing_2018": "eksik çeviri: en-US.data.unplugged.Crowdsourcing_2018.title",
+        "EnvelopeVariables_2018": "eksik çeviri: en-US.data.unplugged.EnvelopeVariables_2018.title",
+        "ForLoopFun_2018": "eksik çeviri: en-US.data.unplugged.ForLoopFun_2018.title",
+        "Internet_2018": "eksik çeviri: en-US.data.unplugged.Internet_2018.title",
+        "SongwritingParameters_2018": "eksik çeviri: en-US.data.unplugged.SongwritingParameters_2018.title",
+        "courseB_unplugged_CnC_2018": "Oluşturmak ve Adil Oynamak Mükemmel",
+        "courseF_unplugged_powerOfWords_2018": "eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }

@@ -664,7 +664,7 @@
           "courseF_bee_functions_challenge1_2": "Die Funktion \"Nektar oder Honig prüfen\" kann hier verwendet werden, wenn sie so bearbeitet wird, dass sie viele Male Honig herstellt."
         },
         "course3_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Lass dieses Programm weiterlaufen, indem du unten mehr Code hinzufügst.",
@@ -890,28 +890,28 @@
           "courseE_playLab_scaffold3_1": "Bringe die Figur zu dieser Fahne, um zum nächsten Level zu gelangen.\n"
         },
         "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_callout1": "Verwende diesen Baustein, wenn sich Waddles und Chomp berühren!"
+          "courseC_PlayLab_events8_callout1": "Verwende diesen Block, wenn sich Waddles und Chomp berühren!"
         },
         "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_callout1": "Verwende diesen Baustein, wenn sich Waddles und Chomp berühren!"
+          "courseC_PlayLab_events8_callout1": "Verwende diesen Block, wenn sich Waddles und Chomp berühren!"
         },
         "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_callout1": "Verwende diesen Baustein, wenn sich Waddles und Chomp berühren!"
+          "courseC_PlayLab_events8_callout1": "Verwende diesen Block, wenn sich Waddles und Chomp berühren!"
         },
         "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_callout1": "Verwende diesen Baustein, wenn sich Waddles und Chomp berühren!"
+          "courseC_PlayLab_events8_callout1": "Verwende diesen Block, wenn sich Waddles und Chomp berühren!"
         },
         "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "courseC_artist_loops1a_2019": {
           "jumpto_callout": "Dieser Baustein ist für dieses Projekt sehr wichtig. Achte darauf diesen zu verwenden!"
@@ -1007,7 +1007,7 @@
           "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
+          "courseC_maze_programming2_1": "Das ist die Werkzeugkiste. Hier findest du zusätzliche Blöcke, mit denen du deine Aufgaben lösen kannst."
         },
         "courseC_maze_programming2_2018": {
           "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
@@ -1090,16 +1090,16 @@
           "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige Farben`-Baustein` leicht machen!"
+          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Aber wenn du willst, kannst du es dir mit dem Block `setze zufällige Farbe` leicht machen!"
         },
         "courseD_artist_nestedLoops1a_2018": {
-          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige Farben`-Baustein` leicht machen!"
+          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Aber wenn du willst, kannst du es dir mit dem Block `setze zufällige Farbe` leicht machen!"
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige Farben`-Baustein` leicht machen!"
+          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Aber wenn du willst, kannst du es dir mit dem Block `setze zufällige Farbe` leicht machen!"
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige Farben`-Baustein` leicht machen!"
+          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Aber wenn du willst, kannst du es dir mit dem Block `setze zufällige Farbe` leicht machen!"
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Du kannst diese Zahl ändern.",
@@ -1141,7 +1141,7 @@
           "courseD_bee_debugging_challenge1_callout1": "Verwende diesen Befehl, um die Biene rückwärts zu bewegen."
         },
         "courseD_collector_ramp8": {
-          "courseD_collector_ramp8_1": "Verwende diesen Baustein, um einen einzelnen Edelstein einzusammeln. "
+          "courseD_collector_ramp8_1": "Verwende diesen Block, um ein einzelnes Stück des Schatzes zu sammeln.  "
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "Um dieses Rätsel zu lösen, musst du den Baustein `Solange ein Weg vor Dir liegt` verwenden."
@@ -1398,7 +1398,7 @@
           "courseE_farmer_functions1a_1": "Dieses Gemüse ist unbekannt.  Es ändert sich bei jeder Ausführung des Programms."
         },
         "courseE_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Mit diesem Baustein kannst du Figuren an verschiedene Orte im Spielbereich bewegen."
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Bringe die Figur zu dieser Fahne, um zum nächsten Level zu gelangen.\n"

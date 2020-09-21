@@ -87,9 +87,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} selamanya"
         options:
@@ -108,9 +105,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -185,9 +179,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} sekali"
         options:
@@ -216,9 +207,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
@@ -1068,6 +1056,13 @@ ms:
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:

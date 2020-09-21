@@ -49,7 +49,10 @@ import {
   NOTIFICATION_ALERT_TYPE
 } from './constants';
 import {assets as assetsApi} from './clientApi';
-import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
+import {
+  configCircuitPlayground,
+  configMicrobit
+} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
@@ -1775,6 +1778,8 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
  * @param {MilestoneReport} options
  */
 StudioApp.prototype.report = function(options) {
+  // We don't need to report again on reset.
+  this.hasReported = true;
   const currentTime = new Date().getTime();
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
@@ -1839,6 +1844,14 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
  * Click the reset button.  Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
+  // If we haven't reported yet, report now.
+  if (!this.hasReported) {
+    this.report({
+      app: getStore().getState().pageConstants.appType,
+      level: this.config.level.id
+    });
+  }
+  this.hasReported = false;
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
@@ -2321,10 +2334,13 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   }
 
   // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.useMakerAPIs()) {
+  if (!project.getMakerAPIs()) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
-      makerDropletBlocks.forEach(block => {
+      configCircuitPlayground.blocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
+      configMicrobit.blocks.forEach(block => {
         delete config.level.codeFunctions[block.func];
       });
     }

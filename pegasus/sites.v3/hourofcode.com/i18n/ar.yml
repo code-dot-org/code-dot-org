@@ -190,6 +190,8 @@ ar:
   codeorg_homepage_special2020_body2: الاطلاع على مصادر التعلم المقترحة لدينا.
   codeorg_homepage_special2020_body: المدرسة مغلقة؟ تعلَّم في المنزل. خُذ استراحة
     لتعلم البرمجة، أو اطلع على المصادر التعليمية المناسبة للطلاب وأولياء الأمور والمعلمين.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: ابدأ الآن
   codeorg_homepage_code_break_body: خُذ استراحة لتعلم البرمجة! جرعتك الأسبوعية من
     الإلهام والمشاركة وعلوم الحاسوب.
@@ -364,6 +366,7 @@ ar:
   how_to_nav_companies: للشركات
   how_to_nav_afterschool_educators: للمعلمين بعد المدرسة
   how_to_nav_volunteers: للمتطوعين
+  how_to_nav_virtual: For virtual events
   whats_next_header: ماذا بعد؟
   whats_next_description: سنرسل لك مواد ونصائح مفيدة للحدث الخاص بك. <a href='http://code.org/learn'>جرِّب
     البرامج التعليمية الحالية</a> على أي متصفح أو هاتف ذكي - أو حتى بدون جهاز كمبيوتر!

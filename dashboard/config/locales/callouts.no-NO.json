@@ -967,6 +967,16 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Bruk rullegardinlisten for å erstatte «???» med et tall"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klikk på kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet ditt",
+          "New Artist Project_callout2": "Trykk \"Kjør\" for å lagre og kjøre programmet",
+          "sign_in_to_save_project": "Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klikk på kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet ditt!",
+          "New Play Lab Project_callout2": "Trykk \"Kjør\" for å lagre og kjøre programmet",
+          "sign_in_to_save_project": "Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!"
         }
       }
     }

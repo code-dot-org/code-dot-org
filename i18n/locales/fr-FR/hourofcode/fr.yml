@@ -195,9 +195,11 @@ fr:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: Faites un Code Break ! Votre dose hebdomadaire
+    d’inspiration, de communauté et d’informatique.
   codeorg_homepage_code_break_link_text: En savoir plus
   cookie_banner_message: En poursuivant votre navigation sur ce site ou en cliquant
     sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou
@@ -370,6 +372,7 @@ fr:
   how_to_nav_companies: Pour les entreprises
   how_to_nav_afterschool_educators: Pour les éducateurs qui officient après la classe
   how_to_nav_volunteers: Pour les bénévoles
+  how_to_nav_virtual: For virtual events
   whats_next_header: Et ensuite ?
   whats_next_description: Nous vous enverrons des outils et conseils utiles pour votre
     évènement. Les tutoriels 2015 seront bientôt à votre disposition pour tous les
@@ -7021,7 +7024,7 @@ fr:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Tous les navigateurs actuels
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Tous les navigateurs actuels
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Tous les navigateurs actuels
@@ -7222,7 +7225,7 @@ fr:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Tous les navigateurs actuels
   tutorial_csfirstname_string_platforms: Tous les navigateurs actuels
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Tous les navigateurs actuels
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8573,7 +8576,7 @@ fr:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8790,9 +8793,9 @@ fr:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9236,7 +9239,7 @@ fr:
   tutorial_tynkerland_string_platforms: Tous les navigateurs modernes, iPad, classes
     non connectées.
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
   tutorial_tynkermars_string_platforms: Tous les navigateurs modernes, iPad, classes

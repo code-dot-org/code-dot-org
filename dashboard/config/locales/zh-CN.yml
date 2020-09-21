@@ -170,9 +170,9 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
-    parent_account_checkbox: 我是一名家长/监护人，代表我的孩子注册
-    parent_account_email_progress_permission: 我们可以给你发电子邮件，不时地告诉你孩子的进度和项目，以及他们的课程和计算机科学的最新情况吗？[(查看我们的隐私权政策)](%{privacy_policy_url})
-    parent_account_email_label: 父母/监护人电子邮箱
+    parent_account_checkbox: 我是家长/监护人，代表我的孩子登录
+    parent_account_email_progress_permission: 我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})
+    parent_account_email_label: 家长/监护人电子邮箱
   school_info:
     title: 学校信息（选填）
     school_country: 学校所在国家
@@ -471,11 +471,12 @@ zh-CN:
     auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
     auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
     update_email: 更新
-    for_parents_and_guardians: 针对家长和监护人
-    link_a_parent_email: 将一位父母/监护人的电子邮箱地址链接到此帐户，以便随时了解你孩子的进度和项目。你还可以使用此电子邮箱地址恢复密码。
+    for_parents_and_guardians: 各位家长及监护人
+    link_a_parent_email: 将家长/监护人的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息。您也可以使用此电邮地址进行密码恢复。
     parent_guardian_email_label: 父母/监护人电子邮箱
+    remove_parent_email_label: 移除
     none: 没有
-    only_one_parent_email_supported_warning: 注：目前，针对每个学生帐户我们仅支持添加一个父母/监护人电子邮箱地址。
+    only_one_parent_email_supported_warning: 注意：我们目前对每位学生帐户只支持一位家长/监护人的电邮地址。
     encrypted: 已加密
   user_level:
     completed: 已完成
@@ -1119,8 +1120,9 @@ zh-CN:
       error_invalid_user: 无效的用户ID，请重新登录。
       error_no_code: 请输入您的登录代码。
   parent_email_banner:
-    text: "**你是一名父母还是监护人？**将你的电子邮箱链接到此帐户，以便随时了解你孩子的进度和项目！"
-    link_your_email: 填写电子邮箱
-    not_now: 以后再说
+    text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
+    link_your_email: 关联您的电子邮箱
+    not_now: 现在不想
   behaviors:
     this_sprite: 这个精灵
+  unit_prefix: 单位%{n}

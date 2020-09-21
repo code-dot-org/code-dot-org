@@ -46,7 +46,7 @@ export default storybook => {
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
           <LessonGroup
-            groupName="My Group"
+            lessonGroup={{displayName: 'My Group'}}
             isPlc={false}
             isSummaryView={false}
             lessons={lessons}
@@ -61,7 +61,7 @@ export default storybook => {
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
           <LessonGroup
-            groupName="My Group"
+            lessonGroup={{displayName: 'My Group'}}
             isPlc={false}
             isSummaryView={true}
             lessons={lessons}
@@ -76,8 +76,27 @@ export default storybook => {
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
           <LessonGroup
-            groupName="My Group"
+            lessonGroup={{displayName: 'My Group'}}
             isPlc={true}
+            isSummaryView={false}
+            lessons={lessons}
+            levelsByLesson={levelsByLesson}
+          />
+        </Provider>
+      )
+    },
+
+    {
+      name: 'LessonGroup with description and big questions',
+      story: () => (
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+          <LessonGroup
+            lessonGroup={{
+              displayName: 'My Group',
+              description: 'Lesson Group Description',
+              bigQuestions: ['Why?', 'Who?', 'Where?']
+            }}
+            isPlc={false}
             isSummaryView={false}
             lessons={lessons}
             levelsByLesson={levelsByLesson}

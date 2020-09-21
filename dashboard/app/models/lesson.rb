@@ -41,6 +41,13 @@ class Lesson < ActiveRecord::Base
 
   serialized_attrs %w(
     overview
+    student_overview
+    unplugged
+    creative_commons_license
+    assessment
+    purpose
+    preparation
+    announcements
     visible_after
   )
 
@@ -49,7 +56,6 @@ class Lesson < ActiveRecord::Base
   # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  #validates_uniqueness_of :name, scope: :script_id TODO: Add this back after we have moved over to new key/name systems for lesson
   validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
@@ -132,7 +138,7 @@ class Lesson < ActiveRecord::Base
     relative_position.to_s
   end
 
-  def unplugged?
+  def unplugged_lesson?
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.unplugged?
@@ -144,7 +150,7 @@ class Lesson < ActiveRecord::Base
   def display_as_unplugged
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged?
+    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged_lesson?
   end
 
   def spelling_bee?
@@ -244,7 +250,7 @@ class Lesson < ActiveRecord::Base
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged?
+      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged_lesson?
 
       lesson_data
     end

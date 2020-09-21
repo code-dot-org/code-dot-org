@@ -815,14 +815,14 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal level_options[:hintPromptAttemptsThreshold], @level.hint_prompt_attempts_threshold
   end
 
-  test 'does not set hint prompt attempts threshold in options if unavailable' do
+  test 'sets hint prompt attempts threshold in options to default if not already set' do
     @script = create :csf_script
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
     level_options = {}
     set_hint_prompt_options(level_options)
-    assert_nil level_options[:hintPromptAttemptsThreshold]
+    assert_equal level_options[:hintPromptAttemptsThreshold], 6.5
   end
 
   test 'does not set hint prompt attempts threshold in options for level in csp script' do

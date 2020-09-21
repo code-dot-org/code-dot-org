@@ -1139,6 +1139,14 @@ en:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
+      gamelab_locationModifier:
+        text: "[DISTANCE][0] pixels [DIRECTION][1] of [LOCATION][2]"
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: mouse location
       gamelab_locationOf:
