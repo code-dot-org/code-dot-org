@@ -1007,8 +1007,8 @@ class Script < ActiveRecord::Base
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_script = scripts.first
+    script_names, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
+    new_script = Script.find_by!(name: script_names.first)
 
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
