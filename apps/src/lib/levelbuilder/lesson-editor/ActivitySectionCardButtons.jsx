@@ -27,7 +27,8 @@ export default class ActivitySectionCardButtons extends Component {
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
     addLevel: PropTypes.func,
-    editTip: PropTypes.func
+    editTip: PropTypes.func,
+    deleteTip: PropTypes.func
   };
 
   constructor(props) {
@@ -38,7 +39,7 @@ export default class ActivitySectionCardButtons extends Component {
       editingExistingTip: false,
       addResourceOpen: false,
       addLevelOpen: false,
-      tipToEdit: {key: 'tip', type: 'teachingTip', markdown: ''}
+      tipToEdit: null
     };
   }
 
@@ -79,12 +80,17 @@ export default class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddTip = tip => {
-    if (!this.state.editingExistingTip) {
-      this.props.addTip(tip);
-    } else {
-      this.props.editTip(tip);
+    // If no tip was provided then user exited without saving
+    if (tip) {
+      this.state.editingExistingTip
+        ? this.props.editTip(tip)
+        : this.props.addTip(tip);
     }
     this.setState({addTipOpen: false, editingExistingTip: false});
+  };
+
+  handleDeleteTip = tipKey => {
+    this.props.deleteTip(tipKey);
   };
 
   handleOpenAddResource = () => {
@@ -149,6 +155,7 @@ export default class ActivitySectionCardButtons extends Component {
             isOpen={this.state.addTipOpen}
             handleConfirm={this.handleCloseAddTip}
             tip={this.state.tipToEdit}
+            handleDelete={this.handleDeleteTip}
           />
         )}
         <AddLevelDialog

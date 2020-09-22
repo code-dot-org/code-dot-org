@@ -16,6 +16,7 @@ import {
   moveLevelToActivitySection,
   addLevel,
   updateTip,
+  removeTip,
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
@@ -110,6 +111,7 @@ class ActivitySectionCard extends Component {
     updateActivitySectionField: PropTypes.func,
     addTip: PropTypes.func,
     updateTip: PropTypes.func,
+    removeTip: PropTypes.func,
     reorderLevel: PropTypes.func,
     moveLevelToActivitySection: PropTypes.func,
     addLevel: PropTypes.func
@@ -309,6 +311,14 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleDeleteTip = tipKey => {
+    this.props.removeTip(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      tipKey
+    );
+  };
+
   handleRemoveLevel = levelPos => {
     this.setState({levelPosToRemove: levelPos});
   };
@@ -447,6 +457,7 @@ class ActivitySectionCard extends Component {
           editTip={this.handleEditTip}
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
+          deleteTip={this.handleDeleteTip}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
@@ -473,6 +484,7 @@ export default connect(
     removeActivitySection,
     updateActivitySectionField,
     addTip,
-    updateTip
+    updateTip,
+    removeTip
   }
 )(ActivitySectionCard);

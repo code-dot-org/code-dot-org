@@ -30,7 +30,8 @@ export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     tip: tipShape,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -51,13 +52,21 @@ export default class EditTipDialog extends Component {
   handleTipTypeChange = event => {
     const newTip = _.cloneDeep(this.state.tip);
     const type = event.target.value;
-    console.log(event.target.value);
     newTip.type = type;
     this.setState({tip: newTip});
   };
 
-  handleClose = () => {
+  handleCloseAndSave = () => {
     this.props.handleConfirm(this.state.tip);
+  };
+
+  handleClose = () => {
+    this.props.handleConfirm();
+  };
+
+  handleDelete = () => {
+    this.props.handleDelete(this.state.tip.key);
+    this.props.handleConfirm();
   };
 
   render() {
@@ -93,11 +102,17 @@ export default class EditTipDialog extends Component {
           />
           <LessonTip tip={this.state.tip} />
         </div>
-        <DialogFooter rightAlign>
+        <DialogFooter>
+          <Button
+            __useDeprecatedTag
+            text={i18n.delete()}
+            onClick={this.handleDelete}
+            color={Button.ButtonColor.red}
+          />
           <Button
             __useDeprecatedTag
             text={i18n.closeAndSave()}
-            onClick={this.handleClose}
+            onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>

@@ -456,7 +456,7 @@ function activities(state = [], action) {
         action.activitySectionPosition - 1
       ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
         tip => {
-          return tip.key !== action.newTip.key;
+          return tip.key !== action.tipKey;
         }
       );
       break;
