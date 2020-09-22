@@ -30,4 +30,40 @@ describe('ActivitySectionCardButtons', () => {
     // Don't render this component until add tip button or tip icon are clicked
     expect(wrapper.find('EditTipDialog').length).to.equal(0);
   });
+
+  it('add level pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(0);
+    expect(button.text()).to.include('Level');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addLevelOpen).to.equal(true);
+  });
+
+  it('edit tip pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const tip = wrapper.find('LessonTipIconWithTooltip');
+    tip.simulate('click');
+    expect(wrapper.state().addTipOpen).to.equal(true);
+    expect(wrapper.state().editingExistingTip).to.equal(true);
+  });
+
+  it('add tip pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(1);
+    expect(button.text()).to.include('Tip');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addTipOpen).to.equal(true);
+  });
+
+  it('add resource link pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(2);
+    expect(button.text()).to.include('Resource Link');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addResourceOpen).to.equal(true);
+  });
 });
