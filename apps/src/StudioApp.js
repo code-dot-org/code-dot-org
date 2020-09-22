@@ -197,6 +197,7 @@ class StudioApp extends EventEmitter {
 
     this.onAttempt = undefined;
     this.onContinue = undefined;
+    this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
     this.isUS = undefined;
     this.enableShowBlockCount = true;
@@ -292,10 +293,10 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
-  this.resetClickedReport = _.debounce(options => {
-    this.report(options);
-    this.hasReported = false;
-  }, 1000);
+  this.debouncedSilentlyReport = _.debounce(
+    this.silentlyReport.bind(this),
+    1000
+  );
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1844,18 +1845,30 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
 };
 
 /**
- * Click the reset button.  Reset the application.
+ * Report milestones but don't trigger the success callback when
+ * the server responds.
+ */
+StudioApp.prototype.silentlyReport = function() {
+  this.report({
+    app: getStore().getState().pageConstants.appType,
+    level: this.config.level.id,
+    skipSuccessCallback: true
+  });
+  this.hasReported = false;
+};
+
+/**
+ * Click the reset button. Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
-  // If we haven't reported yet, report now.
+  // First, abort any reports in progress - the server call will
+  // still complete, but we'll skip the success callback.
+  this.onResetPressed();
+  // Then, check if any reports happened this cycle. If not, trigger a report.
   if (!this.hasReported) {
-    // Use the debounced version of report so we don't make dozens of
-    // server calls if the user mashes the reset button
-    this.resetClickedReport({
-      app: getStore().getState().pageConstants.appType,
-      level: this.config.level.id
-    });
+    this.debouncedSilentlyReport();
   }
+  this.hasReported = false;
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
@@ -2043,6 +2056,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.onInitialize = config.onInitialize
     ? config.onInitialize.bind(config)
     : function() {};
+  this.onResetPressed = config.onResetPressed || function() {};
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;

@@ -87,6 +87,9 @@ function validateReport(report) {
       case 'allowMultipleSends':
         validateType('allowMultipleSends', value, 'boolean');
         break;
+      case 'skipSuccessCallback':
+        validateType('skipSuccessCallback', value, 'boolean');
+        break;
       case 'level':
         if (value !== null) {
           if (report.app === 'level_group' || isContainedLevel) {
@@ -193,6 +196,7 @@ function validateReport(report) {
  * @property {boolean} allowMultipleSends - ??
  * @property {number} lines - number of lines of code written.
  * @property {number} serverLevelId - ??
+ * @property {boolean} skipSuccessCallback - Whether we should ignore the success result from ajax
  * @property {?} submitted - ??
  * @property {?} time - ??
  * @property {number} timeSinceLastMilestone- The time since navigating to this page or since the last
@@ -297,6 +301,10 @@ reporting.sendReport = function(report) {
         );
       },
       success: function(response) {
+        if (report.skipSuccessCallback === true) {
+          reportComplete(report, getFallbackResponse(report));
+          return;
+        }
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
