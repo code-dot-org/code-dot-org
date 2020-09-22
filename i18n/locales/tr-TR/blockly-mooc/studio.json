@@ -122,7 +122,6 @@
   "dropletBlock_setSpritePosition_description": "Aktörü anında belirtilen konuma taşır.",
   "dropletBlock_setSpriteSpeed_description": "Bir aktörün hızını ayarlar",
   "dropletBlock_setSprite_description": "Aktör resmini ayarlar",
-  "dropletBlock_setSprite_param0": "",
   "dropletBlock_setSprite_param0_description": "Hangi aktörün değişeceğini bildiren indeks (0' dan başlar).",
   "dropletBlock_setSprite_param1": "görüntü",
   "dropletBlock_setSprite_param1_description": "Aktör görüntüsünün adı.",

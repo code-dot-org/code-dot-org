@@ -738,7 +738,7 @@ id:
         iceage_repeat: Jam Mengkode Ice Age - Pernyataan yang diulang
         mc_2016_intro: Jam Mengkode Minecraft- Introduksi
         mc_2016_loops: Hour of Code Minecraft - Putaran
-        mc_2016_events: Hour of Code Minecraft - Kejadian
+        mc_2016_events: Hour of Code Minecraft - Events
         mc_2016_spawn: Hour of Code Minecraft - Memunculkan
         mc_2016_congrats: Jam Mengkode Minecraft - Selamat
         applab_hoc_welcome: Hour of Code App Lab - Selamat Datang
@@ -790,7 +790,7 @@ id:
         csd_gamelab_conditional_statements: Pernyataan Kondisional
         csd_gamelab_if_else: Pernyataan Jika/Kecuali
         CSF_SpriteLabIntro_CDEF: Ini adalah Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: Cara membuat Sprite dalam Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Bagaimana membuat Sprite dalam Sprite Lab
         CDEF_Video_SpritesInAction: Sprite dalam aksi
         CSF_SpriteLab_SpritesInAction_CDEF: Sprite dalam aksi
         CSF_StarWars_ProjectIntro: Pendahuluan Proyek Star Wars
@@ -815,13 +815,13 @@ id:
         writing_first_program: Tulis program komputer pertama Anda
         conditionals_with_cards: Pelajaran Unplugged dalam aksi-kondisional dengan
           kartu
-        songwriting_with_functions: 'Pelajaran Unplugged dalam aksi: penulisan lagu
-          dengan fungsi'
+        songwriting_with_functions: 'Unplugged Lesson dalam aksi: penulisan lagu dengan
+          fungsi'
         what_is_an_event: Apa itu peristiwa?
         teaching_cs_pair_programming: 'Mengajar CS Fundamentals: Pemrograman Berpasangan'
         teaching_problem_solving: 'Mengajar CS Fundamentals: Mengajarkan Pemecahan
           Masalah'
-        csd_applab_designmode: 'Penemuan CS: App Lab - Mode Desain'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Mode Desain'
         csd_pair_programming: Pemrograman berpasangan
         csd_gamelab_functions: Fungsi Panggilan dan Mendefinisikan
         csd_applab_parameters: Fungsi dengan parameter
@@ -829,7 +829,7 @@ id:
         csd_problem_solving_process: Proses Pemecahan Masalah
         CSF_Going_Places_Safely: Tetangga Online Saya
         CSF_SpriteLab_Intro_v2: Memperkenalkan Sprite Lab
-        CSF_Spritelab_MakeSprite_v2: Cara Membuat Sprite
+        CSF_Spritelab_MakeSprite_v2: Bagaimana Membuat Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprite dalam aksi
         csd_debugging: Debugging
         csd_applab_designmode_short: Mode Desain App Lab
@@ -929,7 +929,7 @@ id:
           dan ubah ukurannya.
         frozen_snowflake_branch: Gunakan blok "buat cabang kepingan salju.
         frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
-        playlab_drag_say: Seret blok "ucapkan" di sini lalu ketik "Hello"
+        playlab_drag_say: Pindahkan blok "ucapkan" di sini lalu ketik "Hello"
         playlab_use_twice: Gunakan blok ini dua kali dan ingat untuk mengubah nomor
           aktor
         playlab_move_girl: Gunakan "pindah kanan" blok untuk memindahkan gadis Tenis
@@ -941,8 +941,9 @@ id:
         playlab_add_blocks: Tambahkan blok Anda di sini
         set_variable: Tarik nomor blok di sini untuk menetapkan variabel Anda
         place_variable: Tarik Anda variabel di dalam blok ini
-        bee_for_loop: Tarik jumlah terbesar nektar lebah yang Anda inginkan di sini
-        place_counter_variable: Tarik variabel counter ke dalam blok ini
+        bee_for_loop: Pindahkan jumlah terbesar nektar lebah yang Anda inginkan di
+          sini
+        place_counter_variable: Pindahkan variabel counter ke dalam blok ini
         function_editor_draw_square: Ini adalah definisi fungsi Anda. Blok ini dijalankan
           setiap kali Anda menggunakan blok "draw a square"
         change_here: Buat perubahan Anda di sini
