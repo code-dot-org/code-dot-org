@@ -180,7 +180,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if email_already_taken(user)
+    if email_already_taken(user) && AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(provider)
       return sign_in_user user if auth_already_exists(auth_hash)
       if allows_silent_takeover(user, auth_hash)
         user = silent_takeover user, auth_hash
