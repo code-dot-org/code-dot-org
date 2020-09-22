@@ -89,6 +89,7 @@ export default class EditTipDialog extends Component {
             defaultValue={this.state.tip.markdown}
             onChange={this.handleTextChange}
             style={styles.textArea}
+            rows={5}
           />
           <LessonTip tip={this.state.tip} />
         </div>

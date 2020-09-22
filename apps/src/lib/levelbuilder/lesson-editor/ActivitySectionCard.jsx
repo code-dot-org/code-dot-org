@@ -15,6 +15,7 @@ import {
   reorderLevel,
   moveLevelToActivitySection,
   addLevel,
+  updateTip,
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
@@ -108,6 +109,7 @@ class ActivitySectionCard extends Component {
     removeActivitySection: PropTypes.func,
     updateActivitySectionField: PropTypes.func,
     addTip: PropTypes.func,
+    updateTip: PropTypes.func,
     reorderLevel: PropTypes.func,
     moveLevelToActivitySection: PropTypes.func,
     addLevel: PropTypes.func
@@ -299,9 +301,12 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  //TODO: Hook up editing the tip when you click on the icon
   handleEditTip = tip => {
-    console.log(`edit tip ${tip}`);
+    this.props.updateTip(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      tip
+    );
   };
 
   handleRemoveLevel = levelPos => {
@@ -467,6 +472,7 @@ export default connect(
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField,
-    addTip
+    addTip,
+    updateTip
   }
 )(ActivitySectionCard);
