@@ -203,6 +203,9 @@ export function setupApp(appOptions) {
         );
       }
     },
+    onResetPressed: function() {
+      reporting.cancelReport();
+    },
     onContinue: function() {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
