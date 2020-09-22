@@ -929,14 +929,16 @@ class Script < ActiveRecord::Base
 
       n = 0
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.each do |options, raw_lesson_groups|
-        add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+        added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
         n += 1
         print "#{n}, " if debug
+        added_script.name
       rescue => e
         raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
       end
-      custom_i18n
+      puts added_script_names
+      [added_script_names, custom_i18n]
     end
   end
 

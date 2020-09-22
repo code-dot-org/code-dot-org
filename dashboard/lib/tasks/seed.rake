@@ -170,7 +170,7 @@ namespace :seed do
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
-      custom_i18n = Script.setup(custom_scripts)
+      _, custom_i18n = Script.setup(custom_scripts)
       Script.merge_and_write_i18n(custom_i18n)
     rescue
       rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we
