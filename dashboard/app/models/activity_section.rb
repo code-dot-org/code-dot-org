@@ -16,6 +16,15 @@
 #  index_activity_sections_on_seeding_key         (seeding_key) UNIQUE
 #
 
+# An ActivitySection represents a part of an activity in a lesson plan.
+# An ActivitySection may contain a progression of script levels, or
+# may simply contain formatted text and other visual information.
+#
+# @attr [String] title - The user-visible heading of this section of the activity
+# @attr [boolean] remarks - Whether to show the remarks icon
+# @attr [boolean] slide - Whether to show the slides icon
+# @attr [String] description - Text describing the activity
+# @attr [Array] tips - An array of instructional tips to display
 class ActivitySection < ApplicationRecord
   include SerializedProperties
 
