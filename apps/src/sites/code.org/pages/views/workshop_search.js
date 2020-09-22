@@ -1,4 +1,4 @@
-/* globals google */
+/* globals google, mapboxgl */
 
 import $ from 'jquery';
 import MarkerClusterer from 'node-js-marker-clusterer';
@@ -10,18 +10,18 @@ const markerCustererOptions = {
   gridSize: 10
 };
 
-var gmap,
+var map,
   markersByLocation = {},
   infoWindow,
   markerClusterer;
 
 $(document).ready(function() {
   initializeMap();
-  loadWorkshops();
+  map.on('load', loadWorkshops);
 });
 
 function initializeMap() {
-  var mapOptions = {
+  /*var mapOptions = {
     center: new google.maps.LatLng(37.6, -95.665),
     zoom: 4,
     minZoom: 2,
@@ -29,23 +29,47 @@ function initializeMap() {
   };
 
   gmap = new google.maps.Map(document.getElementById('gmap'), mapOptions);
-  infoWindow = new google.maps.InfoWindow();
+  infoWindow = new google.maps.InfoWindow();*/
+  map = new mapboxgl.Map({
+    container: 'gmap',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-95.665, 37.6],
+    zoom: 4
+  });
 }
 
 function loadWorkshops() {
-  markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
+  //markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
 
   const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
   let url = '/dashboardapi/v1/pd/k5workshops';
   if (deepDiveOnly !== undefined) {
     url += '?deep_dive_only=1';
   }
-
+  /*
   $.get(url)
     .done(function(data) {
-      processPdWorkshops(data);
+      console.log(data);
+      map.addSource('workshops', {
+        type: 'geojson',
+        data: JSON.parse(data)
+      });
+      //processPdWorkshops(data);
     })
-    .always(completeProcessingPdWorkshops);
+    //.always(completeProcessingPdWorkshops);
+*/
+  map.addSource('workshops', {
+    type: 'geojson',
+    data: url
+  });
+  map.addLayer({
+    id: 'workshops',
+    type: 'circle',
+    source: 'workshops',
+    paint: {
+      'circle-color': 'blue'
+    }
+  });
 }
 
 function processPdWorkshops(workshops) {

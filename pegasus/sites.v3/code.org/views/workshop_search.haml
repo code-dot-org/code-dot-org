@@ -5,6 +5,9 @@
 %script{type: 'text/javascript', src: webpack_asset_path('js/code.org/views/workshop_search.js'), data: {workshopSearch: {'imagePath': image_path}.to_json} }
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
+%link{href:'https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css', rel:'stylesheet'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'}
+
 :css
   .workshop-item {
     line-height: 1.3em;
@@ -37,3 +40,6 @@
     #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
 
 #properties{'data-studio-url': CDO.studio_url, 'data-deep-dive-only': deep_dive_only}
+
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
