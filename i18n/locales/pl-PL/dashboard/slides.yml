@@ -693,7 +693,7 @@ pl:
       1:
         text: "Ta lekcja nosi tytuł: \"Wyścig kostek\". Prawie wszyscy lubią gry komputerowe. Czy zastanawiałeś się kiedyś, jak programiści komputerowi przekształcają grę w program? Pierwszy krok przy tworzeniu gier komputerowych oraz rozwiązywanie dowolnego problemu wymaga przemyślenia i planowania. "
       2:
-        text: "Krok polegający na przemyśleniu rozwiązania problemu prowadzi do utworzenia algorytmu będącego planem krok-po-kroku na potrzeby rozwiązania problemu lub ukończenia zadania. W tej lekcji będziesz tworzyć algorytm dla gry w \"Wyścig kostek\". Potem poprosisz swoich znajomych o wypróbowanie Waszego planu, aby przekonać się, czy są w stanie wykonać kroki w ramach rozgrywania gry. Gdy programista nabędzie pewności, że kroki są poprawne, czas na przełożenie algorytmu w program w języku zrozumiałym dla komputera."
+        text: "Krok polegający na przemyśleniu rozwiązania problemu prowadzi do utworzenia algorytmu będącego planem krok-po-kroku na potrzeby rozwiązania problemu lub ukończenia zadania. Na tej lekcji będziesz tworzyć algorytm dla gry w \"Wyścig kostek\". Potem poprosisz swoich znajomych o wypróbowanie Waszego planu, aby przekonać się, czy są w stanie wykonać kroki w ramach rozgrywania gry. Gdy programista nabędzie pewności, że kroki są poprawne, czas na przełożenie algorytmu w program w języku zrozumiałym dla komputera."
       3:
         text: "Prawie wszystko, co robimy każdego dnia, wymaga algorytmu, wykazu kroków, które możesz wykonać, aby ukończyć zadanie. Pomyśl o przygotowywaniu się do szkoły lub planowaniu miłego dnia ze znajomymi lub przygotowywaniu czegoś do jedzenia. Celem ukończenia któregokolwiek z tych zadań musisz je podzielić na mniejsze kroki, a czasem kroki muszą być w określonym porządku."
       4:
@@ -752,7 +752,7 @@ pl:
       2:
         text: "Nazywamy to refrenem. W programie komputerowym części programu, które postarzają się, nazywamy funkcjami. Czytając słowa piosenki i pojawia się słowo \"refren\", czy śpiewasz słowo \"refren\"? Nie, patrzysz na górę strony, aby zobaczyć, jakie słowa tworzą refren."
       3:
-        text: "W tej lekcji będziemy się uczyć piosenki zatytułowanej \"Króliczek Fu-Fu\". Piosenka obejmuje refren, który śpiewa się kilka razy. Funkcja jest fragmentem kodu, który będzie się przywoływać i używać wielokrotnie je powtarzając. To ułatwia program i zwiększa jego skuteczność, tak, aby nie trzeba było zapisywać kroków swojej funkcji z wielokrotnymi powtórzeniami. Wystarczy zapisać je raz!"
+        text: "Na tej lekcji będziemy się uczyć piosenki zatytułowanej \"Króliczek Fu-Fu\". Piosenka obejmuje refren, który śpiewa się kilka razy. Funkcja jest fragmentem kodu, który będzie się przywoływać i używać wielokrotnie je powtarzając. To ułatwia program i zwiększa jego skuteczność, tak, aby nie trzeba było zapisywać kroków swojej funkcji z wielokrotnymi powtórzeniami. Wystarczy zapisać je raz!"
     C4_bee_conditional:
       1:
         text: "To jest blok warunkowy. Stanowi on, że jeśli jesteś przy kwiatku lub plastrze miodu, zrób coś. Przydaje się to, gdy nie wiemy ile miodu lu nektaru należy zebrać, co tutaj jest zaznaczone znakiem zapytania."

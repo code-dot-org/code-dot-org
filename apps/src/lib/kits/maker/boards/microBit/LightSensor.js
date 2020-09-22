@@ -86,13 +86,11 @@ export default class LightSensor extends EventEmitter {
 
   // Reset the state to initial values between runs
   reset() {
-    this.state = {
-      threshold: 128,
-      rangeMin: 0,
-      rangeMax: MAX_LIGHT_SENSOR_VALUE,
-      currentReading: 0,
-      currentBufferWriteIndex: 0
-    };
+    this.state.threshold = 128;
+    this.state.rangeMin = 0;
+    this.state.rangeMax = MAX_LIGHT_SENSOR_VALUE;
+    this.state.currentReading = 0;
+    this.state.currentBufferWriteIndex = 0;
     if (this.state.buffer) {
       this.state.buffer.fill(0);
     }
