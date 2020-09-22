@@ -86,7 +86,10 @@ class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddTip = tip => {
-    // If no tip was provided then user exited without saving
+    /*
+      If no tip was provided then user exited without saving
+      and we should not update the tips
+    */
     if (tip) {
       this.state.editingExistingTip
         ? this.props.updateTip(
@@ -181,7 +184,7 @@ class ActivitySectionCardButtons extends Component {
           handleConfirm={this.handleCloseAddLevel}
           currentLevels={this.props.activitySection.levels}
           addLevel={this.props.addLevel}
-          activitySection={this.props.activitySection}
+          activitySectionPosition={this.props.activitySection.position}
           activityPosition={this.props.activityPosition}
         />
       </div>
