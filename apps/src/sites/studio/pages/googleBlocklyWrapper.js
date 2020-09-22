@@ -4,6 +4,7 @@ import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
+import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 
 /**
@@ -44,6 +45,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
+  blocklyWrapper.wrapReadOnlyProperty('bindEventWithChecks_');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -86,6 +88,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
+  blocklyWrapper.wrapReadOnlyProperty('HorizontalFlyout');
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
@@ -93,14 +96,22 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Msg');
   blocklyWrapper.wrapReadOnlyProperty('Names');
   blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
+  blocklyWrapper.wrapReadOnlyProperty('Options');
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
+  blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
+  blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('selected');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_TOP');
+  blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_LEFT');
+  blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_RIGHT');
+  blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_BOTTOM');
+  blocklyWrapper.wrapReadOnlyProperty('VerticalFlyout');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
@@ -111,6 +122,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -207,7 +219,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: CdoTheme
+      theme: CdoTheme,
+      trashcan: true
     };
     return blocklyWrapper.blockly_.inject(container, options);
   };
