@@ -210,7 +210,7 @@ export default class SetupChecklist extends Component {
         <ValidationStep
           stepName={
             applabI18n.makerSetupAppInstalled() +
-            (isChromeOS() ? '' : ' (' + applabI18n.legacy() + ')')
+            (isChromeOS() ? '' : applabI18n.legacy())
           }
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
