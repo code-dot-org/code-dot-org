@@ -283,6 +283,7 @@ Resources:
           PortMappings:
             -
               ContainerPort: 8080
+              HostPort: 8080
           Environment:
             # TODO: (suresh) Update DroneEcsTaskExecutionRole to include the permissions needed by Autoscaler and then remove this API Key.
             -
