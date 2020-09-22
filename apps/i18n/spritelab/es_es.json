@@ -1,4 +1,5 @@
 {
+  "object": "objeto",
   "errorLoadingAnimation": "Parece que tenemos problemas al cargar tu animación \"{animationName}\". Asegúrate de que tienes una buena conexión a Internet y vuelve a cargar la página. Si persiste el problema, es posible que la animación esté rota. En ese caso, deberías eliminar la animación para continuar.",
   "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para pasar al siguiente nivel.",
   "shareGame": "Comparte tu juego:",

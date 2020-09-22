@@ -5,19 +5,19 @@ has_verified_resources true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
-lesson 'The Need For Programming Languages'
+lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L01 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U3L01 Assessment3', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In', assessment: true
 
-lesson 'The Need for Algorithms'
+lesson 'The Need for Algorithms', display_name: 'The Need for Algorithms'
 level 'v2 U3L02 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-lesson 'Creativity in Algorithms'
+lesson 'Creativity in Algorithms', display_name: 'Creativity in Algorithms'
 level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-lesson 'Using Simple Commands'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands'
 level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'csp_applab_turtle', progression: 'Turtle Programming'
 level 'U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
@@ -28,7 +28,7 @@ level 'U3L02 Free Response Getting Started', progression: 'Check Your Understand
 level 'csp_U3_square_v_rect_FR', progression: 'Check Your Understanding', assessment: true
 level 'U3L02 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating Functions'
+lesson 'Creating Functions', display_name: 'Creating Functions'
 level 'v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'csp_applab_functions', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround', progression: 'Using Functions With Turtle Commands'
@@ -44,7 +44,7 @@ level 'U3L03 Assessment', progression: 'Check Your Understanding', assessment: t
 level 'U3L03 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 level 'csp_U3_plan_code_FR', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Functions and Top-Down Design'
+lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design'
 level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'U3L04 - snowflake', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions', progression: 'Using Functions with Turtle Commands'
@@ -53,7 +53,7 @@ level 'U3L04 Assessment1', progression: 'Check Your Understanding', assessment: 
 level 'U3L04 Assessment2', progression: 'Check Your Understanding', assessment: true
 level 'U3L04 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
 
-lesson 'APIs and Function Parameters'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters'
 level 'v2 U3L07 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'U3L06 - moveForwardwithParams', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle', progression: 'Introduction to Parameters'
@@ -70,7 +70,7 @@ level 'U3L06-API-multichoice', progression: 'Check Your Understanding', assessme
 level 'U3L06 Assessment', progression: 'Check Your Understanding', assessment: true
 level 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating functions with Parameters'
+lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters'
 level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'csp_applab_functions_parameters', progression: 'Functions with Parameters'
 level 'U3L08 - drawSquareWithParam', progression: 'Drawing Shapes With Parameters'
@@ -92,7 +92,7 @@ level 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice Resp
 level 'U3L08 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U3L08 Assessment2', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Looping and Random Numbers'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers'
 level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'csp_applab_loops', progression: 'Using Loops'
 level 'U3L07 - introSquare', progression: 'Introduction to Loops'
@@ -113,16 +113,17 @@ level 'U3L07 - MC remove line of code loops', progression: 'Check Your Understan
 level 'U3L07 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 level 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Practice PT - Design a Digital Scene'
+lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene'
 level 'v2 U3L10 Student Lesson Introduction - stage mods only', progression: '(Modified) Lesson Vocabulary & Resources', named: true
 level 'U3L08 - individualCode', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates', named: true
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-lesson 'Unit 3 Chapter 1 Assessment', lockable: true
+lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true
 variants
   level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
+

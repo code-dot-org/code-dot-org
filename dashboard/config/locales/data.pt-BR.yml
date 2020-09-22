@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     game:
       name:
@@ -853,6 +853,7 @@ pt-BR:
         hoc_dance_properties_2019: Dance Party 2019 - Propriedades
         csd_what_computers_do: O que os computadores fazem?
         csf_my_online_neighborhood_2020: Minha Vizinhança Online
+        csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
         csd_what_computers_are: O que é um computador?
     callout:

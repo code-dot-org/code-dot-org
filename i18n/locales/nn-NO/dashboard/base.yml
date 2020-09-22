@@ -342,6 +342,8 @@ nn:
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Personvern"
+      legal_tos: "Vilkår"
     user:
       classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'
@@ -944,6 +946,8 @@ nn:
       school_name: 'Namn på skule'
       school_city: 'Skulen sin poststad'
       school_country: 'Landet til skulen'
+      colombian_school_city: 'Skulen sin poststad'
+      colombian_school_name: 'Namn på skule'
       ages: 'Kva alder underviser du dette året?'
       subjects: 'Kva fag underviser du dette året?'
       resources: 'Kva for følgjande utdanningsressursar i CS nyttar du?'

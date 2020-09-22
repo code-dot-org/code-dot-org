@@ -11,6 +11,24 @@ uk:
   campaign_date_full: 4-10 грудня
   campaign_date_year: '2017'
   campaign_date_full_year: 4-10 грудня 2017 року
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Вивчайте інформатику. Змінюйте світ.
   hoc2019_header_line1_mobile: Вивчайте інформатику.
   hoc2019_header_line2_mobile: Змінюйте світ.
@@ -172,8 +190,10 @@ uk:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -346,6 +366,7 @@ uk:
   how_to_nav_companies: Для компаній
   how_to_nav_afterschool_educators: Для позашкілля
   how_to_nav_volunteers: Для волонтерів
+  how_to_nav_virtual: For virtual events
   whats_next_header: Що далі?
   whats_next_description: Ми надішлемо вам матеріали та корисні поради для вашого
     заходу. Незабаром виходять нові підручники 2015 року для різних браузерів, смартфонів,
@@ -6817,7 +6838,7 @@ uk:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Усі сучасні браузери
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Усі сучасні браузери
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Усі сучасні браузери
@@ -7019,7 +7040,7 @@ uk:
   tutorial_groklearningpython_string_platforms: Усі сучасні браузери
   tutorial_htmltimetravel_string_platforms: Усі сучасні браузери
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Безмашинна
+  tutorial_appytappin_string_platforms: Усі сучасні браузери
   tutorial_icipher_string_platforms: Безмашинна
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Безмашинна
@@ -8348,7 +8369,7 @@ uk:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8566,9 +8587,9 @@ uk:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8978,8 +8999,8 @@ uk:
     iPad
   tutorial_scratchcartoon_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Планшет Android, iPad, телефон Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
   tutorial_bananatales_string_platforms: Усі сучасні браузери
   tutorial_scratchtales_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9004,7 +9025,7 @@ uk:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Планшет Android, iPad, телефон Android, iPhone
@@ -9352,3 +9373,4 @@ uk:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

@@ -265,6 +265,8 @@ sv:
       help_us: "Hjälp oss"
       teach: "Undervisa"
       about: "Om"
+      legal_privacy: "Sekretesspolicy"
+      legal_tos: "Villkor"
     user:
       classroom: 'Lärare hemsida'
       district_dashboard: 'Distriktets kontrollpanel'
@@ -786,6 +788,7 @@ sv:
       email: 'E-post'
       school_name: 'Skolnamn'
       school_country: 'Skolans land'
+      colombian_school_name: 'Skolnamn'
     form_entries:
       gender:
         male: 'Man'

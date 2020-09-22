@@ -11,6 +11,24 @@ ca:
   campaign_date_full: 5-11 de desembre
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 de desembre de 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Aprèn Ciéncies de la Computació. Canvia el món.
   hoc2019_header_line1_mobile: Aprèn Ciéncies de la Computació.
   hoc2019_header_line2_mobile: Canvia el món.
@@ -171,8 +189,10 @@ ca:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -347,6 +367,7 @@ ca:
   how_to_nav_companies: Per a empreses
   how_to_nav_afterschool_educators: Per a educadors extraescolars
   how_to_nav_volunteers: Per a voluntaris
+  how_to_nav_virtual: For virtual events
   whats_next_header: Què segueix?
   whats_next_description: Li enviarem materials i consells útils per al teu esdeveniment.
     <a href='http://code.org/learn'> Prova els tutorials </a> per a qualsevol navegador,
@@ -463,7 +484,7 @@ ca:
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
   signup_registration_deadline: Registration for the Hour of Code closes December
-    11.
+    13.
   signup_name_placeholder: El teu nom
   signup_email_placeholder: tu@exemple.com
   signup_organization_name_placeholder: Per exemple, Universitat Autònoma
@@ -6393,7 +6414,7 @@ ca:
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: Tots els navegadors moderns, tableta amb Android,
@@ -6469,7 +6490,7 @@ ca:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6808,7 +6829,7 @@ ca:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6940,26 +6961,38 @@ ca:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6987,15 +7020,15 @@ ca:
   tutorial_codesparkcreate_string_platforms: Tots els navegadors moderns, tableta
     amb Android, iPad, telèfon Android, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: All modern browsers
   tutorial_csfirstname_string_platforms: All modern browsers
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: All modern browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -7003,10 +7036,10 @@ ca:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -8354,7 +8387,7 @@ ca:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8571,9 +8604,9 @@ ca:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8980,7 +9013,8 @@ ca:
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tots els navegadors moderns, tableta amb
+    Android, iPad, telèfon Android, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9005,7 +9039,7 @@ ca:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -9020,7 +9054,7 @@ ca:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -9031,7 +9065,7 @@ ca:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers
@@ -9353,3 +9387,4 @@ ca:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

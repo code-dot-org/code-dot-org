@@ -1,0 +1,607 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Adams Central High School,IN-0015-0021,180006000007,4568,AP Computer Science Principles,8,2,0,0,0,0,2,0,0
+Adams Central High School,IN-0015-0021,180006000007,4803,Introduction to Computer Science,4,0,0,0,0,0,0,0,0
+South Adams High School,IN-0035-0023,181026001642,4801,Computer Science I,13,1,0,1,0,0,3,0,0
+South Adams High School,IN-0035-0023,181026001642,5236,Computer Science II,2,0,0,0,0,0,1,0,0
+Homestead Senior High School,IN-0125-0047,180003000002,4801,Computer Science I,24,2,1,2,0,0,2,2,1
+Homestead Senior High School,IN-0125-0047,180003000002,5236,Computer Science II,10,2,0,1,0,0,0,1,0
+Homestead Senior High School,IN-0125-0047,180003000002,4803,Introduction to Computer Science,26,1,1,1,0,0,0,0,0
+Homestead Senior High School,IN-0125-0047,180003000002,4803,Introduction to Computer Science,26,5,2,2,0,0,4,1,0
+Carroll High School,IN-0225-0091,180825001414,4570,AP Computer Science A,24,3,2,0,0,0,1,0,0
+Carroll High School,IN-0225-0091,180825001414,4801,Computer Science I,80,8,1,8,1,0,15,6,0
+Anthis Career Center,IN-0235-0093,unspecified,5236,Computer Science II,24,4,3,3,0,0,13,2,3
+North Side High School,IN-0235-0101,180363000550,4568,AP Computer Science Principles,28,7,3,2,0,0,16,1,2
+North Side High School,IN-0235-0101,180363000550,4803,Introduction to Computer Science,117,23,27,19,0,0,80,19,10
+R Nelson Snider High School,IN-0235-0102,180363000556,4570,AP Computer Science A,12,1,0,2,0,0,0,0,0
+R Nelson Snider High School,IN-0235-0102,180363000556,4568,AP Computer Science Principles,32,4,3,3,0,0,15,3,0
+R Nelson Snider High School,IN-0235-0102,180363000556,4803,Introduction to Computer Science,63,15,12,6,0,0,26,6,1
+South Side High School,IN-0235-0105,180363000562,4803,Introduction to Computer Science,115,27,35,34,0,0,88,17,8
+Wayne High School,IN-0235-0177,180363000568,4803,Introduction to Computer Science,63,20,18,10,0,0,40,15,8
+Wayne High School,IN-0235-0177,180363000568,4801,Computer Science I,18,2,1,5,0,0,5,3,0
+Northrop High School,IN-0235-0219,180363000552,4801,Computer Science I,72,16,19,7,0,0,33,15,2
+Northrop High School,IN-0235-0219,180363000552,4803,Introduction to Computer Science,175,71,29,29,1,0,86,24,4
+Leo Junior/Senior High School,IN-0255-0049,180285000349,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,0,0,0
+Heritage Jr/Sr High School,IN-0255-0081,180285000344,5610,Industrial Automation and Robotics I,11,5,0,0,0,0,9,0,6
+Heritage Jr/Sr High School,IN-0255-0081,180285000344,4803,Introduction to Computer Science,24,2,0,2,0,0,16,4,0
+Woodlan Jr/Sr High School,IN-0255-0285,180285000361,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,0,0,0
+New Haven Jr/Sr High School,IN-0255-0297,180285000353,4803,Introduction to Computer Science,11,2,4,1,0,0,5,0,0
+New Haven Jr/Sr High School,IN-0255-0297,180285000353,5610,Industrial Automation and Robotics I,12,0,4,3,0,0,9,1,2
+Columbus North High School,IN-0365-0397,180036000066,5610,Industrial Automation and Robotics I,9,1,0,1,0,0,4,0,2
+Columbus North High School,IN-0365-0397,180036000066,5612,Industrial Automation and Robotics II,2,0,0,0,0,0,0,0,0
+Columbus North High School,IN-0365-0397,180036000066,4801,Computer Science I,1,0,0,0,0,0,0,1,0
+Columbus North High School,IN-0365-0397,180036000066,4570,AP Computer Science A,22,9,0,1,0,0,0,0,0
+Columbus North High School,IN-0365-0397,180036000066,4568,AP Computer Science Principles,39,13,2,3,0,0,4,0,0
+Columbus North High School,IN-0365-0397,180036000066,5236,Computer Science II,9,1,0,0,0,0,0,1,0
+Columbus East High School,IN-0365-0399,180036000065,4801,Computer Science I,15,3,0,1,0,0,0,1,1
+Hauser Jr-Sr High School,IN-0370-0410,180357000509,4568,AP Computer Science Principles,5,3,0,0,0,0,1,0,0
+Hauser Jr-Sr High School,IN-0370-0410,180357000509,4801,Computer Science I,18,6,1,0,0,0,4,2,0
+Hauser Jr-Sr High School,IN-0370-0410,180357000509,5236,Computer Science II,6,2,0,0,0,0,0,0,0
+Benton Central Jr-Sr High School,IN-0395-0445,180048000097,4801,Computer Science I,12,0,1,1,0,0,5,5,0
+Benton Central Jr-Sr High School,IN-0395-0445,180048000097,5236,Computer Science II,5,1,0,1,0,0,2,1,0
+Western Boone Jr-Sr High School,IN-0615-0539,181299002066,4801,Computer Science I,11,0,0,0,0,0,2,1,0
+Zionsville Community High School,IN-0630-0512,180283000341,4570,AP Computer Science A,20,0,0,2,0,0,0,1,0
+Zionsville Community High School,IN-0630-0512,180283000341,4568,AP Computer Science Principles,32,4,0,2,0,0,1,5,0
+Lebanon Senior High School,IN-0665-0553,180579001041,4801,Computer Science I,23,1,0,2,0,0,4,1,0
+Brown County High School,IN-0670-0573,180096000169,4568,AP Computer Science Principles,10,4,0,0,0,0,2,0,1
+Brown County High School,IN-0670-0573,180096000169,4801,Computer Science I,28,3,0,1,0,0,12,10,0
+Brown County Junior High,IN-0670-0587,180096002190,4803,Introduction to Computer Science,22,4,0,0,0,0,14,6,0
+Carroll Senior High School,IN-0750-0621,180129000203,4568,AP Computer Science Principles,2,0,0,1,0,0,0,0,0
+Carroll Senior High School,IN-0750-0621,180129000203,4803,Introduction to Computer Science,14,1,0,0,0,0,3,1,0
+Carroll Senior High School,IN-0750-0621,180129000203,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+Delphi Community High School,IN-0755-0637,180270000326,4801,Computer Science I,70,33,0,5,0,0,35,9,1
+Lewis Cass High School,IN-0815-0689,181068001755,4570,AP Computer Science A,10,0,0,0,0,0,6,1,0
+Lewis Cass High School,IN-0815-0689,181068001755,4801,Computer Science I,8,1,0,0,0,0,3,2,0
+Lewis Cass Polytechnic Academy,IN-0815-0692,181068002622,5610,Industrial Automation and Robotics I,8,1,0,1,0,0,3,0,0
+Century Career Center,IN-0875-0739,180603001054,4803,Introduction to Computer Science,61,7,1,20,0,0,30,7,6
+Silver Creek High School,IN-0940-0777,180937001536,4801,Computer Science I,19,2,0,0,0,0,3,3,0
+Silver Creek High School,IN-0940-0777,180937001536,4803,Introduction to Computer Science,30,5,1,2,0,1,7,3,0
+Clarksville Senior High School,IN-1000-0833,180192000249,4801,Computer Science I,9,2,1,1,0,0,3,0,2
+Clarksville Senior High School,IN-1000-0833,180192000249,4803,Introduction to Computer Science,11,1,0,0,0,0,2,3,0
+Charlestown Senior High School,IN-1010-0821,180394000663,4801,Computer Science I,27,4,0,2,0,0,13,4,1
+Jeffersonville High School,IN-1010-0849,180394000666,4803,Introduction to Computer Science,74,11,18,7,0,0,39,14,3
+Jeffersonville High School,IN-1010-0849,180394000666,4570,AP Computer Science A,6,0,0,1,0,0,1,0,0
+Jeffersonville High School,IN-1010-0849,180394000666,4801,Computer Science I,35,3,5,6,0,0,18,6,1
+Jeffersonville High School,IN-1010-0849,180394000666,5236,Computer Science II,22,1,2,4,0,0,8,6,0
+Northview High School,IN-1125-0933,180084000154,4801,Computer Science I,4,1,0,0,0,0,1,0,0
+Rossville Middle/Senior High Sch,IN-1180-1021,180972001590,4801,Computer Science I,12,1,0,0,0,0,3,1,0
+Crawford County High School,IN-1300-1059,180244000279,4801,Computer Science I,14,2,0,0,0,0,7,1,0
+North Daviess Jr-Sr High School,IN-1375-1121,180771001319,4801,Computer Science I,17,2,0,1,1,0,9,3,0
+East Central High School,IN-1560-7213,181119001802,4801,Computer Science I,49,10,0,0,0,0,7,3,0
+East Central High School,IN-1560-7213,181119001802,5236,Computer Science II,10,0,0,0,0,0,1,0,0
+Lawrenceburg High School,IN-1620-1177,180570001037,4801,Computer Science I,18,0,1,1,0,0,7,3,0
+South Decatur Jr-Sr High School,IN-1655-1263,180261000311,4803,Introduction to Computer Science,19,1,0,1,0,0,8,0,0
+North Decatur Jr-Sr High School,IN-1655-1267,180261000309,4803,Introduction to Computer Science,25,3,0,0,0,0,10,5,0
+Greensburg Community High School,IN-1730-1268,180408000704,4801,Computer Science I,3,2,0,0,0,0,0,0,0
+Greensburg Community High School,IN-1730-1268,180408000704,4803,Introduction to Computer Science,3,2,0,0,0,0,0,0,0
+Eastside Junior-Senior High School,IN-1805-1317,180306000405,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+DeKalb High School,IN-1835-1345,180159000220,4568,AP Computer Science Principles,13,1,0,2,0,0,8,2,0
+DeKalb High School,IN-1835-1345,180159000220,4803,Introduction to Computer Science,23,5,0,2,0,0,8,7,1
+DeKalb Middle School,IN-1835-1346,180159000221,4803,Introduction to Computer Science,64,21,0,2,0,0,28,8,0
+Delta Middle School,IN-1875-1367,180266000323,4803,Introduction to Computer Science,25,1,1,1,0,0,12,2,0
+Wes-Del Middle/Senior High School,IN-1885-1372,180450000761,4801,Computer Science I,2,0,0,0,0,0,1,1,0
+Yorktown High School,IN-1910-1389,180723001217,4801,Computer Science I,11,4,0,0,0,0,2,1,1
+Daleville Jr-Sr High School,IN-1940-1401,180984001603,4801,Computer Science I,23,8,0,2,0,0,12,3,4
+Daleville Jr-Sr High School,IN-1940-1401,180984001603,4803,Introduction to Computer Science,26,11,0,1,0,0,7,2,0
+Daleville Jr-Sr High School,IN-1940-1401,180984001603,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Daleville Jr-Sr High School,IN-1940-1401,180984001603,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,1,0,0
+Muncie Central High School,IN-1970-1421,180732001242,4803,Introduction to Computer Science,10,1,2,0,0,0,6,3,0
+Muncie Central High School,IN-1970-1421,180732001242,4568,AP Computer Science Principles,17,1,2,1,0,0,7,2,0
+Northeast Dubois High School,IN-2040-1545,180812001393,4570,AP Computer Science A,3,0,0,0,0,0,0,0,0
+Northeast Dubois High School,IN-2040-1545,180812001393,4801,Computer Science I,3,0,0,0,0,0,0,1,0
+Forest Park Jr-Sr High School,IN-2100-1583,181064001745,4801,Computer Science I,16,2,0,0,0,0,3,1,0
+Southridge High School,IN-2110-1588,181087001779,4801,Computer Science I,17,4,0,2,0,0,5,2,0
+Jasper High School,IN-2120-1593,180396000685,4570,AP Computer Science A,40,12,0,6,0,0,4,3,1
+Jasper High School,IN-2120-1593,180396000685,4803,Introduction to Computer Science,32,5,0,4,0,0,5,2,1
+Fairfield Jr-Sr High School,IN-2155-1613,180348000491,4801,Computer Science I,9,0,0,1,0,0,2,3,0
+Fairfield Jr-Sr High School,IN-2155-1613,180348000491,4803,Introduction to Computer Science,12,4,0,2,0,0,1,1,1
+Jimtown High School,IN-2260-1701,180042000090,4803,Introduction to Computer Science,24,6,0,0,0,0,7,2,0
+Concord Community High School,IN-2270-1715,180240000269,4801,Computer Science I,15,1,0,3,0,0,6,1,0
+Concord Community High School,IN-2270-1715,180240000269,4801,Computer Science I,5,0,0,0,0,0,2,0,0
+Northridge High School,IN-2275-1733,180660001165,4801,Computer Science I,11,1,0,0,0,0,2,1,0
+Northridge High School,IN-2275-1733,180660001165,4801,Computer Science I,25,1,0,3,0,0,6,2,1
+North Wood High School,IN-2285-1737,181224001956,4803,Introduction to Computer Science,42,6,1,4,0,0,9,4,0
+Elkhart Central High School,IN-2305-1749,180327000429,4803,Introduction to Computer Science,43,5,1,18,0,0,29,3,4
+Elkhart Central High School,IN-2305-1749,180327000429,4570,AP Computer Science A,7,1,0,0,0,0,0,1,0
+Elkhart Central High School,IN-2305-1749,180327000429,4803,Introduction to Computer Science,13,2,1,5,0,0,7,0,0
+Elkhart Memorial High School,IN-2305-1750,180327000430,4568,AP Computer Science Principles,18,0,0,4,0,0,9,2,0
+Elkhart Memorial High School,IN-2305-1750,180327000430,4570,AP Computer Science A,3,0,0,1,0,0,1,0,0
+Elkhart Memorial High School,IN-2305-1750,180327000430,4803,Introduction to Computer Science,23,1,0,3,0,0,9,4,2
+Elkhart Area Career Center,IN-2305-1751,180327000428,5610,Industrial Automation and Robotics I,11,1,4,0,0,0,7,1,0
+Elkhart Area Career Center,IN-2305-1751,180327000428,5612,Industrial Automation and Robotics II,5,0,0,0,0,0,3,2,0
+Goshen High School,IN-2315-1821,180393000654,4801,Computer Science I,53,6,1,24,0,0,29,8,7
+Goshen High School,IN-2315-1821,180393000654,5236,Computer Science II,12,0,0,5,0,0,6,0,2
+Connersville Sr High School,IN-2395-1889,180351000498,4803,Introduction to Computer Science,16,6,0,0,0,0,9,3,1
+Whitewater Career Center,IN-2395-1923,180351000495,4801,Computer Science I,15,0,0,0,0,0,7,4,0
+New Albany Senior High School,IN-2400-1925,180741001277,4803,Introduction to Computer Science,50,24,12,1,0,0,28,7,0
+New Albany Senior High School,IN-2400-1925,180741001277,4568,AP Computer Science Principles,13,4,3,0,0,0,2,0,0
+New Albany Senior High School,IN-2400-1925,180741001277,4801,Computer Science I,49,14,1,2,0,0,11,4,1
+New Albany Senior High School,IN-2400-1925,180741001277,5236,Computer Science II,12,4,1,0,0,0,4,0,0
+Floyd Central High School,IN-2400-1930,180741001265,4570,AP Computer Science A,13,5,0,0,0,0,1,0,0
+Floyd Central High School,IN-2400-1930,180741001265,4801,Computer Science I,31,0,0,2,0,0,1,3,0
+Prosser Career Education Center,IN-2400-1990,180741001262,4801,Computer Science I,23,5,1,1,0,0,9,5,1
+Attica High School,IN-2435-2053,180021000050,4801,Computer Science I,14,5,0,0,0,0,9,0,0
+Covington Community High School,IN-2440-2005,180243000275,4801,Computer Science I,20,6,1,1,0,0,8,2,0
+Fountain Central High School,IN-2455-2022,181062001742,4801,Computer Science I,19,1,0,1,0,0,4,1,0
+Fountain Central High School,IN-2455-2022,181062001742,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Franklin County High,IN-2475-2083,180370002336,4801,Computer Science I,16,0,0,0,0,0,3,2,0
+Franklin County Middle School,IN-2475-2123,180370000589,4803,Introduction to Computer Science,13,2,0,0,0,0,8,4,0
+Rochester Community High School,IN-2645-2173,180963001576,4570,AP Computer Science A,3,0,0,0,0,0,2,2,0
+Rochester Community High School,IN-2645-2173,180963001576,4568,AP Computer Science Principles,17,6,0,0,0,0,3,0,0
+Caston Jr-Sr High School,IN-2650-2159,180141000207,4803,Introduction to Computer Science,11,4,0,0,0,0,6,0,0
+Waldo J Wood Memorial High,IN-2725-2233,180294000386,4568,AP Computer Science Principles,6,1,0,0,0,0,4,3,0
+Waldo J Wood Memorial High,IN-2725-2233,180294000386,5236,Computer Science II,3,0,0,0,0,0,0,0,0
+Waldo J Wood Memorial High,IN-2725-2233,180294000386,4803,Introduction to Computer Science,12,2,0,0,0,0,5,1,0
+Princeton Community High School,IN-2735-2249,180777001326,4801,Computer Science I,15,1,0,2,0,0,6,2,0
+Gibson Southern High School,IN-2765-2211,181035001688,4803,Introduction to Computer Science,12,5,0,1,0,0,3,4,0
+Eastbrook High School,IN-2815-2293,180303000399,4568,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Eastbrook High School,IN-2815-2293,180303000399,4801,Computer Science I,18,5,0,1,0,0,6,2,1
+Madison-Grant Jr./Sr. High School,IN-2825-2321,180624001097,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Madison-Grant Jr./Sr. High School,IN-2825-2321,180624001097,4801,Computer Science I,10,0,0,0,0,0,8,2,0
+Mississinewa High School,IN-2855-2333,180687001189,4570,AP Computer Science A,5,0,0,0,0,0,4,0,0
+Mississinewa High School,IN-2855-2333,180687001189,4568,AP Computer Science Principles,21,4,0,1,0,0,10,1,0
+Mississinewa High School,IN-2855-2333,180687001189,4803,Introduction to Computer Science,35,6,0,2,0,0,22,3,0
+R J Baskett Middle School,IN-2855-2335,180687001190,4803,Introduction to Computer Science,12,2,1,0,0,0,6,2,0
+Marion High School,IN-2865-2351,180639001117,4801,Computer Science I,6,1,0,0,0,0,1,0,0
+Marion High School,IN-2865-2351,180639001117,5236,Computer Science II,4,0,1,0,0,0,1,0,0
+Marion High School,IN-2865-2351,180639001117,4568,AP Computer Science Principles,14,8,0,0,0,0,2,0,1
+Marion High School,IN-2865-2351,180639001117,4801,Computer Science I,33,13,15,2,0,0,22,3,0
+Bloomfield Jr-Sr High School,IN-2920-2419,180060000113,4801,Computer Science I,8,3,1,0,0,0,2,1,0
+Bloomfield Jr-Sr High School,IN-2920-2419,180060000113,4803,Introduction to Computer Science,12,2,0,0,0,0,5,1,0
+Eastern Greene High School,IN-2940-2435,180309000408,4570,AP Computer Science A,11,2,0,0,0,0,3,1,0
+Eastern Greene High School,IN-2940-2435,180309000408,4803,Introduction to Computer Science,9,2,0,0,0,0,5,0,0
+Linton-Stockton Middle School,IN-2950-2438,180591002147,4803,Introduction to Computer Science,14,5,0,0,0,0,8,1,0
+White River Valley High School,IN-2980-2429,180000802302,4803,Introduction to Computer Science,21,0,0,2,0,0,8,1,2
+Fishers High School,IN-3005-2487,181065002392,4570,AP Computer Science A,184,31,3,9,0,0,28,8,1
+Fishers High School,IN-3005-2487,181065002392,4570,AP Computer Science A,50,5,1,1,0,0,5,0,0
+Fishers High School,IN-3005-2487,181065002392,4801,Computer Science I,56,8,1,3,0,0,10,6,0
+Fishers High School,IN-3005-2487,181065002392,4803,Introduction to Computer Science,51,8,3,6,0,0,13,4,7
+Fishers High School,IN-3005-2487,181065002392,4803,Introduction to Computer Science,70,14,4,5,0,0,8,6,4
+Hamilton Southeastern HS,IN-3005-2499,181065001752,4570,AP Computer Science A,112,28,3,3,0,0,7,2,1
+Hamilton Southeastern HS,IN-3005-2499,181065001752,4570,AP Computer Science A,104,17,2,8,0,0,9,3,1
+Hamilton Southeastern HS,IN-3005-2499,181065001752,4801,Computer Science I,38,4,4,1,0,0,5,4,0
+Hamilton Southeastern HS,IN-3005-2499,181065001752,4803,Introduction to Computer Science,54,7,5,1,1,0,7,5,1
+Westfield High School,IN-3030-2493,181308002075,4803,Introduction to Computer Science,82,13,2,10,0,0,16,8,5
+Westfield High School,IN-3030-2493,181308002075,4801,Computer Science I,76,8,3,6,0,0,11,6,2
+Carmel High School,IN-3060-2505,180120000193,4568,AP Computer Science Principles,121,21,2,1,0,1,8,6,0
+Carmel High School,IN-3060-2505,180120000193,4570,AP Computer Science A,82,11,2,2,0,0,3,0,0
+Carmel High School,IN-3060-2505,180120000193,4801,Computer Science I,3,0,0,0,0,0,0,0,0
+Carmel High School,IN-3060-2505,180120000193,4803,Introduction to Computer Science,89,20,0,4,0,1,10,11,3
+Noblesville High School,IN-3070-2517,180765001309,4801,Computer Science I,71,12,0,7,0,0,20,4,0
+Noblesville High School,IN-3070-2517,180765001309,5236,Computer Science II,52,6,2,1,0,0,6,1,0
+New Palestine High School,IN-3115-2565,181071001761,4568,AP Computer Science Principles,18,5,0,2,0,0,3,0,0
+Greenfield-Central High School,IN-3125-2595,180405000696,4568,AP Computer Science Principles,10,1,0,0,0,0,2,2,0
+Mt Vernon High School,IN-3135-2569,180726001221,4801,Computer Science I,1,1,0,0,0,0,1,0,0
+Mt Vernon High School,IN-3135-2569,180726001221,5236,Computer Science II,18,2,3,0,0,0,7,7,0
+Mt Vernon High School,IN-3135-2569,180726001221,4801,Computer Science I,36,4,0,2,0,0,6,2,1
+Mt Vernon High School,IN-3135-2569,180726001221,5236,Computer Science II,2,0,1,1,0,0,2,2,0
+Eastern Hancock High School,IN-3145-2585,180312000410,4568,AP Computer Science Principles,9,2,0,1,0,0,2,0,0
+Eastern Hancock High School,IN-3145-2585,180312000410,4801,Computer Science I,4,0,0,0,0,0,0,2,0
+Eastern Hancock High School,IN-3145-2585,180312000410,4803,Introduction to Computer Science,7,1,0,0,0,0,3,2,0
+North Harrison High School,IN-3180-2629,180069000144,4801,Computer Science I,53,22,0,3,0,0,25,5,0
+North Harrison High School,IN-3180-2629,180069000144,4801,Computer Science I,40,16,1,1,0,0,19,5,0
+North Harrison High School,IN-3180-2629,180069000144,4801,Computer Science I,84,38,0,0,0,0,33,13,0
+Corydon Central High School,IN-3190-2640,181036002282,4801,Computer Science I,3,1,1,0,0,0,3,1,1
+Corydon Central High School,IN-3190-2640,181036002282,4803,Introduction to Computer Science,4,1,0,0,0,0,4,3,0
+Corydon Central High School,IN-3190-2640,181036002282,4801,Computer Science I,31,3,1,2,0,1,17,4,1
+South Central Jr & Sr High School,IN-3190-2670,181036002285,4801,Computer Science I,1,0,0,1,0,0,1,0,0
+Tri-West Senior High School,IN-3295-2731,180810001387,4568,AP Computer Science Principles,12,6,0,1,0,0,2,1,0
+Tri-West Senior High School,IN-3295-2731,180810001387,4801,Computer Science I,7,4,0,0,0,0,1,0,0
+Brownsburg High School,IN-3305-2709,180102000176,4570,AP Computer Science A,40,13,2,1,0,0,2,0,0
+Brownsburg High School,IN-3305-2709,180102000176,4568,AP Computer Science Principles,49,13,2,1,0,0,3,1,0
+Brownsburg High School,IN-3305-2709,180102000176,5236,Computer Science II,44,6,1,3,0,0,8,5,1
+Brownsburg High School,IN-3305-2709,180102000176,4568,AP Computer Science Principles,75,21,5,1,0,0,7,2,0
+Brownsburg High School,IN-3305-2709,180102000176,4803,Introduction to Computer Science,29,3,4,2,0,0,5,5,0
+Avon High School,IN-3315-2737,180027000057,5610,Industrial Automation and Robotics I,35,3,1,0,0,0,4,3,0
+Avon High School,IN-3315-2737,180027000057,4568,AP Computer Science Principles,87,26,8,8,0,0,19,2,1
+Avon High School,IN-3315-2737,180027000057,4570,AP Computer Science A,76,11,4,4,0,0,11,2,0
+Avon High School,IN-3315-2737,180027000057,4568,AP Computer Science Principles,31,8,1,3,0,0,5,0,2
+Avon High School,IN-3315-2737,180027000057,4568,AP Computer Science Principles,181,54,29,13,1,0,50,6,1
+Danville Community High School,IN-3325-2741,180255000304,5236,Computer Science II,19,1,1,1,0,0,3,2,2
+Plainfield High School,IN-3330-2749,180897001494,4801,Computer Science I,75,10,2,2,0,0,12,13,0
+Plainfield High School,IN-3330-2749,180897001494,5236,Computer Science II,10,1,0,1,0,0,0,1,0
+Plainfield High School,IN-3330-2749,180897001494,4803,Introduction to Computer Science,62,18,4,2,0,0,17,11,2
+Plainfield Community Middle School,IN-3330-2750,180897002357,4803,Introduction to Computer Science,53,13,2,0,0,0,17,8,0
+Blue River Valley Jr-Sr High Sch,IN-3405-2801,180066000141,4801,Computer Science I,6,2,0,0,0,0,1,0,0
+Blue River Valley Jr-Sr High Sch,IN-3405-2801,180066000141,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Blue River Valley Jr-Sr High Sch,IN-3405-2801,180066000141,4803,Introduction to Computer Science,12,5,0,0,0,0,5,0,0
+Shenandoah High School,IN-3435-2817,180828001420,4801,Computer Science I,11,2,0,0,0,0,5,2,0
+New Castle High School,IN-3445-2825,180744001290,4801,Computer Science I,18,0,0,0,0,0,5,2,0
+Knightstown High School,IN-3455-2869,180106000189,4803,Introduction to Computer Science,25,1,0,1,0,0,7,4,0
+Northwestern Middle School,IN-3470-2907,180204002334,4803,Introduction to Computer Science,126,62,1,2,0,0,22,4,0
+Eastern High School,IN-3480-2919,180315000413,4801,Computer Science I,5,0,0,0,0,0,1,0,0
+Eastern High School,IN-3480-2919,180315000413,5236,Computer Science II,2,0,0,0,0,0,2,0,0
+Eastern High School,IN-3480-2919,180315000413,4803,Introduction to Computer Science,32,9,1,2,0,1,9,5,0
+Western High School,IN-3490-2921,180447000756,4570,AP Computer Science A,15,2,0,2,0,0,1,0,0
+Western High School,IN-3490-2921,180447000756,4801,Computer Science I,19,1,0,0,0,0,4,3,0
+Kokomo High School,IN-3500-3013,180537000947,4570,AP Computer Science A,10,1,1,0,0,0,1,0,3
+Huntington North High School,IN-3625-3065,180471000786,5236,Computer Science II,12,1,0,1,0,0,0,0,0
+Seymour Senior High School,IN-3675-3133,181008001618,4568,AP Computer Science Principles,27,8,0,3,0,0,4,0,1
+Brownstown Central High School,IN-3695-3126,180105000180,4803,Introduction to Computer Science,22,4,0,0,0,0,5,2,0
+Kankakee Valley High School,IN-3785-3181,180528000933,4801,Computer Science I,12,0,0,0,0,0,4,3,0
+Kankakee Valley High School,IN-3785-3181,180528000933,4803,Introduction to Computer Science,22,2,0,1,0,0,7,1,0
+Rensselaer Central High School,IN-3815-3201,180942001543,4801,Computer Science I,12,3,0,1,0,0,4,1,1
+Jay County High School,IN-3945-3239,180498000914,5610,Industrial Automation and Robotics I,11,0,0,1,0,0,5,1,0
+Jay County High School,IN-3945-3239,180498000914,4801,Computer Science I,15,2,0,0,0,0,4,4,2
+Madison Consolidated High School,IN-3995-3309,180612001090,4568,AP Computer Science Principles,2,0,0,0,0,0,0,0,0
+Madison Consolidated High School,IN-3995-3309,180612001090,4803,Introduction to Computer Science,19,4,0,2,1,0,11,2,0
+Southwestern High School,IN-4000-3337,181080001767,4803,Introduction to Computer Science,19,2,0,1,0,0,12,0,0
+Southwestern High School,IN-4000-3337,181080001767,4803,Introduction to Computer Science,2,0,0,0,0,0,1,0,0
+Southwestern High School,IN-4000-3337,181080001767,4801,Computer Science I,2,0,0,0,0,0,1,0,0
+Jennings County High School,IN-4015-3345,180519000923,4801,Computer Science I,25,1,0,2,0,0,11,5,0
+Whiteland Community High School,IN-4145-3421,180189000246,4570,AP Computer Science A,19,0,0,1,0,0,7,0,0
+Whiteland Community High School,IN-4145-3421,180189000246,4801,Computer Science I,53,12,2,5,0,0,16,2,1
+Whiteland Community High School,IN-4145-3421,180189000246,4803,Introduction to Computer Science,54,7,3,3,0,0,25,5,4
+Clark Pleasant Middle School,IN-4145-3427,180189000245,4803,Introduction to Computer Science,9,1,0,0,0,0,6,1,0
+Center Grove High School,IN-4205-3437,180144000209,4570,AP Computer Science A,50,10,0,2,0,0,3,2,0
+Center Grove High School,IN-4205-3437,180144000209,4568,AP Computer Science Principles,66,21,1,3,0,0,4,4,1
+Center Grove High School,IN-4205-3437,180144000209,4801,Computer Science I,29,1,2,2,0,0,7,6,1
+Franklin Community High School,IN-4225-3445,180369000581,4803,Introduction to Computer Science,33,4,0,1,0,0,7,1,1
+Greenwood Community High Sch,IN-4245-3473,180411000709,4801,Computer Science I,5,1,0,0,0,0,0,0,0
+Greenwood Community High Sch,IN-4245-3473,180411000709,4803,Introduction to Computer Science,29,3,1,2,0,0,9,3,2
+Indian Creek Online Academy,IN-4255-3414,unspecified,4801,Computer Science I,12,7,1,4,0,0,1,0,0
+Indian Creek Online Academy,IN-4255-3414,unspecified,4801,Computer Science I,22,15,3,1,0,0,5,4,0
+Indian Creek Sr High School,IN-4255-3419,180762001303,4801,Computer Science I,14,3,0,1,0,0,2,1,0
+Indian Creek Sr High School,IN-4255-3419,180762001303,4803,Introduction to Computer Science,13,2,0,0,0,0,5,2,0
+North Knox Jr-Sr High School,IN-4315-3537,180783001334,4801,Computer Science I,18,3,0,1,0,0,10,1,0
+Lincoln High School,IN-4335-3553,181212001931,4801,Computer Science I,7,1,0,1,0,0,2,1,0
+Wawasee High School,IN-4345-3639,180555001007,4801,Computer Science I,10,2,0,3,0,0,2,1,0
+Warsaw Community High School,IN-4415-3647,181242001999,4801,Computer Science I,32,1,0,3,0,0,6,2,0
+Warsaw Community High School,IN-4415-3647,181242001999,4803,Introduction to Computer Science,39,3,0,6,0,0,19,8,1
+Warsaw Community High School,IN-4415-3647,181242001999,5236,Computer Science II,8,0,0,1,0,0,1,1,0
+Tippecanoe Valley High School,IN-4445-3602,181137001839,4801,Computer Science I,18,1,0,2,0,0,4,2,0
+Tippecanoe Valley High School,IN-4445-3602,181137001839,5236,Computer Science II,2,0,0,0,0,0,1,0,0
+Lakeland Jr/Sr High School,IN-4535-3730,180552000996,4801,Computer Science I,25,2,2,3,0,0,11,7,1
+Lakeland Jr/Sr High School,IN-4535-3730,180552000996,4803,Introduction to Computer Science,30,4,0,5,0,0,17,5,6
+Hanover Central High School,IN-4580-3785,180435000753,4803,Introduction to Computer Science,61,20,3,8,0,0,11,14,0
+Merrillville High School,IN-4600-3809,180969001586,4570,AP Computer Science A,13,2,2,4,0,0,6,0,1
+Merrillville High School,IN-4600-3809,180969001586,4801,Computer Science I,41,5,22,6,0,0,23,4,0
+Merrillville High School,IN-4600-3809,180969001586,4803,Introduction to Computer Science,27,4,15,3,0,0,11,3,0
+Merrillville High School,IN-4600-3809,180969001586,5236,Computer Science II,18,0,7,7,0,0,10,1,0
+Lake Central High School,IN-4615-3833,180545000984,4570,AP Computer Science A,12,1,1,2,0,0,1,1,0
+Lake Central High School,IN-4615-3833,180545000984,4801,Computer Science I,85,16,5,13,0,0,13,5,3
+Lake Central High School,IN-4615-3833,180545000984,5236,Computer Science II,29,4,0,2,0,0,6,2,0
+Lowell Middle School,IN-4645-3851,181146001851,4803,Introduction to Computer Science,127,58,1,16,0,0,37,17,0
+Calumet New Tech High School,IN-4650-3869,180546000989,4801,Computer Science I,63,26,27,17,0,0,47,7,2
+Calumet New Tech High School,IN-4650-3869,180546000989,5236,Computer Science II,56,13,21,6,0,0,42,8,2
+Calumet New Tech High School,IN-4650-3869,180546000989,4803,Introduction to Computer Science,63,26,27,17,0,0,47,7,2
+Crown Point High School,IN-4660-3901,180249000293,4801,Computer Science I,30,9,0,3,0,0,3,3,0
+Crown Point High School,IN-4660-3901,180249000293,5236,Computer Science II,23,0,0,2,0,0,2,0,0
+Crown Point High School,IN-4660-3901,180249000293,4803,Introduction to Computer Science,19,2,1,4,0,0,2,1,0
+Crown Point High School,IN-4660-3901,180249000293,5610,Industrial Automation and Robotics I,46,6,3,10,0,0,10,8,0
+Crown Point High School,IN-4660-3901,180249000293,5612,Industrial Automation and Robotics II,9,0,0,1,0,0,0,2,0
+East Chicago Central High School,IN-4670-3924,180288002272,4803,Introduction to Computer Science,51,11,17,32,0,0,38,7,6
+Thomas A Edison Jr-Sr HS,IN-4680-3965,180291000380,4803,Introduction to Computer Science,47,11,3,15,0,0,34,10,2
+Griffith Senior High School,IN-4700-4173,180417000722,4568,AP Computer Science Principles,10,4,3,0,0,0,6,0,0
+Griffith Senior High School,IN-4700-4173,180417000722,4801,Computer Science I,31,9,3,8,0,0,15,1,0
+George Rogers Clark Md/HS,IN-4710-4411,180432000735,4801,Computer Science I,28,8,0,22,0,0,14,0,1
+Donald E Gavit Middle/High School,IN-4710-4413,180432000734,4801,Computer Science I,52,23,21,18,0,0,28,5,3
+Donald E Gavit Middle/High School,IN-4710-4413,180432000734,4570,AP Computer Science A,17,4,3,6,0,0,8,1,0
+Donald E Gavit Middle/High School,IN-4710-4413,180432000734,4568,AP Computer Science Principles,28,12,6,15,0,0,19,5,1
+Hammond High School,IN-4710-4415,180432000736,4803,Introduction to Computer Science,87,45,44,38,0,0,45,7,2
+Morton Senior High School,IN-4710-4417,180432000746,4570,AP Computer Science A,18,7,7,4,0,0,9,1,0
+Morton Senior High School,IN-4710-4417,180432000746,4803,Introduction to Computer Science,5,3,0,4,0,0,4,2,0
+Highland High School,IN-4720-4281,180456000763,4803,Introduction to Computer Science,13,0,3,4,0,0,3,1,0
+Highland Middle School,IN-4720-4283,180456000764,4803,Introduction to Computer Science,24,5,1,7,0,0,4,3,0
+Hobart High School,IN-4730-4305,180459000774,4801,Computer Science I,57,11,2,16,0,0,22,6,0
+Munster High School,IN-4740-4332,180735001257,4568,AP Computer Science Principles,30,16,4,5,0,0,4,0,0
+New Prairie High School,IN-4805-4689,180756001298,4801,Computer Science I,46,5,0,2,0,0,10,3,0
+New Prairie High School,IN-4805-4689,180756001298,5236,Computer Science II,12,0,0,1,0,0,5,1,0
+LaCrosse School,IN-4915-4692,180010702511,4803,Introduction to Computer Science,4,2,0,1,0,0,1,0,0
+Michigan City High School,IN-4925-4795,180657001160,4568,AP Computer Science Principles,6,0,0,0,0,0,3,0,0
+Michigan City High School,IN-4925-4795,180657001160,4801,Computer Science I,19,2,7,1,0,0,10,6,0
+Michigan City High School,IN-4925-4795,180657001160,4803,Introduction to Computer Science,44,8,9,5,0,0,28,9,4
+LaPorte High School,IN-4945-4741,180558001015,4803,Introduction to Computer Science,38,6,2,5,0,0,15,2,1
+LaPorte High School,IN-4945-4741,180558001015,4801,Computer Science I,10,1,1,2,0,0,3,0,0
+LaPorte High School,IN-4945-4741,180558001015,5236,Computer Science II,3,0,0,0,0,0,0,0,0
+North Lawrence Career Center,IN-5075-4931,180786001343,5236,Computer Science II,35,2,0,2,0,0,13,8,0
+North Lawrence Career Center,IN-5075-4931,180786001343,4803,Introduction to Computer Science,77,10,0,0,0,0,30,9,1
+Mitchell High School,IN-5085-4925,180690001198,4803,Introduction to Computer Science,22,2,0,0,0,0,8,3,0
+Frankton Jr-Sr High School,IN-5245-5005,181288002050,4801,Computer Science I,15,1,0,0,0,0,6,1,0
+Frankton Jr-Sr High School,IN-5245-5005,181288002050,5236,Computer Science II,8,0,0,0,0,0,5,1,0
+Lapel Sr High School,IN-5245-5011,181288002328,4801,Computer Science I,4,0,0,0,0,0,0,1,0
+Lapel Sr High School,IN-5245-5011,181288002328,4803,Introduction to Computer Science,11,1,0,2,0,0,4,1,1
+Alexandria-Monroe High School,IN-5265-5041,180012000011,4801,Computer Science I,26,5,0,0,0,0,15,2,0
+Anderson High School,IN-5275-4945,180015000029,4803,Introduction to Computer Science,40,5,9,2,0,0,35,9,0
+Anderson High School,IN-5275-4945,180015000029,4568,AP Computer Science Principles,9,1,1,0,0,0,3,1,0
+Anderson High School,IN-5275-4945,180015000029,4801,Computer Science I,27,1,3,1,0,0,15,9,1
+Elwood Jr-Sr High School,IN-5280-5149,180330000449,4801,Computer Science I,3,0,0,0,0,0,2,0,0
+Elwood Jr-Sr High School,IN-5280-5149,180330000449,4803,Introduction to Computer Science,14,1,0,0,0,0,6,0,0
+Decatur Central High School,IN-5300-5177,180264000312,4570,AP Computer Science A,13,1,2,2,0,0,6,1,1
+Decatur Central High School,IN-5300-5177,180264000312,4801,Computer Science I,31,3,4,5,0,0,21,6,2
+Decatur Central High School,IN-5300-5177,180264000312,4803,Introduction to Computer Science,46,6,10,7,0,0,31,6,5
+Decatur Twp School for Excellence,IN-5300-5188,180264002463,4801,Computer Science I,30,15,1,2,0,0,20,4,0
+Decatur Twp School for Excellence,IN-5300-5188,180264002463,4801,Computer Science I,16,7,3,1,0,0,12,0,0
+Decatur Twp School for Excellence,IN-5300-5188,180264002463,4801,Computer Science I,68,24,4,9,0,0,56,7,2
+Franklin Central High School,IN-5310-5193,180375000597,4801,Computer Science I,36,4,4,6,0,0,15,4,2
+Franklin Central High School,IN-5310-5193,180375000597,4570,AP Computer Science A,13,1,0,1,0,0,5,1,0
+Franklin Central High School,IN-5310-5193,180375000597,4568,AP Computer Science Principles,15,1,1,1,0,0,4,1,0
+Lawrence Central High School,IN-5330-5275,180567001029,4803,Introduction to Computer Science,1,1,1,0,0,0,0,0,0
+Lawrence Central High School,IN-5330-5275,180567001029,4803,Introduction to Computer Science,28,6,19,6,0,0,17,4,4
+Lawrence North High School,IN-5330-5276,180567001031,4803,Introduction to Computer Science,57,14,43,8,0,0,48,6,6
+McKenzie Career Center,IN-5330-5303,180567000725,4801,Computer Science I,110,19,39,30,0,0,59,19,18
+McKenzie Career Center,IN-5330-5303,180567000725,5236,Computer Science II,47,3,16,6,0,0,20,10,2
+McKenzie Career Center,IN-5330-5303,180567000725,4803,Introduction to Computer Science,37,10,30,4,0,0,29,5,1
+Perry Meridian High School,IN-5340-5307,180882001464,4570,AP Computer Science A,6,0,0,0,0,0,2,1,0
+Perry Meridian High School,IN-5340-5307,180882001464,4801,Computer Science I,14,2,0,2,0,0,5,1,0
+Perry Meridian High School,IN-5340-5307,180882001464,4803,Introduction to Computer Science,99,14,5,11,0,0,59,18,12
+Southport High School,IN-5340-5309,180882001467,4568,AP Computer Science Principles,23,2,0,0,0,0,13,2,0
+Southport High School,IN-5340-5309,180882001467,4801,Computer Science I,21,3,1,4,0,0,16,3,5
+Pike High School,IN-5350-5353,180891001489,4570,AP Computer Science A,11,0,6,2,0,0,4,1,0
+Pike High School,IN-5350-5353,180891001489,4568,AP Computer Science Principles,3,0,1,1,0,0,3,0,0
+Pike High School,IN-5350-5353,180891001489,4803,Introduction to Computer Science,107,16,65,28,0,0,68,14,5
+Pike High School,IN-5350-5353,180891001489,4801,Computer Science I,100,13,58,22,0,1,67,7,8
+Pike High School,IN-5350-5353,180891001489,5236,Computer Science II,25,5,14,6,0,0,13,1,1
+Warren Central High School,IN-5360-5361,181236001973,4801,Computer Science I,36,2,22,3,0,0,24,6,0
+Walker Career Center,IN-5360-5393,181236001972,4570,AP Computer Science A,21,2,4,3,0,0,7,0,0
+Walker Career Center,IN-5360-5393,181236001972,5236,Computer Science II,66,16,32,4,0,0,32,3,1
+North Central High School,IN-5370-5451,181272002021,4570,AP Computer Science A,33,4,9,5,0,0,8,2,0
+Ben Davis High School,IN-5375-5213,181281002028,4570,AP Computer Science A,30,4,11,5,0,0,15,0,1
+Ben Davis High School,IN-5375-5213,181281002028,4801,Computer Science I,64,13,24,19,0,0,38,5,9
+Ben Davis High School,IN-5375-5213,181281002028,5236,Computer Science II,9,0,2,4,0,0,4,0,0
+Ben Davis University High School,IN-5375-5447,181281002410,5236,Computer Science II,25,4,6,3,0,0,11,3,0
+Beech Grove Sr High School,IN-5380-5449,180045000093,5236,Computer Science II,11,2,0,1,0,0,4,1,0
+Arsenal Technical High School,IN-5385-5462,180477000801,4801,Computer Science I,3,1,2,0,0,0,3,1,0
+Arsenal Technical High School,IN-5385-5462,180477000801,4568,AP Computer Science Principles,14,2,7,7,0,0,10,2,0
+Arsenal Technical High School,IN-5385-5462,180477000801,4801,Computer Science I,49,11,24,19,0,0,30,7,10
+Arsenal Technical High School,IN-5385-5462,180477000801,5236,Computer Science II,7,1,4,1,0,0,6,2,2
+Arsenal Technical High School,IN-5385-5462,180477000801,4803,Introduction to Computer Science,31,6,16,11,0,0,15,3,9
+Arsenal Technical High School,IN-5385-5462,180477000801,4803,Introduction to Computer Science,172,56,93,54,0,0,125,25,26
+Shortridge High School,IN-5385-5492,180477002238,4803,Introduction to Computer Science,56,15,28,17,0,0,30,8,2
+Shortridge High School,IN-5385-5492,180477002238,4801,Computer Science I,1,1,1,0,0,0,0,0,0
+George Washington High School,IN-5385-5644,180477001446,4568,AP Computer Science Principles,18,9,7,5,0,0,10,1,2
+George Washington High School,IN-5385-5644,180477001446,4801,Computer Science I,49,26,18,25,0,0,21,7,24
+Speedway Senior High School,IN-5400-5891,181092001785,4568,AP Computer Science Principles,37,10,11,3,0,0,15,3,4
+Speedway Senior High School,IN-5400-5891,181092001785,4801,Computer Science I,2,1,1,0,0,0,1,0,0
+Speedway Senior High School,IN-5400-5891,181092001785,5236,Computer Science II,7,0,0,1,0,0,3,3,0
+Culver Community Middle/High Sch,IN-5455-5245,180252000301,4801,Computer Science I,14,3,0,0,0,0,8,1,0
+Culver Community Middle/High Sch,IN-5455-5245,180252000301,4803,Introduction to Computer Science,45,21,0,4,0,0,26,7,0
+Argos Comm Jr-Sr High School,IN-5470-5937,180018000048,4801,Computer Science I,29,9,0,1,0,0,8,3,1
+Argos Comm Jr-Sr High School,IN-5470-5937,180018000048,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,1,1,0
+Plymouth High School,IN-5485-5945,180906001500,4801,Computer Science I,25,3,0,5,0,0,13,4,1
+Plymouth High School,IN-5485-5945,180906001500,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,1,0,0
+Triton Jr-Sr High School,IN-5495-5923,181149001856,4803,Introduction to Computer Science,28,3,0,0,0,0,13,4,0
+Oak Hill High School,IN-5625-6069,180834001429,4801,Computer Science I,15,2,0,1,0,0,6,3,0
+Peru High School,IN-5635-6085,180885001476,4801,Computer Science I,14,1,0,0,0,0,5,0,0
+Peru High School,IN-5635-6085,180885001476,5236,Computer Science II,3,0,0,0,0,0,1,0,0
+Edgewood High School,IN-5705-6146,180948001546,4568,AP Computer Science Principles,9,1,0,0,0,0,3,1,0
+Edgewood High School,IN-5705-6146,180948001546,4803,Introduction to Computer Science,11,1,1,0,0,0,1,0,0
+Bloomington High School South,IN-5740-6166,180063000120,4568,AP Computer Science Principles,64,11,0,3,0,0,9,4,0
+Bloomington High School South,IN-5740-6166,180063000120,4801,Computer Science I,22,3,1,1,0,0,4,0,1
+The Acad of Sci & Entrepreneurship,IN-5740-6202,180063002467,4801,Computer Science I,4,2,1,0,0,1,0,1,0
+The Acad of Sci & Entrepreneurship,IN-5740-6202,180063002467,5236,Computer Science II,4,0,0,0,0,0,1,2,0
+Jackson Creek Middle School,IN-5740-6223,180063001123,4801,Computer Science I,11,0,0,0,0,0,2,0,0
+North Montgomery High School,IN-5835-6271,180790001357,4801,Computer Science I,13,0,0,0,0,0,4,0,0
+Crawfordsville Sr High School,IN-5855-6277,180246000287,4570,AP Computer Science A,6,3,0,2,0,0,1,0,0
+Crawfordsville Sr High School,IN-5855-6277,180246000287,4801,Computer Science I,11,2,0,4,0,0,4,0,1
+Monrovia High School,IN-5900-6321,180414000716,4570,AP Computer Science A,7,0,0,0,0,0,0,0,0
+Eminence Jr-Sr High School,IN-5910-6325,180333000454,4801,Computer Science I,19,3,0,0,0,0,8,3,0
+Martinsville High School,IN-5925-6329,180651001135,4801,Computer Science I,17,2,0,0,1,0,3,2,0
+Martinsville High School,IN-5925-6329,180651001135,4803,Introduction to Computer Science,40,8,1,0,0,0,17,5,1
+Martinsville High School,IN-5925-6329,180651001135,5610,Industrial Automation and Robotics I,16,1,0,0,0,0,9,0,0
+John R. Wooden Middle School,IN-5925-6332,180651002600,5610,Industrial Automation and Robotics I,68,13,1,2,1,0,36,20,0
+Mooresville High School,IN-5930-6369,180714001207,4801,Computer Science I,29,5,0,0,0,0,8,3,0
+Mooresville High School,IN-5930-6369,180714001207,5236,Computer Science II,12,0,1,0,0,0,0,1,0
+South Newton Senior High School,IN-5995-6417,181047001722,4803,Introduction to Computer Science,13,1,0,2,0,0,5,1,0
+East Noble High School,IN-6060-6458,180297000389,4803,Introduction to Computer Science,49,6,0,3,1,0,20,2,0
+West Noble High School,IN-6065-6489,181290002058,4803,Introduction to Computer Science,19,2,0,12,0,0,14,3,3
+Rising Sun High School,IN-6080-6513,180960001573,4801,Computer Science I,1,1,0,0,0,0,0,0,0
+Paoli Jr & Sr High School,IN-6155-6581,180864001438,4801,Computer Science I,3,0,0,0,0,0,2,0,0
+Owen Valley Community High School,IN-6195-6613,181095001791,4801,Computer Science I,21,0,0,0,0,0,9,1,0
+Perry Central Jr-Sr High School,IN-6325-6708,180174000234,4801,Computer Science I,8,2,0,0,0,0,4,0,0
+Tell City Jr-Sr High School,IN-6350-6741,181126001819,4568,AP Computer Science Principles,25,10,0,1,0,0,3,1,0
+Tell City Jr-Sr High School,IN-6350-6741,181126001819,4801,Computer Science I,16,6,0,0,0,0,6,0,0
+Pike Central High School,IN-6445-6763,180890001482,4801,Computer Science I,10,2,0,0,0,0,5,1,0
+Hebron High School,IN-6460-6813,180075000153,4801,Computer Science I,28,3,0,3,0,0,5,7,0
+Chesterton Senior High School,IN-6470-6925,180280000333,4570,AP Computer Science A,9,2,0,0,0,0,1,0,0
+Chesterton Senior High School,IN-6470-6925,180280000333,4801,Computer Science I,17,1,0,1,0,0,4,3,0
+Chesterton Senior High School,IN-6470-6925,180280000333,4803,Introduction to Computer Science,87,17,0,14,0,0,18,14,2
+Boone Grove High School,IN-6520-6838,180918001521,4801,Computer Science I,19,4,0,4,0,0,6,1,0
+Portage High School,IN-6550-6853,180915001514,4568,AP Computer Science Principles,36,2,4,8,0,0,9,0,0
+Portage High School,IN-6550-6853,180915001514,4803,Introduction to Computer Science,66,4,6,13,0,0,23,11,1
+Portage High School,IN-6550-6853,180915001514,5610,Industrial Automation and Robotics I,38,1,2,10,0,0,19,6,2
+Portage High School,IN-6550-6853,180915001514,5612,Industrial Automation and Robotics II,10,0,0,3,0,0,2,1,0
+Valparaiso High School,IN-6560-6881,181197001891,4570,AP Computer Science A,10,1,0,2,0,0,2,0,0
+Mount Vernon High School,IN-6590-6949,180729001226,4801,Computer Science I,6,1,0,0,0,0,2,1,0
+Mount Vernon High School,IN-6590-6949,180729001226,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+Mount Vernon High School,IN-6590-6949,180729001226,4803,Introduction to Computer Science,11,1,1,0,0,0,4,2,0
+North Posey High School,IN-6600-6975,180795001366,4570,AP Computer Science A,5,0,0,0,0,0,0,1,1
+North Posey High School,IN-6600-6975,180795001366,4801,Computer Science I,3,0,0,0,0,0,0,0,0
+Winamac Community High School,IN-6620-6997,180711001205,4803,Introduction to Computer Science,11,3,0,0,0,1,6,1,0
+Area 30 Career Center,IN-6700-7080,180003402107,5236,Computer Science II,6,2,0,0,0,0,3,2,0
+South Putnam Middle School,IN-6705-7056,181050002542,4801,Computer Science I,17,9,0,0,0,0,4,3,0
+South Putnam High School,IN-6705-7071,181050001726,4801,Computer Science I,40,9,0,1,0,0,15,4,0
+North Putnam Sr High School,IN-6715-7061,180798001369,4801,Computer Science I,16,1,0,0,0,0,10,5,0
+North Putnam Sr High School,IN-6715-7061,180798001369,4803,Introduction to Computer Science,16,4,0,0,0,0,6,2,0
+Cloverdale High School,IN-6750-7077,180222000265,4801,Computer Science I,6,2,0,1,0,0,3,0,0
+Cloverdale High School,IN-6750-7077,180222000265,4803,Introduction to Computer Science,105,47,0,4,1,0,48,11,0
+Greencastle Senior High School,IN-6755-7089,180399000690,4803,Introduction to Computer Science,20,2,0,1,0,0,8,2,0
+Union Junior & High School,IN-6795-7119,181173001875,4803,Introduction to Computer Science,1,0,0,0,0,0,1,0,0
+Indiana Digital JR and High School,IN-6795-7131,181173002666,4801,Computer Science I,55,7,5,2,0,1,21,10,1
+Winchester Community High School,IN-6825-7125,180177000242,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Winchester Community High School,IN-6825-7125,180177000242,4570,AP Computer Science A,13,7,0,0,0,0,6,0,0
+South Ripley High School,IN-6865-7182,181053001729,4803,Introduction to Computer Science,18,0,0,0,0,0,8,2,1
+Batesville High School,IN-6895-7217,180039000084,4801,Computer Science I,13,0,0,0,0,0,1,1,0
+Jac-Cen-Del MS/HS,IN-6900-7193,180480000907,4570,AP Computer Science A,6,0,0,0,0,0,1,0,0
+Jac-Cen-Del MS/HS,IN-6900-7193,180480000907,4568,AP Computer Science Principles,7,1,0,0,0,0,0,0,0
+Jac-Cen-Del MS/HS,IN-6900-7193,180480000907,4803,Introduction to Computer Science,5,0,0,0,0,0,1,0,0
+Milan High School,IN-6910-7205,180663001168,4801,Computer Science I,7,0,0,0,0,0,5,2,0
+Milan High School,IN-6910-7205,180663001168,5236,Computer Science II,1,1,0,0,0,0,0,0,0
+John Glenn High School,IN-7150-7453,180912001505,4803,Introduction to Computer Science,17,1,0,0,1,0,5,2,0
+Penn High School,IN-7175-7353,180876001451,5610,Industrial Automation and Robotics I,11,2,1,0,0,0,2,1,0
+Penn High School,IN-7175-7353,180876001451,5612,Industrial Automation and Robotics II,14,2,0,0,0,0,1,0,0
+Penn High School,IN-7175-7353,180876001451,4801,Computer Science I,47,4,0,1,0,0,11,4,0
+Penn High School,IN-7175-7353,180876001451,5236,Computer Science II,17,1,0,0,0,0,2,0,0
+Penn High School,IN-7175-7353,180876001451,4803,Introduction to Computer Science,19,0,3,0,0,0,2,3,0
+Penn High School,IN-7175-7353,180876001451,5610,Industrial Automation and Robotics I,11,2,1,0,0,0,2,1,0
+Penn High School,IN-7175-7353,180876001451,5612,Industrial Automation and Robotics II,14,2,0,0,0,0,1,0,0
+Mishawaka High School,IN-7200-7461,180684001183,5610,Industrial Automation and Robotics I,7,2,0,0,0,0,4,0,0
+Mishawaka High School,IN-7200-7461,180684001183,5612,Industrial Automation and Robotics II,14,1,1,1,0,0,4,1,0
+Mishawaka High School,IN-7200-7461,180684001183,4803,Introduction to Computer Science,72,7,5,5,0,0,34,10,1
+Clay High School,IN-7205-7421,181029001649,4803,Introduction to Computer Science,27,7,8,3,0,0,18,2,1
+Clay High School,IN-7205-7421,181029001649,4570,AP Computer Science A,7,1,1,2,0,0,3,0,2
+Clay High School,IN-7205-7421,181029001649,4568,AP Computer Science Principles,4,1,1,0,0,0,3,0,0
+Adams High School,IN-7205-7505,181029001662,4803,Introduction to Computer Science,51,11,14,14,0,0,29,6,5
+Riley High School,IN-7205-7513,181029001660,4801,Computer Science I,51,10,14,7,1,0,19,2,1
+Riley High School,IN-7205-7513,181029001660,5236,Computer Science II,9,0,2,2,0,0,8,1,1
+Riley High School,IN-7205-7513,181029001660,4803,Introduction to Computer Science,17,7,3,6,0,0,12,0,0
+Riley High School,IN-7205-7513,181029001660,4803,Introduction to Computer Science,84,35,30,23,0,0,56,15,5
+Washington High School,IN-7205-7517,181029001684,4801,Computer Science I,35,9,1,4,0,0,13,5,1
+Washington High School,IN-7205-7517,181029001684,4803,Introduction to Computer Science,35,10,13,10,0,0,29,2,4
+Scottsburg Senior High School,IN-7255-7641,181002001612,4801,Computer Science I,18,4,0,1,0,0,7,1,0
+Morristown Jr-Sr High School,IN-7285-7661,180321000418,4570,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Morristown Jr-Sr High School,IN-7285-7661,180321000418,4568,AP Computer Science Principles,4,0,0,0,0,0,1,0,0
+Waldron Jr-Sr High School,IN-7285-7665,180321000420,4803,Introduction to Computer Science,8,0,0,0,0,0,5,0,0
+Triton Central High School,IN-7350-7689,180831001423,4801,Computer Science I,17,0,0,1,0,0,2,0,0
+Shelbyville Sr High School,IN-7365-7717,181014001631,4568,AP Computer Science Principles,5,2,0,0,0,0,1,0,0
+Shelbyville Sr High School,IN-7365-7717,181014001631,4801,Computer Science I,24,6,1,0,0,0,9,1,0
+Blue River Career Ctr,IN-7375-7747,180000900115,4801,Computer Science I,11,0,1,0,0,0,3,3,0
+Heritage Hills High School,IN-7385-7759,180801001376,4801,Computer Science I,11,2,0,1,0,0,2,4,0
+Heritage Hills High School,IN-7385-7759,180801001376,4803,Introduction to Computer Science,27,8,0,2,0,0,9,4,1
+Angola High School,IN-7615-7893,181110001797,4803,Introduction to Computer Science,19,3,0,0,0,0,6,2,0
+North Central Jr/Sr High School,IN-7645-7917,180816001402,5610,Industrial Automation and Robotics I,21,2,0,0,0,0,6,3,0
+North Central Jr/Sr High School,IN-7645-7917,180816001402,4803,Introduction to Computer Science,43,20,0,0,1,0,23,6,0
+Sullivan High School,IN-7715-7957,181086001773,4803,Introduction to Computer Science,7,1,0,0,0,0,5,4,0
+Sullivan High School,IN-7715-7957,181086001773,5610,Industrial Automation and Robotics I,22,0,0,1,0,0,12,4,1
+Sullivan High School,IN-7715-7957,181086001773,4803,Introduction to Computer Science,15,0,0,0,0,0,4,2,1
+Switzerland Co Middle School,IN-7775-7987,181122000806,4803,Introduction to Computer Science,14,0,0,1,0,0,6,1,0
+Switzerland Co Senior High School,IN-7775-7993,181122001811,4801,Computer Science I,12,4,0,0,0,0,8,1,1
+Switzerland Co Senior High School,IN-7775-7993,181122001811,4803,Introduction to Computer Science,16,5,0,1,0,0,11,2,0
+Jefferson High School,IN-7855-8069,180540000968,4801,Computer Science I,18,4,0,5,0,0,7,3,0
+Jefferson High School,IN-7855-8069,180540000968,4803,Introduction to Computer Science,47,10,4,14,1,0,26,12,4
+McCutcheon High School,IN-7865-8003,181134001830,4803,Introduction to Computer Science,52,5,0,6,0,0,21,4,2
+William Henry Harrison High School,IN-7865-8029,181134001835,4801,Computer Science I,51,3,0,4,0,0,7,1,0
+William Henry Harrison High School,IN-7865-8029,181134001835,4801,Computer Science I,3,0,0,0,0,0,1,1,0
+William Henry Harrison High School,IN-7865-8029,181134001835,4801,Computer Science I,2,1,0,0,0,0,0,0,0
+West Lafayette Jr/Sr High School,IN-7875-8129,181287002048,4568,AP Computer Science Principles,78,33,0,2,0,0,5,0,0
+Tri Central Middle-High School,IN-7935-8155,180804001379,4803,Introduction to Computer Science,23,3,0,1,0,0,2,1,0
+Tipton High School,IN-7945-8177,181140001843,4801,Computer Science I,20,2,0,1,0,0,6,5,0
+Benjamin Bosse High School,IN-7995-8237,180345000456,4801,Computer Science I,2,1,0,0,0,0,0,0,0
+Francis Joseph Reitz High School,IN-7995-8245,180345000466,4801,Computer Science I,3,1,0,0,0,0,1,0,0
+Francis Joseph Reitz High School,IN-7995-8245,180345000466,4801,Computer Science I,1,1,0,1,0,0,0,0,0
+North High School,IN-7995-8253,180345000478,4801,Computer Science I,4,0,0,0,0,0,1,0,0
+Southern Ind Career and Tech Cent,IN-7995-8255,180345002219,4801,Computer Science I,6,1,0,1,0,0,3,2,1
+Southern Ind Career and Tech Cent,IN-7995-8255,180345002219,5236,Computer Science II,6,0,0,0,0,0,1,1,0
+New Tech Institute,IN-7995-8326,180345002464,4801,Computer Science I,4,1,0,0,0,0,1,0,1
+North Vermillion High School,IN-8010-8394,180807001384,5610,Industrial Automation and Robotics I,1,1,0,0,0,0,0,0,0
+North Vermillion High School,IN-8010-8394,180807001384,5612,Industrial Automation and Robotics II,3,0,0,0,0,0,1,0,0
+Terre Haute North Vigo High School,IN-8030-8441,181209001917,5610,Industrial Automation and Robotics I,8,2,0,1,0,0,1,0,0
+Terre Haute North Vigo High School,IN-8030-8441,181209001917,5612,Industrial Automation and Robotics II,1,1,0,0,0,0,0,0,0
+Terre Haute North Vigo High School,IN-8030-8441,181209001917,5610,Industrial Automation and Robotics I,17,3,1,0,0,0,7,2,0
+West Vigo High School,IN-8030-8453,181209001923,5610,Industrial Automation and Robotics I,17,1,0,0,1,1,4,4,1
+Terre Haute South Vigo High School,IN-8030-8457,181209001918,4801,Computer Science I,27,1,2,1,0,0,8,5,2
+Terre Haute South Vigo High School,IN-8030-8457,181209001918,5236,Computer Science II,21,1,0,0,0,0,8,3,1
+Terre Haute South Vigo High School,IN-8030-8457,181209001918,5610,Industrial Automation and Robotics I,27,4,1,0,0,0,5,3,0
+Manchester Jr-Sr High School,IN-8045-8625,180627001103,4803,Introduction to Computer Science,17,3,0,0,1,0,10,1,0
+Southwood Jr-Sr High School,IN-8050-8655,181218001948,4803,Introduction to Computer Science,12,2,0,1,0,0,5,1,1
+White's Jr-Sr High School,IN-8050-8673,181218001951,4801,Computer Science I,4,0,0,0,0,0,4,2,0
+White's Jr-Sr High School,IN-8050-8673,181218001951,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+Wabash High School,IN-8060-8693,181215001940,4803,Introduction to Computer Science,5,0,0,0,0,0,2,0,0
+Castle High School,IN-8130-8809,181239001977,4801,Computer Science I,28,2,2,0,0,0,7,1,1
+Castle High School,IN-8130-8809,181239001977,5236,Computer Science II,17,1,0,0,0,0,2,0,0
+Castle High School,IN-8130-8809,181239001977,4568,AP Computer Science Principles,24,2,1,0,0,0,4,1,0
+Salem High School,IN-8205-8857,180981001600,4801,Computer Science I,24,5,0,0,0,0,10,3,0
+West Washington Jr-Sr High School,IN-8220-8869,181293002063,4568,AP Computer Science Principles,1,1,0,0,0,0,0,0,0
+West Washington Jr-Sr High School,IN-8220-8869,181293002063,4803,Introduction to Computer Science,25,11,0,0,0,0,15,0,0
+Centerville Sr High School,IN-8360-8981,180156000217,4801,Computer Science I,31,9,0,0,0,0,9,1,0
+Centerville-Abington Jr High Sch,IN-8360-8982,180156000216,4803,Introduction to Computer Science,141,71,2,5,0,0,43,15,2
+Northeastern High School,IN-8375-8927,180819001406,4801,Computer Science I,17,4,0,0,0,0,8,1,0
+Richmond High School,IN-8385-8993,180951001566,4570,AP Computer Science A,16,7,0,1,0,0,2,1,0
+Norwell High School,IN-8435-9087,180822001410,4801,Computer Science I,9,1,0,1,0,0,3,1,0
+Norwell High School,IN-8435-9087,180822001410,4803,Introduction to Computer Science,20,1,0,2,0,0,7,2,1
+Frontier Jr-Sr High School,IN-8525-9137,180381000603,4801,Computer Science I,4,0,0,0,0,0,0,0,0
+Tri-County Jr/Sr High School,IN-8535-9141,181143001846,4801,Computer Science I,16,1,0,0,0,0,3,3,0
+Twin Lakes Senior High School,IN-8565-9149,181158001863,4570,AP Computer Science A,4,1,0,0,0,0,2,0,0
+Twin Lakes Senior High School,IN-8565-9149,181158001863,4801,Computer Science I,21,3,0,6,0,0,11,3,0
+Twin Lakes Senior High School,IN-8565-9149,181158001863,5236,Computer Science II,15,2,0,4,0,0,8,1,0
+Columbia City High School,IN-8665-9187,180228000267,4801,Computer Science I,11,0,1,0,1,0,2,1,1
+Thomas Carr Howe Comm High School,IN-8810-5639,180012601445,4801,Computer Science I,7,1,3,1,0,0,7,1,2
+Purdue Polytechnic High Sch North,IN-9015-4271,180018302632,4803,Introduction to Computer Science,1,0,0,1,0,0,0,0,0
+Indiana Connections Career Academy,IN-9035-7947,180019102631,4801,Computer Science I,19,1,1,0,0,0,5,4,0
+Indiana Connections Career Academy,IN-9035-7947,180019102631,4803,Introduction to Computer Science,15,1,2,1,0,0,5,5,0
+Insight School of Indiana,IN-9120-2528,180017902601,4801,Computer Science I,125,55,16,7,1,0,72,24,0
+Insight School of Indiana,IN-9120-2528,180017902601,4803,Introduction to Computer Science,33,9,6,0,1,0,21,8,0
+Riverside High School,IN-9145-1122,180018702633,4803,Introduction to Computer Science,22,6,10,5,0,0,16,4,2
+Excel Center - Muncie,IN-9160-1016,180019702662,4801,Computer Science I,3,2,0,0,0,0,3,0,0
+Excel Center - Gary,IN-9190-1024,180020002652,4801,Computer Science I,24,16,17,2,0,0,15,2,0
+Shawe Memorial High School,IN-9200-B505,unspecified,4570,AP Computer Science A,1,0,0,0,0,0,1,0,0
+Shawe Memorial High School,IN-9200-B505,unspecified,4801,Computer Science I,8,0,0,0,0,0,1,0,1
+Roncalli High School,IN-9200-C320,unspecified,4568,AP Computer Science Principles,8,4,0,1,0,0,0,0,0
+Bishop Chatard High School,IN-9200-C705,unspecified,4568,AP Computer Science Principles,46,6,0,2,0,0,3,2,1
+Scecina Memorial High School,IN-9200-C710,unspecified,4801,Computer Science I,11,0,1,3,0,0,4,0,1
+Scecina Memorial High School,IN-9200-C710,unspecified,4803,Introduction to Computer Science,46,11,5,21,0,0,24,0,9
+Cardinal Ritter High School,IN-9200-C715,unspecified,4570,AP Computer Science A,7,1,0,2,0,0,1,1,0
+Cardinal Ritter High School,IN-9200-C715,unspecified,4803,Introduction to Computer Science,23,6,1,11,0,0,11,1,1
+Oldenburg Academy,IN-9200-D135,unspecified,4570,AP Computer Science A,9,1,0,0,0,0,3,0,0
+Oldenburg Academy,IN-9200-D135,unspecified,4568,AP Computer Science Principles,10,4,0,0,0,0,2,1,0
+Seton Catholic High School,IN-9200-D842,unspecified,4801,Computer Science I,15,9,0,1,0,0,6,1,0
+Seton Catholic High School,IN-9200-D842,unspecified,5236,Computer Science II,5,0,0,0,0,0,2,1,0
+Bishop Noll Institute,IN-9205-B970,unspecified,4801,Computer Science I,12,1,0,8,0,0,9,0,2
+Guerin Catholic High School,IN-9210-B249,unspecified,4586,IB Computer Science Standard Level,7,3,0,0,0,0,0,0,0
+Washington Catholic Mid/High Sch,IN-9215-A660,unspecified,5236,Computer Science II,3,0,0,0,0,0,1,0,0
+Mater Dei High School,IN-9215-D530,unspecified,4568,AP Computer Science Principles,8,0,0,0,0,0,0,0,0
+Bishop Dwenger High School,IN-9220-A120,unspecified,4803,Introduction to Computer Science,27,4,0,1,0,0,1,0,0
+Marian High School,IN-9220-D165,unspecified,4801,Computer Science I,16,3,0,1,0,0,4,4,0
+Marian High School,IN-9220-D165,unspecified,5236,Computer Science II,4,0,0,1,0,0,1,0,0
+Saint Joseph High School,IN-9220-D225,unspecified,4801,Computer Science I,19,2,2,2,0,0,2,2,2
+Saint Joseph High School,IN-9220-D225,unspecified,4570,AP Computer Science A,4,0,0,0,0,0,0,0,0
+Saint Joseph High School,IN-9220-D225,unspecified,4568,AP Computer Science Principles,7,1,0,0,0,0,0,0,0
+Concordia Lutheran High School,IN-9230-A195,unspecified,4801,Computer Science I,25,10,2,0,0,0,4,2,0
+Concordia Lutheran High School,IN-9230-A195,unspecified,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+Lutheran High School,IN-9230-C270,unspecified,4570,AP Computer Science A,3,0,0,0,0,0,0,0,0
+Lutheran High School,IN-9230-C270,unspecified,4568,AP Computer Science Principles,5,2,1,0,0,0,0,0,0
+Lutheran High School,IN-9230-C270,unspecified,4803,Introduction to Computer Science,9,3,0,0,0,0,2,2,0
+Signature School Inc,IN-9315-8295,180002100319,4586,IB Computer Science Standard Level,23,6,1,1,0,0,2,0,0
+Community Montessori,IN-9320-1536,180001101737,4801,Computer Science I,2,0,0,0,0,0,0,2,0
+Irvington Community School,IN-9330-1537,180001401756,4570,AP Computer Science A,5,1,0,1,0,0,3,1,0
+Christel House Academy South,IN-9380-5874,180001801789,4801,Computer Science I,32,15,4,19,0,0,25,4,8
+Christel House Academy South,IN-9380-5874,180001801789,5236,Computer Science II,20,7,1,13,0,0,15,1,10
+Christel House Academy South,IN-9380-5874,180001801789,4803,Introduction to Computer Science,55,27,6,24,0,0,45,8,9
+Indiana Agriculture and Technology,IN-9505-5472,180019802665,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+21st Century Charter Sch of Gary,IN-9545-4164,180004602162,4801,Computer Science I,2,0,2,0,0,0,2,0,0
+Victory College Prep Academy,IN-9575-5523,unspecified,4801,Computer Science I,22,11,16,3,0,0,18,2,0
+Indiana School For The Deaf,IN-9610-C695,180002402258,4803,Introduction to Computer Science,6,1,1,0,0,0,6,5,0
+Burris Laboratory School,IN-9620-1441,180003800185,4570,AP Computer Science A,4,0,0,0,0,0,0,0,0
+Burris Laboratory School,IN-9620-1441,180003800185,4568,AP Computer Science Principles,21,7,0,1,2,0,2,2,0
+Indiana Academy for Sci Math Hmn,IN-9625-1443,180004102348,4570,AP Computer Science A,17,4,0,0,0,0,0,1,1
+Indiana Academy for Sci Math Hmn,IN-9625-1443,180004102348,5236,Computer Science II,11,3,0,0,1,0,2,0,0
+Herron High School,IN-9650-5724,180005802315,4568,AP Computer Science Principles,5,3,1,0,0,0,1,1,0
+Herron High School,IN-9650-5724,180005802315,4803,Introduction to Computer Science,42,16,9,7,0,0,16,9,1
+Hammond Academy of Science & Tech,IN-9705-4486,180008202466,4568,AP Computer Science Principles,8,2,0,5,0,0,7,1,0
+Hammond Academy of Science & Tech,IN-9705-4486,180008202466,4803,Introduction to Computer Science,8,2,0,6,0,0,6,2,1
+Rock Creek Community Academy,IN-9875-0771,180009902497,4801,Computer Science I,27,6,6,2,0,0,9,11,0
+Career Academy High School,IN-9880-7567,180010102521,5610,Industrial Automation and Robotics I,43,15,2,2,0,0,13,8,0
+Career Academy High School,IN-9880-7567,180010102521,4801,Computer Science I,24,9,5,1,0,0,12,4,0
+Career Academy High School,IN-9880-7567,180010102521,4803,Introduction to Computer Science,23,6,5,2,1,0,10,7,2
+Indiana Connections Academy,IN-9905-7944,180009802474,4803,Introduction to Computer Science,99,26,6,9,0,0,37,28,0
+Dugger Union Community School Corp,IN-9950-7952,180016502590,4801,Computer Science I,14,1,0,1,0,0,7,3,0
+Dugger Union Community School Corp,IN-9950-7952,180016502590,4803,Introduction to Computer Science,21,7,0,2,0,0,9,7,0
+Dugger Union Community School Corp,IN-9950-7952,180016502590,4803,Introduction to Computer Science,21,7,0,2,0,0,9,7,0
+Dugger Union Community School Corp,IN-9950-7952,180016502590,4801,Computer Science I,14,1,0,1,0,0,7,3,0
+Brebeuf Jesuit Preparatory School,1901514,unspecified,4803,Introduction to Computer Science,10,2,0,0,0,0,0,0,0
+Brebeuf Jesuit Preparatory School,1901514,unspecified,4570,AP Computer Science A,5,0,1,0,0,0,0,0,0
+Brebeuf Jesuit Preparatory School,1901514,unspecified,4801,Computer Science I,14,0,1,0,0,0,0,0,0
+Christian Academy of Indiana,1902019,unspecified,4570,AP Computer Science A,5,0,0,0,0,0,1,0,0
+Christian Academy of Indiana,1902019,unspecified,4568,AP Computer Science Principles,2,1,0,0,0,0,0,0,1
+Christian Academy of Indiana,1902019,unspecified,4801,Computer Science I,17,7,0,1,0,0,1,1,2
+Cornerstone College Prep Sch,A0301442,unspecified,4801,Computer Science I,42,24,38,2,0,0,32,1,0
+Covenant Christian High School,A0103217,unspecified,4803,Introduction to Computer Science,2,2,0,0,0,0,0,0,0
+Eman Schools,A0700916,unspecified,5236,Computer Science II,6,4,1,0,0,0,3,1,0
+Evansville Christian Sch Newburgh,425373,unspecified,4803,Introduction to Computer Science,19,3,0,2,0,0,4,2,0
+Faith Christian School,A9501787,unspecified,4801,Computer Science I,14,0,0,1,0,0,0,1,2
+Heritage Christian School,425533,unspecified,4568,AP Computer Science Principles,5,2,1,0,0,0,0,0,0
+Heritage Christian School,425533,unspecified,4801,Computer Science I,9,2,1,0,0,0,0,0,1
+Horizon Christian Academy,BB181108,unspecified,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Indiana Academy,426901,unspecified,4803,Introduction to Computer Science,41,21,0,23,0,0,31,4,9
+Indiana Christian Academy,A9501753,unspecified,4801,Computer Science I,23,12,0,4,0,0,20,0,1
+Legacy Christian School,unspecified,unspecified,4570,AP Computer Science A,2,1,0,0,0,0,0,0,0
+Legacy Christian School,,unspecified,4568,AP Computer Science Principles,4,2,0,0,0,0,0,0,0
+Legacy Learning Center,A1701724,unspecified,4801,Computer Science I,3,2,2,1,0,0,3,0,0
+Lighthouse Christian Academy,A9701494,unspecified,4801,Computer Science I,3,0,0,0,0,0,2,0,0
+MTI School of Knowledge,A9300388,unspecified,4801,Computer Science I,17,8,8,0,0,0,16,0,8
+MTI School of Knowledge,A9300388,unspecified,4801,Computer Science I,20,8,11,0,0,0,20,1,9
+New Vision Christian Academy,A1701737,unspecified,4803,Introduction to Computer Science,2,2,2,0,0,0,2,0,0
+Tabernacle Christian School,425147,unspecified,4803,Introduction to Computer Science,1,0,0,0,0,0,1,0,0
+Trinity School At Greenlawn,A9102776,unspecified,5236,Computer Science II,12,0,0,1,0,0,2,0,0
+Trinity School At Greenlawn,A9102776,unspecified,5236,Computer Science II,18,18,2,1,0,0,1,0,0
+Victory Christian Academy,BB161139,unspecified,4568,AP Computer Science Principles,11,7,0,3,0,0,6,0,0
+Victory Christian Academy,BB161139,unspecified,4801,Computer Science I,19,9,0,1,0,0,11,0,0

@@ -214,6 +214,8 @@ az:
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
       about: "Haqqımızda"
+      legal_privacy: "Məxfilik siyasəti"
+      legal_tos: "Xidmət şərtləri"
     user:
       classroom: 'Müəllimin ev səhifəsi'
       label: 'Salam %{username}'
@@ -488,6 +490,7 @@ az:
     form_labels:
       email: 'E-poçt'
       school_name: 'Məktəbin adı'
+      colombian_school_name: 'Məktəbin adı'
     form_entries:
       gender:
         male: 'Kişi'

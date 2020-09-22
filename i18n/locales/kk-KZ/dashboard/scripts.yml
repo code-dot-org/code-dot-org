@@ -11,7 +11,7 @@ kk:
           description: Енді бастаушылар Курс 1 - ден бастаңыздар. Оқушылар басқалармен бірлесіп жұмыс, мәселелерді шешу дағдыларын дамыта отырып, компьютерлік бағдарламалар жасайды. Курс соңында оқушылар бөлісе алатындай өздерінің ойындарын немесе оқиғаларын жасайды. K-1 оқушыларына пайдалануға кеңес береміз.
           description_short: Енді бастаушылар Курс 1 - ден бастаңыздар.
           description_audience: 4-6 жастағылар үшін
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'Кейіпкер: Ілмектер'
             'Artist: Sequence':
@@ -48,47 +48,12 @@ kk:
               name: 'Ойындар Лабораториясы: Оқиға құрыңыз'
             The Big Event:
               name: Үлкен Оқиға
-          lessons:
-            Happy Maps:
-              name: Көңілді Карталар
-            Move it, Move it:
-              name: Қозғал, Қозғал
-            'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Жылжытуды үйрену'
-            'Maze: Sequence':
-              name: 'Лабиринт: Тізбектер'
-            'Maze: Debugging':
-              name: 'Лабиринт: Бағдарламаны ретке келтіру'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            'Bee: Sequence':
-              name: 'Ара: Тізбектер'
-            'Artist: Sequence':
-              name: 'Кейіпкер: Тізбектер'
-            Building a Foundation:
-              name: Ғимарат Салу
-            'Artist: Shapes':
-              name: 'Кейіпкер: Фигуралар'
-            Spelling Bee:
-              name: Сөз жазушы Ара
-            Getting Loopy:
-              name: Ілмектерді үйрену
-            'Maze: Loops':
-              name: 'Лабиринт: Ілмектер'
-            'Bee: Loops':
-              name: 'Ара: Циклдер'
-            The Big Event:
-              name: Үлкен Оқиға
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
-            'Artist: Loops':
-              name: 'Кейіпкер: Ілмектер'
         course2:
           title: Курс 2
           description: Курс 2 оқи алатын және бағдарламалаудан тәжірибелері жоқ оқушыларға арналған. Бұл курста оқушылар бөлісе алатын, мәселерді шешетін және интерактивті ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға кеңес береміз.
           description_short: Жазу танитын оқушылар Курс 2 - ден бастаңыздар.
           description_audience: Жас 6-дан бастап (оқу міндетті)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Кейіпкер: Бағдарламаны ретке келтіру'
             'Artist: Loops':
@@ -127,49 +92,12 @@ kk:
               name: Үлкен Оқиға
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
-          lessons:
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            'Real-life Algorithms: Paper Planes':
-              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
-            'Maze: Sequence':
-              name: 'Лабиринт: Тізбектер'
-            'Artist: Sequence':
-              name: 'Кейіпкер: Тізбектер'
-            Getting Loopy:
-              name: Ілмектерді үйрену
-            'Maze: Loops':
-              name: 'Лабиринт: Ілмектер'
-            'Artist: Loops':
-              name: 'Кейіпкер: Ілмектер'
-            'Bee: Loops':
-              name: 'Ара: Циклдер'
-            Relay programming:
-              name: Релелік Бағдарламалау
-            'Bee: Debugging':
-              name: 'Ара: Бағдарламаны ретке келтіру'
-            'Artist: Debugging':
-              name: 'Кейіпкер: Бағдарламаны ретке келтіру'
-            Conditionals:
-              name: Шарттар
-            'Bee: Conditionals':
-              name: 'Ара: Шарттар'
-            Binary Bracelets:
-              name: Екілік Білезіктер
-            The Big Event:
-              name: Үлкен Оқиға
-            Flappy:
-              name: Flappy
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
-            'Artist: Nested Loops':
-              name: 'Кейіпкер: Біріккен Ілмектер'
         course3:
           title: Курс 3
           description: Курс 3 Курс 2-ні бітірген оқушыларға арналған. Оқушылар алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып, аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. 4-5 сынып оқушыларына пайдалануға кеңес береміз.
           description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
           description_audience: 8-18 жастағылар үшін
-          stages:
+          lessons:
             Artist:
               name: Кейіпкер
             'Artist: Functions':
@@ -212,52 +140,10 @@ kk:
               name: 'Ойындар Лабораториясы: Ойын Құру'
             'Studio: Create a Story':
               name: 'Ойындар Лабораториясы: Оқиға құрыңыз'
-          lessons:
-            Computational Thinking:
-              name: Есептегіштік ойлау
-            Maze:
-              name: Лабиринт
-            Artist:
-              name: Кейіпкер
-            Functional Suncatchers:
-              name: Функционалдық Күн сәулесін аулаушы
-            'Artist: Functions':
-              name: 'Кейіпкер: Функциялар'
-            'Bee: Functions':
-              name: 'Ара: Функциялар'
-            'Bee: Conditionals':
-              name: 'Ара: Шарттар'
-            'Maze: Conditionals':
-              name: 'Лабиринт: Шарттар'
-            Songwriting:
-              name: Ән Жазу
-            Dice Race:
-              name: Ойын Сүйектерінің Жарысы
-            'Artist: Nested Loops':
-              name: 'Кейіпкер: Біріккен Ілмектер'
-            'Farmer: While Loops':
-              name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
-            'Bee: Nested Loops':
-              name: 'Ара: Біріккен Ілмектер'
-            'Bee: Debugging':
-              name: 'Ара: Бағдарламаны ретке келтіру'
-            Bounce:
-              name: Секіру
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Artist: Patterns':
-              name: 'Кейіпкер: Үлгілер'
         playlab:
           title: Ойындар Лабораториясы
           description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
           description_short: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
-          stages:
-            Play Lab:
-              name: Ойындар Лабораториясы
           lessons:
             Play Lab:
               name: Ойындар Лабораториясы
@@ -265,9 +151,6 @@ kk:
           title: Кейіпкер
           description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
           description_short: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
-          stages:
-            Artist:
-              name: Кейіпкер
           lessons:
             Artist:
               name: Кейіпкер
@@ -275,9 +158,6 @@ kk:
           title: Классикалық лабиринт
           description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды Дәуірдегі Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
           description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен оқыңыз!
-          stages:
-            Maze:
-              name: Лабиринт
           lessons:
             Maze:
               name: Лабиринт
@@ -285,9 +165,6 @@ kk:
           title: Анна және Эльзамен код жазыңыз
           description: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай, қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен бөлісесіз!
           description_short: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін көрсететін кодты пайдаланайық.
-          stages:
-            Artist:
-              name: Кейіпкер
           lessons:
             Artist:
               name: Кейіпкер
@@ -296,163 +173,88 @@ kk:
           description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға кеңес береміз."
           description_short: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған.
           description_audience: 10-18 жастағылар үшін
-          stages:
-            Artist:
-              name: Кейіпкер
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
-            'Artist: For Loops':
-              name: 'Кейіпкер: For ілмектері'
-            'Artist: Functions':
-              name: 'Кейіпкер: Функциялар'
-            'Artist: Functions with Parameters':
-              name: 'Кейіпкер: Параметрлері бар Функциялар'
-            'Artist: Variables':
-              name: 'Кейіпкер: Айнымалылар'
-            'Bee: For Loops':
-              name: 'Ара: For ілмектері'
-            'Bee: Functions with Parameters':
-              name: 'Ара: Параметрлері бар Функциялар'
-            Extreme Challenge - Comprehensive:
-              name: Өте Қиын жаттығулар - Kешенді
-            Maze and Bee:
-              name: Лабиринт және Ара
-            'Play Lab: For Loops':
-              name: 'Ойындар Лабораториясы: For ілмектері'
-            'Play Lab: Functions with Parameters':
-              name: 'Ойындар Лабораториясы: Параметрлері бар Функциялар'
-            'Play Lab: Variables':
-              name: 'Ойындар Лабораториясы: Айнымалылар'
-            Super Challenge - For Loops:
-              name: Қиын жаттығулар - For Ілмектері
-            Super Challenge - Functions and Parameters:
-              name: Қиын жаттығулар - Фунциялар және Параметрлер
-            Super Challenge - Variables:
-              name: Қиын жаттығулар - Aйнымалылар
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            'Unplugged: Envelope Variables':
-              name: 'Kомпьютерсіз: Ауыспалы Айнымалылар'
-            'Unplugged: For Loop Fun':
-              name: 'Kомпьютерсіз: Көңілді For ілмектері'
-            'Unplugged: Madlibs':
-              name: 'Kомпьютерсіз: Мадлибс'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
-            'Unplugged: Tangrams':
-              name: 'Kомпьютерсіз: Танграмдар'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Kомпьютерсіз: Танграмдар'
-            Maze and Bee:
-              name: Лабиринт және Ара
             Artist:
               name: Кейіпкер
-            'Unplugged: Envelope Variables':
-              name: 'Kомпьютерсіз: Ауыспалы Айнымалылар'
-            'Unplugged: Madlibs':
-              name: 'Kомпьютерсіз: Мадлибс'
-            'Artist: Variables':
-              name: 'Кейіпкер: Айнымалылар'
-            'Play Lab: Variables':
-              name: 'Ойындар Лабораториясы: Айнымалылар'
-            'Unplugged: For Loop Fun':
-              name: 'Kомпьютерсіз: Көңілді For ілмектері'
-            'Bee: For Loops':
-              name: 'Ара: For ілмектері'
-            'Artist: For Loops':
-              name: 'Кейіпкер: For ілмектері'
-            'Play Lab: For Loops':
-              name: 'Ойындар Лабораториясы: For ілмектері'
-            'Artist: Functions':
-              name: 'Кейіпкер: Функциялар'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
-            'Artist: Functions with Parameters':
-              name: 'Кейіпкер: Параметрлері бар Функциялар'
-            'Play Lab: Functions with Parameters':
-              name: 'Ойындар Лабораториясы: Параметрлері бар Функциялар'
-            'Bee: Functions with Parameters':
-              name: 'Ара: Параметрлері бар Функциялар'
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
             Artist Binary:
               name: Кейіпкер Екілік жүйе
-            Super Challenge - Variables:
-              name: Қиын жаттығулар - Aйнымалылар
+            'Artist: For Loops':
+              name: 'Кейіпкер: For ілмектері'
+            'Artist: Functions':
+              name: 'Кейіпкер: Функциялар'
+            'Artist: Functions with Parameters':
+              name: 'Кейіпкер: Параметрлері бар Функциялар'
+            'Artist: Variables':
+              name: 'Кейіпкер: Айнымалылар'
+            'Bee: For Loops':
+              name: 'Ара: For ілмектері'
+            'Bee: Functions with Parameters':
+              name: 'Ара: Параметрлері бар Функциялар'
+            Extreme Challenge - Comprehensive:
+              name: Өте Қиын жаттығулар - Kешенді
+            Maze and Bee:
+              name: Лабиринт және Ара
+            'Play Lab: For Loops':
+              name: 'Ойындар Лабораториясы: For ілмектері'
+            'Play Lab: Functions with Parameters':
+              name: 'Ойындар Лабораториясы: Параметрлері бар Функциялар'
+            'Play Lab: Variables':
+              name: 'Ойындар Лабораториясы: Айнымалылар'
             Super Challenge - For Loops:
               name: Қиын жаттығулар - For Ілмектері
             Super Challenge - Functions and Parameters:
               name: Қиын жаттығулар - Фунциялар және Параметрлер
-            Extreme Challenge - Comprehensive:
-              name: Өте Қиын жаттығулар - Kешенді
+            Super Challenge - Variables:
+              name: Қиын жаттығулар - Aйнымалылар
+            'Unplugged: Binary':
+              name: 'Kомпьютерсіз: Екілік жүйе'
+            'Unplugged: Envelope Variables':
+              name: 'Kомпьютерсіз: Ауыспалы Айнымалылар'
+            'Unplugged: For Loop Fun':
+              name: 'Kомпьютерсіз: Көңілді For ілмектері'
+            'Unplugged: Madlibs':
+              name: 'Kомпьютерсіз: Мадлибс'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
+            'Unplugged: Tangrams':
+              name: 'Kомпьютерсіз: Танграмдар'
         Course4pre:
           title: Курс 4 Қажетті шарттар
           description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
           description_short: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
-          stages:
-            'Artist: Functions':
-              name: 'Кейіпкер: Функциялар'
-            'Artist: Loops':
-              name: 'Кейіпкер: Ілмектер'
-            'Artist: Nested Loops':
-              name: 'Кейіпкер: Біріккен Ілмектер'
-            'Artist: Sequence':
-              name: 'Кейіпкер: Тізбектер'
-            'Bee: Conditionals':
-              name: 'Ара: Шарттар'
-            'Bee: Debugging':
-              name: 'Ара: Бағдарламаны ретке келтіру'
-            'Bee: Nested Loops':
-              name: 'Ара: Біріккен Ілмектер'
-            'Farmer: While Loops':
-              name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
-            'Maze: Sequence':
-              name: 'Лабиринт: Тізбектер'
           lessons:
-            'Maze: Sequence':
-              name: 'Лабиринт: Тізбектер'
-            'Artist: Sequence':
-              name: 'Кейіпкер: Тізбектер'
-            'Artist: Loops':
-              name: 'Кейіпкер: Ілмектер'
-            'Bee: Conditionals':
-              name: 'Ара: Шарттар'
-            'Artist: Nested Loops':
-              name: 'Кейіпкер: Біріккен Ілмектер'
-            'Farmer: While Loops':
-              name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
-            'Bee: Nested Loops':
-              name: 'Ара: Біріккен Ілмектер'
             'Artist: Functions':
               name: 'Кейіпкер: Функциялар'
+            'Artist: Loops':
+              name: 'Кейіпкер: Ілмектер'
+            'Artist: Nested Loops':
+              name: 'Кейіпкер: Біріккен Ілмектер'
+            'Artist: Sequence':
+              name: 'Кейіпкер: Тізбектер'
+            'Bee: Conditionals':
+              name: 'Ара: Шарттар'
             'Bee: Debugging':
               name: 'Ара: Бағдарламаны ретке келтіру'
+            'Bee: Nested Loops':
+              name: 'Ара: Біріккен Ілмектер'
+            'Farmer: While Loops':
+              name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
+            'Maze: Sequence':
+              name: 'Лабиринт: Тізбектер'
         usability:
-          stages:
-            Binary:
-              name: Бинарлы
-            For Loops:
-              name: For ілмектері
-            Functions and Functions with Parameters:
-              name: Функциялар және Параметрлі Функциялар
-            Intro:
-              name: Кіріспе
-            Variables:
-              name: Айнымалылар
           lessons:
-            Intro:
-              name: Кіріспе
-            Variables:
-              name: Айнымалылар
+            Binary:
+              name: Бинарлы
             For Loops:
               name: For ілмектері
             Functions and Functions with Parameters:
               name: Функциялар және Параметрлі Функциялар
-            Binary:
-              name: Бинарлы
+            Intro:
+              name: Кіріспе
+            Variables:
+              name: Айнымалылар
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: Шарттар
             'Eval: Strings and Images':
@@ -463,64 +265,19 @@ kk:
               name: 'Kомпьютерсіз: Құрастырушы Кеңес'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Kомпьютерсіз: Видео Ойындар және Кеңістіктегі координаталар'
-          lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Kомпьютерсіз: Видео Ойындар және Кеңістіктегі координаталар'
-            'Calc: Evaluation Blocks':
-              name: 'Есептеу: Бағалау блоктары'
-            'Eval: Strings and Images':
-              name: 'Eval: Жолдар және Суреттер'
-            'Unplugged: Contracts':
-              name: 'Компьютерсіз: Келісімшарттар'
-            'Eval: Writing Contracts':
-              name: 'Eval: Келісімшарттарды жазу'
-            'Calc: Defining Variables':
-              name: 'Есептеу: Айнымалыларды анықтау'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Ойындар Лабораториясы: Айнымалыларды анықтау (Үлкен Ойын)'
-            'Unplugged: The Design Recipe':
-              name: 'Kомпьютерсіз: Құрастырушы Кеңес'
-            'Play Lab: Animation (Big Game)':
-              name: 'Ойындар Лабораториясы: Анимация (Үлкен Ойын)'
-            'Unplugged: Booleans':
-              name: 'Компьютерсіз: Бульдік тип'
-            'Eval: Boolean Operators':
-              name: 'Eval: Бульдік Оператор'
-            'Play Lab: Booleans':
-              name: 'Ойындар Лабораториясы: Бульдік тип'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Ойындар Лабораториясы: Бульдік тип (Үлкен Ойын)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Kомпьютерсіз: Шарттар және Бөлшекті Функциялар'
-            'Eval: Conditionals':
-              name: 'Eval: Шарттар'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Компьютерсіз: Қақтығыстарды анықтау және Арақашықтық Формуласы'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Ойындар Лабораториясы: Қақтығыстарды анықтау (Үлкен Ойын)'
         infinity:
           title: Диснейдің Шексіз Ойындар Лабораториясы
           description: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
           description_short: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
-          stages:
-            Infinity:
-              name: Шексіздік
           lessons:
             Infinity:
               name: Шексіздік
         algebrademo:
-          stages:
-            Defining Variables:
-              name: Айнымалыларды анықтау
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            The Design Recipe:
-              name: Графика салу әдістері
           lessons:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
             Defining Variables:
               name: Айнымалыларды анықтау
+            Evaluation Blocks:
+              name: Бағалау Блоктары
             The Design Recipe:
               name: Графика салу әдістері
         netsim:
@@ -530,135 +287,75 @@ kk:
           description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің 2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін 2-4 курстарды қараңыз!
           description_short: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің 2-4 курсын қамтиды.
           description_audience: 10-18 жастағылар үшін
-          stages:
-            Abstraction:
-              name: Абстракция
-            Algorithms:
-              name: Алгоритмдер
-            Computational Thinking:
-              name: Есептегіштік ойлау
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            Introduction to Computer Science:
-              name: Информатика пәніне кіріспе
-            Relay Programming:
-              name: Релелік Бағдарламалау
-            Song Writing:
-              name: Ән Жазу
-            The Artist:
-              name: Кейіпкер
-            The Artist 2:
-              name: Кейіпкер 2
-            The Artist 3:
-              name: Кейіпкер 3
-            The Artist 4:
-              name: Кейіпкер 4
-            The Artist 5:
-              name: Кейіпкер 5
-            The Farmer:
-              name: Фермер
-            The Farmer 2:
-              name: Фермер 2
-            The Farmer 3:
-              name: Фермер 3
-            The Internet:
-              name: Ғаламтор
-            The Maze:
-              name: Лабиринт
-            Wrap-up:
-              name: Орау
           lessons:
-            Introduction to Computer Science:
-              name: Информатика пәніне кіріспе
-            The Maze:
-              name: Лабиринт
-            Computational Thinking:
-              name: Есептегіштік ойлау
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            The Artist:
-              name: Кейіпкер
-            Algorithms:
-              name: Алгоритмдер
-            The Artist 2:
-              name: Кейіпкер 2
-            Functions:
-              name: Функциялар
-            The Farmer:
-              name: Фермер
-            Conditionals:
-              name: Шарттар
-            The Artist 3:
-              name: Кейіпкер 3
-            Song Writing:
-              name: Ән Жазу
-            The Farmer 2:
-              name: Фермер 2
             Abstraction:
               name: Абстракция
-            The Artist 4:
-              name: Кейіпкер 4
+            Algorithms:
+              name: Алгоритмдер
+            Computational Thinking:
+              name: Есептегіштік ойлау
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Graph Paper Programming:
+              name: Миллиметрлік Бағдарламалау
+            Introduction to Computer Science:
+              name: Информатика пәніне кіріспе
             Relay Programming:
               name: Релелік Бағдарламалау
+            Song Writing:
+              name: Ән Жазу
+            The Artist:
+              name: Кейіпкер
+            The Artist 2:
+              name: Кейіпкер 2
+            The Artist 3:
+              name: Кейіпкер 3
+            The Artist 4:
+              name: Кейіпкер 4
+            The Artist 5:
+              name: Кейіпкер 5
+            The Farmer:
+              name: Фермер
+            The Farmer 2:
+              name: Фермер 2
             The Farmer 3:
               name: Фермер 3
             The Internet:
               name: Ғаламтор
-            The Artist 5:
-              name: Кейіпкер 5
+            The Maze:
+              name: Лабиринт
             Wrap-up:
               name: Орау
         edit-code:
           title: Кодты өзгерту
           description: Кодты өзгерту
           description_short: Кодты өзгерту
-          stages:
-            Play Lab:
-              name: Ойындар Лабораториясы
-            The Artist:
-              name: Кейіпкер
-            The Maze:
-              name: Лабиринт
           lessons:
-            The Maze:
-              name: Лабиринт
-            The Artist:
-              name: Кейіпкер
             Play Lab:
               name: Ойындар Лабораториясы
+            The Artist:
+              name: Кейіпкер
+            The Maze:
+              name: Лабиринт
         events:
           title: Шаралар
           description: Шаралар
           description_short: Шаралар
-          stages:
-            Bounce:
-              name: Секіру
-            Calc:
-              name: Қақ
-            Eval:
-              name: Eval
-            Studio:
-              name: Студия
           lessons:
             Bounce:
               name: Секіру
-            Studio:
-              name: Студия
             Calc:
               name: Қақ
             Eval:
               name: Eval
+            Studio:
+              name: Студия
         flappy:
           title: Қанат Қағу Коды
           description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің Қанат Қағу Коды сабағын байқап көріңіз!
           description_short: Flappy ойынын 10 минут ішінде жазыңыз!
-          stages:
-            Flappy Code:
-              name: Қанат Қағу Коды
           lessons:
             Flappy Code:
               name: Қанат Қағу Коды
@@ -666,9 +363,6 @@ kk:
           title: Бас қатырғыш
           description: Біздің Jigsaw сабағымызды байқап көріңіз
           description_short: Біздің Jigsaw сабағымызды байқап көріңіз
-          stages:
-            Jigsaw:
-              name: Бас қатырғыш
           lessons:
             Jigsaw:
               name: Бас қатырғыш
@@ -676,9 +370,6 @@ kk:
           title: Қадам
           description: Қадам сабағы
           description_short: Қадам сабағы
-          stages:
-            Step:
-              name: Қадам
           lessons:
             Step:
               name: Қадам
@@ -686,70 +377,39 @@ kk:
           title: Код Жазу Сағаты 2013
           description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен информатика негіздерін оқып көріңіз!
           description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен оқыңыз!
-          stages:
-            Hour of Code 2013:
-              name: Код Жазу Сағаты 2013
           lessons:
             Hour of Code 2013:
               name: Код Жазу Сағаты 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: Басқатырғыштар
           lessons:
             Puzzles:
               name: Басқатырғыштар
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: Басқатырғыштар
           lessons:
             Puzzles:
               name: Басқатырғыштар
         cspunit1:
           description_short: Бағдарламалау
         algebraPD:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
         algPDmiami:
-          stages:
-            Booleans:
-              name: Бульдік тип
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            Strings and Images:
-              name: Жолдар және Суреттер
           lessons:
+            Booleans:
+              name: Бульдік тип
             Evaluation Blocks:
               name: Бағалау Блоктары
             Strings and Images:
               name: Жолдар және Суреттер
-            Booleans:
-              name: Бульдік тип
         cspunit3:
           description_short: Бағдарламалау
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             Creating Functions:
               name: Функцияларды Құру
             While Loops:
               name: Шарт орындалғанша Циклдері
         algebraPD3:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            Strings and Images:
-              name: Жолдар және Суреттер
-            The Design Recipe:
-              name: Графика салу әдістері
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
@@ -758,27 +418,16 @@ kk:
             The Design Recipe:
               name: Графика салу әдістері
         algebraPD-NexTech:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
         algebraPD-iZone:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
         sciencePD2:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -786,166 +435,92 @@ kk:
               name: Аяқтау
         cspunit2:
           description_short: Бағдарламалау
-          stages:
-            The Internet:
-              name: Ғаламтор бәрі үшін
           lessons:
             The Internet:
-              name: Ғаламтор
+              name: Ғаламтор бәрі үшін
         algebraPD2a:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Booleans:
-              name: Бульдік тип
-            Defining Variables:
-              name: Айнымалыларды анықтау
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            Free Play:
-              name: Тегін Ойнау
-            Strings and Images:
-              name: Жолдар және Суреттер
-            The Design Recipe:
-              name: Графика салу әдістері
           lessons:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            Strings and Images:
-              name: Жолдар және Суреттер
-            Defining Variables:
-              name: Айнымалыларды анықтау
-            The Design Recipe:
-              name: Графика салу әдістері
             Booleans:
               name: Бульдік тип
+            Defining Variables:
+              name: Айнымалыларды анықтау
+            Evaluation Blocks:
+              name: Бағалау Блоктары
             Free Play:
               name: Тегін Ойнау
+            Strings and Images:
+              name: Жолдар және Суреттер
+            The Design Recipe:
+              name: Графика салу әдістері
         allthethings:
-          stages:
-            Artist:
-              name: Кейіпкер
-            Bee:
-              name: Ара
-            Bounce:
-              name: Секіру
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Бас қатырғыш
-            Maze:
-              name: Лабиринт
-            Minecraft:
-              name: Minecraft
-            Studio:
-              name: Студия
           lessons:
-            Jigsaw:
-              name: Бас қатырғыш
-            Maze:
-              name: Лабиринт
             Artist:
               name: Кейіпкер
             Bee:
               name: Ара
-            Flappy:
-              name: Flappy
             Bounce:
               name: Секіру
-            Studio:
-              name: Студия
+            Flappy:
+              name: Flappy
+            Jigsaw:
+              name: Бас қатырғыш
+            Maze:
+              name: Лабиринт
             Minecraft:
               name: Minecraft
+            Studio:
+              name: Студия
         algebraPD2b:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Booleans:
-              name: Бульдік тип
-            Defining Functions:
-              name: Функцияларды анықтау
-            Defining Variables:
-              name: Айнымалыларды анықтау
-            'Eval: Conditionals':
-              name: 'Eval: Шарттар'
-            Evaluation Blocks:
-              name: Бағалау Блоктары
-            Strings and Images:
-              name: Жолдар және Суреттер
           lessons:
+            Booleans:
+              name: Бульдік тип
+            Defining Functions:
+              name: Функцияларды анықтау
+            Defining Variables:
+              name: Айнымалыларды анықтау
+            'Eval: Conditionals':
+              name: 'Eval: Шарттар'
             Evaluation Blocks:
               name: Бағалау Блоктары
             Strings and Images:
               name: Жолдар және Суреттер
-            Defining Variables:
-              name: Айнымалыларды анықтау
-            Defining Functions:
-              name: Функцияларды анықтау
-            Booleans:
-              name: Бульдік тип
-            'Eval: Conditionals':
-              name: 'Eval: Шарттар'
         cspfacilitator:
-          stages:
-            App Lab:
-              name: Қосымшалар Лабораториясы
-            Internet Simulator:
-              name: Ғаламтор Симуляторы
-            Welcome!:
-              name: Қош келдіңіз!
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
-            Internet Simulator:
-              name: Ғаламтор Симуляторы
             App Lab:
               name: Қосымшалар Лабораториясы
+            Internet Simulator:
+              name: Ғаламтор Симуляторы
+            Welcome!:
+              name: Қош келдіңіз!
         ECSPD2:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-up:
-              name: Орау
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Қош келдіңіз!
             Wrap-up:
               name: Орау
         algebraPD2:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            The Design Recipe:
-              name: Графика салу әдістері
-            Welcome!:
-              name: Қош келдіңіз!
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             The Design Recipe:
               name: Графика салу әдістері
+            Welcome!:
+              name: Қош келдіңіз!
         sciencePD2b:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -954,11 +529,6 @@ kk:
         science-PD2:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -967,11 +537,6 @@ kk:
         sciencePD2b-iZone:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -980,94 +545,53 @@ kk:
         ECSPD2-iZone:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-up:
-              name: Орау
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Қош келдіңіз!
             Wrap-up:
               name: Орау
         ECSPD2-NexTech:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-up:
-              name: Орау
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Қош келдіңіз!
             Wrap-up:
               name: Орау
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Екілік Білезіктер
-            Building a Foundation:
-              name: Ғимарат Салу
-            Getting Loopy:
-              name: Ілмектерді үйрену
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            Happy Maps:
-              name: Көңілді Карталар
-            Move it, Move it:
-              name: Қозғал, Қозғал
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Songwriting:
-              name: Ән Жазу
-            The Big Event:
-              name: Үлкен Оқиға
           lessons:
+            Binary Bracelets:
+              name: Екілік Білезіктер
+            Building a Foundation:
+              name: Ғимарат Салу
+            Getting Loopy:
+              name: Ілмектерді үйрену
+            Graph Paper Programming:
+              name: Миллиметрлік Бағдарламалау
             Happy Maps:
               name: Көңілді Карталар
             Move it, Move it:
               name: Қозғал, Қозғал
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            Building a Foundation:
-              name: Ғимарат Салу
-            Getting Loopy:
-              name: Ілмектерді үйрену
-            The Big Event:
-              name: Үлкен Оқиға
-            Binary Bracelets:
-              name: Екілік Білезіктер
             Songwriting:
               name: Ән Жазу
+            The Big Event:
+              name: Үлкен Оқиға
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: Қош келдіңіз!
             Wrap-Up:
@@ -1080,17 +604,11 @@ kk:
           title: Mұзды дәуірі ойын лабораториясы
           description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы ойын жаса!
           description_short: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы ойын жаса!
-          stages:
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
           lessons:
             Ice Age Play Lab:
               name: Mұзды дәуірі ойын лабораториясы
         cspunit3temp:
           description_short: Бағдарламалау
-          stages:
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
@@ -1098,9 +616,6 @@ kk:
           title: Gumball ойын лабораториясы
           description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын жаса!
           description_short: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын жаса!
-          stages:
-            Gumball Play Lab:
-              name: Gumball ойын лабораториясы
           lessons:
             Gumball Play Lab:
               name: Gumball ойын лабораториясы
@@ -1108,9 +623,6 @@ kk:
           title: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
           description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
           description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
-          stages:
-            Hour of Code 2015:
-              name: Кодтау Сағаты 2015
           lessons:
             Hour of Code 2015:
               name: Кодтау Сағаты 2015
@@ -1118,9 +630,6 @@ kk:
           title: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
           description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
           description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
-          stages:
-            Hour of Code 2015:
-              name: Кодтау Сағаты 2015
           lessons:
             Hour of Code 2015:
               name: Кодтау Сағаты 2015
@@ -1128,18 +637,10 @@ kk:
           title: Minecraft Кодтау Сағаты
           description: Стив пен Алекс-ты Minecraft әлемінің шытырман оқиғаларымен таныстуры ушин код блоктарын колданыңыз
           description_short: Код арқылы Minecraft әлемін тану
-          stages:
-            Hour of Code 2015:
-              name: Кодтау Сағаты 2015
           lessons:
             Hour of Code 2015:
               name: Кодтау Сағаты 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -1150,111 +651,63 @@ kk:
         cspunit4:
           description_short: Бағдарламалау
         AlgebraA:
-          stages:
-            'Calc: Defining Variables':
-              name: 'Есептеу: Айнымалыларды анықтау'
-            'Calc: Evaluation Blocks':
-              name: 'Есептеу: Бағалау блоктары'
-            'Eval: Strings and Images':
-              name: 'Eval: Жолдар және Суреттер'
-            'Eval: Writing Contracts':
-              name: 'Eval: Келісімшарттарды жазу'
-            'Unplugged: Contracts':
-              name: 'Компьютерсіз: Келісімшарттар'
-            'Unplugged: The Design Recipe':
-              name: 'Kомпьютерсіз: Құрастырушы Кеңес'
           lessons:
+            'Calc: Defining Variables':
+              name: 'Есептеу: Айнымалыларды анықтау'
             'Calc: Evaluation Blocks':
               name: 'Есептеу: Бағалау блоктары'
             'Eval: Strings and Images':
               name: 'Eval: Жолдар және Суреттер'
-            'Unplugged: Contracts':
-              name: 'Компьютерсіз: Келісімшарттар'
             'Eval: Writing Contracts':
               name: 'Eval: Келісімшарттарды жазу'
-            'Calc: Defining Variables':
-              name: 'Есептеу: Айнымалыларды анықтау'
+            'Unplugged: Contracts':
+              name: 'Компьютерсіз: Келісімшарттар'
             'Unplugged: The Design Recipe':
               name: 'Kомпьютерсіз: Құрастырушы Кеңес'
         AlgebraB:
-          stages:
-            'Eval: Boolean Operators':
-              name: 'Eval: Бульдік Оператор'
-            'Eval: Conditionals':
-              name: 'Eval: Шарттар'
-            'Play Lab: Animation (Big Game)':
-              name: 'Ойындар Лабораториясы: Анимация (Үлкен Ойын)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Ойындар Лабораториясы: Бульдік тип (Үлкен Ойын)'
-            'Play Lab: Booleans':
-              name: 'Ойындар Лабораториясы: Бульдік тип'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Ойындар Лабораториясы: Қақтығыстарды анықтау (Үлкен Ойын)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Ойындар Лабораториясы: Айнымалыларды анықтау (Үлкен Ойын)'
-            'Unplugged: Booleans':
-              name: 'Компьютерсіз: Бульдік тип'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Компьютерсіз: Қақтығыстарды анықтау және Арақашықтық Формуласы'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Kомпьютерсіз: Шарттар және Бөлшекті Функциялар'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Kомпьютерсіз: Видео Ойындар және Кеңістіктегі координаталар'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Kомпьютерсіз: Видео Ойындар және Кеңістіктегі координаталар'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Ойындар Лабораториясы: Айнымалыларды анықтау (Үлкен Ойын)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Ойындар Лабораториясы: Анимация (Үлкен Ойын)'
-            'Unplugged: Booleans':
-              name: 'Компьютерсіз: Бульдік тип'
             'Eval: Boolean Operators':
               name: 'Eval: Бульдік Оператор'
-            'Play Lab: Booleans':
-              name: 'Ойындар Лабораториясы: Бульдік тип'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Ойындар Лабораториясы: Бульдік тип (Үлкен Ойын)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Kомпьютерсіз: Шарттар және Бөлшекті Функциялар'
             'Eval: Conditionals':
               name: 'Eval: Шарттар'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Компьютерсіз: Қақтығыстарды анықтау және Арақашықтық Формуласы'
+            'Play Lab: Animation (Big Game)':
+              name: 'Ойындар Лабораториясы: Анимация (Үлкен Ойын)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Ойындар Лабораториясы: Бульдік тип (Үлкен Ойын)'
+            'Play Lab: Booleans':
+              name: 'Ойындар Лабораториясы: Бульдік тип'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Ойындар Лабораториясы: Қақтығыстарды анықтау (Үлкен Ойын)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Ойындар Лабораториясы: Айнымалыларды анықтау (Үлкен Ойын)'
+            'Unplugged: Booleans':
+              name: 'Компьютерсіз: Бульдік тип'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Компьютерсіз: Қақтығыстарды анықтау және Арақашықтық Формуласы'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Kомпьютерсіз: Шарттар және Бөлшекті Функциялар'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Kомпьютерсіз: Видео Ойындар және Кеңістіктегі координаталар'
         algebraPD1:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
         csp1-2017:
-          stages:
-            The Internet:
-              name: Ғаламтор
           lessons:
             The Internet:
               name: Ғаламтор
         csp3-2017:
           description_short: Бағдарламалау
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           lessons:
             Creating Functions:
               name: Функцияларды Құру
         csp5-2017:
-          stages:
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
         CSDU3-Draft:
           description_short: Бағдарламалау
-          stages:
+          lessons:
             Functions:
               name: Функциялар
         TEMP CSD Unit 3:
@@ -1262,9 +715,6 @@ kk:
         CSF_Secret_Sample:
           description_audience: 8-18 жастағылар үшін
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: Бағалау Блоктары
           lessons:
             Evaluation Blocks:
               name: Бағалау Блоктары
@@ -1285,9 +735,6 @@ kk:
             practice:
               display_name: Сабақ беру Практикалары
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Кейіпкер Функциялары
           lessons:
             Artist Functions:
               name: Кейіпкер Функциялары
@@ -1302,14 +749,11 @@ kk:
             practice:
               display_name: Сабақ беру Практикалары
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Ара: Шарттар'
           lessons:
             'Bee: Conditionals':
               name: 'Ара: Шарттар'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Шаралар
             'Jigsaw: Learn to drag and drop':
@@ -1321,13 +765,13 @@ kk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Сандық Азаматтық
             Songwriting:
               name: Ән Жазу
         grade1:
-          stages:
+          lessons:
             Events:
               name: Шаралар
             'Jigsaw: Learn to drag and drop':
@@ -1337,7 +781,7 @@ kk:
             Programming:
               name: Бағдарламалау
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'Кейіпкер: For ілмектері'
             'Artist: Functions with Parameters':
@@ -1359,30 +803,19 @@ kk:
             'Unplugged: Songwriting with Parameters':
               name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-up:
-              name: Орау
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Қош келдіңіз!
             Wrap-up:
               name: Орау
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Кейіпкер: Біріккен Ілмектер'
             Bee Debugging:
@@ -1401,22 +834,15 @@ kk:
               display_name: Сабақ беру Практикалары
         csd3-2017:
           description_short: Бағдарламалау
-          stages:
-            Functions:
-              name: Функциялар
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
           lessons:
+            Functions:
+              name: Функциялар
             Variables:
               name: Айнымалылар
             Conditionals:
               name: Шарттар
-            Functions:
-              name: Функциялар
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -1426,59 +852,33 @@ kk:
             The Big Event:
               name: Үлкен Оқиға
         k5concepts:
-          stages:
-            Binary:
-              name: Бинарлы
-            Conditionals:
-              name: Шарттар
-            Events:
-              name: Шаралар
-            For Loops:
-              name: For ілмектері
-            Functions:
-              name: Функциялар
-            Functions with Parameters:
-              name: Параметрлі Функциялар
-            Loops:
-              name: Ілмек
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Variables:
-              name: Айнымалылар
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
+            Binary:
+              name: Бинарлы
+            Conditionals:
+              name: Шарттар
             Events:
               name: Шаралар
+            For Loops:
+              name: For ілмектері
+            Functions:
+              name: Функциялар
+            Functions with Parameters:
+              name: Параметрлі Функциялар
             Loops:
               name: Ілмек
             Nested Loops:
               name: Кіріккен Циклдер
-            Conditionals:
-              name: Шарттар
-            While Loops:
-              name: Шарт орындалғанша Циклдері
-            Functions:
-              name: Функциялар
             Variables:
               name: Айнымалылар
-            For Loops:
-              name: For ілмектері
-            Functions with Parameters:
-              name: Параметрлі Функциялар
-            Binary:
-              name: Бинарлы
+            While Loops:
+              name: Шарт орындалғанша Циклдері
         algebrapdnext:
-          stages:
-            The Design Recipe:
-              name: Графика салу әдістері
-            Welcome!:
-              name: Қош келдіңіз!
           lessons:
-            Welcome!:
-              name: Қош келдіңіз!
             The Design Recipe:
               name: Графика салу әдістері
+            Welcome!:
+              name: Қош келдіңіз!
         csp-online-test:
           lesson_groups:
             required:
@@ -1499,25 +899,10 @@ kk:
           title: Баскетбол ойынды жасау
           description_short: Баскетбол ойынды жасау
           description: Баскетбол ойынды жасау
-          stages:
-            Bounce:
-              name: Секіру
           lessons:
             Bounce:
               name: Секіру
-        fesbinary:
-          title: Бинарлы
-          stages:
-            Binary Bracelets:
-              name: Екілік Білезіктер
-            Binary Images:
-              name: Екілік Суреттер
-            Play Lab:
-              name: Ойындар Лабораториясы
         csd2-2017:
-          stages:
-            Lists:
-              name: Тізімдер
           lessons:
             Lists:
               name: Тізімдер
@@ -1533,43 +918,27 @@ kk:
           title: Minecraft кодтау сағатының дизайнеры
           description_short: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз Minecraft ойынының нұсқасында.
           description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз Minecraft ойынының нұсқасында.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Minecraft кодтау сағатының дизайнеры
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft кодтау сағатының дизайнеры
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Қанат Қағу Коды
           lessons:
             Flappy Code:
               name: Қанат Қағу Коды
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Going Places Safely:
               name: Қауіпсіз Жерді Табу
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
             Binary Bracelets:
@@ -1578,32 +947,8 @@ kk:
               name: Сіздің сандық іздеріңіз
             Building a Foundation:
               name: Ғимарат Салу
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
-            'Real-life Algorithms: Paper Planes':
-              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
-            Binary Bracelets:
-              name: Екілік Білезіктер
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Introduction:
-              name: Кіріспе
           lessons:
-            Introduction:
-              name: Кіріспе
-            Nested Loops:
-              name: Кіріккен Циклдер
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
             Digital Citizenship:
@@ -1612,8 +957,15 @@ kk:
               name: 'Kомпьютерсіз: Екілік жүйе'
             Artist Binary:
               name: Кейіпкер Екілік жүйе
+            Nested Loops:
+              name: Кіріккен Циклдер
+            Introduction:
+              name: Кіріспе
         coursee-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Контент
+          lessons:
             Digital Citizenship:
               name: Сандық Азаматтық
             Internet:
@@ -1624,20 +976,11 @@ kk:
               name: Кіріспе
             Conditionals:
               name: Шарттар
-          lesson_groups:
-            content:
-              display_name: Контент
-          lessons:
-            Introduction:
-              name: Кіріспе
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
         coursef-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Контент
+          lessons:
             Digital Citizenship:
               name: Сандық Азаматтық
             Envelope Variables:
@@ -1650,30 +993,13 @@ kk:
               name: Кіріспе
             Ice Age Play Lab:
               name: Mұзды дәуірі ойын лабораториясы
-          lesson_groups:
-            content:
-              display_name: Контент
-          lessons:
-            Introduction:
-              name: Кіріспе
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Songwriting with Parameters:
-              name: Параметрлермен ән жазу
         classic-hoc-impact-study:
           description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен оқыңыз!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Код Жазу Сағаты 2013
         hoc-impact-study:
           description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен оқыңыз!
-          stages:
-            Hour of Code 2013:
-              name: Код Жазу Сағаты 2013
           lessons:
             Hour of Code 2013:
               name: Код Жазу Сағаты 2013
@@ -1681,29 +1007,16 @@ kk:
           title: Спорттар
           description_short: Өзіңнің жеке спорт ойынын жаз
           description: Өзіңнің жеке спорт ойынын жаз
-          stages:
-            Sports:
-              name: Спорттар
           lessons:
             Sports:
               name: Спорттар
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
             Wrap-Up:
               name: Аяқтау
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -1726,26 +1039,18 @@ kk:
             practice:
               display_name: Сабақ беру Практикалары
         sciencepd4:
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
             Wrap-Up:
               name: Аяқтау
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: Қош келдіңіз!
             Wrap-Up:
               name: Аяқтау
         csf2harvey:
-          stages:
-            Binary:
-              name: Бинарлы
           lesson_groups:
             content:
               display_name: Контент
@@ -1753,11 +1058,6 @@ kk:
             Binary:
               name: Бинарлы
         sciencepd5:
-          stages:
-            Welcome!:
-              name: Қош келдіңіз!
-            Wrap-Up:
-              name: Аяқтау
           lessons:
             Welcome!:
               name: Қош келдіңіз!
@@ -1776,47 +1076,31 @@ kk:
             content:
               display_name: Контент
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Тізімдер
             For Loops:
               name: For ілмектері
             Functions with Parameters:
               name: Параметрлі Функциялар
-          lessons:
-            Functions with Parameters:
-              name: Параметрлі Функциялар
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Кіріспе
           lessons:
             Introduction:
               name: Кіріспе
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Кіріспе
           lessons:
             Introduction:
               name: Кіріспе
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Кіріспе
-            Conditionals:
-              name: Шарттар
-            'Real Life Algorithms: Dice Race':
-              name: 'Қолданыстағы Алгоритмдер: Ойын тасы Жарысы'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'Қолданыстағы Алгоритмдер: Ойын тасы Жарысы'
             Introduction:
               name: Кіріспе
             Conditionals:
               name: Шарттар
+            'Real Life Algorithms: Dice Race':
+              name: 'Қолданыстағы Алгоритмдер: Ойын тасы Жарысы'
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Тізімдер
             For Loops:
@@ -1826,7 +1110,7 @@ kk:
             Functions with Parameters_:
               name: Параметрлі Функциялар
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Айнымалылар
             Conditionals:
@@ -1834,18 +1118,15 @@ kk:
             Functions:
               name: Функциялар
         csd3-old:
-          stages:
-            Functions:
-              name: Функциялар
           lessons:
             Functions:
               name: Функциялар
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Тізімдер
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Айнымалылар
             Conditionals:
@@ -1855,75 +1136,35 @@ kk:
             'null':
               name: 'бос жиын'
         coursef-ramp:
-          stages:
-            Introduction:
-              name: Кіріспе
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
           lessons:
             Introduction:
               name: Кіріспе
             Ice Age Play Lab:
               name: Mұзды дәуірі ойын лабораториясы
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
-            Bounce:
-              name: Секіру
           lessons:
             Ice Age Play Lab:
               name: Mұзды дәуірі ойын лабораториясы
             Bounce:
               name: Секіру
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
           lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
             'Real-life Algorithms: Paper Planes':
               name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
-            Binary Bracelets:
-              name: Екілік Білезіктер
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: Кіріккен Циклдер
           lessons:
-            Introduction:
-              name: Кіріспе
             Nested Loops:
               name: Кіріккен Циклдер
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
         coursee-2017:
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: Mұзды дәуірі ойын лабораториясы
             Envelope Variables:
@@ -1936,36 +1177,10 @@ kk:
               name: Ғимарат Салу
             Nested Loops:
               name: Кіріккен Циклдер
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Introduction:
-              name: Кіріспе
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Ғимарат Салу
           lessons:
             Building a Foundation:
               name: Ғимарат Салу
-            Introduction:
-              name: Кіріспе
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Songwriting with Parameters:
-              name: Параметрлермен ән жазу
         cspnovice:
           lesson_groups:
             required:
@@ -2039,7 +1254,10 @@ kk:
             content:
               display_name: Контент
         express-2017:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Контент
+          lessons:
             Introduction:
               name: Кіріспе
             Internet:
@@ -2058,54 +1276,27 @@ kk:
               name: Ғимарат Салу
             Nested Loops:
               name: Кіріккен Циклдер
-          lesson_groups:
-            content:
-              display_name: Контент
-          lessons:
-            Introduction:
-              name: Кіріспе
-            Building a Foundation:
-              name: Ғимарат Салу
-            Nested Loops:
-              name: Кіріккен Циклдер
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Spelling Bee:
-              name: Сөз жазушы Ара
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Spelling Bee:
               name: Сөз жазушы Ара
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: Рахмет
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           description_short: Бағдарламалау
           lessons:
             Creating Functions:
               name: Функцияларды Құру
         e-f-ramp:
-          stages:
+          lessons:
             Building a Foundation:
               name: Ғимарат Салу
             Nested Loops:
               name: Кіріккен Циклдер
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
             Conditionals:
               name: Шарттар
             Internet:
@@ -2113,26 +1304,11 @@ kk:
             Crowdsourcing:
               name: Кроудсорсинг
         new-d:
-          stages:
-            Introduction:
-              name: Кіріспе
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
-            Building a Foundation:
-              name: Ғимарат Салу
           lessons:
             Introduction:
               name: Кіріспе
-            Building a Foundation:
-              name: Ғимарат Салу
+            Nested Loops:
+              name: Кіріккен Циклдер
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
             Digital Citizenship:
@@ -2141,14 +1317,9 @@ kk:
               name: 'Kомпьютерсіз: Екілік жүйе'
             Artist Binary:
               name: Кейіпкер Екілік жүйе
-        new-express:
-          stages:
-            Introduction:
-              name: Кіріспе
             Building a Foundation:
               name: Ғимарат Салу
-            Nested Loops:
-              name: Кіріккен Циклдер
+        new-express:
           lesson_groups:
             content:
               display_name: Контент
@@ -2160,15 +1331,6 @@ kk:
             Nested Loops:
               name: Кіріккен Циклдер
         new-e:
-          stages:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
           lessons:
             Building a Foundation:
               name: Ғимарат Салу
@@ -2179,17 +1341,6 @@ kk:
             Crowdsourcing:
               name: Кроудсорсинг
         new-f:
-          stages:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Songwriting with Parameters:
-              name: Параметрлермен ән жазу
           lessons:
             Building a Foundation:
               name: Ғимарат Салу
@@ -2202,33 +1353,14 @@ kk:
             Songwriting with Parameters:
               name: Параметрлермен ән жазу
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           lessons:
             Creating Functions:
               name: Функцияларды Құру
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Minecraft Кодтау Сағаты
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Кодтау Сағаты
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Introduction:
-              name: Кіріспе
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
           lessons:
             Building a Foundation:
               name: Ғимарат Салу
@@ -2243,19 +1375,6 @@ kk:
             Crowdsourcing:
               name: Кроудсорсинг
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Introduction:
-              name: Кіріспе
-            Ice Age Play Lab:
-              name: Mұзды дәуірі ойын лабораториясы
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Songwriting with Parameters:
-              name: Параметрлермен ән жазу
           lessons:
             Building a Foundation:
               name: Ғимарат Салу
@@ -2270,24 +1389,12 @@ kk:
             Songwriting with Parameters:
               name: Параметрлермен ән жазу
         csd6-old:
-          stages:
-            Lists:
-              name: Тізімдер
-            For Loops:
-              name: For ілмектері
           lessons:
             Lists:
               name: Тізімдер
             For Loops:
               name: For ілмектері
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
           description_short: "Бағдарламалау"
           lessons:
             Variables:
@@ -2298,13 +1405,6 @@ kk:
               name: Функциялар
         csd3-2018:
           description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Айнымалылар
@@ -2313,25 +1413,17 @@ kk:
             Functions:
               name: Функциялар
         csd2-2018:
-          stages:
-            Lists:
-              name: Тізімдер
           lessons:
             Lists:
               name: Тізімдер
         coursea-2018:
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: Көңілді Карталар
             Going Places Safely:
               name: Қауіпсіз Жерді Табу
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Миллиметрлік Бағдарламалау
             Introduction:
@@ -2366,42 +1458,16 @@ kk:
               name: Релелік Бағдарламалау
             Graph Paper Programming:
               name: Миллиметрлік Бағдарламалау
-          lessons:
-            Graph Paper Programming:
-              name: Миллиметрлік Бағдарламалау
-            Relay Programming:
-              name: Релелік Бағдарламалау
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Binary Bracelets:
-              name: Екілік Білезіктер
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
         courseb-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
             Move It, Move It:
               name: Қозғал, Қозғал
-          lessons:
-            Move It, Move It:
-              name: Қозғал, Қозғал
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Миллиметрлік Бағдарламалау
             Introduction:
@@ -2420,19 +1486,8 @@ kk:
               name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
-          lessons:
-            Relay Programming:
-              name: Релелік Бағдарламалау
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
         coursec-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Ғимарат Салу
             'Loops: Getting Loopy':
@@ -2441,22 +1496,12 @@ kk:
               name: Үлкен Оқиға
             Binary Bracelets:
               name: Екілік Білезіктер
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
-            'Real-life Algorithms: Paper Planes':
-              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
-            Binary Bracelets:
-              name: Екілік Білезіктер
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Параметрлі Функциялар
           lessons:
             Functions with Parameters:
               name: Параметрлі Функциялар
         coursee-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Менің Достарым Роботтар
             Building a Foundation:
@@ -2473,21 +1518,8 @@ kk:
               name: Картаға қатысты шартты белгілер
             Minecraft Hour of Code:
               name: Minecraft Кодтау Сағаты
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Nested Loops:
-              name: Кіріккен Циклдер
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Conditionals:
-              name: Шарттар
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
         coursef-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Менің Достарым Роботтар
             Building a Foundation:
@@ -2504,34 +1536,16 @@ kk:
               name: Параметрлермен ән жазу
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
-          lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
         csp1-2018:
-          stages:
-            The Internet:
-              name: Ғаламтор
           lessons:
             The Internet:
               name: Ғаламтор
         csp3-2018:
           description_short: Бағдарламалау
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           lessons:
             Creating Functions:
               name: Функцияларды Құру
         csp5-2018:
-          stages:
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
@@ -2638,7 +1652,7 @@ kk:
             content:
               display_name: Контент
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Spelling Bee:
@@ -2647,13 +1661,6 @@ kk:
               name: Қозғал, Қозғал
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
-          lessons:
-            Move It, Move It:
-              name: Қозғал, Қозғал
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
-            Spelling Bee:
-              name: Сөз жазушы Ара
         fit-test:
           lesson_groups:
             required:
@@ -2661,23 +1668,14 @@ kk:
             content:
               display_name: Контент
         frozen-2018:
-          stages:
-            Artist:
-              name: Кейіпкер
           lessons:
             Artist:
               name: Кейіпкер
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Кейіпкер
           lessons:
             Artist:
               name: Кейіпкер
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Кейіпкер
           lessons:
             Artist:
               name: Кейіпкер
@@ -2690,7 +1688,16 @@ kk:
             csp_functions:
               display_name: Функциялар
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: Айнымалылар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_internet:
+              display_name: Ғаламтор
+            csf_digcit:
+              display_name: Сандық Азаматтық
+          lessons:
             Building a Foundation:
               name: Ғимарат Салу
             Conditionals with Cards:
@@ -2705,38 +1712,7 @@ kk:
               name: Ғаламтор
             Crowdsourcing:
               name: Кроудсорсинг
-          lesson_groups:
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-            csf_internet:
-              display_name: Ғаламтор
-            csf_digcit:
-              display_name: Сандық Азаматтық
-          lessons:
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Миллиметрлік Бағдарламалау
-            Relay Programming:
-              name: Релелік Бағдарламалау
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Digital Citizenship:
-              name: Сандық Азаматтық
-            'Unplugged: Binary':
-              name: Екілік Суреттер
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
           lesson_groups:
             csf_events:
               display_name: Шаралар
@@ -2749,18 +1725,27 @@ kk:
             csf_digcit:
               display_name: Сандық Азаматтық
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
-            'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
             Digital Citizenship:
               name: Сандық Азаматтық
+            'Unplugged: Binary':
+              name: Екілік Суреттер
+            Artist Binary:
+              name: Кейіпкер Екілік жүйе
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_nested_loops:
+              display_name: Кіріккен Циклдер
+            csf_functions:
+              display_name: Функциялар
+          lessons:
             Building a Foundation:
               name: Ғимарат Салу
             Nested Loops:
@@ -2775,18 +1760,19 @@ kk:
               name: Кроудсорсинг
             Songwriting:
               name: Ән Жазу
+        express-2019:
           lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_nested_loops:
-              display_name: Кіріккен Циклдер
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
             csf_functions:
               display_name: Функциялар
+            csf_variables:
+              display_name: Айнымалылар
+            csf_for_loops:
+              display_name: For ілмектері
           lessons:
-            Conditionals:
-              name: Шарттар
-        express-2019:
-          stages:
             Relay Programming:
               name: Релелік Бағдарламалау
             Conditionals with Cards:
@@ -2805,34 +1791,16 @@ kk:
               name: Ғаламтор
             Crowdsourcing:
               name: Кроудсорсинг
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
         andrea-test:
-          stages:
-            'null':
-              name: 'бос жиын'
           lesson_groups:
             required:
               display_name: Қысқаша шолу
             content:
               display_name: Контент
+          lessons:
+            'null':
+              name: 'бос жиын'
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
-            'Events: The Big Event':
-              name: Үлкен Оқиға
-            Binary Bracelets:
-              name: Екілік Білезіктер
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -2843,14 +1811,13 @@ kk:
             csf_events:
               display_name: Шаралар
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+            'Events: The Big Event':
+              name: Үлкен Оқиға
             Binary Bracelets:
               name: Екілік Білезіктер
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Көңілді Карталар
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -2859,67 +1826,48 @@ kk:
             csf_events:
               display_name: Шаралар
           lessons:
+            'Programming: Happy Maps':
+              name: Көңілді Карталар
             Going Places Safely:
               name: Қауіпсіз Жерді Табу
         courseb-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+          lessons:
             Move It, Move It:
               name: Қозғал, Қозғал
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
             'Loops: Getting Loopy':
               name: Ілмектерді үйрену
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-          lessons:
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
-            Move It, Move It:
-              name: Қозғал, Қозғал
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Қозғал, Қозғал
-            Your Digital Footprint:
-              name: Сіздің сандық іздеріңіз
-            Spelling Bee:
-              name: Сөз жазушы Ара
           lesson_groups:
             csf_loops:
               display_name: Ілмек
             csf_events:
               display_name: Шаралар
           lessons:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+            Your Digital Footprint:
+              name: Сіздің сандық іздеріңіз
             Spelling Bee:
               name: Сөз жазушы Ара
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
         csd2-2019:
-          stages:
-            Lists:
-              name: Тізімдер
           lessons:
             Lists:
               name: Тізімдер
         csd3-2019:
           description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Айнымалылар
@@ -2928,9 +1876,6 @@ kk:
             Functions:
               name: Функциялар
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Параметрлі Функциялар
           lessons:
             Functions with Parameters:
               name: Параметрлі Функциялар
@@ -2945,24 +1890,15 @@ kk:
             required:
               display_name: Қысқаша шолу
         csp1-2019:
-          stages:
-            The Internet:
-              name: Ғаламтор
           lessons:
             The Internet:
               name: Ғаламтор
         csp3-2019:
           description_short: Бағдарламалау
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           lessons:
             Creating Functions:
               name: Функцияларды Құру
         csp5-2019:
-          stages:
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
@@ -2971,20 +1907,13 @@ kk:
             required:
               display_name: Қысқаша шолу
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Кроудсорсинг
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            Building a Foundation:
-              name: Ғимарат Салу
           lessons:
-            Building a Foundation:
-              name: Ғимарат Салу
             Crowdsourcing:
               name: Кроудсорсинг
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
+            Building a Foundation:
+              name: Ғимарат Салу
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3048,7 +1977,7 @@ kk:
             csp_functions:
               display_name: Функциялар
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Миллиметрлік Бағдарламалау
         csp5-pilot:
@@ -3072,18 +2001,11 @@ kk:
             content:
               display_name: Контент
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Тізімдер
         csd3-pilot:
           description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
           lessons:
             Variables:
               name: Айнымалылар
@@ -3170,11 +2092,6 @@ kk:
             required:
               display_name: Қысқаша шолу
         peru-2019:
-          stages:
-            Introduction:
-              name: Кіріспе
-            Nested Loops:
-              name: Кіріккен Циклдер
           lessons:
             Introduction:
               name: Кіріспе
@@ -3187,26 +2104,13 @@ kk:
             required:
               display_name: Қысқаша шолу
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Ілмек
-            Conditionals:
-              name: Шарттар
-            Events:
-              name: Шаралар
-            Functions:
-              name: Функциялар
-            Variables:
-              name: Айнымалылар
-            For Loops:
-              name: For ілмектері
           lessons:
             Loops:
               name: Ілмек
-            Events:
-              name: Шаралар
             Conditionals:
               name: Шарттар
+            Events:
+              name: Шаралар
             Functions:
               name: Функциялар
             Variables:
@@ -3222,15 +2126,10 @@ kk:
             csp_functions:
               display_name: Функциялар
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: Шарттар
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Кроудсорсинг
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -3246,9 +2145,6 @@ kk:
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Шарттар
           lesson_groups:
             csf_loops:
               display_name: Ілмек
@@ -3262,9 +2158,6 @@ kk:
             Conditionals:
               name: Шарттар
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Шарттар
           lesson_groups:
             csf_loops:
               display_name: Ілмек
@@ -3296,38 +2189,21 @@ kk:
             csp_loops:
               display_name: Ілмек
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Параметрлі Функциялар
           lessons:
             Functions with Parameters:
               name: Параметрлі Функциялар
         csd3-2020:
           description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
-            Text:
-              name: Мәтін
           lessons:
             Variables:
               name: Айнымалылар
-            Text:
-              name: Мәтін
             Conditionals:
               name: Шарттар
             Functions:
               name: Функциялар
+            Text:
+              name: Мәтін
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Қауіпсіз Жерді Табу
-            'Programming: Happy Maps':
-              name: Көңілді Карталар
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -3335,30 +2211,27 @@ kk:
               display_name: Ілмек
             csf_events:
               display_name: Шаралар
+          lessons:
+            Going Places Safely:
+              name: Қауіпсіз Жерді Табу
+            'Programming: Happy Maps':
+              name: Көңілді Карталар
         courseb-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+          lessons:
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
             Move It, Move It:
               name: Қозғал, Қозғал
             'Loops: Getting Loopy':
               name: Ілмектерді үйрену
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-          lessons:
-            Move It, Move It:
-              name: Қозғал, Қозғал
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: Екілік Білезіктер
-            'Events: The Big Event':
-              name: Үлкен Оқиға
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -3371,20 +2244,9 @@ kk:
           lessons:
             Binary Bracelets:
               name: Екілік Білезіктер
+            'Events: The Big Event':
+              name: Үлкен Оқиға
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Миллиметрлік Бағдарламалау
-            Relay Programming:
-              name: Релелік Бағдарламалау
-            Conditionals with Cards:
-              name: Картаға қатысты шартты белгілер
-            'Unplugged: Binary':
-              name: Екілік Суреттер
-            Artist Binary:
-              name: Кейіпкер Екілік жүйе
-            Digital Citizenship:
-              name: Сандық Азаматтық
           lesson_groups:
             csf_events:
               display_name: Шаралар
@@ -3397,18 +2259,19 @@ kk:
             csf_digcit:
               display_name: Сандық Азаматтық
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
             'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
+              name: Екілік Суреттер
             Artist Binary:
               name: Кейіпкер Екілік жүйе
+            Digital Citizenship:
+              name: Сандық Азаматтық
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: Ән Жазу
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -3417,18 +2280,9 @@ kk:
             csf_functions:
               display_name: Функциялар
           lessons:
-            Conditionals:
-              name: Шарттар
+            'Functions: Songwriting':
+              name: Ән Жазу
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: Конверт Айнымалылары
-            For Loop Fun:
-              name: Көңілді For циклі
-            Internet:
-              name: Ғаламтор
-            Crowdsourcing:
-              name: Кроудсорсинг
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -3439,10 +2293,12 @@ kk:
           lessons:
             Envelope Variables:
               name: Конверт Айнымалылары
-            Internet:
-              name: Ғаламтор
             For Loop Fun:
               name: Көңілді For циклі
+            Internet:
+              name: Ғаламтор
+            Crowdsourcing:
+              name: Кроудсорсинг
         express-2020:
           lesson_groups:
             csf_loops:
@@ -3456,9 +2312,6 @@ kk:
             csf_for_loops:
               display_name: For ілмектері
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Сөз жазушы Ара
           lesson_groups:
             csf_loops:
               display_name: Ілмек
@@ -3469,39 +2322,16 @@ kk:
               name: Сөз жазушы Ара
         csp3-virtual:
           description_short: Бағдарламалау
-          stages:
-            Creating Functions:
-              name: Функцияларды Құру
           lessons:
             Creating Functions:
               name: Функцияларды Құру
-        csd3-virtual:
-          description_short: "Бағдарламалау"
-          stages:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
-            Functions:
-              name: Функциялар
-          lessons:
-            Variables:
-              name: Айнымалылар
-            Conditionals:
-              name: Шарттар
         csp5-virtual:
-          stages:
+          lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
             Variables:
               name: Айнымалылар
-          lessons:
-            Variables:
-              name: Айнымалылар
         virtual-holding-place:
-          stages:
-            Functions:
-              name: Функциялар
           lesson_groups:
             content:
               display_name: Контент
@@ -3509,15 +2339,60 @@ kk:
             Functions:
               name: Функциялар
         code-break:
-          stages:
+          lessons:
             Algorithms:
               name: Алгоритмдер
             Events:
               name: Шаралар
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Шарт орындалғанша Циклдері
           lessons:
             While Loops:
               name: Шарт орындалғанша Циклдері
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Ілмек
+            Events:
+              name: Шаралар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
+        csd3-virtual:
+          description_short: "Бағдарламалау"
+          lessons:
+            Variables:
+              name: Айнымалылар
+            Text:
+              name: Мәтін
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+          lesson_groups:
+            csd3_1:
+              display_name: Контент
+            csd3_2:
+              display_name: Контент
+            cspSurvey:
+              display_name: Контент
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Контент
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Контент
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Контент
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Контент

@@ -366,6 +366,8 @@ pt:
       help_us: Ajuda-nos
       teach: Ensina
       about: Sobre
+      legal_privacy: Política de privacidade
+      legal_tos: Termos de utilização
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel de regiões
@@ -962,6 +964,7 @@ pt:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
+      colombian_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino

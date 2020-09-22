@@ -196,6 +196,8 @@ lv:
       educate_hoc: Programmēšanas stunda
       about_us: Par mums
       about_partners: Partneri
+      legal_privacy: Privātuma politika
+      legal_tos: Nosacījumi
     user:
       classroom: Skolotāju mājas lapa
       label: Sveiki, %{username}
@@ -515,6 +517,7 @@ lv:
       last_name: Uzvārds
       email: E-pasts
       school_name: Skolas nosaukums
+      colombian_school_name: Skolas nosaukums
     form_entries:
       gender:
         male: Vīrietis

@@ -1,6 +1,8 @@
 import dom from '@cdo/apps/dom';
 import gameLabDPadHtmlEjs from '@cdo/apps/templates/gameLabDPad.html.ejs';
 import {GAMELAB_DPAD_CONTAINER_ID} from './constants';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import {getStore} from '@cdo/apps/redux';
 
 const DPAD_DEAD_ZONE = 3;
 // Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
@@ -251,9 +253,8 @@ export default class MobileControls {
       buttonId => (document.getElementById(buttonId).style.display = 'inline')
     );
     if (softButtonIds.length) {
-      $('#soft-buttons')
-        .removeClass('soft-buttons-none')
-        .addClass('soft-buttons-' + softButtonIds.length);
+      $('#soft-buttons').addClass('soft-buttons-' + softButtonIds.length);
+      getStore().dispatch(showArrowButtons());
     }
     // For export mode only:
     $('#sketch').removeClass('no-controls');

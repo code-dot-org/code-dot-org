@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "คุณกดปุ่มแล้ว แต่นักเต้นของคุณไม่ตอบสนอง",
   "danceFeedbackNeedTwoDancers": "คุณต้องสร้างนักเต้นขึ้นมาสองคน",
   "danceFeedbackOnlyOneDancerMoved": "มีนักเต้นของคุณเพียงคนเดียวที่เคลื่อนไหว",
-  "danceFeedbackNeedLead": "คุณต้องสร้างนักเต้นนำด้วยบล็อก <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> อีกด้วย",
+  "danceFeedbackNeedLead": "คุณต้องสร้างนักเต้นนำด้วยบล็อก <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> อีกด้วย",
   "danceFeedbackNeedBackup": "คุณต้องสร้างนักเต้นประกอบขึ้นมาหนึ่งกลุ่มด้วยบล็อก <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>",
   "danceFeedbackSetSize": "คุณต้องเปลี่ยนขนาดนักเต้นอย่างน้อยหนึ่งคนหลังเสียงดนตรีเริ่มขึ้น",
   "measure": "ห้องดนตรี:"

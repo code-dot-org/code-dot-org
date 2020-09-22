@@ -185,6 +185,8 @@ hr:
       sign_in_to_save: 'Prijavite se da bi spremili napredak'
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
+      legal_privacy: "Pravila privatnosti"
+      legal_tos: "Uvjeti"
     user:
       classroom: 'Učiteljeva Početna stranica'
       district_dashboard: 'Regionalna nadzorna ploča'

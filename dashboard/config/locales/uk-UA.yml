@@ -364,6 +364,8 @@ uk:
       help_us: Допомога нам
       teach: Вчити
       about: Про
+      legal_privacy: Політика конфіденційності
+      legal_tos: Умови надання послуг
     user:
       classroom: Домашня сторінка вчителя
       district_dashboard: Панель області
@@ -1119,6 +1121,7 @@ uk:
       gender: Гендерна приналежність
       school_name: Назва школи
       school_country: Країна твоєї школи
+      colombian_school_name: Назва школи
       ages: Які віку ви навчали в цьому році?
       subjects: Яким предметам ви навчали в цьому році?
       resources: Який з наступних освітніх ресурсів CS ви використовуєте?

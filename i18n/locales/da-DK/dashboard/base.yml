@@ -320,6 +320,8 @@ da:
       help_us: "Hjælp os"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Privatlivspolitik"
+      legal_tos: "Termer"
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Særskilt betjeningspanel'
@@ -736,6 +738,7 @@ da:
       gender: 'Køn'
       school_name: 'Skolens navn'
       school_country: 'Skolens land'
+      colombian_school_name: 'Skolens navn'
       ages: 'Hvilket alderstrin underviser du på?'
       subjects: 'Hvilke emner underviser du i?'
       workshop_course: 'Workshop kursus'

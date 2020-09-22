@@ -297,6 +297,7 @@ ku:
     header:
       course_catalog: پێرستی کۆرس
       educate_hoc: كاژێری كۆدنووسی
+      legal_tos: بڕگەکان
     user:
       classroom: پەڕەی سەرەکی مامۆستا
       settings: هەژمارەکەم
@@ -374,6 +375,7 @@ ku:
       email: پۆستی ئەلیكترۆنی
       school_name: ناوی قوتابخانە
       school_country: وڵاتی قوتابخانە
+      colombian_school_name: ناوی قوتابخانە
     form_entries:
       gender:
         male: نێر

@@ -64,7 +64,6 @@ class EditSectionForm extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-    sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -167,15 +166,10 @@ class EditSectionForm extends Component {
       SectionLoginType.google_classroom
     ];
 
-    const validLoginTypes =
-      section.studentCount === 0
-        ? Object.values(SectionLoginType)
-        : sectionLoginTypeTransforms[section.loginType];
+    const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
 
     const showLoginTypeField =
-      !isNewSection &&
-      (section.studentCount === 0 ||
-        changeableLoginTypes.includes(section.loginType));
+      !isNewSection && changeableLoginTypes.includes(section.loginType);
 
     if (!section) {
       return null;
@@ -461,7 +455,6 @@ let defaultPropsFromState = state => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
-  sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),

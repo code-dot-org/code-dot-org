@@ -4,18 +4,14 @@ import {MicrobitStubBoard} from '../makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import _ from 'lodash';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {
+  EXTERNAL_PINS,
+  MB_COMPONENT_COUNT,
+  MB_COMPONENTS
+} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
-
-const MB_COMPONENT_COUNT = 7;
-const MB_COMPONENTS = [
-  'LedScreen',
-  'MicroBitButton',
-  'Accelerometer',
-  'MicroBitThermometer',
-  'Compass'
-];
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -159,6 +155,30 @@ describe('MicroBitBoard', () => {
           });
         });
 
+        describe('lightSensor', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.lightSensor;
+          });
+
+          it('value', () => {
+            expect(component).to.have.property('value');
+          });
+
+          it('threshold', () => {
+            expect(component).to.have.property('threshold');
+          });
+
+          it('start()', () => {
+            expect(component.start).to.be.a('function');
+          });
+
+          it('setRange()', () => {
+            expect(component.setRange).to.be.a('function');
+          });
+        });
+
         describe('accelerometer', () => {
           let component;
 
@@ -207,6 +227,7 @@ describe('MicroBitBoard', () => {
         expect(board.prewiredComponents_.compass).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
+        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
     });
   });
@@ -334,6 +355,16 @@ describe('MicroBitBoard', () => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
           });
+      });
+    });
+  });
+
+  describe(`createCapacitiveTouchSensor(pin)`, () => {
+    it('makes a CapacitiveTouchSensor controller', () => {
+      return board.connect().then(() => {
+        const pin = 1;
+        const newSensor = board.createCapacitiveTouchSensor(pin);
+        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
       });
     });
   });

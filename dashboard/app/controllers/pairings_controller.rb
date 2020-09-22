@@ -7,7 +7,7 @@ class PairingsController < ApplicationController
   end
 
   def update
-    self.pairings = params[:pairings]
+    self.pairings = {pairings: params[:pairings], section_id: params[:sectionId]}
 
     render json: {pairings: pairings_summary, sections: sections_summary}
   end
@@ -23,7 +23,8 @@ class PairingsController < ApplicationController
   end
 
   def sections_summary
-    current_user.sections_as_student.map do |section|
+    pairing_sections = current_user.sections_as_student.select(&:pairing_allowed)
+    pairing_sections.map do |section|
       {
         id: section.id,
         name: section.name,

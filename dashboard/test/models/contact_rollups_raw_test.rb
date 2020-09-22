@@ -25,18 +25,35 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     student = create :student, parent_email: 'caring@parent.com'
     ContactRollupsRaw.extract_parent_emails
 
-    # confirms that a) record exists, and b) data is blank
-    refute_nil ContactRollupsRaw.find_by(
+    result = ContactRollupsRaw.find_by(
       email: student.parent_email,
-      sources: 'dashboard.users.parent_email',
-      data: nil
+      sources: 'dashboard.users',
     )
+    refute_nil result
+    assert_equal({'is_parent' => 1}, result.data)
   end
 
-  test 'get_extraction_query can import when data column is null' do
+  test 'extract_pd_enrollments teacher with multiple enrollments' do
+    teacher = create :teacher
+    csf_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
+    csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
+    create :pd_enrollment, email: teacher.email, workshop: csf_workshop
+    create :pd_enrollment, email: teacher.email, workshop: csd_workshop
+
+    refute ContactRollupsRaw.find_by_email(teacher.email)
+    ContactRollupsRaw.extract_pd_enrollments
+
+    records = ContactRollupsRaw.where(email: teacher.email)
+    assert_equal 2, records.count
+    courses = records.map {|record| record[:data]['course']}.sort
+    assert_equal [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF], courses
+  end
+
+  test 'get_extraction_query can import when no data column is given' do
     email_preference = create :email_preference
 
-    query = ContactRollupsRaw.get_extraction_query('email_preferences', 'email', [])
+    select_query = 'SELECT email, updated_at from email_preferences'
+    query = ContactRollupsRaw.get_extraction_query('dashboard.email_preferences', select_query)
     ActiveRecord::Base.connection.execute(query)
 
     refute_nil ContactRollupsRaw.find_by(email: email_preference.email, data: nil, sources: 'dashboard.email_preferences')
@@ -49,13 +66,13 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     # we're not actually interested in user IDs in contact rollups
     # just a simple example of something we could extract in a subquery
     subquery = <<~SQL
-      SELECT parent_email, max(updated_at) as updated_at, max(id) as higher_student_id
+      SELECT parent_email AS email, MAX(updated_at) AS updated_at, MAX(id) AS higher_student_id
       FROM users
       GROUP BY parent_email
     SQL
 
-    source_name = 'dashboard.users.id'
-    query = ContactRollupsRaw.get_extraction_query(subquery, 'parent_email', ['higher_student_id'], true, source_name)
+    source_name = 'dashboard.users'
+    query = ContactRollupsRaw.get_extraction_query(source_name, subquery, 'higher_student_id')
     ActiveRecord::Base.connection.execute(query)
 
     refute_empty ContactRollupsRaw.where(
@@ -67,8 +84,10 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'get_extraction_query looks as expected when called with a single column' do
+    select_query = 'SELECT email, opt_in, updated_at FROM email_preferences'
     expected_sql = <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+      INSERT INTO #{ContactRollupsRaw.table_name}
+        (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         email,
         'dashboard.email_preferences' AS sources,
@@ -76,28 +95,30 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
         updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM email_preferences
-      WHERE email IS NOT NULL AND email != ''
+      FROM (#{select_query}) AS subquery
+      WHERE email > ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('email_preferences', 'email', ['opt_in'])
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('dashboard.email_preferences', select_query, 'opt_in')
   end
 
   test 'get_extraction_query looks as expected when called with multiple columns' do
+    select_query = 'SELECT email, birthday, gender, updated_at FROM users'
     expected_sql = <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+      INSERT INTO #{ContactRollupsRaw.table_name}
+        (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
-        parent_email,
+        email,
         'dashboard.users' AS sources,
         JSON_OBJECT('birthday',birthday,'gender',gender) AS data,
         updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM users
-      WHERE parent_email IS NOT NULL AND parent_email != ''
+      FROM (#{select_query}) AS subquery
+      WHERE email > ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('users', 'parent_email', ['birthday', 'gender'])
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('dashboard.users', select_query, 'birthday', 'gender')
   end
 
   test 'create_json_object looks as expected when called with single column' do

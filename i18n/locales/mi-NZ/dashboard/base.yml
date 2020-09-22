@@ -201,6 +201,8 @@ mi:
       help_support: "Māngai tautoko"
       report_bug: "Pūrongo mai to raru"
       about: "Whakamārama"
+      legal_privacy: "Kaupapahere Tūmataitinga"
+      legal_tos: "Ngā Ture Ratonga"
     user:
       district_dashboard: 'Paemana ā-Rohe'
       label: 'Tēnā koe %{username}'

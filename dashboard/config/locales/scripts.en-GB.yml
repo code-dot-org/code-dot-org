@@ -9,140 +9,93 @@ en-GB:
           title: Course 1
           description_audience: Ages 4-6
         course3:
-          stages:
-            Computational Thinking:
-              name: Computational Thinking
           lessons:
             Computational Thinking:
               name: Computational Thinking
         usability:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
         infinity:
-          stages:
-            Infinity:
-              name: Infinity
           lessons:
             Infinity:
               name: Infinity
         20-hour:
-          stages:
-            Computational Thinking:
-              name: Computational Thinking
-            Introduction to Computer Science:
-              name: Introduction to Computer Science
-            Song Writing:
-              name: Song Writing
-            The Maze:
-              name: The Maze
           lessons:
-            Introduction to Computer Science:
-              name: Introduction to Computer Science
-            The Maze:
-              name: The Maze
             Computational Thinking:
               name: Computational Thinking
+            Introduction to Computer Science:
+              name: Introduction to Computer Science
             Song Writing:
               name: Song Writing
-        edit-code:
-          stages:
             The Maze:
               name: The Maze
+        edit-code:
           lessons:
             The Maze:
               name: The Maze
         step:
           title: Step
-          stages:
-            Step:
-              name: Step
           lessons:
             Step:
               name: Step
         gradeKinder:
-          stages:
+          lessons:
             Loops:
               name: Loops
         grade1:
-          stages:
+          lessons:
             Loops:
               name: Loops
         csd3-2017:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
         k5concepts:
-          stages:
-            Loops:
-              name: Loops
-            Variables:
-              name: Variables
           lessons:
             Loops:
               name: Loops
             Variables:
               name: Variables
         csd2-2017:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variables
             'null':
               name: 'null'
         csd6-old:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
         csd3-2018:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
         csd2-2018:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
@@ -165,7 +118,7 @@ en-GB:
             csf_variables:
               display_name: Variables
         andrea-test:
-          stages:
+          lessons:
             'null':
               name: 'null'
         coursec-2019:
@@ -185,16 +138,10 @@ en-GB:
             csf_loops:
               display_name: Loops
         csd2-2019:
-          stages:
-            Lists:
-              name: Lists
           lessons:
             Lists:
               name: Lists
         csd3-2019:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
@@ -243,13 +190,10 @@ en-GB:
             csp_loops:
               display_name: Loops
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-pilot:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
@@ -258,11 +202,6 @@ en-GB:
             csf_loops:
               display_name: Loops
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Loops
-            Variables:
-              name: Variables
           lessons:
             Loops:
               name: Loops
@@ -291,11 +230,6 @@ en-GB:
             csp_loops:
               display_name: Loops
         csd3-2020:
-          stages:
-            Variables:
-              name: Variables
-            Text:
-              name: Text
           lessons:
             Variables:
               name: Variables
@@ -331,17 +265,19 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-          lessons:
-            Variables:
-              name: Variables
         csp5-virtual:
-          stages:
-            Variables:
-              name: Variables
           lessons:
             Variables:
               name: Variables
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Text

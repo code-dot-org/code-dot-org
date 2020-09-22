@@ -147,8 +147,8 @@ ja:
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
     email_preference_required: "メール設定を指定しなくてはなりません。"
-    parent_account_checkbox: "私は私の子供を代理して登録する親/保護者です。"
-    parent_account_email_progress_permission: "お子様の進み具合、プロジェクト、コース、コンピューターサイエンスについての最新情報をメールで送付してもよろしいでしょうか。[（プライバシーポリシーを参照）](%{privacy_policy_url})\n\n"
+    parent_account_checkbox: "私は子供の代わりに登録する親/保護者です。"
+    parent_account_email_progress_permission: "お子様の進捗状況やプロジェクトに関する最新情報、およびコースとコンピューターサイエンスに関する最新情報をメールでお送りしてもよろしいですか？[(当社のプライバシーポリシーをご覧ください)] (%{privacy_policy_url})"
     parent_account_email_label: "親/保護者のメール"
   school_info:
     title: '学校名(任意)'
@@ -311,6 +311,8 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+      legal_privacy: "プライバシー ポリシー"
+      legal_tos: "利用規約"
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'
@@ -328,6 +330,7 @@ ja:
       algebra_game: '代数'
       applab: 'アプリ ラボ'
       artist: 'アーティスト'
+      artist_k1: "アーティスト (就学前)\n"
       basketball: 'バスケットボール'
       bounce: 'バウンド'
       dance: 'ダンスパーティー'
@@ -340,8 +343,11 @@ ja:
       infinity: 'インフィニティ'
       makerlab: "Makerツールキット\n"
       minecraft_adventurer: 'Minecraftアドベンチャー'
+      minecraft_aquatic: "マインクラフト アクアティック\n"
       minecraft_designer: 'マインクラフト'
+      minecraft_hero: "マインクラフト ヒーロー\n"
       playlab: 'プレイラボ'
+      playlab_k1: "プレイラボ (就学前)\n"
       sports: 'スポーツ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
@@ -414,11 +420,12 @@ ja:
     enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
     update: "アカウントを更新"
     update_email: "更新"
-    for_parents_and_guardians: "親と保護者用"
-    link_a_parent_email: "このアカウントに親/保護者のメールアドレスをリンクさせて、お子様の進み具合とプロジェクトについての最新情報を受け取ります。また、このメールアドレスを用いてパスワードの復旧を行うこともできます。\n\n\n"
+    for_parents_and_guardians: "親と保護者向け"
+    link_a_parent_email: "保護者のメールアドレスをこのアカウントにリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！このメールアドレスをパスワードの回復に使用することもできます。"
     parent_guardian_email_label: "親/保護者Eメール"
     none: "設定なし"
-    only_one_parent_email_supported_warning: "注：現在、学生アカウント1件につきサポートできるのは1名の親/保護者のメールアドレスのみです。"
+    only_one_parent_email_supported_warning: "注: 現在、生徒アカウント1件につきサポートできるのは親/保護者のメールアドレス1つのみです。"
+    encrypted: "暗号化済み\n"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -872,6 +879,8 @@ ja:
       school_name: '学校名'
       school_city: '学校の市町村名'
       school_country: '学校のある国'
+      colombian_school_city: '学校の市町村名'
+      colombian_school_name: '学校名'
     form_entries:
       gender:
         male: '男性'
@@ -905,6 +914,6 @@ ja:
     yes: 'はい'
   copy: 'コピー'
   parent_email_banner:
-    text: "**あなたは親または保護者ですか?** このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
-    link_your_email: "あなたのメールをリンクさせる"
-    not_now: "後から"
+    text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
+    link_your_email: "メールアドレスをリンクさせる"
+    not_now: "後で"

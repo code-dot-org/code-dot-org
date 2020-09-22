@@ -1,0 +1,1144 @@
+{
+  "hi-IN": {
+    "data": {
+      "callouts": {
+        "2-3 Artist Debugging 1": {
+          "2-3_Artist_Debugging_1_a": "कलाकार एक \"कदम\" बटन नहीं है, लेकिन आप अपने कार्यक्रम को और अधिक ध्यान से चलाने देखने के लिए छोड़ दिया स्लाइडर खींच सकते हैं."
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "बैंगनी फूलों में या तो 1 या 0 अमृत हो सकता है... लेकिन जब तक आप कोड नहीं चलाते तब तक आपको पता नहीं चलेगा!"
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!"
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "अब आप डिज़ाइन मोड में हैं।"
+        },
+        "CSD U3 Variables Predict Where XY": {
+          "grid": "ग्रिड दिखाने के लिए यहां क्लिक करें।"
+        },
+        "CSD U3 Variables Predict Where XY_2018": {
+          "grid": "ग्रिड दिखाने के लिए यहां क्लिक करें।"
+        },
+        "CSD U3 Variables Predict Where XY_2019": {
+          "grid": "ग्रिड दिखाने के लिए यहां क्लिक करें।"
+        },
+        "CSD U6 colorLeds intensity": {
+          "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "पूरा चक्कर बनाने के लिए जितनी बार ज़ोम्बी को मूव करना होगा, उसकी संख्या दर्ज करें"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "\"दोहराएं\" ब्लॉक का उपयोग करें और इसे वर्कस्पेस में ब्लॉक्स के चारों ओर मिलाएं"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "अपनी काउंटर वेरिएबल को इस ब्लॉक के अंदर खींचें"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "\"दोहराएं\" ब्लॉक का उपयोग करें और इसे वर्कस्पेस में ब्लॉक्स के चारों ओर मिलाएं"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "\"लम्बाई\" को सही मूल्य पर सेट करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "\"लम्बाई\" को सही मूल्य पर सेट करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "प्रत्येक कोण के आकार को डिग्रियों में प्राप्त करने के लिए 360 को भुजाओं की संख्या से भाग करें।"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "\"इफ/एल्स\" ब्लॉक का उपयोग करें ताकि मधुमक्खी फूल से मधुरस प्राप्त करे और यदि वहां फूल नहीं है तो शहद बनाए"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "फंक्शन को संपादित करने और उस दिशा को बदलने के लिए इस बटन का उपयोग करें, जिस तरफ मधुमक्खी मधुरस प्राप्त करने के लिए मुड़ेगी।"
+        },
+        "Course 4 Maze 4": {
+          "repeat": "दोहराएं कमांड्स के लिए लूप के अंदर ब्लॉक रखें"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।"
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "अपने फंक्शन में मापदंड जोड़ने के लिए संपादित करें पर क्लिक करें"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "अभिनेता को मूव करने के लिए तीरों का उपयोग करें"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "यह ब्लॉक अपने प्रोग्राम में शामिल करें।",
+          "arrow_buttons": "तीर के बटन दबाकर अपने डांसर को नियंत्रित करें।"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "अपने कार्यक्रम में एक नई इवेंट जोड़ें।"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "नई ब्लॉक",
+          "new_block_4": "नई ब्लॉक"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "यहां अपना नया डांसर शामिल करें"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "नई ब्लॉक",
+          "dance_callout_11_b": "नई ब्लॉक"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "\"सभी बत्तखें\" ब्लॉक्स के लिए यहां देखें"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "यह ब्लॉक अपने प्रोग्राम में शामिल करें।",
+          "arrow_buttons": "तीर के बटन दबाकर अपने डांसर को नियंत्रित करें।"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "अपने कार्यक्रम में एक नई इवेंट जोड़ें।"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "नई ब्लॉक"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "नई ब्लॉक"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "नई ब्लॉक",
+          "new_block_4": "नई ब्लॉक"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "यहां अपना नया डांसर शामिल करें"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "नई ब्लॉक",
+          "dance_callout_11_b": "नई ब्लॉक"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "\"सभी बत्तखें\" ब्लॉक्स के लिए यहां देखें"
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "जब यह इवेंट घटित हो तो ध्वनि प्ले करें।"
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "जब ऊपर का तीर दबाया जाता है तो कौन-सा ब्लॉक बेमैक्स को ऊपर मूव करेगा?",
+          "Infinity_move_directions_callout_arrow": "अनुकरण करने के लिए इन तीरों का उपयोग करें"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "यहां मूव करें ब्लॉक जोड़ें"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "यहां अंदर मूव करें ब्लॉक रखें"
+        },
+        "InspirationalArtwork": {
+          "InspirationalArtwork_1": "अपने प्रोग्राम के अंदर अपने नोट्स छोड़ने के लिए इस लेबल के अंतर्गत नया `टिप्पणी` ब्लॉक उपयोग करने का प्रयास करें!"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।"
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।"
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "\"फंक्शन्स\" फ्लाइआउट खोलने के लिए यहां क्लिक करें, फिर \"फंक्शन बनाएं\" बटन पर क्लिक करें।"
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "अपने फंक्शन में मापदंड जोड़ने के लिए संपादित करें पर क्लिक करें",
+          "add_and_drag_parameter": "यहां अपने मापदंड का नाम लिखें, जोड़ें पर क्लिक करें, और फिर इसे अपनी फंक्शन परिभाषा में खींचें"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "प्रश्नचिन्हों को बदलने के लिए यहां लम्बाई वेरिएबल खींचें"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "टूल बॉक्स नए रूप में आ गया है! \"क्रियाएं\" ब्लॉक्स अब यहां हैं"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "अलग-अलग हिम-पक्षी बनाने के लिए इस ड्रॉप-डाउन मेन्यु का उपयोग करें!"
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "ध्यान दें कि अब ब्लॉक्स के पास संख्याएं दर्ज करने के लिए नया तरीका है। इन `गणित` ब्लॉक्स को बाहर खींचकर इधर-उधर मूव किया जा सकता है!"
+        },
+        "OPD-K5-variables-5": {
+          "courseF_artist_variables3_a": "वेरिएबल `लंबाई` का मूल्य सेट करने के लिए इसका उपयोग करें"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "craft_drag_block_callout": "\"आगे की ओर मूव करें\" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "craft_drag_block_callout": "\"आगे की ओर मूव करें\" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "craft_drag_block_callout": "\"आगे की ओर मूव करें\" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
+        },
+        "Robot Doodle": {
+          "4-5_Artist_Patterns_Free_Play_2": "अपने प्रोग्राम के अंदर अपने नोट्स छोड़ने के लिए इस लेबल के अंतर्गत नया `टिप्पणी` ब्लॉक उपयोग करने का प्रयास करें!"
+        },
+        "Robot Doodle_2018": {
+          "4-5_Artist_Patterns_Free_Play_2": "अपने प्रोग्राम के अंदर अपने नोट्स छोड़ने के लिए इस लेबल के अंतर्गत नया `टिप्पणी` ब्लॉक उपयोग करने का प्रयास करें!"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "इस लौह का खनन करें!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "इस लौह का खनन करें!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "इस लौह का खनन करें!"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "मधुमक्खी को पीछे की ओर मूव करने के लिए इस कमांड का उपयोग करें।"
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "आपको इस फंक्शन में कौन-सा कोड रखना चाहिए?",
+          "courseF_bee_functions_challenge1_2": "यदि कई बार शहद बनाने के लिए इसे संपादित करते हैं तो \"मधुरस या शहद देखें\" फंक्शन का उपयोग यहां किया जा सकता है।"
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "यह फंक्शन कॉर्न के साथ अच्छा काम करेगा, लेकिन अन्य सब्जियों के बारे में क्या कहेंगे?"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "पूरे प्रोग्राम में कदम-दर-कदम जाने के लिए स्टेप बटन का उपयोग करें। यह बग ढूंढने में आपकी मदद करेगा!"
+        },
+        "courseA_maze_seq4": {
+          "made_of_stone": "ये ब्लॉक पत्थर से बनें हैं।  आप उन्हें मूव तो कर सकते हैं, लेकिन आप उन्हें मिटा नहीं सकते!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_artist_loops5": {
+          "courseB_artist_loops5_1": "इस नंबर का मतलब है कि टूलबॉक्स में इस ब्लॉक में से कोई ब्लॉक नहीं बचे हैं।"
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "पूरे प्रोग्राम में कदम-दर-कदम जाने के लिए स्टेप बटन का उपयोग करें। यह बग ढूंढने में आपकी मदद करेगा!"
+        },
+        "courseB_maze_seq3": {
+          "courseB_maze_seq3_1": "स्लेटी ब्लॉक्स पत्थर से बने हैं और उन्हें फेंका नहीं जा सकता।"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_artist_loopsPrePre1a": {
+          "courseC_artist_loopsPrePre1a_1": "कलाकार को स्क्रीन के बीच में ले जाने के लिए इस ब्लॉक का उपयोग करके शुरूआत करें।"
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_1": "कलाकार को स्क्रीन के बीच में ले जाने के लिए इस ब्लॉक का उपयोग करके शुरूआत करें।"
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_1": "कलाकार को स्क्रीन के बीच में ले जाने के लिए इस ब्लॉक का उपयोग करके शुरूआत करें।"
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_1": "कलाकार को स्क्रीन के बीच में ले जाने के लिए इस ब्लॉक का उपयोग करके शुरूआत करें।"
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "स्लेटी ब्लॉक्स को मिटाया नहीं जा सकता!"
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming5": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "आप यह संख्या बदल सकते हैं।",
+          "courseD_artist_ramp11_2": "अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां क्लिक करें।"
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।",
+          "4_5_Bee_Conditionals_2_2": "क्या आपको मदद की जरूरत है?  वीडियो संकेत के लिए यहां क्लिक करें!"
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।"
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।"
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।"
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।",
+          "4_5_Bee_Conditionals_2_2": "क्या आपको मदद की जरूरत है?  वीडियो संकेत के लिए यहां क्लिक करें!"
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "मधुमक्खी को पीछे की ओर मूव करने के लिए इस कमांड का उपयोग करें।"
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "मधुमक्खी को पीछे की ओर मूव करने के लिए इस कमांड का उपयोग करें।"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "खजाने का एक ही पीस एकत्र करने के लिए इस ब्लॉक का उपयोग करें।  "
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "stone_block_2": "ये ब्लॉक्स पत्थर के बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "stone_block_2": "ये ब्लॉक्स पत्थर के बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।"
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।"
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_ramp5": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp6": {
+          "courseD_maze_ramp6_1": "आप यहां जो भी कोड रखें, वह उतनी बार दोहराया जाएगा, जितनी बार आप इसे बताएंगे, फिर बाकी प्रोग्राम चलाना जारी रखें।"
+        },
+        "courseD_playLab_condFP": {
+          "courseD_playLab_condFP_1": "हमने आपको खेलने के लिए और कोड देने हेतु ब्लॉक्स को श्रेणियों में व्यवस्थित किया है!  यह देखने के लिए यहां क्लिक करें कि सब कुछ कहां गया।"
+        },
+        "courseD_playLab_condFP_2018": {
+          "courseD_playLab_condFP_1": "हमने आपको खेलने के लिए और कोड देने हेतु ब्लॉक्स को श्रेणियों में व्यवस्थित किया है!  यह देखने के लिए यहां क्लिक करें कि सब कुछ कहां गया।"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।"
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_scrat_ramp5": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "आप यहां जो भी कोड रखें, वह उतनी बार दोहराया जाएगा, जितनी बार आप इसे बताएंगे, फिर बाकी प्रोग्राम चलाना जारी रखें।"
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "आप यहां जो भी कोड रखें, वह उतनी बार दोहराया जाएगा, जितनी बार आप इसे बताएंगे, फिर बाकी प्रोग्राम चलाना जारी रखें।"
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का उपयोग करके शुरुआत करें।"
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का उपयोग करके शुरुआत करें।"
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "आप यह संख्या बदल सकते हैं।",
+          "courseE_artist_ramp8_2": "अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां क्लिक करें।"
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "आप यह संख्या बदल सकते हैं।",
+          "courseE_artist_ramp8_2": "अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां क्लिक करें।"
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "फंक्शन के अंदर कोड बदलने के लिए \"संपादित करें\" बटन पर क्लिक करें।"
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "अपनी बहुभुज पूरी करने के लिए, सुनिश्चित करें कि आप हमेशा 360 ÷ `भुजाएं` डिग्री मुड़ते हैं।"
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "आप बहुभुज फंक्शन यहां पाएंगे।"
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "वेरिएबल `लंबाई` का मूल्य सेट करने के लिए इसका उपयोग करें"
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "वेरिएबल `लंबाई` का मूल्य सेट करने के लिए इसका उपयोग करें"
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "वेरिएबल `लंबाई` का मूल्य सेट करने के लिए इसका उपयोग करें"
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "वेरिएबल `लंबाई` का मूल्य सेट करने के लिए इसका उपयोग करें"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "जब आपको समान संख्या में बहुत सी प्रतियों को बदलना पड़े तो वेरिएबल्स उपयोगी हो सकती हैं।"
+        },
+        "courseF_bee_conditionals2": {
+          "courseF_bee_conditionals2_2": "टूलबॉक्स अब श्रेणी मोड में है।  आपकी जरूरत के सभी ब्लॉक्स इन लेबलों के नीचे हैं!"
+        },
+        "courseF_bee_conditionals5": {
+          "courseF_bee_conditionals5_1": "जब रास्ते की लंबाई बदलती है तो इस ब्लॉक का उपयोग करें (आयत की भुजाओं में उपयोग करने की तरह!)"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_bee_functions2": {
+          "courseF_bee_functions2_1": "यह ब्लॉक फंक्शन बोलता है।  यह देखने के लिए इस \"संपादित करें\" बटन पर क्लिक करें कि अंदर क्या है!"
+        },
+        "courseF_bee_functions6": {
+          "courseF_bee_functions6_1": "अधिक ब्लॉक्स के लिए यहां खोजना न भूलें, जो इसे और भी आसान बनाने में उपयोगी हो सकते हैं!"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "आपको इस फंक्शन में कौन-सा कोड रखना चाहिए?",
+          "courseF_bee_functions_challenge1_2": "यदि कई बार शहद बनाने के लिए इसे संपादित करते हैं तो \"मधुरस या शहद देखें\" फंक्शन का उपयोग यहां किया जा सकता है।"
+        },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "आप यहां `इफ` स्टेटमेंट्स पा सकते हैं।"
+        },
+        "courseF_bee_fwp2": {
+          "courseF_bee_fwp2_a": "जो ब्लॉक आपका फंक्शन बोलता है, वह यहां स्थित है।"
+        },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "इस समान फंक्शन का उपयोग खाली स्थानों के साथ-साथ बादलों को देखते समय किया जा सकता है।"
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "इस फंक्शन में मापदंड जोड़ने के लिए \"संपादित करें\" बटन दबाएं।"
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "यह फंक्शन कॉर्न के साथ अच्छा काम करेगा, लेकिन अन्य सब्जियों के बारे में क्या कहेंगे?"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "आपकी जरूरत के ब्लॉक्स ढूंढने को आसान बनाने के लिए टूलबॉक्स को श्रेणियों में वर्गीकृत किया गया है।"
+        },
+        "courseF_playlab_variables5c": {
+          "courseF_playlab_variables5c_1": "आप अपना वेरिएबल ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_playlab_variables6c": {
+          "courseF_playlab_variables5c_1": "आप अपना वेरिएबल ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "यहां `पूछें` ब्लॉक पाएं!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "\"चक्कर बनाएं\" ब्लॉक का उपयोग करें और आकार बदलें।"
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) इस ब्लॉक का उपयोग करें और इसे वर्कस्पेस में स्लेटी ब्लॉक्स के चारों ओर रखें",
+          "repeat_blocks_2": "(2) यहां \"दोहराएं\" ब्लॉक मूव करें, और अंदर स्लेटी ब्लॉक्स रखें"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "“???\" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग करें"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "यह आकृति बनाने के लिए दोहराएं ब्लॉक का उपयोग करें।"
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "यह आकृति बनाने के लिए दोहराएं ब्लॉक का उपयोग करें।"
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "अलग-अलग हिम-पक्षी बनाने के लिए इस ड्रॉप-डाउन मेन्यु का उपयोग करें!"
+        },
+        "frozen line": {
+          "run": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "move_elsa_forward": "एल्सा को आगे की ओर मूव करने के लिए सक्रिय करने हेतु “आगे की ओर मूव करें” ब्लॉक को खींचें और इसे \"जब चलाया जाए\" ब्लॉक  के नीचे जोड़ें"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "एल्सा को मुड़ने के लिए सक्रिय करने हेतु \"मुड़ें\" ब्लॉक का उपयोग करें। ड्रॉप-डाउन मेन्यु में संख्या यह निर्धारित करती है कि एल्सा कितना मुड़ती है"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "\"हिम-पक्षी ब्रांच बनाएं\" ब्लॉक का उपयोग करें"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "वर्ग बनाने के लिए यहां और ब्लॉक्स जोड़ें"
+        },
+        "frozen square loop": {
+          "replace_questions": "“???\" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग करें"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "“???\" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग करें"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "“???\" को एक संख्या से बदलने के लिए ड्रॉप-डाउन का उपयोग करें"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "ध्यान दें कि अब ब्लॉक्स के पास संख्याएं दर्ज करने के लिए नया तरीका है। इन `गणित` ब्लॉक्स को बाहर खींचकर इधर-उधर मूव किया जा सकता है!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "ध्यान दें कि अब ब्लॉक्स के पास संख्याएं दर्ज करने के लिए नया तरीका है। इन `गणित` ब्लॉक्स को बाहर खींचकर इधर-उधर मूव किया जा सकता है!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "ध्यान दें कि अब ब्लॉक्स के पास संख्याएं दर्ज करने के लिए नया तरीका है। इन `गणित` ब्लॉक्स को बाहर खींचकर इधर-उधर मूव किया जा सकता है!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "ध्यान दें कि अब ब्लॉक्स के पास संख्याएं दर्ज करने के लिए नया तरीका है। इन `गणित` ब्लॉक्स को बाहर खींचकर इधर-उधर मूव किया जा सकता है!"
+        }
+      }
+    }
+  }
+}

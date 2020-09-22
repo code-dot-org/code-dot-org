@@ -34,6 +34,8 @@ mr:
       help_support: "सहाय्य आणि मदत"
       report_bug: "समस्या रिपोर्ट करा"
       about: "या बद्दल"
+      legal_privacy: "गोपनीयता धोरण"
+      legal_tos: "सेवेच्या अटी"
     user:
       signin: 'साइन इन करा'
       signup: 'अकाउंट तयार करा'
@@ -78,6 +80,8 @@ mr:
     privacy: "गोपनीयता धोरण"
     accept_tos: "Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता\nधोरण](%{privacy_url}) साठी संमती देता."
     print: "प्रिंट"
+  race_interstitial:
+    decline: "Band"
   project:
     projects: "प्रकल्प"
     project_gallery: "प्रकल्प"

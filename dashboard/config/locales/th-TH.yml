@@ -255,6 +255,8 @@ th:
       help_us: ช่วยเรา
       teach: สอน
       about: เกี่ยวกับ
+      legal_privacy: นโยบายความเป็นส่วนตัว
+      legal_tos: เงื่อนไขการให้บริการ
     user:
       classroom: หน้าแรกของคุณครู
       label: สวัสดี %{username}
@@ -575,6 +577,7 @@ th:
       email: อีเมล
       school_name: ชื่อโรงเรียน
       school_country: ประเทศของโรงเรียน
+      colombian_school_name: ชื่อโรงเรียน
     form_entries:
       gender:
         male: ชาย

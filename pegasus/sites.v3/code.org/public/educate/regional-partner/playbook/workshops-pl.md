@@ -31,7 +31,7 @@ ________________
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 - [CS Fundamentals One Pager](https://docs.google.com/presentation/d/1bsw3vZuFuC5EzDxGN6szQ_IJ0nhVnqlH34enhTqZ2L0/edit?usp=sharing) 
-- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a>
+- <a href="https://docs.google.com/document/d/1eMA0RT-id5dsVZS0p_UUt4FKMnjzf-uUBUY1y_Z7hr0/edit" target=_blank>CS Fundamentals Workshop Process Document</a>
 - <a href="https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5"target=_blank>CS Fundamentals Facilitator Playbook</a>
 - <a href="https://docs.google.com/document/d/1so6ZyrtydTOmW6YHDgpdpDIUBAssQ_uCI130iCBA8SQ/edit"target=_blank>2019 Intro and Deep Dive Workshop Overview</a>
 - <a href="https://docs.google.com/document/d/1rhqOSkvVoh4LjBoug4pYTXECmifBkOUxlb8rMgRgTAI/edit?usp=drive_web&ouid=101665711587844633285"target=_blank>2019 Deep Dive Workshop FAQ</a>
@@ -112,6 +112,7 @@ Updated guidance for hosting 2020 Summer Workshops is now available!
 
 ### Academic Year Workshop Specific
 
+- [2020-21 Academic Year Workshop Procecss Doc](https://docs.google.com/document/d/1P2PMYhmvYxShWRIdzEbGmLrXoGdaVzJs0qrvOIeDqF4/edit?userstoinvite=jessica.salva%40medb.org&ts=5f3ee441&actionButton=1)
 - [2020-21 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1l4z2dGxT24KFI09lSLJDILRz9qXOTierRcdZ1922BLs/edit#)
 - [Guidance for Adapting AYW1 for Returning CS Principles Teachers](https://docs.google.com/document/d/1DjkSGl8hozaJx_s8_ikb8jU1-CkXia7U2b4QsnsXm6o/edit)
 

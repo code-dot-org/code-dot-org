@@ -63,8 +63,8 @@ class AnimationTab extends React.Component {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
-    categories: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -101,8 +101,8 @@ class AnimationTab extends React.Component {
             channelId={this.props.channelId}
             allowedExtensions=".png,.jpg,.jpeg"
             libraryManifest={this.props.libraryManifest}
-            categories={this.props.categories}
             hideUploadOption={this.props.hideUploadOption}
+            hideAnimationNames={this.props.hideAnimationNames}
           />
         )}
       </div>

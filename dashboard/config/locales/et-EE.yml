@@ -246,6 +246,8 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
+      legal_privacy: Privaatsuspoliitika
+      legal_tos: Teenuse tingimused
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -878,6 +880,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
+      colombian_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees

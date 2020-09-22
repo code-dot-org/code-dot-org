@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "키를 눌렀지만 댄서가 응답하지 않았습니다.",
   "danceFeedbackNeedTwoDancers": "댄서를 두 명 만들어야 합니다.",
   "danceFeedbackOnlyOneDancerMoved": "한 댄서만 움직였습니다.",
-  "danceFeedbackNeedLead": "<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> 블록으로 리드 댄서도 생성해야 합니다..",
+  "danceFeedbackNeedLead": "<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> 블록으로 리드 댄서도 생성해야 합니다..",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> 블록으로 백업 댄서들도 생성해야 합니다.",
   "danceFeedbackSetSize": "음악이 시작된 후 최소 한 댄서의 크기를 변경해야 합니다.",
   "measure": "마디:"

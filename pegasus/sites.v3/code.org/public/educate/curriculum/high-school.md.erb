@@ -1,11 +1,8 @@
 ---
 title: CS Curriculum for grades 9-12
 video_player: true
-theme: responsive 
+theme: responsive
 ---
-<%= view :professional_learning_apply_banner, :use_sign_up_text => true, :link_suffix => "middle-high" %>
-
-<br>
 
 [solid-block-header]
 
@@ -13,65 +10,20 @@ High School
 
 [/solid-block-header]
 
-[Six different studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): students who study computer science perform better in other subjects, excel at problem-solving, and are more likely to attend college! 
+[Six different studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): students who study computer science perform better in other subjects, excel at problem-solving, and are more likely to attend college!
 
 For high schools, we offer two years computer science courses for beginners: Computer Science Discoveries, and Computer Science Principles. Our curriculum is available at no cost for anyone, anywhere to teach. You can read more about our [curriculum values here](https://code.org/educate/curriculum/values).
 
 <hr>
-
 <a name="csd"></a>
 # Computer Science Discoveries</strong>
-
-<div class="col-40" style="padding-right: 10px;">
-
-<% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
-<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
-<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false', twitter: twitter, facebook: facebook %>
-
-</div>
-
-[col-60]
-
-CS Discoveries is an introductory course for 6-10th grade students that can be flexibly taught as a single semester, two semesters over multiple years, or as a full year course. Mapped to CSTA standards, the course takes a wide lens on computer science by covering topics such as problem solving, programming, physical computing, user-centered design, and data, while inspiring students as they build their own websites, apps, games, and physical computing devices.
-
-[<button>Learn about CS Discoveries</button>](/educate/csd)&nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
-
-[/col-60]
-
+<%=view :csd_information %>
 <div style="clear: both;"></div>
-
 <br>
 <hr>
-
 <a name="csp"></a>
 # Computer Science Principles (intro and AP course)
-
-<% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
-<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
-
-<div class="col-40" style="float:left; padding:10px;">
-
-  <%=view :display_video_thumbnail, id: "CSPrinciples", video_code: "DMr1iFYacGQ", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
-
-</div>
-
-[col-60]
-
-Designed for 9 - 12 grade students, CS Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. This year-long course can be taught as an introductory course and as an AP course - no prerequisites required for students or teachers new to computer science! CS Principles complements CS Discoveries with a deeper focus on concepts such as how the internet works and the societal impacts of computer science.
-
-<% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
-<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
-
-[<button>Learn about CS Principles</button>](/educate/csp) &nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
-
-[/col-60]
-
-<div style="clear: both;"></div>
-
-<div class="breakoutquote" style="background-color:#59b9dc; padding-top:20px; padding-bottom:20px">
-  <p style="font-size:14px; line-height:22px">Students who take AP Computer Science Principles are <a href="https://medium.com/@codeorg/study-computer-science-students-much-more-likely-to-enroll-in-college-faca65b1476d">12% more likely to enroll in college</a> compared to similarly-situated peers, and students who take AP exams are <a href="https://files.eric.ed.gov/fulltext/ED519365.pdf">more likely to graduate 4-year college</a>, regardless of their score on the exam. AP computer science students also earn <a href="https://blog.code.org/post/125429946375/cs-other-subjects">better AP Calculus scores</a> than comparable students who don’t take AP computer science.</p>
-</div>
-
+<%=view :csp_information %>
 <br>
 <hr>
 

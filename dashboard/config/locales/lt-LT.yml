@@ -242,6 +242,8 @@ lt:
       educate_inspire: Įkvėpkite mokinius
       educate_community: Virtuali bendruomenė
       educate_tools: Įrankiai ir vaizdo įrašai
+      legal_privacy: Privatumo politika
+      legal_tos: Naudojimo taisyklės
     user:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis
@@ -712,6 +714,7 @@ lt:
     form_labels:
       email: El. paštas
       school_name: Mokyklos pavadinimas
+      colombian_school_name: Mokyklos pavadinimas
     form_entries:
       gender:
         male: Vyras

@@ -380,6 +380,8 @@ fi:
       help_us: Auta meitä
       teach: Opeta
       about: Tietoja
+      legal_privacy: Tietosuojakäytäntö
+      legal_tos: Käyttöehdot
     user:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli
@@ -972,6 +974,7 @@ fi:
       email: Sähköposti
       school_name: Koulun nimi
       school_country: Koulun maa
+      colombian_school_name: Koulun nimi
     form_entries:
       gender:
         male: Mies

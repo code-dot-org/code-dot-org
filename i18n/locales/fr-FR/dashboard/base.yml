@@ -86,7 +86,7 @@ fr:
   courses_page:
     title_student: "Apprends avec Code Studio"
     title_teacher: "Enseigner l'informatique"
-  unplugged_activity: 'Activité manuelle'
+  unplugged_activity: 'Activité "Déconnectée"'
   of: "de"
   more: "PLUS"
   less: "MOINS"
@@ -115,7 +115,7 @@ fr:
     powerschool: 'Powerschool'
     forgot_password: 'Mot de passe oublié ?'
     migration_success: 'Succès ! Vous pouvez maintenant profiter de notre nouvelle expérience de compte.'
-    demigration_success: 'La nouvelle expérience de compte est à présent désactivée sur votre compte.'
+    demigration_success: 'La nouvelle expérience de compte est désormais désactivée sur votre compte.'
     need_confirmation: "Pas reçu les instructions de confirmation ?"
     need_unlock: "Pas reçu les instructions de déverrouillage?"
     not_linked: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez vous identifier en tapant votre mot de passe, ci-dessous."
@@ -172,9 +172,9 @@ fr:
     email_preference_yes: "Oui"
     email_preference_no: "Non"
     email_preference_required: "Vous devez spécifier une adresse e-mail préférée."
-    parent_account_checkbox: "Je suis un parent/tuteur qui s'inscrit au nom de mon enfant"
-    parent_account_email_progress_permission: "Pouvons-nous vous envoyer des e-mails pour vous informer, occasionnellement, sur la progression de votre enfant, sur ses projets, sur son cours ou sur l'informatique? [(Consultez notre politique de confidentialité)](%{privacy_policy_url})"
-    parent_account_email_label: "E-mail du parent/tuteur"
+    parent_account_checkbox: "Je suis un parent/tuteur inscrit au nom de mon enfant"
+    parent_account_email_progress_permission: "Pouvons-nous vous envoyer, par courriel, des mises à jour occasionnelles, sur les progrès et les projets de votre enfant, ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique de confidentialité)] %{privacy_policy_url}"
+    parent_account_email_label: "Adresse électronique du parent/tuteur "
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -345,6 +345,8 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
+      legal_privacy: "Politique de confidentialité"
+      legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
       district_dashboard: 'Tableau de bord du district'
@@ -467,11 +469,11 @@ fr:
     auth_option_saved: "Vous avez réussi à lier votre %{provider} compte avec l'adresse électronique %{email}."
     auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
-    for_parents_and_guardians: "Pour les Parents et Tuteurs"
-    link_a_parent_email: "Associez une adresse e-mail parent/tuteur à ce compte pour rester informé sur les progrès et les projets de votre enfant"
+    for_parents_and_guardians: "Pour les parents et tuteurs"
+    link_a_parent_email: "Associez l'adresse électronique d'un parent/tuteur à ce compte afin de rester informé des progrès et des projets de votre enfant. Vous pourrez également utiliser cette l'adresse électronique pour récupérer le mot de passe."
     parent_guardian_email_label: "E-mail du parent/tuteur"
     none: "Aucun"
-    only_one_parent_email_supported_warning: "Remarque : nous ne pouvons prendre en charge qu'une seule adresse e-mail parent/tuteur par compte étudiant pour le moment."
+    only_one_parent_email_supported_warning: "Remarque : notre système ne supporte qu'une seule adresse électronique de parent/tuteur par compte étudiant, pour le moment."
     encrypted: "chiffré"
   user_level:
     completed: 'Terminé'
@@ -755,6 +757,8 @@ fr:
     open_response_body: "Merci pour ta réponse !"
     correct_title: "Correct"
     correct_body: "C'est la bonne réponse."
+  lesson_extras:
+    bonus_level: "Niveau bonus"
   dialog:
     ok: "OK"
     startover_title: "Es-tu certain(e) de vouloir recommencer ?"
@@ -962,6 +966,8 @@ fr:
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
+      colombian_school_city: 'Ville de l’École'
+      colombian_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1072,6 +1078,6 @@ fr:
       error_invalid_user: 'Identifiant invalide. Veuillez vous reconnecter.'
       error_no_code: 'Veuillez entrer votre code de connexion.'
   parent_email_banner:
-    text: "**Êtes-vous un parent ou un tuteur?** Relier votre e-mail à ce compte pour rester informé sur la progression et les projets de votre enfant!"
-    link_your_email: "Associez votre e-mail"
-    not_now: "Plus tard"
+    text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique à ce compte afin de rester informé des progrès et des projets de votre enfant !** "
+    link_your_email: "Associez votre adresse électronique"
+    not_now: "Pas maintenant"

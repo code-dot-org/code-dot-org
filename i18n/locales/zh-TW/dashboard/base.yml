@@ -173,9 +173,9 @@ zh-TW:
     email_preference_yes: "是"
     email_preference_no: "否"
     email_preference_required: "你必須指定一個信箱地址。"
-    parent_account_checkbox: "我是一名家長/監護人，代表我的孩子注册"
-    parent_account_email_progress_permission: "我們可以給你寄送電郵，不時地告訴你孩子的進度和項目，以及他們的課程和計算機科學的最新情况嗎？[(查閱我們的隱私權政策)]（%{privacy_policy_url}）"
-    parent_account_email_label: "家長/監護人電子信箱"
+    parent_account_checkbox: "我是家長/監護人，代表我的孩子登入"
+    parent_account_email_progress_permission: "我們是否可以偶爾透過電子郵件向你發送關於你孩子進度和專案的最新資訊，以及關於其課程和電腦科學的最新資訊？[(參見我們的隱私政策)](%{privacy_policy_url})"
+    parent_account_email_label: "家長/監護人電子郵箱"
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -311,6 +311,7 @@ zh-TW:
       sections: "學習小組"
       help_support: "幫助與支援"
       report_bug: "回報問題"
+      report_abuse: "檢舉濫用"
       teacher_community: "教師社群"
       professional_learning: "專業學習"
       documentation: "說明文件"
@@ -346,6 +347,9 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+      legal: "法律與隱私權"
+      legal_privacy: "隱私政策"
+      legal_tos: "服務條款"
     user:
       classroom: '教師主頁'
       district_dashboard: '分區控制台'
@@ -468,11 +472,11 @@ zh-TW:
     auth_option_saved: "你已成功連結至%{provider}的帳戶，電子郵件地址是 %{email}。"
     auth_option_saved_no_email: "你已成功連結至%{provider}的帳戶。"
     update_email: "更新"
-    for_parents_and_guardians: "針對家長和監護人"
-    link_a_parent_email: "將一位家長/監護人的電郵地址連結到此帳戶，以便隨時瞭解你孩子的進度和項目。你還可以使用此電郵地址恢復密碼。"
+    for_parents_and_guardians: "各位家長及監護人"
+    link_a_parent_email: "將家長/監護人的電子郵件地址關聯到此帳號，以瞭解孩子的進度和專案的最新資訊。您也可以使用此電郵地址進行密碼恢復。"
     parent_guardian_email_label: "家長/監護人電子信箱"
     none: "無"
-    only_one_parent_email_supported_warning: "注：目前，針對每個學生帳戶我們僅支援新增一個家長/監護人電郵地址。"
+    only_one_parent_email_supported_warning: "注意：我們目前對每位學生帳號只允許一位家長/監護人的電郵地址。"
     encrypted: "已加密"
   user_level:
     completed: '已完成'
@@ -961,6 +965,8 @@ zh-TW:
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
+      colombian_school_city: '學校所在城市'
+      colombian_school_name: '學校名稱'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'
@@ -1071,6 +1077,6 @@ zh-TW:
       error_invalid_user: '使用者 ID 無效。請嘗試再次登入。'
       error_no_code: '請輸入你的登入代碼。'
   parent_email_banner:
-    text: "**你是一名父母還是監護人？**將你的電郵連結到此帳戶，以便隨時瞭解你孩子的進度和項目！"
-    link_your_email: "連結您的電子信箱"
-    not_now: "現在不要"
+    text: "**您是否是一位家長或監護人？**將您的電子郵件地址關聯到此帳號，以瞭解孩子的進度和專案的最新資訊！"
+    link_your_email: "關聯您的電子郵箱"
+    not_now: "現在不想"

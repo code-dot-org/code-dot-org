@@ -1,0 +1,12 @@
+name 'OPD-K5 variables introduction_2020'
+title 'Variables Introduction'
+description 'description here'
+markdown <<MARKDOWN
+# Variables: Where are they introduced?
+
+## <a href="https://curriculum.code.org/csf-20/coursef/" target="blank">Course F</a>
+- Lesson 7:(Unplugged): Envelope Variables
+- Lesson 8: Variables with Artist
+- Lesson 9: Changing Variables with Bee
+- Lesson 10: Changing Variables with Artist
+MARKDOWN

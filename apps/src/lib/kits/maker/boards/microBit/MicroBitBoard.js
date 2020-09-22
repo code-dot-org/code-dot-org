@@ -10,6 +10,7 @@ import {
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -29,6 +30,8 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    this.interpreterReference_ = null;
   }
 
   /**
@@ -37,7 +40,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-      .then(() => this.boardClient_.connect())
+      .then(() => this.boardClient_.connectBoard())
       .then(() => this.initializeComponents());
   }
 
@@ -106,6 +109,25 @@ export default class MicroBitBoard extends EventEmitter {
     return newButton;
   }
 
+  createCapacitiveTouchSensor(pin) {
+    const newSensor = new CapacitiveTouchSensor({mb: this.boardClient_, pin});
+    // Add the capacitive touch sensor to the interpreter
+    // The interpreter reference is set during the board connection so
+    // should be not-null here
+    if (this.interpreterReference_) {
+      this.interpreterReference_.addCustomMarshalObject({
+        instance: CapacitiveTouchSensor
+      });
+      this.interpreterReference_.createGlobalProperty(
+        'CapacitiveTouchSensor',
+        CapacitiveTouchSensor
+      );
+    }
+
+    this.dynamicComponents_.push(newSensor);
+    return newSensor;
+  }
+
   /**
    * Disconnect and clean up the board controller and all components.
    */
@@ -125,6 +147,7 @@ export default class MicroBitBoard extends EventEmitter {
     if (this.prewiredComponents_) {
       cleanupMicroBitComponents(
         this.prewiredComponents_,
+        this.dynamicComponents_,
         true /* shouldDestroyComponents */
       );
     }
@@ -145,6 +168,7 @@ export default class MicroBitBoard extends EventEmitter {
    * @param {JSInterpreter} jsInterpreter
    */
   installOnInterpreter(jsInterpreter) {
+    this.interpreterReference_ = jsInterpreter;
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
         instance: componentConstructors[key]
@@ -160,6 +184,7 @@ export default class MicroBitBoard extends EventEmitter {
   reset() {
     cleanupMicroBitComponents(
       this.prewiredComponents_,
+      this.dynamicComponents_,
       false /* shouldDestroyComponents */
     );
   }

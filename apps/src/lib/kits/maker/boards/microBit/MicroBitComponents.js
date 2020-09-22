@@ -6,6 +6,8 @@ import LedScreen from './LedScreen';
 import Accelerometer from './Accelerometer';
 import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
+import LightSensor from './LightSensor';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Initializes a set of components for the currently
@@ -21,7 +23,8 @@ export function createMicroBitComponents(board) {
     ledScreen: new LedScreen({mb: board}),
     tempSensor: new MicroBitThermometer({mb: board}),
     accelerometer: new Accelerometer({mb: board}),
-    compass: new Compass({mb: board})
+    compass: new Compass({mb: board}),
+    lightSensor: new LightSensor({mb: board})
   });
 }
 
@@ -32,10 +35,15 @@ export function createMicroBitComponents(board) {
  *   createMicroBitComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
+ * @param {Object} dynamicComponents - array of dynamic components, from MicroBitBoard
  * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
  *   components, or just reset to their initial state.
  */
-export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
+export function cleanupMicroBitComponents(
+  components,
+  dynamicComponents,
+  shouldDestroyComponents
+) {
   if (components.ledScreen) {
     components.ledScreen.clear();
   }
@@ -55,6 +63,18 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     components.compass.stop();
   }
 
+  if (components.lightSensor) {
+    components.lightSensor.stop();
+    components.lightSensor.reset();
+  }
+
+  dynamicComponents.forEach(component => {
+    if (component instanceof CapacitiveTouchSensor) {
+      component.stop();
+      component.connected = false;
+    }
+  });
+
   if (shouldDestroyComponents) {
     delete components.ledScreen;
     delete components.buttonA;
@@ -62,6 +82,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     delete components.accelerometer;
     delete components.tempSensor;
     delete components.compass;
+    delete components.lightSensor;
   }
 }
 
@@ -82,6 +103,10 @@ export function enableMicroBitComponents(components) {
   if (components.compass) {
     components.compass.start();
   }
+
+  if (components.lightSensor) {
+    components.lightSensor.start();
+  }
 }
 
 /**
@@ -93,5 +118,6 @@ export const componentConstructors = {
   LedScreen,
   Accelerometer,
   MicroBitThermometer,
-  Compass
+  Compass,
+  LightSensor
 };

@@ -5,12 +5,30 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 4 grudnia
-  campaign_date_start_long: 4 grudnia
-  campaign_date_short: 4-10 grudnia
-  campaign_date_full: 4-10 grudnia
+  campaign_date_start_short: 7 grudnia
+  campaign_date_start_long: 7 grudnia
+  campaign_date_short: 7-13 grudnia
+  campaign_date_full: 7-13 grudnia
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 grudnia 2016 roku
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!
@@ -181,11 +199,13 @@ pl:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: Zrób sobie przerwę z kodem! Twoja tygodniowa dawka
+    inspiracji, wspólnoty i informatyki
   codeorg_homepage_code_break_link_text: Dowiedz się więcej
   cookie_banner_message: Kontynuując przeglądanie naszej strony lub klikając "Zgadzam
     się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.
@@ -357,6 +377,7 @@ pl:
   how_to_nav_companies: Dla firm
   how_to_nav_afterschool_educators: Dla nauczycieli zajęć pozaszkolnych
   how_to_nav_volunteers: Dla wolontariuszy
+  how_to_nav_virtual: For virtual events
   whats_next_header: Co dalej?
   whats_next_description: Wyślemy Ci materiały oraz pomocne wskazówki. Nowe poradniki
     na rok 2015 wkrótce będą dostępne dla każdej przeglądarki, smartfonu - lub nawet
@@ -6987,7 +7008,7 @@ pl:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Wszystkie współczesne przeglądarki
@@ -7204,7 +7225,7 @@ pl:
   tutorial_groklearningpython_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_htmltimetravel_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Bez komputera
+  tutorial_appytappin_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_icipher_string_platforms: Bez komputera
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Bez komputera
@@ -8540,7 +8561,7 @@ pl:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8757,9 +8778,9 @@ pl:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9175,8 +9196,8 @@ pl:
     z systemem Android, iPad
   tutorial_scratchcartoon_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Tablet z systemem Android, iPad, telefon
-    z systemem Android, iPhone
+  tutorial_codemonkeyjr_string_platforms: Wszystkie nowoczesne przeglądarki, tablet
+    z systemem Android, iPad, telefon z systemem Android, iPhone
   tutorial_bananatales_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_scratchtales_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
@@ -9205,7 +9226,7 @@ pl:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
@@ -9557,3 +9578,4 @@ pl:
   some: Niektóre
   all: Wszystkie
   dont_know: Nie wiem
+  language_label: Language

@@ -178,7 +178,7 @@ class SectionActionDropdown extends Component {
           <h2 style={styles.heading}>{i18n.deleteSection()}</h2>
           <div>{i18n.deleteSectionConfirm()}</div>
           <br />
-          <div>{i18n.deleteSectionHideSuggestion()}</div>
+          <div>{i18n.deleteSectionArchiveSuggestion()}</div>
           <DialogFooter>
             <Button
               __useDeprecatedTag

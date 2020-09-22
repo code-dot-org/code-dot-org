@@ -11,7 +11,7 @@ sr:
           description: Почни са првим курсем за ученике који су тек научили да читају. Препоручујемо за узраст до првог разреда.
           description_short: Курс је намењен узрасту од 4 до 6 година.
           description_audience: Узраст од 4 до 6 година
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'Уметник: Петље'
             'Artist: Sequence':
@@ -46,44 +46,11 @@ sr:
               name: 'Студио: Направи причу'
             The Big Event:
               name: Велики догађај
-          lessons:
-            Happy Maps:
-              name: Веселе мапе
-            Move it, Move it:
-              name: Помери га, помери
-            'Maze: Sequence':
-              name: 'Лавиринт: Линијски програми'
-            'Maze: Debugging':
-              name: 'Лавиринт: Исправљање грешака'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            'Bee: Sequence':
-              name: 'Пчела: Линијски програми'
-            'Artist: Sequence':
-              name: 'Уметник: Линијски програми'
-            Building a Foundation:
-              name: Изградња темеља
-            'Artist: Shapes':
-              name: 'Уметник: Облици'
-            Spelling Bee:
-              name: Пчелица словарица
-            Getting Loopy:
-              name: Запетљанције
-            'Maze: Loops':
-              name: 'Лавиринт: Петље'
-            'Bee: Loops':
-              name: 'Пчела: Петље'
-            The Big Event:
-              name: Велики догађај
-            Going Places Safely:
-              name: Сигурна путања
-            'Artist: Loops':
-              name: 'Уметник: Петље'
         course2:
           title: Курс 2
           description: Курс 2 могу да раде ученици који знају да читају и немају искуства са програмирањем. У овом курсу ученици ће писати програме који решавају проблеме и развијати интерактивне игре и приче које могу да деле са другима. Препоручено за ученике до петог разреда.
           description_short: Курс 2 могу да раде ученици који знају да читају .
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Уметник: Проналажење грешака'
             'Artist: Loops':
@@ -122,48 +89,11 @@ sr:
               name: Велики догађај
             Your Digital Footprint:
               name: Твој дигитални траг
-          lessons:
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            'Real-life Algorithms: Paper Planes':
-              name: 'Стварни алгоритми: Папирни авиони'
-            'Maze: Sequence':
-              name: 'Лавиринт: Линијски програми'
-            'Artist: Sequence':
-              name: 'Уметник: Линијски програми'
-            Getting Loopy:
-              name: Запетљанције
-            'Maze: Loops':
-              name: 'Лавиринт: Петље'
-            'Artist: Loops':
-              name: 'Уметник: Петље'
-            'Bee: Loops':
-              name: 'Пчела: Петље'
-            Relay programming:
-              name: Relay programming
-            'Bee: Debugging':
-              name: 'Пчела: Исправљање грешака'
-            'Artist: Debugging':
-              name: 'Уметник: Проналажење грешака'
-            Conditionals:
-              name: Кондиционали
-            'Bee: Conditionals':
-              name: 'Пчела: Услови'
-            Binary Bracelets:
-              name: Бинарне наруквице
-            The Big Event:
-              name: Велики догађај
-            Flappy:
-              name: Флапи
-            Your Digital Footprint:
-              name: Твој дигитални траг
-            'Artist: Nested Loops':
-              name: 'Уметник: Угњеждене петље'
         course3:
           title: Курс 3
           description_short: Курс 3 је наставак курса 2.
           description_audience: За године од 8 до 18
-          stages:
+          lessons:
             Artist:
               name: Уметник
             'Artist: Functions':
@@ -204,50 +134,10 @@ sr:
               name: 'Играоница: Направи игру'
             'Studio: Create a Story':
               name: 'Студио: Направи причу'
-          lessons:
-            Computational Thinking:
-              name: Компјутерско Размишљање
-            Maze:
-              name: Лавиринт
-            Artist:
-              name: Уметник
-            Functional Suncatchers:
-              name: Functional Suncatchers
-            'Artist: Functions':
-              name: 'Уметник: Функције'
-            'Bee: Functions':
-              name: 'Пчела: Функције'
-            'Bee: Conditionals':
-              name: 'Пчела: Услови'
-            'Maze: Conditionals':
-              name: 'Лавиринт: Услови'
-            Dice Race:
-              name: Dice Race
-            'Artist: Nested Loops':
-              name: 'Уметник: Угњеждене петље'
-            'Farmer: While Loops':
-              name: 'Фармер: Условне петље'
-            'Bee: Nested Loops':
-              name: 'Пчела: Угњеждене петље'
-            'Bee: Debugging':
-              name: 'Пчела: Исправљање грешака'
-            Bounce:
-              name: одбиј се
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
-            Digital Citizenship:
-              name: Дигитално држављанство
-            'Artist: Patterns':
-              name: 'Уметник: Шаблони'
         playlab:
           title: Играоница
           description: Направи причу или игру у Играоници!
           description_short: Направи причу или игру у Играоници!
-          stages:
-            Play Lab:
-              name: Играоница
           lessons:
             Play Lab:
               name: Играоница
@@ -255,18 +145,12 @@ sr:
           title: Уметник
           description: Цртај слике са уметником!
           description_short: Цртај слике са уметником!
-          stages:
-            Artist:
-              name: Уметник
           lessons:
             Artist:
               name: Уметник
         hourofcode:
           description: Испробај основе рачунарских наука са љутим птичицама, цвећем против зомбија, и Скречом из леденог доба!
           description_short: Try the basics of computer science with many fun characters!
-          stages:
-            Maze:
-              name: Лавиринт
           lessons:
             Maze:
               name: Лавиринт
@@ -274,9 +158,6 @@ sr:
           title: Програмирај са Аном и Елзом
           description: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
           description_short: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда.
-          stages:
-            Artist:
-              name: Уметник
           lessons:
             Artist:
               name: Уметник
@@ -285,159 +166,86 @@ sr:
           description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3. Ученици ће научити како да решавају сложеније проблеме док уче како да комбинују различите наредбе којима могу да решавају различите проблеме. Када заврше курс 4, ученици ће бити способни да праве програме са понављањима (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4. до 8. разреда.
           description_short: Ученици који пробају курс 4 би требало пре тога да прођу курсеве 2 и 3.
           description_audience: Узраст од 10 до 18 година
-          stages:
-            Artist:
-              name: Уметник
-            Artist Binary:
-              name: Уметник Бинарно
-            'Artist: For Loops':
-              name: 'Уметник: Бројачке петље'
-            'Artist: Functions':
-              name: 'Уметник: Функције'
-            'Artist: Functions with Parameters':
-              name: 'Уметник: Функције са параметрима'
-            'Artist: Variables':
-              name: 'Уметник: Променљиве'
-            'Bee: For Loops':
-              name: 'Пчела: Бројачке петље'
-            'Bee: Functions with Parameters':
-              name: 'Пчела: Функције са параметрима'
-            Extreme Challenge - Comprehensive:
-              name: Екстремни изазов - Comprehensive
-            Maze and Bee:
-              name: Лавиринт и пчела
-            'Play Lab: For Loops':
-              name: 'Играоница: Бројачке петље'
-            'Play Lab: Functions with Parameters':
-              name: 'Играоница: Функције са параметрима'
-            'Play Lab: Variables':
-              name: 'Играоница: Променљиве'
-            Super Challenge - For Loops:
-              name: Супер изазов - Бројачке петље
-            Super Challenge - Functions and Parameters:
-              name: Супер изазов - Функције и параметри
-            Super Challenge - Variables:
-              name: Супер изазов - Променљиве
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Променљиве'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
-            Maze and Bee:
-              name: Лавиринт и пчела
             Artist:
               name: Уметник
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Променљиве'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
-            'Artist: Variables':
-              name: 'Уметник: Променљиве'
-            'Play Lab: Variables':
-              name: 'Играоница: Променљиве'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Bee: For Loops':
-              name: 'Пчела: Бројачке петље'
-            'Artist: For Loops':
-              name: 'Уметник: Бројачке петље'
-            'Play Lab: For Loops':
-              name: 'Играоница: Бројачке петље'
-            'Artist: Functions':
-              name: 'Уметник: Функције'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
-            'Artist: Functions with Parameters':
-              name: 'Уметник: Функције са параметрима'
-            'Play Lab: Functions with Parameters':
-              name: 'Играоница: Функције са параметрима'
-            'Bee: Functions with Parameters':
-              name: 'Пчела: Функције са параметрима'
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
             Artist Binary:
               name: Уметник Бинарно
-            Super Challenge - Variables:
-              name: Супер изазов - Променљиве
+            'Artist: For Loops':
+              name: 'Уметник: Бројачке петље'
+            'Artist: Functions':
+              name: 'Уметник: Функције'
+            'Artist: Functions with Parameters':
+              name: 'Уметник: Функције са параметрима'
+            'Artist: Variables':
+              name: 'Уметник: Променљиве'
+            'Bee: For Loops':
+              name: 'Пчела: Бројачке петље'
+            'Bee: Functions with Parameters':
+              name: 'Пчела: Функције са параметрима'
+            Extreme Challenge - Comprehensive:
+              name: Екстремни изазов - Comprehensive
+            Maze and Bee:
+              name: Лавиринт и пчела
+            'Play Lab: For Loops':
+              name: 'Играоница: Бројачке петље'
+            'Play Lab: Functions with Parameters':
+              name: 'Играоница: Функције са параметрима'
+            'Play Lab: Variables':
+              name: 'Играоница: Променљиве'
             Super Challenge - For Loops:
               name: Супер изазов - Бројачке петље
             Super Challenge - Functions and Parameters:
               name: Супер изазов - Функције и параметри
-            Extreme Challenge - Comprehensive:
-              name: Екстремни изазов - Comprehensive
+            Super Challenge - Variables:
+              name: Супер изазов - Променљиве
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            'Unplugged: Envelope Variables':
+              name: 'Unplugged: Envelope Променљиве'
+            'Unplugged: For Loop Fun':
+              name: 'Unplugged: For Loop Fun'
+            'Unplugged: Madlibs':
+              name: 'Unplugged: Madlibs'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Unplugged: Songwriting with Parameters'
+            'Unplugged: Tangrams':
+              name: 'Unplugged: Tangrams'
         Course4pre:
           title: Предуслови за курс 4
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          stages:
-            'Artist: Functions':
-              name: 'Уметник: Функције'
-            'Artist: Loops':
-              name: 'Уметник: Петље'
-            'Artist: Nested Loops':
-              name: 'Уметник: Угњеждене петље'
-            'Artist: Sequence':
-              name: 'Уметник: Линијски програми'
-            'Bee: Conditionals':
-              name: 'Пчела: Услови'
-            'Bee: Debugging':
-              name: 'Пчела: Исправљање грешака'
-            'Bee: Nested Loops':
-              name: 'Пчела: Угњеждене петље'
-            'Farmer: While Loops':
-              name: 'Фармер: Условне петље'
-            'Maze: Sequence':
-              name: 'Лавиринт: Линијски програми'
           lessons:
-            'Maze: Sequence':
-              name: 'Лавиринт: Линијски програми'
-            'Artist: Sequence':
-              name: 'Уметник: Линијски програми'
-            'Artist: Loops':
-              name: 'Уметник: Петље'
-            'Bee: Conditionals':
-              name: 'Пчела: Услови'
-            'Artist: Nested Loops':
-              name: 'Уметник: Угњеждене петље'
-            'Farmer: While Loops':
-              name: 'Фармер: Условне петље'
-            'Bee: Nested Loops':
-              name: 'Пчела: Угњеждене петље'
             'Artist: Functions':
               name: 'Уметник: Функције'
+            'Artist: Loops':
+              name: 'Уметник: Петље'
+            'Artist: Nested Loops':
+              name: 'Уметник: Угњеждене петље'
+            'Artist: Sequence':
+              name: 'Уметник: Линијски програми'
+            'Bee: Conditionals':
+              name: 'Пчела: Услови'
             'Bee: Debugging':
               name: 'Пчела: Исправљање грешака'
+            'Bee: Nested Loops':
+              name: 'Пчела: Угњеждене петље'
+            'Farmer: While Loops':
+              name: 'Фармер: Условне петље'
+            'Maze: Sequence':
+              name: 'Лавиринт: Линијски програми'
         usability:
-          stages:
-            For Loops:
-              name: Бројачке петље
-            Functions and Functions with Parameters:
-              name: Функције и параметри
-            Intro:
-              name: Увод
-            Variables:
-              name: Променљиве
           lessons:
-            Intro:
-              name: Увод
-            Variables:
-              name: Променљиве
             For Loops:
               name: Бројачке петље
             Functions and Functions with Parameters:
               name: Функције и параметри
+            Intro:
+              name: Увод
+            Variables:
+              name: Променљиве
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: Кондиционали
             'Eval: Strings and Images':
@@ -448,64 +256,21 @@ sr:
               name: 'Unplugged: The Design Recipe'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
-          lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games and Coordinate Planes'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluation Blocks'
-            'Eval: Strings and Images':
-              name: 'Eval: Strings and Images'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Contracts'
-            'Eval: Writing Contracts':
-              name: 'Eval: Writing Contracts'
-            'Calc: Defining Variables':
-              name: 'Калкулатор: Дефинисање променљивих'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Играоница: Дефинисање променљивих (Big Game)'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: The Design Recipe'
-            'Play Lab: Animation (Big Game)':
-              name: 'Играоница: Анимација (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
-            'Eval: Boolean Operators':
-              name: 'Eval: Boolean Operators'
-            'Play Lab: Booleans':
-              name: 'Играоница: Booleans'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Играоница: Логичке променљиве(Big Game)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals and Piecewise Функције'
-            'Eval: Conditionals':
-              name: 'Eval: Услови'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Distance Formula'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Играоница: Collision Detection (Big Game)'
         infinity:
           title: Дизнијева Играоница
           description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
           description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
-          stages:
-            Infinity:
-              name: Бесконачно
           lessons:
             Infinity:
               name: Бесконачно
         algebrademo:
-          stages:
-            Defining Variables:
-              name: Дефинисање променљиве
-            Evaluation Blocks:
-              name: Evaluation Blocks
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Defining Variables:
               name: Дефинисање променљиве
+            Evaluation Blocks:
+              name: Evaluation Blocks
         K5PD:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: Контролна табла за наставнике
         20-hour:
@@ -513,113 +278,62 @@ sr:
           description: Овај 20-часовни  курс представља срж компјутерских наука и програмерских основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно учити у било којем животном периоду.
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           description_audience: Узраст од 10 до 18 година
-          stages:
-            Abstraction:
-              name: Апстракција
-            Algorithms:
-              name: Алгоритми
-            Computational Thinking:
-              name: Компјутерско Размишљање
-            Conditionals:
-              name: Кондиционали
-            Functions:
-              name: Функције
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            Introduction to Computer Science:
-              name: Увод у Компјутерске Науке
-            Relay Programming:
-              name: Relay programming
-            Song Writing:
-              name: Писање Песама
-            The Artist:
-              name: Уметник
-            The Artist 2:
-              name: Уметник 2
-            The Artist 3:
-              name: Уметник 3
-            The Artist 4:
-              name: Уметник 4
-            The Artist 5:
-              name: Уметник 5
-            The Farmer:
-              name: Фармер
-            The Farmer 2:
-              name: Фармер 2
-            The Farmer 3:
-              name: Фармер 3
-            The Internet:
-              name: Интернет
-            The Maze:
-              name: Лавиринт
-            Wrap-up:
-              name: Замотај-Умотај
           lessons:
-            Introduction to Computer Science:
-              name: Увод у Компјутерске Науке
-            The Maze:
-              name: Лавиринт
-            Computational Thinking:
-              name: Компјутерско Размишљање
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            The Artist:
-              name: Уметник
-            Algorithms:
-              name: Алгоритми
-            The Artist 2:
-              name: Уметник 2
-            Functions:
-              name: Функције
-            The Farmer:
-              name: Фармер
-            Conditionals:
-              name: Кондиционали
-            The Artist 3:
-              name: Уметник 3
-            Song Writing:
-              name: Писање Песама
-            The Farmer 2:
-              name: Фармер 2
             Abstraction:
               name: Апстракција
-            The Artist 4:
-              name: Уметник 4
+            Algorithms:
+              name: Алгоритми
+            Computational Thinking:
+              name: Компјутерско Размишљање
+            Conditionals:
+              name: Кондиционали
+            Functions:
+              name: Функције
+            Graph Paper Programming:
+              name: Графиконско - Папирно Програмирање
+            Introduction to Computer Science:
+              name: Увод у Компјутерске Науке
             Relay Programming:
               name: Relay programming
+            Song Writing:
+              name: Писање Песама
+            The Artist:
+              name: Уметник
+            The Artist 2:
+              name: Уметник 2
+            The Artist 3:
+              name: Уметник 3
+            The Artist 4:
+              name: Уметник 4
+            The Artist 5:
+              name: Уметник 5
+            The Farmer:
+              name: Фармер
+            The Farmer 2:
+              name: Фармер 2
             The Farmer 3:
               name: Фармер 3
             The Internet:
               name: Интернет
-            The Artist 5:
-              name: Уметник 5
+            The Maze:
+              name: Лавиринт
             Wrap-up:
               name: Замотај-Умотај
         edit-code:
           title: Уреди код
           description: Уреди код
           description_short: Уреди код
-          stages:
-            Play Lab:
-              name: Играоница
-            The Artist:
-              name: Уметник
-            The Maze:
-              name: Лавиринт
           lessons:
-            The Maze:
-              name: Лавиринт
-            The Artist:
-              name: Уметник
             Play Lab:
               name: Играоница
+            The Artist:
+              name: Уметник
+            The Maze:
+              name: Лавиринт
         events:
           title: Догађаји
           description: Догађаји
           description_short: Догађаји
-          stages:
-            Bounce:
-              name: одбиј се
           lessons:
             Bounce:
               name: одбиј се
@@ -629,9 +343,6 @@ sr:
           title: Слагалица
           description: Пробај нашу слагалицу
           description_short: Пробај нашу слагалицу
-          stages:
-            Jigsaw:
-              name: Слагалица
           lessons:
             Jigsaw:
               name: Слагалица
@@ -639,9 +350,6 @@ sr:
           title: Корак
           description: Step tutorial
           description_short: Step tutorial
-          stages:
-            Step:
-              name: Корак
           lessons:
             Step:
               name: Корак
@@ -651,99 +359,55 @@ sr:
         cspunit1:
           description_short: Programming
         algebraPD:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
             Evaluation Blocks:
               name: Evaluation Blocks
             Teacher Dashboard:
               name: Контролна табла за наставнике
         algPDmiami:
-          stages:
-            Booleans:
-              name: Booleans
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
           lessons:
+            Booleans:
+              name: Booleans
             Evaluation Blocks:
               name: Evaluation Blocks
             Strings and Images:
               name: Strings and Images
-            Booleans:
-              name: Booleans
         CSPPD:
-          stages:
-            Impact of Computer Science:
-              name: Утицај рачунарских наука
           lessons:
             Impact of Computer Science:
               name: Утицај рачунарских наука
         ECSPD:
-          stages:
-            Impact of Computer Science:
-              name: Утицај рачунарских наука
           lessons:
             Impact of Computer Science:
               name: Утицај рачунарских наука
         cspunit3:
           description_short: Programming
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
         algebraPD3:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
             Evaluation Blocks:
               name: Evaluation Blocks
             Strings and Images:
               name: Strings and Images
+            Teacher Dashboard:
+              name: Контролна табла за наставнике
         ECSPD-NexTech:
-          stages:
-            Impact of Computer Science:
-              name: Утицај рачунарских наука
           lessons:
             Impact of Computer Science:
               name: Утицај рачунарских наука
         ECSPD-iZone:
-          stages:
-            Impact of Computer Science:
-              name: Утицај рачунарских наука
           lessons:
             Impact of Computer Science:
               name: Утицај рачунарских наука
         algebraPD-NexTech:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
             Evaluation Blocks:
               name: Evaluation Blocks
             Teacher Dashboard:
               name: Контролна табла за наставнике
         algebraPD-iZone:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
             Evaluation Blocks:
               name: Evaluation Blocks
@@ -752,264 +416,152 @@ sr:
         sciencePD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         cspunit2:
           description_short: Programming
-          stages:
-            The Internet:
-              name: Интернет је за свакога
           lessons:
             The Internet:
-              name: Интернет
+              name: Интернет је за свакога
         algebraPD2a:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Booleans:
-              name: Booleans
-            Defining Variables:
-              name: Дефинисање променљиве
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Free Play:
-              name: Free Play
-            Strings and Images:
-              name: Strings and Images
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
-            Defining Variables:
-              name: Дефинисање променљиве
             Booleans:
               name: Booleans
+            Defining Variables:
+              name: Дефинисање променљиве
+            Evaluation Blocks:
+              name: Evaluation Blocks
             Free Play:
               name: Free Play
+            Strings and Images:
+              name: Strings and Images
         allthethings:
-          stages:
-            Artist:
-              name: Уметник
-            Bee:
-              name: Пчела
-            Bounce:
-              name: одбиј се
-            Flappy:
-              name: Флапи
-            Jigsaw:
-              name: Слагалица
-            Maze:
-              name: Лавиринт
           lessons:
-            Jigsaw:
-              name: Слагалица
-            Maze:
-              name: Лавиринт
             Artist:
               name: Уметник
             Bee:
               name: Пчела
-            Flappy:
-              name: Флапи
             Bounce:
               name: одбиј се
+            Flappy:
+              name: Флапи
+            Jigsaw:
+              name: Слагалица
+            Maze:
+              name: Лавиринт
         algebraPD2b:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Booleans:
-              name: Booleans
-            Defining Functions:
-              name: Дефинисање Функције
-            Defining Variables:
-              name: Дефинисање променљиве
-            'Eval: Conditionals':
-              name: 'Eval: Услови'
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
+            Booleans:
+              name: Booleans
+            Defining Functions:
+              name: Дефинисање Функције
+            Defining Variables:
+              name: Дефинисање променљиве
+            'Eval: Conditionals':
+              name: 'Eval: Услови'
             Evaluation Blocks:
               name: Evaluation Blocks
             Strings and Images:
               name: Strings and Images
-            Defining Variables:
-              name: Дефинисање променљиве
-            Defining Functions:
-              name: Дефинисање Функције
-            Booleans:
-              name: Booleans
-            'Eval: Conditionals':
-              name: 'Eval: Услови'
+            Teacher Dashboard:
+              name: Контролна табла за наставнике
         cspfacilitator:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         ECSPD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Welcome!
-            Wrap-up:
-              name: Замотај-Умотај
           lessons:
-            Welcome!:
-              name: Welcome!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
         algebraPD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
-            Welcome!:
-              name: Welcome!
           lessons:
-            Welcome!:
-              name: Welcome!
             Teacher Dashboard:
               name: Контролна табла за наставнике
+            Welcome!:
+              name: Welcome!
         sciencePD2b:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         science-PD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         sciencePD2b-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         ECSPD2-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Welcome!
-            Wrap-up:
-              name: Замотај-Умотај
           lessons:
-            Welcome!:
-              name: Welcome!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
         ECSPD2-NexTech:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Welcome!
-            Wrap-up:
-              name: Замотај-Умотај
           lessons:
-            Welcome!:
-              name: Welcome!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Бинарне наруквице
-            Building a Foundation:
-              name: Изградња темеља
-            Getting Loopy:
-              name: Запетљанције
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            Happy Maps:
-              name: Веселе мапе
-            Move it, Move it:
-              name: Помери га, помери
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            The Big Event:
-              name: Велики догађај
           lessons:
+            Binary Bracelets:
+              name: Бинарне наруквице
+            Building a Foundation:
+              name: Изградња темеља
+            Getting Loopy:
+              name: Запетљанције
+            Graph Paper Programming:
+              name: Графиконско - Папирно Програмирање
             Happy Maps:
               name: Веселе мапе
             Move it, Move it:
               name: Помери га, помери
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            Building a Foundation:
-              name: Изградња темеља
-            Getting Loopy:
-              name: Запетљанције
             The Big Event:
               name: Велики догађај
-            Binary Bracelets:
-              name: Бинарне наруквице
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: Welcome!
         Special Fun:
@@ -1020,17 +572,11 @@ sr:
           title: Ледено доба - Играоница
           description: Create a story or make a game with Ice Age Играоница!
           description_short: Create a story or make a game with Ice Age Играоница!
-          stages:
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
           lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
         cspunit3temp:
           description_short: Programming
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
@@ -1038,9 +584,6 @@ sr:
           title: Gumball Играоница
           description: Create a story or make a game with Gumball Играоница!
           description_short: Create a story or make a game with Gumball Играоница!
-          stages:
-            Gumball Play Lab:
-              name: Gumball Играоница
           lessons:
             Gumball Play Lab:
               name: Gumball Играоница
@@ -1048,9 +591,6 @@ sr:
           title: 'Ратови Звезда: Изгради галаксије кôдом'
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
           description_short: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
-          stages:
-            Hour of Code 2015:
-              name: Час кода 2015
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
@@ -1058,9 +598,6 @@ sr:
           title: 'Ратови Звезда: Изгради галаксије кôдом'
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
           description_short: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
-          stages:
-            Hour of Code 2015:
-              name: Час кода 2015
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
@@ -1068,16 +605,10 @@ sr:
           title: Мајнкрафт час програмирања
           description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет
           description_short: Истражите Мајнкрафт свет кроз кôд
-          stages:
-            Hour of Code 2015:
-              name: Час кода 2015
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
@@ -1086,109 +617,62 @@ sr:
         cspunit4:
           description_short: Programming
         AlgebraA:
-          stages:
-            'Calc: Defining Variables':
-              name: 'Калкулатор: Дефинисање променљивих'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluation Blocks'
-            'Eval: Strings and Images':
-              name: 'Eval: Strings and Images'
-            'Eval: Writing Contracts':
-              name: 'Eval: Writing Contracts'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Contracts'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: The Design Recipe'
           lessons:
+            'Calc: Defining Variables':
+              name: 'Калкулатор: Дефинисање променљивих'
             'Calc: Evaluation Blocks':
               name: 'Calc: Evaluation Blocks'
             'Eval: Strings and Images':
               name: 'Eval: Strings and Images'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Contracts'
             'Eval: Writing Contracts':
               name: 'Eval: Writing Contracts'
-            'Calc: Defining Variables':
-              name: 'Калкулатор: Дефинисање променљивих'
+            'Unplugged: Contracts':
+              name: 'Unplugged: Contracts'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: The Design Recipe'
         AlgebraB:
-          stages:
-            'Eval: Boolean Operators':
-              name: 'Eval: Boolean Operators'
-            'Eval: Conditionals':
-              name: 'Eval: Услови'
-            'Play Lab: Animation (Big Game)':
-              name: 'Играоница: Анимација (Big Game)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Играоница: Логичке променљиве(Big Game)'
-            'Play Lab: Booleans':
-              name: 'Играоница: Booleans'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Играоница: Collision Detection (Big Game)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Играоница: Дефинисање променљивих (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Distance Formula'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals and Piecewise Функције'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games and Coordinate Planes'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games and Coordinate Planes'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Играоница: Дефинисање променљивих (Big Game)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Играоница: Анимација (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
             'Eval: Boolean Operators':
               name: 'Eval: Boolean Operators'
-            'Play Lab: Booleans':
-              name: 'Играоница: Booleans'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Играоница: Логичке променљиве(Big Game)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals and Piecewise Функције'
             'Eval: Conditionals':
               name: 'Eval: Услови'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Distance Formula'
+            'Play Lab: Animation (Big Game)':
+              name: 'Играоница: Анимација (Big Game)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Играоница: Логичке променљиве(Big Game)'
+            'Play Lab: Booleans':
+              name: 'Играоница: Booleans'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Играоница: Collision Detection (Big Game)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Играоница: Дефинисање променљивих (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Unplugged: Booleans'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Unplugged: Collision Detection and the Distance Formula'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Unplugged: Conditionals and Piecewise Функције'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Unplugged: Video Games and Coordinate Planes'
         algebraPD1:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
             Evaluation Blocks:
               name: Evaluation Blocks
             Teacher Dashboard:
               name: Контролна табла за наставнике
         csp1-2017:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         csp3-2017:
           description_short: Programming
         csp5-2017:
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
         CSDU3-Draft:
           description_short: Programming
-          stages:
+          lessons:
             Functions:
               name: Функције
             Velocity:
@@ -1198,11 +682,6 @@ sr:
         CSF_Secret_Sample:
           description_audience: За године од 8 до 18
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
           lessons:
             Evaluation Blocks:
               name: Evaluation Blocks
@@ -1217,9 +696,6 @@ sr:
             required:
               display_name: Преглед
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Уметник Функције
           lessons:
             Artist Functions:
               name: Уметник Функције
@@ -1230,14 +706,11 @@ sr:
             required:
               display_name: Преглед
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Пчела: Услови'
           lessons:
             'Bee: Conditionals':
               name: 'Пчела: Услови'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Догађаји
             Loops:
@@ -1247,11 +720,11 @@ sr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Дигитално држављанство
         grade1:
-          stages:
+          lessons:
             Events:
               name: Догађаји
             Loops:
@@ -1259,7 +732,7 @@ sr:
             Programming:
               name: Programming
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'Уметник: Бројачке петље'
             'Artist: Functions with Parameters':
@@ -1281,30 +754,19 @@ sr:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Welcome!
-            Wrap-up:
-              name: Замотај-Умотај
           lessons:
-            Welcome!:
-              name: Welcome!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Уметник: Угњеждене петље'
             Bee Debugging:
@@ -1319,26 +781,17 @@ sr:
               display_name: Преглед
         csd3-2017:
           description_short: Programming
-          stages:
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
           lessons:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
             Velocity:
               name: Брзина
             Functions:
               name: Функције
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Флапи
             Binary Bracelets:
@@ -1348,51 +801,29 @@ sr:
             The Big Event:
               name: Велики догађај
         k5concepts:
-          stages:
-            Conditionals:
-              name: Кондиционали
-            Events:
-              name: Догађаји
-            For Loops:
-              name: Бројачке петље
-            Functions:
-              name: Функције
-            Functions with Parameters:
-              name: Функције са параметрима
-            Loops:
-              name: Петље
-            Variables:
-              name: Променљиве
-            While Loops:
-              name: Понављања са условима
           lessons:
-            Events:
-              name: Догађаји
-            Loops:
-              name: Петље
             Conditionals:
               name: Кондиционали
-            While Loops:
-              name: Понављања са условима
-            Functions:
-              name: Функције
-            Variables:
-              name: Променљиве
+            Events:
+              name: Догађаји
             For Loops:
               name: Бројачке петље
+            Functions:
+              name: Функције
             Functions with Parameters:
               name: Функције са параметрима
+            Loops:
+              name: Петље
+            Variables:
+              name: Променљиве
+            While Loops:
+              name: Понављања са условима
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: Контролна табла за наставнике
-            Welcome!:
-              name: Welcome!
           lessons:
-            Welcome!:
-              name: Welcome!
             Teacher Dashboard:
               name: Контролна табла за наставнике
+            Welcome!:
+              name: Welcome!
         csp-online-test:
           lesson_groups:
             required:
@@ -1402,24 +833,10 @@ sr:
             required:
               display_name: Преглед
         basketball:
-          stages:
-            Bounce:
-              name: одбиј се
           lessons:
             Bounce:
               name: одбиј се
-        fesbinary:
-          stages:
-            Binary Bracelets:
-              name: Бинарне наруквице
-            Binary Images:
-              name: Binarne slike
-            Play Lab:
-              name: Играоница
         csd2-2017:
-          stages:
-            Lists:
-              name: Листе
           lessons:
             Lists:
               name: Листе
@@ -1431,36 +848,23 @@ sr:
           title: Мајнкрафт дизајнер - час програмирања
           description_short: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
           description: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Мајнкрафт дизајнер - час програмирања
           lessons:
             Minecraft Hour of Code Designer:
               name: Мајнкрафт дизајнер - час програмирања
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            Going Places Safely:
-              name: Сигурна путања
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
             Going Places Safely:
               name: Сигурна путања
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            Your Digital Footprint:
-              name: Твој дигитални траг
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
             Your Digital Footprint:
               name: Твој дигитални траг
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Стварни алгоритми: Папирни авиони'
             Binary Bracelets:
@@ -1469,23 +873,7 @@ sr:
               name: Твој дигитални траг
             Building a Foundation:
               name: Изградња темеља
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            'Real-life Algorithms: Paper Planes':
-              name: 'Стварни алгоритми: Папирни авиони'
-            Binary Bracelets:
-              name: Бинарне наруквице
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Услови са картама
-            Digital Citizenship:
-              name: Дигитално држављанство
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
           lessons:
             Conditionals with Cards:
               name: Услови са картама
@@ -1496,7 +884,7 @@ sr:
             Artist Binary:
               name: Уметник Бинарно
         coursee-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Дигитално држављанство
             Internet:
@@ -1505,20 +893,10 @@ sr:
               name: Crowdsourcing
             Conditionals:
               name: Кондиционали
-          lessons:
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
         coursef-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Дигитално држављанство
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
-          lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
         classic-hoc-impact-study:
@@ -1526,16 +904,10 @@ sr:
         hoc-impact-study:
           description_short: Try the basics of computer science with many fun characters!
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
@@ -1548,20 +920,14 @@ sr:
             required:
               display_name: Преглед
         sciencepd4:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: Welcome!
         sciencepd5:
-          stages:
-            Welcome!:
-              name: Welcome!
           lessons:
             Welcome!:
               name: Welcome!
@@ -1570,25 +936,19 @@ sr:
             required:
               display_name: Преглед
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Листе
             For Loops:
               name: Бројачке петље
             Functions with Parameters:
               name: Функције са параметрима
-          lessons:
-            Functions with Parameters:
-              name: Функције са параметрима
         coursee-ramp:
-          stages:
-            Conditionals:
-              name: Кондиционали
           lessons:
             Conditionals:
               name: Кондиционали
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Листе
             For Loops:
@@ -1598,7 +958,7 @@ sr:
             Functions with Parameters_:
               name: Функције са параметрима
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Променљиве
             Conditionals:
@@ -1608,22 +968,17 @@ sr:
             Functions:
               name: Функције
         csd3-old:
-          stages:
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           lessons:
             Velocity:
               name: Брзина
             Functions:
               name: Функције
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Листе
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Променљиве
             Conditionals:
@@ -1635,86 +990,37 @@ sr:
             'null':
               name: 'ништа'
         coursef-ramp:
-          stages:
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
           lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
-            Bounce:
-              name: одбиј се
           lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
             Bounce:
               name: одбиј се
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
-            Going Places Safely:
-              name: Сигурна путања
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
-            Your Digital Footprint:
-              name: Твој дигитални траг
         coursec-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Стварни алгоритми: Папирни авиони'
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            'Real-life Algorithms: Paper Planes':
-              name: 'Стварни алгоритми: Папирни авиони'
-            Binary Bracelets:
-              name: Бинарне наруквице
-        coursed-2017:
-          lessons:
-            Conditionals with Cards:
-              name: Услови са картама
-            Digital Citizenship:
-              name: Дигитално држављанство
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
         coursee-2017:
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
             Building a Foundation:
               name: Изградња темеља
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
           lessons:
             Building a Foundation:
               name: Изградња темеља
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
         cspnovice:
           lesson_groups:
             required:
@@ -1764,7 +1070,7 @@ sr:
             required:
               display_name: Преглед
         express-2017:
-          stages:
+          lessons:
             Internet:
               name: Интернет
             Digital Citizenship:
@@ -1773,15 +1079,7 @@ sr:
               name: Услови са картама
             Building a Foundation:
               name: Изградња темеља
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            Spelling Bee:
-              name: Пчелица словарица
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
@@ -1790,15 +1088,6 @@ sr:
         csp3-research-mxghyt:
           description_short: Programming
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Изградња темеља
@@ -1809,20 +1098,7 @@ sr:
             Crowdsourcing:
               name: Crowdsourcing
         new-d:
-          stages:
-            Conditionals with Cards:
-              name: Услови са картама
-            Digital Citizenship:
-              name: Дигитално држављанство
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
-            Building a Foundation:
-              name: Изградња темеља
           lessons:
-            Building a Foundation:
-              name: Изградња темеља
             Conditionals with Cards:
               name: Услови са картама
             Digital Citizenship:
@@ -1831,23 +1107,13 @@ sr:
               name: 'Unplugged: Binary'
             Artist Binary:
               name: Уметник Бинарно
-        new-express:
-          stages:
             Building a Foundation:
               name: Изградња темеља
+        new-express:
           lessons:
             Building a Foundation:
               name: Изградња темеља
         new-e:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Изградња темеља
@@ -1858,33 +1124,16 @@ sr:
             Crowdsourcing:
               name: Crowdsourcing
         new-f:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
           lessons:
             Building a Foundation:
               name: Изградња темеља
             Ice Age Play Lab:
               name: Ледено доба - Играоница
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Мајнкрафт час програмирања
           lessons:
             Minecraft Hour of Code:
               name: Мајнкрафт час програмирања
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: Изградња темеља
@@ -1895,37 +1144,18 @@ sr:
             Crowdsourcing:
               name: Crowdsourcing
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Ice Age Play Lab:
-              name: Ледено доба - Играоница
           lessons:
             Building a Foundation:
               name: Изградња темеља
             Ice Age Play Lab:
               name: Ледено доба - Играоница
         csd6-old:
-          stages:
-            Lists:
-              name: Листе
-            For Loops:
-              name: Бројачке петље
           lessons:
             Lists:
               name: Листе
             For Loops:
               name: Бројачке петље
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           description_short: "Programming"
           lessons:
             Variables:
@@ -1938,15 +1168,6 @@ sr:
               name: Функције
         csd3-2018:
           description_short: "Programming"
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           lessons:
             Variables:
               name: Променљиве
@@ -1957,25 +1178,17 @@ sr:
             Functions:
               name: Функције
         csd2-2018:
-          stages:
-            Lists:
-              name: Листе
           lessons:
             Lists:
               name: Листе
         coursea-2018:
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: Веселе мапе
             Going Places Safely:
               name: Сигурна путања
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
-            Going Places Safely:
-              name: Сигурна путања
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Building a Foundation:
@@ -2000,38 +1213,16 @@ sr:
               name: Relay programming
             Graph Paper Programming:
               name: Графиконско - Папирно Програмирање
-          lessons:
-            Graph Paper Programming:
-              name: Графиконско - Папирно Програмирање
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Услови са картама
-            Binary Bracelets:
-              name: Бинарне наруквице
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
         courseb-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
             Your Digital Footprint:
               name: Твој дигитални траг
             Move It, Move It:
               name: Помери га, помери
-          lessons:
-            Move It, Move It:
-              name: Помери га, помери
-            Your Digital Footprint:
-              name: Твој дигитални траг
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Building a Foundation:
@@ -2048,43 +1239,22 @@ sr:
               name: Графиконско - Папирно Програмирање
             Relay Programming:
               name: Relay programming
-          lessons:
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Услови са картама
-            Digital Citizenship:
-              name: Дигитално држављанство
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
         coursec-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Изградња темеља
             'Loops: Getting Loopy':
               name: Запетљанције
             'Events: The Big Event':
               name: Велики догађај
-            Binary Bracelets:
-              name: Бинарне наруквице
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            'Real-life Algorithms: Paper Planes':
-              name: 'Стварни алгоритми: Папирни авиони'
             Binary Bracelets:
               name: Бинарне наруквице
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Функције са параметрима
           lessons:
             Functions with Parameters:
               name: Функције са параметрима
         coursee-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Моји роботски пријатељи
             Building a Foundation:
@@ -2097,19 +1267,8 @@ sr:
               name: Услови са картама
             Minecraft Hour of Code:
               name: Мајнкрафт час програмирања
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals with Cards:
-              name: Услови са картама
-            Conditionals:
-              name: Кондиционали
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
         coursef-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Моји роботски пријатељи
             Building a Foundation:
@@ -2118,24 +1277,13 @@ sr:
               name: Ледено доба - Играоница
             Conditionals with Cards:
               name: Услови са картама
-          lessons:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals with Cards:
-              name: Услови са картама
         csp1-2018:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         csp3-2018:
           description_short: Programming
         csp5-2018:
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
@@ -2208,7 +1356,7 @@ sr:
             required:
               display_name: Преглед
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
             Spelling Bee:
@@ -2217,35 +1365,19 @@ sr:
               name: Помери га, помери
             Your Digital Footprint:
               name: Твој дигитални траг
-          lessons:
-            Move It, Move It:
-              name: Помери га, помери
-            Your Digital Footprint:
-              name: Твој дигитални траг
-            Spelling Bee:
-              name: Пчелица словарица
         fit-test:
           lesson_groups:
             required:
               display_name: Преглед
         frozen-2018:
-          stages:
-            Artist:
-              name: Уметник
           lessons:
             Artist:
               name: Уметник
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Уметник
           lessons:
             Artist:
               name: Уметник
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Уметник
           lessons:
             Artist:
               name: Уметник
@@ -2258,17 +1390,6 @@ sr:
             csp_functions:
               display_name: Функције
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: Изградња темеља
-            Conditionals with Cards:
-              name: Услови са картама
-            The Artist:
-              name: Уметник
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_variables:
               display_name: Променљиве
@@ -2279,12 +1400,27 @@ sr:
             csf_digcit:
               display_name: Дигитално држављанство
           lessons:
+            Building a Foundation:
+              name: Изградња темеља
+            Conditionals with Cards:
+              name: Услови са картама
+            The Artist:
+              name: Уметник
             Internet:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Relay Programming:
@@ -2297,28 +1433,13 @@ sr:
               name: Binarne slike
             Artist Binary:
               name: Уметник Бинарно
+        coursee-2019:
           lesson_groups:
-            csf_events:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
             csf_digcit:
               display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
           lessons:
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Услови са картама
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
-            Digital Citizenship:
-              name: Дигитално држављанство
-        coursee-2019:
-          stages:
             Building a Foundation:
               name: Изградња темеља
             Conditionals with Cards:
@@ -2327,30 +1448,7 @@ sr:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_functions:
-              display_name: Функције
-          lessons:
-            Conditionals:
-              name: Кондиционали
         express-2019:
-          stages:
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Услови са картама
-            Binary Bracelets:
-              name: Бинарне наруквице
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_loops:
               display_name: Петље
@@ -2362,21 +1460,44 @@ sr:
               display_name: Променљиве
             csf_for_loops:
               display_name: Бројачке петље
+          lessons:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            Binary Bracelets:
+              name: Бинарне наруквице
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
         andrea-test:
-          stages:
-            'null':
-              name: 'ништа'
           lesson_groups:
             required:
               display_name: Преглед
+          lessons:
+            'null':
+              name: 'ништа'
         coursec-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Стварни алгоритми: Папирни авиони'
             'Events: The Big Event':
               name: Велики догађај
             Binary Bracelets:
               name: Бинарне наруквице
+        coursea-2019:
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2385,14 +1506,11 @@ sr:
             csf_events:
               display_name: Догађаји
           lessons:
-            Binary Bracelets:
-              name: Бинарне наруквице
-        coursea-2019:
-          stages:
             'Programming: Happy Maps':
               name: Веселе мапе
             Going Places Safely:
               name: Сигурна путања
+        courseb-2019:
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2401,69 +1519,35 @@ sr:
             csf_events:
               display_name: Догађаји
           lessons:
-            Going Places Safely:
-              name: Сигурна путања
-        courseb-2019:
-          stages:
             Move It, Move It:
               name: Помери га, помери
             Your Digital Footprint:
               name: Твој дигитални траг
             'Loops: Getting Loopy':
               name: Запетљанције
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-          lessons:
-            Your Digital Footprint:
-              name: Твој дигитални траг
-            Move It, Move It:
-              name: Помери га, помери
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Помери га, помери
-            Your Digital Footprint:
-              name: Твој дигитални траг
-            Spelling Bee:
-              name: Пчелица словарица
           lesson_groups:
             csf_loops:
               display_name: Петље
             csf_events:
               display_name: Догађаји
           lessons:
+            Move It, Move It:
+              name: Помери га, помери
+            Your Digital Footprint:
+              name: Твој дигитални траг
             Spelling Bee:
               name: Пчелица словарица
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Прави алгоритми: Засади семе'
         csd2-2019:
-          stages:
-            Lists:
-              name: Листе
           lessons:
             Lists:
               name: Листе
         csd3-2019:
           description_short: "Programming"
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           lessons:
             Variables:
               name: Променљиве
@@ -2474,9 +1558,6 @@ sr:
             Functions:
               name: Функције
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Функције са параметрима
           lessons:
             Functions with Parameters:
               name: Функције са параметрима
@@ -2491,18 +1572,12 @@ sr:
             required:
               display_name: Преглед
         csp1-2019:
-          stages:
-            The Internet:
-              name: Интернет
           lessons:
             The Internet:
               name: Интернет
         csp3-2019:
           description_short: Programming
         csp5-2019:
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
@@ -2511,20 +1586,13 @@ sr:
             required:
               display_name: Преглед
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Услови са картама
-            Building a Foundation:
-              name: Изградња темеља
           lessons:
-            Building a Foundation:
-              name: Изградња темеља
             Crowdsourcing:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Услови са картама
+            Building a Foundation:
+              name: Изградња темеља
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2588,7 +1656,7 @@ sr:
             csp_functions:
               display_name: Функције
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Графиконско - Папирно Програмирање
         csp5-pilot:
@@ -2608,20 +1676,11 @@ sr:
             required:
               display_name: Преглед
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Листе
         csd3-pilot:
           description_short: "Programming"
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           lessons:
             Variables:
               name: Променљиве
@@ -2690,26 +1749,13 @@ sr:
             required:
               display_name: Преглед
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Петље
-            Conditionals:
-              name: Кондиционали
-            Events:
-              name: Догађаји
-            Functions:
-              name: Функције
-            Variables:
-              name: Променљиве
-            For Loops:
-              name: Бројачке петље
           lessons:
             Loops:
               name: Петље
-            Events:
-              name: Догађаји
             Conditionals:
               name: Кондиционали
+            Events:
+              name: Догађаји
             Functions:
               name: Функције
             Variables:
@@ -2725,15 +1771,10 @@ sr:
             csp_functions:
               display_name: Функције
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: Кондиционали
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Услови са картама
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2747,9 +1788,6 @@ sr:
             Conditionals with Cards:
               name: Услови са картама
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Кондиционали
           lesson_groups:
             csf_loops:
               display_name: Петље
@@ -2763,9 +1801,6 @@ sr:
             Conditionals:
               name: Кондиционали
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Кондиционали
           lesson_groups:
             csf_loops:
               display_name: Петље
@@ -2797,42 +1832,23 @@ sr:
             csp_loops:
               display_name: Петље
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Функције са параметрима
           lessons:
             Functions with Parameters:
               name: Функције са параметрима
         csd3-2020:
           description_short: "Programming"
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
-            Text:
-              name: текст
           lessons:
             Variables:
               name: Променљиве
-            Text:
-              name: текст
             Conditionals:
               name: Кондиционали
             Velocity:
               name: Брзина
             Functions:
               name: Функције
+            Text:
+              name: текст
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Сигурна путања
-            'Programming: Happy Maps':
-              name: Веселе мапе
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2840,14 +1856,27 @@ sr:
               display_name: Петље
             csf_events:
               display_name: Догађаји
+          lessons:
+            Going Places Safely:
+              name: Сигурна путања
+            'Programming: Happy Maps':
+              name: Веселе мапе
         courseb-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+          lessons:
             Your Digital Footprint:
               name: Твој дигитални траг
             Move It, Move It:
               name: Помери га, помери
             'Loops: Getting Loopy':
               name: Запетљанције
+        coursec-2020:
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2856,26 +1885,21 @@ sr:
             csf_events:
               display_name: Догађаји
           lessons:
-            Move It, Move It:
-              name: Помери га, помери
-        coursec-2020:
-          stages:
             Binary Bracelets:
               name: Бинарне наруквице
             'Events: The Big Event':
               name: Велики догађај
+        coursed-2020:
           lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
             csf_events:
               display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
           lessons:
-            Binary Bracelets:
-              name: Бинарне наруквице
-        coursed-2020:
-          stages:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Relay Programming:
@@ -2888,39 +1912,13 @@ sr:
               name: Уметник Бинарно
             Digital Citizenship:
               name: Дигитално држављанство
-          lesson_groups:
-            csf_events:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_digcit:
-              display_name: Дигитално држављанство
-          lessons:
-            Relay Programming:
-              name: Relay programming
-            Conditionals with Cards:
-              name: Услови са картама
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Уметник Бинарно
         coursee-2020:
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
             csf_functions:
               display_name: Функције
-          lessons:
-            Conditionals:
-              name: Кондиционали
         coursef-2020:
-          stages:
-            Internet:
-              name: Интернет
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2931,6 +1929,8 @@ sr:
           lessons:
             Internet:
               name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2944,9 +1944,6 @@ sr:
             csf_for_loops:
               display_name: Бројачке петље
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Пчелица словарица
           lesson_groups:
             csf_loops:
               display_name: Петље
@@ -2957,52 +1954,52 @@ sr:
               name: Пчелица словарица
         csp3-virtual:
           description_short: Programming
-        csd3-virtual:
-          description_short: "Programming"
-          stages:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
-          lessons:
-            Variables:
-              name: Променљиве
-            Conditionals:
-              name: Кондиционали
         csp5-virtual:
-          stages:
+          lessons:
             While Loops:
               name: Понављања са условима
             Variables:
               name: Променљиве
-          lessons:
-            Variables:
-              name: Променљиве
         virtual-holding-place:
-          stages:
-            Velocity:
-              name: Брзина
-            Functions:
-              name: Функције
           lessons:
             Velocity:
               name: Брзина
             Functions:
               name: Функције
         code-break:
-          stages:
+          lessons:
             Algorithms:
               name: Алгоритми
             Events:
               name: Догађаји
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Понављања са условима
           lessons:
             While Loops:
               name: Понављања са условима
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Петље
+            Events:
+              name: Догађаји
+            Conditionals:
+              name: Кондиционали
+            Functions:
+              name: Функције
+            Variables:
+              name: Променљиве
+            For Loops:
+              name: Бројачке петље
+        csd3-virtual:
+          description_short: "Programming"
+          lessons:
+            Variables:
+              name: Променљиве
+            Text:
+              name: текст
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције

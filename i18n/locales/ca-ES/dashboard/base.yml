@@ -254,6 +254,8 @@ ca:
       help_us: "Ajuda'ns"
       teach: "Ensenya"
       about: "Quant a"
+      legal_privacy: "Política de privadesa"
+      legal_tos: "Condicions d'ús"
     user:
       classroom: 'Pàgina d''inici de mestre'
       district_dashboard: 'Quadre de comandament de districte'

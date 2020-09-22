@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "「{animationName}」というアニメーションをアップロードすることができません。インターネット接続を確かめてページをリロードしてみてください。問題が続いたら、アニメーションが壊れている可能性があります。その場合は、アニメーションを外してください。",
   "reinfFeedbackMsg": "やった！「進め」をクリックして次のレベルへ行きましょう。",
   "shareGame": "あなたのゲームを共有：",

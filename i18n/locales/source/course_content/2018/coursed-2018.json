@@ -1366,7 +1366,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -1378,7 +1381,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1393,7 +1399,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1408,7 +1417,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1424,7 +1436,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1439,7 +1454,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1454,7 +1472,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1470,7 +1491,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1481,7 +1505,10 @@
     "short_instructions": "Finish the code to create this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1526,7 +1553,10 @@
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits!",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1538,7 +1568,10 @@
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1553,7 +1586,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"

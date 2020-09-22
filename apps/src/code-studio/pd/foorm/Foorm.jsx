@@ -45,6 +45,10 @@ export default class Foorm extends React.Component {
       prev: 'sv_prev_button foorm-button',
       next: 'sv_next_button foorm-button foorm-button-right',
       complete: 'sv_complete_btn foorm-button'
+    },
+    row: 'sv_row foorm-adjust-row',
+    dropdown: {
+      control: 'sv_q_dropdown_control foorm-adjust-dropdown-height'
     }
   };
 
@@ -137,6 +141,8 @@ export default class Foorm extends React.Component {
           css={this.customCss}
           requiredText={'(Required)'}
           showCompletedPage={false}
+          maxTextLength={4000}
+          maxOthersLength={4000}
         />
         {this.state.statusMessage && (
           <div style={styles.statusMessage}>

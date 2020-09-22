@@ -443,6 +443,8 @@ bs-BA:
         content1: opis ovdje
       Begin planning your project_2018_2019:
         content1: opis ovdje
+      Begin planning your project_2018_2019_2020:
+        content1: opis ovdje
       CSD Header Size MC:
         answers:
         - {}
@@ -1119,7 +1121,23 @@ bs-BA:
         - feedback: Netačno
         questions:
         - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: Netačno
+        questions:
+        - {}
       behaviors 4 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: Netačno
+        questions:
+        - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - {}
@@ -1151,6 +1169,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - {}
@@ -1168,6 +1194,14 @@ bs-BA:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1199,6 +1233,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1216,6 +1258,14 @@ bs-BA:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1247,6 +1297,14 @@ bs-BA:
         - text: Ne znam
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ne znam
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1264,6 +1322,14 @@ bs-BA:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1295,6 +1361,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - {}
@@ -1319,6 +1393,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1336,6 +1418,14 @@ bs-BA:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1375,6 +1465,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1399,6 +1497,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
@@ -1416,6 +1522,14 @@ bs-BA:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1455,6 +1569,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1487,6 +1609,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1504,6 +1634,14 @@ bs-BA:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1535,6 +1673,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1552,6 +1698,14 @@ bs-BA:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1599,6 +1753,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1616,6 +1778,14 @@ bs-BA:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1647,6 +1817,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
@@ -1664,6 +1842,14 @@ bs-BA:
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1696,6 +1882,14 @@ bs-BA:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
@@ -1743,6 +1937,14 @@ bs-BA:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1783,6 +1985,20 @@ bs-BA:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: opis ovdje
+      csf_password_power-up:
+        content1: opis ovdje
+      csf_putting_a_stop_to_online_meanness:
+        content1: opis ovdje
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1800,6 +2016,14 @@ bs-BA:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - {}

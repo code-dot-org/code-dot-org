@@ -9,30 +9,7 @@ import {Button} from 'react-bootstrap';
 import Foorm from './Foorm';
 import FontAwesome from '../../../templates/FontAwesome';
 
-const sampleSurveyData = {
-  facilitators: [
-    {
-      facilitator_id: 1,
-      facilitator_name: 'Alice',
-      facilitator_position: 1
-    },
-    {
-      facilitator_id: 2,
-      facilitator_name: 'Bob',
-      facilitator_position: 2
-    },
-    {
-      facilitator_id: 3,
-      facilitator_name: 'Chris',
-      facilitator_position: 3
-    }
-  ],
-  workshop_course: 'Sample Course',
-  workshop_subject: 'Sample Subject',
-  regional_partner_name: 'Regional Partner A',
-  is_virtual: false,
-  num_facilitators: 3
-};
+const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
 const styles = {
   errorMessage: {
@@ -56,13 +33,58 @@ class FoormEditor extends React.Component {
 
     this.state = {
       formKey: 0,
-      formPreviewQuestions: null
+      formPreviewQuestions: null,
+      num_facilitators: 2,
+      workshop_course: 'CS Principles',
+      workshop_subject: '5-day Summer',
+      regional_partner_name: 'Regional Partner A',
+      is_virtual: true,
+      facilitators: [
+        {
+          facilitator_id: 1,
+          facilitator_name: 'Alice',
+          facilitator_position: 1
+        },
+        {
+          facilitator_id: 2,
+          facilitator_name: 'Bob',
+          facilitator_position: 2
+        }
+      ],
+      day: 1,
+      is_friday_institute: false,
+      workshop_agenda: 'module1'
     };
   }
 
   componentDidMount() {
     this.props.populateCodeMirror();
   }
+
+  updateFacilitators = e => {
+    if (this.state.num_facilitators !== e.target.value) {
+      let num_facilitators = e.target.value;
+      let facilitators = [];
+      for (var i = 0; i < num_facilitators; i++) {
+        let facilitator_name = '';
+        if (i < facilitator_names.length) {
+          facilitator_name = facilitator_names[i];
+        } else {
+          facilitator_name =
+            facilitator_names[i % facilitator_names.length] + '_' + i;
+        }
+        facilitators.push({
+          facilitator_id: i,
+          facilitator_name: facilitator_name,
+          facilitator_position: i + 1
+        });
+      }
+      this.setState({
+        num_facilitators: num_facilitators,
+        facilitators: facilitators
+      });
+    }
+  };
 
   previewFoorm = () => {
     // fill in form with any library items
@@ -106,6 +128,85 @@ class FoormEditor extends React.Component {
           </div>
         ) : (
           <div>
+            <form>
+              <h3>Survey Variables</h3>
+              <label>
+                workshop_course <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_course}
+                  onChange={e =>
+                    this.setState({workshop_course: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                workshop_subject <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_subject}
+                  onChange={e =>
+                    this.setState({workshop_subject: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                num_facilitators (will auto-generate facilitator names)
+                <br />
+                <input
+                  type="number"
+                  value={this.state.num_facilitators}
+                  onChange={this.updateFacilitators}
+                />
+              </label>
+              <label>
+                regional_partner_name <br />
+                <input
+                  type="text"
+                  value={this.state.regional_partner_name}
+                  onChange={e =>
+                    this.setState({regional_partner_name: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                is_virtual <br />
+                <input
+                  type="boolean"
+                  value={this.state.is_virtual}
+                  onChange={e => this.setState({is_virtual: e.target.value})}
+                />
+              </label>
+              <label>
+                is_friday_institute <br />
+                <input
+                  type="boolean"
+                  value={this.state.is_friday_institute}
+                  onChange={e =>
+                    this.setState({is_friday_institute: e.target.value})
+                  }
+                />
+              </label>
+
+              <label>
+                day <br />
+                <input
+                  type="number"
+                  value={this.state.day}
+                  onChange={e => this.setState({day: e.target.value})}
+                />
+              </label>
+              <label>
+                workshop_agenda <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_agenda}
+                  onChange={e =>
+                    this.setState({workshop_agenda: e.target.value})
+                  }
+                />
+              </label>
+            </form>
             <Button onClick={this.previewFoorm}>Preview</Button>
             {this.state.formPreviewQuestions && (
               // key allows us to force re-render when preview is clicked
@@ -115,7 +216,17 @@ class FoormEditor extends React.Component {
                 formVersion={0}
                 submitApi={'/none'}
                 key={`form-${this.state.formKey}`}
-                surveyData={sampleSurveyData}
+                surveyData={{
+                  facilitators: this.state.facilitators,
+                  num_facilitators: this.state.num_facilitators,
+                  workshop_course: this.state.workshop_course,
+                  workshop_subject: this.state.workshop_subject,
+                  regional_partner_name: this.state.regional_partner_name,
+                  is_virtual: this.state.is_virtual,
+                  day: this.state.day,
+                  is_friday_institute: this.state.is_friday_institute,
+                  workshop_agenda: this.state.workshop_agenda
+                }}
               />
             )}
           </div>

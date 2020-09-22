@@ -1,4 +1,6 @@
-login_required 'true'
-lesson 'Middle_School_Hackathon'
+login_required true
+
+lesson 'Middle_School_Hackathon', display_name: 'Middle_School_Hackathon'
 level 'Middle School Hackathon Pt 1'
 level 'Middle School Hackathon Pt 2'
+

@@ -62,10 +62,14 @@
      "rows": 2
     },
     {
+     "type": "html",
+     "name": "question2",
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Please be thoughtful in your responses for each individual.</p>"
+    },
+    {
      "type": "paneldynamic",
      "name": "facilitators",
-     "title": "Facilitator Feedback",
-     "description": "Please leave feedback for your facilitator(s).",
+     "title": "Facilitators",
      "templateElements": [
       {
        "type": "comment",

@@ -7,6 +7,15 @@ export const commands = {
     /* no-op */
   },
 
+  getTime(unit) {
+    if (unit === 'seconds') {
+      return this.World.seconds || 0;
+    } else if (unit === 'frames') {
+      return this.World.frameCount || 0;
+    }
+    return 0;
+  },
+
   hideTitleScreen() {
     coreLibrary.title = coreLibrary.subtitle = '';
   },

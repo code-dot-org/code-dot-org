@@ -11,6 +11,24 @@ ro:
   campaign_date_full: 5-11 decembrie
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 decembrie, 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Învață informatica. Schimbă lumea!
   hoc2019_header_line1_mobile: Învață informatica.
   hoc2019_header_line2_mobile: Schimbă lumea!
@@ -170,8 +188,10 @@ ro:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -348,6 +368,7 @@ ro:
   how_to_nav_companies: Pentru companii
   how_to_nav_afterschool_educators: Pentru cadrele didactice din After-School
   how_to_nav_volunteers: Pentru voluntari
+  how_to_nav_virtual: For virtual events
   whats_next_header: Ce urmează?
   whats_next_description: Vă vom trimite materialele şi sfaturi utile pentru evenimentul
     dumneavoastră. <a href='http://code.org/learn'> Incercati tutorialele actuale</a>
@@ -6964,7 +6985,7 @@ ro:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Toate browserele moderne
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Toate browserele moderne
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Toate browserele moderne
@@ -7162,7 +7183,7 @@ ro:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Toate browserele moderne
   tutorial_csfirstname_string_platforms: Toate browserele moderne
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Toate browserele moderne
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -7173,7 +7194,7 @@ ro:
   tutorial_groklearningpython_string_platforms: Toate browserele moderne
   tutorial_htmltimetravel_string_platforms: Toate browserele moderne
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: Toate browserele moderne
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -8503,7 +8524,7 @@ ro:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8720,9 +8741,9 @@ ro:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9134,7 +9155,8 @@ ro:
     iPad
   tutorial_scratchcartoon_string_platforms: Toate browserele moderne, tableta Android,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Toate browserele moderne, tabletă Android,
+    iPad, telefon Android, iPhone
   tutorial_bananatales_string_platforms: Toate browserele moderne
   tutorial_scratchtales_string_platforms: Toate browserele moderne, tableta Android,
     iPad
@@ -9162,7 +9184,7 @@ ro:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Toate browserele moderne, tableta Android,
     iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
@@ -9512,3 +9534,4 @@ ro:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

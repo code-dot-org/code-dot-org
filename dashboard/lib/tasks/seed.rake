@@ -55,8 +55,19 @@ namespace :seed do
     Foorm::Form.setup
   end
 
+  timed_task foorms: :environment do
+    Foorm::LibraryQuestion.setup
+    Foorm::Form.setup
+  end
+
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
-  UI_TEST_SCRIPTS = [
+  SPECIAL_UI_TEST_SCRIPTS = [
+    'ui-test-script-in-course-2017',
+    'ui-test-script-in-course-2019',
+    'ui-test-versioned-script-2017',
+    'ui-test-versioned-script-2019'
+  ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
+  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
     'algebra',
     'allthehiddenthings',
@@ -80,6 +91,7 @@ namespace :seed do
     'coursea-2019',
     'coursec-2019',
     'coursee-2019',
+    'coursea-2020',
     'csd3-2019',
     'csp1-2017',
     'csp2-2017',
@@ -110,6 +122,16 @@ namespace :seed do
     'csp-explore-2019',
     'csp-create-2019',
     'csppostap-2019',
+    'csp1-2020',
+    'csp2-2020',
+    'csp3-2020',
+    'csp4-2020',
+    'csp5-2020',
+    'csp6-2020',
+    'csp7-2020',
+    'csp8-2020',
+    'csp9-2020',
+    'csp10-2020',
     'dance',
     'events',
     'express-2017',
@@ -189,15 +211,18 @@ namespace :seed do
   end
 
   timed_task courses: :environment do
-    Dir.glob(Course.file_path('**')).sort.map do |path|
-      Course.load_from_path(path)
+    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
+      UnitGroup.load_from_path(path)
     end
   end
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csp-2019).each do |course_name|
-      Course.load_from_path("config/courses/#{course_name}.course")
+    %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
+      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+    end
+    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
+      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
 
@@ -374,7 +399,7 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards].freeze
+  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards].freeze
   UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :standards].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
@@ -385,8 +410,8 @@ namespace :seed do
   timed_task ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards]
+  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards]
+  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end

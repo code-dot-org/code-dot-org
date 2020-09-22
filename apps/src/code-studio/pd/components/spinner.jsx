@@ -8,14 +8,19 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class Spinner extends React.Component {
   static propTypes = {
-    size: PropTypes.oneOf(['small', 'large'])
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    style: PropTypes.object
   };
 
   render() {
+    const {size, style} = this.props;
+    let displaySize =
+      size === 'small' ? '' : size === 'medium' ? 'fa-2x' : 'fa-3x';
     return (
       <FontAwesome
+        style={style}
         icon="spinner"
-        className={`fa-pulse ${this.props.size !== 'small' ? 'fa-3x' : ''}`}
+        className={`fa-pulse ${displaySize}`}
       />
     );
   }

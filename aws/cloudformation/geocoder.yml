@@ -125,7 +125,10 @@ Resources:
       ContainerDefinitions:
       - Name: freegeoip
         Essential: true
-        Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/freegeoip:latest"
+        # Image was built from https://github.com/voyagin/freegeoip and contains our free MaxMind License Key.
+        # A copy of the key is stored in AWS Secrets Manager, and credentials to login to the MaxMind web console
+        # to provision a new key are shared securely within the organization.
+        Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/vgeoip:latest"
         MemoryReservation: 512
         LogConfiguration:
           LogDriver: awslogs
@@ -157,6 +160,61 @@ Resources:
             - !ImportValue VPC-SubnetB
             - !ImportValue VPC-SubnetC
       TaskDefinition: !Ref FreegeoipTaskDefinition
+  HTTPErrorRateAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
+      AlarmDescription: Send low priority page if percent HTTP requests to geocoder service exceeds 5%
+      AlarmName: production_geocoder_http_error_rate
+      ComparisonOperator: GreaterThanThreshold
+      Metrics:
+        - Id: total
+          Label: RequestCount
+          MetricStat:
+            Metric:
+              Dimensions:
+                - Name: LoadBalancer
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
+              MetricName: NewConnectionCount
+              Namespace: 'AWS/ApplicationELB'
+            Period: 300
+            Stat: Sum
+            Unit: Count
+          ReturnData: false
+        - Id: target_fail
+          Label: HTTPCode_Target_5XX_Count
+          MetricStat:
+            Metric:
+              Dimensions:
+                - Name: LoadBalancer
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
+              MetricName: HTTPCode_Target_5XX_Count
+              Namespace: 'AWS/ApplicationELB'
+            Period: 300
+            Stat: Sum
+            Unit: Count
+          ReturnData: false
+        - Id: elb_fail
+          Label: HTTPCode_ELB_5XX_Count
+          MetricStat:
+            Metric:
+              Dimensions:
+                - Name: LoadBalancer
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
+              MetricName: HTTPCode_ELB_5XX_Count
+              Namespace: 'AWS/ApplicationELB'
+            Period: 300
+            Stat: Sum
+            Unit: Count
+          ReturnData: false
+        - Id: fail_rate
+          Label: Percent Request Failure
+          Expression: '100*(elb_fail+target_fail)/total'
+          ReturnData: true
+      EvaluationPeriods: 5
+      Threshold: 5
+      TreatMissingData: missing
 Outputs:
   EcsService:
     Value: !Ref FreegeoipService

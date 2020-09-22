@@ -281,6 +281,8 @@ sq:
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       project_gallery: Projekte
       educate_hoc: Ora e Kodimit
+      legal_privacy: Rregullat e Privatësisë
+      legal_tos: Kushtet e shërbimit
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -878,6 +880,7 @@ sq:
       email: Email
       school_name: Emri i shkollës
       school_country: Qyteti i shkollës
+      colombian_school_name: Emri i shkollës
     form_entries:
       gender:
         male: Mashkull

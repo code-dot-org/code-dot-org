@@ -976,6 +976,11 @@ zh-TW:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: 在 {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
@@ -1009,6 +1014,8 @@ zh-TW:
         text: 可拖曳
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_getAllSprites:
+        text: 所有小怪
       gamelab_getProp:
         text: 角色 {SPRITE} 的 {PROPERTY}
         options:
@@ -1025,8 +1032,46 @@ zh-TW:
           CHOICE:
             '"this"': 這個
             '"other"': 其它
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': " 向左"
+            '"right"': 向右
+            '"space"': 太空
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: 角色 {SPRITE} 碰到邊緣？
       gamelab_isTouchingSprite:
@@ -1073,6 +1118,13 @@ zh-TW:
             '"z"': z
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 東
+            '"South"': 南
+            '"West"': 西
       gamelab_locationMouse:
         text: 鼠標位置
       gamelab_locationOf:
@@ -1200,6 +1252,8 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_subjectSpritePointer:
+        text: 點擊 {SPRITE}
       gamelab_tumbling:
         text: 翻滾
       gamelab_turn:

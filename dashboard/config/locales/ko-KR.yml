@@ -321,6 +321,8 @@ ko:
       help_us: 도움주기
       teach: 가르치기
       about: 소개
+      legal_privacy: 개인정보보호 정책
+      legal_tos: 이용 약관
     user:
       classroom: 선생님 홈페이지
       district_dashboard: 대시보드 구역
@@ -932,6 +934,7 @@ ko:
       email: 이메일
       school_name: 학교 이름
       school_country: 학교 국가정보
+      colombian_school_name: 학교 이름
     form_entries:
       gender:
         male: 남

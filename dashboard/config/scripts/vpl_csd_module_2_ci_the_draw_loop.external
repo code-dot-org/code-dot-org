@@ -1,0 +1,19 @@
+name 'VPL - CSD - Module 2 CI - The Draw Loop'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation: U3L11 The Draw Loop
+
+## Overview
+
+In the following activities, you will engage in activities that your students will complete as a part of Unit 3 Lesson 11: The Draw Loop. As you work through these activities to gain a better understanding of Unit 3 content, also think about your role as the teacher. How will you support student learning during this lesson? 
+
+## Investigation Goal
+
+* Use a draw loop to add movement to sprites in Game Lab 
+
+
+![](https://images.code.org/9d93ff1f5090f4de3e17e56bd978cead-image-1594949071192.23.07 PM.png)
+MARKDOWN

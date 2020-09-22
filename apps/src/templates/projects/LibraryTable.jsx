@@ -11,6 +11,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {unpublishProjectLibrary} from './projectsRedux';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import Button from '@cdo/apps/templates/Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {reload} from '@cdo/apps/utils';
 
 export const COLUMNS = {
@@ -43,6 +44,13 @@ const styles = {
   },
   centeredCell: {
     textAlign: 'center'
+  },
+  dialog: {
+    padding: '0 15px 8px 15px'
+  },
+  dialogBody: {
+    fontSize: 18,
+    color: color.charcoal
   }
 };
 
@@ -84,7 +92,8 @@ class LibraryTable extends React.Component {
         direction: 'desc',
         position: 0
       }
-    }
+    },
+    unpublishFailedChannel: null
   };
 
   getSortingColumns = () => {
@@ -226,11 +235,16 @@ class LibraryTable extends React.Component {
         __useDeprecatedTag
         text={i18n.unpublish()}
         color={Button.ButtonColor.orange}
-        onClick={() =>
-          this.props.unpublishProjectLibrary(rowData.channel, error =>
-            error ? console.error(error) : reload()
-          )
-        }
+        onClick={() => {
+          this.setState({unpublishFailedChannel: null});
+          this.props.unpublishProjectLibrary(rowData.channel, error => {
+            if (error) {
+              this.setState({unpublishFailedChannel: rowData.channel});
+            } else {
+              reload();
+            }
+          });
+        }}
       />
     );
   };
@@ -260,9 +274,12 @@ class LibraryTable extends React.Component {
     })(libraries);
 
     const hasLibraries = libraries.length > 0;
+    const unpublishFailedLibrary = libraries.find(
+      library => library.channel === this.state.unpublishFailedChannel
+    );
 
     return (
-      <div>
+      <div className="ui-test-library-table">
         {hasLibraries && (
           <Table.Provider columns={columns} style={tableLayoutStyles.table}>
             <Table.Header />
@@ -271,6 +288,21 @@ class LibraryTable extends React.Component {
         )}
         {!hasLibraries && (
           <h3 style={{textAlign: 'center'}}>{i18n.noLibraries()}</h3>
+        )}
+        {unpublishFailedLibrary && (
+          <BaseDialog
+            isOpen
+            handleClose={() => this.setState({unpublishFailedChannel: null})}
+            style={styles.dialog}
+            useUpdatedStyles
+          >
+            <h1>{i18n.unpublishFailureTitle()}</h1>
+            <p style={styles.dialogBody}>
+              {i18n.unpublishFailureBody({
+                libraryName: unpublishFailedLibrary.name
+              })}
+            </p>
+          </BaseDialog>
         )}
       </div>
     );

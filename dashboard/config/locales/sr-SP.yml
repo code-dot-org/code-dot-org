@@ -265,6 +265,8 @@ sr:
       about_faqs: Често постављана питања
       learn: Научи
       help_us: Помози нам
+      legal_privacy: Политика приватности
+      legal_tos: Услови коришћења
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: Регионална огласна табла
@@ -487,6 +489,7 @@ sr:
     form_labels:
       email: Електронска пошта
       school_name: Име школе
+      colombian_school_name: Име школе
     form_entries:
       gender:
         male: Мушко

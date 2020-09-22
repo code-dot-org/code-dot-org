@@ -11,6 +11,24 @@ ka:
   campaign_date_full: 4-10 დეკემბერი
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 დეკემბერი, 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -171,8 +189,10 @@ ka:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -345,6 +365,7 @@ ka:
   how_to_nav_companies: კომპანიებს
   how_to_nav_afterschool_educators: სკოლის შემდგომი პერიოდის პედაგოგებისთვის
   how_to_nav_volunteers: მოხალისეებს
+  how_to_nav_virtual: For virtual events
   whats_next_header: და შემდეგ?
   whats_next_description: თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა
     და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება და მათი გავლა
@@ -7296,7 +7317,7 @@ ka:
   tutorial_groklearningpython_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_htmltimetravel_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: უსადენო
+  tutorial_appytappin_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_icipher_string_platforms: უსადენო
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: უსადენო
@@ -8630,7 +8651,7 @@ ka:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8847,9 +8868,9 @@ ka:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9261,8 +9282,8 @@ ka:
     iPad
   tutorial_scratchcartoon_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android ტაბლეტი, iPad, Android ტელეფონი,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
+    iPad, iPhone
   tutorial_bananatales_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_scratchtales_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
@@ -9644,3 +9665,4 @@ ka:
   some: ზოგიერთი
   all: ყველა
   dont_know: არ ვიცი
+  language_label: Language

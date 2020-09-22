@@ -83,6 +83,14 @@ class Census::StateCsOffering < ApplicationRecord
   STATES_USING_FORMAT_V2_IN_2017_18 = %w(
     CA
     HI
+    IL
+    MA
+    MD
+    NE
+    NY
+    OR
+    PA
+    VA
   ).freeze
 
   # The following states use the "V2" format for CSV files in 2018-2019.
@@ -90,7 +98,6 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AR
     CA
-    CO
     CT
     FL
     GA
@@ -101,7 +108,6 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MD
-    ME
     MN
     MO
     MS
@@ -131,6 +137,7 @@ class Census::StateCsOffering < ApplicationRecord
   # For such states, we specify which update of the 2017-2018 file is in the V2
   # format.
   UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18 = {
+    NJ: 2,
     RI: 2
   }.freeze
 
@@ -142,7 +149,6 @@ class Census::StateCsOffering < ApplicationRecord
     DC: 2,
     DE: 2,
     NH: 2,
-    NJ: 2,
     VT: 2
   }.freeze
 
@@ -163,18 +169,9 @@ class Census::StateCsOffering < ApplicationRecord
 
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
-  # that the state data is conplete for the following states so we do
+  # that the state data is complete for the following states so we do
   # not want to treat the lack of data as a no for those.
-  INFERRED_NO_EXCLUSION_LIST = %w(
-    CO
-    DE
-    ID
-    ME
-    MI
-    OH
-    TN
-    TX
-  ).freeze
+  INFERRED_NO_EXCLUSION_LIST = [].freeze
 
   def self.infer_no(state_code)
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
@@ -1469,7 +1466,7 @@ class Census::StateCsOffering < ApplicationRecord
         courses = get_courses(state_code, row_hash, school_year, update)
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
-        if school && state_school_id
+        if school && state_school_id && courses
           unless dry_run
             courses.each do |course|
               find_or_create_by!(
@@ -1481,11 +1478,12 @@ class Census::StateCsOffering < ApplicationRecord
           end
           succeeded += 1
         else
-          skipped += 1
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
-          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1} "\
-            "unknown state school id #{state_school_id}"
+          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1}, "\
+            "unknown state school id #{state_school_id}" \
+            "#{courses.nil? ? 'and/or found no CS courses' : ''}"
+          skipped += 1
         end
       end
 
@@ -1562,26 +1560,26 @@ class Census::StateCsOffering < ApplicationRecord
         school_year = 2017
         update = 1
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+        seed_from_csv(state_code, school_year, update, "config/" + filename)
       end
 
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18.each do |state_code, update|
         school_year = 2017
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "config/" + filename)
       end
 
       STATES_USING_FORMAT_V2_IN_2018_19.each do |state_code|
         school_year = 2018
         update = 1
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code, school_year, update, "config/" + filename)
       end
 
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19.each do |state_code, update|
         school_year = 2018
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "config/" + filename)
       end
     else
       seed_from_s3

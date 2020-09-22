@@ -391,6 +391,8 @@ sk:
       help_us: Pomôžte nám
       teach: Vyučujte
       about: O nás
+      legal_privacy: Zásady ochrany súkromia
+      legal_tos: Podmienky používania služby
     user:
       classroom: Domovská stránka učiteľa
       district_dashboard: Prehľad pre školský okres
@@ -901,6 +903,10 @@ sk:
     open_response_body: Ďakujeme za Vašu reakciu!
     correct_title: Správne
     correct_body: To je správna odpoveď.
+  lesson_extras:
+    bonus_level: |-
+      Tekvica označuje miesto, kde by si mal :otočiť sa vpravo". V opačnom prípade pokračuj ďalej, ale nezabudni pozbierať všetok šalát alebo kukuricu.
+      *Každá skrytá plodina má iba jednu kukuricu alebo šalát.*
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -1181,6 +1187,8 @@ sk:
       school_name: Názov školy
       school_city: Mesto
       school_country: Krajina
+      colombian_school_city: Mesto
+      colombian_school_name: Názov školy
       ages: Ktoré ročníky vyučujute tento rok?
       subjects: Ktoré predmety vyučujute tento rok?
       resources: Ktoré z nasledovných zdrojov používate pri výučbe informatiky?

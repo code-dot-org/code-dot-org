@@ -1,0 +1,7 @@
+name 'CSD Games Properties practice_2020_virtual_2020'
+display_name 'Sprite Properties'
+description 'Try out the sprite properties you have learned here'
+
+sublevels
+level 'CSD Games bubble choice properties scale_virtual_2020'
+level 'CSD Games bubble choice properties rotation_virtual_2020'

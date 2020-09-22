@@ -45,11 +45,11 @@
     "makerlab_enabled": "false",
     "long_instructions": "This program has a scope bug created by accidentally using a **local variable**.\r\n\r\n# Do This\r\n\r\n* Read the yellow warning. Why might you see this when you create a local variable?\r\n* Run this program once. Click the \"+1\" button to see how it works now.\r\n* Remove the `var` command inside the `onEvent()` to remove the local variable.",
     "parent_level_id": 15834,
-    "map_reference": "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
+    "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
     "mini_rubric": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
-      "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
     ],
     "preload_asset_list": null,
     "encrypted": "false",

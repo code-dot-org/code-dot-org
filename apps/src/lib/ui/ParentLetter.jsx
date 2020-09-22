@@ -11,6 +11,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
   'https://medium.com/@codeorg/code-orgs-commitment-to-student-privacy-earns-accolades-cae1cca35632';
+const RESEARCH_ARTICLE_URL =
+  'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
 
@@ -121,14 +123,12 @@ class ParentLetter extends React.Component {
               accountEditLink: studio('/users/edit')
             })}
           />
-          <h1>{i18n.parentLetterCodeBreak()}</h1>
+          <h1>{i18n.parentLetterWhy()}</h1>
           <SafeMarkdown
-            markdown={i18n.parentLetterCodeBreakDetails({
-              codebreakLink: pegasus('/break')
+            markdown={i18n.parentLetterWhyDetails({
+              researchLink: RESEARCH_ARTICLE_URL
             })}
           />
-          <h1>{i18n.parentLetterWhy()}</h1>
-          <p>{i18n.parentLetterWhyDetails()}</p>
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({

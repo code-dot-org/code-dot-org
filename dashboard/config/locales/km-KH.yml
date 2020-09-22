@@ -282,6 +282,8 @@ km:
       help_us: ជួយពួកយើង
       teach: បង្រៀន
       about: អំពី
+      legal_privacy: សិទ្ធបុគ្គល
+      legal_tos: លក្ខខណ្ឌ
     user:
       classroom: ទំព័រដើមគ្រូបង្រៀន
       label: សួស្តី%{username}
@@ -504,6 +506,8 @@ km:
       school_name: ឈ្មោះរបស់សាលា
       school_city: ទីក្រុងរបស់សាលា
       school_country: សាលាក្នុងប្រទេស
+      colombian_school_city: ទីក្រុងរបស់សាលា
+      colombian_school_name: ឈ្មោះរបស់សាលា
     form_entries:
       gender:
         male: ប្រុស

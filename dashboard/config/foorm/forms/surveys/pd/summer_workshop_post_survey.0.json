@@ -6,13 +6,14 @@
     {
      "type": "html",
      "name": "variables_for_testing",
+     "visible": false,
      "titleLocation": "hidden",
      "html": "<h2 style=\"background-color: #ffff00\"> Variable Test</h2>\n<ul>\n<li><span style=\"background-color: #ffff00;\">workshop_course: {workshop_course}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshop_subject: {workshop_subject}</span></li>\n<li><span style=\"background-color: #ffff00;\">regional_partner_name: {regional_partner_name}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_virtual: {is_virtual}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_friday_institute: {is_friday_institute}</span></li>\n</ul>"
     },
     {
      "type": "html",
      "name": "preamble_header_and_text",
-     "html": "<h2>{workshop_course} Summer workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed the Code.org {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+     "html": "<h2>{workshop_course} Summer Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed the Code.org {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
     }
    ]
   },
@@ -141,7 +142,7 @@
     {
      "type": "matrix",
      "name": "curriculum_impressions",
-     "title": "Having been through this workshop, please rate the extent to which you agree or disagree with the following about the {workshop_course} curriculum?",
+     "title": "Please rate the extent to which you agree or disagree with the following about the {workshop_course} curriculum?",
      "columns": [
       {
        "value": "1",
@@ -197,11 +198,160 @@
     },
     {
      "type": "panel",
+     "name": "friday_institute_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question3",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; FRIDAY-INSTITUTE-SPECIFIC&lt;&lt;</span></p>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "friday_institute_which_tool",
+       "title": "Which video conferencing tool was primarily used for the synchronous (live meeting) portions of the workshop?",
+       "choices": [
+        {
+         "value": "hangouts",
+         "text": "Google Hangouts"
+        },
+        {
+         "value": "zoom",
+         "text": "Zoom"
+        },
+        {
+         "value": "teams",
+         "text": "Microsoft Teams"
+        },
+        {
+         "value": "goto_meeting",
+         "text": "GoToMeeting"
+        },
+        {
+         "value": "skype",
+         "text": "Skype"
+        },
+        {
+         "value": "dont_know",
+         "text": "Don't Know/Unsure"
+        }
+       ],
+       "hasOther": true,
+       "otherText": "Other"
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_sync_tools",
+       "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "smoothly_for_all",
+         "text": "Overall the video conferencing technology seemed to work smoothly for all participants."
+        },
+        {
+         "value": "personal_tech_adequate",
+         "text": "My personal technology infrastructure - internet connection, bandwidth, screen size, software - was adequate for participating in the workshop."
+        },
+        {
+         "value": "video_conf_engaging",
+         "text": "I found the video conferencing portions of the workshop highly engaging."
+        }
+       ]
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_async_tools",
+       "title": "This workshop also included activities you completed away from the larger group made available through your workshop website in the Friday Institute's Professional Learning and Collaboration Environment (PLACE) ",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "moodle_worked_well_for_all",
+         "text": "Overall the PLACE site seemed to work well for all participants."
+        },
+        {
+         "value": "async_activities_engaging",
+         "text": "I found the activities I did on the PLACE site highly engaging."
+        },
+        {
+         "value": "moodle_organized_positive_exp",
+         "text": "The organization of the PLACE site made sense to me and made for a positive experience."
+        },
+        {
+         "value": "moodle_content_activities",
+         "text": "The content and activities on the PLACE site supported my professional learning and preparation to teach {workshop_course}"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{is_friday_institute} = 'true'"
+    },
+    {
+     "type": "panel",
      "name": "In_person_panel",
      "elements": [
       {
        "type": "html",
-       "name": "ifCs",
+       "name": "inperson_panel_header",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IN-PERSON LOGISTICS AND TOOLS &lt;&lt;</span>"
       },
       {
@@ -254,6 +404,7 @@
       {
        "type": "html",
        "name": "question11",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; VIRTUAL-SPECIFIC&lt;&lt;</span></p>"
       },
       {
@@ -503,12 +654,18 @@
    "name": "teaching_practices_page",
    "elements": [
     {
+     "type": "html",
+     "name": "teaching_practices_page_header",
+     "html": "<h2>Teaching Practices</h2>"
+    },
+    {
      "type": "panel",
      "name": "csp_panel",
      "elements": [
       {
        "type": "html",
        "name": "question1",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
       },
       {
@@ -560,7 +717,7 @@
         },
         {
          "value": "need_support_for_exam_prep",
-         "text": "I’m going to need a lot of extra support preparing students for the AP exam and performance tasks."
+         "text": "I’m going to need a lot of extra support to prepare students for the AP exam and performance tasks."
         },
         {
          "value": "workshop_increased_confidence",
@@ -622,7 +779,7 @@
         },
         {
          "value": "equitable_discussion",
-         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions. "
+         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partner conversations, small-group, or large-group discussions. "
         },
         {
          "value": "normalize_failure",
@@ -634,23 +791,16 @@
         },
         {
          "value": "cs_vocab",
-         "text": "support student understanding and use of of CS vocabulary."
+         "text": "support student understanding and use of CS vocabulary."
         },
         {
          "value": "impacts_of_tech",
          "text": "support students in becoming informed decision makers about the impact of technology."
         }
        ]
-      },
-      {
-       "type": "comment",
-       "name": "csp_fr",
-       "title": "[PLACEHOLDER - CSP Free Response - IF needed]",
-       "rows": 2
       }
      ],
-     "visibleIf": "{workshop_course} = 'CS Principles'",
-     "title": "CS Principles"
+     "visibleIf": "{workshop_course} = 'CS Principles'"
     },
     {
      "type": "panel",
@@ -659,6 +809,7 @@
       {
        "type": "html",
        "name": "question4",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\n"
       },
       {
@@ -666,7 +817,6 @@
        "name": "csd_which_units",
        "title": "Which units of CS Discoveries do you plan to teach in the 2020-2021 school year? ",
        "description": "Check all that apply",
-       "hasOther": true,
        "choices": [
         {
          "value": "unit_1",
@@ -696,7 +846,8 @@
          "value": "none",
          "text": "None / I am not planning to teach any of these units in 2020-21"
         }
-       ]
+       ],
+       "hasOther": true
       },
       {
        "type": "html",
@@ -777,8 +928,7 @@
        ]
       }
      ],
-     "visibleIf": "{workshop_course} = 'CS Discoveries'",
-     "title": "CS Discoveries"
+     "visibleIf": "{workshop_course} = 'CS Discoveries'"
     },
     {
      "type": "html",
@@ -788,14 +938,14 @@
     {
      "type": "html",
      "name": "lead_learner_statements",
-     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\"</td>\n</tr>\n</tbody>\n</table>\n<p> </p>"
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\"</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</td>\n</tr>\n</tbody>\n</table>\n<p> </p>"
     },
     {
      "type": "rating",
      "name": "lead_learner",
-     "title": "Lead Learner. 1. need deep content expertise ---5. model expertise in how to learn",
-     "correctAnswer": 5,
+     "title": "Lead Learner. 1. model expertise in how to learn <---> 5. need deep content expertise ",
      "titleLocation": "hidden",
+     "correctAnswer": 1,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     },
@@ -807,31 +957,40 @@
     {
      "type": "rating",
      "name": "prioritize_time",
-     "title": "Prioritize Time. 1. distribute equally --- 5. prioritize most need",
-     "correctAnswer": 5,
+     "title": "Prioritize Time. 1. distribute equally <---> 5. prioritize most need",
      "titleLocation": "hidden",
+     "correctAnswer": 5,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     },
     {
      "type": "html",
      "name": "instructional_focus_statements",
-     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered.\"</td>\n</tr>\n</tbody>\n</table>"
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material.\"</td>\n</tr>\n</tbody>\n</table>"
     },
     {
      "type": "rating",
      "name": "instructional_focus",
-     "title": "Instructional focus. 1. more material,some students struggle --- 5. less material, leave fewer behind",
-     "correctAnswer": 5,
+     "title": "Instructional focus.  1. less material, leave fewer behind <---> 5. more material, some students struggle",
      "titleLocation": "hidden",
+     "correctAnswer": 1,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
+    }
+   ]
+  },
+  {
+   "name": "facilitator_feedback_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "question2",
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same sets of questions for each facilitator of your workshop.  Please be thoughtful in your responses for each individual."
     },
     {
      "type": "paneldynamic",
      "name": "facilitators",
-     "title": "Facilitator Feedback",
-     "description": "Please leave feedback about your facilitator(s).",
+     "title": "Facilitators",
      "templateElements": [
       {
        "type": "matrix",
@@ -919,7 +1078,7 @@
     {
      "type": "html",
      "name": "overall_header",
-     "html": "<p><span style=\"font-size: 14pt; font-family: verdana, geneva, sans-serif;\"><strong>Overall Workshop Feedback</strong></span></p>\n<p>We’d like to hear your feedback about your experience this week overall, <Strong>especially how this professional development could better fit your learning needs, or how it could be improved</strong>.\n"
+     "html": "<h2>Overall Workshop Feedback</h2>\n<p>We’d like to hear your feedback about your experience this week overall, <Strong>especially how this professional development could better fit your learning needs, or how it could be improved</strong>.</p>\n"
     },
     {
      "type": "comment",
@@ -938,7 +1097,7 @@
     {
      "type": "radiogroup",
      "name": "permission_to_quote",
-     "title": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+     "title": "I give the workshop organizer permission to quote my written comments from today for use on social media, promotional materials, and other communications.",
      "choices": [
       {
        "value": "yes",
@@ -957,7 +1116,7 @@
     {
      "type": "html",
      "name": "thank_you_header",
-     "html": "<h2> Thank You!</h2>\n<p>Thanks for your time and commitment to teaching computer science</p>"
+     "html": "<img style='display: block; margin-left: auto; margin-right: auto;', src='/shared/images/foorm/codeheartyou.png'/>\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
     }
    ]
   }

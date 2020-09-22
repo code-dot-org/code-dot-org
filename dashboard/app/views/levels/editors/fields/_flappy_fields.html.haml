@@ -1,0 +1,26 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#flappy"}}
+  Flappy Settings
+
+#flappy.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ground, description: "Include Ground?"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :obstacles, description: "Include Obstacles?"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :score, description: "Include Score?"}
+  .field
+    = f.label :default_flap, 'Default Flap Amount'
+    = f.select :default_flap, options_for_select(@level.class.flap_amounts, @level.default_flap || "NORMAL")
+  .field
+    = f.label :scale, 'Scalings'
+    = f.text_area :scale, rows: 4, placeholder: Flappy.default_scale
+
+  .field
+    = f.label :goal, 'Goal'
+    %ul
+      %li
+        %strong
+          goal.startX/startY:
+        start location of flag image
+      %li
+        %strong
+          goal.moving:
+        whether the goal stays in one spot or moves at level's speed
+    = f.text_area :goal, rows: 9, placeholder: Flappy.default_goal

@@ -22,7 +22,8 @@ de-DE:
   csedweek_banner_teachers_text: Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal
     genutzt</h3>"
-  try_hoc_num_served: "<h1>Veruche eine</h1><h2>Hour of Code</h2><h3>%{num} mal genutzt</h3>"
+  try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten
+    wird</h3>"
   try_hoc_num_served_markdown: |-
     # Veruche eine
 
@@ -298,12 +299,12 @@ de-DE:
   continue_learning_body: Es gibt unzählige Optionen. Du kannst online lernen, an
     einer örtlichen Schule oder in einem Feriencamp.
   learn_code_studio: Probieren Sie Code.org's Kurse
-  learn_next_level: Weiter zum nächsten Level
+  learn_next_level: Weiter zum nächsten Code Studio Kurs
   learn_online: Probiere andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
   learn_back_to_minecraft: Lerne mehr mit Minecraft
   hoc_is_here: 'Die #HourOfCode kommt wieder: Dezember 5-11. https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
+  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - schau mal vorbei! @codeorg'
   just_did_course1: Ich habe gerade Kurs 1 beendet - schau dir das an! @codeorg
   just_did_course2: Ich habe gerade Kurs 2 beendet - schau dir das an! @codeorg
   just_did_course3: Ich habe gerade Kurs 3 beendet - schau dir das an! @codeorg
@@ -354,7 +355,7 @@ de-DE:
   stats_michael_markdown: '"Ich habe meine Schüler **noch nie** so begeistert beim
     Lernen gesehen." - Frank Martinez, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: Entdecke das Code Studio
+  studiobar_title_nolink: Entdecke Code.org-Kurse
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_dance_title: Tanzparty
@@ -2138,6 +2139,8 @@ de-DE:
   header_teacher_community: Lehrer Community
   header_help_support: 'Hilfe und Support '
   header_report_bug: Einen Fehler melden
+  header_report_abuse: Missbrauch melden
+  header_legal: Privatsphäre und Rechtliches
   header_legal_privacy: Datenschutzerklärung
   header_legal_tos: AGBs
   header_tutorials: Einführungen
@@ -2160,6 +2163,7 @@ de-DE:
   user_header_gamelab: Spielelabor
   user_header_playlab: Spielelabor
   user_header_dance: Tanzparty
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Alle Projekte anzeigen...
@@ -2217,12 +2221,14 @@ de-DE:
     aus Google Classroom synchronisieren" auf der Registerkarte "Schüler verwalten":'
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto"
     auswählen:'
+  hero_name: 'Minecraft: Hero’s Journey'
   applab-intro_name: App Labor Einführung
   applab_tile_title: Einführung ins App-Labor (ab 13 Jahren)
   applab_tile_subtitle: Erstelle deine eigene App in JavaScript mit Blöcken. Oder
     nimm die Herausforderung an und erlerne textbasierte Programmation. (Nur Englisch)
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Lehrer-Leitfaden anzeigen
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren
     Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
   account_sign_up_child_accept_terms: Ich bestätige, dass ich die Erlaubnis meines
@@ -2339,6 +2345,8 @@ de-DE:
   hoc2018_mc_homepage_watch_video: Video ansehen
   hoc2018_mc_homepage_join_us: Mitmachen
   hoc2018_mc_homepage_try_it: Ausprobieren
+  hoc2018_mc_back: Minecraft ist zurück - mit einer brandneuen Aktivität für Hour
+    of Code!
   hoc2018_mc_back_journey: Minecraft präsentiert eine brandneue Aktivität zur Hour
     of Code! Entdecke die Welt von Minecraft mit Code.
   hoc2018_mc_teacher_guide: Lehrer-Leitfaden anzeigen
@@ -2451,9 +2459,12 @@ de-DE:
   hoc2019_dance_previous_versions: |-
     Möchtest du eine frühere Version von Dance Party?
     Klicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten.
-  homepage_slot_text_title_at_home: Zu Hause lernen
+  homepage_slot_text_title_at_home: 'Zu Hause lernen
+
+'
   homepage_slot_text_blurb_at_home: Diese Ressource machen es einfacher
   homepage_slot_text_link_code_break: Mache eine Programmierpause
   homepage_slot_text_link_do_hoc: Probiere die Hour of Code aus (deutsch "Stunde des
     Codes")
   homepage_slot_text_link_express_course: Versuche einen Express-Kurs
+  page_not_available_button: Zurück zur Homepage

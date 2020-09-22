@@ -1,29 +1,30 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
-lesson 'Unit 3 Overview' 
+lesson 'Unit 3 Overview', display_name: 'Unit 3 Overview'
 level 'CSPPD3-u3 breakdown of u3 chunks'
 level 'CSPPD3-u3 tips for prep'
 
-lesson 'Chunk 1 Overview'
+lesson 'Chunk 1 Overview', display_name: 'Chunk 1 Overview'
 level 'CSPPD3-u3 chunk 1 concepts'
 level 'CSPPD3-u3 chunk 1 resources'
 
-lesson 'Chunk 2 Overview'
+lesson 'Chunk 2 Overview', display_name: 'Chunk 2 Overview'
 level 'CSPPD3-u3 chunk 2 concepts'
 level 'CSPPD3-u3 chunk 2 resources'
 
-lesson 'Chunk 3 Overview'
+lesson 'Chunk 3 Overview', display_name: 'Chunk 3 Overview'
 level 'CSPPD3-u3 chunk 3 concepts'
 level 'CSPPD3-u3 chunk 3 resources'
 
-lesson 'Chunk 4 Overview'
+lesson 'Chunk 4 Overview', display_name: 'Chunk 4 Overview'
 level 'CSPPD3-u3 chunk 4 concepts'
 level 'CSPPD3-u3 chunk 4 resources'
 
-lesson 'Chunk 5 Overview' 
+lesson 'Chunk 5 Overview', display_name: 'Chunk 5 Overview'
 level 'CSPPD3-u3 chunk 5 concepts'
 level 'CSPPD3-u3 chunk 5 resources'
 
-lesson 'Practice Performance Task'
+lesson 'Practice Performance Task', display_name: 'Practice Performance Task'
 level 'CSPPD3-u3 practice PT'
+

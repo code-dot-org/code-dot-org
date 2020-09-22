@@ -1,0 +1,40 @@
+name 'VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Debugging
+
+Goal: Review debugging resources and practice debugging in Game Lab (Estimated Time: 25 minutes)
+
+> **Debugging** is the process of finding and fixing bugs in code. 
+
+Bugs are opportunities to:
+
+- Reinforce positive attitudes towards debugging and persistence
+- Identify and address student misconceptions
+- Further develop good debugging skills 
+
+Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in developing their own debugging skills. 
+
+## Revisiting the Debugging Process
+
+As we begin adding more complexity to our programs in Game Lab, more opportunities for bugs arise. One common barrier to supporting students during a programming unit is knowing how to support them effectively when they encounter bugs while programming. 
+
+Over the summer reviewed the resources available to support the process of debugging. We also practiced debugging in Wed Lab. In the following activities you will have the opportunity to practice debugging in Game Lab. Below are the resources that you explored over the summer. Revisit them if you would like to review or click continue to move on to the next activity.
+
+
+## Debugging Resources
+
+Watch this video to understand how debugging works, and hear directly from students how it enhances their learning.
+
+<a href="https://youtu.be/auv10y-dN4s" target="blank">![](https://images.code.org/87bcfca7793858df65e763cc38584ed0-image-1594388746783.45.14 AM.png)</a>
+
+[Can't see the video? Click here](https://www.youtube.com/watch?v=auv10y-dN4s&t=1s)
+<br/><br/>
+Debugging can be broken down into four easy steps for students:
+
+![](https://images.code.org/38b1d819761ca8e2b9d4fd5a950570f8-image-1594389053858.50.37 AM.png)
+
+For teacher specific guidance on how to support students in the process of debugging check out the Guide to Debugging found either on the <a href="https://curriculum.code.org/csd-20/" target="blank">CS Discoveries curriculum landing page</a> or in <a href="https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview#heading=h.2mszt33qb2t9" target="blank">Appendix C of the CS Discoveries Curriculum Guide</a>
+
+
+MARKDOWN

@@ -309,6 +309,8 @@ gl:
       help_us: "Axúdenos"
       teach: "Ensinar"
       about: "Sobre"
+      legal_privacy: "Política de Privacidade"
+      legal_tos: "Termos de Servizo"
     user:
       classroom: 'Páxina inicial do profesor'
       district_dashboard: 'Panel do distrito'
@@ -673,6 +675,7 @@ gl:
       email: 'E-mail'
       school_name: 'Nome da escola'
       school_country: 'País da escola'
+      colombian_school_name: 'Nome da escola'
     form_entries:
       gender:
         male: 'Masculino'

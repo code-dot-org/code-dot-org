@@ -21,7 +21,7 @@ pt:
           description_short: O curso 1 é destinado às crianças que estão a aprender
             a ler.
           description_audience: Dos 4 aos 6 anos
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'Artista: Ciclos'
             'Artist: Sequence':
@@ -58,41 +58,6 @@ pt:
               name: 'Laboratório do Jogo: Criar uma História'
             The Big Event:
               name: O Grande Evento
-          lessons:
-            Happy Maps:
-              name: Mapas felizes
-            Move it, Move it:
-              name: Move it, Move it
-            'Jigsaw: Learn to drag and drop':
-              name: 'Puzzle: Aprender a arrastar e largar'
-            'Maze: Sequence':
-              name: 'Labirinto: Sequência'
-            'Maze: Debugging':
-              name: 'Labirinto: Depuração'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            'Bee: Sequence':
-              name: 'Abelha: Sequência'
-            'Artist: Sequence':
-              name: 'Artista: Sequência'
-            Building a Foundation:
-              name: Criar uma base
-            'Artist: Shapes':
-              name: 'Artista: Formas'
-            Spelling Bee:
-              name: Escrever com a abelha
-            Getting Loopy:
-              name: Repetindo
-            'Maze: Loops':
-              name: 'Labirinto: Ciclos'
-            'Bee: Loops':
-              name: 'Abelha: Ciclos'
-            The Big Event:
-              name: O Grande Evento
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
-            'Artist: Loops':
-              name: 'Artista: Ciclos'
         course2:
           title: Curso 2
           description: O Curso 2 é voltado para estudantes que já sabem ler e não
@@ -102,7 +67,7 @@ pt:
             de 2º-5º ano.
           description_short: O curso 2 é destinado aos alunos que já sabem ler.
           description_audience: Mais de 6 anos (leitura necessária)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Artista: Depuração'
             'Artist: Loops':
@@ -141,43 +106,6 @@ pt:
               name: O Grande Evento
             Your Digital Footprint:
               name: A tua Pegada Digital
-          lessons:
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmos da Vida Real: Aviões de Papel'
-            'Maze: Sequence':
-              name: 'Labirinto: Sequência'
-            'Artist: Sequence':
-              name: 'Artista: Sequência'
-            Getting Loopy:
-              name: Repetindo
-            'Maze: Loops':
-              name: 'Labirinto: Ciclos'
-            'Artist: Loops':
-              name: 'Artista: Ciclos'
-            'Bee: Loops':
-              name: 'Abelha: Ciclos'
-            Relay programming:
-              name: Programação por revezamento
-            'Bee: Debugging':
-              name: 'Abelha: Depuração'
-            'Artist: Debugging':
-              name: 'Artista: Depuração'
-            Conditionals:
-              name: Condicionais
-            'Bee: Conditionals':
-              name: 'Abelha: Condicionais'
-            Binary Bracelets:
-              name: Pulseiras binárias
-            The Big Event:
-              name: O Grande Evento
-            Flappy:
-              name: Flappy Bird
-            Your Digital Footprint:
-              name: A tua Pegada Digital
-            'Artist: Nested Loops':
-              name: 'Artista: Laços Aninhados'
         course3:
           title: Curso 3
           description: O Curso 3 foi desenvolvido para estudantes que já fizeram o
@@ -188,7 +116,7 @@ pt:
             para alunos de 4º-5º ano.
           description_short: O curso 3 é a continuação do curso 2.
           description_audience: Dos 8 aos 18 anos
-          stages:
+          lessons:
             Artist:
               name: Artista
             'Artist: Functions':
@@ -231,52 +159,10 @@ pt:
               name: 'Laboratório do Jogo: Criar Um jogo'
             'Studio: Create a Story':
               name: 'Laboratório do Jogo: Criar uma História'
-          lessons:
-            Computational Thinking:
-              name: Pensamento computacional
-            Maze:
-              name: Labirinto
-            Artist:
-              name: Artista
-            Functional Suncatchers:
-              name: Caça-sóis funcionais
-            'Artist: Functions':
-              name: 'Artista: Funções'
-            'Bee: Functions':
-              name: 'Abelha: Funções'
-            'Bee: Conditionals':
-              name: 'Abelha: Condicionais'
-            'Maze: Conditionals':
-              name: 'Labirinto: Condicionais'
-            Songwriting:
-              name: Composição
-            Dice Race:
-              name: Jogo de dados
-            'Artist: Nested Loops':
-              name: 'Artista: Laços Aninhados'
-            'Farmer: While Loops':
-              name: 'Fazendeira: Laços Enquanto'
-            'Bee: Nested Loops':
-              name: 'Abelha: Laços Aninhados'
-            'Bee: Debugging':
-              name: 'Abelha: Depuração'
-            Bounce:
-              name: Bounce
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
-            Digital Citizenship:
-              name: Cidadania digital
-            'Artist: Patterns':
-              name: 'Artista: Padrões'
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
           description_short: Crie uma história ou um jogo no Laboratório!
-          stages:
-            Play Lab:
-              name: Laboratório
           lessons:
             Play Lab:
               name: Laboratório
@@ -284,9 +170,6 @@ pt:
           title: Artista
           description: Faça desenhos e figuras legais com o Artista!
           description_short: Faça desenhos e figuras legais com o Artista!
-          stages:
-            Artist:
-              name: Artista
           lessons:
             Artist:
               name: Artista
@@ -297,9 +180,6 @@ pt:
             Gelo!
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
-          stages:
-            Maze:
-              name: Labirinto
           lessons:
             Maze:
               name: Labirinto
@@ -311,9 +191,6 @@ pt:
             que poderás partilhar com os teus amigos!
           description_short: Use a programação para explorar a mágica e a beleza do
             gelo com Anna e Elsa.
-          stages:
-            Artist:
-              name: Artista
           lessons:
             Artist:
               name: Artista
@@ -328,165 +205,90 @@ pt:
           description_short: O curso 4 é destinado aos alunos que já concluíram os
             cursos 2 e 3.
           description_audience: Dos 10 aos 18 anos
-          stages:
-            Artist:
-              name: Artista
-            Artist Binary:
-              name: 'Artista: binário'
-            'Artist: For Loops':
-              name: 'Artista: laços for'
-            'Artist: Functions':
-              name: 'Artista: Funções'
-            'Artist: Functions with Parameters':
-              name: 'Artista: funções com parâmetros'
-            'Artist: Variables':
-              name: 'Artista: variáveis'
-            'Bee: For Loops':
-              name: 'Abelha: laços for'
-            'Bee: Functions with Parameters':
-              name: 'Abelha: funções com parâmetros'
-            Extreme Challenge - Comprehensive:
-              name: Desafio extremo - abrangente
-            Maze and Bee:
-              name: Labirinto e abelha
-            'Play Lab: For Loops':
-              name: 'Laboratório: laços for'
-            'Play Lab: Functions with Parameters':
-              name: 'Laboratório: funções com parâmetros'
-            'Play Lab: Variables':
-              name: 'Laboratório: variáveis'
-            Super Challenge - For Loops:
-              name: Super desafio - For Loops
-            Super Challenge - Functions and Parameters:
-              name: Super desafio - funções e parâmetros
-            Super Challenge - Variables:
-              name: Super desafio - variáveis
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            'Unplugged: Envelope Variables':
-              name: 'Offline: variáveis do envelope'
-            'Unplugged: For Loop Fun':
-              name: 'Offline: diversão com laços for'
-            'Unplugged: Madlibs':
-              name: 'Offline: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Offline: escrever músicas com parâmetros'
-            'Unplugged: Tangrams':
-              name: 'Offline: tangrams'
           lessons:
-            'Unplugged: Tangrams':
-              name: 'Offline: tangrams'
-            Maze and Bee:
-              name: Labirinto e abelha
             Artist:
               name: Artista
-            'Unplugged: Envelope Variables':
-              name: 'Offline: variáveis do envelope'
-            'Unplugged: Madlibs':
-              name: 'Offline: Madlibs'
-            'Artist: Variables':
-              name: 'Artista: variáveis'
-            'Play Lab: Variables':
-              name: 'Laboratório: variáveis'
-            'Unplugged: For Loop Fun':
-              name: 'Offline: diversão com laços for'
-            'Bee: For Loops':
-              name: 'Abelha: laços for'
-            'Artist: For Loops':
-              name: 'Artista: laços for'
-            'Play Lab: For Loops':
-              name: 'Laboratório: laços for'
-            'Artist: Functions':
-              name: 'Artista: Funções'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Offline: escrever músicas com parâmetros'
-            'Artist: Functions with Parameters':
-              name: 'Artista: funções com parâmetros'
-            'Play Lab: Functions with Parameters':
-              name: 'Laboratório: funções com parâmetros'
-            'Bee: Functions with Parameters':
-              name: 'Abelha: funções com parâmetros'
-            'Unplugged: Binary':
-              name: 'Offline: binário'
             Artist Binary:
               name: 'Artista: binário'
-            Super Challenge - Variables:
-              name: Super desafio - variáveis
+            'Artist: For Loops':
+              name: 'Artista: laços for'
+            'Artist: Functions':
+              name: 'Artista: Funções'
+            'Artist: Functions with Parameters':
+              name: 'Artista: funções com parâmetros'
+            'Artist: Variables':
+              name: 'Artista: variáveis'
+            'Bee: For Loops':
+              name: 'Abelha: laços for'
+            'Bee: Functions with Parameters':
+              name: 'Abelha: funções com parâmetros'
+            Extreme Challenge - Comprehensive:
+              name: Desafio extremo - abrangente
+            Maze and Bee:
+              name: Labirinto e abelha
+            'Play Lab: For Loops':
+              name: 'Laboratório: laços for'
+            'Play Lab: Functions with Parameters':
+              name: 'Laboratório: funções com parâmetros'
+            'Play Lab: Variables':
+              name: 'Laboratório: variáveis'
             Super Challenge - For Loops:
               name: Super desafio - For Loops
             Super Challenge - Functions and Parameters:
               name: Super desafio - funções e parâmetros
-            Extreme Challenge - Comprehensive:
-              name: Desafio extremo - abrangente
+            Super Challenge - Variables:
+              name: Super desafio - variáveis
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            'Unplugged: Envelope Variables':
+              name: 'Offline: variáveis do envelope'
+            'Unplugged: For Loop Fun':
+              name: 'Offline: diversão com laços for'
+            'Unplugged: Madlibs':
+              name: 'Offline: Madlibs'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Offline: escrever músicas com parâmetros'
+            'Unplugged: Tangrams':
+              name: 'Offline: tangrams'
         Course4pre:
           title: Pré-requisitos do curso 4
           description: Uma breve revisão dos conceitos para os alunos que não fizeram
             os cursos 2 e 3.
           description_short: Uma breve revisão dos conceitos para os alunos que não
             fizeram os cursos 2 e 3.
-          stages:
-            'Artist: Functions':
-              name: 'Artista: Funções'
-            'Artist: Loops':
-              name: 'Artista: Ciclos'
-            'Artist: Nested Loops':
-              name: 'Artista: Laços Aninhados'
-            'Artist: Sequence':
-              name: 'Artista: Sequência'
-            'Bee: Conditionals':
-              name: 'Abelha: Condicionais'
-            'Bee: Debugging':
-              name: 'Abelha: Depuração'
-            'Bee: Nested Loops':
-              name: 'Abelha: Laços Aninhados'
-            'Farmer: While Loops':
-              name: 'Fazendeira: Laços Enquanto'
-            'Maze: Sequence':
-              name: 'Labirinto: Sequência'
           lessons:
-            'Maze: Sequence':
-              name: 'Labirinto: Sequência'
-            'Artist: Sequence':
-              name: 'Artista: Sequência'
-            'Artist: Loops':
-              name: 'Artista: Ciclos'
-            'Bee: Conditionals':
-              name: 'Abelha: Condicionais'
-            'Artist: Nested Loops':
-              name: 'Artista: Laços Aninhados'
-            'Farmer: While Loops':
-              name: 'Fazendeira: Laços Enquanto'
-            'Bee: Nested Loops':
-              name: 'Abelha: Laços Aninhados'
             'Artist: Functions':
               name: 'Artista: Funções'
+            'Artist: Loops':
+              name: 'Artista: Ciclos'
+            'Artist: Nested Loops':
+              name: 'Artista: Laços Aninhados'
+            'Artist: Sequence':
+              name: 'Artista: Sequência'
+            'Bee: Conditionals':
+              name: 'Abelha: Condicionais'
             'Bee: Debugging':
               name: 'Abelha: Depuração'
+            'Bee: Nested Loops':
+              name: 'Abelha: Laços Aninhados'
+            'Farmer: While Loops':
+              name: 'Fazendeira: Laços Enquanto'
+            'Maze: Sequence':
+              name: 'Labirinto: Sequência'
         usability:
-          stages:
-            Binary:
-              name: Binário
-            For Loops:
-              name: Ciclos "for"
-            Functions and Functions with Parameters:
-              name: Funções e funções com parâmetros
-            Intro:
-              name: Introdução
-            Variables:
-              name: Variáveis
           lessons:
-            Intro:
-              name: Introdução
-            Variables:
-              name: Variáveis
+            Binary:
+              name: Binário
             For Loops:
               name: Ciclos "for"
             Functions and Functions with Parameters:
               name: Funções e funções com parâmetros
-            Binary:
-              name: Binário
+            Intro:
+              name: Introdução
+            Variables:
+              name: Variáveis
         algebra:
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: Operadores Booleanos
             'Eval: Conditionals':
@@ -505,70 +307,25 @@ pt:
               name: 'Offline: a receita de design'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: video games e planos de coordenadas'
-          lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Offline: video games e planos de coordenadas'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Blocos de cálculo'
-            'Eval: Strings and Images':
-              name: 'Eval: Strings e imagens'
-            'Unplugged: Contracts':
-              name: 'Offline: contratos'
-            'Eval: Writing Contracts':
-              name: 'Eval: Escrever contratos'
-            'Calc: Defining Variables':
-              name: 'Cálculo: definir variáveis'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Laboratório: Definição de variáveis (O Grande Jogo)'
-            'Unplugged: The Design Recipe':
-              name: 'Offline: a receita de design'
-            'Play Lab: Animation (Big Game)':
-              name: 'Laboratório: Animação (O Grande Jogo)'
-            'Unplugged: Booleans':
-              name: 'Offline: booleanos'
-            'Eval: Boolean Operators':
-              name: 'Eval: Operadores booleanos'
-            'Play Lab: Booleans':
-              name: 'Laboratório: booleanos'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Laboratório: Booleano (O Grande Jogo)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Offline: condicionais e funções definidas por partes'
-            'Eval: Conditionals':
-              name: 'Eval: Condicionais'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Offline: deteção de colisão e fórmula da distância'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Laboratório: Deteção de colisão (O Grande Jogo)'
         infinity:
           title: Laboratório Infinito Disney
           description: Use o Laboratório para criar uma história ou um jogo usando
             personagens da Disney Infinity.
           description_short: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
-          stages:
-            Infinity:
-              name: Infinito
           lessons:
             Infinity:
               name: Infinito
         algebrademo:
-          stages:
-            Defining Variables:
-              name: Definir variáveis
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            The Design Recipe:
-              name: A receita do design
           lessons:
-            Evaluation Blocks:
-              name: Blocos de cálculo
             Defining Variables:
               name: Definir variáveis
+            Evaluation Blocks:
+              name: Blocos de cálculo
             The Design Recipe:
               name: A receita do design
         K5PD:
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: Pedagogia das Ciências da Computação
             K-5 Courses:
@@ -585,9 +342,6 @@ pt:
               name: nova fase
         netsim:
           title: Simulador de internet
-          stages:
-            Manual DNS:
-              name: DNS Manual
           lessons:
             Manual DNS:
               name: DNS Manual
@@ -599,119 +353,64 @@ pt:
           description_short: Este curso de 20 horas aborda os conceitos fundamentais
             de ciência da computação e programação nos cursos de 2 a 4.
           description_audience: Dos 10 aos 18 anos
-          stages:
-            Abstraction:
-              name: Abstração
-            Algorithms:
-              name: Algoritmos
-            Computational Thinking:
-              name: Pensamento computacional
-            Conditionals:
-              name: Condicionais
-            Functions:
-              name: Funções
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            Introduction to Computer Science:
-              name: Introdução à Ciência Computacional
-            Relay Programming:
-              name: Programação por revezamento
-            Song Writing:
-              name: escrita de canção
-            The Artist:
-              name: O Artista
-            The Artist 2:
-              name: O Artista 2
-            The Artist 3:
-              name: O Artista 3
-            The Artist 4:
-              name: O Artista 4
-            The Artist 5:
-              name: O Artista 5
-            The Farmer:
-              name: O Agricultor
-            The Farmer 2:
-              name: O Agricultor 2
-            The Farmer 3:
-              name: O Agricultor 3
-            The Internet:
-              name: A Internet
-            The Maze:
-              name: O Labirinto
-            Wrap-up:
-              name: Resumo
           lessons:
-            Introduction to Computer Science:
-              name: Introdução à Ciência Computacional
-            The Maze:
-              name: O Labirinto
-            Computational Thinking:
-              name: Pensamento computacional
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            The Artist:
-              name: O Artista
-            Algorithms:
-              name: Algoritmos
-            The Artist 2:
-              name: O Artista 2
-            Functions:
-              name: Funções
-            The Farmer:
-              name: O Agricultor
-            Conditionals:
-              name: Condicionais
-            The Artist 3:
-              name: O Artista 3
-            Song Writing:
-              name: escrita de canção
-            The Farmer 2:
-              name: O Agricultor 2
             Abstraction:
               name: Abstração
-            The Artist 4:
-              name: O Artista 4
+            Algorithms:
+              name: Algoritmos
+            Computational Thinking:
+              name: Pensamento computacional
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções
+            Graph Paper Programming:
+              name: Programação de papel milimetrico
+            Introduction to Computer Science:
+              name: Introdução à Ciência Computacional
             Relay Programming:
               name: Programação por revezamento
+            Song Writing:
+              name: escrita de canção
+            The Artist:
+              name: O Artista
+            The Artist 2:
+              name: O Artista 2
+            The Artist 3:
+              name: O Artista 3
+            The Artist 4:
+              name: O Artista 4
+            The Artist 5:
+              name: O Artista 5
+            The Farmer:
+              name: O Agricultor
+            The Farmer 2:
+              name: O Agricultor 2
             The Farmer 3:
               name: O Agricultor 3
             The Internet:
               name: A Internet
-            The Artist 5:
-              name: O Artista 5
+            The Maze:
+              name: O Labirinto
             Wrap-up:
               name: Resumo
         edit-code:
           title: Editar código
           description: Editar código
           description_short: Editar código
-          stages:
-            Hoc2015 Blockly:
-              name: Hoc2015 Blockly
-            Play Lab:
-              name: Laboratório
-            The Artist:
-              name: O Artista
-            The Maze:
-              name: O Labirinto
           lessons:
-            The Maze:
-              name: O Labirinto
-            The Artist:
-              name: O Artista
-            Play Lab:
-              name: Laboratório
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
+            Play Lab:
+              name: Laboratório
+            The Artist:
+              name: O Artista
+            The Maze:
+              name: O Labirinto
         events:
           title: Eventos
           description: Eventos
           description_short: Eventos
-          stages:
-            Bounce:
-              name: Bounce
-            Calc:
-              name: Calc
           lessons:
             Bounce:
               name: Bounce
@@ -723,9 +422,6 @@ pt:
             nosso tutorial sobre o Código do Flappy bird!
           description_short: Escreva seu próprio jogo no estilo Flappy Bird em menos
             de 10 minutos!
-          stages:
-            Flappy Code:
-              name: Flappy Bird
           lessons:
             Flappy Code:
               name: Flappy Bird
@@ -733,9 +429,6 @@ pt:
           title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
           description_short: Experimente nosso tutorial sobre quebra-cabeça
-          stages:
-            Jigsaw:
-              name: Quebra-cabeças
           lessons:
             Jigsaw:
               name: Quebra-cabeças
@@ -743,9 +436,6 @@ pt:
           title: Avançar
           description: Etapa do tutorial
           description_short: Etapa do tutorial
-          stages:
-            Step:
-              name: Avançar
           lessons:
             Step:
               name: Avançar
@@ -755,82 +445,43 @@ pt:
             de Angry Birds e Plants vs. Zombies!
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
-          stages:
-            Hour of Code 2013:
-              name: Hora de Código 2013
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: Puzzles
           lessons:
             Puzzles:
               name: Puzzles
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: Puzzles
           lessons:
             Puzzles:
               name: Puzzles
         cspunit1:
           description_short: Programação
-          stages:
-            Binary Numbers:
-              name: Números Binários
-            Bytes and File Sizes:
-              name: Bytes e tamanhos de ficheiros
-            Number Systems:
-              name: Sistemas de Numeração
-            Personal Innovations:
-              name: Inovação Pessoal
-            Sending Binary Messages:
-              name: Enviar Mensagens Binárias
-            Sending Binary Messages with the Internet Simulator:
-              name: Enviar Mensagens Binárias com o Simulador de Internet
-            Sending Bits in the Real World:
-              name: Enviar Bits no Mundo Real
-            Sending Complex Messages:
-              name: Enviar Mensagens Complexas
-            Sending Formatted Text:
-              name: Enviar Texto Formatado
-            Sending Numbers:
-              name: Enviando números
-            Text Compression:
-              name: Compressão de Texto
           lessons:
+            Binary Numbers:
+              name: Números Binários
+            Bytes and File Sizes:
+              name: Bytes e tamanhos de ficheiros
+            Number Systems:
+              name: Sistemas de Numeração
             Personal Innovations:
               name: Inovação Pessoal
             Sending Binary Messages:
               name: Enviar Mensagens Binárias
-            Sending Complex Messages:
-              name: Enviar Mensagens Complexas
             Sending Binary Messages with the Internet Simulator:
               name: Enviar Mensagens Binárias com o Simulador de Internet
             Sending Bits in the Real World:
               name: Enviar Bits no Mundo Real
-            Number Systems:
-              name: Sistemas de Numeração
-            Binary Numbers:
-              name: Números Binários
-            Sending Numbers:
-              name: Enviando números
+            Sending Complex Messages:
+              name: Enviar Mensagens Complexas
             Sending Formatted Text:
               name: Enviar Texto Formatado
-            Bytes and File Sizes:
-              name: Bytes e tamanhos de ficheiros
+            Sending Numbers:
+              name: Enviando números
             Text Compression:
               name: Compressão de Texto
         algebraPD:
-          stages:
-            Course Overview:
-              name: Visão geral do curso
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Teacher Dashboard:
-              name: Painel do Professor
           lessons:
             Course Overview:
               name: Visão geral do curso
@@ -839,108 +490,58 @@ pt:
             Teacher Dashboard:
               name: Painel do Professor
         algPDmiami:
-          stages:
-            Booleans:
-              name: Booleanos
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Sam the Bat:
-              name: Morcego Sam
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
           lessons:
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
             Booleans:
               name: Booleanos
+            Evaluation Blocks:
+              name: Blocos de cálculo
             Sam the Bat:
               name: Morcego Sam
+            Strings and Images:
+              name: Cadeias de caracteres e imagens
         text-compression:
           title: Compressão de Texto
-          stages:
-            Text Compression:
-              name: Compressão de Texto
           lessons:
             Text Compression:
               name: Compressão de Texto
         CSPLessonSamples:
-          stages:
-            Lesson 14:
-              name: Lição 14
-            Lesson 15:
-              name: Lição 15
           lessons:
             Lesson 14:
               name: Lição 14
             Lesson 15:
               name: Lição 15
         sciencePD:
-          stages:
-            The Tutorial:
-              name: O Tutorial
           lessons:
             The Tutorial:
               name: O Tutorial
         rbo-reference:
-          stages:
-            reference:
-              name: referência
           lessons:
             reference:
               name: referência
         cspunit3:
           description_short: Programação
-          stages:
-            Creating Functions:
-              name: Criando funções
-            While Loops:
-              name: Laços enquanto
           lessons:
             Creating Functions:
               name: Criando funções
             While Loops:
               name: Laços enquanto
         algebraPD3:
-          stages:
-            Computer Science Pedagogy:
-              name: Pedagogia das Ciências da Computação
-            Course Overview:
-              name: Visão geral do curso
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Next Steps:
-              name: Próximos Passos
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            Teacher Dashboard:
-              name: Painel do Professor
-            The Design Recipe:
-              name: A receita do design
           lessons:
-            Course Overview:
-              name: Visão geral do curso
             Computer Science Pedagogy:
               name: Pedagogia das Ciências da Computação
-            Teacher Dashboard:
-              name: Painel do Professor
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            The Design Recipe:
-              name: A receita do design
-            Next Steps:
-              name: Próximos Passos
-        algebraPD-NexTech:
-          stages:
             Course Overview:
               name: Visão geral do curso
             Evaluation Blocks:
               name: Blocos de cálculo
+            Next Steps:
+              name: Próximos Passos
+            Strings and Images:
+              name: Cadeias de caracteres e imagens
             Teacher Dashboard:
               name: Painel do Professor
+            The Design Recipe:
+              name: A receita do design
+        algebraPD-NexTech:
           lessons:
             Course Overview:
               name: Visão geral do curso
@@ -949,13 +550,6 @@ pt:
             Teacher Dashboard:
               name: Painel do Professor
         algebraPD-iZone:
-          stages:
-            Course Overview:
-              name: Visão geral do curso
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Teacher Dashboard:
-              name: Painel do Professor
           lessons:
             Course Overview:
               name: Visão geral do curso
@@ -964,27 +558,16 @@ pt:
             Teacher Dashboard:
               name: Painel do Professor
         sciencePD-NexTech:
-          stages:
-            The Tutorial:
-              name: O Tutorial
           lessons:
             The Tutorial:
               name: O Tutorial
         sciencePD-iZone:
-          stages:
-            The Tutorial:
-              name: O Tutorial
           lessons:
             The Tutorial:
               name: O Tutorial
         sciencePD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -992,214 +575,117 @@ pt:
               name: Resumo
         cspunit2:
           description_short: Programação
-          stages:
-            The Internet:
-              name: A Internet
           lessons:
             The Internet:
               name: A Internet
         algebraPD2a:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Booleans:
-              name: Booleanos
-            Defining Variables:
-              name: Definir variáveis
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Free Play:
-              name: Atividade livre
-            Sam the Bat:
-              name: Morcego Sam
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            The Design Recipe:
-              name: A receita do design
           lessons:
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            Defining Variables:
-              name: Definir variáveis
-            The Design Recipe:
-              name: A receita do design
             Booleans:
               name: Booleanos
-            Sam the Bat:
-              name: Morcego Sam
+            Defining Variables:
+              name: Definir variáveis
+            Evaluation Blocks:
+              name: Blocos de cálculo
             Free Play:
               name: Atividade livre
+            Sam the Bat:
+              name: Morcego Sam
+            Strings and Images:
+              name: Cadeias de caracteres e imagens
+            The Design Recipe:
+              name: A receita do design
         allthethings:
           title: Todas as coisas!
-          stages:
-            AppLab:
-              name: Laboratório de aplicações
-            Artist:
-              name: Artista
-            Bee:
-              name: Abelha
-            Bounce:
-              name: Bounce
-            Farmer:
-              name: Agricultor
-            Flappy:
-              name: Flappy Bird
-            Jigsaw:
-              name: Quebra-cabeças
-            Maze:
-              name: Labirinto
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Multi
-            Odometer:
-              name: Odómetro
-            Text Compression:
-              name: Compressão de Texto
           lessons:
-            Jigsaw:
-              name: Quebra-cabeças
-            Maze:
-              name: Labirinto
+            AppLab:
+              name: Laboratório de aplicações
             Artist:
               name: Artista
             Bee:
               name: Abelha
+            Bounce:
+              name: Bounce
             Farmer:
               name: Agricultor
             Flappy:
               name: Flappy Bird
-            Bounce:
-              name: Bounce
+            Jigsaw:
+              name: Quebra-cabeças
+            Maze:
+              name: Labirinto
+            Minecraft:
+              name: Minecraft
             Multi:
               name: Multi
             Odometer:
               name: Odómetro
             Text Compression:
               name: Compressão de Texto
-            AppLab:
-              name: Laboratório de aplicações
-            Minecraft:
-              name: Minecraft
         algebraPD2b:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Booleans:
-              name: Booleanos
-            Course Overview:
-              name: Visão geral do curso
-            Defining Functions:
-              name: Definir funções
-            Defining Variables:
-              name: Definir variáveis
-            'Eval: Conditionals':
-              name: 'Eval: Condicionais'
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Next Steps:
-              name: Próximos Passos
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            Teacher Dashboard:
-              name: Painel do Professor
-            Writing Contracts:
-              name: Escrever Contratos
           lessons:
-            Course Overview:
-              name: Visão geral do curso
-            Teacher Dashboard:
-              name: Painel do Professor
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Strings and Images:
-              name: Cadeias de caracteres e imagens
-            Writing Contracts:
-              name: Escrever Contratos
-            Defining Variables:
-              name: Definir variáveis
-            Defining Functions:
-              name: Definir funções
             Booleans:
               name: Booleanos
+            Course Overview:
+              name: Visão geral do curso
+            Defining Functions:
+              name: Definir funções
+            Defining Variables:
+              name: Definir variáveis
             'Eval: Conditionals':
               name: 'Eval: Condicionais'
+            Evaluation Blocks:
+              name: Blocos de cálculo
             Next Steps:
               name: Próximos Passos
+            Strings and Images:
+              name: Cadeias de caracteres e imagens
+            Teacher Dashboard:
+              name: Painel do Professor
+            Writing Contracts:
+              name: Escrever Contratos
         cspfacilitator:
-          stages:
-            App Lab:
-              name: Laboratório de aplicações
-            Internet Simulator:
-              name: Simulador de internet
-            Welcome!:
-              name: Olá!
           lessons:
-            Welcome!:
-              name: Olá!
-            Internet Simulator:
-              name: Simulador de internet
             App Lab:
               name: Laboratório de aplicações
+            Internet Simulator:
+              name: Simulador de internet
+            Welcome!:
+              name: Olá!
         K5-OnlinePD:
-          stages:
-            Next Steps:
-              name: Próximos Passos
           lessons:
             Next Steps:
               name: Próximos Passos
         ECSPD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Olá!
-            Wrap-up:
-              name: Resumo
           lessons:
-            Welcome!:
-              name: Olá!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Olá!
             Wrap-up:
               name: Resumo
         algebraPD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Teacher Dashboard:
-              name: Painel do Professor
-            The Design Recipe:
-              name: A receita do design
-            Welcome!:
-              name: Olá!
           lessons:
-            Welcome!:
-              name: Olá!
-            The Design Recipe:
-              name: A receita do design
             Teacher Dashboard:
               name: Painel do Professor
+            The Design Recipe:
+              name: A receita do design
+            Welcome!:
+              name: Olá!
         sciencePD2b:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -1208,31 +694,18 @@ pt:
         science-PD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
         Equity-OnlinePD:
-          stages:
-            Next Steps:
-              name: Próximos Passos
           lessons:
             Next Steps:
               name: Próximos Passos
         sciencePD2b-iZone:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -1241,94 +714,53 @@ pt:
         ECSPD2-iZone:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Olá!
-            Wrap-up:
-              name: Resumo
           lessons:
-            Welcome!:
-              name: Olá!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Olá!
             Wrap-up:
               name: Resumo
         ECSPD2-NexTech:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Olá!
-            Wrap-up:
-              name: Resumo
           lessons:
-            Welcome!:
-              name: Olá!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Olá!
             Wrap-up:
               name: Resumo
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Pulseiras binárias
-            Building a Foundation:
-              name: Criar uma base
-            Getting Loopy:
-              name: Repetindo
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            Happy Maps:
-              name: Mapas felizes
-            Move it, Move it:
-              name: Move it, Move it
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Songwriting:
-              name: Composição
-            The Big Event:
-              name: O Grande Evento
           lessons:
+            Binary Bracelets:
+              name: Pulseiras binárias
+            Building a Foundation:
+              name: Criar uma base
+            Getting Loopy:
+              name: Repetindo
+            Graph Paper Programming:
+              name: Programação de papel milimetrico
             Happy Maps:
               name: Mapas felizes
             Move it, Move it:
               name: Move it, Move it
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            Building a Foundation:
-              name: Criar uma base
-            Getting Loopy:
-              name: Repetindo
-            The Big Event:
-              name: O Grande Evento
-            Binary Bracelets:
-              name: Pulseiras binárias
             Songwriting:
               name: Composição
+            The Big Event:
+              name: O Grande Evento
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
@@ -1343,17 +775,11 @@ pt:
             da Era do Gelo!
           description_short: Criar uma história ou faz um jogo com o Laboratório de
             Jogar da Era do Gelo!
-          stages:
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
           lessons:
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
         cspunit3temp:
           description_short: Programação
-          stages:
-            While Loops:
-              name: Laços enquanto
           lessons:
             While Loops:
               name: Laços enquanto
@@ -1363,9 +789,6 @@ pt:
             Gumball!
           description_short: Criar uma história ou faz um jogo com o Laboratório de
             jogo Gumball!
-          stages:
-            Gumball Play Lab:
-              name: Laboratório de jogo Gumball
           lessons:
             Gumball Play Lab:
               name: Laboratório de jogo Gumball
@@ -1375,9 +798,6 @@ pt:
             galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars
             numa galáxia muito, muito distante.
-          stages:
-            Hour of Code 2015:
-              name: Hora de Código 2015
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
@@ -1387,9 +807,6 @@ pt:
             galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars
             numa galáxia muito, muito distante.
-          stages:
-            Hour of Code 2015:
-              name: Hora de Código 2015
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
@@ -1398,18 +815,10 @@ pt:
           description: Utiliza blocos de código para levares o Steve ou a Alex numa
             aventura através deste mundo Minecraft
           description_short: Explora um mundo Minecraft através do código
-          stages:
-            Hour of Code 2015:
-              name: Hora de Código 2015
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -1420,87 +829,44 @@ pt:
         cspunit4:
           description_short: Programação
         AlgebraA:
-          stages:
-            'Calc: Defining Variables':
-              name: 'Cálculo: definir variáveis'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Blocos de cálculo'
-            'Eval: Strings and Images':
-              name: 'Eval: Strings e imagens'
-            'Eval: Writing Contracts':
-              name: 'Eval: Escrever contratos'
-            'Unplugged: Contracts':
-              name: 'Offline: contratos'
-            'Unplugged: The Design Recipe':
-              name: 'Offline: a receita de design'
           lessons:
+            'Calc: Defining Variables':
+              name: 'Cálculo: definir variáveis'
             'Calc: Evaluation Blocks':
               name: 'Calc: Blocos de cálculo'
             'Eval: Strings and Images':
               name: 'Eval: Strings e imagens'
-            'Unplugged: Contracts':
-              name: 'Offline: contratos'
             'Eval: Writing Contracts':
               name: 'Eval: Escrever contratos'
-            'Calc: Defining Variables':
-              name: 'Cálculo: definir variáveis'
+            'Unplugged: Contracts':
+              name: 'Offline: contratos'
             'Unplugged: The Design Recipe':
               name: 'Offline: a receita de design'
         AlgebraB:
-          stages:
-            'Eval: Boolean Operators':
-              name: 'Eval: Operadores booleanos'
-            'Eval: Conditionals':
-              name: 'Eval: Condicionais'
-            'Play Lab: Animation (Big Game)':
-              name: 'Laboratório: Animação (O Grande Jogo)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Laboratório: Booleano (O Grande Jogo)'
-            'Play Lab: Booleans':
-              name: 'Laboratório: booleanos'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Laboratório: Deteção de colisão (O Grande Jogo)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Laboratório: Definição de variáveis (O Grande Jogo)'
-            'Unplugged: Booleans':
-              name: 'Offline: booleanos'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Offline: deteção de colisão e fórmula da distância'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Offline: condicionais e funções definidas por partes'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Offline: video games e planos de coordenadas'
           lessons:
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Offline: video games e planos de coordenadas'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Laboratório: Definição de variáveis (O Grande Jogo)'
-            'Play Lab: Animation (Big Game)':
-              name: 'Laboratório: Animação (O Grande Jogo)'
-            'Unplugged: Booleans':
-              name: 'Offline: booleanos'
             'Eval: Boolean Operators':
               name: 'Eval: Operadores booleanos'
-            'Play Lab: Booleans':
-              name: 'Laboratório: booleanos'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Laboratório: Booleano (O Grande Jogo)'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Offline: condicionais e funções definidas por partes'
             'Eval: Conditionals':
               name: 'Eval: Condicionais'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Offline: deteção de colisão e fórmula da distância'
+            'Play Lab: Animation (Big Game)':
+              name: 'Laboratório: Animação (O Grande Jogo)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Laboratório: Booleano (O Grande Jogo)'
+            'Play Lab: Booleans':
+              name: 'Laboratório: booleanos'
             'Play Lab: Collision Detection (Big Game)':
               name: 'Laboratório: Deteção de colisão (O Grande Jogo)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Laboratório: Definição de variáveis (O Grande Jogo)'
+            'Unplugged: Booleans':
+              name: 'Offline: booleanos'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Offline: deteção de colisão e fórmula da distância'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Offline: condicionais e funções definidas por partes'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Offline: video games e planos de coordenadas'
         algebraPD1:
-          stages:
-            Course Overview:
-              name: Visão geral do curso
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Teacher Dashboard:
-              name: Painel do Professor
           lessons:
             Course Overview:
               name: Visão geral do curso
@@ -1509,37 +875,20 @@ pt:
             Teacher Dashboard:
               name: Painel do Professor
         csp1-2017:
-          stages:
-            Binary Numbers:
-              name: Números Binários
-            Number Systems:
-              name: Sistemas de Numeração
-            Personal Innovations:
-              name: Inovação Pessoal
-            Sending Binary Messages:
-              name: Enviar Mensagens Binárias
-            Sending Binary Messages with the Internet Simulator:
-              name: Enviar Mensagens Binárias com o Simulador de Internet
-            Sending Numbers:
-              name: Enviando números
-            The Internet:
-              name: A Internet
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
           lessons:
+            Binary Numbers:
+              name: Números Binários
+            Number Systems:
+              name: Sistemas de Numeração
             Personal Innovations:
               name: Inovação Pessoal
             Sending Binary Messages:
               name: Enviar Mensagens Binárias
             Sending Binary Messages with the Internet Simulator:
               name: Enviar Mensagens Binárias com o Simulador de Internet
-            Number Systems:
-              name: Sistemas de Numeração
-            Binary Numbers:
-              name: Números Binários
             Sending Numbers:
               name: Enviando números
             The Internet:
@@ -1547,13 +896,6 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csp2-2017:
-          stages:
-            Bytes and File Sizes:
-              name: Bytes e tamanhos de ficheiros
-            Text Compression:
-              name: Compressão de Texto
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -1566,11 +908,6 @@ pt:
               name: Inquérito Pós-Curso
         csp3-2017:
           description_short: Programação
-          stages:
-            Creating Functions:
-              name: Criando funções
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -1580,11 +917,6 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csp4-2017:
-          stages:
-            Simple Encryption:
-              name: Encriptação Simples
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -1594,11 +926,6 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csp5-2017:
-          stages:
-            While Loops:
-              name: Laços enquanto
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -1609,15 +936,12 @@ pt:
               name: Inquérito Pós-Curso
         CSDU3-Draft:
           description_short: Programação
-          stages:
+          lessons:
             Functions:
               name: Funções
             Velocity:
               name: Velocidade
         2016_sciencePD_phase1:
-          stages:
-            The Tutorial:
-              name: O Tutorial
           lessons:
             The Tutorial:
               name: O Tutorial
@@ -1626,27 +950,16 @@ pt:
         CSF_Secret_Sample:
           description_audience: Dos 8 aos 18 anos
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: Blocos de cálculo
-            Teacher Dashboard:
-              name: Painel do Professor
           lessons:
             Evaluation Blocks:
               name: Blocos de cálculo
             Teacher Dashboard:
               name: Painel do Professor
         sciencePD1:
-          stages:
-            The Tutorial:
-              name: O Tutorial
           lessons:
             The Tutorial:
               name: O Tutorial
         cspunit1-support:
-          stages:
-            Sending Binary Messages:
-              name: Enviar Mensagens Binárias
           lesson_groups:
             required:
               display_name: Visão geral
@@ -1666,9 +979,6 @@ pt:
             practice:
               display_name: Práticas de Ensino
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Funções do Artista
           lessons:
             Artist Functions:
               name: Funções do Artista
@@ -1683,14 +993,11 @@ pt:
             practice:
               display_name: Práticas de Ensino
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Abelha: Condicionais'
           lessons:
             'Bee: Conditionals':
               name: 'Abelha: Condicionais'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -1702,13 +1009,13 @@ pt:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Cidadania digital
             Songwriting:
               name: Composição
         grade1:
-          stages:
+          lessons:
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -1718,7 +1025,7 @@ pt:
             Programming:
               name: Programação
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'Artista: laços for'
             'Artist: Functions with Parameters':
@@ -1740,30 +1047,19 @@ pt:
             'Unplugged: Songwriting with Parameters':
               name: 'Offline: escrever músicas com parâmetros'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Olá!
-            Wrap-up:
-              name: Resumo
           lessons:
-            Welcome!:
-              name: Olá!
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Olá!
             Wrap-up:
               name: Resumo
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Artista: Laços Aninhados'
             Bee Debugging:
@@ -1782,15 +1078,6 @@ pt:
               display_name: Práticas de Ensino
         csd3-2017:
           description_short: Programação
-          stages:
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1801,16 +1088,16 @@ pt:
             csd_survey:
               display_name: Inquérito Pós-Curso
           lessons:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
             Velocity:
               name: Velocidade
             Functions:
               name: Funções
+            Variables:
+              name: Variáveis
+            Conditionals:
+              name: Condicionais
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy Bird
             Binary Bracelets:
@@ -1820,63 +1107,35 @@ pt:
             The Big Event:
               name: O Grande Evento
         k5concepts:
-          stages:
-            Binary:
-              name: Binário
-            Conditionals:
-              name: Condicionais
-            Events:
-              name: Eventos
-            For Loops:
-              name: Ciclos "for"
-            Functions:
-              name: Funções
-            Functions with Parameters:
-              name: Funções com parâmetros
-            Loops:
-              name: Ciclos
-            Nested Loops:
-              name: Laços aninhados
-            Variables:
-              name: Variáveis
-            While Loops:
-              name: Laços enquanto
           lessons:
+            Binary:
+              name: Binário
+            Conditionals:
+              name: Condicionais
             Events:
               name: Eventos
+            For Loops:
+              name: Ciclos "for"
+            Functions:
+              name: Funções
+            Functions with Parameters:
+              name: Funções com parâmetros
             Loops:
               name: Ciclos
             Nested Loops:
               name: Laços aninhados
-            Conditionals:
-              name: Condicionais
-            While Loops:
-              name: Laços enquanto
-            Functions:
-              name: Funções
             Variables:
               name: Variáveis
-            For Loops:
-              name: Ciclos "for"
-            Functions with Parameters:
-              name: Funções com parâmetros
-            Binary:
-              name: Binário
+            While Loops:
+              name: Laços enquanto
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: Painel do Professor
-            The Design Recipe:
-              name: A receita do design
-            Welcome!:
-              name: Olá!
           lessons:
-            Welcome!:
-              name: Olá!
-            The Design Recipe:
-              name: A receita do design
             Teacher Dashboard:
               name: Painel do Professor
+            The Design Recipe:
+              name: A receita do design
+            Welcome!:
+              name: Olá!
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -1902,38 +1161,20 @@ pt:
             practice:
               display_name: Práticas de Ensino
         basketball:
-          stages:
-            Bounce:
-              name: Bounce
           lessons:
             Bounce:
               name: Bounce
         hoc-encryption:
-          stages:
-            Simple Encryption:
-              name: Encriptação Simples
           lessons:
             Simple Encryption:
               name: Encriptação Simples
-        fesbinary:
-          title: Binário
-          stages:
-            Binary Bracelets:
-              name: Pulseiras binárias
-            Binary Images:
-              name: Imagens binárias
-            Play Lab:
-              name: Laboratório
         csd2-2017:
-          stages:
-            new stage:
-              name: nova fase
-            Lists:
-              name: Listas
           lesson_groups:
             csd_survey:
               display_name: Inquérito Pós-Curso
           lessons:
+            new stage:
+              name: nova fase
             Lists:
               name: Listas
         csp2-support:
@@ -1954,43 +1195,27 @@ pt:
             de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           description: Constrói um jogo Minecraft. Cria as tuas próprias versões de
             galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Desginer da Hora do Código de Minecraft
           lessons:
             Minecraft Hour of Code Designer:
               name: Desginer da Hora do Código de Minecraft
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Flappy Bird
           lessons:
             Flappy Code:
               name: Flappy Bird
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Your Digital Footprint:
-              name: A tua Pegada Digital
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Your Digital Footprint:
               name: A tua Pegada Digital
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da Vida Real: Aviões de Papel'
             Binary Bracelets:
@@ -1999,32 +1224,8 @@ pt:
               name: A tua Pegada Digital
             Building a Foundation:
               name: Criar uma base
-          lessons:
-            Building a Foundation:
-              name: Criar uma base
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmos da Vida Real: Aviões de Papel'
-            Binary Bracelets:
-              name: Pulseiras binárias
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Digital Citizenship:
-              name: Cidadania digital
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
-            Nested Loops:
-              name: Laços aninhados
-            Introduction:
-              name: Introdução
           lessons:
-            Introduction:
-              name: Introdução
-            Nested Loops:
-              name: Laços aninhados
             Conditionals with Cards:
               name: Condicionais com cartas
             Digital Citizenship:
@@ -2033,34 +1234,32 @@ pt:
               name: 'Offline: binário'
             Artist Binary:
               name: 'Artista: binário'
-        coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: Cidadania digital
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
+            Nested Loops:
+              name: Laços aninhados
             Introduction:
               name: Introdução
-            Conditionals:
-              name: Condicionais
+        coursee-draft:
           lesson_groups:
             content:
               display_name: Conteúdo
             extra_course_content:
               display_name: Conteúdo Extra Curso
           lessons:
-            Introduction:
-              name: Introdução
-            Conditionals:
-              name: Condicionais
+            Digital Citizenship:
+              name: Cidadania digital
             Internet:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+            Introduction:
+              name: Introdução
+            Conditionals:
+              name: Condicionais
         coursef-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+          lessons:
             Digital Citizenship:
               name: Cidadania digital
             Envelope Variables:
@@ -2075,54 +1274,25 @@ pt:
               name: Laboratório de brincadeiras da Idade do gelo
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
-          lesson_groups:
-            content:
-              display_name: Conteúdo
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
-            Introduction:
-              name: Introdução
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Songwriting with Parameters:
-              name: Composição de música com parâmetros
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
-          stages:
-            Hour of Code 2013:
-              name: Hora de Código 2013
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -2137,7 +1307,7 @@ pt:
             practice:
               display_name: Práticas de Ensino
         csdgraveyard:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp4-support:
@@ -2149,26 +1319,18 @@ pt:
             practice:
               display_name: Práticas de Ensino
         sciencepd4:
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
         csf2harvey:
-          stages:
-            Binary:
-              name: Binário
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -2176,11 +1338,6 @@ pt:
             Binary:
               name: Binário
         sciencepd5:
-          stages:
-            Welcome!:
-              name: Olá!
-            Wrap-Up:
-              name: Resumo
           lessons:
             Welcome!:
               name: Olá!
@@ -2195,9 +1352,6 @@ pt:
             practice:
               display_name: Práticas de Ensino
         csppostap-2017:
-          stages:
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -2207,55 +1361,42 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Listas
             For Loops:
               name: Ciclos "for"
             Functions with Parameters:
               name: Funções com parâmetros
-          lessons:
-            Functions with Parameters:
-              name: Funções com parâmetros
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Introdução
           lessons:
             Introduction:
               name: Introdução
         csd5-draft:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         applab-2hour:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Introdução
           lessons:
             Introduction:
               name: Introdução
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Introdução
-            Conditionals:
-              name: Condicionais
-            'Real Life Algorithms: Dice Race':
-              name: 'Algoritmos da via real: jogo de dados'
           lessons:
-            'Real Life Algorithms: Dice Race':
-              name: 'Algoritmos da via real: jogo de dados'
             Introduction:
               name: Introdução
             Conditionals:
               name: Condicionais
+            'Real Life Algorithms: Dice Race':
+              name: 'Algoritmos da via real: jogo de dados'
         csd6-2017:
-          stages:
+          lesson_groups:
+            csd_survey:
+              display_name: Inquérito Pós-Curso
+          lessons:
             Lists:
               name: Listas
             For Loops:
@@ -2264,14 +1405,8 @@ pt:
               name: Funções com parâmetros
             Functions with Parameters_:
               name: Funções com parâmetros
-          lesson_groups:
-            csd_survey:
-              display_name: Inquérito Pós-Curso
-          lessons:
-            Functions with Parameters_:
-              name: Funções com parâmetros
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variáveis
             Conditionals:
@@ -2285,22 +1420,17 @@ pt:
             csd_survey:
               display_name: Inquérito Pós-Curso
         csd3-old:
-          stages:
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
           lessons:
             Velocity:
               name: Velocidade
             Functions:
               name: Funções
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Listas
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variáveis
             Conditionals:
@@ -2312,13 +1442,6 @@ pt:
             'null':
               name: nulo
         coursef-ramp:
-          stages:
-            'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
-            Introduction:
-              name: Introdução
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
@@ -2331,53 +1454,33 @@ pt:
             cspSurvey:
               display_name: Inquérito
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
-            Bounce:
-              name: Bounce
           lessons:
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
             Bounce:
               name: Bounce
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
           title: Curso A
           assignment_family_title: Curso A
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
           title: Curso B
           assignment_family_title: Curso B
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Your Digital Footprint:
-              name: A tua Pegada Digital
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmos da Vida Real: Aviões de Papel'
           title: Curso C
           assignment_family_title: Curso C
           lessons:
-            Building a Foundation:
-              name: Criar uma base
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da Vida Real: Aviões de Papel'
-            Binary Bracelets:
-              name: Pulseiras binárias
         coursed-2017:
-          stages:
+          title: Curso D
+          assignment_family_title: Curso D
+          lessons:
             'Algorithms: Graph Paper Programming':
               description_teacher: Através da programação para desenhar as figuras,
                 os alunos vão começar a entender o que de fato é programar. A aula
@@ -2387,23 +1490,17 @@ pt:
                 que os próprios alunos criaram.
             Nested Loops:
               name: Laços aninhados
-          title: Curso D
-          assignment_family_title: Curso D
-          lessons:
-            Introduction:
-              name: Introdução
-            Nested Loops:
-              name: Laços aninhados
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Digital Citizenship:
-              name: Cidadania digital
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
         coursee-2017:
-          stages:
+          title: Curso E
+          assignment_family_title: Curso E
+          lesson_groups:
+            csf_e_1:
+              display_name: Continuar para o Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do Curso E
+            extra_course_content:
+              display_name: Conteúdo Extra Curso
+          lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
             Ice Age Play Lab:
@@ -2424,34 +1521,7 @@ pt:
               name: Criar uma base
             Nested Loops:
               name: Laços aninhados
-          title: Curso E
-          assignment_family_title: Curso E
-          lesson_groups:
-            csf_e_1:
-              display_name: Continuar para o Curso E (Opcional)
-            csf_e_2:
-              display_name: Conteúdo do Curso E
-            extra_course_content:
-              display_name: Conteúdo Extra Curso
-          lessons:
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
-            Introduction:
-              name: Introdução
-            Conditionals:
-              name: Condicionais
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
         coursef-2017:
-          stages:
-            'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
-            Building a Foundation:
-              name: Criar uma base
           title: Curso F
           assignment_family_title: Curso F
           lesson_groups:
@@ -2460,20 +1530,10 @@ pt:
             csf_f_2:
               display_name: Conteúdo do Curso F
           lessons:
-            Building a Foundation:
-              name: Criar uma base
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
-            Introduction:
-              name: Introdução
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Songwriting with Parameters:
-              name: Composição de música com parâmetros
+            Building a Foundation:
+              name: Criar uma base
         cspnovice:
           lesson_groups:
             required:
@@ -2547,7 +1607,10 @@ pt:
             content:
               display_name: Conteúdo
         express-2017:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+          lessons:
             Introduction:
               name: Introdução
             Internet:
@@ -2566,60 +1629,31 @@ pt:
               name: Criar uma base
             Nested Loops:
               name: Laços aninhados
-          lesson_groups:
-            content:
-              display_name: Conteúdo
-          lessons:
-            Introduction:
-              name: Introdução
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Spelling Bee:
-              name: Escrever com a abelha
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Spelling Bee:
               name: Escrever com a abelha
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: Obrigado
         csp-pre-survey-test-2017:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp3-research-mxghyt:
-          stages:
-            new stage:
-              name: nova fase
-            Creating Functions:
-              name: Criando funções
           description_short: Programação
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
           lessons:
+            new stage:
+              name: nova fase
             Creating Functions:
               name: Criando funções
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
-            Conditionals:
-              name: Condicionais
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
           lesson_groups:
             csf_e_1:
               display_name: Continuar para o Curso E (Opcional)
@@ -2630,6 +1664,8 @@ pt:
           lessons:
             Building a Foundation:
               name: Criar uma base
+            Nested Loops:
+              name: Laços aninhados
             Conditionals:
               name: Condicionais
             Internet:
@@ -2637,26 +1673,11 @@ pt:
             Crowdsourcing:
               name: Aberto ao público
         new-d:
-          stages:
-            Introduction:
-              name: Introdução
-            Nested Loops:
-              name: Laços aninhados
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Digital Citizenship:
-              name: Cidadania digital
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
-            Building a Foundation:
-              name: Criar uma base
           lessons:
             Introduction:
               name: Introdução
-            Building a Foundation:
-              name: Criar uma base
+            Nested Loops:
+              name: Laços aninhados
             Conditionals with Cards:
               name: Condicionais com cartas
             Digital Citizenship:
@@ -2665,18 +1686,13 @@ pt:
               name: 'Offline: binário'
             Artist Binary:
               name: 'Artista: binário'
+            Building a Foundation:
+              name: Criar uma base
         csp3-a:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         new-express:
-          stages:
-            Introduction:
-              name: Introdução
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -2688,15 +1704,6 @@ pt:
             Nested Loops:
               name: Laços aninhados
         new-e:
-          stages:
-            Building a Foundation:
-              name: Criar uma base
-            Conditionals:
-              name: Condicionais
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
           lesson_groups:
             csf_e_1:
               display_name: Continuar para o Curso E (Opcional)
@@ -2714,19 +1721,6 @@ pt:
             Crowdsourcing:
               name: Aberto ao público
         new-f:
-          stages:
-            Building a Foundation:
-              name: Criar uma base
-            'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Songwriting with Parameters:
-              name: Composição de música com parâmetros
           lesson_groups:
             csf_f_1:
               display_name: Continuar para o Curso F (Opcional)
@@ -2746,52 +1740,35 @@ pt:
             Songwriting with Parameters:
               name: Composição de música com parâmetros
         hocali:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: Criando funções
           lessons:
             Creating Functions:
               name: Criando funções
         pwc:
-          stages:
+          lessons:
             new stage:
               name: nova fase
-            Personal Innovations:
-              name: Inovação Pessoal
-            Simple Encryption:
-              name: Encriptação Simples
-          lessons:
             Personal Innovations:
               name: Inovação Pessoal
             Simple Encryption:
               name: Encriptação Simples
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Hora do Código de Minecraft
           lessons:
             Minecraft Hour of Code:
               name: Hora do Código de Minecraft
         csp-explore-2017:
-          stages:
-            new stage:
-              name: nova fase
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
           lessons:
+            new stage:
+              name: nova fase
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csp-create-2017:
-          stages:
-            Post-Course Survey:
-              name: Inquérito Pós-Curso
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -2799,30 +1776,14 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         aws-demo:
-          stages:
-            new stage:
-              name: nova fase
           lessons:
             new stage:
               name: nova fase
         colehoc17:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
-            Introduction:
-              name: Introdução
-            Conditionals:
-              name: Condicionais
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
           lesson_groups:
             csf_e_1:
               display_name: Continuar para o Curso E (Opcional)
@@ -2844,21 +1805,6 @@ pt:
             Crowdsourcing:
               name: Aberto ao público
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: Criar uma base
-            'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
-            Introduction:
-              name: Introdução
-            Ice Age Play Lab:
-              name: Laboratório de brincadeiras da Idade do gelo
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Songwriting with Parameters:
-              name: Composição de música com parâmetros
           lesson_groups:
             csf_f_1:
               display_name: Continuar para o Curso F (Opcional)
@@ -2880,26 +1826,12 @@ pt:
             Songwriting with Parameters:
               name: Composição de música com parâmetros
         csd6-old:
-          stages:
-            Lists:
-              name: Listas
-            For Loops:
-              name: Ciclos "for"
           lessons:
             Lists:
               name: Listas
             For Loops:
               name: Ciclos "for"
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
           description_short: Programação
           lesson_groups:
             csd3_1:
@@ -2918,23 +1850,11 @@ pt:
             Functions:
               name: Funções
         textbook:
-          stages:
-            new stage:
-              name: nova fase
           lessons:
             new stage:
               name: nova fase
         csd3-2018:
           description_short: Programação
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -2952,9 +1872,6 @@ pt:
             Functions:
               name: Funções
         csd2-2018:
-          stages:
-            Lists:
-              name: Listas
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -2963,18 +1880,13 @@ pt:
               name: Listas
         coursea-2018:
           assignment_family_title: Curso A
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: Mapas felizes
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação de papel milimetrico
             Introduction:
@@ -3009,30 +1921,9 @@ pt:
               name: Programação por revezamento
             Graph Paper Programming:
               name: Programação de papel milimetrico
-          lessons:
-            Graph Paper Programming:
-              name: Programação de papel milimetrico
-            Relay Programming:
-              name: Programação por revezamento
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Binary Bracelets:
-              name: Pulseiras binárias
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
         courseb-2018:
           assignment_family_title: Curso B
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Your Digital Footprint:
@@ -3041,14 +1932,9 @@ pt:
               name: Criando caminhos
             Copyright and Creativity:
               name: É Óptimo Criar e Jogar Limpo
-          lessons:
-            Move It, Move It:
-              name: Criando caminhos
-            Your Digital Footprint:
-              name: A tua Pegada Digital
         coursed-2018:
           assignment_family_title: Curso D
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação de papel milimetrico
             Introduction:
@@ -3067,20 +1953,9 @@ pt:
               name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
-          lessons:
-            Relay Programming:
-              name: Programação por revezamento
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Digital Citizenship:
-              name: Cidadania digital
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
         coursec-2018:
           assignment_family_title: Curso C
-          stages:
+          lessons:
             Building a Foundation:
               name: Criar uma base
             'Loops: Getting Loopy':
@@ -3089,28 +1964,25 @@ pt:
               name: O Grande Evento
             Binary Bracelets:
               name: Pulseiras binárias
-          lessons:
-            Building a Foundation:
-              name: Criar uma base
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmos da Vida Real: Aviões de Papel'
-            Binary Bracelets:
-              name: Pulseiras binárias
         csd6-2018:
-          stages:
-            Functions with Parameters_:
-              name: Funções com parâmetros
-            Functions with Parameters:
-              name: Funções com parâmetros
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
           lessons:
+            Functions with Parameters_:
+              name: Funções com parâmetros
             Functions with Parameters:
               name: Funções com parâmetros
         coursee-2018:
           assignment_family_title: Curso E
-          stages:
+          lesson_groups:
+            csf_e_1:
+              display_name: Continuar para o Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do Curso E
+            extra_course_content:
+              display_name: Conteúdo Extra Curso
+          lessons:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
             Building a Foundation:
@@ -3134,29 +2006,14 @@ pt:
               name: Hora do Código de Minecraft
             Copyright and Creativity:
               name: Partilha Digital
-          lesson_groups:
-            csf_e_1:
-              display_name: Continuar para o Curso E (Opcional)
-            csf_e_2:
-              display_name: Conteúdo do Curso E
-            extra_course_content:
-              display_name: Conteúdo Extra Curso
-          lessons:
-            Building a Foundation:
-              name: Criar uma base
-            Nested Loops:
-              name: Laços aninhados
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Conditionals:
-              name: Condicionais
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
         coursef-2018:
           assignment_family_title: Curso F
-          stages:
+          lesson_groups:
+            csf_f_1:
+              display_name: Continuar para o Curso F (Opcional)
+            csf_f_2:
+              display_name: Conteúdo do Curso F
+          lessons:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
             Building a Foundation:
@@ -3175,36 +2032,7 @@ pt:
               name: Composição de música com parâmetros
             Conditionals with Cards:
               name: Condicionais com cartas
-          lesson_groups:
-            csf_f_1:
-              display_name: Continuar para o Curso F (Opcional)
-            csf_f_2:
-              display_name: Conteúdo do Curso F
-          lessons:
-            Building a Foundation:
-              name: Criar uma base
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
         csp1-2018:
-          stages:
-            Personal Innovations:
-              name: Inovação Pessoal
-            Sending Binary Messages:
-              name: Enviar Mensagens Binárias
-            Sending Binary Messages with the Internet Simulator:
-              name: Enviar Mensagens Binárias com o Simulador de Internet
-            Number Systems:
-              name: Sistemas de Numeração
-            Binary Numbers:
-              name: Números Binários
-            Sending Numbers:
-              name: Enviando números
-            The Internet:
-              name: A Internet
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3240,11 +2068,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csp2-2018:
-          stages:
-            Bytes and File Sizes:
-              name: Bytes e tamanhos de ficheiros
-            Text Compression:
-              name: Compressão de Texto
           lesson_groups:
             csp2_1_2018:
               display_name: 'Unidade 1: Informação Digital'
@@ -3255,9 +2078,6 @@ pt:
               name: Compressão de Texto
         csp3-2018:
           description_short: Programação
-          stages:
-            Creating Functions:
-              name: Criando funções
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3273,9 +2093,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csp4-2018:
-          stages:
-            Simple Encryption:
-              name: Encriptação Simples
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3283,9 +2100,6 @@ pt:
             Simple Encryption:
               name: Encriptação Simples
         csp5-2018:
-          stages:
-            While Loops:
-              name: Laços enquanto
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3403,7 +2217,7 @@ pt:
             content:
               display_name: Conteúdo
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Spelling Bee:
@@ -3414,13 +2228,6 @@ pt:
               name: A tua Pegada Digital
             Copyright and Creativity:
               name: É Óptimo Criar e Jogar Limpo
-          lessons:
-            Move It, Move It:
-              name: Criando caminhos
-            Your Digital Footprint:
-              name: A tua Pegada Digital
-            Spelling Bee:
-              name: Escrever com a abelha
         fit-test:
           lesson_groups:
             required:
@@ -3428,42 +2235,30 @@ pt:
             content:
               display_name: Conteúdo
         frozen-2018:
-          stages:
-            Artist:
-              name: Artista
           lessons:
             Artist:
               name: Artista
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Artista
           lessons:
             Artist:
               name: Artista
         dance:
-          stages:
+          title: Festa da Dança
+          lessons:
             new stage:
               name: nova fase
             Dance Party:
               name: Festa da Dança
-          title: Festa da Dança
-          lessons:
-            Dance Party:
-              name: Festa da Dança
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Artista
           lessons:
             Artist:
               name: Artista
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: Festa da Dança
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: Festa da Dança
         cspplayground:
@@ -3477,7 +2272,16 @@ pt:
             csp_project:
               display_name: Projecto
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: Variáveis
+            csf_for_loops:
+              display_name: Ciclos "for"
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Cidadania digital
+          lessons:
             Building a Foundation:
               name: Criar uma base
             Conditionals with Cards:
@@ -3494,46 +2298,11 @@ pt:
               name: Aberto ao público
             Digital Sharing:
               name: Partilha Digital
-          lesson_groups:
-            csf_variables:
-              display_name: Variáveis
-            csf_for_loops:
-              display_name: Ciclos "for"
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
-              display_name: Cidadania digital
-          lessons:
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Aberto ao público
-            Digital Sharing:
-              name: Partilha Digital
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: Festa da Dança
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programação de papel milimetrico
-            Relay Programming:
-              name: Programação por revezamento
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Digital Citizenship:
-              name: Cidadania digital
-            'Unplugged: Binary':
-              name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
-            Dance Party:
-              name: Festa da Dança
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -3548,20 +2317,29 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
             Conditionals with Cards:
               name: Condicionais com cartas
-            'Unplugged: Binary':
-              name: 'Offline: binário'
-            Artist Binary:
-              name: 'Artista: binário'
             Digital Citizenship:
               name: Cidadania digital
+            'Unplugged: Binary':
+              name: Imagens binárias
+            Artist Binary:
+              name: 'Artista: binário'
             Dance Party:
               name: Festa da Dança
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: Funções
+          lessons:
             Building a Foundation:
               name: Criar uma base
             Nested Loops:
@@ -3585,20 +2363,23 @@ pt:
               name: O Rei Manda
             Songwriting:
               name: Composição
+        express-2019:
           lesson_groups:
-            csf_digcit:
-              display_name: Cidadania digital
-            csf_nested_loops:
-              display_name: Laços aninhados
+            csf_warmup:
+              display_name: Aquecimento
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_conditionals:
+              display_name: Condicionais
             csf_functions:
               display_name: Funções
+            csf_variables:
+              display_name: Variáveis
+            csf_for_loops:
+              display_name: Ciclos "for"
           lessons:
-            Conditionals:
-              name: Condicionais
-            Simon Says:
-              name: O Rei Manda
-        express-2019:
-          stages:
             Relay Programming:
               name: Programação por revezamento
             Conditionals with Cards:
@@ -3619,24 +2400,6 @@ pt:
               name: Aberto ao público
             Dance Party:
               name: Festa da Dança
-          lesson_groups:
-            csf_warmup:
-              display_name: Aquecimento
-            csf_sequencing:
-              display_name: Sequenciação
-            csf_loops:
-              display_name: Ciclos
-            csf_conditionals:
-              display_name: Condicionais
-            csf_functions:
-              display_name: Funções
-            csf_variables:
-              display_name: Variáveis
-            csf_for_loops:
-              display_name: Ciclos "for"
-          lessons:
-            Dance Party:
-              name: Festa da Dança
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -3646,26 +2409,17 @@ pt:
             csd1_2:
               display_name: 'Capítulo 2: Computadores e Resolução de Problemas'
         andrea-test:
-          stages:
-            new stage:
-              name: nova fase
-            'null':
-              name: nulo
           lesson_groups:
             required:
               display_name: Visão geral
             content:
               display_name: Conteúdo
+          lessons:
+            new stage:
+              name: nova fase
+            'null':
+              name: nulo
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmos da Vida Real: Aviões de Papel'
-            'Events: The Big Event':
-              name: O Grande Evento
-            Binary Bracelets:
-              name: Pulseiras binárias
-            Powerful Passwords:
-              name: Senhas Poderosas
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3678,20 +2432,19 @@ pt:
             csf_events:
               display_name: Eventos
           lessons:
-            Powerful Passwords:
-              name: Senhas Poderosas
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da Vida Real: Aviões de Papel'
+            'Events: The Big Event':
+              name: O Grande Evento
             Binary Bracelets:
               name: Pulseiras binárias
+            Powerful Passwords:
+              name: Senhas Poderosas
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Mapas felizes
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3702,38 +2455,28 @@ pt:
             csf_events:
               display_name: Eventos
           lessons:
+            'Programming: Happy Maps':
+              name: Mapas felizes
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
         courseb-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+          lessons:
             Move It, Move It:
               name: Criando caminhos
             Your Digital Footprint:
               name: A tua Pegada Digital
             'Loops: Getting Loopy':
               name: Repetindo
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadania digital
-            csf_sequencing:
-              display_name: Sequenciação
-            csf_loops:
-              display_name: Ciclos
-            csf_events:
-              display_name: Eventos
-          lessons:
-            Your Digital Footprint:
-              name: A tua Pegada Digital
-            Move It, Move It:
-              name: Criando caminhos
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Criando caminhos
-            Your Digital Footprint:
-              name: A tua Pegada Digital
-            Spelling Bee:
-              name: Escrever com a abelha
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -3742,23 +2485,21 @@ pt:
             csf_events:
               display_name: Eventos
           lessons:
+            Move It, Move It:
+              name: Criando caminhos
+            Your Digital Footprint:
+              name: A tua Pegada Digital
             Spelling Bee:
               name: Escrever com a abelha
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
         dani-test-script:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csd2-2019:
-          stages:
-            Lists:
-              name: Listas
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3767,15 +2508,6 @@ pt:
               name: Listas
         csd3-2019:
           description_short: Programação
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -3801,9 +2533,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funções com parâmetros
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3811,9 +2540,6 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
         csp4-pilot:
-          stages:
-            Surveys:
-              name: Inquéritos
           lesson_groups:
             csp_variables:
               display_name: Variáveis
@@ -3825,22 +2551,10 @@ pt:
               display_name: Projecto
             required:
               display_name: Visão geral
+          lessons:
+            Surveys:
+              name: Inquéritos
         csp1-2019:
-          stages:
-            Personal Innovations:
-              name: Inovação Pessoal
-            Sending Binary Messages:
-              name: Enviar Mensagens Binárias
-            Sending Binary Messages with the Internet Simulator:
-              name: Enviar Mensagens Binárias com o Simulador de Internet
-            Number Systems:
-              name: Sistemas de Numeração
-            Binary Numbers:
-              name: Números Binários
-            Sending Numbers:
-              name: Enviando números
-            The Internet:
-              name: A Internet
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3860,11 +2574,6 @@ pt:
             The Internet:
               name: A Internet
         csp2-2019:
-          stages:
-            Bytes and File Sizes:
-              name: Bytes e tamanhos de ficheiros
-            Text Compression:
-              name: Compressão de Texto
           lesson_groups:
             csp2_1_2018:
               display_name: 'Unidade 1: Informação Digital'
@@ -3877,9 +2586,6 @@ pt:
               name: Compressão de Texto
         csp3-2019:
           description_short: Programação
-          stages:
-            Creating Functions:
-              name: Criando funções
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3887,9 +2593,6 @@ pt:
             Creating Functions:
               name: Criando funções
         csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Encriptação Simples
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3897,9 +2600,6 @@ pt:
             Simple Encryption:
               name: Encriptação Simples
         csp5-2019:
-          stages:
-            While Loops:
-              name: Laços enquanto
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -3919,7 +2619,12 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csp1-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+            required:
+              display_name: Visão geral
+          lessons:
             new stage:
               name: nova fase
             Number Systems:
@@ -3930,33 +2635,18 @@ pt:
               name: Enviar Mensagens Binárias com o Simulador de Internet
             Binary Numbers:
               name: Números Binários
-          lesson_groups:
-            cspSurvey:
-              display_name: Inquérito
-            required:
-              display_name: Visão geral
-          lessons:
-            Binary Numbers:
-              name: Números Binários
         csd-videos:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Aberto ao público
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            Building a Foundation:
-              name: Criar uma base
           lessons:
-            Building a Foundation:
-              name: Criar uma base
             Crowdsourcing:
               name: Aberto ao público
             Conditionals with Cards:
               name: Condicionais com cartas
+            Building a Foundation:
+              name: Criar uma base
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -4009,14 +2699,14 @@ pt:
             csp_project:
               display_name: Projecto
         csp7-pilot-staging:
-          stages:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotecas
+          lessons:
             new stage:
               name: nova fase
             Libraries:
               name: Bibliotecas
-          lesson_groups:
-            csp_libraries:
-              display_name: Bibliotecas
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -4048,7 +2738,7 @@ pt:
             csp_project:
               display_name: Projecto
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Programação de papel milimetrico
         csd-post-survey-2018:
@@ -4060,9 +2750,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csp5-pilot:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             csp_lists:
               display_name: Listas
@@ -4072,6 +2759,9 @@ pt:
               display_name: Projecto
             required:
               display_name: Visão geral
+          lessons:
+            new stage:
+              name: nova fase
         fit2019-novice:
           lesson_groups:
             required:
@@ -4093,27 +2783,14 @@ pt:
             csd1_2:
               display_name: 'Capítulo 2: Computadores e Resolução de Problemas'
         csd2-pilot:
-          stages:
-            Lists:
-              name: Listas
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
+          lessons:
+            Lists:
+              name: Listas
         csd3-pilot:
           description_short: Programação
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Random Numbers:
-              name: Números Aleatórios
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -4122,20 +2799,20 @@ pt:
             cspSurvey:
               display_name: Inquérito
           lessons:
-            Shapes and Parameters:
-              name: Formas e Parâmetros
             Variables:
               name: Variáveis
-            Random Numbers:
-              name: Números Aleatórios
             Conditionals:
               name: Condicionais
             Velocity:
               name: Velocidade
             Functions:
               name: Funções
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Random Numbers:
+              name: Números Aleatórios
         maddie-test:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp3-pilot:
@@ -4171,14 +2848,14 @@ pt:
             content:
               display_name: Conteúdo
         dlp19-csd-mod-w2:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             required:
               display_name: Visão geral
             content:
               display_name: Conteúdo
+          lessons:
+            new stage:
+              name: nova fase
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
@@ -4220,23 +2897,18 @@ pt:
             csd1_2:
               display_name: 'Capítulo 2: Computadores e Resolução de Problemas'
         csp2-pilot:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             content:
               display_name: Conteúdo
             required:
               display_name: Visão geral
-        peru-2019:
-          stages:
+          lessons:
             new stage:
               name: nova fase
-            Introduction:
-              name: Introdução
-            Nested Loops:
-              name: Laços aninhados
+        peru-2019:
           lessons:
+            new stage:
+              name: nova fase
             Introduction:
               name: Introdução
             Nested Loops:
@@ -4248,14 +2920,14 @@ pt:
             required:
               display_name: Visão geral
         dance-2019:
-          stages:
-            Dance Party:
-              name: Festa da Dança
           lessons:
             Dance Party:
               name: Festa da Dança
         k5-onlinepd-2019:
-          stages:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Próximos Passos
+          lessons:
             Next Steps:
               name: Próximos Passos
             Sequencing:
@@ -4272,32 +2944,11 @@ pt:
               name: Variáveis
             For Loops:
               name: Ciclos "for"
-          lesson_groups:
-            k5_next_steps:
-              display_name: Próximos Passos
-          lessons:
-            Sequencing:
-              name: Sequenciação
-            Loops:
-              name: Ciclos
-            Events:
-              name: Eventos
-            Conditionals:
-              name: Condicionais
-            Functions:
-              name: Funções
-            Variables:
-              name: Variáveis
-            For Loops:
-              name: Ciclos "for"
         csp10-pilot:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp4-preview:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             csp_variables:
               display_name: Variáveis
@@ -4307,18 +2958,16 @@ pt:
               display_name: Funções
             csp_project:
               display_name: Projecto
+          lessons:
+            new stage:
+              name: nova fase
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: Condicionais
             Simon Says:
               name: O Rei Manda
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Aberto ao público
-            Conditionals with Cards:
-              name: Condicionais com cartas
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -4334,11 +2983,6 @@ pt:
             Conditionals with Cards:
               name: Condicionais com cartas
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Condicionais
-            Simon Says:
-              name: O Rei Manda
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -4356,11 +3000,6 @@ pt:
             Simon Says:
               name: O Rei Manda
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Condicionais
-            Simon Says:
-              name: O Rei Manda
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -4384,7 +3023,7 @@ pt:
             required:
               display_name: Visão geral
         csp8-pilot:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp4-2020:
@@ -4410,7 +3049,7 @@ pt:
             csp_libraries:
               display_name: Bibliotecas
         csp9-pilot:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csd2-2020:
@@ -4434,9 +3073,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Funções com parâmetros
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -4445,21 +3081,6 @@ pt:
               name: Funções com parâmetros
         csd3-2020:
           description_short: Programação
-          stages:
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Variables:
-              name: Variáveis
-            Random Numbers:
-              name: Números Aleatórios
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Text:
-              name: Texto
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -4474,37 +3095,15 @@ pt:
               name: Variáveis
             Random Numbers:
               name: Números Aleatórios
-            Text:
-              name: Texto
             Conditionals:
               name: Condicionais
             Velocity:
               name: Velocidade
             Functions:
               name: Funções
+            Text:
+              name: Texto
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Ir a Locais de um modo Seguro
-            'Programming: Happy Maps':
-              name: Mapas felizes
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadania digital
-            csf_sequencing:
-              display_name: Sequenciação
-            csf_loops:
-              display_name: Ciclos
-            csf_events:
-              display_name: Eventos
-        courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: A tua Pegada Digital
-            Move It, Move It:
-              name: Criando caminhos
-            'Loops: Getting Loopy':
-              name: Repetindo
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -4515,16 +3114,28 @@ pt:
             csf_events:
               display_name: Eventos
           lessons:
+            Going Places Safely:
+              name: Ir a Locais de um modo Seguro
+            'Programming: Happy Maps':
+              name: Mapas felizes
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+          lessons:
+            Your Digital Footprint:
+              name: A tua Pegada Digital
             Move It, Move It:
               name: Criando caminhos
+            'Loops: Getting Loopy':
+              name: Repetindo
         coursec-2020:
-          stages:
-            Powerful Passwords:
-              name: Senhas Poderosas
-            Binary Bracelets:
-              name: Pulseiras binárias
-            'Events: The Big Event':
-              name: O Grande Evento
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -4537,24 +3148,13 @@ pt:
             csf_events:
               display_name: Eventos
           lessons:
+            Powerful Passwords:
+              name: Senhas Poderosas
             Binary Bracelets:
               name: Pulseiras binárias
+            'Events: The Big Event':
+              name: O Grande Evento
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Programação de papel milimetrico
-            Relay Programming:
-              name: Programação por revezamento
-            Conditionals with Cards:
-              name: Condicionais com cartas
-            'Unplugged: Binary':
-              name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
-            Digital Citizenship:
-              name: Cidadania digital
-            Dance Party:
-              name: Festa da Dança
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -4569,18 +3169,29 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
-            Dance Party:
-              name: Festa da Dança
             Conditionals with Cards:
               name: Condicionais com cartas
             'Unplugged: Binary':
-              name: 'Offline: binário'
+              name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
+            Digital Citizenship:
+              name: Cidadania digital
+            Dance Party:
+              name: Festa da Dança
         coursee-2020:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: Funções
+          lessons:
             Simon Says:
               name: O Rei Manda
             'Functions: Songwriting':
@@ -4592,32 +3203,7 @@ pt:
                 por que combinar blocos de códigos em funções é uma prática útil.
             Digital Sharing:
               name: Partilha Digital
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadania digital
-            csf_nested_loops:
-              display_name: Laços aninhados
-            csf_functions:
-              display_name: Funções
-          lessons:
-            Conditionals:
-              name: Condicionais
-            Simon Says:
-              name: O Rei Manda
-            Digital Sharing:
-              name: Partilha Digital
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: Variáveis do envelope
-            For Loop Fun:
-              name: Diversão com laços for
-            Internet:
-              name: A Internet
-            Crowdsourcing:
-              name: Aberto ao público
-            Digital Sharing:
-              name: Partilha Digital
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -4628,14 +3214,15 @@ pt:
           lessons:
             Envelope Variables:
               name: Variáveis do envelope
-            Internet:
-              name: Internet
             For Loop Fun:
               name: Diversão com laços for
+            Internet:
+              name: A Internet
+            Crowdsourcing:
+              name: Aberto ao público
+            Digital Sharing:
+              name: Partilha Digital
         express-2020:
-          stages:
-            Dance Party:
-              name: Festa da Dança
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -4655,9 +3242,6 @@ pt:
             Dance Party:
               name: Festa da Dança
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Escrever com a abelha
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -4669,105 +3253,66 @@ pt:
             Spelling Bee:
               name: Escrever com a abelha
         csp1-2020:
-          stages:
-            new stage:
-              name: nova fase
-            Binary Numbers:
-              name: Números Binários
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
+            cspSurvey:
+              display_name: Inquérito
           lessons:
+            new stage:
+              name: nova fase
             Binary Numbers:
               name: Números Binários
         csp2-2020:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A Internet'
+          lessons:
+            new stage:
+              name: nova fase
         csp3-2020:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp6-2020:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp8-2020:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp9-2020:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp10-2020:
-          stages:
-            new stage:
-              name: nova fase
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Ciber Segurança e Impactos Globais'
+          lessons:
+            new stage:
+              name: nova fase
         csp-march-virtual:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp3-virtual:
           description_short: Programação
-          stages:
-            Creating Functions:
-              name: Criando funções
           lessons:
             Creating Functions:
               name: Criando funções
-        csd3-virtual:
-          description_short: Programação
-          stages:
-            Variables:
-              name: Variáveis
-            Conditionals:
-              name: Condicionais
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Random Numbers:
-              name: Números Aleatórios
-          lesson_groups:
-            csd3_1:
-              display_name: 'Capítulo 1: Imagens e Animações'
-          lessons:
-            Shapes and Parameters:
-              name: Formas e Parâmetros
-            Variables:
-              name: Variáveis
-            Random Numbers:
-              name: Números Aleatórios
-            Conditionals:
-              name: Condicionais
         jess-test-script:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp5-virtual:
-          stages:
+          lessons:
             While Loops:
               name: Laços enquanto
             Variables:
               name: Variáveis
-          lessons:
-            Variables:
-              name: Variáveis
         virtual-holding-place:
-          stages:
-            Velocity:
-              name: Velocidade
-            Functions:
-              name: Funções
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -4779,7 +3324,7 @@ pt:
             Functions:
               name: Funções
         code-break:
-          stages:
+          lessons:
             new stage:
               name: nova fase
             Algorithms:
@@ -4787,13 +3332,91 @@ pt:
             Events:
               name: Eventos
         no-lg:
-          stages:
+          lessons:
             new stage:
               name: nova fase
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Laços enquanto
           lessons:
             While Loops:
               name: Laços enquanto
+        k5-onlinepd-2020:
+          lessons:
+            Sequencing:
+              name: Sequenciação
+            Loops:
+              name: Ciclos
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções
+            Variables:
+              name: Variáveis
+            For Loops:
+              name: Ciclos "for"
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Próximos Passos
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csd3-virtual:
+          description_short: Programação
+          lessons:
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Variables:
+              name: Variáveis
+            Random Numbers:
+              name: Números Aleatórios
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Velocity:
+              name: Velocidade
+            Functions:
+              name: Funções
+          lesson_groups:
+            csd3_1:
+              display_name: Conteúdo
+            csd3_2:
+              display_name: Conteúdo
+            cspSurvey:
+              display_name: Conteúdo
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Lição
+          lesson_groups:
+            lg_1:
+              display_name: Conteúdo
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curso A
+            Course B:
+              name: Curso B

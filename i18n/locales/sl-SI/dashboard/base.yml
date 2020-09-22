@@ -237,6 +237,8 @@ sl:
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
+      legal_privacy: "Izjava o zasebnosti"
+      legal_tos: "Pogoje storitve"
     user:
       classroom: 'Učiteljeva domača stran'
       district_dashboard: 'Nadzorna plošča za okrožje'
@@ -609,6 +611,7 @@ sl:
     form_labels:
       email: 'Elektronska pošta'
       school_name: 'Ime šole'
+      colombian_school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'

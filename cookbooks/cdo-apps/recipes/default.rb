@@ -61,8 +61,6 @@ apt_package %w(
   cmake
 )
 
-include_recipe 'cdo-mysql'
-
 include_recipe 'cdo-ruby'
 
 # Ensure the correct locale is generated and set as default (e.g. for Docker containers).
@@ -87,6 +85,7 @@ end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 
 include_recipe 'cdo-secrets'
+include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 

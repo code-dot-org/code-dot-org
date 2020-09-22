@@ -57,7 +57,6 @@ const SILENCED = [
   'netsim',
   'studio',
   'turtle',
-  'scratch',
   'weblab',
   'spritelab',
 
@@ -81,10 +80,10 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'regionalPartnerMiniContact',
-  'donorTeacherBanner',
 
   // other entry points
   'blockly',
+  'googleblockly',
   'brambleHost',
   'levelbuilder'
 ];

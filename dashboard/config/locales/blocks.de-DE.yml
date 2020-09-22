@@ -976,6 +976,10 @@ de:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': Sekunden
       gamelab_bounceOff:
         text: "{SPRITE} prallt von {TARGET} ab"
       gamelab_changePropBy:
@@ -1024,8 +1028,46 @@ de:
           CHOICE:
             '"this"': dies
             '"other"': andere
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': Sekunden
       gamelab_hideTitleScreen:
         text: verstecke Titelbildschirm
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': hoch
+            '"down"': runter
+            '"left"': links
+            '"right"': rechts
+            '"space"': Abstand
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} berührt den Rand"
       gamelab_isTouchingSprite:
@@ -1072,6 +1114,13 @@ de:
             '"z"': z
       gamelab_locationAt:
         text: 'Position x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
       gamelab_locationMouse:
         text: Mausposition
       gamelab_locationOf:
@@ -1102,6 +1151,8 @@ de:
             '"West"': West
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} geklicked"
       gamelab_patrollingUpDown:
         text: patrouilliert auf und ab
       gamelab_playSound:
@@ -1189,6 +1240,8 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} geklicked"
       gamelab_tumbling:
         text: hingefallen
       gamelab_turn:

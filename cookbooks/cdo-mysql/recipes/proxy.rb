@@ -13,28 +13,10 @@ apt_package 'proxysql' do
   action :upgrade
 end
 
-# Recursively resolve CNAME entries to get the last-resolved domain.
-def get_cname(domain)
-  require 'resolv'
-  Resolv::DNS.open do |dns|
-    loop do
-      domain = dns.getresource(domain, Resolv::DNS::Resource::IN::CNAME)&.name.to_s
-    end
-  end
-rescue Resolv::ResolvError
-  domain
-end
-
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
 writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
 reader = URI.parse((node['cdo-secrets']['db_reader'] || writer).to_s)
 reporting = URI.parse((node['cdo-secrets']['reporting_db_writer'] || writer).to_s)
-
-# If this is an Aurora cluster, resolve instance-endpoint hostnames
-# to help with instance auto-discovery.
-if (is_aurora = !!node['cdo-secrets']['db_cluster_id'])
-  [writer, reader, reporting].each {|server| server.host = get_cname(server.host)}
-end
 
 admin = URI.parse(node['cdo-mysql']['proxy']['admin'])
 admin_opt_str = %w(user host port).map {|x| "--#{x}=#{admin.send(x)}"}.join(' ')
@@ -50,16 +32,13 @@ template 'proxysql.cnf' do
   path "/etc/#{name}"
   source "#{name}.erb"
   variables(
-    mysql_servers: {
-      writer => [0, 1, 2],
-      reader => [1, 2],
-      reporting => [3]
-    }.flat_map {|server, hostgroup| [server].product(hostgroup)},
+    mysql_servers: [
+      {writer => [0, 1, 2]},
+      {reader => [1, 2]},
+      {reporting => [3]}
+    ],
     data_dir: data_dir,
-    is_aurora: is_aurora,
-    writer: writer,
-    reader: reader,
-    reporting: reporting,
+    is_aurora: lazy {!!CDO.db_cluster_id},
     admin: admin,
     port: proxy_port,
     reporting_port: reporting_port

@@ -1416,7 +1416,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -1428,7 +1431,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1443,7 +1449,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1458,7 +1467,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1474,7 +1486,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1489,7 +1504,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1504,7 +1522,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1520,7 +1541,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1531,7 +1555,10 @@
     "short_instructions": "Finish the code to create this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"

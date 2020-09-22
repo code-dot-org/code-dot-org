@@ -17,6 +17,8 @@
   "designToolboxHeader": "Design Toolbox",
   "designWorkspaceDescription": "Click on an element or choose it from the dropdown below to edit its properties. Create code in Events.",
   "designWorkspaceHeader": "Workspace",
+  "designElementPhotoSelectClickName": "Change",
+  "designElementPhotoSelectClickDescription": "Triggered when a photo is selected.",
   "dropletBlock_appendItem_description": "Append the item to the end of the array.",
   "dropletBlock_appendItem_param0_description": "The array to be modified.",
   "dropletBlock_appendItem_param1_description": "The item to add to the end of the array.",

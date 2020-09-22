@@ -91,9 +91,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
@@ -113,9 +110,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -193,9 +187,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} مرة واحدة"
         options:
@@ -225,9 +216,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: تقييم{CODE}
       Dancelab_everyMeasuresRange:
@@ -907,7 +895,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -953,7 +941,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -980,6 +968,10 @@ ar:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': ثوان
       gamelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -1024,8 +1016,47 @@ ar:
         options:
           CHOICE:
             '"this"': هذا
+            '"other"': أخرى
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثوان
       gamelab_hideTitleScreen:
         text: إخفاء شاشة العنوان
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+            '"a"': أ
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': ي
+            '"k"': ك
+            '"l"': أنا
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': ف
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': ص
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} هو لمس الحواف"
       gamelab_jumpTo:
@@ -1066,10 +1097,17 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': 'y'
+            '"y"': ص
             '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       gamelab_locationMouse:
         text: موقع الماوس
       gamelab_locationOf:
@@ -1098,6 +1136,8 @@ ar:
             '"West"': غرب
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
+      gamelab_objectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_playSound:
         text: بلاي ساوند {SOUND}
       gamelab_pointInDirection:
@@ -1175,6 +1215,8 @@ ar:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
+      gamelab_subjectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_turn:
         text: دوره {SPRITE} {DIRECTION} {N} درجه
         options:
@@ -1482,7 +1524,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1493,7 +1535,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenMouseClicked:
         text: عند النقر على الماوس
       Mikelab_whenYesNoClicked:

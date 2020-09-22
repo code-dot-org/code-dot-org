@@ -175,6 +175,8 @@ bn:
       project_gallery: প্রকল্প
       educate_hoc: এক ঘন্টার কোড
       stats: পরিসংখ্যান
+      legal_privacy: গোপনীয়তার নীতি
+      legal_tos: সেবার শর্ত সমূহ
     user:
       classroom: শিক্ষক হোম পেজ
       label: হ্যালো %{username}

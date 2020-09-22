@@ -332,6 +332,8 @@ nl:
       help_us: Help ons
       teach: Onderwijzen
       about: Over
+      legal_privacy: Privacybeleid
+      legal_tos: Gebruiksvoorwaarden
     user:
       classroom: Startpagina voor de leerkracht
       district_dashboard: Regio-overzicht
@@ -898,6 +900,8 @@ nl:
       school_name: Naam van de school
       school_city: School Stad
       school_country: Land van de school
+      colombian_school_city: School Stad
+      colombian_school_name: Naam van de school
     form_entries:
       gender:
         male: Man

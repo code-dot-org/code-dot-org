@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -86,6 +86,57 @@ class Level < ActiveRecord::Base
     bubble_choice_description
     thumbnail_url
   )
+
+  def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
+    levels_by_key = script.levels.index_by(&:key)
+
+    raw_levels.map do |raw_level|
+      raw_level.symbolize_keys!
+
+      # Concepts are comma-separated, indexed by name
+      raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+      end
+
+      raw_level_data = raw_level.dup
+
+      key = raw_level.delete(:name)
+
+      if raw_level[:level_num] && !key.starts_with?('blockly')
+        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+        key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
+      end
+
+      level =
+        if new_suffix && !key.starts_with?('blockly')
+          Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
+        else
+          levels_by_key[key] || Level.find_by_key(key)
+        end
+
+      if key.starts_with?('blockly')
+        # this level is defined in levels.js. find/create the reference to this level
+        level = Level.
+          create_with(name: 'blockly').
+          find_or_create_by!(Level.key_to_params(key))
+        level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+        if level.video_key && !raw_level[:video_key]
+          raw_level[:video_key] = nil
+        end
+
+        level.update(raw_level)
+      elsif raw_level[:video_key]
+        level.update(video_key: raw_level[:video_key])
+      end
+
+      unless level
+        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+      end
+
+      level.save! if level.changed?
+      level
+    end
+  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -275,6 +326,21 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def should_allow_pairing?(current_script_id)
+    if type == "LevelGroup"
+      return false
+    end
+
+    # A level could have multiple parents. Find the one associated with the current script.
+    current_parent = parent_levels.find do |parent|
+      parent.script_levels.find do |script|
+        script&.script_id == current_script_id
+      end
+    end
+
+    !(current_parent&.type == "LevelGroup")
+  end
+
   def self.level_file_path(level_name)
     level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
     raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
@@ -355,7 +421,6 @@ class Level < ActiveRecord::Base
     'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Scratch', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -650,13 +715,53 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # we must search recursively for child levels, because some bubble choice
+  # sublevels have project template levels.
+  def all_descendant_levels
+    my_child_levels = all_child_levels
+    child_descendant_levels = my_child_levels.map(&:all_descendant_levels).flatten
+    my_child_levels + child_descendant_levels
+  end
+
+  # Returns all child levels of this level, which could include contained levels,
+  # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
+  # This method may be overridden by subclasses.
+  def all_child_levels
+    (contained_levels + [project_template_level] - [self]).compact
+  end
+
+  # There's a bit of trickery here. We consider a level to be
+  # hint_prompt_enabled for the sake of the level editing experience if any of
+  # the scripts associated with the level are hint_prompt_enabled.
+  def hint_prompt_enabled?
+    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+  end
+
   private
 
-  # Returns the level name, removing the name_suffix first (if present).
+  # Returns the level name, removing the name_suffix first (if present), and
+  # also removing any additional suffixes of the format "_NNNN" which might
+  # represent a version year.
   def base_name
-    return name unless name_suffix
-    strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
-    name[strip_suffix_regex, 1] || name
+    base_name = name
+    if name_suffix
+      strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
+      base_name = name[strip_suffix_regex, 1] || name
+    end
+    base_name = strip_version_year_suffixes(base_name)
+    base_name
+  end
+
+  # repeatedly strip any version year suffix of the form _NNNN ()e.g. _2017)
+  # from the input string.
+  def strip_version_year_suffixes(str)
+    year_suffix_regex = /^(.*)_[0-9]{4}$/
+    loop do
+      matchdata = str.match(year_suffix_regex)
+      break unless matchdata
+      str = matchdata.captures.first
+    end
+    str
   end
 
   def write_to_file?

@@ -288,6 +288,8 @@ bg:
       help_us: "Помогнете ни"
       teach: "Обучи"
       about: "Относно"
+      legal_privacy: "Защита на личните данни"
+      legal_tos: "Термини"
     user:
       classroom: 'Начална страница на учителя'
       district_dashboard: 'Областно табло'
@@ -820,6 +822,7 @@ bg:
       email: 'Имейл'
       school_name: 'Име на училището'
       school_country: 'Училищен район'
+      colombian_school_name: 'Име на училището'
     form_entries:
       gender:
         male: 'Мъж'

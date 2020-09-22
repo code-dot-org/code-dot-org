@@ -1,4 +1,10 @@
 {
+  "clicked": "",
+  "clickedSprite": "",
+  "subject": "",
+  "subjectSprite": "",
+  "object": "",
+  "objectSprite": "",
   "errorLoadingAnimation": "Se pare că avem dificultăți la încărcarea animației tale \"{animationName}\". Asigură-te că ai o bună conexiune la internet și încearcă să reîncarci pagina. Dacă problema continuă, e posibil ca această animație să nu funcționeze. În cazul acesta, va fi necesar să ștergi animația pentru a putea continua.",
   "reinfFeedbackMsg": "Ai terminat! Apasă \"Continuă\" pentru a avansa la nivelul următor.",
   "shareGame": "condivide jocul tău:",

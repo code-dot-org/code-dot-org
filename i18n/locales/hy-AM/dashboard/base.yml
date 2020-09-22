@@ -192,6 +192,8 @@ hy:
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"
+      legal_privacy: "Գաղտնիության քաղաքականություն"
+      legal_tos: "Ծառայությունների մատուցման պայմաններ"
     user:
       classroom: 'Ուսուցչի գլխավոր էջը'
       district_dashboard: 'District Dashboard'
