@@ -25,7 +25,7 @@ layout: none
       %br
       Illuminating Disparities
     %p
-      One sentence describing the report
+      Annual report on K-12 computer science in the United States which Includes diversity data, national momentum, policy trends, maps, state summaries, and implementation data.
     %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
       %button{style: "background-color: black; color: white; border-color: black"} Download PDF
     %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
@@ -41,19 +41,19 @@ layout: none
     %h4
       State Summaries
     %p
-      One sentence describing the images below and the state summaries
+      Each state has the following graphics which show state specific Computer Science policies and student enrollment data
   .col-33
     %img.center{src: "/images/fit-300/StatePage.png"}
     %p{style: "margin-bottom: 20px"}
-      Sentence describing the State Page
+      Detailed description of state's progress on reaching the 9 policies.
   .col-33
     %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
     %p{style: "margin-bottom: 20px"}
-      Sentence describing the State Page
+      Graph showing access to foundational computer science courses in high school
   .col-33
     %img.center{src: "/images/fit-300/AccessParticipation.png"}
     %p{style: "margin-bottom: 20px"}
-      Sentence describing the State Page
+      Grahic showing access and participation disparities for racial and ethnical groups for AP Computer Science
   .clear
 
 %br
@@ -82,7 +82,7 @@ layout: none
     %h4
       Access to Computer Science
     %p
-      Sentence describing Access Report
+      The Access Report shows the percent of high schools in each state that offer at least 1 foundational Computer Science courses.
   .clear
 
 %br
@@ -92,7 +92,7 @@ layout: none
     %h4
       Policy Maps
     %p
-      Sentence describing Policy Maps
+      The policy maps show which state have passed a particiular policy
   .col-50{style: "background-color: white; text-align: center"}
     %img{src: "/images/fit-450/AccessReport.png"}
   .clear
@@ -106,7 +106,7 @@ layout: none
     %h4
       9 Policies
     %p
-      Sentence describing 9 Policies
+      Our 9 policies help promote growth and sustainability of K-12 computer science. 
   .clear
 
 %br
@@ -130,6 +130,7 @@ layout: none
 
 %hr{style: "height:2px; background-color: black; width: 85%"}
 
+
 .container_responsive
   .col-50
     %h4
@@ -137,25 +138,69 @@ layout: none
     %p
       Download our digital state handout PDFs for more details about computer science in your state!
   .col-50{style: "text-align: center"}
-    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
-      %button{style: "background-color: black; color: white; border-color: black"} Download State Handouts
+    %select.dropdown#small-state-dropdown
+      %option Pick a State
+      -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
+        %option{value: abbr}= state
+
+    :javascript
+      var documents = {
+        AK: "Alaska",
+        AL: "Alabama",
+        AR: "Arkansas",
+        AZ: "Arizona",
+        CA: "California",
+        CO: "Colorado",
+        CT: "Connecticut",
+        DC: "DistrictofColumbia",
+        DE: "Delaware",
+        FL: "Florida",
+        GA: "Georgia",
+        KS: "Kansas",
+        KY: "Kentucky",
+        LA: "Louisiana",
+        MA: "Massachusetts",
+        MD: "Maryland",
+        ME: "Maine",
+        MI: "Michigan",
+        MN: "Minnesota",
+        MO: "Missouri",
+        MS: "Mississippi",
+        MT: "Montana",
+        NC: "NorthCarolina",
+        ND: "NorthDakota",
+        NE: "Nebraska",
+        NH: "NewHampshire",
+        NJ: "NewJersey",
+        NM: "NewMexico",
+        NV: "Nevada",
+        NY: "NewYork",
+        OH: "Ohio",
+        OK: "Oklahoma",
+        OR: "Oregon",
+        PA: "Pennsylvania",
+        RI: "RhodeIsland",
+        SC: "SouthCarolina",
+        SD: "SouthDakota",
+        TN: "Tennessee",
+        TX: "Texas",
+        UT: "Utah",
+        VA: "Virginia",
+        VT: "Vermont",
+        WA: "Washington",
+        WI: "Wisconsin",
+        WV: "WestVirginia",
+        WY: "Wyoming"
+      };
+
+      $("#small-state-dropdown").on('change', function() {
+        var value = $(this).val();
+        location.href = "/state_handouts/" + documents[value] +".pdf";
+      });
+
   .clear
 
 %br
-
-/Dropdown button for state handouts
-
-/ .container_responsive
-/   .col-50
-/     %h4
-/       Looking for more state specific information?
-/     %p
-/       Download our digital state handout PDFs for more details about computer science in your state!
-/   .col-50{style: "text-align: center"}
-/     %button{onclick: "myFunction()", style: "background-color: black; color: white; border-color: black"} Download State Handouts
-/       %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z"} Alabama
-/       %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z"} Arkansas
-/   .clear
 
 
 
