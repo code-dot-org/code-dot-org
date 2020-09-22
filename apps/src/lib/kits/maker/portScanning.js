@@ -40,10 +40,7 @@ export function findPortWithViableDevice() {
       } else {
         return Promise.reject(
           new ConnectionFailedError(
-            applabI18n.noUsableDeviceOnPort() +
-              '\n\n' +
-              applabI18n.foundDevices() +
-              JSON.stringify(list)
+            applabI18n.foundDevices({deviceList: JSON.stringify(list)})
           )
         );
       }

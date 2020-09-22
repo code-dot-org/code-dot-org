@@ -874,6 +874,7 @@
   "inProgress": "In progress",
   "inspireStudents": "Inspire students",
   "instructions": "Instructions",
+  "instructionsWithColon": "Instructions:",
   "intlAnnouncementSpecial2020Body": "Students can continue to learn at home while schools are closed. Take a Code Break with us, or see resources for students, parents, and teachers - including videos, fun tutorials, and projects! Most options only available in English.",
   "intlAnnouncementSpecial2020Heading": "More resources for learning at home",
   "invalidDataEntryTypeError": "Value must be boolean, number, string, `undefined`, or `null`. Make sure to include quotes for strings like \"this\". ",

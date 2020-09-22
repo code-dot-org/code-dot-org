@@ -147,7 +147,7 @@ class WindowsDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>{i18n.instructions()}:</h4>
+          <h4>{i18n.instructionsWithColon()}</h4>
           <ol>
             <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
             <li>
@@ -284,7 +284,7 @@ const FetchingLatestVersionError = () => (
 
 const SetupInstructions = () => (
   <div>
-    <h4>{i18n.instructions()}:</h4>
+    <h4>{i18n.instructionsWithColon()}</h4>
     <ol>
       <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
       <li>{applabI18n.makerSetupSignIn()}</li>
