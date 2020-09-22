@@ -2,22 +2,24 @@
 #
 # Table name: script_levels
 #
-#  id          :integer          not null, primary key
-#  script_id   :integer          not null
-#  chapter     :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  stage_id    :integer
-#  position    :integer
-#  assessment  :boolean
-#  properties  :text(65535)
-#  named_level :boolean
-#  bonus       :boolean
+#  id                  :integer          not null, primary key
+#  script_id           :integer          not null
+#  chapter             :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#  stage_id            :integer
+#  position            :integer
+#  assessment          :boolean
+#  properties          :text(65535)
+#  named_level         :boolean
+#  bonus               :boolean
+#  activity_section_id :integer
 #
 # Indexes
 #
-#  index_script_levels_on_script_id  (script_id)
-#  index_script_levels_on_stage_id   (stage_id)
+#  index_script_levels_on_activity_section_id  (activity_section_id)
+#  index_script_levels_on_script_id            (script_id)
+#  index_script_levels_on_stage_id             (stage_id)
 #
 
 require 'cdo/shared_constants'
@@ -229,7 +231,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged?
+    return false if lesson && lesson.unplugged_lesson?
     return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
@@ -299,7 +301,7 @@ class ScriptLevel < ActiveRecord::Base
   def level_display_text
     if level.unplugged?
       I18n.t('unplugged_activity')
-    elsif lesson.unplugged?
+    elsif lesson.unplugged_lesson?
       position - 1
     else
       position
