@@ -5,6 +5,12 @@ import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/L
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {connect} from 'react-redux';
+import {
+  addTip,
+  updateTip,
+  removeTip
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   bottomControls: {
@@ -12,7 +18,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  addLevel: {
+  addButton: {
     fontSize: 14,
     background: '#eee',
     border: '1px solid #ddd',
@@ -21,14 +27,14 @@ const styles = {
   }
 };
 
-export default class ActivitySectionCardButtons extends Component {
+class ActivitySectionCardButtons extends Component {
   static propTypes = {
     activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
     addLevel: PropTypes.func,
-    editTip: PropTypes.func,
-    deleteTip: PropTypes.func
+    updateTip: PropTypes.func,
+    removeTip: PropTypes.func
   };
 
   constructor(props) {
@@ -83,14 +89,18 @@ export default class ActivitySectionCardButtons extends Component {
     // If no tip was provided then user exited without saving
     if (tip) {
       this.state.editingExistingTip
-        ? this.props.editTip(tip)
-        : this.props.addTip(tip);
+        ? this.props.updateTip(
+            this.props.activityPosition,
+            this.props.activitySection.position,
+            tip
+          )
+        : this.props.addTip(
+            this.props.activityPosition,
+            this.props.activitySection.position,
+            tip
+          );
     }
     this.setState({addTipOpen: false, editingExistingTip: false});
-  };
-
-  handleDeleteTip = tipKey => {
-    this.props.deleteTip(tipKey);
   };
 
   handleOpenAddResource = () => {
@@ -101,6 +111,14 @@ export default class ActivitySectionCardButtons extends Component {
     this.setState({addResourceOpen: false});
   };
 
+  handleDeleteTip = tipKey => {
+    this.props.removeTip(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      tipKey
+    );
+  };
+
   render() {
     return (
       <div>
@@ -109,7 +127,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddLevel}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -118,7 +136,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddTip}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -127,7 +145,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddResource}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -163,10 +181,21 @@ export default class ActivitySectionCardButtons extends Component {
           handleConfirm={this.handleCloseAddLevel}
           currentLevels={this.props.activitySection.levels}
           addLevel={this.props.addLevel}
-          activitySectionPosition={this.props.activitySection.position}
+          activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
         />
       </div>
     );
   }
 }
+
+export const UnconnectedActivitySectionCardButtons = ActivitySectionCardButtons;
+
+export default connect(
+  state => ({}),
+  {
+    addTip,
+    updateTip,
+    removeTip
+  }
+)(ActivitySectionCardButtons);
