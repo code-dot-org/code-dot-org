@@ -919,13 +919,24 @@ class Script < ActiveRecord::Base
         }, lesson_groups]
       end
 
+      # Print progress for dev environments and adhocs
+      debug = [:adhoc, :development].include?(rack_env)
+      if debug
+        $stdout.sync = true
+        puts "Seeding #{scripts_to_add.length} Scripts"
+        print "Seeded... "
+      end
+
+      n = 0
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+      scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.each do |options, raw_lesson_groups|
         add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+        n += 1
+        print "#{n}, " if debug
       rescue => e
         raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
       end
-      [added_scripts, custom_i18n]
+      custom_i18n
     end
   end
 
