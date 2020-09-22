@@ -3,7 +3,7 @@
   "config": {
     "simpleValue": true,
     "name": "clickedSpritePointer",
-    "blockText": "clicked {SPRITE}",
+    "blockText": "{SPRITE}",
     "args": [
       {
         "name": "SPRITE",

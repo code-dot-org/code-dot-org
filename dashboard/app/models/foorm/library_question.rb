@@ -18,6 +18,8 @@
 class Foorm::LibraryQuestion < ApplicationRecord
   include Seeded
 
+  validate :validate_library_question
+
   def self.setup
     library_questions = Dir.glob('config/foorm/library/**/*.json').sort.map do |path|
       # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
@@ -45,8 +47,14 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end.flatten
 
     transaction do
-      reset_db
+      Foorm::LibraryQuestion.delete_all
       Foorm::LibraryQuestion.import! library_questions
     end
+  end
+
+  def validate_library_question
+    Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
+  rescue StandardError => e
+    errors.add(:question, e.message)
   end
 end

@@ -1,0 +1,33 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+MIDDLEBURY UNION HIGH SCHOOL,VT-U055-PS180,500040200189,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARLINGTON MEMORIAL,VT-T005-PS011,500183000005,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BELLOWS FALLS UHSD #27,VT-U027-PS025,500824600346,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUE MOUNTAIN USD #21,VT-U021-PS036,500822400334,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BURLINGTON SENIOR HIGH SCHOOL,VT-T037-PS052,500282000063,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BURLINGTON TECHNICAL CENTER,VT-T037-VC004,500282000080,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CABOT SCHOOL,VT-T038-PS055,500285000074,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANAAN SCHOOLS,VT-T041-PS059,500294000426,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHAMPLAIN VALLEY UNION HIGH SCHOOL,VT-U056-PS066,500039600082,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLCHESTER HIGH SCHOOL,VT-T050-PS072,500324000087,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DANVILLE SCHOOL,VT-T057-PS082,500345000451,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THE CENTER FOR TECHNOLOGY - ESSEX,VT-U051-VC006,500039500122,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ESSEX HIGH SCHOOL,VT-U051-PS388,500039500120,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARTFORD HIGH SCHOOL,VT-T093-PS134,500459000151,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARTFORD AREA CAREER & TECHNOLOGY CENTER,VT-T093-VC007,500459000093,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARWOOD UNION HIGH SCHOOL,VT-U060-PS138,500040300148,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLACK RIVER USD #39,VT-U039-PS035,500824100342,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILTON SENIOR HIGH SCHOOL,VT-T126-PS186,500561000125,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MISSISQUOI VALLEY UHSD #7,VT-U007-PS187,500562000195,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONTPELIER HIGH SCHOOL,VT-T129-PS191,500570000199,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT. ANTHONY SENIOR UHSD #14,VT-U014-PS196,500581000208,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT MANSFIELD UNION HIGH SCHOOL,VT-U401B-PS199,500038800210,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH COUNTRY CAREER CENTER,VT-U022B-VC010,500960000107,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RANDOLPH UNION HIGH SCHOOL,VT-U059-PS237,500040000042,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATRICIA A. HANNAFORD CAREER CENTER,VT-TE001-VC001,500002100099,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHFORD JUNIOR/SENIOR HIGH SCHOOL,VT-T165-PS242,500681000256,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RUTLAND SENIOR HIGH SCHOOL,VT-T173-PS253,500705000271,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH BURLINGTON HIGH SCHOOL,VT-T191-PS272,500747000294,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPAULDING UHSD #41,VT-U041-PS276,500000200419,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWINFIELD USD #33,VT-U033-PS304,500822500335,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+U-32 HIGH SCHOOL (UHSD #32),VT-U032-PS305,500823700339,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH ROYALTON ELEMENTARY/HIGH SCHOOL,VT-T171-PS274,500699000266,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

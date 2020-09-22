@@ -17,8 +17,6 @@
     <script src="<%- p5playPath %>"></script>
     <script src="<%- codePath %>"></script>
     <style>
-      #soft-buttons.soft-buttons-none {
-        display: none; }
       body.expo {
         background-color: black;
       }
@@ -29,7 +27,7 @@
   </head>
   <body class="<%- exportClass %>" style="margin:0; overflow:hidden; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; position:fixed; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
     <div id="sketch" class="<%- exportClass %>" style="position:absolute;"></div>
-    <div id="soft-buttons" class="soft-buttons-none">
+    <div id="soft-buttons" style="display: none">
       <button id="leftButton" disabled className="arrow">
       </button>
       <button id="rightButton" disabled className="arrow">

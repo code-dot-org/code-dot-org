@@ -3,6 +3,12 @@ import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
 
+const styles = {
+  buttonLeft: {
+    marginLeft: 0
+  }
+};
+
 /**
  * A component for selecting one or more students in a section.
  */
@@ -65,6 +71,7 @@ export default class StudentSelector extends React.Component {
         <div className="clear" />
         {this.state.selectedStudentIds.length !== 0 && (
           <button
+            style={styles.buttonLeft}
             type="button"
             onClick={this.handleSubmit}
             className="addPartners"

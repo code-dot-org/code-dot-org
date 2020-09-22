@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script updates the pd_enrollment survey_sent_at and survey_id fields for existing surveys
 # from before those fields existed, and sends missing pd_workshop survey emails that didn't go out.
@@ -6,7 +8,6 @@
 require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/only_one'
 
 def main
   dashboard_message_id = DB[:poste_messages].where(name: 'dashboard').order(:id).last[:id]
@@ -67,4 +68,4 @@ def main
   puts "#{unprocessed_workshop_ids.count} unprocessed workshops processed."
 end
 
-main if only_one_running?(__FILE__)
+main

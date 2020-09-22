@@ -104,18 +104,11 @@ export default class EnrollForm extends React.Component {
   constructor(props) {
     super(props);
 
-    let initialState = {
+    this.state = {
+      first_name: this.props.first_name,
+      email: this.props.email,
       errors: {}
     };
-
-    if (this.props.email) {
-      initialState = {
-        ...initialState,
-        ...{first_name: this.props.first_name, email: this.props.email}
-      };
-    }
-
-    this.state = initialState;
   }
 
   handleChange = change => {

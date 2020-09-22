@@ -6,6 +6,7 @@ import progress, {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 export default storybook => {
   const initialState = {
     progress: {
+      lessonGroups: [],
       stages: [
         {
           levels: []
@@ -18,6 +19,20 @@ export default storybook => {
 
   const initialStateGrouped = {
     progress: {
+      lessonGroups: [
+        {
+          display_name: 'cat1',
+          id: 1,
+          description: 'This is a description',
+          big_questions: ['What?']
+        },
+        {
+          display_name: 'cat2',
+          id: 2,
+          description: 'This is another description',
+          big_questions: ['Why?']
+        }
+      ],
       stages: [
         {
           lesson_group_display_name: 'cat1',

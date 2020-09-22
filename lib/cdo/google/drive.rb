@@ -3,6 +3,8 @@ require 'cdo/chat_client'
 
 module Google
   class Drive
+    BATCH_UPDATE_SIZE = 2000
+
     class File
       def initialize(session, file)
         @session = session
@@ -113,8 +115,12 @@ module Google
       worksheet = document.worksheet_by_title(sheet_name)
       worksheet ||= document.add_worksheet(sheet_name, 500)
       worksheet.delete_rows(1, worksheet.num_rows)
-      worksheet.update_cells(1, 1, data)
-      worksheet.save
+      current_index = 1
+      data.each_slice(BATCH_UPDATE_SIZE) do |data_batch|
+        worksheet.update_cells(current_index, 1, data_batch)
+        current_index += BATCH_UPDATE_SIZE
+        worksheet.save
+      end
     end
 
     # Returns an ACL object for a spreadsheet document

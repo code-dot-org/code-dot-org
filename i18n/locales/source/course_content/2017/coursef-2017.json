@@ -205,7 +205,10 @@
     },
     "function_definitions": {
       "draw flame": {
-        "name": "draw flame"
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
       },
       "draw fire": {
         "name": "draw fire"
@@ -1195,7 +1198,7 @@
     "long_instructions": "Now, Pirate Pegleg has some questions for Brian.\n\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \n\nPut the variables in the correct places to create this conversation.",
     "authored_hints": {
       "courseF_playlab_variables4b_a": "You don’t need any more blocks from the toolbox here.",
-      "courseF_playlab_variables4b_b": "Put the two `age` variables and one `name` variable where they make the most sense in the conversation."
+      "courseF_playlab_variables4b_b": "Put the two `age` variables and the two `name` variables where they make the most sense in the conversation."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/17/puzzle/6": {
@@ -1894,16 +1897,26 @@
         "name": "draw a square"
       },
       "checker": {
-        "name": "checker"
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
       },
       "do something": {
         "name": "do something"
       },
       "Make gingham": {
-        "name": "Make gingham"
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
       },
       "black outline": {
-        "name": "black outline"
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -1913,7 +1926,10 @@
     "function_definitions": {
       "draw a square": {
         "name": "draw a square",
-        "description": "draw a square with a length parameter"
+        "description": "draw a square with a length parameter",
+        "parameters": {
+          "length": "length"
+        }
       }
     },
     "contained levels": [
@@ -1961,19 +1977,32 @@
     "function_definitions": {
       "draw a square": {
         "name": "draw a square",
-        "description": "draw a square with length parameter\n"
+        "description": "draw a square with length parameter\n",
+        "parameters": {
+          "length": "length"
+        }
       },
       "checker": {
-        "name": "checker"
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
       },
       "do something": {
         "name": "do something"
       },
       "Make gingham": {
-        "name": "Make gingham"
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
       },
       "black outline": {
-        "name": "black outline"
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -1986,16 +2015,29 @@
     },
     "function_definitions": {
       "draw a square": {
-        "name": "draw a square"
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a square2": {
-        "name": "draw a square2"
+        "name": "draw a square2",
+        "parameters": {
+          "size": "size"
+        }
       },
       "filled square": {
-        "name": "filled square"
+        "name": "filled square",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
       },
       "black outline": {
-        "name": "black outline"
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -2012,7 +2054,11 @@
     "function_definitions": {
       "draw a polygon": {
         "name": "draw a polygon",
-        "description": "draw a polygon with sides and length paramater"
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -2030,7 +2076,11 @@
     },
     "function_definitions": {
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -2043,7 +2093,11 @@
     },
     "function_definitions": {
       "draw a spiral edge": {
-        "name": "draw a spiral edge"
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       }
     }
   },
@@ -2056,7 +2110,12 @@
     },
     "function_definitions": {
       "draw a spiral edge": {
-        "name": "draw a spiral edge"
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
       }
     }
   },
@@ -2069,7 +2128,12 @@
     },
     "function_definitions": {
       "draw a spiral edge": {
-        "name": "draw a spiral edge"
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
       }
     }
   },
@@ -2082,29 +2146,59 @@
     "function_definitions": {
       "draw a star": {
         "name": "draw a star",
-        "description": "draw a star with given points and sides of given length"
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
       },
       "draw a circle": {
         "name": "draw a circle",
-        "description": "draw a circle of given radius"
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
       },
       "draw a pinwheel": {
-        "name": "draw a pinwheel"
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
       },
       "draw a triangle": {
-        "name": "draw a triangle"
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a shape": {
-        "name": "draw a shape"
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       },
       "draw a house": {
-        "name": "draw a house"
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a square": {
-        "name": "draw a square"
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
       },
       "draw a spiral edge": {
-        "name": "draw a spiral edge"
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
       }
     }
   },
@@ -2117,10 +2211,16 @@
     },
     "function_definitions": {
       "draw background": {
-        "name": "draw background"
+        "name": "draw background",
+        "parameters": {
+          "color": "color"
+        }
       },
       "draw a polygon": {
-        "name": "draw a polygon"
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides"
+        }
       },
       "draw a square 20": {
         "name": "draw a square 20",
@@ -2151,7 +2251,10 @@
         "name": "do something"
       },
       "draw an octagon": {
-        "name": "draw an octagon"
+        "name": "draw an octagon",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -2210,7 +2313,10 @@
     },
     "function_definitions": {
       "rowOfNectar": {
-        "name": "rowOfNectar"
+        "name": "rowOfNectar",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -2223,7 +2329,10 @@
     },
     "function_definitions": {
       "rowOfNectar": {
-        "name": "rowOfNectar"
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
       }
     }
   },
@@ -2236,7 +2345,10 @@
     },
     "function_definitions": {
       "rowOfNectar": {
-        "name": "rowOfNectar"
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
       }
     }
   },
@@ -2249,7 +2361,10 @@
     },
     "function_definitions": {
       "rowOfNectarOrHoney": {
-        "name": "rowOfNectarOrHoney"
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
       }
     }
   },
@@ -2261,7 +2376,10 @@
     },
     "function_definitions": {
       "rowOfNectarOrHoney": {
-        "name": "rowOfNectarOrHoney"
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
       }
     }
   },
@@ -2269,7 +2387,10 @@
     "short_instructions": "Use your new function to solve this puzzle.",
     "function_definitions": {
       "rowOfNectarOrHoney": {
-        "name": "rowOfNectarOrHoney"
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
       }
     },
     "contained levels": [
@@ -2321,7 +2442,10 @@
     },
     "function_definitions": {
       "pick row": {
-        "name": "pick row"
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -2339,7 +2463,10 @@
     },
     "function_definitions": {
       "pick row": {
-        "name": "pick row"
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
       }
     }
   },
@@ -2355,13 +2482,24 @@
     "function_definitions": {
       "n-sided shape": {
         "name": "n-sided shape",
-        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length "
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length ",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
       },
       "draw a loop": {
-        "name": "draw a loop"
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       },
       "draw spiral circle": {
-        "name": "draw spiral circle"
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
       }
     }
   },
@@ -2374,7 +2512,10 @@
       },
       "score_points": {
         "name": "score_points",
-        "description": "Adds the given number of points to the player_score variable."
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
       }
     }
   },
@@ -2382,7 +2523,10 @@
     "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
     "function_definitions": {
       "check guess": {
-        "name": "check guess"
+        "name": "check guess",
+        "parameters": {
+          "theGuess": "theGuess"
+        }
       }
     }
   },

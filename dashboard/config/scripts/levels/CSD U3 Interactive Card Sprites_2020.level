@@ -209,17 +209,24 @@
     "parent_level_id": 18591,
     "name_suffix": "_2020",
     "reference_links": [
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
       "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
       "/docs/concepts/game-lab/sprites/sprite-properties/"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 07:08:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-05 07:08:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-28 17:21:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

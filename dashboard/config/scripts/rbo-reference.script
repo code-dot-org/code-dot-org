@@ -1,7 +1,8 @@
-lesson 'reference'
+lesson 'reference', display_name: 'reference'
 level 'PDK5 Intro C'
 level '2-3'
 level 'PDK5 Visual Languages'
 level 'PDK5 Pair programming match'
 level 'PDK5 Strategies O'
 level 'PDK5 Promo Video 2'
+

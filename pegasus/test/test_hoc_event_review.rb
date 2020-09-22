@@ -7,6 +7,9 @@ require_relative '../helpers/form_helpers'
 class HocEventReviewTest < Minitest::Test
   describe 'HocEventReview' do
     before do
+      if HocEventReview.events.count > 0
+        PEGASUS_DB[:forms].where(kind: HocEventReview.kind).delete
+      end
       assert_empty HocEventReview.events, 'Precondition: No HOC events in test DB'
     end
 

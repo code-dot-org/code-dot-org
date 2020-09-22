@@ -4,6 +4,7 @@
  */
 import {trySetSessionStorage} from '../utils';
 import cookies from 'js-cookie';
+// Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
 import {mergeActivityResult} from './activityUtils';

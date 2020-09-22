@@ -213,16 +213,16 @@ class Homepage
           links:
             [
               {
-                text: "homepage_slot_text_link_code_break",
-                url: "/break"
-              },
-              {
                 text: "homepage_slot_text_link_do_hoc",
                 url: "/hourofcode/overview"
               },
               {
                 text: "homepage_slot_text_link_express_course",
                 url: "/educate/curriculum/express-course"
+              },
+              {
+                text: "homepage_slot_text_link_code_break",
+                url: "/break"
               }
             ]
         },
@@ -450,7 +450,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    true
+    false
   end
 
   def self.show_courses_banner(request)
@@ -458,7 +458,7 @@ class Homepage
   end
 
   def self.show_special2020_banner(request)
-    false
+    true
   end
 
   def self.get_dance_stars

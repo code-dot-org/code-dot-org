@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/only_one'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -146,4 +147,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

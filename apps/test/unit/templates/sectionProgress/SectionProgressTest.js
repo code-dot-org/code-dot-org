@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sinon from 'sinon';
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -14,10 +16,10 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
+    sinon.stub(progressLoader, 'loadScript');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
-      loadScript: () => {},
       setScriptId: () => {},
       scriptId: 1,
       section: {
@@ -46,6 +48,10 @@ describe('SectionProgress', () => {
         1: Date.now()
       }
     };
+  });
+
+  afterEach(() => {
+    progressLoader.loadScript.restore();
   });
 
   it('loading data shows loading icon', () => {

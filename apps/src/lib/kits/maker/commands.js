@@ -133,3 +133,21 @@ export function createButton(opts) {
   apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid');
   return board.createButton(opts.pin);
 }
+
+/**
+ * Create a Button component on the current maker board attached to the
+ * specified pin. Validate that pin is between 0 and 2 (for MB captouch)
+ * @param {number} opts.pin
+ */
+export function createCapacitiveTouchSensor(opts) {
+  apiValidateTypeAndRange(
+    opts,
+    'createCapacitiveTouchSensor',
+    'pin',
+    opts.pin,
+    'pinid',
+    0,
+    2
+  );
+  return board.createCapacitiveTouchSensor(opts.pin);
+}

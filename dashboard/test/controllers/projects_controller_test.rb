@@ -1,3 +1,4 @@
+require 'webmock/minitest'
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
@@ -18,18 +19,22 @@ class ProjectsControllerTest < ActionController::TestCase
   setup_all do
     @driver = create :user
     @navigator = create :user
-    section = create :section
-    section.add_student @driver
-    section.add_student @navigator
+    @section = create :section
+    @section.add_student @driver
+    @section.add_student @navigator
   end
 
   test "index" do
     get :index
     assert_response :success
+  end
 
+  test "index/libraries" do
     get :index, params: {tab_name: 'libraries'}
     assert_response :success
+  end
 
+  test "index/public" do
     get :index, params: {tab_name: 'public'}
     assert_response :success
   end
@@ -168,7 +173,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver.update(age: 10)
     @navigator.update(age: 18)
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -181,7 +186,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver.update(age: 18)
     @navigator.update(age: 10)
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -195,7 +200,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @navigator.update(age: 10)
     create :follower, user: (create :terms_of_service_teacher), student_user: @navigator
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}

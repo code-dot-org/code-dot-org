@@ -30,9 +30,9 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
+  belongs_to :script
+  belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
-  belongs_to :script, inverse_of: :script_levels
-  belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
   has_many :callouts, inverse_of: :script_level
 
   validate :anonymous_must_be_assessment
@@ -50,6 +50,55 @@ class ScriptLevel < ActiveRecord::Base
     progression
     challenge
   )
+
+  # Chapter values order all the script_levels in a script.
+  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+    script_level_position = 0
+
+    raw_script_levels.map do |raw_script_level|
+      raw_script_level.symbolize_keys!
+
+      # variants are deprecated. when cloning a script, retain only the first
+      # active level in each script level, discarding any variants.
+      if new_suffix && raw_script_level[:levels].length > 1
+        remove_variants(raw_script_level)
+      end
+
+      properties = raw_script_level.delete(:properties) || {}
+
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+
+      script_level_attributes = {
+        script_id: script.id,
+        stage_id: lesson.id,
+        chapter: (counters.chapter += 1),
+        position: (script_level_position += 1),
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment],
+        properties: properties.with_indifferent_access
+      }
+      script_level = script.script_levels.detect do |sl|
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+          sl.levels == levels
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
+        sl.levels = levels
+      end
+
+      script_level.assign_attributes(script_level_attributes)
+      script_level.save! if script_level.changed?
+      script_level
+    end
+  end
+
+  def self.remove_variants(raw_script_level)
+    first_active_level = raw_script_level[:levels].find do |raw_level|
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      !(variant && variant[:active] == false)
+    end
+    raw_script_level[:levels] = [first_active_level]
+    raw_script_level[:properties].delete(:variants)
+  end
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -117,9 +166,13 @@ class ScriptLevel < ActiveRecord::Base
     !has_another_level_to_go_to?
   end
 
-  def next_level_or_redirect_path_for_user(user, extras_lesson=nil)
-    if bubble_choice?
-      # Redirect user back to the BubbleChoice activity page.
+  def next_level_or_redirect_path_for_user(
+    user,
+    extras_lesson=nil,
+    bubble_choice_parent=false
+  )
+    if bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
       level_to_follow = self
     elsif valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
@@ -297,10 +350,18 @@ class ScriptLevel < ActiveRecord::Base
       display_as_unplugged: display_as_unplugged
     }
 
-    summary[:progression] = progression if progression
+    if progression
+      summary[:progression] = progression
+      localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+      summary[:progression_display_name] = localized_progression_name
+    end
 
     if named_level
       summary[:name] = level.display_name || level.name
+    end
+
+    if bubble_choice?
+      summary[:sublevels] = level.summarize_sublevels(script_level: self)
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -412,7 +473,7 @@ class ScriptLevel < ActiveRecord::Base
                [level]
              end
 
-    user_level = student.last_attempt_for_any(levels)
+    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 
@@ -455,7 +516,7 @@ class ScriptLevel < ActiveRecord::Base
       lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: lesson.script.localized_title
+      unitName: lesson.script.title_for_display
     }
   end
 

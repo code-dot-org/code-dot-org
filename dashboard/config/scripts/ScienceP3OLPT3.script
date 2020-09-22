@@ -1,21 +1,22 @@
 professional_learning_course 'CS in Science Legacy'
 login_required true
 
-lesson 'Welcome!'
+lesson 'Welcome!', display_name: 'Welcome!'
 level 'sciPD3OLP33 intro'
 level 'sciPD2 timeline'
 level 'ECSPD PD details'
 level 'PD check your progress'
 
-lesson 'Assessing Computer Models'
+lesson 'Assessing Computer Models', display_name: 'Assessing Computer Models'
 level 'sciPD33 rubric'
 level 'sciPD33 implement2'
 
-lesson '(optional) Refresh your connection to Complex Adaptive Systems'
+lesson '(optional) Refresh your connection to Complex Adaptive Systems', display_name: '(optional) Refresh your connection to Complex Adaptive Systems'
 level 'sciPD33 refresh'
 level 'sciPD33 refresh2'
 
-lesson 'Wrap-Up'
+lesson 'Wrap-Up', display_name: 'Wrap-Up'
 level 'sciPD33 thanks'
 level 'sciPD33 reflection'
 level 'sciPD33 end'
+

@@ -27,13 +27,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: @section.summarize
   end
 
-  # Temporarily use this to get this param while switching JS code from stage_extras to lesson_extras.
-  def get_lesson_extras_from_params(params)
-    return params['stage_extras'] if params.include?('stage_extras')
-    return params['lesson_extras'] if params.include?('lesson_extras')
-    return nil
-  end
-
   # POST /api/v1/sections
   # Create a new section
   def create
@@ -54,9 +47,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && Course.valid_course_id?(params[:course_id]) ?
+        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
-        stage_extras: get_lesson_extras_from_params(params) || false,
+        stage_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
       }
     )
@@ -86,9 +79,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       script = Script.get_from_cache(script_id)
       return head :bad_request if script.nil?
       # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.course.try(:id)
+      return head :bad_request if course_id && course_id != script.unit_group.try(:id)
       # If script has a course and no course_id was provided, use default course
-      course_id ||= script.course.try(:id)
+      course_id ||= script.unit_group.try(:id)
       # Unhide script for this section before assigning
       section.toggle_hidden_script script, false
     end
@@ -100,8 +93,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
-    lesson_extras = get_lesson_extras_from_params(params)
-    fields[:stage_extras] = lesson_extras unless lesson_extras.nil?
+    fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
 
@@ -192,7 +184,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Update course_id if user provided valid course_id
   # Set course_id to nil if invalid or no course_id provided
   def set_course_id(course_id)
-    return course_id if Course.valid_course_id?(course_id)
+    return course_id if UnitGroup.valid_course_id?(course_id)
     nil
   end
 end

@@ -328,6 +328,3 @@ export default class SmallFooter extends React.Component {
     );
   }
 }
-
-window.dashboard = window.dashboard || {};
-window.dashboard.SmallFooter = SmallFooter;

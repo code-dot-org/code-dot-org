@@ -16,21 +16,8 @@ const styles = {
     marginRight: 7,
     marginTop: 15
   },
-  checkbox: {
-    margin: '0 7px 4px 0',
-    cursor: 'pointer',
-    verticalAlign: 'middle'
-  },
-  checkboxDisabled: {
-    margin: '0 7px 4px 0',
-    cursor: 'not-allowed',
-    verticalAlign: 'middle'
-  },
   clear: {
     clear: 'both'
-  },
-  error: {
-    color: color.red
   },
   header: {
     marginTop: 10,
@@ -64,38 +51,15 @@ const styles = {
     verticalAlign: 'top',
     marginRight: 10,
     cursor: 'pointer'
-  },
-  permissionEnabled: {},
-  permissionDisabled: {
-    opacity: 0.5
-  },
-  red: {
-    color: color.red
   }
 };
-
-export const donorTeacherBannerOptionsShape = PropTypes.shape({
-  teacherFirstName: PropTypes.string,
-  teacherSecondName: PropTypes.string,
-  teacherEmail: PropTypes.string,
-  ncesSchoolId: PropTypes.string,
-  schoolAddress1: PropTypes.string,
-  schoolAddress2: PropTypes.string,
-  schoolAddress3: PropTypes.string,
-  schoolCity: PropTypes.string,
-  schoolState: PropTypes.string,
-  schoolZip: PropTypes.string
-});
-
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
-    options: donorTeacherBannerOptionsShape,
     showPegasusLink: PropTypes.bool,
     source: PropTypes.string.isRequired
   };
 
   initialState = {
-    permission: false,
     participate: undefined,
     submitted: false
   };
@@ -108,22 +72,16 @@ export default class DonorTeacherBanner extends Component {
     });
   };
 
-  onPermissionChange = event => {
-    this.setState({
-      permission: event.target.checked
-    });
-  };
-
   handleSubmit = event => {
-    if (this.state.permission && this.state.participate) {
+    if (this.state.participate) {
       putRecord({
         study: 'afe-schools',
         event: 'submit',
         data_string: $('input[name="nces-id"]').val()
       });
 
-      // Post to the external endpoint in a new tab.
-      $('#hidden_form').submit();
+      // redirect to form on amazon-future-engineer page
+      window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
     }
 
     this.setState({submitted: true});
@@ -153,31 +111,7 @@ export default class DonorTeacherBanner extends Component {
   }
 
   renderDonorForm() {
-    const permissionStyle = this.state.participate
-      ? styles.permissionEnabled
-      : styles.permissionDisabled;
-
-    const buttonDisabled =
-      this.state.participate === undefined ||
-      (this.state.participate === true && this.state.permission !== true);
-
-    const optionFields = {
-      teacherFirstName: 'first-name',
-      teacherSecondName: 'last-name',
-      teacherEmail: 'email',
-      ncesSchoolId: 'nces-id',
-      schoolAddress1: 'school-address-1',
-      schoolAddress2: 'school-address-2',
-      schoolAddress3: 'school-address-3',
-      schoolCity: 'school-city',
-      schoolState: 'school-state',
-      schoolZip: 'school-zip'
-    };
-
-    const schoolLink =
-      'https://support.code.org/hc/en-us/articles/360031291431-What-does-school-information-refer-to-';
-    const amazonLink =
-      'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
+    const buttonDisabled = this.state.participate === undefined;
 
     return (
       <div style={styles.main}>
@@ -234,52 +168,6 @@ export default class DonorTeacherBanner extends Component {
               </label>
             </div>
           </div>
-          <hr />
-          <div style={permissionStyle}>
-            <label style={styles.label}>
-              <input
-                type="checkbox"
-                name={name}
-                checked={this.state.permission}
-                onChange={this.onPermissionChange}
-                style={
-                  this.state.participate
-                    ? styles.checkbox
-                    : styles.checkboxDisabled
-                }
-                disabled={this.state.participate !== true}
-              />
-              I give Code.org permission to share my name, email address, and{' '}
-              <a href={schoolLink} target="_blank">
-                school name and ID
-              </a>{' '}
-              with Amazon.com (required to participate). Use of your personal
-              information by Amazon is subject to{' '}
-              <a href={amazonLink} target="_blank">
-                Amazon’s Privacy Policy
-              </a>
-              . You may be required to agree to additional terms and conditions
-              with Amazon directly. <span style={styles.red}>*</span>
-            </label>
-          </div>
-
-          <form
-            id="hidden_form"
-            action="https://www.amazonfutureengineer.com/teacher-form"
-            method="post"
-            target="_blank"
-          >
-            {Object.keys(optionFields)
-              .filter(key => this.props.options[key])
-              .map(key => (
-                <input
-                  key={key}
-                  type="hidden"
-                  name={optionFields[key]}
-                  value={this.props.options[key]}
-                />
-              ))}
-          </form>
 
           <Button
             __useDeprecatedTag
@@ -314,7 +202,7 @@ export default class DonorTeacherBanner extends Component {
           notice="Your response has been submitted!"
           details="Thank you for your response.  If you are not redirected to the form in a few moments,"
           detailsLinkText="click here"
-          detailsLink="https://www.amazonfutureengineer.com/teacher-form"
+          detailsLink={pegasus('/amazon-future-engineer#sign-up-today')}
           detailsLinkNewWindow={true}
           dismissible={true}
         />

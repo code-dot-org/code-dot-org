@@ -17,7 +17,8 @@ const DEFAULT_MARGIN = 7;
 
 const styles = {
   dialog: {
-    padding: '0 15px'
+    padding: '0 15px',
+    cursor: 'default'
   },
   linkBox: {
     cursor: 'auto',
@@ -433,7 +434,7 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
           <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
-          <div style={styles.inputParent}>
+          <div style={styles.inputParent} id="ui-test-import-library">
             <input
               style={styles.linkBox}
               type="text"

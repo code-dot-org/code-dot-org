@@ -2,10 +2,10 @@ login_required true
 has_lesson_plan true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Tangrams'
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
-lesson 'Introduction'
+lesson 'Introduction', display_name: 'Introduction'
 level 'courseE_video_ramp1'
 level 'courseF_maze_ramp1'
 level 'courseF_maze_ramp2'
@@ -24,40 +24,26 @@ level 'courseF_maze_ramp13'
 level 'courseF_maze_ramp7'
 level 'courseF_external_ramp14'
 
-lesson 'The Power of Words'
+lesson 'The Power of Words', display_name: 'The Power of Words'
 level 'coursef_powerofwords'
 
-lesson 'Ice Age Play Lab'
-skin 'iceage'
-video_key_for_next_level 'iceage_intro'
+lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab'
 level 'iceage_hello1'
-skin 'iceage'
 level 'iceage_hello2'
-skin 'iceage'
 level 'iceage_move_to_flag'
-skin 'iceage'
 level 'iceage_move_to_actor'
-skin 'iceage'
-video_key_for_next_level 'iceage_repeat'
 level 'iceage_repeat'
-skin 'iceage'
-video_key_for_next_level 'iceage_events'
 level 'iceage_click_hello'
-skin 'iceage'
 level 'iceage_move_events'
-skin 'iceage'
 level 'iceage_sound_and_points'
-skin 'iceage'
 level 'iceage_warn_ice_age'
-skin 'iceage'
 level 'iceage_throw_hearts'
-skin 'iceage'
 level 'iceage_free_play'
 
-lesson 'Envelope Variables'
+lesson 'Envelope Variables', display_name: 'Envelope Variables'
 level 'EnvelopeVariables'
 
-lesson 'Variables in Artist'
+lesson 'Variables in Artist', display_name: 'Variables in Artist'
 level 'grade5_artist_variables_triangles1'
 level 'courseF_artist_variables2'
 level 'courseF_video_artistVariables'
@@ -74,7 +60,7 @@ level 'courseF_artist_variables9'
 level 'courseF_artist_variables10'
 level 'courseF_artist_variablesFP'
 
-lesson 'Variables in Play Lab'
+lesson 'Variables in Play Lab', display_name: 'Variables in Play Lab'
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
@@ -84,10 +70,10 @@ level 'courseF_playlab_variables5b'
 level 'courseF_playlab_variables6b'
 level 'courseF_playlab_variables7b'
 
-lesson 'For Loop Fun'
+lesson 'For Loop Fun', display_name: 'For Loop Fun'
 level 'ForLoopFun'
 
-lesson 'For Loops in Bee'
+lesson 'For Loops in Bee', display_name: 'For Loops in Bee'
 level 'courseF_bee_for1'
 level 'courseF_bee_for2'
 level 'courseF_video_forBee'
@@ -101,7 +87,7 @@ level 'courseF_bee_for9'
 level 'courseF_bee_for10', challenge: true
 level 'courseF_bee_for11'
 
-lesson 'For Loops in Artist'
+lesson 'For Loops in Artist', display_name: 'For Loops in Artist'
 level 'courseF_video_forArtist'
 level 'courseF_artist_for1'
 level 'courseF_artist_for2'
@@ -115,10 +101,10 @@ level 'courseF_artist_for9'
 level 'courseF_artist_for10_predict1', assessment: true
 level 'courseF_artist_for10'
 
-lesson 'Songwriting with Parameters'
+lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
-lesson 'Conditionals and Functions in Bee'
+lesson 'Conditionals and Functions in Bee', display_name: 'Conditionals and Functions in Bee'
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'
@@ -140,7 +126,7 @@ level 'courseF_bee_functions6'
 level 'courseF_bee_functions7'
 level 'courseF_bee_functions8a'
 
-lesson 'Functions with Parameters in Artist'
+lesson 'Functions with Parameters in Artist', display_name: 'Functions with Parameters in Artist'
 level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
@@ -155,7 +141,7 @@ level 'courseF_artist_fwp7'
 level 'courseF_artist_fwp8'
 level 'courseF_artist_fwp9'
 
-lesson 'Functions with Parameters in Bee'
+lesson 'Functions with Parameters in Bee', display_name: 'Functions with Parameters in Bee'
 level 'courseF_bee_fwp1'
 level 'courseF_bee_fwp2'
 level 'courseF_bee_fwp3'
@@ -167,23 +153,24 @@ level 'courseF_bee_fwp8'
 level 'courseF_bee_fwp9_predict1', assessment: true
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'Explore Project Ideas'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas'
 level 'courseF_video_csMatters', named: true
 level 'InspirationalArtwork', named: true
 level 'FoodFight', named: true
 level 'Guess The Number', named: true
 level 'Choose Your Own Adventure', named: true
 
-lesson 'The Design Process'
+lesson 'The Design Process', display_name: 'The Design Process'
 level 'Begin planning your project', named: true
 
-lesson 'Build Your Project'
+lesson 'Build Your Project', display_name: 'Build Your Project'
 level 'Course F: Artist Project', named: true
 level 'Course F: Play Lab Project', named: true
 
-lesson 'Revise Your Project'
+lesson 'Revise Your Project', display_name: 'Revise Your Project'
 level 'Course F: Artist Project - Revise', named: true
 level 'Course F: Play Lab Project - Revise', named: true
 
-lesson 'Presentation Your Project'
+lesson 'Presentation Your Project', display_name: 'Present Your Project'
 level 'Prepare for your presentation', named: true
+

@@ -12,7 +12,7 @@ theme: responsive
 
 <div class="col-66" style="margin-top: 50px;">
 
-The Circuit Playground is family of small microcontroller boards with LEDs, buttons, and sensors built in. Designed specifically for novice programmers, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
+The Circuit Playground is family of small microcontroller boards with LEDs, buttons, and sensors built in. Designed specifically for novice programmers, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in Unit 6, Physical Computing in <a href="//studio.code.org/courses/csd">CS Discoveries</a>.
 
 </div>
 

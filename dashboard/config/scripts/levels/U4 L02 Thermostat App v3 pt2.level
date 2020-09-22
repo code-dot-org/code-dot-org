@@ -53,8 +53,8 @@
     "parent_level_id": 15838,
     "mini_rubric": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
-      "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
     ],
     "encrypted": "false",
     "widget_mode": "false",

@@ -50,7 +50,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "assignment should take precedence over progress in a script" do
     create :user_script, user: @student, script: @csd6_2019
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
 
     assert_equal @csd6_2017, MakerController.maker_script(@student)
   end
@@ -97,14 +97,14 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2019 if CSD-2019 is assigned" do
-    create :follower, section: create(:section, course: @csd_2019), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2019), student_user: @student
     assert_includes @student.section_courses, @csd_2019
 
     assert_equal @csd6_2019, MakerController.maker_script(@student)
   end
 
   test "shows CSD6-2018 if CSD-2018 is assigned" do
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     refute_includes @student.section_courses, @csd_2017
     assert_includes @student.section_courses, @csd_2018
 
@@ -112,7 +112,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2017 if CSD-2017 is assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
     assert_includes @student.section_courses, @csd_2017
     refute_includes @student.section_courses, @csd_2018
 
@@ -120,8 +120,8 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     @student.reload
     assert_includes @student.section_courses, @csd_2017
     assert_includes @student.section_courses, @csd_2018
@@ -131,7 +131,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
     create :follower, section: create(:section, script: @csd6_2017), student_user: @student
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     @student.reload
     assert_includes @student.scripts, @csd6_2017
     refute_includes @student.section_courses, @csd_2017
@@ -142,7 +142,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
     create :follower, section: create(:section, script: @csd6_2018), student_user: @student
     assert_includes @student.section_scripts, @csd6_2018
     refute_includes @student.scripts, @csd6_2017
@@ -478,12 +478,14 @@ class MakerControllerTest < ActionController::TestCase
   def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
       create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
-        create :script_level, script: script
+        lesson_group = create :lesson_group, script: script
+        lesson = create :lesson, script: script, lesson_group: lesson_group
+        create :script_level, script: script, lesson: lesson
       end
   end
 
   def ensure_course(course_name, version_year)
-    Course.find_by_name(course_name) ||
-      create(:course, name: course_name, version_year: version_year, family_name: Course::CSD)
+    UnitGroup.find_by_name(course_name) ||
+      create(:unit_group, name: course_name, version_year: version_year, family_name: UnitGroup::CSD)
   end
 end

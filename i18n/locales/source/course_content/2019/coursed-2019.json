@@ -995,7 +995,7 @@
     "short_instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
     "long_instructions": "_\"What a bountiful crop!\"_\n\nThis field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?",
     "authored_hints": {
-      "courseD_farmer_condLoops5_a": "There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?",
+      "courseD_farmer_condLoops5_a": "There is a new loop: `repeat until there are pumpkins`. Can you see how to use it in this puzzle?",
       "courseD_farmer_condLoops5_b": "There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!"
     }
   },
@@ -1099,7 +1099,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -1111,7 +1114,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1126,7 +1132,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1141,7 +1150,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1157,7 +1169,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1172,7 +1187,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1187,7 +1205,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1203,7 +1224,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1214,7 +1238,10 @@
     "short_instructions": "Finish the code to create this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1259,7 +1286,10 @@
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits!",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1271,7 +1301,10 @@
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -1286,7 +1319,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"

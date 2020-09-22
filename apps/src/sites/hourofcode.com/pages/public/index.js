@@ -124,6 +124,15 @@ $(document).ready(function() {
       $('#hoc-entire-school').hide();
       $('#continue-btn').hide();
       $('#submit-btn').show();
+    } else if ($('#hoc-event-type').val() === 'at_home') {
+      // at home, hide all extra fields
+      $('#school-autocomplete').hide();
+      $('#organization-name-field').hide();
+      $('#hoc-event-location-field').hide();
+      $('#school-name-field').hide();
+      $('#hoc-entire-school').hide();
+      $('#continue-btn').hide();
+      $('#submit-btn').show();
     }
   }
 

@@ -31,6 +31,15 @@ module CourseBlockHelper
         url: CDO.code_org_url('/educate/applab'),
         body: I18n.t('upsell.applab.body_short')
       },
+      'gamelab' => {
+        url: CDO.code_org_url('/educate/gamelab'),
+        body: I18n.t('upsell.gamelab.body')
+      },
+      'weblab' => {
+        url: CDO.code_org_url('/educate/weblab'),
+        title: "Web Lab",
+        body: I18n.t('upsell.weblab.body')
+      },
       'conditionals' => {
         url: CDO.code_org_url('/hourofcode/unplugged-conditionals-with-cards'),
         title: I18n.t('upsell.unplugged_conditionals.title'),
@@ -187,7 +196,7 @@ module CourseBlockHelper
     if [Script::COURSEA, Script::COURSEB, Script::COURSEC, Script::COURSED, Script::COURSEE, Script::COURSEF].include? family_name
       return {
         url: script_url(id),
-        image_url: CDO.shared_image_url("courses/logo_tall_#{id}.jpg"),
+        image_url: CDO.shared_image_url("courses/logo_tall_#{family_name}.jpg"),
         title: data_t_suffix('script.name', id, 'title'),
         body: data_t_suffix('script.name', id, 'description_short'),
         audience: data_t_suffix('script.name', id, 'description_audience')

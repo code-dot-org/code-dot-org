@@ -53,7 +53,8 @@ const stageData = [
         previous: false,
         is_concept_level: false,
         bonus: false,
-        display_as_unplugged: true
+        display_as_unplugged: true,
+        sublevels: []
       },
       {
         ids: [323],
@@ -65,7 +66,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
         is_concept_level: false,
         bonus: false,
-        display_as_unplugged: false
+        display_as_unplugged: false,
+        sublevels: []
       },
       {
         ids: [322],
@@ -78,7 +80,8 @@ const stageData = [
         next: [2, 1],
         is_concept_level: false,
         bonus: true,
-        display_as_unplugged: false
+        display_as_unplugged: false,
+        sublevels: []
       }
     ],
     lesson_plan_html_url:
@@ -109,7 +112,8 @@ const stageData = [
         previous: [1, 3],
         is_concept_level: false,
         bonus: false,
-        display_as_unplugged: false
+        display_as_unplugged: false,
+        sublevels: []
       },
       {
         ids: [339],
@@ -121,7 +125,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
         is_concept_level: false,
         bonus: false,
-        display_as_unplugged: false
+        display_as_unplugged: false,
+        sublevels: []
       },
       {
         ids: [341],
@@ -133,7 +138,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
         is_concept_level: false,
         bonus: false,
-        display_as_unplugged: false
+        display_as_unplugged: false,
+        sublevels: []
       }
     ],
     lesson_plan_html_url:
@@ -151,6 +157,7 @@ const initialScriptOverviewProgress = {
   currentLevelId: undefined,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
+  lessonGroups: [],
   stages: stageData,
   scriptName: 'course3'
 };
@@ -160,6 +167,7 @@ const initialPuzzlePageProgress = {
   currentLevelId: '341',
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
+  lessonGroups: [],
   // We're on a puzzle in stage 2. That is the only provided stage
   stages: [stageData[1]],
   scriptName: 'course3'
@@ -625,6 +633,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.unplugged,
             icon: null,
@@ -633,7 +642,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: false
+            bonus: false,
+            sublevels: []
           },
           {
             status: 'not_tried',
@@ -641,6 +651,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
@@ -649,7 +660,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: false
+            bonus: false,
+            sublevels: []
           },
           {
             status: 'not_tried',
@@ -657,6 +669,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
@@ -665,7 +678,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: true
+            bonus: true,
+            sublevels: []
           }
         ],
         [
@@ -675,6 +689,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -683,7 +698,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: false
+            bonus: false,
+            sublevels: []
           },
           {
             status: 'perfect',
@@ -691,6 +707,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -699,7 +716,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: false
+            bonus: false,
+            sublevels: []
           },
           {
             status: 'attempted',
@@ -707,6 +725,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -715,7 +734,8 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            bonus: false
+            bonus: false,
+            sublevels: []
           }
         ]
       ];
@@ -821,6 +841,7 @@ describe('progressReduxTest', () => {
       assert.deepEqual(progressionsFromLevels(levels), [
         {
           name: undefined,
+          displayName: undefined,
           start: 0,
           levels: levels
         }
@@ -850,6 +871,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
+        displayName: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });
@@ -886,17 +908,20 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
+          progressionDisplayName: 'Progression 1'
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
+          progressionDisplayName: 'Progression 1'
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          progression: 'Progression 2'
+          progression: 'Progression 2',
+          progressionDisplayName: 'Progression 2'
         }
       ];
 
@@ -904,6 +929,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
+        displayName: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });
@@ -1007,6 +1033,14 @@ describe('progressReduxTest', () => {
 
     it('returns lesson group', () => {
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: 'This is a lesson group',
+            big_questions: ['Why?', 'Who?']
+          }
+        ],
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         levelProgress: {},
         focusAreaStageIds: []
@@ -1014,11 +1048,20 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.displayName, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.description, 'This is a lesson group');
     });
 
     it('returns a single group if all lessons have the same lesson group', () => {
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: 'This is a lesson group',
+            big_questions: ['Why?']
+          }
+        ],
         stages: [
           fakeLesson('Lesson Group', 'lesson1', 1),
           fakeLesson('Lesson Group', 'lesson2', 2),
@@ -1030,7 +1073,7 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Lesson Group');
+      assert.equal(groups[0].lessonGroup.displayName, 'Lesson Group');
     });
 
     it('includes bonus levels in groups if includeBonusLevels is true', () => {
@@ -1040,6 +1083,14 @@ describe('progressReduxTest', () => {
         bonus: true
       };
       const state = {
+        lessonGroups: [
+          {
+            id: 1,
+            display_name: 'Lesson Group',
+            description: null,
+            big_questions: null
+          }
+        ],
         stages: [
           {
             lesson_group_display_name: 'Lesson Group',

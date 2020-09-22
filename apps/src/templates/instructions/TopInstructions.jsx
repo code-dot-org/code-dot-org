@@ -572,8 +572,9 @@ class TopInstructions extends Component {
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
-      this.state.tabSelected === TabType.COMMENTS &&
-      this.state.teacherViewingStudentWork;
+      this.state.tabSelected === TabType.TEACHER_ONLY ||
+      (this.state.tabSelected === TabType.COMMENTS &&
+        this.state.teacherViewingStudentWork);
 
     if (
       hidden ||
@@ -582,11 +583,8 @@ class TopInstructions extends Component {
       return <div />;
     }
 
-    /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =
-      this.props.hasContainedLevels &&
-      isCSF &&
-      $('#containedLevelAnswer0').length > 0;
+      this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
     return (
       <div style={mainStyle} className="editor-column" ref="topInstructions">
@@ -652,9 +650,7 @@ class TopInstructions extends Component {
                     isRtl={this.props.isRtl}
                   />
                 )}
-              {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
-              {isCSF &&
-                this.props.viewAs === ViewType.Teacher &&
+              {this.props.viewAs === ViewType.Teacher &&
                 (this.props.teacherMarkdown || showContainedLevelAnswer) && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
@@ -700,16 +696,6 @@ class TopInstructions extends Component {
                     ref="instructions"
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
-                  {/* TODO: When we move CSD and CSP to the Teacher Only tab remove this*/}
-                  {!isCSF && this.props.viewAs === ViewType.Teacher && (
-                    <div>
-                      <ContainedLevelAnswer
-                        ref="teacherOnlyTab"
-                        hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                      />
-                      {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
-                    </div>
-                  )}
                 </div>
               )}
               {!this.props.hasContainedLevels &&
@@ -735,7 +721,6 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                     />
-                    {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
                   </div>
                 )}
             </div>
@@ -762,9 +747,7 @@ class TopInstructions extends Component {
                 token={this.state.token}
               />
             )}
-            {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
-            {isCSF &&
-              this.props.viewAs === ViewType.Teacher &&
+            {this.props.viewAs === ViewType.Teacher &&
               (this.props.hasContainedLevels || this.props.teacherMarkdown) && (
                 <div>
                   {this.props.hasContainedLevels && (

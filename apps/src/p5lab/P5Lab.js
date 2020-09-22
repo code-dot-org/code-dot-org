@@ -440,7 +440,13 @@ P5Lab.prototype.init = function(config) {
     config.initialAnimationList && !config.embed && !config.hasContainedLevels
       ? config.initialAnimationList
       : this.startAnimations;
-  getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  getStore().dispatch(
+    setInitialAnimationList(
+      initialAnimationList,
+      this.isSpritelab /* shouldRunV3Migration */
+    )
+  );
 
   this.generatedProperties = {
     ...config.initialGeneratedProperties

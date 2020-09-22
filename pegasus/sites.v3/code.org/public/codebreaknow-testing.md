@@ -13,11 +13,13 @@ social:
   "og:video:type": ""
 ---
 
+<h1>Join us for the last live episode of Code Break on June 10th</h1>
+
 <p>
 <font color="00adbc"><b>Check back at this page right before the episode</b></font> for the link to participate: Wednesdays at 10am PT / 1pm ET, starting March 25. Recordings will also be available here after the episode has aired.
 </p>
 
-<%= view :codebreak_testing %>
+<%= view :codebreak_counter %>
 
 <div style="text-align: center; padding: 10px">
 <span style="display: inline-block; padding: 15px 25px; background-color: yellow; font-weight:bold; color:#444444; font-size: 1.1em; border: 1px solid #eeeeee;border-radius: 5px; position: relative;">When the timer reaches zero, you will see the link to join Code Break on Zoom. Or, you can <a href="https://www.youtube.com/user/CodeOrg/live">watch on YouTube</a>. </span></div>

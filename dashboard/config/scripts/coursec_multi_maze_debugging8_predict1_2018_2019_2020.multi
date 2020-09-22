@@ -1,6 +1,14 @@
 name 'courseC_multi_maze_debugging8_predict1_2018_2019_2020'
-question 'Look closely at the code below. What is the first bug that will make this program fail?'
-wrong 'The program won\'t fail. Scrat will get to the acorn.', feedback: 'Incorrect. Scrat goes the wrong way after his final turn.'
-right 'Scrat will go the wrong way after his final turn.', feedback: 'Correct!'
-wrong 'Scrat takes one too few steps and ends up short of the acorn.', feedback: 'Incorrect. Taking one too few steps happens after Scrat turns the wrong way.'
-wrong 'I don\'t know.', feedback: 'The first error is that Scrat goes the wrong way after his final turn. '
+question 'Look for bugs in this code. Will Scrat reach the acorn or is there a problem?'
+wrong 'Scrat will reach the acorn. There are no bugs in the code.', feedback: 'Incorrect. First, Scrat turns the wrong direction, then Scrat doesn\'t move forward enough times to reach the acorn.'
+right 'Scrat will not reach the acorn because he turns the wrong way.', feedback: 'Correct! First, Scrat turns the wrong direction, then Scrat doesn\'t move forward enough times to reach the acorn.'
+right 'Scrat will not reach the acorn because there are not enough `move forward` blocks.', feedback: 'Correct! First, Scrat turns the wrong direction, then Scrat doesn\'t move forward enough times to reach the acorn.'
+wrong 'I don\'t know.', feedback: 'There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn\'t move forward enough times to reach the acorn.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

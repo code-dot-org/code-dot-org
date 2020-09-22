@@ -120,6 +120,11 @@ class Documents < Sinatra::Base
     Haml::TempleEngine.disable_option_validator!
   end
 
+  # Capture the current request URL for i18n string tracking
+  before do
+    Thread.current[:current_request_url] = request.url
+  end
+
   before do
     $log.debug request.url
 

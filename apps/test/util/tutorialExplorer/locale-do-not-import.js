@@ -9,4 +9,4 @@
 // make sure Blockly is loaded
 require('../frame')();
 require('../../../build/package/js/en_us/tutorialExplorer_locale.js');
-export default window.blockly.tutorialExplorer_locale;
+export default window.locales.tutorialExplorer_locale;

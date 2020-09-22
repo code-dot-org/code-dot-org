@@ -48,8 +48,8 @@ class AdminStandardsController < ApplicationController
           updated_standards << code_studio_standard
         end
       end
-      stage.standards = updated_standards
-      stage.save!
+      stage&.standards = updated_standards
+      stage&.save!
     end
 
     if !missing_standards.empty? || !missing_stages.empty?

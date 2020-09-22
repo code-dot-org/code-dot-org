@@ -41,7 +41,9 @@ module Pd::Foorm
       parsed_forms = {general: {}, facilitator: {}}
       forms.each do |form|
         parsed_form = {general: {}, facilitator: {}}
-        form_questions = JSON.parse(form.questions, symbolize_names: true)
+        form_questions = JSON.parse(form.questions)
+        form_questions = ::Foorm::Form.fill_in_library_items(form_questions)
+        form_questions.deep_symbolize_keys!
         form_questions[:pages].each do |page|
           page[:elements].each do |question_data|
             parsed_form.deep_merge!(parse_element(question_data, false))
