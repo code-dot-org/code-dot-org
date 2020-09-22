@@ -108,6 +108,21 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: {error: e.message}, status: :bad_request
   end
 
+  def to_geojson(workshops)
+    locations = []
+    workshops.each do |workshop|
+      next unless workshop.processed_location
+      workshop_location = JSON.parse(workshop.processed_location)
+      next unless workshop_location['latitude'] && workshop_location['longitude']
+      locations.append(
+        {type: "Feature",
+         geometry: { type: "Point",
+                     coordinates:[workshop_location['longitude'], workshop_location['latitude']] },
+         properties: { name: workshop.location_name } })
+    end
+    {type: 'FeatureCollection', features: locations}.to_json
+  end
+
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     conditions = {
@@ -121,7 +136,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
-    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+    render json: to_geojson(@workshops)
   end
 
   # GET /api/v1/pd/workshops/1
