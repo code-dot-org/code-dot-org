@@ -26,8 +26,8 @@ export default class ActivitySectionCardButtons extends Component {
     activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
-    editTip: PropTypes.func,
-    addLevel: PropTypes.func
+    addLevel: PropTypes.func,
+    editTip: PropTypes.func
   };
 
   constructor(props) {
@@ -81,6 +81,8 @@ export default class ActivitySectionCardButtons extends Component {
   handleCloseAddTip = tip => {
     if (!this.state.editingExistingTip) {
       this.props.addTip(tip);
+    } else {
+      this.props.editTip(tip);
     }
     this.setState({addTipOpen: false, editingExistingTip: false});
   };
@@ -142,11 +144,13 @@ export default class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
-        <EditTipDialog
-          isOpen={this.state.addTipOpen}
-          handleConfirm={this.handleCloseAddTip}
-          tip={this.state.tipToEdit}
-        />
+        {this.state.addTipOpen && (
+          <EditTipDialog
+            isOpen={this.state.addTipOpen}
+            handleConfirm={this.handleCloseAddTip}
+            tip={this.state.tipToEdit}
+          />
+        )}
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
