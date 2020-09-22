@@ -14,7 +14,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable
+  stageExtrasAvailable,
+  ttsAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -70,6 +71,7 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
+    ttsAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
@@ -132,6 +134,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      ttsAvailable,
       assignedScriptName,
       localeEnglishName,
       isNewSection
@@ -218,6 +221,15 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {ttsAvailable(section.scriptId) && (
+            <AutoplayField
+              value={section.autoplayEnabled}
+              onChange={autoplayEnabled =>
+                editSectionProperties({autoplayEnabled})
+              }
+              disabled={isSaveInProgress}
+            />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -415,6 +427,19 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
+const AutoplayField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enableAutoplay()}</FieldName>
+    <FieldDescription>{i18n.explainAutoplay()} </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={autoplayEnabled => onChange(autoplayEnabled)}
+      disabled={disabled}
+    />
+  </div>
+);
+AutoplayField.propTypes = FieldProps;
+
 const FieldName = props => (
   <div
     style={{
@@ -458,6 +483,7 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  ttsAvailable: id => ttsAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName

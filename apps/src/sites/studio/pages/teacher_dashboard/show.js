@@ -13,7 +13,9 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setValidAssignments,
-  setValidGrades
+  setValidGrades,
+  setTextToSpeechScriptIds,
+  setPreReaderScriptIds
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -42,6 +44,8 @@ const validCourses = scriptData.validCourses;
 const currentUserId = scriptData.currentUserId;
 const hasSeenStandardsReportInfo = scriptData.hasSeenStandardsReportInfo;
 const localeCode = scriptData.localeCode;
+const textToSpeechScriptIds = scriptData.textToSpeechScriptIds;
+const preReaderScriptIds = scriptData.preReaderScriptIds;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -73,6 +77,8 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
+  store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
+  store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
