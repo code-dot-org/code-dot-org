@@ -16,6 +16,11 @@
 #  index_lesson_activities_on_seeding_key  (seeding_key) UNIQUE
 #
 
+# A LessonActivity represents a classroom activity within a Lesson
+# which consists of one or more ActivitySections.
+#
+# @attr [String] title - The user-visible name of this activity.
+# @attr [Integer] duration - The length of this activity in minutes.
 class LessonActivity < ApplicationRecord
   include SerializedProperties
 
