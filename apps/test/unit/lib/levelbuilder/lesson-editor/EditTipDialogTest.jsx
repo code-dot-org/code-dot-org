@@ -5,11 +5,14 @@ import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialo
 import sinon from 'sinon';
 
 describe('EditTipDialog', () => {
-  let defaultProps;
+  let defaultProps, handleConfirm, handleDelete;
   beforeEach(() => {
+    handleConfirm = sinon.spy();
+    handleDelete = sinon.spy();
     defaultProps = {
       isOpen: true,
-      handleConfirm: sinon.spy(),
+      handleConfirm,
+      handleDelete,
       tip: {
         key: 'tip-1',
         type: 'teachingTip',
