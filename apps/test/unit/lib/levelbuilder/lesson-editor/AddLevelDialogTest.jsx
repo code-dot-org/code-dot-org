@@ -23,6 +23,6 @@ describe('AddLevelDialog', () => {
     expect(wrapper.find('ToggleGroup').length).to.equal(1);
     expect(wrapper.find('AddLevelFilters').length).to.equal(1);
     expect(wrapper.find('AddLevelTable').length).to.equal(1);
-    //expect(wrapper.find('LevelToken').length).to.equal(2);
+    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
   });
 });
