@@ -81,15 +81,15 @@ export default class EditTipDialog extends Component {
           <h2>Add Tip</h2>
           <select
             onChange={this.handleTipTypeChange}
-            defaultValue={tipTypes[this.state.tip.type].displayName}
+            value={this.state.tip.type}
           >
-            {Object.values(tipTypes).map((tip, index) => {
+            {Object.values(tipTypes).map((tipType, index) => {
               return (
                 <option
                   value={Object.keys(tipTypes)[index]}
                   key={`tip-${index}`}
                 >
-                  {tip.displayName}
+                  {tipType.displayName}
                 </option>
               );
             })}
