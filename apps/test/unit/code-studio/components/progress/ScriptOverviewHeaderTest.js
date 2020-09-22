@@ -2,9 +2,12 @@ import React from 'react';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-import {VisibilityType} from '../../../../../src/code-studio/announcementsRedux';
 import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
+import {
+  fakeStudentAnnouncement,
+  fakeTeacherAndStudentAnnouncement,
+  fakeTeacherAnnouncement
+} from './FakeAnnouncementsTestData';
 
 const defaultProps = {
   plcHeaderProps: undefined,
@@ -19,28 +22,6 @@ const defaultProps = {
   scriptDescription:
     '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: []
-};
-
-const fakeTeacherAnnouncement = {
-  notice: 'Notice - Teacher',
-  details: 'Teachers are the best',
-  link: '/foo/bar/teacher',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacher
-};
-const fakeStudentAnnouncement = {
-  notice: 'Notice - Student',
-  details: 'Students are the best',
-  link: '/foo/bar/student',
-  type: NotificationType.information,
-  visibility: VisibilityType.student
-};
-const fakeTeacherAndStudentAnnouncement = {
-  notice: 'Notice - Teacher And Student',
-  details: 'More detail here',
-  link: '/foo/bar/teacherAndStudent',
-  type: NotificationType.information,
-  visibility: VisibilityType.teacherAndStudent
 };
 
 describe('ScriptOverviewHeader', () => {
