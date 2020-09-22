@@ -1,3 +1,4 @@
+/* eslint-env node */
 const svmjs = require("svm");
 import { store } from "./index.js";
 import { setPrediction } from "./redux";
