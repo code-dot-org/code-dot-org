@@ -27,6 +27,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(2);
       expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(6);
     });
 
     it('has correct markdown for preview of unit description', () => {

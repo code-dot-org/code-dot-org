@@ -6,20 +6,30 @@ import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/lev
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitiesEditor', () => {
-  let defaultProps;
+  let defaultProps, addActivity;
   beforeEach(() => {
+    addActivity = sinon.spy();
     defaultProps = {
       activities: sampleActivities,
-      addActivity: sinon.spy()
+      addActivity
     };
   });
 
   it('renders default props', () => {
-    console.log(sampleActivities);
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    //expect(wrapper.find('ActivityCard').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(1);
     expect(wrapper.contains('Preview'));
+    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('Connect(ActivityCard)').length).to.equal(1);
     expect(wrapper.find('Activity').length).to.equal(1);
+  });
+
+  it('adds activity when button pressed', () => {
+    const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
+    expect(wrapper.find('button').length).to.equal(1);
+
+    const button = wrapper.find('button');
+    expect(button.text()).to.include('Activity');
+    button.simulate('mouseDown');
+    expect(addActivity).to.have.been.calledOnce;
   });
 });

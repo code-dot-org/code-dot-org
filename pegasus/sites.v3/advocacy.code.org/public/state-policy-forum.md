@@ -67,6 +67,7 @@ Ohio|Oct 15|10:30 - 11:30 am ET|<a href="https://code.zoom.us/meeting/register/t
 Oklahoma|Oct 14|3:00 - 4:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJ0rdeyopjkvG9cBYHVCM3_f8qpE5dBhkJ0J"><button>Register</button></a>|
 Oregon|Oct 15|1:30 - 2:30 pm PT|<a href="https://code.zoom.us/meeting/register/tJcvfuyvrT4vEtb9s1lmSM-FHvzAQRmyqmuf"><button>Register</button></a>|
 Pennsylvania|Oct 15|1:30 - 2:30 pm ET|<a href="https://code.zoom.us/meeting/register/tJMuf-mqpj8vGty0m1cZjJ2k_gw--OI9DBE_"><button>Register</button></a>|
+Puerto Rico|Oct 15|9:00 - 10:00 am AST|<a href="https://code.zoom.us/meeting/register/tJEuceGppz4rGtaEIyU7z3p4SMTOaXB_nPUI"><button>Register</button></a>|
 Rhode Island|Oct 15|9:00 - 10:00 am ET|<a href="https://code.zoom.us/meeting/register/tJMkde6hqD4iGN0vbpW6EmKk9utpR2dr5wBZ"><button>Register</button></a>|
 South Carolina|Oct 14|4:00 - 5:00 pm ET|<a href="https://code.zoom.us/meeting/register/tJYlf-qqrzkuE9X4582wx2QxqGbdVm2ls1ht"><button>Register</button></a>|
 South Dakota|Oct 15|2:00 - 3:00 pm CT|<a href="https://code.zoom.us/meeting/register/tJcqcOusrzgiHdSFrl9Y6-_3mgyjbH_vlmNR"><button>Register</button></a>|
