@@ -180,31 +180,29 @@ class ActivityCard extends Component {
           />
         </div>
         <div style={styles.activityBody} hidden={this.state.collapsed}>
-          {activity.activitySections.map(section => {
-            return (
-              <ActivitySectionCard
-                key={section.key}
-                activitySection={section}
-                activityPosition={activity.position}
-                activitySectionsCount={activity.activitySections.length}
-                activitiesCount={this.props.activitiesCount}
-                ref={activitySectionCard => {
-                  if (activitySectionCard) {
-                    const metrics = ReactDOM.findDOMNode(
-                      activitySectionCard
-                    ).getBoundingClientRect();
-                    this.props.setActivitySectionMetrics(
-                      metrics,
-                      section.position
-                    );
-                  }
-                }}
-                activitySectionMetrics={this.props.activitySectionMetrics}
-                setTargetActivitySection={this.props.setTargetActivitySection}
-                targetActivitySectionPos={this.props.targetActivitySectionPos}
-              />
-            );
-          })}
+          {activity.activitySections.map(section => (
+            <ActivitySectionCard
+              key={section.key}
+              activitySection={section}
+              activityPosition={activity.position}
+              activitySectionsCount={activity.activitySections.length}
+              activitiesCount={this.props.activitiesCount}
+              ref={activitySectionCard => {
+                if (activitySectionCard) {
+                  const metrics = ReactDOM.findDOMNode(
+                    activitySectionCard
+                  ).getBoundingClientRect();
+                  this.props.setActivitySectionMetrics(
+                    metrics,
+                    section.position
+                  );
+                }
+              }}
+              activitySectionMetrics={this.props.activitySectionMetrics}
+              setTargetActivitySection={this.props.setTargetActivitySection}
+              targetActivitySectionPos={this.props.targetActivitySectionPos}
+            />
+          ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
             className="btn"
