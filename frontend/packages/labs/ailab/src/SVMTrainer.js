@@ -1,5 +1,6 @@
 const svmjs = require("svm");
 import { store } from "./index.js";
+import { setPrediction } from "./redux";
 
 export default class SVMTrainer {
   constructor() {
@@ -13,7 +14,7 @@ export default class SVMTrainer {
   }
 
   startTraining() {
-    this.addTrainingData(this.state);
+    this.addTrainingData();
   }
 
   extractLabels = row => {
@@ -28,14 +29,30 @@ export default class SVMTrainer {
     return exampleValues;
   };
 
-  addTrainingData(state) {
-    const trainingExamples = state.data.map(this.extractExamples);
-    const trainingLabels = state.data.map(this.extractLabels);
+  addTrainingData() {
+    const trainingExamples = this.state.data.map(this.extractExamples);
+    const trainingLabels = this.state.data.map(this.extractLabels);
     this.train(trainingExamples, trainingLabels);
   }
 
   train(trainingExamples, trainingLabels) {
     this.svm.train(trainingExamples, trainingLabels);
+  }
+
+  predict() {
+    const testValues = this.prepareTestData();
+    let prediction = {};
+    prediction.predictedLabel = this.svm.predict([testValues])[0];
+    prediction.confidence = Math.abs(this.svm.marginOne(testValues));
+    store.dispatch(setPrediction(prediction));
+  }
+
+  prepareTestData() {
+    let testValues = [];
+    this.state.selectedFeatures.forEach(feature =>
+      testValues.push(parseInt(this.state.testData[feature]))
+    );
+    return testValues;
   }
 
   clearAll() {
