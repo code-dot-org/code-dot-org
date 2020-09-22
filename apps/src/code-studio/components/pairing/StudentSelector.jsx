@@ -3,9 +3,21 @@ import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
 
+const cyan = '#0094ca';
 const styles = {
   buttonLeft: {
     marginLeft: 0
+  },
+  selectable: {
+    backgroundColor: 'white',
+    color: cyan,
+    border: '1px solid',
+    borderColor: cyan,
+    fontFamily: "'Gotham 4r', sans-serif",
+    fontSize: '13px'
+  },
+  warning: {
+    color: 'red'
   }
 };
 
@@ -47,28 +59,46 @@ export default class StudentSelector extends React.Component {
     } else if (this.props.students.length === 0) {
       return <span>{i18n.noStudentsInSection()}</span>;
     }
-
-    const studentDivs = this.props.students.map(student => {
-      let className = 'student selectable';
+    const exceededMaximum = this.state.selectedStudentIds.length >= 4;
+    const studentBtns = this.props.students.map(student => {
+      let className = 'selectable';
       if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
-        className = 'student selectable selected';
+        className = 'selected';
       }
+      let btnStyle = styles.selectable;
+      const unselectable = exceededMaximum && className === 'selectable';
+
+      //Adjust styles for disabled and selected buttons
+      let baseStyles = {...btnStyle};
+      if (unselectable) {
+        baseStyles['opacity'] = 0.5;
+      } else if (className === 'selected') {
+        baseStyles['backgroundColor'] = cyan;
+        baseStyles['color'] = 'white';
+      }
+      btnStyle = baseStyles;
+
       return (
-        <div
+        <button
+          type="button"
           key={student.id}
           data-id={student.id}
           className={className}
           onClick={this.handleStudentClicked}
+          style={btnStyle}
+          disabled={unselectable}
         >
           {student.name}
-        </div>
+        </button>
       );
     });
-
     return (
       <div>
-        {studentDivs}
+        {studentBtns}
         <div className="clear" />
+        {exceededMaximum && (
+          <p style={styles.warning}>You cannot pair with more than 4 people.</p>
+        )}
         {this.state.selectedStudentIds.length !== 0 && (
           <button
             style={styles.buttonLeft}
