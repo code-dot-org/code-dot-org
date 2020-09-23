@@ -46,15 +46,9 @@ class AnimationList extends React.Component {
     let animationListKeys = this.props.animationList.orderedKeys;
     if (this.props.hideBackgrounds) {
       animationListKeys = animationListKeys.filter(key => {
-        if (
-          this.props.animationList.propsByKey[key].categories &&
-          this.props.animationList.propsByKey[key].categories.includes(
-            'backgrounds'
-          )
-        ) {
-          return false;
-        }
-        return true;
+        return !(
+          this.props.animationList.propsByKey[key].categories || []
+        ).includes('backgrounds');
       });
     }
     return (

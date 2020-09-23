@@ -367,10 +367,11 @@ export function setInitialAnimationList(
     if (isSpriteLab) {
       while (
         index < serializedAnimationList.orderedKeys.length &&
-        serializedAnimationList.orderedKeys[index].categories &&
-        serializedAnimationList.orderedKeys[index].categories.includes(
-          'backgrounds'
-        )
+        (
+          serializedAnimationList.propsByKey[
+            serializedAnimationList.orderedKeys[index]
+          ].categories || []
+        ).includes('backgrounds')
       ) {
         index = index + 1;
       }
@@ -399,7 +400,7 @@ export function addBlankAnimation() {
       frameDelay: 4,
       version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
     },
-    false /*checkBackground. False because these are going to be sprites or we're in gamelab*/
+    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
   );
 }
 
@@ -457,7 +458,7 @@ export function appendCustomFrames(props) {
  * Add a library animation to the project (at the end of the list, unless a spritelab project).
  * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimation(props, checkBackground) {
+export function addLibraryAnimation(props, skipBackground) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
@@ -465,8 +466,8 @@ export function addLibraryAnimation(props, checkBackground) {
     } else {
       dispatch(addAnimationAction(key, props));
     }
-    // if checkBackground, this means we don't want the selected animation to be a background
-    if (!checkBackground || !props.categories.includes('backgrounds')) {
+    // if skipBackground, this means we don't want the selected animation to be a background
+    if (!skipBackground || !props.categories.includes('backgrounds')) {
       dispatch(
         loadAnimationFromSource(key, () => {
           dispatch(selectAnimation(key));
