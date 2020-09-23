@@ -60,7 +60,8 @@ export const sampleActivities = [
             skin: null,
             videoKey: null,
             concepts: '',
-            conceptDifficulty: ''
+            conceptDifficulty: '',
+            expand: false
           },
           {
             name: 'Level 2',
@@ -82,7 +83,8 @@ export const sampleActivities = [
             skin: null,
             videoKey: null,
             concepts: '',
-            conceptDifficulty: ''
+            conceptDifficulty: '',
+            expand: false
           }
         ]
       }

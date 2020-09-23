@@ -2,22 +2,24 @@
 #
 # Table name: script_levels
 #
-#  id          :integer          not null, primary key
-#  script_id   :integer          not null
-#  chapter     :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  stage_id    :integer
-#  position    :integer
-#  assessment  :boolean
-#  properties  :text(65535)
-#  named_level :boolean
-#  bonus       :boolean
+#  id                  :integer          not null, primary key
+#  script_id           :integer          not null
+#  chapter             :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#  stage_id            :integer
+#  position            :integer
+#  assessment          :boolean
+#  properties          :text(65535)
+#  named_level         :boolean
+#  bonus               :boolean
+#  activity_section_id :integer
 #
 # Indexes
 #
-#  index_script_levels_on_script_id  (script_id)
-#  index_script_levels_on_stage_id   (stage_id)
+#  index_script_levels_on_activity_section_id  (activity_section_id)
+#  index_script_levels_on_script_id            (script_id)
+#  index_script_levels_on_stage_id             (stage_id)
 #
 
 require 'cdo/shared_constants'
@@ -32,17 +34,29 @@ class ScriptLevel < ActiveRecord::Base
 
   belongs_to :script
   belongs_to :lesson, foreign_key: 'stage_id'
+
+  # This field will only be present in scripts which are being edited in the
+  # new script / lesson edit GUI.
+  belongs_to :activity_section
+
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
 
   validate :anonymous_must_be_assessment
+  validate :validate_activity_section_lesson
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
   def anonymous_must_be_assessment
     if anonymous? && !assessment
       errors.add(:script_level, "Only assessments can be anonymous in \"#{level.try(:name)}\"")
+    end
+  end
+
+  def validate_activity_section_lesson
+    if activity_section && activity_section.lesson != lesson
+      errors.add(:script_level, 'activity_section.lesson does not match lesson')
     end
   end
 
@@ -231,7 +245,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged?
+    return false if lesson && lesson.unplugged_lesson?
     return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
@@ -303,7 +317,7 @@ class ScriptLevel < ActiveRecord::Base
   def level_display_text
     if level.unplugged?
       I18n.t('unplugged_activity')
-    elsif lesson.unplugged?
+    elsif lesson.unplugged_lesson?
       position - 1
     else
       position
