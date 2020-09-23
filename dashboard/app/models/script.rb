@@ -919,17 +919,15 @@ class Script < ActiveRecord::Base
       }, lesson_groups]
     end
 
-    # TODO: replace this with configuration option
-    debug = [:adhoc, :development].include?(rack_env)
-    if debug
+    if Rake.application.options.trace
       puts "Seeding #{scripts_to_add.length} Scripts"
-      progressbar = ProgressBar.create(total: scripts_to_add.length)
+      progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|')
     end
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
       added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      progressbar.increment if debug
+      progressbar.increment if Rake.application.options.trace
       added_script.name
     rescue => e
       raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
