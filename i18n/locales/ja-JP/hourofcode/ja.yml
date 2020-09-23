@@ -470,6 +470,7 @@ ja:
   signup_send_posters_address_placeholder: この住所は公開されません
   signup_event_type_in_school: 学校で
   signup_event_type_out_of_school: 学校以外で
+  signup_event_type_at_home: Home
   signup_submit_census_label: 送信
   signup_submit_census_error_message: 申し訳ありません。エラーが発生しました。もう一度送信しなおしてください。
   signup_submit_label: 登録

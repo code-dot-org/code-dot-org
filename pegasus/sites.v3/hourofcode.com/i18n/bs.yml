@@ -494,6 +494,7 @@ bs:
     mapi
   signup_event_type_in_school: U školi
   signup_event_type_out_of_school: Izvan škole
+  signup_event_type_at_home: Home
   signup_submit_census_label: Potvrdi
   signup_submit_census_error_message: Žao nam je. Došlo je do pogreške. Molimo pokušajte
     ponovno poslati obrazac.

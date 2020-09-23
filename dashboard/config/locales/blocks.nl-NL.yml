@@ -963,6 +963,7 @@ nl:
         options:
           UNIT:
             '"seconds"': seconden
+            '"frames"': frames
       gamelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -1008,10 +1009,12 @@ nl:
         options:
           CHOICE:
             '"this"': Dit
+            '"other"': anders
       gamelab_getTime:
         options:
           UNIT:
             '"seconds"': seconden
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: titelscherm verbergen
       gamelab_isKeyPressed:
@@ -1093,6 +1096,7 @@ nl:
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
         options:
           DIRECTION:
             '"North"': Naar het noorden
@@ -1209,6 +1213,8 @@ nl:
             '"while"': terwijl
       gamelab_subjectSpritePointer:
         text: geklikt {SPRITE}
+      gamelab_tumbling:
+        text: tuimelen
       gamelab_turn:
         text: draai {SPRITE} {DIRECTION} {N} graden
         options:

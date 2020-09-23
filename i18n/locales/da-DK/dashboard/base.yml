@@ -26,7 +26,7 @@ da:
               invalid: "ugyldigt!. Bemærk, at hvert link kun kan blive brugt en gang, til at nulstille din adgangskode, eller password. Kun det sidst sendte link vil virke."
       messages:
         blank: "påkrævet"
-        blank_plural: "påkrævet"
+        blank_plural: "er påkrævet"
         invalid: "er ugyldigt"
         invalid_plural: "er ugyldige"
     attributes:
@@ -119,7 +119,10 @@ da:
     need_unlock: "Ikke modtaget lås op instruktioner?"
     not_linked: "Desværre, er din Code.org konto ikke knyttet til %{provider}. Du bliver nødt til at logge på ved at skrive din adgangskode nedenfor."
     use_clever: "Desværre, er din Code.org konto ikke knyttet til %{provider}. Venligst log på via Clever Portal i stedet."
+    invalid_provider: "Beklager, %{provider}-konti kan ikke blive sammenkoblet til Code.org-konti."
+    migration_required: "Beklager, vi kunne ikke forbinde eller afbryde konti, der stadig bruger det gamle konti-system. Opdater venligst til det nye konti-system."
     unable_to_connect_provider: "Ude af stand til at forbinde din Code.org konto til kontoen %{provider}. Prøv venligst igen."
+    disconnect_successful: "Succes! Vi har afbrudt den eksterne konto fra din Code.org-konto."
     already_in_use: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
     already_linked: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
     existing_account:
@@ -157,6 +160,7 @@ da:
     student_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
     my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
+    student_terms_markdown: "E-mailadresser er ikke gemt i form af, at vi kontakter studerende. Studerende vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er adgangskode-genopretning. Se vores [fortrolighedspolitik](http://code.org/privacy) for mere information."
     additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
     user_type_button: "Opdater kontotype"
     user_type_label: "Kontotype"
@@ -196,12 +200,12 @@ da:
   signin_form:
     title: 'Har du allerede en konto? Log på'
     login: 'E-mail'
-    login_username: 'Email eller Brugernavn'
+    login_username: 'E-mail eller brugernavn'
     password: 'Adgangskode'
     remember: 'Husk mig'
     submit: 'Log ind'
   signin:
-    try_heading: 'Vil du prøve kodning uden tilmelding?'
+    try_heading: 'Vil du prøve at kode uden at tilmelde dig?'
     try_hoc: 'Prøv Hour of Code først'
     try_20hours: 'Prøv vores 20 timers Introduktion til datalogi'
   signinsection:
@@ -212,6 +216,7 @@ da:
     login: 'Log ind'
     invalid_login: 'Ugyldig login, prøv igen'
     pair_programming: 'Jeg har en partner på min computer'
+    student_privacy_markdown: "Lær mere om, hvorfor du ikke ser dit fulde navn [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Glemt din adgangskode?'
@@ -240,6 +245,7 @@ da:
     parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
+    delete_teacher_subject: 'Code.org notifikation: Din konto er blevet slettet'
   section:
     your_section:
       one: 'Din afdeling:'
@@ -265,6 +271,7 @@ da:
       section_not_found: "Kunne ikke finde en sektion med kode '%{section_code}'."
       blank_code: "Angiv en sektions kode"
       cant_join_own_section: "Desværre, du kan ikke deltage i dit eget afsnit."
+      provider_managed_section: "Denne sektion er styret af en anden udbyder og derfor kan ikke tilsluttes. Spørg venligst din lærer om, at tilføje dig via %{provider} og synkroniser igen deres sektion."
     mail:
       student_disassociated:
         subject: "Code.org besked: %{student_name} er ikke længere tilknyttet som din elev."
@@ -285,6 +292,10 @@ da:
     updated: '%{model} blev opdateret.'
     destroyed: '%{model} blev slettet.'
     access_denied: 'Du har ikke adgang til denne %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "E-mailadresserne, du angav, matcher ikke e-mailadressen til denne konto"
   nav:
     header:
       finished_hoc: "Jeg har afsluttet min Hour of Code"
@@ -330,7 +341,7 @@ da:
       settings: 'Min konto'
       logout: 'Log ud'
       signin: 'Log ind'
-      signup: 'Skab en konto'
+      signup: 'Opret en konto'
       already_registered: 'Allerede registreret?'
       pair_programming: 'Par-programmering'
       team: 'Hold'
@@ -394,6 +405,7 @@ da:
       last_updated: 'Senest opdateret:'
       unsubmit: 'Fortryd indsendelse'
       worked_with: 'Samarbejdede med'
+      update_lock_settings: 'Opdater låsningsindstillinger her.'
       clear_response: 'Klar feedback'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
@@ -405,20 +417,31 @@ da:
     current_password_hint: '(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)'
     delete: 'Slet din konto'
     delete_text: "Klikkes på knappen nedenfor, slettes din konto."
+    delete_text_teacher_managed_note: "Du har ikke tilladelse til at slette denne konto, fordi den er styret af din lærer. Din lærer bliver nød til at fjerne dig fra deres sektion, før du kan slette din konto."
     delete_text_teacher_note: "Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti."
     delete_confirm: 'Sikker på, at du vil slette din konto?'
     deleted_user: 'slettet bruger'
+    no_password_because_oauth: 'Ingen adgangskode, fordi du tilmeldte dig ved brug af en tredjepartsudbyder.'
     create_personal_login: "Lav et personligt kodeords-login\n"
+    create_personal_login_under_13_info: 'Hvis du ønsker, at beholde din Code.org-konto efter slutning af skoleåret, så spørg dine forældre eller din værge om hjælp, om at oprette din egen personlige log-in, som vist nedenunder.'
+    create_personal_login_under_13_username: "Brugernavn (ikke brug dit rigtige navn!)"
     create_personal_login_under_13_parent_email: 'Forældres/værges e-mail adresse'
+    create_personal_login_info: 'Hvis du ønsker, at beholde din Code.org-konto efter slutning af skoleåret, så kan du oprette din egen, som vist nedenunder.'
+    create_personal_login_link_account: 'Du kan også vælge at forbinde den til en personlig konto under "Administrere sammenkoblet konti"-sektionen.'
     create_personal_login_terms_markdown: "Ved å lage ei personleg pålogging godtar eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester, sjølv utan ein lærar tilstade."
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    parent_email_label: "Forældrenes eller værgens e-mail (valgfrit) "
+    parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
+    enter_parent_email: "Indtast dine forældres eller din værges e-mailadresse (til genopreting af adgangskode)"
     update: "Opdater Konto"
     account_successfully_updated: "Konto opdateret"
     auth_option_saved: "Du har linket din %{provider} konto med email %{email}.\n"
+    auth_option_saved_no_email: "Du har sammenkoblet din %{provider}-konto med succes."
     update_email: "Opdater"
     for_parents_and_guardians: "For forældre og værger"
     link_a_parent_email: "Knyt en forælder / værges e-mail-adresse til denne konto for at holde dig opdateret om dit barns fremskridt og projekter. Du vil også være i stand til at bruge denne e-mail-adresse til gendannelse af adgangskode."
     parent_guardian_email_label: "Forældres/værges e-mail adresse"
+    remove_parent_email_label: "Fjern"
     none: "Ingen"
     only_one_parent_email_supported_warning: "Bemærk: Vi er kun i stand til at understøtte en forælder / værges e-mail-adresse pr. studiekonto på dette tidspunkt."
   user_level:
@@ -455,10 +478,20 @@ da:
     test_videos_help: 'Teste vores nye video-afspiller på din skole'
     try_beta_courses: 'Nyt! Prøv vores beta kurser for K-5 elever'
     use_as_teacher: 'Bruge dette websted som en lærer'
+    heading_elementary_markdown: "## 20 timers kurser for\n\n# Computer videnskab (grundlæggende) - (alle aldre)"
     your_gallery: Galleri
     no_primary_course: "Prøv et kursusforløb på Code Studio"
     choose_next_course: "Prøv en Code Studio kursus ved at vælge en nedenfor"
     print_certificate: "Udskriv certifikat"
+  move_students:
+    new_section_dne: "Beklager, men sektionen %{new_section_code} findes ikke. Indtast venligst en anden sektionskode."
+    section_code_cant_be_current_section: "Den nuværende sektion kan ikke blive det samme som den nye sektion."
+    current_section_dne: "Beklager, men sektionen %{current_section_code} findes ikke. Indtast venligst en anden sektionskode."
+    student_ids_not_entered: "Angiv venligst student_ids. "
+    student_not_found: "En eller flere studerende kunne ikke blive fundet."
+    all_students_must_be_in_current_section: "Alle de studerende skal i øjeblikket indskrives i din sektion."
+    already_enrolled_in_new_section: "Du kan ikke flytte disse studenter, fordi de allerede er i den nye sektion."
+    third_party_login: "Du kan ikke flytte studenter til en sektion, der er synkroniseret med en tredjepartsværktøj."
   share:
     title: "Lære om Code Studio"
     description: "Enhver kan lære programmering. Lav spil, apps og kunst med kode."
@@ -466,6 +499,7 @@ da:
   gender:
     male: 'Mand'
     female: 'Kvinde'
+    non_binary: 'Ikke-binært'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -476,6 +510,7 @@ da:
     help_from_html_old: 'Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.'
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheder forbeholdes. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheder forbeholdes. < br / > Frozen &#8482; © %{current_year} Disney. Alle rettigheder forbeholdes. < br / > Ice Age &#8482; © %{current_year} 20th Century Fox. Alle rettigheder forbeholdes. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes. < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org bruger p5.play, hvilket er licenseret under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: 'Copyright'
@@ -497,6 +532,7 @@ da:
     title: 'Brug for hjælp?'
     subtitle: 'Se disse videoer og tips'
     teacher: 'Se løsningen'
+    teacher_no_solution: 'Stop med at se løsninger'
     auth_error: 'Du har ikke rettigheder til at se løsningen.'
     submit: 'Opdater kunstner placering'
     direction: 'Start retning (i grader)'
@@ -506,8 +542,11 @@ da:
     notes_coming_soon: 'Noter til denne video kommer snart.'
     autoplay_option: 'Automatisk afspil videoer'
     download: 'Hent Video'
+    show_notes: 'Vis noter'
+    show_video: 'Vis videoen'
   compatibility:
     upgrade:
+      unsupported_message: "Din browser er ikke understøttet. Opgrader venligst din browser til [en af vores understøttende browsere](%{supported_browsers_url}). Du kan prøve at vise siden, men forvent at funktionaliteten er dårlig."
       link: "Lær mere"
   slow_loading: 'Dette tager længere tid end normalt...'
   try_reloading: 'Prøv at genindlæse siden'
@@ -651,12 +690,16 @@ da:
     privacy: "Privatlivspolitik"
     accept_label_markdown: Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).
     accept_tos: Ved at tilmelde dig Code.org, accepterer du vores [Servicevilkår](%{tos_url}) og [Privatlivspolitik](%{privacy_url}).
+    accept: "Accepter"
     print: "Udskriv"
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.
   school_info_interstitial:
     save: "Gem"
   race_interstitial:
     races:
+      white: "Hvid"
+      black: "Sort eller afroamerikansk"
+      asian: "Asiatisk"
       other: "Andre"
     submit: "Indsend"
     decline: "Luk"
@@ -682,6 +725,8 @@ da:
     project_gallery: "Projekter"
     share_title: Del dit projekt
     share_copy_link: "Kopiér linket:"
+    share_u13_warning: "Spørg din lærer, før du deler noget. Kun del noget med andre på din skole."
+    advanced_share: "Vis avancerede indstillinger"
     name: "Navn"
     updated: "Opdateret"
     project_type: "Projekttype"
@@ -718,6 +763,44 @@ da:
       name: 'Eskalerede'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
+    download_in_Albanian: 'Download på albansk:'
+    download_in_Arabic: 'Download på arabisk:'
+    download_in_Azerbaijani: 'Download på aserbajdsjansk:'
+    download_in_Basque: 'Download på baskisk:'
+    download_in_Bosnian: 'Download på bosnisk:'
+    download_in_Bulgarian: 'Download på bulgarsk:'
+    download_in_Catalan: 'Download på catalansk:'
+    download_in_Chinese-Taiwan: 'Download på Kinesisk-Taiwan:'
+    download_in_Chinese: 'Download på kinesisk:'
+    download_in_Croatian: 'Download på kroatisk:'
+    download_in_Czech: 'Download på tjekkisk:'
+    download_in_Danish: 'Download på dansk:'
+    download_in_Dutch: 'Download på hollandsk:'
+    download_in_English: 'Download på engelsk:'
+    download_in_Finnish: 'Download på finsk:'
+    download_in_French: 'Download på fransk:'
+    download_in_German: 'Download på tysk:'
+    download_in_Greek: 'Download på græsk:'
+    download_in_Hebrew: 'Download på hebraisk:'
+    download_in_Hungarian: 'Download på ungarsk:'
+    download_in_Icelandic: 'Download på islandsk:'
+    download_in_Indonesian: 'Download på indonesisk:'
+    download_in_Irish: 'Download på irsk:'
+    download_in_Italian: 'Download på italiensk:'
+    download_in_Japanese: 'Download på japansk:'
+    download_in_Korean: 'Download på koreansk:'
+    download_in_Latvian: 'Download på lettisk:'
+    download_in_Lithuanian: 'Download på litauisk:'
+    download_in_Norwegian: 'Download på norsk:'
+    download_in_Norwegian-Nynorsk: 'Download på Norsk-nynorsk:'
+    download_in_Polish: 'Download på polsk:'
+    download_in_Portuguese-Brazil: 'Download på Portugisisk-Brasilien:'
+    download_in_Portuguese: 'Download på Portugisisk:'
+    download_in_Romanian: 'Download på rumænsk:'
+    download_in_Russian: 'Download på russisk:'
+    download_in_Serbian: 'Download på serbisk:'
+    download_in_Slovenian: 'Download på slovensk:'
+    download_in_Spanish: 'Download på spansk:'
     download_in_Swedish: 'Download på svensk:'
     download_in_Turkish: 'Download på tyrkisk:'
     download_in_Ukrainian: 'Download på ukrainsk:'
@@ -748,14 +831,25 @@ da:
       gender:
         male: 'Mand'
         female: 'Kvinde'
+        non_binary: 'Ikke-binært'
         none: 'Foretrækker ikke at svare'
       school_country:
         canada: 'Canada'
         chile: 'Chile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
         thailand: 'Thailand'
+      ages:
+        ages_under_6: '< 6 år gammel'
+        ages_7_8: '7-8 år gammel'
+        ages_9_10: '9-10 år gammel'
+        ages_11_12: '11-12 år gammel'
+        ages_13_14: '13-14 år gammel'
+        ages_15_16: '15-16 år gammel'
+        ages_17_18: '17-18 år gammel'
+        ages_19_over: '19+ år gammel'
       subjects:
         cs: 'Datalogi'
         math: 'Matematik'
