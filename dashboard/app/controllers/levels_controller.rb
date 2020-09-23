@@ -116,44 +116,20 @@ class LevelsController < ApplicationController
     return head :no_content unless Rails.application.config.levelbuilder_mode
 
     # Define search filter fields
-    @search_fields = [
-      {
-        name: :name,
-        description: 'Filter by name:',
-        type: 'text'
-      },
-      {
-        name: :level_type,
-        description: 'By type:',
-        type: 'select',
-        options: [
-          ['All types', ''],
-          *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
-        ]
-      },
-      {
-        name: :script_id,
-        description: 'By script:',
-        type: 'select',
-        options: [
-          ['All scripts', ''],
-          *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
-        ]
-      }
-    ]
-
-    # Add an "owner" filter, only if we're on levelbuilder
-    if Rails.application.config.levelbuilder_mode
-      @search_fields << {
-        name: :owner_id,
-        description: 'By owner:',
-        type: 'select',
-        options: [
-          ['Any owner', ''],
-          *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
-        ]
-      }
-    end
+    @search_fields = {
+      levelOptions: [
+        ['All types', ''],
+        *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+      ],
+      scriptOptions: [
+        ['All scripts', ''],
+        *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+      ],
+      ownerOptions: [
+        ['Any owner', ''],
+        *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
+      ]
+    }
 
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)

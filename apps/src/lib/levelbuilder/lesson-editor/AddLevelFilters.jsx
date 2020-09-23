@@ -19,7 +19,7 @@ const styles = {
 
 export default class AddLevelFilters extends Component {
   static propTypes = {
-    searchFields: PropTypes.array
+    searchFields: PropTypes.object
   };
 
   render() {
@@ -44,7 +44,7 @@ export default class AddLevelFilters extends Component {
               console.log('filter by type');
             }}
           >
-            {this.props.searchFields[1].options.map(levelType => (
+            {this.props.searchFields.levelOptions.map(levelType => (
               <option key={levelType[0]}>{levelType[0]}</option>
             ))}
           </select>
@@ -57,7 +57,7 @@ export default class AddLevelFilters extends Component {
               console.log('filer by script');
             }}
           >
-            {this.props.searchFields[2].options.map(script => (
+            {this.props.searchFields.scriptOptions.map(script => (
               <option key={script[0]}>{script[0]}</option>
             ))}
           </select>
@@ -70,7 +70,7 @@ export default class AddLevelFilters extends Component {
               console.log('filter by owner');
             }}
           >
-            {this.props.searchFields[3].options.map(owner => (
+            {this.props.searchFields.ownerOptions.map(owner => (
               <option key={owner[0]}>{owner[0]}</option>
             ))}
           </select>
