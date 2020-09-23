@@ -24,6 +24,7 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
@@ -918,22 +919,17 @@ class Script < ActiveRecord::Base
       }, lesson_groups]
     end
 
-    # Print progress for dev environments and adhocs
+    # TODO: replace this with configuration option
     debug = [:adhoc, :development].include?(rack_env)
     if debug
       puts "Seeding #{scripts_to_add.length} Scripts"
-      print "Seeded... "
-      n = 0
+      progressbar = ProgressBar.create(total: scripts_to_add.length)
     end
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
       added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      if debug
-        n += 1
-        print "#{n}, "
-        STDOUT.flush
-      end
+      progressbar.increment if debug
       added_script.name
     rescue => e
       raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
