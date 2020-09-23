@@ -186,6 +186,12 @@ class StudioApp extends EventEmitter {
     this.milestoneStartTime = undefined;
 
     /**
+     * Whether we've reported a milestone yet for this run/reset cycle
+     * @type {boolean}
+     */
+    this.hasReported = false;
+
+    /**
      * If true, we don't show blockspace. Used when viewing shared levels
      */
     this.hideSource = false;
