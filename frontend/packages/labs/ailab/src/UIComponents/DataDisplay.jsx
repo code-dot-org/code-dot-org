@@ -1,3 +1,4 @@
+/* React component to handle displaying imported data and selecting features. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";

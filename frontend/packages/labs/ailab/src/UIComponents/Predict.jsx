@@ -1,3 +1,4 @@
+/* React component to handle predicting and displaying predictions. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";

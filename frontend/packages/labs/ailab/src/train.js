@@ -1,3 +1,5 @@
+/* Generic machine learning handlers that route to the selected trainer. */
+
 import SVMTrainer from "./SVMTrainer";
 
 let trainingState = {};

@@ -1,3 +1,5 @@
+/* Training and prediction using a binary SVM machine learning model from (https://github.com/karpathy/svmjs) */
+
 /* eslint-env node */
 const svmjs = require("svm");
 import { store } from "./index.js";

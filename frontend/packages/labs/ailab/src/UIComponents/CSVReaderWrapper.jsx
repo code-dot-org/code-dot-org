@@ -1,3 +1,4 @@
+/* React component to handle importing CSVs and pushing data to Redux store. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
