@@ -31,6 +31,7 @@ class Lesson < ActiveRecord::Base
 
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
+  has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
 

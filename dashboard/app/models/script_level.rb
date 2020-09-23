@@ -34,16 +34,28 @@ class ScriptLevel < ActiveRecord::Base
 
   belongs_to :script
   belongs_to :lesson, foreign_key: 'stage_id'
+
+  # This field will only be present in scripts which are being edited in the
+  # new script / lesson edit GUI.
+  belongs_to :activity_section
+
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
 
   validate :anonymous_must_be_assessment
+  validate :validate_activity_section_lesson
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
   def anonymous_must_be_assessment
     if anonymous? && !assessment
       errors.add(:script_level, "Only assessments can be anonymous in \"#{level.try(:name)}\"")
+    end
+  end
+
+  def validate_activity_section_lesson
+    if activity_section && activity_section.lesson != lesson
+      errors.add(:script_level, 'activity_section.lesson does not match lesson')
     end
   end
 
