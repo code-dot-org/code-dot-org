@@ -284,6 +284,14 @@ reporting.sendReport = function(report) {
   }
 
   if (postMilestone) {
+    var onNoSuccess = xhr => {
+      if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+        return;
+      }
+      report.error = xhr.responseText;
+      reportComplete(report, getFallbackResponse(report));
+    };
+
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
@@ -302,10 +310,7 @@ reporting.sendReport = function(report) {
       },
       success: function(response) {
         if (report.skipSuccessCallback === true) {
-          reportComplete(report, getFallbackResponse(report));
-          return;
-        }
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+          onNoSuccess(response);
           return;
         }
         if (appOptions.hasContainedLevels && !response.redirect) {
@@ -324,13 +329,7 @@ reporting.sendReport = function(report) {
         }
         reportComplete(report, response);
       },
-      error: function(xhr, textStatus, thrownError) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
-        }
-        report.error = xhr.responseText;
-        reportComplete(report, getFallbackResponse(report));
-      }
+      error: xhr => onNoSuccess(xhr)
     });
 
     lastAjaxRequest = thisAjax;
