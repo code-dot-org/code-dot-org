@@ -23,6 +23,12 @@ export const CIRCUIT_PLAYGROUND_PID = 0x8011;
 /** @const {string} The Circuit Playground Express product id */
 export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
 
+/** @const {string} The micro:bit vendor id as reported by micro:bit boards */
+export const MICROBIT_VID = 0x0d28;
+
+/** @const {string} The micro:bit product id */
+export const MICROBIT_PID = 0x0204;
+
 /**
  * Scan system serial ports for a device compatible with Maker Toolkit.
  * @returns {Promise.<string>} resolves to a serial port object for a viable
@@ -117,7 +123,17 @@ export function getPreferredPort(portList) {
     return adafruitExpress;
   }
 
-  // 3. Next best case: Some other Adafruit product that might also work
+  // 3. Next-best case: micro:bit
+  const microbit = portList.find(
+    port =>
+      parseInt(port.vendorId, 16) === MICROBIT_VID &&
+      parseInt(port.productId, 16) === MICROBIT_PID
+  );
+  if (microbit) {
+    return microbit;
+  }
+
+  // 4. Next best case: Some other Adafruit product that might also work
   const otherAdafruit = portList.find(
     port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
   );
@@ -125,7 +141,7 @@ export function getPreferredPort(portList) {
     return otherAdafruit;
   }
 
-  // 4. Last-ditch effort: Anything with a probably-usable port name and
+  // 5. Last-ditch effort: Anything with a probably-usable port name and
   //    a valid vendor id and product id
   const comNameRegex = /usb|acm|^com/i;
   return portList.find(port => {
