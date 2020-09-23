@@ -41,7 +41,42 @@ export default class ImagePicker extends React.Component {
   };
 
   setMode = mode => {
-    this.setState({mode: mode});
+    this.setState({mode});
+  };
+
+  getBody = (disableAudio, levelName, isStartMode) => {
+    if (!this.props.assetChosen || this.state.mode === ImageMode.FILE) {
+      return (
+        <AssetManager
+          assetChosen={this.props.assetChosen}
+          assetsChanged={this.props.assetsChanged}
+          allowedExtensions={extensionFilter[this.props.typeFilter]}
+          uploadsEnabled={this.props.uploadsEnabled}
+          useFilesApi={this.props.useFilesApi}
+          projectId={this.props.projectId}
+          soundPlayer={this.props.soundPlayer}
+          disableAudioRecording={disableAudio}
+          imagePicker={true}
+          elementId={this.props.elementId}
+          levelName={levelName}
+          isStartMode={isStartMode}
+        />
+      );
+    } else if (this.state.mode === ImageMode.ICON) {
+      return <IconLibrary assetChosen={this.getAssetNameWithPrefix} />;
+    } else {
+      return (
+        <ImageURLInput
+          assetChosen={this.props.assetChosen}
+          allowedExtensions={extensionFilter[this.props.typeFilter]}
+          currentValue={
+            this.props.currentImageType === ImageMode.URL
+              ? this.props.currentValue
+              : ''
+          }
+        />
+      );
+    }
   };
 
   render() {
@@ -127,41 +162,6 @@ export default class ImagePicker extends React.Component {
       isStartMode = reduxState.level.isStartMode;
     }
 
-    const getBody = () => {
-      if (!this.props.assetChosen || this.state.mode === ImageMode.FILE) {
-        return (
-          <AssetManager
-            assetChosen={this.props.assetChosen}
-            assetsChanged={this.props.assetsChanged}
-            allowedExtensions={extensionFilter[this.props.typeFilter]}
-            uploadsEnabled={this.props.uploadsEnabled}
-            useFilesApi={this.props.useFilesApi}
-            projectId={this.props.projectId}
-            soundPlayer={this.props.soundPlayer}
-            disableAudioRecording={disableAudio}
-            imagePicker={true}
-            elementId={this.props.elementId}
-            levelName={levelName}
-            isStartMode={isStartMode}
-          />
-        );
-      } else if (this.state.mode === ImageMode.ICON) {
-        return <IconLibrary assetChosen={this.getAssetNameWithPrefix} />;
-      } else {
-        return (
-          <ImageURLInput
-            assetChosen={this.props.assetChosen}
-            allowedExtensions={extensionFilter[this.props.typeFilter]}
-            currentValue={
-              this.props.currentImageType === ImageMode.URL
-                ? this.props.currentValue
-                : ''
-            }
-          />
-        );
-      }
-    };
-
     return (
       <div className="modal-content" style={styles.root}>
         {title}
@@ -171,7 +171,7 @@ export default class ImagePicker extends React.Component {
           </p>
         )}
         {modeSwitch}
-        {getBody()}
+        {this.getBody(disableAudio, levelName, isStartMode)}
       </div>
     );
   }

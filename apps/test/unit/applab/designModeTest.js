@@ -235,7 +235,7 @@ describe('setProperty and read Property', () => {
     });
 
     it('Return file for non empty, non url, non icon input', () => {
-      expect(assignImageType(picture, 'some_random_string')).to.equal('files');
+      expect(assignImageType(picture, 'some_random_string')).to.equal('file');
     });
   });
 });
