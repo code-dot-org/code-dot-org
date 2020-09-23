@@ -83,9 +83,11 @@ var LegacyDialog = (module.exports = function(options) {
       modalHeader.append(closeLink);
       if (options.link) {
         modalHeader.append(
-          $(`<div onclick="window.open('${options.link}');"></div>`).addClass(
-            'open-link'
-          )
+          $(
+            `<div><a target="_blank" href="${
+              options.link
+            }" rel="noopener noreferrer"></a></div>`
+          ).addClass('open-link')
         );
       }
     }
@@ -94,9 +96,11 @@ var LegacyDialog = (module.exports = function(options) {
     modalBody.append(closeLink);
     if (options.link) {
       modalBody.append(
-        $(`<div onclick="window.open('${options.link}');"></div>`).addClass(
-          'open-link'
-        )
+        $(
+          `<div><a target="_blank" href="${
+            options.link
+          }" rel="noopener noreferrer"></a></div>`
+        ).addClass('open-link')
       );
     }
   }
