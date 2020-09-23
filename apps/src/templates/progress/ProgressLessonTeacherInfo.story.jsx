@@ -19,7 +19,7 @@ import teacherSections, {
   selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import googlePlatformApi, {
-  startLoadingGapi
+  loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 
@@ -124,7 +124,7 @@ const createStore = ({
     store.dispatch(setSections([sections[11], sections[12]]));
     store.dispatch(setSectionLockStatus(sections));
     if (showGoogleButton) {
-      store.dispatch(startLoadingGapi());
+      store.dispatch(loadGooglePlatformApi());
     }
     const section = showGoogleButton ? '12' : '11';
     store.dispatch(selectSection(section));
