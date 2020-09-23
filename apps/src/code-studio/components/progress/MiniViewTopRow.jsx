@@ -20,12 +20,13 @@ const styles = {
     lineHeight: '34px'
   },
   // absolutely position children so that they're located correctly in RTL as well
-  link: {
-    color: color.white,
+  button: {
     position: 'absolute',
-    left: 15,
-    textDecoration: 'underline',
-    lineHeight: '34px'
+    left: 15
+  },
+  buttonRtl: {
+    position: 'absolute',
+    right: 15
   },
   linesOfCodeText: {
     position: 'absolute',
@@ -38,12 +39,13 @@ const styles = {
   toggle: {
     position: 'absolute',
     top: 10,
-    right: 10
+    right: 15
   },
   toggleRtl: {
     position: 'absolute',
     top: 10,
-    left: 10
+    left: 15,
+    direction: 'ltr'
   }
 };
 
@@ -79,6 +81,7 @@ export default class MiniViewTopRow extends React.Component {
           text={i18n.viewUnitOverview()}
           href={`/s/${scriptName}${params}`}
           color={Button.ButtonColor.gray}
+          style={isRtl ? styles.buttonRtl : styles.button}
         />
         <span
           style={isRtl ? styles.linesOfCodeTextRtl : styles.linesOfCodeText}
