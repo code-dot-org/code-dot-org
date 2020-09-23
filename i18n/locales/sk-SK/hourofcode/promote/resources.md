@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Dievčatá a menšiny sú zastúpené veľmi malým podielom na hodinách informatiky i v IT odvetví. Dobrou správou je, že sme na ceste tento stav zmeniť.
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou správou je, že sme na ceste tento stav zmeniť.
 
 Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Viac ako 100 partnerov sa pridalo pre podporu tohto hnutia. Dokonca aj Apple Store vo svete organizoval Hodiny Kódu. Aj prezident Obama napísal svoj prvý riadok kódu v rámci tejto kampane.
 

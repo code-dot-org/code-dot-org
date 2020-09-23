@@ -15479,6 +15479,8 @@ pl:
               name: Kurs B
             Course E/F:
               name: Kurs E/F
+            CS Discoveries:
+              name: Odkrycia informatyki
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
