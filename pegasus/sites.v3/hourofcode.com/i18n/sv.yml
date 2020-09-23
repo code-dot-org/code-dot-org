@@ -489,6 +489,7 @@ sv:
   signup_send_posters_address_placeholder: Denna adress kommer inte att visas på kartan
   signup_event_type_in_school: I en skola
   signup_event_type_out_of_school: Utanför skolan
+  signup_event_type_at_home: Home
   signup_submit_census_label: Skicka in
   signup_submit_census_error_message: Beklagar, det blev fel. Försök skicka in formuläret
     igen.
