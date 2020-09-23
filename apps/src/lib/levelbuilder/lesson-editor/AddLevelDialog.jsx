@@ -69,20 +69,51 @@ export default class AddLevelDialog extends Component {
 
   componentDidMount() {
     $.ajax({
-      url: `/levels/get_levels`,
+      url: `/levels/get_filters`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      this.setState({levels: data.levels, searchFields: data.search_fields});
+      this.setState({searchFields: data});
+    });
+
+    $.ajax({
+      url: `/levels/get_filtered_levels?page=${1}`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done((data, _, request) => {
+      this.setState({levels: data});
     });
   }
+
+  handleSearch = (levelName, levelType, scriptId, ownerId) => {
+    let url = `/levels/get_filtered_levels?page=${1}`;
+    if (levelName) {
+      url = url + `&name=${levelName}`;
+    }
+    if (levelType) {
+      url = url + `&level_type=${levelType}`;
+    }
+    if (scriptId) {
+      url = url + `&script_id=${scriptId}`;
+    }
+    if (ownerId) {
+      url = url + `&owner_id=${ownerId}`;
+    }
+
+    $.ajax({
+      url: url,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done((data, _, request) => {
+      this.setState({levels: data});
+    });
+  };
 
   handleToggle = value => {
     this.setState({methodOfAddingLevel: value});
   };
 
   render() {
-    console.log(this.state.levels);
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -106,7 +137,10 @@ export default class AddLevelDialog extends Component {
             </ToggleGroup>
             {this.state.methodOfAddingLevel === 'Find Level' && (
               <div style={styles.filtersAndLevels}>
-                <AddLevelFilters searchFields={this.state.searchFields} />
+                <AddLevelFilters
+                  searchFields={this.state.searchFields}
+                  handleSearch={this.handleSearch}
+                />
                 <AddLevelTable addLevel={this.props.addLevel} />
               </div>
             )}

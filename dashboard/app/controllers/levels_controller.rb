@@ -110,9 +110,9 @@ class LevelsController < ApplicationController
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
-  # GET /levels/get_levels/
-  # Get all the information for levels to filter and search through
-  def get_levels
+  # GET /levels/get_filters/
+  # Get all the information to filter levels with
+  def get_filters
     return head :no_content unless Rails.application.config.levelbuilder_mode
 
     # Define search filter fields
@@ -127,24 +127,27 @@ class LevelsController < ApplicationController
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
       ]
     }
+
+    render json: @search_fields
+  end
+
+  # GET /levels/get_filtered_levels/
+  # Get all the information for levels after filtering
+  def get_filtered_levels
+    return head :no_content unless Rails.application.config.levelbuilder_mode
 
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
-    if Rails.application.config.levelbuilder_mode
-      @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
-    end
+    @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
 
-    render json: {
-      levels: @levels,
-      search_fields: @search_fields
-    }
+    render json: @levels
   end
 
   # GET /levels/1
