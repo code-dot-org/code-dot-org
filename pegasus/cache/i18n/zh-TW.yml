@@ -24,7 +24,7 @@ zh-TW:
   learn_now: 現在就開始學習
   petition_message: 每個在學校的學生都應該有機會學習計算機科學
   petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
-  petition_sign_message_num: 若你同意，請簽署你的名字，以加入我們的郵寄名單。目前已有 %{num} 人簽署。
+  petition_sign_message_num: 若你同意，請簽署你的名字，已加入我們的郵寄名單。目前已有 %{num} 人簽署。
   petition_join_others: '目前已有 # 人簽署。'
   petition_join_others_num: 加入這個已有 %{num} 人參與的活動
   name: 名稱
@@ -168,11 +168,11 @@ zh-TW:
   thanks_for_submitting: 感謝您的提交！
   if_you_enjoyed: 如果你喜歡這樣的學習方式，不妨邀請你的朋友一起體驗！我們希望全世界都能學習。
   personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
-  print_batch_certificates: 列印一批證書
+  print_batch_certificates: 列印證書
   print_certificates: 列印所有證書
   certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
   print_ice_art_from_frozen: 列印冰雪奇緣教程的冰雕藝術
-  want_a_blank_certificate_template: 你是否想要空白的證書範本，用於寫下你的學生姓名？
+  want_a_blank_certificate_template: 你是否需要空白的證書範本，以寫下你的學生姓名？
   landscape_recommended_certificates: 列印證書時，建議你選擇**水平**列印。
   print_one_here_certificates: 在此處列印一份。
   enter_certificate_names: 輸入最多 30 個姓名，**每行一個**。系統會產生可列印的頁面，並印上個人化的%{script_name}。

@@ -2,10 +2,10 @@ import {assert} from 'chai';
 import reducer, {
   addAnnouncement,
   VisibilityType
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+} from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
-describe('scriptAnnouncementsRedux', () => {
+describe('announcementsRedux', () => {
   it('can add a single teacher announcement', () => {
     const state = reducer(
       undefined,
