@@ -335,10 +335,10 @@ const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
     <div>
       <div>
         By checking the box above, I consent to Amazon sharing my email address
-        and school address with its third party vendor, Corporate Imaging Concepts,
-        LLC, solely in order to fulfill my request. I understand Amazon's vendor
-        will email me a promo code to allow me to select and redeem my Thank You
-        Kit items.
+        and school address with its third party vendor, Corporate Imaging
+        Concepts, LLC, solely in order to fulfill my request. I understand
+        Amazon's vendor will email me a promo code to allow me to select and
+        redeem my Thank You Kit items.
       </div>
       <FieldGroup
         id="street1"
