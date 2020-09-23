@@ -521,6 +521,7 @@ el:
     χάρτη μας
   signup_event_type_in_school: Σε ένα σχολείο
   signup_event_type_out_of_school: Εκτός σχολείου
+  signup_event_type_at_home: Home
   signup_submit_census_label: Υποβολή
   signup_submit_census_error_message: Ζητούμε συγγνώμη. Παρουσιάστηκε ένα σφάλμα.
     Δοκιμάστε να υποβάλετε τη φόρμα ξανά.

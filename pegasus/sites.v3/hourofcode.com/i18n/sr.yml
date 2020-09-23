@@ -497,6 +497,7 @@ sr:
     мапи
   signup_event_type_in_school: У школи
   signup_event_type_out_of_school: Изван школе
+  signup_event_type_at_home: Home
   signup_submit_census_label: Пошаљи
   signup_submit_census_error_message: Жао нам је, али дошло је до грешке. Пробајте
     поново да пошаљете форму.

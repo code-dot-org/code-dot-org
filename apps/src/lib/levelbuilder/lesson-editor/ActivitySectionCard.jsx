@@ -342,7 +342,8 @@ class ActivitySectionCard extends Component {
         conceptDifficulty: '',
         named: false,
         assessment: false,
-        challenge: false
+        challenge: false,
+        expand: false
       }
     );
   };
