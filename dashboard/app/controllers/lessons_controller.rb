@@ -18,7 +18,7 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = {
       id: @lesson.id,
-      editableData: {
+      lesson: {
         name: @lesson.name,
         overview: @lesson.overview,
         studentOverview: @lesson.student_overview,
