@@ -8,6 +8,8 @@ import {
   isChromeOS
 } from './browserChecks';
 import {detectBoardTypeFromPort} from './boardUtils';
+import MicroBitBoard from '../boards/microBit/MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 export default class SetupChecker {
   port = null;
@@ -52,8 +54,13 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectCorrectFirmware() {
-    this.boardController = new CircuitPlaygroundBoard(this.port);
-    return this.boardController.connectToFirmware();
+    if (experiments.isEnabled('microbit')) {
+      this.boardController = new MicroBitBoard(this.port);
+      return this.boardController.boardClient_.connectBoard();
+    } else {
+      this.boardController = new CircuitPlaygroundBoard(this.port);
+      return this.boardController.connectToFirmware();
+    }
   }
 
   /**
