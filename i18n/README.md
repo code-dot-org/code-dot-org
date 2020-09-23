@@ -13,6 +13,14 @@ they will be handled.
 When adding a string, please make the key as descriptive as possible because
 this is used as context for translators.
 
+Make sure your string value only has plain text and simple HTML.
+
+When using a translation string, please be aware that the it comes from an untrusted 
+source like a translator and may contain security risks. If the translation string 
+contains HTML elements, you should pass `markdown: true` or `markdown: :inline` to the 
+`I18n.t` method to have it parse the translation string as markdown instead. (Markdown 
+is a safe alternative to HTML.)
+
 ### Pegasus
 
 #### Modifying an existing string
@@ -25,7 +33,7 @@ this is used as context for translators.
 
 -   Add a unique key and your string value to the [i18n Gsheet][0]. 
 
-    -   NOTE: Make sure your string value only has plain HTML. Organization is
+    -   Organization is
         by category/page; try to prepend each string of a common category with
         the same key. For example, all teacher dashboard strings begin with 'dashboard'
         so they're easier to find.
