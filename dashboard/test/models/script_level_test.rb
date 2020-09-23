@@ -792,6 +792,26 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
   end
 
+  test 'validates activity section lesson' do
+    lesson = create :lesson
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    other_lesson = create :lesson
+
+    # can create script level with no activity section
+    script_level = create :script_level, lesson: lesson
+    assert_nil script_level.activity_section
+
+    # can create script level with matching lessons
+    script_level = create :script_level, lesson: lesson, activity_section: activity_section
+    assert_equal lesson, script_level.activity_section.lesson
+
+    # cannot create script level with mismatched lessons
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script_level, lesson: other_lesson, activity_section: activity_section
+    end
+  end
+
   private
 
   def create_fake_plc_data

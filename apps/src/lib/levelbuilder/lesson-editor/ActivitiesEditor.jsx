@@ -90,19 +90,17 @@ class ActivitiesEditor extends Component {
     return (
       <div style={styles.activityEditAndPreview}>
         <div style={styles.editor}>
-          {activities.map(activity => {
-            return (
-              <ActivityCard
-                activity={activity}
-                activitiesCount={activities.length}
-                key={activity.key}
-                setActivitySectionMetrics={this.setActivitySectionMetrics}
-                setTargetActivitySection={this.setTargetActivitySection}
-                targetActivitySectionPos={this.state.targetActivitySectionPos}
-                activitySectionMetrics={this.activitySectionMetrics}
-              />
-            );
-          })}
+          {activities.map(activity => (
+            <ActivityCard
+              activity={activity}
+              activitiesCount={activities.length}
+              key={activity.key}
+              setActivitySectionMetrics={this.setActivitySectionMetrics}
+              setTargetActivitySection={this.setTargetActivitySection}
+              targetActivitySectionPos={this.state.targetActivitySectionPos}
+              activitySectionMetrics={this.activitySectionMetrics}
+            />
+          ))}
           <button
             onMouseDown={this.handleAddActivity}
             className="btn"
@@ -110,15 +108,15 @@ class ActivitiesEditor extends Component {
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Activity
+            Activity
           </button>
         </div>
         <div style={styles.preview}>
           <h2>Preview</h2>
           <div style={styles.previewBox}>
-            {activities.map(activity => {
-              return <Activity activity={activity} key={activity.key} />;
-            })}
+            {activities.map(activity => (
+              <Activity activity={activity} key={activity.key} />
+            ))}
           </div>
         </div>
       </div>
