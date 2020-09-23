@@ -508,6 +508,7 @@ id:
     kami
   signup_event_type_in_school: Di sekolah
   signup_event_type_out_of_school: Di luar sekolah
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: Mohon maaf. Terjadi kesalahan. Silakan coba
     menyerahkan formulir kembali.

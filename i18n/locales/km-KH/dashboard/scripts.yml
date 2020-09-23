@@ -187,6 +187,10 @@ km:
           lessons:
             Lists:
               name: បញ្ជី
+        workshop-gamelab:
+          lessons:
+            Input:
+              name: ធាតុបញ្ចូល
         coursee-ramp:
           lessons:
             Conditionals:

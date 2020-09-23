@@ -499,6 +499,7 @@ fa:
   signup_send_posters_address_placeholder: این آدرس بر نقشه ما نمايش داده نخواهد شد
   signup_event_type_in_school: در مدرسه
   signup_event_type_out_of_school: خارج از مدرسه
+  signup_event_type_at_home: Home
   signup_submit_census_label: ارسال
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.
