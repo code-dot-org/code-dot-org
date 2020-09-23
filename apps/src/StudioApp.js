@@ -2656,8 +2656,9 @@ StudioApp.prototype.enableBreakpoints = function() {
   this.editor.on(
     'guttermousedown',
     function(e) {
-      var bps = this.editor.getBreakpoints();
-      if (bps[e.line]) {
+      const bps = this.editor.getBreakpoints();
+      const activeBreakpoint = bps[e.line];
+      if (activeBreakpoint) {
         this.editor.clearBreakpoint(e.line);
       } else {
         this.editor.setBreakpoint(e.line);
@@ -2677,6 +2678,7 @@ StudioApp.prototype.enableBreakpoints = function() {
           data_json: JSON.stringify({
             levelId: this.config.serverLevelId,
             lineNumber: e.line,
+            activeBreakpoint,
             projectLevelId: this.config.serverProjectLevelId,
             scriptId: this.config.scriptId,
             scriptLevelId: this.config.serverScriptLevelId,
