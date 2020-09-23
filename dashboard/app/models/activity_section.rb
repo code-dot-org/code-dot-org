@@ -24,7 +24,7 @@
 # @attr [boolean] remarks - Whether to show the remarks icon
 # @attr [boolean] slide - Whether to show the slides icon
 # @attr [String] description - Text describing the activity
-# @attr [Array] tips - An array of instructional tips to display
+# @attr [Array<Hash>] tips - An array of instructional tips to display
 class ActivitySection < ApplicationRecord
   include SerializedProperties
 
