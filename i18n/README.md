@@ -13,13 +13,15 @@ they will be handled.
 When adding a string, please make the key as descriptive as possible because
 this is used as context for translators.
 
-Make sure your string value only has plain text and simple HTML.
+Make sure your string value only has plain text, Markdown-formatted text, and/or
+simple HTML. Try to always use plain text. If you want to add formatting, use Markdown.
+If you want to do something that Markdown can't do, you can add HTML.
 
-When using a translation string, please be aware that the it comes from an untrusted 
-source like a translator and may contain security risks. If the translation string 
-contains HTML elements, you should pass `markdown: true` or `markdown: :inline` to the 
-`I18n.t` method to have it parse the translation string as markdown instead. (Markdown 
-is a safe alternative to HTML.)
+If you want your string to support embedded HTML you **must** render it as Markdown.
+This is because translation strings come from unstruted sources and our Markdown
+renderer will remove any potentially-dangerous HTML.
+You can render a string as Markdown by passing `markdown: true` or `markdown: :inline`
+to the `I18n.t` method.
 
 ### Pegasus
 
@@ -31,7 +33,7 @@ is a safe alternative to HTML.)
 
 #### Adding a new string
 
--   Add a unique key and your string value to the [i18n Gsheet][0]. 
+-   Add a unique key and your string value to the [i18n Gsheet][0].
 
     -   Organization is
         by category/page; try to prepend each string of a common category with
