@@ -12,7 +12,7 @@ const FINISH_LOADING_GAPI = 'googlePlatformApi/FINISH_LOADING_GAPI';
 const startLoadingGapi = startTime => ({type: START_LOADING_GAPI, startTime});
 const finishLoadingGapi = success => ({type: FINISH_LOADING_GAPI, success});
 
-const GOOGLE_PLATFORM_API_ID = 'GooglePlatformApiId';
+export const GOOGLE_PLATFORM_API_ID = 'GooglePlatformApiId';
 const LOAD_TIMEOUT_MILLIS = 15000;
 
 const initialState = {
