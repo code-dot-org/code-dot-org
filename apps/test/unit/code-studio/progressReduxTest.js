@@ -1462,7 +1462,7 @@ describe('progressReduxTest', () => {
   describe('useDbProgress', () => {
     it('clears the client progress', () => {
       var clearProgressSpy = sinon.spy(clientState, 'clearProgress');
-      useDbProgress();
+      useDbProgress()(sinon.stub());
       expect(clearProgressSpy).to.have.been.calledOnce;
     });
   });
