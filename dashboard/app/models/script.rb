@@ -24,7 +24,6 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
-require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
@@ -889,75 +888,66 @@ class Script < ActiveRecord::Base
   # script and any associated levels, appending new_suffix to the name when
   # copying. Any new_properties are merged into the properties of the new script.
   def self.setup(custom_files, new_suffix: nil, new_properties: {})
-    scripts_to_add = []
+    transaction do
+      scripts_to_add = []
 
-    custom_i18n = {}
-    # Load custom scripts from Script DSL format
-    custom_files.map do |script|
-      name = File.basename(script, '.script')
-      base_name = Script.base_name(name)
-      name = "#{base_name}-#{new_suffix}" if new_suffix
-      script_data, i18n =
-        begin
-          ScriptDSL.parse_file(script, name)
-        rescue => e
-          raise e, "Error parsing script file #{script}: #{e}"
-        end
+      custom_i18n = {}
+      # Load custom scripts from Script DSL format
+      custom_files.map do |script|
+        name = File.basename(script, '.script')
+        base_name = Script.base_name(name)
+        name = "#{base_name}-#{new_suffix}" if new_suffix
+        script_data, i18n =
+          begin
+            ScriptDSL.parse_file(script, name)
+          rescue => e
+            raise e, "Error parsing script file #{script}: #{e}"
+          end
 
-      lesson_groups = script_data[:lesson_groups]
-      custom_i18n.deep_merge!(i18n)
-      # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
-      scripts_to_add << [{
-        id: script_data[:id],
-        name: name,
-        hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-        login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-        wrapup_video: script_data[:wrapup_video],
-        new_name: script_data[:new_name],
-        family_name: script_data[:family_name],
-        properties: Script.build_property_hash(script_data).merge(new_properties)
-      }, lesson_groups]
+        lesson_groups = script_data[:lesson_groups]
+        custom_i18n.deep_merge!(i18n)
+        # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
+        scripts_to_add << [{
+          id: script_data[:id],
+          name: name,
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
+          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
+          wrapup_video: script_data[:wrapup_video],
+          new_name: script_data[:new_name],
+          family_name: script_data[:family_name],
+          properties: Script.build_property_hash(script_data).merge(new_properties)
+        }, lesson_groups]
+      end
+
+      # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+        add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      rescue => e
+        raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
+      end
+      [added_scripts, custom_i18n]
     end
-
-    # TODO: replace this with configuration option
-    debug = [:adhoc, :development].include?(rack_env)
-    if debug
-      puts "Seeding #{scripts_to_add.length} Scripts"
-      progressbar = ProgressBar.create(total: scripts_to_add.length)
-    end
-
-    # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-    added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      progressbar.increment if debug
-      added_script.name
-    rescue => e
-      raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
-    end
-    [added_script_names, custom_i18n]
   end
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
-    transaction do
-      script = fetch_script(options)
-      script.update!(hidden: true) if new_suffix
+    script = fetch_script(options)
+    script.update!(hidden: true) if new_suffix
 
-      script.prevent_duplicate_lesson_groups(raw_lesson_groups)
-      Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+    script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+    Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
-      script.reload
-      script.lesson_groups = temp_lgs
-      script.save!
+    temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+    script.reload
+    script.lesson_groups = temp_lgs
+    script.save!
 
-      script.generate_plc_objects
+    script.generate_plc_objects
 
-      CourseOffering.add_course_offering(script)
+    CourseOffering.add_course_offering(script)
 
-      script
-    end
+    script
   end
 
   # If there is more than 1 lesson group then the key should never
@@ -1005,8 +995,8 @@ class Script < ActiveRecord::Base
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
-    script_names, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_script = Script.find_by!(name: script_names.first)
+    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
+    new_script = scripts.first
 
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
