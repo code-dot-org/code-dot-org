@@ -10,6 +10,7 @@ import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTabl
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
 import $ from 'jquery';
+import queryString from 'query-string';
 
 const styles = {
   dialog: {
@@ -87,19 +88,22 @@ export default class AddLevelDialog extends Component {
   }
 
   handleSearch = (levelName, levelType, scriptId, ownerId) => {
-    let url = `/levels/get_filtered_levels?page=${this.state.currentPage}`;
+    let queryParams = {page: this.state.currentPage};
     if (levelName) {
-      url = url + `&name=${levelName}`;
+      queryParams.name = levelName;
     }
     if (levelType) {
-      url = url + `&level_type=${levelType}`;
+      queryParams.level_type = levelType;
     }
     if (scriptId) {
-      url = url + `&script_id=${scriptId}`;
+      queryParams.script_id = scriptId;
     }
     if (ownerId) {
-      url = url + `&owner_id=${ownerId}`;
+      queryParams.owner_id = ownerId;
     }
+
+    const url =
+      '/levels/get_filtered_levels?' + queryString.stringify(queryParams);
 
     $.ajax({
       url: url,
