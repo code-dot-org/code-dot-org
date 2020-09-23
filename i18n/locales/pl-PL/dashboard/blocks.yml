@@ -1132,6 +1132,7 @@ pl:
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pikseli {DIRECTION} od {LOCATION}"
         options:
           DIRECTION:
             '"North"': Północ

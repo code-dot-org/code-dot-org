@@ -4,9 +4,7 @@ import {expect} from '../../../../../../util/deprecatedChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
-import CircuitPlaygroundBoard, {
-  BOARD_TYPE
-} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,
   EXTERNAL_PINS,
@@ -16,11 +14,7 @@ import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
-import {
-  CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
-  CIRCUIT_PLAYGROUND_PORTS,
-  FLORA_PORTS
-} from '../../sampleSerialPorts';
+import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -746,23 +740,6 @@ describe('CircuitPlaygroundBoard', () => {
       for (let i = 0; i < xPins.length; i++) {
         expect(board.mappedPin(xPins[i])).to.equal(classicPins[i]);
       }
-    });
-  });
-
-  describe(`detectBoardType()`, () => {
-    it('sets the type of board detected for Classic boards', () => {
-      board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_PORTS[0]);
-      expect(board.detectBoardType()).to.equal(BOARD_TYPE.CLASSIC);
-    });
-
-    it('sets the type of board detected for Express boards', () => {
-      board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0]);
-      expect(board.detectBoardType()).to.equal(BOARD_TYPE.EXPRESS);
-    });
-
-    it('sets the type of board detected for other boards', () => {
-      board = new CircuitPlaygroundBoard(FLORA_PORTS[0]);
-      expect(board.detectBoardType()).to.equal(BOARD_TYPE.OTHER);
     });
   });
 });

@@ -153,9 +153,6 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.4.0'
@@ -216,9 +213,10 @@ gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
-# Used by a build script.
+# Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
-gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+# JavaScript runtime used by ExecJS.
+gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
@@ -342,7 +340,7 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import'
+gem 'activerecord-import', '~> 0.26'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
