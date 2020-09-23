@@ -41,22 +41,26 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
+    # Convert camelCase params to snake_case. Right now this only works on
+    # top-level key names. This lets us do the transformation before calling
+    # .permit, so that we can use snake_case key names in our parameter list,
+    # because transform_keys returns a params object while deep_transform_keys
+    # returns a plain Hash.
+    lp = params.transform_keys(&:underscore)
+
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
-    lp = params.permit(
+    lp = lp.permit(
       :overview,
-      :studentOverview,
+      :student_overview,
       :assessment,
       :unplugged,
-      :creativeCommonsLicense,
+      :creative_commons_license,
       :lockable,
       :purpose,
       :preparation,
       :announcements
-    ).to_h
-    unexpected_keys = params.keys - lp.keys - ['id', 'controller', 'action']
-    raise "unexpected parameter: #{unexpected_keys}" unless unexpected_keys.empty?
-    lp.deep_transform_keys!(&:underscore)
+    )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
   end
