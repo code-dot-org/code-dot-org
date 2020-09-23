@@ -8,7 +8,10 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
-import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
+import {
+  searchAssets,
+  filterOutBackgrounds
+} from '@cdo/apps/code-studio/assets/searchAssets';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
@@ -66,8 +69,12 @@ export default class AnimationPickerBody extends React.Component {
         currentPage,
         nextProps.defaultQuery
       );
+      let nextQuery = nextProps.defaultQuery || {
+        categoryQuery: '',
+        searchQuery: ''
+      };
       this.setState({
-        ...nextProps.defaultQuery,
+        ...nextQuery,
         currentPage,
         results,
         pageCount
@@ -108,9 +115,7 @@ export default class AnimationPickerBody extends React.Component {
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
       if (this.props.hideBackgrounds) {
-        newResults = newResults.filter(
-          animation => !animation.categories.includes('backgrounds')
-        );
+        newResults = filterOutBackgrounds(newResults);
       }
 
       this.setState({
@@ -127,9 +132,7 @@ export default class AnimationPickerBody extends React.Component {
       searchQuery
     });
     if (this.props.hideBackgrounds) {
-      results = results.filter(
-        animation => !animation.categories.includes('backgrounds')
-      );
+      results = filterOutBackgrounds(results);
     }
     this.setState({searchQuery, currentPage, results, pageCount});
   };
@@ -141,9 +144,7 @@ export default class AnimationPickerBody extends React.Component {
       categoryQuery
     });
     if (this.props.hideBackgrounds) {
-      results = results.filter(
-        animation => !animation.categories.includes('backgrounds')
-      );
+      results = filterOutBackgrounds(results);
     }
     this.setState({categoryQuery, currentPage, results, pageCount});
   };

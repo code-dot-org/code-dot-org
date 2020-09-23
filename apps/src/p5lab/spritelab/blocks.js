@@ -15,7 +15,7 @@ import {
 } from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-function animations(backgrounds) {
+function animations(isBackgroundAnimations) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -24,15 +24,8 @@ function animations(backgrounds) {
   return animationList.orderedKeys
     .filter(key => {
       const animation = animationList.propsByKey[key];
-      if (backgrounds) {
-        return (
-          animation.categories && animation.categories.includes('backgrounds')
-        );
-      } else {
-        return !(
-          animation.categories && animation.categories.includes('backgrounds')
-        );
-      }
+      const isBackground = (animation.categories || []).includes('backgrounds');
+      return isBackgroundAnimations ? isBackground : !isBackground;
     })
     .map(key => {
       const animation = animationList.propsByKey[key];

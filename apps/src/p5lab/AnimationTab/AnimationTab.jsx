@@ -107,7 +107,6 @@ class AnimationTab extends React.Component {
             navigable={true}
             canDraw={true}
             hideBackgrounds={this.props.hideBackgrounds}
-            defaultQuery={{categoryQuery: '', searchQuery: ''}}
           />
         )}
       </div>
