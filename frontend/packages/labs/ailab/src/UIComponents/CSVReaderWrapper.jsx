@@ -1,7 +1,15 @@
+/* React component to handle importing CSVs and pushing data to Redux store. */
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
+import { connect } from "react-redux";
+import { setImportedData } from "../redux";
 
-export default class CSVReaderWrapper extends Component {
+class CSVReaderWrapper extends Component {
+  static propTypes = {
+    setImportedData: PropTypes.func.isRequired
+  };
+
   constructor(props) {
     super(props);
 
@@ -27,9 +35,7 @@ export default class CSVReaderWrapper extends Component {
 
   updateData = result => {
     var data = result.data;
-    this.setState({
-      data: JSON.stringify(data)
-    });
+    this.props.setImportedData(data);
   };
 
   render() {
@@ -48,16 +54,18 @@ export default class CSVReaderWrapper extends Component {
         />
         <p />
         <button type="button" onClick={this.importCSV}>
-          {" "}
           Upload now!
         </button>
-        {this.state.data && (
-          <div>
-            <h2>Here's the data</h2>
-            <span>{this.state.data}</span>
-          </div>
-        )}
       </div>
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    setImportedData(data) {
+      dispatch(setImportedData(data));
+    }
+  })
+)(CSVReaderWrapper);
