@@ -153,9 +153,6 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.7.0'
