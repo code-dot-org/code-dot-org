@@ -111,6 +111,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('TOOLBOX_AT_BOTTOM');
+  blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('VerticalFlyout');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');

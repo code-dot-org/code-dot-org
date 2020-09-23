@@ -39,7 +39,7 @@ export default class CdoTrashcan {
     // Create vertical or horizontal flyout.
     if (this.workspace_.horizontalLayout) {
       flyoutWorkspaceOptions.toolboxPosition =
-        this.workspace_.toolboxPosition == Blockly.TOOLBOX_AT_TOP
+        this.workspace_.toolboxPosition === Blockly.TOOLBOX_AT_TOP
           ? Blockly.TOOLBOX_AT_BOTTOM
           : Blockly.TOOLBOX_AT_TOP;
       if (!Blockly.HorizontalFlyout) {
@@ -48,7 +48,7 @@ export default class CdoTrashcan {
       this.flyout = new Blockly.HorizontalFlyout(flyoutWorkspaceOptions);
     } else {
       flyoutWorkspaceOptions.toolboxPosition =
-        this.workspace_.toolboxPosition == Blockly.TOOLBOX_AT_RIGHT
+        this.workspace_.toolboxPosition === Blockly.TOOLBOX_AT_RIGHT
           ? Blockly.TOOLBOX_AT_LEFT
           : Blockly.TOOLBOX_AT_RIGHT;
       if (!Blockly.VerticalFlyout) {
@@ -109,7 +109,7 @@ export default class CdoTrashcan {
     body.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
       'xlink:href',
-      this.workspace_.options.pathToMedia + Blockly.SPRITE.url
+      CdoTrashcan.TRASH_URL
     );
 
     clip = Blockly.utils.dom.createSvgElement(
@@ -136,7 +136,7 @@ export default class CdoTrashcan {
     this.svgLid_.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
       'xlink:href',
-      this.workspace_.options.pathToMedia + Blockly.SPRITE.url
+      CdoTrashcan.TRASH_URL
     );
 
     Blockly.bindEventWithChecks_(this.svgGroup_, 'mouseup', this, this.click);
@@ -199,30 +199,17 @@ export default class CdoTrashcan {
       return;
     }
     if (
-      metrics.toolboxPosition == Blockly.TOOLBOX_AT_LEFT ||
+      metrics.toolboxPosition === Blockly.TOOLBOX_AT_LEFT ||
       (this.workspace_.horizontalLayout && !this.workspace_.RTL)
     ) {
       // Toolbox starts in the left corner.
-      this.left_ =
-        metrics.viewWidth +
-        metrics.absoluteLeft -
-        this.WIDTH_ -
-        this.MARGIN_SIDE_ -
-        Blockly.Scrollbar.scrollbarThickness;
+      this.left_ = Math.round(metrics.flyoutWidth / 2 - this.WIDTH_ / 2);
     } else {
       // Toolbox starts in the right corner.
       this.left_ = this.MARGIN_SIDE_ + Blockly.Scrollbar.scrollbarThickness;
     }
 
-    if (metrics.toolboxPosition == Blockly.TOOLBOX_AT_BOTTOM) {
-      this.top_ = this.verticalSpacing_;
-    } else {
-      this.top_ =
-        metrics.viewHeight +
-        metrics.absoluteTop -
-        (this.BODY_HEIGHT_ + this.LID_HEIGHT_) -
-        this.verticalSpacing_;
-    }
+    this.top_ = this.verticalSpacing_;
 
     this.svgGroup_.setAttribute(
       'transform',
@@ -245,7 +232,7 @@ export default class CdoTrashcan {
   }
 
   setOpen(state) {
-    if (this.isOpen == state) {
+    if (this.isOpen === state) {
       return;
     }
     clearTimeout(this.lidTask_);
@@ -278,7 +265,7 @@ export default class CdoTrashcan {
 
   setLidAngle_(lidAngle) {
     var openAtRight =
-      this.workspace_.toolboxPosition == Blockly.TOOLBOX_AT_RIGHT ||
+      this.workspace_.toolboxPosition === Blockly.TOOLBOX_AT_RIGHT ||
       (this.workspace_.horizontalLayout && this.workspace_.RTL);
     this.svgLid_.setAttribute(
       'transform',
@@ -330,11 +317,11 @@ export default class CdoTrashcan {
       return;
     }
     if (
-      event.type == Blockly.Events.BLOCK_DELETE &&
-      event.oldXml.tagName.toLowerCase() != 'shadow'
+      event.type === Blockly.Events.BLOCK_DELETE &&
+      event.oldXml.tagName.toLowerCase() !== 'shadow'
     ) {
       var cleanedXML = this.cleanBlockXML_(event.oldXml);
-      if (this.contents_.indexOf(cleanedXML) != -1) {
+      if (this.contents_.indexOf(cleanedXML) !== -1) {
         return;
       }
       this.contents_.unshift(cleanedXML);
@@ -360,7 +347,7 @@ export default class CdoTrashcan {
         node.removeAttribute('y');
         node.removeAttribute('id');
         node.removeAttribute('disabled');
-        if (node.nodeName == 'comment') {
+        if (node.nodeName === 'comment') {
           // Future proof just in case.
           node.removeAttribute('h');
           node.removeAttribute('w');
@@ -412,3 +399,4 @@ CdoTrashcan.prototype.lidTask_ = 0;
 CdoTrashcan.prototype.lidOpen_ = 0;
 CdoTrashcan.prototype.left_ = 0;
 CdoTrashcan.prototype.top_ = 0;
+CdoTrashcan.TRASH_URL = '/blockly/media/trash.png';
