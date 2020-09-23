@@ -22,7 +22,7 @@ const styles = {
     marginLeft: 40
   },
   details: {
-    textAlign: 'start'
+    textAlign: 'left'
   }
 };
 

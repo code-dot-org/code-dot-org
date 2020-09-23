@@ -1192,6 +1192,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
+    html[dir=rtl] & {
+      text-align: right;
+    }
+
     p {
       font-size: 14px;
       line-height: inherit;
