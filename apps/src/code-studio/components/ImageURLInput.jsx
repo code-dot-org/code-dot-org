@@ -27,10 +27,7 @@ export default class ImageURLInput extends React.Component {
     allowedExtensions: PropTypes.string,
     currentValue: PropTypes.string
   };
-  constructor(props) {
-    super(props);
-    this.state = {showError: false};
-  }
+  state = {showError: false};
 
   handleSubmitWrapper = url => {
     if (ABSOLUTE_REGEXP.test(url)) {
