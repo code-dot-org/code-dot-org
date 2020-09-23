@@ -452,12 +452,12 @@ Resources:
       NetworkInterfaces:
       - DeviceIndex: 0
         SubnetId: <%=(frontends ? subnets : public_subnets).first.to_json%>
-        GroupSet:
-          - !ImportValue VPC-FrontendSecurityGroup
-          - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
 <%  unless frontends -%>
         AssociatePublicIpAddress: true
 <%  end -%>
+        GroupSet:
+          - !ImportValue VPC-FrontendSecurityGroup
+          - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
