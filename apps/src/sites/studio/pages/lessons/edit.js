@@ -15,7 +15,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
-  const lessonData = getScriptData('lesson');
+  const lessonData = getScriptData('lesson').editableData;
 
   registerReducers({...reducers});
   const store = getStore();

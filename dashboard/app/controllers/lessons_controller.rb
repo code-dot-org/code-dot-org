@@ -18,16 +18,18 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = {
       id: @lesson.id,
-      name: @lesson.name,
-      overview: @lesson.overview,
-      studentOverview: @lesson.student_overview,
-      assessment: @lesson.assessment,
-      unplugged: @lesson.unplugged,
-      lockable: @lesson.lockable,
-      creativeCommonsLicense: @lesson.creative_commons_license,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation,
-      announcements: @lesson.announcements
+      editableData: {
+        name: @lesson.name,
+        overview: @lesson.overview,
+        studentOverview: @lesson.student_overview,
+        assessment: @lesson.assessment,
+        unplugged: @lesson.unplugged,
+        lockable: @lesson.lockable,
+        creativeCommonsLicense: @lesson.creative_commons_license,
+        purpose: @lesson.purpose,
+        preparation: @lesson.preparation,
+        announcements: @lesson.announcements
+      }
     }
   end
 
