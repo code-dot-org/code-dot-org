@@ -53,7 +53,10 @@ class LessonsController < ApplicationController
       :purpose,
       :preparation,
       :announcements
-    ).to_h.deep_transform_keys(&:underscore)
+    ).to_h
+    unexpected_keys = params.keys - lp.keys - ['id', 'controller', 'action']
+    raise "unexpected parameter: #{unexpected_keys}" unless unexpected_keys.empty?
+    lp.deep_transform_keys!(&:underscore)
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
   end
