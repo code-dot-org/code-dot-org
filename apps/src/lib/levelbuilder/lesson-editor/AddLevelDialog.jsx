@@ -63,7 +63,8 @@ export default class AddLevelDialog extends Component {
     this.state = {
       methodOfAddingLevel: 'Find Level',
       levels: null,
-      searchFields: null
+      searchFields: null,
+      currentPage: 1
     };
   }
 
@@ -77,7 +78,7 @@ export default class AddLevelDialog extends Component {
     });
 
     $.ajax({
-      url: `/levels/get_filtered_levels?page=${1}`,
+      url: `/levels/get_filtered_levels?page=${this.state.currentPage}`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
@@ -86,7 +87,7 @@ export default class AddLevelDialog extends Component {
   }
 
   handleSearch = (levelName, levelType, scriptId, ownerId) => {
-    let url = `/levels/get_filtered_levels?page=${1}`;
+    let url = `/levels/get_filtered_levels?page=${this.state.currentPage}`;
     if (levelName) {
       url = url + `&name=${levelName}`;
     }
