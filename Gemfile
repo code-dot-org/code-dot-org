@@ -340,7 +340,7 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import', '~> 0.26'
+gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
