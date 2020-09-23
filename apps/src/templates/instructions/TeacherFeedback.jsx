@@ -32,6 +32,13 @@ const styles = {
     fontSize: 12,
     color: color.cyan
   },
+  timeTeacherStudentSeen: {
+    paddingTop: 8,
+    paddingLeft: 8,
+    fontStyle: 'italic',
+    fontSize: 12,
+    color: 'lightgreen'
+  },
   timeStudent: {
     fontStyle: 'italic',
     fontSize: 12,
@@ -244,16 +251,29 @@ export class TeacherFeedback extends Component {
       'performanceLevel4'
     ];
 
+    const studentSawFeedback = !!this.state.latestFeedback[0]
+      .student_seen_feedback;
+
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabVisible = this.props.visible
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
 
-    const timeStyle =
-      this.props.viewAs === ViewType.Student
-        ? styles.timeStudent
-        : styles.timeTeacher;
+    let timeStyle;
+    let dateSeen;
+    if (this.props.viewAs === ViewType.Student) {
+      timeStyle = styles.timeStudent;
+    } else {
+      if (studentSawFeedback) {
+        timeStyle = styles.timeTeacherStudentSeen;
+        //TODO: come back to make these display "friendly". for now, just doing dates
+        dateSeen = this.state.latestFeedback[0].student_seen_feedback;
+        dateSeen = dateSeen.split('T')[0];
+      } else {
+        timeStyle = styles.timeTeacher;
+      }
+    }
 
     // If a student has rubric feedback we want to expand that field
     const expandPerformanceLevelForStudent =
@@ -329,13 +349,18 @@ export class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.state.latestFeedback.length > 0 && (
+              {this.state.latestFeedback.length > 0 && !studentSawFeedback && (
                 <div style={timeStyle} id="ui-test-feedback-time">
                   {i18n.lastUpdated({
                     time: moment
                       .min(moment(), moment(latestFeedback.created_at))
                       .fromNow()
                   })}
+                </div>
+              )}
+              {this.state.latestFeedback.length > 0 && studentSawFeedback && (
+                <div style={timeStyle}>
+                  &#10003; Seen by student <strong>{dateSeen}</strong>
                 </div>
               )}
             </div>
