@@ -1,7 +1,14 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {registerReducers, getStore} from '@cdo/apps/redux';
+import {
+  registerReducers,
+  getStore,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import reducer, {
-  loadGooglePlatformApi
+  GOOGLE_PLATFORM_API_ID,
+  loadGooglePlatformApi,
+  canShowGoogleShareButton
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 
 describe('Google Platoform API redux module', () => {
@@ -15,8 +22,17 @@ describe('Google Platoform API redux module', () => {
   const state = () => store.getState().googlePlatformApi;
 
   beforeEach(() => {
+    stubRedux();
     registerReducers({googlePlatformApi: reducer});
     store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+    const gapi = document.getElementById(GOOGLE_PLATFORM_API_ID);
+    if (gapi) {
+      gapi.parentNode.removeChild(gapi);
+    }
   });
 
   it('has expected initial state', () => {
@@ -42,5 +58,12 @@ describe('Google Platoform API redux module', () => {
     const promise1 = store.dispatch(loadGooglePlatformApi());
     const promise2 = store.dispatch(loadGooglePlatformApi());
     return Promise.all[(promise1, promise2)];
+  });
+
+  it('canShowGoogleShareButton only once API is loaded', () => {
+    expect(canShowGoogleShareButton(store.getState())).to.be.false;
+    return store.dispatch(loadGooglePlatformApi()).then(() => {
+      expect(canShowGoogleShareButton(store.getState())).to.be.true;
+    });
   });
 });
