@@ -30,7 +30,6 @@ const initialState = {
   userName: null,
   userType: 'unknown',
   signInState: SignInState.Unknown,
-  providers: [],
   hasSeenStandardsReportInfo: false
 };
 
@@ -61,6 +60,7 @@ export default function currentUser(state = initialState, action) {
         : SignInState.SignedOut
     };
   }
+
   if (action.type === SET_USER_TYPE) {
     return {
       ...state,
