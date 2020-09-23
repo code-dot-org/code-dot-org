@@ -11,143 +11,158 @@ it:
   campaign_date_full: dal 9 al 15 dicembre
   campaign_date_year: '2017'
   campaign_date_full_year: dal 9 al 15 dicembre 2019
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: '1 ottobre '
+  latam_campaign_date_start_long: '1 ottobre '
+  latam_campaign_date_short: 1 ottobre - 18 dicembre
+  latam_campaign_date_full: 1 ottobre - 18 dicembre
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: 1 ottobre 2020 - 18 dicembre 2020
+  europe_campaign_date_start_short: 10 ottobre
+  europe_campaign_date_start_long: 10 ottobre
+  europe_campaign_date_short: 10-25 ottobre
+  europe_campaign_date_full: 10-25 ottobre
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 10-25 ottobre, 2020
+  africa_campaign_date_start_short: '1 ottobre '
+  africa_campaign_date_start_long: '1 ottobre '
+  africa_campaign_date_short: 1-31 ottobre
+  africa_campaign_date_full: 1-31 ottobre
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: 1-31 ottobre, 2020
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
   social_hoc2019_every_sudent: 'Ogni studente può cambiare il mondo. Aiutalo ad essere
     pronto. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
+  social_hoc2019_learn_computer_science: 'Impara l''informatica e cambia il mondo.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  social_hoc_is_coming: L'Ora del Codice sta arrivando!
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode è #CSforGood. Impara l'informatica.
+    Cambia il mondo."
   social_hoc2019_coming_dates: L'Ora del Codice sta arrivando dal 9 al 15 dicembre
     2019. È fondamentale che ogni studente apprenda l’informatica.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  social_hoc2019_dance: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj e altri 34!
+  oceans_landing_title: IA per i Mari
+  oceans_landing_description: Informazioni sull'apprendimento automatico e sull'uso
+    etico dell'intelligenza artificiale.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
+  oceans_landing_specs: Disponibile in più di 25 lingue | Dalla terza primaria in
+    poi
+  oceans_landing_explanation: L'informatica è molto più che codifica! Scopri l'intelligenza
+    artificiale (AI), l'apprendimento automatico, i dati di formazione e i pregiudizi,
+    mentre esplori le questioni etiche e come l'IA può essere utilizzata per affrontare
+    i problemi del mondo. Goditi il primo passo di Code.org in un nuovo viaggio per
+    insegnare di più sull'IA. Quando utilizzi l'attività Intelligenza Artificiale
+    per i Mari, stai addestrando dei modelli reali di apprendimento automatico. <a
+    href='#behind-the-scenes'>Per saperne di più</a>
+  oceans_landing_explanation_markdown: L'informatica è molto più che codifica! Scopri
+    l'intelligenza artificiale (AI), l'apprendimento automatico, i dati di formazione
+    e i pregiudizi, mentre esplori le questioni etiche e come l'IA può essere utilizzata
+    per affrontare i problemi del mondo. Goditi il primo passo di Code.org in un nuovo
+    viaggio per insegnare di più sull'IA. Quando utilizzi l'attività Intelligenza
+    Artificiale per i Mari, stai addestrando dei modelli reali di apprendimento automatico.
+    <a href='#behind-the-scenes'>Per saperne di più</a>
+  oceans_landing_teacher_resources: Risorse per l'insegnante
+  oceans_landing_teacher_resources_desc: Piani di lavoro e attività della lezione
+    per aiutarti a insegnare l'Intelligenza Artificiale, l'apprendimento automatico,
+    i dati di formazione e i pregiudizi, esplorando le questioni etiche.
+  oceans_landing_resource_button: Visualizza le risorse
+  oceans_landing_cs_for_good: Informatica per sempre
+  oceans_landing_cs_for_good_desc: Risorse per aiutare gli alunni a comprendere il
+    ruolo che l'informatica potrebbe svolgere nella creazione di un mondo più equo.
+  oceans_landing_videos: Video sull'intelligenza Artificiale e l'Apprendimento Automatico
+  oceans_behind_the_scenes: 'Intelligenza Artificiale per i Mari: dietro le quinte'
+  oceans_behind_the_scenes_1: I livelli 2-4 utilizzano un modello preimpostato fornito
+    dal progetto <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a>. Un modello MobileNet è una <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rete
+    neurale convoluzionale</a> che è stato impostato su <a href="http://www.image-net.org/">ImageNet</a>,
+    un set di dati di oltre 14 milioni di immagini annotate a mano con parole come
+    "palloncino" o "fragola".Per personalizzare questo modello con i dati della formazione
+    etichettati che lo studente genera in questa attività, utilizziamo una tecnica
+    chiamata <a href="https://en.wikipedia.org/wiki/Transfer_learning">Trasferimento
+    dell'apprendimento</a>. Ogni immagine nel set di dati della formazione viene inviata
+    a MobileNet, come pixel, per ottenere un elenco di annotazioni che è più probabile
+    che vengano applicati. Quindi, per una nuova immagine, la inviamo a MobileNet
+    e confrontiamo il suo elenco di annotazioni risultante con quello del set di dati
+    della formazione. Classifichiamo la nuova immagine con la stessa etichetta (tipo
+    "pesce" o "non pesce") delle immagini del set di formazione con i risultati più
+    simili.
+  oceans_behind_the_scenes_1_markdown: I livelli 2-4 utilizzano un modello pre-impostato
+    fornito dal progetto [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    Un modello MobileNet è un file [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    su cui è stato impostato su [ImageNet](http://www.image-net.org/), un set di dati
+    di oltre 14 milioni di immagini annotate a mano con parole come "palloncino" o
+    "fragola". Per personalizzare questo modello con i dati della formazione etichettati
+    che lo studente genera in questa attività, utilizziamo una tecnica chiamata [Transfer
+    Learning](https://en.wikipedia.org/wiki/Transfer_learning). Ogni immagine nel
+    set di dati della formazione viene inviata a MobileNet, come pixel, per ottenere
+    un elenco di annotazioni che è più probabile che vengano applicati. Quindi, per
+    una nuova immagine, la inviamo a MobileNet e confrontiamo il suo elenco di annotazioni
+    risultante con quelli del set di dati della formazione. Classifichiamo la nuova
+    immagine con la stessa etichetta (come "pesce" o "non pesce") come le immagini
+    del set della formazione con i risultati più simili.
+  oceans_behind_the_scenes_2: I livelli 6-8 usano una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Macchina
+    vettore di supporto</a> (SVM). Osserviamo ogni componente del pesce (come occhi,
+    bocca, corpo) e assembliamo tutti i metadati per i componenti (come numero di
+    denti, forma del corpo) in un vettore di numeri per ogni pesce. Usiamo questi
+    vettori per addestrare la Macchina vettore di supporto. Sulla base dei dati di
+    addestramento, la macchina separa lo "spazio" di tutti i pesci possibili in due
+    parti, che corrispondono alle classi che stiamo cercando di imparare (come "blu"
+    o "non blu").
+  oceans_behind_the_scenes_2_markdown: I livelli 6-8 usano una  [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). Osserviamo ogni componente del pesce (come occhi, bocca, corpo) e assembliamo
+    tutti i metadati per i componenti (come numero di denti, forma del corpo) in un
+    vettore di numeri per ogni pesce. Usiamo questi vettori per addestrare la Macchina
+    vettore di supporto. Sulla base dei dati di addestramento, la macchina separa
+    lo "spazio" di tutti i pesci possibili in due parti, che corrispondono alle classi
+    che stiamo cercando di imparare (come "blu" o "non blu").
+  social_hoc2019_oceans_title: 'IA per i Mari #CSforGood'
+  social_hoc2019_oceans_desc: 'Scopri l''intelligenza artificiale, l''apprendimento
+    automatico, i dati della formazione e i pregiudizi, mentre esplori le questioni
+    etiche e in che modo l''Intelligenza Artificiale può essere utilizzata per affrontare
+    i problemi del mondo. L''informatica è molto più che codifica! Goditi il primo
+    passo di Code.org in un nuovo viaggio per insegnare di più sull''intelligenza
+    artificiale durante il nostro piano di studi.
+
+'
+  hoc_overview_oceans_tutorial_header: IA per i Mari
+  hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
+    automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
+    etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
+    i problemi del mondo.
   ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_algorithm_bias: Combattere i pregiudizi negli algoritmi
   ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
     di un cane?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_video_title_what_is_ml: Cos'è l'Apprendimento Automatico?
+  ai_video_title_ml_big_small_prickly: 'Apprendimento automatico: risoluzione di problemi
+    grandi, piccoli e spinosi'
+  ai_video_title_ethics_of_ai: Etica dell'Intelligenza Artificiale
+  ai_video_title_ml_human_bias: Apprendimento automatico e pregiudizi umani
+  ai_video_title_seeing_ai: 'Vedere l''Intelligenza Artificiale: rendere il mondo
+    visivo più accessibile'
+  activity: Attività
+  name: Nome
+  description: Descrizione
+  audience: Pubblico
+  ai_resource_header: Insegna e impara sull'Intelligenza Artificiale
+  ai_resource_minecraft: IA in Minecraft per sempre
+  ai_resource_minecraft_desc: 'Accedi a risorse gratuite tra cui un programma di lezioni,
+    video, piano di studi in informatica e corsi di formazione per insegnanti. (Richiede
+    Minecraft: Versione Education)'
+  ai_resource_ml_for_kids: Apprendimento automatico per i bambini
+  ai_resource_ml_for_kids_desc: Addestra un modello di apprendimento automatico con
+    testo, numeri o immagini e usalo per creare giochi con Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Apprendimento automatico per i bambini'
+  ai_resouce_ibm_ml_for_kids_desc: Attività pratiche per presentare agli studenti
+    semplici modelli di apprendimento automatico attraverso giochi e progetti interattivi.
+  ai_resource_ecs: 'ECS: Intelligenza Artificiale (IA)'
+  ai_resource_ecs_desc: Una nuova unità curricolare alternativa per il piano di studi
+    Esplorare l'informatica (ECS).
+  ai_resource_elements_ai: Elementi dell'Intelligenza Artificiale
+  ai_resource_elements_ai_desc: Una serie di corsi online gratuiti creati da Reaktor
+    e dall'Università di Helsinki.
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
@@ -193,8 +208,8 @@ it:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
-  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
-    classroom this semester? View our resources.
+  codeorg_homepage_remote2020_body: Insegni in una classe remota o socialmente lontana
+    questo semestre? Visualizza le nostre risorse.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -512,6 +527,7 @@ it:
     nostra mappa
   signup_event_type_in_school: In una scuola
   signup_event_type_out_of_school: In un'organizzazione diversa da una scuola
+  signup_event_type_at_home: Home
   signup_submit_census_label: Invia
   signup_submit_census_error_message: Siamo spiacenti. Si è verificato un errore.
     Prova a inviare nuovamente il modulo.
@@ -8565,7 +8581,7 @@ it:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'L''Ora del Codice di Minecraft: IA a fin di bene'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: IA per i Mari
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -9517,4 +9533,4 @@ it:
   some: Some
   all: All
   dont_know: I don't know
-  language_label: Language
+  language_label: Lingua

@@ -493,6 +493,7 @@ uk:
   signup_send_posters_address_placeholder: Адреса не буде показана на карті
   signup_event_type_in_school: У школі
   signup_event_type_out_of_school: За межами школи
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

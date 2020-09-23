@@ -516,6 +516,7 @@ ta:
   signup_send_posters_address_placeholder: இந்த முகவரி எங்கள் மேப்பில் பகிரப்படாது
   signup_event_type_in_school: ஒரு பள்ளியில்
   signup_event_type_out_of_school: பள்ளிக்கு வெளியே
+  signup_event_type_at_home: Home
   signup_submit_census_label: சமர்ப்பி
   signup_submit_census_error_message: மன்னிக்கவும். ஒரு பிழை ஏற்பட்டுள்ளது. தயவுசெய்து
     படிவத்தை மீண்டும் சமர்ப்பிக்க முயற்சிக்கவும்.

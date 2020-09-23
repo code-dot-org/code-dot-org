@@ -493,6 +493,7 @@ ky:
   signup_send_posters_address_placeholder: Бул адрес сиздин картаңызда бөлүшүлбөйт
   signup_event_type_in_school: Мектепте
   signup_event_type_out_of_school: Мектептен тышкары
+  signup_event_type_at_home: Home
   signup_submit_census_label: Кошуу
   signup_submit_census_error_message: Кечиресиздер. Ката кетти. Толтурманы кайра кошууга
     аракет кылгыла.

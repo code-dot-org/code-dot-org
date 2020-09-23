@@ -1129,7 +1129,9 @@
         "courseD_harvester_nested_loops_challenge1": "_\"Potřebuji pomoc na farmě! Pomoz mi sklidit kukuřici pouze pomocí dostupných bloků.\"_",
         "courseD_harvester_nested_loops_challenge1_2018": "_\"Potřebuji pomoc na farmě! Pomoz mi sklidit kukuřici pouze pomocí dostupných bloků.\"_",
         "courseD_harvester_nested_loops_challenge1_2019": "_\"Potřebuji pomoc na farmě! Pomoz mi sklidit kukuřici pouze pomocí dostupných bloků.\"_",
-        "courseD_harvester_nested_loops_challenge1_2020": "_\"Potřebuji pomoc na farmě! Pomoz mi sklidit kukuřici pouze pomocí dostupných bloků.\"_"
+        "courseD_harvester_nested_loops_challenge1_2020": "_\"Potřebuji pomoc na farmě! Pomoz mi sklidit kukuřici pouze pomocí dostupných bloků.\"_",
+        "Escape Room Example": "# Útěk z místnosti\n\nV dnešním kurzu budeš vytvářet aplikaci pro útěk z místnosti! V této úrovni je ukázková aplikace, se kterou by sis měl pohrát, abys získal představu o tom, co budeš vytvářet.\n\n# Udělej následující\n\n-   Klikni na SPUSTIT pro spuštění aplikace\n-   Zkus najít klíč, který otevře dveře.",
+        "Final Room Escape App": "# Zvládl jsi to!\n\nVytvořil jsi útěk z místnosti! Teď je čas to vylepšit. \n\nZkus:\n\n-   Vylepšit vzhled místnosti\n-   Přidat více věcí, se kterými může uživatel interagovat\n-   Pokusit se udělat tajný kód náhodný\n-   Přidat více místností"
       }
     }
   }

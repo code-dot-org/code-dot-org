@@ -507,6 +507,7 @@ ru:
   signup_send_posters_address_placeholder: Этот адрес не будет показан на нашей карте
   signup_event_type_in_school: В школе
   signup_event_type_out_of_school: Вне школы
+  signup_event_type_at_home: Home
   signup_submit_census_label: Отправить
   signup_submit_census_error_message: Мы очень сожалеем, возникла ошибка. Пожалуйста,
     попробуйте отправить форму ещё раз.

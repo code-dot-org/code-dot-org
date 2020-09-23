@@ -464,7 +464,7 @@ pl:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Moi przyjaciele wśród robotów
-        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
+        desc: Ucz się programowania pisząc kod dla swoich przyjaciół!
       PlantASeed_2018:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
@@ -552,7 +552,7 @@ pl:
           się na zespoły i będą pracować razem nad pisaniem programu, po jednej instrukcji.
       courseB_unplugged_MRF_2019:
         title: Moi przyjaciele wśród robotów
-        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
+        desc: Ucz się programowania pisząc kod dla swoich przyjaciół!
       BuildingAFoundation_2019:
         title: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.desc'

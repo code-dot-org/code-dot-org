@@ -6,11 +6,11 @@ title: Hour of Code How-To Guide for Volunteers
 
 ### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>자원봉사자로 등록하십시오.</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+컴퓨팅 사고는 문제해결 능력과 논리력, 창의력을 키워주는데 도움이 됩니다. 기술은 지구상의 모든 산업을 변모시키고 있습니다. 오늘날 학생은 단순히 사용법만이 아닌 기술을 창조하는 방법을 배워야 합니다.
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
@@ -21,7 +21,7 @@ The Hour of Code is a one-hour introduction to computer science designed to demy
 - [How to prepare](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [아워오브코드를 지원하는 더 많은 방법](#support-hour-of-code)
 - [Volunteer FAQ](#faq)
 
 Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
@@ -52,7 +52,7 @@ Check out some testimonials from past volunteers:
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
 - "나는 아이들이 즐거워하는 것을 보는게 아주 즐겁습니다. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>자원봉사자로 등록하십시오.</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -221,7 +221,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## 아워오브코드를 지원하는 더 많은 방법
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
@@ -263,4 +263,4 @@ Teachers will be searching for volunteers on our [volunteer map](https://code.or
 When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>자원봉사자로 등록하십시오.</button>]({{ urls/volunteer }})

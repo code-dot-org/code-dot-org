@@ -503,6 +503,7 @@ te:
   signup_send_posters_address_placeholder: ఈ అడ్రసు మా మ్యాప్‌లో షేర్ చేయబడదు
   signup_event_type_in_school: ఒక పాఠశాలలో
   signup_event_type_out_of_school: పాఠశాల బయట
+  signup_event_type_at_home: Home
   signup_submit_census_label: సబ్మిట్ చేయండి
   signup_submit_census_error_message: మమ్మల్ని క్షమించండి. ఒక తప్పిదం జరిగింది. ఫారం
     సబ్మిట్ చేయడం మళ్లీ ప్రయత్నించండి.
