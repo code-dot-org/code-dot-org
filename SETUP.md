@@ -35,9 +35,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     </details>
 
 1. `bundle exec rake install`
-    * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
-  each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
-  install is working correctly.
+    * This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 1. `bundle exec rake build`
     * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step

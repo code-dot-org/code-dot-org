@@ -173,7 +173,7 @@ namespace :seed do
       _, custom_i18n = Script.setup(custom_scripts)
       Script.merge_and_write_i18n(custom_i18n)
     rescue
-      rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we
+      rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
     end
   end
