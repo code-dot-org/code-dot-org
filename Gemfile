@@ -153,9 +153,6 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.4.0'
@@ -343,7 +340,7 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import'
+gem 'activerecord-import', '~> 0.26'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 

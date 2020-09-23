@@ -15,8 +15,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
   # Other cases are covered by directly testing add_course_offering below.
   test "Script.setup creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
-    scripts, _ = Script.setup([script_file])
-    script = scripts.first
+    script_names, _ = Script.setup([script_file])
+    script = Script.find_by!(name: script_names.first)
 
     offering = script.course_version.course_offering
     assert_equal 'xyz', offering.key
