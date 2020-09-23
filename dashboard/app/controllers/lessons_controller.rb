@@ -45,7 +45,7 @@ class LessonsController < ApplicationController
     # script edit page.
     lp = params.permit(
       :overview,
-      :student_overview,
+      :studentOverview,
       :assessment,
       :unplugged,
       :creativeCommonsLicense,
@@ -53,7 +53,7 @@ class LessonsController < ApplicationController
       :purpose,
       :preparation,
       :announcements
-    )
+    ).to_h.deep_transform_keys(&:underscore)
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
   end

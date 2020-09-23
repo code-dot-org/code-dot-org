@@ -41,7 +41,7 @@ class LessonsControllerTest < ActionController::TestCase
     @update_params = {
       id: @lesson.id,
       overview: 'new overview',
-      student_overview: 'new student overview',
+      studentOverview: 'new student overview',
     }
 
     @levelbuilder = create :levelbuilder
