@@ -119,7 +119,7 @@ class P5LabView extends React.Component {
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
               navigable={navigable}
-              defaultQuery={defaultQuery}
+              defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
               canDraw={canDraw}
             />
