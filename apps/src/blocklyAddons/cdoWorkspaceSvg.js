@@ -1,6 +1,15 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  addTrashcan() {
+    if (!Blockly.Trashcan) {
+      throw Error('Missing require for Blockly.Trashcan');
+    }
+    /** @type {Blockly.Trashcan} */
+    this.trashcan = new Blockly.Trashcan(this);
+    var svgTrashcan = this.trashcan.createDom();
+    this.flyout_.svgGroup_.appendChild(svgTrashcan);
+  }
   addUnusedBlocksHelpListener(helpClickFunc) {
     Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
 
