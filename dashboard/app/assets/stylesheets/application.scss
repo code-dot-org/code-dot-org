@@ -1420,6 +1420,14 @@ body.iframe_embed_app_and_code {
     height: $startHeight + $growth;
   }
 }
+.open-link > a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
 
 .qtip-content {
   font-size: 20px;
