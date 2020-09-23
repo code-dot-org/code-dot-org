@@ -478,6 +478,7 @@ he:
   signup_send_posters_address_placeholder: כתובת זו לא ישותף על המפה שלנו
   signup_event_type_in_school: בבית הספר
   signup_event_type_out_of_school: מחוץ לבית הספר
+  signup_event_type_at_home: Home
   signup_submit_census_label: שליחה
   signup_submit_census_error_message: אנו מצטערים, אירעה שגיאה. אנא נסו לשלוח את הטופס
     בשנית.

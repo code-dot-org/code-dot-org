@@ -504,6 +504,7 @@ bg:
     карта
   signup_event_type_in_school: В училище
   signup_event_type_out_of_school: Извън училище
+  signup_event_type_at_home: Home
   signup_submit_census_label: Изпращане
   signup_submit_census_error_message: Съжаляваме. Възникна грешка. Моля опитайте да
     подадете формуляра отново.

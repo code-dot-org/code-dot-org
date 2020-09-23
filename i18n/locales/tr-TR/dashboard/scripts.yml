@@ -15582,6 +15582,8 @@ tr:
               name: Kurs B
             Course E/F:
               name: Kurs E/F
+            CS Discoveries:
+              name: Bilgisayar Bilimi Keşifleri
           lesson_groups:
             lesson group:
               display_name: görünen isim

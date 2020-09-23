@@ -144,7 +144,7 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. კომპიუტერული მეცნიერების კლასებსა და ტექნოლოგიის ინდუსტრიაში გოგონები და უმცირესობები უკიდურესად მცირედ არიან წარმოდგენილნი. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე.
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე.
 
 კოდის ერთი საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ის, MSN-ის, Yahoo!-სა და Disney-ის მთავარი გვერდები დაიკავა. ჩვენი მოძრაობის მხარდასაჭერად 100-ზე მეტი პირი და ორგანიზაცია გაერთიანდა. მსოფლიოში Apple-ის ყველა მაღაზიამ უმასპინძლა კოდის ერთ საათს. პრეზიდენტ ობამამაც კი კოდის პირველი ხაზი კამპანიის ფარგლებში დაწერა.
 
