@@ -9,6 +9,7 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import $ from 'jquery';
 
 const styles = {
   dialog: {
@@ -60,8 +61,20 @@ export default class AddLevelDialog extends Component {
     super(props);
 
     this.state = {
-      methodOfAddingLevel: 'Find Level'
+      methodOfAddingLevel: 'Find Level',
+      levels: null,
+      searchFields: null
     };
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: `/levels/get_levels`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done((data, _, request) => {
+      this.setState({levels: data.levels, searchFields: data.search_fields});
+    });
   }
 
   handleToggle = value => {
@@ -69,6 +82,7 @@ export default class AddLevelDialog extends Component {
   };
 
   render() {
+    console.log(this.state.levels);
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -92,7 +106,7 @@ export default class AddLevelDialog extends Component {
             </ToggleGroup>
             {this.state.methodOfAddingLevel === 'Find Level' && (
               <div style={styles.filtersAndLevels}>
-                <AddLevelFilters />
+                <AddLevelFilters searchFields={this.state.searchFields} />
                 <AddLevelTable addLevel={this.props.addLevel} />
               </div>
             )}

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 
@@ -17,9 +18,13 @@ const styles = {
 //Selects need real data added into them
 
 export default class AddLevelFilters extends Component {
-  static propTypes = {};
+  static propTypes = {
+    searchFields: PropTypes.array
+  };
 
   render() {
+    console.log(this.props.searchFields);
+
     return (
       <div style={styles.filters}>
         <label>
@@ -39,10 +44,9 @@ export default class AddLevelFilters extends Component {
               console.log('filter by type');
             }}
           >
-            <option>All Types</option>
-            <option>App Lab</option>
-            <option>Game Lab</option>
-            <option>Standalone Video</option>
+            {this.props.searchFields[1].options.map(levelType => (
+              <option key={levelType[0]}>{levelType[0]}</option>
+            ))}
           </select>
         </label>
         <label>
@@ -53,10 +57,9 @@ export default class AddLevelFilters extends Component {
               console.log('filer by script');
             }}
           >
-            <option>All Scripts</option>
-            <option>csp1-2020</option>
-            <option>csd3-2020</option>
-            <option>coursea-2020</option>
+            {this.props.searchFields[2].options.map(script => (
+              <option key={script[0]}>{script[0]}</option>
+            ))}
           </select>
         </label>
         <label>
@@ -67,10 +70,9 @@ export default class AddLevelFilters extends Component {
               console.log('filter by owner');
             }}
           >
-            <option>Any Owner</option>
-            <option>Hannah</option>
-            <option>Mike</option>
-            <option>Dan</option>
+            {this.props.searchFields[3].options.map(owner => (
+              <option key={owner[0]}>{owner[0]}</option>
+            ))}
           </select>
         </label>
         <Button
