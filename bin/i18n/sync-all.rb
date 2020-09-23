@@ -40,14 +40,14 @@ class I18nSync
 
   def run
     if @options[:interactive]
-      checkout_staging
+      return_to_staging_branch
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
       sync_down if should_i "sync down"
       sync_out(true) if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
-      checkout_staging
+      return_to_staging_branch
     elsif @options[:command]
       case @options[:command]
       when 'in'
@@ -68,6 +68,8 @@ class I18nSync
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
+      when 'return-to-staging'
+        return_to_staging_branch
       end
     end
   end
@@ -93,7 +95,7 @@ class I18nSync
         options[:interactive] = true
       end
 
-      opts.on("-c", "--command COMMAND", %w(in up down out), "Run a single sync command") do |cmd|
+      opts.on("-c", "--command COMMAND", %w(in up down out return-to-staging), "Run a single sync command") do |cmd|
         options[:command] = cmd
       end
 
@@ -136,8 +138,21 @@ class I18nSync
     end
   end
 
-  def checkout_staging
-    return if GitUtils.current_branch == "staging"
+  def return_to_staging_branch
+    case GitUtils.current_branch
+    when "staging"
+      # If we're already on staging, we don't need to bother
+      return
+    when /^i18n-sync/
+      # If we're on an i18n sync branch, only return to staging if the branch
+      # has been merged.
+      return unless GitUtils.current_branch_merged_into? "staging"
+    else
+      # If we're on some other branch, then we're in some kind of weird state,
+      # so error out.
+      raise "Tried to return to staging branch from unknown branch #{GitUtils.current_branch.inspect}"
+    end
+
     `git checkout staging` if should_i "switch to staging branch"
   end
 end

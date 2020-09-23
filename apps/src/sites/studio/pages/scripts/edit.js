@@ -59,7 +59,7 @@ export default function initPage(scriptEditorData) {
     ([type, link]) => ({type, link})
   );
 
-  let announcements = scriptData.script_announcements || [];
+  let announcements = scriptData.announcements || [];
 
   ReactDOM.render(
     <Provider store={store}>

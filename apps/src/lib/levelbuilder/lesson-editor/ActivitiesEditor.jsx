@@ -9,10 +9,11 @@ import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEd
 const styles = {
   activityEditAndPreview: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    margin: 10
   },
   editor: {
-    width: '50%'
+    width: '55%'
   },
   preview: {
     width: '45%',
@@ -87,39 +88,35 @@ class ActivitiesEditor extends Component {
     const {activities} = this.props;
 
     return (
-      <div>
-        <div style={styles.activityEditAndPreview}>
-          <div style={styles.editor}>
-            {activities.map(activity => {
-              return (
-                <ActivityCard
-                  activity={activity}
-                  activitiesCount={activities.length}
-                  key={activity.key}
-                  setActivitySectionMetrics={this.setActivitySectionMetrics}
-                  setTargetActivitySection={this.setTargetActivitySection}
-                  targetActivitySectionPos={this.state.targetActivitySectionPos}
-                  activitySectionMetrics={this.activitySectionMetrics}
-                />
-              );
-            })}
-            <button
-              onMouseDown={this.handleAddActivity}
-              className="btn"
-              style={styles.addActivity}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Activity
-            </button>
-          </div>
-          <div style={styles.preview}>
-            <h2>Preview</h2>
-            <div style={styles.previewBox}>
-              {activities.map(activity => {
-                return <Activity activity={activity} key={activity.key} />;
-              })}
-            </div>
+      <div style={styles.activityEditAndPreview}>
+        <div style={styles.editor}>
+          {activities.map(activity => (
+            <ActivityCard
+              activity={activity}
+              activitiesCount={activities.length}
+              key={activity.key}
+              setActivitySectionMetrics={this.setActivitySectionMetrics}
+              setTargetActivitySection={this.setTargetActivitySection}
+              targetActivitySectionPos={this.state.targetActivitySectionPos}
+              activitySectionMetrics={this.activitySectionMetrics}
+            />
+          ))}
+          <button
+            onMouseDown={this.handleAddActivity}
+            className="btn"
+            style={styles.addActivity}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Activity
+          </button>
+        </div>
+        <div style={styles.preview}>
+          <h2>Preview</h2>
+          <div style={styles.previewBox}>
+            {activities.map(activity => (
+              <Activity activity={activity} key={activity.key} />
+            ))}
           </div>
         </div>
       </div>
