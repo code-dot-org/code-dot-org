@@ -5,31 +5,22 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    @lesson_data = {
-      title: @lesson.localized_title,
-      overview: @lesson.overview,
-      announcements: @lesson.announcements,
-      purpose: @lesson.purpose,
-      preparation: @lesson.preparation
-    }
+    @lesson_data =
+      ActiveModelSerializers::SerializableResource.
+        new(@lesson, key_transform: :camel_lower).
+        as_json
+    @lesson_data[:title] = @lesson.localized_title
   end
 
   # GET /lessons/1/edit
   def edit
+    lesson_hash =
+      ActiveModelSerializers::SerializableResource.
+        new(@lesson, key_transform: :camel_lower).
+        as_json
     @lesson_data = {
       id: @lesson.id,
-      lesson: {
-        name: @lesson.name,
-        overview: @lesson.overview,
-        studentOverview: @lesson.student_overview,
-        assessment: @lesson.assessment,
-        unplugged: @lesson.unplugged,
-        lockable: @lesson.lockable,
-        creativeCommonsLicense: @lesson.creative_commons_license,
-        purpose: @lesson.purpose,
-        preparation: @lesson.preparation,
-        announcements: @lesson.announcements
-      }
+      lesson: lesson_hash
     }
   end
 
