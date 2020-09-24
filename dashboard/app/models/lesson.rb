@@ -291,6 +291,15 @@ class Lesson < ActiveRecord::Base
     }
   end
 
+  # Use LessonSerializer to "serialize" this lesson's attributes into a hash,
+  # jumping through some hoops to make ActiveModel Serializer camelize the keys.
+  # @return [Hash] Attributes
+  def to_camelized_hash
+    ActiveModelSerializers::SerializableResource.
+      new(self, key_transform: :camel_lower).
+      as_json
+  end
+
   # For a given set of students, determine when the given lesson is locked for
   # each student.
   # The design of a lockable lesson is that there is (optionally) some number of
