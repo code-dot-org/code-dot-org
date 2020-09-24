@@ -888,7 +888,7 @@ class Script < ActiveRecord::Base
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
   # copying. Any new_properties are merged into the properties of the new script.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {})
+  def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
     scripts_to_add = []
 
     custom_i18n = {}
@@ -919,15 +919,12 @@ class Script < ActiveRecord::Base
       }, lesson_groups]
     end
 
-    if Rake.application.options.trace
-      puts "Seeding #{scripts_to_add.length} Scripts"
-      progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|')
-    end
+    progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
       added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      progressbar.increment if Rake.application.options.trace
+      progressbar.increment if show_progress
       added_script.name
     rescue => e
       raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
