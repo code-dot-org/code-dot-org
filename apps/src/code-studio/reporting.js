@@ -5,6 +5,8 @@ import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
 import {PostMilestoneMode} from '@cdo/apps/util/sharedConstants';
 var clientState = require('./clientState');
+import {getStore} from '../redux';
+import {mergeProgress} from './progressRedux';
 
 var lastAjaxRequest;
 var lastServerResponse = {};
@@ -251,14 +253,10 @@ reporting.sendReport = function(report) {
     queryItems.push(key + '=' + report[key]);
   }
   const queryString = queryItems.join('&');
-
-  clientState.trackProgress(
-    report.result,
-    report.lines,
-    report.testResult,
-    appOptions.scriptName,
-    report.serverLevelId || appOptions.serverLevelId
-  );
+  const levelId = report.serverLevelId || appOptions.serverLevelId;
+  const store = getStore();
+  store.dispatch(mergeProgress({[levelId]: report.testResult}));
+  clientState.trackLines(report.result, report.lines);
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
