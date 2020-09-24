@@ -138,7 +138,7 @@ class Script < ActiveRecord::Base
     has_verified_resources
     has_lesson_plan
     curriculum_path
-    script_announcements
+    announcements
     version_year
     is_stable
     supported_locales
@@ -770,16 +770,18 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    script_levels.find {|sl| sl.id == script_level_id.to_i}
+    script_levels.find(id: script_level_id.to_i)
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
-    script_levels.to_a.find do |sl|
-      sl.lesson.lockable? == lockable &&
+    script_levels.find do |sl|
+      # make sure we are checking the native properties of the script level
+      # first, so we only have to load lesson if it's actually necessary.
+      sl.position == puzzle_position.to_i &&
+        !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.position == puzzle_position.to_i &&
-        !sl.bonus
+        sl.lesson.lockable? == lockable
     end
   end
 
@@ -987,7 +989,7 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
-      script_announcements: nil,
+      announcements: nil,
       is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1229,7 +1231,8 @@ class Script < ActiveRecord::Base
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
-      script_announcements: script_announcements,
+      script_announcements: announcements, #TODO: (dmcavoy) Remove after Sept 25 2020
+      announcements: announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
@@ -1411,7 +1414,7 @@ class Script < ActiveRecord::Base
       :project_widget_types,
       :lesson_extras_available,
       :curriculum_path,
-      :script_announcements,
+      :announcements,
       :version_year,
       :supported_locales,
       :pilot_experiment,
