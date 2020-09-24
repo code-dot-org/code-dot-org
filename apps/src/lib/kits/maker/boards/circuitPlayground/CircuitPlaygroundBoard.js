@@ -24,7 +24,7 @@ import {
 import Led from './Led';
 import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
-import {detectBoardTypeFromPort} from '../../util/boardUtils';
+import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -34,12 +34,6 @@ const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
 const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
-
-export const BOARD_TYPE = {
-  CLASSIC: 'classic',
-  EXPRESS: 'express',
-  OTHER: 'other'
-};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using

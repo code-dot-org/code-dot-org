@@ -15,11 +15,11 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import {BOARD_TYPE} from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 import Button from '@cdo/apps/templates/Button';
+import {BOARD_TYPE} from '../util/boardUtils';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
