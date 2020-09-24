@@ -1860,7 +1860,8 @@ StudioApp.prototype.silentlyReport = function() {
   this.report({
     app: getStore().getState().pageConstants.appType,
     level: this.config.level.id,
-    skipSuccessCallback: true
+    skipSuccessCallback: true,
+    testResult: TestResults.LEVEL_STARTED
   });
   this.hasReported = false;
 };
