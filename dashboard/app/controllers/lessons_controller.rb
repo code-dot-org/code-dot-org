@@ -43,17 +43,8 @@ class LessonsController < ApplicationController
 
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
-    lp = lp.permit(
-      :overview,
-      :student_overview,
-      :assessment,
-      :unplugged,
-      :creative_commons_license,
-      :lockable,
-      :purpose,
-      :preparation,
-      :announcements
-    )
+
+    lp = lp.permit(LessonSerializer._attributes)
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
   end
