@@ -106,7 +106,10 @@ class ScriptLevelsController < ApplicationController
     end
 
     configure_caching(@script)
-    load_script_level
+
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+    authorize! :read, @script_level
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -152,6 +155,18 @@ class ScriptLevelsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
 
     present_level
+  end
+
+  def self.get_script_level(script, params)
+    if params[:chapter]
+      script.get_script_level_by_chapter(params[:chapter])
+    elsif params[:stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lockable_stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+    else
+      script.get_script_level_by_id(params[:id])
+    end
   end
 
   # Get a list of hidden stages for the current users section
@@ -311,21 +326,6 @@ class ScriptLevelsController < ApplicationController
       sl.valid_progression_level? &&
           (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
-  end
-
-  def load_script_level
-    @script_level =
-      if params[:chapter]
-        @script.get_script_level_by_chapter(params[:chapter])
-      elsif params[:stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-      elsif params[:lockable_stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-      else
-        @script.get_script_level_by_id(params[:id])
-      end
-    raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level
   end
 
   def load_level_source

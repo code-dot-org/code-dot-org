@@ -379,7 +379,7 @@ la:
   how_to_nav_companies: Para empresas
   how_to_nav_afterschool_educators: Para docentes extracurriculares
   how_to_nav_volunteers: Para voluntarios
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: Para eventos virtuales
   whats_next_header: Próximos pasos
   whats_next_description: Te enviaremos materiales y consejos útiles para tu evento.
     <a href='http://code.org/learn'> Prueba los tutoriales</a> para cualquier navegador
@@ -517,6 +517,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.

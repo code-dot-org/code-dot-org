@@ -474,7 +474,7 @@
         },
         "Virtual Pet 1_2019": {
           "wandering": "pengembaraan",
-          "mystery": "misterius",
+          "mystery": "misteri",
           "spinning right": "berputar ke kanan",
           "moving east": "bergerak ke timur",
           "spinning left": "berputar ke kiri",
@@ -489,7 +489,7 @@
         },
         "Virtual Pet 1_2020": {
           "wandering": "pengembaraan",
-          "mystery": "misterius",
+          "mystery": "misteri",
           "spinning right": "berputar ke kanan",
           "moving east": "bergerak ke timur",
           "spinning left": "berputar ke kiri",
@@ -673,7 +673,7 @@
           "spinning right": "berputar ke kanan"
         },
         "behaviors 1": {
-          "mystery behavior": "perilaku misterius",
+          "mystery behavior": "perilaku misteri",
           "wandering": "pengembaraan",
           "running east": "berlari ke timur",
           "spinning left": "berputar ke kiri",
@@ -689,7 +689,7 @@
           "moving east": "bergerak ke timur"
         },
         "behaviors 1_2020": {
-          "mystery behavior": "perilaku misterius",
+          "mystery behavior": "perilaku misteri",
           "wandering": "pengembaraan",
           "running east": "berlari ke timur",
           "spinning left": "berputar ke kiri",
@@ -1059,8 +1059,8 @@
           "patrolling": "perondaan"
         },
         "courseF_project_1": {
-          "flying south and loop": "terbang ke selatan dan berputar",
-          "drive south and loop": "berkendara ke selatan dan berputar",
+          "flying south and loop": "terbang ke selatan dan loop",
+          "drive south and loop": "berkendara ke selatan dan loop",
           "wandering": "pengembaraan",
           "moving east": "bergerak ke timur",
           "spinning left": "berputar ke kiri",
