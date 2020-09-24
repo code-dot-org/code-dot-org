@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad 或 iPhone",
   "filterPlatformNoInternet": "速度较慢或没有互联网",
   "filterPlatformNoComputers": "没有计算机或设备",
+  "filterPlatformScreenReader": "屏幕阅读器",
   "filterTopics": "主题",
   "filterTopicsScience": "科学",
   "filterTopicsMath": "数学",

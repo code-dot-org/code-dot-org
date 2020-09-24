@@ -5030,8 +5030,8 @@ es-ES:
           feedback: 'El primer error es que Scrat va por el camino equivocado después
             de su último giro. '
         questions:
-        - text: 'Mira el siguiente código con atención. ¿Cuál es el primer error que
-            hará que el programa falle? '
+        - text: 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará
+            que este programa falle? '
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: El programa no fallará. Scrat conseguirá la bellota.
@@ -5666,8 +5666,8 @@ es-ES:
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
-        - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
-            en "Ejecutar"?
+        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
+            ocurrirá si haces clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
