@@ -82,6 +82,7 @@ export default project => {
     var sharingDisabled = project.getSharingDisabled();
     var privateOrProfane = project.hasPrivacyProfanityViolation();
     var abuseScore = project.getAbuseScore();
+    $('.admin-abuse-score').text(abuseScore);
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
       $('.blocked').show();
@@ -114,8 +115,6 @@ export default project => {
         } else {
           $('.reported-abuse').show();
         }
-        $('.admin-abuse').show();
-        $('.admin-abuse-score').text(abuseScore);
         $('.admin-abuse-reset').click(function() {
           project.adminResetAbuseScore();
         });
