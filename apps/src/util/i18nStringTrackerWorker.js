@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import 'whatwg-fetch';
 
 /**
  * Gets the singleton instance of an I18nStringTrackerWorker
@@ -71,6 +71,9 @@ class I18nStringTrackerWorker {
   }
 }
 
+// The max number of records which can be sent at once to the '/i18n/track_string_usage' API
+const RECORD_LIMIT = 500;
+
 /**
  * Asynchronously send the given records to the `/i18n/track_string_usage` API
  * @param {I18nRecords} records The records of i18n string usage information to be sent.
@@ -79,15 +82,20 @@ function sendRecords(records) {
   const url = window.location.origin + window.location.pathname; //strip the query string from the URL
   Object.keys(records).forEach(source => {
     const stringKeys = Array.from(records[source]);
-    $.ajax({
-      url: '/i18n/track_string_usage',
-      type: 'post',
-      dataType: 'json',
-      data: {
-        url: url,
-        source: source,
-        string_keys: stringKeys
-      }
-    });
+    // Break the keys up into smaller batches because the API has a maximum limit.
+    for (let i = 0; i < stringKeys.length; i += RECORD_LIMIT) {
+      const stringKeyBatch = stringKeys.slice(i, RECORD_LIMIT);
+      fetch('/i18n/track_string_usage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          url: url,
+          source: source,
+          string_keys: stringKeyBatch
+        })
+      });
+    }
   });
 }
