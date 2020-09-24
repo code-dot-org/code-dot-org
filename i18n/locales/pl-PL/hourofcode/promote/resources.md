@@ -144,7 +144,7 @@ Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomag
 
 **Temat:** Lokalna szkoła włącza się w misję wprowadzania uczniów do informatyki
 
-Komputery są wszędzie, zmieniają każdą branżę na Ziemi, ale tylko 45% wszystkich szkół średnich uczy informatyki. Dziewczęta i mniejszości społeczne są zdecydowanie niedostatecznie reprezentowane na studiach informatycznych i w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
+Komputery są wszędzie, zmieniają każdą branżę na Ziemi, ale tylko 45% wszystkich szkół średnich uczy informatyki. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 

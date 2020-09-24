@@ -491,6 +491,7 @@ cs:
   signup_send_posters_address_placeholder: Tato adresa nebude sdílena na naší mapě
   signup_event_type_in_school: Ve škole
   signup_event_type_out_of_school: Mimo školu
+  signup_event_type_at_home: Home
   signup_submit_census_label: Odeslat
   signup_submit_census_error_message: Je nám líto. Došlo k chybě. Prosím zkuste formulář
     odeslat znovu.

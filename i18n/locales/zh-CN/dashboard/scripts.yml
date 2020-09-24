@@ -10475,6 +10475,8 @@ zh-CN:
               display_name: 项目
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             Variables Explore:
               name: 变量探索
@@ -10546,6 +10548,10 @@ zh-CN:
               name: 项目 - 决定制作者应用 第 3 部分
             "[OLD] Variables Make":
               name: "[OLD]使用变量"
+            "[OLD] Conditionals Make":
+              name: "[OLD]条件语句创造成功"
+            "[OLD] Functions Make":
+              name: "[OLD]函数创造"
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -11703,6 +11709,8 @@ zh-CN:
               display_name: 项目
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             new stage:
               name: 新的阶段
@@ -11790,6 +11798,12 @@ zh-CN:
               name: 第 5 单元教师问卷
             'Lesson 18: Assessment Day':
               name: '第 18 单元：评估日'
+            "[OLD] Lists Make":
+              name: "[OLD]列表创造"
+            "[OLD] Loops Make":
+              name: "[OLD]循环创造"
+            "[OLD] Traversals Make":
+              name: "[OLD] 遍历创造"
         fit2019-novice:
           title: 夏季工场的新手思考 2019
           description_audience: 6 - 12 培训中的新主持人
@@ -12998,6 +13012,8 @@ zh-CN:
               display_name: 库
             required:
               display_name: 概览
+            optional_stages:
+              display_name: 可选阶段
           lessons:
             Parameters and Returns Explore:
               name: 参数和返回值探索
@@ -13051,6 +13067,8 @@ zh-CN:
               name: 第 7 单元教师问卷
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
+            "[OLD] Parameters and Return Make":
+              name: "[OLD]参数和返回值制作"
         csp8-pilot:
           title: 计算机科学原理 第 8 单元 试用 - 创建表演任务 准备
           lessons:
@@ -13241,6 +13259,8 @@ zh-CN:
               display_name: '第 2 章︰ 样式和 CSS'
             cspSurvey:
               display_name: 调查
+            csd2_1v2:
+              display_name: '第一单元：创造网页'
           lessons:
             Exploring Web Pages:
               name: 探索网页
@@ -14967,3 +14987,5 @@ zh-CN:
               name: 课程 A
             Course B:
               name: 课程 B
+            CS Discoveries:
+              name: 计算机科学发现
