@@ -12,8 +12,10 @@ class I18nStringUrlTracker
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
   def log(string_key, url, source)
-    return unless string_key && url && source
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+
+    url = I18nStringUrlTracker.normalize_url(url)
+    return unless string_key && url && source
 
     # record the string : url association.
     FirehoseClient.instance.put_record(
@@ -23,6 +25,8 @@ class I18nStringUrlTracker
   end
 
   def self.normalize_url(url)
+    return unless url
+
     parsed_url = URI(url)
 
     # strip query string
