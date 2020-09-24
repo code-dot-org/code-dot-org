@@ -4,7 +4,7 @@
 # We use serialization and seeding to synchronize curriculum data from Levelbuilder to
 # other environments, most importantly production. One key requirement is that when an
 # object is updated on Levelbuilder and serialized, the seeding process in the downstream environment must
-# find the logically corresponding object in that environment and updating it without changing its primary key id.
+# find the logically corresponding object in that environment and update it without changing its primary key id.
 # This is because other tables, for example user_levels which tracks user progress, contains references to those
 # primary key IDs.
 #

@@ -561,6 +561,16 @@ class ScriptLevel < ActiveRecord::Base
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
+  #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context, use_existing_level_keys = true)
     my_key = {
       'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
@@ -576,8 +586,18 @@ class ScriptLevel < ActiveRecord::Base
     my_key.stringify_keys
   end
 
-  # TODO: add validation so this is always in sync?
+  # Gets keys of the Levels associated with this ScriptLevel, in order.
+  #
+  # Because getting level keys can be expensive (1-2 queries per Level, depending on whether it's a Blockly level),
+  # we prefer to use already loaded data instead of re-querying for it when possible. However, we shouldn't do so
+  # during serialization, to eliminate the risk that the data is out of sync.
+  #
+  # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
+  #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
+  # @return [Array[String]] the keys for the Level objects associated with this ScriptLevel.
   def get_level_keys(seed_context, use_existing_level_keys = true)
+    # Use the level_keys property if it's there, unless we specifically want to re-query the level keys.
+    # This property is set during seeding.
     return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
 
     if levels.loaded?
