@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'services/seeding/lesson_seeding'
 
 class LessonSeedingTest < ActiveSupport::TestCase
   test 'serialize script lessons' do
