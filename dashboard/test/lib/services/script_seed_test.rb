@@ -11,6 +11,10 @@ require 'services/script_seed'
 #
 # Also add a new test case which tests adding, creating, and deleting your new model.
 class ScriptSeedTest < ActiveSupport::TestCase
+  setup do
+    Game.game_cache = nil
+  end
+
   # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
   # When adding a new model that is serialized, update this test to include the model, generate new json,
   # save it to test-serialize-seeding-json.script_json, and eyeball the changes to see that they look right.
@@ -34,11 +38,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
     #   13 queries - two for each model, + one extra query each for Lessons, ScriptLevels and LevelsScriptLevels
     #   8 queries, one for each LevelsScriptLevel.
+    #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
     # LevelsScriptLevels has queries which scale linearly with the number of rows.
     # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
-    assert_queries(24) do
+    # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
+    assert_queries(33) do
       ScriptSeed.seed_from_json(json)
     end
 
@@ -266,7 +272,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     i = 1
     script.lessons.each do |lg|
       num_script_levels_per_lesson.times do
-        level = create :level, name: "#{name_prefix}_Level_#{i}", level_num: "1_2_#{i}"
+        level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}"
         create :script_level, lesson: lg, script: script, levels: [level], challenge: i.even?
         i += 1
       end

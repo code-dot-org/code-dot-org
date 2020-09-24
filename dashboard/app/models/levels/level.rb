@@ -87,11 +87,6 @@ class Level < ActiveRecord::Base
     thumbnail_url
   )
 
-  def unique_key
-    return name unless name == 'blockly'
-    return [name, game.name, level_num].join(':')
-  end
-
   def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
     levels_by_key = script.levels.index_by(&:key)
 
