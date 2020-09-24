@@ -83,6 +83,12 @@ export default project => {
     var privateOrProfane = project.hasPrivacyProfanityViolation();
     var abuseScore = project.getAbuseScore();
     $('.admin-abuse-score').text(abuseScore);
+    $('#admin-abuse-reset').click(function() {
+      project.adminResetAbuseScore(0);
+    });
+    $('#admin-abuse-buffer').click(function() {
+      project.adminResetAbuseScore(-50);
+    });
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
       $('.blocked').show();
@@ -115,9 +121,6 @@ export default project => {
         } else {
           $('.reported-abuse').show();
         }
-        $('.admin-abuse-reset').click(function() {
-          project.adminResetAbuseScore();
-        });
       }
     } else {
       $('.unblocked').show();
