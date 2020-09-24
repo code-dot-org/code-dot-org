@@ -51,7 +51,6 @@ export default class EditTipDialog extends Component {
   handleTipTypeChange = event => {
     const newTip = _.cloneDeep(this.state.tip);
     const type = event.target.value;
-    console.log(event.target.value);
     newTip.type = type;
     this.setState({tip: newTip});
   };
