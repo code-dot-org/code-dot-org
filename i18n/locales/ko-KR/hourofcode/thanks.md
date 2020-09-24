@@ -1,8 +1,8 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+title: 아워오브코드를 주최하기 위해 가입해 주셔서 감사힙니다.
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# 아워오브코드를 주최하기 위해 가입해 주셔서 감사힙니다.
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

@@ -190,8 +190,9 @@ zh:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: '開始《代碼小憩》！您每週的靈感、社區和電腦科學。
+
+'
   codeorg_homepage_code_break_link_text: 進一步學習
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
@@ -470,6 +471,7 @@ zh:
   signup_send_posters_address_placeholder: 這個地址不會被分享在我們的地圖上
   signup_event_type_in_school: 在學校內
   signup_event_type_out_of_school: 校外團體
+  signup_event_type_at_home: Home
   signup_submit_census_label: 提交
   signup_submit_census_error_message: 我們很抱歉發生錯誤。請再次嘗試提交表單。
   signup_submit_label: 註冊

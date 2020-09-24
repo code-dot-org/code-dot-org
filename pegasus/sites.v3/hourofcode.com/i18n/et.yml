@@ -491,6 +491,7 @@ et:
   signup_send_posters_address_placeholder: Seda aadressi ei jagata meie kaardil
   signup_event_type_in_school: Koolis
   signup_event_type_out_of_school: Väljaspool kooli
+  signup_event_type_at_home: Home
   signup_submit_census_label: Esita
   signup_submit_census_error_message: Vabandame, ilmnes tõrge. Proovige uuesti vormi
     edastada.

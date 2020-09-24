@@ -51,6 +51,23 @@ module GitUtils
     `git rev-parse --abbrev-ref HEAD`.strip
   end
 
+  # Get a list of the names of all branches merged into the given branch
+  def self.merged_branches(base_branch)
+    merged_branches = `git branch --merged #{base_branch}`.split("\n")
+    merged_branches.each do |branch|
+      # The return format here is a bit messy, so in addition to splitting by
+      # newline to turn it into a list we also want to make sure to clean up
+      # whitespace and the "* " string used to denote the current branch.
+      branch.strip!
+      branch.delete_prefix! "* "
+    end
+    return merged_branches
+  end
+
+  def self.current_branch_merged_into?(base_branch)
+    merged_branches(base_branch).include? current_branch
+  end
+
   def self.get_latest_commit_merged_branch
     get_branch_commit_merges(git_revision)
   end

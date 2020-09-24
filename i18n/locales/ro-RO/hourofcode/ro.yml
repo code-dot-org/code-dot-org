@@ -503,6 +503,7 @@ ro:
     noastră
   signup_event_type_in_school: Într-o şcoală
   signup_event_type_out_of_school: În afara şcolii
+  signup_event_type_at_home: Home
   signup_submit_census_label: Trimite
   signup_submit_census_error_message: Ne pare rău. A apărut o eroare. Vă rugăm să
     încercaţi din nou trimiterea formularului.
@@ -6985,7 +6986,7 @@ ro:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Toate browserele moderne
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Toate browserele moderne
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Toate browserele moderne
@@ -7183,7 +7184,7 @@ ro:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Toate browserele moderne
   tutorial_csfirstname_string_platforms: Toate browserele moderne
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Toate browserele moderne
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -9184,7 +9185,7 @@ ro:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Toate browserele moderne, tableta Android,
     iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad

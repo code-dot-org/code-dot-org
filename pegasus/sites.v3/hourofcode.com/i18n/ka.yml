@@ -498,6 +498,7 @@ ka:
   signup_send_posters_address_placeholder: ამ მისამართს ჩვენს რუკაზე არ გავაზიარებთ
   signup_event_type_in_school: სკოლაში
   signup_event_type_out_of_school: სკოლის გარეთ
+  signup_event_type_at_home: Home
   signup_submit_census_label: გაგზავნა
   signup_submit_census_error_message: გვაპატიეთ. მოხდა შეცდომა. გთხოვთ, ფორმის გაგზავნა
     სცადოთ თავიდან.
