@@ -272,7 +272,8 @@ class ScriptSeedTest < ActiveSupport::TestCase
     i = 1
     script.lessons.each do |lg|
       num_script_levels_per_lesson.times do
-        level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}"
+        game = create :game, name: "#{name_prefix}_game#{i}"
+        level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
         create :script_level, lesson: lg, script: script, levels: [level], challenge: i.even?
         i += 1
       end
