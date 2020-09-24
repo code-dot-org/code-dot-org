@@ -31,6 +31,9 @@ const styles = {
     width: '100%',
     paddingLeft: 0,
     paddingRight: 0
+  },
+  googleButtonMargin: {
+    marginBottom: 5
   }
 };
 
@@ -49,9 +52,15 @@ class ProgressLessonTeacherInfo extends React.Component {
     showGoogleClassroomButton: PropTypes.bool.isRequired
   };
 
-  onClickHiddenToggle = value => {
+  constructor(props) {
+    super(props);
+    this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
+    this.firehoseData = this.firehoseData.bind(this);
+  }
+
+  onClickHiddenToggle(value) {
     const {scriptName, section, lesson, toggleHiddenStage} = this.props;
-    const sectionId = section.id.toString();
+    const sectionId = (section && section.id.toString()) || '';
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
@@ -62,9 +71,9 @@ class ProgressLessonTeacherInfo extends React.Component {
       },
       {includeUserId: true}
     );
-  };
+  }
 
-  firehoseData = () => {
+  firehoseData() {
     const {scriptName, section, lesson} = this.props;
     return {
       script_name: scriptName,
@@ -72,7 +81,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       lesson_id: lesson.id,
       lesson_name: lesson.name
     };
-  };
+  }
 
   render() {
     const {
@@ -129,7 +138,9 @@ class ProgressLessonTeacherInfo extends React.Component {
           />
         )}
         {showGoogleClassroomButton && (
-          <div style={{...styles.buttonContainer, marginBottom: 5}}>
+          <div
+            style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
+          >
             <GoogleClassroomShareButton
               buttonId={`gc-button-${lesson.id}`}
               url={levelUrl}
