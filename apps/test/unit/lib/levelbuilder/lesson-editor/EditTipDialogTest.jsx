@@ -34,7 +34,7 @@ describe('EditTipDialog', () => {
     const wrapper = shallow(<EditTipDialog {...defaultProps} />);
 
     const dropdown = wrapper.find('select');
-    expect(dropdown.props().defaultValue).to.equal('Teaching Tip');
+    expect(dropdown.props().value).to.equal('teachingTip');
     dropdown.simulate('change', {target: {value: 'contentCorner'}});
 
     const textarea = wrapper.find('textarea');
