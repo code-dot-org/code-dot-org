@@ -120,7 +120,7 @@ describe('StudioApp', () => {
         studio.reset = () => {};
 
         reportSpy = sinon.spy();
-        studio.report = reportSpy;
+        studio.debouncedSilentlyReport = reportSpy;
       });
 
       it('Sets hasReported to false', () => {
