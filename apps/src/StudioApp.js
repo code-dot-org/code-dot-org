@@ -36,6 +36,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
+import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -77,6 +78,7 @@ import {
   setFeedback
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
@@ -2654,12 +2656,39 @@ StudioApp.prototype.enableBreakpoints = function() {
   this.editor.on(
     'guttermousedown',
     function(e) {
-      var bps = this.editor.getBreakpoints();
-      if (bps[e.line]) {
+      const bps = this.editor.getBreakpoints();
+      const activeBreakpoint = bps[e.line];
+      if (activeBreakpoint) {
         this.editor.clearBreakpoint(e.line);
       } else {
         this.editor.setBreakpoint(e.line);
       }
+
+      // Log breakpoints usage to firehose. This is part of the work to add
+      // inline teacher comments; we want to get a sense of how much
+      // breakpoints are used and in what scenarios, so we can reason about the
+      // feasibility of repurposing line number clicks for this feature.
+      const currentUser = getStore().getState().currentUser;
+      const userType = currentUser && currentUser.userType;
+      firehoseClient.putRecord(
+        {
+          study: 'droplet-breakpoints',
+          study_group: userType,
+          event: 'guttermousedown',
+          data_json: JSON.stringify({
+            levelId: this.config.serverLevelId,
+            lineNumber: e.line,
+            activeBreakpoint,
+            projectLevelId: this.config.serverProjectLevelId,
+            scriptId: this.config.scriptId,
+            scriptLevelId: this.config.serverScriptLevelId,
+            scriptName: this.config.scriptName,
+            studentUserId: queryParams('user_id'),
+            url: window.location.toString()
+          })
+        },
+        {includeUserId: true}
+      );
     }.bind(this)
   );
 };
