@@ -202,7 +202,7 @@ module ScriptSeed
   end
 
   def self.import_levels_script_levels(levels_script_levels_data, seed_context)
-    levels_by_seeding_key = seed_context.levels.index_by(&:unique_key)
+    levels_by_seeding_key = seed_context.levels.index_by(&:key)
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
     levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
@@ -214,6 +214,7 @@ module ScriptSeed
         levels_by_seeding_key[seeding_key] = level
         seed_context.levels.append(level)
       end
+
       raise 'No level found' if level.nil?
 
       script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]

@@ -593,6 +593,6 @@ class ScriptLevel < ActiveRecord::Base
       my_levels = my_levels.sort_by(&:id)
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.map(&:unique_key)
+    my_levels.map(&:key)
   end
 end
