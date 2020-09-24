@@ -84,6 +84,9 @@ clientState.writeSourceForLevel = function(
   timestamp,
   source
 ) {
+  if (source === undefined) {
+    return;
+  }
   trySetSessionStorage(
     createKey(scriptName, levelId, 'source'),
     JSON.stringify({
