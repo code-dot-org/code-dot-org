@@ -79,6 +79,22 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(expected_record, @firehose_record)
   end
 
+  def test_log_given_url_with_anchor_tag_should_call_firehose_without_anchor_tag
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/#tag-youre-it', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
+  def test_log_given_projects_url_should_only_log_the_project_type
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy/zjiufOp0h-9GS-DywevS0d3tKJyjdbQZZqZVaiuAjiU/view', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
   def test_log_given_false_dcdo_flag_should_not_call_firehose
     unstub_firehose
     unstub_dcdo
@@ -86,34 +102,5 @@ class TestI18nStringUrlTracker < Minitest::Test
     FirehoseClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
-  end
-
-  def test_normalize_url_given_nil_returns_nil
-    assert_nil(I18nStringUrlTracker.normalize_url(nil))
-  end
-
-  def test_normalize_url_given_blank_url_returns_blank_url
-    assert_equal('', I18nStringUrlTracker.normalize_url(''))
-  end
-
-  def test_normalize_url_should_strip_query_string
-    url = 'https://studio.code.org/test/page?querystring=true'
-    expected_url = 'https://studio.code.org/test/page'
-    normalized_url = I18nStringUrlTracker.normalize_url(url)
-    assert_equal(expected_url, normalized_url)
-  end
-
-  def test_normalize_url_should_strip_anchor_tags
-    url = 'https://studio.code.org/test/page#tag-youre-it'
-    expected_url = 'https://studio.code.org/test/page'
-    normalized_url = I18nStringUrlTracker.normalize_url(url)
-    assert_equal(expected_url, normalized_url)
-  end
-
-  def test_normalize_url_should_aggregate_project_urls
-    url = 'https://studio.code.org/projects/flappy/zjiufOp0h-9GS-DywevS0d3tKJyjdbQZZqZVaiuAjiU/view'
-    expected_url = 'https://studio.code.org/projects/flappy'
-    normalized_url = I18nStringUrlTracker.normalize_url(url)
-    assert_equal(expected_url, normalized_url)
   end
 end
