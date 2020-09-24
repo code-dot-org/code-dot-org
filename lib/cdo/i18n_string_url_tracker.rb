@@ -14,7 +14,7 @@ class I18nStringUrlTracker
   def log(string_key, url, source)
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
 
-    url = I18nStringUrlTracker.normalize_url(url)
+    url = normalize_url(url)
     return unless string_key && url && source
 
     # record the string : url association.
@@ -24,7 +24,9 @@ class I18nStringUrlTracker
     )
   end
 
-  def self.normalize_url(url)
+  private
+
+  def normalize_url(url)
     return unless url
 
     parsed_url = URI(url)
