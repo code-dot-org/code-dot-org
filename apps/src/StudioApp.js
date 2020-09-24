@@ -36,6 +36,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
+import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -77,6 +78,7 @@ import {
   setFeedback
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
@@ -186,6 +188,12 @@ class StudioApp extends EventEmitter {
     this.milestoneStartTime = undefined;
 
     /**
+     * Whether we've reported a milestone yet for this run/reset cycle
+     * @type {boolean}
+     */
+    this.hasReported = false;
+
+    /**
      * If true, we don't show blockspace. Used when viewing shared levels
      */
     this.hideSource = false;
@@ -293,6 +301,10 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
+  this.debouncedSilentlyReport = _.debounce(
+    this.silentlyReport.bind(this),
+    1000
+  );
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1841,18 +1853,30 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
 };
 
 /**
- * Click the reset button.  Reset the application.
+ * Report milestones but don't trigger the success callback when
+ * the server responds.
+ */
+StudioApp.prototype.silentlyReport = function() {
+  this.report({
+    app: getStore().getState().pageConstants.appType,
+    level: this.config.level.id,
+    skipSuccessCallback: true
+  });
+  this.hasReported = false;
+};
+
+/**
+ * Click the reset button. Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
-  // If we haven't reported yet, report now.
+  // First, abort any reports in progress - the server call will
+  // still complete, but we'll skip the success callback.
+  this.onResetPressed();
+  // Then, check if any reports happened this cycle. If not, trigger a report.
   if (!this.hasReported) {
-    this.report({
-      app: getStore().getState().pageConstants.appType,
-      level: this.config.level.id
-    });
+    this.debouncedSilentlyReport();
   }
   this.hasReported = false;
-  this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
@@ -2654,12 +2678,39 @@ StudioApp.prototype.enableBreakpoints = function() {
   this.editor.on(
     'guttermousedown',
     function(e) {
-      var bps = this.editor.getBreakpoints();
-      if (bps[e.line]) {
+      const bps = this.editor.getBreakpoints();
+      const activeBreakpoint = bps[e.line];
+      if (activeBreakpoint) {
         this.editor.clearBreakpoint(e.line);
       } else {
         this.editor.setBreakpoint(e.line);
       }
+
+      // Log breakpoints usage to firehose. This is part of the work to add
+      // inline teacher comments; we want to get a sense of how much
+      // breakpoints are used and in what scenarios, so we can reason about the
+      // feasibility of repurposing line number clicks for this feature.
+      const currentUser = getStore().getState().currentUser;
+      const userType = currentUser && currentUser.userType;
+      firehoseClient.putRecord(
+        {
+          study: 'droplet-breakpoints',
+          study_group: userType,
+          event: 'guttermousedown',
+          data_json: JSON.stringify({
+            levelId: this.config.serverLevelId,
+            lineNumber: e.line,
+            activeBreakpoint,
+            projectLevelId: this.config.serverProjectLevelId,
+            scriptId: this.config.scriptId,
+            scriptLevelId: this.config.serverScriptLevelId,
+            scriptName: this.config.scriptName,
+            studentUserId: queryParams('user_id'),
+            url: window.location.toString()
+          })
+        },
+        {includeUserId: true}
+      );
     }.bind(this)
   );
 };
