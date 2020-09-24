@@ -112,7 +112,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game1.com:1_2_1"
+          "blockly:test-serialize-seeding-json_game1:1_2_1"
         ],
         "script_level.chapter": 1,
         "script_level.position": 1,
@@ -121,7 +121,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game1.com:1_2_1"
+        "blockly:test-serialize-seeding-json_game1:1_2_1"
       ]
     },
     {
@@ -135,7 +135,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game2.com:1_2_2"
+          "blockly:test-serialize-seeding-json_game2:1_2_2"
         ],
         "script_level.chapter": 2,
         "script_level.position": 2,
@@ -144,7 +144,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game2.com:1_2_2"
+        "blockly:test-serialize-seeding-json_game2:1_2_2"
       ]
     },
     {
@@ -157,7 +157,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game3.com:1_2_3"
+          "blockly:test-serialize-seeding-json_game3:1_2_3"
         ],
         "script_level.chapter": 3,
         "script_level.position": 1,
@@ -166,7 +166,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game3.com:1_2_3"
+        "blockly:test-serialize-seeding-json_game3:1_2_3"
       ]
     },
     {
@@ -180,7 +180,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game4.com:1_2_4"
+          "blockly:test-serialize-seeding-json_game4:1_2_4"
         ],
         "script_level.chapter": 4,
         "script_level.position": 2,
@@ -189,7 +189,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game4.com:1_2_4"
+        "blockly:test-serialize-seeding-json_game4:1_2_4"
       ]
     },
     {
@@ -202,7 +202,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game5.com:1_2_5"
+          "blockly:test-serialize-seeding-json_game5:1_2_5"
         ],
         "script_level.chapter": 5,
         "script_level.position": 1,
@@ -211,7 +211,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game5.com:1_2_5"
+        "blockly:test-serialize-seeding-json_game5:1_2_5"
       ]
     },
     {
@@ -225,7 +225,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game6.com:1_2_6"
+          "blockly:test-serialize-seeding-json_game6:1_2_6"
         ],
         "script_level.chapter": 6,
         "script_level.position": 2,
@@ -234,7 +234,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game6.com:1_2_6"
+        "blockly:test-serialize-seeding-json_game6:1_2_6"
       ]
     },
     {
@@ -247,7 +247,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game7.com:1_2_7"
+          "blockly:test-serialize-seeding-json_game7:1_2_7"
         ],
         "script_level.chapter": 7,
         "script_level.position": 1,
@@ -256,7 +256,7 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game7.com:1_2_7"
+        "blockly:test-serialize-seeding-json_game7:1_2_7"
       ]
     },
     {
@@ -270,7 +270,7 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:game8.com:1_2_8"
+          "blockly:test-serialize-seeding-json_game8:1_2_8"
         ],
         "script_level.chapter": 8,
         "script_level.position": 2,
@@ -279,16 +279,16 @@
         "script.name": "test-serialize-seeding-json-script"
       },
       "level_keys": [
-        "blockly:game8.com:1_2_8"
+        "blockly:test-serialize-seeding-json_game8:1_2_8"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "blockly:game1.com:1_2_1",
+        "level.key": "blockly:test-serialize-seeding-json_game1:1_2_1",
         "script_level.level_keys": [
-          "blockly:game1.com:1_2_1"
+          "blockly:test-serialize-seeding-json_game1:1_2_1"
         ],
         "script_level.chapter": 1,
         "script_level.position": 1,
@@ -299,9 +299,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game2.com:1_2_2",
+        "level.key": "blockly:test-serialize-seeding-json_game2:1_2_2",
         "script_level.level_keys": [
-          "blockly:game2.com:1_2_2"
+          "blockly:test-serialize-seeding-json_game2:1_2_2"
         ],
         "script_level.chapter": 2,
         "script_level.position": 2,
@@ -312,9 +312,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game3.com:1_2_3",
+        "level.key": "blockly:test-serialize-seeding-json_game3:1_2_3",
         "script_level.level_keys": [
-          "blockly:game3.com:1_2_3"
+          "blockly:test-serialize-seeding-json_game3:1_2_3"
         ],
         "script_level.chapter": 3,
         "script_level.position": 1,
@@ -325,9 +325,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game4.com:1_2_4",
+        "level.key": "blockly:test-serialize-seeding-json_game4:1_2_4",
         "script_level.level_keys": [
-          "blockly:game4.com:1_2_4"
+          "blockly:test-serialize-seeding-json_game4:1_2_4"
         ],
         "script_level.chapter": 4,
         "script_level.position": 2,
@@ -338,9 +338,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game5.com:1_2_5",
+        "level.key": "blockly:test-serialize-seeding-json_game5:1_2_5",
         "script_level.level_keys": [
-          "blockly:game5.com:1_2_5"
+          "blockly:test-serialize-seeding-json_game5:1_2_5"
         ],
         "script_level.chapter": 5,
         "script_level.position": 1,
@@ -351,9 +351,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game6.com:1_2_6",
+        "level.key": "blockly:test-serialize-seeding-json_game6:1_2_6",
         "script_level.level_keys": [
-          "blockly:game6.com:1_2_6"
+          "blockly:test-serialize-seeding-json_game6:1_2_6"
         ],
         "script_level.chapter": 6,
         "script_level.position": 2,
@@ -364,9 +364,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game7.com:1_2_7",
+        "level.key": "blockly:test-serialize-seeding-json_game7:1_2_7",
         "script_level.level_keys": [
-          "blockly:game7.com:1_2_7"
+          "blockly:test-serialize-seeding-json_game7:1_2_7"
         ],
         "script_level.chapter": 7,
         "script_level.position": 1,
@@ -377,9 +377,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:game8.com:1_2_8",
+        "level.key": "blockly:test-serialize-seeding-json_game8:1_2_8",
         "script_level.level_keys": [
-          "blockly:game8.com:1_2_8"
+          "blockly:test-serialize-seeding-json_game8:1_2_8"
         ],
         "script_level.chapter": 8,
         "script_level.position": 2,
