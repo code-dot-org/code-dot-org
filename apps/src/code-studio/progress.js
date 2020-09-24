@@ -10,6 +10,7 @@ import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
+import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -29,7 +30,14 @@ import {
   setPageType,
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import googlePlatformApi, {
+  loadGooglePlatformApi
+} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {
+  OAuthSectionTypes,
+  OAuthProviders
+} from '@cdo/apps/lib/ui/accounts/constants';
 
 var progress = module.exports;
 
@@ -139,6 +147,7 @@ progress.generateStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+  initializeStoreWithSections(store, scriptData);
 
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
@@ -151,9 +160,6 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
-  if (scriptData.sections) {
-    store.dispatch(setSections(scriptData.sections));
-  }
 
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
@@ -314,4 +320,36 @@ function initializeStoreWithProgress(
       }
     });
   }
+}
+
+function initializeStoreWithSections(store, scriptData) {
+  const sections = scriptData.sections;
+  if (!sections) {
+    return;
+  }
+
+  // If we have a selected section, merge it with the minimal data in the
+  // `sections` array before storing in redux.
+  const currentSection = scriptData.section;
+  if (currentSection) {
+    const idx = sections.findIndex(section => section.id === currentSection.id);
+    if (idx >= 0) {
+      sections[idx] = {
+        ...sections[idx],
+        ...currentSection
+      };
+    }
+
+    // If our current section is a google classroom and teacher is conntected
+    // to google, load the google classroom share button api.
+    if (
+      currentSection.login_type === OAuthSectionTypes.google_classroom &&
+      scriptData.user_providers &&
+      scriptData.user_providers.includes(OAuthProviders.google)
+    ) {
+      registerReducers({googlePlatformApi});
+      store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
+    }
+  }
+  store.dispatch(setSections(sections));
 }
