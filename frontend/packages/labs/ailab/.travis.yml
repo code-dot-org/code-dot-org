@@ -12,7 +12,7 @@ before-install:
   - sudo apt-get install build-essential g++
 
 script:
-  - npm test
+  - travis_wait yarn test
 
 notifications:
   email: false
