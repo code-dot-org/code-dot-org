@@ -643,6 +643,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
+  def create_script_level_with_ancestors(script_level_attributes = nil)
+    script_level_attributes ||= {}
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    create :script_level, script: script, lesson: lesson, **script_level_attributes
+  end
+
   test 'seeding_key without existing level_keys' do
     script_level = create_script_level_with_ancestors
     script_level.reload # reload to clear out any already loaded association data, to verify query counts later
@@ -723,14 +731,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     }
 
     assert_equal expected, seeding_key
-  end
-
-  def create_script_level_with_ancestors(script_level_attributes = nil)
-    script_level_attributes ||= {}
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    create :script_level, script: script, lesson: lesson, **script_level_attributes
   end
 
   def create_seed_context(script)

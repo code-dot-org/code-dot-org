@@ -1644,7 +1644,7 @@ class Script < ActiveRecord::Base
   # See comments on ScriptSeed.seed_from_json for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
-  # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context)
     {'script.name': name}.stringify_keys
   end
