@@ -93,4 +93,11 @@ class TestI18nStringUrlTracker < Minitest::Test
     normalized_url = I18nStringUrlTracker.normalize_url(url)
     assert_equal(expected_url, normalized_url)
   end
+
+  def test_normalize_url_should_aggregate_project_urls
+    url = 'https://studio.code.org/projects/flappy/zjiufOp0h-9GS-DywevS0d3tKJyjdbQZZqZVaiuAjiU/view'
+    expected_url = 'https://studio.code.org/projects/flappy'
+    normalized_url = I18nStringUrlTracker.normalize_url(url)
+    assert_equal(expected_url, normalized_url)
+  end
 end
