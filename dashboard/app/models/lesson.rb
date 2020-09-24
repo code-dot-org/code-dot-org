@@ -291,9 +291,9 @@ class Lesson < ActiveRecord::Base
     }
   end
 
-  # Use LessonSerializer to "serialize" this lesson's attributes into a hash,
-  # jumping through some hoops to make ActiveModel Serializer camelize the keys.
-  # @return [Hash] Attributes
+  # Use LessonSerializer to "serialize" this lesson's editable attributes into a
+  # hash, jumping through some hoops to camelize the keys.
+  # @return [Hash] Editable attributes of this object.
   def to_camelized_hash
     ActiveModelSerializers::SerializableResource.
       new(self, key_transform: :camel_lower).

@@ -34,9 +34,6 @@ class LessonsController < ApplicationController
     # returns a plain Hash.
     lp = params.transform_keys(&:underscore)
 
-    # for now, only allow editing of fields that cannot be edited on the
-    # script edit page.
-
     lp = lp.permit(LessonSerializer._attributes)
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp

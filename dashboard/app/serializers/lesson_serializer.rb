@@ -19,6 +19,9 @@
 #  index_stages_on_script_id  (script_id)
 #
 
+# Serializer for the Lesson model. For now, only include fields which can
+# be edited on the lesson edit page, excluding any fields which are still
+# controlled by the script edit page (e.g. name and key).
 class LessonSerializer < ActiveModel::Serializer
   attributes :overview, :student_overview, :assessment, :unplugged, :creative_commons_license,
     :lockable, :purpose, :preparation, :announcements
