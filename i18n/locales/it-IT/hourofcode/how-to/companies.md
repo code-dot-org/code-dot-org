@@ -1,5 +1,5 @@
 ---
-title: Come organizzare un'Ora del Codice - Aziende
+title: Hour of Code How-To Guide for Companies
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Come organizzare un'Ora del Codice - Aziende
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
 During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
 
@@ -19,6 +19,8 @@ During the Hour of Code campaign, your company can help raise awareness of the c
 - [Host your own Hour of Code event](#host-hour-of-code)
 - [Promuovi l'Ora del Codice](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
+
+* * *
 
 <a id="encourage-employees"></a>
 
@@ -32,7 +34,7 @@ One of the most fulfilling ways to participate in the Hour of Code is to volunte
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://hourofcode.com/files/hoc-corporate-toolkit.pdf).
 
 * * *
 
@@ -74,7 +76,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 |Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Che cosa o chi ti ha ispirato? Come ti è nata la passione per l'informatica? Hai avuto un mentore? Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. |  
-|30-60 minutes | Code! Answer questions and guide them through tough puzzles. Try not to give students the solution outright, instead, ask them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. L'apprendimento reciproco è una grande opportunità. If you're volunteering virtually, discuss with the teacher ahead of time if you'll be helping students code their projects or assisting in other ways. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -148,7 +150,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more girls to computer science with #HourOfCode https://hourofcode.com/ 
+- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
 
 #### Create your own

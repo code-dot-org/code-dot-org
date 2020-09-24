@@ -4,7 +4,20 @@ FactoryGirl.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
-    questions '{}'
+    questions '{
+       "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "comment",
+                "name": "describe_favorite",
+                "title": "Please describe your favorite ice cream."
+              }
+            ]
+          }
+        ]
+    }'
 
     trait :with_multi_select_question do
       questions '{
@@ -1014,5 +1027,89 @@ FactoryGirl.define do
     created_at '2020-03-25 21:58:28'
     updated_at '2020-03-26 21:58:28'
     questions '{}'
+  end
+
+  factory :foorm_form_duplicate_question_survey, class: 'Foorm::Form' do
+    name 'surveys/teachers/duplicate_question_test'
+    version 0
+    created_at '2020-03-25 21:58:28'
+    updated_at '2020-03-26 21:58:28'
+    questions '{
+      "title": "Sample Survey",
+      "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "comment",
+            "name": "question1",
+            "title": "sample!"
+          },
+          {
+            "type": "comment",
+            "name": "question1",
+            "title": "another sample!"
+          }
+        ]
+      }
+    ]
+  }'
+  end
+
+  factory :foorm_form_duplicate_choice_survey, class: 'Foorm::Form' do
+    name 'surveys/teachers/duplicate_choice_test'
+    version 0
+    created_at '2020-03-25 21:58:28'
+    updated_at '2020-03-26 21:58:28'
+    questions '{
+      "title": "Sample Survey",
+      "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "checkbox",
+            "name": "question1",
+            "title": "sample!",
+           "choices": [
+             {
+               "value": "choice1",
+               "text": "Choice 1."
+             },
+             {
+               "value": "choice1",
+               "text": "Choice 1 again."
+             }
+           ]
+          },
+          {
+            "type": "matrix",
+            "name": "question2",
+            "title": "another sample!",
+             "columns": [
+               {
+                 "value": "1",
+                 "text": "Strongly Disagree"
+               },
+               {
+                 "value": "1",
+                 "text": "Disagree"
+               }
+             ],
+             "rows": [
+               {
+                 "value": "demonstrated_knowledge",
+                 "text": "Demonstrated knowledge of the curriculum."
+               },
+               {
+                 "value": "demonstrated_knowledge",
+                 "text": "Built and sustained an equitable learning environment in our workshop."
+               }
+             ]
+          }
+        ]
+      }
+    ]
+  }'
   end
 end

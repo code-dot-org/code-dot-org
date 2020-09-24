@@ -1,12 +1,18 @@
 ---
-title: How-to 가이드
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Hour of Code를 방과후 수업에서 가르치는 방법
 
-### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### 이 운동에 참여하고 다음의 단계로 컴퓨터 과학을 학생들에게 소개해 보세요.
+
+컴퓨팅 사고는 문제해결 능력과 논리력, 창의력을 키워주는데 도움이 됩니다. 기술은 지구상의 모든 산업을 변모시키고 있습니다. 오늘날 학생은 단순히 사용법만이 아닌 기술을 창조하는 방법을 배워야 합니다. 일찍 시작함으로써, 그들은 21세기 직업경로에서 성공을 위한 기반을 갖게 될 것입니다.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 모든 아이들이 컴퓨터가 필요한 것은 **아닙니다**, 그리고 Hour of Code는 컴퓨터 없이도 가능합니다.
+Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. 아니면 오프라인 자습서를 시도해보세요.
+튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
 
-**충분한 장비가 없습니까?**[페어 프로그래밍 방법을](https://www.youtube.com/watch?v=vgkahOzFH2Q) 활용하세요. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
 
 ## 5. 여러분에게 영감을 주는 비디오를 보며 여러분의 Hour of code를 시작하세요.
 
@@ -59,7 +65,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. 어떻게 하는지 같이 알아볼까.” - “기술은 항상 우리가 원하는 방식대로 되지는 않아.” - “프로그래밍을 배우는 것은 바로 유창하게 잘 할 수는 없는 새로운 언어를 배우는 것과 같아. .”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

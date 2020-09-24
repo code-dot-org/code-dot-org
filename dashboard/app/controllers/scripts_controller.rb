@@ -112,7 +112,6 @@ class ScriptsController < ApplicationController
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       beta: beta,
       betaWarning: beta_warning,
-      levelKeyList: beta && Level.key_list,
       lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
@@ -196,7 +195,7 @@ class ScriptsController < ApplicationController
       :tts,
       :is_stable,
       :is_course,
-      :script_announcements,
+      :announcements,
       :pilot_experiment,
       :editor_experiment,
       resourceTypes: [],
@@ -206,7 +205,7 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
-    h[:script_announcements] = JSON.parse(h[:script_announcements]) if h[:script_announcements]
+    h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
     h.delete(:visible_to_teachers)
     h
   end

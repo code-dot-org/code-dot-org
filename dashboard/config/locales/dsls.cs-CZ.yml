@@ -1384,15 +1384,12 @@ cs-CZ:
             způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program neselže. Veverka se dostane k žaludu.
-        - text: Veverka půjde po svém posledním otočení špatným směrem.
-          correct: true
-          feedback: Správně!
-        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nevím.
         questions:
-        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
-            způsobí selhání tohoto programu?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.
@@ -1493,7 +1490,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1508,7 +1506,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1523,7 +1522,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1538,7 +1538,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -2664,3 +2665,24 @@ cs-CZ:
         questions:
         - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
             spustí?
+      'Overview: Images':
+        markdown: "# Obrázky\n\n## Zadávání URL obrázku na stránku\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nExistuje několik způsobů, jak získat
+          URL obrázku.  \n\nBěžný způsob (ukázaný vpravo) je najít obrázek, který
+          se ti líbí, na nějaké stránce a kliknout na něj pravým tlačítkem (nebo ctrl-kliknutí)
+          a vybrat možnost, která říká něco jako \"Kopírovat adresu obrázku\". Tu
+          pak budeš moct vložit do textového pole v App Lab.\n\nPokud si nejsi jistý,
+          můžeš také vybrat možnost \"Otevřít obrázek v nové kartě\", což zobrazí
+          samotný obrázek a jeho URL se zobrazí ve vyhledávací liště, ze které ho
+          můžeš zkopírovat a následně vložit do App Lab.\n\n**Běžná chyba**: Použití
+          URL *stránky vyhledávání obrázku* namísto URL samotného obrázku.\n\n* Ujisti
+          se, že získáš cestu k samostatnému obrázku - něco, co končí **.jpg**, **.gif**
+          nebo **.png**.\n* URL, která začíná takhle: `https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          pravděpodobně není správná.\n\n\n## Nahrávání vlastních obrázků\n\nPokud
+          máš obrázky uložené v počítači, můžeš je nahrávat do **správce souborů**
+          App Lab. Stačí kliknout na **Nahrát soubor** a následovat dialogy na obrazovce.\n\nObrázky
+          musí být typu: **.jpg**, **.png** nebo **.gif**\n\nJakmile nahraješ obrázek,
+          musíš kliknout na **Vybrat**, abys ho vložil do souboru. Pokud přidáš několik
+          obrázků, uvidíš je všechny pokaždé, když nahraješ soubor a můžeš používat
+          *jakýkoliv* soubor, který jsi už nahrál.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Klikni na Pokračovat a vyzkoušej si to!"

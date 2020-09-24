@@ -66,8 +66,8 @@ tr:
   oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_landing_videos: Yapay Akil hakkinda videolar ve Makine Ogrenimi
+  oceans_behind_the_scenes: 'Okyanuslar icin YA (yapay akil): Sahnelerin Arkasinda'
   oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
     href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
@@ -126,10 +126,10 @@ tr:
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
+  activity: Aktivite
+  name: İsim
+  description: Tanım
+  audience: Dinleyiciler
   ai_resource_header: Teach and Learn about AI
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
@@ -366,6 +366,7 @@ tr:
   how_to_nav_companies: Şirketler için
   how_to_nav_afterschool_educators: Okul sonrası eğitmenler için
   how_to_nav_volunteers: Gönüllüler için
+  how_to_nav_virtual: For virtual events
   whats_next_header: Sırada ne var?
   whats_next_description: Size etkinlik için ipuçları ve malzemeler göndereceğiz.<a
     href='http://code.org/learn'>Herhangi bir tarayıcıdan,telefondan ya da bilgisayarsız
@@ -495,6 +496,7 @@ tr:
   signup_send_posters_address_placeholder: Harita üzerinde bu adres paylaşılmayacaktır
   signup_event_type_in_school: Okul içinde
   signup_event_type_out_of_school: Okulun dışında
+  signup_event_type_at_home: Home
   signup_submit_census_label: Gönder
   signup_submit_census_error_message: Özür dileriz. Bir hata oluştu. Lütfen formu
     tekrar göndermeyi deneyin.
@@ -8556,7 +8558,7 @@ tr:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8773,9 +8775,9 @@ tr:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding

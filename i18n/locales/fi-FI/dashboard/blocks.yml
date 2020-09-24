@@ -88,9 +88,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -109,9 +106,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -188,9 +182,6 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} tee liike {MOVE} {DIR} kerran"
         options:
@@ -219,9 +210,6 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'toista joka {N} mittayksikköä jälkeen {START} '
       Dancelab_everySeconds:
@@ -1097,6 +1085,13 @@ fi:
             '"z"': z
       gamelab_locationAt:
         text: 'sijainti x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
       gamelab_locationMouse:
         text: hiiren sijainti
       gamelab_locationOf:

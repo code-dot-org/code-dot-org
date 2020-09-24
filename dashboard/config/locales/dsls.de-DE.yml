@@ -3269,22 +3269,12 @@ de-DE:
             dieses Programm scheitern lässt? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
-          feedback: Falsch. Nach seiner letzten Drehung geht Scrat in die falsche
-            Richtung.
-        - text: Nach seiner letzten Drehung geht Scrat in die falsche Richtung.
-          correct: true
-          feedback: Richtig!
-        - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
-            stoppen.
-          feedback: Falsch. Scrat macht erst einen Schritt zu wenig, nachdem er sich
-            in die falsche Richtung gedreht hat.
+        - {}
+        - correct: true
+        - correct: true
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
-            die falsche Richtung geht. '
         questions:
-        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
-            dieses Programm scheitern lässt? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.

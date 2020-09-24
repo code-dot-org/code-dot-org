@@ -91,9 +91,6 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} esegue ininterrottamente la mossa {MOVE} {DIR}"
         options:
@@ -113,9 +110,6 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: modifica la {PROPERTY} di {SPRITE} di {VAL}
         options:
@@ -193,9 +187,6 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} esegue la mossa {MOVE} {DIR} una volta"
         options:
@@ -225,9 +216,6 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
@@ -1114,6 +1102,13 @@ it:
             '"z"': z
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
       gamelab_locationMouse:
         text: posizione del mouse
       gamelab_locationOf:

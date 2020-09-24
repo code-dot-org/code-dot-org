@@ -1,36 +1,39 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### 이 운동에 참여하고 다음의 단계로 컴퓨터 과학을 학생들에게 소개해 보세요.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+컴퓨팅 사고는 문제해결 능력과 논리력, 창의력을 키워주는데 도움이 됩니다. 기술은 지구상의 모든 산업을 변모시키고 있습니다. 오늘날 학생은 단순히 사용법만이 아닌 기술을 창조하는 방법을 배워야 합니다. 일찍 시작함으로써, 그들은 21세기 직업경로에서 성공을 위한 기반을 갖게 될 것입니다.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
-- [1. Watch the Hour of Code how-to video](#how-to-video)
-- [2. Explore activities and tutorials](#explore-activities)
-- [3. Create your plan for the day](#create-your-plan)
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [교육자들을 위한 추가적인 Hour of Code 리소스들](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 아워오브코드의 하우 투 비디오 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. 활동과 튜토리얼 탐구.
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -42,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. 당일 계획 수립
 
 ### Think about your technology needs - computers are optional!
 
@@ -61,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. 아워오브코드 홍보
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -83,9 +86,9 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 * * *
 
-<a id="promote-your-hour"></a>
+<a id="how-to-start"></a>
 
-## 5. Start your Hour of Code Strong
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -100,15 +103,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 * * *
 
-## 6. Get Coding!
+<a id="code"></a>
+
+## 6. Get coding!
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- 화이트보드에 튜토리얼 링크를 적으세요. 참가자 수 아래[i선택하신 튜토리얼에 대한 정보에 관한]({{ urls/learn }})링크를 찾으세요.
 
 When your students come across difficulties it's okay to respond:
 
@@ -123,7 +128,9 @@ What if a student finishes early?
 
 * * *
 
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
@@ -138,12 +145,14 @@ What if a student finishes early?
 
 * * *
 
+<a id="other-resources"></a>
+
 ## 교육자를 위한 다른 Hour of Code 리소스들
 
 - 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
 - [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요.
 
-## Hour of Code 이후에는 어떤 것들이 있나요?
+### Hour of Code 이후에는 어떤 것들이 있나요?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

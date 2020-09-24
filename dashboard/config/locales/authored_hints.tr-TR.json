@@ -5218,16 +5218,16 @@
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Bu programın neden ilk yarısı çalıştı? Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden her geçtiklerinde arılar ne kadar nektar toplarlar?",
@@ -5772,22 +5772,22 @@
           "courseD_farmer_conditionals5a_c": "5 kere ilerle. Her ilerlediğinde \"sürece yığın var\" döngüsü ile toprağı temizle."
         },
         "courseD_farmer_while6": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2018": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2019": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
         "courseD_farmer_while6_2020": {
-          "courseD_farmer_conditionals6_a": "Her deliği doldurmak için ne kadar zaman gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
+          "courseD_farmer_conditionals6_a": "Her deliğin kaç sefer doldurulması gerektiğini anlamak için 'süresince' döngüsünü kullandığından emin ol.",
           "courseD_farmer_conditionals6_b": "Çiftçinin bir merdiven basamağı deseninde birkaç kez ileri ve aşağı doğru gitmesi gerektiğine dikkat edin.",
           "courseD_farmer_conditionals6_c": "Merdiven basamak modeli aşağıdaki blokları kullanır \n\\-ilerle \n\n-   doldur \n-   sağa dön \n-   ilerle \n-   doldur \n-   sola dön\n    Kaç kez bu merdiven basamağı desenini kullanman gerekiyor? 'Çukur olduğu sürece' bloğunu kullanarak çukurları doldurduğunuzdan emin olun."
         },
@@ -5949,22 +5949,22 @@
           "courseD_maze_nestedLoops5_b": "Döngüleri nereye koyacağınızı bulamıyor musunuz? Kodu adım adım yazmayı ve bir desen bulmayı deneyin."
         },
         "courseD_maze_nestedLoops6": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2018": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2019": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },
         "courseD_maze_nestedLoops6_2020": {
-          "courseD_maze_nestedLoops6_a": "Eğer takıldıysan, önce döngüler olmayan kağıt üzerine kodu yazmayı dene ve desenleri ara.",
+          "courseD_maze_nestedLoops6_a": "Zorlanırsanız kodu önce döngüler olmadan kağıt üzerine yazmayı deneyin ve tekrarlı kısımları bulun.",
           "courseD_maze_nestedLoops6_b": "İç içe 'tekrar' döngüleri, kullanılan blok sayısının azaltılmasına yardımcı olabilir.",
           "courseD_maze_nestedLoops6_c": "Bu bulmacayı çözmek için iki farklı 'tekrar' döngüsü setine ihtiyacınız olacak."
         },

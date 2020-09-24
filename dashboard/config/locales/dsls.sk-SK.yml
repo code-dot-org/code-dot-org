@@ -1990,20 +1990,12 @@ sk-SK:
             program zlyhá? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
-          feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
-        - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
-          correct: true
-          feedback: Správne!
-        - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
-          feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
-            smerom.
+        - {}
+        - correct: true
+        - correct: true
         - text: Neviem.
-          feedback: 'Prvá chyba je, že Scrat pôjde zlým smerom po svojom poslednom
-            otočení. '
         questions:
-        - text: 'Pozri sa pozorne na tento kód.  Aká je prvá chyba, kvôli ktorej tento
-            program zlyhá? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Vták skončí jeden krok pred prasiatkom.

@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
@@ -9,15 +9,18 @@ title: How-to Guide for Hour of Code
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-An Hour of Code can also be held <b>remotely, online</b>! To get started, check out our <a href="https://hourofcode.com/us/how-to/virtual">tips for hosting a virtual Hour of Code event</a>. 
-
-- <a href="#how-to-video">1. Watch the Hour of Code how-to video</a>
-- <a href="#explore-activities">2. Explore activities and tutorials</a>
-- <a href="#create-your-plan">3. Create your plan for the day</a>
+- <a href="#how-to-video">Watch the Hour of Code how-to video</a>
+- <a href="#explore-activities">Explore activities and tutorials</a>
+- <a href="#create-your-plan">Create your plan for the day</a>
 - <a href="#promote-your-hour">Promote your Hour of Code</a>
-- <a href="#support-hour-of-code">More ways to support the Hour of Code</a>
+- <a href="#how-to-start">How to start your Hour of Code strong</a>
+- <a href="#code">Get coding</a>
+- <a href="#celebrate">Celebrate your students' success</a>
+- <a href="#other-resources">Other Hour of Code resources for educators</a>
+
+### An Hour of Code can also be hosted remotely! To get started, check out our <a href="https://hourofcode.com/us/how-to/virtual">tips for hosting a virtual Hour of Code event</a>. 
 
 ***
 
@@ -75,8 +78,8 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
 ---
-<a id="promote-your-hour"></a>
-## 5. Start your Hour of Code Strong
+<a id="how-to-start"></a>
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -91,11 +94,11 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 ---
-
-## 6. Get Coding!
+<a id="code"></a>
+## 6. Get coding!
 
 Direct students to the activity
 
@@ -113,8 +116,8 @@ What if a student finishes early?
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 ---
-
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+## 7. Celebrate your students' success
 
 [col-33]
 
@@ -128,13 +131,13 @@ What if a student finishes early?
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 ----
-
+<a id="other-resources"></a>
 ## Other Hour of Code resources for educators:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## What comes after the Hour of Code?
+### What comes after the Hour of Code?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

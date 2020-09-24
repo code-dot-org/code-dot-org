@@ -5,29 +5,29 @@ ar:
   language: الإنجليزية
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
-  campaign_date_start_short: 4 ديسمبر
-  campaign_date_start_long: 4 ديسمبر
-  campaign_date_short: 4-10 ديسمبر
-  campaign_date_full: 4-10 ديسمبر
-  campaign_date_year: '2017'
-  campaign_date_full_year: 4-10 ديسمبر 2017
-  latam_campaign_date_start_short: Oct. 1
+  campaign_date_start_short: 7 ديسمبر
+  campaign_date_start_long: 7 ديسمبر
+  campaign_date_short: 7-13 ديسمبر
+  campaign_date_full: 7-13 ديسمبر
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 ديسمبر 2020
+  latam_campaign_date_start_short: 1 أكتوبر
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2017'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_short: 1 أكتوبر
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2017'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: تعلم علوم الحاسوب. غير العالم.
   hoc2019_header_line1_mobile: تعلم علوم الحاسوب.
@@ -366,6 +366,7 @@ ar:
   how_to_nav_companies: للشركات
   how_to_nav_afterschool_educators: للمعلمين بعد المدرسة
   how_to_nav_volunteers: للمتطوعين
+  how_to_nav_virtual: For virtual events
   whats_next_header: ماذا بعد؟
   whats_next_description: سنرسل لك مواد ونصائح مفيدة للحدث الخاص بك. <a href='http://code.org/learn'>جرِّب
     البرامج التعليمية الحالية</a> على أي متصفح أو هاتف ذكي - أو حتى بدون جهاز كمبيوتر!
@@ -490,6 +491,7 @@ ar:
   signup_send_posters_address_placeholder: لن تتم مشاركة هذا العنوان على خريطتنا
   signup_event_type_in_school: داخل المدرسة
   signup_event_type_out_of_school: خارج المدرسة
+  signup_event_type_at_home: Home
   signup_submit_census_label: إرسال
   signup_submit_census_error_message: نعتذر. حدث خطأ. يرجى محاولة إرسال النموذج مرة
     أخرى.

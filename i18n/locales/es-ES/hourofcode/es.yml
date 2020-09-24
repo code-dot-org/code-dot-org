@@ -379,6 +379,7 @@ es:
   how_to_nav_companies: Para empresas
   how_to_nav_afterschool_educators: Para los educadores de extraescolares
   how_to_nav_volunteers: Para los voluntarios
+  how_to_nav_virtual: For virtual events
   whats_next_header: "¿Qué puedo hacer?"
   whats_next_description: Te enviaremos materiales y consejos útiles para tu evento.
     <a href='http://code.org/learn'> Prueba los tutoriales</a> para cualquier navegador
@@ -515,7 +516,8 @@ es:
   signup_send_posters_address_placeholder: Esta dirección no será compartida en nuestro
     mapa
   signup_event_type_in_school: En un colegio o instituto
-  signup_event_type_out_of_school: Fuera de una escuela
+  signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -989,7 +991,7 @@ es:
   highlights_constant_athletes_short_heading: Esfuérzate
   footer_copyright_message: Copyright %{current_year} Code.org. Todos los derechos
     reservados.
-  footer_trademark_message: Hora de código ™ es una marca registrada de Code.org.
+  footer_trademark_message: Hora del código ™ es una marca registrada de Code.org.
   footer_menu_partners: Socios y asesores
   footer_menu_contact: Contáctenos
   footer_menu_support: Soporte
