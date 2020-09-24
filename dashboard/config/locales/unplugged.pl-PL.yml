@@ -212,9 +212,10 @@ pl:
           online.
       TangramAlgorithms:
         title: Algorytmy na tangramach
-        desc: Ta lekcja demonstruje coś ważnego o algorytmach. Jeśli Twój algorytm
-          jest prosty, to istnieje wiele sposobów jego wykorzystania. Jeśli chcesz
-          mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga więcej szczegółów.
+        desc: Na tej lekcji przedstawia się ważną informację o o algorytmach. Jeśli
+          Twój algorytm jest prosty, to istnieje wiele sposobów jego wykorzystania.
+          Jeśli chcesz mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga
+          więcej szczegółów.
       EnvelopeVariables:
         title: Zmienne w kopertach
         desc: Zmienne umożliwiają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu,
@@ -284,10 +285,10 @@ pl:
           w grze) dotykają się.
       courseA_unplugged_loops:
         title: Pętle bez komputera
-        desc: W tej lekcji dowiesz się, jak używać pętli!
+        desc: Na tej lekcji dowiesz się, jak używać pętli!
       courseB_unplugged_MRF:
         title: Aktywność unplugged (bez komputera)
-        desc: W tej lekcji "zaprogramujesz" swoich przyjaciół!
+        desc: Na tej lekcji "zaprogramujesz" swoich przyjaciół!
       courseB_unplugged_loopyMRF:
         title: Aktywność unplugged (bez komputera)
         desc: Podobnie jak w &ldquor;Moich Robotycznych Przyjaciołach&rdquo;, będziesz
@@ -397,9 +398,10 @@ pl:
           i wywoływać funkcje.
       courseF_unplugged_tangrams:
         title: Algorytmy na tangramach
-        desc: Ta lekcja demonstruje coś ważnego o algorytmach. Jeśli Twój algorytm
-          jest prosty, to istnieje wiele sposobów jego wykorzystania. Jeśli chcesz
-          mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga więcej szczegółów.
+        desc: Na tej lekcji przedstawia się ważną informację o o algorytmach. Jeśli
+          Twój algorytm jest prosty, to istnieje wiele sposobów jego wykorzystania.
+          Jeśli chcesz mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga
+          więcej szczegółów.
       courseF_unplugged_envelopeVariables:
         title: Zmienne w kopertach
         desc: Zmienne umożliwiają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu,
@@ -462,7 +464,7 @@ pl:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Moi przyjaciele wśród robotów
-        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
+        desc: Ucz się programowania pisząc kod dla swoich przyjaciół!
       PlantASeed_2018:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
@@ -479,7 +481,7 @@ pl:
           przedstawiają, jak bezpiecznie nawigować po Internecie.
       courseA_unplugged_loops_2018:
         title: Pętle bez komputera
-        desc: W tej lekcji dowiesz się, jak używać pętli!
+        desc: Na tej lekcji dowiesz się, jak używać pętli!
       BigEvent_2018:
         title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
@@ -550,7 +552,7 @@ pl:
           się na zespoły i będą pracować razem nad pisaniem programu, po jednej instrukcji.
       courseB_unplugged_MRF_2019:
         title: Moi przyjaciele wśród robotów
-        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
+        desc: Ucz się programowania pisząc kod dla swoich przyjaciół!
       BuildingAFoundation_2019:
         title: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -671,7 +673,7 @@ pl:
           przedstawiają, jak bezpiecznie nawigować po Internecie.
       courseA_unplugged_loops_2019:
         title: Pętle bez komputera
-        desc: W tej lekcji dowiesz się, jak używać pętli!
+        desc: Na tej lekcji dowiesz się, jak używać pętli!
       MoveItMoveIt_2019:
         title: Przenieść go, przenieść go
       DigitalFootprint_2019:

@@ -137,7 +137,7 @@ id:
       account_exists: Kabar baik! Anda telah memiliki akun Code.org yang menggunakan
         %{email}
       sign_in: Mohon mendaftar dan kami akan menghubungkan profil %{provider}.
-      sign_up: Bukan email Andal? Ingin membuat akun baru dengan email berbeda? Kami
+      sign_up: Bukan email Andal? Ingin membuat akun baru dengan email berbeda? Anda
         juga akan menghubungkan profil %{provider} jika Anda tidak ingin membuat akun
         baru.
   signup_form:
@@ -148,12 +148,12 @@ id:
       <a href="/">Anda dapat menelusuri berbagai tahap dan teka-teki</a> tanpa akun,
       namun Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.
     overview_markdown: Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas
-      Anda. [Anda dapat menelusuri berbagai tahap dan teka-teki](/) tanpa akun, namun
+      Anda. [Anda dapat menelusuri berbagai tahap dan puzzle](/) tanpa akun, namun
       Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.
     hoc_already_signed_up_heading: Mulai tanpa masuk
     hoc_already_signed_up_content: Anda mendaftar untuk mengajarkan kode selama satu
       jam! Anda dan siswa Anda tidak perlu masuk ke studio kode untuk berpartisipasi
-      dalam acara tersebut. Untuk memulai, <a href="%{learn_url}"> pilih tutorial
+      dalam event tersebut. Untuk memulai, <a href="%{learn_url}"> pilih tutorial
       </a> untuk kelas Anda dan bagikan tautan dengannya. <br/> <br/> Jika Anda menikmati
       Jam Kode dan ingin Selanjutnya, Anda dapat menyiapkan kata sandi dan membuat
       akun Kode Studio di bawah untuk mendaftarkan siswa Anda ke <a href="%{educate_url}">
@@ -162,13 +162,13 @@ id:
       masuk ke Studio code, Anda harus menyiapkan kata sandi untuk akun Anda. Ini
       akan membiarkan Anda menyimpan kemajuan Anda dan mengelola kelas Anda. Anda
       akan dapat memberikan kursus kepada siswa dan melacak kemajuan mereka. <a href="%{studio_url}">
-      Anda juga dapat terus menjelajahi berbagai tahap dan teka-teki </a> tanpa membuat
+      Anda juga dapat terus menjelajahi berbagai tahap dan puzzle </a> tanpa membuat
       akun.
     hoc_already_signed_up_content_post_hoc_markdown: Terima kasih telah hosting Jam
       Kode. Untuk masuk ke Studio code, Anda harus menyiapkan kata sandi untuk akun
       Anda. Ini akan membiarkan Anda menyimpan kemajuan Anda dan mengelola kelas Anda.
       Anda akan dapat memberikan kursus kepada siswa dan melacak kemajuan mereka.
-      [Anda juga dapat terus menjelajahi berbagai tahap dan teka-teki](%{studio_url})
+      [Anda juga dapat terus menjelajahi berbagai tahap dan puzzle](%{studio_url})
       tanpa membuat akun.
     teacher_educator_guide: Lihat panduan guru
     title: Mendaftar ke Code.org
@@ -209,15 +209,14 @@ id:
     error: Sebuah kesalahan terjadi.
     email_preference_question: Dapat kami email Anda tentang pembaruan kursus kami,
       peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
-    email_preference_privacy: "(Lihat kebijakan privasi kami)\n"
+    email_preference_privacy: "(Lihak kebijakan privasi kami)"
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
-    parent_account_checkbox: Saya adalah seorang orang tua/wakil mendaftar atas nama
-      anak saya
-    parent_account_email_progress_permission: Bolehkah kami sesekali mengirim Anda
-      email mengenai pembaruan mengenai perkembangan dan proyek anak Anda, dan pembaruan
-      tentang kursus dan ilmu komputer?
+    parent_account_checkbox: Saya orang tua/wali yang mendaftar untuk anak saya
+    parent_account_email_progress_permission: Dapatkah kami mengemail Anda sesekali
+      terkait info terkini mengenai kemajuan dan proyek anak Anda, serta kursus dan
+      ilmu komputer mereka? [(Lihak kebijakan privasi kami.)](%{privacy_policy_url})
     parent_account_email_label: Email Orang Tua/Wali
   school_info:
     title: Informasi sekolah (pilihan)
@@ -557,12 +556,13 @@ id:
     auth_option_saved_no_email: Anda telah menghubungkan akun %{provider} Anda.
     update_email: Update
     for_parents_and_guardians: Untuk Orang Tua dan Wali
-    link_a_parent_email: Hubungkan alamat email orang tua/wali ke akun ini untuk tetap
-      mengikuti perkembangan dan proyek anak Anda.
+    link_a_parent_email: Tautkan alamat email orang tua/wali ke akun ini untuk tetap
+      mendapatkan info terkini mengenai kemajuan dan proyek anak Anda. Anda juga bisa
+      menggunakan alamat email ini untuk pemulihan kata sandi.
     parent_guardian_email_label: Email orang tua/wali
     none: Tidak Ada
     only_one_parent_email_supported_warning: 'Catatan: kami hanya dapat mendukung
-      satu alamat email orang tua/wali per murid pada saat ini.'
+      satu alamat email orang tua/wali per akun siswa pada saat ini.'
     encrypted: dienkripsi
   user_level:
     completed: Selesai
@@ -759,9 +759,9 @@ id:
     manage: Bangun tingkatan
     view: Tampilan
     back: Kembali ke skrip
-    success: Kamu berhasil merubah blok-blok tersebut.
+    success: Anda berhasil merubah blok-blok tersebut.
     level:
-      create: Buat level baru
+      create: Buat Tingkat baru
       current: Tingkat saat ini
       unused: Tingkat yang tidak terpakai
   upsell:
@@ -1130,10 +1130,11 @@ id:
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan
       oleh Code.org.
     disclaimer_text: Situs ini mungkin memiliki kebijakan privasi yang berbeda dari
-      Code.org's. Kami telah memilih sumber daya pihak ketiga ini karena kami pikir
-      ini berguna bagi Anda. Meskipun kami tidak bertanggung jawab langsung atas konten
-      situs web ini, <a href='%{support_url}'> Hubungi Dukungan </a> jika Anda mendapati
-      konten tersebut tidak pantas, atau jika situs yang ditautkan tidak lagi tersedia.
+      Code.org's. Kami telah memilih materi pembelajaran pihak ketiga ini karena kami
+      pikir ini berguna bagi Anda. Meskipun kami tidak bertanggung jawab langsung
+      atas konten situs web ini, <a href='%{support_url}'> Hubungi Dukungan </a> jika
+      Anda mendapati konten tersebut tidak pantas, atau jika situs yang ditautkan
+      tidak lagi tersedia.
   hoc_download:
     title: Kode download jam
     capsule_title: Apakah kamu mempunyai internet?
@@ -1241,15 +1242,15 @@ id:
         update ke kursus kami, atau Berita Sains komputer lainnya?
       legal_opt_in: 'Dengan menyerahkan formulir ini, Anda setuju untuk membiarkan
         Code.org untuk membagikan informasi tentang bagaimana Anda menggunakan Code.org
-        dan sumber daya Professional Learning dengan Rekan Internasional Code.org
-        di negara Anda, distrik sekolah, dan fasilitator. Kami akan membagikan informasi
-        kontak Anda, kursus.unit mana yang Anda gunakan dan menghitung data tentang
-        kelas Anda dengan rekan-rekan ini. Ini termasuk jumlah murid dalam kelas Anda,
-        pembagian demografis dalam kelas Anda, dan nama sekolah dan distrik Anda.
-        Kami tidak akan membagikan informasi apa pun tentang individu murid dengan
-        rekan-rekan kami: semua informasi murid akan tidak-diidentifikasi atau dihitung.
-        Rekan Internasional dan fasilitator kami diwajibkan secara kontrak untuk memperlakukan
-        informasi ini dengan kerahasiaan yang sama seperti Code.org. '
+        dan materi pembelajaran pembelajaran profesional dengan Rekan Internasional
+        Code.org di negara Anda, distrik sekolah, dan fasilitator. Kami akan membagikan
+        informasi kontak Anda, kursus.unit mana yang Anda gunakan dan menghitung data
+        tentang kelas Anda dengan rekan-rekan ini. Ini termasuk jumlah murid dalam
+        kelas Anda, pembagian demografis dalam kelas Anda, dan nama sekolah dan distrik
+        Anda. Kami tidak akan membagikan informasi apa pun tentang individu murid
+        dengan rekan-rekan kami: semua informasi murid akan tidak-diidentifikasi atau
+        dihitung. Rekan Internasional dan fasilitator kami diwajibkan secara kontrak
+        untuk memperlakukan informasi ini dengan kerahasiaan yang sama seperti Code.org. '
     form_entries:
       gender:
         male: Laki-laki
@@ -1314,7 +1315,7 @@ id:
         opt_in_no: Tidak
     international_opt_in:
       title: Kehadiran Workshop
-      intro: Terima kasih telah meluangkan waktu untuk menerima pelatihan pada kurikulum
+      intro: Terima Anda telah meluangkan waktu untuk menerima pelatihan pada kurikulum
         Code.org. Misi kami untuk membawa kesempatan edukasi ilmu komputer kepada
         semua anak-anak di semua sekolah di seluruh dunia tak akan mungkin tanpa Anda.
       instructions: Tolong isi formulir di bawah untuk menunjukkan bahwa 1) Anda menghadiri
@@ -1322,22 +1323,22 @@ id:
         dan 2) Anda setuju untuk membagikan informasi Anda dengan rekan internasional
         kami di negara Anda agar mereka dapat membantu perjalanan Anda sebagai seorang
         guru ilmu komputer.
-      thanks_markdown: Terima kasih untuk Menyerahkan! Kami menanti untuk membantu
+      thanks_markdown: Terima Anda untuk Menyerahkan! Kami menanti untuk membantu
         Anda selagi Anda mengenal kurikulum dan alat Code.org. Tolong terus bagikan
         pertanyaan dan masukan Anda dengan kami di [support@code.org](%{support_email_url})
         atau dengan mempostingnya di [teacher forum](%{teacher_forum_url})!
     logged_out:
-      heading: Terima kasih atas minat Anda pada Professional Learing Program!
+      heading: Terima Anda atas minat Anda pada Pembelajaran Profesional Program!
       body: Untuk mulai, Anda perlu masuk ke akun Code.org Anda. Jika Anda ingin informasi
         lebih lanjut tentang program ini sebelum memulai aplikasi, silakan periksa
-        <a href="%{url}">Professional Learning Program overview</a>.
+        <a href="%{url}">Pembelajaran Profesional Program overview</a>.
     not_teacher:
-      body_markdown: Terima kasih untuk ketertarikan Anda dalam Professional Learing
+      body_markdown: Terima kasih untuk ketertarikan Anda dalam Pembelajaran Profesional
         Program Code.org! Anda sedang terdaftar ke dalam akun murid. Silakan buat
         akun guru atau [go to your user settings](%{user_settings}) untuk mengubah
         akun Anda dari murid menjadi guru.
       more_markdown: a Anda ingin informasi lebih lanjut tentang program ini sebelum
-        memulai aplikasi, silakan periksa [Professional Learning Program overview](%{pl_overview}).
+        memulai aplikasi, silakan periksa [Pembelajaran Profesional Program overview](%{pl_overview}).
     no_teacher_email:
       body_markdown: Akun Anda tidak memiliki alamat email. Silakan [visit your account
         settings](%{user_registration}) Untuk menambahkan Alamat email Anda sebelum
@@ -1353,7 +1354,7 @@ id:
       Amerika Serikat?
     message: Data dari penggunaan Anda atas situs ini dapat dikirimkan ke dan disimpan
       atau diproses di Amerika Serikat.
-    link_intro: Untuk perincian lihat
+    link_intro: Untuk Rincian lihat
     privacy_policy: Kebijakan privasi
     logout: Keluar
     true: Ya
@@ -1375,7 +1376,7 @@ id:
       error_invalid_user: Id pengguna salah. Silakan coba untuk masuk lagi.
       error_no_code: Mohon masukkan kode masuk Anda.
   parent_email_banner:
-    text: "**Apakah Anda Orang tua atau wali?** hubungkan email Anda ke akun ini agar
-      tetap menerima pemberitahuan tentang kemajuan dan proyek anak Anda!"
+    text: "**Apakah Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk
+      tetap mendapatkan info terkini mengenai kemajuan dan proyek anak Anda!"
     link_your_email: Hubungkan email Anda
     not_now: Tidak sekarang

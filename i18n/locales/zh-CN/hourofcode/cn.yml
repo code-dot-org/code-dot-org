@@ -190,8 +190,9 @@ cn:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: '开始《代码小憩》！您每周的灵感、社区和计算机科学。
+
+'
   codeorg_homepage_code_break_link_text: 了解更多
   cookie_banner_message: 通过继续浏览我们的网站或单击"我同意"，您同意在您的计算机或设备上存储 cookie。
   cookie_banner_more_information: 请参阅 Code.org 的隐私政策。
@@ -466,6 +467,7 @@ cn:
   signup_send_posters_address_placeholder: 此地址不会在我们的地图上被共享
   signup_event_type_in_school: 在一所学校
   signup_event_type_out_of_school: 学校之外
+  signup_event_type_at_home: Home
   signup_submit_census_label: 提交
   signup_submit_census_error_message: 我们很抱歉，系统出现了错误。请尝试重新提交表单。
   signup_submit_label: 注册

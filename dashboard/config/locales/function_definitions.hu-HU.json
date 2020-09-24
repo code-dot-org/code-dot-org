@@ -67,7 +67,11 @@
             "name": "rajzold meg a jobb lábat"
           },
           "draw body and arms": {
-            "name": "rajzolj testet és karokat"
+            "name": "rajzolj testet és karokat",
+            "parameters": {
+              "armlength": "kar hossza",
+              "bodylength": "test hossza"
+            }
           },
           "draw a head": {
             "name": "rajzolj egy fejet"

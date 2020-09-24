@@ -1521,6 +1521,9 @@ da-DK:
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
   compatibility_hide_this_warning: Skjul denne advarsel
+  compatibility_unsupported_browser_markdown: Din browser er ikke understøttet. Opgrader
+    venligst din browser til [en af vores understøttende browsere](%{supported_browsers_url}).
+    Du kan prøve at vise siden, men forvent at funktionaliteten er dårlig.
   flappy_shortcode: bask
   header_home: Hjem
   header_my_dashboard: Hjem
