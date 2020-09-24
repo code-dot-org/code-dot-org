@@ -79,4 +79,18 @@ class TestI18nStringUrlTracker < Minitest::Test
     test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
   end
+
+  def test_normalize_url_should_strip_query_string
+    url = 'https://studio.code.org/test/page?querystring=true'
+    expected_url = 'https://studio.code.org/test/page'
+    normalized_url = I18nStringUrlTracker.normalize_url(url)
+    assert_equal(expected_url, normalized_url)
+  end
+
+  def test_normalize_url_should_strip_anchor_tags
+    url = 'https://studio.code.org/test/page#tag-youre-it'
+    expected_url = 'https://studio.code.org/test/page'
+    normalized_url = I18nStringUrlTracker.normalize_url(url)
+    assert_equal(expected_url, normalized_url)
+  end
 end

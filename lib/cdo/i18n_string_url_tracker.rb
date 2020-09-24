@@ -1,5 +1,6 @@
 require 'cdo/firehose'
 require 'dynamic_config/dcdo'
+require 'uri'
 
 class I18nStringUrlTracker
   include Singleton
@@ -19,5 +20,12 @@ class I18nStringUrlTracker
       :i18n,
       {url: url, string_key: string_key, source: source}
     )
+  end
+
+  def self.normalize_url(url)
+    parsed_url = URI(url)
+    parsed_url.query = nil
+    parsed_url.fragment = nil
+    parsed_url.to_s
   end
 end
