@@ -71,6 +71,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(@firehose_record, test_record)
   end
 
+  def test_log_given_url_with_query_string_should_call_firehose_without_query_string
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/?query=true', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
   def test_log_given_false_dcdo_flag_should_not_call_firehose
     unstub_firehose
     unstub_dcdo
@@ -78,6 +86,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     FirehoseClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+  end
+
+  def test_normalize_url_given_nil_returns_nil
+    assert_nil(I18nStringUrlTracker.normalize_url(nil))
+  end
+
+  def test_normalize_url_given_blank_url_returns_blank_url
+    assert_equal('', I18nStringUrlTracker.normalize_url(''))
   end
 
   def test_normalize_url_should_strip_query_string
