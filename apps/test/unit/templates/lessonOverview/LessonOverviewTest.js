@@ -27,12 +27,12 @@ describe('LessonOverview', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
-    expect(wrapper.contains('Lesson Name'));
-    expect(wrapper.contains('Lesson Overview'));
+    expect(wrapper.contains('Lesson Name')).to.be.true;
+    expect(wrapper.contains('Lesson Overview')).to.be.true;
     expect(
       wrapper.contains('The purpose of the lesson is for people to learn')
     );
-    expect(wrapper.contains('- One'));
+    expect(wrapper.contains('- One')).to.be.true;
   });
 
   it('renders correct number of activities', () => {

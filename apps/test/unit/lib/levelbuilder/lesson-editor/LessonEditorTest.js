@@ -22,9 +22,9 @@ describe('LessonEditor', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonEditor {...defaultProps} />);
-    expect(wrapper.contains('Lesson Name'));
-    expect(wrapper.contains('Lesson Overview'));
-    expect(wrapper.contains('Overview of the lesson for students'));
+    expect(wrapper.contains('Lesson Name')).to.be.true;
+    expect(wrapper.contains('Lesson Overview')).to.be.true;
+    expect(wrapper.contains('Overview of the lesson for students')).to.be.true;
     expect(
       wrapper.contains('The purpose of the lesson is for people to learn')
     );

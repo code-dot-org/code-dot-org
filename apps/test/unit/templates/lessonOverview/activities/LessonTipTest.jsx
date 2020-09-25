@@ -17,8 +17,8 @@ describe('LessonTip', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonTip {...defaultProps} />);
-    expect(wrapper.contains('Teaching Tip'));
-    expect(wrapper.contains('Teaching tip content'));
+    expect(wrapper.contains('Teaching Tip')).to.be.true;
+    expect(wrapper.contains('Teaching tip content')).to.be.true;
     expect(wrapper.find('SafeMarkdown').length).to.equal(1);
   });
 });
