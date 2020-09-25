@@ -20,6 +20,7 @@ import reducers, {
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {sampleActivities} from './activitiesTestData';
+import _ from 'lodash';
 
 const getInitialState = () => ({
   levelKeyList: {},
@@ -182,100 +183,34 @@ describe('activitiesEditorRedux reducer tests', () => {
 
     it('update activity field', () => {
       let state = reducer(initialState, updateActivityField(1, 'time', 100));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            time: 100,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
+
+      let expectedState = _.cloneDeep(initialActivities);
+      expectedState[0].time = 100;
+
+      assert.deepEqual(expectedState, state.activities);
     });
 
     it('removes activity', () => {
       let state = reducer(initialState, removeActivity(1));
-      assert.deepEqual(
-        [
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 1,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
+
+      let expectedState = _.cloneDeep(initialActivities).slice(1);
+      expectedState[0].position = 1;
+
+      assert.deepEqual(expectedState, state.activities);
     });
 
     it('moves activity', () => {
       let state = reducer(initialState, moveActivity(2, 'up'));
-      assert.deepEqual(
-        [
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 1,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          },
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 2,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'}
-            ]
-          }
-        ],
-        state.activities
-      );
+
+      let expectedState = _.cloneDeep(initialActivities).reverse();
+      expectedState[0].position = 1;
+      expectedState[1].position = 2;
+
+      assert.deepEqual(expectedState, state.activities);
 
       state = reducer(state, moveActivity(1, 'down'));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
+
+      assert.deepEqual(initialActivities, state.activities);
     });
 
     it('moves a activitySection up three times', () => {
