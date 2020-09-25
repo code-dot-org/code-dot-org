@@ -26,7 +26,7 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('AddResourceDialog').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
-    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(1);
+    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
     expect(wrapper.find('EditTipDialog').length).to.equal(0);
   });
@@ -43,7 +43,7 @@ describe('ActivitySectionCardButtons', () => {
   it('edit tip pressed', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
-    const tip = wrapper.find('LessonTipIconWithTooltip');
+    const tip = wrapper.find('LessonTipIconWithTooltip').at(0);
     tip.simulate('click');
     expect(wrapper.state().addTipOpen).to.equal(true);
     expect(wrapper.state().editingExistingTip).to.equal(true);
