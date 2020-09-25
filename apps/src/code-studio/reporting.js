@@ -251,14 +251,7 @@ reporting.sendReport = function(report) {
     queryItems.push(key + '=' + report[key]);
   }
   const queryString = queryItems.join('&');
-
-  clientState.trackProgress(
-    report.result,
-    report.lines,
-    report.testResult,
-    appOptions.scriptName,
-    report.serverLevelId || appOptions.serverLevelId
-  );
+  clientState.trackLines(report.result, report.lines);
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
