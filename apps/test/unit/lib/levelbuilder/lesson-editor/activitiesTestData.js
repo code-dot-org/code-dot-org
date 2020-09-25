@@ -28,6 +28,11 @@ export const sampleActivities = [
             key: 'tip-1',
             type: 'teachingTip',
             markdown: 'Teaching tip content'
+          },
+          {
+            key: 'tip-2',
+            type: 'discussionGoal',
+            markdown: 'Discussion Goal content'
           }
         ]
       },
