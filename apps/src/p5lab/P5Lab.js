@@ -273,7 +273,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -444,7 +450,8 @@ P5Lab.prototype.init = function(config) {
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
-      this.isSpritelab /* shouldRunV3Migration */
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
     )
   );
 
