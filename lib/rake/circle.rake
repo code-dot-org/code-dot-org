@@ -212,6 +212,7 @@ end
 
 def check_for_new_file_changes
   puts "Checking for new file changes"
+  puts GitUtils.current_branch
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/config/locales/*.en.yml'])
     RakeUtils.system_stream_output('git diff -- dashboard/config/locales | cat')
     raise 'Unexpected change to dashboard/config/locales/ - Make sure you run seeding locally and include those changes in your branch.'
