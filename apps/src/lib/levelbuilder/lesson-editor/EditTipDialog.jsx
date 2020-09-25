@@ -104,13 +104,11 @@ export default class EditTipDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.delete()}
             onClick={this.handleDelete}
             color={Button.ButtonColor.red}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}

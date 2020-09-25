@@ -434,17 +434,12 @@ function activities(state = [], action) {
     case UPDATE_TIP: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      newState[action.activityPosition - 1].activitySections;
-      //Remove current tip
-      activitySections[
+      const index = activitySections[
         action.activitySectionPosition - 1
-      ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
-        tip => {
-          return tip.key !== action.newTip.key;
-        }
-      );
-      //Add updated tip
-      activitySections[action.activitySectionPosition - 1].tips.push(
+      ].tips.indexOf(tip => tip.key === action.newTip.key);
+      activitySections[action.activitySectionPosition - 1].tips.splice(
+        index - 1,
+        1,
         action.newTip
       );
       break;

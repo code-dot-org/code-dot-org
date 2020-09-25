@@ -45,6 +45,7 @@ describe('activitiesEditorRedux reducer tests', () => {
     ).activities;
     assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
       'teachingTip',
+      'discussionGoal',
       'contentCorner'
     ]);
   });
@@ -58,23 +59,26 @@ describe('activitiesEditorRedux reducer tests', () => {
         markdown: 'Programming is about solving puzzles.'
       })
     ).activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
-      'contentCorner'
+    assert.deepEqual(nextState[0].activitySections[1].tips, [
+      {
+        key: 'tip-1',
+        type: 'contentCorner',
+        markdown: 'Programming is about solving puzzles.'
+      },
+      {
+        key: 'tip-2',
+        markdown: 'Discussion Goal content',
+        type: 'discussionGoal'
+      }
     ]);
-    assert.deepEqual(nextState[0].activitySections[1].tips[0], {
-      key: 'tip-1',
-      type: 'contentCorner',
-      markdown: 'Programming is about solving puzzles.'
-    });
   });
 
   it('remove tip', () => {
     const nextState = reducer(initialState, removeTip(1, 2, 'tip-1'))
       .activities;
-    assert.deepEqual(
-      nextState[0].activitySections[1].tips.map(s => s.type),
-      []
-    );
+    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
+      'discussionGoal'
+    ]);
   });
 
   describe('levels', () => {
