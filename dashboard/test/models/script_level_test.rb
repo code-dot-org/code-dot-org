@@ -661,11 +661,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     seed_context.levels_script_levels = script.levels_script_levels.to_a
 
     seeding_key = nil
-    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
-    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context)}
 
     expected = {
-      "script_level.level_keys" => [script_level.levels.first.name],
+      "script_level.level_keys" => [script_level.levels.first.key],
       "script_level.chapter" => 1,
       "script_level.position" => 1,
       "lesson.key" => script_level.lesson.key,
@@ -683,7 +684,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     seed_context = create_seed_context(script_level.script)
 
     seeding_key = nil
-    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
     assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
 
     assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
@@ -700,15 +701,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     seed_context.levels_script_levels = script.levels_script_levels.to_a
 
     seeding_key = nil
-    # Important to not make queries in seeding_key, since it's called for each ScriptLevel during seeding
-    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context, false)}
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context, false)}
 
-    assert_equal [script_level.levels.first.name], seeding_key['script_level.level_keys']
+    assert_equal [script_level.levels.first.key], seeding_key['script_level.level_keys']
   end
 
   test 'LevelsScriptLevel seeding_key' do
     script_level = create_script_level_with_ancestors
-    script_level.update!(level_keys: [script_level.levels.first.name])
+    script_level.update!(level_keys: [script_level.levels.first.key])
     script_level.reload # reload to clear out any already loaded association data, to verify query counts later
     script = script_level.script
     seed_context = create_seed_context(script)
@@ -717,12 +719,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     lsl = script_level.levels_script_levels.first
 
     seeding_key = nil
-    # Important to not make queries in seeding_key, since it's called for each LevelsScriptLevel during seeding
-    assert_queries(0) {seeding_key = lsl.seeding_key(seed_context)}
+    # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
+    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
+    assert_queries(1) {seeding_key = lsl.seeding_key(seed_context)}
 
     expected = {
-      "level.key" => lsl.level.name,
-      "script_level.level_keys" => [lsl.level.name],
+      "level.key" => lsl.level.key,
+      "script_level.level_keys" => [lsl.level.key],
       "script_level.chapter" => 1,
       "script_level.position" => 1,
       "lesson.key" => script_level.lesson.key,
