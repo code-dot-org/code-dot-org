@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class LessonsTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
