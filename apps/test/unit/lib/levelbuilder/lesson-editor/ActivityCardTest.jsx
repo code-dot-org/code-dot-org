@@ -37,7 +37,7 @@ describe('ActivityCard', () => {
   it('renders default props', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
     expect(wrapper.contains('Activity:')).to.be.true;
-    expect(wrapper.contains('Time:')).to.be.true;
+    expect(wrapper.contains('Duration:')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
     expect(wrapper.find('button').length).to.equal(1);
