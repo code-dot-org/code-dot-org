@@ -244,7 +244,7 @@ GEM
       activemodel (= 5.0.7.2)
       activesupport (= 5.0.7.2)
       arel (~> 7.0)
-    activerecord-import (0.28.2)
+    activerecord-import (0.22.0)
       activerecord (>= 3.2)
     activesupport (5.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -901,7 +901,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   active_record_query_trace
   active_record_union
-  activerecord-import (~> 0.26)
+  activerecord-import
   acts_as_list
   addressable
   annotate
