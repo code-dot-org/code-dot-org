@@ -294,13 +294,6 @@ function initializeStoreWithProgress(
   // Determine if we are viewing student progress.
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
-  // Merge in progress saved on the client, unless we are viewing student's work.
-  if (!isViewingStudentAnswer) {
-    store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-    );
-  }
-
   if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
@@ -308,18 +301,33 @@ function initializeStoreWithProgress(
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
 
-  // Progress from the server should be written down locally, unless we're a teacher
-  // viewing a student's work.
-  if (!isViewingStudentAnswer) {
-    let lastProgress;
-    store.subscribe(() => {
-      const nextProgress = store.getState().progress.levelProgress;
-      if (nextProgress !== lastProgress) {
-        lastProgress = nextProgress;
-        clientState.batchTrackProgress(scriptData.name, nextProgress);
-      }
-    });
+  // The rest of these actions are only relevant if the current user is the
+  // owner of the code being viewed.
+  if (isViewingStudentAnswer) {
+    return;
   }
+
+  // We should use client state XOR database state to track user progress
+  if (!store.getState().progress.usingDbProgress) {
+    store.dispatch(
+      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+    );
+  }
+
+  let lastProgress;
+  store.subscribe(() => {
+    const progressState = store.getState().progress;
+    const nextProgress = progressState.levelProgress;
+    const usingDbProgress = progressState.usingDbProgress;
+
+    // We should use client state XOR database state to track user progress.
+    // We may not know until much later, when we load the app, that there
+    // is state available from the DB.
+    if (!usingDbProgress && nextProgress !== lastProgress) {
+      lastProgress = nextProgress;
+      clientState.batchTrackProgress(scriptData.name, nextProgress);
+    }
+  });
 }
 
 function initializeStoreWithSections(store, scriptData) {
