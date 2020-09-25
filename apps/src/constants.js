@@ -69,7 +69,7 @@ export const TestResults = {
   UNSUBMITTED_ATTEMPT: -50, // Progress was saved without submitting for review, or was unsubmitted.
 
   SKIPPED: -100, // Skipped, e.g. they used the skip button on a challenge level
-  LEVEL_STARTED: -150, // The user has clicked run and reset at least once
+  LEVEL_STARTED: -150, // The user has triggered the reset action at least once (ex: by clicking the reset button)
 
   // Numbers below 20 are generally considered some form of failure.
   // Numbers >= 20 generally indicate some form of success (although again there
