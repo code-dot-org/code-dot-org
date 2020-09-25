@@ -362,23 +362,10 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          // codeModeButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // resetButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
 
     {
@@ -479,23 +466,10 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          // codeModeButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // resetButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
 
     {
@@ -581,18 +555,10 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          // resetButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
 
     {
@@ -1616,18 +1582,10 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          // resetButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
 
     {
