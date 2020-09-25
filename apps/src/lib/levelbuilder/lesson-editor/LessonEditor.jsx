@@ -109,7 +109,7 @@ export default class LessonEditor extends Component {
           <label>
             Creative Commons Image
             <select
-              name="creative_commons_license"
+              name="creativeCommonsLicense"
               style={styles.dropdown}
               defaultValue={creativeCommonsLicense}
             >
@@ -143,7 +143,7 @@ export default class LessonEditor extends Component {
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
             label={'Student Overview'}
-            name={'student_overview'}
+            name={'studentOverview'}
             inputRows={5}
           />
           <TextareaWithMarkdownPreview
