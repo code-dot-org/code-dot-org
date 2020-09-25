@@ -60,6 +60,6 @@ export const activityShape = PropTypes.shape({
   key: PropTypes.string,
   displayName: PropTypes.string,
   position: PropTypes.number,
-  time: PropTypes.number,
+  duration: PropTypes.number,
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });

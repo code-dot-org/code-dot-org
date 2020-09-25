@@ -244,7 +244,7 @@ GEM
       activemodel (= 5.0.7.2)
       activesupport (= 5.0.7.2)
       arel (~> 7.0)
-    activerecord-import (0.28.2)
+    activerecord-import (0.22.0)
       activerecord (>= 3.2)
     activesupport (5.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -353,8 +353,6 @@ GEM
     codecov (0.2.8)
       json
       simplecov
-    codemirror-rails (5.16.0)
-      railties (>= 3.0, < 6.0)
     coderay (1.1.1)
     colorize (0.8.1)
     composite_primary_keys (9.0.10)
@@ -901,7 +899,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   active_record_query_trace
   active_record_union
-  activerecord-import (~> 0.26)
+  activerecord-import
   acts_as_list
   addressable
   annotate
@@ -931,7 +929,6 @@ DEPENDENCIES
   cancancan (~> 1.15.0)
   chronic (~> 0.10.2)
   codecov
-  codemirror-rails
   colorize
   composite_primary_keys
   cucumber

@@ -220,8 +220,6 @@ gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
-gem 'codemirror-rails' # edit code in textarea
-
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
 # We also serve a copy of one of these font files from the public directory
@@ -340,7 +338,7 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import', '~> 0.26'
+gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
