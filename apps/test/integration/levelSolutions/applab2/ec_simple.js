@@ -46,7 +46,7 @@ module.exports = {
       expected: [
         {
           result: undefined,
-          testResult: undefined
+          testResult: TestResults.LEVEL_STARTED
         },
         {
           result: true,
