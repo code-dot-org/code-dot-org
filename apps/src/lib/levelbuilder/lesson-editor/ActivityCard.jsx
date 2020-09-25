@@ -129,10 +129,10 @@ class ActivityCard extends Component {
     );
   };
 
-  handleChangeTime = event => {
+  handleChangeDuration = event => {
     this.props.updateActivityField(
       this.props.activity.position,
-      'time',
+      'duration',
       event.target.value
     );
   };
@@ -167,9 +167,9 @@ class ActivityCard extends Component {
           <label style={styles.labelAndInput}>
             <span style={styles.label}>{`Time:`}</span>
             <input
-              value={activity.time}
+              value={activity.duration}
               style={{width: 35}}
-              onChange={this.handleChangeTime}
+              onChange={this.handleChangeDuration}
             />
             <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>

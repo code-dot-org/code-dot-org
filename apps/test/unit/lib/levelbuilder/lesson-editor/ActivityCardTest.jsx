@@ -65,11 +65,11 @@ describe('ActivityCard', () => {
     );
   });
 
-  it('edit activity time', () => {
+  it('edit activity duration', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'time', '1000');
+    expect(updateActivityField).to.have.been.calledWith(1, 'duration', '1000');
   });
 });
