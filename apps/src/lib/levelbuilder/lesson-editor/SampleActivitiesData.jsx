@@ -3,7 +3,7 @@ export const activities = [
     key: 'activity-1',
     displayName: 'Main Activity',
     position: 1,
-    time: 20,
+    duration: 20,
     activitySections: [
       {
         key: 'section-3',
@@ -115,7 +115,7 @@ export const activities = [
   {
     key: 'activity-2',
     displayName: '',
-    time: 0,
+    duration: 0,
     position: 2,
     activitySections: [
       {
