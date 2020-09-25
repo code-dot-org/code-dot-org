@@ -74,15 +74,39 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filters" do
     get :get_filters, params: {}
-    assert_equal JSON.parse(@response.body)["levelOptions"].map {|option| option[0]}, ["All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch", "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External", "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab", "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim", "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo", "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged", "Vigenere", "Weblab"]
-    assert_equal JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}, ["All scripts", "20-hour", "algebra", "artist", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy", "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"]
+    assert_equal JSON.parse(@response.body)["levelOptions"].map {|option| option[0]}, [
+      "All types", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    assert_equal JSON.parse(@response.body)["scriptOptions"].map {|option| option[0]}, [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
     assert_equal JSON.parse(@response.body)["ownerOptions"].map {|option| option[0]}, ["Any owner"]
   end
 
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal JSON.parse(@response.body).length, 30
-    assert_equal JSON.parse(@response.body).map {|level| level["name"]}, ["Level_81", "Level_82", "Test longassessment levelgroup split new", "Sample CSP Assessment", "Test longassessment levelgroup new", "Test anonymous student survey", "PS U3 Assessment1 new", "Pluralsight LevelGroup Test", "CSP pre-assessment survey", "U3L25 Student Lesson Introduction", "U3L20 Student Lesson Introduction", "blockly", "blockly", "blockly", "blockly", "allthethings_fish_tank", "courseC_PlayLab_events1", "iceage_warn_ice_age", "iceage_move_events", "iceage_hello2", "iceage_move_to_flag", "iceage_sound_and_points", "iceage_move_to_actor", "iceage_free_play", "iceage_throw_hearts", "scrat 17", "scrat 19", "scrat 18", "scrat 20", "scrat 16"]
+    assert_equal JSON.parse(@response.body).map {|level| level["name"]}, [
+      "Level_81", "Level_82", "Test longassessment levelgroup split new",
+      "Sample CSP Assessment", "Test longassessment levelgroup new",
+      "Test anonymous student survey", "PS U3 Assessment1 new",
+      "Pluralsight LevelGroup Test", "CSP pre-assessment survey",
+      "U3L25 Student Lesson Introduction", "U3L20 Student Lesson Introduction",
+      "blockly", "blockly", "blockly", "blockly", "allthethings_fish_tank",
+      "courseC_PlayLab_events1", "iceage_warn_ice_age", "iceage_move_events",
+      "iceage_hello2", "iceage_move_to_flag", "iceage_sound_and_points",
+      "iceage_move_to_actor", "iceage_free_play", "iceage_throw_hearts",
+      "scrat 17", "scrat 19", "scrat 18", "scrat 20", "scrat 16"
+    ]
   end
 
   test "should get filtered levels with level_type" do
