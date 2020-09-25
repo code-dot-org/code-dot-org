@@ -1145,7 +1145,7 @@ class Script < ActiveRecord::Base
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
     end
 
-    lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
+    lessons_i18n = {'en' => {'data' => {'script' => {'nameS' => lessons_i18n}}}}
     existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
 
