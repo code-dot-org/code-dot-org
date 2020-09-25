@@ -17,7 +17,6 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson_data = {
-      id: @lesson.id,
       lesson: {
         name: @lesson.name,
         overview: @lesson.overview,
