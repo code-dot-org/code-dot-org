@@ -99,7 +99,7 @@ id:
           memutuskan apa yang harus dilakukan ketika ini terjadi.
       3:
         image: notes/flappy03.jpg
-        text: 'Contohnya, Kamu bisa mendapatkan pesan ''EVEN-HANDLER'' isinya "ketika
+        text: 'Contohnya, Anda bisa mendapatkan pesan ''EVEN-HANDLER'' isinya "ketika
           maus ditekan, mainkan sebuah bunyi" '
       4:
         image: notes/flappy04.jpg
@@ -252,7 +252,7 @@ id:
           berdasarkan keputusan itu. Dan seperti halnya  blok "if" / "jika", Anda
           dapat menempatkan blok "if-else" / "kecuali-jika" dalam blok "ulangi" .
       4:
-        text: Sekarang mari kita membantu Scrat tupai mendapatkan bijinya itu!
+        text: Sekarang mari kita membantu Scrat tupai mendapatkan biji akorn!
     function:
       1:
         text: Halo, saya Brina, seorang programer dari Instagram. Fungsi adalah baris-baris
@@ -533,7 +533,7 @@ id:
       1:
         text: Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah
           menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke
-          sarang lebah untuk membuat madu. Kamu akan memakai balok "dapatkan nektar"
+          sarang lebah untuk membuat madu. Anda akan memakai balok "dapatkan nektar"
           dan balok "buat madu" untuk latihan ini.
       2:
         text: 'Setiap bunga memiliki jumlah nektar yang berbeda: 1, 2, 3, atau lebih.
@@ -2721,7 +2721,7 @@ id:
           bahwa jika saya memasukkan kata sandi dengan benar, maka ponsel akan terbuka.
           Atau, menunjukkan pesan kesalahan.
       3:
-        text: Kamu dapat menggunakan pernyataan jika dalam kode untuk membuat Steve
+        text: Anda dapat menggunakan pernyataan jika dalam kode untuk membuat Steve
           dan Alice menanggapi apa yang mereka lihat di dunia. Misalnya, jika ada
           batu di depan, mereka akan berbelok ke kiri. Atau berbelok ke kanan jika
           ada pohon di sana.
@@ -2737,12 +2737,12 @@ id:
           menggunakan pernyataan jika untuk memperhatikan langkahmu.
     mc_congrats_share:
       1:
-        text: Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut
+        text: Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut
           ilmu komputer.
       2:
         text: Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri.
-          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa
-          membangun apa saja yang kamu inginkan. Kamu harus memilih.
+          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa
+          membangun apa saja yang kamu inginkan. Anda harus memilih.
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor.
           Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun
@@ -2752,12 +2752,12 @@ id:
           untuk membagikannya dengan teman-teman kamu. Selamat bersenang-senang!
     mc_congrats_no_share:
       1:
-        text: Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut
+        text: Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut
           ilmu komputer.
       2:
         text: Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri.
-          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa
-          membangun apa saja yang kamu inginkan. Kamu harus memilih.
+          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa
+          membangun apa saja yang kamu inginkan. Anda harus memilih.
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor.
           Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun

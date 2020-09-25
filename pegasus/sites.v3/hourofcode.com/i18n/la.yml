@@ -517,6 +517,7 @@ la:
     mapa
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Fuera de la escuela
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
