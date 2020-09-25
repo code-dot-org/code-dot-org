@@ -9,6 +9,7 @@ import LessonTip, {
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import RemoveTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveTipDialog';
 
 const styles = {
   dialog: {
@@ -38,7 +39,8 @@ export default class EditTipDialog extends Component {
     super(props);
 
     this.state = {
-      tip: this.props.tip
+      tip: this.props.tip,
+      removeTipOpen: false
     };
   }
 
@@ -65,8 +67,17 @@ export default class EditTipDialog extends Component {
   };
 
   handleDelete = () => {
+    this.setState({removeTipOpen: false});
     this.props.handleDelete(this.state.tip.key);
     this.props.handleConfirm();
+  };
+
+  handleConfirmDelete = () => {
+    this.setState({removeTipOpen: true});
+  };
+
+  handleCloseRemoveTip = () => {
+    this.setState({removeTipOpen: false});
   };
 
   render() {
@@ -101,11 +112,17 @@ export default class EditTipDialog extends Component {
             rows={5}
           />
           <LessonTip tip={this.state.tip} />
+          <RemoveTipDialog
+            isOpen={this.state.removeTipOpen}
+            tipToRemove={this.state.tip}
+            handleClose={this.handleCloseRemoveTip}
+            handleConfirm={this.handleDelete}
+          />
         </div>
         <DialogFooter>
           <Button
             text={i18n.delete()}
-            onClick={this.handleDelete}
+            onClick={this.handleConfirmDelete}
             color={Button.ButtonColor.red}
           />
           <Button
