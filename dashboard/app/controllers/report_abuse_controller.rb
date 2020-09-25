@@ -20,7 +20,8 @@ class ReportAbuseController < ApplicationController
   AGE_CUSTOM_FIELD_ID = 24_024_923
 
   # Projects that are created by users with project validator permissions are
-  # blocked from abuse reports because they are created internally and we know # they are safe. This reduces spamming of the report abuse feature.
+  # blocked from abuse reports because they are created internally and we know
+  # they are safe. This reduces spamming of the report abuse feature.
   def protected_project?
     return false if params[:channel_id].blank?
     owner, _storage_app_id = storage_decrypt_channel_id(params[:channel_id])
