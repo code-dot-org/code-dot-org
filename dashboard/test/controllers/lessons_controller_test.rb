@@ -81,7 +81,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     # verify the lesson fields appear in camelCase in the DOM.
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
-    editable_data = lesson_data['lesson']
+    editable_data = lesson_data['editableData']
     assert_equal 'lesson overview', editable_data['overview']
     assert_equal 'student overview', editable_data['studentOverview']
   end

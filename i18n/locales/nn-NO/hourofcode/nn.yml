@@ -495,6 +495,7 @@ nn:
   signup_send_posters_address_placeholder: Denne adressa vil ikkje bli vist på kartet
   signup_event_type_in_school: På ein skule
   signup_event_type_out_of_school: Utanfor skulen
+  signup_event_type_at_home: Home
   signup_submit_census_label: Send inn
   signup_submit_census_error_message: Vi beklager. Feil. Prøv å sende skjemaet ein
     gong til.
