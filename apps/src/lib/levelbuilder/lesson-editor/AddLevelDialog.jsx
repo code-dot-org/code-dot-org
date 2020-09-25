@@ -173,7 +173,6 @@ export default class AddLevelDialog extends Component {
         </div>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
