@@ -165,7 +165,7 @@ class ActivityCard extends Component {
             />
           </label>
           <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Time:`}</span>
+            <span style={styles.label}>{`Duration:`}</span>
             <input
               value={activity.duration}
               style={{width: 35}}
