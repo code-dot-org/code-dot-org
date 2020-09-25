@@ -1,4 +1,4 @@
-- afe_link = 'https://www.amazonfutureengineer.com'
+- afe_link = request.country == 'FR' ? 'https://www.amazonfutureengineer.fr/' : 'https://www.amazonfutureengineer.com'
 
 - if request.language == 'en'
   %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
