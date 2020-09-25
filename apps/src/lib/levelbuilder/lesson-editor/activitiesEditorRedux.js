@@ -282,7 +282,7 @@ function activities(state = [], action) {
         key: action.activityKey,
         displayName: '',
         position: action.activityPosition,
-        time: 0,
+        duration: 0,
         activitySections: []
       });
       updateActivityPositions(newState);

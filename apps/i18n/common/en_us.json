@@ -11,7 +11,7 @@
   "abusiveUrl": "URL of the content being reported",
   "achievements": "Achievements",
   "activity": "Activity",
-  "activityHeader": "{activityName} ({activityTime} minutes)",
+  "activityHeader": "{activityName} ({activityDuration} minutes)",
   "actions": "Actions",
   "add": "Add",
   "addNewSection": "Add New Section",
