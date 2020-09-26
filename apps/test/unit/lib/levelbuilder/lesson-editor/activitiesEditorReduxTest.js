@@ -3,7 +3,6 @@ import {combineReducers} from 'redux';
 import reducers, {
   addActivity,
   moveActivity,
-  setActivity,
   removeActivity,
   updateActivityField,
   addActivitySection,
@@ -213,428 +212,155 @@ describe('activitiesEditorRedux reducer tests', () => {
       assert.deepEqual(initialActivities, state.activities);
     });
 
-    it('moves a activitySection up three times', () => {
-      const key = 'd';
-      let activityPosition = initialState.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      let activitySectionPosition = initialState.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      let state = reducer(
-        initialState,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'd', position: 1, displayName: 'D'},
-              {key: 'c', position: 2, displayName: 'C'}
-            ]
-          }
-        ],
-        state.activities,
-        'first move changes position but not activity'
-      );
+    describe('activity section', () => {
+      it('moves a activitySection up three times', () => {
+        const key = 'd';
+        let activityPosition = initialState.activities.find(activity =>
+          activity.activitySections.find(
+            activitySection => activitySection.key === key
+          )
+        ).position;
+        let activitySectionPosition = initialState.activities[
+          activityPosition - 1
+        ].activitySections.find(activitySection => activitySection.key === key)
+          .position;
+        let state = reducer(
+          initialState,
+          moveActivitySection(activityPosition, activitySectionPosition, 'up')
+        );
+        assert.deepEqual(
+          [
+            {
+              key: 'x',
+              displayName: 'X',
+              position: 1,
+              activitySections: [
+                {key: 'a', position: 1, displayName: 'A'},
+                {key: 'b', position: 2, displayName: 'B'}
+              ]
+            },
+            {
+              key: 'y',
+              displayName: 'Y',
+              position: 2,
+              activitySections: [
+                {key: 'd', position: 1, displayName: 'D'},
+                {key: 'c', position: 2, displayName: 'C'}
+              ]
+            }
+          ],
+          state.activities,
+          'first move changes position but not activity'
+        );
 
-      activityPosition = state.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      activitySectionPosition = state.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      state = reducer(
-        state,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'},
-              {key: 'd', position: 3, displayName: 'D'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-          }
-        ],
-        state.activities,
-        'second move changes activity but not position'
-      );
+        activityPosition = state.activities.find(activity =>
+          activity.activitySections.find(
+            activitySection => activitySection.key === key
+          )
+        ).position;
+        activitySectionPosition = state.activities[
+          activityPosition - 1
+        ].activitySections.find(activitySection => activitySection.key === key)
+          .position;
+        state = reducer(
+          state,
+          moveActivitySection(activityPosition, activitySectionPosition, 'up')
+        );
+        assert.deepEqual(
+          [
+            {
+              key: 'x',
+              displayName: 'X',
+              position: 1,
+              activitySections: [
+                {key: 'a', position: 1, displayName: 'A'},
+                {key: 'b', position: 2, displayName: 'B'},
+                {key: 'd', position: 3, displayName: 'D'}
+              ]
+            },
+            {
+              key: 'y',
+              displayName: 'Y',
+              position: 2,
+              activitySections: [{key: 'c', position: 1, displayName: 'C'}]
+            }
+          ],
+          state.activities,
+          'second move changes activity but not position'
+        );
 
-      activityPosition = state.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      activitySectionPosition = state.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      state = reducer(
-        state,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'd', position: 2, displayName: 'D'},
-              {key: 'b', position: 3, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-          }
-        ],
-        state.activities,
-        'third move changes position but not activity'
-      );
-    });
+        activityPosition = state.activities.find(activity =>
+          activity.activitySections.find(
+            activitySection => activitySection.key === key
+          )
+        ).position;
+        activitySectionPosition = state.activities[
+          activityPosition - 1
+        ].activitySections.find(activitySection => activitySection.key === key)
+          .position;
+        state = reducer(
+          state,
+          moveActivitySection(activityPosition, activitySectionPosition, 'up')
+        );
+        assert.deepEqual(
+          [
+            {
+              key: 'x',
+              displayName: 'X',
+              position: 1,
+              activitySections: [
+                {key: 'a', position: 1, displayName: 'A'},
+                {key: 'd', position: 2, displayName: 'D'},
+                {key: 'b', position: 3, displayName: 'B'}
+              ]
+            },
+            {
+              key: 'y',
+              displayName: 'Y',
+              position: 2,
+              activitySections: [{key: 'c', position: 1, displayName: 'C'}]
+            }
+          ],
+          state.activities,
+          'third move changes position but not activity'
+        );
+      });
 
-    it('remove activity section', () => {
-      let state = reducer(initialState, removeActivitySection(1, 2));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [{key: 'a', position: 1, displayName: 'A'}]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
+      it('remove activity section', () => {
+        let state = reducer(initialState, removeActivitySection(1, 1));
 
-    it('update activity section field', () => {
-      let state = reducer(
-        initialState,
-        updateActivitySectionField(1, 2, 'displayName', 'My Display Name')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'My Display Name'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
+        let expectedState = _.cloneDeep(initialActivities);
+        expectedState[0].activitySections = expectedState[0].activitySections.slice(
+          1
+        );
+        expectedState[0].activitySections[0].position = 1;
 
-    it('set the activity for an activity section', () => {
-      let state = reducer(initialState, setActivity(2, 1, 2));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [{key: 'a', position: 1, displayName: 'A'}]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'},
-              {key: 'b', position: 3, displayName: 'B'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
-  });
+        assert.deepEqual(expectedState, state.activities);
+      });
 
-  describe('activity section', () => {
-    let initialActivities = [];
+      it('update activity section field', () => {
+        let state = reducer(
+          initialState,
+          updateActivitySectionField(1, 2, 'displayName', 'My Display Name')
+        );
 
-    beforeEach(() => {
-      initialActivities = [
-        {
-          key: 'x',
-          displayName: 'X',
-          position: 1,
-          activitySections: [
-            {key: 'a', position: 1, displayName: 'A'},
-            {key: 'b', position: 2, displayName: 'B'}
-          ]
-        },
-        {
-          key: 'y',
-          displayName: 'Y',
-          position: 2,
-          activitySections: [
-            {key: 'c', position: 1, displayName: 'C'},
-            {key: 'd', position: 2, displayName: 'D'}
-          ]
-        }
-      ];
-      initialState.activities = initialActivities;
-    });
+        let expectedState = _.cloneDeep(initialActivities);
+        expectedState[0].activitySections[1].displayName = 'My Display Name';
 
-    it('moves a activitySection up three times', () => {
-      const key = 'd';
-      let activityPosition = initialState.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      let activitySectionPosition = initialState.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      let state = reducer(
-        initialState,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'd', position: 1, displayName: 'D'},
-              {key: 'c', position: 2, displayName: 'C'}
-            ]
-          }
-        ],
-        state.activities,
-        'first move changes position but not activity'
-      );
+        assert.deepEqual(expectedState, state.activities);
+      });
 
-      activityPosition = state.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      activitySectionPosition = state.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      state = reducer(
-        state,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'B'},
-              {key: 'd', position: 3, displayName: 'D'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-          }
-        ],
-        state.activities,
-        'second move changes activity but not position'
-      );
-
-      activityPosition = state.activities.find(activity =>
-        activity.activitySections.find(
-          activitySection => activitySection.key === key
-        )
-      ).position;
-      activitySectionPosition = state.activities[
-        activityPosition - 1
-      ].activitySections.find(activitySection => activitySection.key === key)
-        .position;
-      state = reducer(
-        state,
-        moveActivitySection(activityPosition, activitySectionPosition, 'up')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'd', position: 2, displayName: 'D'},
-              {key: 'b', position: 3, displayName: 'B'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-          }
-        ],
-        state.activities,
-        'third move changes position but not activity'
-      );
-    });
-
-    it('remove activity section', () => {
-      let state = reducer(initialState, removeActivitySection(1, 2));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [{key: 'a', position: 1, displayName: 'A'}]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
-
-    it('update activity section field', () => {
-      let state = reducer(
-        initialState,
-        updateActivitySectionField(1, 2, 'displayName', 'My Display Name')
-      );
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [
-              {key: 'a', position: 1, displayName: 'A'},
-              {key: 'b', position: 2, displayName: 'My Display Name'}
-            ]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
-
-    it('set the activity for an activity section', () => {
-      let state = reducer(initialState, setActivity(2, 1, 2));
-      assert.deepEqual(
-        [
-          {
-            key: 'x',
-            displayName: 'X',
-            position: 1,
-            activitySections: [{key: 'a', position: 1, displayName: 'A'}]
-          },
-          {
-            key: 'y',
-            displayName: 'Y',
-            position: 2,
-            activitySections: [
-              {key: 'c', position: 1, displayName: 'C'},
-              {key: 'd', position: 2, displayName: 'D'},
-              {key: 'b', position: 3, displayName: 'B'}
-            ]
-          }
-        ],
-        state.activities
-      );
-    });
-
-    it('add activitySection', () => {
-      const nextState = reducer(
-        initialState,
-        addActivitySection(1, 'activitySection-key')
-      ).activities;
-      assert.deepEqual(nextState[0].activitySections.map(s => s.key), [
-        'a',
-        'b',
-        'activitySection-key'
-      ]);
+      it('add activitySection', () => {
+        const nextState = reducer(
+          initialState,
+          addActivitySection(1, 'activitySection-key')
+        ).activities;
+        assert.deepEqual(nextState[0].activitySections.map(s => s.key), [
+          'a',
+          'b',
+          'activitySection-key'
+        ]);
+      });
     });
   });
 });
