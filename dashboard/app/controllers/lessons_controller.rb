@@ -27,7 +27,26 @@ class LessonsController < ApplicationController
         creativeCommonsLicense: @lesson.creative_commons_license,
         purpose: @lesson.purpose,
         preparation: @lesson.preparation,
-        announcements: @lesson.announcements
+        announcements: @lesson.announcements,
+        activities: @lesson.lesson_activities.map do |activity|
+          {
+            id: activity.id,
+            position: activity.position,
+            title: activity.title,
+            duration: activity.duration,
+            activitySections: activity.activity_sections.map do |activity_section|
+              {
+                id: activity_section.id,
+                position: activity_section.position,
+                title: activity_section.title,
+                remarks: activity_section.remarks,
+                slide: activity_section.slide,
+                description: activity_section.description,
+                tips: activity_section.tips
+              }
+            end
+          }
+        end
       }
     }
   end
