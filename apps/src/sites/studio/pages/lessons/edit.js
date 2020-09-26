@@ -9,13 +9,17 @@ import reducers, {
 import {Provider} from 'react-redux';
 
 //TODO Remove once we hook up real activity data
-import {
-  levelKeyList,
-  activities
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson').editableData;
+  const activities = lessonData.activities;
+
+  // Rename any keys that are different on the frontend.
+  activities.forEach(activity => {
+    activity.displayName = activity.title;
+    delete activity.title;
+  });
 
   registerReducers({...reducers});
   const store = getStore();
