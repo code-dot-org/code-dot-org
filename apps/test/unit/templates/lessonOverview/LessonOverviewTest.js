@@ -28,12 +28,13 @@ describe('LessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
-    // expect(wrapper.contains('Lesson Overview'), 'Lesson Overview').to.be.true;
-    // expect(
-    //   wrapper.contains('The purpose of the lesson is for people to learn'),
-    //   'purpose'
-    // ).to.be.true;
-    // expect(wrapper.contains('- One'), 'One').to.be.true;
+
+    const safeMarkdowns = wrapper.find('SafeMarkdown');
+    expect(safeMarkdowns.at(0).props().markdown).to.contain('Lesson Overview');
+    expect(safeMarkdowns.at(1).props().markdown).to.contain(
+      'The purpose of the lesson is for people to learn'
+    );
+    expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
   });
 
   it('renders correct number of activities', () => {
