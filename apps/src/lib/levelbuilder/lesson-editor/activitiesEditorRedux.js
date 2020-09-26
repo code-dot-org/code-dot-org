@@ -3,7 +3,6 @@ import _ from 'lodash';
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
-const SET_ACTIVITY = 'activitiesEditor/SET_ACTIVITY';
 const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
 const UPDATE_ACTIVITY_FIELD = 'activitiesEditor/UPDATE_ACTIVITY_FIELD';
 const ADD_ACTIVITY_SECTION = 'activitiesEditor/ADD_ACTIVITY_SECTION';
@@ -219,17 +218,6 @@ export const removeActivitySection = (
   activitySectionPosition
 });
 
-export const setActivity = (
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-) => ({
-  type: SET_ACTIVITY,
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-});
-
 export const addTip = (activityPosition, activitySectionPosition, tip) => ({
   type: ADD_TIP,
   activityPosition,
@@ -373,23 +361,6 @@ function activities(state = [], action) {
           : newActivitySections.unshift(curActivitySection);
       }
       updateActivitySectionPositions(newState);
-      break;
-    }
-    case SET_ACTIVITY: {
-      // Remove the activitySection from the old activity
-      const oldActivitySections =
-        newState[action.oldActivityPosition - 1].activitySections;
-      const curActivitySection = oldActivitySections.splice(
-        action.activitySectionPosition - 1,
-        1
-      )[0];
-
-      // add activitySection to the new activity
-      const newActivitySections =
-        newState[action.newActivityPosition - 1].activitySections;
-      newActivitySections.push(curActivitySection);
-      updateActivitySectionPositions(newState);
-
       break;
     }
     case UPDATE_ACTIVITY_SECTION_FIELD: {
