@@ -960,6 +960,38 @@ var projects = (module.exports = {
       });
     });
   },
+
+  /**
+   * Tests whether provided sample code is different from the current project code.
+   * This also normalizes the code so incidental differences in line endings or
+   * empty xml tags are not recognized as differences.
+   * @param {string} sampleCode the code to diff against the current project code
+   */
+  isCodeDifferent(sampleCode) {
+    let normalizedSample, normalizedCurrent;
+    const parser = new DOMParser();
+    const parsedCurrent = parser.parseFromString(
+      currentSources.source,
+      'text/xml'
+    );
+    const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    if (
+      parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
+      parsedSample.getElementsByTagName('parsererror').length > 0
+    ) {
+      // This is droplet. Normalize line endings.
+      normalizedSample = sampleCode.replaceAll('\r\n', '\n');
+      normalizedCurrent = currentSources.source.replaceAll('\r\n', '\n');
+    } else {
+      // This is blockly. Normalize XML.
+      const serializer = new XMLSerializer();
+      normalizedSample = serializer.serializeToString(parsedSample);
+      normalizedCurrent = serializer.serializeToString(parsedCurrent);
+    }
+
+    return normalizedSample !== normalizedCurrent;
+  },
+
   /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
