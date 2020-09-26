@@ -228,27 +228,14 @@ describe('activitiesEditorRedux reducer tests', () => {
           initialState,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
         );
+
+        let expectedState = _.cloneDeep(initialActivities);
+        expectedState[1].activitySections = expectedState[1].activitySections.reverse();
+        expectedState[1].activitySections[0].position = 1;
+        expectedState[1].activitySections[1].position = 2;
+
         assert.deepEqual(
-          [
-            {
-              key: 'x',
-              displayName: 'X',
-              position: 1,
-              activitySections: [
-                {key: 'a', position: 1, displayName: 'A'},
-                {key: 'b', position: 2, displayName: 'B'}
-              ]
-            },
-            {
-              key: 'y',
-              displayName: 'Y',
-              position: 2,
-              activitySections: [
-                {key: 'd', position: 1, displayName: 'D'},
-                {key: 'c', position: 2, displayName: 'C'}
-              ]
-            }
-          ],
+          expectedState,
           state.activities,
           'first move changes position but not activity'
         );
@@ -266,25 +253,18 @@ describe('activitiesEditorRedux reducer tests', () => {
           state,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
         );
+
+        expectedState[0].activitySections.push(
+          expectedState[1].activitySections[0]
+        );
+        expectedState[0].activitySections[2].position = 3;
+        expectedState[1].activitySections = expectedState[1].activitySections.slice(
+          1
+        );
+        expectedState[1].activitySections[0].position = 1;
+
         assert.deepEqual(
-          [
-            {
-              key: 'x',
-              displayName: 'X',
-              position: 1,
-              activitySections: [
-                {key: 'a', position: 1, displayName: 'A'},
-                {key: 'b', position: 2, displayName: 'B'},
-                {key: 'd', position: 3, displayName: 'D'}
-              ]
-            },
-            {
-              key: 'y',
-              displayName: 'Y',
-              position: 2,
-              activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-            }
-          ],
+          expectedState,
           state.activities,
           'second move changes activity but not position'
         );
@@ -302,25 +282,16 @@ describe('activitiesEditorRedux reducer tests', () => {
           state,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
         );
+
+        let temp = expectedState[0].activitySections[1];
+        expectedState[0].activitySections[1] =
+          expectedState[0].activitySections[2];
+        expectedState[0].activitySections[1].position = 2;
+        expectedState[0].activitySections[2] = temp;
+        expectedState[0].activitySections[2].position = 3;
+
         assert.deepEqual(
-          [
-            {
-              key: 'x',
-              displayName: 'X',
-              position: 1,
-              activitySections: [
-                {key: 'a', position: 1, displayName: 'A'},
-                {key: 'd', position: 2, displayName: 'D'},
-                {key: 'b', position: 3, displayName: 'B'}
-              ]
-            },
-            {
-              key: 'y',
-              displayName: 'Y',
-              position: 2,
-              activitySections: [{key: 'c', position: 1, displayName: 'C'}]
-            }
-          ],
+          expectedState,
           state.activities,
           'third move changes position but not activity'
         );
