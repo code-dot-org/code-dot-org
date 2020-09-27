@@ -7,6 +7,7 @@ import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {Provider} from 'react-redux';
+import _ from 'lodash';
 
 //TODO Remove once we hook up real activity data
 import {levelKeyList} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
@@ -17,8 +18,28 @@ $(document).ready(function() {
 
   // Rename any keys that are different on the frontend.
   activities.forEach(activity => {
+    activity.key = activity.id + '';
+
     activity.displayName = activity.title;
     delete activity.title;
+
+    activity.activitySections.forEach(activitySection => {
+      activitySection.key = activitySection.id + '';
+
+      activitySection.displayName = activitySection.title;
+      delete activitySection.title;
+
+      activitySection.text = activitySection.description;
+      delete activitySection.description;
+
+      activitySection.levels = activitySection.levels || [];
+
+      activitySection.tips = activitySection.tips || [];
+
+      activitySection.tips.forEach(tip => {
+        tip.key = _.uniqueId();
+      });
+    });
   });
 
   registerReducers({...reducers});
