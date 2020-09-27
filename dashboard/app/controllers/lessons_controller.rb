@@ -119,6 +119,7 @@ class LessonsController < ApplicationController
     )
   end
 
+  # @param lesson_activity [LessonActivity] LessonActivity whose activity sections we are updating.
   # @param sections [Array<Hash>] - Hash representing an ActivitySection.
   def update_activity_sections(lesson_activity, sections)
     return unless sections
