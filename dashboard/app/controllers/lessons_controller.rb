@@ -89,7 +89,8 @@ class LessonsController < ApplicationController
   # @param activities [Array<Hash>]
   def update_activities(activities)
     return unless activities
-    activities.each do |activity|
+    # use assignment to delete any missing activities.
+    @lesson.lesson_activities = activities.map do |activity|
       lesson_activity = fetch_activity(activity)
       lesson_activity.update!(
         position: activity['position'],
@@ -98,6 +99,7 @@ class LessonsController < ApplicationController
       )
 
       update_activity_sections(lesson_activity, activity['activitySections'])
+      lesson_activity
     end
   end
 
@@ -120,7 +122,8 @@ class LessonsController < ApplicationController
   # @param sections [Array<Hash>] - Hash representing an ActivitySection.
   def update_activity_sections(lesson_activity, sections)
     return unless sections
-    sections.each do |section|
+    # use assignment to delete any missing activity sections.
+    lesson_activity.activity_sections = sections.map do |section|
       activity_section = fetch_activity_section(lesson_activity, section)
       activity_section.update!(
         position: section['position'],
@@ -130,6 +133,7 @@ class LessonsController < ApplicationController
         description: section['description'],
         tips: section['tips']
       )
+      activity_section
     end
   end
 
