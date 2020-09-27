@@ -54,6 +54,7 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   def update
     @lesson.update!(lesson_params)
+    update_activities(JSON.parse(params[:activities]))
 
     redirect_to lesson_path(id: @lesson.id)
   end
@@ -83,5 +84,36 @@ class LessonsController < ApplicationController
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
+  end
+
+  # @param activities [Array<Hash>]
+  def update_activities(activities)
+    return unless activities
+    activities.each do |activity|
+      lesson_activity = fetch_activity(activity)
+      lesson_activity.update!(
+        position: activity['position'],
+        title: activity['title'],
+        duration: activity['duration']
+      )
+
+      # update_activity_sections(activities['activity_sections'])
+    end
+  end
+
+  # Finds the LessonActivity by id, or creates a new one if id is not specified.
+  # @param activity [Hash]
+  # @returns [LessonActivity]
+  def fetch_activity(activity)
+    if activity['id']
+      lesson_activity = @lesson.lesson_activities.find(activity['id'])
+      raise "LessonActivity id #{activity['id']} not found in Lesson id #{@lesson.id}" unless lesson_activity
+      return lesson_activity
+    end
+
+    @lesson.lesson_activities.create(
+      position: activity['position'],
+      seeding_key: SecureRandom.uuid
+    )
   end
 end
