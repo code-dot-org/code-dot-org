@@ -255,9 +255,7 @@ export default class CdoTrashcan {
   }
 
   setLidAngle_(lidAngle) {
-    var openAtRight =
-      this.workspace_.toolboxPosition === Blockly.TOOLBOX_AT_RIGHT ||
-      (this.workspace_.horizontalLayout && this.workspace_.RTL);
+    var openAtRight = !this.workspace_.RTL;
     this.svgLid_.setAttribute(
       'transform',
       'rotate(' +
