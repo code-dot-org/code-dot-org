@@ -15,7 +15,6 @@ import {
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import _ from 'lodash';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
@@ -176,35 +175,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
             options,
             textFieldMap
           )}
-          {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend],
-            this.props.data.ableToAttendMultiple
-          ).length > 0 && (
-            <div>
-              {this.radioButtonsWithAdditionalTextFieldsFor(
-                'travelToAnotherWorkshop',
-                {[TextFields.notSureExplain]: 'notSure'},
-                {
-                  label: (
-                    <span>
-                      <strong>
-                        If you are unable to make any of the above workshop
-                        dates, would you be open to traveling to another region
-                        for your local summer workshop?
-                      </strong>
-                      <br />
-                      Note: This option may have other fees or costs associated
-                      with it. Additionally, please note that we are not able to
-                      guarantee a space for you in a different location, and you
-                      will be responsible for the costs related to traveling to
-                      that location. If you indicate yes, your Regional Partner
-                      will follow up with more information.
-                    </span>
-                  )
-                }
-              )}
-            </div>
-          )}
         </div>
       );
     }
@@ -355,15 +325,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
       requiredFields.push('scholarshipReasons');
     }
 
-    if (
-      _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend],
-        data.ableToAttendMultiple
-      ).length > 0
-    ) {
-      requiredFields.push('travelToAnotherWorkshop');
-    }
-
     return requiredFields;
   }
 
@@ -375,15 +336,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
 
     if (data.payFee !== TextFields.noPayFee) {
       changes.scholarshipReasons = undefined;
-    }
-
-    if (
-      _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend],
-        data.ableToAttendMultiple
-      ).length === 0
-    ) {
-      changes.travelToAnotherWorkshop = undefined;
     }
 
     return changes;
