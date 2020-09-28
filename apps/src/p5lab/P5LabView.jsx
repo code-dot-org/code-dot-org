@@ -39,7 +39,8 @@ class P5LabView extends React.Component {
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    isBackground: PropTypes.bool
   };
 
   state = {
@@ -87,7 +88,20 @@ class P5LabView extends React.Component {
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
-
+    let defaultQuery = {
+      categoryQuery: '',
+      searchQuery: ''
+    };
+    if (this.props.isBackground) {
+      defaultQuery.categoryQuery = 'backgrounds';
+    }
+    // we don't want them to be able to navigate to all categories if we're only showing backgrounds
+    const navigable = !this.props.isBackground;
+    // we don't want to show backgrounds if we're looking for sprites in spritelab
+    const hideBackgrounds = !this.props.isBackground && this.props.spriteLab;
+    // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
+    // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
+    const canDraw = !this.props.isBackground;
     return (
       <div style={codeModeStyle}>
         <div
@@ -104,6 +118,10 @@ class P5LabView extends React.Component {
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
+              navigable={navigable}
+              defaultQuery={this.props.isBackground ? defaultQuery : undefined}
+              hideBackgrounds={hideBackgrounds}
+              canDraw={canDraw}
             />
           )}
         </div>
@@ -132,6 +150,7 @@ class P5LabView extends React.Component {
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
+        hideBackgrounds={this.props.spriteLab}
       />
     ) : (
       undefined
@@ -158,5 +177,6 @@ export default connect(state => ({
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
-  spriteLab: state.pageConstants.isBlockly
+  spriteLab: state.pageConstants.isBlockly,
+  isBackground: state.animationPicker.isBackground
 }))(P5LabView);

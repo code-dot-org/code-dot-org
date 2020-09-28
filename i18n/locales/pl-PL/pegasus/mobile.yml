@@ -962,9 +962,18 @@
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Kurs A (2018)
+  courseb-2018_name: Kurs B (2018)
+  coursec-2018_name: Kurs C (2018)
+  coursed-2018_name: Kurs D (2018)
+  coursee-2018_name: Kurs E (2018)
+  coursef-2018_name: Kurs F (2018)
   coursea-2019_name: Kurs A (2019)
   courseb-2019_name: Kurs B (2019)
   coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
   coursea-2020_name: Kurs A (2020)
   courseb-2020_name: Kurs B (2020)
   coursec-2020_name: Kurs C (2020)
@@ -973,12 +982,14 @@
   coursef-2020_name: Kurs F (2020)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
+  express-2019_name: Kurs ekspresowy (2019)
   pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   csd2_name: 'Rodział 2: Web Development'
   csd3_name: 'Dział 3: Animacje i gry'
   accelerated_name: "Przyspieszony kurs"
+  express_name: "Kurs ekspresowy"
   pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
   20-hour_name: Przyspieszony kurs
   algebra_name: "Pełny kurs Informatyka w algebrze"
@@ -1181,25 +1192,25 @@
   courseb_shortdescription_congrats: "Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)"
   coursec_shortdescription_congrats: "Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry."
   coursed_shortdescription_congrats: "Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych."
-  coursee_shortdescription_congrats: "Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji."
+  coursee_shortdescription_congrats: "Szybko omów pojęcia w kursach C i D, a następnie przejdź dalej do funkcji."
   coursef_shortdescription_congrats: "Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę."
   coursea-2017_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać.
   courseb-2017_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
   coursec-2017_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
   coursed-2017_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2017_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+  coursee-2017_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie przejdź dalej do funkcji.
   coursef-2017_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
   coursea-2018_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać.
   courseb-2018_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
   coursec-2018_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
   coursed-2018_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+  coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie przejdź dalej do funkcji.
   coursef-2018_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
   coursea-2019_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać.
   courseb-2019_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
   coursec-2019_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
   coursed-2019_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+  coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie przejdź dalej do funkcji.
   coursef-2019_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
@@ -1544,7 +1555,7 @@
   hoc_overview_dance_2019_subtitle: "Koduj Potańcówkę, aby podzielić się ze znajomymi. Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj i 34 innych!"
   hoc_overview_title: "Aktywności Godziny Kodowania z Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\"> Godzina Kodowania (Hour of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
-  hoc_overview_subtitle_markdown: "(https://hourofcode.com\"> Godzina Kodowania (Hour of Code) to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
+  hoc_overview_subtitle_markdown: "[Godzina Kodowania](https://hourofcode.com) to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
   hoc_overview_partner_activities_title: "Więcej aktywności od naszych partnerów"
   hoc_overview_partner_activities_body: "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie."
   hoc_overview_partner_activities_link: "Zobacz aktywności"

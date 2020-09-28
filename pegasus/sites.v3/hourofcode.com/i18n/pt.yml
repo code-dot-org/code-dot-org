@@ -503,6 +503,7 @@ pt:
     mapa
   signup_event_type_in_school: Em uma escola
   signup_event_type_out_of_school: Fora da escola
+  signup_event_type_at_home: Home
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lamentamos. Ocorreu um erro. Por favor, tente
     enviar o formulário novamente.
@@ -949,7 +950,7 @@ pt:
   highlights_constant_athletes_short_heading: Esforce-se
   footer_copyright_message: Copyright %{current_year} Code.org. Todos os direitos
     reservados.
-  footer_trademark_message: Hour of Code™ é uma marca registrada da Code.org.
+  footer_trademark_message: Hour of Code™ é uma marca registrada de Code.org.
   footer_menu_partners: Parceiros e conselheiros
   footer_menu_contact: Fale conosco
   footer_menu_support: Suporte
@@ -7197,7 +7198,7 @@ pt:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Todos os navegadores modernos
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Todos os navegadores modernos
   tutorial_rginter_string_platforms: Chrome, Firefox, tablet Android
   tutorial_cssgrid_string_platforms: Todos os navegadores modernos
@@ -9424,7 +9425,7 @@ pt:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Todos os navegadores modernos, iPad, sem conexão
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Todos os navegadores modernos, tablet Android,
     iPad
   tutorial_tynkermars_string_platforms: Todos os navegadores modernos, iPad, sem conexão

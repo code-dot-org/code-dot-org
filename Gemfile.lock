@@ -353,8 +353,6 @@ GEM
     codecov (0.2.8)
       json
       simplecov
-    codemirror-rails (5.16.0)
-      railties (>= 3.0, < 6.0)
     coderay (1.1.1)
     colorize (0.8.1)
     composite_primary_keys (9.0.10)
@@ -508,9 +506,6 @@ GEM
       concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
-    jbuilder (2.5.0)
-      activesupport (>= 3.0.0, < 5.1)
-      multi_json (~> 1.2)
     jmespath (1.4.0)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
@@ -934,7 +929,6 @@ DEPENDENCIES
   cancancan (~> 1.15.0)
   chronic (~> 0.10.2)
   codecov
-  codemirror-rails
   colorize
   composite_primary_keys
   cucumber
@@ -971,7 +965,6 @@ DEPENDENCIES
   image_optim_rails!
   image_size
   ims-lti!
-  jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
   jumphash

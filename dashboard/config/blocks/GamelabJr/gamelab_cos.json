@@ -1,0 +1,14 @@
+{
+  "category": "Math",
+  "config": {
+    "func": "cos",
+    "blockText": "cos {NUM}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number"
+      }
+    ]
+  }
+}
