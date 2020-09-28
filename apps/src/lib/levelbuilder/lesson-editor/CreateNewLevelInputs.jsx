@@ -3,7 +3,7 @@ import Button, {ButtonColor} from '@cdo/apps/templates/Button';
 
 //TODO: Set up creating a new level. Make sure dropdown has all level types
 
-export default class AddLevelFilters extends Component {
+export default class CreateNewLevelInputs extends Component {
   static propTypes = {};
 
   render() {

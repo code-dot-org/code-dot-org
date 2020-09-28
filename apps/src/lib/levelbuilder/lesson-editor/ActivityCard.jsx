@@ -46,16 +46,14 @@ const styles = {
     marginLeft: 10
   },
   label: {
-    fontSize: 20,
+    fontSize: 18,
     marginRight: 5
-  },
-  input: {
-    marginRight: 10
   },
   labelAndInput: {
     marginLeft: 5,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   }
 };
 
@@ -131,10 +129,10 @@ class ActivityCard extends Component {
     );
   };
 
-  handleChangeTime = event => {
+  handleChangeDuration = event => {
     this.props.updateActivityField(
       this.props.activity.position,
-      'time',
+      'duration',
       event.target.value
     );
   };
@@ -162,17 +160,18 @@ class ActivityCard extends Component {
             <span style={styles.label}>{`Activity:`}</span>
             <input
               value={activity.displayName}
-              style={styles.input}
+              style={{width: 150}}
               onChange={this.handleChangeDisplayName}
             />
           </label>
           <label style={styles.labelAndInput}>
-            <span style={styles.label}>{`Time (mins):`}</span>
+            <span style={styles.label}>{`Duration:`}</span>
             <input
-              value={activity.time}
-              style={{...styles.input, ...{width: 50}}}
-              onChange={this.handleChangeTime}
+              value={activity.duration}
+              style={{width: 35}}
+              onChange={this.handleChangeDuration}
             />
+            <span style={{fontSize: 10}}>{'(mins)'}</span>
           </label>
           <OrderControls
             name={activity.key || '(none)'}
@@ -181,31 +180,29 @@ class ActivityCard extends Component {
           />
         </div>
         <div style={styles.activityBody} hidden={this.state.collapsed}>
-          {activity.activitySections.map(section => {
-            return (
-              <ActivitySectionCard
-                key={section.key}
-                activitySection={section}
-                activityPosition={activity.position}
-                activitySectionsCount={activity.activitySections.length}
-                activitiesCount={this.props.activitiesCount}
-                ref={activitySectionCard => {
-                  if (activitySectionCard) {
-                    const metrics = ReactDOM.findDOMNode(
-                      activitySectionCard
-                    ).getBoundingClientRect();
-                    this.props.setActivitySectionMetrics(
-                      metrics,
-                      section.position
-                    );
-                  }
-                }}
-                activitySectionMetrics={this.props.activitySectionMetrics}
-                setTargetActivitySection={this.props.setTargetActivitySection}
-                targetActivitySectionPos={this.props.targetActivitySectionPos}
-              />
-            );
-          })}
+          {activity.activitySections.map(section => (
+            <ActivitySectionCard
+              key={section.key}
+              activitySection={section}
+              activityPosition={activity.position}
+              activitySectionsCount={activity.activitySections.length}
+              activitiesCount={this.props.activitiesCount}
+              ref={activitySectionCard => {
+                if (activitySectionCard) {
+                  const metrics = ReactDOM.findDOMNode(
+                    activitySectionCard
+                  ).getBoundingClientRect();
+                  this.props.setActivitySectionMetrics(
+                    metrics,
+                    section.position
+                  );
+                }
+              }}
+              activitySectionMetrics={this.props.activitySectionMetrics}
+              setTargetActivitySection={this.props.setTargetActivitySection}
+              targetActivitySectionPos={this.props.targetActivitySectionPos}
+            />
+          ))}
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
             className="btn"
@@ -213,7 +210,7 @@ class ActivityCard extends Component {
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Activity Section
+            Activity Section
           </button>
         </div>
       </div>
