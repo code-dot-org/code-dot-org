@@ -8,16 +8,26 @@ const styles = {
   buttonLeft: {
     marginLeft: 0
   },
-  selectable: {
+  enabled: {
     backgroundColor: 'white',
     color: cyan,
-    border: '1px solid',
+    border: '2px solid',
     borderColor: cyan,
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: '13px'
   },
   warning: {
-    color: 'red'
+    color: 'red',
+    fontFamily: "'Gotham 4r', sans-serif",
+    fontSize: '12px',
+    paddingTop: '5px'
+  },
+  disabled: {
+    opacity: 0.5
+  },
+  clicked: {
+    backgroundColor: cyan,
+    color: 'white'
   }
 };
 
@@ -65,18 +75,16 @@ export default class StudentSelector extends React.Component {
       if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
         className = 'selected';
       }
-      let btnStyle = styles.selectable;
+      let btnStyle = styles.enabled;
       const unselectable = exceededMaximum && className === 'selectable';
 
       //Adjust styles for disabled and selected buttons
       let baseStyles = {...btnStyle};
       if (unselectable) {
-        baseStyles['opacity'] = 0.5;
+        btnStyle = {...baseStyles, ...styles.disabled};
       } else if (className === 'selected') {
-        baseStyles['backgroundColor'] = cyan;
-        baseStyles['color'] = 'white';
+        btnStyle = {...baseStyles, ...styles.clicked};
       }
-      btnStyle = baseStyles;
 
       return (
         <button
@@ -97,7 +105,7 @@ export default class StudentSelector extends React.Component {
         {studentBtns}
         <div className="clear" />
         {exceededMaximum && (
-          <p style={styles.warning}>You cannot pair with more than 4 people.</p>
+          <p style={styles.warning}>{i18n.exceededPairProgrammingMax()}</p>
         )}
         {this.state.selectedStudentIds.length !== 0 && (
           <button
