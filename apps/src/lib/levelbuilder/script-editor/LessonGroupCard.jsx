@@ -1,59 +1,79 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import LessonCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonCard';
 import {
-  addLesson,
-  removeGroup,
-  moveGroup,
-  convertGroupToUserFacing
+  moveLesson,
+  removeLesson,
+  addLesson
 } from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
 const styles = {
-  groupHeader: {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  lessonGroupCard: {
     fontSize: 18,
-    color: 'white',
-    background: color.cyan,
-    borderTopLeftRadius: borderRadius,
-    borderTopRightRadius: borderRadius,
-    padding: 10
-  },
-  groupBody: {
-    background: color.lightest_cyan,
-    borderBottomLeftRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    padding: 10,
-    marginBottom: 20
-  },
-  addLesson: {
-    fontSize: 14,
-    color: '#5b6770',
     background: 'white',
-    border: '1px solid #ccc',
-    boxShadow: 'none',
-    margin: '0 10px 10px 10px'
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
+    borderRadius: borderRadius,
+    padding: 20,
+    margin: 10
+  },
+  lessonGroupCardHeader: {
+    color: '#5b6770',
+    marginBottom: 15
+  },
+  bottomControls: {
+    height: 30
+  },
+  addButton: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    margin: '0 5px 0 0'
   }
 };
 
-class LessonGroupCard extends Component {
+export class UnconnectedLessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
-    lessonGroupsCount: PropTypes.number.isRequired,
+    lessonGroupsCount: PropTypes.number,
 
-    //redux
+    // from redux
+    moveLesson: PropTypes.func.isRequired,
+    removeLesson: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    moveGroup: PropTypes.func.isRequired,
-    removeGroup: PropTypes.func.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired
   };
 
-  handleAddLesson = lessonGroupPosition => {
+  handleMoveLessonGroup = direction => {
+    if (
+      (this.props.lessonGroup.position !== 1 && direction === 'up') ||
+      (this.props.lessonGroup.position !== this.props.lessonGroupsCount &&
+        direction === 'down')
+    ) {
+      this.props.moveLesson(this.props.lessonGroup.position, direction);
+    }
+  };
+
+  handleRemoveLessonGroup = () => {
+    this.props.removeLesson(this.props.lessonGroup.position);
+  };
+
+  handleRemoveLesson = lessonPosition => {
+    this.props.removeLesson(this.props.lessonGroup.position, lessonPosition);
+  };
+
+  handleAddLesson = () => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addLesson(lessonGroupPosition, newLessonName);
+      this.props.addLesson(this.props.lessonGroup.position, newLessonName);
     }
   };
 
@@ -71,26 +91,11 @@ class LessonGroupCard extends Component {
     }
   };
 
-  handleMoveLessonGroup = direction => {
-    if (
-      (this.props.lessonGroup.position !== 1 && direction === 'up') ||
-      (this.props.lessonGroup.position !== this.props.lessonGroupsCount &&
-        direction === 'down')
-    ) {
-      this.props.moveGroup(this.props.lessonGroup.position, direction);
-    }
-  };
-
-  handleRemoveLessonGroup = () => {
-    this.props.removeGroup(this.props.lessonGroup.position);
-  };
-
   render() {
     const {lessonGroup} = this.props;
-
     return (
-      <div>
-        <div style={styles.groupHeader}>
+      <div style={styles.lessonGroupCard}>
+        <div style={styles.lessonGroupCardHeader}>
           {lessonGroup.user_facing
             ? `Lesson Group: ${lessonGroup.key}: "${lessonGroup.display_name}"`
             : 'Lesson Group: Not User Facing (No Display Name)'}
@@ -100,25 +105,25 @@ class LessonGroupCard extends Component {
             remove={this.handleRemoveLessonGroup}
           />
         </div>
-        <div style={styles.groupBody}>
-          {lessonGroup.lessons.map((lesson, index) => {
-            return (
-              <LessonCard
-                key={`lesson-${index}`}
-                lessonGroupsCount={this.props.lessonGroupsCount}
-                lessonsCount={lessonGroup.lessons.length}
-                lesson={lesson}
-                lessonGroupPosition={lessonGroup.position}
-              />
-            );
-          })}
+        {lessonGroup.lessons.map(lesson => (
+          <LessonToken
+            lessonGroupPosition={this.props.lessonGroup.position}
+            lesson={lesson}
+            dragging={false}
+            draggedLessonPos={1}
+            delta={0}
+            handleDragStart={() => {}}
+            removeLesson={this.handleRemoveLesson}
+          />
+        ))}
+        <div style={styles.bottomControls}>
           <button
-            onMouseDown={this.handleAddLesson.bind(null, lessonGroup.position)}
+            onMouseDown={this.handleAddLesson}
             className="btn"
-            style={styles.addLesson}
+            style={styles.addButton}
             type="button"
           >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            <i style={{marginRight: 7}} className="fa fa-pencil" />
             Add Lesson
           </button>
           {!this.props.lessonGroup.user_facing && (
@@ -141,22 +146,11 @@ class LessonGroupCard extends Component {
   }
 }
 
-export const UnconnectedLessonGroupCard = LessonGroupCard;
-
 export default connect(
   state => ({}),
-  dispatch => ({
-    addLesson(position, lessonName) {
-      dispatch(addLesson(position, lessonName));
-    },
-    removeGroup(position) {
-      dispatch(removeGroup(position));
-    },
-    moveGroup(position, direction) {
-      dispatch(moveGroup(position, direction));
-    },
-    convertGroupToUserFacing(position, key, displayName) {
-      dispatch(convertGroupToUserFacing(position, key, displayName));
-    }
-  })
-)(LessonGroupCard);
+  {
+    moveLesson,
+    removeLesson,
+    addLesson
+  }
+)(UnconnectedLessonGroupCard);

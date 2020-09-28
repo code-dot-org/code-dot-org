@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {
-  levelTokenMargin,
-  borderRadius
-} from '@cdo/apps/lib/levelbuilder/constants';
+import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 import {connect} from 'react-redux';
@@ -139,7 +136,7 @@ class ActivitySectionCard extends Component {
       });
       this.setState({
         draggedLevelPos: position,
-        dragHeight: this.metrics[position].height + levelTokenMargin,
+        dragHeight: this.metrics[position].height + tokenMargin,
         initialClientY: clientY,
         newPosition: position,
         startingPositions
