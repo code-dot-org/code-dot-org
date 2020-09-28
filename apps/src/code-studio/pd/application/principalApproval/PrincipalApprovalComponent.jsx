@@ -244,7 +244,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
               required: false,
               label: `I am authorized to release student data and give permission for the College
               Board to send de-identified AP scores for Code.org classes directly to Code.org for
-              the 2019 to 2021 school years. I understand that the de-identified data cannot be
+              the 2019 to 2022 school years. I understand that the de-identified data cannot be
               tied to individual students, will not be used to evaluate teachers, and will greatly
               help Code.org evaluate its program effectiveness.`
             })}
@@ -321,7 +321,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           Participating teachers are asked to commit to Code.org’s yearlong
           Professional Learning Program starting in the summer and concluding in
           the spring. Workshops can either be held in-person, virtually, or as a
-          combination of both throughout the year
+          combination of both throughout the year.
         </p>
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'doYouApprove',

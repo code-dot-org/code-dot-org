@@ -1182,7 +1182,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
-    assert_equal '', workshop.friendly_location
+    assert_equal 'Location TBA', workshop.friendly_location
   end
 
   test 'friendly_location with virtual location' do

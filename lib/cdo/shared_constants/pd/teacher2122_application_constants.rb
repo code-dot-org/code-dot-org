@@ -97,11 +97,6 @@ module Pd
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
-          travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
-          willing_to_travel: clean_multiline(
-            'The four one-day school year workshops are typically held on Saturdays, with an approximate
-           schedule of 9am - 4pm. How far would you be willing to travel to each workshop?'
-          ),
           interested_in_online_program: 'Do you want to be considered for Code.org’s national virtual academic year workshops?',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
@@ -173,7 +168,6 @@ module Pd
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
-        willing_to_travel: "How far would you be willing to travel to academic year workshops?",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
@@ -350,8 +344,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
-        :travel_to_another_workshop,
-        :willing_to_travel,
         :interested_in_online_program,
         :pay_fee,
         :scholarship_reasons,
