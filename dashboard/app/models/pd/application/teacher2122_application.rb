@@ -404,11 +404,6 @@ module Pd::Application
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],
-        travel_to_another_workshop: [
-          'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
-          'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
-          TEXT_FIELDS[:not_sure_explain]
-        ],
         interested_in_online_program: [YES, NO]
       }
     end
@@ -453,12 +448,6 @@ module Pd::Application
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
           required << :completing_on_behalf_of_name
-        end
-
-        if hash[:able_to_attend_multiple]
-          if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend]] & hash[:able_to_attend_multiple]).any?
-            required << :travel_to_another_workshop
-          end
         end
 
         if hash[:regional_partner_id].present?
@@ -507,7 +496,6 @@ module Pd::Application
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
-        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
