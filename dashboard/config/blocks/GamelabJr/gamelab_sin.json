@@ -1,0 +1,14 @@
+{
+  "category": "Math",
+  "config": {
+    "func": "sin",
+    "blockText": "sin {NUM}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number"
+      }
+    ]
+  }
+}

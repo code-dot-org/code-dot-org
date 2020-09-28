@@ -130,28 +130,15 @@ describe('sectionProgressLoader.loadScript', () => {
     sectionProgress.startRefreshingProgress.restore();
   });
 
-  it('returns early if it is already loading', () => {
-    reduxStub.returns({
-      getState: () => {
-        return {
-          sectionProgress: {
-            isLoadingProgress: true
-          },
-          sectionData: {}
-        };
-      }
-    });
-    expect(loadScript(0)).to.be.undefined;
-    expect(startLoadingProgressStub).to.have.not.been.called;
-    expect(startRefreshingProgressStub).to.have.not.been.called;
-  });
-
   it('returns early if it is already refreshing', () => {
     reduxStub.returns({
       getState: () => {
         return {
           sectionProgress: {
-            isRefreshingProgress: true
+            isRefreshingProgress: true,
+            studentLevelProgressByScript: [true],
+            scriptDataByScript: [true],
+            currentView: 0
           },
           sectionData: {}
         };

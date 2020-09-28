@@ -955,7 +955,11 @@
         "ramp_artist_loops9": "Oldd meg ezt a feladványt egy négyzet megrajzolásával.",
         "ramp_artist_loops9_2018": "Oldd meg ezt a feladványt egy négyzet megrajzolásával.",
         "ramp_artist_loops9_2019": "Oldd meg ezt a feladványt egy négyzet megrajzolásával.",
-        "ramp_artist_loops9_2020": "Oldd meg ezt a feladványt egy négyzet megrajzolásával."
+        "ramp_artist_loops9_2020": "Oldd meg ezt a feladványt egy négyzet megrajzolásával.",
+        "2-3 Artist Debugging 6": "Úgy néz ki, egy olyan székre ültem, aminek hiányzik az egyik lába. \n\nSzerkeszd meg a kódot, hogy megrajzold a hiányzó lábat.",
+        "2-3 Artist Debugging 7": "Úgy tűnik, a C-t visszafelé rajzolja meg a kód. \n\nMeg tudod csinálni, hogy valóban C-nek nézzen ki?",
+        "2-3 Artist Debugging 8": "A tanárom azt mondja, hogy fejezzem be, amit elkezdtem!\n\nSegíts nekem befejezni a szélforgót! Kitalálod, hogy mi a gond vele?",
+        "2-3 Artist Debugging 9": "Valami gond van!\n\nEnnek a szárnak a kódja nem jó! Kitalálod, hogyan tudja a megfelelő helyre rajzolni a szárat a művész?"
       }
     }
   }

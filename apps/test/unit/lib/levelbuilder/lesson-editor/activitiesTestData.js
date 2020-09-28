@@ -3,7 +3,7 @@ export const sampleActivities = [
     key: 'activity-1',
     displayName: 'Main Activity',
     position: 1,
-    time: 20,
+    duration: 20,
     activitySections: [
       {
         key: 'section-3',
@@ -60,7 +60,8 @@ export const sampleActivities = [
             skin: null,
             videoKey: null,
             concepts: '',
-            conceptDifficulty: ''
+            conceptDifficulty: '',
+            expand: false
           },
           {
             name: 'Level 2',
@@ -82,7 +83,8 @@ export const sampleActivities = [
             skin: null,
             videoKey: null,
             concepts: '',
-            conceptDifficulty: ''
+            conceptDifficulty: '',
+            expand: false
           }
         ]
       }

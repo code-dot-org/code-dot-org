@@ -105,7 +105,7 @@
  {
    "name":"ayw1_page",
    "title": "Academic Year Workshop 1 Feedback",
-   "visibleIf": "{workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 1'",
+   "visibleIf": "{workshop_agenda}='in_person' and ({workshop_subject}='Academic Year Workshop 1' or {workshop_subject}='Academic Year Workshop 1 + 2')",
    "elements": [
      {
       "type":"library_item",
@@ -118,7 +118,7 @@
   {
    "name":"ayw2_page",
    "title": "Academic Year Workshop 2 Feedback",
-   "visibleIf": "{workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 2'",
+   "visibleIf": "{workshop_agenda}='in_person' and ({workshop_subject}='Academic Year Workshop 2' or {workshop_subject}='Academic Year Workshop 1 + 2')",
    "elements": [
      {
       "type":"library_item",

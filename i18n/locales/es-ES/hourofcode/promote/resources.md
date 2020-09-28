@@ -144,7 +144,7 @@ Visita http://hourofcode.com/{{ country }} para ver más detalles y ayudar a dif
 
 **Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Las computadoras están en todas partes y cambian todas las industrias del planeta, pero solo el 45% de las escuelas secundarias enseñan ciencias de la computación. Las niñas y las minorías no tienen presencia suficiente en las clases de ciencias de la computación y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes y cambian todas las industrias del planeta, pero solo el 45% de las escuelas secundarias enseñan ciencias de la computación. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esto.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 

@@ -489,6 +489,7 @@ sv:
   signup_send_posters_address_placeholder: Denna adress kommer inte att visas på kartan
   signup_event_type_in_school: I en skola
   signup_event_type_out_of_school: Utanför skolan
+  signup_event_type_at_home: Home
   signup_submit_census_label: Skicka in
   signup_submit_census_error_message: Beklagar, det blev fel. Försök skicka in formuläret
     igen.
@@ -6847,7 +6848,7 @@ sv:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Alla moderna webbläsare
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Alla moderna webbläsare
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Alla moderna webbläsare
@@ -9051,7 +9052,7 @@ sv:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_tynkermars_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad

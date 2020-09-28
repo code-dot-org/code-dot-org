@@ -335,7 +335,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "login: omniauth student is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    user = create(:user, email: email)
+    create(:user, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
 
@@ -345,12 +345,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_equal user.id, signed_in_user_id
+    assert_nil signed_in_user_id
   end
 
   test "login: omniauth teacher is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    user = create(:user, email: email)
+    create(:user, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
@@ -359,12 +359,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_equal user.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_nil signed_in_user_id
   end
 
   test "login: omniauth student is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    user = create(:teacher, email: email)
+    create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
     @request.env['omniauth.auth'] = auth
@@ -373,12 +374,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_equal user.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_nil signed_in_user_id
   end
 
   test "login: omniauth teacher is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    user = create(:teacher, email: email)
+    create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
@@ -387,7 +389,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_equal user.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_nil signed_in_user_id
   end
 
   test 'clever: signs in user if user is found by credentials' do
@@ -793,10 +796,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :google_oauth2
     end
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
-    assert_equal 'google_oauth2', user.provider
-    assert_equal user.uid, uid
-    assert_equal user.id, signed_in_user_id
+    assert_not_equal 'google_oauth2', user.provider
   end
 
   test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
@@ -817,16 +819,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_creates(AuthenticationOption) do
+    assert_does_not_create(AuthenticationOption) do
       assert_does_not_create(User) do
         get :microsoft_v2_auth
       end
     end
     user.reload
-    takeover_auth = user.authentication_options.last
-    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
-    assert_equal uid, takeover_auth.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_nil signed_in_user_id
   end
 
   test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
@@ -849,7 +848,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
+  test 'login: google_oauth2 does not silently take over unmigrated teacher with only password login' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:teacher, :demigrated, email: email)
@@ -860,12 +859,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     user.reload
-    assert_equal 'google_oauth2', user.provider
-    assert_equal user.uid, uid
-    assert_equal user.id, signed_in_user_id
+    assert_not_equal 'google_oauth2', user.provider
+    assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth silently takes over unmigrated teacher with matching email' do
+  test 'login: microsoft_v2_auth does not silently take over unmigrated teacher with only password login' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:teacher, email: email)
@@ -883,19 +881,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_creates(AuthenticationOption) do
+    assert_does_not_create(AuthenticationOption) do
       assert_does_not_create(User) do
         get :microsoft_v2_auth
       end
     end
     user.reload
     takeover_auth = user.authentication_options.last
-    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
-    assert_equal uid, takeover_auth.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_not_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    assert_nil signed_in_user_id
   end
 
-  test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
+  test 'google_oauth2 redirects migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, email: email)
@@ -905,11 +902,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :google_oauth2
     end
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
-    assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert found_google
-    assert_equal user.id, signed_in_user_id
+    assert_not found_google
   end
 
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
@@ -933,7 +929,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
+  test 'login: google_oauth2 does not silent adds authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:teacher, email: email)
@@ -946,11 +942,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert found_google
-    assert_equal user.id, signed_in_user_id
+    assert_not found_google
+    assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth silently adds authentication_option to migrated teacher with matching email' do
+  test 'login: microsoft_v2_auth does not silently add authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:teacher, email: email)
@@ -973,14 +969,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     assert_equal 'migrated', user.provider
-    assert_equal 2, user.authentication_options.count
+    assert_equal 1, user.authentication_options.count
     microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
-    refute_nil microsoft_auth_option
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_nil microsoft_auth_option
+    assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth silently adds authentication_option to migrated student with matching email' do
+  test 'login: microsoft_v2_auth does not silently add authentication_option to migrated student with only password login' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, email: email)
@@ -1003,11 +998,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     assert_equal 'migrated', user.provider
-    assert_equal 2, user.authentication_options.count
+    assert_equal 1, user.authentication_options.count
     microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
-    refute_nil microsoft_auth_option
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_nil microsoft_auth_option
+    assert_nil signed_in_user_id
   end
 
   test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
@@ -1485,7 +1479,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
-    malformed_account = create :teacher, :demigrated
+    malformed_account = create :teacher, :demigrated, provider: 'microsoft_v2_auth'
     email = malformed_account.email
     uid = 'google-takeover-id'
 
@@ -1526,7 +1520,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'silent_takeover: Does not add email to student account' do
     # Set up existing account
     email = 'student+example@code.org'
-    student = create :student, :demigrated, email: email
+    student = create :student, :demigrated, :microsoft_v2_sso_provider, email: email
     uid = 'google-takeover-id'
 
     Honeybadger.expects(:notify).never
@@ -1557,6 +1551,36 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal student.id, signed_in_user_id
   end
 
+  test 'silent_takeover: does add authentication option to account with verified email' do
+    # Set up existing account
+    email = 'example@code.org'
+    user = create :teacher, :microsoft_v2_sso_provider, email: email
+    uid = 'google-takeover-id'
+
+    Honeybadger.expects(:notify).never
+
+    # Hit google callback with matching email to trigger takeover
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '',
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Verify takeover completed
+    user.reload
+    google_oauth = user.authentication_options.find {|a| a.credential_type == AuthenticationOption::GOOGLE}
+    assert_not_nil google_oauth
+
+    # Verify that we signed the user into the taken-over account
+    assert_equal user.id, signed_in_user_id
+  end
+
   test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
     # Set up existing account
     malformed_account = create :teacher, :demigrated
@@ -1567,16 +1591,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     malformed_account.save(validate: false)
     malformed_account.reload
     refute malformed_account.valid?
-
-    # Expect notification about validation failure
-    Honeybadger.expects(:notify).with(
-      error_class: 'Failed to update User during silent takeover',
-      error_message: 'Validation failed: Display Name is required',
-      context: {
-        user_id: malformed_account.id,
-        tags: 'accounts'
-      }
-    )
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
@@ -1596,9 +1610,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_equal AuthenticationOption::GOOGLE, malformed_account.provider
     assert_nil malformed_account.uid
 
-    # We sign the user in anyway (weird, but okay because we know
-    # the email matches?)
-    assert_equal malformed_account.id, signed_in_user_id
+    assert_nil signed_in_user_id
   end
 
   test 'silent_takeover: Fails and notifies on malformed migrated user' do
@@ -1610,16 +1622,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Stub to break creation of new AuthenticationOptions by returning
     # an un-persisted instance
     AuthenticationOption.stubs(:create!).raises('Intentional test failure')
-
-    # Expect notification about validation failure
-    Honeybadger.expects(:notify).with(
-      error_class: 'Failed to create AuthenticationOption during silent takeover',
-      error_message: 'Intentional test failure',
-      context: {
-        user_id: account.id,
-        tags: 'accounts'
-      }
-    )
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
@@ -1638,9 +1640,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     account.reload
     assert_equal 1, account.authentication_options.count
 
-    # We sign the user in anyway (weird, but okay because we know
-    # the email matches?)
-    assert_equal account.id, signed_in_user_id
+    assert_nil signed_in_user_id
   end
 
   private

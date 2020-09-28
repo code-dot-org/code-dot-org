@@ -608,22 +608,76 @@ zh-TW:
           探討如何用兩個簡單的值來重新創造一個圖片。"
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** 這個選擇題在考驗學生 HTML 標頭是如何顯示在網頁上面的。你可以到指定的等級右手邊的教師專區去查看哪些學生的作答是正確的。作答正確的學生會有一個綠色的泡泡。學生們可以作答無數次，直到答對為止，所以一直邊猜邊作答也有可能答對。
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** 這個選擇題在考驗學生 HTML 標頭是如何顯示在網頁上面的。你可以到指定的等級右手邊的教師專區去查看哪些學生的作答是正確的。作答正確的學生會有一個綠色的泡泡。學生們可以作答無數次，直到答對為止，所以一直邊猜邊作答也有可能答對。
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+          <div class="clear"></div>
       CSD U2 Design Project:
         content1: 在此描述
       CSD U2 Design Project_2018:
@@ -659,10 +713,51 @@ zh-TW:
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
       CSD U2 L1 Overview:
         content1: 在此描述
+        markdown: |-
+          # 總覽
+          本課程包含了提供服務給一般使用者和創作者為目的的網站。 這課程探討了美國少數幾個最常用的網站，並討論了每個網站如何對一般使用者有用以及如何為創作者提供服務。
+
+          ##詞彙
+          * **網站**-一個連接在網際網路上並維護一個或多個頁面的地方。
+
+          ##資源
+          * [網站的目的-活動指南]（https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf）
+        teacher_markdown: "* [製作網站的目的為何？ - 範例](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
         content1: 在此描述
+        markdown: |-
+          ＃總覽
+          本課介紹網站作為個人表達的一種手段。 課程中首先討論人們用不同的方式來表達和分享自己的興趣和想法，然後研究由以前課程的學生所建立的一些範例網站。 最後，每個人都集思廣益並分享主題和興趣清單，要包含能在剩下的單元中建立開發個人網站的資源 。
+
+          ##詞彙
+          * **網站內容**-網頁中包含的原始文字，圖像和其他元素
+
+          ##資源
+          * [個人網站草稿-活動指南]（https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf）
+        teacher_markdown: "* [個人網站的設計草稿](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         content1: 在此描述
+        markdown: |-
+          ＃總覽
+          本課將介紹HTML，以解決如何將網站的內容和結構傳達給電腦的問題。 本課程以簡短的不插電活動開始，展示了有效傳達網頁結構的挑戰。 該課程在Web Lab中查看HTML頁面，並討論HTML標籤如何幫助解決此問題，然後使用HTML編寫單元的第一個Web頁面。
+
+          ##詞彙
+          * ** HTML **-超文字標記語言，一種用於建立網頁的語言
+          * ** HTML元素**-網站的一部分，以開始標籤標記，有時以結束標籤關閉
+          * ** HTML標記**-特殊字符集，用於指示HTML元素的開始和結束以及該元素的類型
+          * **網站內容**-網頁中包含的原始文字，圖像和其他元素
+          * **網站結構**-在網頁中不同區塊的內容，目的是在幫助電腦決定如何顯示內容
+
+          ##介紹過的程式碼
+
+          * ** [HTML]（// studio.code.org/docs/weblab/html/)**-`<html> </ html>`
+          * ** [Doctype]（// studio.code.org/docs/weblab/doctype/)**-`<！DOCTYPE>`
+          * ** [Paragraph]（// studio.code.org/docs/weblab/P/)**-`<p> </ p>`
+          * ** [Body]（// studio.code.org/docs/weblab/body/)**-`<body> </ body>`
+          * ** [Head]（// studio.code.org/docs/weblab/head/)**-`<head> </ head>`
       CSD U2 L4 Overview:
         content1: 在此描述
       CSD U2 L5 Overview:
@@ -699,23 +794,38 @@ zh-TW:
           * Wikipedia.org - 內容由用戶生成的免費線上百科全書
       CSD U2 expand project:
         content1: 在此描述
+        teacher_markdown: 如何展開學生們的網站的指引可以在版面上看到，點擊以顯示學生們的範例網站頁面。
       CSD U2 expand project_2018:
         content1: 在此描述
+        teacher_markdown: 如何展開學生們的網站的指引可以在版面上看到，點擊以顯示學生們的範例網站頁面。
       CSD U2 expand project_2018_2019:
         content1: 在此描述
+        teacher_markdown: 如何展開學生們的網站的指引可以在版面上看到，點擊以顯示學生們的範例網站頁面。
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: The `src` attribute is spelled incorrectly.
+        - text: The `src` and `alt` attributes are switched
+        - text: The file extension (.jpg) is missing from the image address
+        - text: The image address is not given as a `src` attribute
+        - text: There is a space in the file name
+        content1: Match the buggy HTML code with the description of its bug.
+        teacher_markdown: 'Although this level can be used to assess student understanding
+          of the syntax of the `<img>` tag, its main purpose is to make students aware
+          of the most common types of bugs they may encounter when adding images to
+          web pages.
+
+'
       CSD U2 lists match:
         answers:
         - {}
@@ -724,11 +834,15 @@ zh-TW:
         - {}
         - {}
         questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        markdown: " *提示: 有一些HTML清單是有錯誤的，請思考程式碼中有何錯誤導致問題的。*\n\n"
       CSD U2 lists match_2018:
         answers:
         - {}
@@ -737,11 +851,15 @@ zh-TW:
         - {}
         - {}
         questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        markdown: " *提示: 有一些HTML清單是有錯誤的，請思考程式碼中有何錯誤導致問題的。*\n\n"
       CSD U2 lists match_2018_2019:
         answers:
         - {}
@@ -750,17 +868,33 @@ zh-TW:
         - {}
         - {}
         questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        markdown: " *提示: 有一些HTML清單是有錯誤的，請思考程式碼中有何錯誤導致問題的。*\n\n"
       CSD U2 project guide:
         content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
       CSD U2 project guide_2018:
         content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
       CSD U2 project guide_2018_2019:
         content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -954,8 +1088,28 @@ zh-TW:
 
       CSD U3 combining rep_2018:
         content1: 在此描述
+        markdown: |
+          ### 你能夠解碼這個二進位字串嗎？
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### 你需要哪些資訊來幫助你進行解碼呢？
       CSD U3 combining rep_2018_2019:
         content1: 在此描述
+        markdown: |
+          ### 你能夠解碼這個二進位字串嗎？
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### 你需要哪些資訊來幫助你進行解碼呢？
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -992,18 +1146,70 @@ zh-TW:
         content1: 在此描述
       CSD U5 Encryption 1:
         content1: 在此描述
+        markdown: |
+          # 解碼二進位字串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 編碼系統：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018:
         content1: 在此描述
+        markdown: |
+          # 解碼二進位字串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 編碼系統：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018_2019:
         content1: 在此描述
+        markdown: |
+          # 解碼二進位字串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 編碼系統：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 2:
         content1: 在此描述
+        markdown: |-
+          # 解碼二進位字串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 你能夠解碼這個二進位字串嗎？
+          * 在進行解碼之前，你需要先具備哪些知識呢？
       CSD U5 Encryption 2_2018:
         content1: 在此描述
+        markdown: |-
+          # 解碼二進位字串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 你能夠解碼這個二進位字串嗎？
+          * 在進行解碼之前，你需要先具備哪些知識呢？
       CSD U5 Encryption 2_2018_2019:
         content1: 在此描述
+        markdown: |-
+          # 解碼二進位字串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 你能夠解碼這個二進位字串嗎？
+          * 在進行解碼之前，你需要先具備哪些知識呢？
       CSD U5 L13 SFLP Interpreting Data:
         content1: 在此描述
+        teacher_markdown: "* 數據判讀 - 範例 ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: 在此描述
       CSD U5 crosstab warmup_2018:
@@ -1012,22 +1218,250 @@ zh-TW:
         content1: 在此描述
       CSD U5 data visualization:
         content1: 在此描述
+        markdown: |-
+          ## 最佳的班級寵物
+          ### 這裡有三種關於最佳班級寵物投票結果的不同呈現方式。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 對於人類來說，哪一種呈現方式最容易決定哪種寵物是最受歡迎的？
+          ### 對於電腦來說，哪一個呈現方式最容易決定？
       CSD U5 data visualization_2018:
         content1: 在此描述
+        markdown: |-
+          ## 最佳的班級寵物
+          ### 這裡有三種關於最佳班級寵物投票結果的不同呈現方式。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 對於人類來說，哪一種呈現方式最容易決定哪種寵物是最受歡迎的？
+          ### 對於電腦來說，哪一個呈現方式最容易決定？
       CSD U5 data visualization_2018_2019:
         content1: 在此描述
+        markdown: |-
+          ## 最佳的班級寵物
+          ### 這裡有三種關於最佳班級寵物投票結果的不同呈現方式。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 對於人類來說，哪一種呈現方式最容易決定哪種寵物是最受歡迎的？
+          ### 對於電腦來說，哪一個呈現方式最容易決定？
       CSD U5 student record:
         content1: 在此描述
+        markdown: "# 學生資料紀錄\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 學生資料依據以下的規則紀錄了特定資訊：\n\n * <h4>頭八個位元儲存了以二進位制呈現數字的學生成績。</h4>\n
+          * <h4>第二組八個位元儲存了以二進位制呈現數字的學生年紀。</h4>\n * <h4>接著的八個位元儲存了以ASCII編碼呈現的學生名字開頭的字母。</h4>\n
+          * <h4>最後八個位元儲存了以ASCII編碼呈現的學生姓氏開頭的字母。</h4>\n\n<br />\n<br />\n"
       CSD U5 student record_2018:
         content1: 在此描述
+        markdown: "# 學生資料紀錄\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 學生資料依據以下的規則紀錄了特定資訊：\n\n * <h4>頭八個位元儲存了以二進位制呈現數字的學生成績。</h4>\n
+          * <h4>第二組八個位元儲存了以二進位制呈現數字的學生年紀。</h4>\n * <h4>接著的八個位元儲存了以ASCII編碼呈現的學生名字開頭的字母。</h4>\n
+          * <h4>最後八個位元儲存了以ASCII編碼呈現的學生姓氏開頭的字母。</h4>\n\n<br />\n<br />\n"
       CSD U5 student record_2018_2019:
         content1: 在此描述
+        markdown: "# 學生資料紀錄\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 學生資料依據以下的規則紀錄了特定資訊：\n\n * <h4>頭八個位元儲存了以二進位制呈現數字的學生成績。</h4>\n
+          * <h4>第二組八個位元儲存了以二進位制呈現數字的學生年紀。</h4>\n * <h4>接著的八個位元儲存了以ASCII編碼呈現的學生名字開頭的字母。</h4>\n
+          * <h4>最後八個位元儲存了以ASCII編碼呈現的學生姓氏開頭的字母。</h4>\n\n<br />\n<br />\n"
       CSD U6 LED create intro:
         content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
       CSD U6 LED create intro_2018:
         content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
       CSD U6 LED create intro_2018_2019:
         content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
       CSD U6 array multi:
         answers:
         - {}
@@ -1065,7 +1499,7 @@ zh-TW:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
         title: 預測一下
       CSD U6 setProperty predict multi_2018:
         answers:
@@ -1074,7 +1508,7 @@ zh-TW:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
         title: 預測一下
       CSD U6 setProperty predict multi_2018_2019:
         answers:
@@ -1083,7 +1517,7 @@ zh-TW:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
         title: 預測一下
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
@@ -1094,6 +1528,7 @@ zh-TW:
           ## 資源
 
           * [使用數據解決問題](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - 活動指南
+        teacher_markdown: "* 使用數據解決問題 - 範例 ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # 概述
@@ -1268,6 +1703,33 @@ zh-TW:
           建立一個演算法去移動字符穿過迷宮。
       Internet Simulator Setup:
         content1: 在此描述
+        markdown: |
+          #Code.org的網路模擬器
+
+          注意：此課程內所列出的指令是給老師在把這個網路模擬器當作獨立工具使用，以便與Ｃode.org電腦科學原理課程分開．如果你正在計畫使用Code.org CSP課程中的活動，請前往[CSP課程](https://cpde.org/educate/csp)_
+
+          ###內容
+
+          *什麼是網路模擬器? 概觀(請參閱下方說明)
+          *[設定命令集[(/s/netsim/stage/1/puzzle/2)
+          *[常見問題集](/s/netsim/stage/1/puzzle/3)
+
+          ##什麼是網路模擬器? 概觀：
+
+          網路模擬器是一個由Code.org開發的工具，給我們新的中學[電腦科學原理](https://code.org/educate/csp)課程所使用．這個工具設計成可以幫助學生取得(解決)實際在不同種類相關於發生在連網電腦上的經驗．這個網路模器器也會用在不同的課程內，在我們課程階段1與2來依序建立網路網路中不同層
+
+          如果你考慮在課堂上使用我們的工具來進行你設定的項目，我們建議你透過我們的[教學計劃](https://curriculum.code.org/csp/unit) 來熟悉工具．下一章節的**設定指令集**是讓使用此網路模擬器的老師可以與Code.org CSP課程分開使用
+
+          此工具本身並不會教學這些網路的概念，但是可以提供一個讓多個學生可以一起使用的環境，能讓學生互相發送二進位, 十進位，或著是以asscii為基礎的訊息． **環境可以組態設定** 是個能以多樣方式來設計各種問題，視覺化資料呈現，主機間互連，同時也能支援網路上相關概念上的學習．
+
+          此網路模擬器是設計在課堂上給學生一起合作來解決問題．通常這些問題涉及通訊協定或設計一些將資訊可以結構化編碼的方式來讓在網路上傳輸是可行的
+
+          **在Code.org's 電腦科學原理課程** 我們通常以下列的方式來安排課程於活動:
+
+          **首先，向學生提出一些挑戰問題**
+          *如: 網路本來就不可靠，訊息是會遺失的*
+          **給學生一個機會透過模擬器來體驗這些問題**
+          *如：去觀察路由器的紀錄擋，來發現大約有10~20%的訊息是被丟掉且封包能不按照預定順序發送
       Internet Simulator Setup 2:
         content1: 在此描述
       Internet Simulator Setup 3:
@@ -1689,6 +2151,16 @@ zh-TW:
           利用歌曲中的副歌概念，學習函式的定義和呼叫。"
       'Technique: Frequency Analysis':
         content1: 在此描述
+        markdown: "# 破解替換加密法\n\n破解一個隨機替換加密法的最佳方法就是被稱為**頻率分析**的技術\n\n轉述自： [維基百科](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **頻率分析** 是一種根據特定字母相較其他的在英文中出現次數多寡的技術。\n* 舉例來說，通常在一段英文段落文本中，*E*、*T*、*A* 以及
+          *O* 這四個字母是最常見的；然而 *Z*、*Q* 跟 *X* 則是相對少見的。同樣的，*TH*、*ER*、*ON* 以及 *AN* 這四種字母組合相較於其他組合來說，是最常一起出現的字母組合。\n*
+          事實上，概略來說，在幾乎 *所有的* 英文的樣本文本中，字母出現次數的分佈都是一樣的。\n\n在前一頁中的物件，是刻意用來幫助你 **透過頻率分析的方式來破解一個替換加密法**。\n\n靠著分析加密訊息中字母出現的頻率，並比對常見典型的英文散文中的字母頻率，你就可以開始專心研究哪些可能的字母對應關係了。\n\n這個工具告訴你在橘色標示的加密文本中字母出現頻率，並對照一般典型英文中的字母頻率（以藍色標示）。\n\n###
+          提示：該從哪裡下手呢？\n\n1. 找出比較短的單字，並優先嘗試破解它們。你知道幾個是只有一個字母的單字（”a“）嗎？還有一個非常常見的單字，而且是由三個字母組成的
+          \"the\"。 \n2. 一旦你完成破解了那些較短的單字，你就已經得到一些常見的字母替換關係了。你就應該可以開始使用自己的直覺來檢視並猜測其他已經被部分替換好的單字。
+          \n3. 在找出一些比較難破解的字母之後，剩下的對應關係就很好解決了。\n4. 靠著比對字母出現的頻率，將帶來更顯著的洞見資訊而能夠進行更有效率的猜測。\n\n###
+          不如嘗試這樣子做：\n下面的動畫告訴你有其他人是這樣下手的。以下是他們嘗試的方式\n\n* 首先，根據字母出現的頻率進行排序。 \n* 確認可能會對應到
+          `the` 單字的字母組合。  \n這是一個很好的下手點！\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          隨機替換是一個好的加密方法嗎？\n* 在短暫的練習操作之後，你花了多久的時間破解了一個隨機替換加密法呢？\n* 而這種方法，你覺得適合嗎？\n"
       Terminology Recap:
         content1: 在此描述
         markdown: |
@@ -1722,6 +2194,9 @@ zh-TW:
           ## 資源
 
           * [問題解決過程 — 活動指南](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [解決問題的過程](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - 活動指南 ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
       Unit 1 Lesson 3 Overview:
         markdown: |
           # 概述
@@ -1730,6 +2205,9 @@ zh-TW:
           ## 資源
 
           * [解決問題 — 活動指南](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[解決問題的關鍵](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - 活動指南 ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
       behaviors 1 predict:
         answers:
         - text: '精靈會旋轉
@@ -1977,12 +2455,18 @@ zh-TW:
         - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: 小松鼠即將拿到橡果.程式碼中沒有錯誤.
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - text: 松鼠不會取得橡果因為他轉錯了方向。
+          correct: true
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - text: 松鼠不會取得像果，因為「前進」的區塊不夠多。
+          correct: true
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         - text: 我不知道。
+          feedback: 這段程式碼中有兩個臭蟲。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         questions:
-        - {}
+        - text: 在這段程式碼裡找找看臭蟲。松鼠會取得橡果還是不會？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
@@ -2141,6 +2625,7 @@ zh-TW:
         - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
       courseD_EOC_2020:
         display_name: 課程結束專案
+        description: 你已經到達課程D的最後一課!選擇一個要創建的項目
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2872,8 +3357,25 @@ zh-TW:
         content1: '測試標記課件頁面
 
 '
+        markdown: |
+          # 範例項目
+
+          你將要開始你的最後一個項目。在開始之前，請花一些時間查看範例項目。
+
+
+          |隨機的彈跳(籃球)|暴風兵衝鋒隊(星際大戰)|
+          |---|---|
+          | [![隨機的彈跳(籃球)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "隨機的彈跳(籃球)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![暴風兵衝鋒隊(星際大戰)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "暴風兵衝鋒隊(星際大戰)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          |球彈跳時會改變速度! | 避免碰到暴風兵否則他們數量會越來越多 |
+
+
+          | 慌張的迪斯可舞會 (跳舞派對) | 海灘風光(藝術家) |
+          |---|---|
+          | [![海灘風光(藝術家)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "海灘風光(藝術家)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![雪花(冰雪奇緣)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "雪花(冰雪奇緣)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | 你的伴舞群會一直切換他們的動作| 嘗試為該場景添加更多的顏色和背景! |
       courseE_EOC_2020:
         display_name: 課程結束專案
+        description: 你已經到達課程E的結尾!選擇一個要創建的項目
       courseE_multi_bee_functions_predict1:
         answers:
         - text: 同樣的程式也可以用來通過這個關卡。
@@ -3048,14 +3550,48 @@ zh-TW:
         content1: '測試標記課件頁面
 
 '
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          ## 精靈實驗室
+
+          | 怪物舞蹈（精靈實驗室）| 蛋糕遊戲（精靈實驗室）|
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png ""Monster Dance (Sprite Lab"")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png ""Cupcake Game (Sprite Lab"")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | 試著在這個遊戲中新增文字或得分！| 試著在這個遊戲中新增文字或得分！|
+
+          ## 小藝術家
+
+          | 圖案（小藝術家） | 函式之花（小藝術家）|
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png ""Pattern (Artist)"")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png ""Function Flowers (Artist)"")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | 讓我們用巢狀迴圈發揮創意！| 讓我們用函式來創新吧！|"
       courseExpress_EOC_2020:
         display_name: 課程結束專案
+        description: 你已經到達課程的結尾!選擇一個要創建的項目
       courseExpress_project_exemplars_2019_2020:
         content1: '測試標記課件頁面
 
 '
+        markdown: |-
+          # 專案範例
+
+          你要準備開始你的最後專案啦。在開始之前，花一點時間來看看這一些範例專案喔。
+
+          | 慌張! 迪斯可 (舞會) | 海灘景色 (畫家) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | 當舞群出現的時候舞動你的迪斯可吧! | 試著在這個景色增加多一些顏色以及背景! |
+
+          | 雪花片片 (冰雪) | 飛機遊戲 (精靈實驗室) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | 讓我們有多一點函式的創意! | 試著在遊戲裡增加文字跟分數! |
       courseF_EOC_2020:
         display_name: 課程結束專案
+        description: 你已經到達課程F的結尾!選擇一個要創建的項目
       courseF_bee_variables_8a_2018:
         answers:
         - text: '蜜蜂不會收集到任何花蜜，因為變數沒有呼叫「收集」。
@@ -3642,6 +4178,24 @@ zh-TW:
         content1: '測試標記課件頁面
 
 '
+        markdown: |
+          "# 專案示例
+
+          你即將開始你的最終專案。在開始之前，請花點時間看看下面的專案範例。
+
+          ## 精靈實驗室
+
+          | 蛋糕遊戲（精靈實驗室） | 直升機遊戲（精靈實驗室）|
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | 試著在這個遊戲中新增文字或得分！| 試著在這個遊戲中新增文字或得分！|
+
+          ## 小藝術家
+
+          | 鮮花 （小藝術家） | 螺旋線（小藝術家） |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | 讓我們用變數發揮創意吧！| 讓我們用計數迴圈發揮創意吧！|"
       coursee_prediction_artistfunction2:
         answers:
         - text: 藝術家會完美地解決這個難題。
@@ -3704,12 +4258,45 @@ zh-TW:
           ## 資源
 
           * [鋁箔紙船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活動指南 (複製為 [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        teacher_markdown: |-
+          [key]
+
+          * [鋁箔紙船 - 範例](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - 活動指南 ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       csf_be_a_super_digital_citizen:
         content1: 在此描述
+        markdown: |-
+          #超級數位公民
+
+          ##當我們看到網絡霸凌行為時，我們如何成為好人？
       csf_password_power-up:
         content1: 在此描述
+        markdown: |-
+          # 增強你的密碼
+
+          ## 記住關於密碼的秘訣
+
+          * 重一個難忘的短句開始
+          * 只有你的**雙親** 才知道你的密碼
+          * 絕對不要使用**私人**的身分訊息在密碼中
+          * 密碼長度至少要有**8**個字符
+          *在密碼中使用字母，數字和**符號**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: 在此描述
+        markdown: |
+          # 停止(STOP) 霸凌/惡意行爲
+
+          ## 當有人在網路霸凌你的時候，應該怎麼做呢？
+
+          * 先遠離霸凌現場 (**S**tep away)
+          * 告知你所信任的大人此事 (**T**ell a trusted adult)
+          * 優先使用經過大人認為適合小朋友的網站 (**O**K sites first)
+          * 讓自己暫緩上網，並且思考如果自己遇到了霸凌或是惡意的行為時，應該要怎麼做 (**P**ause and think online)
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
@@ -3772,3 +4359,564 @@ zh-TW:
         markdown: "#計算機實驗室行為\n\n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>轉至教學計劃</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
           btn-large btn-primary next-stage submitButton\">繼續</a>"
+      Building a UI with Design Mode:
+        markdown: |-
+          ＃ 歡迎使用App Lab設計模式
+          App Lab “設計模式” 讓你拖放用戶界面的元素到應用程式中。
+
+          ### 詞彙
+          **使用者界面 (UI)** - 應用程序的「使用者界面」或「 UI 」，指的是人(使用者) 與電腦或應用程式進行互動的方式。 您可能會從經驗中了解一些常見的使用者界面模式：
+
+          **UI 元素** 或物件，像是按鈕，圖像，文字框，下拉選單，螢幕等。
+          **UI 事件** 或控制，像是點擊、滾動、移動滑鼠、輸入鍵盤按鍵等等。
+
+          App Lab讓您輕鬆地將UI元素添加到您的應用程式中，且新增程式碼，以讓使用者在與這些元素進行互動時做出回應。 這是一個兩階段的過程，但是我們將在本課程中學習所有內容。
+
+          首先，讓我們看一下“設計模式”並將一個UI元素 (一個按鈕) 新增到我們的應用程式中。 稍後我們將新增程式碼。
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          你會在應用程式的區域上方看到一組新的開關，可以在“設計模式”和“程式碼模式”之間來回切換。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>在你想要的地方拖放就可以簡單的新增元素。 在應用程式的視窗裡，您可以重新放置它，調整其大小並更改許多其他屬性 </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>屬性</em> 標籤顯示任何你可以更改的所有UI元素外觀內容。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>元件 ID</strong>是很重要的，因為這是你在程式碼中呼叫元件的方式。 稍後我們將討論元件ID</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>你可以在按鈕上輸入你想要文字，這樣使用者就會在按鈕上看到。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>備註:</strong> 向下滾動以查看UI元件的其它屬性，可能「隱藏」在下方</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **現在你試試!**
+      CSD U1 Lesson 5 Overview:
+        markdown: |-
+          ＃概述
+
+          在本課程中，你將學習電腦所使用之不同類型的輸入和輸出設備，以及它們發送和接收的訊息類型。
+
+          ##詞彙
+
+          * **輸入** - 一種允許向電腦提供訊息的設備或組件
+          * **輸出** - 從電腦接收訊息的任何設備或組件
+
+
+          ##資源
+
+          * [輸入和輸出-活動指南]
+          (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[輸入和輸出 - 範例](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - 活動指南 ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
+      CSD U1 Lesson 6 Overview:
+        teacher_markdown: "* [卡片分類演算法](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - 範例 ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
+      CSD U1 Lesson 8 Overview:
+        markdown: |-
+          # 概述
+
+          在本堂課中，你將會探索應用程式為了解決問題處理不同種類資訊的方法
+
+          ## 資源
+
+          * [問題解決過程 — 活動指南](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U2 PSP Programming:
+        teacher_markdown: |
+          # 審查問題解決步驟
+
+          將審查問題解決四步驟視為一堂課。
+      CSD U2 PSP Programming_2018:
+        teacher_markdown: |
+          # 審查問題解決步驟
+
+          將審查問題解決四步驟視為一堂課。
+      CSD U2 PSP Programming_2018_2019:
+        teacher_markdown: |
+          # 審查問題解決步驟
+
+          將審查問題解決四步驟視為一堂課。
+      CSD U2 Top Websites:
+        markdown: |
+          # 美國最熱門網站
+
+          以下出列美國一些最常訪問的網站。包含核心功能的簡述。
+
+          1. Google.com - 網站、圖片、影片以及其他媒體的搜索引擎
+          2. Youtube.com - 供用戶分享影片的網站，有評價影片及留言評論等功能
+          3. Facebook.com - 社交媒體平台，允許用戶與朋友們共享資訊
+          4. Amazon.com - 提供各種商品的線上購物網站
+          5. Yahoo.com - 搜索引擎、電子郵件服務供應商與新聞來源
+          6. Wikipedia.org - 由全球志願者共同編輯的免費線上百科全書
+      CSD-U5-SFLP Automating Data Decisions:
+        teacher_markdown: "* 自動化數據決策 - 範例 ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
+      CSD-U5-SFLP Interpreting Data:
+        teacher_markdown: "* 結構化資料 - 範例 ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
+      CSD-U5-SFLP Making Decisions with Data:
+        teacher_markdown: "* [利用數據協助決策](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - 範例 ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
+      CSD-U5-SFLP Representing Numbers Part 1:
+        teacher_markdown: |-
+          [key]
+
+          * 數字的表示方法 - 範例 ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/key]
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |-
+          * [請推薦](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - 專案說明
+          * [請推薦](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - 同行評審
+        teacher_markdown: |-
+          * 請推薦 - 專案說明範例 ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * 請推薦 - 同行評審範例 ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
+      'CSD: getText vs getNumber':
+        markdown: |
+          # getText 與 getNumber
+
+          電腦以不同的方式存儲資訊。 電腦存儲資訊的兩種不同方式是字符和數字。
+
+          `getNumber()`  以數字的型式去嘗試得到你要問的任何值。
+
+          `getText()`  以字串的形式得到你要查詢的任何值，字串通常在你的程式碼中被標式成 `" "`。舉例來說，你所有的編號都是字串，那你可以使用  `getText()` 去取回數字，但只知道它被 `" "` 包圍。
+
+          ##為什麼這麼重要？
+
+          通常，將所有內容都作為字串取回是可以的，但是當您要進行數學運算時，您需要的是數字而不是字串。 當你嘗試將兩個字串加在一起時，電腦會認為你要將兩個字串合併為一個字串。
+
+          因此，當你說  `"2" + "2"` 時，電腦會將它計算為 `"22"`。
+
+          就像你說的 `2 + 2` (注意沒有 `" "`) ，電腦會計算為 `4`。
+      'CSD: setProperty':
+        markdown: "# setProperty 是如何運作的\n\n`setProperty` 是用來設定 UI 元素屬性的地方，像是顏色 寬度
+          字型大小等。你可以在設計模式或者程式碼中使用 `setProperty` 設定任何屬性。 is the code that lets you set
+          properties of UI elements like color, width, font size, etc.  Any property
+          you can set in Design Mode can also be set in code using `setProperty`\n\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> 你可以在程式碼編輯模式中找到 <code>setProperty</code>
+          in the UI Controls toolbox.<br>\n\n\t<span style=\"color: #00adbc; font-size:
+          150%\">2.</span> Choose the id of the UI element you want to change a property
+          of\n</p>"
+      CSDU6 Innovation:
+        markdown: |-
+          # 創新研究
+
+          從下列主題中選一個閱讀. 你會想要找尋一些資訊, 來了解那些與你相關的創新資訊科技
+
+          ## 穿戴式科技
+          穿戴式科技包含了那些以任何形式為了使用者穿戴所設計的計算裝置, 無論它是否內嵌於衣物或者是以配件及飾品呈現.
+          許多穿戴式科技, 像是智慧計步器, 與具有健康及安全的裝置在功能上有所重疊. 但它們都是可穿戴於人身上且主要是用來幫助改善人的健康.
+
+          ## 健康及安全
+          這是項非常廣的主題, 其包含了一般消費者用來改善自身健康及安全的消費型產品以及醫生或是其他專職人員所使用的專業型產品.
+
+          ## 農業
+          農業或許不是一項很顯而易見的主題, 但是科技化的創新在農業上曾有巨大的變革. 這包含了將電腦應用在現存的農業設備上, 使用感應器和機器人來監控作物, 以及分析資料以改善效率和永續性.
+
+          ## 製造業
+          資訊科技在快速的製作原型, 工業用機器人以及自動化的生產產品上曾有一個主要的變革. 不論是有能力進行更小的製程(像是3D列印機和雷射切割機)或是將電腦整合進工廠作業, 在製造業上還有許多值得研究的地方.
+
+          ## 藝術和設計
+          藝術與電腦的融合能產生令人印象深刻與意想不到的結果. 儘管你可能無法找到可用的藝術和設計的商用產品, 但你可以找到非常多種使用各種資訊科技所創造和呈現的自製產品.
+
+          ## 智慧家庭
+          資訊科技讓房子有能力了解甚至是預測你所需的這個夢想比起過往變得更近了. 不論是使用聲控或是用感應器對環境變化進行監測或反應, 智慧家庭裝置幫助我們解決的許多重複和例行的工作.
+
+          # 研究注意事項
+
+          當你研究所選取主題的資訊科技, 請先了解以下事項:
+          * 專注於以硬體為基礎的資訊科技, 而非軟體.
+          * 專注於新興的資訊科技, 而非過時的.
+          * 挑選你所感興趣的
+
+          除了上述主題所列的推薦網站以外, 也可以看看其他Crowd出資的網站(像是Kickstarter和Indiegogo)來了解那些還未被實現的產品.
+        teacher_markdown: |+
+          這裡有幾個推薦的網站讓學生開始他們的研究. 雖然這些網站一般來說都是適合學校的, 但是其內容是很頻繁改變的. 因此我們強烈建議在分享給學生之前先到各網站上確認是否有不適當的內容.
+
+          ### 穿戴式科技
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### 健康及安全
+
+          * [當代醫療保健](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### 農業
+
+          * [國立糧食與農業研究所](https://nifa.usda.gov/topic/agriculture-technology)
+          * [農場行業新聞](http://www.farmindustrynews.com/technology)
+
+          ### Manufacturing
+
+          * [工業週](http://www.industryweek.com/technology)
+          * [3D 列印](https://3dprinting.com/)
+
+          ### 藝術和設計
+
+          * [藝術工廠](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### 智慧家庭
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [物聯網發展](http://www.iotevolutionworld.com/smart-home/)
+
+
+      CSDU6 Innovation_2018:
+        markdown: |-
+          # 創新研究
+
+          從下列主題中選一個閱讀. 你會想要找尋一些資訊, 來了解那些與你相關的創新資訊科技
+
+          ## 穿戴式科技
+          穿戴式科技包含了那些以任何形式為了使用者穿戴所設計的計算裝置, 無論它是否內嵌於衣物或者是以配件及飾品呈現.
+          許多穿戴式科技, 像是智慧計步器, 與具有健康及安全的裝置在功能上有所重疊. 但它們都是可穿戴於人身上且主要是用來幫助改善人的健康.
+
+          ## 健康及安全
+          這是項非常廣的主題, 其包含了一般消費者用來改善自身健康及安全的消費型產品以及醫生或是其他專職人員所使用的專業型產品.
+
+          ## 農業
+          農業或許不是一項很顯而易見的主題, 但是科技化的創新在農業上曾有巨大的變革. 這包含了將電腦應用在現存的農業設備上, 使用感應器和機器人來監控作物, 以及分析資料以改善效率和永續性.
+
+          ## 製造業
+          資訊科技在快速的製作原型, 工業用機器人以及自動化的生產產品上曾有一個主要的變革. 不論是有能力進行更小的製程(像是3D列印機和雷射切割機)或是將電腦整合進工廠作業, 在製造業上還有許多值得研究的地方.
+
+          ## 藝術和設計
+          藝術與電腦的融合能產生令人印象深刻與意想不到的結果. 儘管你可能無法找到可用的藝術和設計的商用產品, 但你可以找到非常多種使用各種資訊科技所創造和呈現的自製產品.
+
+          ## 智慧家庭
+          資訊科技讓房子有能力了解甚至是預測你所需的這個夢想比起過往變得更近了. 不論是使用聲控或是用感應器對環境變化進行監測或反應, 智慧家庭裝置幫助我們解決的許多重複和例行的工作.
+
+          # 研究注意事項
+
+          當你研究所選取主題的資訊科技, 請先了解以下事項:
+          * 專注於以硬體為基礎的資訊科技, 而非軟體.
+          * 專注於新興的資訊科技, 而非過時的.
+          * 挑選你所感興趣的
+
+          除了上述主題所列的推薦網站以外, 也可以看看其他Crowd出資的網站(像是Kickstarter和Indiegogo)來了解那些還未被實現的產品.
+        teacher_markdown: |+
+          這裡有幾個推薦的網站讓學生開始他們的研究. 雖然這些網站一般來說都是適合學校的, 但是其內容是很頻繁改變的. 因此我們強烈建議在分享給學生之前先到各網站上確認是否有不適當的內容.
+
+          ### 穿戴式科技
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### 健康及安全
+
+          * [當代醫療保健](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### 農業
+
+          * [國立糧食與農業研究所](https://nifa.usda.gov/topic/agriculture-technology)
+          * [農場行業新聞](http://www.farmindustrynews.com/technology)
+
+          ### Manufacturing
+
+          * [工業週](http://www.industryweek.com/technology)
+          * [3D 列印](https://3dprinting.com/)
+
+          ### 藝術和設計
+
+          * [藝術工廠](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### 智慧家庭
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [物聯網發展](http://www.iotevolutionworld.com/smart-home/)
+
+
+      CSDU6 Innovation_2018_2019:
+        markdown: |-
+          # 創新研究
+
+          從下列主題中選一個閱讀. 你會想要找尋一些資訊, 來了解那些與你相關的創新資訊科技
+
+          ## 穿戴式科技
+          穿戴式科技包含了那些以任何形式為了使用者穿戴所設計的計算裝置, 無論它是否內嵌於衣物或者是以配件及飾品呈現.
+          許多穿戴式科技, 像是智慧計步器, 與具有健康及安全的裝置在功能上有所重疊. 但它們都是可穿戴於人身上且主要是用來幫助改善人的健康.
+
+          ## 健康及安全
+          這是項非常廣的主題, 其包含了一般消費者用來改善自身健康及安全的消費型產品以及醫生或是其他專職人員所使用的專業型產品.
+
+          ## 農業
+          農業或許不是一項很顯而易見的主題, 但是科技化的創新在農業上曾有巨大的變革. 這包含了將電腦應用在現存的農業設備上, 使用感應器和機器人來監控作物, 以及分析資料以改善效率和永續性.
+
+          ## 製造業
+          資訊科技在快速的製作原型, 工業用機器人以及自動化的生產產品上曾有一個主要的變革. 不論是有能力進行更小的製程(像是3D列印機和雷射切割機)或是將電腦整合進工廠作業, 在製造業上還有許多值得研究的地方.
+
+          ## 藝術和設計
+          藝術與電腦的融合能產生令人印象深刻與意想不到的結果. 儘管你可能無法找到可用的藝術和設計的商用產品, 但你可以找到非常多種使用各種資訊科技所創造和呈現的自製產品.
+
+          ## 智慧家庭
+          資訊科技讓房子有能力了解甚至是預測你所需的這個夢想比起過往變得更近了. 不論是使用聲控或是用感應器對環境變化進行監測或反應, 智慧家庭裝置幫助我們解決的許多重複和例行的工作.
+
+          # 研究注意事項
+
+          當你研究所選取主題的資訊科技, 請先了解以下事項:
+          * 專注於以硬體為基礎的資訊科技, 而非軟體.
+          * 專注於新興的資訊科技, 而非過時的.
+          * 挑選你所感興趣的
+
+          除了上述主題所列的推薦網站以外, 也可以看看其他Crowd出資的網站(像是Kickstarter和Indiegogo)來了解那些還未被實現的產品.
+        teacher_markdown: |+
+          這裡有幾個推薦的網站讓學生開始他們的研究. 雖然這些網站一般來說都是適合學校的, 但是其內容是很頻繁改變的. 因此我們強烈建議在分享給學生之前先到各網站上確認是否有不適當的內容.
+
+          ### 穿戴式科技
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### 健康及安全
+
+          * [當代醫療保健](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### 農業
+
+          * [國立糧食與農業研究所](https://nifa.usda.gov/topic/agriculture-technology)
+          * [農場行業新聞](http://www.farmindustrynews.com/technology)
+
+          ### Manufacturing
+
+          * [工業週](http://www.industryweek.com/technology)
+          * [3D 列印](https://3dprinting.com/)
+
+          ### 藝術和設計
+
+          * [藝術工廠](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### 智慧家庭
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [物聯網發展](http://www.iotevolutionworld.com/smart-home/)
+
+
+      OPD-K5 PreSurvey:
+        markdown: "# 課程入門 > 填寫問卷\n\n我們希望你可以在此專業的開發課程學到越多越好，所以請您在上課之前填寫一個小問卷\n(https://form.jotform.com/90556900301146).
+          \n問券裡會問你想在此課程達到什麼目標，也會請您小小的自我介紹以及我們如何可以協助。\n\n<a class=\"btn btn-large btn-primary\"
+          href=\"https://form.jotform.com/90556900301146?user_id=<user_id/>\">填寫問卷</a>"
+      'Overview: Design Mode':
+        markdown: |-
+          # 歡迎來到 App Lab 設計模式
+          在 App Lab 「設計模式」，你可以拖移使用者介面的元件到應用程式中。
+
+          ### 字彙
+
+          * **使用者介面 (UI)** - 使用者如何與電腦或是應用程式互動。
+          * **UI 元件** 或是物件，像是按鈕、圖片、文字輸入框、下拉選單、螢幕等等。
+
+          ## 範例
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          你會在應用程式的上方區域看到一組開關，讓你在「設計模式」和「程式碼模式」中來回切換。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>新增元件只要簡單地將他拖移到應用程式，放置在任何你想要的位置上。只要在應用程式的畫面上，你可以調整他的位置、大小，還有其他很多的屬性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>屬性</em>頁籤顯示了任何你可以在 UI 元件上更改的樣子或是感受。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>元件 ID</strong>很重要，因為它可以讓你在程式碼中引用。我們會在稍後討論元件 ID。</p>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>你可以把按鈕上的文字改成任何你喜歡的。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>備註：</strong>往下滾動看到更多藏起來的 UI 元件的屬性。</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+          </div>
+
+          **該你嘗試了！**
+      'Overview: If Statements':
+        markdown: "# If 運算式\n## If 運算式如何運作\n\n<img src=\"https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png\"
+          style=\"float: right; margin-left: 20px; margin-right: 20px\">\n\nIf 運算式讓你能夠
+          *決定接下來要執行哪一行程式碼*\n\n右方的圖片顯示 JavaScript 中基本 If 運算式的元素。\n\n在 If 運算式有兩個基本的部分(parts)。\n\n1.
+          驗證的條件式(利用布林運算式Boolean驗証**真(true)** 或是 **假(false)**)\n2. 當*if*的條件式是真(true)時執行的程式碼
+          - 使用{ } \n\n\n\n\n"
+      'Overview: Images':
+        markdown: |-
+          # 圖片
+
+          ## 輸入網路圖片的網址
+
+          <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
+
+          有幾種方法可以拿到圖片的網址。
+
+          一個常見的方式（如右邊所示）是在你找到的網路圖片上按下右鍵（或是按下 ctrl），然後選擇像是「複製圖片地址」的選項，然後就能將內容貼在 App Lab 的文字框中。
+
+          如果你不是很確定，你可以選擇像是「在新頁籤中開啟圖片」的選項，會打開獨立的圖片頁面，然後網址即會顯示在網址列上，即可複製/貼上到 App Lab 中。
+
+          **常見錯誤**：用到 *圖片搜尋網站* 的網址，而不是圖片本身
+
+          * 確定你拿到的網址真的是圖片檔案的——會以 **.jpg**、**.gif** 或是 **.png** 結尾。
+          * 網址如果是 `https://www.google.com/search?q=cat&espv=2&biw=1497....` 這樣開頭，很有可能是錯的。
+
+          ## 上傳你自己的圖片
+
+          如果在你的電腦上已有儲存好的圖片，你可以將它們上傳到 app lab 的 **資產管理**。按下 **上傳檔案** 然後照著螢幕上的指示操作。
+
+          這些圖檔必須是這些型態的：**.jpg**, **.png**, or **.gif**
+
+          一旦你上傳了圖片，你需要 "選擇" 它，將它設定至檔案中，如果你加了多張圖片，你將會在每次你上傳一個檔案時，看到所有的檔案列表，然後你可以選擇任何一個你已經上傳的檔案。
+
+          ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+          ### 按繼續來試試！
+      'Overview: onEvent':
+        markdown: |-
+          # 回應使用者輸入
+
+          您需要深入「代碼」模式才能讓它實際回應使用者。App Lab 會等待回應程式中觸發的特定 **event** (事件)。`onEvent` 區塊指定了我們想等待哪個 UI 元件觸發事件。
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          切換到「代碼」模式。</p>
+
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          從工具箱拖曳一個 <code>onEvent</code> 積木到工作區。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          用下拉選單選擇您想回應某些事件的 UI 元素的 <em>ID</em>。在設計模式加入的所有 UI 元素的 ID 都會列在這邊。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          用下拉選單選取您想回應的是建 <em>type</em> (類型)。 (這邊先選 "click" 就好。)
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          在函式裡加入使用者觸發事件時您想執行的程式碼。每次使用者觸發指定事件，這個函式都會執行一次。</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: |-
+          # setPosition 與畫面大小
+
+          `setPosition` 指令可以把 UI 元素移動到畫面上的任意位置。
+
+          <img src="https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12 AM.png" style="display: block; margin: auto">
+
+          您顯然需要把實際的數字填入 `setPosition` 的引數才會有作用。setPosition 要的數字是 **畫面上的 x 與 y 座標**。
+
+          **提示:**
+
+          * 0,0 是左上角。
+          * 指定位置的方式是，計算從螢幕左上角開始 **往右往下** 多少個像素。
+          * 螢幕的大小是 **寬 320 高 450 像素**。
+          * 您可以 **把滑鼠指標移到螢幕上** 看到指標所指位置的 x, y 座標。
+
+          <div style="width: 100%; text-align: center">
+          <img src="https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png">
+
+          <img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
+          </div>
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # 文字的力量
+
+          ## 當網路上有人使用卑劣或傷人的語言時,你該怎麼做?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # 私人和個人資訊
+
+          ##什麼資訊是可以公開在網路上的?
+      Social Sleuth_2018_2019:
+        markdown: |+
+          # Social Sleuth
+
+          You will need the <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#"> Social Sleuth Worksheet </a> to complete this activity.
+
+          ## Profiles
+
+          Click on the picture for each profile to open it.
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+        teacher_markdown: |
+          #### Social Sleuth
+
+          **Step 1:** Students look through all of the provided social media pages on Code Studio. The pages represent several unique individuals, each of whom has an account on three social media platforms. They are distributed as follows (do not share this with students):
+
+          |               | FaceSpace  | Chirpr     | instantframe |
+          | ------------- | ---------  | ---------  | ------------ |
+          | John Thomas   | John T     | @johnsnow  | johnsnow     |
+          | Haley Gutierrez   | Haley G  | @flyinghail | desertrider  |
+          | Lizzie Dell    | Lizzie Dell| @lillizard | photolizzie  |
+
+
+          **Tip:**
+
+          Students are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints.
+
+          **Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users, or may have different levels of details (full street address for one user, but only a city and state for another).
+
+          **Share:** Have the class share the digital footprints that they developed through the activity.
+
+          **Discuss:**
+
+          * Which information was most difficult to find?
+          * Which details were innocuous on their own, but revealed private information when combined with other details?
+          * How does this make you think differently about what you choose to post online?
+      Unit 1 Lesson 4 Overview:
+        teacher_markdown: "[什麼是電腦 - 範例](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - 活動指南 ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Discoveries 課程結束給學生的問卷調查
+      csd-post-survey-levelgroup-2018:
+        title: CS Discoveries 課程結束給學生的問卷調查
+      csf_digital_trails:
+        markdown: |-
+          #跟隨數位蹤跡
+
+          ##你的數位足跡可以有哪些資訊?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #我的網路鄰居
+
+          ##你如何安全地上網？

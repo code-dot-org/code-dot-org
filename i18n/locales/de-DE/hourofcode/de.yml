@@ -195,8 +195,10 @@ de:
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
-  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
-    community, and computer science.
+  codeorg_homepage_code_break_body: 'Zeit für eine Pause mit Code! Ihre wöchentliche
+    Quelle für Inspiration, Gemeinschaft und Informatik.
+
+'
   codeorg_homepage_code_break_link_text: Erfahre mehr
   cookie_banner_message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme
     zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät
@@ -504,6 +506,7 @@ de:
     angezeigt
   signup_event_type_in_school: In einer Schule
   signup_event_type_out_of_school: Außerhalb einer Schule
+  signup_event_type_at_home: Home
   signup_submit_census_label: Absenden
   signup_submit_census_error_message: Es tut uns leid. Es ist ein Fehler aufgetreten.
     Bitte senden Sie das Formular erneut.
@@ -6915,7 +6918,7 @@ de:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: Alle modernen Browser
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: Alle modernen Browser
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: Alle modernen Browser
@@ -7102,7 +7105,7 @@ de:
   tutorial_codinismhero_string_platforms: Android-Tablet, Android-Handy
   tutorial_discovery_string_platforms: Alle modernen Browser
   tutorial_csfirstname_string_platforms: Alle modernen Browser
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Alle modernen Browser
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -9116,7 +9119,7 @@ de:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alle modernen Browser, iPad, Unplugged
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Alle modernen Browser, Android-Tablet, iPad
   tutorial_tynkermars_string_platforms: Alle modernen Browser, iPad, Unplugged
   tutorial_cityx_string_platforms: Android-Tablet, iPhone, iPad, Android-Handy
