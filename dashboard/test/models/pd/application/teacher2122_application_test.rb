@@ -306,12 +306,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher2122Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 95, csv_header_csd.length
+      assert_equal 93, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2122Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 97, csv_header_csp.length
+      assert_equal 95, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -429,7 +429,7 @@ module Pd::Application
       assert_nil application.formatted_partner_contact_email
 
       refute application.valid?
-      assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+      assert_equal %w(completingOnBehalfOfName scholarshipReasons), application.errors.messages[:form_data]
     end
 
     test 'test csd dynamically required fields' do
