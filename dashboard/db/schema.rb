@@ -619,6 +619,7 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.integer "level_id",        null: false
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
+    t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true, using: :btree
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
   end
 
@@ -1481,6 +1482,7 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
     t.string   "key"
+    t.index ["lesson_group_id", "key"], name: "index_stages_on_lesson_group_id_and_key", unique: true, using: :btree
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
