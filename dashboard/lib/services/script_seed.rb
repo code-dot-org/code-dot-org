@@ -139,7 +139,7 @@ module ScriptSeed
     script_to_import = Script.new(script_data.except('seeding_key'))
     # Needed because we already have some Scripts with invalid names
     script_to_import.skip_name_format_validation = true
-    Script.import! [script_to_import], on_duplicate_key_update: :all
+    Script.import! [script_to_import], on_duplicate_key_update: get_columns(Script)
     Script.find_by!(name: script_to_import.name)
   end
 
@@ -149,7 +149,7 @@ module ScriptSeed
       lesson_attrs['script_id'] = seed_context.script.id
       LessonGroup.new(lesson_attrs)
     end
-    LessonGroup.import! lesson_groups_to_import, on_duplicate_key_update: :all
+    LessonGroup.import! lesson_groups_to_import, on_duplicate_key_update: get_columns(LessonGroup)
 
     # Destroy any existing lesson groups that weren't in the imported list, return remaining
     destroy_outdated_objects(LessonGroup, LessonGroup.where(script: seed_context.script), lesson_groups_to_import, seed_context)
@@ -169,7 +169,7 @@ module ScriptSeed
     # Destroy any existing lessons that weren't in the imported list
     # Destroy before import, otherwise absolute_position gets messed up.
     destroy_outdated_objects(Lesson, Lesson.where(script: seed_context.script), lessons_to_import, seed_context)
-    Lesson.import! lessons_to_import, on_duplicate_key_update: :all
+    Lesson.import! lessons_to_import, on_duplicate_key_update: get_columns(Lesson)
     Lesson.where(script: seed_context.script)
   end
 
@@ -197,7 +197,7 @@ module ScriptSeed
     # Delete any existing ScriptLevels that weren't in the imported list
     # Destroy before import, otherwise chapter gets messed up.
     destroy_outdated_objects(ScriptLevel, seed_context.script_levels, script_levels_to_import, seed_context)
-    ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: :all
+    ScriptLevel.import! script_levels_to_import, on_duplicate_key_update: get_columns(ScriptLevel)
     ScriptLevel.where(script: seed_context.script).includes(:levels)
   end
 
@@ -223,7 +223,7 @@ module ScriptSeed
       levels_script_level_attrs = {level_id: level.id, script_level_id: script_level.id}
       LevelsScriptLevel.new(levels_script_level_attrs)
     end
-    LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: :all
+    LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: get_columns(LevelsScriptLevel)
 
     # Delete any existing LevelsScriptLevels that weren't in the imported list, return remaining
     levels_script_levels = Script.find(seed_context.script.id).levels_script_levels
@@ -235,6 +235,10 @@ module ScriptSeed
     should_keep = all_objects.group_by {|o| objects_to_keep_by_seeding_key.include?(o.seeding_key(seed_context))}
     model_class.destroy(should_keep[false]) if should_keep.include?(false)
     should_keep[true]
+  end
+
+  def self.get_columns(model_class)
+    model_class.columns.map(&:name).map(&:to_sym) - %i(id)
   end
 
   class ScriptSerializer < ActiveModel::Serializer
