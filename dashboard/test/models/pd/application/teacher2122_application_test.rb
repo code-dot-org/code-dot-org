@@ -611,8 +611,8 @@ module Pd::Application
 
       application_hash = build :pd_teacher2122_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
-        csd_which_grades: ['11', '12'],
-        csd_which_units: ['Unit 0: Problem Solving'],
+        csd_which_grades: %w(11 12),
+        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
