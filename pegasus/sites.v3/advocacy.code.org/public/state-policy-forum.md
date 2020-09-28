@@ -30,7 +30,7 @@ State | Date  | Time   |Link|
 --------------|------------------|-----------------|----|
 Alabama 	| Oct 15 | 1:30 - 2:30 pm ET 	|<a href="https://code.zoom.us/meeting/register/tJYrce6prjsvGNCPoqjbv4IOqXaIsn1JSwA5"><button>Register</button></a>|
 Alaska  	| Oct 14 | 3:00 - 4:00 pm AKT |<a href="https://code.zoom.us/meeting/register/tJ0pd--gqTMsH9F-fzEWEx4Z4KJg6vZVyadN"><button>Register</button></a>|
-Arizona	|Oct 14  | 2:30 - 3:30 pm MST| <a href="https://code.zoom.us/meeting/register/tJEkduyopjkqGdaBDiqA3WwC5rcw4Yg76iVT"><button>Register</button></a>|
+Arizona	|Oct 14  | 2:30 - 3:30 pm PT| <a href="https://code.zoom.us/meeting/register/tJEkduyopjkqGdaBDiqA3WwC5rcw4Yg76iVT"><button>Register</button></a>|
 Arkansas	|Oct 14|4:30 - 5:30 pm CT|<a href="https://code.zoom.us/meeting/register/tJMrc-qtqz0jH9XS5i7m72NwrU5k_FF3fVuF"><button>Register</button></a>|
 California|Oct 14|11:30 - 12:30 pm PT|<a href="https://code.zoom.us/meeting/register/tJIude6orDkrHtfxeXPaHnC6Xv46gBqofd7D"><button>Register</button></a>|
 Colorado	|Oct 14|2:00 - 3:00 pm MT|<a href="https://code.zoom.us/meeting/register/tJIocuirqTsjEtN5CrjJzVKCcf7dlqGOju64"><button>Register</button></a>|
