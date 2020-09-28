@@ -58,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
 
@@ -153,9 +152,6 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.7.0'
@@ -222,8 +218,6 @@ gem 'execjs'
 gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
-
-gem 'codemirror-rails' # edit code in textarea
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
@@ -357,3 +351,5 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'ruby-progressbar'

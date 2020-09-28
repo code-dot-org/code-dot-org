@@ -504,6 +504,7 @@ ur:
   signup_send_posters_address_placeholder: یہ پتہ ہمارے نقشے پر نہیں کیا جائے گا
   signup_event_type_in_school: ایک اسکول میں
   signup_event_type_out_of_school: اسکول کے باہر
+  signup_event_type_at_home: Home
   signup_submit_census_label: جمع
   signup_submit_census_error_message: ہم معذرت خواہ ہیں. ایک خرابی آگئی. دوبارہ فارم
     جمع کرنے کی کوشش کریں.

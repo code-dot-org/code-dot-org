@@ -264,7 +264,8 @@ function generateAnimationName(baseName, animationList) {
  */
 export function setInitialAnimationList(
   serializedAnimationList,
-  shouldRunV3Migration
+  shouldRunV3Migration,
+  isSpriteLab
 ) {
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
@@ -361,7 +362,21 @@ export function setInitialAnimationList(
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    dispatch(selectAnimation(serializedAnimationList.orderedKeys[0] || ''));
+    let index = 0;
+    // If we're in spritelab, we need to make sure we don't set the selected animation to a background
+    if (isSpriteLab) {
+      while (
+        index < serializedAnimationList.orderedKeys.length &&
+        (
+          serializedAnimationList.propsByKey[
+            serializedAnimationList.orderedKeys[index]
+          ].categories || []
+        ).includes('backgrounds')
+      ) {
+        index = index + 1;
+      }
+    }
+    dispatch(selectAnimation(serializedAnimationList.orderedKeys[index] || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -374,16 +389,19 @@ export function addBlankAnimation() {
   // picks "Draw my own."  As soon as the user makes any changes to the
   // animation it gets saved as a custom animation in their own project, just
   // like we do with other library animations.
-  return addLibraryAnimation({
-    name: 'animation',
-    sourceUrl:
-      '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
-    frameSize: {x: 100, y: 100},
-    frameCount: 1,
-    looping: true,
-    frameDelay: 4,
-    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
-  });
+  return addLibraryAnimation(
+    {
+      name: 'animation',
+      sourceUrl:
+        '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+      frameSize: {x: 100, y: 100},
+      frameCount: 1,
+      looping: true,
+      frameDelay: 4,
+      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
+    },
+    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
+  );
 }
 
 /**
@@ -440,7 +458,7 @@ export function appendCustomFrames(props) {
  * Add a library animation to the project (at the end of the list, unless a spritelab project).
  * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimation(props) {
+export function addLibraryAnimation(props, skipBackground) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
@@ -448,11 +466,17 @@ export function addLibraryAnimation(props) {
     } else {
       dispatch(addAnimationAction(key, props));
     }
-    dispatch(
-      loadAnimationFromSource(key, () => {
-        dispatch(selectAnimation(key));
-      })
-    );
+    // if skipBackground, this means we don't want the selected animation to be a background
+    if (!skipBackground || !props.categories.includes('backgrounds')) {
+      dispatch(
+        loadAnimationFromSource(key, () => {
+          dispatch(selectAnimation(key));
+        })
+      );
+    } else {
+      dispatch(loadAnimationFromSource(key, () => {}));
+    }
+
     let name = generateAnimationName(
       props.name,
       getState().animationList.propsByKey

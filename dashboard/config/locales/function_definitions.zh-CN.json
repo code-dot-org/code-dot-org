@@ -465,7 +465,8 @@
           "get 5 nectar": {
             "name": "获取5个花蜜",
             "parameters": {
-              "direction": "方向"
+              "direction": "方向",
+              "nectar units": "花蜜数量"
             }
           }
         },
@@ -475,7 +476,8 @@
             "parameters": {
               "direction": "方向",
               "nectars": "花蜜"
-            }
+            },
+            "description": "在任何方向收集所给予数量的花粉"
           }
         },
         "Course 4 Bee Params 8": {
@@ -485,7 +487,8 @@
               "honey": "蜂蜜",
               "direction": "方向",
               "nectars": "花蜜"
-            }
+            },
+            "description": "向某个方向移动以收集花粉或制作花蜜。"
           }
         },
         "Course 4 Play Lab Params 1": {
@@ -496,7 +499,8 @@
         },
         "Course 4 Play Lab Params 10": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
@@ -610,7 +614,8 @@
           "get nectar": {
             "name": "采花蜜",
             "parameters": {
-              "counter": "counter"
+              "counter": "counter",
+              "dir": "DIR（方向）"
             }
           }
         },
@@ -625,7 +630,10 @@
             "description": "画一个面积 20 的正方形"
           },
           "draw octagons": {
-            "name": "画多个八边形"
+            "name": "画多个八边形",
+            "parameters": {
+              "numOctagons": "numOctagons（八边形数量）"
+            }
           },
           "draw an octagon": {
             "name": "画一个八边形"
@@ -664,7 +672,8 @@
         },
         "FoodFight": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
@@ -755,7 +764,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "检查猜测"
+            "name": "检查猜测",
+            "parameters": {
+              "theGuess": "猜想"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -3279,7 +3291,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的三角形"
           },
           "checker": {
             "name": "检查",
@@ -3309,7 +3322,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的正方形"
           }
         },
         "courseF_artist_fwp3": {

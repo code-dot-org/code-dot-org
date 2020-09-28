@@ -1402,6 +1402,8 @@ uk:
           lessons:
             Introduction:
               name: Вступ
+            Input:
+              name: Ввід
         csd5-draft:
           lesson_groups:
             csd5_1:

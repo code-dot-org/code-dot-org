@@ -9,8 +9,8 @@ You can join tens of millions of students worldwide in this global event. Togeth
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>시작하려면 무엇을 해야 하나요?</h3>
+아워오브코드는 초보자라고 쉽게 할 수 있습니다. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
@@ -77,10 +77,10 @@ Computer science is all about learning how to “debug” situations that didn�
 
 ## 4) Don’t forget to celebrate!
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+The Hour of Code is a global event, and your family deserves to celebrate. 아워오브코드를 더 특별히 만드는 몇 가지 방법이 여기에 있습니다.
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
+- 자녀가 활동을 완료했을 때 상으로 줄  <a href="https://staging.code.org/certificates">아워오브코드 수료증</a> 을 인쇄하세요.
+- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">깜짝 선물로 스티커를</a> 집에서 프린트하거나 또는 <a href="https://store.code.org/">온라인으로 구매하세요 </a>.
 - Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
