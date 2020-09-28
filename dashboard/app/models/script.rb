@@ -24,6 +24,7 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'services/script_seed'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -38,6 +39,7 @@ class Script < ActiveRecord::Base
   has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
+  has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
   has_many :users, through: :user_scripts
   has_many :user_scripts
@@ -1638,5 +1640,27 @@ class Script < ActiveRecord::Base
   def all_descendant_levels
     sublevels = levels.map(&:all_descendant_levels).flatten
     levels + sublevels
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    {'script.name': name}.stringify_keys
+  end
+
+  # Wrapper for convenience
+  def serialize_seeding_json
+    ScriptSeed.serialize_seeding_json(self)
+  end
+
+  # Wrapper for convenience
+  def self.seed_from_json_file(file_or_path)
+    ScriptSeed.seed_from_json_file(file_or_path)
   end
 end
