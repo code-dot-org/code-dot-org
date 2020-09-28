@@ -1143,6 +1143,7 @@
   "noMenuItemsAvailable": "No menu items available.",
   "nominateATeacher": "Nominate a Teacher",
   "noStudentsInSection": "There are no other students in this section.",
+  "exceededPairProgrammingMax": "You cannot pair with more than 4 people.",
   "noPersonalProjects": "You currently have no projects. Click on one of the buttons above to start a project.",
   "noTablesInProject": "You have no tables in your project. Try adding one from the Data Library.",
   "none": "None",
