@@ -24,6 +24,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -164,6 +165,7 @@ class ScriptOverview extends React.Component {
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
         )}
+        <GoogleClassroomAttributionLabel />
       </div>
     );
   }
