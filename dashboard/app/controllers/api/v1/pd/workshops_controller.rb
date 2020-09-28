@@ -114,11 +114,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       next unless workshop.processed_location
       workshop_location = JSON.parse(workshop.processed_location)
       next unless workshop_location['latitude'] && workshop_location['longitude']
+      workshop_properties = workshop.attributes
+      workshop_properties['sessions'] = workshop.sessions.map(&:formatted_date_with_start_and_end_times)
       locations.append(
         {type: "Feature",
          geometry: { type: "Point",
                      coordinates:[workshop_location['longitude'], workshop_location['latitude']] },
-         properties: { name: workshop.location_name } })
+         properties: workshop_properties })
     end
     {type: 'FeatureCollection', features: locations}.to_json
   end
