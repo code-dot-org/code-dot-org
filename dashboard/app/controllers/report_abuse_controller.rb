@@ -24,8 +24,9 @@ class ReportAbuseController < ApplicationController
   # they are safe. This reduces spamming of the report abuse feature.
   def protected_project?
     return false if params[:channel_id].blank?
-    owner, _storage_app_id = storage_decrypt_channel_id(params[:channel_id])
-    project_owner = User.find(owner)
+    owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    project_owner = User.find(owner_user_id)
     project_owner.permission?(UserPermission::PROJECT_VALIDATOR)
   end
 
