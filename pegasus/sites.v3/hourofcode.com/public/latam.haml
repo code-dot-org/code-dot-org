@@ -133,9 +133,9 @@ social:
   -# Show sign up form above highlights when we're trying to increase sign ups. Otherwise, feature highlights first which is more engaging and evergreen.
   -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
     = view :home_signup, hoc_mode: hoc_mode
-    = view :home_highlights
+    = view :latam_highlights
   -else
-    = view :home_highlights
+    = view :latam_highlights
     = view :home_signup, hoc_mode: hoc_mode
 
   -# Stats
