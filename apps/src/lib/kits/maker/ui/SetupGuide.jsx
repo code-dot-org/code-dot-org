@@ -16,6 +16,7 @@ import {
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
+import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -146,7 +147,7 @@ class WindowsDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>{i18n.instructions()}:</h4>
+          <h4>{i18n.instructionsWithColon()}</h4>
           <ol>
             <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
             <li>
@@ -283,7 +284,7 @@ const FetchingLatestVersionError = () => (
 
 const SetupInstructions = () => (
   <div>
-    <h4>{i18n.instructions()}:</h4>
+    <h4>{i18n.instructionsWithColon()}</h4>
     <ol>
       <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
       <li>{applabI18n.makerSetupSignIn()}</li>
@@ -292,8 +293,6 @@ const SetupInstructions = () => (
   </div>
 );
 
-const CHROME_APP_WEBSTORE_URL =
-  'https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg';
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
 class ChromebookInstructions extends React.Component {

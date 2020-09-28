@@ -1857,11 +1857,19 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
  * the server responds.
  */
 StudioApp.prototype.silentlyReport = function() {
-  this.report({
+  var options = {
     app: getStore().getState().pageConstants.appType,
     level: this.config.level.id,
     skipSuccessCallback: true
-  });
+  };
+
+  // Some DB-backed levels (such as craft) only save the user's code when the user
+  // successfully finishes the level. Opening the level in a new tab will make the level
+  // appear freshly started. Therefore, we mark only channel-backed levels "started" here.
+  if (this.config.channel) {
+    options.testResult = TestResults.LEVEL_STARTED;
+  }
+  this.report(options);
   this.hasReported = false;
 };
 
