@@ -138,6 +138,12 @@ class HttpCache
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
+          },
+          {
+            path: '/i18n/track_string_usage',
+            proxy: 'dashboard',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
           }
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.

@@ -188,6 +188,12 @@ class StudioApp extends EventEmitter {
     this.milestoneStartTime = undefined;
 
     /**
+     * Whether we've reported a milestone yet for this run/reset cycle
+     * @type {boolean}
+     */
+    this.hasReported = false;
+
+    /**
      * If true, we don't show blockspace. Used when viewing shared levels
      */
     this.hideSource = false;
@@ -295,6 +301,10 @@ StudioApp.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
+  this.debouncedSilentlyReport = _.debounce(
+    this.silentlyReport.bind(this),
+    1000
+  );
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1843,18 +1853,38 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
 };
 
 /**
- * Click the reset button.  Reset the application.
+ * Report milestones but don't trigger the success callback when
+ * the server responds.
+ */
+StudioApp.prototype.silentlyReport = function() {
+  var options = {
+    app: getStore().getState().pageConstants.appType,
+    level: this.config.level.id,
+    skipSuccessCallback: true
+  };
+
+  // Some DB-backed levels (such as craft) only save the user's code when the user
+  // successfully finishes the level. Opening the level in a new tab will make the level
+  // appear freshly started. Therefore, we mark only channel-backed levels "started" here.
+  if (this.config.channel) {
+    options.testResult = TestResults.LEVEL_STARTED;
+  }
+  this.report(options);
+  this.hasReported = false;
+};
+
+/**
+ * Click the reset button. Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
-  // If we haven't reported yet, report now.
+  // First, abort any reports in progress - the server call will
+  // still complete, but we'll skip the success callback.
+  this.onResetPressed();
+  // Then, check if any reports happened this cycle. If not, trigger a report.
   if (!this.hasReported) {
-    this.report({
-      app: getStore().getState().pageConstants.appType,
-      level: this.config.level.id
-    });
+    this.debouncedSilentlyReport();
   }
   this.hasReported = false;
-  this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
