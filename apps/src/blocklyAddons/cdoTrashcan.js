@@ -198,17 +198,8 @@ export default class CdoTrashcan {
       // There are no metrics available (workspace is probably not visible).
       return;
     }
-    if (
-      metrics.toolboxPosition === Blockly.TOOLBOX_AT_LEFT ||
-      (this.workspace_.horizontalLayout && !this.workspace_.RTL)
-    ) {
-      // Toolbox starts in the left corner.
-      this.left_ = Math.round(metrics.flyoutWidth / 2 - this.WIDTH_ / 2);
-    } else {
-      // Toolbox starts in the right corner.
-      this.left_ = this.MARGIN_SIDE_ + Blockly.Scrollbar.scrollbarThickness;
-    }
 
+    this.left_ = Math.round(metrics.flyoutWidth / 2 - this.WIDTH_ / 2);
     this.top_ = this.verticalSpacing_;
 
     this.svgGroup_.setAttribute(
