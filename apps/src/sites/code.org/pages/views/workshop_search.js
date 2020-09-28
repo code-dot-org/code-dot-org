@@ -46,18 +46,6 @@ function loadWorkshops() {
   if (deepDiveOnly !== undefined) {
     url += '?deep_dive_only=1';
   }
-  /*
-  $.get(url)
-    .done(function(data) {
-      console.log(data);
-      map.addSource('workshops', {
-        type: 'geojson',
-        data: JSON.parse(data)
-      });
-      //processPdWorkshops(data);
-    })
-    //.always(completeProcessingPdWorkshops);
-*/
   map.addSource('workshops', {
     type: 'geojson',
     data: url
@@ -69,6 +57,19 @@ function loadWorkshops() {
     paint: {
       'circle-color': 'blue'
     }
+  });
+  map.on('click', 'workshops', e => {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var workshop = e.features[0].properties;
+    const description = compileHtml(workshop, false);
+
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(map);
+  });
+  map.on('mouseenter', 'workshops', function () {
+    map.getCanvas().style.cursor = 'pointer';
   });
 }
 
@@ -148,7 +149,8 @@ function compileHtml(workshop, first) {
 
   // Add the date(s).
   html += '<div class="workshop-dates">';
-  $.each(workshop.sessions, function(i, session) {
+  const sessions = JSON.parse(workshop.sessions);
+  $.each(sessions, function(i, session) {
     html +=
       '<div class="workshop-date" style="white-space: nowrap;">' +
       session +
