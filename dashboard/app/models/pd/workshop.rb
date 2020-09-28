@@ -350,8 +350,8 @@ class Pd::Workshop < ActiveRecord::Base
   # 4. no location address at all? use blank
   def friendly_location
     return 'Virtual Workshop' if location_address_virtual? || virtual?
-    return 'Location TBA' if location_address_tba? || !location_address.presence
     return "#{location_city} #{location_state}" if processed_location
+    return 'Location TBA' if location_address_tba? || !location_address.presence
     return location_address
   end
 

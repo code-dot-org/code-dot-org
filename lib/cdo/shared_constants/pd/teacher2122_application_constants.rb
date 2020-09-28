@@ -86,7 +86,7 @@ module Pd
         csp_which_units: "Which CS Principles units do you intend to teach in the #{YEAR} school year?",
         plan_to_teach: clean_multiline(
           "Do you plan to personally teach this course in the #{YEAR} school year?
-          Note:  This program is designed to work best for teachers who are teaching
+          Note: This program is designed to work best for teachers who are teaching
           this course in the 2021-2022 school year. Scholarship eligibility is dependent
           on whether or not you will be teaching the course during the 2021-2022 school year."
         ),
