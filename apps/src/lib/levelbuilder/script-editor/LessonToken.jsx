@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
-import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
-import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
-import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 
 const styles = {
-  levelToken: {
+  lessonToken: {
     fontSize: 13,
     position: 'relative',
     background: '#eee',
@@ -28,7 +23,7 @@ const styles = {
     borderBottomLeftRadius: borderRadius,
     cursor: 'ns-resize'
   },
-  levelTokenName: {
+  lessonTokenName: {
     padding: 7,
     display: 'table-cell',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
@@ -67,64 +62,46 @@ const styles = {
     padding: '7px 13px',
     cursor: 'pointer'
   },
-  levelArea: {
+  lessonArea: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  titleAndBubble: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  levelTitle: {
+  lessonTitle: {
     marginLeft: 5
   }
 };
 
 /**
- * Component for editing puzzle dots with one or more level variants.
+ * Component for editing lessons
  */
-class LevelToken extends Component {
+export default class LessonToken extends Component {
   static propTypes = {
-    activitySectionPosition: PropTypes.number.isRequired,
-    activityPosition: PropTypes.number.isRequired,
-    level: levelShape.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
+    lesson: PropTypes.object,
     dragging: PropTypes.bool,
-    draggedLevelPos: PropTypes.bool,
+    draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
-    removeLevel: PropTypes.func.isRequired,
-
-    //redux
-    levelKeyList: PropTypes.object.isRequired,
-    toggleExpand: PropTypes.func
+    removeLesson: PropTypes.func
   };
 
   handleDragStart = e => {
-    this.props.handleDragStart(this.props.level.position, e);
-  };
-
-  toggleExpand = () => {
-    this.props.toggleExpand(
-      this.props.activityPosition,
-      this.props.activitySectionPosition,
-      this.props.level.position
-    );
+    this.props.handleDragStart(this.props.lesson.position, e);
   };
 
   handleRemove = () => {
-    this.props.removeLevel(this.props.level.position);
+    this.props.removeLesson(this.props.lesson.position);
   };
 
   render() {
-    const {draggedLevelPos} = this.props;
+    const {draggedLessonPos} = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
         style={
-          draggedLevelPos
+          draggedLessonPos
             ? {
                 y: this.props.dragging ? this.props.delta : 0,
                 scale: spring(1.02, springConfig),
@@ -138,43 +115,33 @@ class LevelToken extends Component {
                 shadow: 0
               }
         }
-        key={this.props.level.position}
+        key={this.props.lesson.position}
       >
         {// Use react-motion to interpolate the following values and create
         // smooth transitions.
         ({y, scale, shadow}) => (
           <div
-            style={Object.assign({}, styles.levelToken, {
+            style={Object.assign({}, styles.lessonToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: draggedLevelPos ? 1000 : 500 - this.props.level.position
+              zIndex: draggedLessonPos ? 1000 : 500 - this.props.lesson.position
             })}
           >
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
               <i className="fa fa-arrows-v" />
             </div>
-            <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
-              <span style={styles.levelArea}>
-                <span style={styles.titleAndBubble}>
-                  <ProgressBubble
-                    hideToolTips={true}
-                    level={this.props.level}
-                    disabled={true}
-                  />
-                  <span style={styles.levelTitle}>{this.props.level.name}</span>
-                </span>
-                {this.props.level.named && (
-                  <span style={styles.tag}>named</span>
-                )}
-                {this.props.level.assessment && (
-                  <span style={styles.tag}>assessment</span>
-                )}
+            <span style={styles.lessonTokenName}>
+              <span style={styles.lessonArea}>
+                <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
               </span>
             </span>
             <div
               style={styles.edit}
               onClick={() => {
-                const win = window.open(this.props.level.url, '_blank');
+                const win = window.open(
+                  `/lessons/${this.props.lesson.id}/edit`,
+                  '_blank'
+                );
                 win.focus();
               }}
             >
@@ -183,25 +150,9 @@ class LevelToken extends Component {
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times" />
             </div>
-            {this.props.level.expand && (
-              <LevelTokenDetails
-                level={this.props.level}
-                activitySectionPosition={this.props.activitySectionPosition}
-                activityPosition={this.props.activityPosition}
-              />
-            )}
           </div>
         )}
       </Motion>
     );
   }
 }
-
-export default connect(
-  state => ({
-    levelKeyList: state.levelKeyList
-  }),
-  {
-    toggleExpand
-  }
-)(LevelToken);
