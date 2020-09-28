@@ -222,8 +222,15 @@ gem 'jwt' # single signon for zendesk
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-# We also serve a copy of one of these font files from the public directory
-gem 'font-awesome-rails', '~> 4.7.0.5' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
+# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
+# files included here. If you're upgrading to a different version, make sure to
+# check that the filenames have not changed, and copy the latest files from the
+# gem into our project. These font files are currently served from:
+# - /dashboard/public/fonts/
+# - /pegasus/sites.v3/code.org/public/fonts/
+# - /pegasus/sites.v3/hourofcode/public/fonts/
+gem 'font-awesome-rails', '~> 4.7.0.5'
+
 gem 'sequel'
 gem 'user_agent_parser'
 
