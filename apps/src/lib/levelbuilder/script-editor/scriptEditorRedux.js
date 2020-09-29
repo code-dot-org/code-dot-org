@@ -10,7 +10,7 @@ const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
-// NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
+// NOTE: Position for Lesson Groups and Lessons is 1 based.
 
 export const init = lessonGroups => ({
   type: INIT,
@@ -24,9 +24,10 @@ export const addGroup = (groupPosition, groupKey, groupName) => ({
   groupName
 });
 
-export const addLesson = (groupPosition, lessonName) => ({
+export const addLesson = (groupPosition, lessonKey, lessonName) => ({
   type: ADD_LESSON,
   groupPosition,
+  lessonKey,
   lessonName
 });
 
@@ -95,8 +96,6 @@ function updateLessonPositions(lessonGroups) {
   });
 }
 
-export const NEW_LEVEL_ID = -1;
-
 function lessonGroups(state = [], action) {
   let newState = _.cloneDeep(state);
 
@@ -117,8 +116,8 @@ function lessonGroups(state = [], action) {
     case ADD_LESSON: {
       const lessons = newState[action.groupPosition - 1].lessons;
       lessons.push({
-        name: action.lessonName,
-        levels: []
+        key: action.lessonKey,
+        name: action.lessonName
       });
       updateLessonPositions(newState);
       break;

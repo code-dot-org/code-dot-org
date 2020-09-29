@@ -213,6 +213,7 @@ class Lesson < ActiveRecord::Base
         script_name: script.name,
         num_script_lessons: script.lessons.to_a.size,
         id: id,
+        key: key,
         position: absolute_position,
         relative_position: relative_position,
         name: localized_name,

@@ -26,27 +26,11 @@ export default function initPage(scriptEditorData) {
         .filter(lesson => lesson.id)
         .map(lesson => ({
           id: lesson.id,
+          key: lesson.key,
           position: lesson.position,
           relativePosition: lesson.relative_position,
           lockable: lesson.lockable,
-          name: lesson.name,
-          // Only include the first level of an assessment (uid ending with "_0").
-          levels: lesson.levels
-            .filter(level => !level.uid || /_0$/.test(level.uid))
-            .map(level => ({
-              position: level.position,
-              activeId: level.activeId,
-              ids: level.ids.slice(),
-              kind: level.kind,
-              skin: level.skin,
-              videoKey: level.videoKey,
-              concepts: level.concepts,
-              conceptDifficulty: level.conceptDifficulty,
-              progression: level.progression,
-              named: !!level.name,
-              assessment: level.assessment,
-              challenge: level.challenge
-            }))
+          name: lesson.name
         }))
     }));
   const locales = scriptEditorData.locales;
