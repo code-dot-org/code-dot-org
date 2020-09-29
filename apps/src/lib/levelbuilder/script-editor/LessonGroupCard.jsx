@@ -48,6 +48,9 @@ const styles = {
   },
   input: {
     width: '100%'
+  },
+  title: {
+    marginRight: 5
   }
 };
 
@@ -65,6 +68,7 @@ export class LessonGroupCard extends Component {
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
+    generateLessonGroupKey: PropTypes.func,
 
     // from redux
     moveLesson: PropTypes.func.isRequired,
@@ -234,17 +238,11 @@ export class LessonGroupCard extends Component {
   };
 
   handleMakeUserFacing = lessonGroupPosition => {
-    const newLessonGroupKey = prompt('Enter new lesson group key');
-    const newLessonGroupDisplayName = prompt(
-      'Enter new lesson group display name'
+    this.props.convertGroupToUserFacing(
+      lessonGroupPosition,
+      this.props.generateLessonGroupKey,
+      ''
     );
-    if (newLessonGroupKey && newLessonGroupDisplayName) {
-      this.props.convertGroupToUserFacing(
-        lessonGroupPosition,
-        newLessonGroupKey,
-        newLessonGroupDisplayName
-      );
-    }
   };
 
   handleChangeDescription = event => {
@@ -263,6 +261,14 @@ export class LessonGroupCard extends Component {
     );
   };
 
+  handleChangeLessonGroupName = event => {
+    this.props.updateLessonGroupField(
+      this.props.lessonGroup.position,
+      'name',
+      event.target.value
+    );
+  };
+
   render() {
     const {lessonGroup, targetLessonGroupPos} = this.props;
     const {draggedLessonPos} = this.state;
@@ -276,40 +282,55 @@ export class LessonGroupCard extends Component {
         }
       >
         <div style={styles.lessonGroupCardHeader}>
-          {lessonGroup.user_facing
-            ? `Lesson Group: "${lessonGroup.display_name}"`
-            : 'Lesson Group: Not User Facing (No Display Name)'}
+          {lessonGroup.user_facing && (
+            <span>
+              <span style={styles.title}>Lesson Group Name:</span>
+              <input
+                value={this.props.lessonGroup.display_name}
+                onChange={this.handleChangeLessonGroupName}
+                style={{width: 300}}
+              />
+            </span>
+          )}
+          {!lessonGroup.user_facing && (
+            <span>Lesson Group: Not User Facing (No Display Name)</span>
+          )}
           <OrderControls
             name={lessonGroup.key || '(none)'}
             move={this.handleMoveLessonGroup}
             remove={this.handleRemoveLessonGroup}
           />
         </div>
-        <label>
-          Description
-          <textarea
-            value={this.props.lessonGroup.description}
-            rows={Math.max(
-              this.props.lessonGroup.description.split(/\r\n|\r|\n/).length + 1,
-              2
-            )}
-            style={styles.input}
-            onChange={this.handleChangeDescription}
-          />
-        </label>
-        <label>
-          Big Questions
-          <textarea
-            value={this.props.lessonGroup.big_questions}
-            rows={Math.max(
-              this.props.lessonGroup.big_questions.split(/\r\n|\r|\n/).length +
-                1,
-              2
-            )}
-            style={styles.input}
-            onChange={this.handleChangeBigQuestions}
-          />
-        </label>
+        {lessonGroup.user_facing && (
+          <div>
+            <label>
+              Description
+              <textarea
+                value={this.props.lessonGroup.description}
+                rows={Math.max(
+                  this.props.lessonGroup.description.split(/\r\n|\r|\n/)
+                    .length + 1,
+                  2
+                )}
+                style={styles.input}
+                onChange={this.handleChangeDescription}
+              />
+            </label>
+            <label>
+              Big Questions
+              <textarea
+                value={this.props.lessonGroup.big_questions}
+                rows={Math.max(
+                  this.props.lessonGroup.big_questions.split(/\r\n|\r|\n/)
+                    .length + 1,
+                  2
+                )}
+                style={styles.input}
+                onChange={this.handleChangeBigQuestions}
+              />
+            </label>
+          </div>
+        )}
         {lessonGroup.lessons.map(lesson => (
           <LessonToken
             ref={lessonToken => {
@@ -350,8 +371,7 @@ export class LessonGroupCard extends Component {
               style={styles.addButton}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Set Display Name
+              Make User Facing
             </button>
           )}
         </div>
