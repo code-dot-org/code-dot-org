@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import NewLessonGroupInput from '@cdo/apps/lib/levelbuilder/script-editor/NewLessonGroupInput';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 
