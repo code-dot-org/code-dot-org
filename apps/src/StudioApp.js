@@ -61,6 +61,7 @@ import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
@@ -224,6 +225,11 @@ class StudioApp extends EventEmitter {
      * Stores the alert that appears if the user edits code while its running. It will be unmounted and set to undefined on reset.
      */
     this.editDuringRunAlert = undefined;
+
+    /*
+     * Stores whether we should display the alert above. Will be set to false and stored in localStorage if the user has already dismissed this alert.
+     */
+    this.showEditDuringRunAlert = true;
 
     /*
      * Stores the code at run. It's undefined if the code is not running.
@@ -578,21 +584,38 @@ StudioApp.prototype.init = function(config) {
   }
   if (!config.readOnlyWorkspace) {
     this.addChangeHandler(() => {
-      // if the code has changed (other than whitespace at the beginning or end) and the code is running,
-      // we want to show an alert to tell the user to reset and run their code again. We trim the whitespace
-      // because droplet sometimes adds an extra newline when switching from block to code mode.
+      // If the code has changed (other than whitespace at the beginning or end) and the code is running,
+      // tell redux the code has changed and disable block highlighting.
+      // Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
       if (
         this.isRunning() &&
-        this.editDuringRunAlert === undefined &&
         this.getCode().trim() !== this.executingCode.trim()
       ) {
         getStore().dispatch(setIsEditWhileRun(true));
-        this.editDuringRunAlert = this.displayWorkspaceAlert(
-          'warning',
-          React.createElement('div', {}, msg.editDuringRunMessage()),
-          true
-        );
         this.clearHighlighting();
+
+        // Check if the user has already dismissed the "your code may have changed" warning.
+        if (this.showEditDuringRunAlert) {
+          this.showEditDuringRunAlert =
+            utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
+        }
+
+        // Display the "your code may have changed" warning if the user hasn't previously dismissed that alert.
+        if (
+          this.showEditDuringRunAlert &&
+          this.editDuringRunAlert === undefined
+        ) {
+          const onClose = () => {
+            utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+            this.showEditDuringRunAlert = false;
+          };
+          this.editDuringRunAlert = this.displayWorkspaceAlert(
+            'warning',
+            React.createElement('div', {}, msg.editDuringRunMessage()),
+            true /* bottom */,
+            onClose
+          );
+        }
       }
     });
   }
@@ -999,8 +1022,8 @@ StudioApp.prototype.toggleRunReset = function(button) {
     if (this.editDuringRunAlert !== undefined) {
       ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
-      getStore().dispatch(setIsEditWhileRun(false));
     }
+    getStore().dispatch(setIsEditWhileRun(false));
   } else {
     this.executingCode = this.getCode().trim();
   }
@@ -1581,12 +1604,13 @@ StudioApp.prototype.resizeToolboxHeader = function() {
 };
 
 /**
- * Highlight the block (or clear highlighting).
+ * Highlight the block (or clear highlighting) unless the user has edited their
+ * code during this run.
  * @param {?string} id ID of block that triggered this action.
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.isUsingBlockly() && this.editDuringRunAlert === undefined) {
+  if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -3170,7 +3194,8 @@ function rectFromElementBoundingBox(element) {
 StudioApp.prototype.displayWorkspaceAlert = function(
   type,
   alertContents,
-  bottom = false
+  bottom = false,
+  onClose = () => {}
 ) {
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
@@ -3180,6 +3205,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
     {
       type: type,
       onClose: () => {
+        onClose();
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
