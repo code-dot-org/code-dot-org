@@ -30,33 +30,13 @@ require 'csv'
 # where quartile = 4
 # group by 1;
 
-# UPDATES for 2020: script names and date ranges updated
+# To generate attempts for the CSF 2020 levels we re-ran the query above
+# with the following adjustments:
 #
-# select
-#   l.name,
-#   min(attempts) as percentile_75
-# from
-# (
-#   select
-#     ul.script_id,
-#     ul.level_id,
-#     ul.user_id,
-#     ul.attempts,
-#     ntile(4) over(partition by script_id, level_id order by attempts asc) as quartile
-#   from dashboard_production.user_levels ul
-#   join dashboard_production_pii.users u on u.id = ul.user_id
-#   join dashboard_production.scripts sc on sc.id = ul.script_id
-#   where sc.name in (
-#     'coursea-2020', 'courseb-2020', 'coursec-2020', 'coursed-2020',
-#     'coursee2020', 'coursef-2020'
-#   )
-#   and u.birthday between '2008-01-01' and '2013-01-01'
-#   and ul.created_at::date >= '2020-01-01'
-#   group by 1, 2, 3, 4
-# )
-# join dashboard_production.levels l on l.id = level_id
-# where quartile = 4
-# group by 1;
+#  script names: 'coursea-2020', 'courseb-2020', 'coursec-2020', 'coursed-2020',
+#     'coursee2020', 'coursef-2020',
+#  birthday between: '2008-01-01' and '2013-01-01',
+#  created_at::date >= '2020-01-01'
 
 thresholds_csv = ARGV[0]
 unless thresholds_csv
