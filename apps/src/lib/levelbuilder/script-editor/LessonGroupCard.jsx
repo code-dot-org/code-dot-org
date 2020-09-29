@@ -12,7 +12,8 @@ import {
   removeGroup,
   convertGroupToUserFacing,
   setLessonGroup,
-  reorderLesson
+  reorderLesson,
+  updateLessonGroupField
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import color from '@cdo/apps/util/color';
@@ -44,6 +45,9 @@ const styles = {
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '0 5px 0 0'
+  },
+  input: {
+    width: '100%'
   }
 };
 
@@ -70,7 +74,8 @@ export class LessonGroupCard extends Component {
     addLesson: PropTypes.func.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
-    reorderLesson: PropTypes.func.isRequired
+    reorderLesson: PropTypes.func.isRequired,
+    updateLessonGroupField: PropTypes.func.isRequired
   };
 
   /**
@@ -242,6 +247,22 @@ export class LessonGroupCard extends Component {
     }
   };
 
+  handleChangeDescription = event => {
+    this.props.updateLessonGroupField(
+      this.props.lessonGroup.position,
+      'description',
+      event.target.value
+    );
+  };
+
+  handleChangeBigQuestions = event => {
+    this.props.updateLessonGroupField(
+      this.props.lessonGroup.position,
+      'big_questions',
+      event.target.value
+    );
+  };
+
   render() {
     const {lessonGroup, targetLessonGroupPos} = this.props;
     const {draggedLessonPos} = this.state;
@@ -264,6 +285,31 @@ export class LessonGroupCard extends Component {
             remove={this.handleRemoveLessonGroup}
           />
         </div>
+        <label>
+          Description
+          <textarea
+            value={this.props.lessonGroup.description}
+            rows={Math.max(
+              this.props.lessonGroup.description.split(/\r\n|\r|\n/).length + 1,
+              2
+            )}
+            style={styles.input}
+            onChange={this.handleChangeDescription}
+          />
+        </label>
+        <label>
+          Big Questions
+          <textarea
+            value={this.props.lessonGroup.big_questions}
+            rows={Math.max(
+              this.props.lessonGroup.big_questions.split(/\r\n|\r|\n/).length +
+                1,
+              2
+            )}
+            style={styles.input}
+            onChange={this.handleChangeBigQuestions}
+          />
+        </label>
         {lessonGroup.lessons.map(lesson => (
           <LessonToken
             ref={lessonToken => {
@@ -326,6 +372,7 @@ export default connect(
     addLesson,
     convertGroupToUserFacing,
     setLessonGroup,
-    reorderLesson
+    reorderLesson,
+    updateLessonGroupField
   }
 )(LessonGroupCard);

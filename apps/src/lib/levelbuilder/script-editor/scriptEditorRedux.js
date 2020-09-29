@@ -10,6 +10,7 @@ const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 const REORDER_LESSON = 'scriptEditor/REORDER_LESSON';
+const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
@@ -83,6 +84,17 @@ export const reorderLesson = (
   groupPosition,
   originalLessonPosition,
   newLessonPosition
+});
+
+export const updateLessonGroupField = (
+  lessonGroupPosition,
+  fieldName,
+  fieldValue
+) => ({
+  type: UPDATE_LESSON_GROUP_FIELD,
+  lessonGroupPosition,
+  fieldName,
+  fieldValue
 });
 
 function updateGroupPositions(lessonGroups) {
@@ -218,6 +230,11 @@ function lessonGroups(state = [], action) {
       const temp = lessons.splice(action.originalLessonPosition - 1, 1);
       lessons.splice(action.newLessonPosition - 1, 0, temp[0]);
       updateLessonPositions(newState);
+      break;
+    }
+    case UPDATE_LESSON_GROUP_FIELD: {
+      const lessonGroup = newState[action.lessonGroupPosition - 1];
+      lessonGroup[action.fieldName] = action.fieldValue;
       break;
     }
   }
