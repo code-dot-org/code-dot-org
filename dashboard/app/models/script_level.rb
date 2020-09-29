@@ -14,13 +14,11 @@
 #  named_level         :boolean
 #  bonus               :boolean
 #  activity_section_id :integer
-#  seed_key            :string(255)
 #
 # Indexes
 #
 #  index_script_levels_on_activity_section_id  (activity_section_id)
 #  index_script_levels_on_script_id            (script_id)
-#  index_script_levels_on_seed_key             (seed_key) UNIQUE
 #  index_script_levels_on_stage_id             (stage_id)
 #
 
