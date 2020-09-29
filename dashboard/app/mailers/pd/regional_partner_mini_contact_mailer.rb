@@ -1,6 +1,5 @@
 class Pd::RegionalPartnerMiniContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
-  ZENDESK_FRIENDLY_FROM = 'Regional Partner Contact Request <regional_partner_contact_request@code.org>'
   default from: 'Liz Gauthier <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -25,7 +24,6 @@ class Pd::RegionalPartnerMiniContactMailer < ActionMailer::Base
     role = form[:role].downcase
 
     mail(
-      from: ZENDESK_FRIENDLY_FROM,
       to: email,
       subject: "A " + role + " wants to connect with Code.org"
     )

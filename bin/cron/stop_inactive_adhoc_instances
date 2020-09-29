@@ -1,125 +1,33 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script stops AWS EC2 instances being used to run adhoc environments,
+# reporting a list of all stopped instances to ChatClient.
 
 require_relative '../../deployment'
-require_relative '../../lib/cdo/only_one'
-require 'aws-sdk-cloudformation'
-require 'aws-sdk-cloudwatch'
+
 require 'aws-sdk-ec2'
 require 'cdo/chat_client'
-require 'active_support/core_ext/numeric/time'
-require 'csv'
 
-StackStatus = Struct.new(
-  :name,
-  :cloudformation_status,
-  :owner,
-  :creation_time,
-  :activity,
-  :current_instance_status,
-  :previous_instance_status,
-  :instance_status_change_reason
-)
+dry_run = !rack_env?(:production)
 
-# set to :warn to notify that an adhoc environment should be stopped due to inactivity
-# set to :stop_instance to stop inactive instances
-EXECUTION_MODE = :warn
-
-# number of http requests received by environment within activity period
-# below which environment is considered to be inactive
-ACTIVITY_THRESHOLD = 1000
-
-# window of time within which activity is measured
-ACTIVITY_PERIOD_DAYS = 7
-
-# protect new instances from being terminated
-GRACE_PERIOD_DAYS = 3
-
-# This script stops AWS EC2 instances being used to run adhoc environments if they have not been used recently:
-#
-# 1) for each AWS CloudFormation Stacks with 'adhoc' at the beginning of the name
-#   a) get AWS CloudWatch Metrics to determine if it has been inactive for more than a configurable time period
-#   b) stop instance if it activity is below threshold
-# 2) publish final status to slack cron-job (list of all adhoc environments and which ones were stopped)
-def main
-  ChatClient.message 'adhoc', 'Beginning to stop inactive adhoc instances'
-  job_status = Array.new
-
-  cloudformation_client = Aws::CloudFormation::Client.new
-  cloudformation_resource = Aws::CloudFormation::Resource.new(client: cloudformation_client)
-  cloudwatch_client = Aws::CloudWatch::Client.new
-
-  # find all stacks with 'adhoc' name prefix or environment tag
-  adhoc_stacks = cloudformation_resource.stacks.select do |stack|
-    stack.name.start_with?('adhoc-') ||
-    stack.tags.detect {|tag| tag.key == 'environment'}&.value == 'adhoc'
-  end
-
-  adhoc_stacks.each do |stack|
-    status = StackStatus.new
-    status.name = stack.name
-    status.cloudformation_status = stack.stack_status
-    status.owner = stack.tags.detect {|tag| tag.key == 'owner'}&.value
-    status.creation_time = stack.creation_time
-
-    # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
-    metric = Aws::CloudWatch::Metric.new(namespace: 'App Server', name: 'active', client: cloudwatch_client)
-    total_http_requests = metric.get_statistics(
-      {
-        dimensions: [
-          {
-            name: 'Environment',
-            value: 'adhoc',
-          },
-          {
-            name: 'Host',
-            value: "#{stack.name}.cdn-code.org",
-          }
-        ],
-        start_time: Time.now - ACTIVITY_PERIOD_DAYS.days,
-        end_time: Time.now,
-        period: ACTIVITY_PERIOD_DAYS.days,
-        statistics: ['Sum'],
-        unit: 'Count'
-      }
-    )&.datapoints&.sum(&:sum)
-
-    status[:activity] = total_http_requests
-
-    # If an engineer Terminates the EC2 Instance in their adhoc environment instead of running the rake task to delete
-    # their adhoc environment, then the Stack still exists and references an AWS Instance Resource.  Instantiating an
-    # EC2 Instance Resource object by the instance id succeeds, but invoking most methods on the resource object will
-    # raise an error.  Protect all method calls on the variable 'instance' with instance.exists?
-    instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
-    status[:previous_instance_status] = instance.exists? ? instance&.state&.name : 'TERMINATED'
-
-    # stop instances with activity below threshold if they are running (state code == 16)
-    if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
-        instance.exists? &&
-        instance&.state&.code == 16 &&
-        stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
-      stop_result = instance.stop(
-        {
-          dry_run: !(EXECUTION_MODE == :stop_instance),
-          force: false
-        }
-      )
-      status[:current_instance_status] = stop_result.state.name
-      status[:instance_status_change_reason] = 'Instance activity is below threshold'
-    else
-      status[:current_instance_status] = instance.exists? ? instance&.reload&.state&.name : 'TERMINATED'
-      status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
-    end
-  rescue StandardError => error
-    status[:current_instance_status] = instance&.exists? ? instance&.reload&.state&.name : 'TERMINATED'
-    status[:instance_status_change_reason] = error.to_s
-  ensure
-    job_status.push(status)
-  end
-  job_status_csv = CSV.generate do |csv|
-    csv << StackStatus.members
-    job_status.sort! {|a, b|  a.creation_time <=> b.creation_time}.each {|status| csv << status}
-  end
-  ChatClient.message 'adhoc', "Adhoc Environments Status: \n\n" + job_status_csv
+adhocs = Aws::EC2::Resource.new.instances(
+  filters: {
+    'tag:environment' => 'adhoc',
+    'tag:aws:cloudformation:logical-id' => 'WebServer',
+    'instance-state-name' => 'running'
+  }.map {|k, v| {name: k, values: [v]}}
+).reject do |adhoc|
+  # Exclude instances with disableApiTermination == true.
+  adhoc.describe_attribute(attribute: 'disableApiTermination').
+    disable_api_termination.value
 end
 
-main if only_one_running?(__FILE__)
+if adhocs.any?
+  msg = "Stopping #{adhocs.length} adhoc instances:\n" +
+    adhocs.map {|a| a.tags.detect {|t| t.key == 'Name'}&.value}.join("\n")
+  ChatClient.message 'adhoc', msg
+
+  Aws::EC2::Instance::Collection.new([adhocs]).batch_stop(dry_run: dry_run)
+end

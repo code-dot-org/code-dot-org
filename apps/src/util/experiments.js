@@ -21,14 +21,16 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
-experiments.STUDENT_LIBRARIES = 'student-libraries';
-experiments.BETT_DEMO = 'bett-demo';
+experiments.MICROBIT = 'microbit';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
+experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
+experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
+experiments.IMMERSIVE_READER = 'immersive-reader';
+experiments.I18N_TRACKING = 'i18n-tracking';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

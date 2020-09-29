@@ -454,6 +454,15 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: @level}
+    end
+    assert_redirected_to "/"
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user

@@ -20,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Other Ways to Assign Values to Variables\r\nPrograms become much more interesting when the values in variables change while the program is running. We can also assign to a variable the value returned by a function. For example:\r\n\r\n![](https://images.code.org/31447c1b90c925bba3ca86ead8d84a7d-image-1445892065474.png)\r\n\r\nBecause `randomNumber` picks a new and different number each time, we can now have the computer pick a random number, and use that *same number* for two different things in a program.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/df3d2a8f4c1a3061981667c9f85b0071-image-1445549489133.png\" style=\"float: right; width: 350px\">Write a program that simulates the rolling of two dice and reports their individual values as well as the sum. \r\nThe program should:\r\n* Pick two random numbers between 1 and 6 and store each result in its own variable.\r\n* Display the individual values of the two dice.\r\n* Display the sum of the two dice (see right).\r\n* Every time you run the program the result will be a little different.\r\n\r\nWe have given you starting code that shows what to do for the first die. The *rest of the code is up to you!*  When you're done the output in the app display should look like what's above (but with different numbers).\r\n\r\n",
+    "long_instructions": "# Other Ways to Assign Values to Variables\r\nPrograms become much more interesting when the values in variables change while the program is running. We can also assign to a variable the value that comes from another command. For example:\r\n\r\n![](https://images.code.org/31447c1b90c925bba3ca86ead8d84a7d-image-1445892065474.png)\r\n\r\nBecause `randomNumber` picks a new and different number each time, we can now have the computer pick a random number, and use that *same number* for two different things in a program.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/df3d2a8f4c1a3061981667c9f85b0071-image-1445549489133.png\" style=\"float: right; width: 350px\">Write a program that simulates the rolling of two dice and reports their individual values as well as the sum. \r\nThe program should:\r\n* Pick two random numbers between 1 and 6 and store each result in its own variable.\r\n* Display the individual values of the two dice.\r\n* Display the sum of the two dice (see right).\r\n* Every time you run the program the result will be a little different.\r\n\r\nWe have given you starting code that shows what to do for the first die. The *rest of the code is up to you!*  When you're done the output in the app display should look like what's above (but with different numbers).\r\n\r\n",
     "start_blocks": "write(\"Rolling dice!\");\r\nvar die1 = randomNumber(1,6);\r\nwrite(\"You rolled a: \"+die1);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -55,7 +55,6 @@
     "parent_level_id": 17135,
     "name_suffix": "_virtual",
     "show_debug_watch": "true",
-    "preload_asset_list": null,
     "encrypted": "false",
     "instructions_important": "false",
     "mini_rubric": "false",
@@ -64,11 +63,12 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-04-07 16:58:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-04-07 16:58:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 20:57:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

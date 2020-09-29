@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: 電腦科學基礎過渡指南
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# 教授課程 A-F
 
-## Table of Contents
+## 目錄
 
 * [概述](#overview)
 * [教導新課程](#newcourses)
-* [圈圈時間(課程A和課程B)](#circletime)
-* [鷹架課程&amp挑戰拼圖(所有年齡)](#scaffolding)
-* [為不插電課程準備的橋接活動(所有年齡)](#unplugged)
-* [後期課程專案(課程E&ampF)](#endofcourse)
+* [圍圈圈講故事時間（課程 A 和 B）](#circletime)
+* [鷹架課程與挑戰謎題（所有年齡）](#scaffolding)
+* [為不插電課堂準備的過渡活動（所有年齡）](#unplugged)
+* [課程結束專案（課程 E 和 F）](#endofcourse)
 * [結論](#conclusion)
 * [常見問答](#faq)
 
 <a id="overview"></a>
 
 ## 概述
-從早期的電腦科學基礎課程創建以來, 現在電腦科學教育已經發生了全面巨大的變化。 最初, 1-4 的課程是被設計為獲取學科基礎的起點, 不分年齡。  現在, 從幼稚園開始, 已經有了更多的地區、城市和州開設了電腦科學課程, 老師們要求更多的內容, 讓學生通過, 直到初中。
+從早期的電腦科學基礎課程創立以來至今，現在電腦科學教育已經發生了全面且巨大的變化。 最初，課程 1-4 的設計，是為了讓學生獲取學科基礎的起點，不分年齡。  現在，從幼稚園開始，已經有更多的地區、城市和州開設了電腦科學課程。老師們要求讓學生學習更多的內容，直到初中。
 
-電腦科學基礎課程 A-F, 是我們對這一問題的答案。  設計按年級劃分的課程使我們能夠退一步, 重新思考我們呈現教材的方式。  它還使我們有機會，可以全心全意地納入支援我們完成這一使命的敬業的教師群體的回饋意見。 透過全國一些最好的小學CS教育專家的協助設計，A-F 課程應該感覺上足以熟悉, 可以在沒有額外專業開發的情況下備運作, 對過去修習過我們課程的學生來說，內容的呈現也夠新穎有趣。
+電腦科學基礎課程 A-F，是我們對這一問題的答案。  設計按年級劃分的課程使我們能夠退一步，重新思考我們呈現教材的方式。  這種做法還使我們有機會全心全意地納入敬業的教師社群提供的回饋意見，他們過去都在支援我們完成這一使命。 A-F 課程由全國一些最好的小學 CS 教育專家協助下設計，教師應該感覺上足夠熟習，可以在沒有額外專業發展的情況下準備運作，而對過去修習過我們課堂的學生來說，內容的呈現也夠新穎有趣。
 
-* 課程A: 幼稚園
-* 課程B: 一年級
-* 課程C: 二年級
-* 課程D: 三年級
-* 課程E: 四年級
-* 課程F: 五年級
-* 預習讀者速成課程: 幼稚園-一年級
-* 速成課程: 二年級-五年級
+* 課程 A：幼稚園
+* 課程 B：一年級
+* 課程 C：二年級
+* 課程 D：三年級
+* 課程 E：四年級
+* 課程 F：五年級
+* 學前兒童的速學課程：幼稚園 - 一年級
+* 速學課程：二年級 - 五年級
 
-CS基礎課程的最大更新是, 內容將從四個課程 (課程1-4) 轉移到六個課程, 與每個K-5年級 (A-F課程) 一致。  如此, 這些課程將能更貼近閱讀、數學和整體認知發展的合適層次。  請注意, 增加了兩個不同的 "速成" 課程, 一個用於預習讀者課程, 另一個適用於其他所有年級。  類似於之前的 "加速" 版本套組。
+CS 基礎課程的最大更新是，內容將從四個課程（課程 1-4）轉移到六個課程，與每個 K-5 年級（A-F 課程）一致。  如此，這些課程將能更貼近閱讀、數學和整體認知發展的合適水平。  請注意，我們增加了兩個不同的「速學」課程，一個供學前兒童使用，另一個則適用於所有其他年級。  這些課程類似於前一個套組的「速成」版本。
 
 <a id="newcourses"></a>
 
 ## 教導新課程
-如前所述, 課程應該讓人感覺很熟悉, 但有所不同。  如果你參加過 code. org 專業發展工作坊, 那麼，你可以準備好開始教授新的課程了。 除了些微的調整外, 但整體平臺、課程和教學理念並無任何改變。 If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+如前所述，課程應該讓人感覺很熟悉，但有所不同。  如果你參加過 Code. org 專業發展工作坊，那麼你可以準備好開始教授新的課程了。 課程有些微調整，但整體平臺、課程和教學理念並無任何改變。 不管先前有沒有參加過也可以 - Code.org 提供免費的 1 天工作坊，助你學習怎樣瞭解各課程、瀏覽 Code.org 平台，並教導不插電課堂。
 
-The main updates to the courses are:
+課程的主要更新如下：
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* 為較年輕的學生提供圍圈圈講故事時間
+* 以新方式搭建鷹架和練習/應用各種概念
+* 各種過渡活動，從而更順利從不插電課堂過渡到插電課堂
+* 為年齡較大的學生提供課程結束專案
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+本指南的餘下部分會更詳細地說明每項構思，提供多種秘訣和技巧，協助在課室中實行這些變更。
 
 <a id="circletime"></a>
 
-## 圈圈時間(課程A和課程B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## 圍圈圈講故事時間（課程 A 和 B）
+某些概念難以僅使用活動與謎題教導，對較年輕的學生而言更明顯。  因此，我們推出了少量圍圈圈講故事活動，這些活動適用於幼稚園與一年級課程。 這些故事預期由教師向全班讀出，故事中途會有一些暫停時間，用於討論一些重要的概念，例如除錯、堅持與挫折等。  我們希望，讓學生以故事角色的形式體驗這些較難掌握的概念，可幫助他們在未來的課堂中出現相同的觀念時識別出來。
 
-Here is how the circle-time stories are intended to be used:
+以下說明預期怎樣使用圍圈圈講故事活動：
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### 向班級學生讀出合適的故事
+  - 確保在講故事期間的有用時刻說出問題與意見，以檢查確認學生瞭解內容。
+  - 在講故事後討論內容。 學生聽到甚麼？ 他們是否有任何不明白的概念？
+  - 讓學生認得各個角色。  在他們的生活中是否有任何事情，讓他們回想起故事中的角色？
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### 學生在開始下一個活動前，與學生重溫講述的故事。
+  - 你記得我們討論過的主要概念嗎？
+  - 你怎樣知道今天會看到這個概念？
+  - 角色曾經做過甚麼，去處理這個概念？ 你會怎麼做？
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### 指出故事和學生在活動中的境況有甚麼相似的地方。
+  - 向學生說明，學生遇到的情況怎樣和書本中的情況相似。
+  - 請一位學生思考一下各個角色，並想想這些角色可能會做些甚麼。  這樣做是否可幫助學生瞭解下一步？
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+若你無法讓全班聚集在一起，Code.org 已在適當的課堂中提供影片選項，影片會以有限的動畫展示故事。 雖然這些影片無法提供相同的體驗，但是也可讓學生學習各種概念與認識角色，然後再繼續課程中餘下的部分。
 
 <a id="scaffolding"></a>
 
-## 鷹架課程&amp挑戰拼圖(所有年齡)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## 鷹架課程與挑戰謎題（所有年齡）
+整體而言，課程 A-F 搭建鷹架的程度比我們先前的課堂較低。  這表示，我們會盡量嘗試讓學生從一開始就自己編寫程式，除非他們專門在學習除錯。  做為這種設計的一部分，我們的大部分線上課堂都會遵從一種趨勢：我們會以展示簡單謎題的方式開始課堂，然後慢慢向前推進，教導新的概念，直到學生有機會瞭解背後的意思。  然後，我們會向學生展示一個挑戰謎題，這個謎題的用意是讓學生以全新與複雜的方式思考相關概念。
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+挑戰謎題是課程 A-F 的全新內容。  挑戰謎題旨在讓學生挑戰高難度，從而訓練他們堅持和獨立思考。  挑戰謎題是故意調高難度的謎題，這種設計讓學生僅可在真正瞭解概念後，才可在合理的時間範圍內完成。  這表示，有不少學生將無法成功第一次完成挑戰。 這時候，學生和老師都需要抱著謹慎的態度接受挑戰。
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. 學生應熱切地嘗試這些挑戰，然後把挑戰放在一旁並繼續學習。  該練習可讓兩件重要的事情發生：
+2. 學生可更瞭解在甚麼時候運用學習中的概念。 挑戰後的謎題會變得更容易，即便這些謎題本身也有點難度。
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+請謹記，學生可隨時進入各課堂，重新嘗試未完成的謎題。  有時候，在回顧艱難的問題前的一晚，睡個好覺也可以帶來不錯的效果。
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+學生完成挑戰後，便會發現有些練習在等候他們完成，而這些練習和階段前半部遇到的練習相似。 這些謎題的放置順序，專門用於測試學生是否清楚學習中的主題。  謎題看起來可能會太容易，因為這些謎題在之前已經遇到過；但是制定這些謎題的用意，在於展示相應階段所需的實際能力。
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+在某些情況下，我們會以自由探索式關卡來結束課堂。  這些關卡可能沒有「錯誤」的答案，或是僅允許以幾種不同方式解決其核心問題。  請鼓勵學生盡力做到最好，而不是僅僅點擊「繼續」，即便這樣做也可以。
 
-Some final notes for this area:
+關於這個範疇的總結備註：
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* 提醒學生應該堅持不懈，並運用他們的除錯技巧，應付感到艱難的問題。
+* 影片通常都能夠提供幫助。  若學生卡住了進度，可讓他們重新觀看影片一次、兩次甚至三次。
+* 要求學生閱讀指示。  若學生遇到困難，請他們向全班大聲讀出指示。
+* 使用提示是沒問題的！  學生應盡量使用需要的提示，但是在每次提供新的提示時，要確保至少嘗試一次重新解決謎題。
 
 <a id="unplugged"></a>
 
-## 為不插電課程準備的橋接活動(所有年齡)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## 為不插電課堂準備的過渡活動（所有年齡）
+不插電活動會讓學生親身進行活動，指出他們在日常生活中如何在運用重要的電腦科學概念。  學生確認基本概念，例如迴圈與條件式後，就能夠跨越心理障礙。學生第一次在線上設計程式並使用迴圈時，便可能會出現這種障礙。
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+不插電體驗非常重要，以至於我們選擇了採取進一步行動，把不插電課堂轉換為線上堂課的過渡活動升溫。  你會在課程 A-F 中發現，課堂計畫提供各種範例，說明怎樣完成離線練習，並把課堂翻譯成以下各組線上謎題。  我們把這些活動稱為「過渡活動」或「橋接活動」。
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+在大部分情況下，制定過渡活動的方式可以是：採用不插電練習的主題，並使用 Blockly 紙張積木；或是採用線上謎題，並使用不插電練習的語言解決謎題。  某些情況會說明不同的關係，但是所有範例皆旨在降低離線體驗太抽象或不相關的程度。
 
 <a id="endofcourse"></a>
 
-## 後期課程專案(課程E&ampF)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## 課程結束專案（課程 E 和 F）
+在教導年齡較大的學生方面，我們在課程 E 與 F 中提供各種豐富的課程結束專案。雖然 Code.org 本來已能夠讓學生製作「專案」，但我們認為可以讓學生增添一些很有需要的觀點，讓學生能夠在正式的情境中計畫並執行專案。
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+課程結束專案相對較為直接。  在 4 到 5 週的時期中，學生將會檢閱專案構思、計畫如何應用構思、編寫程式、依據回饋意見修改改程式（五年級），然後展示完成的作品。  以上每個步驟都會提供實用的講義做為指導，並提供強調大局的教師課堂計畫。
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**檢閱：**學生會觀察一下部分優秀的專案，這些專案用於展示學生至今為止學到的技巧可以做出的精彩內容。  這些專案以 Play Lab 或藝術家完成，但是學生也可自由檢閱 Tynker 和 Scratch 等完成的專案；若教師認為合適，甚至可讓學生檢閱文字式程式語言。
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**計畫：**計畫之目的是讓學生靜靜地坐下來，想想有哪些事情真的能夠做出來。  他們將要思考看過的遊戲，以及在編輯遊戲時面對的限制。  之後，學生便會編寫計畫草稿，以製作獨一無二的東西。  教師可能需要提醒學生要腳踏實地，因為學生要把理念做出來，製作專案的時間與資源有限。  這裡提供的材料皆假設學生使用藝術家或 Play Lab，但是每個特定班級都可改為使用他們適用的平台製作專案。
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**製作：**要執行紙張上寫出來的計畫，一天其實也不算很長時間。  學生在嘗試讓事情成功做出來時，會面對一些困難的選擇，因為他們會不斷遇到障礙。  他們會學習編輯與適應，因為程式錯誤與限制會改變他們的看法，瞭解哪些事情可在有限的時間內自在地完成。
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**修改：**對年齡較大的學生而言，以一天的時間依據同學的回饋意見修改自己的程式，可協助他們改善最終專案，以及讓他們以完成的事情來激勵他人。  學生會練習建設性的批評，以及小組集體思考（腦力激盪 brainstorming）和堅持不懈。
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**展示：**在大約製作專案的一個月後，學生便有機會昂首挺胸，對自己一直以來的進展感到自豪。  我們的課堂計畫預設以口頭形式進行簡報展示，但是教師也可選擇建議改為書面或多媒體簡報。
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+不論學生有多徹底地投入製專案，他們也肯定可學習到電腦科學中一些實用的創意流程與問題解決技巧。
 
 <a id="conclusion"></a>
 
 ## 結論
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+全賴電腦科學基礎的教師與輔導員社群提供大量回饋意見，現在你可以看到，電腦科學基礎的課程 A-F 已經有多項優質的改良。
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+我們希望本概覽能為你帶來精彩的見解。  若你對這種變更有任何問題或意見，請到訪 http://forum.code.org/c/csf 並在我們的討論區發表意見。  我們將確保盡快回答你的問題。  現在提供課程 A-F 的一些常見問題與解答。
 
 <a id="faq"></a>
 
 ## 常見問答
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| 問題                                                        | 回答                                                                                                                                        |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **你們正在推出一套新的課程-- 這是否代表課程 1-4 將會被取消？**                     | 否。 正如我們原始的 20 小時課程仍然在我們的網站上提供給大家使用，我們計畫保留課程 1-4。若認為課程 1-4 更能代表學生/孩童需要的體驗，可繼續使用這些課程。                                                       |
+| **我們甚麼時候可以開始使用課程 A-F？**                                   | 課程 A-F 現在已可使用！                                                                                                                            |
+| **有一些我最喜愛的課堂/謎題沒有在課程 A-F 中！**                             | 不用害怕！ 課程 1-4 或 20 小時速成課程中的內容仍然保留在那裡。                                                                                                      |
+| **這些謎題似乎困難很多。  我擔心對我的孩童來說太困難。**                           | 這些全新課程背後的意義，在於希望讓學生思考、解決問題與堅持不懈。  若謎題太容易完成，學生就不能體驗上述各點。  因此，我們必須讓謎題變得更困難一些。  請參閱教師指南，讓你在帶領班級學生建立這些技巧時獲得協助。  一如以往，不要低估在跳到線上謎題前使用不插電課程的重要性。 |
+| **某些謎題僅允許使用特定數目的指定積木。  若我的學生希望以較長的方式編寫程式，然後才瞭解迴圈，我該怎麼辦？** | 有些謎題會限制指定積木的數量。 這是我們搭建鷹架的新方法之一。  這種方法可提供指引，而不用在工作區過量搭建鷹架。  若學生首先想以較長的方式編寫程式，然後再縮短程式（其實所有學生都會這樣），可在鍵盤旁邊放置日誌或草稿紙，讓學生可以最自然的方法找出演算法。          |
 

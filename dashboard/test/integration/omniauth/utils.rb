@@ -38,7 +38,7 @@ module OmniauthCallbacksControllerTests
     # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
     # @param [String] provider
     def sign_in_through(provider)
-      get "/users/auth/#{provider}"
+      post "/users/auth/#{provider}"
       assert_redirected_to "/users/auth/#{provider}/callback"
       follow_redirect!
     end
@@ -132,15 +132,16 @@ module OmniauthCallbacksControllerTests
     # Skip firehose logging for these tests
     # Instead record the sequence of events logged, for easy validation in test cases.
     def stub_firehose
-      @firehose_records = []
-      FirehoseClient.instance.stubs(:put_record).with do |args|
-        @firehose_records << args
+      @firehose_requests = []
+      FirehoseClient.instance.stubs(:put_record).with do |stream, args|
+        @firehose_requests << [stream, args]
         true
       end
     end
 
     def assert_sign_up_tracking(expected_study_group, expected_events)
-      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
+      study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
+      study_records = study_requests.map {|e| e[1]}
       study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
       study_events = study_records.map {|e| e[:event]}
 
@@ -151,8 +152,8 @@ module OmniauthCallbacksControllerTests
     end
 
     def refute_sign_up_tracking
-      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
-      assert_empty study_records
+      study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
+      assert_empty study_requests
     end
   end
 end

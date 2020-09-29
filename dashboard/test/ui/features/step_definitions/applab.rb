@@ -206,8 +206,8 @@ def drag_grippy(element_js, delta_x, delta_y)
     element[0].dispatchEvent(drag);
     element[0].dispatchEvent(mouseup);
   }
-
-  @browser.execute_script(script)
+  # Run the script and then wait a little bit of time to give the UI a chance to reflow.
+  @browser.execute_script(script, 0.5)
 end
 
 And /^I drag the instructions grippy by ([-|\d]+) pixels$/ do |delta|

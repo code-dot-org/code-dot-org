@@ -1468,6 +1468,8 @@ fi-FI:
   header_teacher_community: Opettajayhteisö
   header_help_support: 'Ohjeet ja tuki '
   header_report_bug: Ilmoita ongelmasta
+  header_legal_privacy: Tietosuojakäytäntö
+  header_legal_tos: Käyttöehdot
   header_tutorials: Oppaat
   sprite_lab_documentation: Sprite-labra dokumentaatio
   sprite_lab_tutorials: Sprite-labra oppitunnit

@@ -10,12 +10,11 @@ const FACILITATOR = 'facilitator';
 export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
+    facilitators: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
-    // TODO: add rollups once they are sent by the backend
     workshopRollups: PropTypes.object
-    // facilitatorRollups: PropTypes.object
   };
 
   render() {
@@ -35,6 +34,7 @@ export default class Results extends React.Component {
               section={GENERAL}
               questions={this.props.questions[GENERAL]}
               answers={this.props.thisWorkshop[workshopTab][GENERAL]}
+              facilitators={this.props.facilitators}
             />
             {this.props.thisWorkshop[workshopTab][FACILITATOR] && (
               <div>
@@ -43,6 +43,7 @@ export default class Results extends React.Component {
                   section={FACILITATOR}
                   questions={this.props.questions[FACILITATOR]}
                   answers={this.props.thisWorkshop[workshopTab][FACILITATOR]}
+                  facilitators={this.props.facilitators}
                 />
               </div>
             )}
@@ -50,14 +51,31 @@ export default class Results extends React.Component {
         ))}
         {this.props.workshopRollups && (
           <Tab
+            /* Keys here are +1 to last survey summary tab keys */
             eventKey={this.props.workshopTabs.length + 1}
             key={this.props.workshopTabs.length}
             title="Workshop Rollups"
           >
             <SurveyRollupTableFoorm
-              workshopRollups={this.props.workshopRollups}
-              questions={this.props.questions}
+              workshopRollups={this.props.workshopRollups[GENERAL]}
               courseName={this.props.courseName}
+              isPerFacilitator={false}
+              facilitators={this.props.facilitators}
+            />
+          </Tab>
+        )}
+        {this.props.workshopRollups && this.props.workshopRollups[FACILITATOR] && (
+          /* Keys here are +1 to general rollup tab */
+          <Tab
+            eventKey={this.props.workshopTabs.length + 2}
+            key={this.props.workshopTabs.length + 1}
+            title="Facilitator Rollups"
+          >
+            <SurveyRollupTableFoorm
+              workshopRollups={this.props.workshopRollups[FACILITATOR]}
+              courseName={this.props.courseName}
+              isPerFacilitator={true}
+              facilitators={this.props.facilitators}
             />
           </Tab>
         )}

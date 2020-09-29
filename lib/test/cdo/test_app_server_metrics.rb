@@ -15,9 +15,15 @@ class AppServerMetricsTest < Minitest::Test
     @app = Rack::Builder.app do
       use Cdo::AppServerMetrics,
         interval: 0,
-        report_count: 2,
         listeners: [TCP_LISTENER, SOCKET_LISTENER]
       run ok
+    end
+  end
+
+  def expect_metrics(*metrics)
+    @sequence ||= sequence('metrics')
+    metrics.each do |name, value|
+      Cdo::Metrics.expects(:put).with("App Server/#{name}", value, {}, {storage_resolution: 1, unit: 'Count'}).in_sequence(@sequence)
     end
   end
 
@@ -32,29 +38,29 @@ class AppServerMetricsTest < Minitest::Test
       with([SOCKET_LISTENER]).times(2).
       returns({SOCKET_LISTENER => Raindrops::ListenStats.new(0, 0)})
 
-    Cdo::Metrics.expects(:push).with do |namespace, data|
-      namespace == 'App Server' &&
-        data.group_by {|d| d[:metric_name]}.
-          map {|k, v| {k => v.map {|x| x[:value]}}} ==
-          [
-            {active: [1, 3]},
-            {queued: [2, 4]},
-            {calling: [1, 1]}
-          ]
-    end
+    expect_metrics(
+      [:active, 1],
+      [:queued, 2],
+      [:calling, 1],
+      [:active, 3],
+      [:queued, 4],
+      [:calling, 1]
+    )
 
     get '/'
     get '/'
   end
 
   def test_reporting_task
+    # Note: this test only passes on Linux systems, since it relies on Raindrops reading from /proc/net/unix.
+    skip "Skip on non-Linux system" unless File.file? Raindrops::Linux::PROC_NET_UNIX_ARGS.first
+
     listener = Cdo::AppServerMetrics.new(nil,
       interval: 0.1,
-      report_count: 2,
       listeners: [TCP_LISTENER, SOCKET_LISTENER]
     )
     listener.spawn_reporting_task
-    Cdo::Metrics.expects(:push).at_least(1)
+    Cdo::Metrics.expects(:put).at_least(1)
     sleep 1
   ensure
     listener && listener.shutdown

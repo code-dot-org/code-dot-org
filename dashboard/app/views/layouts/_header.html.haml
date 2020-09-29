@@ -67,73 +67,97 @@
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
 %div{class: header_class}
-  .navbar-static-top.header
-    .container{style: (full_width ? 'width: 880px;' : '')}
-      .navbar-header
-        .row.header_row
-          .header_left
-            .header_logo
-              - if current_user
-                = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
-              - else
-                = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
-            .project_info
-          .header_middle
-            - if should_show_progress
-              = render partial: 'shared/header_progress'
-            - elsif level
-            - else
-              .headerlinks.hide_on_tablet
-                - Hamburger.get_header_contents(header_contents_options).each do |entry|
-                  %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+  .navbar-static-top.header{dir: "ltr"}
+    .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
+      .header_left
+        .header_logo
+          - if current_user
+            = link_to(image_tag('logo.svg'), '/home', {id: "logo_home_link"})
+          - else
+            = link_to(image_tag('logo.svg'), CDO.code_org_url, {id: "logo_home_link"})
 
-          .header_right
-            - if !@hide_sign_in_option && signin_button_enabled
-              %span#sign_in_or_user
-                = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
-            = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
-            = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+      .header_middle{dir: locale_dir}
+        - if should_show_progress || level
+          -# React will attach to this.
+          .header_level
+        - else
+          .headerlinks.hide_on_tablet
+            - Hamburger.get_header_contents(header_contents_options).each do |entry|
+              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
-- if request.path == "/home"
-  #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
-- elsif request.path == "/courses"
-  #header-banner.header-banner-courses{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.jpg\")"}
+      .header_right
+        - if !@hide_sign_in_option && signin_button_enabled
+          #sign_in_or_user
+            = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
+        = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
+        = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+  }
 
-- if ["/projects", "/projects/public", "/projects/libraries"].include? request.path
-  #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
+:ruby
+  if should_show_progress
+    view_as = @user || current_user
+    user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as, view_as == current_user && @public_caching).to_json
+
+    if view_as
+      lesson_extras_enabled = view_as.lesson_extras_enabled?(script)
+    end
+
+    # don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
+    puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
+
+    if script_level
+      uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
+    else
+      # A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
+      uid = SharedConstants::LEVEL_KIND.stage_extras
+    end
+
+
+    script_data = script.summarize_header
+    lesson_group_data = script.lesson_groups.map(&:summarize)
+    stage_data = (@stage || script_level.lesson).summarize
+    # If caching, we don't know the sign in state, and should be nil
+    signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
+
+    # Pass script name through to header
+    if @stage_extras
+      text = @stage.localized_title
+    else
+      stage = @stage || @script_level.lesson
+      text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
+    end
+
+    # Pass along section_id param so that when teacher moves between lesson
+    # page and course overview they maintain their section.
+    section_id = request.query_parameters[:section_id]
+
+    user_id = request.query_parameters[:user_id]
+
+    small_text = false
+
+    script_name_data = {
+      name: text,
+      href: script_path(@script, section_id: section_id, user_id: user_id),
+      smallText: small_text
+    }
+  end
 
 - if should_show_progress
-  - view_as = @user || current_user
-  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as, view_as == current_user && @public_caching).to_json
-
-  - if view_as
-    - stage_extras_enabled = view_as.stage_extras_enabled?(script)
-
-  -# don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
-  - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
-
-  - if script_level
-    - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
-  - else
-    /A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
-    - uid = SharedConstants::LEVEL_KIND.stage_extras
-
-  - script_data = script.summarize_header
-  - stage_data = (@stage || script_level.lesson).summarize
-  -# If caching, we don't know the sign in state, and should be nil
-  - signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
   :javascript
     //<![CDATA[
     dashboard.header.build(
       #{script_data.to_json},
+      #{lesson_group_data.to_json},
       #{stage_data.to_json},
       #{user_progress},
       "#{uid}",
       #{puzzle_page},
       #{signed_in},
-      #{stage_extras_enabled || 'null'}
+      #{lesson_extras_enabled || 'null'},
+      #{script_name_data.to_json}
     )
     //]]>
 
-- content_for(:body_scripts) do
-  %script{type: "text/javascript", src: webpack_asset_path('js/layouts/_header.js')}
+- elsif level
+  :javascript
+    dashboard.header.buildProjectInfoOnly()

@@ -1180,6 +1180,8 @@ lv-LV:
   header_educate_hoc: Programmēšanas stunda
   header_about_us: Par mums
   header_about_partners: Partneri
+  header_legal_privacy: Privātuma politika
+  header_legal_tos: Nosacījumi
   header_documentation: Dokumentācija
   user_header_label: Sveiki, %{username}
   user_header_team: Komanda

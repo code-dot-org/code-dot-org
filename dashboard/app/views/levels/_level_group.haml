@@ -23,35 +23,32 @@
       #survey-submission-thankyou
         = I18n.t('level_group.survey_submission_thankyou')
 
-    - page.levels.each_with_index do |level, index|
-      -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
-      -# could access student responses
-      - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level, @script) unless submitted_survey
-
-      -# Show any text from an external level.
-      - if data["texts"]
-        - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
-          - text_level = Script.cache_find_level(text_level_info["level_name"])
-          .level-group-content
-            = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
-
-      -# Embed the multi/match/free_response level.
-
+    - page.levels_and_texts.each do |level|
       - level_class = level.class.to_s.underscore
+      - if level_class == 'external'
+        -# Show any text from an external level.
+        .level-group-content
+          = render partial: 'levels/external', locals: {in_level_group: true, level: level}
+      - else
+        - level_index = page.levels.find_index(level)
+        -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
+        -# could access student responses
+        - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level, @script) unless submitted_survey
 
-      .level-group-number= "#{page.offset + index + 1}. "
-      .level-group-content
-        - if ['multi', 'evaluation_multi'].include? level_class
-          = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
-        - elsif level_class == "text_match"
-          -# For students (or teachers doing PD), clear out all answers.
-          - unless Policies::InlineAnswer.visible?(current_user, @script_level)
-            - level.properties['answers'] = nil
-          = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
-        - elsif level_class == "free_response"
-          = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
-        - elsif level_class == "match"
-          = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
+        -# Embed the multi/match/free_response level.
+        .level-group-number= "#{page.levels_offset + level_index + 1}. "
+        .level-group-content
+          - if ['multi', 'evaluation_multi'].include? level_class
+            = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
+          - elsif level_class == "text_match"
+            -# For students (or teachers doing PD), clear out all answers.
+            - unless Policies::InlineAnswer.visible?(current_user, @script_level)
+              - level.properties['answers'] = nil
+            = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
+          - elsif level_class == "free_response"
+            = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
+          - elsif level_class == "match"
+            = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
 
     - unless @script_level.nil?
       = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}

@@ -69,6 +69,7 @@ export const TestResults = {
   UNSUBMITTED_ATTEMPT: -50, // Progress was saved without submitting for review, or was unsubmitted.
 
   SKIPPED: -100, // Skipped, e.g. they used the skip button on a challenge level
+  LEVEL_STARTED: -150, // The user has triggered the reset action at least once (ex: by clicking the reset button)
 
   // Numbers below 20 are generally considered some form of failure.
   // Numbers >= 20 generally indicate some form of success (although again there
@@ -183,3 +184,12 @@ export const EXPO_SESSION_SECRET =
 export const BASE_DIALOG_WIDTH = 700;
 
 export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
+
+export const PROFANITY_FOUND = 'profanity_found';
+
+export const NOTIFICATION_ALERT_TYPE = 'notification';
+
+export const BlocklyVersion = {
+  CDO: 'CDO',
+  GOOGLE: 'Google'
+};

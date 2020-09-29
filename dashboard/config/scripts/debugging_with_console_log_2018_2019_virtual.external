@@ -10,21 +10,21 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/baf244a881a988e7ca9375500c517df0-image-1477340527847.png" style="float: right">
 <em>Example output from a programmer who used a lot of console.log statements to track what was happening in her program.</em>
 </div>
-Printing messages to the console is just about the **fastest and easiest** way to immediately see output from a running program.  
-
-Many professionals **get started building programs** with very simple inputs and outputs, using the console initially to just display a plain-text transcript of activity.  It helps you see what's happening early on.  You can update graphical displays and remove print statements later on.
-
-As you program more and more you realize that it's nice to **get immediate feedback from the computer** that your program is doing *something*.
-
+Printing messages to the console is a fast and easy way to immediately see output from a running program.
+<br></br>
+Many professionals get started building programs with very simple inputs and outputs, using the console to display text that describes what is happening on the screen.  It helps you see what's happening early on.  You can update how the screen looks and remove console.log statements later on.
+<br></br>
+As you program more and more you realize that **it's nice to get immediate feedback from the computer** that your program is doing *something*.
+<br></br>
 Over time this gives you an increasing **sense of control** over the process of writing programs.
 
 ## Debugging with console.log
 
-One of the oldest, but still best, ways to debug programs is to put `console.log` statements into the code to display messages to yourself about the state of program execution at any given point in time.
+One of the best ways to debug programs is to put `console.log` statements into the code to display messages to yourself about what is happening in your program at any given point in time.
 
 Using `console.log` is a way to get the computer to tell you what's happening and when.  
 
-This doesn't mean you can be lazy! You still have to think about where and how to insert those statements but you can take advantage of the fact that the computer *has* to execute them, and will do so in the order it encounters them.
+You still have to think about where and how to insert those statements but you can take advantage of the fact that the computer *must* run them, and will do so in the order it encounters them.
 
 **Using well-placed `console.log` statements is very useful technique for figuring out things like:**
 

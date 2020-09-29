@@ -51,20 +51,19 @@ module Pd::Foorm
             parsed_forms[:general][form_key]
           )
         else
-          facilitator_name = User.find(ws_submission.facilitator_id).name
           workshop_summary[survey_key][:facilitator] ||= {response_count: {}}
-          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] ||= 0
-          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] += 1
+          workshop_summary[survey_key][:facilitator][:response_count][ws_submission.facilitator_id] ||= 0
+          workshop_summary[survey_key][:facilitator][:response_count][ws_submission.facilitator_id] += 1
           workshop_summary[survey_key][:facilitator][form_key] ||= {}
           workshop_summary[survey_key][:facilitator][form_key] = add_facilitator_submission_to_summary(
             submission,
             workshop_summary[survey_key][:facilitator][form_key],
-            facilitator_name,
+            ws_submission.facilitator_id,
             parsed_forms[:facilitator][form_key]
           )
         end
       end
-      workshop_summary
+      sort_summary(workshop_summary)
     end
 
     def self.get_response_count_per_survey(workshop_id, form_name, form_version)
@@ -78,7 +77,7 @@ module Pd::Foorm
     def self.add_facilitator_submission_to_summary(
       submission,
       current_workshop_summary,
-      facilitator_name,
+      facilitator_id,
       form_questions
     )
       answers = JSON.parse(submission.answers)
@@ -86,8 +85,8 @@ module Pd::Foorm
         next unless form_questions[name]
 
         current_workshop_summary[name] ||= {}
-        current_workshop_summary[name][facilitator_name] = add_question_to_summary(
-          current_workshop_summary[name][facilitator_name],
+        current_workshop_summary[name][facilitator_id] = add_question_to_summary(
+          current_workshop_summary[name][facilitator_id],
           answer,
           answers,
           form_questions[name][:type]
@@ -158,6 +157,20 @@ module Pd::Foorm
         end
       end
       summary_at_question
+    end
+
+    # Sort summaries so that survey data is ordered in the order surveys
+    # should be taken in. i.e. Pre-Workshop, Day 1, Day 2,.. Post-Workshop
+    # @param workshop_summary: object in the format returned by summarize_answers_by_survey
+    def self.sort_summary(workshop_summary)
+      temp_summary = workshop_summary.sort_by {|survey_key, _| get_index_for_survey_key(survey_key)}
+      workshop_summary_sorted = {}
+      # temp_summary is an array in the format [[survey_key, summary],[survey_key2, summary2],...]
+      # want to convert back to {survey_key: summary, survey_key2: summary2}
+      temp_summary.each do |summaries|
+        workshop_summary_sorted[summaries[0]] = summaries[1]
+      end
+      workshop_summary_sorted
     end
   end
 end

@@ -67,10 +67,13 @@ class Api::V1::RegionalPartnersController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      study: 'regional-partner-search-log',
-      event: result,
-      data_string: zip_code,
-      source_page_id: params[:source_page_id]
+      :analysis,
+      {
+        study: 'regional-partner-search-log',
+        event: result,
+        data_string: zip_code,
+        source_page_id: params[:source_page_id]
+      }
     )
   end
 

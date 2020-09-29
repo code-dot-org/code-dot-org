@@ -1,5 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: 'S3 Buckets'
+Parameters:
+  DeveloperAccount:
+    Type: String
+    NoEcho: true
 Resources:
   ## Create S3 bucket for student libraries
   LibraryBucket:
@@ -20,6 +24,25 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  DroneLibraryBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref LibraryBucket
+      PolicyDocument:
+        Statement:
+        - Sid: Grant Drone permission to objects created by CI tests.
+          Effect: 'Allow'
+          Action: 's3:*'
+          Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_circle/*'
+          Principal: {AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]}
+        - Sid: Grant Drone permission to list objects for CI tests.
+          Effect: 'Allow'
+          Action: 's3:ListBucket*'
+          Resource: 'arn:aws:s3:::cdo-v3-libraries'
+          Condition:
+            StringLike:
+              's3:Prefix': 'libraries_circle/*'
+          Principal: {AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]}
   SpritelabAnimationBucket:
     Type: 'AWS::S3::Bucket'
     Properties:

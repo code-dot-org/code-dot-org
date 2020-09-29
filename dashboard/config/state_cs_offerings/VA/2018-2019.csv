@@ -1,0 +1,463 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+A. Linwood Holton Governor's School,unspecified,510390001933,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academies of Loudoun,unspecified,5102250,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Advanced Career Education Center at Hermitage,VA-043-0430671,510189000807,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Advanced Technology Center,VA-128-1281048,510384002430,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Advanced Technology Center,VA-128-1281048,510384002430,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albemarle High,VA-002-0020880,510009000015,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albemarle High,VA-002-0020880,510009000015,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albemarle High,VA-002-0020880,510009000015,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alleghany High,VA-003-0030310,510015201883,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Altavista High,VA-016-0160200,510060000220,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Amelia County High,VA-004-0040010,510018001828,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Annandale High,VA-029-0290660,510126000423,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Annandale High,VA-029-0290660,510126000423,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Annandale High,VA-029-0290660,510126000423,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appomattox Regional Governor's School,VA-267-2670010,510003201932,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appomattox Regional Governor's School,VA-267-2670010,510003201932,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appomattox Regional Governor's School,unspecified,510375001932,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Atlee High,VA-042-0420062,510183000114,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Atlee High,VA-042-0420062,510183000114,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Atlee High,VA-042-0420062,510183000114,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn High,VA-060-0600650,510252001013,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bath County High,VA-009-0090140,510033000139,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bath County High,VA-009-0090140,510033000139,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Battlefield High ,VA-075-0750290,510313002457,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Battlefield High ,VA-075-0750290,510313002457,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Battlefield High ,VA-075-0750290,510313002457,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bayside High,VA-128-1280530,510384001675,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel High,VA-112-1120430,510180000731,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel High,VA-112-1120430,510180000731,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel High,VA-112-1120430,510180000731,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blacksburg High,VA-060-0600760,510252001016,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blacksburg High,VA-060-0600760,510252001016,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Ridge Crossroads Governor's Academy for Technical Education,VA-018-0187313,510069002985,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bluestone  High,VA-058-0580980,510246000996,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bluestone  High,VA-058-0580980,510246000996,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Booker T Washington High,VA-118-1180880,510267001079,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Botetourt Technical Education Center,VA-012-0120010,510042000165,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Botetourt Technical Education Center,VA-012-0120010,510042000165,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Briar Woods High ,VA-053-0530420,510225002451,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridging Communities STEM Academy,VA-313-3130020,510025503014,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridging Communities STEM Academy,VA-313-3130020,510025503014,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Broad Run High,VA-053-0530740,510225000913,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brooke Point High,VA-089-0890421,510366000591,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brooke Point High,VA-089-0890421,510366000591,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookville High,VA-016-0160720,510060000223,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bruton High,VA-098-0980020,510415001812,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Buckingham County High,VA-015-0150700,510054000210,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burton Center for Arts and Technology,VA-080-0800590,510333001469,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burton Center for Arts and Technology,VA-080-0800590,510333001469,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cave Spring High,VA-080-0800470,510333001447,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cave Spring High,VA-080-0800470,510333001447,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central High,VA-085-0850780,510351001543,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Virginia Governor's School,unspecified,510024002229,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Virginia Governor's School,unspecified,510024002229,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Virginia Governor's School,unspecified,510036002229,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centreville High,VA-029-0290200,510126002114,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centreville High,VA-029-0290200,510126002114,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centreville High,VA-029-0290200,510126002114,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chancellor High,VA-088-0880381,510364002134,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chancellor High,VA-088-0880381,510364002134,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chancellor High,VA-088-0880381,510364002134,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chantilly High,VA-029-0290131,510126000059,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chantilly High,VA-029-0290131,510126000059,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chantilly High,VA-029-0290131,510126000059,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chantilly High,VA-029-0290131,510126000059,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charles J. Colgan Sr. High,VA-075-0755010,510313003025,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charles J. Colgan Sr. High,VA-075-0755010,510313003025,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlottesville High,VA-104-1040140,510078000273,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlottesville High,VA-104-1040140,510078000273,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlottesville High,VA-104-1040140,510078000273,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charlottesville High,VA-104-1040140,510078000273,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chatham High,VA-071-0711720,510294001210,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clarke County High,VA-022-0220010,510087002100,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clarke County High,VA-022-0220010,510087002100,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Hill High,VA-021-0210740,510084000324,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Hill High,VA-021-0210740,510084000324,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Hill High,VA-021-0210740,510084000324,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Hill High,VA-021-0210740,510084000324,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CodeRVA Regional High,VA-432-4320011,510025603031,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CodeRVA Regional High,VA-432-4320011,510025603031,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Forge High,VA-089-0890424,510366001923,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Forge High,VA-089-0890424,510366001923,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Forge High,VA-089-0890424,510366001923,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Forge High,VA-089-0890424,510366001923,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Heights High,VA-106-1060040,510096000361,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Heights High,VA-106-1060040,510096000361,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colonial Heights High,VA-106-1060040,510096000361,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cosby High,VA-021-0210840,510084002661,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cosby High,VA-021-0210840,510084002661,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cosby High,VA-021-0210840,510084002661,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Courtland High,VA-088-0880020,510364001873,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Courtland High,VA-088-0880020,510364001873,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Covington High,VA-107-1070350,510099000367,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Covington High,VA-107-1070350,510099000367,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig County High,VA-023-0230011,510102002111,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Craig County High,VA-023-0230011,510102002111,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Culpeper County High,VA-024-0240480,510105000376,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Culpeper County High,VA-024-0240480,510105000376,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Culpeper County High,VA-024-0240480,510105000376,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland High,VA-025-0250151,510108000057,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dan River High,VA-071-0711680,510294001214,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deep Run High,VA-043-0430160,510189002278,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deep Run High,VA-043-0430160,510189002278,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deep Run High,VA-043-0430160,510189002278,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denbigh High,VA-117-1170280,510264001047,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dinwiddie County High,VA-027-0270500,510117000410,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dominion High,VA-053-0530031,510225002411,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Douglas S. Freeman High,VA-043-0430410,510189000795,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E.C. Glass High ,VA-115-1150260,510234000956,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastern View High,VA-024-0240050,510105002758,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastern View High,VA-024-0240050,510105002758,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastern View High,VA-024-0240050,510105002758,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edison High,VA-029-0291270,510126000461,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edison High,VA-029-0291270,510126000461,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairfax High,VA-029-0290020,510126000463,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairfax High,VA-029-0290020,510126000463,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Falls Church High,VA-029-0291100,510126000468,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fauquier High,VA-030-0300701,510132000607,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fauquier High,VA-030-0300701,510132000607,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+First Colonial High,VA-128-1280610,510384001684,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+First Colonial High,VA-128-1280610,510384001684,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+First Colonial High,VA-128-1280610,510384001684,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Floyd County High,VA-031-0310660,510135000618,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Floyd County High,VA-031-0310660,510135000618,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Floyd Kellam High,VA-128-1280440,510384001685,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Floyd Kellam High,VA-128-1280440,510384001685,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fluvanna County High,VA-032-0320260,510138000625,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fluvanna County High,VA-032-0320260,510138000625,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fluvanna County High,VA-032-0320260,510138000625,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High,VA-075-0750870,510313002542,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High,VA-075-0750870,510313002542,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Park High,VA-075-0750870,510313002542,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Frank W. Cox High,VA-128-1280030,510384002049,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Frank W. Cox High,VA-128-1280030,510384002049,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin County High,VA-033-0331311,510144000637,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Military Academy,VA-123-1230621,510324002214,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High ,VA-053-0530120,510225002447,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High ,VA-075-0750300,510313002458,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High ,VA-075-0750300,510313002458,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom High ,VA-075-0750300,510313002458,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gar-Field High,VA-075-0750690,510313001299,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gar-Field High,VA-075-0750690,510313001299,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gar-Field High,VA-075-0750690,510313001299,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gar-Field High,VA-075-0750690,510313001299,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gate City High,VA-084-0840770,510348001532,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+George Mason High,VA-109-1090251,510129000283,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+George Mason High,VA-109-1090251,510129000283,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+George Wythe High,VA-123-1230741,510324002081,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goochland High,VA-037-0370220,510165000686,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goochland High,VA-037-0370220,510165000686,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Governor's Academy for Career and Technical Education in Arlington,VA-007-0070623,510027003003,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Governor's Academy for Career and Technical Education in Arlington,VA-007-0070623,510027003003,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Governor's Academy for Career and Technical Education in Arlington,VA-007-0070623,510027003003,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Governor's School of Southside Virginia,unspecified,510306001505,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grafton High,VA-098-0980332,510415001443,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham High,VA-092-0920940,510381001653,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham High,VA-092-0920940,510381001653,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham Middle,VA-092-0920010,510381001654,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham Park Middle,VA-075-0750510,510313001301,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granby High,VA-118-1180390,510267001098,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grassfield High,VA-136-1360960,510081002765,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grassfield High School Governor's STEM Academy,VA-136-1360965,510081002998,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grassfield High School Governor's STEM Academy,VA-136-1360965,510081002998,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Green Run High,VA-128-1280010,510384001879,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greensville County High,VA-040-0400200,510174000706,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gretna High,VA-071-0711700,510294001218,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gunston Middle,VA-007-0070611,510027000752,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Halifax County High,VA-041-0410010,510177001848,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High,VA-112-1120280,510180000742,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High,VA-112-1120280,510180000742,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton High,VA-112-1120280,510180000742,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanover High,VA-042-0420554,510183002338,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanover High,VA-042-0420554,510183002338,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrisonburg High,VA-113-1130012,510186000782,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrisonburg High,VA-113-1130012,510186000782,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hayfield Secondary,VA-029-0291800,510126000493,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HB Woodlawn Secondary Program,VA-007-0070616,510027002659,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HB Woodlawn Secondary Program,VA-007-0070616,510027002659,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henrico High,VA-043-0430610,510189000804,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High,VA-053-0530900,510225002285,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High,VA-117-1171395,510264001451,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School Governor's STEM Academy,VA-117-1171455,510264003015,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hermitage High,VA-043-0430670,510189000806,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herndon High,VA-029-0290032,510126000495,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herndon High,VA-029-0290032,510126000495,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Herndon High,VA-029-0290032,510126000495,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hickory High,VA-136-1360890,510081001482,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hidden Valley High,VA-080-0800754,510333002308,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hidden Valley High,VA-080-0800754,510333002308,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland High,VA-045-0450220,510195000862,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland High,VA-045-0450220,510195000862,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hopewell High,VA-114-1140120,510198000867,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huguenot High,VA-123-1231510,510324002083,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James River High,VA-021-0210770,510084000766,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James River High,VA-021-0210770,510084000766,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Wood High,VA-034-0340030,510147000652,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Wood High,VA-034-0340030,510147000652,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jamestown High,VA-131-1310202,510402001665,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Forest High,VA-010-0101212,510036002175,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Forest High,VA-010-0101212,510036002175,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Forest High,VA-010-0101212,510036002175,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Middle,VA-007-0070180,510027000098,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Champe High School,VA-053-0530370,510225002865,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Handley High School,VA-132-1320040,510405001780,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John Rolfe Middle,VA-043-0430130,510189001850,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John S. Battle High,VA-094-0941040,510390001746,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John S. Battle High,VA-094-0941040,510390001746,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kecoughtan High,VA-112-1120320,510180000747,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kecoughtan High,VA-112-1120320,510180000747,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kecoughtan High,VA-112-1120320,510180000747,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kempsville High,VA-128-1280620,510384001694,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kempsville High,VA-128-1280620,510384001694,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kenmore Middle,VA-007-0070500,510027000099,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Run High,VA-030-0300510,510132002785,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Run High,VA-030-0300510,510132002785,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+King George High,VA-048-0480120,510210000882,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lafayette High,VA-131-1310090,510402001773,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Braddock Secondary,VA-029-0290090,510126000516,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Braddock Secondary,VA-029-0290090,510126000516,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Braddock Secondary,VA-029-0290090,510126000516,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Braddock Secondary,VA-029-0290090,510126000516,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lancaster High,VA-051-0510010,510216000887,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lancaster High,VA-051-0510010,510216000887,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Landstown High,VA-128-1281030,510384002323,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Landstown High,VA-128-1281030,510384002323,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Langley High,VA-029-0291460,510126000517,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Langley High,VA-029-0291460,510126000517,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Langley High,VA-029-0291460,510126000517,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High,VA-083-0830140,510342002042,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee Davis High,VA-042-0420370,510183000772,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee Davis High,VA-042-0420370,510183000772,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee Davis High,VA-042-0420370,510183000772,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee Davis High,VA-042-0420370,510183000772,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee High,VA-029-0291020,510126000521,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee High,VA-029-0291020,510126000521,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee High,VA-029-0291020,510126000521,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lee High,VA-052-0520300,510219002152,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High,VA-010-0101180,510036000151,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High,VA-030-0300851,510132000854,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High,VA-030-0300851,510132000854,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lloyd C. Bird High,VA-021-0210010,510084000337,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lloyd C. Bird High,VA-021-0210010,510084000337,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lloyd C. Bird High,VA-021-0210010,510084000337,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loudoun County High,VA-053-0530660,510225000923,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Loudoun Valley High,VA-053-0530680,510225000924,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Louisa County High,VA-054-0540602,510228000939,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Louisa County Middle,VA-054-0540601,510228001930,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Luray High,VA-069-0690110,510285001180,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison County High,VA-056-0560221,510237000972,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison High,VA-029-0291060,510126000532,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison High,VA-029-0291060,510126000532,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison High,VA-029-0291060,510126000532,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maggie L. Walker Governor's School,VA-271-2710010,510006102561,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Maggie L. Walker Governor's School,VA-271-2710010,510006102561,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manassas Park High,VA-144-1440030,510239000983,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manassas Park High,VA-144-1440030,510239000983,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manassas Park High,VA-144-1440030,510239000983,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marion Senior High,VA-086-0860700,510352001562,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martinsville High,VA-116-1160110,510240000988,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Martinsville High,VA-116-1160110,510240000988,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mary Ellen Henderson Middle,VA-109-1090252,510129000284,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Massaponax High,VA-088-0880506,510364001881,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Massaponax High,VA-088-0880506,510364001881,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mathews High,VA-057-0570190,510243000993,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Matoaca High,VA-021-0210530,510084000340,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Matoaca High,VA-021-0210530,510084000340,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Matoaca High,VA-021-0210530,510084000340,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Matthew Fontaine Maury High,VA-118-1180010,510267001117,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McLean High,VA-029-0290790,510126000538,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McLean High,VA-029-0290790,510126000538,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McLean High,VA-029-0290790,510126000538,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowbrook High,VA-021-0210580,510084000342,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowbrook High,VA-021-0210580,510084000342,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menchville High,VA-117-1171220,510264001063,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Menchville High,VA-117-1171220,510264001063,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Midlothian High,VA-021-0210320,510084002006,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Midlothian High,VA-021-0210320,510084002006,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Millbrook High,VA-034-0340584,510147002337,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mills E. Godwin High,VA-043-0430140,510189001851,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mills E. Godwin High,VA-043-0430140,510189001851,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monacan High,VA-021-0210280,510084001833,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monticello High,VA-002-0021052,510009001747,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monticello High,VA-002-0021052,510009001747,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Vernon High,VA-029-0290420,510126000542,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Vernon High,VA-029-0290420,510126000542,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High ,VA-089-0890430,510366002464,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High ,VA-089-0890430,510366002464,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High ,VA-089-0890430,510366002464,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High ,VA-089-0890430,510366002464,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High ,VA-089-0890430,510366002464,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain Vista Governor's School,unspecified,510087002697,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Horizons Woodside Campus,VA-307-3070210,510000902022,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Horizons Woodside Campus,VA-307-3070210,510000902022,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norfolk Technical Center,VA-118-1180870,510267001119,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norfolk Technical Center,VA-118-1180870,510267001119,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Stafford High,VA-089-0890030,510366001979,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Stafford High,VA-089-0890030,510366001979,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Stafford High,VA-089-0890030,510366001979,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Stafford High,VA-089-0890030,510366001979,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northside High,VA-080-0800520,510333001465,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norview High,VA-118-1180580,510267001122,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norview High,VA-118-1180580,510267001122,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakton High,VA-029-0291710,510126000550,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakton High,VA-029-0291710,510126000550,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakton High,VA-029-0291710,510126000550,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakton High,VA-029-0291710,510126000550,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ocean Lakes High,VA-128-1280960,510384001046,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ocean Lakes High,VA-128-1280960,510384001046,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Open High,VA-123-1230090,510324001373,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orange County High ,VA-068-0680330,510282001174,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orange County High ,VA-068-0680330,510282001174,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Osbourn High,VA-143-1430370,510236000978,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Osbourn High,VA-143-1430370,510236000978,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Osbourn Park High,VA-075-0750080,510313001313,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Page County High,VA-069-0690380,510285001181,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Park View High,VA-053-0530060,510225000928,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parry McCluer High,VA-103-1030062,510056000217,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parry McCluer High,VA-103-1030062,510056000217,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patrick County High,VA-070-0700700,510288001188,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patrick Henry High,VA-042-0420400,510183000776,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patrick Henry High,VA-124-1240390,510330001430,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patrick Henry High,VA-124-1240390,510330001430,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patrick Henry High,VA-124-1240390,510330001430,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Patriot High,VA-075-0751060,510313002850,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Petersburg High,VA-120-1200200,510291001198,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phoebus High,VA-112-1120050,510180000755,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phoebus High,VA-112-1120050,510180000755,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Poquoson High,VA-142-1420010,510298001231,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Poquoson High,VA-142-1420010,510298001231,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potomac Falls High,VA-053-0530140,510225001627,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potomac High,VA-075-0750140,510313001857,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potomac High,VA-075-0750140,510313001857,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potomac High,VA-075-0750140,510313001857,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Potomac High,VA-075-0750140,510313001857,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powhatan High,VA-072-0720011,510303001268,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prince George High,VA-074-0740020,510309001280,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prince George High,VA-074-0740020,510309001280,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Princess Anne High,VA-128-1280321,510384000412,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Princess Anne High,VA-128-1280321,510384000412,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Princess Anne High,VA-128-1280321,510384000412,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pulaski County Senior High,VA-077-0770010,510315001338,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Radford High,VA-122-1220041,510318001345,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Randolph-Henry High,VA-020-0200460,510075000270,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rappahannock County High,VA-078-0780230,510321001346,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rappahannock County High,VA-078-0780230,510321001346,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rappahannock High,VA-079-0790210,510327001409,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rappahannock High,VA-079-0790210,510327001409,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richlands High,VA-092-0920821,510381001661,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richlands High,VA-092-0920821,510381001661,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richmond Community High,VA-123-1230452,510324002075,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverbend High ,VA-088-0880510,510364002462,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverbend High ,VA-088-0880510,510364002462,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverbend High ,VA-088-0880510,510364002462,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside High,VA-053-0531050,510225003001,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roanoke Valley Governor's School,unspecified,510144002232,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roanoke Valley Governor's School,unspecified,510330002232,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Robert E. Lee High,VA-126-1260030,510369001606,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Robert E. Lee High,VA-126-1260030,510369001606,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Robinson Secondary,VA-029-0291960,510126000561,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Robinson Secondary,VA-029-0291960,510126000561,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rock Ridge High,VA-053-0531060,510225002969,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rustburg High,VA-016-0160222,510060000231,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High,VA-128-1280850,510384002166,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High,VA-128-1280850,510384002166,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High,VA-139-1390070,510346002043,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salem High,VA-139-1390070,510346002043,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sherando High,VA-034-0340581,510147000524,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sherando High,VA-034-0340581,510147000524,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sherando High,VA-034-0340581,510147000524,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Short Pump Middle,VA-043-0430080,510189000123,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High,VA-093-0930250,510387002657,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline Middle,VA-113-1130111,510186002766,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smithfield High,VA-046-0460040,510201000875,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smithfield High,VA-046-0460040,510201000875,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South County High,VA-029-0292241,510126002436,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South County High,VA-029-0292241,510126002436,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Lakes High,VA-029-0291990,510126000566,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Lakes High,VA-029-0291990,510126000566,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Lakes High,VA-029-0291990,510126000566,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southwest Virginia Governor's School,unspecified,510411002230,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spotswood High,VA-082-0820020,510339001872,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spotswood High,VA-082-0820020,510339001872,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spotsylvania High,VA-088-0880370,510364001593,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spotsylvania High,VA-088-0880370,510364001593,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Academy for Technolgy (STAT),VA-089-0890900,510366002984,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Academy for Technolgy (STAT),VA-089-0890900,510366002984,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Academy for Technolgy (STAT),VA-089-0890900,510366002984,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Academy for Technolgy (STAT),VA-089-0890900,510366002984,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Senior High,VA-089-0890020,510366001602,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Senior High,VA-089-0890020,510366001602,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stafford Senior High,VA-089-0890020,510366001602,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Staunton River High,VA-010-0101190,510036000156,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Staunton River High,VA-010-0101190,510036000156,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stone Bridge High,VA-053-0530850,510225002538,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stonewall Jackson High,VA-075-0750680,510313001321,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stonewall Jackson High,VA-075-0750680,510313001321,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stonewall Jackson High,VA-085-0850790,510351001548,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surry County High,VA-090-0900010,510375001635,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Surry County High,VA-090-0900010,510375001635,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sussex Central High,VA-091-0910340,510378001643,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Swanson Middle,VA-007-0070240,510027000107,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T.C. Williams High,VA-101-1010210,510012000054,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T.C. Williams High,VA-101-1010210,510012000054,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tabb High,VA-098-0980230,510415001820,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Technical Education & Career Center,VA-007-0070162,510027000109,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Dale High,VA-021-0210610,510084000350,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Dale High,VA-021-0210610,510084000350,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Dale High,VA-021-0210610,510084000350,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Jefferson High for Science and Technology,VA-029-0291371,510126002034,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Walker High,VA-052-0520880,510219000904,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tunstall High,VA-071-0711730,510294001227,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Turner Ashby High,VA-082-0820850,510339002164,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tuscarora High,VA-053-0530200,510225002817,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Virginia High,VA-102-1020080,510045000179,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wakefield High,VA-007-0070450,510027000111,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wakefield High,VA-007-0070450,510027000111,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wakefield High,VA-007-0070450,510027000111,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wakefield High,VA-007-0070450,510027000111,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warren County High,VA-093-0930230,510387001733,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warren County High,VA-093-0930230,510387001733,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warwick High,VA-117-1171070,510264001076,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Lee High,VA-007-0070080,510027000112,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Lee High,VA-007-0070080,510027000112,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Lee High,VA-007-0070080,510027000112,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Lee High,VA-007-0070080,510027000112,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington-Lee High,VA-007-0070080,510027000112,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waynesboro High,VA-130-1300600,510393001759,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Point High,VA-207-2070290,510395001763,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Potomac High,VA-029-0290900,510126000489,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Potomac High,VA-029-0290900,510126000489,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Potomac High,VA-029-0290900,510126000489,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Springfield High,VA-029-0291610,510126000585,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Albemarle High,VA-002-0020140,510009000035,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Albemarle High,VA-002-0020140,510009000035,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Albemarle High,VA-002-0020140,510009000035,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Branch High,VA-136-1360840,510081000312,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westfield High,VA-029-0292228,510126002529,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westfield High,VA-029-0292228,510126002529,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westfield High,VA-029-0292228,510126002529,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Byrd High,VA-080-0800630,510333001476,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Byrd High,VA-080-0800630,510333001476,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Campbell High,VA-016-0160542,510060000233,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Fleming High,VA-124-1240400,510330001438,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Fleming High,VA-124-1240400,510330001438,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Monroe High,VA-039-0390072,510171000702,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Monroe High,VA-039-0390072,510171000702,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Monroe High,VA-039-0390072,510171000702,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williamsburg Middle,VA-007-0070480,510027000113,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Windsor High,VA-046-0460250,510201000877,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Windsor High,VA-046-0460250,510201000877,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbridge High,VA-075-0750060,510313001327,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbridge High,VA-075-0750060,510313001327,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbridge High,VA-075-0750060,510313001327,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodgrove High,VA-053-0530590,510225002812,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodside High,VA-117-1171396,510264001453,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodson High,VA-029-0291260,510126000600,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodson High,VA-029-0291260,510126000600,10152,Adv Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodson High,VA-029-0291260,510126000600,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York High,VA-098-0980030,510415001823,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Yorktown High,VA-007-0070330,510027000115,10019,AP Computer Sci Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Yorktown High,VA-007-0070330,510027000115,10152,Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Yorktown High,VA-007-0070330,510027000115,10157,AP Computer Sci A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

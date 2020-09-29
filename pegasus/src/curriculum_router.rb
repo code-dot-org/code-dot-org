@@ -227,7 +227,7 @@ module Pegasus
       settings.set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
       settings.set :template_extnames, ['.haml', '.md']
 
-      settings.set :blacklist, {}
+      settings.set :denylist, {}
       settings.set :vary, {}
     end
 

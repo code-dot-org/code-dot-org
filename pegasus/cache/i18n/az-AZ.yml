@@ -614,6 +614,8 @@ az-AZ:
   header_about: Haqqımızda
   header_teacher_community: Müəllim icması
   header_help_support: 'Kömək və texniki dəstək '
+  header_legal_privacy: Məxfilik siyasəti
+  header_legal_tos: Xidmət şərtləri
   header_tutorials: Dərsliklər
   header_documentation: Təlimat və sənədlər
   user_header_label: Salam %{username}

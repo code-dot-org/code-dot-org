@@ -15,8 +15,11 @@ As you saw in the video there are a bunch of terms that generally are all talkin
 
 **Condition, Conditionals, Conditional Statements**:
 
-* "Conditional" is simply a generic term for code that alters program flow based on true/false values (like an `if` statement)
-* Examples: Condition, Conditionals, Conditional statements, conditional execution
+"Conditional" is simply a generic term for code that alters program flow based on true/false values (like an `if` statement). You might also see these similar terms:
+* Condition
+* Conditionals
+* Conditional statements
+* conditional execution
 
 
 ## Comparison Operators

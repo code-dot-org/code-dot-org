@@ -11,7 +11,6 @@ module Cdo
   # all forked worker-processes.
   #
   # Every :interval seconds (default 1), metrics are collected.
-  # Once :report_count metrics (default 60) have been collected, they are asynchronously reported to CloudWatch.
   #
   # The following metrics are collected and reported:
   # `active` - the number of active TCP/socket connections
@@ -35,7 +34,6 @@ module Cdo
 
       @namespace = opts[:namespace] || 'App Server'
       @dimensions = opts[:dimensions] || {}
-      @report_count = opts[:report_count] || 60
       @interval = opts[:interval] || 1
       self.instance = self
     end
@@ -50,41 +48,30 @@ module Cdo
         execute
     end
 
-    # Periodically collect unicorn-listener metrics,
-    # reporting every time `report_count` metrics have been collected.
+    # Periodically collect unicorn-listener metrics.
     def collect_metrics(*_)
-      stat_values = collect_listener_stats + [@stats.max_calling.tap {@stats.max_calling = 0}]
-      @metrics.zip(stat_values) {|stat, val| stat[1] << {timestamp: Time.now, value: val}}
-      report!(@metrics) if @metrics.values.first.count >= @report_count
+      collect_listener_stats.each do |name, value|
+        Cdo::Metrics.put(
+          "#{@namespace}/#{name}",
+          value,
+          @dimensions,
+          storage_resolution: 1,
+          unit: 'Count'
+        )
+      end
     end
 
     # Collect current snapshot of tcp/unix listener stats.
+    # @return [Hash{Symbol => Number}]
     def collect_listener_stats
       stats = {}
       stats.merge! Raindrops::Linux.tcp_listener_stats(@tcp.uniq) if @tcp
       stats.merge! Raindrops::Linux.unix_listener_stats(@unix.uniq) if @unix
-      %i(active queued).map do |name|
-        stats.values.map(&name).inject(:+)
-      end
-    end
-
-    # Report all stats as CloudWatch metrics, then clear the collection.
-    # @param metrics [Hash]
-    def report!(metrics)
-      metric_data = metrics.map do |name, stat|
-        stat.reject {|datum| datum[:value].nil?}.map do |datum|
-          {
-            metric_name: name,
-            dimensions: @dimensions.map {|k, v| {name: k, value: v}},
-            timestamp: datum[:timestamp],
-            value: datum[:value],
-            unit: 'Count',
-            storage_resolution: 1
-          }
-        end
-      end.flatten
-      metrics.values.map(&:clear)
-      Cdo::Metrics.push(@namespace, metric_data)
+      stats = %i(active queued).map do |name|
+        [name, stats.values.map(&name).inject(:+)]
+      end.to_h
+      stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
+      stats
     end
   end
 

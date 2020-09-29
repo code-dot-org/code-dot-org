@@ -421,9 +421,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/7/puzzle/5": {
@@ -434,8 +441,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/7/puzzle/6": {
@@ -1231,8 +1240,10 @@
   "https://studio.code.org/s/coursec-2019/stage/17/puzzle/2": {
     "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
     "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
-    "function_names": {
-      "do something": "do something"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/18/puzzle/1": {

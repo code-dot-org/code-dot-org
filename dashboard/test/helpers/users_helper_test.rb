@@ -59,6 +59,8 @@ class UsersHelperTest < ActionView::TestCase
   def test_summarize_user_progress_with_pages
     user = create :user, total_lines: 42
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Create some levels to be embedded in the LevelGroup.
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -66,14 +68,23 @@ class UsersHelperTest < ActionView::TestCase
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
 
-    # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
-    level.save!
+    # Create a LevelGroup level from DSL.
+    level_group_dsl = <<-DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+    DSL
+    level = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
 
     # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.
@@ -115,12 +126,14 @@ class UsersHelperTest < ActionView::TestCase
   def test_summarize_user_progress_with_bubble_choice
     user = create :user, total_lines: 150
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
     sublevel1 = create :level, name: 'choice_1'
     sublevel2 = create :level, name: 'choice_2'
     level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, script: script, levels: [level]
+    script_level = create :script_level, script: script, levels: [level], lesson: lesson
     create :user_level, user: user, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT
     create :user_level, user: user, level: sublevel2, script: script, best_result: 20
 
@@ -133,6 +146,14 @@ class UsersHelperTest < ActionView::TestCase
         level.id => {
           status: LEVEL_STATUS.perfect,
           result: ActivityConstants::BEST_PASS_RESULT
+        },
+        sublevel1.id => {
+          status: LEVEL_STATUS.perfect,
+          result: ActivityConstants::BEST_PASS_RESULT
+        },
+        sublevel2.id => {
+          status: LEVEL_STATUS.passed,
+          result: 20
         }
       },
       current_stage: script_level.lesson.id,
@@ -144,15 +165,15 @@ class UsersHelperTest < ActionView::TestCase
   def test_summarize_user_progress_with_locked
     user = create :user, total_lines: 42
     script = create :script
+    lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :lesson, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: stage
@@ -250,16 +271,16 @@ class UsersHelperTest < ActionView::TestCase
   def test_summarize_user_progress_non_lockable
     user = create :user, total_lines: 42
     script = create :script
+    lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 
     # create a stage that is NOT lockable
-    stage = create :lesson, name: 'Stage1', script: script, lockable: false
+    stage = create :lesson, name: 'Stage1', script: script, lockable: false, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: stage

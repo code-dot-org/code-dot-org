@@ -76,11 +76,13 @@ class SchoolStatsByYear < ActiveRecord::Base
   end
 
   # Percentage of underrepresented minorities students
+  # Note these are values between 0-100, not 0-1!
   def urm_percent
     percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
   end
 
   # Percentage of free/reduced lunch eligible students
+  # Note these are values between 0-100, not 0-1!
   def frl_eligible_percent
     percent_of_students(frl_eligible_total)
   end
@@ -97,7 +99,19 @@ class SchoolStatsByYear < ActiveRecord::Base
       include? community_type
   end
 
-  # returns what percent "count" is of the total student enrollment
+  # Title I status can be values 1-6, M, or nil.
+  # Values 1-5 are Title I eligible,
+  # 6 is ineligible, M=Missing, and nil are unknown.
+  # See description under TITLEISTAT here:
+  # https://nces.ed.gov/ccd/Data/txt/sc131alay.txt
+  def title_i_eligible?
+    return nil unless title_i_status
+    return nil if title_i_status == 'M'
+
+    %w(1 2 3 4 5).include? title_i_status
+  end
+
+  # returns what percent "count" is of the total student enrollment (0-100)
   def percent_of_students(count)
     return nil unless count && students_total
     (100.0 * count / students_total).round(2)

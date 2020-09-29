@@ -26,6 +26,7 @@ class Game < ActiveRecord::Base
   def self.by_name(name)
     (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
   end
+  mattr_accessor :game_cache # Direct access should only be used in tests
 
   def self.custom_maze
     @@game_custom_maze ||= find_by_name("CustomMaze")
@@ -51,7 +52,6 @@ class Game < ActiveRecord::Base
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
-  SCRATCH = 'scratch'.freeze
   DANCE = 'dance'.freeze
   SPRITELAB = 'spritelab'.freeze
   FISH = 'fish'.freeze
@@ -152,10 +152,6 @@ class Game < ActiveRecord::Base
     @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
-  def self.scratch
-    @@game_scratch ||= find_by_name('Scratch')
-  end
-
   def self.dance
     @@game_dance ||= find_by_name('Dance')
   end
@@ -213,7 +209,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH, DANCE, FISH].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -229,12 +225,18 @@ class Game < ActiveRecord::Base
     [APPLAB, GAMELAB].include? app
   end
 
+  def use_azure_speech_service?
+    [APPLAB, GAMELAB].include? app
+  end
+
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION, SPRITELAB].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB].include? app
   end
 
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
+  # The list contains no longer used level types in order to maintain the order
+  # including: Scratch
   GAMES_BY_INDEX = %w(
     Maze:maze:maze_intro
     Artist:turtle:artist_intro

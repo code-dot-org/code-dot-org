@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
   stubStudioApp,
@@ -104,6 +104,89 @@ describe('StudioApp', () => {
         });
 
         expect(listener).to.have.been.calledOnce;
+      });
+    });
+
+    describe('The StudioApp.resetButtonClick function', () => {
+      let studio, reportSpy;
+      beforeEach(() => {
+        studio = studioApp();
+        studio.onResetPressed = () => {};
+        studio.toggleRunReset = () => {};
+        studio.clearHighlighting = () => {};
+        studio.isUsingBlockly = () => {
+          return false;
+        };
+        studio.reset = () => {};
+
+        reportSpy = sinon.spy();
+        studio.debouncedSilentlyReport = reportSpy;
+      });
+
+      it('Sets hasReported to false', () => {
+        studio.hasReported = true;
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.not.been.called;
+      });
+
+      it('Calls `report` if it has not yet been called', () => {
+        studio.hasReported = false;
+        studio.config = {level: {}};
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.been.calledOnce;
+        delete studio.config;
+      });
+    });
+
+    describe('The StudioApp.report function', () => {
+      let clock, studio, onAttemptSpy;
+      beforeEach(() => {
+        clock = sinon.useFakeTimers();
+        studio = studioApp();
+        studio.feedback_ = {
+          canContinueToNextLevel: () => {},
+          getNumBlocksUsed: () => {}
+        };
+
+        onAttemptSpy = sinon.spy();
+        studio.onAttempt = onAttemptSpy;
+      });
+
+      afterEach(() => {
+        clock.restore();
+      });
+
+      it('sets the milestoneStartTime to the current time', () => {
+        studio.milestoneStartTime = 0;
+        clock.tick(2000);
+
+        studio.report({});
+
+        expect(studio.milestoneStartTime).to.equal(2000);
+      });
+
+      it('sets hasReported to true', () => {
+        studio.hasReported = false;
+        studio.report({});
+        expect(studio.hasReported).to.be.true;
+      });
+
+      it('calculates the timeSinceLastMilestone', () => {
+        studio.milestoneStartTime = 1000;
+        studio.initTime = 1000;
+        clock.tick(3000);
+
+        studio.report({});
+
+        expect(onAttemptSpy).to.have.been.calledWith({
+          pass: undefined,
+          time: 2000,
+          timeSinceLastMilestone: 2000,
+          attempt: 0,
+          lines: undefined
+        });
       });
     });
   });
@@ -292,8 +375,15 @@ describe('StudioApp', () => {
   });
 
   describe('addChangeHandler', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+    });
 
     it('calls a handler in response to a blockly change', () => {
       let changed = false;

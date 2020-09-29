@@ -1,4 +1,4 @@
-stage 'Collector Hour of Code 2017'
+lesson 'Collector Hour of Code 2017', display_name: 'Collector Hour of Code 2017'
 level 'courseAB_video_collector'
 level 'courseA_collector_preLoops1'
 level 'courseA_collector_preLoops2'
@@ -17,3 +17,4 @@ level 'courseA_collector_loops8'
 level 'courseA_collector_loops12'
 bonus 'courseA_collector_loops_challenge1'
 bonus 'courseA_collector_loops_challenge2'
+

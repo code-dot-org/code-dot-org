@@ -1,0 +1,82 @@
+- pre_work_url = 'https://bit.ly/summer-prep-sessions'
+- zoom_download_url = 'https://zoom.us/download'
+- learning_tips_url = 'https://docs.google.com/document/d/e/2PACX-1vQbiURoyzHZhWrmT8jbXq7QRiCMicUIO58EQQcw7aIPdZrxhfn1XP64djtg2TVFTsBNEUZnSYHSx4Lx/pub'
+- digital_digest_url = 'https://bit.ly/summer-prep-sessions'
+
+= render partial: 'workshop_logistics'
+
+= render partial: 'workshop_notes'
+
+%h3 Materials
+
+%p
+  Please have the following with you on the day of your session to ensure you
+  are able to participate fully:
+
+%ul
+  %li
+    Laptop and charger, as well as any adapters. Review
+    = link_to 'this page', Pd::WorkshopMailer::SUPPORTED_TECH_URL
+    for more information regarding compatible operating systems and browsers.
+    We do not recommend bringing a tablet as your primary device.
+  %li Download the Zoom app. (more information below)
+  %li Headphones or earphones. (optional)
+  %li Your curiosity and readiness to learn!
+
+%h3 Complete your pre-work and download Zoom
+
+%p
+  To prepare for our time together, we ask that you engage with your pre-work
+  materials (linked below), which should take about
+  %strong 90 minutes
+  to complete. We’ve designed these resources to help you prepare for summer
+  workshops given your region’s chosen delivery modality.
+
+%p
+  = link_to 'Click here', pre_work_url
+  to access pre-work. Pre-work will be added as ready.
+
+%p
+  All of our sessions will be taking place via Zoom, so we strongly recommend
+  that you
+  %strong
+    download the Zoom app
+    = surround '(', ' for download options)' do
+      = link_to 'click here', zoom_download_url
+  because it offers a more reliable connection than the standard browser AND
+  will allow you to fully participate in the activities we’ve planned. Be sure
+  to also check out our
+  = link_to 'Tips for Having a Great Virtual Learning Experience', learning_tips_url
+  for more information about steps you can take to prepare for our time together.
+
+%h3 Visit and bookmark the Digital Digest
+
+%p
+  We also ask that you take a few moments to check out and bookmark the
+  = link_to 'Digital Digest', digital_digest_url
+  = surround '(', ').' do
+    = link_to(digital_digest_url, digital_digest_url)
+  It will serve as your one-stop-shop for a ton of important information, such
+  as your pre-work, session join links, notes doc, and more!
+
+%p
+  Keep an eye out for a calendar invite with the meeting link that will be sent
+  out roughly the week prior to the session.
+
+%h3 Did something come up? If you can’t make it, let us know
+
+%p
+  If for any reason, you can’t make it, please click this link to
+  = link_to 'cancel your registration', @cancel_url, target: "_blank"
+  so we can open up your spot to other interested educators.
+
+%p
+  If you have any questions, reach out to us directly at
+  = link_to('facilitators@code.org', 'mailto:facilitators@code.org') + '.'
+
+%p
+  Thank you,
+  %br
+  Megan Hochstatter
+  %br
+  Program Manager of K-12 Professional Learning Programs

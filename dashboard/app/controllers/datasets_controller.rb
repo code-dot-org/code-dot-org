@@ -6,7 +6,8 @@ class DatasetsController < ApplicationController
   before_action :initialize_firebase
   authorize_resource class: false
 
-  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide']
+  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
+                   'COVID-19 Cases per US State', 'COVID-19 Cases per Country']
 
   # GET /datasets
   def index

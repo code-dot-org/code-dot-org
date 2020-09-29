@@ -59,7 +59,8 @@ const styles = {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
-    fontSize: 0
+    fontSize: 0,
+    alignItems: 'none'
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
@@ -101,7 +102,7 @@ class ProgressBubble extends React.Component {
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
-    stageTrophyEnabled: PropTypes.bool,
+    lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
@@ -135,7 +136,7 @@ class ProgressBubble extends React.Component {
       selectedSectionId,
       selectedStudentId,
       currentLocation,
-      stageTrophyEnabled,
+      lessonTrophyEnabled,
       pairingIconEnabled,
       hideAssessmentIcon
     } = this.props;
@@ -144,7 +145,7 @@ class ProgressBubble extends React.Component {
 
     const number = level.levelNumber;
     const url = level.url;
-    const levelName = level.name || level.progression;
+    const levelName = level.name || level.progressionDisplayName;
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
@@ -204,8 +205,8 @@ class ProgressBubble extends React.Component {
         <ProgressPill
           levels={[level]}
           text={i18n.unpluggedActivity()}
-          fontSize={16}
           tooltip={this.props.hideToolTips ? null : tooltip}
+          progressStyle={true}
         />
       );
     }
@@ -219,7 +220,7 @@ class ProgressBubble extends React.Component {
       <div
         style={{
           // two pixels on each side for border, 2 pixels on each side for margin
-          width: stageTrophyEnabled ? width - 3 : width,
+          width: lessonTrophyEnabled ? width - 3 : width,
           display: 'flex',
           justifyContent: 'center'
         }}

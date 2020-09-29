@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/only_one'
 
 def main
   three_days_ago = Time.now - 3.days
@@ -11,4 +12,4 @@ def main
     find_each(&:remove_code)
 end
 
-main if only_one_running?(__FILE__)
+main

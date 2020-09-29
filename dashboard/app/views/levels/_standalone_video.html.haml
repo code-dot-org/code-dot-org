@@ -13,7 +13,10 @@
 
   - unless @level.video_full_width
     %h1= "#{t('video.label')}: #{video.localized_name}"
-  %div= render(inline: @level.long_instructions, type: :md) if @level.long_instructions
+  - long_instructions = @level.localized_long_instructions
+  - if long_instructions
+    / Markdown will be rendered clientside by _standalone_video.js
+    .markdown-container{data: {markdown: long_instructions}}
 
   .video-content
   - if @slides
@@ -44,4 +47,4 @@
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('continue')
 
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.localized_teacher_markdown}}

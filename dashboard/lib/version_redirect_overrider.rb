@@ -37,7 +37,7 @@ module VersionRedirectOverrider
     script_overrides = script_version_overrides(session)
     course_overrides = course_version_overrides(session)
 
-    script_overrides.include?(script.name) || course_overrides.include?(script.course&.name)
+    script_overrides.include?(script.name) || course_overrides.include?(script.unit_group&.name)
   end
 
   def self.override_course_redirect?(session, course)

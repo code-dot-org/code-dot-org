@@ -49,7 +49,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       User.find(feedback.teacher_id).authorized_teacher?
     end
 
-    render json: @all_unseen_feedbacks.count, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @all_unseen_feedbacks.count
   end
 
   # POST /teacher_feedbacks

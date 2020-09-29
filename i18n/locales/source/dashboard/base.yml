@@ -131,13 +131,16 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    invalid_provider: "Sorry, %{provider} accounts cannot be linked to Code.org accounts."
+    migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
-      sign_in: "Please sign in and we'll link your %{provider} profile."
-      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
+      sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
+      sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
@@ -253,7 +256,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
-    parent_email_added_subject: 'Welcome to Code.org!'  
+    parent_email_added_subject: 'Welcome to Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -321,6 +324,7 @@ en:
       sections: "Sections"
       help_support: "Help and support"
       report_bug: "Report a problem"
+      report_abuse: "Report abuse"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
       documentation: "Documentation"
@@ -356,6 +360,9 @@ en:
       help_us: "Help Us"
       teach: "Teach"
       about: "About"
+      legal: "Privacy & Legal"
+      legal_privacy: "Privacy Policy"
+      legal_tos: "Terms of Service"
 
     user:
       classroom: 'Teacher Home Page'
@@ -481,8 +488,9 @@ en:
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
     for_parents_and_guardians: "For Parents and Guardians"
-    link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects"
+    link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects. You will also be able to use this email address for password recovery."
     parent_guardian_email_label: "Parent/guardian email"
+    remove_parent_email_label: "Remove"
     none: "None"
     only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
     encrypted: "encrypted"
@@ -706,20 +714,6 @@ en:
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ages 14+"
       cta: "Learn how"
-  gallery:
-    students_drew_these_with_code: "Students drew these with code!"
-    students_made_these_with_code: "Students made these with code!"
-    picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
-    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
-    want_to_make_your_own: "Want to make your own?"
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More →"
-    caption_by_name_age: "by %{name}, age %{age}"
-    caption_time_ago: "%{time_ago} ago"
-    header: "Gallery"
-    header_playlab: "Stories and games"
-    header_artist: "Code art"
-    report_abuse: "Report Abuse"
   landing:
     prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"
@@ -782,6 +776,8 @@ en:
     open_response_body: "Thanks for your response!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
@@ -814,6 +810,14 @@ en:
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
     review_terms: "Review updated terms"
+  donor_interstitial:
+    title: "Your free CS courses are made possible by..."
+    subtitle: "We’d like to thank the generous donors whose support has made Code.org’s success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our [donors](%{donors_url})!"
+    local_supporters: "Local Supporters"
+    global_supporters: "Global Supporters"
+    support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
+    support_codeorg_2: "[Donate now](%{donate_url}) to support Code.org."
+    get_started: "Get started on Code.org"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Please enter your school information below."
@@ -916,103 +920,7 @@ en:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  flex_category:
-    required: 'Overview'
-    content: 'Content'
-    practice: 'Teaching Practices'
     peer_review: 'Peer Review'
-    ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
-    optional: 'Optional'
-    optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
-    csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
-    csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csf_digcit: 'Digital Citizenship'
-    csf_jigsaw: 'Jigsaw'
-    csf_sequencing: 'Sequencing'
-    csf_loops: 'Loops'
-    csf_events: 'Events'
-    csf_online_safety: 'Online Safety'
-    csf_binary: 'Binary'
-    csf_data: 'Data'
-    csf_conditionals: 'Conditionals'
-    csf_sprites: 'Sprites'
-    csf_spritelab: 'Sprite Lab'
-    csf_nested_loops: 'Nested Loops'
-    csf_functions: 'Functions'
-    csf_variables: 'Variables'
-    csf_for_loops: 'For Loops'
-    csf_internet: 'Internet'
-    csf_impacts: 'Impacts of Computing'
-    csf_warmup: 'Warm-Up'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd1_3: 'Alternate Lessons'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Programming with Hardware'
-    csd6_2: 'Chapter 2: Building Physical Prototypes'
-    csd_survey: 'Post-Course Survey'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualizing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    csp_variables: 'Variables'
-    csp_conditionals: 'Conditionals'
-    csp_functions: 'Functions'
-    csp_project: 'Project'
-    csp_lists: 'Lists'
-    csp_loops: 'Loops'
-    csp_traversals: 'Traversals'
-    csp_libraries: 'Libraries'
-    csp_parameters_return_values: 'Parameters and Return Values'
-    csp_unit1_2020: 'Unit 1: Digital Information'
-    csp_unit2_2020: 'Unit 2: The Internet'
-    csp_unit3_2020: 'Unit 3: Intro to App Design'
-    csp_unit6_2020: 'Unit 6: Algorithms'
-    csp_unit8_2020: 'Unit 8: Create PT Prep'
-    csp_unit9_2020: 'Unit 9: Data'
-    csp_unit10_2020: 'Unit 10: Cybersecurity and Global Impacts'
-    dlp: 'Reflection Prompts'
-    time4cs_c1: 'Collection 1: The Everglades & its Ecosystems'
-    time4cs_c2: 'Collection 2: Food Chains (in the Everglades)'
-    time4cs_c3: 'Collection 3: Native Species (in the Everglades)'
-    time4cs_c4: 'Collection 4: Impact of Invasive Species (on the Everglades)'
-    time4cs_c5: 'Collection 5: Citizens Take Action'
-    time4cs_c6: 'Conditionals (review)'
-    k5_getting_started: 'Getting Started'
-    k5_csf_intro: 'Get to know the CS Fundamentals Courses'
-    k5_coding_concepts: 'Coding Concepts and Teaching Strategies'
-    k5_next_steps: 'Next Steps'
-    k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices'
-    k5_diving_deeper: 'Diving Deeper: Courses E and F'
-    web_lab_projects: 'Web Lab Projects'
-    game_lab_projects: 'Game Lab Projects'
-    app_lab_projects: 'App Lab Projects'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1130,6 +1038,10 @@ en:
       school_name: 'School Name'
       school_city: 'School City'
       school_country: 'School Country'
+      colombian_school_city: 'School City'
+      colombian_school_department: 'School Department'
+      colombian_school_municipality: 'School Municipality'
+      colombian_school_name: 'School Name'
       ages: 'Which age(s) do you teach this year?'
       subjects: 'Which subject(s) do you teach this year?'
       resources: 'Which of the following CS education resources do you use?'
@@ -1149,6 +1061,7 @@ en:
       school_country:
         canada: 'Canada'
         chile: 'Chile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
@@ -1198,6 +1111,7 @@ en:
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        not_applicable: "Not applicable"
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
@@ -1206,6 +1120,9 @@ en:
       intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
       instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
       thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+      facilitator_not_listed: "My facilitator is not listed"
+      facilitator_not_applicable: "Not applicable"
+      organizer_not_listed: "My organizer is not listed"
     logged_out:
       heading: 'Thanks for your interest in the Professional Learning Program!'
       body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
@@ -1244,3 +1161,6 @@ en:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
     not_now: "Not now"
+  behaviors:
+    this_sprite: "this sprite"
+  unit_prefix: "Unit %{n}"

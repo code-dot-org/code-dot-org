@@ -4,6 +4,6 @@ display_name 'Practice'
 description 'Try out using the draw loop with these activities.'
 
 sublevels
-level 'CSD U3 Movement Gears_2020'
-level 'CSD U3 Watcher Debug_2020'
 level 'CSD U3 Watcher Predict_2020'
+level 'CSD U3 Watcher Debug_2020'
+level 'CSD U3 Movement Gears_2020'

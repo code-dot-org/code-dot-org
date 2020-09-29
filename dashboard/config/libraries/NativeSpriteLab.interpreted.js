@@ -1,4 +1,4 @@
-var extraArgs = null;
+var extraArgs = {};
 var other = [];
 
 function draw() {
@@ -204,23 +204,23 @@ function setupSim(
   */
 
   checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.target] == undefined) {
+    if (World.collisions[extraArgs.objectSprite] == undefined) {
       // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
       // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.target] = [];
-      World.s3ToDelete.push(extraArgs.target);
+      World.collisions[extraArgs.objectSprite] = [];
+      World.s3ToDelete.push(extraArgs.objectSprite);
     }
-    World.collisions[extraArgs.target].push(s1costume);
+    World.collisions[extraArgs.objectSprite].push(s1costume);
   });
 
   checkTouching('while', {costume: s2costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.target] == undefined) {
+    if (World.collisions[extraArgs.objectSprite] == undefined) {
       // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
       // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.target] = [];
-      World.s3ToDelete.push(extraArgs.target);
+      World.collisions[extraArgs.objectSprite] = [];
+      World.s3ToDelete.push(extraArgs.objectSprite);
     }
-    World.collisions[extraArgs.target].push(s2costume);
+    World.collisions[extraArgs.objectSprite].push(s2costume);
   });
 
   function collectBehavior() {
@@ -249,7 +249,7 @@ function setupSim(
   addBehaviorSimple({id: 0}, new Behavior(collectBehavior));
 
   function checkSimulationEnd() {
-    if (countByAnimation(s3costume) === 0) {
+    if (countByAnimation({costume: s3costume}) === 0) {
       destroy({costume: s1costume});
       destroy({costume: s2costume});
       printText('The simulation has ended after ' + World.seconds + ' seconds');

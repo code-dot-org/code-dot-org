@@ -1228,6 +1228,8 @@ hr-HR:
   header_courses: Tečajevi
   header_project_gallery: Projekti
   header_educate_hoc: Hour of Code
+  header_legal_privacy: Pravila privatnosti
+  header_legal_tos: Uvjeti
   user_header_label: Zdravo, %{username}
   user_header_settings: Moj račun
   user_header_logout: Odjava

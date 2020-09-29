@@ -6,13 +6,13 @@
   "user_id": 106,
   "properties": {
     "instructions_important": "false",
-    "reference": "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
+    "reference": "/docs/concepts/patterns/list-scrolling-pattern/",
     "parent_level_id": 17678,
     "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-26 00:52:46 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-26 00:57:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:26:45 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:27:42 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:31:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:32:00 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-26 00:52:46 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-26 00:57:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:26:45 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:27:42 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:31:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-05-06 22:32:00 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-06-25 19:46:06 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-06-25 19:46:29 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-06-25 19:47:31 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-06-25 19:52:53 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-06-25 19:53:49 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

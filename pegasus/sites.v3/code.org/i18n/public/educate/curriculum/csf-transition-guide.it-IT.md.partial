@@ -9,136 +9,136 @@ style_min: true
 ## Indice
 
 * [Panoramica](#overview)
-* [Insegnando dei nuovi corsi](#newcourses)
-* [Storie cicliche (Corsi A e B)](#circletime)
-* [Lezioni di base & esercizi di sfida (tutte le età)](#scaffolding)
-* [Attività ponte verso le lezioni tradizionali (tutte le età)](#unplugged)
-* [Progetti di fine corso (Corsi E & F)](#endofcourse)
+* [L'insegnamento dei nuovi corsi](#newcourses)
+* [Storie cicliche (corsi A e B)](#circletime)
+* [Lezioni strutturate & sfide (tutti i corsi)](#scaffolding)
+* [Attività ponte tra lezioni tradizionali e tecnologiche (tutti i corsi)](#unplugged)
+* [Progetti di fine corso (corsi E & F)](#endofcourse)
 * [Conclusione](#conclusion)
 * [Domande frequenti](#faq)
 
 <a id="overview"></a>
 
 ## Panoramica
-Il panorama dello studio dell'informatica è cambiato drasticamente dalla creazione dei primi corsi di Fondamenti dell'informatica. Inizialmente, i corsi 1-4 sono stati progettati come punto di partenza per acquisire le basi, indipendentemente dall'età dello studente che si avvicinava alla disciplina.  Ora che molti più paesi hanno messo in atto corsi di informatica che iniziano dalla scuola dell'infanzia, gli insegnanti richiedono più contenuti per portare gli studenti fino a agli istituti superiori.
+Il panorama dello studio dell'informatica è cambiato drasticamente dalla creazione dei primi corsi di Fondamenti di informatica. Inizialmente, i corsi 1-4 erano stati progettati come punto di partenza per acquisire le basi, indipendentemente dall'età dello studente che si avvicinava alla disciplina.  Ora che molti più paesi hanno messo in atto corsi di informatica a partire dalla scuola dell'infanzia, gli insegnanti richiedono più contenuti per portare gli studenti fino a agli istituti superiori.
 
-I corsi di Fondamenti di informatica A-F sono la nostra risposta a questo problema.  La creazione di un curriculum per gradi, ci ha permesso di fare un passo indietro e ripensare il modo in cui abbiamo presentato il materiale.  Ha consentito anche di incorporare con grande piacere i preziosissimi suggerimenti che sono pervenuti dalla comunità degli insegnanti che ci supportano nel nostro progetto. Sviluppati con l'aiuto dei migliori docenti di informatica della scuola primaria, i corsi di Fondamenti di informatica A-F dovrebbero risultare molto familiari e fruibili senza ulteriore approfondimento professionale, nonché rinnovati per gli alunni che hanno già seguito le nostre precedenti lezioni.
+I corsi di Fondamenti di informatica A-F sono la risposta a questa esigenza.  La creazione di un curriculum diviso in gradi scolastici, ci ha permesso di fare un passo indietro e ripensare le modalità in cui abbiamo presentato le varie nozioni.  In questo modo siamo stati anche felici di avere l'opportunità di incorporare i preziosissimi suggerimenti che abbiamo ricevuto dalla comunità degli insegnanti che ci supportano nel nostro progetto. Sviluppati con l'aiuto dei migliori docenti di informatica della scuola primaria, i nuovi corsi A-F di Fondamenti di informatica dovrebbero risultare molto familiari e fruibili per gli insegnanti che hanno dimestichezza con i precedenti corsi 1-4 e questo rinnovamento sarà un vantaggio per gli alunni che apprezzeranno le novità rispetto al passato.
 
-* Corso A: Scuola materna
-* Corso B: 1ª classe primaria
-* Corso C: 2ª classe primaria
-* Corso D: 3ª classe primaria
-* Corso E: 4ª classe primaria
-* Corso F: 5ª classe primaria
-* Corso rapido prescolare: Scuola materna - 1ª classe primaria
-* Corso rapido: 2ª - 5ª classe primaria
+* Corso A - Scuola dell'infanzia
+* Corso B - Classe 1ª primaria
+* Corso C - Classe 2ª primaria
+* Corso D - Classe 3ª primaria
+* Corso E - Classe 4ª primaria
+* Corso F - Classe 5ª primaria
+* Corso rapido prescolare - Scuola dell'infanzia ÷ Classe 1ª primaria
+* Corso rapido - Classi 2ª ÷ 5ª primaria
 
-Il principale aggiornamento apportato ai corsi di Fondamenti di informatica è l'adattamento dei contenuti da quattro corsi (Corsi 1 - 4) a sei corsi indicati ai bambini più grandi della scuola materna ed ognuna delle classi di istruzione primaria (Corsi A - F).  In questo modo, le lezioni risultano maggiormente appropriate alla corrispondente capacità di lettura, di calcolo e del livello di sviluppo cognitivo nel suo complesso.  Da notare l'aggiunta di due corsi "Rapidi", uno per la fascia prescolare e l'altro per le classi della scuola primaria.  Sono simili alla precedente versione dei corsi "accelerati".
+Il principale aggiornamento apportato ai corsi di Fondamenti di informatica è l'adattamento dei contenuti da quattro corsi (1 - 4) a sei corsi (A - F) specificatamente indicati per ogni singolo anno a partire dall'ultimo anno della scuola dell'infanzia, fino alla classe 5ª primaria.  In questo modo, le lezioni risultano maggiormente appropriate alla corrispondente capacità di lettura, di calcolo e del livello di sviluppo cognitivo nel suo complesso.  Da notare l'aggiunta di due corsi "Rapidi": uno per la fascia prescolare e l'altro per gli alunni più grandi.  Questi sono simili al vecchio "corsi rapido".
 
 <a id="newcourses"></a>
 
-## Insegnando dei nuovi corsi
-Come già detto, i corsi dovrebbero risultare familiari, ma differenti.  Se hai già frequentato un laboratorio di aggiornamento professionale di Code.org, sei già pronto per insegnare i nuovi corsi. Ci sono alcuni cambiamenti, ma la la piattaforma di gestione, il curriculum e la filosofia pedagogica rimangono invariati. Se non hai mai avuto esperienza con i corsi di Core.org, puoi seguire il corso Fondamenti di Informatica - Corso per insegnanti: https://studio.code.org/s/K5-OnlinePD.
+## L'insegnamento dei nuovi corsi
+Come già detto, i corsi dovrebbero risultare familiari, ma differenti.  Se hai frequentato un corso di formazione professionale di Code.org (negli Stati Uniti), sei già pronto per insegnare i nuovi corsi. Ci sono alcuni cambiamenti, ma la la piattaforma nel suo complesso, il curriculum e la filosofia pedagogica di fondo restano inalterati. Se non hai mai avuto esperienza con i corsi di Core.org, puoi seguire il corso online di Fondamenti di Informatica per insegnanti: https://studio.code.org/s/K5-OnlinePD.
 
-I principali aggiornamenti dei corsi sono:
+I principali aggiornamenti dei corsi sono i seguenti:
 
-* storie cicliche per gli alunni più piccoli
-* un nuovo approccio per strutturare, applicare e fare pratica dei nuovi concetti
-* attività ponte per migliorare il passaggio da lezioni tradizionali a lezioni con il computer
-* progetti di fine corso per gli alunni più grandi
+* storie cicliche per gli alunni più piccoli;
+* un nuovo approccio per strutturare, applicare e fare pratica dei nuovi concetti;
+* attività ponte per ottimizzare la transizione da lezioni tradizionali a lezioni tecnologiche;
+* progetti di fine corso per gli alunni più grandi.
 
-Il resto di questa guida presenterà in dettaglio questi argomenti, offrendo suggerimenti e consigli per adottare i cambiamenti nella tua classe.
+Il resto di questa guida presenta queste novità con maggior dettaglio, offrendo suggerimenti e consigli per introdurle nella tua classe.
 
 <a id="circletime"></a>
 
-## Storie cicliche (Corsi A e B)
-Alcuni concetti sono difficili da insegnare utilizzando solamente spiegazioni ed esercizi, specialmente per gli alunni più piccoli.  Ecco perché abbiamo inserito alcune storie cicliche nei corsi per la scuola materna e per la 1ª classe primaria. Queste storie devono essere lette dall'insegnante a tutta la classe, fermandosi durante il racconto per discutere con loro le situazioni critiche come la gestione degli errori, la perseveranza e le frustrazioni.  Confidiamo che consentendo agli alunni di sperimentare questi concetti attraverso i personaggi delle storie, li aiuterà a riconoscere le stesse situazioni quando compariranno nelle lezioni successive.
+## Storie cicliche (corsi A e B)
+Alcuni concetti sono difficili da insegnare utilizzando solamente spiegazioni ed esercizi, specialmente agli alunni più piccoli.  Ecco perché abbiamo inserito alcune storie cicliche nei corsi per la scuola dell'infanzia e per la 1ª primaria. Queste storie devono essere lette dall'insegnante a tutta la classe, fermandosi durante il racconto per discutere con loro le situazioni critiche come la gestione degli errori, la perseveranza e la frustrazione.  La speranza è che l'introduzione di questi concetti nelle storie narrate aiuti gli alunni a riconoscere poi le stesse situazioni quando compariranno nelle lezioni successive.
 
-Ecco come le storie cicliche dovrebbero essere utilizzate:
+Ecco come dovrebbero essere usate le storie cicliche.
 
-### Leggere la storia appropriata alla classe
-  - Verificate la comprensione del racconto durante la narrazione attraverso domande e commenti nei momenti cruciali della storia.
-  - Riesaminate insieme la storia. Cosa hanno capito i tuoi alunni? C'è qualche situazione che gli è rimasta impressa?
-  - Cerca di fare immedesimare gli studenti nei personaggi della storia.  C'è qualche episodio che hanno vissuto che gli ricorda uno dei personaggi della storia?
+### Leggi la storia adatta alla classe
+  - Verifica la comprensione del racconto durante la narrazione attraverso domande e commenti nei momenti cruciali della storia.
+  - Riesaminate insieme la storia. Cos'hanno capito i tuoi alunni? C'è qualche situazione che gli è rimasta particolarmente impressa?
+  - Cerca di fare immedesimare gli alunni nei personaggi della storia.  C'è qualche episodio che hanno vissuto che gli ricorda un personaggio o una situazione della storia?
 
-### Ricordare i contenuti della storia all'inizio dell'attività successiva
+### Ricorda i contenuti della storia all'inizio dell'attività successiva
   - Vi ricordate le situazioni che abbiamo discusso nella storia?
-  - Come farete a sapere se oggi vi dovesse accadere?
-  - Il personaggio della storia come ha gestito la situazione? Tu cosa faresti?
+  - Oggi sapreste riconoscere queste situazioni?
+  - Il personaggio della storia come ha gestito questa circostanza? Tu cosa faresti?
 
 ### Evidenzia le similitudini tra la storia e le situazioni che gli alunni incontreranno durante un'attività
   - Illustra ad un alunno come la situazione in cui si trova assomiglia alla situazione del racconto.
-  - Chiedi all'alunno di pensare al personaggio e capire cosa potrebbero fare.  Questo metodo ha aiutato l'alunno ha capire come andare avanti?
+  - Chiedi all'alunno di pensare ai personaggi e capire cosa farebbero loro.  Questo metodo ha aiutato l'alunno ha capire come andare avanti?
 
-Se non sei in grado di riunire tutta insieme la classe, Code.org ha inserito un video all'inizio della specifica lezione che racconta la storia con delle semplici animazioni. Sebbene questi video non offrono la stessa esperienza, consentono comunque all'alunno di venire a conoscenza dei concetti e dei personaggi prima di proseguire con il resto del corso.
+Se non puoi raccontare personalmente la storia a tutta la classe, Code.org ha preparato un video nella specifica lezione, in cui viene raccontata la storia con delle semplici animazioni (sul sito di Programma il Futuro è anche disponibile l'analogo video in lingua italiana). Sebbene questi video non possano offrire la stessa esperienza di una lettura in aula, consentono comunque all'alunno di venire a conoscenza dei concetti e dei personaggi prima di proseguire con il resto del corso.
 
 <a id="scaffolding"></a>
 
-## Lezioni di base & esercizi di sfida (tutte le età)
-I corsi A-F sono meno strutturati rispetto ai corsi precedenti.  Ciò significa che fin dall'inizio proviamo far in modo che gli alunni programmino il più spesso possibile, a meno che non stiano specificamente imparando a eseguire la ricerca degli errori.  Per questa specifica ragione, la maggior parte delle nostre lezioni online segue una sequenza in cui presentiamo un semplice esercizio per iniziare la lezione, quindi procede lentamente con un nuovo concetto fino al punto in cui gli studenti hanno avuto la possibilità di comprendere tutta l'idea sottostante.  Infine, presentiamo loro un esercizio di sfida, che ha lo scopo di indurre gli studenti a riflettere sul concetto in un modo nuovo e più complicato.
+## Lezioni strutturate & sfide (tutti i corsi)
+I corsi A-F sono meno strutturati rispetto ai precedenti corsi 1-4.  Ciò significa che sollecitiamo gli alunni a creare programmi completi da zero il più spesso possibile, a meno che non stiano specificamente imparando la procedura di debugging (ricerca e correzione degli errori).  Per questo motivo, la maggior parte delle nostre lezioni segue una sequenza in cui presentiamo un semplice esercizio per iniziare la lezione, quindi procediamo lentamente con un nuovo concetto fino al punto in cui gli alunni hanno avuto la possibilità di comprendere tutta l'idea sottostante.  Successivamente proponiamo una sfida che ha lo scopo di indurre gli alunni a riflettere sul concetto in modo nuovo e più complesso.
 
-Gli esercizi di sfida sono rinnovati nei Corsi A-F.  Lo scopo degli esercizi di sfida è di esporre gli alunni ad un livello elevato in cui possano applicare la perseveranza ed il pensiero autonomo.  Gli esercizi di sfida sono intenzionalmente difficili ed ideati affinché solo gli alunni che hanno realmente compreso il concetto lo risolvano in un tempo ragionevole.  Ciò significa che un buon numero di alunni non riuscirà a risolverli al primo tentativo. Sia all'alunno che all'insegnante è richiesta un'attenzione particolare per completarli.
+Le sfide dei corsi A-F sono rinnovate.  Lo scopo delle sfide è di portare gli alunni ad un livello più elevato in cui debbano esercitarsi con la perseveranza ed il pensiero autonomo.  Le sfide sono intenzionalmente difficili e sono studiate in modo che solo gli alunni che hanno profondamente compreso il concetto siano in grado di risolverle in un tempo ragionevole.  Ciò significa che un buon numero di alunni non riuscirà a risolverle al primo tentativo. Sia all'alunno che all'insegnante è richiesta una particolare attenzione per completarle.
 
-1. Gli studenti dovrebbero provare queste sfide con entusiasmo, poi metterle da parte e proseguire.  Questi esercizi portano a due benefici:
-2. Gli studenti acquisiscono una migliore consapevolezza su quando e perché utilizzare il concetto che stanno studiando. Gli esercizi successivi dopo gli esercizi di sfida saranno più semplici, sebbene rimangano dei veri e propri esercizi.
+1. Gli alunni dovrebbero provare queste sfide con entusiasmo, poi metterle da parte e proseguire.  Questa pratica induce due benefici molto importanti.
+2. Gli alunni acquisiscono una maggiore consapevolezza su quando e perché sfruttare lo specifico concetto che stanno studiando. Gli esercizi successivi alle sfide risulteranno più semplici, pur essendo validi a tutti gli effetti.
 
-Ricorda che gli alunni possono proseguire nelle lezioni e riprovare gli esercizi non completati in qualsiasi momento.  Talvolta può essere efficace dormirci sopra una notte prima di ritentare la soluzione di un problema ostico.
+Ricorda che gli alunni possono proseguire nelle lezioni e ritornare in qualsiasi momento a provare gli esercizi non completati.  Talvolta può essere particolarmente utile dormirci sopra una notte prima di ritentare la soluzione di un problema ostico.
 
-Dopo aver superato la sfida, gli alunni troveranno ancora qualche esercizio da eseguire, simili a quelli che potrebbero aver trovato nella prima metà della lezione. Questi esercizi sono stati inseriti intenzionalmente per verificare la comprensione dell'alunno sull'argomento studiato.  Potrebbero sembrare fin troppo facili a fronte degli esercizi di sfida precedentemente svolti, ma sono stati aggiunti per verificare che sia stato acquisito il livello di competenza richiesto in questa fase.
+Dopo aver superato la sfida, gli alunni troveranno ancora alcuni esercizi da eseguire, simili a quelli della prima metà della lezione. Questi esercizi sono stati inseriti intenzionalmente per verificare la comprensione dell'alunno sull'argomento studiato.  Potrebbero sembrare fin troppo facili rispetto alla sfida appena affrontata, ma servono proprio per verificare che sia stato acquisito il livello di competenza richiesto in questa fase.
 
-In alcuni casi, terminiamo le nostre lezioni con esercizi liberi.  Questi esercizi potrebbero non avere risposte "sbagliate" o potrebbero consentire differenti modalità di risoluzione del problema.  Incoraggia gli alunni a dare loro il meglio di sé e non selezionare semplicemente "Termina", anche se possono.
+In alcuni casi, le lezioni terminano con degli esercizi liberi.  Questi esercizi potrebbero non avere risposte "sbagliate" o potrebbero consentire differenti modalità di risoluzione del problema.  Incoraggia gli alunni a dare il meglio di sé e non limitarsi a cliccare semplicemente il pulsante "Termina", anche se possono farlo.
 
 Alcuni consigli finali su questa parte:
 
-* Sprona gli alunni ad essere perseveranti ed usare le loro competenze nel correggere gli errori nei problemi impegnativi.
-* I video sono spesso utili.  Quando gli studenti sono bloccati, fagli rivedere il video una seconda o terza o anche quarta volta.
-* Esigi che gli alunni leggano le istruzioni.  Se sono in difficoltà, fai leggere le istruzioni ad alta voce ai compagni di classe.
-* Va bene usare i suggerimenti!  Gli alunni dovrebbero usare tutti i suggerimenti di cui necessitano, ma assicurati che riprovino ad eseguire un esercizio completo prima di un passare alla proposta successiva.
+* Sprona gli alunni ad essere perseveranti ed usare tutte le competenze a loro disposizione per correggere gli errori che incontrano nei problemi più impegnativi.
+* I video spesso aiutano.  Quando gli alunni si bloccano, fagli rivedere il video una seconda, un terza o anche una quarta volta. Se manca il video doppiato in italiano, ripeti tu la spiegazione contenuta nel video.
+* Esigi e controlla che gli alunni leggano sempre le istruzioni degli esercizi.  Se sono in difficoltà, fai leggere le istruzioni ad alta voce ai compagni di classe.
+* Va bene usare i suggerimenti!  Gli alunni dovrebbero usare tutti i suggerimenti di cui necessitano, ma assicurati che si impegnino a provare ad eseguire completamente l'esercizio prima di richiedere il suggerimento successivo.
 
 <a id="unplugged"></a>
 
-## Attività ponte verso le lezioni tradizionali (tutte le età)
-Le lezioni tradizionali evidenziano agli alunni che importanti concetti dell'informatica sono già utilizzati nella loro vita quotidiana.  Quando gli alunni sono in grado di identificare i concetti fondamentali di cicli o di scelte condizionate, possono superare agevolmente lo scoglio mentale che può avvenire quando li utilizzano per la prima volta nella programmazione online.
+## Attività ponte tra lezioni tradizionali e tecnologiche (tutti i corsi)
+Le lezioni tradizionali mettono in evidenza che importanti concetti informatici sono già utilizzati nella vita quotidiana.  Quando gli alunni sono in grado di identificare i concetti fondamentali di ciclo o di istruzione condizionale, possono superare più agevolmente lo scoglio mentale che può presentarsi la prima volta che li incontrano negli esercizi di programmazione.
 
-Le esperienze tradizionali sono così importanti che abbiamo scelto di aggiungere un passo intermedio e realizzare attività che colleghino le lezioni tradizionali alle loro controparti online.  Nei corsi A-F, scoprirai che le pianificazioni delle lezioni includono gli esempi su come eseguire gli esercizi tradizionali ed anche come tradurre i contenuti della lezione all'interno dei prossimi esercizi online.  In maniera approprita le abbiamo chiamate "Attività ponte".
+Le lezioni tradizionali sono così importanti che abbiamo deciso di aggiungere un passo intermedio, realizzando delle attività che collegano le lezioni tradizionali alle loro controparti tecnologiche.  Nei corsi A-F, scoprirai che i piani di lavoro delle lezioni includono degli esempi su come eseguire le attività tradizionali ed anche su come trasferire questi contenuti all'interno delle successive lezioni tecnologiche.  È per questo motivo che le abbiamo chiamate "attività ponte".
 
-La maggior parte delle attività ponte possono essere create prendendo il soggetto dell'esercizio tradizionale ed eseguirlo con i blocchi Blockly riprodotti in carta, oppure prendendo un esercizio online e risolverlo usando il linguaggio dell'esercizio tradizionale.  In alcuni casi è introdotta una relazione diversa, ma tutti gli esempi hanno lo scopo di impedire che l'esperienze tradizionali siano troppo astratte o non correlate.
+La maggior parte delle attività ponte possono essere realizzate eseguendo l'esercizio tradizionale con dei blocchi di istruzioni Blockly riprodotti su carta, oppure risolvendo un esercizio online con dei riferimenti alla relativa lezione tradizionale.  In alcuni casi è può esserci una relazione diversa, ma gli esempi hanno lo scopo di impedire che le lezioni tradizionali restino troppo astratte o non correlate con il resto del corso.
 
 <a id="endofcourse"></a>
 
-## Progetti di fine corso (Corsi E & F)
-Per gli alunni più grandi, abbiamo introdotto l'obiettivo di creare importanti progetti alla fine dei corsi E e F. Sebbene Code.org abbia già da tempo fornito la possibilità di realizzare “progetti”, abbiamo pensato che consentire agli alunni di pianificare ed eseguire i loro progetti in un contesto formale avrebbe aggiunto alcuni punti di vista fondamentali nell'apprendimento della programmazione.
+## Progetti di fine corso (corsi E & F)
+Per gli alunni più grandi, abbiamo introdotto la creazione di un vero e proprio progetto alla fine dei corsi E ed F. Sebbene Code.org abbia da tempo fornito la possibilità di realizzare “progetti” personali, abbiamo pensato che guidare gli alunni nella pianificazione ed esecuzione dei loro progetti in un contesto formale potesse aggiungere alcuni fondamentali punti di vista nell'apprendimento della programmazione.
 
-I progetti di fine corso sono relativamente semplici.  In un periodo di 4-5 settimane gli studenti dovranno esaminare le idee del progetto, pianificare la loro applicazione, scrivere il loro programma, revisionarlo in base ai commenti ricevuti (5ª classe primaria) ed infine presentare il loro lavoro completo.  Ognuno di questi passaggi è guidato da un'utile scheda e da una guida alla lezione che offrono la visione globale del progetto.
+I progetti di fine corso sono relativamente semplici.  In un periodo di 4-5 settimane gli alunni dovranno esaminare le idee di progetto, pianificare la loro applicazione, scrivere il programma, revisionarlo in base ai commenti ricevuti (solo corso F) ed infine presentare il lavoro svolto.  Ognuno di queste fasi è guidata da un'utile scheda e da una guida per l'insegnante che permettono di mantenere una visione globale del progetto.
 
-**Analisi:** Gli alunni potranno vedere alcuni esempi di progetti ispirativi, costruiti per mostrare le cose straordinarie che possono essere realizzate con le competenze che hanno acquisito finora.  Questi progetti sono stati realizzati con il Laboratorio o l'Artista, ma gli alunni sono liberi di creare i progetti con Tynker, Scratch o addirittura usando un linguaggio testuale se l'insegnante lo ritiene opportuno.
+**Analisi** - Gli alunni sono invitati ad analizzare alcuni progetti di esempio da cui prendere ispirazione, questi sono costruiti per mostrare le straordinarie potenzialità che possono essere sfruttate con le competenze acquisite finora.  Questi progetti sono stati realizzati con il Laboratorio o l'Artista, ma gli alunni sono liberi di creare i propri progetti anche con Scratch o altri ambienti, addirittura usando un linguaggio di programmazione testuale se l'insegnante lo ritiene opportuno.
 
-**Pianificazione:** L'obiettivo di questa fase è di far riflettere gli alunni su cosa sia realmente realizzabile.  Dovranno pensare agli esempi che hanno visto ed ai limiti delle loro competenze che sono emerse durante la loro modifica.  Dopodiché, definiranno un piano per creare qualcosa di nuovo.  Sarà bene ricordare agli alunni di rimanere realistici, in quanto il tempo e le risorse a loro disposizione per realizzare le loro idee sono limitate.  Le guide assumo l'utilizzo di l'Artista o il Laboratorio, ma i progetti possono essere sviluppati su qualsiasi altro ambiente più consono per ogni classe.
+**Pianificazione** - L'obiettivo di questa fase è di far riflettere gli alunni su cosa sia realisticamente realizzabile.  Devono pensare agli esempi che hanno preso in considerazione e ai limiti delle loro competenze emersi durante l'analisi.  Dopodiché, definiscono un piano per creare qualcosa di nuovo.  Sarà bene ricordare agli alunni di essere realistici, dal momento che il tempo e le risorse a disposizione per realizzare le loro idee sono limitati.  Le guide messe a disposizione in queste lezioni presumono l'utilizzo dell'Artista o del Laboratorio, ma i progetti possono essere sviluppati su qualsiasi altro ambiente adatto ad ogni classe.
 
-**Realizzazione:** Un giorno non è molto per realizzare un progetto che è stato redatto su carta.  Gli alunni dovranno affrontare scelte difficili quando si tratta di provare a far funzionare le cose mentre si imbattono in un ostacolo dopo l'altro.  Impareranno a modificare e ad adattarsi man mano che gli errori e le limitazioni del programma fanno cambiare le loro percezioni di ciò che può essere realizzato in un lasso di tempo limitato.
+**Realizzazione** - Un giorno non è molto per realizzare un intero progetto appena abbozzato su carta.  Gli alunni devono gestire scelte difficili quando si tratta di far funzionare il programma superando ostacolo dopo l'altro.  Imparano a modificare e ad adattarsi man mano che gli errori ed i limiti dell'ambiente di programmazione fanno cambiare la percezione di ciò che può essere realizzato in un lasso di tempo così limitato.
 
-**Revisione:** Gli studenti più grandi avranno una giornata di revisione dei loro programmi basata sui commenti dei compagni di classe che potranno aiutarli a migliorare il loro prodotto finale e consentire loro di ispirare gli altri con le cose che hanno realizzato.  Gli studenti si eserciteranno nella pratica della critica costruttiva, nonché dello scambio di idee in gruppo e nella perseveranza.
+**Revisione** - Gli alunni più grandi (corso F) hanno a disposizione una giornata in più dedicata alla revisione dei loro programmi, basata sui commenti dei loro compagni di classe, che possono così aiutarli a migliorare il prodotto finale e servire da ispirazione con ciò che hanno realizzato.  In questo modo gli alunni hanno la possibilità di allenare la critica costruttiva, lo scambio di idee in gruppo e la perseveranza.
 
-**Presentazione:** Quasi un mese di lavoro per dare la possibilità agli alunni di presentare con orgoglio quanto hanno imparato.  Le nostre guide per la lezione prevedono una presentazione orale, ma gli insegnanti possono optare verso presentazioni scritte o multimediali.
+**Presentazione** - Il precedente mese di attività è una grande occasione per gli alunni per presentare con orgoglio quanto hanno realizzato ed imparato.  Il piano di lavoro delle lezioni prevede una presentazione orale, ma gli insegnanti possono optare per presentazioni scritte o multimediali.
 
-Non importa quanto gli studenti siano coinvolti nei loro progetti, impareranno sicuramente qualcosa di utile sui processi di creatività e risoluzione dei problemi nell'informatica.
+Non è il caso di preoccuparsi troppo di quanto gli alunni siano coinvolti nella realizzazione dei loro progetti, in ogni caso impareranno qualcosa di utile sui processi di creatività e di risoluzione dei problemi in informatica.
 
 <a id="conclusion"></a>
 
 ## Conclusione
-Come puoi vedere, i corsi A-F in Fondamenti di informatica contengono stimolanti miglioramenti, ispirati dai commenti ricevuti dalla grande comunità di insegnanti e animatori di Fondamenti di informatica.
+Come puoi notare, i corsi A-F di Fondamenti di informatica contengono stimolanti miglioramenti, ispirati dai commenti ricevuti dalla grande comunità di insegnanti e animatori di Code.org.
 
-Speriamo che questa panoramica sia stata esauriente.  In caso di domande o commenti su queste modifiche, pubblicale sul nostro forum http://forum.code.org/c/csf.  Faremo in modo di rispondere alle tue domande il più preso possibile.  Nel frattempo, ecco alcune delle domande più frequenti sui corsi A-F.
+Speriamo che questa panoramica sia stata esauriente.  In caso di domande o commenti su queste modifiche, partecipa alle discussioni del nostro forum http://forum.code.org/c/csf (in inglese).  Faremo del nostro meglio per rispondere alle tue domande nel minor tempo possibile.  Nel frattempo, ecco alcune delle domande più frequenti sui corsi A-F.
 
 <a id="faq"></a>
 
 ## Domande frequenti
 
-| Domanda                                                                                                                                                                           | Risposta                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **State proponendo una nuova serie di corsi -- significa che i corsi 1-4 spariranno?**                                                                                            | No. Così come il nostro corso originale di 20 ore è ancora disponibile ed usufruibile sul nostro sito, abbiamo in programma di mantenere i corsi 1-4 a disposizione per coloro che ritengono che si adattino meglio all'esperienza di cui hanno bisogno i loro alunni/bambini.                                                                                                                                                                                                                                                                |
-| **Quando possiamo cominciare ad utilizzare corsi A-F?**                                                                                                                           | I corsi A-F sono disponibili adesso!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Alcune delle mie lezioni/esercizi preferiti non sono presenti nei corsi A-F!**                                                                                                  | Nessuna paura! Sono ancora disponibili all'interno dei corsi 1-4 o nel corso accelerato di 20 ore.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Questi esercizi sembrano molto più difficili.  Sono preoccupato che siano troppo difficili per i miei alunni.**                                                                 | Lo scopo di finale di questi nuovi corsi è indurre gli studenti a pensare, imparare a risolvere i problemi e sviluppare la perseveranza.  Nessuna di queste cose viene richiesta quando gli esercizi sono troppo facili da eseguire.  Per questo motivo abbiamo realizzato esercizi più difficili.  Fai riferimento alle guide per gli insegnanti come supporto verso l'acquisizione di queste competenze nella tua classe.  Come al solito, non sottovalutare l'importanza delle lezioni tradizionali prima di passare agli esercizi online. |
-| **Alcuni esercizi limitano il numero di specifici blocchi.  Come fare se i miei alunni vogliono scrivere le istruzioni per esteso prima di identificare e raggruppare in cicli?** | Sono pochi gli esercizi che limitano l'uso di specifici blocchi. Questo fa parte della nuova impostazione.  Ė una differente modalità per dare le direttive, ed evitare di riempire eccessivamente l'area di lavoro di blocchi.  Per gli alunni che preferiscono scrivere il programma per esteso prima di fare i raggruppamenti (ma questo è un suggerimento valido per tutti gli studenti) è utile utilizzare un quaderno o un foglio a fianco della tastiera per poter scrivere l'algoritmo nella maniera che loro sentono più naturale.   |
+| Domanda                                                                                                                                                                              | Risposta                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ora che avete lanciato la nuova serie di corsi, i precedenti corsi 1-4 spariranno?**                                                                                               | No. Così come il corso originale di 20 ore è ancora disponibile ed utilizzabile sul nostro sito, intendiamo mantenere i corsi 1-4 a disposizione per coloro che li ritengono più adatti per i loro bambini.                                                                                                                                                                                                                                                                                                                                 |
+| **Quando possiamo iniziare ad utilizzare i corsi A-F?**                                                                                                                              | I corsi A-F sono già disponibili ed operativi!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Alcune delle mie lezioni/esercizi preferiti non sono presenti nei corsi A-F!**                                                                                                     | Nessuna paura! Puoi sempre fare riferimento ai corsi 1-4 o al precedente corso rapido di 20 ore.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Questi esercizi sembrano molto più complicati.  Temo che siano troppo difficili per i più piccoli.**                                                                               | Lo scopo di finale di questi nuovi corsi è indurre gli alunni a pensare, imparare a risolvere i problemi e sviluppare la perseveranza.  Nessuna di queste abilità viene sviluppata se gli esercizi sono troppo facili.  Per questo motivo abbiamo proposto esercizi un po' più difficili.  Fai riferimento alla guida per l'insegnante per supportare i tuoi alunni nell'acquisizione di queste competenze.  Come già sottolineato, non sottovalutare l'importanza delle lezioni tradizionali prima di affrontare le lezioni teconologiche. |
+| **Alcuni esercizi limitano il numero di specifici blocchi.  Come fare se i miei alunni vogliono scrivere le istruzioni per esteso prima di identificare i raggruppamenti in cicli?** | Sono pochi gli esercizi che limitano l'uso di specifici blocchi. Questo fa parte della nuova impostazione.  È una nuova modalità per orientare gli alunni verso una programmazione più efficiente.  Per gli alunni che preferiscono scrivere il programma per esteso prima di fare i raggruppamenti (ma questo è un suggerimento valido anche in altre circostanze), possono utilizzare un quaderno o un foglio a fianco della tastiera per scrivere l'algoritmo nella modalità a loro più affine.                                          |
 

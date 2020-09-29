@@ -10,7 +10,12 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
-import {beginEditingSection} from './teacherSectionsRedux';
+import {
+  beginEditingSection,
+  getAssignmentName,
+  sortedSectionsList
+} from './teacherSectionsRedux';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
 
@@ -37,38 +42,30 @@ const styles = {
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
-    sections: PropTypes.object.isRequired,
-    selectedSectionId: PropTypes.number.isRequired,
-    selectedSectionScript: PropTypes.object.isRequired,
-    openEditSectionDialog: PropTypes.func.isRequired
+    sections: PropTypes.arrayOf(sectionShape).isRequired,
+    selectedSection: sectionShape.isRequired,
+    openEditSectionDialog: PropTypes.func.isRequired,
+    assignmentName: PropTypes.string
   };
 
   constructor(props) {
     super(props);
     this.getDropdownOptions = this.getDropdownOptions.bind(this);
-    this.selectedSection = this.props.sections[this.props.selectedSectionId];
   }
   getDropdownOptions(optionMetricName) {
     let self = this;
-    let visibleSections = Object.entries(this.props.sections)
-      .filter(([sectionId, section]) => !section.hidden)
-      .reduce((visibleSections, filteredEntry) => {
-        visibleSections[filteredEntry[0]] = filteredEntry[1];
-        return visibleSections;
-      }, {});
 
-    let options = Object.keys(visibleSections).map(function(key, i) {
-      let section = visibleSections[key];
+    let options = self.props.sections.map(function(section, i) {
       let optionOnClick = () => {
-        switchToSection(section.id, self.selectedSection.id);
+        switchToSection(section.id, self.props.selectedSection.id);
         recordSwitchToSection(
           section.id,
-          self.selectedSection.id,
+          self.props.selectedSection.id,
           optionMetricName
         );
       };
       let icon = undefined;
-      if (section.id === self.selectedSection.id) {
+      if (section.id === self.props.selectedSection.id) {
         icon = <FontAwesome icon="check" />;
       }
       return (
@@ -91,22 +88,26 @@ class TeacherDashboardHeader extends React.Component {
         />
         <div style={styles.header}>
           <div>
-            <h1>{this.selectedSection.name}</h1>
-            <div>
-              <span style={styles.sectionPrompt}>
-                {i18n.assignedToWithColon()}{' '}
-              </span>
-              {this.props.selectedSectionScript.name}
-            </div>
+            <h1>{this.props.selectedSection.name}</h1>
+            {this.props.assignmentName && (
+              <div id="assignment-name">
+                <span style={styles.sectionPrompt}>
+                  {i18n.assignedToWithColon()}{' '}
+                </span>
+                {this.props.assignmentName}
+              </div>
+            )}
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
               <Button
                 __useDeprecatedTag
                 onClick={() => {
-                  this.props.openEditSectionDialog(this.selectedSection.id);
+                  this.props.openEditSectionDialog(
+                    this.props.selectedSection.id
+                  );
                   recordOpenEditSectionDetails(
-                    this.selectedSection.id,
+                    this.props.selectedSection.id,
                     'dashboard_header'
                   );
                 }}
@@ -136,14 +137,16 @@ export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 
 export default connect(
   state => {
-    let sections = state.teacherSections.sections;
+    // In most cases, filtering out hidden sections is done on the backend.
+    // However in this case, we need hidden sections in the redux tree in case
+    // the selected section is hidden.
+    let sections = sortedSectionsList(state.teacherSections.sections).filter(
+      section => !section.hidden
+    );
     let selectedSectionId = state.teacherSections.selectedSectionId;
-
-    let selectedSectionScriptId = state.scriptSelection.scriptId;
-    let selectedSectionScript = state.scriptSelection.validScripts.filter(
-      script => script.id === selectedSectionScriptId
-    )[0];
-    return {sections, selectedSectionId, selectedSectionScript};
+    let selectedSection = state.teacherSections.sections[selectedSectionId];
+    let assignmentName = getAssignmentName(state, selectedSectionId);
+    return {sections, selectedSection, assignmentName};
   },
   dispatch => {
     return {

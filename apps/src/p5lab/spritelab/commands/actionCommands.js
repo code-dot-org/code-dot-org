@@ -49,6 +49,11 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
+
+  isKeyPressed(key) {
+    return this.keyDown(key);
+  },
+
   isTouchingEdges(spriteArg) {
     if (!this.edges) {
       this.createEdgeSprites();

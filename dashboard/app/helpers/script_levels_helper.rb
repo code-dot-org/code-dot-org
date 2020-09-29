@@ -7,14 +7,13 @@ module ScriptLevelsHelper
         response[:stage_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
 
         # End-of-Stage Experience is only enabled for:
-        # scripts with the stage_extras_available property
+        # scripts with the lesson_extras_available property
         # stages except for the last stage of a script
         # users in or teaching sections with an enabled "stage extras" flag
-        enabled_for_stage = script_level.script.stage_extras_available &&
-          !script_level.end_of_script? &&
-          !script_level.lesson.stage_extras_disabled
+        enabled_for_stage = script_level.script.lesson_extras_available &&
+          !script_level.end_of_script?
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
-            current_user.section_for_script(script_level.script).stage_extras
+            current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
               script_id: script_level.script_id,

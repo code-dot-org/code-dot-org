@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
 import msg from '@cdo/locale';
-import CreateSomething from './stageExtras/CreateSomething';
+import CreateSomething from './lessonExtras/CreateSomething';
 
 const styles = {
   container: {

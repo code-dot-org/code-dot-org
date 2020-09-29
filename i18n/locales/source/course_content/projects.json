@@ -6,14 +6,55 @@
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
     },
-    "function_names": {
-      "draw a star": "draw a star",
-      "draw a circle": "draw a circle",
-      "draw a pinwheel": "draw a pinwheel",
-      "draw a triangle": "draw a triangle",
-      "draw a shape": "draw a shape",
-      "draw a house": "draw a house",
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star",
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
+      },
+      "draw a circle": {
+        "name": "draw a circle",
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
+      },
+      "draw a pinwheel": {
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a shape": {
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a house": {
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/p/frozen": {
@@ -27,9 +68,23 @@
       "New Play Lab Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
     },
-    "function_names": {
-      "jump": "jump",
-      "patrol": "patrol"
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "jump function block with height and actor parameter",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
+      },
+      "patrol": {
+        "name": "patrol",
+        "description": "a patrol function that has a actor and speed parameter",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
+      }
     }
   },
   "https://studio.code.org/p/iceage": {
@@ -48,9 +103,13 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map."
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
   },
   "https://studio.code.org/p/dance": {
