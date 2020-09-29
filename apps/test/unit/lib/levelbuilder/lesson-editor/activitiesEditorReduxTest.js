@@ -181,10 +181,13 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     it('update activity field', () => {
-      let state = reducer(initialState, updateActivityField(1, 'time', 100));
+      let state = reducer(
+        initialState,
+        updateActivityField(1, 'duration', 100)
+      );
 
       let expectedState = _.cloneDeep(initialActivities);
-      expectedState[0].time = 100;
+      expectedState[0].duration = 100;
 
       assert.deepEqual(expectedState, state.activities);
     });

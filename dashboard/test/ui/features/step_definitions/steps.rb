@@ -586,10 +586,6 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
-Then /^mark the current level as completed on the client/ do
-  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
-end
-
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"

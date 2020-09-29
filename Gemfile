@@ -58,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
 
@@ -155,7 +154,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.4.0'
+gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -219,8 +218,6 @@ gem 'execjs'
 gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
-
-gem 'codemirror-rails' # edit code in textarea
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
@@ -340,7 +337,7 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import', '~> 0.26'
+gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
@@ -354,3 +351,5 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'ruby-progressbar'
