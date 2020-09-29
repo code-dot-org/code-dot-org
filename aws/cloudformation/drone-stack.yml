@@ -367,7 +367,7 @@ Resources:
       LoadBalancers:
         - ContainerName: drone-autoscaler
           ContainerPort: 8080
-          TargetGroupArn: arn:aws:elasticloadbalancing:us-west-2:165336972514:targetgroup/DroneAutoScaler/a93b1a398a831274
+          TargetGroupArn: !Ref DroneAutoscalerTargetGroup
       TaskDefinition: !Ref DroneAutoscalerTaskDefinition
 
   DroneAutoscalerECSCluster:
@@ -419,6 +419,31 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
+
+  AutoscalerLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref DroneMasterELB
+      Port: 8443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificate
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DroneAutoscalerTargetGroup
+
+  DroneAutoscalerTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub "AutoscalerTargGrp-${AWS::StackName}"
+      VpcId: !Ref VpcId
+      Port: 8080
+      Protocol: HTTP
+      HealthCheckPath: /healthz
+      Tags:
+        -
+          Key: Name
+          Value: !Sub "ECS ${AWS::StackName} - Autoscaler TargetGroup"
 
   DroneWorkerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup
