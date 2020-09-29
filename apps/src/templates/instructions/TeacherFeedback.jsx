@@ -33,10 +33,6 @@ const styles = {
     color: color.cyan
   },
   timeTeacherStudentSeen: {
-    paddingTop: 8,
-    paddingLeft: 8,
-    fontStyle: 'italic',
-    fontSize: 12,
     color: 'lightgreen'
   },
   timeStudent: {
@@ -260,26 +256,59 @@ export class TeacherFeedback extends Component {
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
 
-    let timeStyle;
-    let dateSeen;
-    if (this.props.viewAs === ViewType.Student) {
-      timeStyle = styles.timeStudent;
-    } else {
-      if (studentSawFeedback) {
-        timeStyle = styles.timeTeacherStudentSeen;
-        //TODO: come back to make these display "friendly". for now, just doing dates
-        dateSeen = this.state.latestFeedback[0].student_seen_feedback;
-        dateSeen = dateSeen.split('T')[0];
-      } else {
-        timeStyle = styles.timeTeacher;
-      }
-    }
-
     // If a student has rubric feedback we want to expand that field
     const expandPerformanceLevelForStudent =
       this.props.viewAs === ViewType.Student &&
       showFeedbackInputAreas &&
       this.state.performance !== null;
+
+    let timeStyle;
+    let feedbackMessage;
+    if (this.state.latestFeedback.length > 0) {
+      //Student view indicates when feedback was last updated
+      if (this.props.viewAs === ViewType.Student) {
+        timeStyle = styles.timeStudent;
+        feedbackMessage = i18n.lastUpdated({
+          time: moment
+            .min(moment(), moment(latestFeedback.created_at))
+            .fromNow()
+        });
+      } else if (this.props.viewAs === ViewType.Teacher) {
+        //Teacher view if the current teacher did not leave the feedback
+        if (
+          this.props.latestFeedback[0].feedback_provider_id !==
+          this.props.teacher
+        ) {
+          timeStyle = styles.timeTeacher;
+          feedbackMessage = i18n.lastUpdatedDifferentTeacher({
+            time: moment
+              .min(moment(), moment(latestFeedback.student_seen_feedback))
+              .fromNow()
+          });
+        } else {
+          //Teacher view if current teacher left feedback & student viewed
+          if (studentSawFeedback) {
+            timeStyle = {
+              ...styles.timeTeacher,
+              ...styles.timeTeacherStudentSeen
+            };
+            feedbackMessage = i18n.seenByStudent({
+              time: moment
+                .min(moment(), moment(latestFeedback.student_seen_feedback))
+                .fromNow()
+            });
+          } else {
+            //Teacher view if current teacher left feedback & student did not view
+            timeStyle = styles.timeTeacher;
+            feedbackMessage = i18n.lastUpdatedCurrentTeacher({
+              time: moment
+                .min(moment(), moment(latestFeedback.created_at))
+                .fromNow()
+            });
+          }
+        }
+      }
+    }
 
     return (
       <div style={tabVisible}>
@@ -349,18 +378,9 @@ export class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.state.latestFeedback.length > 0 && !studentSawFeedback && (
+              {this.state.latestFeedback.length > 0 && (
                 <div style={timeStyle} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
-                </div>
-              )}
-              {this.state.latestFeedback.length > 0 && studentSawFeedback && (
-                <div style={timeStyle}>
-                  &#10003; Seen by student <strong>{dateSeen}</strong>
+                  {feedbackMessage}
                 </div>
               )}
             </div>
