@@ -7,7 +7,7 @@ import {
   moveLesson,
   removeLesson,
   addLesson
-} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
 const styles = {
