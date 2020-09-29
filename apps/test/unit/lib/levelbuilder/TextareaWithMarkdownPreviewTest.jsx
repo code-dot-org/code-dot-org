@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
 describe('TextareaWithMarkdownPreview', () => {
   it('has correct markdown for preview of unit description', () => {
     const wrapper = mount(<TextareaWithMarkdownPreview {...DEFAULT_PROPS} />);
-    expect(wrapper.contains('Section Name'));
+    expect(wrapper.contains('Section Name')).to.be.true;
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('textarea').prop('defaultValue')).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'

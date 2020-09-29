@@ -17,8 +17,8 @@ describe('CollapsibleEditorSection', () => {
         <span>Child</span>
       </CollapsibleEditorSection>
     );
-    expect(wrapper.contains('Section Title'));
-    expect(wrapper.contains('Child'));
+    expect(wrapper.contains('Section Title')).to.be.true;
+    expect(wrapper.contains('Child')).to.be.true;
     expect(wrapper.find('span').length).to.equal(1);
     expect(wrapper.find('FontAwesome').length).to.equal(1);
     expect(wrapper.state().collapsed).to.equal(false);
