@@ -89,7 +89,7 @@ class TestI18nStringUrlTracker < Minitest::Test
 
   def test_log_given_projects_url_should_only_log_the_project_type
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy/zjiufOp0h-9GS-DywevS0d3tKJyjdbQZZqZVaiuAjiU/view', source: 'test'}
-    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy/view', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     assert_equal(:i18n, @firehose_stream)
     assert_equal(expected_record, @firehose_record)
