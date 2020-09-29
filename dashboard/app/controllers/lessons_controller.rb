@@ -32,13 +32,13 @@ class LessonsController < ApplicationController
           {
             id: activity.id,
             position: activity.position,
-            title: activity.title,
+            name: activity.name,
             duration: activity.duration,
             activitySections: activity.activity_sections.map do |activity_section|
               {
                 id: activity_section.id,
                 position: activity_section.position,
-                title: activity_section.title,
+                name: activity_section.name,
                 remarks: activity_section.remarks,
                 slide: activity_section.slide,
                 description: activity_section.description,
@@ -94,7 +94,7 @@ class LessonsController < ApplicationController
       lesson_activity = fetch_activity(activity)
       lesson_activity.update!(
         position: activity['position'],
-        title: activity['title'],
+        name: activity['name'],
         duration: activity['duration']
       )
 
@@ -128,7 +128,7 @@ class LessonsController < ApplicationController
       activity_section = fetch_activity_section(lesson_activity, section)
       activity_section.update!(
         position: section['position'],
-        title: section['title'],
+        name: section['name'],
         remarks: section['remarks'],
         slide: section['slide'],
         description: section['description'],
