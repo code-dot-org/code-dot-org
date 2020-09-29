@@ -42,6 +42,7 @@ Scenario: GameLab with a submittable contained level
   And I press "submitButton"
   And I press "confirm-button"
   And I wait until current URL contains "/stage/41/puzzle/8"
+  Then I close my eyes
 
 Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab contained level"
