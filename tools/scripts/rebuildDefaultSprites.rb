@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../../deployment'
+require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require_relative './constants'
-require '../../lib/cdo/only_one'
 require 'securerandom'
 require 'json'
 
@@ -28,6 +30,7 @@ def main
     props['looping'] = animation_metadata['looping']
     props['frameDelay'] = animation_metadata['frameDelay']
     props['version'] = animation_metadata['version']
+    props['categories'] = animation_metadata['categories']
     key = SecureRandom.uuid
     ordered_keys.push(key)
     props_by_key[key] = props
@@ -45,4 +48,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

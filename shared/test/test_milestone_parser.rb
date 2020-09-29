@@ -40,21 +40,21 @@ class TestMilestoneParser < Minitest::Test
 
     @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]}
-    )
-    @s3_client.stub_responses(:list_objects,
-      {contents: [
-        {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-        {key: 'hosts/folder_1/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-      ]},
-      {contents: [
-        {key: 'hosts/folder_2/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-        {key: 'hosts/folder_2/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-      ]},
-      {contents: [
-        {key: 'hosts/folder_3/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-        {key: 'hosts/folder_3/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-      ]},
+      [
+        {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
+        {contents: [
+          {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+          {key: 'hosts/folder_1/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+        ]},
+        {contents: [
+          {key: 'hosts/folder_2/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+          {key: 'hosts/folder_2/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+        ]},
+        {contents: [
+          {key: 'hosts/folder_3/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+          {key: 'hosts/folder_3/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+        ]}
+      ]
     )
     @cache = JSON.parse(IO.read(CACHE_FILE))
   end
@@ -122,12 +122,12 @@ class TestMilestoneParser < Minitest::Test
   def test_error_handling
     @s3_client.stub_responses(
       :list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/folder_1/'}]}
-    )
-    @s3_client.stub_responses(:list_objects,
-      {contents: [
-        {key: 'hosts/folder_1/dashboard/milestone.log.12345', size: LOG_SIZE, etag: 'x'}
-      ]}
+      [
+        {common_prefixes: [{prefix: 'hosts/folder_1/'}]},
+        {contents: [
+          {key: 'hosts/folder_1/dashboard/milestone.log.12345', size: LOG_SIZE, etag: 'x'}
+        ]}
+      ]
     )
     count = MilestoneParser.new(@cache, @s3_client).count
     assert_equal 0, count

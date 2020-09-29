@@ -13,7 +13,7 @@ id:
       Default: Standar
       Events: kegiatan
       Functions: fungsi
-      'Functions ': 'Fungsi '
+      'Functions ': 'fungsi'
       Game/Score: Permainan/nilai
       Games/Score: Permainan/nilai
       Groups: Kelompok
@@ -24,6 +24,7 @@ id:
       Math: Matematika
       Numbers: Nomor
       Properties: Properti
+      Sprites: Sprites
       Text: Teks
       Variables: variabel
       'Variables ': 'Variabel '

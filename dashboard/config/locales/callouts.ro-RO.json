@@ -1,0 +1,316 @@
+{
+  "ro-RO": {
+    "data": {
+      "callouts": {
+        "2-3 Artist Debugging 1": {
+          "2-3_Artist_Debugging_1_a": "Artistul nu are un buton \"Pas\", dar poţi trage cursorul în stânga ca să priveşti cu mai multă atenţie cum rulează programul tau."
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "Florile mov pot avea 1 sau 0 nectar...dar nu vei şti până când nu rulezi programul!"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": "[șir gol]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": "[șir gol]"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "Introdu numărul necesar de mișcări ale zombie-ului astfel încât acesta să facă un cerc complet"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "Utilizaţi blocul \"Repetă\" şi aduceți-l lângă blocurile din spațiul de lucru"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Trageți variabila contor înăuntrul acestui block"
+        },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Observă că am sortat toate blocurile şi le-am pus în categorii pentru a ţine totul ordonat. Apasă aici pentru a găsi toate blocurile de care ai nevoie."
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "Utilizaţi blocul \"Repetă\" şi aduceți-l lângă blocurile din spațiul de lucru"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "Utilizaţi acest bloc pentru a seta \"lungime\" la valoarea corectă."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "Utilizaţi acest bloc pentru a seta \"lungime\" la valoarea corectă."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "Împărțiți 360 la numărul de laturi pentru a obține mărimea în grade a fiecărui unghi."
+        },
+        "Course 4 Artist Vars 8": {
+          "Course_4_Artist_Vars_8_a": "Ai nevoie de mai mult spaţiu? Trage de această bară pentru a face spaţiul de program mai lat."
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Folosește blocul \"dacă\" pentru a decide dacă albina ar trebui să ia nectarul sau să facă miere"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "Utilizează blocul \"dacă/altfel\", astfel încât albina să ia nectar de la o floare şi să facă miere dacă nu este o floare"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "Utilizaţi acest buton pentru a edita funcţia şi pentru a schimba direcţia spre care se va întoarce albina ca să obţină nectarul."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "Pune blocuri în interiorul buclei pentru a repeta comenzi"
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "Apasă \"editează\" pentru a actualiza această funcţie pentru a folosi parametrul înălţime."
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "Click aici pentru a edita funcţia dumneavoastră."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "Clic editare pentru a adăuga un parametru în funcția ta"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "Utilizează săgețile pentru a muta actorul"
+        },
+        "Course 4 Play Lab Vars 9": {
+          "Course_4_Play_Lab_Vars_9_1": "Toate blocurile tale sunt acum aranjate în categorii! Apasă pe o etichetă pentru a vedea piesele din acea categorie."
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_1": "Observă că variabila `contor` are un nume diferit pentru fiecare caracter? Aceasta este aşa pentru ca fiecare buclă `pentru` să-şi controleze propriul contor.",
+          "Course_4_Playlab_For_Loops_4b_2": "Pentru această problemă, ai voie doar să schimbi \"incrementul\" buclelor `pentru`."
+        },
+        "Course 4 SCV 6": {
+          "Course_4_SCV_6": "Acest bloc îţi permite să modifici culoarea cu aproape orice vrei vrei să vezi! Joacă-te cu numerele ca să vezi ce se întamplă!"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "Adaugă acest bloc la programul tău.",
+          "arrow_buttons": "Apasă butoanele cu săgeată pentru a-l controla pe dansator."
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Adăugați un nou eveniment în program."
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Bloc nou!",
+          "new_block_4": "Bloc nou!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Adaugă noul dansator aici"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Bloc nou!",
+          "dance_callout_11_b": "Bloc nou!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Caută aici blocurile „toate rațele”"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "Adaugă acest bloc la programul tău!"
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "Adaugă acest bloc la programul tău.",
+          "arrow_buttons": "Apasă butoanele cu săgeată pentru a-l controla pe dansator."
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "Adăugați un nou eveniment în program."
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Bloc nou!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Bloc nou!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Bloc nou!",
+          "new_block_4": "Bloc nou!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Adaugă acest bloc la programul tău!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Adaugă acest bloc la programul tău!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Adaugă noul dansator aici"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Bloc nou!",
+          "dance_callout_11_b": "Bloc nou!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Caută aici blocurile „toate rațele”"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Emite un sunet când se produce acest eveniment."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Care bloc îl va face pe Baymax să se mute în sus când săgeata în sus este apăsată?",
+          "Infinity_move_directions_callout_arrow": "Utilizează aceste săgeți pentru a pune în mișcare"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Adaugă bloc de mutare aici"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Plasează blocuri de mutare în interior aici"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Când eşti gata, apasă \"Rulează\" pentru a încerca programul."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Apasă \"Rulează\" pentru a începe mişcarea."
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "NEW_Course_4_Artist_Functions_3_1": "Apasă aici pentru a edita funcţia nouă astfel încât să creze un pătrat."
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Click aici pentru a edita funcţia dumneavoastră."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Click aici pentru a edita funcţia dumneavoastră."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "Click aici pentru a deschide bara de instrumente \"Funcţii\", apoi faceţi clic pe butonul \"Creează o funcţie\"."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "Clic editare pentru a adăuga un parametru în funcția ta",
+          "add_and_drag_parameter": "Scrie numele parametrului tău aici, fă click pe \"adaugă\", iar apoi trage-l în definiția funcției tale"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Muta variabila length aici pentru a înlocui semnul de interogație"
+        },
+        "NEW Course 4 Bee For Loops 4": {
+          "bee_for_loop": "Introdu cel mai mare număr care să indice de câte ori doreşti ca albina să strângă polen de aici"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "Caseta de instrumente are acum un nou aspect! Blocurile \"Acţiuni\" sunt aici acum."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Extrage acest fier!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Extrage acest fier!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Extrage acest fier!"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Apasă aici pentru a vedea acest cod rulând!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Utilizaţi blocul \"crează un cerc\" şi modificaţi dimensiunea."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Folosește acest bloc și pune-l în jurul blocurilor gri în spațiul de lucru",
+          "repeat_blocks_2": "(2) Mută blocul ”Repetă” aici, și plasează blocurile gri în interior"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Utilizaţi blocul se repetă pentru a crea această formă."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Utilizaţi blocul se repetă pentru a crea această formă."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!"
+        },
+        "frozen line": {
+          "run": "Apasă \"Rulează\" pentru a încerca programul tău!",
+          "move_elsa_forward": "Trageţi un bloc de \"Mutare înainte\" şi fixaţi-l sub blocul \"Atunci când rulaţi\" pentru a o face pe Elsa să avanseze"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Utilizaţi blocul \"Întoarce\" pentru a o face pe Elsa să se întoarcă. Numărul din listă determină de câte ori se întoarce Elsa"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Utilizaţi blocul \"creaţi o ramură de fulg de Nea\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Ataşează aici mai multe blocuri pentru a crea un pătrat"
+        },
+        "frozen square loop": {
+          "replace_questions": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
+        }
+      }
+    }
+  }
+}

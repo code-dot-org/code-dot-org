@@ -201,6 +201,7 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
   before_validation :normalize_parent_email
@@ -395,8 +396,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-
-  has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -642,8 +641,9 @@ class User < ActiveRecord::Base
     nil
   end
 
-  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
-  validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
@@ -797,18 +797,42 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
+    # If the user is changing their password, then we should run all the password
+    # field verifications.
+    is_changing_password = password.present? || password_confirmation.present?
+    return true if is_changing_password
+
     # Password is not required if the user is not managing their own account
     # (i.e., someone is creating their account for them or the user is using OAuth).
     return false unless managing_own_credentials?
 
     # Password is required for:
-    # New users with no encrypted_password set and users changing their password.
-    new_without_password = !persisted? && encrypted_password.blank?
-    is_changing_password = password.present? || password_confirmation.present?
-    new_without_password || is_changing_password
+    # New users with no encrypted_password set
+    !persisted? && encrypted_password.blank?
   end
 
-  def email_required?
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+
+  # Determines if email is a required field for a teacher.
+  # Currently, we have some old teacher accounts which don't have an email
+  # address associated with them because it wasn't required when they were
+  # created. Those old accounts are allowed to skip the email validation.
+  def teacher_email_required?
+    # non-teachers are not relevant to this method.
+    return false unless teacher? && purged_at.nil?
+
+    # new teacher accounts should always require an email
+    return true unless created_at.present?
+
+    # existing accounts created after the email requirement must have an email.
+    # FND-1130: The created_at exception will no longer be required
+    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
+    # emails.
+    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
+  end
+
+  def email_or_hashed_email_required?
     return true if teacher?
     return false if manual?
     return false if sponsored?
@@ -1242,10 +1266,10 @@ class User < ActiveRecord::Base
     return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
-    course = script.try(:course)
-    return false unless course
+    unit_group = script.try(:unit_group)
+    return false unless unit_group
 
-    get_student_hidden_ids(course.id, false).include?(script.id)
+    get_student_hidden_ids(unit_group.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1263,10 +1287,10 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course = nil)
-    return [] if !teacher? && course.nil?
+  def get_hidden_script_ids(unit_group = nil)
+    return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1454,6 +1478,7 @@ class User < ActiveRecord::Base
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
       self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
+      return self
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
       return nil
@@ -1520,12 +1545,12 @@ class User < ActiveRecord::Base
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.course)
+    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1596,10 +1621,10 @@ class User < ActiveRecord::Base
     primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1631,7 +1656,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -1643,8 +1668,8 @@ class User < ActiveRecord::Base
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
-      elsif section.course.present?
-        all_scripts.concat(section.course.default_scripts)
+      elsif section.unit_group.present?
+        all_scripts.concat(section.unit_group.default_scripts)
       end
     end
 
@@ -1665,6 +1690,15 @@ class User < ActiveRecord::Base
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
+  end
+
+  def first_sign_in_date
+    sign_ins.find_by(sign_in_count: 1)&.sign_in_at
+  end
+
+  def days_since_first_sign_in
+    return nil if first_sign_in_date.nil?
+    (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
@@ -1711,11 +1745,12 @@ class User < ActiveRecord::Base
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
     new_level_completed = false
     new_csf_level_perfected = false
 
     user_level = nil
+    script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -1745,10 +1780,13 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
+      total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      user_level.time_spent = total_time_spent if total_time_spent
+
       user_level.atomic_save!
     end
 
-    if pairing_user_ids
+    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
@@ -1758,7 +1796,8 @@ class User < ActiveRecord::Base
           submitted: submitted,
           level_source_id: level_source_id,
           pairing_user_ids: nil,
-          is_navigator: true
+          is_navigator: true,
+          time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
@@ -1967,12 +2006,12 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
-  def stage_extras_enabled?(script)
-    return false unless script.stage_extras_available?
+  def lesson_extras_enabled?(script)
+    return false unless script.lesson_extras_available?
     return true if teacher?
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.stage_extras
+      section.script_id == script.id && section.lesson_extras
     end
   end
 
@@ -2236,7 +2275,7 @@ class User < ActiveRecord::Base
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)

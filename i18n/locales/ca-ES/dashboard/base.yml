@@ -254,6 +254,8 @@ ca:
       help_us: "Ajuda'ns"
       teach: "Ensenya"
       about: "Quant a"
+      legal_privacy: "Política de privadesa"
+      legal_tos: "Condicions d'ús"
     user:
       classroom: 'Pàgina d''inici de mestre'
       district_dashboard: 'Quadre de comandament de districte'
@@ -501,19 +503,6 @@ ca:
       title: "Condicionals"
     widgets:
       title: "Ginys"
-  gallery:
-    students_drew_these_with_code: "Els estudiants van dibuixar això amb codi!"
-    students_made_these_with_code: "Els estudiants van fer això amb codi!"
-    picture_count: "En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b> imatges escrivint els seus propis programes informàtics. Fes clic a les fotos per veure el programa en acció."
-    activity_count: "En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b> aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic a les fotos i captures de pantalla per veure el programa en acció."
-    want_to_make_your_own: "Vols fer el teu propi?"
-    more: "Més &rarr;"
-    caption_by_name_age: "per %{name}, %{age} anys"
-    caption_time_ago: "fa %{time_ago}"
-    header: "Galeria"
-    header_playlab: "Play Lab"
-    header_artist: "Artista"
-    report_abuse: "Denuncieu un abús"
   landing:
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"
@@ -619,25 +608,6 @@ ca:
           offensive: 'Contingut ofensiu'
           infringement: 'Infracció de copyright'
           other: 'Altres'
-  flex_category:
-    required: 'Vista general'
-    csf_digcit: 'Ciutadania digital'
-    csf_jigsaw: 'Puzzle'
-    csf_loops: 'Bucles'
-    csf_events: 'Esdeveniments'
-    csf_binary: 'Binari'
-    csf_conditionals: 'Condicionals'
-    csf_spritelab: 'Laboratori de personatges'
-    csf_nested_loops: 'Bucles imbricats'
-    csf_functions: 'Funcions'
-    csf_variables: 'Variables'
-    csf_for_loops: 'Per bucles'
-    csf_internet: 'Internet'
-    csp_variables: 'Variables'
-    csp_conditionals: 'Condicionals'
-    csp_functions: 'Funcions'
-    csp_lists: 'Llistes'
-    csp_loops: 'Bucles'
   hoc_download:
     minecraft_name: 'Hora del Codi de Minecraft'
   view_teacher_guide: 'Veure la guia docent'

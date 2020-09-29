@@ -222,6 +222,7 @@ fa:
       course_catalog: "سرفصل دوره‌ها"
       project_gallery: "پروژه ها"
       sections: "بخش‌ها"
+      report_bug: "گزارش مشکل"
       educate_hoc: "ساعت کد نویسی"
       educate_tools: "ابزار‌ها و فیلم‌ها"
       about_us: "درباره ما"
@@ -234,6 +235,8 @@ fa:
       help_us: "به ما کمک کنید"
       teach: "آموزش"
       about: "درباره"
+      legal_privacy: "قوانین حفظ حریم خصوصی"
+      legal_tos: "شرایط"
     user:
       classroom: 'صفحه اصلی معلم'
       district_dashboard: 'محدوده ی داشبورد'
@@ -488,19 +491,6 @@ fa:
       title: "شرطی ها"
     widgets:
       cta: "یادبگیر چگونه"
-  gallery:
-    students_drew_these_with_code: "دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!"
-    students_made_these_with_code: "دانش آموزان اینها را با کد ساخته اند !"
-    picture_count: "در <b>%{days}</b> روز گذشته، دانش‌آموزان با نوشتن برنامه‌های کامپیوتری خودشان <b>%{count}</b> تصویر رسم کرده‌اند. روی تصاویر کلیک کنید تا هر برنامه را در عمل ببینید."
-    activity_count: "در <b>%{days}</b> روز گذشته  <b>%{count}</b> دانش آموز برنامه ها و تصاویر را با نوشتن برنامه های کامپیوتری خود را ساخته اند. برای دیدن هر برنامه در عمل بر روی عکس و یا نمای هربرنامه کلیک کنید."
-    want_to_make_your_own: "می‌خواهی مال خودت را بسازی؟"
-    more: "بیشتر &rarr;"
-    caption_by_name_age: "توسط %{name} سن %{age}"
-    caption_time_ago: "%{time_ago} پیش"
-    header: "گالری"
-    header_playlab: "آزمایشگاه بازی"
-    header_artist: "هنرمند"
-    report_abuse: "گزارش سوء استفاده"
   landing:
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
@@ -633,26 +623,6 @@ fa:
       name: 'پذیرفته شد'
     rejected:
       name: 'رد شد'
-  flex_category:
-    required: 'بررسی اجمالی'
-    main_course: 'درس اصلی'
-    csf_digcit: 'شهروندی دیجیتالی'
-    csf_jigsaw: 'جورچین'
-    csf_loops: 'حلقه‌ها'
-    csf_events: 'رویدادها'
-    csf_online_safety: 'امنیت سایبری'
-    csf_binary: 'دو دویی'
-    csf_conditionals: 'شرطی ها'
-    csf_nested_loops: 'حلقه های تو در تو'
-    csf_functions: 'توابع'
-    csf_variables: 'متغیرها'
-    csf_for_loops: 'حلقه های "برای"'
-    csf_internet: 'اینترنت'
-    csp_variables: 'متغیرها'
-    csp_conditionals: 'شرطی ها'
-    csp_functions: 'توابع'
-    csp_lists: 'فهرست‌ها'
-    csp_loops: 'حلقه‌ها'
   hoc_download:
     minecraft_name: 'ساعتی با کد ماینکرفت'
     download_in_Catalan: 'دانلود Catalan:'
@@ -669,6 +639,7 @@ fa:
       last_name: 'نام خانوادگی'
       email: 'ایمیل'
       school_name: 'نام مدرسه'
+      colombian_school_name: 'نام مدرسه'
     form_entries:
       gender:
         male: 'مرد'

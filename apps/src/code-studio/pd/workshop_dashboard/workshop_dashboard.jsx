@@ -12,8 +12,6 @@ import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
 import Header from '../components/header';
-import SurveyResults from './survey_results.jsx';
-import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
 import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
@@ -104,16 +102,6 @@ export default class WorkshopDashboard extends React.Component {
               component={WorkshopFilter}
             />
             <Route
-              path="survey_results(/:workshopId)"
-              breadcrumbs="Survey Results"
-              component={SurveyResults}
-            />
-            <Route
-              path="organizer_survey_results(/:workshopId)"
-              breadcrumbs="Organizer Survey Results"
-              component={OrganizerSurveyResults}
-            />
-            <Route
               path="local_summer_workshop_survey_results(/:workshopId)"
               breadcrumbs="Local Summer Workshop Survey Results"
               component={LocalSummerWorkshopSurveyResults}
@@ -124,13 +112,13 @@ export default class WorkshopDashboard extends React.Component {
               component={DailySurveyResultsLoader}
             />
             <Route
-              path="daily_survey_results_foorm(/:workshopId)"
+              path="workshop_daily_survey_results(/:workshopId)"
               breadcrumbs="Survey Results"
               component={FoormDailySurveyResultsLoader}
             />
             <Route
               path="legacy_survey_summaries"
-              breadcrumbs="Legacy Survey Summaries"
+              breadcrumbs="Legacy Facilitator Survey Summaries"
               component={LegacySurveySummaries}
             />
             <Route

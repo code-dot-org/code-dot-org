@@ -1018,6 +1018,8 @@
   header_teach: "Predavaj"
   header_help_us: "Pomagaj nam"
   header_about: "O programu"
+  header_legal_privacy: "Izjava o zasebnosti"
+  header_legal_tos: "Pogoje storitve"
   user_header_label: "Živjo %{username}"
   user_header_team: "Ekipa"
   user_header_settings: "Moj račun"

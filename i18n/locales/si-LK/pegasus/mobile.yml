@@ -1216,6 +1216,8 @@
   header_project_gallery: "ව්යාපෘති"
   header_educate_hoc: "Hour of Code"
   header_stats: "සංඛ්‍යාන"
+  header_legal_privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
+  header_legal_tos: "සේවා නියම"
   user_header_label: "ආයුබෝවන් %{username}"
   user_header_team: "කණ්ඩායම"
   user_header_settings: "මගේ ගිණුම"

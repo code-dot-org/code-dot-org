@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -215,6 +215,13 @@ pt-BR:
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: Você deve especificar um e-mail de preferência.
+    parent_account_checkbox: Sou pai/responsável, atuando em nome do(a) meu(minha)
+      filho(a)
+    parent_account_email_progress_permission: Podemos enviar e-mails com atualizações
+      ocasionais sobre o progresso e os projetos do(a) seu(sua) filho(a), bem como
+      atualizações sobre seu curso e seus conhecimentos em informática? [(consulte
+      nossa política de privacidade)]%{privacy_policy_url})
+    parent_account_email_label: E-mail do Pai/Responsável
   school_info:
     title: Informações da escola (opcional)
     school_country: País da Escola
@@ -395,6 +402,8 @@ pt-BR:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
+      legal_privacy: Política de Privacidade
+      legal_tos: Termos de Serviço
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -543,8 +552,14 @@ pt-BR:
     auth_option_saved: Você vinculou sua conta %{provider} ao email %{email}.
     auth_option_saved_no_email: Você vinculou com êxito sua conta %{provider}.
     update_email: Atualizar
+    for_parents_and_guardians: Para os pais e responsáveis
+    link_a_parent_email: Associe um endereço de e-mail do pai/responsável a esta conta,
+      para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua)
+      filho(a). Você também poderá utilizar esse e-mail para recuperar sua senha.
     parent_guardian_email_label: E-mail dos responsáveis
     none: Nenhum
+    only_one_parent_email_supported_warning: 'Observação: somente um endereço de e-mail
+      do pai/responsável pode ser cadastrado para cada conta de estudante no momento.'
     encrypted: criptografado
   user_level:
     completed: Concluído
@@ -848,25 +863,6 @@ pt-BR:
         envolvendo um único conceito para suas aulas.
       audience: Maiores de 14 anos
       cta: Saiba como
-  gallery:
-    students_drew_these_with_code: Alunos criaram isso com programação!
-    students_made_these_with_code: Os alunos criaram isso com programação!
-    picture_count: Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b>
-      imagens desenvolvendo seus próprios programas de computador. Clique nas imagens
-      para ver cada programa em execução.
-    activity_count: Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b>
-      aplicativos e figuras escrevendo seus próprios programas de computador. Clique
-      nas figuras e capturas de tela para ver cada programa em funcionamento.
-    want_to_make_your_own: Quer criar seu próprio programa?
-    how_to_save: No último nível destes tutoriais, clique em "Concluir" e em "Salvar"
-      para salvar seu trabalho na galeria.
-    more: Mais &rarr;
-    caption_by_name_age: feito por %{name}, %{age} anos
-    caption_time_ago: há %{time_ago}
-    header: Galeria
-    header_playlab: Laboratório
-    header_artist: Artista
-    report_abuse: Reportar abuso
   landing:
     prerelease_tutorial: Esse tutorial está em **beta**. Ele ainda está sujeito a
       revisões, conforme são recebidos feedbacks e são feitas melhorias.
@@ -937,6 +933,8 @@ pt-BR:
     open_response_body: Obrigado pela sua resposta!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  lesson_extras:
+    bonus_level: Level Bonus
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?
@@ -1120,95 +1118,7 @@ pt-BR:
     instructor_feedback: Feedback do instrutor
     peer_feedback: Feedback de colegas
     outdated: Este feedback foi adicionado para uma versão enviada anteriormente
-  flex_category:
-    required: Visão geral
-    content: Conteúdo
-    practice: Práticas de ensino
     peer_review: Revisão em grupo
-    ramp_up: Treinamento
-    main_course: Curso Principal
-    extra_course_content: Conteúdo do curso extra
-    csf_e_1: Treinamento até Curso E (Opcional)
-    csf_e_2: Conteúdo do curso E
-    csf_f_1: Treinamento até Curso F (Opcional)
-    csf_f_2: Conteúdo do curso F
-    csf_digcit: Cidadania digital
-    csf_jigsaw: Quebra-cabeça
-    csf_sequencing: Sequenciamento
-    csf_loops: laços
-    csf_events: Eventos
-    csf_online_safety: Segurança Online
-    csf_binary: Binário
-    csf_conditionals: Condições
-    csf_sprites: Sprite
-    csf_spritelab: Laboratório de Sprite
-    csf_nested_loops: Laços aninhados
-    csf_functions: funções
-    csf_variables: variáveis
-    csf_for_loops: Laços para
-    csf_internet: Internet
-    csf_impacts: Impacto da computação
-    csf_warmup: Aquecimento
-    csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
-    csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
-    csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
-    csd2_2: 'Capítulo 2: Estilo e CSS'
-    csd3_1: 'Capítulo 1: Imagens e Amimações'
-    csd3_2: 'Capítulo 2: Construindo Jogos'
-    csd4_1: 'Capítulo 1: Desenho orientado ao usuário'
-    csd4_2: 'Capítulo 1: Prototipando o App'
-    csd5_1: 'Capítulo 1: Representando Informação'
-    csd5_2: 'Capítulo 2: Resolvendo problemas de dados'
-    csd6_1: 'Capítulo 1: Programando com Hardware'
-    csd6_2: 'Capítulo 2: Construindo protótipos físicos'
-    csd_survey: Pesquisa Pós-Curso
-    csp1_1: 'Capítulo 1: Representando e Transmitindo Informação'
-    csp1_2: 'Capítulo 2: Inventando a Internet'
-    csp2_1: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
-    csp2_2: 'Capítulo 2: Manipulando e Visualizando Dados'
-    csp3_1: 'Capítulo 1: Programando Linguagens e Algoritmos'
-    csp4_1: 'Capítulo 1: O mundo do "Big Data" e criptografia'
-    csp5_1: 'Capítulo 1: Programação orientada a eventos'
-    csp5_2: 'Capítulo 2: Programando com Estruturas de Dados'
-    cspSurvey: Questionário
-    cspAssessment: Avaliação do Capítulo
-    csp_ap_1: 'Capítulo 1: Configuração do AP Tech'
-    csp_ap_2: 'Capítulo 2: Tarefa de Exploração de Performance AP'
-    csp_ap_3: 'Capítulo 3: Tarefa de Criação de Performance AP'
-    csp_postap_1: 'Capítulo 1: Manipulando e Visualizando Dados'
-    csp_postap_2: 'Capítulo 2: Aplicativos e Bancos de Dados'
-    csp2_1_2018: 'Unidade 2: Informação Digital'
-    csp3_1_2018: 'Unidade 3: Introdução à Programação'
-    csp4_1_2018: 'Unit 4: Big Data e Privacy'
-    csp_variables: variáveis
-    csp_conditionals: Condições
-    csp_functions: funções
-    csp_project: Projeto
-    csp_lists: Listas
-    csp_loops: laços
-    csp_traversals: Traversais
-    csp_libraries: Bibliotecas
-    csp_parameters_return_values: Parâmetros e valores de retorno
-    csp_unit1_2020: 'Unidade 1: Informação digital'
-    csp_unit2_2020: 'Unidade 2: A internet'
-    csp_unit3_2020: 'Unidade 3: Introdução ao design de aplicativos'
-    csp_unit6_2020: 'Unidade 6: Algoritmos'
-    csp_unit8_2020: 'Unidade 8: Preparação para o Create PT'
-    csp_unit9_2020: 'Unidade 9: Dados'
-    csp_unit10_2020: 'Unidade 10: Segurança cibernética e impactos globais'
-    dlp: Prompts de reflexão
-    time4cs_c1: Everglades e seus ecossistemas
-    time4cs_c2: Cadeias de comida em Everglades
-    time4cs_c3: Viver em Everglades
-    time4cs_c4: Impactos Invasivos em Everglades
-    time4cs_c5: Cidadãos influenciam as mudanças em Everglades
-    time4cs_c6: Condicionais (revisão)
-    k5_getting_started: Iniciando
-    k5_csf_intro: Conheça os cursos de Conceitos básicos da Ciência da Computação
-    k5_coding_concepts: Conceitos de codificação e estratégias de ensino
-    k5_next_steps: Próximas etapas
-    k5_basic_concepts: Conceitos Básicos de Programação e Prática de Ensino
-    k5_diving_deeper: 'Aprofundamento: Cursos E e F'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é
@@ -1311,6 +1221,8 @@ pt-BR:
       school_name: Nome da escola
       school_city: Cidade da Escola
       school_country: País da Escola
+      colombian_school_city: Cidade da Escola
+      colombian_school_name: Nome da escola
       ages: Qual idade(s) você ensina este ano?
       subjects: Qual(is) disciplina(s) você ensina este ano?
       resources: Quais dos seguintes recursos de educação de Ciência da Computação
@@ -1462,3 +1374,8 @@ pt-BR:
         com o Google.
       error_invalid_user: Identificação de usuário inválida. Tente fazer login novamente.
       error_no_code: Digite seu código de login.
+  parent_email_banner:
+    text: "**Você é pai ou responsável?** Associe seu e-mail a esta conta para se
+      manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
+    link_your_email: Associe seu e-mail
+    not_now: Agora não

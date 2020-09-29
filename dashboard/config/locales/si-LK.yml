@@ -224,6 +224,8 @@ si:
       project_gallery: ව්යාපෘති
       educate_hoc: Hour of Code
       stats: සංඛ්‍යාන
+      legal_privacy: රහස්‍යතා ප්‍රතිපත්තිය
+      legal_tos: සේවා නියම
     user:
       classroom: ගුරු මුල් පිටුව
       district_dashboard: දිස්ත්‍රික්ක උපකරණ පුවරුව
@@ -546,24 +548,6 @@ si:
       title: කන්ඩිෂනලස්
     widgets:
       cta: කෙසේදැයි දැනගන්න
-  gallery:
-    students_drew_these_with_code: සිසුන් මේවා ඇන්දේ කේත මගිනි!
-    students_made_these_with_code: සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!
-    picture_count: පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය කිරීමෙන්
-      චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත ක්ලික් කරන්න.
-    activity_count: "අතීතයේ, <b>%{days}</b>  , සිසුන් apps සහ පින්තුර <b>%{count}</b>
-      නිමානය කරේ ඔවුන්ගේම \nපරිගණක වැඩසටහන්, එක් එක් වැඩසටහන බැලීමට පින්තූර සහ තිරපිටපත්
-      මත ක්ලික් කරන්න."
-    want_to_make_your_own: ඔබේම නිර්මාණයක් හදමු ද?
-    how_to_save: 'මෙම නිබන්ධන අවසන් මට්ටම වලදී , ගැලරිය හි  ගබඩා කිරීම සදහා "අවසානයි"
-      සහ "සුරකින්න" බොත්තම් මත ඔබන්න '
-    more: තව &rarr;
-    caption_by_name_age: "%{name} විසින්, වයස %{age}"
-    caption_time_ago: "%{time_ago} පෙර"
-    header: ගැලරිය
-    header_playlab: කථා සහ ක්‍රීඩා
-    header_artist: කේත කලාව
-    report_abuse: අනිසි භාවිතයක් වාර්තා කරන්න
   landing:
     report_bug: දෝෂය වාර්තා කරන්න
     support: උපකාර ලබාගන්න
@@ -778,32 +762,7 @@ si:
     outdated: කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී
     review_in_progress: සමාලෝචනයට සූදානම්
     review_new_submission: අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න
-  flex_category:
-    required: දළ විශ්ලේෂණය
-    content: අන්තර්ගතය
-    practice: ඉගැන්වීමේ පිළිවෙත්
     peer_review: සමූහ විමර්ශනය
-    csf_digcit: ඩිජිටල් පුරවැසිකම
-    csf_jigsaw: පින්තූර ප්‍රෙහේලිකාව
-    csf_loops: ලූපයන්
-    csf_events: වැඩසටහන්
-    csf_binary: ද්විමය
-    csf_data: දත්ත
-    csf_conditionals: කන්ඩිෂනලස්
-    csf_nested_loops: නැවත නැවත සිදුවන ලුප
-    csf_functions: ශ්‍රිතයන්
-    csf_variables: විචල්‍යන්
-    csf_for_loops: ලූපයන් සඳහා
-    csf_internet: අන්තර්ජාලය
-    csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
-    csp4_1_2018: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
-    csp_variables: විචල්‍යන්
-    csp_conditionals: කන්ඩිෂනලස්
-    csp_functions: ශ්‍රිතයන්
-    csp_lists: ලැයිස්තු
-    csp_loops: ලූපයන්
-    csp_unit1_2020: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-    k5_next_steps: ඉදිරි පියවර
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.

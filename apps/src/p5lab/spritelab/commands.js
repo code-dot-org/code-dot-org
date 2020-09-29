@@ -21,6 +21,8 @@ function drawBackground() {
 
 function updateTitle() {
   this.fill('black');
+  this.stroke('white');
+  this.strokeWeight(3);
   this.textAlign(this.CENTER, this.CENTER);
   this.textSize(50);
   this.text(coreLibrary.title, 0, 0, 400, 200);
@@ -47,6 +49,10 @@ export const commands = {
 
   edgesDisplace(spriteArg) {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
+  },
+
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
   },
 
   isTouchingEdges(spriteArg) {
@@ -115,6 +121,10 @@ export const commands = {
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
@@ -132,6 +142,10 @@ export const commands = {
     return locationCommands.locationAt(x, y);
   },
 
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
+  },
+
   locationMouse() {
     return locationCommands.locationMouse.apply(this);
   },
@@ -144,9 +158,24 @@ export const commands = {
     return locationCommands.randomLocation();
   },
 
+  // Math commands
+  cos(angleDegrees) {
+    if (angleDegrees === undefined) {
+      angleDegrees = 0;
+    }
+    return parseFloat(Math.cos((angleDegrees * Math.PI) / 180).toFixed(4));
+  },
+
+  sin(angleDegrees) {
+    if (angleDegrees === undefined) {
+      angleDegrees = 0;
+    }
+    return parseFloat(Math.sin((angleDegrees * Math.PI) / 180).toFixed(4));
+  },
+
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {
@@ -177,6 +206,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },
@@ -184,6 +221,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {

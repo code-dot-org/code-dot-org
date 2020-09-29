@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This syncs content changes from the shared dropbox folder to our github repo
 # on the staging machine. This is required for contents changes from dropbox to
@@ -6,11 +8,10 @@
 
 SCRIPT_START = Time.now
 
-require_relative "../../lib/cdo/only_one"
 require_relative "../../deployment"
 require "cdo/slack"
+require "cdo/high_frequency_reporter"
 require "open3"
-exit unless only_one_running?(__FILE__)
 
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",
@@ -32,27 +33,36 @@ FOLDERS = {
 }.freeze
 
 INTERVAL_SECONDS = 5
-TOTAL_SECONDS = 60 - INTERVAL_SECONDS
-error_message = ""
-alert_slack = true
+TOTAL_SECONDS = 55 - INTERVAL_SECONDS
+
+logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', '/home/ubuntu/dropbox_sync_error_log.csv')
+logger.load # load errors from most recent sync
+
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   attempt_start = Time.now
+  logger.reset_new_events # reset new events such that they represent one run through all FOLDERS
   FOLDERS.each do |key, value|
     # 'unison' will sync the two folders. It will return true on success and false on failure.
     # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
     command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
     stdout, stderr, _ = Open3.capture3(command)
-    if stdout != "" || stderr != ""
-      error_message = "#{error_message}Dropbox directory: #{key}. staging directory: #{value}. \n#{stdout}#{stderr}\n"
-    end
+    next if stdout == "" && stderr == ""
+    error_message = <<~ERROR_MSG
+                      <!here> Error syncing Dropbox and staging
+                      Dropbox directory: #{key}
+                      pegasus directory: #{value}
+                      stdout: #{stdout}
+                      stderr: #{stderr}
+                    ERROR_MSG
+    logger.record error_message
   end
   current_time = Time.now
-  if alert_slack && error_message != ""
-    Slack.message("@here Error syncing Dropbox and staging\n" + error_message, {channel: "sync-dropbox-staging"})
-    alert_slack = false
-  end
+  logger.save
   while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
     sleep 0.1
     current_time = Time.now
   end
 end
+
+# Reports to Slack if current minute is a multiple of 5
+logger.report! 5

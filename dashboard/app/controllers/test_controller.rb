@@ -18,8 +18,8 @@ class TestController < ApplicationController
 
   def enroll_in_plc_course
     return unless (user = current_user)
-    course = Course.find_by(name: 'All The PLC Things')
-    enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course.plc_course)
+    unit_group = UnitGroup.find_by(name: 'All The PLC Things')
+    enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: unit_group.plc_course)
     enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
     head :ok
   end

@@ -83,9 +83,6 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
@@ -104,9 +101,6 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
@@ -139,7 +133,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_doMoveEachLR:
-        text: "{GROUP} do {MOVE} {DIR} once"
+        text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -178,9 +172,6 @@ ta:
             MOVES.XArmsUp: நீட்டவும்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
@@ -209,9 +200,6 @@ ta:
             MOVES.XArmsUp: நீட்டவும்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
         options:
@@ -284,7 +272,7 @@ ta:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
@@ -358,6 +346,7 @@ ta:
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
             '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
@@ -385,6 +374,7 @@ ta:
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
             '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
@@ -895,6 +885,10 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
       gamelab_changePropBy:
         text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
@@ -915,8 +909,45 @@ ta:
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
+            '"space"': வெளி
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:

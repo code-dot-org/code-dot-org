@@ -136,6 +136,7 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Sesiapa pun boleh belajar. Mulakan hari ini"
   homepage_slot_text_link_hoc: "Cuba Hour of Code"
+  homepage_slot_text_blurb_students: "Jelajahi semua tutorial kami"
   homepage_slot_text_link_codestudio: "Cuba Code Studio"
   homepage_slot_text_link_local: "Cari kelas tempatan"
   homepage_slot_text_link_othercourses: "Lain-lain kursus dalam talian"
@@ -379,6 +380,8 @@
   header_about: "Tentang"
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: "Laporkan masalah"
+  header_legal_privacy: "Dasar Privasi"
+  header_legal_tos: "Terma Perkhidmatan"
   user_header_label: "Hi %{username}"
   user_header_settings: "Akaun saya"
   user_header_logout: "Daftar keluar"

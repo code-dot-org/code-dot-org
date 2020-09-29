@@ -281,6 +281,8 @@ sq:
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       project_gallery: Projekte
       educate_hoc: Ora e Kodimit
+      legal_privacy: Rregullat e Privatësisë
+      legal_tos: Kushtet e shërbimit
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -606,25 +608,6 @@ sq:
       title: Kushtet
     widgets:
       cta: 'Mëso si '
-  gallery:
-    students_drew_these_with_code: Studentët vizatuan këto me kod!
-    students_made_these_with_code: Studentët e bënë këtë me kod!
-    picture_count: Në këto <b>%{days}</b> ditë, studentët kanë vizatuar <b>%{count}</b>
-      piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të
-      parë çdo program që funksionon.
-    activity_count: Në këto <b>%{days}</b> ditë, studentët kanë bërë <b>%{count}</b>
-      apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në
-      pikturat dhe screenshotet për të parë çdo program që funksionon.
-    want_to_make_your_own: Dëshiron të bësh tëndin?
-    how_to_save: Në nivelin e fundit të këtyre mësime, kliko "Finish" dhe "Save" për
-      të ruajtur punën tuaj në galeri.
-    more: Më shumë &rarr;
-    caption_by_name_age: nga %{name}, mosha %{age}
-    caption_time_ago: "%{time_ago} më përpara"
-    header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artisti
-    report_abuse: Raporto abuzimin
   landing:
     report_bug: Raportoni një problem
     support: Merr Ndihmë
@@ -853,29 +836,7 @@ sq:
     instructor_feedback: Instruktor i Përgjigjes
     peer_feedback: Reagim i ndërsjelltë
     outdated: Ky reagim është shtuar për një version të dorëzuar më parë
-  flex_category:
-    required: Përmbledhja
-    content: Përmbajtja
-    practice: Praktikat mësimore
     peer_review: Rishikimi i ndërsjellë
-    csf_digcit: Shtetësi Dixhitale
-    csf_jigsaw: Jigsaw
-    csf_loops: 'cikle '
-    csf_events: Ngjarje
-    csf_binary: Binare
-    csf_data: të dhëna
-    csf_conditionals: Kushtet
-    csf_nested_loops: Përsëritjet e Mbivendosura
-    csf_functions: funksione
-    csf_variables: variabla
-    csf_for_loops: Për Ciklet
-    csf_internet: Internet
-    csp_variables: variabla
-    csp_conditionals: Kushtet
-    csp_functions: funksione
-    csp_lists: Listat
-    csp_loops: 'cikle '
-    k5_next_steps: Hapat e ardhshme
   external_links:
     disclaimer: Mohim
     leaving_domain: Ju tani jeni duke e lënë këtë domain, në një vend që nuk është
@@ -919,6 +880,7 @@ sq:
       email: Email
       school_name: Emri i shkollës
       school_country: Qyteti i shkollës
+      colombian_school_name: Emri i shkollës
     form_entries:
       gender:
         male: Mashkull

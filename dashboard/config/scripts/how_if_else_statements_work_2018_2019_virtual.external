@@ -1,4 +1,5 @@
 name 'How If-Else Statements Work_2018_2019_virtual'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -46,39 +47,4 @@ The <code>if</code> statement and Boolean expression are also the same as before
 <span style="color: #00adbc; font-size: 150%">3.</span> With an <code>if-else</code> statement you are guaranteeing that exactly one of these two sections of code <strong>will</strong> execute.  If the condition is <em>true</em> (age is 18 or greater) then the lines of code inside the if-statement's curly braces are executed. If the condition is <em>false</em> it jumps to the else clause and executes any lines of code it finds between the else clause's curly braces.
 
 <span style="color: #00adbc; font-size: 150%">4.</span> Finally the program picks up normal execution directly after the <code>if-else</code> block. At this point in the program, we know that <em>either</em> the code in the if-block <em>or</em> the else block has executed.
-
-## Optional: What if you wanted to type the code instead of using blocks?
-<img src="https://images.code.org/d873962609e99f821249fde2007ca1bb-image-1479494721725.gif" style="float: right; margin-left: 10px">
-
-You can always type any of the code we compose in blocks.  Here is an animation showing a programmer adding an `else` clause to an if-statement. Notice that you can freely go back and forth between blocks and text. With text you also have a bit more leeway with formating.  
-
-**In JavaScript, spaces and line breaks are the treated the same - 1 space is the same as 2 or 10 or 20**.  
-
-There are certain stylistic conventions that programmers can get in heated arguments about, but there actually are no rules about style that will make your code run any differently.  JavaScript looks for keywords, parentheses, curly braces and so on, but ignores extra spaces.
-
-You usually use white space to make your code more readable.  
-
-Here are some examples of the exact same program, but formatted differently.  They all work and run the same.
-
-<img src="https://images.code.org/541d98fcb419eedb0920603509a63719-image-1479495748314.png" style="float: left; margin-right: 20px">
-<br><br>
-<span style="color: #00adbc; font-size: 150%">1.</span>
-This is the format that is used by the block-based version of code in app lab.  It's trying to save on space because the blocks take up a lot of space on their own.
-
-<div style="clear: both">&nbsp;</div>
-
-<img src="https://images.code.org/dae61cab9a0c71fa0d9b6e819873a2b8-image-1479495762083.png" style="float: left; margin-right: 20px">
-<br><br>
-<span style="color: #00adbc; font-size: 150%">2.</span>
-Here is the formatting that's similar to the <i>AP</i> pseudocode with <code>if</code>, <code>else</code>, and all of the curly braces, each on their own line. This is a perfectly valid way to format code as well.
-
-<div style="clear: both">&nbsp;</div>
-
-<img src="https://images.code.org/8ba7bfba9d18534f07f2c83801817cdf-image-1479495773146.png" style="float: left; margin-right: 20px">
-<br><br>
-<span style="color: #00adbc; font-size: 150%">3.</span>
-Here, the programmer used line breaks to add some white space for readability. People sometimes use blank lines to separate portions of a program so that lines of code that are visually clumped together are related to each other in some way.
-
-<div style="clear: both">&nbsp;</div>
-
 MARKDOWN

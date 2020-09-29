@@ -976,6 +976,14 @@ zh-TW:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: 在 {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': 秒
+            '"frames"': 頁框
+      gamelab_bounceOff:
+        text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
         text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
@@ -997,6 +1005,8 @@ zh-TW:
         text: 點擊 {SPRITE}
       gamelab_comment:
         text: 註解：{COMMENT}
+      gamelab_countByAnimation:
+        text: "{SPRITE} 個"
       gamelab_createNewSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
@@ -1007,6 +1017,8 @@ zh-TW:
         text: 可拖曳
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_getAllSprites:
+        text: 所有小怪
       gamelab_getProp:
         text: 角色 {SPRITE} 的 {PROPERTY}
         options:
@@ -1023,10 +1035,53 @@ zh-TW:
           CHOICE:
             '"this"': 這個
             '"other"': 其它
+      gamelab_getTime:
+        text: 在 {UNIT} 時間內
+        options:
+          UNIT:
+            '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
+      gamelab_isKeyPressed:
+        text: 按下 {KEY}  鍵
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': " 向左"
+            '"right"': 向右
+            '"space"': 太空
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: 角色 {SPRITE} 碰到邊緣？
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} 正在碰觸 {TARGET}"
       gamelab_jumpTo:
         text: 角色 {SPRITE} 定位到 {LOCATION}
       gamelab_keyPressed:
@@ -1069,6 +1124,14 @@ zh-TW:
             '"z"': z
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: 在 {LOCATION} 往{DIRECTION} 方向的 {DISTANCE} 像素
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 東
+            '"South"': 南
+            '"West"': 西
       gamelab_locationMouse:
         text: 鼠標位置
       gamelab_locationOf:
@@ -1077,6 +1140,8 @@ zh-TW:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      gamelab_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1085,6 +1150,8 @@ zh-TW:
             '"left"': " 向左"
       gamelab_mouseLocation:
         text: 鼠標位置
+      gamelab_moveBackward:
+        text: 角色 {SPRITE} 向後移動 {DISTANCE} 像素
       gamelab_moveForward:
         text: 角色 {SPRITE} 向前移動 {DISTANCE} 像素
       gamelab_moveInDirection:
@@ -1097,6 +1164,10 @@ zh-TW:
             '"West"': 西
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
+      gamelab_objectSpritePointer:
+        text: 物件 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: 到處巡邏
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:
@@ -1192,12 +1263,18 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_subjectSpritePointer:
+        text: 點擊 {SPRITE}
+      gamelab_tumbling:
+        text: 翻滾
       gamelab_turn:
         text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': " 向左"
+      gamelab_updateTitleWithColor:
+        text: 標題畫面顯示 {BREAK} 標題 {TITLE} 顏色 {COLOR}
       gamelab_whenDownArrow:
         text: 當向下鍵被按下
       gamelab_whenKey:
@@ -1645,9 +1722,16 @@ zh-TW:
       aalab_setupStory:
         text: 設定故事
       aalab_starwars_playSound:
+        text: 播放{OPTION}聲音
         options:
           OPTION:
             '"random"': 隨機
+            '"R2-D2 random"': R2-D2 隨機
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:

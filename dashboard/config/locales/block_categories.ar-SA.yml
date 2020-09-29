@@ -8,7 +8,9 @@ ar:
       Brushes: فرش
       Color: اللون
       Comment: تعليق
-      Comments: تعليقات
+      Comments: 'تعليقات
+
+'
       Conditionals: الجمل الشرطية
       Dancers: الراقصون
       Default: الافتراضي
@@ -16,15 +18,25 @@ ar:
       Functions: دوال
       'Functions ': 'الدوال '
       Game/Score: لعبة/نقطة
-      Games/Score: ألعاب/نقطة
-      Groups: المجموعات
+      Games/Score: 'ألعاب/نقطة
+
+'
+      Groups: 'مجموعات
+
+'
+      Input: الإدخال
       Locations: مواقع
       Logic: المنطق
       Loops: الحلقات
       Math: العمليات الحسابية
       Numbers: أرقام
-      Properties: عقارات
+      Properties: 'خصائص
+
+'
+      Sprites: النقوش المتحركة
       Text: النص
       Variables: المتغيرات
-      'Variables ': 'المتغيرات '
+      'Variables ': 'المتغيرات
+
+'
       World: العالم

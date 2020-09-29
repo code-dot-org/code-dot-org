@@ -2,6 +2,7 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+require 'active_support/inflector'
 require 'cdo/redshift'
 self.tags.push key: 'environment', value: rack_env
 -%>
@@ -23,9 +24,9 @@ Parameters:
     NoEcho: true
   RDSHost:
     Type: String
-  AuroraClone:
+  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
+  RDSClusterEndpointRootDomain:
     Type: String
-    Default: <%= RedshiftImport::CLONE_CLUSTER_ID %>
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -48,7 +49,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
-      AutomatedSnapshotRetentionPeriod: 1
+      AutomatedSnapshotRetentionPeriod: 5
       ClusterParameterGroupName: default.redshift-1.0
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
@@ -90,7 +91,9 @@ Resources:
       EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
-      ServerName: !Ref AuroraClone
+      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
+      # endpoints API to get this server name.
+      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
@@ -193,42 +196,16 @@ Resources:
                   - 's3:ListBucket'
                 Resource: 'arn:aws:s3:::cdo-activities-archive'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
-  PrimaryDBParameters:
-    Type: AWS::RDS::DBParameterGroup
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
     Properties:
-      Description: !Sub "Primary Database Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['Primary'].compact.to_json %>
-  ReportingDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Reporting Read Replica DB Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['Replica'].compact.to_json %>
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraCluster'].compact.to_json %>
-  AuroraReportingClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora Reporting DB Cluster Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingCluster'].compact.to_json %>
-  AuroraWriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Writer Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraWriter'].compact.to_json %>
-  AuroraReportingReplicaDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Reporting Replica Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingReplica'].compact.to_json %>
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
+      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5

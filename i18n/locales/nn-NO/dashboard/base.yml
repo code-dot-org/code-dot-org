@@ -342,6 +342,8 @@ nn:
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Personvern"
+      legal_tos: "Vilkår"
     user:
       classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'
@@ -682,20 +684,6 @@ nn:
       body: "Studentar kan utforske konsept fra informatikkursa våre sjølv ved å bruke desse digitale verktøya. Bruk modulane for seg sjølv, eller lag ei enkeltkonseptøkt for klassen din."
       audience: "Alder 14+"
       cta: "Lær korleis"
-  gallery:
-    students_drew_these_with_code: "Elevar teikna desse ved å kode!"
-    students_made_these_with_code: "Elever laga desse ved å kode!"
-    picture_count: "I løpet av dei siste <b>%{days}</b> dagane har elevar teikna <b>%{count}</b> bilder ved å skrive sine eigne dataprogram. Klikk på bilda for å sjå kvart program køyre."
-    activity_count: "De siste <b>%{days}</b> dagane har elevar laga <b>%{count}</b> apps og bilder ved å skrive sine egne program. Klikk på bilda og skjermbilda for å sjå kvart program i aksjon."
-    want_to_make_your_own: "Vil du lage din eigen?"
-    how_to_save: "På siste nivå i desse rettleiingane, klikkar du \"Avslutt\" og \"Lagre\" for å lagre ditt arbeid for galleriet."
-    more: "Fleire &rarr;"
-    caption_by_name_age: "av %{name}, %{age} år"
-    caption_time_ago: "%{time_ago} sidan"
-    header: "Galleri"
-    header_playlab: "Historier og spel"
-    header_artist: "Kunstnar"
-    report_abuse: "Rapporter misbruk"
   landing:
     prerelease_tutorial: "Denne leksjonen er i **beta**.  Den kan bli endra etter kvart som vi mottek tilbakemeldingar og gjer forbetringar."
     report_bug: "Rapporter feil"
@@ -879,85 +867,7 @@ nn:
     instructor_feedback: 'Tilbakemelding frå instruktør'
     peer_feedback: 'Tilbakemelding frå annan elev'
     outdated: 'Denne tilbakemelding er gitt på eit tidlegare bidrag'
-  flex_category:
-    required: 'Oversyn'
-    content: 'Innhald'
-    practice: 'Undervisningspraksis'
     peer_review: 'Gjennomgang av annan elev'
-    ramp_up: 'Oppgrader'
-    main_course: 'Hovedkurs'
-    extra_course_content: 'Ekstra kursinnhald'
-    csf_e_1: 'Oppgrader til Kurs E (valfritt)'
-    csf_e_2: 'Kursinnhald E'
-    csf_f_1: 'Oppgrader til Kurs F (valfritt)'
-    csf_f_2: 'Kursinnhald F'
-    csf_digcit: 'Digitalt statsborgerskap'
-    csf_jigsaw: 'Puslespill'
-    csf_sequencing: 'Sekvensiering'
-    csf_loops: 'Løkker'
-    csf_events: 'Hendingar'
-    csf_online_safety: 'Nettsikkerhet'
-    csf_binary: 'Binær'
-    csf_conditionals: 'Betingelser'
-    csf_nested_loops: 'Løkker i løkke'
-    csf_functions: 'Funksjonar'
-    csf_variables: 'Variablar'
-    csf_for_loops: 'For-løkker'
-    csf_internet: 'Internett'
-    csf_warmup: 'Oppvarming'
-    csd1_1: 'Kapittel 1: Problemløsingsprosessen'
-    csd1_2: 'Kapittel 2: Datamaskiner og problemløsing'
-    csd2_1: 'Kapittel 1: Nettinnhald og HTML'
-    csd2_2: 'Kapittel 2: Styling og CSS'
-    csd3_1: 'Kapittel 1: Bilder og animasjonar'
-    csd3_2: 'Kapittel 2: Bygge spel'
-    csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: Prototyping av app'
-    csd5_1: 'Kapittel 1: Representere informasjon'
-    csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Programmering med maskinvare'
-    csd6_2: 'Kapittel 2: Bygge fysiske prototypar'
-    csd_survey: 'Undersøking etter kurs'
-    csp1_1: 'Kapittel 1: Representere og formidle informasjon'
-    csp1_2: 'Kapittel 2: Finne opp Internett'
-    csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
-    csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmar'
-    csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Hendingdriven programmering'
-    csp5_2: 'Kapittel 2: Programmering med datastrukturar'
-    cspSurvey: 'Undersøking'
-    cspAssessment: 'Vurdering av kapittel'
-    csp_ap_1: 'Kapittel 1: AP Tech oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgåve'
-    csp_postap_1: 'Kapittel 1: Manipulere og visualisere data'
-    csp_postap_2: 'Kapittel 2: Appar og databasar'
-    csp2_1_2018: 'Eining 2: Digital informasjon'
-    csp3_1_2018: 'Eining 3: Introduksjon til programmering'
-    csp4_1_2018: 'Eining 4: Big data og personvern'
-    csp_variables: 'Variablar'
-    csp_conditionals: 'Betingelser'
-    csp_functions: 'Funksjonar'
-    csp_project: 'Prosjekt'
-    csp_lists: 'Lister'
-    csp_loops: 'Løkker'
-    csp_traversals: 'Traversaler'
-    csp_libraries: 'Bibliotek'
-    csp_parameters_return_values: 'Parameter og returverdiar'
-    csp_unit1_2020: '(gammel) Eining 1: Digital informasjon'
-    dlp: 'Spørsmål til refleksjon'
-    time4cs_c1: 'Samling 1: Everglades og økosystemet'
-    time4cs_c2: 'Samling 2: Matkjeder (i Everglades)'
-    time4cs_c3: 'Samling 3: Innfødte artar (i Everglades)'
-    time4cs_c4: 'Samling 4: Påverknad frå innvaderande artar (i Everglades)'
-    time4cs_c5: 'Samling 5: Innbyggarar tar grep'
-    time4cs_c6: 'Betingelsar (gjennomgang)'
-    k5_csf_intro: 'Bli kjent med kursa i CS Fundamentals'
-    k5_coding_concepts: 'Kodekonsept og lærestrategiar'
-    k5_next_steps: 'Neste steg'
-    k5_basic_concepts: 'Grunnleggande kodekonsept og lærestrategiar'
-    k5_diving_deeper: 'Djupdykk: Kurs E og F'
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt av Code.org.
@@ -1036,6 +946,8 @@ nn:
       school_name: 'Namn på skule'
       school_city: 'Skulen sin poststad'
       school_country: 'Landet til skulen'
+      colombian_school_city: 'Skulen sin poststad'
+      colombian_school_name: 'Namn på skule'
       ages: 'Kva alder underviser du dette året?'
       subjects: 'Kva fag underviser du dette året?'
       resources: 'Kva for følgjande utdanningsressursar i CS nyttar du?'

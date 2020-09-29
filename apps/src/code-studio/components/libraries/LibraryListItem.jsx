@@ -24,6 +24,7 @@ const styles = {
   libraryTitle: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
+    cursor: 'pointer',
     color: color.link_color,
     ':hover': {
       color: color.link_color
@@ -157,8 +158,9 @@ export class LibraryListItem extends React.Component {
             >
               <button
                 type="button"
+                className="ui-test-remove-library"
                 key={'remove-' + library.id}
-                onClick={() => this.props.onRemove(library.name)}
+                onClick={() => this.props.onRemove(library.channelId)}
                 style={[styles.actionBtn, styles.removeBtn]}
                 disabled={!!library.fromLevelbuilder}
               >

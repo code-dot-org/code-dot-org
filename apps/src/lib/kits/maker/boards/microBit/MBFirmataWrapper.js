@@ -1,9 +1,20 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
+import {SAMPLE_INTERVAL} from './MicroBitConstants';
+
+export const ACCEL_EVENT_ID = 27;
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
     super(SerialPort);
     this.digitalCallbacks = [];
+  }
+
+  connectBoard() {
+    return Promise.resolve()
+      .then(() => this.connect())
+      .then(() => {
+        return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
+      });
   }
 
   setPinMode(pin, mode) {

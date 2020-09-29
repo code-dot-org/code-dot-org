@@ -8,59 +8,113 @@ mr:
           description: ईव्हेंट्स
           description_short: ईव्हेंट्स
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: ईव्हेंट्स
         grade1:
-          stages:
+          lessons:
             Events:
               name: ईव्हेंट्स
         k5concepts:
-          stages:
+          lessons:
             Events:
               name: ईव्हेंट्स
         dance:
-          stages:
+          title: डांस पार्टी
+          lessons:
             Dance Party:
               name: डांस पार्टी
-          title: डांस पार्टी
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+          lessons:
             Dance Party:
               name: डांस पार्टी
         express-2019:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         dance-2019:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Events:
               name: ईव्हेंट्स
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         coursed-2020:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+          lessons:
             Dance Party:
               name: डांस पार्टी
         express-2020:
-          stages:
+          lessons:
             Dance Party:
               name: डांस पार्टी
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         code-break:
-          stages:
+          lessons:
+            Events:
+              name: ईव्हेंट्स
+        k5-onlinepd-2020:
+          lessons:
             Events:
               name: ईव्हेंट्स

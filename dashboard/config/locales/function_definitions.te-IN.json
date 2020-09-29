@@ -1,0 +1,130 @@
+{
+  "te-IN": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "parameters": {
+              "width": "వెడల్పు",
+              "height": "ఎత్తు"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "parameters": {
+              "width": "వెడల్పు",
+              "height": "ఎత్తు"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "parameters": {
+              "height": "ఎత్తు"
+            }
+          }
+        },
+        "InspirationalArtwork": {
+          "draw spiral circle": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw spiral circle": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "parameters": {
+              "height": "ఎత్తు"
+            }
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "parameters": {
+              "height": "ఎత్తు"
+            }
+          }
+        },
+        "courseF_artist_fwp1": {
+          "checker": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "checker": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square2": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "size": "సైజు"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "వెడల్పు"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "వెడల్పు"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "వెడల్పు"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "వెడల్పు"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "వెడల్పు"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -323,6 +323,8 @@ bg:
       help_us: Помогнете ни
       teach: Обучи
       about: Относно
+      legal_privacy: Защита на личните данни
+      legal_tos: Термини
     user:
       classroom: Начална страница на учителя
       district_dashboard: Областно табло
@@ -700,25 +702,6 @@ bg:
     widgets:
       title: Джаджи
       cta: Научете как
-  gallery:
-    students_drew_these_with_code: Учениците начертаха това с код!
-    students_made_these_with_code: Учениците правят това с код!
-    picture_count: В изминалите <b>%{days}</b> дни,  ученици са начертали <b>%{count}</b>
-      изображения като са писали свои собствени компютърни програми. Кликнете върху
-      изображенията, за да видите всяка програма в действие.
-    activity_count: В изминалите <b>%{days}</b> дни, учениците са направили  <b>%{count}</b>  приложения
-      и картини чрез писане на свои собствени компютърни програми. Щракнете върху
-      картинките и скрийншотовете, за да видите всяка програма в действие.
-    want_to_make_your_own: Искате ли да направите свои собствени?
-    how_to_save: На последното ниво в тези уроци щракнете върху "Готово" и "Запази",
-      за да запишете работата си в галерията.
-    more: Повече &rarr;
-    caption_by_name_age: по %{name}, възраст %{age}
-    caption_time_ago: "%{time_ago} преди"
-    header: Галерия
-    header_playlab: Театрална лаборатория
-    header_artist: Художник
-    report_abuse: Съобщи за злоупотреба
   landing:
     report_bug: Доклад за бъгове
     support: Получаване на помощ
@@ -945,35 +928,7 @@ bg:
     instructor_feedback: 'Инструктор: обратна връзка'
     peer_feedback: Изпрати обратна връзка
     outdated: Тази обратна връзка е добавена в по-ранна версия
-  flex_category:
-    required: Общ преглед
-    content: Съдържание
-    practice: Учителски практики
     peer_review: Вашаят отзив
-    extra_course_content: Допълнително учебно съдържание
-    csf_digcit: Цифрови граждани
-    csf_jigsaw: Мозайка
-    csf_loops: Повторения
-    csf_events: Събития
-    csf_binary: Двоичен код
-    csf_data: Данни
-    csf_conditionals: Условия
-    csf_nested_loops: Вмъкнати цикли
-    csf_functions: Функции
-    csf_variables: Променливи
-    csf_for_loops: За циклите
-    csf_internet: Интернет
-    csp5_2: 'Глава 2: Програмиране със структури от данни'
-    cspSurvey: Проучване
-    csp_ap_1: 'Глава 1: AP техническа настройка'
-    csp2_1_2018: Част 1 - Дигитална информация
-    csp_variables: Променливи
-    csp_conditionals: Условия
-    csp_functions: Функции
-    csp_lists: Списъци
-    csp_loops: Повторения
-    csp_unit1_2020: 'Урок 1: Цифрова информация'
-    k5_next_steps: Следващи стъпки
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се
@@ -1055,6 +1010,7 @@ bg:
       email: Имейл
       school_name: Име на училището
       school_country: Училищен район
+      colombian_school_name: Име на училището
     form_entries:
       gender:
         male: Мъж

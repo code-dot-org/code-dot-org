@@ -1122,6 +1122,8 @@
   header_project_gallery: "প্রকল্প"
   header_educate_hoc: "এক ঘন্টার কোড"
   header_stats: "পরিসংখ্যান"
+  header_legal_privacy: "গোপনীয়তার নীতি"
+  header_legal_tos: "সেবার শর্ত সমূহ"
   user_header_label: "হ্যালো %{username}"
   user_header_settings: "আমার একাউন্ট"
   user_header_logout: "সাইন আউট"

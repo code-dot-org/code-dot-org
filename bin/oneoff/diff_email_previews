@@ -26,6 +26,7 @@ PREVIEWS = %w(
   exit_survey__csf_deepdive
   exit_survey__csf_intro
   exit_survey__csp_1
+  exit_survey__csp_for_returning_teachers
   exit_survey__csp_summer_workshop
   exit_survey__general
   facilitator_detail_change_notification__csf_intro
@@ -46,12 +47,14 @@ PREVIEWS = %w(
   teacher_enrollment_receipt__csf_deepdive
   teacher_enrollment_receipt__csf_intro
   teacher_enrollment_receipt__csp_1
+  teacher_enrollment_receipt__csp_for_returning_teachers
   teacher_enrollment_receipt__csp_summer_workshop
   teacher_enrollment_receipt__ecs_phase_4
   teacher_enrollment_receipt__ecs_unit_3
   teacher_enrollment_receipt__ecs_unit_4
   teacher_enrollment_receipt__ecs_unit_5
   teacher_enrollment_receipt__ecs_unit_6
+  teacher_enrollment_receipt__facilitator
   teacher_enrollment_receipt__formatted_notes
   teacher_enrollment_receipt__phase_2
   teacher_enrollment_receipt_csd_1
@@ -65,8 +68,11 @@ PREVIEWS = %w(
   teacher_enrollment_reminder__csf_intro_3_day
   teacher_enrollment_reminder__csp_1_10_day
   teacher_enrollment_reminder__csp_1_3_day
+  teacher_enrollment_reminder__csp_for_returning_teachers_10_day
+  teacher_enrollment_reminder__csp_for_returning_teachers_3_day
   teacher_enrollment_reminder__csp_summer_workshop_10_day
   teacher_enrollment_reminder__csp_summer_workshop_3_day
+  teacher_enrollment_reminder__facilitator
   teacher_enrollment_reminder_csd_1_10_day
   teacher_enrollment_reminder_csd_1_3_day
   teacher_enrollment_reminder_csd_unit_6_3_day

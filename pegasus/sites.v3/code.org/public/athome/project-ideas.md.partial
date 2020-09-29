@@ -5,7 +5,7 @@ theme: responsive
 ---
 <a id="top"></a>
 # Overview
-<p>Below is a step-by-step guide for assigning students open-ended projects that use Code.org tools. This guide could be used by anyone but is targeted at middle and high school teachers currently teaching [CS Discoveries](https://code.org/educate/csd) as alternatives or ways to augment the existing course material.</p>
+<p>Below is a step-by-step guide for assigning students open-ended projects that use Code.org tools. This guide could be used by anyone but is targeted at middle and high school teachers currently teaching <a href="https://code.org/educate/csd">CS Discoveries</a> as alternatives or ways to augment the existing course material.</p>
 <p>More options for learning at home can be found on our <a href="/athome">Learning At Home</a> page.</p>
 
 ## 1. Choose a Tool
@@ -100,6 +100,8 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
         </tr>
     </tbody>
 </table>
+<br>
+<strong>Check back soon for more game projects with Game Lab!</strong>
 <br>
 <br>
 <table>

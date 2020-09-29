@@ -60,10 +60,14 @@ class Section < ActiveRecord::Base
   validates :name, presence: true, unless: -> {deleted?}
 
   belongs_to :script
-  belongs_to :course
+  belongs_to :unit_group, foreign_key: 'course_id'
 
-  has_many :section_hidden_stages
+  has_many :section_hidden_lessons
   has_many :section_hidden_scripts
+
+  # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
+  # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
+  alias_attribute :lesson_extras, :stage_extras
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -97,8 +101,8 @@ class Section < ActiveRecord::Base
     Script.get_from_cache(script_id) if script_id
   end
 
-  def course
-    Course.get_from_cache(course_id) if course_id
+  def unit_group
+    UnitGroup.get_from_cache(course_id) if course_id
   end
 
   def workshop_section?
@@ -201,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:default_course_scripts).try(:first).try(:script)
+    return unit_group.try(:default_unit_group_units).try(:first).try(:script)
   end
 
   def summarize_without_students
@@ -218,15 +222,15 @@ class Section < ActiveRecord::Base
     title_of_current_unit = ''
     link_to_current_unit = ''
 
-    if course
-      title = course.localized_title
-      link_to_assigned = course_path(course)
+    if unit_group
+      title = unit_group.localized_title
+      link_to_assigned = course_path(unit_group)
       if script_id
-        title_of_current_unit = script.localized_title
+        title_of_current_unit = script.title_for_display
         link_to_current_unit = script_path(script)
       end
     elsif script_id
-      title = script.localized_title
+      title = script.title_for_display
       link_to_assigned = script_path(script)
     end
 
@@ -250,7 +254,7 @@ class Section < ActiveRecord::Base
       numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stage_extras: stage_extras,
+      lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
       autoplay_enabled: autoplay_enabled,
       sharing_disabled: sharing_disabled?,
@@ -283,11 +287,11 @@ class Section < ActiveRecord::Base
 
   # Hide or unhide a stage for this section
   def toggle_hidden_stage(stage, should_hide)
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
     if hidden_stage && !should_hide
       hidden_stage.delete
     elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 

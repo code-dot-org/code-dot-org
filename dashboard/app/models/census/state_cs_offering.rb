@@ -26,6 +26,7 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AL
     AR
+    AZ
     CA
     CO
     CT
@@ -69,25 +70,34 @@ class Census::StateCsOffering < ApplicationRecord
     UT
     VA
     VT
+    WA
     WI
     WV
     WY
   ).freeze
 
-  SUPPORTED_UPDATES = [1, 2].freeze
+  SUPPORTED_UPDATES = [1, 2, 3].freeze
 
   # The following states use the "V2" format for CSV files in 2017-2018.
   # (The expectation is that all states will use the new format as of 2019-20.)
   STATES_USING_FORMAT_V2_IN_2017_18 = %w(
     CA
     HI
+    IL
+    MA
+    MD
+    NE
+    NY
+    OR
+    PA
+    VA
   ).freeze
 
   # The following states use the "V2" format for CSV files in 2018-2019.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
     AR
-    CO
+    CA
     CT
     FL
     GA
@@ -98,13 +108,13 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MD
-    ME
     MN
     MO
     MS
     MT
     ND
     NE
+    NJ
     NM
     NY
     OH
@@ -115,10 +125,11 @@ class Census::StateCsOffering < ApplicationRecord
     SD
     TX
     UT
+    VA
+    WA
     WI
     WV
     WY
-    VA
   ).freeze
 
   # For a few states, we already placed a 2017-2018 CSV on S3 using their V1 format,
@@ -126,6 +137,7 @@ class Census::StateCsOffering < ApplicationRecord
   # For such states, we specify which update of the 2017-2018 file is in the V2
   # format.
   UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18 = {
+    NJ: 2,
     RI: 2
   }.freeze
 
@@ -137,7 +149,6 @@ class Census::StateCsOffering < ApplicationRecord
     DC: 2,
     DE: 2,
     NH: 2,
-    NJ: 2,
     VT: 2
   }.freeze
 
@@ -158,18 +169,9 @@ class Census::StateCsOffering < ApplicationRecord
 
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
-  # that the state data is conplete for the following states so we do
+  # that the state data is complete for the following states so we do
   # not want to treat the lack of data as a no for those.
-  INFERRED_NO_EXCLUSION_LIST = %w(
-    CO
-    DE
-    ID
-    ME
-    MI
-    OH
-    TN
-    TX
-  ).freeze
+  INFERRED_NO_EXCLUSION_LIST = [].freeze
 
   def self.infer_no(state_code)
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
@@ -1454,62 +1456,102 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
-  def self.seed_from_csv(state_code, school_year, update, filename)
+  def self.seed_from_csv(state_code, school_year, update, filename, dry_run = false)
     ActiveRecord::Base.transaction do
+      succeeded = 0
+      skipped = 0
       CSV.foreach(filename, {headers: true}) do |row|
         row_hash = row.to_hash
         state_school_id = get_state_school_id(state_code, row_hash, school_year, update)
         courses = get_courses(state_code, row_hash, school_year, update)
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
-        if school && state_school_id
-          courses.each do |course|
-            find_or_create_by!(
-              school: school,
-              course: course,
-              school_year: school_year,
-            )
+        if school && state_school_id && courses
+          unless dry_run
+            courses.each do |course|
+              find_or_create_by!(
+                school: school,
+                course: course,
+                school_year: school_year,
+              )
+            end
           end
+          succeeded += 1
         else
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
-          CDO.log.warn "State CS Offering seeding: skipping unknown state school id #{state_school_id}"
+          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1}, "\
+            "unknown state school id #{state_school_id}" \
+            "#{courses.nil? ? 'and/or found no CS courses' : ''}"
+          skipped += 1
         end
       end
+
+      CDO.log.info "State CS Offering seeding: done processing "\
+        "#{state_code}-#{school_year}-#{update} data. "\
+        "#{succeeded} rows succeeded, #{skipped} rows skipped."
     end
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
   # Construct a path to the CSV.
-  # @param {string} state_code - Something like "CA".
-  # @param {number} school_year - Something like 2018.
-  # @param {number} update - Something like 2.
-  def self.construct_object_key(state_code, school_year, update = 1)
+  # @param [string] state_code - Something like "CA".
+  # @param [number] school_year - Something like 2018.
+  # @param [number] update - Something like 2.
+  # @param [string] file_extension
+  def self.construct_object_key(state_code, school_year, update = 1, file_extension = 'csv')
     update_string = update == 1 ? "" : ".#{update}"
-    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.csv"
+    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.#{file_extension}"
   end
 
-  def self.seed_from_s3
+  def self.seed_from_s3(file_extension: 'csv', dry_run: false)
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2015-2016
+    seeded_objects = []
     current_year = Date.today.year
     (2015..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
         SUPPORTED_UPDATES.each do |update|
-          object_key = construct_object_key(state_code, school_year, update)
+          object_key = construct_object_key(state_code, school_year, update, file_extension)
           begin
-            AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-              seed_from_csv(state_code, school_year, update, filename)
+            AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key, dry_run) do |filename|
+              seed_from_csv(state_code, school_year, update, filename, dry_run)
+              seeded_objects << object_key
             end
           rescue Aws::S3::Errors::NotFound
             # We don't expect every school year to be there so skip anything that isn't found.
-            CDO.log.warn "State CS Offering seeding: object #{object_key} not found in S3 - skipping."
+            # Note: Don't print out this warning in a dry run to reduce noises.
+            CDO.log.warn "State CS Offering seeding: object #{object_key} not found in S3 - skipping." unless dry_run
           end
         end
       end
     end
+    CDO.log.info "Seeded data from #{seeded_objects.count} object(s)."
+    CDO.log.info seeded_objects.join("\n")
+    CDO.log.info "This is a dry run. No data is written to the database." if dry_run
+  end
+
+  # Test seeding an object from S3 to find issues.
+  # This method does not check if the object had been seeded before
+  # and does not write to the database.
+  #
+  # @example:
+  #   Census::StateCsOffering.dry_seed_s3_object('AL', 2019, 1)
+  #   will seed from state_cs_offerings/AL/2019-2020.csv object
+  #
+  #   Census::StateCsOffering.dry_seed_s3_object('WA', 2019, 2, 'txt')
+  #   will seed from state_cs_offerings/WA/2019-2020.2.txt object
+  def self.dry_seed_s3_object(state_code, school_year, update, file_extension = 'csv')
+    object_key = construct_object_key(state_code, school_year, update, file_extension)
+    AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+      seed_from_csv(state_code, school_year, update, filename, true)
+    end
+  rescue Aws::S3::Errors::NoSuchKey
+    CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3."
+  ensure
+    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   def self.seed
@@ -1518,26 +1560,26 @@ class Census::StateCsOffering < ApplicationRecord
         school_year = 2017
         update = 1
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+        seed_from_csv(state_code, school_year, update, "config/" + filename)
       end
 
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18.each do |state_code, update|
         school_year = 2017
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "config/" + filename)
       end
 
       STATES_USING_FORMAT_V2_IN_2018_19.each do |state_code|
         school_year = 2018
         update = 1
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code, school_year, update, "config/" + filename)
       end
 
       UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19.each do |state_code, update|
         school_year = 2018
         filename = construct_object_key(state_code, school_year, update)
-        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2018_2019/" + filename)
+        seed_from_csv(state_code.to_s, school_year, update, "config/" + filename)
       end
     else
       seed_from_s3

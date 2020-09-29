@@ -853,6 +853,7 @@ uk-UA:
     їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс
     з випадного меню вгорі.
   dashboard_sections_new_section: Нова група
+  dashboard_sections_new_google_section: Імпорт розділу з Google Classroom
   dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
     учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
     прогресу та керування обліковими записами.
@@ -1879,6 +1880,7 @@ uk-UA:
     працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
+  header_my_dashboard: Моя майстерня
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
@@ -1911,6 +1913,8 @@ uk-UA:
   header_teacher_community: Спільнота вчителів
   header_help_support: 'Допомога та підтримка '
   header_report_bug: Сповістити про проблему
+  header_legal_privacy: Політика конфіденційності
+  header_legal_tos: Умови надання послуг
   header_tutorials: Навчальні матеріали
   header_documentation: Документація
   user_header_label: Привіт %{username}

@@ -8,7 +8,7 @@ module Pd::Foorm
         course: Pd::Workshop::COURSE_CSF,
         subject: Pd::Workshop::SUBJECT_CSF_101
       ).first&.data
-      csf_intro_post_workshop_from_pegasus = JSON.parse(data) if data
+      csf_intro_post_workshop_from_pegasus = data ? JSON.parse(data) : {}
 
       # (Lookup strings from IDs.)
       csf_intro_post_workshop_from_pegasus_with_strings = {}
@@ -22,7 +22,7 @@ module Pd::Foorm
         course: Pd::Workshop::COURSE_CSF,
         subject: Pd::Workshop::SUBJECT_CSF_101
       ).first&.data
-      csf_intro_post_workshop_from_pegasus_for_all_workshops = JSON.parse(data) if data
+      csf_intro_post_workshop_from_pegasus_for_all_workshops = data ? JSON.parse(data) : {}
 
       # (Lookup strings from IDs.)
       csf_intro_post_workshop_from_pegasus_for_all_workshops_with_strings = {}
@@ -36,7 +36,7 @@ module Pd::Foorm
         course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
       ).first&.data
-      csd_summer_workshops_from_jotform = JSON.parse(data) if data
+      csd_summer_workshops_from_jotform = data ? JSON.parse(data) : {}
 
       # CSP summer workshops
       data = Pd::LegacySurveySummary.where(
@@ -44,7 +44,7 @@ module Pd::Foorm
         course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
       ).first&.data
-      csp_summer_workshops_from_jotform = JSON.parse(data) if data
+      csp_summer_workshops_from_jotform = data ? JSON.parse(data) : {}
 
       # Return everything.
       {

@@ -1391,6 +1391,8 @@
   header_teacher_community: "Brukergruppe for lærere"
   header_help_support: 'Hjelp og støtte '
   header_report_bug: "Rapporter feil"
+  header_legal_privacy: "Personvern"
+  header_legal_tos: "Vilkår"
   header_tutorials: "Guide"
   app_lab_documentation: "Programmerings lab dokumentasjon"
   app_lab_tutorials: "Programmerings lab veiledning"
@@ -1542,3 +1544,4 @@
   page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
   page_not_found_button: "Returner hjem"
   hoc2019_mc_more_coding_resources: "Flere Programmeringsressurser"
+  page_not_available_button: "Returner hjem"

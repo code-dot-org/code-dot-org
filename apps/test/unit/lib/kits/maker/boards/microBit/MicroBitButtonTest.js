@@ -41,6 +41,30 @@ describe('MicroBitButton', function() {
     });
   });
 
+  describe('holdtime', () => {
+    let button;
+
+    beforeEach(() => {
+      button = new MicroBitButton({
+        mb: new MicrobitStubBoard(),
+        pin: 0
+      });
+    });
+
+    it('is a readonly property', () => {
+      const descriptor = Object.getOwnPropertyDescriptor(button, 'holdtime');
+      expect(descriptor.get).to.be.a('function');
+      expect(descriptor.set).to.be.undefined;
+      expect(() => {
+        button.holdtime = 600;
+      }).to.throw();
+    });
+
+    it('returns the default value, 500 ms', () => {
+      expect(button.holdtime).to.equal(500);
+    });
+  });
+
   describe('emitsEvent', () => {
     it('emits the corresponding event and updates states when board receives event', () => {
       let boardClient = new MicrobitStubBoard();

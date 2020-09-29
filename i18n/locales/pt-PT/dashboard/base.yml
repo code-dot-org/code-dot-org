@@ -170,6 +170,7 @@ pt:
     email_preference_yes: "Sim"
     email_preference_no: "Não"
     email_preference_required: "Deves especificar uma preferência de email."
+    parent_account_email_label: "Email dos pais ou do encarregado de educação"
   school_info:
     title: 'Informação da escola (opcional)'
     school_country: 'País da escola'
@@ -325,6 +326,8 @@ pt:
       help_us: "Ajuda-nos"
       teach: "Ensina"
       about: "Sobre"
+      legal_privacy: "Política de privacidade"
+      legal_tos: "Termos de utilização"
     user:
       classroom: 'Página inicial do Professor'
       district_dashboard: 'Painel de regiões'
@@ -424,6 +427,7 @@ pt:
     update: "Atualizar conta"
     account_successfully_updated: "Conta atualizada com sucesso."
     update_email: "Atualizar"
+    for_parents_and_guardians: "Para os Pais e Encarregados de Educação"
     parent_guardian_email_label: "Email dos pais ou do encarregado de educação"
     none: "Nenhum"
     encrypted: "encriptado"
@@ -628,20 +632,6 @@ pt:
       title: "Widgets"
       audience: "Maiores de 14 anos"
       cta: "Saber mais"
-  gallery:
-    students_drew_these_with_code: "Alunos criaram isso com programação!"
-    students_made_these_with_code: "Os alunos criaram isso com programação!"
-    picture_count: "Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b> imagens desenvolvendo seus próprios programas de computador. Clique nas imagens para ver cada programa em execução."
-    activity_count: "Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b> aplicativos e figuras escrevendo seus próprios programas de computador. Clique nas figuras e capturas de tela para ver cada programa em funcionamento."
-    want_to_make_your_own: "Queres criar o teu próprio programa?"
-    how_to_save: "No último nível destes tutoriais, clique em \"Concluir\" e \"Salvar\" para salvar o seu trabalho na galeria."
-    more: "Mais &rarr;"
-    caption_by_name_age: "por %{name}, com %{age}"
-    caption_time_ago: "há %{time_ago}"
-    header: "Galeria"
-    header_playlab: "Laboratório"
-    header_artist: "Artista"
-    report_abuse: "Denunciar abuso"
   landing:
     prerelease_tutorial: "Este tutorial está na versão beta. Ele está sujeito a revisões conforme são recebidos feedbacks e melhorias são feitas."
     report_bug: "Comunicar um problema"
@@ -802,49 +792,6 @@ pt:
       name: 'Reencaminhado'
       description: 'Gostaria que um instrutor revisse esta proposta.'
     instructor_feedback: 'Opinião do Instrutor'
-  flex_category:
-    required: 'Visão geral'
-    content: 'Conteúdo'
-    practice: 'Práticas de Ensino'
-    main_course: 'Curso Principal'
-    extra_course_content: 'Conteúdo Extra Curso'
-    csf_e_1: 'Continuar para o Curso E (Opcional)'
-    csf_e_2: 'Conteúdo do Curso E'
-    csf_f_1: 'Continuar para o Curso F (Opcional)'
-    csf_f_2: 'Conteúdo do Curso F'
-    csf_digcit: 'Cidadania digital'
-    csf_jigsaw: 'Quebra-cabeças'
-    csf_sequencing: 'Sequenciação'
-    csf_loops: 'Ciclos'
-    csf_events: 'Eventos'
-    csf_online_safety: 'Segurança Online'
-    csf_binary: 'Binário'
-    csf_conditionals: 'Condicionais'
-    csf_nested_loops: 'Laços aninhados'
-    csf_functions: 'Funções'
-    csf_variables: 'Variáveis'
-    csf_for_loops: 'Ciclos "for"'
-    csf_internet: 'Internet'
-    csf_warmup: 'Aquecimento'
-    csd1_1: 'Capítulo 1: O Processo de Resolução de Problemas'
-    csd1_2: 'Capítulo 2: Computadores e Resolução de Problemas'
-    csd3_1: 'Capítulo 1: Imagens e Animações'
-    csd3_2: 'Capítulo 2: Construindo Jogos'
-    csd_survey: 'Inquérito Pós-Curso'
-    cspSurvey: 'Inquérito'
-    csp2_1_2018: 'Unidade 1: Informação Digital'
-    csp_variables: 'Variáveis'
-    csp_conditionals: 'Condicionais'
-    csp_functions: 'Funções'
-    csp_project: 'Projecto'
-    csp_lists: 'Listas'
-    csp_loops: 'Ciclos'
-    csp_libraries: 'Bibliotecas '
-    csp_unit1_2020: 'Unidade 1: Informação Digital'
-    csp_unit2_2020: 'Unidade 2: A Internet'
-    csp_unit10_2020: 'Unidade 10: Ciber Segurança e Impactos Globais'
-    time4cs_c6: 'Condicionais (revisão)'
-    k5_next_steps: 'Próximos Passos'
   hoc_download:
     title: 'Hora das transferências de Código'
     capsule_title: 'Tem Internet?'
@@ -877,6 +824,7 @@ pt:
       email: 'E-mail'
       school_name: 'Nome da escola'
       school_country: 'País da escola'
+      colombian_school_name: 'Nome da escola'
     form_entries:
       gender:
         male: 'Masculino'

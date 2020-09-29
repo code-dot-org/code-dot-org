@@ -184,6 +184,8 @@ kk:
       sign_in_to_save: Прогрессті сақтау үшін тіркеліңіз
       project_gallery: Жобалар
       educate_hoc: Код жазу Сағаты
+      legal_privacy: Құпиялылық саясаты
+      legal_tos: Қызмет көрсету шарттары
     user:
       classroom: Оқытушының жеке парақшасы
       district_dashboard: Ақпарат панелі
@@ -478,23 +480,6 @@ kk:
       title: Шарттар
     widgets:
       cta: Қалай жасауды үйрең
-  gallery:
-    students_drew_these_with_code: Оқушылар кодпен бірге суретін салады!
-    students_made_these_with_code: Оқушылар кодын жазады!
-    picture_count: Өткен <b>%{days}</b> күнде, оқушылар компьютерлік бағдарламаларына
-      <b>%{count}</b> сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа
-      шертіңіз.
-    activity_count: Өткен <b>%{days}</b> күнде, оқушылар <b>%{count}</b> қосымша мен
-      компьютерлік ойындарына сурет салды. Әрбір бағдарламаны көру үшін суретке және
-      скриншотқа шертіңіз.
-    want_to_make_your_own: Өзіңіз жасап көргіңіз келеді ме?
-    more: Көбірек &rarr;
-    caption_by_name_age: "%{name}, жасы %{age}"
-    caption_time_ago: "%{time_ago} бұрын"
-    header: Галерея
-    header_playlab: Хикаялар мен ойындар
-    header_artist: Өнерді кодтау
-    report_abuse: Құқық бұзушылық туралы хабарлау
   landing:
     report_bug: Қате туралы хабарлау
     support: Көмек Сұрау
@@ -647,26 +632,6 @@ kk:
       name: Қабылданды
     rejected:
       name: Қабылданбады
-  flex_category:
-    required: Қысқаша шолу
-    content: Контент
-    practice: Сабақ беру Практикалары
-    csf_digcit: Сандық Азаматтық
-    csf_jigsaw: Бас қатырғыш
-    csf_loops: Ілмек
-    csf_events: Шаралар
-    csf_binary: Бинарлы
-    csf_conditionals: Шарттар
-    csf_nested_loops: Кіріккен Циклдер
-    csf_functions: Функциялар
-    csf_variables: Айнымалылар
-    csf_for_loops: For ілмектері
-    csf_internet: Ғаламтор
-    csp_variables: Айнымалылар
-    csp_conditionals: Шарттар
-    csp_functions: Функциялар
-    csp_lists: Тізімдер
-    csp_loops: Ілмек
   hoc_download:
     instructions_headline: Интернет жоқ па?
     minecraft_name: Minecraft Кодтау Сағаты

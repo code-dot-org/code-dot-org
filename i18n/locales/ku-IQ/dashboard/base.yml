@@ -253,6 +253,7 @@ ku:
     header:
       course_catalog: "پێرستی کۆرس"
       educate_hoc: "كاژێری كۆدنووسی"
+      legal_tos: "بڕگەکان"
     user:
       classroom: 'پەڕەی سەرەکی مامۆستا'
       settings: 'هەژمارەکەم'
@@ -325,22 +326,12 @@ ku:
       report_abuse_form:
         abuse_type:
           other: 'هی تر'
-  flex_category:
-    csf_jigsaw: 'مەتەڵە وێنە'
-    csf_loops: 'گرێکان'
-    csf_conditionals: 'مەرجیەکان'
-    csf_functions: 'فرمانەکان'
-    csf_variables: 'گۆڕاوەکان'
-    csp_variables: 'گۆڕاوەکان'
-    csp_conditionals: 'مەرجیەکان'
-    csp_functions: 'فرمانەکان'
-    csp_lists: 'لیستەکان'
-    csp_loops: 'گرێکان'
   pd:
     form_labels:
       email: 'پۆستی ئەلیكترۆنی'
       school_name: 'ناوی قوتابخانە'
       school_country: 'وڵاتی قوتابخانە'
+      colombian_school_name: 'ناوی قوتابخانە'
     form_entries:
       gender:
         male: 'نێر'

@@ -140,7 +140,8 @@ describe('Library parser', () => {
         {
           func: functionName,
           category: category,
-          comment: comment
+          comment: comment,
+          type: 'either'
         }
       ];
 
@@ -180,12 +181,14 @@ describe('Library parser', () => {
         {
           func: functions[0],
           category: category,
+          type: 'either',
           params: params,
           paletteParams: params
         },
         {
           func: functions[1],
-          category: category
+          category: category,
+          type: 'either'
         }
       ];
 

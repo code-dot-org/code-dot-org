@@ -175,6 +175,8 @@ bn:
       project_gallery: প্রকল্প
       educate_hoc: এক ঘন্টার কোড
       stats: পরিসংখ্যান
+      legal_privacy: গোপনীয়তার নীতি
+      legal_tos: সেবার শর্ত সমূহ
     user:
       classroom: শিক্ষক হোম পেজ
       label: হ্যালো %{username}
@@ -309,11 +311,6 @@ bn:
       title: শর্তযুক্ত
     widgets:
       cta: শিখুন কিভাবে
-  gallery:
-    caption_time_ago: "%{time_ago} আগে"
-    header: সংগ্রহশালা
-    header_playlab: প্লে ল্যাব
-    header_artist: কোড শিল্প
   landing:
     report_bug: বাগ রিপোর্ট করুন
     support: সহায়তা নিন
@@ -382,25 +379,6 @@ bn:
       report_abuse_form:
         abuse_type:
           other: অন্যান্য
-  flex_category:
-    required: সংক্ষিপ্ত বিবরণ
-    csf_jigsaw: টুকরো কাঠের ধাঁধা
-    csf_loops: চক্র
-    csf_events: ঘটনাবলী
-    csf_binary: দ্বি-আঙ্কিক
-    csf_conditionals: শর্তযুক্ত
-    csf_nested_loops: নেষ্টেড লুপ
-    csf_functions: ফাংশনগুলি
-    csf_variables: চলকগুলো
-    csf_for_loops: ফর লুপ
-    csf_internet: ইন্টারনেট
-    csp2_1_2018: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
-    csp_variables: চলকগুলো
-    csp_conditionals: শর্তযুক্ত
-    csp_functions: ফাংশনগুলি
-    csp_lists: তালিকা
-    csp_loops: চক্র
-    csp_unit1_2020: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
   hoc_download:
     minecraft_name: মাইনক্র্যাফট এক ঘণ্টার কোড
   pd:

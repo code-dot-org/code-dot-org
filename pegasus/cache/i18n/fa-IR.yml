@@ -346,6 +346,9 @@ fa-IR:
   homepage_slot_text_link_stats: آمار ها را ببینید
   homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: پولی اهدا کنید
+  homepage_gallery_header: 'بیش از  %{project_count} میلیون پروژه ایجاد شده در Code.org
+
+'
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: تمامش را ببینید
   homepage_donors_donate: کمک مالی بدهید
@@ -1402,6 +1405,9 @@ fa-IR:
   header_teach: آموزش
   header_help_us: به ما کمک کنید
   header_about: درباره
+  header_report_bug: گزارش مشکل
+  header_legal_privacy: قوانین حفظ حریم خصوصی
+  header_legal_tos: شرایط
   user_header_label: سلام %{username}
   user_header_team: تیم
   user_header_settings: حساب کاربری من

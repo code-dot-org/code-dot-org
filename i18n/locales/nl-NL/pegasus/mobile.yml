@@ -315,7 +315,7 @@
   homepage_slot_text_link_donate: "Doneer"
   homepage_slot_text_link_shop: "T-shirts, hoeden, & meer"
   homepage_gallery_header: "Meer dan %{project_count} miljoen Code.org projecten gemaakt"
-  homepage_header_donors: "Code.org dankt zijn aanhangers"
+  homepage_header_donors: "Code.org bedankt haar sponsoren"
   homepage_donors_seall: "Alles weergeven"
   homepage_donors_donate: "Doneren"
   homepage_below_hero_announcement_text: "We nemen uw privacy serieus en met ingang van 25 mei zullen delen van ons privacybeleid geüpdatet worden."
@@ -771,6 +771,7 @@
   classicmaze_name: "Klassiek doolhof"
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
+  text-compression_name: Tekstcompressie
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   applab_gradelevel: "Leeftijd 13+"
@@ -1174,6 +1175,7 @@
   header_educate_high: "Middelbare school"
   header_educate_hoc: "Uur Code"
   header_educate_partner: "Partner met ons"
+  header_educate_beyond: "Achter Code.org"
   header_educate_inspire: "Inspireer een Student"
   header_educate_community: "Online gemeenschap"
   header_educate_tools: "Hulpmiddelen en video's"
@@ -1194,6 +1196,8 @@
   header_teacher_community: "Lerarengemeenschap"
   header_help_support: 'Hulp en ondersteuning'
   header_report_bug: "Rapporteer bugs"
+  header_legal_privacy: "Privacybeleid"
+  header_legal_tos: "Gebruiksvoorwaarden"
   header_tutorials: "Tutorials"
   header_documentation: "Documentatie"
   user_header_label: "Hallo %{username}"

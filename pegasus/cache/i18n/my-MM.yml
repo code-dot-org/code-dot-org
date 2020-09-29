@@ -197,7 +197,7 @@ my-MM:
   petition_age: အသက်
   dashboard_announce_learn_more_button: ဆက်သင်ယူရန်
   dashboard_action_cancel: ပယ်ဖျတ်သည်
-  dashboard_sections_close: ပိတ်မည်
+  dashboard_sections_close: ပိတ်ပါ
   dashboard_students_name: အမည္
   dashboard_login_none: email လိပ္စာ
   learn_more: ဆက်သင်ယူရန်
@@ -214,6 +214,7 @@ my-MM:
   user_header_view_my_projects: ပရောဂျက်တွေကို ကြည့်မယ်
   view_all_sections: Section အားလုံးကို ကြည့်မယ်
   hero_name: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
+  hoc_overview_title: Code.org မှ Hour of Code လေ့ကျင့်ခန်းများ
   hoc2018_creativity_create: ဖန်တီးပါ
   hoc2018_mc_page_title: Minecraft Hour of Code နည်းပြ Tutorialများ
   hoc2018_mc_details: ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Grades

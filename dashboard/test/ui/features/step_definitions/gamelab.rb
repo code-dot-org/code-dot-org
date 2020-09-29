@@ -57,11 +57,13 @@ Then /^I select a blank animation$/ do
 end
 
 Then /^I select the animal category of the animation library$/ do
-  @browser.execute_script("$(\"img[src*='/category_animals.png']\")[0].click();")
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals.png']\").length != 0;")}
+  @browser.execute_script("$(\"img[src*='/category_animals.png']\")[1].click();")
 end
 
 Then /^I select the bear animation from the animal category$/ do
-  @browser.execute_script("$(\"img[style*='/category_animals/bear.png']\")[0].click();")
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals/bear.png']\").length != 0;")}
+  @browser.execute_script("$(\"img[src*='/category_animals/bear.png']\")[0].click();")
 end
 
 Then /^I add a new, blank animation$/ do

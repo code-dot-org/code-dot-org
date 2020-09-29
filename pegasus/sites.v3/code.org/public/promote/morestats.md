@@ -2,21 +2,29 @@
 chart: true
 theme: responsive
 ---
-# Make Your Own Advocacy Materials
+# More Data and Talking Points for Advocacy
 
 Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!
 
 ## Code.org Policy Resources
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml) on our 9 model policies for computer science education.
-* Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf).
+* Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf). The 2019 report found that states who adopt more state computer science policies show greater gender diversity in AP computer science exam-taking.
 * [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
 * Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
 
-
-## Code.org blog posts
-### Why computer science?
+## Why study computer science? 
+[Six different studies](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) show that studying computer science helps students outperform in school and college. Details on each of the studies follow.
 
 * Code.org classrooms with resourceful teachers see [higher scores on English, math, and science standardized tests](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e).
+* Learning computer science [may be linked to](http://codeorg.tumblr.com/post/125429946375/cs-other-subjects) improved learning in math: AP computer science students receive better AP calculus scores than similiarly-situated peers.
+* Students who take AP Computer Science Principles are [12% more likely to enroll in college](https://medium.com/@codeorg/study-computer-science-students-much-more-likely-to-enroll-in-college-faca65b1476d) compared to similiarly-situated peers, and students who take any AP computer science course are 17% more likely to attend college. Further, students who take AP exams are [more likely to graduate 4-year college](https://files.eric.ed.gov/fulltext/ED519365.pdf), even when they don't pass the exam.
+* Learning to code on CS Fundamentals [helps students learn executive/planning problem-solving skills](https://www.sciencedirect.com/science/article/abs/pii/S0360131520300099?via%3Dihub) better than regular math and science. 
+* University students who studied computer science [outperformed in problem solving](https://dl.acm.org/doi/10.1145/3328778.3366808) compared to students who studied other subjects (both STEM and non-STEM). 
+* [Research shows](https://www.nature.com/articles/s41598-020-60661-8) that language skills are more important than math skills in predicting student CS performance.
+
+## Code.org blog posts
+### The importance of computer science
+
 * Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * The majority of Americans [want schools to teach computer science](http://codeorg.tumblr.com/post/139445414968).
 * Computer Science is the [4th most popular STEM major](https://medium.com/@codeorg/computer-science-climbs-to-4th-most-popular-stem-major-for-college-bound-students-773ce681b96c) for college-bound students.
@@ -24,25 +32,25 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * In manufacturing, openings for [software jobs outpace production jobs](https://medium.com/@codeorg/in-manufacturing-software-jobs-outpace-production-jobs-for-first-time-4a3c40fd8773) for the first time.
 * Computer science jobs account for the majority of "skilled worker" [immigration](http://codeorg.tumblr.com/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
 * Computer science accounts for [the majority of new STEM jobs] (http://codeorg.tumblr.com/post/89267280803/stem).
-* Learning computer science [may be linked to](http://codeorg.tumblr.com/post/125429946375/cs-other-subjects) improved learning in math.
+* A school's participation in the Code.org professional learning program [results](https://medium.com/@codeorg/research-shows-5x-computer-science-participation-at-schools-in-code-org-program-f99ca6ff3207) in an estimated five times increase in AP CS Principles participation, and a ten times increase among Black students.
 * Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
 
 ### Diversity in computer science
 
 * Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
 * When computer science counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
-* The [underrepresentation of minorities in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access.
+* The [underrepresentation of students from marginalized racial and ethnic groups in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access.
 * Girls set AP Computer Science record: skyrocketing growth outpaces boys [in 2017](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) and [in 2018](https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e).
 * [Maryland makes a simple policy change to boost diversity in computer science.](http://blog.code.org/post/121123281798/md)
-* 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04).
+* 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04), and both boys and girls show [improved self-efficacy](https://code.org/files/HourOfCodeImpactStudy_Jan2017.pdf) and attitudes towards computer science after an Hour of Code.
 * Reporting on [Code.org's successful efforts](/diversity) to increase diversity in computer science.
-* [Representation of girls and underrepresented minorities in Code.org courses](https://medium.com/@codeorg/girls-and-underrepresented-minorities-are-represented-on-code-org-7fb32b7c4eba) (2017).
+* [Representation of young women and students from marginalized racial and ethnic groups in Code.org courses](https://medium.com/@codeorg/girls-and-underrepresented-minorities-are-represented-on-code-org-7fb32b7c4eba) (2017).
 
 ### Miscellaneous
 
 * Any teacher can [succeed](https://twitter.com/codeorg/status/1058432567223967745) at teaching CS; what matters is how many [years of teaching experience](https://twitter.com/codeorg/status/1073278358870507520) they have. 
 * Universities prepare [way fewer](https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa) computer science teachers than we need.
-* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak, and three years later, [women computer science graduates surpass](https://medium.com/@codeorg/women-computer-science-graduates-finally-surpass-record-set-17-years-ago-20a79a76275) 2003 record (but percentages still lag).
 * [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade.
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
@@ -61,7 +69,7 @@ We are interested in seeing what's happening in computer science education inter
 - Access to computer science matters! [A longitudinal study described in this article](https://dl.acm.org/citation.cfm?doid=3363561.3343195) and [this summary](https://computinged.wordpress.com/2019/10/14/results-from-longitudinal-study-of-female-persistence-in-cs-ap-cs-matters-after-school-programs-and-internships-do-not/) report that the three best predictors of student persistence in computing-related majors were taking programming in high school, taking a computer science AP exam, and participating in the Aspirations awards program. 
 - The [Pre-College Computer Science Education: A Survey of the Field] (https://services.google.com/fh/files/misc/pre-college-computer-science-education-report.pdf) report from Google reviews the current state of the research into computer science education.
 - [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
-- [Low-income](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLeI) or [underrepresented minority students](https://pbs.twimg.com/media/Dls3NzoU8AAASYB.jpg:large) are less likely than other demographic groups to attend a school that offers computer science.
+- [Low-income](http://ecs.force.com/studies/rstempg?id=a0r0g000009TLeI) or [students from underrepresented racial and ethnic groups](https://pbs.twimg.com/media/Dls3NzoU8AAASYB.jpg:large) are less likely than other demographic groups to attend a school that offers computer science.
 - 74% of women working in computing were [exposed to computing in junior high](https://www.accenture.com/t20170417T030444Z__w__/us-en/_acnmedia/Accenture/next-gen-3/girls-who-code/Accenture-Cracking-The-Gender-Code-Report.pdfla=en).
 - The [Computational Thinking for a Computational World report] (http://digitalpromise.org/wp-content/uploads/2017/12/dp-comp-thinking-v1r5.pdf) from Digital Promise describes the role of computational thinking and provides recommendations for expanding it in K-12.
 - The [Closing the STEM Gap](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1UMWz) report from Microsoft explores why girls and women lose interest in STEM subjects and careers, and suggests strategies to reverse the trend.
@@ -119,8 +127,8 @@ This [series of reports](http://csedu.gallup.com/home.aspx) from Gallup and Goog
 - [Computer Science Learning: Closing the Gap - Hispanic Students](http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-hispanic-brief.pdf)
 	- Hispanic (35%) middle and high school students are more likely to be very interested in learning CS than White students (21%), yet fewer Hispanic students have high confidence that they could learn computer science (51%, compared to 56% of White and 68% of Black students).
 	- 92% of Hispanic parents whose children haven't learned computer science want their children to learn it (vs. 84% of White parents).
-- [Diversity Gaps in Computer Science: Exploring the Underrepresentation of Girls, Blacks and Hispanics] (http://services.google.com/fh/files/misc/diversity-gaps-in-computer-science-report.pdf)
-	- Comprehensive document from Year 2 of the study; contains the talking points from the Closing the Gap reports for Girls, Black students, and Hispanic students; plus additional information.
+- [Diversity Gaps in Computer Science: Exploring the Underrepresentation of Girls, Blacks and Hispanics](http://services.google.com/fh/files/misc/diversity-gaps-in-computer-science-report.pdf)
+	- Comprehensive document from Year 2 of the study; contains the talking points from the Closing the Gap reports for young women, Black students, and Hispanic/Latinx students; plus additional information.
 - [Computer Science Learning: Closing the Gap - Rural and Small-Town School Districts](http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-rural-small-town-brief.pdf)
 	- 86% of students in rural and small town schools believe that computer science is going to be important for their future jobs.
 	- 83% of parents and 64% of principals in rural and small towns believe offering computer science is more or equally as important as any required course.

@@ -333,6 +333,8 @@ gl:
       help_us: Axúdenos
       teach: Ensinar
       about: Sobre
+      legal_privacy: Política de Privacidade
+      legal_tos: Termos de Servizo
     user:
       classroom: Páxina inicial do profesor
       district_dashboard: Panel do distrito
@@ -628,23 +630,6 @@ gl:
       title: Minecraft
     unplugged_conditionals:
       title: Condicionais
-  gallery:
-    students_drew_these_with_code: Os alumnos crearon isto con programación!
-    students_made_these_with_code: Os alumnos crearon isto con programación!
-    picture_count: Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b>
-      imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes
-      para ver cada programa em execución.
-    activity_count: Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b>
-      aplicacións e figuras escribindo os seus proprios programas de computador. Clique
-      nas figuras e capturas de pantalla para ver cada programa en funcionamento.
-    want_to_make_your_own: Queres crear o teu propio programa?
-    more: Máis &rarr;
-    caption_by_name_age: feito por %{name}, anos %{age}
-    caption_time_ago: hai %{time_ago}
-    header: Galería
-    header_playlab: Laboratorio de xogos
-    header_artist: Artista
-    report_abuse: Reportar abuso
   landing:
     report_bug: Comunicar erro
     support: Obter axuda
@@ -779,24 +764,6 @@ gl:
         acknowledge: Ao enviar esta información, acepta que esta será tratada de acordo
           cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilización%{link_end}
-  flex_category:
-    required: Visión xeral
-    csf_digcit: Cidadanía dixital
-    csf_jigsaw: Crebacabezas
-    csf_loops: Bucles
-    csf_events: Eventos
-    csf_binary: Binario
-    csf_conditionals: Condicionais
-    csf_nested_loops: Bucles aniñados
-    csf_functions: Funcións
-    csf_variables: Variables
-    csf_for_loops: Bucles "Para" (For)
-    csf_internet: Internet
-    csp_variables: Variables
-    csp_conditionals: Condicionais
-    csp_functions: Funcións
-    csp_lists: Listas
-    csp_loops: Bucles
   hoc_download:
     minecraft_name: Hora do Código Minecraft
   pd:
@@ -804,6 +771,7 @@ gl:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
+      colombian_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino

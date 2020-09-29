@@ -214,6 +214,8 @@ az:
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
       about: "Haqqımızda"
+      legal_privacy: "Məxfilik siyasəti"
+      legal_tos: "Xidmət şərtləri"
     user:
       classroom: 'Müəllimin ev səhifəsi'
       label: 'Salam %{username}'
@@ -385,15 +387,6 @@ az:
       audience: "4+ yaş"
     unplugged_conditionals:
       title: "Şərti ifadələr"
-  gallery:
-    students_made_these_with_code: "Şagirdlər bunları kod yazmaqla edib!"
-    picture_count: "Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün şəkilləri klikləyin."
-    activity_count: "Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini görmək üçün şəkil və ekran təsvirlərini klikləyin."
-    want_to_make_your_own: "Özünüz üçün də birini düzəltmək istərdiniz?"
-    more: "Daha çox &rarr;"
-    header: "Qalereya"
-    header_playlab: "Oyun labı"
-    header_artist: "Rəssam"
   landing:
     support: "Kömək istə"
     support_url: "//support.code.org"
@@ -482,23 +475,6 @@ az:
       name: 'Qəbul edildi'
     rejected:
       name: 'Rədd edildi'
-  flex_category:
-    required: 'Yekun'
-    content: 'Məzmun'
-    practice: 'Öyrədici proqramlar'
-    csf_jigsaw: 'Mozaika'
-    csf_loops: 'dövrlər'
-    csf_events: 'Hadisələr'
-    csf_binary: 'İkilik'
-    csf_conditionals: 'Şərti ifadələr'
-    csf_functions: 'funksiyalar'
-    csf_variables: 'dəyişənlər'
-    csf_internet: 'İnternet'
-    csp_variables: 'dəyişənlər'
-    csp_conditionals: 'Şərti ifadələr'
-    csp_functions: 'funksiyalar'
-    csp_lists: 'Siyahılar'
-    csp_loops: 'dövrlər'
   hoc_download:
     title: 'Kod saatı yükləmələr'
     capsule_title: 'Internetiniz varmı?'
@@ -514,6 +490,7 @@ az:
     form_labels:
       email: 'E-poçt'
       school_name: 'Məktəbin adı'
+      colombian_school_name: 'Məktəbin adı'
     form_entries:
       gender:
         male: 'Kişi'

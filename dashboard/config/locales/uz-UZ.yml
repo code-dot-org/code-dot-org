@@ -83,6 +83,7 @@ uz:
   nav:
     header:
       educate_hoc: Dasturlash soati
+      legal_tos: Xizmat shartlari
     user:
       classroom: O‘qituvchining bosh sahifasi
       create: Yaratmoq
@@ -128,8 +129,6 @@ uz:
       title: Ilova labaratoriyasi
     unplugged_conditionals:
       title: Shart buyruqlari
-  gallery:
-    report_abuse: Nosozlik haqida xabar berish
   free_response:
     placeholder: Javobingizni bu yerga yozing
   multi:
@@ -172,17 +171,6 @@ uz:
       report_abuse_form:
         abuse_type:
           other: Boshqa
-  flex_category:
-    csf_jigsaw: Topishmoq
-    csf_loops: Sikllar
-    csf_conditionals: Shart buyruqlari
-    csf_functions: Funksiyalar
-    csf_variables: O‘zgaruvchilar
-    csp_variables: O‘zgaruvchilar
-    csp_conditionals: Shart buyruqlari
-    csp_functions: Funksiyalar
-    csp_lists: Ro‘yxatlar
-    csp_loops: Sikllar
   hoc_download:
     minecraft_name: Maynkraft Dasturlash soati
   pd:

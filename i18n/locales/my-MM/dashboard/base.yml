@@ -82,22 +82,17 @@ my:
     print: "ပုံနှိပ်သည်"
   race_interstitial:
     submit: "ပေးပို့ပါ"
-    decline: "ပိတ်မည်"
+    decline: "ပိတ်ပါ"
   project:
     name: "အမည္"
     saved: "သိမ်းထားပြီးပါပြီ"
-  flex_category:
-    csf_loops: 'Loops'
-    csf_variables: 'Variables'
-    csp_variables: 'Variables'
-    csp_lists: 'စာရင်းများ'
-    csp_loops: 'Loops'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
   pd:
     form_labels:
       email: 'email လိပ္စာ'
       school_city: 'ကျောင်းမြို့'
+      colombian_school_city: 'ကျောင်းမြို့'
     form_entries:
       subjects:
         cs: 'ကွန်ပျုတာသိပ္ပံ'

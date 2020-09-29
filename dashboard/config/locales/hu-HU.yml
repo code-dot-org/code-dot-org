@@ -190,6 +190,11 @@ hu:
     email_preference_yes: Igen
     email_preference_no: Nem
     email_preference_required: Meg kell adnia egy e-mail címet.
+    parent_account_checkbox: Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem
+    parent_account_email_progress_permission: Küldhetünk Önnek esetenként e-mailt
+      a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról
+      és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})
+    parent_account_email_label: Szülő/gondviselő e-mail címe
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
@@ -337,6 +342,8 @@ hu:
       help_us: Támogass minket
       teach: Taníts
       about: Rólunk
+      legal_privacy: Adatvédelmi Elvek
+      legal_tos: Feltételek
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
@@ -446,8 +453,14 @@ hu:
     update: Adatok frissítése
     account_successfully_updated: Az adatok frissítése sikeres volt.
     update_email: Frissítés
+    for_parents_and_guardians: Szülőknek és gondviselőknek
+    link_a_parent_email: 'Kapcsolja a szülő/gondviselő e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről. Ezzel
+      az e-mail címmel tudja a jelszavát is visszaállítani.  '
     parent_guardian_email_label: Szülő/gondviselő e-mail
     none: Egyik sem
+    only_one_parent_email_supported_warning: 'Megjegyzés: ez alkalommal diákonként
+      csak egy szülői/gondviselői e-mail címet tudunk támogatni.'
     encrypted: titkosítva
   user_level:
     completed: Befejezve
@@ -675,23 +688,6 @@ hu:
       title: Feltételek
     widgets:
       cta: Ismerd meg hogyan
-  gallery:
-    students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
-    students_made_these_with_code: Ezeket diákok készítették kódolással!
-    picture_count: Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet
-      rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden
-      egyes programot láthass működés közben.
-    activity_count: Az elmúlt <b>%{days}</b> nap a diákok <b>%{count}</b> alkalmazást
-      és a képet készítettek saját maguk, számítógépprogram írással. Kattints a képekre
-      illetve képernyőmentésekre, hogy megnézesd az egyes programokat működés közben.
-    want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
-    more: Több &rarr;
-    caption_by_name_age: készítette %{name}, %{age} éves
-    caption_time_ago: 'ennyi ideje: %{time_ago}'
-    header: Galéria
-    header_playlab: Játéklabor
-    header_artist: Művész
-    report_abuse: Visszaélés jelentése
   landing:
     report_bug: Hiba bejelentése
     support: Segítség kérés
@@ -853,43 +849,6 @@ hu:
       name: Elfogad
     rejected:
       name: Elutasított
-  flex_category:
-    required: Összefoglaló
-    content: Tartalom
-    practice: Tanítási gyakorlatok
-    csf_digcit: Digitális állampolgárság
-    csf_jigsaw: Kirakós játék
-    csf_loops: hurkok
-    csf_events: Események
-    csf_binary: Bináris
-    csf_conditionals: Feltételek
-    csf_sprites: Sprite-ok
-    csf_spritelab: Sprite labor
-    csf_nested_loops: Egymásba ágyazott ciklusok
-    csf_functions: funkciók
-    csf_variables: változók
-    csf_for_loops: Számláló ciklusok
-    csf_internet: Internet
-    csd1_1: '1. fejezet: A probléma-megoldási folyamat'
-    csd1_2: '2. fejezet: Számítógépek és problémamegoldás'
-    csp1_1: '1. fejezet: Az információ ábrázolása és továbbítása'
-    csp1_2: '2. fejezet: Az internet feltalálása'
-    csp2_1: '1. fejezet: Összetett információk kódolása és tömörítése'
-    csp2_2: '2. fejezet: Adatok manipulálása és megjelenítése'
-    csp3_1: '1. fejezet: Programozási nyelvek és algoritmusok'
-    csp5_1: '1. fejezet: Eseményvezérelt programozás'
-    csp5_2: '2. fejezet: Programozás adatszerkezetekkel'
-    cspSurvey: Kérdőív
-    cspAssessment: Fejezet végi értékelés
-    csp_postap_1: '2. fejezet: Adatok manipulálása és megjelenítése'
-    csp2_1_2018: '2. fejezet: Digitális információ'
-    csp_variables: változók
-    csp_conditionals: Feltételek
-    csp_functions: funkciók
-    csp_lists: Listák
-    csp_loops: hurkok
-    csp_unit1_2020: '2. fejezet: Digitális információ'
-    k5_getting_started: Első lépések
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
   hoc_download:
@@ -909,6 +868,8 @@ hu:
       school_name: Iskola neve
       school_city: Iskola városa
       school_country: Iskola országa
+      colombian_school_city: Iskola városa
+      colombian_school_name: Iskola neve
       email_opt_in: Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami
         újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?
     form_entries:
@@ -939,3 +900,8 @@ hu:
       az Egyesült Államokban történik.
     true: Igen
   copy: Másol
+  parent_email_banner:
+    text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
+    link_your_email: Kapcsolja az e-mail címét
+    not_now: Most nem

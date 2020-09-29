@@ -33,13 +33,23 @@ class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description: PropTypes.string.isRequired,
-    importTable: PropTypes.func.isRequired
+    description: PropTypes.string,
+    importTable: PropTypes.func.isRequired,
+    forceExpanded: PropTypes.bool
   };
 
   state = {
     collapsed: true
   };
+
+  componentWillReceiveProps(newProps) {
+    if (
+      (newProps.forceExpanded && this.state.collapsed) ||
+      (!newProps.forceExpanded && !this.state.collapsed)
+    ) {
+      this.toggleCollapsed();
+    }
+  }
 
   toggleCollapsed = () =>
     this.setState({
@@ -60,9 +70,11 @@ class LibraryCategory extends React.Component {
         </a>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
-            <span style={styles.categoryDescription}>
-              {this.props.description}
-            </span>
+            {this.props.description && (
+              <span style={styles.categoryDescription}>
+                {this.props.description}
+              </span>
+            )}
             {this.props.datasets.map(tableName => (
               <LibraryTable
                 key={tableName}

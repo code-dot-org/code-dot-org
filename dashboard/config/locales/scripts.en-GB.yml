@@ -9,19 +9,19 @@ en-GB:
           title: Course 1
           description_audience: Ages 4-6
         course3:
-          stages:
+          lessons:
             Computational Thinking:
               name: Computational Thinking
         usability:
-          stages:
+          lessons:
             Variables:
               name: Variables
         infinity:
-          stages:
+          lessons:
             Infinity:
               name: Infinity
         20-hour:
-          stages:
+          lessons:
             Computational Thinking:
               name: Computational Thinking
             Introduction to Computer Science:
@@ -31,111 +31,253 @@ en-GB:
             The Maze:
               name: The Maze
         edit-code:
-          stages:
+          lessons:
             The Maze:
               name: The Maze
         step:
           title: Step
-          stages:
+          lessons:
             Step:
               name: Step
         gradeKinder:
-          stages:
+          lessons:
             Loops:
               name: Loops
         grade1:
-          stages:
+          lessons:
             Loops:
               name: Loops
         csd3-2017:
-          stages:
+          lessons:
             Variables:
               name: Variables
         k5concepts:
-          stages:
+          lessons:
             Loops:
               name: Loops
             Variables:
               name: Variables
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variables
             'null':
               name: 'null'
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: Lists
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        coursed-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
         andrea-test:
-          stages:
+          lessons:
             'null':
               name: 'null'
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: Variables
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Lists
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
               name: Variables
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Loops:
               name: Loops
             Variables:
               name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
         csd3-2020:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Text:
               name: Text
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2020:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         csp5-virtual:
-          stages:
+          lessons:
             Variables:
               name: Variables
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Text

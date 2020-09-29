@@ -1,0 +1,11 @@
+name 'CSD U3 drawing challenges_2020_virtual_2020'
+display_name 'Drawing Challenges'
+description 'Try out some challenges!'
+
+sublevels
+level 'CSD U3 drawing challenge 2_virtual_2020'
+level 'CSD U3 drawing challenge 3_virtual_2020'
+level 'CSD U3 drawing challenge no fill_virtual_2020'
+level 'CSD U3 challenge face_virtual_2020'
+level 'CSD U3 challenge new shape_virtual_2020'
+level 'CSD U3 L3 Freeplay_virtual_2020'

@@ -88,9 +88,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -109,9 +106,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -188,9 +182,6 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} tee liike {MOVE} {DIR} kerran"
         options:
@@ -219,9 +210,6 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'toista joka {N} mittayksikköä jälkeen {START} '
       Dancelab_everySeconds:
@@ -967,6 +955,10 @@ fi:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -1011,8 +1003,45 @@ fi:
         options:
           CHOICE:
             '"this"': tätä
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} koskettaa reunoja"
       gamelab_jumpTo:
@@ -1056,6 +1085,13 @@ fi:
             '"z"': z
       gamelab_locationAt:
         text: 'sijainti x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
       gamelab_locationMouse:
         text: hiiren sijainti
       gamelab_locationOf:
@@ -1086,6 +1122,8 @@ fi:
             '"West"': Länsi
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
+      gamelab_objectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1163,6 +1201,8 @@ fi:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
+      gamelab_subjectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_turn:
         text: käännä {SPRITE} {DIRECTION} {N} astetta
         options:

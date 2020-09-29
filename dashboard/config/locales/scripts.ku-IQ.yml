@@ -9,7 +9,7 @@ ku:
         course1:
           title: Ders 1
           description_audience: تەمەنی ٤-٦
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'هونەرمەند: خولانەوەکان'
             'Artist: Sequence':
@@ -19,7 +19,7 @@ ku:
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'هونەرمەند: خولانەوەکان'
             'Artist: Sequence':
@@ -29,29 +29,29 @@ ku:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
         course3:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
         Course4pre:
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'هونەرمەند: خولانەوەکان'
             'Artist: Sequence':
               name: 'هونەر: ریز'
         usability:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: مەرجیەکان
         netsim:
           title: هاوشێوەسازی ئینتەرنێت
         20-hour:
-          stages:
+          lessons:
             Abstraction:
               name: پوختە
             Algorithms:
@@ -93,34 +93,34 @@ ku:
             Wrap-up:
               name: پوختەی بابەت
         edit-code:
-          stages:
+          lessons:
             The Artist:
               name: هونەرمەندەکە
             The Maze:
               name: مەتەڵە ڕێگا
         events:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
         jigsaw:
           title: مەتەڵە وێنە
-          stages:
+          lessons:
             Jigsaw:
               name: مەتەڵە وێنە
         allthethings:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
             Jigsaw:
               name: مەتەڵە وێنە
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: تاقیگەی ئاپ
             Internet Simulator:
               name: هاوشێوەسازی ئینتەرنێت
         ECSPD2:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -130,7 +130,7 @@ ku:
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-iZone:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -140,7 +140,7 @@ ku:
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-NexTech:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -150,33 +150,33 @@ ku:
             Wrap-up:
               name: پوختەی بابەت
         asUnplugged:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Happy Maps:
               name: نەخشەی دڵخۆش
         csp1-2017:
-          stages:
+          lessons:
             The Internet:
               name: ئینتەرنێت
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: فرمانەکان
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: تاقیگەی یاری
         gradeKinder:
-          stages:
+          lessons:
             Loops:
               name: گرێکان
         grade1:
-          stages:
+          lessons:
             Loops:
               name: گرێکان
         ecs-unit1:
-          stages:
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -186,11 +186,11 @@ ku:
             Wrap-up:
               name: پوختەی بابەت
         grade3:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
         csd3-2017:
-          stages:
+          lessons:
             Functions:
               name: فرمانەکان
             Variables:
@@ -198,7 +198,7 @@ ku:
             Conditionals:
               name: مەرجیەکان
         k5concepts:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
             Functions:
@@ -210,29 +210,33 @@ ku:
             Variables:
               name: گۆڕاوەکان
         basketball:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         coursee-draft:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
             Functions with Parameters:
               name: فەرمانی بە پێوەر
+        workshop-gamelab:
+          lessons:
+            Input:
+              name: داخڵکردن
         coursee-ramp:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
             Functions with Parameters:
@@ -240,7 +244,7 @@ ku:
             Functions with Parameters_:
               name: فەرمانی بە پێوەر
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -248,15 +252,15 @@ ku:
             Functions:
               name: فرمانەکان
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: فرمانەکان
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -266,27 +270,27 @@ ku:
             'null':
               name: بەتاڵ
         artist-and-bb8:
-          stages:
+          lessons:
             Bounce:
               name: هەڵبەزینەوە
         e-f-ramp:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
         new-e:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
         course-e-2018:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -294,7 +298,7 @@ ku:
             Functions:
               name: فرمانەکان
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -302,15 +306,15 @@ ku:
             Functions:
               name: فرمانەکان
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         coursea-2018:
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: نەخشەی دڵخۆش
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Internet:
@@ -320,7 +324,7 @@ ku:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Graph Paper Programming:
@@ -328,49 +332,93 @@ ku:
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
         csd6-2018:
-          stages:
+          lessons:
             Functions with Parameters:
               name: فەرمانی بە پێوەر
         coursee-2018:
-          stages:
+          lessons:
             Internet:
               name: ئینتەرنێت
         csp1-2018:
-          stages:
+          lessons:
             The Internet:
               name: ئینتەرنێت
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: گۆڕاوەکان
+          lessons:
             The Artist:
               name: هونەرمەندەکە
             Internet:
               name: ئینتەرنێت
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
         express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+          lessons:
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
         andrea-test:
-          stages:
+          lessons:
             'null':
               name: بەتاڵ
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
         gamelab:
           title: تاقیگەی یاری
         coursea-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+          lessons:
             'Programming: Happy Maps':
               name: نەخشەی دڵخۆش
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -378,31 +426,111 @@ ku:
             Functions:
               name: فرمانەکان
         csd6-2019:
-          stages:
+          lessons:
             Functions with Parameters:
               name: فەرمانی بە پێوەر
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
         csp1-2019:
-          stages:
+          lessons:
             The Internet:
               name: ئینتەرنێت
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: لیستەکان
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
         k5-onlinepd-2019:
-          stages:
+          lessons:
             Loops:
               name: گرێکان
             Conditionals:
@@ -411,24 +539,62 @@ ku:
               name: فرمانەکان
             Variables:
               name: گۆڕاوەکان
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
         time4cs-original-unit-1:
-          stages:
+          lessons:
             Conditionals:
               name: مەرجیەکان
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
         time4cs-control-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+          lessons:
             Conditionals:
               name: مەرجیەکان
         time4cs-experiment-unit-1:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+          lessons:
             Conditionals:
               name: مەرجیەکان
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان
         csd6-2020:
-          stages:
+          lessons:
             Functions with Parameters:
               name: فەرمانی بە پێوەر
         csd3-2020:
-          stages:
+          lessons:
             Variables:
               name: گۆڕاوەکان
             Conditionals:
@@ -438,36 +604,85 @@ ku:
             Text:
               name: دەق
         coursea-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+          lessons:
             'Programming: Happy Maps':
               name: نەخشەی دڵخۆش
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
         coursed-2020:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
         coursef-2020:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: گۆڕاوەکان
+          lessons:
             Internet:
               name: ئینتەرنێت
-        csd3-virtual:
-          stages:
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        csp5-virtual:
+          lessons:
             Variables:
               name: گۆڕاوەکان
+        virtual-holding-place:
+          lessons:
+            Functions:
+              name: فرمانەکان
+        code-break:
+          lessons:
+            Algorithms:
+              name: خوارزمیەکان
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: گرێکان
             Conditionals:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
-        csp5-virtual:
-          stages:
             Variables:
               name: گۆڕاوەکان
-        virtual-holding-place:
-          stages:
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: گۆڕاوەکان
+            Text:
+              name: دەق
+            Conditionals:
+              name: مەرجیەکان
             Functions:
               name: فرمانەکان
-        code-break:
-          stages:
-            Algorithms:
-              name: خوارزمیەکان

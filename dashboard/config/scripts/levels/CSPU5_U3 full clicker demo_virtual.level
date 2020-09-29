@@ -138,7 +138,7 @@
     "encrypted_examples": "pUlknB1X1g0LDk9ciFEBZ5DgmsOqCvkEF9NlPhCcP3yLr1O0cM52Mn3VACDw\nbZUM\n",
     "embed": "true",
     "short_instructions": "Clicker game - Try it out!",
-    "long_instructions": "# Clicker Game Demo\r\n\r\nTry out this clicker game! You'll be building your own version (with a theme you choose) at the end of the lesson.\r\n\r\n# Things That Are Familiar\r\nYou know how to build many of the components of this game already:\r\n- Multiple screens.\r\n- Buttons that change the screen when clicked.\r\n- Image that moves when you click it.\r\n\r\n# Things That Are New\r\n- Keeping track of and displaying the __changing score__.\r\n- Keeping track of and displaying the __changing lives__.\r\n- Changing to the __win screen if the score is 25__.\r\n- Changing to the __lose screen if the lives is 0__.\r\n",
+    "long_instructions": "# Clicker Game Demo\r\n\r\nTry out this clicker game! You'll be building your own version at the end of the lesson.\r\n\r\n# Things That Are Familiar\r\nYou know how to build many of the components of this game already:\r\n- Multiple screens.\r\n- Buttons that change the screen when clicked.\r\n- Image that moves when you click it.\r\n\r\n# Things That Are New\r\n- Keeping track of and displaying the __changing score__.\r\n- Keeping track of and displaying the __changing lives__.\r\n- Changing to the __win screen if the score is 25__.\r\n- Changing to the __lose screen if the lives is 0__.\r\n",
     "start_blocks": "var score = 0;\r\nvar lives = 3;\r\n\r\nonEvent(\"apple\", \"click\", function() {\r\n  var appleSize = randomNumber(30, 100);\r\n  setPosition(\"apple\", randomNumber(50,280), randomNumber(50, 350), appleSize, appleSize);\r\n  score = score + 1;\r\n  setText(\"total_score_label\", score);\r\n  if(score == 25){\r\n  setScreen(\"win_screen\");\r\n  playSound(\"https://videos.code.org/applab/applause.mp3\");\r\n  }\r\n});\r\nonEvent(\"start_button\", \"click\", function() {\r\n  setScreen(\"game_screen\");\r\n});\r\nonEvent(\"playAgain_button\", \"click\", function() {\r\n  resetGame();\r\n});\r\nonEvent(\"tryAgain_button\", \"click\", function() {\r\n  resetGame();\r\n});\r\nonEvent(\"background\", \"click\", function() {\r\n  lives = lives - 1;\r\n  setText(\"number_lives_label\", lives);\r\n  if(lives == 0){\r\n    setScreen(\"lose_screen\");\r\n    playSound(\"https://videos.code.org/applab/trombone.mp3\");\r\n  }\r\n});\r\n\r\nfunction resetGame(){\r\n  score = 0;\r\n  lives = 3;\r\n  setText(\"total_score_label\", score);\r\n  setText(\"number_lives_label\", lives);\r\n  setScreen(\"welcome_screen\");\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -172,9 +172,22 @@
     "parent_level_id": 17151,
     "name_suffix": "_virtual",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-21 21:01:47 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

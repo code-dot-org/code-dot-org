@@ -1877,6 +1877,8 @@ bg-BG:
   header_about: Относно
   header_teacher_community: Учителска общност
   header_report_bug: Съобщи за бъгове
+  header_legal_privacy: Защита на личните данни
+  header_legal_tos: Термини
   user_header_label: Здравейте %{username}
   user_header_team: Екип
   user_header_settings: Моят акаунт

@@ -21,6 +21,7 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const style = {
   root: {
@@ -35,7 +36,7 @@ const style = {
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
     display: 'block',
-    width: '100%',
+    width: '98%',
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em'
@@ -63,7 +64,6 @@ class EditSectionForm extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-    sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -114,6 +114,13 @@ class EditSectionForm extends Component {
     });
   };
 
+  isOauthType(loginType) {
+    return [
+      SectionLoginType.google_classroom,
+      SectionLoginType.clever
+    ].includes(loginType);
+  }
+
   render() {
     const {
       section,
@@ -129,6 +136,40 @@ class EditSectionForm extends Component {
       localeEnglishName,
       isNewSection
     } = this.props;
+
+    /**
+    OAuth and personal email login types can not be changed.
+    Picture login type can be changed to word login type.
+    Word login type can be changed to picture login type.
+    **/
+    const changeableLoginTypes = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+
+    let sectionLoginTypeTransforms = {};
+    sectionLoginTypeTransforms[SectionLoginType.email] = [
+      SectionLoginType.email
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.picture] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.word] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.clever] = [
+      SectionLoginType.clever
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.google_classroom] = [
+      SectionLoginType.google_classroom
+    ];
+
+    const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
+
+    const showLoginTypeField =
+      !isNewSection && changeableLoginTypes.includes(section.loginType);
 
     if (!section) {
       return null;
@@ -148,6 +189,14 @@ class EditSectionForm extends Component {
             validGrades={validGrades}
             disabled={isSaveInProgress}
           />
+          {showLoginTypeField && (
+            <LoginTypeField
+              value={section.loginType}
+              onChange={loginType => editSectionProperties({loginType})}
+              validLoginTypes={validLoginTypes}
+              disabled={isSaveInProgress}
+            />
+          )}
           <AssignmentField
             section={section}
             onChange={ids => editSectionProperties(ids)}
@@ -249,6 +298,44 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
 GradeField.propTypes = {
   ...FieldProps,
   validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
+  const friendlyNameByLoginType = {
+    [SectionLoginType.picture]: i18n.loginTypePicture(),
+    [SectionLoginType.word]: i18n.loginTypeWord(),
+    [SectionLoginType.email]: i18n.loginTypePersonal(),
+    [SectionLoginType.google_classroom]: i18n.loginTypeGoogleClassroom(),
+    [SectionLoginType.clever]: i18n.loginTypeClever()
+  };
+  const descriptionByLoginType = {
+    [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+    [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+    [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
+    [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
+    [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
+  };
+  return (
+    <div>
+      <FieldName>{i18n.loginType()}</FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {validLoginTypes.map((loginType, index) => (
+          <option key={index} value={loginType}>
+            {friendlyNameByLoginType[loginType]}
+          </option>
+        ))}
+      </Dropdown>
+      <span style={{marginLeft: 5}}>{descriptionByLoginType[value]}</span>
+    </div>
+  );
+};
+LoginTypeField.propTypes = {
+  ...FieldProps,
+  validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const AssignmentField = ({
@@ -368,7 +455,6 @@ let defaultPropsFromState = state => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
-  sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),

@@ -3,7 +3,8 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
     :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
     :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
     :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
-    :scholarship_status, :scholarship_ineligible_reason, :enrolled_date
+    :scholarship_status, :scholarship_ineligible_reason, :enrolled_date,
+    :years_teaching, :years_teaching_cs, :taught_ap_before, :planning_to_teach_ap
 
   def user_id
     user = object.resolve_user

@@ -2,25 +2,22 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/editors/_gamelab.js')}
 
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
+
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
-
 = render partial: 'levels/editors/fields/debugger', locals: {f: f}
-
 = render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
-
-= render partial: 'levels/editors/fields/submittable', locals: {f: f}
-
-= render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
-
-.field.aligned-input-group
-  = boolean_check_box f, :hide_view_data_button
-  = f.label 'Hide View Data Button'
-
-= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
-
-= render partial: 'levels/editors/fields/validation_code', locals: {f: f}
-
 = render partial: 'levels/editors/fields/animation', locals: {f: f}
+
+= render partial: 'levels/editors/fields/preload_assets', locals: {f: f}
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 
 :javascript
   window.toggleBlock = function (elementId) {

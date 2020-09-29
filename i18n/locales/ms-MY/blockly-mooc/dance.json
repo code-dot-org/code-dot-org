@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Anda menekan kekunci, tetapi penari anda tidak bertindak balas.",
   "danceFeedbackNeedTwoDancers": "Anda perlu mengadakan dua orang penari.",
   "danceFeedbackOnlyOneDancerMoved": "Hanya seorang daripada penari anda yang bergerak.",
-  "danceFeedbackNeedLead": "Anda juga perlu mencipta seorang penari utama dengan <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> blok.",
+  "danceFeedbackNeedLead": "Anda juga perlu mencipta seorang penari utama dengan <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> blok.",
   "danceFeedbackNeedBackup": "Anda perlu mencipta kumpulan penari sandaran dengan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blok.",
   "danceFeedbackSetSize": "Anda perlu menukar saiz sekurang-kurangnya seorang penari selepas muzik bermula.",
   "measure": "Corak Berirama:"

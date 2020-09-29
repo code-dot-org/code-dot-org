@@ -11,125 +11,158 @@ it:
   campaign_date_full: dal 9 al 15 dicembre
   campaign_date_year: '2017'
   campaign_date_full_year: dal 9 al 15 dicembre 2019
+  latam_campaign_date_start_short: '1 ottobre '
+  latam_campaign_date_start_long: '1 ottobre '
+  latam_campaign_date_short: 1 ottobre - 18 dicembre
+  latam_campaign_date_full: 1 ottobre - 18 dicembre
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: 1 ottobre 2020 - 18 dicembre 2020
+  europe_campaign_date_start_short: 10 ottobre
+  europe_campaign_date_start_long: 10 ottobre
+  europe_campaign_date_short: 10-25 ottobre
+  europe_campaign_date_full: 10-25 ottobre
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: 10-25 ottobre, 2020
+  africa_campaign_date_start_short: '1 ottobre '
+  africa_campaign_date_start_long: '1 ottobre '
+  africa_campaign_date_short: 1-31 ottobre
+  africa_campaign_date_full: 1-31 ottobre
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: 1-31 ottobre, 2020
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
   social_hoc2019_every_sudent: 'Ogni studente può cambiare il mondo. Aiutalo ad essere
     pronto. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
+  social_hoc2019_learn_computer_science: 'Impara l''informatica e cambia il mondo.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  social_hoc_is_coming: L'Ora del Codice sta arrivando!
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode è #CSforGood. Impara l'informatica.
+    Cambia il mondo."
   social_hoc2019_coming_dates: L'Ora del Codice sta arrivando dal 9 al 15 dicembre
     2019. È fondamentale che ogni studente apprenda l’informatica.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  social_hoc2019_dance: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj e altri 34!
+  oceans_landing_title: IA per i Mari
+  oceans_landing_description: Informazioni sull'apprendimento automatico e sull'uso
+    etico dell'intelligenza artificiale.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
+  oceans_landing_specs: Disponibile in più di 25 lingue | Dalla terza primaria in
+    poi
+  oceans_landing_explanation: L'informatica è molto più che codifica! Scopri l'intelligenza
+    artificiale (AI), l'apprendimento automatico, i dati di formazione e i pregiudizi,
+    mentre esplori le questioni etiche e come l'IA può essere utilizzata per affrontare
+    i problemi del mondo. Goditi il primo passo di Code.org in un nuovo viaggio per
+    insegnare di più sull'IA. Quando utilizzi l'attività Intelligenza Artificiale
+    per i Mari, stai addestrando dei modelli reali di apprendimento automatico. <a
+    href='#behind-the-scenes'>Per saperne di più</a>
+  oceans_landing_explanation_markdown: L'informatica è molto più che codifica! Scopri
+    l'intelligenza artificiale (AI), l'apprendimento automatico, i dati di formazione
+    e i pregiudizi, mentre esplori le questioni etiche e come l'IA può essere utilizzata
+    per affrontare i problemi del mondo. Goditi il primo passo di Code.org in un nuovo
+    viaggio per insegnare di più sull'IA. Quando utilizzi l'attività Intelligenza
+    Artificiale per i Mari, stai addestrando dei modelli reali di apprendimento automatico.
+    <a href='#behind-the-scenes'>Per saperne di più</a>
+  oceans_landing_teacher_resources: Risorse per l'insegnante
+  oceans_landing_teacher_resources_desc: Piani di lavoro e attività della lezione
+    per aiutarti a insegnare l'Intelligenza Artificiale, l'apprendimento automatico,
+    i dati di formazione e i pregiudizi, esplorando le questioni etiche.
+  oceans_landing_resource_button: Visualizza le risorse
+  oceans_landing_cs_for_good: Informatica per sempre
+  oceans_landing_cs_for_good_desc: Risorse per aiutare gli alunni a comprendere il
+    ruolo che l'informatica potrebbe svolgere nella creazione di un mondo più equo.
+  oceans_landing_videos: Video sull'intelligenza Artificiale e l'Apprendimento Automatico
+  oceans_behind_the_scenes: 'Intelligenza Artificiale per i Mari: dietro le quinte'
+  oceans_behind_the_scenes_1: I livelli 2-4 utilizzano un modello preimpostato fornito
+    dal progetto <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a>. Un modello MobileNet è una <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rete
+    neurale convoluzionale</a> che è stato impostato su <a href="http://www.image-net.org/">ImageNet</a>,
+    un set di dati di oltre 14 milioni di immagini annotate a mano con parole come
+    "palloncino" o "fragola".Per personalizzare questo modello con i dati della formazione
+    etichettati che lo studente genera in questa attività, utilizziamo una tecnica
+    chiamata <a href="https://en.wikipedia.org/wiki/Transfer_learning">Trasferimento
+    dell'apprendimento</a>. Ogni immagine nel set di dati della formazione viene inviata
+    a MobileNet, come pixel, per ottenere un elenco di annotazioni che è più probabile
+    che vengano applicati. Quindi, per una nuova immagine, la inviamo a MobileNet
+    e confrontiamo il suo elenco di annotazioni risultante con quello del set di dati
+    della formazione. Classifichiamo la nuova immagine con la stessa etichetta (tipo
+    "pesce" o "non pesce") delle immagini del set di formazione con i risultati più
+    simili.
+  oceans_behind_the_scenes_1_markdown: I livelli 2-4 utilizzano un modello pre-impostato
+    fornito dal progetto [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    Un modello MobileNet è un file [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    su cui è stato impostato su [ImageNet](http://www.image-net.org/), un set di dati
+    di oltre 14 milioni di immagini annotate a mano con parole come "palloncino" o
+    "fragola". Per personalizzare questo modello con i dati della formazione etichettati
+    che lo studente genera in questa attività, utilizziamo una tecnica chiamata [Transfer
+    Learning](https://en.wikipedia.org/wiki/Transfer_learning). Ogni immagine nel
+    set di dati della formazione viene inviata a MobileNet, come pixel, per ottenere
+    un elenco di annotazioni che è più probabile che vengano applicati. Quindi, per
+    una nuova immagine, la inviamo a MobileNet e confrontiamo il suo elenco di annotazioni
+    risultante con quelli del set di dati della formazione. Classifichiamo la nuova
+    immagine con la stessa etichetta (come "pesce" o "non pesce") come le immagini
+    del set della formazione con i risultati più simili.
+  oceans_behind_the_scenes_2: I livelli 6-8 usano una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Macchina
+    vettore di supporto</a> (SVM). Osserviamo ogni componente del pesce (come occhi,
+    bocca, corpo) e assembliamo tutti i metadati per i componenti (come numero di
+    denti, forma del corpo) in un vettore di numeri per ogni pesce. Usiamo questi
+    vettori per addestrare la Macchina vettore di supporto. Sulla base dei dati di
+    addestramento, la macchina separa lo "spazio" di tutti i pesci possibili in due
+    parti, che corrispondono alle classi che stiamo cercando di imparare (come "blu"
+    o "non blu").
+  oceans_behind_the_scenes_2_markdown: I livelli 6-8 usano una  [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). Osserviamo ogni componente del pesce (come occhi, bocca, corpo) e assembliamo
+    tutti i metadati per i componenti (come numero di denti, forma del corpo) in un
+    vettore di numeri per ogni pesce. Usiamo questi vettori per addestrare la Macchina
+    vettore di supporto. Sulla base dei dati di addestramento, la macchina separa
+    lo "spazio" di tutti i pesci possibili in due parti, che corrispondono alle classi
+    che stiamo cercando di imparare (come "blu" o "non blu").
+  social_hoc2019_oceans_title: 'IA per i Mari #CSforGood'
+  social_hoc2019_oceans_desc: 'Scopri l''intelligenza artificiale, l''apprendimento
+    automatico, i dati della formazione e i pregiudizi, mentre esplori le questioni
+    etiche e in che modo l''Intelligenza Artificiale può essere utilizzata per affrontare
+    i problemi del mondo. L''informatica è molto più che codifica! Goditi il primo
+    passo di Code.org in un nuovo viaggio per insegnare di più sull''intelligenza
+    artificiale durante il nostro piano di studi.
+
+'
+  hoc_overview_oceans_tutorial_header: IA per i Mari
+  hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
+    automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
+    etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
+    i problemi del mondo.
   ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_algorithm_bias: Combattere i pregiudizi negli algoritmi
   ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
     di un cane?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_video_title_what_is_ml: Cos'è l'Apprendimento Automatico?
+  ai_video_title_ml_big_small_prickly: 'Apprendimento automatico: risoluzione di problemi
+    grandi, piccoli e spinosi'
+  ai_video_title_ethics_of_ai: Etica dell'Intelligenza Artificiale
+  ai_video_title_ml_human_bias: Apprendimento automatico e pregiudizi umani
+  ai_video_title_seeing_ai: 'Vedere l''Intelligenza Artificiale: rendere il mondo
+    visivo più accessibile'
+  activity: Attività
+  name: Nome
+  description: Descrizione
+  audience: Pubblico
+  ai_resource_header: Insegna e impara sull'Intelligenza Artificiale
+  ai_resource_minecraft: IA in Minecraft per sempre
+  ai_resource_minecraft_desc: 'Accedi a risorse gratuite tra cui un programma di lezioni,
+    video, piano di studi in informatica e corsi di formazione per insegnanti. (Richiede
+    Minecraft: Versione Education)'
+  ai_resource_ml_for_kids: Apprendimento automatico per i bambini
+  ai_resource_ml_for_kids_desc: Addestra un modello di apprendimento automatico con
+    testo, numeri o immagini e usalo per creare giochi con Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Apprendimento automatico per i bambini'
+  ai_resouce_ibm_ml_for_kids_desc: Attività pratiche per presentare agli studenti
+    semplici modelli di apprendimento automatico attraverso giochi e progetti interattivi.
+  ai_resource_ecs: 'ECS: Intelligenza Artificiale (IA)'
+  ai_resource_ecs_desc: Una nuova unità curricolare alternativa per il piano di studi
+    Esplorare l'informatica (ECS).
+  ai_resource_elements_ai: Elementi dell'Intelligenza Artificiale
+  ai_resource_elements_ai_desc: Una serie di corsi online gratuiti creati da Reaktor
+    e dall'Università di Helsinki.
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
@@ -173,9 +206,14 @@ it:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Insegni in una classe remota o socialmente lontana
+    questo semestre? Visualizza le nostre risorse.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: Cliccando "Accetto." accetti la memorizzazione dei cookie
     sul tuo computer o dispositivo.
   cookie_banner_more_information: Vedi la Privacy Policy di Code.org.
@@ -345,6 +383,7 @@ it:
   how_to_nav_companies: Per le aziende
   how_to_nav_afterschool_educators: Per gli insegnanti del doposcuola
   how_to_nav_volunteers: Per i volontari
+  how_to_nav_virtual: For virtual events
   whats_next_header: Cosa c'è dopo?
   whats_next_description: Ti manderemo del materiale e consigli utili per il tuo evento.
     <a href='http://code.org/learn'>Prova le esercitazioni disponibili </a> per qualunque
@@ -488,6 +527,7 @@ it:
     nostra mappa
   signup_event_type_in_school: In una scuola
   signup_event_type_out_of_school: In un'organizzazione diversa da una scuola
+  signup_event_type_at_home: Home
   signup_submit_census_label: Invia
   signup_submit_census_error_message: Siamo spiacenti. Si è verificato un errore.
     Prova a inviare nuovamente il modulo.
@@ -2889,12 +2929,12 @@ it:
     Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
 
     All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.
-  tutorial_vidclim_longdescription: "Students research a fact about the Earth's climate,
+  tutorial_vidclim_longdescription: Students research a fact about the Earth's climate,
     engaging with the work of scientists and artists in response to climate change.
-    Students take their research and plan a video sharing their fact. \n\nVideos can
-    be about\nUnderstanding climate changes and its effects\nPublic responses to the
-    climate change effects\nHow climate change impacts everyday life\nWhat actions
-    can you take to make a difference"
+    Students take their research and plan a video sharing their fact. Videos can be
+    about understanding climate changes and its effects, public responses to climate
+    change, how climate change impacts everyday life, and the actions you can take
+    to make a difference.
   tutorial_matlab_longdescription: Learn to Code is an engaging, online, interactive
     tutorial where you learn how to code. Use MATLAB to find out if the closest meet-up
     location with your friends is the movies, the mall, or the cafe. Break the problem
@@ -2917,8 +2957,8 @@ it:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2946,7 +2986,7 @@ it:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -3125,7 +3165,6 @@ it:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -3299,7 +3338,7 @@ it:
   tutorial_bbcgeo_longdescription: Standards-based lesson plan for grades K-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
     geometry.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3534,7 +3573,7 @@ it:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3642,7 +3681,7 @@ it:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -4164,7 +4203,7 @@ it:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Coding in Java with CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4398,9 +4437,9 @@ it:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -5056,30 +5095,29 @@ it:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -5143,7 +5181,7 @@ it:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -6522,7 +6560,7 @@ it:
   tutorial_n2y_string_detail_grades: Pre-scolare
   tutorial_dance2019_string_platforms: Tutti i browser moderni, iPad
   tutorial_danceparty_string_platforms: Tutti i browser moderni, Android, iOS
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_star-wars_string_platforms: Tutti i browser moderni, tablet Android, iPad,
@@ -6597,7 +6635,7 @@ it:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: non-mostrare
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6937,7 +6975,7 @@ it:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -7111,15 +7149,15 @@ it:
   tutorial_codesparkcreate_string_platforms: Tutti i browser moderni, tablet Android,
     iPad, telefoni Android, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: All modern browsers
   tutorial_csfirstname_string_platforms: All modern browsers
-  tutorial_obstaclecourse_string_platforms: iPad
+  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: All modern browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -7128,10 +7166,10 @@ it:
     scollegati
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -8491,7 +8529,7 @@ it:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8543,7 +8581,7 @@ it:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'L''Ora del Codice di Minecraft: IA a fin di bene'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: IA per i Mari
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8708,9 +8746,9 @@ it:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -9117,7 +9155,8 @@ it:
   tutorial_googlehero_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_codestersbball_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_scratchcartoon_string_platforms: Tutti i browser moderni, Android, iOS
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tutti i browser moderni, tablet Android,
+    iPad, telefoni Android, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9143,7 +9182,7 @@ it:
   tutorial_tynkerland_string_platforms: Tutti i moderni browser, iPad, apparecchi
     scollegati
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_tynkermars_string_platforms: Tutti i moderni browser, iPad, apparecchi
     scollegati
@@ -9159,7 +9198,7 @@ it:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: Tutti i moderni browser, iPad, apparecchi
     scollegati
   tutorial_careconfigure_string_platforms: All modern browsers
@@ -9172,7 +9211,7 @@ it:
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: Tutti i moderni browser, iPad, apparecchi
     scollegati
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: Tutti i moderni browser, iPad, apparecchi scollegati
   tutorial_baroborav_string_platforms: All modern browsers
@@ -9494,3 +9533,4 @@ it:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Lingua

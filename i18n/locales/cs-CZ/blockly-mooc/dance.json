@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Zmáčkl(a) jsi klávesu, ale tvůj tanečník nezareagoval.",
   "danceFeedbackNeedTwoDancers": "Musíš vytvořit dva tanečníky.",
   "danceFeedbackOnlyOneDancerMoved": "Jen jeden ze tvých tanečníků se pohnul.",
-  "danceFeedbackNeedLead": "Musíš vytvořit také jednoho hlavního tanečníka s blokem <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Musíš vytvořit také jednoho hlavního tanečníka s blokem <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Musíš vytvořit skupinu doprovodných tanečníků s blokem <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"JEDNOROŽEC\"</title><title name=\"LAYOUT\">\"kruh\"</title></block></xml>.",
   "danceFeedbackSetSize": "Poté, co začne hrát hudba, musíš změnit velikost alespoň jednoho tanečníka.",
   "measure": "Takt:"

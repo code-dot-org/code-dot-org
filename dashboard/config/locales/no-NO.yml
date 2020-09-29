@@ -356,6 +356,8 @@
       help_us: Hjelp oss
       teach: Undervis
       about: Om
+      legal_privacy: Personvern
+      legal_tos: Vilkår
     user:
       classroom: Lærerens startside
       district_dashboard: Distrikt skrivebord
@@ -773,25 +775,6 @@
         lag en enkeltkonseptøkt for klassen din.
       audience: Alder 14+
       cta: Lær hvordan
-  gallery:
-    students_drew_these_with_code: Elever tegnet disse ved å kode.
-    students_made_these_with_code: Elever laget disse ved å kode.
-    picture_count: I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b>
-      bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program
-      kjøre.
-    activity_count: De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b>
-      apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder
-      for å se hvert program i aksjon.
-    want_to_make_your_own: Vil du lage din egen?
-    how_to_save: På siste nivå i disse opplæringene, klikker du "Avslutt" og "Lagre"
-      for å lagre ditt arbeid i galleriet.
-    more: Flere &rarr;
-    caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: "%{time_ago} siden"
-    header: Galleri
-    header_playlab: Spill-lab
-    header_artist: Kunstner
-    report_abuse: Rapporter misbruk
   landing:
     report_bug: Rapporter feil
     support: Få hjelp
@@ -1024,63 +1007,7 @@
     instructor_feedback: Tilbakemelding fra instruktør
     peer_feedback: Gi tilbakemelding
     outdated: Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget
-  flex_category:
-    required: Oversikt
-    content: Innhold
-    practice: Undervisningspraksis
     peer_review: Tilbakemelding
-    main_course: Hovedkurs
-    extra_course_content: Ekstra kursinnhold
-    csf_e_1: Oppgrader til Kurs E (Valgfritt)
-    csf_e_2: 'Kurs E: innhold'
-    csf_f_1: Oppgrader til Kurs F (Valgfritt)
-    csf_f_2: 'Kurs F: innhold'
-    csf_digcit: Digitalt statsborgerskap
-    csf_jigsaw: Puslespill
-    csf_loops: Løkker
-    csf_events: Hendelser
-    csf_binary: Binær
-    csf_conditionals: Betingelser
-    csf_nested_loops: Løkker i løkker
-    csf_functions: Funksjoner
-    csf_variables: Variabler
-    csf_for_loops: For-løkker
-    csf_internet: Internett
-    csd1_1: 'Kapittel 1: Problemløsingsprosessen'
-    csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
-    csd2_2: 'Kapittel 2: Styling og CSS'
-    csd3_1: 'Kapittel 1: Bilder og animasjoner'
-    csd3_2: 'Kapittel 2: Bygge spill'
-    csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: Prototyping av app'
-    csd5_1: 'Kapittel 1: Representerer informasjon'
-    csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Programmere hardware'
-    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
-    csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
-    csp1_2: 'Kapittel 2: Finne opp Internett'
-    csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
-    csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
-    csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
-    csp5_2: 'Kapittel 2: Programmering med datastrukturer'
-    cspSurvey: Undersøkelse
-    cspAssessment: Vurdering av kapittel
-    csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
-    csp_postap_1: 'Kapittel 2: Manipulere og visualisere data'
-    csp2_1_2018: 'Enhet 2: Digital informasjon'
-    csp_variables: Variabler
-    csp_conditionals: Betingelser
-    csp_functions: Funksjoner
-    csp_lists: Lister
-    csp_loops: Løkker
-    csp_unit1_2020: "(gammel) Enhet 1: Digital informasjon"
-    dlp: Spørsmål til refleksjon
-    k5_next_steps: De Neste Trinnene
   external_links:
     disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives
@@ -1172,6 +1099,8 @@
       school_name: Skolens navn
       school_city: Skolens poststed
       school_country: Landet til skolen
+      colombian_school_city: Skolens poststed
+      colombian_school_name: Skolens navn
     form_entries:
       gender:
         male: Mann

@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Du hast eine Taste gedrückt, aber dein Tänzer hat nicht reagiert.",
   "danceFeedbackNeedTwoDancers": "Du musst zwei Tänzer erstellen.",
   "danceFeedbackOnlyOneDancerMoved": "Nur einer deiner Tänzer hat sich bewegt.",
-  "danceFeedbackNeedLead": "Du musst auch einen Leadtänzer mit dem <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> Baustein erstellen.",
+  "danceFeedbackNeedLead": "Du musst auch einen Leadtänzer mit dem <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> Baustein erstellen.",
   "danceFeedbackNeedBackup": "Du musst eine Gruppe von Backup-Tänzern mit dem <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> Block erstellen.",
   "danceFeedbackSetSize": "Du musst nach dem Einsetzen der Musik die Größe von mindestens einem Tänzer ändern.",
   "measure": "Takt:"

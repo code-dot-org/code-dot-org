@@ -32,6 +32,7 @@ class AssetHelpersTest < Minitest::Test
 
   def test_valid_asset_with_unoptimized_webpack_assets
     CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
     assert_equal(
       '/assets/js/cookieBanner.js',
       @asset_helper.webpack_asset_path('js/cookieBanner.js')
@@ -40,6 +41,7 @@ class AssetHelpersTest < Minitest::Test
 
   def test_missing_manifest_with_unoptimized_webpack_assets
     CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
     AssetHelper.any_instance.stubs(:webpack_manifest_path).returns('./test/fixtures/nonexistent.json')
     assert_equal(
       '/assets/js/cookieBanner.js',

@@ -156,6 +156,9 @@ vi:
     email_preference_yes: "Đồng ý"
     email_preference_no: "Không"
     email_preference_required: "Bạn phải có một tài khoản email tham chiếu."
+    parent_account_checkbox: "Tôi là phụ huynh/người giám hộ đăng ký nhân danh con của tôi"
+    parent_account_email_progress_permission: "Liệu chúng tôi có thể gửi thư điện tử chứa những cập nhật thường xuyên về tiến trình và các bài tập cũng như cập nhật về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng tư của chúng tôi)](%{privacy_policy_url})"
+    parent_account_email_label: "Email của phụ huynh hoặc người giám hộ"
   school_info:
     title: 'Thông tin trường học (không bắt buộc)'
     school_country: 'Quốc gia'
@@ -318,6 +321,8 @@ vi:
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "Thông tin"
+      legal_privacy: "Chính sách riêng tư"
+      legal_tos: "Các điều khoản của Code.org"
     user:
       classroom: 'Trang chủ giáo viên'
       district_dashboard: 'khu vực điều khiển'
@@ -422,8 +427,11 @@ vi:
     confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
     enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
     update_email: "Cập nhật"
+    for_parents_and_guardians: "Dành cho Phụ huynh và Người giám hộ"
+    link_a_parent_email: "Liên kết địa chỉ email phụ huynh/người giám hộ với tài khoản này để luôn được cập nhật về tiến triển và các bài tập của con bạn. Bạn cũng sẽ có thể sử dụng địa chỉ email này để khôi phục mật khẩu."
     parent_guardian_email_label: "Email của phụ huynh/người giám hộ"
     none: "Không có"
+    only_one_parent_email_supported_warning: "Lưu ý: Hiện tại, chúng tôi chỉ có thể hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh."
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -615,6 +623,7 @@ vi:
     sports:
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
     text-compression:
+      title: "Nén văn bản"
       body: "Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản bằng cách thay thế các mẫu với các ký hiệu."
     unplugged:
       audience: "Lứa tuổi 4 +"
@@ -628,20 +637,6 @@ vi:
       body: "Sinh viên có thể khám phá các khái niệm từ các Nguyên tắc Khoa học Máy tính của chúng tôi thực hành bằng cách sử dụng các công cụ kỹ thuật số này. Sử dụng các vật dụng một mình, hoặc tạo một bài học khái niệm đơn cho lớp học của bạn."
       audience: "Độ tuổi 14+"
       cta: "Học cách làm"
-  gallery:
-    students_drew_these_with_code: "Các học sinh/sinh viên đã vẽ chúng bằng cách lập trình!"
-    students_made_these_with_code: "Các học sinh/sinh viên đã tạo ra chúng bằng cách lập trình!"
-    picture_count: "Trong <b>%{days}</b> ngày vừa qua, các học sinh/sinh viên đã vẽ <b>%{count}</b> bức ảnh bằng cách tự viết các chương trình máy tính. Click vào những bức ảnh này để xem mỗi chương trình."
-    activity_count: "Trong <b>%{days}</b> ngày vừa qua, học sinh đã thực hiện <b>%{count}</b> các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động."
-    want_to_make_your_own: "Bạn muốn tự tạo chương trình này?"
-    how_to_save: "Ở bài cuối cùng của những hướng dẫn này, nhấn \"Hoàn thành\" và \"Lưu\" để lưu dự án của bạn vào trong thư viện."
-    more: "Nhiều &rarr;"
-    caption_by_name_age: "bởi  %{name}, %{age} tuổi"
-    caption_time_ago: "%{time_ago} trước"
-    header: "Bộ sưu tập"
-    header_playlab: "Phòng trò chơi"
-    header_artist: "Nghệ sĩ"
-    report_abuse: "Báo cáo lạm dụng"
   landing:
     report_bug: "Báo cáo lỗi"
     support: "Nhận trợ giúp"
@@ -813,28 +808,6 @@ vi:
       name: 'Bị từ chối'
     escalated:
       name: 'Đã tăng cấp'
-  flex_category:
-    required: 'Tổng quan'
-    content: 'Nội dung'
-    csf_digcit: 'Dân kỹ thuật số'
-    csf_jigsaw: 'Ghép hình'
-    csf_sequencing: 'Chuỗi tuần tự'
-    csf_loops: 'Vòng lặp'
-    csf_events: 'Các sự kiện'
-    csf_binary: 'Nhị phân'
-    csf_conditionals: 'Điều kiện'
-    csf_nested_loops: 'Vòng lặp lồng nhau'
-    csf_functions: 'Các hàm'
-    csf_variables: 'Các biến'
-    csf_for_loops: 'Cho vòng lặp'
-    csf_internet: 'Kết nối mạng'
-    csp_variables: 'Các biến'
-    csp_conditionals: 'Điều kiện'
-    csp_functions: 'Các hàm'
-    csp_lists: 'Danh sách'
-    csp_loops: 'Vòng lặp'
-    k5_getting_started: 'Bắt đầu'
-    k5_next_steps: 'Bước tiếp theo'
   external_links:
     disclaimer: Miễn trừ trách nhiệm
   hoc_download:
@@ -894,6 +867,8 @@ vi:
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
+      colombian_school_city: 'Thành phố của trường'
+      colombian_school_name: 'Tên trường'
     form_entries:
       gender:
         male: 'Nam'
@@ -919,3 +894,7 @@ vi:
     message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
     yes: 'Đồng ý'
   copy: 'Sao chép'
+  parent_email_banner:
+    text: "**Bạn có phải là phụ huynh hay người giám hộ không?** Hãy liên kết thư điện tử của bạn với tài khoản này để cập nhật thông tin về tiến triển và các bài tập của trẻ!"
+    link_your_email: "Liên kết thư điện tử của bạn"
+    not_now: "Để sau"

@@ -1,0 +1,906 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2020-05-11T14:22:08.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "parent_level_id": 23011,
+    "display_name": "Sprite Lab: Variables Game",
+    "block_pool": "gamelab",
+    "include_shared_functions": "true",
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"77fcb37e-e837-4230-abe5-c38ffe39dc3f\",\r\n    \"963b7e6e-afc8-43ae-8d44-89257b902e7b\",\r\n    \"98a96ffa-fbdc-42ab-bda1-876ea8e6d6c7\",\r\n    \"5687e89d-7015-484d-a8da-47505df1ba9e\",\r\n    \"c71f8624-bc69-4131-8af4-3db6b34b480f\",\r\n    \"1b3549d0-607f-4702-8fda-c9a2c2b951e4\",\r\n    \"f72dadb4-f85a-4867-bae9-204290b806f4\",\r\n    \"e4b42ce0-9510-46c2-910c-0c4b69cf612c\",\r\n    \"31942aad-c011-4676-bc37-3385ba6dfdbd\",\r\n    \"38198004-a9f7-4c94-8a06-b5d113c11017\",\r\n    \"45e301c8-a90f-44f9-88cd-28f3ac03ea57\",\r\n    \"21d7923f-d23c-4fab-8353-25d06325f496\",\r\n    \"b3459b90-8953-4229-9826-9a67f46f3349\",\r\n    \"f3899dc4-8a21-46cf-8fe1-19de2f851a20\",\r\n    \"e3fcf3f4-43c9-43f4-a108-a3da084f690d\",\r\n    \"c99d1174-6898-4b84-a3cd-c156b2e765b8\",\r\n    \"72b433a1-5231-4756-a4f4-bf5c5745a8c2\",\r\n    \"653410a3-3ee6-46fb-b170-cfc75cc55536\",\r\n    \"419b2e07-56bc-4d9d-836d-8c37802ce403\",\r\n    \"88955b91-9530-4705-a46d-ca34509128f6\",\r\n    \"708d8909-9ab4-468f-9882-2e82a06f7382\",\r\n    \"6ee8577d-4432-44e7-be22-c066cba01e3f\",\r\n    \"e9c2afb6-6841-429f-a0a6-0489000991b1\",\r\n    \"79471631-21e6-4bb6-aeaa-09ecef687710\",\r\n    \"16523800-670c-4401-8b99-65fbe8e563d7\",\r\n    \"cfec234c-9e58-413b-b93f-5fd26c225ac3\",\r\n    \"24cc61ba-4b6f-4563-8aa8-71e441403783\",\r\n    \"8c4d59cc-c01a-4118-abac-9ee3aa3495d0\",\r\n    \"3135901b-5398-4f3b-b9dd-b9bcffe35735\",\r\n    \"7ac1f4e7-8e50-4448-a14a-5410c0cca06b\",\r\n    \"fa8a6d22-dc6a-462c-ba75-400cf9b06aad\",\r\n    \"e9b3a9de-45a1-4c6c-920b-0b9521b7d910\",\r\n    \"1efa6613-a2a9-4f2d-94d2-9575df99a2ec\",\r\n    \"627380a2-e63a-4865-8e4b-7e25e0ab86f5\",\r\n    \"aa67ed36-c01c-415d-b5a9-7007cdd38c0c\",\r\n    \"def9ff27-d2cf-4863-ba29-ec820b5dae13\",\r\n    \"64bd6737-a596-463a-9ed3-c639c79b662b\",\r\n    \"0976caea-2ecc-47b3-b7a3-4d962fb04dcb\",\r\n    \"14561fe0-d917-40c9-ba9e-e2ab01d433f4\",\r\n    \"4b62a499-b010-4f3b-984c-91bbb0a9e393\",\r\n    \"e8bd0110-4bde-493d-991e-1f26af21cfef\",\r\n    \"a6462adf-2059-40f2-a980-18905e3355cd\",\r\n    \"538cef50-6ab5-4e33-9f9e-784624a0935b\",\r\n    \"1da5d891-3c60-408a-8496-8cc026a3e793\",\r\n    \"bb45c28c-d5c3-427a-aec0-9600ecfa9304\",\r\n    \"6f0024ce-42c6-416a-acf9-e25e7342c911\",\r\n    \"fdb8c610-c88b-4faf-8432-77c9add74eab\",\r\n    \"aaba8a27-9f63-4ee2-923a-757f5a593122\",\r\n    \"6d6c845a-0b4a-45e9-93e3-6503b6dda8a0\",\r\n    \"bf8a170e-a710-424e-b690-e416260865fc\",\r\n    \"9a39f1aa-2b4a-4587-ba2a-36f4df582f99\",\r\n    \"84e4e25b-ab5c-43fe-8c54-d0a2d89787d4\",\r\n    \"a39e6a03-6995-48d8-be2d-d666cfa358f4\",\r\n    \"2dc1905c-3851-4590-b4a7-52167d05c64a\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"77fcb37e-e837-4230-abe5-c38ffe39dc3f\": {\r\n      \"name\": \"bear\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png\",\r\n      \"frameSize\": {\r\n        \"x\": 254,\r\n        \"y\": 333\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp\"\r\n    },\r\n    \"963b7e6e-afc8-43ae-8d44-89257b902e7b\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/EE3g6ia8pNICxkHVHUoTkljd9sHj40pE/category_animals/bee.png\",\r\n      \"frameSize\": {\r\n        \"x\": 62,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"EE3g6ia8pNICxkHVHUoTkljd9sHj40pE\"\r\n    },\r\n    \"98a96ffa-fbdc-42ab-bda1-876ea8e6d6c7\": {\r\n      \"name\": \"brown bunny\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l/category_animals/bunny1_ready.png\",\r\n      \"frameSize\": {\r\n        \"x\": 120,\r\n        \"y\": 191\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l\"\r\n    },\r\n    \"5687e89d-7015-484d-a8da-47505df1ba9e\": {\r\n      \"name\": \"purple bunny\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 152,\r\n        \"y\": 193\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kBiszeGACcLTGTrqmS4laPVQKPGQnDln\"\r\n    },\r\n    \"c71f8624-bc69-4131-8af4-3db6b34b480f\": {\r\n      \"name\": \"corgi\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/VtKpUDKH2C9JjfbimUkhbbH.dHQ5t7ex/category_animals/corgi.png\",\r\n      \"frameSize\": {\r\n        \"x\": 542,\r\n        \"y\": 500\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"VtKpUDKH2C9JjfbimUkhbbH.dHQ5t7ex\"\r\n    },\r\n    \"1b3549d0-607f-4702-8fda-c9a2c2b951e4\": {\r\n      \"name\": \"cow\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/ROqEBwbLmX6qg9Acz.DUkfyl2gaMh4lP/category_animals/cow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 265,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ROqEBwbLmX6qg9Acz.DUkfyl2gaMh4lP\"\r\n    },\r\n    \"f72dadb4-f85a-4867-bae9-204290b806f4\": {\r\n      \"name\": \"crab\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/SdV.w3j8_4Djmt1L5C_gEVpS2VTh53Od/category_animals/crab.png\",\r\n      \"frameSize\": {\r\n        \"x\": 288,\r\n        \"y\": 191\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"SdV.w3j8_4Djmt1L5C_gEVpS2VTh53Od\"\r\n    },\r\n    \"e4b42ce0-9510-46c2-910c-0c4b69cf612c\": {\r\n      \"name\": \"elephant\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ/category_animals/elephant2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 99,\r\n        \"y\": 97\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ\"\r\n    },\r\n    \"31942aad-c011-4676-bc37-3385ba6dfdbd\": {\r\n      \"name\": \"fish\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/CwVno2kER.r_tECMOL4D4YL.lcaFNv7h/category_animals/fish.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CwVno2kER.r_tECMOL4D4YL.lcaFNv7h\"\r\n    },\r\n    \"38198004-a9f7-4c94-8a06-b5d113c11017\": {\r\n      \"name\": \"hippo\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/zqsDGpXOezy.SxANtxyxyThklFz1v1.1/category_animals/hippo_gray.png\",\r\n      \"frameSize\": {\r\n        \"x\": 243,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zqsDGpXOezy.SxANtxyxyThklFz1v1.1\"\r\n    },\r\n    \"45e301c8-a90f-44f9-88cd-28f3ac03ea57\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/BF9M9h767oyE2PE2u8uCA2pDQzJG19ji/category_animals/ladybug.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"BF9M9h767oyE2PE2u8uCA2pDQzJG19ji\"\r\n    },\r\n    \"21d7923f-d23c-4fab-8353-25d06325f496\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/sTV_ECoTPZ4e322cfbiihNiMroU13hpD/category_animals/mouse.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 37\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"sTV_ECoTPZ4e322cfbiihNiMroU13hpD\"\r\n    },\r\n    \"b3459b90-8953-4229-9826-9a67f46f3349\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3/category_animals/pig.png\",\r\n      \"frameSize\": {\r\n        \"x\": 288,\r\n        \"y\": 257\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3\"\r\n    },\r\n    \"f3899dc4-8a21-46cf-8fe1-19de2f851a20\": {\r\n      \"name\": \"bell\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/PXwfEV0ey9ywPrIX.eBetY3EPIBehUdU/category_generic_items/bell.png\",\r\n      \"frameSize\": {\r\n        \"x\": 85,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PXwfEV0ey9ywPrIX.eBetY3EPIBehUdU\"\r\n    },\r\n    \"e3fcf3f4-43c9-43f4-a108-a3da084f690d\": {\r\n      \"name\": \"book\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/LjwHKxijspVx1mP9MzObUvyxK5WG3oim/category_generic_items/book.png\",\r\n      \"frameSize\": {\r\n        \"x\": 109,\r\n        \"y\": 125\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LjwHKxijspVx1mP9MzObUvyxK5WG3oim\"\r\n    },\r\n    \"c99d1174-6898-4b84-a3cd-c156b2e765b8\": {\r\n      \"name\": \"compass\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/2dfHfS8SHX0KZKAOFL4p1tpdmcyE.P5q/category_generic_items/compass.png\",\r\n      \"frameSize\": {\r\n        \"x\": 105,\r\n        \"y\": 79\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"2dfHfS8SHX0KZKAOFL4p1tpdmcyE.P5q\"\r\n    },\r\n    \"72b433a1-5231-4756-a4f4-bf5c5745a8c2\": {\r\n      \"name\": \"computer monitor\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/AV67_BG0DzS_w3UNmSsT7JXTV_wmaBeo/category_generic_items/computer_monitor.png\",\r\n      \"frameSize\": {\r\n        \"x\": 136,\r\n        \"y\": 129\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"AV67_BG0DzS_w3UNmSsT7JXTV_wmaBeo\"\r\n    },\r\n    \"653410a3-3ee6-46fb-b170-cfc75cc55536\": {\r\n      \"name\": \"first aid kit\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/qJH1.9rzwUqhdOsDInXK3DZLW2JQLHjE/category_generic_items/first_aid.png\",\r\n      \"frameSize\": {\r\n        \"x\": 117,\r\n        \"y\": 117\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qJH1.9rzwUqhdOsDInXK3DZLW2JQLHjE\"\r\n    },\r\n    \"419b2e07-56bc-4d9d-836d-8c37802ce403\": {\r\n      \"name\": \"keys\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/yLPZZ9U2U5MNSf321I3XMwS_kAw9LyZZ/category_generic_items/keys.png\",\r\n      \"frameSize\": {\r\n        \"x\": 94,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"yLPZZ9U2U5MNSf321I3XMwS_kAw9LyZZ\"\r\n    },\r\n    \"88955b91-9530-4705-a46d-ca34509128f6\": {\r\n      \"name\": \"money\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/WOADjHCtrTpzfug5zO08.VemfZQxczxM/category_generic_items/money.png\",\r\n      \"frameSize\": {\r\n        \"x\": 101,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"WOADjHCtrTpzfug5zO08.VemfZQxczxM\"\r\n    },\r\n    \"708d8909-9ab4-468f-9882-2e82a06f7382\": {\r\n      \"name\": \"paint pallette\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/N1aMvPy04__knoU3yolIxey_2v3kCnN3/category_generic_items/paint_pallette.png\",\r\n      \"frameSize\": {\r\n        \"x\": 116,\r\n        \"y\": 96\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"N1aMvPy04__knoU3yolIxey_2v3kCnN3\"\r\n    },\r\n    \"6ee8577d-4432-44e7-be22-c066cba01e3f\": {\r\n      \"name\": \"potion\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/lwbDlPwSetDvZN1Qg.5X9rLcUirjG5ZZ/category_generic_items/flask.png\",\r\n      \"frameSize\": {\r\n        \"x\": 60,\r\n        \"y\": 112\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"lwbDlPwSetDvZN1Qg.5X9rLcUirjG5ZZ\"\r\n    },\r\n    \"e9c2afb6-6841-429f-a0a6-0489000991b1\": {\r\n      \"name\": \"tablet\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/nBBhpOU7OIfXpQlr3_A3Qc2rXHON5Pyo/category_generic_items/tablet.png\",\r\n      \"frameSize\": {\r\n        \"x\": 84,\r\n        \"y\": 98\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nBBhpOU7OIfXpQlr3_A3Qc2rXHON5Pyo\"\r\n    },\r\n    \"79471631-21e6-4bb6-aeaa-09ecef687710\": {\r\n      \"name\": \"teapot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/8sssIK6UnCKrpe.Zuv3D3QCDOsIj4CnM/category_generic_items/teapot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 152,\r\n        \"y\": 116\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"8sssIK6UnCKrpe.Zuv3D3QCDOsIj4CnM\"\r\n    },\r\n    \"16523800-670c-4401-8b99-65fbe8e563d7\": {\r\n      \"name\": \"boat\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/oI8SYIuf5aImfljkVGuZQjPe_qAA.3Do/category_vehicles/boat.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oI8SYIuf5aImfljkVGuZQjPe_qAA.3Do\"\r\n    },\r\n    \"cfec234c-9e58-413b-b93f-5fd26c225ac3\": {\r\n      \"name\": \"black car\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw/category_vehicles/car_black.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw\"\r\n    },\r\n    \"24cc61ba-4b6f-4563-8aa8-71e441403783\": {\r\n      \"name\": \"blue car\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ/category_vehicles/car_blue.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ\"\r\n    },\r\n    \"8c4d59cc-c01a-4118-abac-9ee3aa3495d0\": {\r\n      \"name\": \"green car\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK/category_vehicles/car_green.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK\"\r\n    },\r\n    \"3135901b-5398-4f3b-b9dd-b9bcffe35735\": {\r\n      \"name\": \"red car\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L/category_vehicles/car_red.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L\"\r\n    },\r\n    \"7ac1f4e7-8e50-4448-a14a-5410c0cca06b\": {\r\n      \"name\": \"yellow car\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK/category_vehicles/car_yellow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK\"\r\n    },\r\n    \"fa8a6d22-dc6a-462c-ba75-400cf9b06aad\": {\r\n      \"name\": \"blue plane\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/grzc0jLLnQ2NSxjwUjplDJj.R2E10flT/category_vehicles/planeBlue1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"grzc0jLLnQ2NSxjwUjplDJj.R2E10flT\"\r\n    },\r\n    \"e9b3a9de-45a1-4c6c-920b-0b9521b7d910\": {\r\n      \"name\": \"red plane\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/AX6K06DecwVXhRO4AvAt7SLsE7NtvfNt/category_vehicles/planeRed1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"AX6K06DecwVXhRO4AvAt7SLsE7NtvfNt\"\r\n    },\r\n    \"1efa6613-a2a9-4f2d-94d2-9575df99a2ec\": {\r\n      \"name\": \"blue alien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/hcRqOZPeqGxuqlUdrr1qUEwah623B4g1/purple_alien.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 92\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"dzbDU2MeZx18waIkI0skVjweN1Rg_UxU\"\r\n    },\r\n    \"627380a2-e63a-4865-8e4b-7e25e0ab86f5\": {\r\n      \"name\": \"green alien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/DW4DypUlfossYbRM0NcaMXXGBvbs9tJW/category_characters/alienGreen.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 92\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"DW4DypUlfossYbRM0NcaMXXGBvbs9tJW\"\r\n    },\r\n    \"aa67ed36-c01c-415d-b5a9-7007cdd38c0c\": {\r\n      \"name\": \"pink alien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 92\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu\"\r\n    },\r\n    \"def9ff27-d2cf-4863-ba29-ec820b5dae13\": {\r\n      \"name\": \"yellow alien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/7iIxntwgHtrM.IEp6Ga2OFAGz1Ciq_y1/category_characters/alienYellow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 82\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"7iIxntwgHtrM.IEp6Ga2OFAGz1Ciq_y1\"\r\n    },\r\n    \"64bd6737-a596-463a-9ed3-c639c79b662b\": {\r\n      \"name\": \"ghost\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/X2R5uPhDuVXpg9iy6qK_kYrY9KWXxASH/category_characters/ghost.png\",\r\n      \"frameSize\": {\r\n        \"x\": 51,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"X2R5uPhDuVXpg9iy6qK_kYrY9KWXxASH\"\r\n    },\r\n    \"0976caea-2ecc-47b3-b7a3-4d962fb04dcb\": {\r\n      \"name\": \"orange monster\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/PYXi1AIsJ3QoaegkbPhHIqcC.yWg_t0X/category_characters/orange_monster.png\",\r\n      \"frameSize\": {\r\n        \"x\": 240,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PYXi1AIsJ3QoaegkbPhHIqcC.yWg_t0X\"\r\n    },\r\n    \"14561fe0-d917-40c9-ba9e-e2ab01d433f4\": {\r\n      \"name\": \"green monster\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/rT9oAB0skB62_LtrjffjYO0SrACE6D_Y/category_characters/happy_critter.png\",\r\n      \"frameSize\": {\r\n        \"x\": 262,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"rT9oAB0skB62_LtrjffjYO0SrACE6D_Y\"\r\n    },\r\n    \"4b62a499-b010-4f3b-984c-91bbb0a9e393\": {\r\n      \"name\": \"purple monster\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/CdlNOvtih6CV7QUekCCPH7e11tMwCGQh/category_characters/purple_monster.png\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CdlNOvtih6CV7QUekCCPH7e11tMwCGQh\"\r\n    },\r\n    \"e8bd0110-4bde-493d-991e-1f26af21cfef\": {\r\n      \"name\": \"cloud\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/zQs0ejWu81wIiZyi4WyF0G0efY1RG5kY/category_environment/cloud.png\",\r\n      \"frameSize\": {\r\n        \"x\": 260,\r\n        \"y\": 134\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zQs0ejWu81wIiZyi4WyF0G0efY1RG5kY\"\r\n    },\r\n    \"a6462adf-2059-40f2-a980-18905e3355cd\": {\r\n      \"name\": \"rock\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/bwzgoXDO24mMPbQmo21kn4tqxa8CZm_X/category_environment/rock.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"bwzgoXDO24mMPbQmo21kn4tqxa8CZm_X\"\r\n    },\r\n    \"538cef50-6ab5-4e33-9f9e-784624a0935b\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/5i6Vfj3NhrIHW5XFDTfF6K0y4Xegltto/category_environment/sun.png\",\r\n      \"frameSize\": {\r\n        \"x\": 150,\r\n        \"y\": 150\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"5i6Vfj3NhrIHW5XFDTfF6K0y4Xegltto\"\r\n    },\r\n    \"1da5d891-3c60-408a-8496-8cc026a3e793\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/vbw9BDeBFLTx8OXL1VvVXKtSU8Bchm7_/category_food/apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"vbw9BDeBFLTx8OXL1VvVXKtSU8Bchm7_\"\r\n    },\r\n    \"bb45c28c-d5c3-427a-aec0-9600ecfa9304\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/LktfiFiKxVZilg.oRMm7BIzGPEA3igqc/category_food/carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LktfiFiKxVZilg.oRMm7BIzGPEA3igqc\"\r\n    },\r\n    \"6f0024ce-42c6-416a-acf9-e25e7342c911\": {\r\n      \"name\": \"cupcake\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/9YuGeoTtld.6UW7A462ht9nigqil_6xs/category_food/cupcake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 283,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9YuGeoTtld.6UW7A462ht9nigqil_6xs\"\r\n    },\r\n    \"fdb8c610-c88b-4faf-8432-77c9add74eab\": {\r\n      \"name\": \"mushroom\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/12FsgKxv2Cvon5LWsmLIZQckWyx.tAyv/category_food/mushroom_red.png\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 99\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"12FsgKxv2Cvon5LWsmLIZQckWyx.tAyv\"\r\n    },\r\n    \"aaba8a27-9f63-4ee2-923a-757f5a593122\": {\r\n      \"name\": \"watermelon\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/5BW1xx6Sl6Ec6d_sOSReEIOe5W.UXMiG/category_food/sliced_watermelon.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 240\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"5BW1xx6Sl6Ec6d_sOSReEIOe5W.UXMiG\"\r\n    },\r\n    \"6d6c845a-0b4a-45e9-93e3-6503b6dda8a0\": {\r\n      \"name\": \"gold coin\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/Vs3f3C74lKLX_.v83wHjBOqPduB14F0T/category_gameplay/coin_gold.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Vs3f3C74lKLX_.v83wHjBOqPduB14F0T\"\r\n    },\r\n    \"bf8a170e-a710-424e-b690-e416260865fc\": {\r\n      \"name\": \"silver coin\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/kDI1bxJye5Z4LS0frg.jfN6qZ0piUaxl/category_gameplay/coin_silver.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kDI1bxJye5Z4LS0frg.jfN6qZ0piUaxl\"\r\n    },\r\n    \"9a39f1aa-2b4a-4587-ba2a-36f4df582f99\": {\r\n      \"name\": \"target\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC/category_gameplay/target_red3_outline.png\",\r\n      \"frameSize\": {\r\n        \"x\": 142,\r\n        \"y\": 142\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC\"\r\n    },\r\n    \"84e4e25b-ab5c-43fe-8c54-d0a2d89787d4\": {\r\n      \"name\": \"cactus\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/fvP_YDSp32ON.B1R69F.ha4Et2iu.U5W/category_obstacles/cactus.png\",\r\n      \"frameSize\": {\r\n        \"x\": 117,\r\n        \"y\": 160\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"fvP_YDSp32ON.B1R69F.ha4Et2iu.U5W\"\r\n    },\r\n    \"a39e6a03-6995-48d8-be2d-d666cfa358f4\": {\r\n      \"name\": \"wheat\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/1T4NkoECSpVfV_gWsnBrrMcXWDhL5Heb/category_obstacles/wheat.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"1T4NkoECSpVfV_gWsnBrrMcXWDhL5Heb\"\r\n    },\r\n    \"2dc1905c-3851-4590-b4a7-52167d05c64a\": {\r\n      \"name\": \"soap\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ/category_generic_items/soap.png\",\r\n      \"frameSize\": {\r\n        \"x\": 97,\r\n        \"y\": 97\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ\"\r\n    }\r\n  }\r\n}",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "long_instructions": "What new features can you add? What happens when the player character touches the alien? Update the background and sprites! \r\n",
+    "bubble_choice_description": "What new features can you add? What happens when the player character touches the alien? Update the background and sprites! ",
+    "thumbnail_url": "https://images.code.org/69feb44c0591c2aa7ae9fd8057c9252f-image-1589295083731.gif",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-18 20:22:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:24:00 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:27:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:29:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:14 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:37 +0000\",\"changed\":[\"free_play\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:32:43 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:33:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:35:42 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:39:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 21:02:26 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-03 16:02:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:02:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:06:54 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:07:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-24 17:51:16 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-26 17:44:53 +0000\",\"changed\":[\"toolbox_blocks\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"start_in_animation_tab\",\"all_animations_single_frame\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 17:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_in_animation_tab\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:34:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:35:13 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"start_animations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-02 15:59:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-06 14:58:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-08-23 16:04:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-09 13:17:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 16:15:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:19:27 +0000\",\"changed\":[\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:52:24 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 17:54:05 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 17:54:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 18:27:03 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 18:51:02 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-30 01:31:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 14:23:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"short_instructions\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 14:29:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 15:13:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 18:01:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:41:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:47:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:51:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="gamelab_printText">
+              <value name="TEXT">
+                <block type="text">
+                  <title name="TEXT">Collect the coins to win!</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setBackgroundImage">
+                  <title name="IMG">"https://studio.code.org/blockly/media/skins/studio/background_space.png"</title>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <title name="ANIMATION_NAME">"green alien"</title>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":200,"y":200}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"scale"</title>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"green alien"</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <title name="NUM">50</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext">
+                              <value name="TIMES">
+                                <block type="math_number">
+                                  <title name="NUM">4</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="gamelab_makeNewSpriteAnon">
+                                  <title name="ANIMATION_NAME">"gold coin"</title>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_randomLocation"/>
+                                  </value>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="gamelab_setProp">
+                                  <title name="PROPERTY">"scale"</title>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <title name="ANIMATION">"gold coin"</title>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <title name="NUM">50</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_addBehaviorSimple">
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <title name="ANIMATION">"gold coin"</title>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation/>
+                                          <title name="VAR">wandering</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="controls_repeat_ext">
+                                          <value name="TIMES">
+                                            <block type="math_number">
+                                              <title name="NUM">5</title>
+                                            </block>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="gamelab_makeNewSpriteAnon">
+                                              <title name="ANIMATION_NAME">"blue alien"</title>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_randomLocation"/>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="gamelab_setProp">
+                                              <title name="PROPERTY">"scale"</title>
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <title name="ANIMATION">"blue alien"</title>
+                                                </block>
+                                              </value>
+                                              <value name="VAL">
+                                                <block type="math_number">
+                                                  <title name="NUM">50</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_addBehaviorSimple">
+                                                  <value name="SPRITE">
+                                                    <block type="gamelab_allSpritesWithAnimation">
+                                                      <title name="ANIMATION">"blue alien"</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="BEHAVIOR">
+                                                    <block type="gamelab_behavior_get">
+                                                      <mutation/>
+                                                      <title name="VAR">wandering</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME">wandering</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"green alien"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"gold coin"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">score</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="math_change">
+                  <title name="VAR">size</title>
+                  <value name="DELTA">
+                    <block type="math_number">
+                      <title name="NUM">-10</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setProp">
+                      <title name="PROPERTY">"scale"</title>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"blue alien"</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="variables_get">
+                          <title name="VAR">size</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"scale"</title>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"green alien"</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="variables_get">
+                              <title name="VAR">size</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setProp">
+                              <title name="PROPERTY">"scale"</title>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <title name="ANIMATION">"gold coin"</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="variables_get">
+                                  <title name="VAR">size</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_printText">
+                                  <value name="TEXT">
+                                    <block type="text_join_simple" inputcount="2">
+                                      <value name="ADD0">
+                                        <block type="text">
+                                          <title name="TEXT">Score: </title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD1">
+                                        <block type="variables_get">
+                                          <title name="VAR">score</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="controls_if">
+                                      <value name="IF0">
+                                        <block type="logic_compare">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <title name="VAR">score</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <title name="NUM">4</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="gamelab_showTitleScreen">
+                                          <value name="TITLE">
+                                            <block type="text">
+                                              <title name="TEXT">You win!</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="gamelab_destroy">
+                                          <value name="THIS">
+                                            <block type="gamelab_getThisSprite">
+                                              <title name="CHOICE">"other"</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"down"</title>
+          <next>
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"green alien"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"left"</title>
+          <next>
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"green alien"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"up"</title>
+          <next>
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"green alien"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"right"</title>
+          <next>
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"green alien"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#99ff99</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setBackgroundImage">
+            <title name="IMG">"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"</title>
+          </block>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_playSound">
+            <title name="SOUND">Choose</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"purple bunny"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_allSpritesWithAnimation">
+            <title name="ANIMATION">"purple bunny"</title>
+          </block>
+          <block type="gamelab_destroy">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setAnimation">
+            <title name="ANIMATION">"brown bunny"</title>
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_createNewSprite">
+            <title name="NAME">mySprite</title>
+            <title name="COSTUME">"bear"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">mySprite</title>
+          </block>
+          <block type="gamelab_getProp">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="sprite_variables_get">
+                <title name="VAR">mySprite</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Locations">
+          <block type="gamelab_randomLocation"/>
+          <block type="gamelab_location_picker">
+            <title name="LOCATION">{"x":200,"y":200}</title>
+          </block>
+          <block type="gamelab_locationAt">
+            <value name="X">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_locationOf">
+            <value name="SPRITE">
+              <block type="sprite_variables_get">
+                <title name="VAR">mySprite</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_locationMouse"/>
+        </category>
+        <category name="Actions">
+          <block type="gamelab_setTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveInDirection">
+            <title name="DIRECTION">"North"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_turn">
+            <title name="DIRECTION">"right"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="N">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">50</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_changePropBy">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_jumpTo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation"/>
+            </value>
+          </block>
+          <block type="gamelab_moveForward">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveToward">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="TARGET">
+              <block type="gamelab_locationOf">
+                <value name="SPRITE">
+                  <block type="sprite_variables_get">
+                    <title name="VAR">mySprite</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_edgesDisplace">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_keyPressed">
+            <title name="CONDITION">"when"</title>
+            <title name="KEY">"up"</title>
+          </block>
+          <block type="gamelab_spriteClicked">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_checkTouching">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE1">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"carrot"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors" custom="Behavior">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeAllBehaviors">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple bunny"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="math_change">
+            <title name="VAR">i</title>
+            <value name="DELTA">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_arithmetic">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_compare">
+                <title name="OP">EQ</title>
+              </block>
+            </value>
+          </block>
+          <block type="logic_compare">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Text">
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="text">
+            <title name="TEXT"/>
+          </block>
+          <block type="text_join_simple" inputcount="2"/>
+          <block type="gamelab_showTitleScreen">
+            <value name="TITLE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="SUBTITLE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Comments">
+          <block type="gamelab_comment">
+            <title name="COMMENT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

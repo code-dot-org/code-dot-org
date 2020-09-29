@@ -8,21 +8,19 @@ title: Guía para las actividades
   }
 </style>
 
-{{ signup_button }}
-
 # Directrices para las lecciones de la Hora del Código™ y la Semana por la Educación en Ciencias de la Computación
 
 Code.org organiza diversas actividades, lecciones y videos de la Hora del Código™ en los sitios web de Code.org, la Hora del Código y CSEdWeek. El listado actualizado está en [hourofcode.com/learn]({{ urls/learn }}).
 
-¿Quieres enviar tu propio juego autoguiado, una lección a cargo de un docente o una actividad que explique un principio de las ciencias de la computación? Únete a este movimiento global y ayuda a participantes de todo el mundo a comenzar con una hora de código o ir más allá con actividades de varias lecciones que duran un día o una semana.
+Code.org organiza diversas actividades, lecciones y videos de la Hora del Código™ en los sitios web de Code.org, la Hora del Código y CSEdWeek. El listado actualizado está en [hourofcode.com/learn]({{ urls/learn }}).
 
-**Después de leer las directrices, puedes enviar tu actividad a través de esta [página de la Hora del Código™](http://bit.ly/29zt9ki). Puedes enviar una actividad en cualquier momento, pero la fecha límite para su inclusión en el año calendario es el 1 de octubre (por ejemplo, cualquier actividad recibida después del 1 de octubre, {{ campaign_date/year }} no aparecerá en la Hora del Código de {{ campaign_date/year }}).** Si tienes alguna pregunta sobre el envío de tu actividad , ponte en contacto con nosotros a support@code.org.
+¿Quieres enviar tu propio juego autoguiado, una lección a cargo de un docente o una actividad que explique un principio de las ciencias de la computación? Únete a este movimiento global y ayuda a participantes de todo el mundo a comenzar con una hora de código o ir más allá con actividades de varias lecciones que duran un día o una semana. (Por ejemplo, cualquier actividad recibida después del 1ro de Octubre {{ campaign_date/year }} no será enlistada para la Hora del Código de {{ campaign_date/year }}.) La fecha límite de envío para solicitar una revisión de calidad [(detalles abajo)](#earlyreview) es el 16 de agosto.</strong> Si tienes preguntas sobre el envío de actividades, por favor contáctanos via support@code.org.
 
 Algunos consejos:
 
-1. **Envía más de una actividad**: si has creado actividades para diferentes niveles, diferentes edades u otras categorías, enumeramos tus actividades por separado para que cada docente pueda encontrar lo correcto para su clase. Entonces, si antes creaste una página de destino y nos diste una única URL para su promoción, no lo vuelvas a hacer. Envía cada tutorial o actividad por separado. Dado el número de envíos que hemos visto en los últimos años, tendremos tiempo para revisar hasta 5 actividades por socio. Después de eso, haremos todo lo posible para revisar la mayor cantidad posible de actividades antes de que comience la Hora del Código.
+1. **Envía más de una actividad**: si has creado actividades para diferentes niveles, diferentes edades u otras categorías, enumeramos tus actividades por separado para que cada docente pueda encontrar lo correcto para su clase. Entonces, si antes creaste una página de destino y nos diste una única URL para su promoción, no lo vuelvas a hacer. Envía cada tutorial o actividad por separado. Dado el número de envíos que hemos visto en los últimos años, tendremos tiempo para revisar hasta 5 actividades por socio.
 
-2. **Más allá de las lecciones para principiantes**: además de las lecciones para docentes y estudiantes que aprenden ciencias de la computación por primera vez, ¡incluimos las experiencias de aprendizaje para aulas con conocimientos de ciencias de la computación que quieren ir un poco más allá! ¿Quieres ayudarnos? Envía lecciones para clases que ya han aprendido los conceptos básicos. Estos estudiantes pueden tener entre 9 y 99 años.
+2. **Más allá de las lecciones para principiantes**: además de las lecciones para docentes y estudiantes que aprenden ciencias de la computación por primera vez, ¡incluimos las experiencias de aprendizaje para aulas con conocimientos de ciencias de la computación que quieren ir un poco más allá! ¿Quieres ayudarnos? Envía lecciones para clases que ya han aprendido los conceptos básicos.
 
 3. **Áreas temáticas**: ¿tienes una gran idea para una lección que integre las ciencias de la computación y las matemáticas? ¿Historia? ¿Artes del lenguaje? ¿Ciencia? ¿Arte? ¿Otra materia? Hemos recibido numerosas solicitudes de docentes que desean integrar la Hora del Código con sus áreas temáticas (particularmente, con los estándares ISTE actualizados para los estudiantes, que incluyen "diseñador innovador" y "pensador informático"). Los docentes pueden filtrar por tipo de clase (grado o asignatura), por lo que necesitamos tu ayuda para llenar los vacíos y ofrecer actividades o planes de lecciones que relacionen las ciencias de la computación con cada asignatura principal para los diferentes grados. También tenemos la categoría “Ciencias de la computación” para docentes que buscan actividades genéricas.
 
@@ -34,32 +32,33 @@ Algunos consejos:
 - [Guía general para crear una actividad de la Hora del Código™](#guidelines)
 - [Cómo enviar](#submit)
 - [Cómo se evaluarán las actividades](#inclusion)
-- [Sugerencias para diseñar tu actividad](#design)
-- [Directrices de marca registrada](#tm)
-- [Pixel de seguimiento](#pixel)
+- [Sugerencias para diseñar tu actividad](#earlyreview)
+- [Directrices de marca registrada](#design)
+- [Pixel de seguimiento](#tm)
+- [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#pixel)
 - [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#promote)
 
 <a id="whatsubmit"></a>
 
 ## Qué enviar
 
-**Desafío o juego autoguiado ([ejemplo](https://code.org/mc))**
+**Desafío o juego autoguiado ([ejemplo](https://code.org/dance))**
 
-Estas actividades se diseñaron para que los estudiantes las sigan a su ritmo a través de un tutorial. No requieren demasiadas instrucciones o trabajo de preparación de un docente.
+Estas actividades se diseñaron para que los estudiantes las sigan a su propio ritmo a través de un tutorial. No requieren demasiadas instrucciones o trabajo de preparación de un profesor.
 
-**Lección facilitada por el docente ([ejemplo](https://csedweek.org/csteacher/computerhistory.pdf), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lección facilitada por el profesor ([ejemplo](https://studio.code.org/s/course1/stage/2/puzzle/1), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Ahora que decenas de miles de educadores han participado en la Hora del Código, muchas aulas están preparadas para actividades más creativas que enseñan los conceptos básicos de las ciencias de la computación. Para ayudar a los docentes a encontrar inspiración, nos gustaría seleccionar lecciones "dirigidas por docentes" y planes de actividades para veteranos de la Hora del Código.
 
-Un tipo de actividad que presentaremos a docentes experimentados son los proyectos de creación “open sandbox”. Actividades que alientan a los estudiantes a crear su propia aplicación, juego, sitio web u otro proyecto. Si se implementan de forma adecuada, las actividades más abiertas pueden mostrar mejor la naturaleza creativa de las ciencias de la computación.
+Ahora que decenas de miles de educadores han participado en la Hora del Código, muchas aulas están preparadas para actividades más creativas que enseñan los conceptos básicos de las ciencias de la computación. Para ayudar a los docentes a encontrar inspiración, nos gustaría seleccionar lecciones "dirigidas por docentes" y planes de actividades para veteranos de la Hora del Código. Si se implementan de forma adecuada, las actividades más abiertas pueden mostrar mejor la naturaleza creativa de las ciencias de la computación.
 
 Algunos educadores pueden preferir las actividades de la Hora del Código que siguen un formato de lección tradicional, en lugar de un desafío o juego autoguiado.
 
-Puedes empezar con esta [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) para tu plan de lecciones.
+Algunos educadores pueden preferir las actividades de la Hora del Código que siguen un formato de lección tradicional, en lugar de un desafío o juego autoguiado.
 
 **Actividades para docentes en otras asignaturas/campos**
 
-También presentamos planes de lecciones diseñados para diferentes asignaturas. Por ejemplo, un plan de lección de una hora para enseñar programación en una clase de geometría, un ejercicio de mad-lib para una clase de inglés o una actividad de creación de pruebas para la clase de historia. Así puedes convocar a docentes de otras asignaturas para dirigir una actividad de la Hora del Código que sea única en su campo, mientras demuestras cómo las ciencias de la computación pueden influir y mejorar muchas asignaturas diferentes.
+También presentamos planes de lecciones diseñados para diferentes asignaturas. Por ejemplo, un plan de lección de una hora para enseñar programación en una clase de geometría, O un ejercicio de mad-lib para clase de inglés. O una actividad de creación de pruebas para la clase de historia. Así puedes convocar a docentes de otras asignaturas para dirigir una actividad de la Hora del Código que sea única en su campo, mientras demuestras cómo las ciencias de la computación pueden influir y mejorar muchas asignaturas diferentes.
 
 Ejemplos:
 
@@ -84,11 +83,13 @@ El objetivo de una Hora del Código es que los principiantes puedan tener un pri
 - Las ciencias de la computación están conectadas a una amplia variedad de campos e intereses. ¡Todos deberían aprenderlas!
 - Anima a los estudiantes a crear algo único que puedan compartir con amigos o familiares, o en línea. 
 
-Las actividades deben enseñar un concepto de las ciencias de la computación, como los bucles, los condicionales, el cifrado o cómo funciona Internet. Una actividad también puede enseñar cómo las ciencias de la computación se conectan con ocupaciones, eventos o historias del mundo real. Por ejemplo, enseñar el diseño de la experiencia de usuario para crear aplicaciones que tengan sentido para una audiencia o causa específica. Desalentamos las actividades que se centran en la sintaxis de la programación en lugar de los conceptos. Por ejemplo, enumeraremos, pero no destacaremos, las actividades que enseñan HTML. Del mismo modo, desaconsejamos las lecciones de programación en bloque que se centran en establecer o cambiar las opciones de configuración en lugar de aprender a modelar un algoritmo o proceso.
+El objetivo de una Hora del Código es que los principiantes puedan tener un primer acercamiento a las ciencias de la computación o a la programación. El tono debería ser que: Por ejemplo, enseñar el diseño de la experiencia de usuario para crear aplicaciones que tengan sentido para una audiencia o causa específica. Desalentamos las actividades que se centran en la sintaxis de la programación en lugar de los conceptos. Por ejemplo, enumeraremos, pero no destacaremos, las actividades que enseñan HTML. Del mismo modo, desaconsejamos las lecciones de programación en bloque que se centran en establecer o cambiar las opciones de configuración en lugar de aprender a modelar un algoritmo o proceso.
+
+Las actividades deben enseñar un concepto de las ciencias de la computación, como los bucles, los condicionales, el cifrado o cómo funciona Internet. Una actividad también puede enseñar cómo las ciencias de la computación se conectan con ocupaciones, eventos o historias del mundo real. Por ejemplo, enseñar el diseño de la experiencia de usuario para crear aplicaciones que tengan sentido para una audiencia o causa específica. Desalentamos las actividades que se centran en la sintaxis de la programación en lugar de los conceptos.
 
 *Requisitos técnicos*: debido a la amplia variedad de configuraciones tecnológicas en aulas y escuelas, las mejores actividades son las que se realizan en Internet o en smartphones, o actividades sin conexión que enseñan conceptos de las ciencias de la computación sin necesidad de una computadora (ver <http://csunplugged.com/>). Las actividades que requieren instalar una aplicación móvil o de escritorio, o las experiencias en consolas de juegos, son aceptables pero no ideales. No incluiremos actividades que requieran registrarse o pagar (las actividades de robótica pueden requerir la compra de robótica).
 
-*Formato guiado por el estudiante (autoguiado)*: la Hora del Código original se basó en el éxito de los tutoriales o las lecciones autoguiadas, que podían ser dirigidas por el docente. Hay muchas opciones pero, si quieres crear una, estas actividades deben diseñarse de tal forma que sean divertidas para el estudiante que trabaja solo, o en un aula cuyo docente tiene poca preparación o conocimiento de ciencias de la computación. Deben proporcionar instrucciones para los estudiantes al contrario que un desafío abierto de una hora de duración. Idealmente, las instrucciones y los tutoriales se integran directamente en la plataforma de programación, para evitar ir de una pestaña o ventana a la otra.
+Para tener una idea de la gran variedad de tipos de tutoriales y planes de lección que puedes crear, visita la [página de actividades de la Hora del Código](https://hourofcode.com/us/learn).
 
 [**Volver al principio**](#top)
 
@@ -104,9 +105,7 @@ Qué necesitas:
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
 * Descripciones de la actividad 
-    * Descripción más larga para la vista de escritorio con un máximo de 400 caracteres
-    * Descripción más corta para la vista móvil con un máximo de 75 caracteres
-    * Incluye en la descripción si es guiado por el estudiante o por el docente. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad se centra en estándares específicos, incluye esta información.
+    * Incluye en la descripción si es guiado por el estudiante o por el docente. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad aborda estándares específicos, considera incluir esta información.
 * Niveles de grado recomendados para los usuarios previstos. Puedes consultar \[los estándares K-12 de la Computer Science Teachers’ Association\] (https://k12cs.org/framework-statements-by-grade-band/) para ver los conceptos de las ciencias de la computación adecuados para cada grado. Algunos ejemplos de niveles de grado: 
     * Jardín de infantes - Grado 1 (4 a 6 años)
     * Grados 2-5 (7 a 10 años)
@@ -120,15 +119,12 @@ Qué necesitas:
     * 1 hora solamente
     * 1 hora con curso de seguimiento
     * 2 a 6 horas (pueden ser varias lecciones)
+* Una lista de adaptaciones de accesibilidad, si su actividad las tiene. Estos incluyen compatibilidad con lectores de pantalla, capacidades de conversión de texto a voz, uso de colores de alto contraste o cualquier otra adaptación hecha para estudiantes con discapacidades.
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Tu nombre
 * Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. 
-* Escuela donde enseñas, ciudad y estado (opcional)
-* Grados y asignaturas que enseñas (opcional)
-* Tu foto (opcional)
-* ¿Qué software necesitará el profesor para llevar adelante tu plan de lecciones (¿Scratch? ¿Robots? ¿Ninguno?)
+* Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. ¿Ninguno?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
 
@@ -143,14 +139,14 @@ Qué necesitas:
         * Android Chrome (optimizado para dispositivos móviles)
     * Sin conexión: especificar la plataforma para el código nativo (Mac, Win, iOS, Android, xBox, otra)
     * Sin conexión
-* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png.
-* Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio. No coloques pixeles en las páginas intermedias). Consulta la sección del pixel de seguimiento debajo para ver más detalles.
+* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png.
+* Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio.
 * Una vez que finalizan tu actividad, los usuarios serán dirigidos a [code.org/api/hour/finish](https://code.org/api/hour/finish), donde podrán: 
     * Decir en las redes sociales que han completado la Hora del Código
     * Recibir un certificado que dice que completaron la Hora del Código
     * Ver tablas con los países y ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
     * Para los usuarios que pasan una hora en tu actividad y no la completan, incluye un botón que diga "Terminé mi Hora del Código" y que también lleve a <http://code.org/api/hour/finish>.
-* (Opcional) Podemos hacer un seguimiento con un enlace de encuesta o formulario en línea que solicita un informe de las siguientes métricas de la actividad para la semana del 9 de diciembre, desde las 12:01 a. m., al 15 de diciembre, hasta las 11:59 p. m.) 
+* (Opcional) Podemos realizar un seguimiento con un enlace de formulario/encuesta en línea solicitando un informe de las siguientes métricas de actividad: 
     * Para actividades en línea (especialmente aplicaciones para smartphones y tablets): 
         * Número de usuarios
         * Cuántos completaron la tarea
@@ -202,55 +198,78 @@ Los docentes y los estudiantes pueden buscar y filtrar nuestra lista de activida
 
 [**Volver al principio**](#top)
 
-<a id="design"></a>
+<a id="earlyreview"></a>
 
 ## Sugerencias para diseñar tutoriales autoguiados de una hora
+
+Cualquier actividad enviada entre el 30 de abril y el 16 de agosto recibirá una evaluación de calidad de al menos tres miembros del [Comité de Evaluación de Actividades de la Hora del Código](/review-committee).
+
+Los evaluadores se enfocarán en proveer lo siguiente:
+
+* ¿En qué plataformas y navegadores funciona mejor el tutorial?
+* Retroalimentación crítica - ¿Qué se puede mejorar?
+* Errores o bugs - ¿Hay bugs, errores de sintaxis o gramaticales? Si los hay, ¿en qué parte de la actividad?
+* ¿Alienta esta actividad a los estudiantes a crear algo único?
+
+**Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No solo los estudiantes son principiantes, algunos docentes también lo son. Incluye información como:
+
+**La evaluación temprana no es una oportunidad para obtener retroalimentación para una actividad incompleta. Cualquier actividad que un evaluador considere los suficientemente incompleta no será evaluada.**
+
+**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
+
+Toda actividad enviada antes del 1ro de octubre recibirá una evaluación estándar, ya sea que reciba una evaluación temprana o no. Durante el periodo de evaluación estándar (septiembre-octubre), los evaluadores se enfocarán en calificar las actividades de acuerdo a los criterios descritos en la sección "Cómo serán evaluadas las actividades" de arriba. Al menos que señales cambios específicos en la actividad, los evaluadores se basarán en la retroalimentación de la evaluación temprana para calificar las actividades.
+
+[**Volver al principio**](#top)
+
+<a id="design"></a>
+
+## Directrices de marca registrada
 
 Puedes incluir el [logo de la Hora del Código](https://hourofcode.com/us/promote/resources#logo) en tu tutorial, pero no es obligatorio. Si utilizas el logo de la Hora del Código, consulta las directrices de marca registrada debajo. <u>Bajo ninguna circunstancia puedes usar el logo y el nombre de Code.org.</u> Ambos son marcas registradas y no pueden aparecer junto a una marca de un tercero sin un permiso expreso por escrito.
 
 **Asegúrate de que el estudiante promedio pueda finalizar la actividad sin problemas en una hora.** Puedes agregar una actividad abierta al final para los estudiantes que avancen más rápido durante la lección. Recuerda que la mayoría de los niños recién comienzan a aprender sobre las ciencias de la computación y la programación.
 
-**Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No solo los estudiantes son principiantes, algunos docentes también lo son. Incluye información como:
+Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites: Incluye información como:
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
-- ¿Recomiendas la programación en parejas? 
+- Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios. 
 - ¿Existen aspectos a tener en cuenta a la hora de realizar la actividad en un aula? Por ejemplo, si hay videos, aconseja a los docentes a que los muestren en una pantalla proyectada para que toda la clase pueda verlos
 
-**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles! ¡Felicitaciones!”)
+**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”)
 
-**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek. ¿Y tú? @Scratch.” Usa el hashtag **#HoraDelCódigo** (con las letras H, D y C en mayúsculas)
+**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de #CSEdWeek. ¿Y tú? @Scratch.” Usa el hashtag **#HoraDelCódigo** (con las letras H, D y C en mayúsculas)
 
 **Crea tu actividad en español o en otros idiomas además del inglés.**
 
 **Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven cómo puede mejorar el mundo!
 
-**Asegúrate de que tu tutorial se puede en un paradigma de [programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Esto es particularmente útil para la Hora del Código porque muchas aulas no tienen computadoras para todos los estudiantes.
+**Asegúrate de que tu tutorial pueda ser utilizado en el paradigma de [Programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Esto es particularmente útil para la Hora del Código porque muchas aulas no tienen computadoras para todos los estudiantes.
 
 [**Volver al principio**](#top)
 
 <a id="tm"></a>
 
-## Directrices de marca registrada
+## Pixel de seguimiento
 
 Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites:
 
 1. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la Hora del Código como un movimiento colectivo. Correcto: "Participa en la Hora del Código™ en ACMECorp.com". Incorrecto: "Participa en la Hora del Código de ACME Corp".
 2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
 3. Incluye el idioma en la página (o en el pie de página), así como enlaces hacia los sitios web de la Hora del Código, la Semana por la Educación en Ciencias de la Computación y Code.org, que digan lo siguiente: a. "La '[Hora del Código](http://hourofcode.com)™' es una iniciativa nacional de la [Semana por la Educación en Ciencias de Computación](http://csedweek.org) y [Code.org](http://code.org) para que millones de estudiantes participen en una hora de ciencias de la computación y programación."
-4. No uses la marca "Hora del Código" en nombres de aplicaciones.
+4. No uses la marca "Hora del Código" o "Hour of Code" en nombres de aplicaciones.
 
 [**Volver al principio**](#top)
 
 <a id="pixel"></a>
 
-## Pixel de seguimiento
+## Promoción de tus actividades, la Semana por la Educación en Ciencias de la Computación y la Hora del Código
 
-Para poder realizar un seguimiento más preciso de la participación, pedimos que todos los tutoriales de la Hora del Código de los socios incluyan una imagen de seguimiento de 1 pixel en la primera página. La imagen de 1 pixel debe estar solo en la página de inicio. No la incluyas en las páginas internas de tu tutorial.
+¡Promociona tu actividad en tu red! Dirígelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad.
 
 Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial.
 
-Si tu tutorial es aprobado e incluido en la página final de tutoriales, Code.org te proporcionará un único pixel de seguimiento para integrarlo en tu tutorial. Mira el ejemplo debajo.
+Si tu tutorial es aprobado e incluido en la página final de tutoriales, Code.org te proporcionará un pixel de seguimiento único para integrarlo en tu tutorial. Mira el ejemplo debajo.
 
 Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)
 
@@ -265,12 +284,12 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 ## Promoción de tus actividades, la Semana por la Educación en Ciencias de la Computación y la Hora del Código
 
-¡Promociona tu actividad en tu red! Dirígelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad. Usa la campaña internacional de la Hora del Código para la Semana por la Educación en Ciencias de la Computación como una excusa para animar a los usuarios a invitar a otros a unirse, y así alcanzar un total de 100 millones de participantes.
+¡Promociona tu actividad en tu red! Dirígelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad. Usa la campaña internacional de la Hora del Código durante la Semana por la Educación en Ciencias de la Computación como una excusa para animar a los usuarios a invitar a otros a unirse. ¡Ayúdanos a alcanzar más estudiantes!
 
 - Destaca la Hora del Código y la Semana por la Educación en Ciencias de la Computación en tu sitio web. Por ejemplo: <http://www.tynker.com/hour-of-code>
-- Promociona la Hora del Código en redes sociales, medios de comunicación tradicionales, listas de correo, etcétera, con el hashtag #HoraDelCódigo (con H, D y C en mayúsculas)
+- Promueve la Hora del Código en redes sociales, medios de comunicación tradicionales, listas de correo, etcétera, con el hashtag #HoraDelCódigo (con H, D y C en mayúsculas)
 - Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios.
-- Consulta nuestro kit de recursos para obtener más información (disponible muy pronto).
+- Ve nuestro [catálogo de recursos](https://hourofcode.com/us/promote) para más información.
 
 [**Volver al principio**](#top)
 

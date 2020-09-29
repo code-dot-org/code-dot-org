@@ -88,9 +88,6 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} örökké"
         options:
@@ -109,9 +106,6 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -188,9 +182,6 @@ hu:
             MOVES.XArmsUp: Nyújt
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} egyszer"
         options:
@@ -219,9 +210,6 @@ hu:
             MOVES.XArmsUp: Nyújt
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
@@ -971,6 +959,10 @@ hu:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       gamelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -1015,8 +1007,46 @@ hu:
         options:
           CHOICE:
             '"this"': ez
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       gamelab_hideTitleScreen:
         text: címoldal elrejtése
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': p
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} megérinti a szélét"
       gamelab_jumpTo:
@@ -1061,6 +1091,13 @@ hu:
             '"z"': z
       gamelab_locationAt:
         text: 'hely x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Észak
+            '"East"': Kelet
+            '"South"': Dél
+            '"West"': Nyugat
       gamelab_locationMouse:
         text: egér helye
       gamelab_locationOf:
@@ -1089,6 +1126,8 @@ hu:
             '"West"': Nyugat
       gamelab_moveToward:
         text: "{SPRITE} menj {DISTANCE} távolságot {TARGET} felé"
+      gamelab_objectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_playSound:
         text: adjHangot {SOUND}
       gamelab_pointInDirection:
@@ -1166,6 +1205,8 @@ hu:
           CONDITION:
             '"when"': amikor
             '"while"': amíg
+      gamelab_subjectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_turn:
         text: "{SPRITE} fordul {DIRECTION} {N} fokot"
         options:

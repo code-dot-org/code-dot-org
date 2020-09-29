@@ -2,15 +2,17 @@ import React from 'react';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
-var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ArrowButtons from '../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
 var BounceVisualizationColumn = function() {
   return (
     <span>
       <ProtectedVisualizationDiv>
+        <SwipePrompt />
         <svg version="1.1" id="svgBounce" />
       </ProtectedVisualizationDiv>
       <GameButtons>

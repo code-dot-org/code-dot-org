@@ -41,17 +41,24 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "## Step 1 - Make randButtonId a global variable\r\n\r\nMaking `randButtonId` global means modifying the code to declare/create it *outside* of any function and then setting its value *inside* setBoard().\r\n\r\n* Create a new variable on line 1: `var randButtonId`;\r\n* **Switch to text-mode** \r\n* Inside the setBoard() function, delete the `var` in front of `randButtonId` so that rather than re-creating the variable, we set the value of the global one.\r\n\r\nUpdated code should look like this (new or updated lines have `<--` arrows)\r\n\r\n\tvar randButtonId;     <-- declare as global variable\r\n    setBoard();\r\n    function setBoard(){\r\n    \t\r\n        //...set board code...\r\n        \r\n        randButtonId = \"button\"+randomNumber(1,4);    <-- remove \"var\" from assignment\r\n        \r\n    }\r\n\r\n**Testing it out**\r\n\r\nUnfortunately, there is not much to test here other than to determine your code still functions.  This is just a step that doesn't really change any functionality.\r\n\r\n* If it works the same as before, it's probably right, move on.\r\n* If it's broken or doesn't run double-check the changes you made.\r\n",
+    "long_instructions": "# Activating Buttons\r\n\r\nNext, we're going to move creating the `randButtonId` **outside** the function you created. This important step is going to allow us to do what comes afterwards.\r\n\r\n* Create a new variable on line 1: `var randButtonId;`\r\n* **Switch to text-mode**\r\n* Inside the setBoard() function, delete the `var` in front of `randButtonId` so that rather than re-creating the variable, we just set a new value each time the function runs.\r\n\r\nUpdated code should look like this (new or updated lines have `<--` arrows)\r\n\r\n\tvar randButtonId;     <-- declare variable\r\n    setBoard();\r\n    function setBoard(){\r\n    \t\r\n        //...set board code...\r\n        \r\n        randButtonId = \"button\"+randomNumber(1,4);    <-- remove \"var\"\r\n        \r\n    }\r\n\r\n**Testing it out**\r\n\r\nUnfortunately, there is not much to test here other than to determine your code still functions.  This is just a step that doesn't really change any functionality.\r\n\r\n* If it works the same as before, it's probably right, move on.\r\n* If it's broken or doesn't run double-check the changes you made.\r\n",
     "teacher_markdown": "Here is a working version of where students should be at this point.\r\n\r\n\r\n\tvar randButtonID;\r\n    setBoard();\r\n\r\n    function setBoard() {\r\n      var R = randomNumber(0,235);\r\n      var G = randomNumber(0,235);\r\n      var B = randomNumber(0,235);\r\n      var color = rgb(R, G, B);\r\n      setProperty(\"button1\", \"background-color\", color);\r\n      setProperty(\"button2\", \"background-color\", color);\r\n      setProperty(\"button3\", \"background-color\", color);\r\n      setProperty(\"button4\", \"background-color\", color);\r\n\r\n      R = R+20; \r\n      G = G+20;\r\n      B = B+20;\r\n      var diffColor = rgb(R, G, B);\r\n      randButtonID = \"button\"+randomNumber(1,4);\r\n      setProperty(randButtonID, \"background-color\", diffColor);\r\n      console.log(\"correct button is: \"+randButtonID);\r\n    }\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 17256,
     "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-20 15:50:05 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-20 15:51:22 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-20 15:55:44 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

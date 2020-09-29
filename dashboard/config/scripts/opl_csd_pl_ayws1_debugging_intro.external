@@ -4,15 +4,23 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Debugging
+# Module 1: CS Discoveries Virtual Professional Learning
 
-## What is debugging?
+## Module 1 Overview
 
-Debugging is the process of finding and fixing problems in code. It is a major part of programming and a critical skill for students to develop. 
+Welcome to your first set of asynchronous work for CS Discoveries! We have selected a set of experiences for you to engage in that will feed into the upcoming synchronous workshop of this module and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+The module focuses on the overarching theme of "The Role of the Teacher". One role of the teacher is  the teacher as lead learner. As lead learner, the role of the teacher shifts from being the source of knowledge to being the leader in seeking knowledge. As you progress through this asynchronous work, consider the role your role as the teacher in facilitating learning for your students. 
+
+**During this asynchronous work you will:**
+
+* Review Unit 3 content from the summer
+* Develop empathy for the student experience while learning about variables and random numbers in Game Lab
+* Review debugging resources and practice debugging in Game Lab
+* Reflect on your role as the teacher
 
 
-## How does debugging connect to the curriculum?
+### Let's get started!
 
-Occasionally students will encounter a debugging level where they are explicitly asked to identify and fix bugs in provided code. While these are great opportunities to highlight specific kinds of errors and misconceptions, it is important to build a culture of constant debugging, as debugging is not an activity that is done in isolated moments.
 
 MARKDOWN

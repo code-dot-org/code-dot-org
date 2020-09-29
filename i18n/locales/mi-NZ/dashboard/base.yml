@@ -201,6 +201,8 @@ mi:
       help_support: "Māngai tautoko"
       report_bug: "Pūrongo mai to raru"
       about: "Whakamārama"
+      legal_privacy: "Kaupapahere Tūmataitinga"
+      legal_tos: "Ngā Ture Ratonga"
     user:
       district_dashboard: 'Paemana ā-Rohe'
       label: 'Tēnā koe %{username}'
@@ -462,20 +464,6 @@ mi:
       title: "Ngā Here"
     widgets:
       cta: "Ako me pēhea"
-  gallery:
-    students_drew_these_with_code: "Nā ngā ākonga ēnei i tā me te waehere!"
-    students_made_these_with_code: "Nā ngā ākonga ēnei i hanga me te waehere!"
-    picture_count: "I ngā rangi <b>%{days}</b> kua hipa, kua tuhia e ngā ākonga ngā pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono rorohiko. Pāwhiritia ngā pikitia kia kitea ai te rere o ia papatono."
-    activity_count: "I ngā rangi <b>%{days}</b> kua hipa, kua hangaia e ngā ākonga ngā taupānga me ngā pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono rorohiko. Pāwhiritia ngā pikitia me ngā topenga mata kia kitea ai te rere o ia papatono."
-    want_to_make_your_own: "E hiahia ana koe ki te hanga i tō ake?"
-    how_to_save: "I te taumata whakamutunga o ēnei whakaakoranga, pāwhiritia the \"Whakamutu\" me te \"Tiaki\" kia tiaki āu mahi ki te taiwhanga."
-    more: "Mea Atu Anō &rarr;"
-    caption_by_name_age: "nā %{name}, %{age} tau te pakeke"
-    caption_time_ago: "%{time_ago} i mua"
-    header: "Taiwhainga"
-    header_playlab: "Ngā pūrākau me ngā kēmu"
-    header_artist: "Toi waehere"
-    report_abuse: "Pūrongohia te Tūkino"
   landing:
     report_bug: "Pūrongotia tētahi Iro"
     support: "Tono Āwhina"
@@ -637,26 +625,7 @@ mi:
     instructor_feedback: 'Urupare Kaitohutohu'
     peer_feedback: 'Urupare Hoa'
     outdated: 'I tāpiritia tēnei urupare mō tētahi putanga tāpaetanga o mua'
-  flex_category:
-    content: 'Ihirangi'
-    practice: 'Huarahi Whakaako'
     peer_review: 'Arotake ā-Hoa'
-    csf_digcit: 'Te Kirirarautanga Matihiko'
-    csf_jigsaw: 'Pangahono'
-    csf_loops: 'Ngā Koromeke'
-    csf_events: 'Ngā Takunetanga'
-    csf_binary: 'Tāhūrua'
-    csf_conditionals: 'Ngā Here'
-    csf_nested_loops: 'Ngā Koromeke Tauroto'
-    csf_functions: 'Ngā Taumahi'
-    csf_variables: 'Ngā Taurangi'
-    csf_for_loops: 'Mō Ngā Koromeke'
-    csf_internet: 'Te Ipurangi'
-    csp_variables: 'Ngā Taurangi'
-    csp_conditionals: 'Ngā Here'
-    csp_functions: 'Ngā Taumahi'
-    csp_lists: 'Ngā Rārangi'
-    csp_loops: 'Ngā Koromeke'
   external_links:
     disclaimer: Karo
     leaving_domain: E puta ana koe i tēnei rohe ināianei ki tētahi pae kāore i te whakahaerehia e Code.org.

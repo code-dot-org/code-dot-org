@@ -7,7 +7,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Guided Example: Making a Multi-screen Chaser Game
 
-In the last lesson we got some very basic functionality for a simple chaser game going.  Now let's make **version 2**.  Now that we know how to use console.log to help us debug problems, let's make our game a little more polished.  
+In the last lesson you made a simple chaser game.  Now let's make **version 2**.   
 
 Here is the plan for what we're about to make:
 

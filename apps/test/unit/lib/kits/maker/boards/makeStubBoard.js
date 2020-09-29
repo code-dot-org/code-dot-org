@@ -37,6 +37,8 @@ export class MicrobitStubBoard {
     callback();
   }
 
+  displayShow() {}
+
   displayPlot() {}
 
   displayClear() {}
@@ -78,4 +80,12 @@ export class MicrobitStubBoard {
   reset() {}
 
   trackDigitalComponent() {}
+
+  enableLightSensor() {}
+
+  connectBoard() {
+    this.connect();
+  }
+
+  clearChannelData() {}
 }

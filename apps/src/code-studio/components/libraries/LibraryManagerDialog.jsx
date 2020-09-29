@@ -17,7 +17,8 @@ const DEFAULT_MARGIN = 7;
 
 const styles = {
   dialog: {
-    padding: '0 15px'
+    padding: '0 15px',
+    cursor: 'default'
   },
   linkBox: {
     cursor: 'auto',
@@ -115,8 +116,9 @@ export class LibraryManagerDialog extends React.Component {
     displayLibrary: null,
     displayLibraryMode: DisplayLibraryMode.NONE,
     isLoading: false,
-    error: null,
-    updatedLibraryChannels: []
+    errorMessages: {},
+    updatedLibraryChannels: [],
+    sectionFilter: ''
   };
 
   componentDidUpdate(prevProps) {
@@ -139,7 +141,12 @@ export class LibraryManagerDialog extends React.Component {
         this.setState({classLibraries, projectLibraries});
       },
       error => {
-        console.log('error: ' + error);
+        this.setState({
+          errorMessages: {
+            ...this.state.errorMessages,
+            loadClassLibraries: i18n.errorFindingClassLibraries()
+          }
+        });
       }
     );
 
@@ -163,7 +170,10 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   setLibraryToImport = event => {
-    this.setState({importLibraryId: event.target.value, error: null});
+    this.setState({
+      importLibraryId: event.target.value,
+      errorMessages: {...this.state.errorMessages, importFromId: undefined}
+    });
   };
 
   addLibraryToProject = libraryJson => {
@@ -194,7 +204,10 @@ export class LibraryManagerDialog extends React.Component {
   addLibraryById = (libraryJson, error) => {
     if (error) {
       this.setState({
-        error: i18n.libraryImportError(),
+        errorMessages: {
+          ...this.state.errorMessages,
+          importFromId: i18n.libraryImportError()
+        },
         isLoading: false
       });
     } else if (libraryJson) {
@@ -238,11 +251,11 @@ export class LibraryManagerDialog extends React.Component {
     );
   };
 
-  removeLibrary = libraryName => {
+  removeLibrary = channelId => {
     const {projectLibraries} = this.state;
     dashboard.project.setProjectLibraries(
       projectLibraries.filter(library => {
-        return library.name !== libraryName;
+        return library.channelId !== channelId;
       })
     );
     this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
@@ -263,7 +276,7 @@ export class LibraryManagerDialog extends React.Component {
     return projectLibraries.map(library => {
       return (
         <LibraryListItem
-          key={library.name}
+          key={library.channelId}
           library={library}
           onUpdate={
             updatedLibraryChannels.includes(library.channelId)
@@ -278,11 +291,19 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    const {classLibraries} = this.state;
+    const {classLibraries, errorMessages, sectionFilter} = this.state;
+    if (errorMessages.loadClassLibraries) {
+      return <div style={styles.error}>{errorMessages.loadClassLibraries}</div>;
+    }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }
-    return classLibraries.map(library => {
+
+    const filteredLibraries = sectionFilter
+      ? classLibraries.filter(library => library.sectionName === sectionFilter)
+      : classLibraries;
+
+    return filteredLibraries.map(library => {
       return (
         <LibraryListItem
           key={library.channel}
@@ -367,11 +388,21 @@ export class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {importLibraryId, displayLibrary, isLoading, error} = this.state;
+    const {
+      importLibraryId,
+      displayLibrary,
+      isLoading,
+      errorMessages,
+      classLibraries
+    } = this.state;
 
     if (!isOpen) {
       return null;
     }
+
+    const sections = [
+      ...new Set(classLibraries.map(library => library.sectionName))
+    ];
 
     return (
       <div>
@@ -384,9 +415,26 @@ export class LibraryManagerDialog extends React.Component {
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
           <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
+          <div style={{textAlign: 'left'}}>
+            <label style={{...styles.message, display: 'inline'}}>
+              {i18n.showingLibrariesFromSection()}
+            </label>
+            <select
+              onChange={event =>
+                this.setState({sectionFilter: event.target.value})
+              }
+            >
+              <option value="">{i18n.all()}</option>
+              {sections.map(section => (
+                <option key={section} value={section}>
+                  {section}
+                </option>
+              ))}
+            </select>
+          </div>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
           <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
-          <div style={styles.inputParent}>
+          <div style={styles.inputParent} id="ui-test-import-library">
             <input
               style={styles.linkBox}
               type="text"
@@ -406,7 +454,7 @@ export class LibraryManagerDialog extends React.Component {
               {!isLoading && i18n.add()}
             </button>
           </div>
-          <div style={styles.error}>{error}</div>
+          <div style={styles.error}>{errorMessages.importFromId}</div>
         </BaseDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>

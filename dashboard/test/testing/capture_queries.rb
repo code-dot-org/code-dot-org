@@ -41,7 +41,7 @@ module CaptureQueries
     # Level-cache queries don't count.
     /script\.rb.*cache_find_(script_level|level)/,
     # Ignore cached script id lookup
-    /stage_extras_script_ids/,
+    /lesson_extras_script_ids/,
     # Ignore random updates to experiment cache.
     /experiment\.rb.*update_cache/
   ]

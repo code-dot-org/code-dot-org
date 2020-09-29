@@ -4,14 +4,24 @@ import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
   N_COLOR_LEDS,
-  BUTTON_VARS,
-  COMPONENT_EVENTS,
+  CP_BUTTON_VARS,
+  CP_COMPONENT_EVENTS,
   SONG_CHARGE,
   SONG_1D
 } from './boards/circuitPlayground/PlaygroundConstants';
 
-export const MAKER_CATEGORY = 'Maker';
+import {
+  MB_BUTTON_VARS,
+  MB_COMPONENT_EVENTS
+} from './boards/microBit/MicroBitConstants';
+
+const config = {};
+export default config;
+
+const MAKER_CATEGORY = 'Maker';
+config.MAKER_CATEGORY = MAKER_CATEGORY;
 const CIRCUIT_CATEGORY = 'Circuit';
+const MICROBIT_CATEGORY = 'micro:bit';
 
 const pixelType = '[ColorLed].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(
@@ -19,23 +29,12 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 );
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
-export function stringifySong(song) {
+function stringifySong(song) {
   return (
     '[\n' + song.map(note => `  ${JSON.stringify(note)}`).join(',\n') + '\n]'
   );
 }
-
-/**
- * Relies on `this` being the Droplet socket when in droplet mode, and, in
- * text mode, this.parent being undefined.
- * @param {AceEditor} editor
- * @returns {Array.<string>}
- */
-const boardEventDropdownGenerator = function(editor) {
-  return getBoardEventDropdownForParam(
-    getFirstParam('onBoardEvent', this.parent, editor)
-  );
-};
+config.stringifySong = stringifySong;
 
 /**
  * Generate an array of dropdown strings appropriate for the second
@@ -43,9 +42,9 @@ const boardEventDropdownGenerator = function(editor) {
  * onBoardEvent.
  * @param {string} firstParam - first parameter to onBoardEvent
  */
-export function getBoardEventDropdownForParam(firstParam) {
+function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
-  const idealOptions = COMPONENT_EVENTS[firstParam];
+  const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
     return _.chain(idealOptions)
       .sort()
@@ -55,7 +54,7 @@ export function getBoardEventDropdownForParam(firstParam) {
   }
 
   // If we can't find an ideal subset, use all possible
-  return _.chain(COMPONENT_EVENTS)
+  return _.chain(componentEvents)
     .values()
     .flatten()
     .sort()
@@ -63,11 +62,12 @@ export function getBoardEventDropdownForParam(firstParam) {
     .map(wrapInQuotes)
     .value();
 }
+config.getBoardEventDropdownForParam = getBoardEventDropdownForParam;
 
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
+config.additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {
@@ -82,11 +82,17 @@ const createButtonProps = {
   paletteParams: ['pin'],
   params: ['0']
 };
+const createCapacitiveTouchSensorProps = {
+  parent: api,
+  category: MAKER_CATEGORY,
+  paletteParams: ['pin'],
+  params: ['0']
+};
 
-export const blocks = [
-  /**
-   * Generic Johnny-Five / Firmata blocks
-   */
+/**
+ * Generic Johnny-Five / Firmata blocks
+ */
+const makerBlocks = [
   {
     func: 'pinMode',
     parent: api,
@@ -150,11 +156,13 @@ export const blocks = [
     ...createButtonProps,
     noAutocomplete: true,
     docFunc: 'createButton'
-  },
+  }
+];
 
-  /**
-   * Circuit-Playground-specific blocks
-   */
+/**
+ * Circuit-Playground-specific blocks
+ */
+const circuitPlaygroundBlocks = [
   {
     func: 'onBoardEvent',
     parent: api,
@@ -162,7 +170,15 @@ export const blocks = [
     paletteParams: ['component', 'event', 'callback'],
     params: ['buttonL', '"down"', 'function(event) {\n  \n}'],
     allowFunctionDrop: {2: true},
-    dropdown: {0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator}
+    dropdown: {
+      0: Object.keys(CP_COMPONENT_EVENTS),
+      1: function(editor) {
+        return getBoardEventDropdownForParam(
+          getFirstParam('onBoardEvent', this.parent, editor),
+          CP_COMPONENT_EVENTS
+        );
+      }
+    }
   },
 
   {
@@ -321,22 +337,22 @@ export const blocks = [
     type: 'property'
   },
 
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'isPressed',
-    objectDropdown: {options: BUTTON_VARS, dropdownOnly: true},
+    objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
     category: CIRCUIT_CATEGORY,
-    blockPrefix: `${BUTTON_VARS[0]}.`,
+    blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.isPressed',
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
   },
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'holdtime',
-    objectDropdown: {options: BUTTON_VARS, dropdownOnly: true},
+    objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
     category: CIRCUIT_CATEGORY,
-    blockPrefix: `${BUTTON_VARS[0]}.`,
+    blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.holdtime',
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
@@ -394,15 +410,196 @@ export const blocks = [
   }
 ];
 
-export const categories = {
+const ledScreenPrefix = 'ledScreen[0][0].';
+/* micro:bit specific blocks */
+const microBitBlocks = [
+  {
+    func: 'createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    type: 'either'
+  },
+  {
+    func: 'var mySensor = createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    noAutocomplete: true,
+    docFunc: 'createCapacitiveTouchSensor'
+  },
+  {
+    func: 'onBoardEvent',
+    parent: api,
+    category: MICROBIT_CATEGORY,
+    paletteParams: ['component', 'event', 'callback'],
+    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    allowFunctionDrop: {2: true},
+    dropdown: {
+      0: Object.keys(MB_COMPONENT_EVENTS),
+      1: function(editor) {
+        return getBoardEventDropdownForParam(
+          getFirstParam('onBoardEvent', this.parent, editor),
+          MB_COMPONENT_EVENTS
+        );
+      }
+    }
+  },
+  {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
+  {
+    func: 'on',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.on'
+  },
+  {
+    func: 'off',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.off'
+  },
+  {
+    func: 'toggle',
+    blockPrefix: ledScreenPrefix,
+    category: MICROBIT_CATEGORY,
+    modeOptionName: '*.toggle'
+  },
+  {
+    func: 'ledScreen.clear',
+    category: MICROBIT_CATEGORY
+  },
+  {
+    func: 'ledScreen.scrollNumber',
+    category: MICROBIT_CATEGORY,
+    params: ['100'],
+    paletteParams: ['number']
+  },
+  {
+    func: 'ledScreen.scrollString',
+    category: MICROBIT_CATEGORY,
+    params: ['"Hello World!"'],
+    paletteParams: ['string']
+  },
+
+  {
+    func: 'ledScreen.display',
+    category: MICROBIT_CATEGORY,
+    params: [
+      '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
+    ],
+    paletteParams: ['boardArray']
+  },
+  {
+    func: 'isPressed',
+    objectDropdown: {options: MB_BUTTON_VARS, dropdownOnly: true},
+    category: MICROBIT_CATEGORY,
+    blockPrefix: `${MB_BUTTON_VARS[0]}.`,
+    modeOptionName: '*.isPressed',
+    type: 'readonlyproperty',
+    tipPrefix: '[Button].'
+  },
+  {
+    func: 'accelerometer.getOrientation',
+    category: MICROBIT_CATEGORY,
+    type: 'value',
+    paletteParams: ['orientationType'],
+    params: ['"inclination"'],
+    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}
+  },
+  {
+    func: 'accelerometer.getAcceleration',
+    category: MICROBIT_CATEGORY,
+    type: 'value',
+    paletteParams: ['orientationType'],
+    params: ['"x"'],
+    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}
+  },
+  {
+    func: 'lightSensor.start',
+    category: MICROBIT_CATEGORY,
+    noAutocomplete: true
+  },
+  {
+    func: 'lightSensor.value',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'lightSensor.getAveragedValue',
+    category: MICROBIT_CATEGORY,
+    params: ['500'],
+    paletteParams: ['ms'],
+    type: 'value'
+  },
+  {
+    func: 'lightSensor.setScale',
+    category: MICROBIT_CATEGORY,
+    params: ['0', '100'],
+    paletteParams: ['low', 'high']
+  },
+  {
+    func: 'lightSensor.threshold',
+    category: MICROBIT_CATEGORY,
+    type: 'property'
+  },
+
+  {
+    func: 'soundSensor.start',
+    category: MICROBIT_CATEGORY,
+    noAutocomplete: true
+  },
+  {
+    func: 'soundSensor.value',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'soundSensor.getAveragedValue',
+    category: MICROBIT_CATEGORY,
+    params: ['500'],
+    paletteParams: ['ms'],
+    type: 'value'
+  },
+  {
+    func: 'soundSensor.setScale',
+    category: MICROBIT_CATEGORY,
+    params: ['0', '100'],
+    paletteParams: ['low', 'high']
+  },
+  {
+    func: 'soundSensor.threshold',
+    category: MICROBIT_CATEGORY,
+    type: 'property'
+  },
+
+  {func: 'compass.getHeading', category: MICROBIT_CATEGORY, type: 'value'},
+
+  {func: 'tempSensor.F', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
+];
+
+config.categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
     rgb: color.droplet_cyan,
     blocks: []
-  },
-  [CIRCUIT_CATEGORY]: {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
   }
+};
+
+export let configMicrobit = {
+  categories: {
+    [MICROBIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...microBitBlocks]
+};
+
+export let configCircuitPlayground = {
+  categories: {
+    [CIRCUIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...circuitPlaygroundBlocks]
 };

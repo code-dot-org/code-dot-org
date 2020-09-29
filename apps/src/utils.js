@@ -779,6 +779,7 @@ export function interpolateColors(from, to, value) {
  * open, including if this page is reloaded or if we navigate away and then back to it. The id will
  * be different for other tabs, including tabs in other browsers or on other machines. Unfortunately,
  * duplicating a browser tab will result in two tabs with the same id, but this is not common.
+ *
  * @returns {string} A string representing a float between 0 and 1.
  */
 export function getTabId() {

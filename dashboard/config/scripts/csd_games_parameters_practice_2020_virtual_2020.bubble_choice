@@ -1,0 +1,7 @@
+name 'CSD Games parameters practice_2020_virtual_2020'
+display_name 'Practice with Parameters'
+
+sublevels
+level 'CSD U3 shapes behind_virtual_2020'
+level 'CSD U3 shapes missing_virtual_2020'
+level 'CSD U3 shapes scene_virtual_2020'

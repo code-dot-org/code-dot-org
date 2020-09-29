@@ -1,0 +1,11 @@
+name 'CSD U2 Sample classes'
+editor_experiment ''
+display_name 'Sample Website'
+css 'unplugged'
+markdown <<MARKDOWN
+# Sample Website
+
+Click the website below to discover some new ways to style elements.
+
+[![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+MARKDOWN

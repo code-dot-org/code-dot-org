@@ -32,7 +32,7 @@ function showHomepage() {
   registerReducers({locales});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
+  store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
@@ -73,7 +73,6 @@ function showHomepage() {
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             donorBannerName={homepageData.donorBannerName}
-            donorTeacherBannerOptions={homepageData.donorTeacherBannerOptions}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
@@ -106,9 +105,9 @@ function showHomepage() {
 function getTeacherAnnouncement(override) {
   // Start with default teacher announcement.
   let announcement = {
-    heading: i18n.announcementHeadingBackToSchool(),
+    heading: i18n.announcementHeadingBackToSchoolRemote(),
     buttonText: i18n.announcementButtonBackToSchool(),
-    description: i18n.announcementDescriptionBackToSchool(),
+    description: i18n.announcementDescriptionBackToSchoolRemote(),
     link:
       'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
     image: '',

@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Та товчлуур дээр дарсан боловч бүжигчин тань хариу өгсөнгүй.",
   "danceFeedbackNeedTwoDancers": "Та хоёр бүжигчин бүтээх хэрэгтэй.",
   "danceFeedbackOnlyOneDancerMoved": "Таны бүжигчдийн зөвхөн нэг нь хөдөллөө.",
-  "danceFeedbackNeedLead": "Түүнчлэн та <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> блок бүхий нэг гоцлол бүжигчин бүтээх хэрэгтэй.",
+  "danceFeedbackNeedLead": "Түүнчлэн та <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> блок бүхий нэг гоцлол бүжигчин бүтээх хэрэгтэй.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"НЭГ ЭВЭРТ\"</title><title name=\"LAYOUT\">\"тойрог\"</title></block></xml> блок бүхий нөөц бүжигчдийн бүлгийг үүсгэх шаардлагатай.",
   "danceFeedbackSetSize": "Хөгжим эхэлмэгц дор хаяж нэг бүжигчний хэмжээг өөрчлөх хэрэгтэй.",
   "measure": "Арга хэмжээ:"

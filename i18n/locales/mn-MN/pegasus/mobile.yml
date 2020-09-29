@@ -1422,6 +1422,8 @@
   header_teacher_community: "Багш нар"
   header_help_support: 'Тусламж, дэмжлэг '
   header_report_bug: "Асуудал мэдээлэх"
+  header_legal_privacy: "Нууцлалын бодлого"
+  header_legal_tos: "Үйлчилгээний нөхцөл"
   header_tutorials: "Хичээлүүд"
   app_lab_documentation: "Аппын лабын баримт бичиг"
   app_lab_tutorials: "Аппын лабын зааварчилгаа"
@@ -1626,3 +1628,4 @@
   hoc2019_mc_mee_description2: "Хичээлийн төлөвлөгөө, видео бичлэг, компьютерийн шинжлэх ухааны сургалтын хөтөлбөр, багшийн сургалт зэргийг багтаасан үнэгүй нөөцөд хандаарай."
   hoc2019_mc_more_coding_resources: "Илүү кодлох эх үүсвэрүүд"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nӨмнөх жилийн [1-р хэсэг](%{dance_2018_link})-г эхлүүлэхийн тулд дарж [2-р хэсэг](%{dance_extras_2018_link})-г дараарай."
+  page_not_available_button: "Нүүр хуудас руу буцах"

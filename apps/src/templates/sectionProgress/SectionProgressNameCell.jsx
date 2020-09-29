@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {progressStyles} from './multiGridConstants';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
-import {tooltipIdForStudent} from './sectionProgressRedux';
+import {tooltipIdForStudent} from './sectionProgressConstants';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../lib/util/firehose';
 

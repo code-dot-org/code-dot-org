@@ -96,6 +96,29 @@ module OmniauthCallbacksControllerTests
       refute_sign_up_tracking
     end
 
+    test 'user_type queryparam has no effect on Clever sign-up' do
+      # This shouldn't be common, because we don't link to Clever from
+      # our sign-up page. But there's no reason someone couldn't hit
+      # these routes in this order, so this test ensures we respect
+      # Clever's user types.
+
+      # Clever says this account is a STUDENT
+      mock_oauth user_type: User::TYPE_STUDENT
+
+      # User visits a page that sets the sign-up type to TEACHER
+      get '/users/sign_up?user[user_type]=teacher'
+
+      # User signs in with their student clever account
+      assert_creates(User) {sign_in_through_clever}
+      follow_redirect!
+
+      # Ensure we created a student
+      created_user = User.find signed_in_user_id
+      assert_valid_student created_user
+    ensure
+      created_user&.destroy!
+    end
+
     private
 
     def mock_oauth(override_params = {})

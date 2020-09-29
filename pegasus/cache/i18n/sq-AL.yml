@@ -1569,6 +1569,8 @@ sq-AL:
   header_courses: Kurset
   header_project_gallery: Projekte
   header_educate_hoc: Ora e Kodimit
+  header_legal_privacy: Rregullat e Privatësisë
+  header_legal_tos: Kushtet e shërbimit
   user_header_label: Përshëndetje %{username}
   user_header_team: Skuadra
   user_header_settings: Llogaria ime

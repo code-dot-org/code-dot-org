@@ -106,7 +106,6 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections,
     hiddenStageState: state.hiddenStage
   }),
   {

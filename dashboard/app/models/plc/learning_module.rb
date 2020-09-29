@@ -25,7 +25,15 @@ class Plc::LearningModule < ActiveRecord::Base
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,
-    PRACTICE_MODULE = 'practice'.freeze
+    PRACTICE_MODULE = 'practice'.freeze,
+    REVIEW_MODULE = 'peer'.freeze
+  ].freeze
+
+  RESERVED_LESSON_GROUPS_FOR_PLC = [
+    {key: REQUIRED_MODULE, display_name: 'Overview'},
+    {key: CONTENT_MODULE, display_name: 'Content'},
+    {key: PRACTICE_MODULE, display_name: 'Teaching Practices'},
+    {key: REVIEW_MODULE, display_name: 'Peer Review'},
   ].freeze
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
@@ -45,9 +53,5 @@ class Plc::LearningModule < ActiveRecord::Base
 
   def required?
     module_type == REQUIRED_MODULE
-  end
-
-  def name_with_required_tag
-    "#{name}#{' - Required' if required?}"
   end
 end

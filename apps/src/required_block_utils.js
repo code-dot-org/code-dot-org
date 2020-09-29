@@ -1,5 +1,6 @@
 /* global Text */
 
+var constants = require('@cdo/apps/constants');
 var xml = require('./xml');
 var msg = require('@cdo/locale');
 var _ = require('lodash');
@@ -223,8 +224,22 @@ export function elementsEquivalent(expected, given) {
   }
   // Not fully clear to me why, but blockToDom seems to return us an element
   // with a tagName in all caps
-  if (expected.tagName.toLowerCase() !== given.tagName.toLowerCase()) {
-    return false;
+  var expectedTag = expected.tagName.toLowerCase();
+  var givenTag = given.tagName.toLowerCase();
+  // Google's Blockly has slightly different tag names, but our validation code
+  // expects all the tag names to be consistent with CDO Blockly. This mapping
+  // ensures we will validate correctly in both versions of Blockly.
+  var equivalentTagNamesMap = {
+    field: 'title'
+  };
+  if (expectedTag !== givenTag) {
+    if (Blockly.version === constants.BlocklyVersion.GOOGLE) {
+      if (expectedTag !== equivalentTagNamesMap[givenTag]) {
+        return false;
+      }
+    } else {
+      return false;
+    }
   }
 
   if (!attributesEquivalent(expected, given)) {

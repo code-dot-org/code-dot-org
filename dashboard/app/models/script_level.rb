@@ -2,22 +2,24 @@
 #
 # Table name: script_levels
 #
-#  id          :integer          not null, primary key
-#  script_id   :integer          not null
-#  chapter     :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  stage_id    :integer
-#  position    :integer
-#  assessment  :boolean
-#  properties  :text(65535)
-#  named_level :boolean
-#  bonus       :boolean
+#  id                  :integer          not null, primary key
+#  script_id           :integer          not null
+#  chapter             :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#  stage_id            :integer
+#  position            :integer
+#  assessment          :boolean
+#  properties          :text(65535)
+#  named_level         :boolean
+#  bonus               :boolean
+#  activity_section_id :integer
 #
 # Indexes
 #
-#  index_script_levels_on_script_id  (script_id)
-#  index_script_levels_on_stage_id   (stage_id)
+#  index_script_levels_on_activity_section_id  (activity_section_id)
+#  index_script_levels_on_script_id            (script_id)
+#  index_script_levels_on_stage_id             (stage_id)
 #
 
 require 'cdo/shared_constants'
@@ -30,12 +32,19 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
+  belongs_to :script
+  belongs_to :lesson, foreign_key: 'stage_id'
+
+  # This field will only be present in scripts which are being edited in the
+  # new script / lesson edit GUI.
+  belongs_to :activity_section
+
   has_and_belongs_to_many :levels
-  belongs_to :script, inverse_of: :script_levels
-  belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
   has_many :callouts, inverse_of: :script_level
+  has_many :levels_script_levels # join table. we need this association for seeding logic
 
   validate :anonymous_must_be_assessment
+  validate :validate_activity_section_lesson
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -45,11 +54,67 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def validate_activity_section_lesson
+    if activity_section && activity_section.lesson != lesson
+      errors.add(:script_level, 'activity_section.lesson does not match lesson')
+    end
+  end
+
   serialized_attrs %w(
     variants
     progression
     challenge
+    level_keys
   )
+
+  # Chapter values order all the script_levels in a script.
+  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+    script_level_position = 0
+
+    raw_script_levels.map do |raw_script_level|
+      raw_script_level.symbolize_keys!
+
+      # variants are deprecated. when cloning a script, retain only the first
+      # active level in each script level, discarding any variants.
+      if new_suffix && raw_script_level[:levels].length > 1
+        remove_variants(raw_script_level)
+      end
+
+      properties = raw_script_level.delete(:properties) || {}
+
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+
+      script_level_attributes = {
+        script_id: script.id,
+        stage_id: lesson.id,
+        chapter: (counters.chapter += 1),
+        position: (script_level_position += 1),
+        named_level: raw_script_level[:named_level],
+        bonus: raw_script_level[:bonus],
+        assessment: raw_script_level[:assessment],
+        properties: properties.with_indifferent_access
+      }
+      script_level = script.script_levels.detect do |sl|
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+          sl.levels == levels
+      end || ScriptLevel.create!(script_level_attributes) do |sl|
+        sl.levels = levels
+      end
+
+      script_level.assign_attributes(script_level_attributes)
+      script_level.save! if script_level.changed?
+      script_level
+    end
+  end
+
+  def self.remove_variants(raw_script_level)
+    first_active_level = raw_script_level[:levels].find do |raw_level|
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      !(variant && variant[:active] == false)
+    end
+    raw_script_level[:levels] = [first_active_level]
+    raw_script_level[:properties].delete(:variants)
+  end
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -117,9 +182,13 @@ class ScriptLevel < ActiveRecord::Base
     !has_another_level_to_go_to?
   end
 
-  def next_level_or_redirect_path_for_user(user, extras_lesson=nil)
-    if bubble_choice?
-      # Redirect user back to the BubbleChoice activity page.
+  def next_level_or_redirect_path_for_user(
+    user,
+    extras_lesson=nil,
+    bubble_choice_parent=false
+  )
+    if bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
       level_to_follow = self
     elsif valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
@@ -176,7 +245,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged?
+    return false if lesson && lesson.unplugged_lesson?
     return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
@@ -223,11 +292,12 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    return false unless assessment
-    !!level.properties["pages"]
+    assessment && level.is_a?(LevelGroup)
   end
 
   def anonymous?
+    return false if level.nil? || level.properties.nil?
+
     return level.properties["anonymous"] == "true"
   end
 
@@ -247,7 +317,7 @@ class ScriptLevel < ActiveRecord::Base
   def level_display_text
     if level.unplugged?
       I18n.t('unplugged_activity')
-    elsif lesson.unplugged?
+    elsif lesson.unplugged_lesson?
       position - 1
     else
       position
@@ -298,10 +368,18 @@ class ScriptLevel < ActiveRecord::Base
       display_as_unplugged: display_as_unplugged
     }
 
-    summary[:progression] = progression if progression
+    if progression
+      summary[:progression] = progression
+      localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+      summary[:progression_display_name] = localized_progression_name
+    end
 
     if named_level
       summary[:name] = level.display_name || level.name
+    end
+
+    if bubble_choice?
+      summary[:sublevels] = level.summarize_sublevels(script_level: self)
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -349,7 +427,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels = []
     level_id = last_level_summary[:ids].first
     level = Script.cache_find_level(level_id)
-    extra_level_count = level.properties["pages"].length - 1
+    extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
@@ -361,19 +439,23 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
-      level_id: level.id,
-      name: level.display_name || level.name,
       type: level.type,
-      map: JSON.parse(level.try(:maze) || '[]'),
-      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
-      skin: level.try(:skin),
-      thumbnail_url: level.try(:thumbnail_url),
-      solution_image_url: level.try(:solution_image_url),
-      level: level.summarize_as_bonus.camelize_keys,
-    }.camelize_keys
+      description: level.try(:bubble_choice_description),
+      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
+      url: build_script_level_url(self),
+      perfect: perfect,
+      maze_summary: {
+        map: JSON.parse(level.try(:maze) || '[]'),
+        serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
+        skin: level.try(:skin),
+        level: level.summarize_as_bonus.camelize_keys
+      }.camelize_keys
+    }
   end
 
   def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
@@ -409,7 +491,7 @@ class ScriptLevel < ActiveRecord::Base
                [level]
              end
 
-    user_level = student.last_attempt_for_any(levels)
+    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 
@@ -452,7 +534,7 @@ class ScriptLevel < ActiveRecord::Base
       lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: lesson.script.localized_title
+      unitName: lesson.script.title_for_display
     }
   end
 
@@ -468,7 +550,7 @@ class ScriptLevel < ActiveRecord::Base
   # it is contained in is hidden, or the script it is contained in is hidden.
   def hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
+    !SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: section_id).nil? ||
       !SectionHiddenScript.find_by(script_id: lesson.script.id, section_id: section_id).nil?
   end
 
@@ -477,5 +559,60 @@ class ScriptLevel < ActiveRecord::Base
   # prior answers
   def should_hide_survey(user, viewed_user)
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
+  #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context, use_existing_level_keys = true)
+    my_key = {
+      'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys),
+      'script_level.chapter': chapter,
+      'script_level.position': position
+    }
+
+    my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
+    raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
+    lesson_seeding_key = my_lesson.seeding_key(seed_context)
+
+    my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
+  end
+
+  # Gets keys of the Levels associated with this ScriptLevel, in order.
+  #
+  # Because getting level keys can be expensive (1-2 queries per Level, depending on whether it's a Blockly level),
+  # we prefer to use already loaded data instead of re-querying for it when possible. However, we shouldn't do so
+  # during serialization, to eliminate the risk that the data is out of sync.
+  #
+  # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
+  #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
+  # @return [Array[String]] the keys for the Level objects associated with this ScriptLevel.
+  def get_level_keys(seed_context, use_existing_level_keys = true)
+    # Use the level_keys property if it's there, unless we specifically want to re-query the level keys.
+    # This property is set during seeding.
+    return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
+
+    if levels.loaded?
+      my_levels = levels
+    else
+      # TODO: this series of in-memory filters is probably inefficient
+      my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
+      my_levels = my_levels_script_levels.map do |lsl|
+        level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
+        raise "No level found for #{lsl}" unless level
+        level
+      end
+      my_levels = my_levels.sort_by(&:id)
+      raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
+    end
+    my_levels.map(&:key)
   end
 end

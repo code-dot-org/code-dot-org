@@ -192,6 +192,8 @@ hy:
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"
+      legal_privacy: "Գաղտնիության քաղաքականություն"
+      legal_tos: "Ծառայությունների մատուցման պայմաններ"
     user:
       classroom: 'Ուսուցչի գլխավոր էջը'
       district_dashboard: 'District Dashboard'
@@ -444,20 +446,6 @@ hy:
       title: "conditionals"
     widgets:
       cta: "Իմացեք, թե ինչպես"
-  gallery:
-    students_drew_these_with_code: "Ուսանողները ոչ-ոքի դրանք կոդով!"
-    students_made_these_with_code: "Ուսանողները դրանք կոդով!"
-    picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
-    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
-    want_to_make_your_own: "Ցանկանում եք, որպեսզի ձեր սեփական."
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More & rarr;"
-    caption_by_name_age: "by %{name}, age %{age}"
-    caption_time_ago: "%{time_ago} ago"
-    header: "սրահ"
-    header_playlab: "Պատմություններ եւ խաղեր"
-    header_artist: "ՕՐԵՆՍԳԻՐՔ, հոդված"
-    report_abuse: "Զեկուցել չարաշահման մասին"
   landing:
     report_bug: "Report Bug"
     support: "Օգնություն ստանալ"
@@ -599,28 +587,6 @@ hy:
     instructor_feedback: 'Instructor Feedback'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
-  flex_category:
-    required: 'Overview'
-    content: 'պարունակություն'
-    practice: 'Ուսուցիչի փորձեր'
-    csf_digcit: 'Digital Citizenship'
-    csf_jigsaw: 'ոլորահատ սղոց'
-    csf_loops: 'loops'
-    csf_events: 'Իրադարձություններ'
-    csf_binary: 'երկուական'
-    csf_conditionals: 'conditionals'
-    csf_nested_loops: 'nested Loops'
-    csf_functions: 'գործառույթները'
-    csf_variables: 'փոփոխականների'
-    csf_for_loops: 'For Loops'
-    csf_internet: 'Internet'
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp_variables: 'փոփոխականների'
-    csp_conditionals: 'conditionals'
-    csp_functions: 'գործառույթները'
-    csp_lists: 'ցուցակները'
-    csp_loops: 'loops'
-    csp_unit1_2020: 'CS Principles Unit 1'
   hoc_download:
     title: 'Hour of Code downloads'
     capsule_title: 'Do you have Internet?'

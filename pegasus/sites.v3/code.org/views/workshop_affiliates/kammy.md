@@ -1,3 +1,0 @@
-## Kammy Sanghera
-
-Dr. Sanghera is the Executive Director of STEM Outreach and the Associate Professor in the Department of Information Sciences and Technology (IST), Volgenau School of Engineering at George Mason University. Her focus is on developing opportunities for K-12 teachers’ PD, offering engineering and technology related summer camps for K-12 students while creating a community of practice for like-minded people who wish to participate in and contribute to STEM initiatives. She works closely with the local schools and corporate partners.

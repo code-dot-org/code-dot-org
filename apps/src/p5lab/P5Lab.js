@@ -273,7 +273,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -374,7 +380,9 @@ P5Lab.prototype.init = function(config) {
 
   var showDebugButtons =
     config.level.editCode &&
-    (!config.hideSource && !config.level.debuggerDisabled);
+    (!config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.iframeEmbedAppAndCode);
   var showDebugConsole = config.level.editCode && !config.hideSource;
   this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
@@ -438,7 +446,14 @@ P5Lab.prototype.init = function(config) {
     config.initialAnimationList && !config.embed && !config.hasContainedLevels
       ? config.initialAnimationList
       : this.startAnimations;
-  getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  getStore().dispatch(
+    setInitialAnimationList(
+      initialAnimationList,
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
+    )
+  );
 
   this.generatedProperties = {
     ...config.initialGeneratedProperties
@@ -879,11 +894,6 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
         onComplete
       });
     }
-
-    if (this.studioApp_.isUsingBlockly()) {
-      // reenable toolbox
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    }
   };
 
   sendReport();
@@ -958,11 +968,6 @@ P5Lab.prototype.execute = function() {
     this.executionError
   ) {
     return;
-  }
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
   this.startTickTimer();

@@ -83,6 +83,11 @@ ms:
     field_is_required: adalah diperlukan
     email_preference_yes: Ya
     email_preference_no: Tidak
+    parent_account_checkbox: Saya ibubapa/penjaga yang daftar bagi pihak anak saya
+    parent_account_email_progress_permission: Bolehkah kami sekali-sekala e-mel anda
+      kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer
+      mereka? [(Lihat polisi privasi kami)](%{privacy_policy_url})
+    parent_account_email_label: E-mel Ibubapa/Penjaga
   school_info:
     other: Lain-lain
   signin_form:
@@ -166,6 +171,8 @@ ms:
       report_bug: Laporkan masalah
       educate_hoc: Hour of Code
       about: Tentang
+      legal_privacy: Dasar Privasi
+      legal_tos: Terma Perkhidmatan
     user:
       classroom: Laman Utama Guru
       label: Hi %{username}
@@ -206,7 +213,13 @@ ms:
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
     update_email: Kemas kini
+    for_parents_and_guardians: Untuk Ibubapa dan Penjaga
+    link_a_parent_email: Sambungkan e-mel ibubapa/penjaga ke akaun ini untuk dikemaskini
+      mengenai kemajuan dan projek anak anda. Anda juga boleh guna e-mel ini untuk
+      pemulihan kata laluan.
     none: Tiada
+    only_one_parent_email_supported_warning: 'Nota: kami hanya dapat sokong satu e-mel
+      ibubapa/penjaga untuk setiap akaun pelajar pada masa ini.'
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -313,15 +326,6 @@ ms:
         adalah menyeronokkan untuk belajar di semua peringkat umur.
     unplugged_conditionals:
       title: Bersyarat
-  gallery:
-    students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
-    picture_count: Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b>
-      gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk
-      melihat program dimainkan.
-    want_to_make_your_own: Ingin buat anda punya sendiri?
-    more: Lagi &rarr;
-    header_artist: artis
-    report_abuse: Lapor Salah Guna
   landing:
     help_support: Bantuan dan sokongan
   multi:
@@ -365,18 +369,6 @@ ms:
       report_abuse_form:
         abuse_type:
           other: Lain-lain
-  flex_category:
-    csf_loops: Gelung
-    csf_events: Acara-acara
-    csf_conditionals: Bersyarat
-    csf_functions: Fungsi
-    csf_variables: Pembolehubah
-    csf_internet: Internet
-    csp_variables: Pembolehubah
-    csp_conditionals: Bersyarat
-    csp_functions: Fungsi
-    csp_lists: Senarai
-    csp_loops: Gelung
   pd:
     form_labels:
       email: E-mel
@@ -395,3 +387,8 @@ ms:
   gdpr_dialog:
     true: Ya
   copy: Salin
+  parent_email_banner:
+    text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini
+      untuk kemaskini kemajuan dan projek anak anda!"
+    link_your_email: Sambung e-mel
+    not_now: Nanti
