@@ -22,7 +22,9 @@ export default function initPage(scriptEditorData) {
       display_name: lesson_group.display_name,
       user_facing: lesson_group.user_facing,
       position: lesson_group.position,
-      lessons: lesson_group.lessons
+      lessons: lesson_group.lessons,
+      description: lesson_group.description,
+      big_questions: lesson_group.big_questions
         .filter(lesson => lesson.id)
         .map(lesson => ({
           id: lesson.id,
