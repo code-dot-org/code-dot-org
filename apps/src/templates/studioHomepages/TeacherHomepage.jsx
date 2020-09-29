@@ -176,8 +176,8 @@ export class UnconnectedTeacherHomepage extends Component {
       specialAnnouncement
     } = this.props;
 
-    // Show the regular announcement/notification for now.
-    const showAnnouncement = true;
+    // Whether we show the regular announcement/notification
+    const showAnnouncement = false;
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
@@ -212,6 +212,7 @@ export class UnconnectedTeacherHomepage extends Component {
               <div style={styles.clear} />
             </div>
           )}
+          {!showAnnouncement && <br />}
           {isEnglish && <SpecialAnnouncement isTeacher={true} />}
           {this.state.showCensusBanner && (
             <div>
