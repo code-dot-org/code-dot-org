@@ -48,8 +48,26 @@ class UnitCard extends Component {
     addGroup: PropTypes.func.isRequired
   };
 
+  generateLessonGroupKey = () => {
+    let lessonGroupNumber = this.props.lessonGroups.length + 1;
+    while (
+      this.props.lessonGroups.some(
+        lessonGroup => lessonGroup.key === `lessonGroup-${lessonGroupNumber}`
+      )
+    ) {
+      lessonGroupNumber++;
+    }
+
+    return `lessonGroup-${lessonGroupNumber}`;
+  };
+
   handleAddLessonGroup = () => {
-    this.props.addGroup();
+    const newLessonGroupName = prompt('Enter new lesson group name');
+    this.props.addGroup(
+      this.props.lessonGroups.length + 1,
+      this.generateLessonGroupKey,
+      newLessonGroupName
+    );
   };
 
   render() {
