@@ -133,6 +133,12 @@ export default class LessonToken extends Component {
             <span style={styles.lessonTokenName}>
               <span style={styles.lessonArea}>
                 <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
+                {this.props.lesson.unplugged && (
+                  <span style={styles.tag}>unplugged</span>
+                )}
+                {this.props.lesson.assessment && (
+                  <span style={styles.tag}>assessment</span>
+                )}
               </span>
             </span>
             <div
