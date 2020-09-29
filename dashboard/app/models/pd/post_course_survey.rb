@@ -3,8 +3,8 @@
 # Table name: pd_post_course_surveys
 #
 #  id            :integer          not null, primary key
-#  form_id       :integer          not null
-#  submission_id :integer          not null
+#  form_id       :bigint           not null
+#  submission_id :bigint           not null
 #  answers       :text(65535)
 #  year          :string(255)
 #  user_id       :integer          not null
