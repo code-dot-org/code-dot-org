@@ -30,6 +30,8 @@ export default function initPage(scriptEditorData) {
           position: lesson.position,
           relativePosition: lesson.relative_position,
           lockable: lesson.lockable,
+          assessment: lesson.assessment,
+          unplugged: lesson.unplugged,
           name: lesson.name
         }))
     }));
