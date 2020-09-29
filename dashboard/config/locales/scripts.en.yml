@@ -18188,17 +18188,17 @@ en:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Unit 5 and using datasets in apps'
             Module 5:
-              name: Module 5
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
             Module 6:
-              name: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
             Module 7:
               name: Module 7
             Module 8:
