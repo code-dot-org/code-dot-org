@@ -22,7 +22,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 1. `bundle exec rake install:hooks`
     <details>
-      <summary>Troubleshoot: `rake aborted!..` </summary>
+      <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
 
       * If you have issue `"rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0."`, make sure you add `bundle exec` in front of the `rake install:hooks` command
     </details>
