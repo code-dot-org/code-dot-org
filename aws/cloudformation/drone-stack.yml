@@ -410,6 +410,11 @@ Resources:
       GroupDescription: Allowed Drone Autoscaler Ports
       VpcId: !Ref VpcId
       SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 1
+          ToPort: 65535
+          SourceSecurityGroupId: !Ref ElbSecurityGroup
         - IpProtocol: tcp
           FromPort: 8080
           ToPort: 8080
