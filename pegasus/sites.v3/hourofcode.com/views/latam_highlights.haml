@@ -1,81 +1,8 @@
-:ruby
-  highlights = [
-    {
-      id: 64,
-      heading_s: hoc_s(:highlights_constant_trudeau_heading),
-      short_heading_s: hoc_s(:highlights_constant_trudeau_short_heading),
-      image_url_s: "hoc-trudeau.jpg",
-      link_text_s: hoc_s(:highlights_watchvideo),
-      url_s: "https://www.youtube.com/watch?v=8QwT58VTj_g"
-    },
-    {
-      id: 63,
-      heading_s: hoc_s(:highlights_constant_ny_heading),
-      short_heading_s: hoc_s(:highlights_constant_ny_short_heading),
-      image_url_s: "chicago-2.png",
-      link_text_s: hoc_s(:highlights_readmore),
-      url_s: "http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"
-    },
-    {
-      id: 65,
-      heading_s: hoc_s(:highlights_constant_athletes_heading),
-      short_heading_s: hoc_s(:highlights_constant_athletes_short_heading),
-      image_url_s: "athletes.png",
-      link_text_s: hoc_s(:highlights_watchvideo),
-      url_s: "https://code.org/athletes"
-    }
-  ]
-
--if @language == 'en'
-  .row
-    .col-md-8
-      %br/
-      %h2
-        Hour of Code Highlights
-      %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256"}
-        Hour of Code Highlights
-      %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
-    .col-md-3.highlights-column
-      %h2 Highlights from previous years
-      %div.highlight-tiles
-        - highlights.each do |item|
-          = view :highlight_item, item: item
-        .clear
-        %a{href: "/highlights"}
-          %button See more highlights
--else
-  -# Highlights
-  %br/
-
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      .hidden-xs
-        %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
-      %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-8
-      %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}
+.row
+  .col-md-8
+    %br/
+    %h2
+      Hour of Code Highlights
+    %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/1299406095904116742"}
+      Hour of Code Highlights
+    %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
