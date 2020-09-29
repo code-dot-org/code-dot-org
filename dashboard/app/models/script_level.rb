@@ -26,8 +26,12 @@
 
 require 'cdo/shared_constants'
 
-# Joins a Script to a Level
-# A Script has one or more Levels, and a Level can belong to one or more Scripts
+# This is sort-of-but-not-quite a join table between Scripts and Levels; it's grown to have other functionality.
+# It corresponds to the "bubbles" in the UI which represent the levels in a lesson.
+#
+# A Script has_many ScriptLevels, and a ScriptLevel has_and_belongs_to_many Levels. However, most ScriptLevels
+# are only associated with one Level. There are some special cases where they can have multiple Levels, such as
+# with the now-deprecated variants feature.
 class ScriptLevel < ActiveRecord::Base
   include SerializedProperties
   include LevelsHelper
