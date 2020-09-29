@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200916194417) do
+ActiveRecord::Schema.define(version: 20200929062628) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1369,8 +1369,10 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.boolean  "named_level"
     t.boolean  "bonus"
     t.integer  "activity_section_id"
+    t.string   "seed_key"
     t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
+    t.index ["seed_key"], name: "index_script_levels_on_seed_key", unique: true, using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
 
