@@ -555,6 +555,8 @@ ActiveRecord::Schema.define(version: 20200928224602) do
   create_table "lessons_resources", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "lesson_id",   null: false
     t.integer "resource_id", null: false
+    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", using: :btree
+    t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id", using: :btree
   end
 
   create_table "level_concept_difficulties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1274,11 +1276,12 @@ ActiveRecord::Schema.define(version: 20200928224602) do
 
   create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.string   "url"
-    t.string   "embed_slug"
+    t.string   "url",        null: false
+    t.string   "key",        null: false
     t.string   "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_resources_on_key", unique: true, using: :btree
   end
 
   create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
