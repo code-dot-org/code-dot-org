@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import ReactDOM from 'react-dom';
 
 const styles = {
   unitHeader: {
@@ -49,6 +50,25 @@ class UnitCard extends Component {
     // from redux
     lessonGroups: PropTypes.array.isRequired,
     addGroup: PropTypes.func.isRequired
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      targetLessonGroupPos: null
+    };
+  }
+
+  setTargetLessonGroup = targetLessonGroupPos => {
+    this.setState({targetLessonGroupPos});
+  };
+
+  // To be populated with the bounding client rect of each LessonGroupCard element.
+  lessonGroupMetrics = {};
+
+  setLessonGroupMetrics = (metrics, lessonGroupPosition) => {
+    this.lessonGroupMetrics[lessonGroupPosition] = metrics;
   };
 
   serializeLessonGroups = lessonGroups => {
@@ -117,6 +137,17 @@ class UnitCard extends Component {
               key={`lesson-group-${index}`}
               lessonGroupssCount={lessonGroups.length}
               lessonGroup={lessonGroup}
+              ref={lessonGroupCard => {
+                if (lessonGroupCard) {
+                  const metrics = ReactDOM.findDOMNode(
+                    lessonGroupCard
+                  ).getBoundingClientRect();
+                  this.setLessonGroupMetrics(metrics, lessonGroup.position);
+                }
+              }}
+              lessonGroupMetrics={this.lessonGroupMetrics}
+              setTargetLessonGroup={this.setTargetLessonGroup}
+              targetLessonGroupPos={this.state.targetLessonGroupPos}
             />
           ))}
           <div style={styles.addGroupWithWarning}>

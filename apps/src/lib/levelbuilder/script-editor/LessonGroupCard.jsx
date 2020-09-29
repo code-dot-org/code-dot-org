@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
+import ReactDOM from 'react-dom';
+import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
   moveLesson,
@@ -9,9 +10,12 @@ import {
   removeLesson,
   addLesson,
   removeGroup,
-  convertGroupToUserFacing
+  convertGroupToUserFacing,
+  setLessonGroup,
+  reorderLesson
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   checkbox: {
@@ -43,10 +47,20 @@ const styles = {
   }
 };
 
+styles.targetLessonGroupCard = {
+  ...styles.lessonGroupCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
+
 export class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
     lessonGroupsCount: PropTypes.number,
+    lessonGroupMetrics: PropTypes.object,
+    setTargetLessonGroup: PropTypes.func,
+    targetLessonGroupPos: PropTypes.number,
 
     // from redux
     moveLesson: PropTypes.func.isRequired,
@@ -54,7 +68,122 @@ export class LessonGroupCard extends Component {
     removeLesson: PropTypes.func.isRequired,
     removeGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired
+    convertGroupToUserFacing: PropTypes.func.isRequired,
+    setLessonGroup: PropTypes.func.isRequired,
+    reorderLesson: PropTypes.func.isRequired
+  };
+
+  /**
+   * To be populated with the bounding client rect of each lesson token element.
+   */
+  metrics = {};
+
+  state = {
+    currentPositions: [],
+    draggedLessonPos: null,
+    dragHeight: null,
+    initialClientY: null,
+    newPosition: null,
+    startingPositions: null
+  };
+
+  handleDragStart = (position, {clientY}) => {
+    // The bounding boxes in this.metrics will be stale if the user scrolled the
+    // page since the last time this component was updated. Therefore, force the
+    // component to rerender so that this.metrics will be up to date.
+    this.forceUpdate(() => {
+      const startingPositions = this.props.lessonGroup.lessons.map(lesson => {
+        const metrics = this.metrics[lesson.position];
+        return metrics.top + metrics.height / 2;
+      });
+      this.setState({
+        draggedLessonPos: position,
+        dragHeight: this.metrics[position].height + tokenMargin,
+        initialClientY: clientY,
+        newPosition: position,
+        startingPositions
+      });
+      window.addEventListener('selectstart', this.preventSelect);
+      window.addEventListener('mousemove', this.handleDrag);
+      window.addEventListener('mouseup', this.handleDragStop);
+    });
+  };
+
+  handleDrag = ({clientY}) => {
+    const delta = clientY - this.state.initialClientY;
+    const dragPosition = this.metrics[this.state.draggedLessonPos].top;
+    let newPosition = this.state.draggedLessonPos;
+    const currentPositions = this.state.startingPositions.map(
+      (midpoint, index) => {
+        const position = index + 1;
+        if (position === this.state.draggedLessonPos) {
+          return delta;
+        }
+        if (position < this.state.draggedLessonPos && dragPosition < midpoint) {
+          newPosition--;
+          return this.state.dragHeight;
+        }
+        if (
+          position > this.state.draggedLessonPos &&
+          dragPosition + this.state.dragHeight > midpoint
+        ) {
+          newPosition++;
+          return -this.state.dragHeight;
+        }
+        return 0;
+      }
+    );
+    this.setState({currentPositions, newPosition});
+    const targetLessonGroupPos = this.getTargetLessonGroup(clientY);
+    this.props.setTargetLessonGroup(targetLessonGroupPos);
+  };
+
+  // Given a clientY value of a location on the screen, find the LessonGroupCard
+  // corresponding to that location, and return the position of the
+  // corresponding activity section within the script.
+  getTargetLessonGroup = y => {
+    const {lessonGroupMetrics} = this.props;
+    const lessonGroupPos = Object.keys(lessonGroupMetrics).find(
+      lessonGroupPos => {
+        const lessonGroupRect = lessonGroupMetrics[lessonGroupPos];
+        return (
+          y > lessonGroupRect.top &&
+          y < lessonGroupRect.top + lessonGroupRect.height
+        );
+      }
+    );
+    return lessonGroupPos ? Number(lessonGroupPos) : null;
+  };
+
+  handleDragStop = () => {
+    const {lessonGroup, targetLessonGroupPos} = this.props;
+    if (targetLessonGroupPos === lessonGroup.position) {
+      // When dragging within a lessonGroup, reorder the lesson within that lessonGroup.
+      if (this.state.draggedLessonPos !== this.state.newPosition) {
+        this.props.reorderLesson(
+          lessonGroup.position,
+          this.state.draggedLessonPos,
+          this.state.newPosition
+        );
+      }
+    } else if (targetLessonGroupPos) {
+      // When dragging between lessonGroups, move it to the end of the new lessonGroup.
+      this.props.setLessonGroup(
+        this.state.draggedLessonPos,
+        lessonGroup.position,
+        targetLessonGroupPos
+      );
+    }
+    this.props.setTargetLessonGroup(null);
+
+    this.setState({
+      draggedLessonPos: null,
+      newPosition: null,
+      currentPositions: []
+    });
+    window.removeEventListener('selectstart', this.preventSelect);
+    window.removeEventListener('mousemove', this.handleDrag);
+    window.removeEventListener('mouseup', this.handleDragStop);
   };
 
   handleMoveLessonGroup = direction => {
@@ -114,9 +243,17 @@ export class LessonGroupCard extends Component {
   };
 
   render() {
-    const {lessonGroup} = this.props;
+    const {lessonGroup, targetLessonGroupPos} = this.props;
+    const {draggedLessonPos} = this.state;
+    const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
     return (
-      <div style={styles.lessonGroupCard}>
+      <div
+        style={
+          isTargetLessonGroup
+            ? styles.targetLessonGroupCard
+            : styles.lessonGroupCard
+        }
+      >
         <div style={styles.lessonGroupCardHeader}>
           {lessonGroup.user_facing
             ? `Lesson Group: "${lessonGroup.display_name}"`
@@ -129,13 +266,21 @@ export class LessonGroupCard extends Component {
         </div>
         {lessonGroup.lessons.map(lesson => (
           <LessonToken
+            ref={lessonToken => {
+              if (lessonToken) {
+                const metrics = ReactDOM.findDOMNode(
+                  lessonToken
+                ).getBoundingClientRect();
+                this.metrics[lesson.position] = metrics;
+              }
+            }}
             key={lesson.key}
             lessonGroupPosition={this.props.lessonGroup.position}
             lesson={lesson}
-            dragging={false}
-            draggedLessonPos={false}
-            delta={0}
-            handleDragStart={() => {}}
+            dragging={!!draggedLessonPos}
+            draggedLessonPos={lesson.position === draggedLessonPos}
+            delta={this.state.currentPositions[lesson.position - 1] || 0}
+            handleDragStart={this.handleDragStart}
             removeLesson={this.handleRemoveLesson}
           />
         ))}
@@ -179,6 +324,8 @@ export default connect(
     removeLesson,
     removeGroup,
     addLesson,
-    convertGroupToUserFacing
+    convertGroupToUserFacing,
+    setLessonGroup,
+    reorderLesson
   }
 )(LessonGroupCard);
