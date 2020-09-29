@@ -26,6 +26,7 @@ class Game < ActiveRecord::Base
   def self.by_name(name)
     (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
   end
+  mattr_accessor :game_cache # Direct access should only be used in tests
 
   def self.custom_maze
     @@game_custom_maze ||= find_by_name("CustomMaze")
