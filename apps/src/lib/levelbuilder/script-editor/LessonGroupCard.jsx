@@ -5,8 +5,11 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
   moveLesson,
+  moveGroup,
   removeLesson,
-  addLesson
+  addLesson,
+  removeGroup,
+  convertGroupToUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
@@ -47,7 +50,9 @@ export class UnconnectedLessonGroupCard extends Component {
 
     // from redux
     moveLesson: PropTypes.func.isRequired,
+    moveGroup: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
+    removeGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired
   };
@@ -58,22 +63,39 @@ export class UnconnectedLessonGroupCard extends Component {
       (this.props.lessonGroup.position !== this.props.lessonGroupsCount &&
         direction === 'down')
     ) {
-      this.props.moveLesson(this.props.lessonGroup.position, direction);
+      this.props.moveGroup(this.props.lessonGroup.position, direction);
     }
   };
 
   handleRemoveLessonGroup = () => {
-    this.props.removeLesson(this.props.lessonGroup.position);
+    this.props.removeGroup(this.props.lessonGroup.position);
   };
 
   handleRemoveLesson = lessonPosition => {
     this.props.removeLesson(this.props.lessonGroup.position, lessonPosition);
   };
 
+  generateLessonKey = () => {
+    let lessonNumber = this.props.lessonGroup.lessons.length + 1;
+    while (
+      this.props.lessonGroup.lessons.some(
+        lesson => lesson.key === `lesson-${lessonNumber}`
+      )
+    ) {
+      lessonNumber++;
+    }
+
+    return `lesson-${lessonNumber}`;
+  };
+
   handleAddLesson = () => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addLesson(this.props.lessonGroup.position, newLessonName);
+      this.props.addLesson(
+        this.props.lessonGroup.position,
+        this.generateLessonKey(),
+        newLessonName
+      );
     }
   };
 
@@ -97,7 +119,7 @@ export class UnconnectedLessonGroupCard extends Component {
       <div style={styles.lessonGroupCard}>
         <div style={styles.lessonGroupCardHeader}>
           {lessonGroup.user_facing
-            ? `Lesson Group: ${lessonGroup.key}: "${lessonGroup.display_name}"`
+            ? `Lesson Group: "${lessonGroup.display_name}"`
             : 'Lesson Group: Not User Facing (No Display Name)'}
           <OrderControls
             name={lessonGroup.key || '(none)'}
@@ -107,10 +129,11 @@ export class UnconnectedLessonGroupCard extends Component {
         </div>
         {lessonGroup.lessons.map(lesson => (
           <LessonToken
+            key={lesson.key}
             lessonGroupPosition={this.props.lessonGroup.position}
             lesson={lesson}
             dragging={false}
-            draggedLessonPos={1}
+            draggedLessonPos={false}
             delta={0}
             handleDragStart={() => {}}
             removeLesson={this.handleRemoveLesson}
@@ -133,7 +156,7 @@ export class UnconnectedLessonGroupCard extends Component {
                 lessonGroup.position
               )}
               className="btn"
-              style={styles.addLesson}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -150,7 +173,10 @@ export default connect(
   state => ({}),
   {
     moveLesson,
+    moveGroup,
     removeLesson,
-    addLesson
+    removeGroup,
+    addLesson,
+    convertGroupToUserFacing
   }
 )(UnconnectedLessonGroupCard);

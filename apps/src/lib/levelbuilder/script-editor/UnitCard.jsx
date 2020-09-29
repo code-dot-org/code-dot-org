@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
-import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 
 const styles = {
   unitHeader: {
@@ -44,7 +44,7 @@ const styles = {
 class UnitCard extends Component {
   static propTypes = {
     // from redux
-    lessonGroups: PropTypes.object.isRequired,
+    lessonGroups: PropTypes.array.isRequired,
     addGroup: PropTypes.func.isRequired
   };
 
@@ -65,7 +65,7 @@ class UnitCard extends Component {
     const newLessonGroupName = prompt('Enter new lesson group name');
     this.props.addGroup(
       this.props.lessonGroups.length + 1,
-      this.generateLessonGroupKey,
+      this.generateLessonGroupKey(),
       newLessonGroupName
     );
   };
