@@ -443,4 +443,35 @@ describe('StudioApp', () => {
       expect(changed2).to.be.true;
     });
   });
+
+  describe('The StudioApp.userChangedLevelCode function', () => {
+    let studio, codeDifferentStub;
+    beforeEach(() => {
+      codeDifferentStub = sinon.stub(project, 'isCodeDifferent');
+      studio = studioApp();
+    });
+
+    afterEach(() => {
+      codeDifferentStub.restore();
+    });
+
+    it('returns true if validationEnabled is not set', () => {
+      studio.config = {level: {}};
+      expect(studio.userChangedLevelCode()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns true if validationEnabled is false', () => {
+      studio.config = {level: {validationEnabled: false}};
+      expect(studio.userChangedLevelCode()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns the result of project.isCodeDifferent', () => {
+      studio.config = {level: {validationEnabled: true}};
+      codeDifferentStub.returns(false);
+      expect(studio.userChangedLevelCode()).to.be.false;
+      expect(codeDifferentStub).to.have.been.called;
+    });
+  });
 });

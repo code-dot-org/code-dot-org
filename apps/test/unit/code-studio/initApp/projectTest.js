@@ -13,6 +13,7 @@ describe('project.js', () => {
   let sourceHandler;
 
   const setData = project.__TestInterface.setCurrentData;
+  const setSources = project.__TestInterface.setCurrentSources;
 
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
@@ -973,6 +974,32 @@ describe('project.js', () => {
         expect(e).to.contain('foo');
         done();
       });
+    });
+  });
+
+  describe('project.isCodeDifferent', () => {
+    afterEach(() => {
+      setSources({});
+    });
+
+    it('ignores differences in line endings', () => {
+      setSources({source: 'foo\r\nbar'});
+      expect(project.isCodeDifferent('foo\nbar')).to.be.false;
+    });
+
+    it('ignores differences in xml closing tags', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCodeDifferent('<xml><test></test></xml>')).to.be.false;
+    });
+
+    it('notices differences xml', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCodeDifferent('<xml><test2/></xml>')).to.be.true;
+    });
+
+    it('notices differences text', () => {
+      setSources({source: 'test'});
+      expect(project.isCodeDifferent('test2')).to.be.true;
     });
   });
 });

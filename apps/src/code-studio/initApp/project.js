@@ -496,6 +496,9 @@ var projects = (module.exports = {
     setCurrentData(data) {
       current = data;
     },
+    setCurrentSources(data) {
+      currentSources = data;
+    },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
     },
