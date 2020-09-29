@@ -148,6 +148,7 @@ class UnitCard extends Component {
               lessonGroupMetrics={this.lessonGroupMetrics}
               setTargetLessonGroup={this.setTargetLessonGroup}
               targetLessonGroupPos={this.state.targetLessonGroupPos}
+              generateLessonGroupKey={this.generateLessonGroupKey}
             />
           ))}
           <div style={styles.addGroupWithWarning}>
@@ -164,8 +165,8 @@ class UnitCard extends Component {
           </div>
           {!this.props.lessonGroups[0].user_facing && (
             <span style={styles.displayNameWarning}>
-              You must set the display name of the existing lesson group before
-              adding more.
+              You must make the existing lesson group user facing before adding
+              more.
             </span>
           )}
         </div>
