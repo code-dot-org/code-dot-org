@@ -15,7 +15,7 @@ describe('AddResourceDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddResourceDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Resource'));
+    expect(wrapper.contains('Add Resource')).to.be.true;
     expect(wrapper.find('BaseDialog').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
   });
