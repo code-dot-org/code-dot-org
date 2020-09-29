@@ -449,6 +449,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         }
       )
     end
+    # In case we tried to update and failed, reload to make sure our attempted
+    # changes don't stick around.
+    lookup_user.reload
     lookup_user
   end
 
