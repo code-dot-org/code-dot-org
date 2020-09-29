@@ -71,6 +71,30 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(@firehose_record, test_record)
   end
 
+  def test_log_given_url_with_query_string_should_call_firehose_without_query_string
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/?query=true', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
+  def test_log_given_url_with_anchor_tag_should_call_firehose_without_anchor_tag
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/#tag-youre-it', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
+  def test_log_given_projects_url_should_only_log_the_project_type
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy/zjiufOp0h-9GS-DywevS0d3tKJyjdbQZZqZVaiuAjiU/view', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy/view', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
   def test_log_given_false_dcdo_flag_should_not_call_firehose
     unstub_firehose
     unstub_dcdo
