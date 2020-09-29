@@ -21,4 +21,5 @@
 # @attr [String] url - The URL pointing to the resource
 # @attr [String] key - A unique identifier for the resource
 class Resource < ApplicationRecord
+  has_and_belongs_to_many :lessons, join_table: :lessons_resources
 end
