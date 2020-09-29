@@ -19,7 +19,7 @@
 # A LessonActivity represents a classroom activity within a Lesson
 # which consists of one or more ActivitySections.
 #
-# @attr [String] title - The user-visible name of this activity.
+# @attr [String] name - The user-visible name of this activity.
 # @attr [Integer] duration - The length of this activity in minutes.
 class LessonActivity < ApplicationRecord
   include SerializedProperties
@@ -28,7 +28,7 @@ class LessonActivity < ApplicationRecord
   has_many :activity_sections, dependent: :destroy
 
   serialized_attrs %w(
-    title
+    name
     duration
   )
 end

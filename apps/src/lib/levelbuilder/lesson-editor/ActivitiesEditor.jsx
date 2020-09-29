@@ -90,11 +90,11 @@ class ActivitiesEditor extends Component {
   serializeActivities = () => {
     const activities = _.cloneDeep(this.props.activities);
     activities.forEach(activity => {
-      activity.title = activity.displayName;
+      activity.name = activity.displayName;
       delete activity.displayName;
 
       activity.activitySections.forEach(activitySection => {
-        activitySection.title = activitySection.displayName;
+        activitySection.name = activitySection.displayName;
         delete activitySection.displayName;
 
         activitySection.description = activitySection.text;

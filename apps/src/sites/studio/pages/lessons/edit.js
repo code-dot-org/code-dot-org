@@ -20,14 +20,14 @@ $(document).ready(function() {
   activities.forEach(activity => {
     activity.key = activity.id + '';
 
-    activity.displayName = activity.title;
-    delete activity.title;
+    activity.displayName = activity.name;
+    delete activity.name;
 
     activity.activitySections.forEach(activitySection => {
       activitySection.key = activitySection.id + '';
 
-      activitySection.displayName = activitySection.title;
-      delete activitySection.title;
+      activitySection.displayName = activitySection.name;
+      delete activitySection.name;
 
       activitySection.text = activitySection.description;
       delete activitySection.description;
