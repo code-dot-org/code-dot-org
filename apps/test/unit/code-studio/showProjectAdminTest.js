@@ -56,10 +56,11 @@ describe('showProjectAdmin', () => {
             Manually reported abusive
           </li>
         </ul>
-        <div class="admin-abuse" style="display: none">
+        <div class="admin-abuse">
           Abuse score:
           <span class="admin-abuse-score"></span>
-          <a class="admin-abuse-reset" href="#">Reset</a>
+          <button id="admin-abuse-reset" href="#">Reset</button>
+          <button id="admin-abuse-buffer" href="#">Buffer</button>
         </div>
         <div class="admin-report-abuse">
           <a href="/report_abuse">Report Abuse</a>
@@ -136,11 +137,12 @@ describe('showProjectAdmin', () => {
             assertVisible('.admin-report-abuse');
           });
 
-          it('does not show reset abuse control', () => {
+          it('shows reset and buffer abuse control', () => {
             showProjectAdmin(project);
-            assertHidden('.admin-abuse');
-            assertHidden('.admin-abuse-score');
-            assertHidden('.admin-abuse-reset');
+            assertVisible('.admin-abuse');
+            assertVisible('.admin-abuse-score');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
 
@@ -172,11 +174,12 @@ describe('showProjectAdmin', () => {
             assertVisible('.admin-report-abuse');
           });
 
-          it('does not show reset abuse control', () => {
+          it('shows reset and buffer abuse control', () => {
             showProjectAdmin(project);
-            assertHidden('.admin-abuse');
-            assertHidden('.admin-abuse-score');
-            assertHidden('.admin-abuse-reset');
+            assertVisible('.admin-abuse');
+            assertVisible('.admin-abuse-score');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
 
@@ -210,11 +213,12 @@ describe('showProjectAdmin', () => {
             assertVisible('.admin-report-abuse');
           });
 
-          it('does not show reset abuse control', () => {
+          it('shows reset and buffer abuse control', () => {
             showProjectAdmin(project);
-            assertHidden('.admin-abuse');
-            assertHidden('.admin-abuse-score');
-            assertHidden('.admin-abuse-reset');
+            assertVisible('.admin-abuse');
+            assertVisible('.admin-abuse-score');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
 
@@ -249,11 +253,12 @@ describe('showProjectAdmin', () => {
             assertVisible('.admin-report-abuse');
           });
 
-          it('does not show reset abuse control', () => {
+          it('shows reset and buffer abuse control', () => {
             showProjectAdmin(project);
-            assertHidden('.admin-abuse');
-            assertHidden('.admin-abuse-score');
-            assertHidden('.admin-abuse-reset');
+            assertVisible('.admin-abuse');
+            assertVisible('.admin-abuse-score');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
 
@@ -289,7 +294,8 @@ describe('showProjectAdmin', () => {
             showProjectAdmin(project);
             assertVisible('.admin-abuse');
             assertVisible('.admin-abuse-score');
-            assertVisible('.admin-abuse-reset');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
 
@@ -325,7 +331,8 @@ describe('showProjectAdmin', () => {
             showProjectAdmin(project);
             assertVisible('.admin-abuse');
             assertVisible('.admin-abuse-score');
-            assertVisible('.admin-abuse-reset');
+            assertVisible('#admin-abuse-reset');
+            assertVisible('#admin-abuse-buffer');
           });
         });
       }
