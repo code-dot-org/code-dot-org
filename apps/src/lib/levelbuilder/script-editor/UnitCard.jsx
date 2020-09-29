@@ -49,7 +49,8 @@ class UnitCard extends Component {
   static propTypes = {
     // from redux
     lessonGroups: PropTypes.array.isRequired,
-    addGroup: PropTypes.func.isRequired
+    addGroup: PropTypes.func.isRequired,
+    levelKeyList: PropTypes.object.isRequired
   };
 
   constructor(props) {
@@ -77,6 +78,16 @@ class UnitCard extends Component {
       if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
         let t = `lesson_group '${lessonGroup.key}'`;
         t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        if (lessonGroup.description) {
+          t += `, lesson_group_description: '${escape(
+            lessonGroup.description
+          )}'`;
+        }
+        if (lessonGroup.big_questions) {
+          lessonGroup.big_questions.forEach(question => {
+            t += `, lesson_group_question: '${escape(question)}'`;
+          });
+        }
         s.push(t);
       }
       lessonGroup.lessons.forEach(lesson => {
@@ -95,12 +106,69 @@ class UnitCard extends Component {
    */
   serializeLesson = lesson => {
     let s = [];
-    let t = `stage '${escape(lesson.name)}'`;
+    let t = `lesson '${escape(lesson.name)}'`;
+    if (lesson.name) {
+      t += `, display_name: '${escape(lesson.name)}'`;
+    }
     if (lesson.lockable) {
       t += ', lockable: true';
     }
+    if (lesson.visible_after) {
+      t += ', visible_after: true';
+    }
     s.push(t);
+    lesson.levels.forEach(level => {
+      if (level.ids.length > 1) {
+        s.push('variants');
+        level.ids.forEach(id => {
+          s = s.concat(this.serializeLevel(id, level, level.activeId === id));
+        });
+        s.push('endvariants');
+      } else {
+        s = s.concat(this.serializeLevel(level.ids[0], level));
+      }
+    });
+    s.push('');
     return s.join('\n');
+  };
+
+  serializeLevel = (id, level, active) => {
+    const s = [];
+    const key = this.props.levelKeyList[id];
+    if (/^blockly:/.test(key)) {
+      if (level.skin) {
+        s.push(`skin '${escape(level.skin)}'`);
+      }
+      if (level.videoKey) {
+        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
+      }
+      if (level.concepts) {
+        // concepts is a comma-separated list of single-quoted strings, so do
+        // not escape its single quotes.
+        s.push(`concepts ${level.concepts}`);
+      }
+      if (level.conceptDifficulty) {
+        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
+      }
+    }
+    let l = `level '${escape(key)}'`;
+    if (active === false) {
+      l += ', active: false';
+    }
+    if (level.progression) {
+      l += `, progression: '${escape(level.progression)}'`;
+    }
+    if (level.named) {
+      l += `, named: true`;
+    }
+    if (level.assessment) {
+      l += `, assessment: true`;
+    }
+    if (level.challenge) {
+      l += `, challenge: true`;
+    }
+    s.push(l);
+    return s;
   };
 
   generateLessonGroupKey = () => {
@@ -184,7 +252,8 @@ export const UnconnectedUnitCard = UnitCard;
 
 export default connect(
   state => ({
-    lessonGroups: state.lessonGroups
+    lessonGroups: state.lessonGroups,
+    levelKeyList: state.levelKeyList
   }),
   {
     addGroup

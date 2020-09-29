@@ -14,9 +14,10 @@ const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
-export const init = lessonGroups => ({
+export const init = (lessonGroups, levelKeyList) => ({
   type: INIT,
-  lessonGroups
+  lessonGroups,
+  levelKeyList
 });
 
 export const addGroup = (groupPosition, groupKey, groupName) => ({
@@ -141,7 +142,8 @@ function lessonGroups(state = [], action) {
       const lessons = newState[action.groupPosition - 1].lessons;
       lessons.push({
         key: action.lessonKey,
-        name: action.lessonName
+        name: action.lessonName,
+        levels: []
       });
       updateLessonPositions(newState);
       break;
@@ -242,6 +244,15 @@ function lessonGroups(state = [], action) {
   return newState;
 }
 
+function levelKeyList(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.levelKeyList;
+  }
+  return state;
+}
+
 export default {
+  levelKeyList,
   lessonGroups
 };

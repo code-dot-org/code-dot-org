@@ -34,14 +34,31 @@ export default function initPage(scriptEditorData) {
           lockable: lesson.lockable,
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
-          name: lesson.name
+          name: lesson.name,
+          // Only include the first level of an assessment (uid ending with "_0").
+          levels: lesson.levels
+            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .map(level => ({
+              position: level.position,
+              activeId: level.activeId,
+              ids: level.ids.slice(),
+              kind: level.kind,
+              skin: level.skin,
+              videoKey: level.videoKey,
+              concepts: level.concepts,
+              conceptDifficulty: level.conceptDifficulty,
+              progression: level.progression,
+              named: !!level.name,
+              assessment: level.assessment,
+              challenge: level.challenge
+            }))
         }))
     }));
   const locales = scriptEditorData.locales;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(lesson_groups));
+  store.dispatch(init(lesson_groups, scriptEditorData.levelKeyList));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
