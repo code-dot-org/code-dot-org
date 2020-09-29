@@ -18,20 +18,22 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 1.17`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
+1. `bundle install`
+    * This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 1. `bundle exec rake install:hooks`
     <details>
-        <summary>Troubleshoot: `rake aborted!..` </summary>
+      <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
 
-        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
-            * Follow the instructions and make sure you added `bundle exec` in front of the `rake install:hooks` command
+      * If you have issue `"rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0."`, make sure you add `bundle exec` in front of the `rake install:hooks` command
     </details>
     <details>
-        <summary>Troubleshoot: wrong version of rake </summary>
+      <summary>Troubleshoot: wrong version of rake </summary>
 
-        You might get a message at some point about having the wrong version of rake. If so, try:
+      * You might get a message at some point about having the wrong version of rake. If so, try:
+        ```
         $> gem uninstall rake
         $> bundle update rake
+        ```
     </details>
 
 1. `bundle exec rake install`
@@ -47,20 +49,52 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 ## OS-specific prerequisites
 
-### OS X Mojave / Mavericks / Yosemite / El Capitan / Sierra
+### OS X Catalina
 
+1. Choose shell. Starting in Catalina, [the default shell for new users is zsh](https://support.apple.com/en-us/HT208050). Most developers at Code.org are still using bash so that may be a smoother experience for now.
+    <details>
+      <summary>To use bash:</summary>
+
+      * Switch the default shell back to bash and disable the warning:
+        * `chsh -s /bin/bash`
+        * Add the following to `~/.bash_profile` or your desired shell configuration file:
+          ```
+          export BASH_SILENCE_DEPRECATION_WARNING=1
+          ```
+    </details>
+    <details>
+      <summary>To use zsh:</summary>
+        
+      * Setup git autocompletion
+        * Add the following to `~/.zshrc` or your desired shell configuration file:
+          ```
+          # git prompt
+          source ~/bin/oh-my-zsh/git-prompt.sh
+          GIT_PS1_SHOWCOLORHINTS=1
+          GIT_PS1_SHOWDIRTYSTATE=1
+          GIT_PS1_SHOWUNTRACKEDFILES=1
+          setopt PROMPT_SUBST ; PS1='%m:%~$(__git_ps1 " (%s)")\$ '
+           
+          # git completion
+          source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh >/dev/null 2>&1
+           
+          # make git checkout not show remote branches
+          GIT_COMPLETION_CHECKOUT_NO_GUESS=1
+          autoload -Uz compinit && compinit
+          ```
+    </details>
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
     <details>
-        <summary>Troubleshoot: <code>Formula.sha1</code> is disabled or <code>Error: pdftk: undefined method sha1' for #&lt;Class:...&gt;</code></summary>
+      <summary>Troubleshoot: pdftk errors</summary>
 
-        If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
+      * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
     </details>
     <details>
-        <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
+      <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
 
-        If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+      * If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
     </details>
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
@@ -91,7 +125,10 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
     1. `npm install -g yarn@1.16.0`.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
-1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
+1. Install OpenSSL:
+    1. `brew install openssl`
+    1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
+1. [Check rmagick version](#rmagick)
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
         ```
@@ -103,14 +140,9 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `xcode-select --install`
 
     <details>
-              <summary>Troubleshoot: command line tools already installed</summary>
+      <summary>Troubleshoot: command line tools already installed</summary>
 
-              If it complains
-
-              ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
-
-              check to make sure XCode is downloaded and up to date manually.
-
+      If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
     </details>
 
 1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -301,6 +333,13 @@ If you run into an issue about therubyracer while running `bundle install` try :
 If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try (as seen in this [StackOverflow](https://stackoverflow.com/questions/47026174/find-spec-for-exe-cant-find-gem-bundler-0-a-gemgemnotfoundexception)):
 - `gem install bundler -v BUNDLED_WITH_VERSION`, where the version is the `BUNDLED WITH` version in [Gemfile.lock](./Gemfile.lock)).
 - `bundle install`
+
+#### thin
+
+If you run into error messages about `implicit declaration of function thin_xxx` when trying to compile the native extensions for thin:
+- `gem install thin -v THIN_VERSION -- --with-cflags="-Wno-error=implicit-function-declaration"` where THIN_VERSION is the current version of thin in [Gemfile.lock](./Gemfile.lock)).
+
+(More info [here](https://github.com/macournoyer/thin/pull/364))
 
 #### Xcode Set Up
 

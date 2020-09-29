@@ -24,6 +24,7 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'services/script_seed'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -38,6 +39,7 @@ class Script < ActiveRecord::Base
   has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
+  has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
   has_many :users, through: :user_scripts
   has_many :user_scripts
@@ -888,7 +890,7 @@ class Script < ActiveRecord::Base
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
   # copying. Any new_properties are merged into the properties of the new script.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {})
+  def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
     scripts_to_add = []
 
     custom_i18n = {}
@@ -919,17 +921,12 @@ class Script < ActiveRecord::Base
       }, lesson_groups]
     end
 
-    # TODO: replace this with configuration option
-    debug = [:adhoc, :development].include?(rack_env)
-    if debug
-      puts "Seeding #{scripts_to_add.length} Scripts"
-      progressbar = ProgressBar.create(total: scripts_to_add.length)
-    end
+    progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
       added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      progressbar.increment if debug
+      progressbar.increment if show_progress
       added_script.name
     rescue => e
       raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
@@ -1643,5 +1640,27 @@ class Script < ActiveRecord::Base
   def all_descendant_levels
     sublevels = levels.map(&:all_descendant_levels).flatten
     levels + sublevels
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    {'script.name': name}.stringify_keys
+  end
+
+  # Wrapper for convenience
+  def serialize_seeding_json
+    ScriptSeed.serialize_seeding_json(self)
+  end
+
+  # Wrapper for convenience
+  def self.seed_from_json_file(file_or_path)
+    ScriptSeed.seed_from_json_file(file_or_path)
   end
 end

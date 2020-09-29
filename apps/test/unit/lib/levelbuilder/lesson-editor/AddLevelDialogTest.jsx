@@ -18,7 +18,7 @@ describe('AddLevelDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Levels'));
+    expect(wrapper.contains('Add Levels')).to.be.true;
     expect(wrapper.find('BaseDialog').length).to.equal(1);
     expect(wrapper.find('ToggleGroup').length).to.equal(1);
     expect(wrapper.find('AddLevelFilters').length).to.equal(1);

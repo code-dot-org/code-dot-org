@@ -25,6 +25,36 @@ module.exports = {
       }
     },
 
+    {
+      description: 'Reset logs milestones.',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function(assert) {
+        $('#runButton').click();
+        $('#resetButton').click();
+
+        // Add wait for debouncing
+        setTimeout(function() {
+          $('#runButton').click();
+          $('#resetButton').click();
+          // Add wait for debouncing
+          setTimeout(function() {
+            Applab.onPuzzleComplete();
+          }, 1100);
+        }, 300);
+      },
+      expected: [
+        {
+          result: undefined,
+          testResult: TestResults.LEVEL_STARTED
+        },
+        {
+          result: true,
+          testResult: TestResults.FREE_PLAY
+        }
+      ]
+    },
+
     // Missing coverage of the data category here.
     // Most data blocks make network calls and modify data records. To get
     // test coverage of these here, we would probably need to mock portions of that.
