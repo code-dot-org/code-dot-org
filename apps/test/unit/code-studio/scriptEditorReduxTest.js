@@ -5,7 +5,7 @@ import reducers, {
   addLesson,
   moveLesson,
   setLessonGroup
-} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 
 const getInitialState = () => ({
   lessonGroups: [
@@ -32,7 +32,7 @@ const getInitialState = () => ({
 
 const reducer = combineReducers(reducers);
 
-describe('editorRedux reducer tests', () => {
+describe('scriptEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
 

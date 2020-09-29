@@ -3940,7 +3940,7 @@ de-DE:
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
           feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
-        - text: Die Biene wird den ganzen Nektar bekommen.
+        - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.

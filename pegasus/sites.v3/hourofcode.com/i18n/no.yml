@@ -492,6 +492,7 @@
   signup_send_posters_address_placeholder: Denne adressen blir ikke delt på kartet
   signup_event_type_in_school: På en skole
   signup_event_type_out_of_school: Utenfor skolen
+  signup_event_type_at_home: Home
   signup_submit_census_label: Send inn
   signup_submit_census_error_message: Vi beklager. En feil har oppstått. Prøv å sende
     inn skjemaet på nytt.

@@ -1,10 +1,10 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: 가상 이벤트를 위한 아워오브코드 하우 투 가이드
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# 가상 아워오브코드 이벤트를 위한 팁
 
 ### You don't have to be in-person to run a successful Hour of Code!
 
@@ -16,7 +16,7 @@ While the Hour of Code is traditionally held in classrooms throughout the globe,
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
+## 떨어져 있을 수 있지만 여전히 함께 시작할 수 있습니다.
 Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
 
 <ul>
