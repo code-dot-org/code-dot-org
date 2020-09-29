@@ -392,10 +392,10 @@ GEM
     debug_inspector (0.0.3)
     declarative (0.0.10)
     declarative-option (0.1.0)
-    devise (4.4.1)
+    devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.2)
+      railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
     devise_invitable (1.6.0)
@@ -936,7 +936,7 @@ DEPENDENCIES
   dalli
   dalli-elasticache
   datapackage
-  devise (~> 4.4.0)
+  devise (~> 4.7.0)
   devise_invitable (~> 1.6.0)
   dotiw
   execjs
