@@ -1,0 +1,398 @@
+{
+  "script": {
+    "name": "infinity",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "infinity"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Infinity",
+      "name": "Infinity",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_move_right"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_move_right"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_say"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 2,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_say"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_move_directions"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 3,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_move_directions"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_move_collide"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 4,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_move_collide"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_touch_score"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 5,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_touch_score"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_shoot"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 6,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_shoot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_shoot_directions"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 7,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_shoot_directions"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_repeat"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 8,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_repeat"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_catch"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 9,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_catch"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Infinity_finale"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 10,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      },
+      "level_keys": [
+        "Infinity_finale"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Infinity_move_right",
+        "script_level.level_keys": [
+          "Infinity_move_right"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_say",
+        "script_level.level_keys": [
+          "Infinity_say"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 2,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_move_directions",
+        "script_level.level_keys": [
+          "Infinity_move_directions"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 3,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_move_collide",
+        "script_level.level_keys": [
+          "Infinity_move_collide"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 4,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_touch_score",
+        "script_level.level_keys": [
+          "Infinity_touch_score"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 5,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_shoot",
+        "script_level.level_keys": [
+          "Infinity_shoot"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 6,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_shoot_directions",
+        "script_level.level_keys": [
+          "Infinity_shoot_directions"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 7,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_repeat",
+        "script_level.level_keys": [
+          "Infinity_repeat"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 8,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_catch",
+        "script_level.level_keys": [
+          "Infinity_catch"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 9,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Infinity_finale",
+        "script_level.level_keys": [
+          "Infinity_finale"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 10,
+        "lesson.key": "Infinity",
+        "lesson_group.key": "",
+        "script.name": "infinity"
+      }
+    }
+  ]
+}

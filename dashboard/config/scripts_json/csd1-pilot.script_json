@@ -1,0 +1,1150 @@
+{
+  "script": {
+    "name": "csd1-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "curriculum_path": "https://curriculum.code.org/csd-20/unit1/{LESSON}",
+      "pilot_experiment": "csd-piloters",
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "project_sharing": true,
+      "tts": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd-20/unit1"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csd-20/unit1/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csd-20/unit1/standards/"
+        ]
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csd1-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "csd1_1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 1: The Problem Solving Process"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "csd1_2",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Chapter 2: Computers and Problem Solving"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CS Discoveries Pre-survey",
+      "name": "CS Discoveries Pre-survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "Intro to Problem Solving",
+      "name": "Intro to Problem Solving",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "The Problem Solving Process",
+      "name": "The Problem Solving Process",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "Exploring Problem Solving",
+      "name": "Exploring Problem Solving",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "Input and Output",
+      "name": "Input and Output",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "Processing",
+      "name": "Processing",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "key": "Apps and Storage",
+      "name": "Apps and Storage",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-2017-levelgroup_2018_2019_pilot"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "csd-pre-survey-2017-levelgroup_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L01 TFMD_pilot"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 1,
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L01 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L02 TFMD_pilot"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 1,
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L02 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Problem Solving Process Video_pilot"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 2,
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD Problem Solving Process Video_pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L03 TFMD_pilot"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 1,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L03 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search big"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 2,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP word search big"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating big"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 3,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP seating big"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L04 TFMD_2020"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 1,
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L04 TFMD_2020"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video_2020"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 2,
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD What Makes a Computer a Computer Video_2020"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L05 TFMD_2020"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 1,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L05 TFMD_2020"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 IO Pet Chooser"
+        ],
+        "script_level.chapter": 11,
+        "script_level.position": 2,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 IO Pet Chooser"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 IO Story"
+        ],
+        "script_level.chapter": 12,
+        "script_level.position": 3,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 IO Story"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 IO Pet Chooser 2"
+        ],
+        "script_level.chapter": 13,
+        "script_level.position": 4,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 IO Pet Chooser 2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L06 TFMD_2020"
+        ],
+        "script_level.chapter": 14,
+        "script_level.position": 1,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L06 TFMD_2020"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "App: Is It Your Birthday?"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing bday"
+        ],
+        "script_level.chapter": 15,
+        "script_level.position": 2,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing bday"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "App: National Park Quiz"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing npark"
+        ],
+        "script_level.chapter": 16,
+        "script_level.position": 3,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing npark"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "App: How Many Countries..."
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing countries"
+        ],
+        "script_level.chapter": 17,
+        "script_level.position": 4,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing countries"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "App: My Famous Birthday"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing writers"
+        ],
+        "script_level.chapter": 18,
+        "script_level.position": 5,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing writers"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "App: Stamp Notebook"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing notebook"
+        ],
+        "script_level.chapter": 19,
+        "script_level.position": 6,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing notebook"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "App: The Fastest Finger"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing fastest"
+        ],
+        "script_level.chapter": 20,
+        "script_level.position": 7,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing fastest"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "App: Guess the Number"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing guess"
+        ],
+        "script_level.chapter": 21,
+        "script_level.position": 8,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing guess"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "App: Where Should I Live?"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 processing live"
+        ],
+        "script_level.chapter": 22,
+        "script_level.position": 9,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 processing live"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L07 TFMD_2020"
+        ],
+        "script_level.chapter": 23,
+        "script_level.position": 1,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1L07 TFMD_2020"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 storage outfit"
+        ],
+        "script_level.chapter": 24,
+        "script_level.position": 2,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 storage outfit"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 storage friends"
+        ],
+        "script_level.chapter": 25,
+        "script_level.position": 3,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 storage friends"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 storage movies"
+        ],
+        "script_level.chapter": 26,
+        "script_level.position": 4,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 storage movies"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 storage video"
+        ],
+        "script_level.chapter": 27,
+        "script_level.position": 5,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      },
+      "level_keys": [
+        "CSD U1 storage video"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-2017-levelgroup_2018_2019_pilot",
+        "script_level.level_keys": [
+          "csd-pre-survey-2017-levelgroup_2018_2019_pilot"
+        ],
+        "script_level.chapter": 1,
+        "script_level.position": 1,
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L01 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L01 TFMD_pilot"
+        ],
+        "script_level.chapter": 2,
+        "script_level.position": 1,
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L02 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L02 TFMD_pilot"
+        ],
+        "script_level.chapter": 3,
+        "script_level.position": 1,
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Problem Solving Process Video_pilot",
+        "script_level.level_keys": [
+          "CSD Problem Solving Process Video_pilot"
+        ],
+        "script_level.chapter": 4,
+        "script_level.position": 2,
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L03 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L03 TFMD_pilot"
+        ],
+        "script_level.chapter": 5,
+        "script_level.position": 1,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP word search big",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search big"
+        ],
+        "script_level.chapter": 6,
+        "script_level.position": 2,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP seating big",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating big"
+        ],
+        "script_level.chapter": 7,
+        "script_level.position": 3,
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L04 TFMD_2020",
+        "script_level.level_keys": [
+          "CSD U1L04 TFMD_2020"
+        ],
+        "script_level.chapter": 8,
+        "script_level.position": 1,
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD What Makes a Computer a Computer Video_2020",
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video_2020"
+        ],
+        "script_level.chapter": 9,
+        "script_level.position": 2,
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L05 TFMD_2020",
+        "script_level.level_keys": [
+          "CSD U1L05 TFMD_2020"
+        ],
+        "script_level.chapter": 10,
+        "script_level.position": 1,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 IO Pet Chooser",
+        "script_level.level_keys": [
+          "CSD U1 IO Pet Chooser"
+        ],
+        "script_level.chapter": 11,
+        "script_level.position": 2,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 IO Story",
+        "script_level.level_keys": [
+          "CSD U1 IO Story"
+        ],
+        "script_level.chapter": 12,
+        "script_level.position": 3,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 IO Pet Chooser 2",
+        "script_level.level_keys": [
+          "CSD U1 IO Pet Chooser 2"
+        ],
+        "script_level.chapter": 13,
+        "script_level.position": 4,
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L06 TFMD_2020",
+        "script_level.level_keys": [
+          "CSD U1L06 TFMD_2020"
+        ],
+        "script_level.chapter": 14,
+        "script_level.position": 1,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing bday",
+        "script_level.level_keys": [
+          "CSD U1 processing bday"
+        ],
+        "script_level.chapter": 15,
+        "script_level.position": 2,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing npark",
+        "script_level.level_keys": [
+          "CSD U1 processing npark"
+        ],
+        "script_level.chapter": 16,
+        "script_level.position": 3,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing countries",
+        "script_level.level_keys": [
+          "CSD U1 processing countries"
+        ],
+        "script_level.chapter": 17,
+        "script_level.position": 4,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing writers",
+        "script_level.level_keys": [
+          "CSD U1 processing writers"
+        ],
+        "script_level.chapter": 18,
+        "script_level.position": 5,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing notebook",
+        "script_level.level_keys": [
+          "CSD U1 processing notebook"
+        ],
+        "script_level.chapter": 19,
+        "script_level.position": 6,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing fastest",
+        "script_level.level_keys": [
+          "CSD U1 processing fastest"
+        ],
+        "script_level.chapter": 20,
+        "script_level.position": 7,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing guess",
+        "script_level.level_keys": [
+          "CSD U1 processing guess"
+        ],
+        "script_level.chapter": 21,
+        "script_level.position": 8,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 processing live",
+        "script_level.level_keys": [
+          "CSD U1 processing live"
+        ],
+        "script_level.chapter": 22,
+        "script_level.position": 9,
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L07 TFMD_2020",
+        "script_level.level_keys": [
+          "CSD U1L07 TFMD_2020"
+        ],
+        "script_level.chapter": 23,
+        "script_level.position": 1,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 storage outfit",
+        "script_level.level_keys": [
+          "CSD U1 storage outfit"
+        ],
+        "script_level.chapter": 24,
+        "script_level.position": 2,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 storage friends",
+        "script_level.level_keys": [
+          "CSD U1 storage friends"
+        ],
+        "script_level.chapter": 25,
+        "script_level.position": 3,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 storage movies",
+        "script_level.level_keys": [
+          "CSD U1 storage movies"
+        ],
+        "script_level.chapter": 26,
+        "script_level.position": 4,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 storage video",
+        "script_level.level_keys": [
+          "CSD U1 storage video"
+        ],
+        "script_level.chapter": 27,
+        "script_level.position": 5,
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-pilot"
+      }
+    }
+  ]
+}
