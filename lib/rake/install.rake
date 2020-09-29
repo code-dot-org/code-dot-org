@@ -45,7 +45,7 @@ namespace :install do
           # yet because doing so would break unit tests.
           RakeUtils.rake 'db:create db:test:prepare'
         else
-          RakeUtils.rake 'dashboard:setup_db'
+          RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
       end
     end
