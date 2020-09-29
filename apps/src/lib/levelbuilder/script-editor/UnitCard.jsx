@@ -41,11 +41,46 @@ const styles = {
   }
 };
 
+// Replace ' with \'
+const escape = str => str.replace(/'/, "\\'");
+
 class UnitCard extends Component {
   static propTypes = {
     // from redux
     lessonGroups: PropTypes.array.isRequired,
     addGroup: PropTypes.func.isRequired
+  };
+
+  serializeLessonGroups = lessonGroups => {
+    let s = [];
+    lessonGroups.forEach(lessonGroup => {
+      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+        let t = `lesson_group '${lessonGroup.key}'`;
+        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        s.push(t);
+      }
+      lessonGroup.lessons.forEach(lesson => {
+        s = s.concat(this.serializeLesson(lesson));
+      });
+    });
+
+    s.push('');
+    return s.join('\n');
+  };
+
+  /**
+   * Generate the ScriptDSL format.
+   * @param lesson
+   * @return {string}
+   */
+  serializeLesson = lesson => {
+    let s = [];
+    let t = `stage '${escape(lesson.name)}'`;
+    if (lesson.lockable) {
+      t += ', lockable: true';
+    }
+    s.push(t);
+    return s.join('\n');
   };
 
   generateLessonGroupKey = () => {
@@ -77,15 +112,13 @@ class UnitCard extends Component {
       <div>
         <div style={styles.unitHeader}>Unit</div>
         <div style={styles.unitBody}>
-          {lessonGroups.map((lessonGroup, index) => {
-            return (
-              <LessonGroupCard
-                key={`lesson-group-${index}`}
-                lessonGroupssCount={lessonGroups.length}
-                lessonGroup={lessonGroup}
-              />
-            );
-          })}
+          {lessonGroups.map((lessonGroup, index) => (
+            <LessonGroupCard
+              key={`lesson-group-${index}`}
+              lessonGroupssCount={lessonGroups.length}
+              lessonGroup={lessonGroup}
+            />
+          ))}
           <div style={styles.addGroupWithWarning}>
             <button
               onMouseDown={this.handleAddLessonGroup}
@@ -105,12 +138,17 @@ class UnitCard extends Component {
             </span>
           )}
         </div>
+        <input
+          type="hidden"
+          name="script_text"
+          value={this.serializeLessonGroups(lessonGroups)}
+        />
       </div>
     );
   }
 }
 
-export const UnconnectedLessonGroupCard = UnitCard;
+export const UnconnectedUnitCard = UnitCard;
 
 export default connect(
   state => ({

@@ -43,7 +43,7 @@ const styles = {
   }
 };
 
-export class UnconnectedLessonGroupCard extends Component {
+export class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
     lessonGroupsCount: PropTypes.number,
@@ -169,6 +169,8 @@ export class UnconnectedLessonGroupCard extends Component {
   }
 }
 
+export const UnconnectedLessonGroupCard = LessonGroupCard;
+
 export default connect(
   state => ({}),
   {
@@ -179,4 +181,4 @@ export default connect(
     addLesson,
     convertGroupToUserFacing
   }
-)(UnconnectedLessonGroupCard);
+)(LessonGroupCard);
