@@ -11,8 +11,8 @@ describe('CreateNewLevelInputs', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<CreateNewLevelInputs {...defaultProps} />);
-    expect(wrapper.contains('Level Type:'));
-    expect(wrapper.contains('Level Name:'));
+    expect(wrapper.contains('Level Type:')).to.be.true;
+    expect(wrapper.contains('Level Name:')).to.be.true;
     expect(wrapper.find('input').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
