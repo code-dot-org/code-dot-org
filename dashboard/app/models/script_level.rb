@@ -341,6 +341,7 @@ class ScriptLevel < ActiveRecord::Base
       else
         LEVEL_KIND.puzzle
       end
+
     ids = level_ids
 
     levels.each do |l|
