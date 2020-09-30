@@ -82,7 +82,7 @@ export default class AddLevelDialog extends Component {
       url: `/levels/get_filtered_levels?page=${this.state.currentPage}`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
-    }).done((data, _, request) => {
+    }).done(data => {
       this.setState({levels: data});
     });
   }
