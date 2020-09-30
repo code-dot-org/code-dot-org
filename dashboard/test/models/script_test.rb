@@ -301,6 +301,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
+    original_seed_keys = script.script_levels.map(&:seed_key).compact
+    assert_equal 5, original_seed_keys.length
+    original_script_level_ids = script.script_levels.map(&:id)
+
     script_names, _ = Script.setup([@script_file])
     script = Script.find_by!(name: script_names.first)
     first = script.lessons[0].script_levels[0]
@@ -310,6 +314,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.position
     assert_equal 3, third.position
     assert_equal original_count, ScriptLevel.count
+    assert_equal original_seed_keys, script.script_levels.map(&:seed_key)
+    assert_equal original_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'unplugged in script' do
@@ -1384,6 +1390,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.challenge
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1391,6 +1398,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.challenge
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can make a bonus level not a bonus level' do
@@ -1408,6 +1416,7 @@ class ScriptTest < ActiveSupport::TestCase
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.bonus
+    original_script_level_id = script.script_levels.first.id
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
@@ -1415,6 +1424,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     refute script.script_levels.first.bonus
+    assert_equal original_script_level_id, script.script_levels.first.id
   end
 
   test 'can unset the project_widget_visible attribute' do
