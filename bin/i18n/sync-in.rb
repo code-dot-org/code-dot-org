@@ -98,6 +98,19 @@ def get_i18n_strings(level)
         name = behavior.at_xpath('./title[@name="NAME"]')
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
+
+      text_blocks = blocks.xpath("//block[@type=\"text\"]")
+      i18n_strings['placeholder_texts'] = Hash.new unless text_blocks.empty?
+      text_blocks.each do |text_block|
+        text_title = text_block.at_xpath('./title[@name="TEXT"]')
+        # Skip empty or untranslatable string.
+        # A translatable string must have at least 3 consecutive alphabetic characters.
+        next unless text_title&.content =~ /[a-zA-Z]{3,}/
+
+        # Use only alphanumeric characters in lower cases as string key
+        text_key = text_title.content.gsub(/[^a-zA-Z0-9_ ]/, '').split.join('_').downcase
+        i18n_strings['placeholder_texts'][text_key] = text_title.content
+      end
     end
   end
 
