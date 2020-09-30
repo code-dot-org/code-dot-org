@@ -9,7 +9,7 @@ import LessonTip, {
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import RemoveTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveTipDialog';
+import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
 
 const styles = {
   dialog: {
@@ -24,6 +24,10 @@ const styles = {
   },
   textArea: {
     width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -39,8 +43,7 @@ export default class EditTipDialog extends Component {
     super(props);
 
     this.state = {
-      tip: this.props.tip,
-      removeTipOpen: false
+      tip: this.props.tip
     };
   }
 
@@ -67,17 +70,8 @@ export default class EditTipDialog extends Component {
   };
 
   handleDelete = () => {
-    this.setState({removeTipOpen: false});
     this.props.handleDelete(this.state.tip.key);
     this.props.handleConfirm();
-  };
-
-  handleConfirmDelete = () => {
-    this.setState({removeTipOpen: true});
-  };
-
-  handleCloseRemoveTip = () => {
-    this.setState({removeTipOpen: false});
   };
 
   render() {
@@ -112,18 +106,16 @@ export default class EditTipDialog extends Component {
             rows={5}
           />
           <LessonTip tip={this.state.tip} />
-          <RemoveTipDialog
-            isOpen={this.state.removeTipOpen}
-            tipToRemove={this.state.tip}
-            handleClose={this.handleCloseRemoveTip}
-            handleConfirm={this.handleDelete}
-          />
         </div>
         <DialogFooter>
-          <Button
-            text={i18n.delete()}
-            onClick={this.handleConfirmDelete}
-            color={Button.ButtonColor.red}
+          <ConfirmDeleteButton
+            title={'Delete Tip?'}
+            body={`Are you sure you want to remove the ${
+              tipTypes[this.state.tip.type].displayName
+            } with key "${this.state.tip.key}" from the Activity?`}
+            buttonText={'Delete'}
+            containerStyle={styles.confirmDeleteButton}
+            onConfirmDelete={this.handleDelete}
           />
           <Button
             text={i18n.closeAndSave()}
