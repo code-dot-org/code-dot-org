@@ -9,6 +9,7 @@ import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import RubricField from './RubricField';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CommentArea} from './CommentArea';
 
 const styles = {
@@ -33,7 +34,7 @@ const styles = {
     color: color.cyan
   },
   timeTeacherStudentSeen: {
-    color: 'lightgreen'
+    color: '#25c23c'
   },
   timeStudent: {
     fontStyle: 'italic',
@@ -73,6 +74,9 @@ const styles = {
   },
   commentAndFooter: {
     margin: '8px 16px 8px 16px'
+  },
+  checkboxIcon: {
+    color: '#25c23c'
   },
   form: {
     margin: 0
@@ -214,6 +218,72 @@ export class TeacherFeedback extends Component {
     return feedbackUnchanged;
   };
 
+  getFriendlyDate = feedbackSeen => {
+    const today = new Date();
+    const dateFeedbackSeen = new Date(feedbackSeen);
+    const [todayM, todayD, todayY] = [
+      today.getMonth() + 1,
+      today.getDate(),
+      today.getFullYear()
+    ];
+
+    const [m, d, y] = [
+      dateFeedbackSeen.getMonth() + 1,
+      dateFeedbackSeen.getDate(),
+      dateFeedbackSeen.getFullYear()
+    ];
+    if (todayM === m && todayY === y && todayD === d) {
+      if (todayD === d) {
+        return 'today';
+      } else if (todayD === d + 1) {
+        return 'yesterday';
+      }
+    } else {
+      const feedbackYear = (y + '').substr(2, 2);
+      return `${m}/${d}/${feedbackYear}`;
+    }
+  };
+
+  getFeedbackText = (latestFeedback, studentSawFeedback) => {
+    let timeStyle;
+    let feedbackMessage;
+    //Student view indicates when feedback was last updated
+    if (this.props.viewAs === ViewType.Student) {
+      timeStyle = styles.timeStudent;
+      feedbackMessage = i18n.lastUpdated({
+        time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow()
+      });
+    } else if (this.props.viewAs === ViewType.Teacher) {
+      //Teacher view if the current teacher did not leave the feedback
+      if (
+        this.props.latestFeedback[0].feedback_provider_id !== this.props.teacher
+      ) {
+        timeStyle = styles.timeTeacher;
+        feedbackMessage = i18n.lastUpdatedDifferentTeacher({
+          time: this.getFriendlyDate(latestFeedback.created_at)
+        });
+      } else {
+        //Teacher view if current teacher left feedback & student viewed
+        if (studentSawFeedback) {
+          timeStyle = {
+            ...styles.timeTeacher,
+            ...styles.timeTeacherStudentSeen
+          };
+          feedbackMessage = i18n.seenByStudent({
+            time: this.getFriendlyDate(latestFeedback.student_seen_feedback)
+          });
+        } else {
+          //Teacher view if current teacher left feedback & student did not view
+          timeStyle = styles.timeTeacher;
+          feedbackMessage = i18n.lastUpdatedCurrentTeacher({
+            time: this.getFriendlyDate(latestFeedback.created_at)
+          });
+        }
+      }
+    }
+    return [timeStyle, feedbackMessage];
+  };
+
   render() {
     const latestFeedback = this.latestFeedback();
     const feedbackUnchanged = this.feedbackIsUnchanged();
@@ -250,6 +320,9 @@ export class TeacherFeedback extends Component {
     const studentSawFeedback = !!this.state.latestFeedback[0]
       .student_seen_feedback;
 
+    let currentTeacherStudentSeen =
+      studentSawFeedback && this.props.viewAs === ViewType.Teacher;
+
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabVisible = this.props.visible
@@ -265,51 +338,11 @@ export class TeacherFeedback extends Component {
     let timeStyle;
     let feedbackMessage;
     if (this.state.latestFeedback.length > 0) {
-      //Student view indicates when feedback was last updated
-      if (this.props.viewAs === ViewType.Student) {
-        timeStyle = styles.timeStudent;
-        feedbackMessage = i18n.lastUpdated({
-          time: moment
-            .min(moment(), moment(latestFeedback.created_at))
-            .fromNow()
-        });
-      } else if (this.props.viewAs === ViewType.Teacher) {
-        //Teacher view if the current teacher did not leave the feedback
-        if (
-          this.props.latestFeedback[0].feedback_provider_id !==
-          this.props.teacher
-        ) {
-          timeStyle = styles.timeTeacher;
-          feedbackMessage = i18n.lastUpdatedDifferentTeacher({
-            time: moment
-              .min(moment(), moment(latestFeedback.student_seen_feedback))
-              .fromNow()
-          });
-        } else {
-          //Teacher view if current teacher left feedback & student viewed
-          if (studentSawFeedback) {
-            timeStyle = {
-              ...styles.timeTeacher,
-              ...styles.timeTeacherStudentSeen
-            };
-            feedbackMessage = i18n.seenByStudent({
-              time: moment
-                .min(moment(), moment(latestFeedback.student_seen_feedback))
-                .fromNow()
-            });
-          } else {
-            //Teacher view if current teacher left feedback & student did not view
-            timeStyle = styles.timeTeacher;
-            feedbackMessage = i18n.lastUpdatedCurrentTeacher({
-              time: moment
-                .min(moment(), moment(latestFeedback.created_at))
-                .fromNow()
-            });
-          }
-        }
-      }
+      [timeStyle, feedbackMessage] = this.getFeedbackText(
+        latestFeedback,
+        studentSawFeedback
+      );
     }
-
     return (
       <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
@@ -380,6 +413,13 @@ export class TeacherFeedback extends Component {
               )}
               {this.state.latestFeedback.length > 0 && (
                 <div style={timeStyle} id="ui-test-feedback-time">
+                  {currentTeacherStudentSeen && (
+                    <FontAwesome
+                      icon="check"
+                      className="fa-check"
+                      style={styles.checkboxIcon}
+                    />
+                  )}
                   {feedbackMessage}
                 </div>
               )}
