@@ -2,17 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
-const cyan = '#0094ca';
 const styles = {
   buttonLeft: {
     marginLeft: 0
   },
   enabled: {
     backgroundColor: 'white',
-    color: cyan,
+    color: color.cyan,
     border: '2px solid',
-    borderColor: cyan,
+    borderColor: color.cyan,
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: '13px'
   },
@@ -25,8 +25,8 @@ const styles = {
   disabled: {
     opacity: 0.5
   },
-  clicked: {
-    backgroundColor: cyan,
+  selected: {
+    backgroundColor: color.cyan,
     color: 'white'
   }
 };
@@ -69,21 +69,22 @@ export default class StudentSelector extends React.Component {
     } else if (this.props.students.length === 0) {
       return <span>{i18n.noStudentsInSection()}</span>;
     }
+
     const exceededMaximum = this.state.selectedStudentIds.length >= 4;
     const studentBtns = this.props.students.map(student => {
-      let className = 'selectable';
-      if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
-        className = 'selected';
+      let className = 'selected';
+      let disabled = false;
+      if (this.state.selectedStudentIds.indexOf(student.id) === -1) {
+        className = 'selectable';
+        disabled = exceededMaximum;
       }
-      let btnStyle = styles.enabled;
-      const unselectable = exceededMaximum && className === 'selectable';
+      let buttonStyle = styles.enabled;
 
       //Adjust styles for disabled and selected buttons
-      let baseStyles = {...btnStyle};
-      if (unselectable) {
-        btnStyle = {...baseStyles, ...styles.disabled};
+      if (disabled) {
+        buttonStyle = {...buttonStyle, ...styles.disabled};
       } else if (className === 'selected') {
-        btnStyle = {...baseStyles, ...styles.clicked};
+        buttonStyle = {...buttonStyle, ...styles.selected};
       }
 
       return (
@@ -93,8 +94,8 @@ export default class StudentSelector extends React.Component {
           data-id={student.id}
           className={className}
           onClick={this.handleStudentClicked}
-          style={btnStyle}
-          disabled={unselectable}
+          style={buttonStyle}
+          disabled={disabled}
         >
           {student.name}
         </button>
