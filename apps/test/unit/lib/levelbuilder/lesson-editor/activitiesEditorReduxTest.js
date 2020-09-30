@@ -181,14 +181,17 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     it('update activity field', () => {
-      let state = reducer(initialState, updateActivityField(1, 'time', 100));
+      let state = reducer(
+        initialState,
+        updateActivityField(1, 'duration', 100)
+      );
       assert.deepEqual(
         [
           {
             key: 'x',
             displayName: 'X',
             position: 1,
-            time: 100,
+            duration: 100,
             activitySections: [
               {key: 'a', position: 1, displayName: 'A'},
               {key: 'b', position: 2, displayName: 'B'}
