@@ -14,11 +14,11 @@ describe('AddLevelTable', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelTable {...defaultProps} />);
-    expect(wrapper.contains('Actions'));
-    expect(wrapper.contains('Name'));
-    expect(wrapper.contains('Type'));
-    expect(wrapper.contains('Owner'));
-    expect(wrapper.contains('Last Updated'));
+    expect(wrapper.contains('Actions')).to.be.true;
+    expect(wrapper.contains('Name')).to.be.true;
+    expect(wrapper.contains('Type')).to.be.true;
+    expect(wrapper.contains('Owner')).to.be.true;
+    expect(wrapper.contains('Last Updated')).to.be.true;
     expect(wrapper.find('Button').length).to.equal(4);
   });
 });
