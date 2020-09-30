@@ -45,7 +45,7 @@ describe('ActivitySectionCardButtons', () => {
 
     const tip = wrapper.find('LessonTipIconWithTooltip').at(0);
     tip.simulate('click');
-    expect(wrapper.state().addTipOpen).to.equal(true);
+    expect(wrapper.state().tipToEdit).to.not.be.null;
     expect(wrapper.state().editingExistingTip).to.equal(true);
   });
 
@@ -55,7 +55,7 @@ describe('ActivitySectionCardButtons', () => {
     const button = wrapper.find('button').at(1);
     expect(button.text()).to.include('Tip');
     button.simulate('mouseDown');
-    expect(wrapper.state().addTipOpen).to.equal(true);
+    expect(wrapper.state().tipToEdit).to.not.be.null;
   });
 
   it('add resource link pressed', () => {
