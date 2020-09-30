@@ -9,7 +9,10 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson = create(
       :lesson,
       name: 'lesson display name',
-      properties: {overview: 'lesson overview'}
+      properties: {
+        overview: 'lesson overview',
+        student_overview: 'student overview'
+      }
     )
 
     @script_title = 'Script Display Name'
@@ -37,7 +40,8 @@ class LessonsControllerTest < ActionController::TestCase
 
     @update_params = {
       id: @lesson.id,
-      overview: 'new overview'
+      overview: 'new overview',
+      studentOverview: 'new student overview',
     }
 
     @levelbuilder = create :levelbuilder
@@ -74,6 +78,12 @@ class LessonsControllerTest < ActionController::TestCase
       id: @lesson.id
     }
     assert_response :ok
+
+    # verify the lesson fields appear in camelCase in the DOM.
+    lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
+    editable_data = lesson_data['editableData']
+    assert_equal 'lesson overview', editable_data['overview']
+    assert_equal 'student overview', editable_data['studentOverview']
   end
 
   # only levelbuilders can update
@@ -90,5 +100,6 @@ class LessonsControllerTest < ActionController::TestCase
     assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
     assert_equal 'new overview', @lesson.overview
+    assert_equal 'new student overview', @lesson.student_overview
   end
 end

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {clearProgress, mergeProgress} from '../progressRedux';
+import {overwriteProgress, useDbProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
@@ -58,27 +58,16 @@ function mergeProgressData(scriptName, serverProgress) {
   const store = getStore();
 
   // The server returned progress. This is the source of truth.
-  // Note: Changes to the progressRedux also update the sessionStorage,
-  // so this will clear and update the sessionStorage too.
-  store.dispatch(clearProgress());
+  store.dispatch(useDbProgress());
+
+  // Clear any existing redux state.
   store.dispatch(
-    mergeProgress(
+    overwriteProgress(
       _.mapValues(serverProgress, level =>
         level.submitted ? TestResults.SUBMITTED_RESULT : level.result
       )
     )
   );
-
-  Object.keys(serverProgress).forEach(levelId => {
-    // Write down new progress in sessionStorage
-    clientState.trackProgress(
-      null,
-      null,
-      serverProgress[levelId],
-      scriptName,
-      levelId
-    );
-  });
 }
 
 /**

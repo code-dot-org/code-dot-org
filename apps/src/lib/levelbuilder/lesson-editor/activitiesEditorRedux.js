@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
@@ -297,13 +299,14 @@ function activities(state = [], action) {
 
   switch (action.type) {
     case INIT:
+      validateActivities(action.activities, action.type);
       return action.activities;
     case ADD_ACTIVITY: {
       newState.push({
         key: action.activityKey,
         displayName: '',
         position: action.activityPosition,
-        time: 0,
+        duration: 0,
         activitySections: []
       });
       updateActivityPositions(newState);
@@ -567,6 +570,13 @@ function levelNameToIdMap(state = {}, action) {
     }
   }
   return state;
+}
+
+// Use PropTypes.checkPropTypes to enforce that each entry in the array of
+// activities matches the shape defined in activityShape.
+function validateActivities(activities, location) {
+  const propTypes = {activities: PropTypes.arrayOf(activityShape)};
+  PropTypes.checkPropTypes(propTypes, {activities}, 'property', location);
 }
 
 export default {

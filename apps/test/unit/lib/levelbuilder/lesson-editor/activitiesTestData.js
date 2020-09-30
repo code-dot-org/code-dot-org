@@ -3,7 +3,7 @@ export const sampleActivities = [
     key: 'activity-1',
     displayName: 'Main Activity',
     position: 1,
-    time: 20,
+    duration: 20,
     activitySections: [
       {
         key: 'section-3',
