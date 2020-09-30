@@ -36,6 +36,13 @@ function initializeMap() {
     center: [-95.665, 37.6],
     zoom: 4
   });
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+    marker: false,
+    types: 'country,region,district,postcode,locality,place'
+  });
+  document.getElementById('geocomplete').appendChild(geocoder.onAdd(map));
 }
 
 function loadWorkshops() {
@@ -58,6 +65,7 @@ function loadWorkshops() {
       'circle-color': 'blue'
     }
   });
+
   map.on('click', 'workshops', e => {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var workshop = e.features[0].properties;
@@ -68,7 +76,7 @@ function loadWorkshops() {
       .setHTML(description)
       .addTo(map);
   });
-  map.on('mouseenter', 'workshops', function () {
+  map.on('mouseenter', 'workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
