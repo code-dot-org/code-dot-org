@@ -216,7 +216,7 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     describe('activity section', () => {
-      it('moves a activitySection up three times', () => {
+      it('moves a activitySection and changes position but not activity', () => {
         const key = 'd';
         let activityPosition = initialState.activities.find(activity =>
           activity.activitySections.find(
@@ -237,26 +237,26 @@ describe('activitiesEditorRedux reducer tests', () => {
         expectedState[1].activitySections[0].position = 1;
         expectedState[1].activitySections[1].position = 2;
 
-        assert.deepEqual(
-          expectedState,
-          state.activities,
-          'first move changes position but not activity'
-        );
+        assert.deepEqual(expectedState, state.activities);
+      });
 
-        activityPosition = state.activities.find(activity =>
+      it('moves a activitySection up and changes activity but not position', () => {
+        const key = 'c';
+        let activityPosition = initialState.activities.find(activity =>
           activity.activitySections.find(
             activitySection => activitySection.key === key
           )
         ).position;
-        activitySectionPosition = state.activities[
+        let activitySectionPosition = initialState.activities[
           activityPosition - 1
         ].activitySections.find(activitySection => activitySection.key === key)
           .position;
-        state = reducer(
-          state,
+        let state = reducer(
+          initialState,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
         );
 
+        let expectedState = _.cloneDeep(initialActivities);
         expectedState[0].activitySections.push(
           expectedState[1].activitySections[0]
         );
@@ -266,38 +266,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         );
         expectedState[1].activitySections[0].position = 1;
 
-        assert.deepEqual(
-          expectedState,
-          state.activities,
-          'second move changes activity but not position'
-        );
-
-        activityPosition = state.activities.find(activity =>
-          activity.activitySections.find(
-            activitySection => activitySection.key === key
-          )
-        ).position;
-        activitySectionPosition = state.activities[
-          activityPosition - 1
-        ].activitySections.find(activitySection => activitySection.key === key)
-          .position;
-        state = reducer(
-          state,
-          moveActivitySection(activityPosition, activitySectionPosition, 'up')
-        );
-
-        let temp = expectedState[0].activitySections[1];
-        expectedState[0].activitySections[1] =
-          expectedState[0].activitySections[2];
-        expectedState[0].activitySections[1].position = 2;
-        expectedState[0].activitySections[2] = temp;
-        expectedState[0].activitySections[2].position = 3;
-
-        assert.deepEqual(
-          expectedState,
-          state.activities,
-          'third move changes position but not activity'
-        );
+        assert.deepEqual(expectedState, state.activities);
       });
 
       it('remove activity section', () => {
