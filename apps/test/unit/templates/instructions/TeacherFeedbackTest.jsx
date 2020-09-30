@@ -2,6 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
+import i18n from '@cdo/locale';
+import sinon from 'sinon';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
@@ -283,6 +285,16 @@ describe('TeacherFeedback', () => {
   });
 
   describe('viewed as a Student', () => {
+    it('with feedback displays lastUpdated message', () => {
+      const props = {
+        ...STUDENT_FEEDBACK_RUBRIC_PROPS,
+        latestFeedback: [{student_seen_feedback: new Date()}]
+      };
+      const lastUpdatedSpy = sinon.spy(i18n, 'lastUpdated');
+      shallow(<TeacherFeedback {...props} />);
+      expect(lastUpdatedSpy).to.have.been.calledOnce;
+    });
+
     it('shows the correct components if student is on a level with a rubric, where no feedback has been given by the teacher', () => {
       const wrapper = shallow(
         <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
