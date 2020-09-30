@@ -171,14 +171,12 @@ class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
-        {this.state.addTipOpen && (
-          <EditTipDialog
-            isOpen={this.state.addTipOpen}
-            handleConfirm={this.handleCloseAddTip}
-            tip={this.state.tipToEdit}
-            handleDelete={this.handleDeleteTip}
-          />
-        )}
+        <EditTipDialog
+          isOpen={this.state.addTipOpen}
+          handleConfirm={this.handleCloseAddTip}
+          tip={this.state.tipToEdit}
+          handleDelete={this.handleDeleteTip}
+        />
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
