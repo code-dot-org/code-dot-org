@@ -784,7 +784,6 @@ FactoryGirl.define do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     script
-    resources {[create(:resource)]}
 
     absolute_position do |lesson|
       (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
@@ -799,6 +798,7 @@ FactoryGirl.define do
 
   factory :resource do
     url 'fake.url'
+    key 'fake key'
   end
 
   factory :callout do
