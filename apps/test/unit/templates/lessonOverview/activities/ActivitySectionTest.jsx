@@ -16,7 +16,7 @@ describe('ActivitySection', () => {
     const wrapper = shallow(<ActivitySection {...defaultProps} />);
     expect(wrapper.find('ProgressionDetails').length).to.equal(0);
     expect(wrapper.find('SafeMarkdown').length).to.equal(1);
-    expect(wrapper.contains('Remarks'));
+    expect(wrapper.contains('Remarks')).to.be.true;
     expect(wrapper.find('FontAwesome[icon="microphone"]').length).to.equal(1);
   });
 
