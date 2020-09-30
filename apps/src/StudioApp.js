@@ -1633,7 +1633,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     trackEvent(
       'experiment',
       'Feedback bubbleDialog',
-      `AppType ${this.config.app}. Level ${this.config.level.id}`
+      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
     );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
