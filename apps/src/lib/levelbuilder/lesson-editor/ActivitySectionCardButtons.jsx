@@ -41,7 +41,6 @@ class ActivitySectionCardButtons extends Component {
     super(props);
 
     this.state = {
-      addTipOpen: false,
       editingExistingTip: false,
       addResourceOpen: false,
       addLevelOpen: false,
@@ -58,7 +57,7 @@ class ActivitySectionCardButtons extends Component {
   };
 
   handleEditTip = tip => {
-    this.setState({tipToEdit: tip, addTipOpen: true, editingExistingTip: true});
+    this.setState({tipToEdit: tip, editingExistingTip: true});
   };
 
   handleOpenAddTip = () => {
@@ -67,8 +66,7 @@ class ActivitySectionCardButtons extends Component {
         key: this.generateTipKey(),
         type: 'teachingTip',
         markdown: ''
-      },
-      addTipOpen: true
+      }
     });
   };
 
@@ -103,7 +101,7 @@ class ActivitySectionCardButtons extends Component {
             tip
           );
     }
-    this.setState({addTipOpen: false, editingExistingTip: false});
+    this.setState({tipToEdit: null, editingExistingTip: false});
   };
 
   handleOpenAddResource = () => {
@@ -171,9 +169,10 @@ class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
-        {this.state.addTipOpen && (
+        {/* Prevent dialog from trying to render when there is no tip to edit*/}
+        {this.state.tipToEdit !== null && (
           <EditTipDialog
-            isOpen={this.state.addTipOpen}
+            isOpen={true}
             handleConfirm={this.handleCloseAddTip}
             tip={this.state.tipToEdit}
             handleDelete={this.handleDeleteTip}
