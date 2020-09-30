@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
 
 const styles = {
   filters: {
@@ -31,10 +32,10 @@ export default class AddLevelFilters extends Component {
     };
   }
 
-  handleSearch = () => {
+  handleSearch = _.debounce(() => {
     const {levelName, levelType, scriptId, ownerId} = this.state;
     this.props.handleSearch(levelName, levelType, scriptId, ownerId);
-  };
+  }, 1000);
 
   handleInputChange = event => {
     this.setState({levelName: event.target.value});
@@ -105,7 +106,7 @@ export default class AddLevelFilters extends Component {
             ))}
           </select>
         </label>
-        <button type="button" onMouseDown={this.handleSearch}>
+        <button type="button" onClick={this.handleSearch}>
           <FontAwesome icon="search" />
         </button>
       </div>
