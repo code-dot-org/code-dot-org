@@ -218,15 +218,12 @@ describe('activitiesEditorRedux reducer tests', () => {
     describe('activity section', () => {
       it('moves a activitySection up and changes position but not activity', () => {
         const key = 'd';
-        let activityPosition = initialState.activities.find(activity =>
-          activity.activitySections.find(
-            activitySection => activitySection.key === key
-          )
-        ).position;
-        let activitySectionPosition = initialState.activities[
-          activityPosition - 1
-        ].activitySections.find(activitySection => activitySection.key === key)
-          .position;
+        let activityPosition = findActivityPositionByKey(initialState, key);
+        let activitySectionPosition = findActivitySectionPositionByKey(
+          initialState,
+          activityPosition,
+          key
+        );
         let state = reducer(
           initialState,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
@@ -242,15 +239,12 @@ describe('activitiesEditorRedux reducer tests', () => {
 
       it('moves a activitySection up and changes activity but not position', () => {
         const key = 'c';
-        let activityPosition = initialState.activities.find(activity =>
-          activity.activitySections.find(
-            activitySection => activitySection.key === key
-          )
-        ).position;
-        let activitySectionPosition = initialState.activities[
-          activityPosition - 1
-        ].activitySections.find(activitySection => activitySection.key === key)
-          .position;
+        let activityPosition = findActivityPositionByKey(initialState, key);
+        let activitySectionPosition = findActivitySectionPositionByKey(
+          initialState,
+          activityPosition,
+          key
+        );
         let state = reducer(
           initialState,
           moveActivitySection(activityPosition, activitySectionPosition, 'up')
@@ -307,3 +301,17 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
   });
 });
+
+const findActivityPositionByKey = (state, key) => {
+  return state.activities.find(activity =>
+    activity.activitySections.find(
+      activitySection => activitySection.key === key
+    )
+  ).position;
+};
+
+const findActivitySectionPositionByKey = (state, activityPosition, key) => {
+  return state.activities[activityPosition - 1].activitySections.find(
+    activitySection => activitySection.key === key
+  ).position;
+};
