@@ -139,6 +139,22 @@ export default class CdoTrashcan {
       CdoTrashcan.TRASH_URL
     );
 
+    this.notAllowed_ = Blockly.utils.dom.createSvgElement(
+      'g',
+      {},
+      this.svgGroup_
+    );
+    Blockly.utils.dom.createSvgElement(
+      'line',
+      {x1: 0, y1: 10, x2: 45, y2: 60, stroke: '#c00', 'stroke-width': 5},
+      this.notAllowed_
+    );
+    Blockly.utils.dom.createSvgElement(
+      'circle',
+      {cx: 22, cy: 33, r: 33, stroke: '#c00', 'stroke-width': 5, fill: 'none'},
+      this.notAllowed_
+    );
+
     Blockly.bindEventWithChecks_(this.svgGroup_, 'mouseup', this, this.click);
     // bindEventWithChecks_ quashes events too aggressively. See:
     // https://groups.google.com/forum/#!topic/blockly/QF4yB9Wx00s
@@ -220,6 +236,11 @@ export default class CdoTrashcan {
     var left = trashRect.left + this.SPRITE_LEFT_ - this.MARGIN_HOTSPOT_;
     var right = left + this.WIDTH_ + 2 * this.MARGIN_HOTSPOT_;
     return new Blockly.utils.Rect(top, bottom, left, right);
+  }
+
+  setDisabled(disabled) {
+    const visibility = disabled ? 'visible' : 'hidden';
+    this.notAllowed_.setAttribute('visibility', visibility);
   }
 
   setOpen(state) {

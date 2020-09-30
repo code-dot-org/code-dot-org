@@ -1,13 +1,26 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class BlockDragger extends GoogleBlockly.BlockDragger {
-  updateCursorDuringBlockDrag_() {
-    const wouldDeleteBlock_ = this.draggedConnectionManager_.wouldDeleteBlock();
-    if (wouldDeleteBlock_) {
-      this.workspace_.showTrashcan();
-    } else {
+  dragBlock(e, currentDragDeltaXY) {
+    super.dragBlock(e, currentDragDeltaXY);
+    const isDraggingFromFlyout_ = !!Blockly.mainBlockSpace.currentGesture_
+      .flyout_;
+
+    if (isDraggingFromFlyout_) {
       this.workspace_.hideTrashcan();
+    } else {
+      this.workspace_.showTrashcan();
+      if (this.draggingBlock_.isDeletable()) {
+        this.workspace_.trashcan.setDisabled(false);
+      } else {
+        this.workspace_.trashcan.setDisabled(true);
+      }
     }
-    super.updateCursorDuringBlockDrag_();
+  }
+
+  endBlockDrag(e, currentDragDeltaXY) {
+    super.endBlockDrag(e, currentDragDeltaXY);
+    this.workspace_.trashcan.setDisabled(false);
+    this.workspace_.hideTrashcan();
   }
 }
