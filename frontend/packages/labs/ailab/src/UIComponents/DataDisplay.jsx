@@ -8,7 +8,9 @@ import {
   setShowPredict,
   setMetaDataByColumn,
   getFeatures,
-  ColumnTypes
+  ColumnTypes,
+  getCategoricalColumns,
+  getSelectableFeatures
 } from "../redux";
 
 class DataDisplay extends Component {
@@ -21,7 +23,9 @@ class DataDisplay extends Component {
     setSelectedFeatures: PropTypes.func.isRequired,
     setShowPredict: PropTypes.func.isRequired,
     metaDataByColumn: PropTypes.object,
-    setMetaDataByColumn: PropTypes.func.isRequired
+    setMetaDataByColumn: PropTypes.func.isRequired,
+    categoricalColumns: PropTypes.array,
+    selectableFeatures: PropTypes.array
   };
 
   constructor(props) {
@@ -124,13 +128,13 @@ class DataDisplay extends Component {
                 <p>
                   The model will be trained to predict which catgegory from the
                   label column an example (a set of attributes or features) is
-                  most likely to belong to.
+                  most likely to belong to. Labels are categorical.
                 </p>
                 <select
                   value={this.props.labelColumn}
                   onChange={this.handleChangeSelect}
                 >
-                  {this.props.features.map((feature, index) => {
+                  {this.props.categoricalColumns.map((feature, index) => {
                     return (
                       <option key={index} value={feature}>
                         {feature}
@@ -145,14 +149,14 @@ class DataDisplay extends Component {
                 <h2>Which features are you interested in training on?</h2>
                 <p>
                   Features are the attributes the model will use to make a
-                  prediction.
+                  prediction. Features can be categorical or continuous.
                 </p>
                 <select
                   multiple={true}
                   value={this.props.selectedFeatures}
                   onChange={this.handleChangeMultiSelect}
                 >
-                  {this.props.features.map((feature, index) => {
+                  {this.props.selectableFeatures.map((feature, index) => {
                     return (
                       <option key={index} value={feature}>
                         {feature}
@@ -175,7 +179,9 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     features: getFeatures(state),
-    metaDataByColumn: state.metaDataByColumn
+    metaDataByColumn: state.metaDataByColumn,
+    categoricalColumns: getCategoricalColumns(state),
+    selectableFeatures: getSelectableFeatures(state)
   }),
   dispatch => ({
     setMetaDataByColumn(column, metadataField, value) {

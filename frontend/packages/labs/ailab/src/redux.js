@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 // Action types
 
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
@@ -107,6 +109,35 @@ export default function rootReducer(state = initialState, action) {
 
 export function getFeatures(state) {
   return state.data.length > 0 ? Object.keys(state.data[0]) : [];
+}
+
+function filterColumnsByType(state, columnType) {
+  let columnsOfType = [];
+  if (!_.isEmpty(state.metaDataByColumn)) {
+    var filteredObject = _.pickBy(state.metaDataByColumn, function(
+      columnMetaData,
+      column
+    ) {
+      return columnMetaData["dataType"] === columnType;
+    });
+    columnsOfType = Object.keys(filteredObject);
+  }
+  return columnsOfType;
+}
+
+export function getCategoricalColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
+}
+
+export function getContinuousColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.CONTINUOUS);
+}
+
+export function getSelectableFeatures(state) {
+  return _.pull(
+    getContinuousColumns(state).concat(getCategoricalColumns(state)),
+    state.labelColumn
+  );
 }
 
 export const ColumnTypes = {
