@@ -5,6 +5,12 @@ import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/L
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {connect} from 'react-redux';
+import {
+  addTip,
+  updateTip,
+  removeTip
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   bottomControls: {
@@ -12,7 +18,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  addLevel: {
+  addButton: {
     fontSize: 14,
     background: '#eee',
     border: '1px solid #ddd',
@@ -21,24 +27,24 @@ const styles = {
   }
 };
 
-export default class ActivitySectionCardButtons extends Component {
+class ActivitySectionCardButtons extends Component {
   static propTypes = {
     activitySection: activitySectionShape,
     activityPosition: PropTypes.number,
     addTip: PropTypes.func,
-    editTip: PropTypes.func,
-    addLevel: PropTypes.func
+    addLevel: PropTypes.func,
+    updateTip: PropTypes.func,
+    removeTip: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      addTipOpen: false,
       editingExistingTip: false,
       addResourceOpen: false,
       addLevelOpen: false,
-      tipToEdit: {key: 'tip', type: 'teachingTip', markdown: ''}
+      tipToEdit: null
     };
   }
 
@@ -51,7 +57,7 @@ export default class ActivitySectionCardButtons extends Component {
   };
 
   handleEditTip = tip => {
-    this.setState({tipToEdit: tip, addTipOpen: true, editingExistingTip: true});
+    this.setState({tipToEdit: tip, editingExistingTip: true});
   };
 
   handleOpenAddTip = () => {
@@ -60,8 +66,7 @@ export default class ActivitySectionCardButtons extends Component {
         key: this.generateTipKey(),
         type: 'teachingTip',
         markdown: ''
-      },
-      addTipOpen: true
+      }
     });
   };
 
@@ -79,10 +84,24 @@ export default class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddTip = tip => {
-    if (!this.state.editingExistingTip) {
-      this.props.addTip(tip);
+    /*
+      If no tip was provided then user exited without saving
+      and we should not update the tips
+    */
+    if (tip) {
+      this.state.editingExistingTip
+        ? this.props.updateTip(
+            this.props.activityPosition,
+            this.props.activitySection.position,
+            tip
+          )
+        : this.props.addTip(
+            this.props.activityPosition,
+            this.props.activitySection.position,
+            tip
+          );
     }
-    this.setState({addTipOpen: false, editingExistingTip: false});
+    this.setState({tipToEdit: null, editingExistingTip: false});
   };
 
   handleOpenAddResource = () => {
@@ -93,6 +112,14 @@ export default class ActivitySectionCardButtons extends Component {
     this.setState({addResourceOpen: false});
   };
 
+  handleDeleteTip = tipKey => {
+    this.props.removeTip(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      tipKey
+    );
+  };
+
   render() {
     return (
       <div>
@@ -101,7 +128,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddLevel}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -110,7 +137,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddTip}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -119,7 +146,7 @@ export default class ActivitySectionCardButtons extends Component {
             <button
               onMouseDown={this.handleOpenAddResource}
               className="btn"
-              style={styles.addLevel}
+              style={styles.addButton}
               type="button"
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
@@ -142,11 +169,15 @@ export default class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addResourceOpen}
           handleConfirm={this.handleCloseAddResource}
         />
-        <EditTipDialog
-          isOpen={this.state.addTipOpen}
-          handleConfirm={this.handleCloseAddTip}
-          tip={this.state.tipToEdit}
-        />
+        {/* Prevent dialog from trying to render when there is no tip to edit*/}
+        {this.state.tipToEdit !== null && (
+          <EditTipDialog
+            isOpen={true}
+            handleConfirm={this.handleCloseAddTip}
+            tip={this.state.tipToEdit}
+            handleDelete={this.handleDeleteTip}
+          />
+        )}
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
@@ -159,3 +190,14 @@ export default class ActivitySectionCardButtons extends Component {
     );
   }
 }
+
+export const UnconnectedActivitySectionCardButtons = ActivitySectionCardButtons;
+
+export default connect(
+  state => ({}),
+  {
+    addTip,
+    updateTip,
+    removeTip
+  }
+)(ActivitySectionCardButtons);

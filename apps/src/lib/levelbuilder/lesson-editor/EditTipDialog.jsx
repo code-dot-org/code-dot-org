@@ -9,6 +9,7 @@ import LessonTip, {
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
 
 const styles = {
   dialog: {
@@ -23,6 +24,10 @@ const styles = {
   },
   textArea: {
     width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -30,7 +35,8 @@ export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     tip: tipShape,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -55,8 +61,17 @@ export default class EditTipDialog extends Component {
     this.setState({tip: newTip});
   };
 
-  handleClose = () => {
+  handleCloseAndSave = () => {
     this.props.handleConfirm(this.state.tip);
+  };
+
+  handleClose = () => {
+    this.props.handleConfirm();
+  };
+
+  handleDelete = () => {
+    this.props.handleDelete(this.state.tip.key);
+    this.props.handleConfirm();
   };
 
   render() {
@@ -71,15 +86,15 @@ export default class EditTipDialog extends Component {
           <h2>Add Tip</h2>
           <select
             onChange={this.handleTipTypeChange}
-            defaultValue={tipTypes[this.state.tip.type].displayName}
+            value={this.state.tip.type}
           >
-            {Object.values(tipTypes).map((tip, index) => {
+            {Object.values(tipTypes).map((tipType, index) => {
               return (
                 <option
                   value={Object.keys(tipTypes)[index]}
                   key={`tip-${index}`}
                 >
-                  {tip.displayName}
+                  {tipType.displayName}
                 </option>
               );
             })}
@@ -88,14 +103,23 @@ export default class EditTipDialog extends Component {
             defaultValue={this.state.tip.markdown}
             onChange={this.handleTextChange}
             style={styles.textArea}
+            rows={5}
           />
           <LessonTip tip={this.state.tip} />
         </div>
-        <DialogFooter rightAlign>
+        <DialogFooter>
+          <ConfirmDeleteButton
+            title={'Delete Tip?'}
+            body={`Are you sure you want to remove the ${
+              tipTypes[this.state.tip.type].displayName
+            } with key "${this.state.tip.key}" from the Activity?`}
+            buttonText={'Delete'}
+            containerStyle={styles.confirmDeleteButton}
+            onConfirmDelete={this.handleDelete}
+          />
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
-            onClick={this.handleClose}
+            onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
