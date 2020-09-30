@@ -305,6 +305,9 @@ export default class CdoTrashcan {
     if (this.workspace_.options.maxTrashcanContents <= 0) {
       return;
     }
+    if (event.type === Blockly.Events.BLOCK_DELETE) {
+      this.workspace_.hideTrashcan();
+    }
     if (
       event.type === Blockly.Events.BLOCK_DELETE &&
       event.oldXml.tagName.toLowerCase() !== 'shadow'
