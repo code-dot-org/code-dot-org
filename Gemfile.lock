@@ -445,8 +445,8 @@ GEM
       httpclient
       json
     firebase_token_generator (2.0.0)
-    font-awesome-rails (4.6.3.1)
-      railties (>= 3.2, < 5.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     fspath (3.1.0)
     gemoji (2.1.0)
     get_process_mem (0.2.3)
@@ -945,7 +945,7 @@ DEPENDENCIES
   fakeredis
   firebase
   firebase_token_generator
-  font-awesome-rails (~> 4.6.3)
+  font-awesome-rails (~> 4.7.0.5)
   full-name-splitter!
   gctools!
   gemoji
