@@ -65,7 +65,6 @@ function loadWorkshops() {
       'circle-color': 'blue'
     }
   });
-
   map.on('click', 'workshops', e => {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var workshop = e.features[0].properties;
