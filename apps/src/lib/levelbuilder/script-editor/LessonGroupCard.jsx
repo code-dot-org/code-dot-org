@@ -358,7 +358,7 @@ export class LessonGroupCard extends Component {
             style={styles.addButton}
             type="button"
           >
-            <i style={{marginRight: 7}} className="fa fa-pencil" />
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
             Add Lesson
           </button>
           {!this.props.lessonGroup.user_facing && (

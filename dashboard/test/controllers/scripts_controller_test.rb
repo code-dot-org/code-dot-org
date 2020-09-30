@@ -333,7 +333,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "platformization partner can update their scripts" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{@partner_script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(@partner_script.name)
 
     sign_in @platformization_partner
     patch :update, params: {
@@ -359,18 +359,22 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'create' do
     expected_contents = ''
+    script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
+    File.stubs(:write).with("config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with do |filename, contents|
+      filename == "config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+    end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
     post :create, params: {
-      script: {name: 'test-script-create'},
+      script: {name: script_name},
     }
-    assert_redirected_to edit_script_path id: 'test-script-create'
+    assert_redirected_to edit_script_path id: script_name
 
-    script = Script.find_by_name('test-script-create')
-    assert_equal 'test-script-create', script.name
+    script = Script.find_by_name(script_name)
+    assert_equal script_name, script.name
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -414,7 +418,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -467,7 +475,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -484,7 +492,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -503,7 +511,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -523,7 +531,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     assert_nil script.project_sharing
     assert_nil script.curriculum_umbrella
@@ -552,7 +560,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
     # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
@@ -590,7 +598,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -660,7 +668,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     level = create :level
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     assert_empty script.lessons
 
@@ -873,5 +881,12 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     refute response.body.include? 'visible after'
     Timecop.return
+  end
+
+  def stub_file_writes(script_name)
+    filenames_to_stub = ["config/scripts/#{script_name}.script", "config/scripts_json/#{script_name}.script_json"]
+    File.stubs(:write).with do |filename, _|
+      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
+    end
   end
 end
