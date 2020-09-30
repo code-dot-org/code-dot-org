@@ -57,7 +57,7 @@ export default class ChooseYourProgram extends LabeledFormComponent {
 
     let belowMinCourseHours = false;
     let program = this.props.data.program;
-    let minCourseHours = MIN_CSP_HOURS;
+    let minCourseHours = (program && program.includes('Discoveries')) ? MIN_CSD_HOURS : MIN_CSP_HOURS;
     if (program) {
       if (program.includes('Discoveries')) {
         minCourseHours = MIN_CSD_HOURS;
