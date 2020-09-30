@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200916194417) do
+ActiveRecord::Schema.define(version: 20200929062628) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -550,6 +550,13 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.integer  "position"
     t.text     "properties",  limit: 65535
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true, using: :btree
+  end
+
+  create_table "lessons_resources", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "lesson_id",   null: false
+    t.integer "resource_id", null: false
+    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", using: :btree
+    t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id", using: :btree
   end
 
   create_table "level_concept_difficulties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1267,6 +1274,16 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id", using: :btree
   end
 
+  create_table "resources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url",        null: false
+    t.string   "key",        null: false
+    t.string   "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_resources_on_key", unique: true, using: :btree
+  end
+
   create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",       null: false
     t.string   "city",       null: false
@@ -1369,8 +1386,10 @@ ActiveRecord::Schema.define(version: 20200916194417) do
     t.boolean  "named_level"
     t.boolean  "bonus"
     t.integer  "activity_section_id"
+    t.string   "seed_key"
     t.index ["activity_section_id"], name: "index_script_levels_on_activity_section_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
+    t.index ["seed_key"], name: "index_script_levels_on_seed_key", unique: true, using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
 
