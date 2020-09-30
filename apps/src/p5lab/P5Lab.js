@@ -801,7 +801,7 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
-  const sourcesUnchanged = !this.studioApp_.userChangedLevelCode();
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else if (sourcesUnchanged) {

@@ -2728,13 +2728,13 @@ StudioApp.prototype.enableBreakpoints = function() {
  * specified in levelbuilder. If the level has disabled this functionality,
  * by turning `validationEnabled` off, this will always return true.
  */
-StudioApp.prototype.userChangedLevelCode = function() {
+StudioApp.prototype.validateCodeChanged = function() {
   const level = this.config.level;
   if (!level.validationEnabled) {
     return true;
   }
 
-  return project.isCodeDifferent(level.startBlocks);
+  return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
 /**

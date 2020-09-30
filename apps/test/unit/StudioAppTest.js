@@ -444,10 +444,10 @@ describe('StudioApp', () => {
     });
   });
 
-  describe('The StudioApp.userChangedLevelCode function', () => {
+  describe('The StudioApp.validateCodeChanged function', () => {
     let studio, codeDifferentStub;
     beforeEach(() => {
-      codeDifferentStub = sinon.stub(project, 'isCodeDifferent');
+      codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
       studio = studioApp();
     });
 
@@ -457,20 +457,20 @@ describe('StudioApp', () => {
 
     it('returns true if validationEnabled is not set', () => {
       studio.config = {level: {}};
-      expect(studio.userChangedLevelCode()).to.be.true;
+      expect(studio.validateCodeChanged()).to.be.true;
       expect(codeDifferentStub).to.have.not.been.called;
     });
 
     it('returns true if validationEnabled is false', () => {
       studio.config = {level: {validationEnabled: false}};
-      expect(studio.userChangedLevelCode()).to.be.true;
+      expect(studio.validateCodeChanged()).to.be.true;
       expect(codeDifferentStub).to.have.not.been.called;
     });
 
-    it('returns the result of project.isCodeDifferent', () => {
+    it('returns the result of project.isCurrentCodeDifferent', () => {
       studio.config = {level: {validationEnabled: true}};
       codeDifferentStub.returns(false);
-      expect(studio.userChangedLevelCode()).to.be.false;
+      expect(studio.validateCodeChanged()).to.be.false;
       expect(codeDifferentStub).to.have.been.called;
     });
   });
