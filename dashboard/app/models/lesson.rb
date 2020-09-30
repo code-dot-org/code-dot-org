@@ -87,7 +87,9 @@ class Lesson < ActiveRecord::Base
       )
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment)
+      lesson.script_levels = ScriptLevel.add_script_levels(
+        script, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
+      )
       lesson.save!
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)

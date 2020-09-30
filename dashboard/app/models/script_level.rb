@@ -74,7 +74,7 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   # Chapter values order all the script_levels in a script.
-  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
+  def self.add_script_levels(script, lesson_group, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
     script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|
@@ -109,7 +109,7 @@ class ScriptLevel < ActiveRecord::Base
 
       # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
       # We'll use this in our new, JSON-based seeding process.
-      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: script.lesson_groups, lessons: [lesson])
+      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson])
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
 
