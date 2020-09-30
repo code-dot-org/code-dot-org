@@ -21,6 +21,11 @@ GameLab.prototype.init = function(config) {
     }));
   }
 
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config, {
+    validationEnabled: !!config.level.validationEnabled
+  });
+
   return P5Lab.prototype.init.call(this, config);
 };
 
