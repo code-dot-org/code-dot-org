@@ -51,7 +51,7 @@ describe('AddLevelFilters', () => {
     ownerDropdown.simulate('change', {target: {value: 1}});
 
     const button = wrapper.find('button');
-    button.simulate('mousedown');
+    button.simulate('click');
     expect(handleSearch).to.have.been.calledOnce;
 
     expect(wrapper.state().levelName).to.equal('Level Name');

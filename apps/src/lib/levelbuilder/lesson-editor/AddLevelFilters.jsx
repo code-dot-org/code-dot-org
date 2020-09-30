@@ -32,10 +32,17 @@ export default class AddLevelFilters extends Component {
     };
   }
 
-  handleSearch = _.debounce(() => {
-    const {levelName, levelType, scriptId, ownerId} = this.state;
-    this.props.handleSearch(levelName, levelType, scriptId, ownerId);
-  }, 1000);
+  handleSearch = _.debounce(
+    () => {
+      const {levelName, levelType, scriptId, ownerId} = this.state;
+      this.props.handleSearch(levelName, levelType, scriptId, ownerId);
+    },
+    1000,
+    {
+      leading: true,
+      trailing: false
+    }
+  );
 
   handleInputChange = event => {
     this.setState({levelName: event.target.value});
