@@ -13,7 +13,7 @@
 module ScriptSeed
   # Holds data that we've already retrieved from the database. Used to look up associations of objects without making additional queries.
   # Storing this data together in a "data object" makes it easier to pass around.
-  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
+  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels,  keyword_init: true)
 
   # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
   # designed to be used for seeding.
@@ -28,17 +28,12 @@ module ScriptSeed
   def self.serialize_seeding_json(script)
     script.reload
 
-    # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
-    my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
-    my_levels = my_script_levels.map(&:levels).flatten
-
     seed_context = SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups,
       lessons: script.lessons,
-      script_levels: my_script_levels,
-      levels_script_levels: script.levels_script_levels,
-      levels: my_levels
+      script_levels: script.script_levels,
+      levels: script.levels
     )
     scope = {seed_context: seed_context}
 
@@ -117,12 +112,6 @@ module ScriptSeed
       seed_context.script = import_script(script_data)
       seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
       seed_context.lessons = import_lessons(lessons_data, seed_context)
-
-      # Because ScriptLevel's seeding_key depends on the keys of its associated Levels, we can
-      # improve performance by loading all of it here into the SeedContext.
-      # TODO: this can be simplified / avoided if we add a new unique identifier field to ScriptLevel.
-      seed_context.script_levels = ScriptLevel.where(script: seed_context.script).includes(:levels)
-      seed_context.levels_script_levels = seed_context.script.levels_script_levels
       seed_context.script_levels = import_script_levels(script_levels_data, seed_context)
 
       # levels_script_levels is a join table, which isn't usually explicitly modeled in Rails, but treating it
@@ -175,7 +164,6 @@ module ScriptSeed
 
   def self.import_script_levels(script_levels_data, seed_context)
     lessons_by_seeding_key = seed_context.lessons.index_by {|l| l.seeding_key(seed_context)}
-    script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
     script_levels_to_import = script_levels_data.map do |sl_data|
       # Everything that doesn't start with the 'script_level' prefix in the seeding_key hash is used
@@ -183,15 +171,10 @@ module ScriptSeed
       stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
       raise 'No stage found' if stage.nil?
 
-      # Unlike the other models, we must explicitly check for an existing ScriptLevel to update, since its
-      # logical unique key is not a unique index on the table, so we can't just rely on on_duplicate_key_update: :all.
-      # TODO: this can be simplified / avoided if we add a new unique identifier field to ScriptLevel.
-      script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
       script_level_attrs = sl_data.except('seeding_key')
       script_level_attrs['script_id'] = seed_context.script.id
       script_level_attrs['stage_id'] = stage.id
-      script_level_to_import.assign_attributes(script_level_attrs)
-      script_level_to_import
+      ScriptLevel.new(script_level_attrs)
     end
 
     # Delete any existing ScriptLevels that weren't in the imported list
@@ -297,21 +280,11 @@ module ScriptSeed
       :named_level,
       :bonus,
       :seeding_key,
-      :level_keys
+      :seed_key
     )
 
     def seeding_key
-      # Just in case the data stored in the level_keys property is out of sync somehow,
-      # don't use that data during serialization.
-      object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
-    end
-
-    def level_keys
-      # We store this as a property in the database to allow for efficient ScriptLevel lookups
-      # when seeding LevelsScriptLevels.
-      # Just in case the data stored in the level_keys property is out of sync somehow,
-      # don't use that data during serialization.
-      object.get_level_keys(@scope[:seed_context], use_existing_level_keys: false)
+      object.seeding_key(@scope[:seed_context])
     end
   end
 
