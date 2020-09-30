@@ -216,7 +216,7 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     describe('activity section', () => {
-      it('moves a activitySection and changes position but not activity', () => {
+      it('moves a activitySection up and changes position but not activity', () => {
         const key = 'd';
         let activityPosition = initialState.activities.find(activity =>
           activity.activitySections.find(
