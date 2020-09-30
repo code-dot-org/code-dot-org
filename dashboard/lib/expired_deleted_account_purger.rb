@@ -34,8 +34,8 @@ class ExpiredDeletedAccountPurger
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # Only purge accounts soft-deleted after this date.
-    # The default is when we released the updated messaging about hard-deletes.
-    @deleted_after = options[:deleted_after] || Time.parse('2018-07-31 4:18pm PDT')
+    # The default is 60 days ago.
+    @deleted_after = options[:deleted_after] || 60.days.ago
     raise ArgumentError.new('deleted_after must be Time') unless @deleted_after.is_a? Time
 
     # Only purge accounts soft-deleted this long ago.
