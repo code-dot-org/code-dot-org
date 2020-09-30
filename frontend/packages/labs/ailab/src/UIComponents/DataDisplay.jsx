@@ -7,7 +7,8 @@ import {
   setSelectedFeatures,
   setShowPredict,
   setMetaDataByColumn,
-  getFeatures
+  getFeatures,
+  ColumnTypes
 } from "../redux";
 
 class DataDisplay extends Component {
@@ -55,8 +56,6 @@ class DataDisplay extends Component {
   };
 
   render() {
-    const COLUMN_TYPES = ["categorical", "continuous", "other"];
-
     return (
       <div>
         {this.props.data.length > 0 && (
@@ -103,7 +102,7 @@ class DataDisplay extends Component {
                             this.props.metaDataByColumn[feature]["dataType"]
                           }
                         >
-                          {COLUMN_TYPES.map((option, index) => {
+                          {Object.values(ColumnTypes).map((option, index) => {
                             return (
                               <option key={index} value={option}>
                                 {option}

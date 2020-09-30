@@ -61,9 +61,6 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_METADATA_BY_COLUMN) {
-    const prevMetaData = state.metaDataByColumn[action.column]
-      ? state.metaDataByColumn[action.column][action.metadataField]
-      : {};
     return {
       ...state,
       metaDataByColumn: {
@@ -111,3 +108,9 @@ export default function rootReducer(state = initialState, action) {
 export function getFeatures(state) {
   return state.data.length > 0 ? Object.keys(state.data[0]) : [];
 }
+
+export const ColumnTypes = {
+  CATEGORICAL: "categorical",
+  CONTINUOUS: "continuous",
+  OTHER: "other"
+};

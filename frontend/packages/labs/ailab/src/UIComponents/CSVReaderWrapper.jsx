@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Papa from "papaparse";
 import { connect } from "react-redux";
-import { setImportedData, setMetaDataByColumn } from "../redux";
+import { setImportedData, setMetaDataByColumn, ColumnTypes } from "../redux";
 
 class CSVReaderWrapper extends Component {
   static propTypes = {
@@ -42,7 +42,7 @@ class CSVReaderWrapper extends Component {
 
   updateMetaData = data => {
     Object.keys(data[0]).map(column =>
-      this.props.setMetaDataByColumn(column, "dataType", "other")
+      this.props.setMetaDataByColumn(column, "dataType", ColumnTypes.OTHER)
     );
   };
 
