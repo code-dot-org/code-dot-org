@@ -122,50 +122,56 @@ class DataDisplay extends Component {
                 );
               })}
             </form>
-            <form>
-              <label>
-                <h2>Which column contains the labels for your dataset?</h2>
-                <p>
-                  The model will be trained to predict which catgegory from the
-                  label column an example (a set of attributes or features) is
-                  most likely to belong to. Labels are categorical.
-                </p>
-                <select
-                  value={this.props.labelColumn}
-                  onChange={this.handleChangeSelect}
-                >
-                  {this.props.categoricalColumns.map((feature, index) => {
-                    return (
-                      <option key={index} value={feature}>
-                        {feature}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
-            <form>
-              <label>
-                <h2>Which features are you interested in training on?</h2>
-                <p>
-                  Features are the attributes the model will use to make a
-                  prediction. Features can be categorical or continuous.
-                </p>
-                <select
-                  multiple={true}
-                  value={this.props.selectedFeatures}
-                  onChange={this.handleChangeMultiSelect}
-                >
-                  {this.props.selectableFeatures.map((feature, index) => {
-                    return (
-                      <option key={index} value={feature}>
-                        {feature}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
+            {this.props.categoricalColumns.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which column contains the labels for your dataset?</h2>
+                  <p>
+                    The model will be trained to predict which catgegory from
+                    the label column an example (a set of attributes or
+                    features) is most likely to belong to. Labels are
+                    categorical.
+                  </p>
+                  <select
+                    value={this.props.labelColumn}
+                    onChange={this.handleChangeSelect}
+                  >
+                    <option>{""}</option>
+                    {this.props.categoricalColumns.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
+            {this.props.selectableFeatures.length > 0 && (
+              <form>
+                <label>
+                  <h2>Which features are you interested in training on?</h2>
+                  <p>
+                    Features are the attributes the model will use to make a
+                    prediction. Features can be categorical or continuous.
+                  </p>
+                  <select
+                    multiple={true}
+                    value={this.props.selectedFeatures}
+                    onChange={this.handleChangeMultiSelect}
+                  >
+                    {this.props.selectableFeatures.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
           </div>
         )}
       </div>
