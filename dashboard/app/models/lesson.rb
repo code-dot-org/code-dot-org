@@ -16,7 +16,8 @@
 #
 # Indexes
 #
-#  index_stages_on_script_id  (script_id)
+#  index_stages_on_lesson_group_id_and_key  (lesson_group_id,key) UNIQUE
+#  index_stages_on_script_id                (script_id)
 #
 
 require 'cdo/shared_constants'
@@ -216,13 +217,15 @@ class Lesson < ActiveRecord::Base
         position: absolute_position,
         relative_position: relative_position,
         name: localized_name,
+        key: key,
+        assessment: assessment,
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged
+        unplugged: display_as_unplugged # TODO: Update to use unplugged property
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -358,5 +361,24 @@ class Lesson < ActiveRecord::Base
     return true unless visible_after
 
     Time.parse(visible_after) <= Time.now
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    my_key = {'lesson.key': key}
+
+    my_lesson_group = seed_context.lesson_groups.select {|lg| lg.id == lesson_group_id}.first
+    raise "No LessonGroup found for #{self.class}: #{my_key}, LessonGroup ID: #{lesson_group_id}" unless my_lesson_group
+    lesson_group_seeding_key = my_lesson_group.seeding_key(seed_context)
+
+    my_key.merge!(lesson_group_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
   end
 end

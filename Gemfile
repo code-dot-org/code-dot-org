@@ -58,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
 
@@ -155,7 +154,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.4.0'
+gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -222,8 +221,15 @@ gem 'jwt' # single signon for zendesk
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-# We also serve a copy of one of these font files from the public directory
-gem 'font-awesome-rails', '~> 4.6.3' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
+# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
+# files included here. If you're upgrading to a different version, make sure to
+# check that the filenames have not changed, and copy the latest files from the
+# gem into our project. These font files are currently served from:
+# - /dashboard/public/fonts/
+# - /pegasus/sites.v3/code.org/public/fonts/
+# - /pegasus/sites.v3/hourofcode/public/fonts/
+gem 'font-awesome-rails', '~> 4.7.0.5'
+
 gem 'sequel'
 gem 'user_agent_parser'
 
@@ -352,3 +358,5 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'ruby-progressbar'
