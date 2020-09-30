@@ -1518,7 +1518,7 @@ Applab.onPuzzleFinish = function() {
 };
 
 Applab.onPuzzleComplete = function(submit) {
-  const sourcesUnchanged = !studioApp().userChangedLevelCode();
+  const sourcesUnchanged = !studioApp().validateCodeChanged();
   if (Applab.executionError) {
     Applab.result = ResultType.ERROR;
   } else if (sourcesUnchanged) {

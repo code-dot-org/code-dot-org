@@ -977,29 +977,40 @@ describe('project.js', () => {
     });
   });
 
-  describe('project.isCodeDifferent', () => {
+  describe('project.isCurrentCodeDifferent', () => {
     afterEach(() => {
       setSources({});
     });
 
+    it('compares unset sources as if they were an empty string', () => {
+      setSources({});
+      expect(project.isCurrentCodeDifferent('')).to.be.false;
+    });
+
+    it('compares unset input sources as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent()).to.be.false;
+    });
+
     it('ignores differences in line endings', () => {
       setSources({source: 'foo\r\nbar'});
-      expect(project.isCodeDifferent('foo\nbar')).to.be.false;
+      expect(project.isCurrentCodeDifferent('foo\nbar')).to.be.false;
     });
 
     it('ignores differences in xml closing tags', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCodeDifferent('<xml><test></test></xml>')).to.be.false;
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
+        .false;
     });
 
-    it('notices differences xml', () => {
+    it('notices differences in xml', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCodeDifferent('<xml><test2/></xml>')).to.be.true;
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
     });
 
-    it('notices differences text', () => {
+    it('notices differences in text', () => {
       setSources({source: 'test'});
-      expect(project.isCodeDifferent('test2')).to.be.true;
+      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
     });
   });
 });

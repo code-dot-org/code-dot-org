@@ -970,23 +970,23 @@ var projects = (module.exports = {
    * empty xml tags are not recognized as differences.
    * @param {string} sampleCode the code to diff against the current project code
    */
-  isCodeDifferent(sampleCode) {
+  isCurrentCodeDifferent(sampleCode = '') {
+    const currentCode = currentSources.source || '';
     let normalizedSample, normalizedCurrent;
     const parser = new DOMParser();
-    const parsedCurrent = parser.parseFromString(
-      currentSources.source,
-      'text/xml'
-    );
+    const parsedCurrent = parser.parseFromString(currentCode, 'text/xml');
     const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    // We normalize in different ways due to the difference in how droplet and blockly
+    // store code. Blockly is xml based and Droplet is plaintext based.
     if (
       parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
       parsedSample.getElementsByTagName('parsererror').length > 0
     ) {
-      // This is droplet. Normalize line endings.
+      // Normalize line endings between unix and Windows OS.
       normalizedSample = sampleCode.replaceAll('\r\n', '\n');
-      normalizedCurrent = currentSources.source.replaceAll('\r\n', '\n');
+      normalizedCurrent = currentCode.replaceAll('\r\n', '\n');
     } else {
-      // This is blockly. Normalize XML.
+      // Normalize XML to ignore differences in closing tags.
       const serializer = new XMLSerializer();
       normalizedSample = serializer.serializeToString(parsedSample);
       normalizedCurrent = serializer.serializeToString(parsedCurrent);
