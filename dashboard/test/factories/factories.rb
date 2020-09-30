@@ -798,7 +798,7 @@ FactoryGirl.define do
 
   factory :resource do
     url 'fake.url'
-    key 'fake key'
+    sequence(:key) {|n| "key-#{n}"}
   end
 
   factory :callout do
