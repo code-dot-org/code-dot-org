@@ -16,3 +16,7 @@
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
   = render partial: 'levels/editors/fields/studio_validations', locals: {f: f} if @level.is_a?(Studio) || @level.is_a?(Bounce) || @level.is_a?(Flappy)
+
+  - if (defined?(@level.validation_enabled))
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :validation_enabled, description: "Enable Basic Validation"}
+
