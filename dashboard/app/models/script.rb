@@ -1089,9 +1089,15 @@ class Script < ActiveRecord::Base
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       if Rails.application.config.levelbuilder_mode
-        # write script to file
-        filename = "config/scripts/#{script_params[:name]}.script"
-        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+        script = Script.find_by_name(script_name)
+        # Save in our custom Script DSL format. This is still what we're using currently to sync data
+        # across environments. The CPlat team is working on replacing it a new JSON-based approach.
+        ScriptDSL.serialize(script, "config/scripts/#{script_params[:name]}.script")
+
+        # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
+        # pre-launch testing, we'll start generating these files in addition to the old .script files.
+        script_json_filepath = "config/scripts_json/#{script_params[:name]}.script_json"
+        File.write(script_json_filepath, ScriptSeed.serialize_seeding_json(script))
       end
       true
     rescue StandardError => e
