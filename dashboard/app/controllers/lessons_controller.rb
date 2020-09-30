@@ -54,7 +54,7 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   def update
     @lesson.update!(lesson_params)
-    update_activities(JSON.parse(params[:activities]))
+    update_activities(JSON.parse(params[:activities])) if params[:activities]
 
     redirect_to lesson_path(id: @lesson.id)
   end
