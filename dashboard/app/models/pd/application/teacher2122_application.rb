@@ -321,15 +321,15 @@ module Pd::Application
         ],
 
         plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "I hope to teach this course this year (#{year})",
+          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course",
+          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course",
           "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
           "No, someone else from my school will teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
         pay_fee: [
-          'Yes, my school will be able to pay the full program fee.',
+          'Yes, my school/district will be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
           "I don't know."
         ],
@@ -350,14 +350,6 @@ module Pd::Application
           'No (Please Explain):'
         ],
 
-        willing_to_travel: [
-          'Up to 10 miles',
-          'Up to 25 miles',
-          'Up to 50 miles',
-          'Any distance',
-          'I am unable to travel to the school year workshops'
-        ],
-
         taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
           TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
@@ -370,27 +362,26 @@ module Pd::Application
           TEXT_FIELDS[:i_dont_know_explain]
         ],
         csd_which_units: [
-          'Unit 0: Problem Solving',
-          'Unit 1: Web Development',
-          'Unit 2: Animations & Games',
-          'Unit 3: What is a Computer?',
+          'Unit 1: Problem Solving',
+          'Unit 2: Web Development',
+          'Unit 3: Interactive Animations & Games',
           'Unit 4: The Design Process',
-          'Unit 5: Data & Society',
+          'Unit 5: Data and Society',
           'Unit 6: Physical Computing',
           'All units',
           "I'm not sure"
         ],
         csp_which_units: [
           'Unit 1: Digital Information',
-          'Unit 2: Internet',
-          'Unit 3: Intro App Development',
-          'Unit 4:  Variables, Conditionals, and Functions',
-          'Unit 5: Lists and Loops',
+          'Unit 2: The Internet',
+          'Unit 3: Intro App Design',
+          'Unit 4: Variables, Conditionals, and Functions',
+          'Unit 5: Lists, Loops and Traversals',
           'Unit 6: Algorithms',
-          'Unit 7: Functions with Parameters, Return Values, and Libraries',
+          'Unit 7: Parameters, Return, and Libraries',
           'Unit 8: AP Create Performance Task',
           'Unit 9: Data',
-          'Unit 10: Cybersecurity and Global Impact',
+          'Unit 10: Cybersecurity and Global Impacts',
           'All units',
           "I'm not sure"
         ],
@@ -399,20 +390,19 @@ module Pd::Application
           'Codesters',
           'Computer Applications (ex: using Microsoft programs)',
           'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
           'Exploring Computer Science',
           'Globaloria',
+          'ICT',
           'My CS',
           'Project Lead the Way - Computer Science',
           'Robotics',
           'ScratchEd',
           'Typing',
+          'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
-        ],
-        travel_to_another_workshop: [
-          'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
-          'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
-          TEXT_FIELDS[:not_sure_explain]
         ],
         interested_in_online_program: [YES, NO]
       }
@@ -444,7 +434,6 @@ module Pd::Application
 
         previous_yearlong_cdo_pd
 
-        willing_to_travel
         interested_in_online_program
 
         gender_identity
@@ -459,12 +448,6 @@ module Pd::Application
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
           required << :completing_on_behalf_of_name
-        end
-
-        if hash[:able_to_attend_multiple]
-          if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend]] & hash[:able_to_attend_multiple]).any?
-            required << :travel_to_another_workshop
-          end
         end
 
         if hash[:regional_partner_id].present?
@@ -513,7 +496,6 @@ module Pd::Application
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
-        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
@@ -527,7 +509,7 @@ module Pd::Application
     end
 
     def self.next_year
-      YEAR_22_23_SHORT
+      YEAR_22_23
     end
 
     # @override
@@ -771,8 +753,7 @@ module Pd::Application
       # Section 3
       if course == 'csd'
         took_csd_course =
-          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries') ||
-            responses[:previous_yearlong_cdo_pd].include?('Exploring Computer Science')
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
