@@ -224,7 +224,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
             <p>
               Code.org’s Professional Learning Program is a yearlong program
               starting in the summer and concluding in the spring. Workshops can
-              either be held in-person, virtually, or as a combination of both
+              be held in-person, virtually, or as a combination of both
               throughout the year. Refer to the Regional Partner’s{' '}
               <a
                 href={
@@ -250,10 +250,10 @@ export default class SummerWorkshop extends LabeledFormComponent {
               this.renderAssignedWorkshopList()}
           </div>
           Code.org <em>may</em> offer a national series of virtual academic year
-          workshops to support teachers from regions who need to join a virtual
-          academic year cohort in order to engage in the full Professional
-          Learning Program and where a regional virtual option is not offered or
-          is offered on a schedule that doesn’t work for teachers.
+          workshops to support teachers who need to join a virtual academic year
+          cohort in order to engage in the full Professional Learning Program
+          because a virtual option is not offered in their region or is offered
+          on a schedule that doesn’t work for them.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>

@@ -981,8 +981,8 @@ module Api::V1::Pd
         "Total course hours",
         "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year? "\
           "Note: This program is designed to work best for teachers who are teaching "\
-          "this course in the 2021-2022 school year. Scholarship eligibility is dependent "\
-          "on whether or not you will be teaching the course during the 2021-2022 school year.",
+          "this course in the #{APPLICATION_CURRENT_YEAR} school year. Scholarship eligibility is dependent "\
+          "on whether or not you will be teaching the course during the #{APPLICATION_CURRENT_YEAR} school year.",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
