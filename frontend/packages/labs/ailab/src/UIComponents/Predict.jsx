@@ -3,18 +3,25 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import train from "../train";
-import { setTestData } from "../redux";
+import {
+  setTestData,
+  getSelectedContinuousColumns,
+  getSelectedCategoricalColumns,
+  getUniqueOptionsByColumn
+} from "../redux";
 
 class Predict extends Component {
   static propTypes = {
     showPredict: PropTypes.bool,
-    selectedFeatures: PropTypes.array,
+    selectedCategoricalColumns: PropTypes.array,
+    selectedContinuousColumns: PropTypes.array,
+    uniqueOptionsByColumn: PropTypes.object,
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     prediction: PropTypes.object
   };
 
-  handleInput = (event, feature) => {
+  handleChange = (event, feature) => {
     const testData = this.props.testData;
     testData[feature] = event.target.value;
     this.props.setTestData(testData);
@@ -31,20 +38,49 @@ class Predict extends Component {
           <div>
             <h2>Test the Model</h2>
             <form>
-              {this.props.selectedFeatures.map((feature, index) => {
+              {this.props.selectedContinuousColumns.map((feature, index) => {
                 return (
                   <span key={index}>
                     <label>
                       {feature}:
                       <input
                         type="text"
-                        onChange={event => this.handleInput(event, feature)}
+                        onChange={event => this.handleChange(event, feature)}
                       />
                     </label>
                   </span>
                 );
               })}
             </form>
+            <br />
+            <br />
+            <form>
+              {this.props.selectedCategoricalColumns.map((feature, index) => {
+                return (
+                  <span key={index}>
+                    <label>
+                      {feature}:
+                      <select
+                        onChange={event => this.handleChange(event, feature)}
+                      >
+                        <option>{""}</option>
+                        {this.props.uniqueOptionsByColumn[feature].map(
+                          (option, index) => {
+                            return (
+                              <option key={index} value={option}>
+                                {option}
+                              </option>
+                            );
+                          }
+                        )}
+                      </select>
+                    </label>
+                  </span>
+                );
+              })}
+            </form>
+            <br />
+            <br />
             <button type="button" onClick={this.onClickPredict}>
               Predict!
             </button>
@@ -67,9 +103,11 @@ class Predict extends Component {
 export default connect(
   state => ({
     showPredict: state.showPredict,
-    selectedFeatures: state.selectedFeatures,
     testData: state.testData,
-    prediction: state.prediction
+    prediction: state.prediction,
+    selectedContinuousColumns: getSelectedContinuousColumns(state),
+    selectedCategoricalColumns: getSelectedCategoricalColumns(state),
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {

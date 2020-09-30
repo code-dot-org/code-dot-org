@@ -129,6 +129,20 @@ export function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
+export function getSelectedCategoricalColumns(state) {
+  let intersection = getCategoricalColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
+  );
+  return intersection;
+}
+
+export function getSelectedContinuousColumns(state) {
+  let intersection = getContinuousColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
+  );
+  return intersection;
+}
+
 export function getContinuousColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CONTINUOUS);
 }
@@ -138,6 +152,18 @@ export function getSelectableFeatures(state) {
     getContinuousColumns(state).concat(getCategoricalColumns(state)),
     state.labelColumn
   );
+}
+
+function getUniqueOptions(state, column) {
+  return Array.from(new Set(state.data.map(row => row[column])));
+}
+
+export function getUniqueOptionsByColumn(state) {
+  let uniqueOptionsByColumn = {};
+  getSelectedCategoricalColumns(state).map(
+    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
+  );
+  return uniqueOptionsByColumn;
 }
 
 export const ColumnTypes = {
