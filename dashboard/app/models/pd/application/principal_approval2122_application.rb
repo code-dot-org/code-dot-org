@@ -54,7 +54,7 @@ module Pd::Application
     end
 
     def self.next_year
-      YEAR_22_23_SHORT
+      YEAR_22_23
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
@@ -94,32 +94,40 @@ module Pd::Application
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
-          'Beauty and Joy of Computing',
-          'CodeHS',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS50',
-          'Exploring Computer Science',
-          'Intro to Computer Science',
-          'Intro to Programming',
-          'Mobile CSP',
-          'Project Lead the Way - Computer Science',
-          'UTeach CSP',
-          'Web Development',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csd: [
           'CodeHS',
           'Codesters',
           'Computer Applications (ex: using Microsoft programs)',
           'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
           'Exploring Computer Science',
           'Globaloria',
+          'ICT',
           'My CS',
           'Project Lead the Way - Computer Science',
           'Robotics',
           'ScratchEd',
           'Typing',
+          'Technology Foundations',
+          'We’ve created our own course',
+          TEXT_FIELDS[:other_please_explain]
+        ],
+        replace_which_course_csd:  [
+          'CodeHS',
+          'Codesters',
+          'Computer Applications (ex: using Microsoft programs)',
+          'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
+          'Exploring Computer Science',
+          'Globaloria',
+          'ICT',
+          'My CS',
+          'Project Lead the Way - Computer Science',
+          'Robotics',
+          'ScratchEd',
+          'Typing',
+          'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],

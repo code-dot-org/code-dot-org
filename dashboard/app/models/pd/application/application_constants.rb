@@ -10,7 +10,8 @@ module Pd::Application
       YEAR_18_19 = '2018-2019'.freeze,
       YEAR_19_20 = '2019-2020'.freeze,
       YEAR_20_21 = '2020-2021'.freeze,
-      YEAR_21_22 = '2021-2022'.freeze
+      YEAR_21_22 = '2021-2022'.freeze,
+      YEAR_22_23 = '2022-2023'.freeze
     ].freeze
 
     APPLICATION_YEARS_SHORT = [

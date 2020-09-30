@@ -7,7 +7,7 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    SHORT_YEAR = '2021-2022'
+    YEAR = '2021-2022'
 
     SECTION_HEADERS = {
       about_you: 'About You',
@@ -56,21 +56,19 @@ module Pd
       },
       choose_your_program: {
         program: clean_multiline(
-          "Which professional learning program would you like to join for the #{SHORT_YEAR}
+          "Which professional learning program would you like to participate in for the #{YEAR}
           school year? Note: this application is only for Computer Science Discoveries and
           Computer Science Principles. If you are interested in teaching Advanced
-          Placement CS A (in Java), visit this
-          [AP CS A overview](https://code.org/educate/curriculum/apcsa). Review our
-          [guidance documents](https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit)
-          to see whether your course implementation plans meet our program guidelines."
+          Placement CSA (in Java), visit this
+          [AP CSA overview](https://code.org/educate/curriculum/apcsa)."
         ),
         csd_which_grades: clean_multiline(
-          "To which grades does your school plan to offer CS Discoveries in the #{SHORT_YEAR} school year?
+          "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
            Please note that the CS Discoveries Professional Learning Program
            is not available for grades K-5. (select all that apply)"
         ),
         csp_which_grades: clean_multiline(
-          "To which grades does your school plan to offer CS Principles in the #{SHORT_YEAR}
+          "To which grades does your school plan to offer CS Principles in the #{YEAR}
           school year? Please note that the CS Principles Professional Learning Program
           is not available for grades K-8. (select all that apply)"
         ),
@@ -84,22 +82,22 @@ module Pd
         cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: 'Computed total course hours',
-        csd_which_units: "Which CS Discoveries units do you intend to teach in the #{SHORT_YEAR} school year?",
-        csp_which_units: "Which CS Principles units do you intend to teach in the #{SHORT_YEAR} school year?",
-        plan_to_teach: "Do you plan to personally teach this course in the #{SHORT_YEAR} school year?",
+        csd_which_units: "Which CS Discoveries units do you intend to teach in the #{YEAR} school year?",
+        csp_which_units: "Which CS Principles units do you intend to teach in the #{YEAR} school year?",
+        plan_to_teach: clean_multiline(
+          "Do you plan to personally teach this course in the #{YEAR} school year?
+          Note: This program is designed to work best for teachers who are teaching
+          this course in the 2021-2022 school year. Scholarship eligibility is dependent
+          on whether or not you will be teaching the course during the 2021-2022 school year."
+        ),
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
       },
       professional_learning_program_requirements:
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
-          able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
-          travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
-          willing_to_travel: clean_multiline(
-            'The four one-day school year workshops are typically held on Saturdays, with an approximate
-           schedule of 9am - 4pm. How far would you be willing to travel to each workshop?'
-          ),
-          interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
+          able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
+          interested_in_online_program: 'Do you want to be considered for Code.org’s national virtual academic year workshops?',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
@@ -109,7 +107,7 @@ module Pd
           gender_identity: 'Gender identity:',
           race: 'Race or ethnicity:',
           how_heard: 'How did you hear about this program?',
-          agree: 'By submitting this application, I agree to share this application, my contact information, and overall class information with my local Code.org Regional Partner.'
+          agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
@@ -125,8 +123,8 @@ module Pd
         native_hawaiian_or_pacific_islander_percent: 'Percentage of student enrollment by race: Native Hawaiian or Pacific Islander',
         white_percent: 'Percentage of student enrollment by race: White',
         other_races_percent: 'Percentage of student enrollment by race: Other',
-        principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{SHORT_YEAR} Professional Learning Program?",
-        principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{SHORT_YEAR} if <Teacher Name> is accepted into the program?",
+        principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
+        principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
         contact_invoicing_detail: "Contact email or phone number for invoicing",
@@ -134,7 +132,7 @@ module Pd
     }.freeze
 
     LABEL_OVERRIDES = {
-      program: "Which professional learning program would you like to join for the #{SHORT_YEAR} school year?",
+      program: "Which professional learning program would you like to join for the #{YEAR} school year?",
       cs_how_many_minutes: 'How many minutes will your class last?'
     }.freeze
 
@@ -163,14 +161,13 @@ module Pd
         school_zip_code: "School zip code",
         current_role: "Current role",
         program: LABEL_OVERRIDES[:program],
-        csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{SHORT_YEAR} school year?",
-        csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{SHORT_YEAR} school year?",
+        csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
+        csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
         cs_how_many_minutes: "How many minutes will your CS Program class last?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
-        willing_to_travel: "How far would you be willing to travel to academic year workshops?",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
@@ -183,7 +180,7 @@ module Pd
         email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
         school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
         district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
-        do_you_approve: "Do you approve of this teacher participating in Code.org's #{SHORT_YEAR} Professional Learning Program?",
+        do_you_approve: "Do you approve of this teacher participating in Code.org's #{YEAR} Professional Learning Program?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal's response)",
@@ -194,7 +191,7 @@ module Pd
         pacific_islander: "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
         american_indian: "Percentage of student enrollment by race - American Indian or Native Alaskan",
         other: "Percentage of student enrollment by race - Other",
-        committed_to_master_schedule: "Are you committed to including this course on the master schedule in #{SHORT_YEAR} if this teacher is accepted into the program?",
+        committed_to_master_schedule: "Are you committed to including this course on the master schedule in #{YEAR} if this teacher is accepted into the program?",
         replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
         replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
@@ -347,8 +344,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
-        :travel_to_another_workshop,
-        :willing_to_travel,
         :interested_in_online_program,
         :pay_fee,
         :scholarship_reasons,
@@ -431,7 +426,7 @@ module Pd
       unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
       able_to_attend_single: "Yes, I'm able to attend".freeze,
       no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
       i_dont_know_explain: "I don't know (Please Explain):",
       not_sure_explain: 'Not sure (Please Explain):'
     }.freeze

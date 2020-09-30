@@ -10,20 +10,20 @@ import {FormGroup} from 'react-bootstrap';
 import {
   styles as defaultStyles,
   PROGRAM_CSD,
-  PROGRAM_CSP,
-  YEAR,
-  SUMMER_YEAR
+  PROGRAM_CSP
 } from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import _ from 'lodash';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   ...defaultStyles,
   error: {
     color: color.red
+  },
+  marginBottom: {
+    marginBottom: 30
   }
 };
 
@@ -127,10 +127,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
           </p>
           <p>
             Code.org will review your application and contact you with options
-            for joining another Regional Partner program. Please note that we
-            are not able to guarantee a space for you in a different location,
-            and you will be responsible for the costs related to traveling to
-            that location.
+            for joining the program hosted by an available Regional Partner.
+            Please note that we are not able to guarantee a space for you with a
+            Regional Partner in another region, and you will be responsible for
+            the costs related to traveling to that location if a virtual option
+            is not available.
           </p>
         </div>
       );
@@ -148,17 +149,17 @@ export default class SummerWorkshop extends LabeledFormComponent {
   renderAssignedWorkshopList() {
     if (this.state.partnerWorkshops.length === 0) {
       return (
-        <p>
+        <p style={styles.marginBottom}>
           <strong>
-            Local summer workshop dates have not yet been finalized for your
-            region. Your Regional Partner will be in touch once workshop dates
-            and locations are known.
+            Summer Workshop dates have not yet been finalized for your region.
+            Your Regional Partner will be in touch once workshop details are
+            known.
           </strong>
         </p>
       );
     } else {
       const options = this.state.partnerWorkshops.map(
-        workshop => `${workshop.dates} in ${workshop.location}`
+        workshop => `${workshop.dates} (${workshop.location})`
       );
       options.push(TextFields.notSureExplain);
       options.push(TextFields.unableToAttend);
@@ -174,53 +175,12 @@ export default class SummerWorkshop extends LabeledFormComponent {
             options,
             textFieldMap
           )}
-          {_.intersection(
-            [TextFields.notSureExplain, TextFields.unableToAttend],
-            this.props.data.ableToAttendMultiple
-          ).length > 0 && (
-            <div>
-              {this.radioButtonsWithAdditionalTextFieldsFor(
-                'travelToAnotherWorkshop',
-                {[TextFields.notSureExplain]: 'notSure'},
-                {
-                  label: (
-                    <span>
-                      <strong>
-                        If you are unable to make any of the above workshop
-                        dates, would you be open to traveling to another region
-                        for your local summer workshop?
-                      </strong>
-                      <br />
-                      Note: This option may have other fees or costs associated
-                      with it. Additionally, please note that we are not able to
-                      guarantee a space for you in a different location, and you
-                      will be responsible for the costs related to traveling to
-                      that location. If you indicate yes, your Regional Partner
-                      will follow up with more information.
-                    </span>
-                  )
-                }
-              )}
-            </div>
-          )}
         </div>
       );
     }
   }
 
   renderContents() {
-    let showPayFeeNote = false;
-    if (
-      this.props.data.planToTeach &&
-      !this.props.data.planToTeach.includes(
-        'Yes, I plan to teach this course this year'
-      ) &&
-      this.props.data.payFee &&
-      this.props.data.payFee.includes('No, ')
-    ) {
-      showPayFeeNote = true;
-    }
-
     if (this.props.data.program === undefined) {
       return (
         <div style={styles.error}>
@@ -260,24 +220,28 @@ export default class SummerWorkshop extends LabeledFormComponent {
       return (
         <div>
           <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
-          <p>
-            Teachers in this program are expected to attend the minimum number
-            of workshops that{' '}
-            <a
-              href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit"
-              target="_blank"
-            >
-              correspond to the number of units they intend to teach
-            </a>
-            , including:
-          </p>
-          <ul>
-            <li>One summer workshop in {SUMMER_YEAR}</li>
-            <li>
-              Up to four one-day workshops during the {YEAR} school year
-              (typically held on Saturdays)
-            </li>
-          </ul>
+          {this.state.regionalPartnerName && (
+            <p>
+              Code.org’s Professional Learning Program is a yearlong program
+              starting in the summer and concluding in the spring. Workshops can
+              be held in-person, virtually, or as a combination of both
+              throughout the year. Refer to the Regional Partner’s{' '}
+              <a
+                href={
+                  pegasus(
+                    '/educate/professional-learning/program-information'
+                  ) +
+                  (!!this.props.data.schoolZipCode
+                    ? '?zip=' + this.props.data.schoolZipCode
+                    : '')
+                }
+                target="_blank"
+              >
+                landing page
+              </a>{' '}
+              for more information about the schedule and delivery model.
+            </p>
+          )}
           {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
             [TextFields.noExplain]: 'other'
           })}
@@ -285,14 +249,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
             {this.props.data.regionalPartnerId &&
               this.renderAssignedWorkshopList()}
           </div>
-          {this.radioButtonsFor('willingToTravel')}
-          We offer a series of virtual academic year workshops for those who are
-          unable to commit to traveling to in-person academic year workshops.
-          This workshop series consists of eight, 1.5 hour live sessions
-          throughout the academic year, hosted via a video conference tool.{' '}
-          <strong>Please note</strong> that this option is only available for
-          the academic year - all participants in the Professional Learning
-          Program must attend a summer workshop.
+          Code.org <em>may</em> offer a national series of virtual academic year
+          workshops to support teachers who need to join a virtual academic year
+          cohort in order to engage in the full Professional Learning Program
+          because a virtual option is not offered in their region or is offered
+          on a schedule that doesn’t work for them.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>
@@ -312,25 +273,11 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 >
                   Click here to check the fees and discounts for your program
                 </a>
-                . Let us know if your school would be able to pay the fee or if
-                you need to be considered for a scholarship.
+                . Let us know if your school or district would be able to pay
+                the fee or if you need to be considered for a scholarship.
               </label>
               {this.singleCheckboxFor('understandFee')}
               {this.radioButtonsFor('payFee')}
-              {showPayFeeNote && (
-                <p style={{color: 'red'}}>
-                  Note: To meet our implementation guidance and our scholarship
-                  recommendations, you should plan to teach this course in the
-                  upcoming school year ({YEAR}). We suggest checking with your
-                  administrators to ensure that the course will be offered in
-                  {YEAR} before updating your answer to "
-                  <strong>
-                    Do you plan to personally teach this course in the {YEAR}
-                    school year?
-                  </strong>
-                  " on page 3 and submitting your application.
-                </p>
-              )}
               {this.props.data.payFee === TextFields.noPayFee &&
                 this.largeInputFor('scholarshipReasons')}
             </div>
@@ -378,15 +325,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
       requiredFields.push('scholarshipReasons');
     }
 
-    if (
-      _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend],
-        data.ableToAttendMultiple
-      ).length > 0
-    ) {
-      requiredFields.push('travelToAnotherWorkshop');
-    }
-
     return requiredFields;
   }
 
@@ -398,15 +336,6 @@ export default class SummerWorkshop extends LabeledFormComponent {
 
     if (data.payFee !== TextFields.noPayFee) {
       changes.scholarshipReasons = undefined;
-    }
-
-    if (
-      _.intersection(
-        [TextFields.notSureExplain, TextFields.unableToAttend],
-        data.ableToAttendMultiple
-      ).length === 0
-    ) {
-      changes.travelToAnotherWorkshop = undefined;
     }
 
     return changes;

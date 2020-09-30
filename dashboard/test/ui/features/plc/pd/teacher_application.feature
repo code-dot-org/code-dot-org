@@ -71,7 +71,6 @@ Scenario: Basic teacher application submission
   Then I wait until element "input[name='committed']" is visible
   And I press "input[name='committed']:first" using jQuery
   And I click selector "input[name='payFee']" if I see it
-  And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
