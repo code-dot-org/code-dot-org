@@ -1,6 +1,9 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  /** Add trashcan to flyout instead of block canvas
+   * @override
+   */
   addTrashcan() {
     if (!Blockly.Trashcan) {
       throw Error('Missing require for Blockly.Trashcan');
