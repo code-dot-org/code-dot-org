@@ -76,6 +76,7 @@ import {
 } from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -307,7 +308,14 @@ P5Lab.prototype.init = function(config) {
   // Display CSF-style instructions when using Blockly. Otherwise provide a way
   // for us to have top pane instructions disabled by default, but able to turn
   // them on.
-  config.noInstructionsWhenCollapsed = !this.isSpritelab;
+  config.noInstructionsWhenCollapsed =
+    !this.isSpritelab ||
+    (this.isSpritelab &&
+      !hasInstructions(
+        this.level.shortInstructions,
+        this.level.longInstructions,
+        config.hasContainedLevels
+      ));
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -818,10 +826,10 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
       executionError: this.executionError
     });
-  } else if (sourcesUnchanged) {
-    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else if (testResult) {
     this.testResults = testResult;
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
