@@ -244,44 +244,62 @@ export class TeacherFeedback extends Component {
     }
   };
 
+  displayFeedbackMessage = ([style, message, studentSeen, time]) => {
+    return (
+      <div style={style} id="ui-test-feedback-time">
+        {studentSeen && (
+          <FontAwesome
+            icon="check"
+            className="fa-check"
+            style={styles.checkboxIcon}
+          />
+        )}
+        {`${message} `}
+        {time && <strong>{time}</strong>}
+      </div>
+    );
+  };
+
   getFeedbackText = (latestFeedback, studentSawFeedback) => {
     let timeStyle;
+    let time;
     let feedbackMessage;
+    let currentTeacherStudentSeen = false;
+
     //Student view indicates when feedback was last updated
     if (this.props.viewAs === ViewType.Student) {
       timeStyle = styles.timeStudent;
-      feedbackMessage = i18n.lastUpdated({
-        time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow()
-      });
+      feedbackMessage = i18n.lastUpdated();
+      time = moment.min(moment(), moment(latestFeedback.created_at)).fromNow();
     } else if (this.props.viewAs === ViewType.Teacher) {
+      timeStyle = styles.timeTeacher;
       //Teacher view if the current teacher did not leave the feedback
-      if (
-        this.props.latestFeedback[0].feedback_provider_id !== this.props.teacher
-      ) {
-        timeStyle = styles.timeTeacher;
-        feedbackMessage = i18n.lastUpdatedDifferentTeacher({
-          time: this.getFriendlyDate(latestFeedback.created_at)
-        });
+      if (latestFeedback.feedback_provider_id !== this.props.teacher) {
+        feedbackMessage = i18n.lastUpdatedDifferentTeacher();
+        time = this.getFriendlyDate(latestFeedback.created_at);
       } else {
         //Teacher view if current teacher left feedback & student viewed
         if (studentSawFeedback) {
           timeStyle = {
-            ...styles.timeTeacher,
+            ...timeStyle,
             ...styles.timeTeacherStudentSeen
           };
-          feedbackMessage = i18n.seenByStudent({
-            time: this.getFriendlyDate(latestFeedback.student_seen_feedback)
-          });
+          feedbackMessage = i18n.seenByStudent();
+          time = this.getFriendlyDate(latestFeedback.student_seen_feedback);
+          currentTeacherStudentSeen = true;
         } else {
           //Teacher view if current teacher left feedback & student did not view
-          timeStyle = styles.timeTeacher;
-          feedbackMessage = i18n.lastUpdatedCurrentTeacher({
-            time: this.getFriendlyDate(latestFeedback.created_at)
-          });
+          feedbackMessage = i18n.lastUpdatedCurrentTeacher();
+          time = this.getFriendlyDate(latestFeedback.created_at);
         }
       }
     }
-    return [timeStyle, feedbackMessage];
+    return this.displayFeedbackMessage([
+      timeStyle,
+      feedbackMessage,
+      currentTeacherStudentSeen,
+      time
+    ]);
   };
 
   render() {
@@ -317,11 +335,9 @@ export class TeacherFeedback extends Component {
       'performanceLevel4'
     ];
 
-    const studentSawFeedback = !!this.state.latestFeedback[0]
-      .student_seen_feedback;
-
-    let currentTeacherStudentSeen =
-      studentSawFeedback && this.props.viewAs === ViewType.Teacher;
+    const studentSawFeedback =
+      this.state.latestFeedback.length > 0 &&
+      !!latestFeedback.student_seen_feedback;
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
@@ -335,14 +351,6 @@ export class TeacherFeedback extends Component {
       showFeedbackInputAreas &&
       this.state.performance !== null;
 
-    let timeStyle;
-    let feedbackMessage;
-    if (this.state.latestFeedback.length > 0) {
-      [timeStyle, feedbackMessage] = this.getFeedbackText(
-        latestFeedback,
-        studentSawFeedback
-      );
-    }
     return (
       <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
@@ -411,18 +419,8 @@ export class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.state.latestFeedback.length > 0 && (
-                <div style={timeStyle} id="ui-test-feedback-time">
-                  {currentTeacherStudentSeen && (
-                    <FontAwesome
-                      icon="check"
-                      className="fa-check"
-                      style={styles.checkboxIcon}
-                    />
-                  )}
-                  {feedbackMessage}
-                </div>
-              )}
+              {this.state.latestFeedback.length > 0 &&
+                this.getFeedbackText(latestFeedback, studentSawFeedback)}
             </div>
           </div>
         )}
