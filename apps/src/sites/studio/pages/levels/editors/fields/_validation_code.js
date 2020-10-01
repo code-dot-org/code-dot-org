@@ -6,16 +6,17 @@ function initPage() {
   const freePlay = $('#level_free_play');
   const autoValidate = $('#level_validation_enabled');
   if (freePlay && autoValidate) {
-    freePlay.on('click', () => enforceMutualExclusion(freePlay, autoValidate));
-    autoValidate.on('click', () =>
-      enforceMutualExclusion(autoValidate, freePlay)
-    );
-
-    enforceMutualExclusion(freePlay, autoValidate);
-    enforceMutualExclusion(autoValidate, freePlay);
+    freePlay.on('click', syncWithValidate);
+    if (!freePlay.prop('checked')) {
+      syncWithValidate();
+    }
   }
 }
 
-function enforceMutualExclusion(clicked, other) {
-  other.prop('disabled', clicked.prop('checked'));
+function syncWithValidate() {
+  const freePlay = $('#level_free_play');
+  const autoValidate = $('#level_validation_enabled');
+  const checked = freePlay.prop('checked');
+  autoValidate.prop('checked', checked);
+  autoValidate.prop('disabled', !checked);
 }
