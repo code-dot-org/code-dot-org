@@ -16,7 +16,10 @@
 #
 
 # A Resource represents a link to external material for a lesson
-# #
+#
+# @attr [String] name - The user-visisble name of the resource
+# @attr [String] url - The URL pointing to the resource
+# @attr [String] key - A unique identifier for the resource
 # @attr [String] type - type of resource (eg video, handout, etc)
 # @attr [Boolean] assessment - indicates whether this resource is an assessment
 # @attr [String] audience - who this resource is targeted toward (eg teacher, student, etc)
