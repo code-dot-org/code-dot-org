@@ -42,8 +42,10 @@ describe('scriptEditorRedux reducer tests', () => {
     assert.equal(nextState[nextState.length - 1].display_name, 'Display Name');
   });
   it('add lesson', () => {
-    const nextState = reducer(initialState, addLesson(1, 'New Lesson 2'))
-      .lessonGroups;
+    const nextState = reducer(
+      initialState,
+      addLesson(1, 'lesson-new', 'New Lesson 2')
+    ).lessonGroups;
     assert.deepEqual(nextState[0].lessons.map(s => s.name), [
       'A',
       'B',
