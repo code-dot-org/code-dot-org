@@ -471,6 +471,7 @@ zh:
   signup_send_posters_address_placeholder: 這個地址不會被分享在我們的地圖上
   signup_event_type_in_school: 在學校內
   signup_event_type_out_of_school: 校外團體
+  signup_event_type_at_home: Home
   signup_submit_census_label: 提交
   signup_submit_census_error_message: 我們很抱歉發生錯誤。請再次嘗試提交表單。
   signup_submit_label: 註冊

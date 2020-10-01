@@ -497,6 +497,7 @@ ne:
     छैन
   signup_event_type_in_school: विद्यालयमा
   signup_event_type_out_of_school: विद्यालय बाहिर
+  signup_event_type_at_home: Home
   signup_submit_census_label: Submit
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.

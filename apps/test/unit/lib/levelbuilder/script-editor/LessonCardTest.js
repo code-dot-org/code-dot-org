@@ -47,7 +47,7 @@ describe('LessonCard', () => {
 
   it('renders default props', () => {
     let wrapper = shallow(<LessonCard {...defaultProps} />);
-    expect(wrapper.contains('Lesson 1: Lesson 1'));
+    expect(wrapper.contains('Lesson 1')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('button').length).to.equal(1);
   });
