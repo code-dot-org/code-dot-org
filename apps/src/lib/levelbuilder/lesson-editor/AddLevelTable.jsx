@@ -17,10 +17,6 @@ export default class AddLevelTable extends Component {
     levels: PropTypes.array
   };
 
-  handleAddLevel = level => {
-    this.props.addLevel(level);
-  };
-
   render() {
     return (
       <div>

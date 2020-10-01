@@ -295,35 +295,34 @@ class ActivitySectionCard extends Component {
   }
 
   //TODO: Hook up being able to actually pick a level to add instead of holding place level
-  handleAddLevel = level => {
+  handleAddLevel = () => {
     const newLevelPosition = this.props.activitySection.levels.length + 1;
-    const newLevel = {
-      ids: [NEW_LEVEL_ID],
-      activeId: NEW_LEVEL_ID,
-      status: 'not started',
-      url: `https://levelbuilder-studio.code.org/levels/${level.id}/edit`,
-      icon: 'fa-desktop',
-      name: level.name,
-      isUnplugged: false,
-      levelNumber: newLevelPosition,
-      isCurrentLevel: false,
-      isConceptLevel: false,
-      sublevels: level.properties.sublevels,
-      position: newLevelPosition,
-      kind: 'puzzle',
-      skin: null,
-      videoKey: null,
-      concepts: '',
-      conceptDifficulty: '',
-      named: false,
-      assessment: false,
-      challenge: false,
-      expand: false
-    };
     this.props.addLevel(
       this.props.activityPosition,
       this.props.activitySection.position,
-      newLevel
+      {
+        ids: [NEW_LEVEL_ID],
+        activeId: NEW_LEVEL_ID,
+        status: 'not started',
+        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+        icon: 'fa-desktop',
+        name: `Level ${newLevelPosition}`,
+        isUnplugged: false,
+        levelNumber: newLevelPosition,
+        isCurrentLevel: false,
+        isConceptLevel: false,
+        sublevels: [],
+        position: newLevelPosition,
+        kind: 'puzzle',
+        skin: null,
+        videoKey: null,
+        concepts: '',
+        conceptDifficulty: '',
+        named: false,
+        assessment: false,
+        challenge: false,
+        expand: false
+      }
     );
   };
 
