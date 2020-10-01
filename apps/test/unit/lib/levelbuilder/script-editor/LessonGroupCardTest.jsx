@@ -29,14 +29,14 @@ const defaultProps = {
       {
         id: 100,
         name: 'A',
-        key: 'lesson-1',
-        position: 1
+        position: 1,
+        key: 'lesson-1'
       },
       {
         name: 'B',
-        key: 'lesson-2',
         id: 101,
-        position: 2
+        position: 2,
+        key: 'lesson-2'
       }
     ]
   }

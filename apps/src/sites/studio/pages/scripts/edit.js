@@ -41,7 +41,7 @@ export default function initPage(scriptEditorData) {
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(lesson_groups));
+  store.dispatch(init(lesson_groups, scriptEditorData.levelKeyList));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})

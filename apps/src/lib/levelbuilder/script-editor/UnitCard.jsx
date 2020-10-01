@@ -135,7 +135,7 @@ class UnitCard extends Component {
           {lessonGroups.map((lessonGroup, index) => (
             <LessonGroupCard
               key={`lesson-group-${index}`}
-              lessonGroupssCount={lessonGroups.length}
+              lessonGroupsCount={lessonGroups.length}
               lessonGroup={lessonGroup}
               ref={lessonGroupCard => {
                 if (lessonGroupCard) {
