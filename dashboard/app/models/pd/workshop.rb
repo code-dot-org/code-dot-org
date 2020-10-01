@@ -344,15 +344,15 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Friendly location string is determined by:
-  # 1. known variant of TBA? use TBA
-  # 2. processed location? use city, state
-  # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use blank
+  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
+  # 2. has processed_location: use city, state
+  # 3. known variant of TBA or no location address at all: 'Location TBA'
+  # 4. unprocessable location that is not TBA: use user-entered string
   def friendly_location
-    return 'Location TBA' if location_address_tba?
-    return 'Virtual Workshop' if location_address_virtual?
+    return 'Virtual Workshop' if location_address_virtual? || virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || ''
+    return 'Location TBA' if location_address_tba? || !location_address.presence
+    return location_address
   end
 
   # Returns date and location (only date if no location specified)
