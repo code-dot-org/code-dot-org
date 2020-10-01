@@ -582,45 +582,43 @@ StudioApp.prototype.init = function(config) {
       startDialogDiv
     );
   }
+
   if (!config.readOnlyWorkspace) {
-    this.addChangeHandler(() => {
-      // If the code has changed (other than whitespace at the beginning or end) and the code is running,
-      // tell redux the code has changed and disable block highlighting.
-      // Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
-      if (
-        this.isRunning() &&
-        this.getCode().trim() !== this.executingCode.trim()
-      ) {
-        getStore().dispatch(setIsEditWhileRun(true));
-        this.clearHighlighting();
-
-        // Check if the user has already dismissed the "your code may have changed" warning.
-        if (this.showEditDuringRunAlert) {
-          this.showEditDuringRunAlert =
-            utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
-        }
-
-        // Display the "your code may have changed" warning if the user hasn't previously dismissed that alert.
-        if (
-          this.showEditDuringRunAlert &&
-          this.editDuringRunAlert === undefined
-        ) {
-          const onClose = () => {
-            utils.trySetLocalStorage('hideEditDuringRunAlert', true);
-            this.showEditDuringRunAlert = false;
-          };
-          this.editDuringRunAlert = this.displayWorkspaceAlert(
-            'warning',
-            React.createElement('div', {}, msg.editDuringRunMessage()),
-            true /* bottom */,
-            onClose
-          );
-        }
-      }
-    });
+    this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.editDuringRunAlertHandler = function() {
+  // If the code has changed (other than whitespace at the beginning or end) and the code is running,
+  // tell redux the code has changed and disable block highlighting.
+  // Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
+  if (this.isRunning() && this.getCode().trim() !== this.executingCode.trim()) {
+    getStore().dispatch(setIsEditWhileRun(true));
+    this.clearHighlighting();
+
+    // Check if the user has already dismissed the "your code may have changed" warning.
+    if (this.showEditDuringRunAlert) {
+      this.showEditDuringRunAlert =
+        utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
+    }
+
+    // Display the "your code may have changed" warning if the user hasn't previously dismissed that alert.
+    if (this.showEditDuringRunAlert && this.editDuringRunAlert === undefined) {
+      const onClose = () => {
+        utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+        this.editDuringRunAlert = undefined;
+        this.showEditDuringRunAlert = false;
+      };
+      this.editDuringRunAlert = this.displayWorkspaceAlert(
+        'warning',
+        React.createElement('div', {}, msg.editDuringRunMessage()),
+        true /* bottom */,
+        onClose
+      );
+    }
+  }
 };
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function() {
