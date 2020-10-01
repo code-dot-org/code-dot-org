@@ -289,7 +289,7 @@ class LessonGroupCard extends Component {
           <button
             onMouseDown={this.handleAddLesson}
             className="btn"
-            style={styles.addButon}
+            style={styles.addButton}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
