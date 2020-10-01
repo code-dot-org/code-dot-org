@@ -17,6 +17,7 @@ import {
   convertGroupToUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   checkbox: {
@@ -63,7 +64,7 @@ styles.targetLessonGroupCard = {
 
 class LessonGroupCard extends Component {
   static propTypes = {
-    lessonGroup: PropTypes.object.isRequired,
+    lessonGroup: lessonGroupShape,
     lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
