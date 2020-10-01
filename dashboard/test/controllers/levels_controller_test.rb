@@ -96,7 +96,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal JSON.parse(@response.body).length, 30
+    assert_equal JSON.parse(@response.body).length, 7
   end
 
   test "should get filtered levels with level_type" do
@@ -107,7 +107,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with script_id" do
     get :get_filtered_levels, params: {page: 1, script_id: 2}
-    assert_equal JSON.parse(@response.body).length, 20
+    assert_equal JSON.parse(@response.body).length, 7
   end
 
   test "should get filtered levels with owner_id" do
