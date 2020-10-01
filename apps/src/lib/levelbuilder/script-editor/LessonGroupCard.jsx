@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import ReactDOM from 'react-dom';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
@@ -10,13 +11,12 @@ import {
   removeLesson,
   addLesson,
   removeGroup,
-  convertGroupToUserFacing,
   setLessonGroup,
   reorderLesson,
-  updateLessonGroupField
+  updateLessonGroupField,
+  convertGroupToUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
-import color from '@cdo/apps/util/color';
 
 const styles = {
   checkbox: {
@@ -61,24 +61,23 @@ styles.targetLessonGroupCard = {
   padding: 16
 };
 
-export class LessonGroupCard extends Component {
+class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
-    lessonGroupsCount: PropTypes.number,
+    lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
-    generateLessonGroupKey: PropTypes.func,
 
     // from redux
-    moveLesson: PropTypes.func.isRequired,
-    moveGroup: PropTypes.func.isRequired,
-    removeLesson: PropTypes.func.isRequired,
-    removeGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired,
+    moveGroup: PropTypes.func.isRequired,
+    removeGroup: PropTypes.func.isRequired,
+    moveLesson: PropTypes.func.isRequired,
+    removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired,
     updateLessonGroupField: PropTypes.func.isRequired
   };
 
@@ -238,11 +237,17 @@ export class LessonGroupCard extends Component {
   };
 
   handleMakeUserFacing = lessonGroupPosition => {
-    this.props.convertGroupToUserFacing(
-      lessonGroupPosition,
-      this.props.generateLessonGroupKey,
-      ''
+    const newLessonGroupKey = prompt('Enter new lesson group key');
+    const newLessonGroupDisplayName = prompt(
+      'Enter new lesson group display name'
     );
+    if (newLessonGroupKey && newLessonGroupDisplayName) {
+      this.props.convertGroupToUserFacing(
+        lessonGroupPosition,
+        newLessonGroupKey,
+        newLessonGroupDisplayName
+      );
+    }
   };
 
   handleChangeDescription = event => {
