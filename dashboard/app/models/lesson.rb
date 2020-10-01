@@ -63,6 +63,7 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    script.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
@@ -89,6 +90,7 @@ class Lesson < ActiveRecord::Base
 
       lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment)
       lesson.save!
+      lesson.reload
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
