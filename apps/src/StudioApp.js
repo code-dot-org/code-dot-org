@@ -2724,6 +2724,20 @@ StudioApp.prototype.enableBreakpoints = function() {
 };
 
 /**
+ * Checks whether the code has been changed from the original level code as
+ * specified in levelbuilder. If the level has disabled this functionality,
+ * by turning `validationEnabled` off, this will always return true.
+ */
+StudioApp.prototype.validateCodeChanged = function() {
+  const level = this.config.level;
+  if (!level.validationEnabled) {
+    return true;
+  }
+
+  return project.isCurrentCodeDifferent(level.startBlocks);
+};
+
+/**
  * Set whether to alert user to empty blocks, short-circuiting all other tests.
  * @param {boolean} checkBlocks Whether to check for empty blocks.
  */
