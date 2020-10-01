@@ -10,6 +10,8 @@ import reducers, {
   removeActivitySection,
   updateActivitySectionField,
   addTip,
+  updateTip,
+  removeTip,
   addLevel,
   removeLevel,
   setActiveVariant,
@@ -36,13 +38,46 @@ describe('activitiesEditorRedux reducer tests', () => {
     const nextState = reducer(
       initialState,
       addTip(1, 2, {
+        key: 'new-tip',
         type: 'contentCorner',
         markdown: 'Programming is about solving puzzles.'
       })
     ).activities;
     assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
       'teachingTip',
+      'discussionGoal',
       'contentCorner'
+    ]);
+  });
+
+  it('update tip', () => {
+    const nextState = reducer(
+      initialState,
+      updateTip(1, 2, {
+        key: 'tip-1',
+        type: 'contentCorner',
+        markdown: 'Programming is about solving puzzles.'
+      })
+    ).activities;
+    assert.deepEqual(nextState[0].activitySections[1].tips, [
+      {
+        key: 'tip-1',
+        type: 'contentCorner',
+        markdown: 'Programming is about solving puzzles.'
+      },
+      {
+        key: 'tip-2',
+        markdown: 'Discussion Goal content',
+        type: 'discussionGoal'
+      }
+    ]);
+  });
+
+  it('remove tip', () => {
+    const nextState = reducer(initialState, removeTip(1, 2, 'tip-1'))
+      .activities;
+    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
+      'discussionGoal'
     ]);
   });
 
