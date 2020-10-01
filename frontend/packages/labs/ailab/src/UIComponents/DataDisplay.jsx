@@ -45,6 +45,25 @@ class DataDisplay extends Component {
   handleChangeDataType = (event, feature) => {
     event.preventDefault();
     this.props.setColumnsByDataType(feature, event.target.value);
+    this.resetSelections(event.target.value, feature);
+  };
+
+  resetSelections = (dataType, feature) => {
+    if (
+      dataType !== ColumnTypes.CATEGORICAL &&
+      this.props.labelColumn === feature
+    ) {
+      this.props.setLabelColumn("");
+    }
+    if (
+      dataType === ColumnTypes.OTHER &&
+      this.props.selectedFeatures.includes(feature)
+    ) {
+      let remainingSelectedFeatures = this.props.selectedFeatures.filter(
+        selectedFeature => selectedFeature !== feature
+      );
+      this.props.setSelectedFeatures(remainingSelectedFeatures);
+    }
   };
 
   handleChangeSelect = event => {
