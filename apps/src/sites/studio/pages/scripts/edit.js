@@ -32,9 +32,9 @@ export default function initPage(scriptEditorData) {
           position: lesson.position,
           relativePosition: lesson.relative_position,
           lockable: lesson.lockable,
+          name: lesson.name,
           assessment: lesson.assessment,
-          unplugged: lesson.unplugged,
-          name: lesson.name
+          unplugged: lesson.unplugged
         }))
     }));
   const locales = scriptEditorData.locales;
