@@ -11,6 +11,8 @@ const defaultProps = {
   moveLesson: () => {},
   removeLesson: () => {},
   convertGroupToUserFacing: () => {},
+  setLessonGroup: () => {},
+  reorderLesson: () => {},
   lessonGroup: {
     key: 'lg-key',
     display_name: 'Display Name',
