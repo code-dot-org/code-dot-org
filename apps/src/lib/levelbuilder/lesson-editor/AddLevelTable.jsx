@@ -78,7 +78,7 @@ export default class AddLevelTable extends Component {
                   <div>{level.type}</div>
                 </td>
                 <td>
-                  <div>{level.user_id}</div>
+                  <div>{level.owner}</div>
                 </td>
                 <td>
                   <div>{level.updated_at}</div>
