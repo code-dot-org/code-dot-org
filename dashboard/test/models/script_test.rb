@@ -1666,7 +1666,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
-    assert_equal("other", assignable_info[:category])
+    assert_equal("Other", assignable_info[:category])
     assert(assignable_info[:lesson_extras_available])
   end
 
