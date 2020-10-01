@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import sinon from 'sinon';
@@ -43,7 +43,7 @@ describe('AddLevelTable', () => {
   });
 
   it('renders default props', () => {
-    const wrapper = mount(<AddLevelTable {...defaultProps} />);
+    const wrapper = shallow(<AddLevelTable {...defaultProps} />);
     expect(wrapper.contains('Actions')).to.be.true;
     expect(wrapper.contains('Name')).to.be.true;
     expect(wrapper.contains('Type')).to.be.true;
