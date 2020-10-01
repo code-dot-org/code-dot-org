@@ -6,7 +6,7 @@ import {
   setLabelColumn,
   setSelectedFeatures,
   setShowPredict,
-  setMetaDataByColumn,
+  setColumnsByDataType,
   getFeatures,
   ColumnTypes,
   getCategoricalColumns,
@@ -22,8 +22,8 @@ class DataDisplay extends Component {
     selectedFeatures: PropTypes.array,
     setSelectedFeatures: PropTypes.func.isRequired,
     setShowPredict: PropTypes.func.isRequired,
-    metaDataByColumn: PropTypes.object,
-    setMetaDataByColumn: PropTypes.func.isRequired,
+    columnsByDataType: PropTypes.object,
+    setColumnsByDataType: PropTypes.func.isRequired,
     categoricalColumns: PropTypes.array,
     selectableFeatures: PropTypes.array
   };
@@ -44,7 +44,7 @@ class DataDisplay extends Component {
 
   handleChangeDataType = (event, feature) => {
     event.preventDefault();
-    this.props.setMetaDataByColumn(feature, "dataType", event.target.value);
+    this.props.setColumnsByDataType(feature, event.target.value);
   };
 
   handleChangeSelect = event => {
@@ -95,16 +95,14 @@ class DataDisplay extends Component {
               {this.props.features.map((feature, index) => {
                 return (
                   <div key={index}>
-                    {this.props.metaDataByColumn[feature] && (
+                    {this.props.columnsByDataType[feature] && (
                       <label>
                         {feature}:
                         <select
                           onChange={event =>
                             this.handleChangeDataType(event, feature)
                           }
-                          value={
-                            this.props.metaDataByColumn[feature]["dataType"]
-                          }
+                          value={this.props.columnsByDataType[feature]}
                         >
                           {Object.values(ColumnTypes).map((option, index) => {
                             return (
@@ -185,13 +183,13 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     features: getFeatures(state),
-    metaDataByColumn: state.metaDataByColumn,
+    columnsByDataType: state.columnsByDataType,
     categoricalColumns: getCategoricalColumns(state),
     selectableFeatures: getSelectableFeatures(state)
   }),
   dispatch => ({
-    setMetaDataByColumn(column, metadataField, value) {
-      dispatch(setMetaDataByColumn(column, metadataField, value));
+    setColumnsByDataType(column, dataType) {
+      dispatch(setColumnsByDataType(column, dataType));
     },
     setSelectedFeatures(selectedFeatures) {
       dispatch(setSelectedFeatures(selectedFeatures));
