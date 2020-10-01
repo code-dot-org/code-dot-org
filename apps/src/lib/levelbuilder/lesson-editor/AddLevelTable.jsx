@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Button, {ButtonColor, ButtonSize} from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 
@@ -29,47 +28,32 @@ export default class AddLevelTable extends Component {
           <thead>
             <tr>
               <th style={{width: '13%'}}>Actions</th>
-              <th style={{width: '33%'}}>
-                Name
-                <FontAwesome icon="sort" style={styles.orderIcon} />
-              </th>
-              <th style={{width: '18%'}}>
-                Type
-                <FontAwesome icon="sort" style={styles.orderIcon} />
-              </th>
-              <th style={{width: '15%'}}>
-                Owner
-                <FontAwesome icon="sort" style={styles.orderIcon} />
-              </th>
-              <th style={{width: '20%'}}>
-                Last Updated
-                <FontAwesome icon="sort" style={styles.orderIcon} />
-              </th>
+              <th style={{width: '33%'}}>Name</th>
+              <th style={{width: '18%'}}>Type</th>
+              <th style={{width: '15%'}}>Owner</th>
+              <th style={{width: '20%'}}>Last Updated</th>
             </tr>
           </thead>
           <tbody>
             {this.props.levels.map(level => (
               <tr key={level.id}>
                 <td>
-                  <Button
-                    icon="plus"
-                    text={''}
+                  <button
+                    type="button"
                     onClick={() => {
                       console.log('Add');
                     }}
-                    //onClick={this.handleAddLevel}
-                    color={ButtonColor.blue}
-                    size={ButtonSize.narrow}
-                  />
-                  <Button
-                    icon="files-o"
-                    text={''}
+                  >
+                    <FontAwesome icon="plus" />
+                  </button>
+                  <button
+                    type="button"
                     onClick={() => {
-                      console.log('Clone Level and Add');
+                      console.log('Clone and Add');
                     }}
-                    color={ButtonColor.blue}
-                    size={ButtonSize.narrow}
-                  />
+                  >
+                    <FontAwesome icon="files-o" />
+                  </button>
                 </td>
                 <td>
                   <div>{level.name}</div>
