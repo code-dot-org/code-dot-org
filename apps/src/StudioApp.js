@@ -590,21 +590,23 @@ StudioApp.prototype.init = function(config) {
   this.emit('afterInit');
 };
 
+/*
+ * If the code has changed (other than whitespace at the beginning or end) and the code is running,
+ * tell redux the code has changed, disable block highlighting, and conditionally display an alert.
+ * Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
+ */
 StudioApp.prototype.editDuringRunAlertHandler = function() {
-  // If the code has changed (other than whitespace at the beginning or end) and the code is running,
-  // tell redux the code has changed and disable block highlighting.
-  // Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
   if (this.isRunning() && this.getCode().trim() !== this.executingCode.trim()) {
     getStore().dispatch(setIsEditWhileRun(true));
     this.clearHighlighting();
 
-    // Check if the user has already dismissed the "your code may have changed" warning.
+    // Check if the user has already dismissed this alert.
     if (this.showEditDuringRunAlert) {
       this.showEditDuringRunAlert =
         utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
     }
 
-    // Display the "your code may have changed" warning if the user hasn't previously dismissed that alert.
+    // Display the alert if the user hasn't previously dismissed it.
     if (this.showEditDuringRunAlert && this.editDuringRunAlert === undefined) {
       const onClose = () => {
         utils.trySetLocalStorage('hideEditDuringRunAlert', true);
