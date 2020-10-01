@@ -16,6 +16,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {sandboxDocumentBody} from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import * as utils from '@cdo/apps/utils';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -104,6 +105,77 @@ describe('StudioApp', () => {
         });
 
         expect(listener).to.have.been.calledOnce;
+      });
+    });
+
+    describe('StudioApp.editDuringRunAlertHandler()', () => {
+      const mockCode = '<xml></xml>';
+      let studio;
+
+      beforeEach(() => {
+        studio = studioApp();
+        studio.executingCode = mockCode;
+        studio.clearHighlighting = sinon.spy();
+      });
+
+      afterEach(() => {
+        sinon.restore();
+      });
+
+      it('no-ops if app is not running', () => {
+        sinon.stub(studio, 'isRunning').returns(false);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('no-ops if code has not changed', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode);
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('clears block highlighting', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.clearHighlighting).to.have.been.calledOnce;
+      });
+
+      it('checks localStorage if showEditDuringRunAlert is true', () => {
+        studio.showEditDuringRunAlert = true;
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        sinon.stub(utils, 'tryGetLocalStorage');
+
+        studio.editDuringRunAlertHandler();
+
+        expect(utils.tryGetLocalStorage).to.have.been.calledWith(
+          'hideEditDuringRunAlert',
+          null
+        );
+      });
+
+      it('renders editDuringRunAlert if showEditDuringRunAlert is true and editDuringRunAlert is undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.showEditDuringRunAlert = true;
+        studio.editDuringRunAlert = undefined;
+        sinon.stub(utils, 'tryGetLocalStorage').returns(null); // user has not dismissed this alert before
+        studio.displayWorkspaceAlert = sinon.spy();
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.displayWorkspaceAlert).to.have.been.calledOnce;
       });
     });
 
