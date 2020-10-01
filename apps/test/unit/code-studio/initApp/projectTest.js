@@ -993,8 +993,8 @@ describe('project.js', () => {
     });
 
     it('ignores differences in line endings', () => {
-      setSources({source: 'foo\r\nbar'});
-      expect(project.isCurrentCodeDifferent('foo\nbar')).to.be.false;
+      setSources({source: 'foo\r\n\r\nbar'});
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
     });
 
     it('ignores differences in xml closing tags', () => {
