@@ -2556,6 +2556,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
   end
 
+  test 'level can only be added once to a lesson' do
+    level = create :level
+    dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level '#{level.name}'
+      level '#{level.name}'
+    SCRIPT
+
+    error = assert_raises do
+      Script.add_script(
+        {name: 'level-included-multiple-times'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    expected_message = 'Level cannot be added multiple times to one lesson. Lesson key: lesson1 Script name: level-included-multiple-times'
+    assert_equal expected_message, error.message
+  end
+
   test 'seeding_key' do
     script = create :script
 
