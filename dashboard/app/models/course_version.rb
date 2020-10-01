@@ -21,6 +21,7 @@
 
 class CourseVersion < ApplicationRecord
   belongs_to :course_offering
+  has_many :resources
 
   # "Interface" for content_root:
   #

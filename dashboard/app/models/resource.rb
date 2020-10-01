@@ -30,6 +30,7 @@ class Resource < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
+  belongs_to :course_version
 
   serialized_attrs %(
     type
