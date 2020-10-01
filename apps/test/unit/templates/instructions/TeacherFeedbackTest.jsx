@@ -113,6 +113,47 @@ describe('TeacherFeedback', () => {
   });
 
   describe('viewed as Teacher', () => {
+    it('displays correct message if student has viewed their feedback', () => {
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [
+          {feedback_provider_id: 5, student_seen_feedback: new Date()}
+        ]
+      };
+      const seenByStudentSpy = sinon.spy(i18n, 'seenByStudent');
+      shallow(<TeacherFeedback {...props} />);
+      expect(seenByStudentSpy).to.have.been.calledOnce;
+      i18n.seenByStudent.restore();
+    });
+
+    it('displays correct missage if student has not viewed their feedback', () => {
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [{feedback_provider_id: 5}]
+      };
+      const lastUpdatedCurrentTeacherSpy = sinon.spy(
+        i18n,
+        'lastUpdatedCurrentTeacher'
+      );
+      shallow(<TeacherFeedback {...props} />);
+      expect(lastUpdatedCurrentTeacherSpy).to.have.been.calledOnce;
+      i18n.lastUpdatedCurrentTeacher.restore();
+    });
+
+    it('displays correct message if teacher views feedback given by another teacher', () => {
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [{feedback_provider_id: 10}]
+      };
+      const lastUpdatedDiffTeacherSpy = sinon.spy(
+        i18n,
+        'lastUpdatedDifferentTeacher'
+      );
+      shallow(<TeacherFeedback {...props} />);
+      expect(lastUpdatedDiffTeacherSpy).to.have.been.calledOnce;
+      i18n.lastUpdatedDifferentTeacher.restore();
+    });
+
     it('shows the correct components if teacher is giving feedback, on a level with a rubric, with no previous feedback', () => {
       const wrapper = shallow(
         <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
@@ -293,6 +334,7 @@ describe('TeacherFeedback', () => {
       const lastUpdatedSpy = sinon.spy(i18n, 'lastUpdated');
       shallow(<TeacherFeedback {...props} />);
       expect(lastUpdatedSpy).to.have.been.calledOnce;
+      i18n.lastUpdated.restore();
     });
 
     it('shows the correct components if student is on a level with a rubric, where no feedback has been given by the teacher', () => {
