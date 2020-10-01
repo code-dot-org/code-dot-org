@@ -14,9 +14,12 @@ import {
   toggleHiddenStage,
   isStageHiddenForSection
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import GoogleClassroomShareButton from './GoogleClassroomShareButton';
+import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 
 const styles = {
   buttonContainer: {
@@ -28,52 +31,89 @@ const styles = {
     width: '100%',
     paddingLeft: 0,
     paddingRight: 0
+  },
+  googleButtonMargin: {
+    marginBottom: 5
   }
 };
 
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
+    levelUrl: PropTypes.string.isRequired,
 
     // redux provided
-    sectionId: PropTypes.string,
+    section: sectionShape,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired
+    toggleHiddenStage: PropTypes.func.isRequired,
+    showGoogleClassroomButton: PropTypes.bool.isRequired
   };
 
-  onClickHiddenToggle = value => {
-    const {scriptName, sectionId, lesson, toggleHiddenStage} = this.props;
+  constructor(props) {
+    super(props);
+    this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
+    this.firehoseData = this.firehoseData.bind(this);
+  }
+
+  onClickHiddenToggle(value) {
+    const {scriptName, section, lesson, toggleHiddenStage} = this.props;
+    const sectionId = (section && section.id.toString()) || '';
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord({
-      study: 'hidden-lessons',
-      study_group: 'v0',
-      event: value,
-      data_json: JSON.stringify({
-        script_name: scriptName,
-        section_id: sectionId,
-        lesson_id: lesson.id,
-        lesson_name: lesson.name
-      })
-    });
-  };
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-lessons',
+        study_group: 'v0',
+        event: value,
+        data_json: JSON.stringify(this.firehoseData())
+      },
+      {includeUserId: true}
+    );
+  }
+
+  firehoseData() {
+    const {scriptName, section, lesson} = this.props;
+    return {
+      script_name: scriptName,
+      section_id: section && section.id,
+      lesson_id: lesson.id,
+      lesson_name: lesson.name
+    };
+  }
 
   render() {
     const {
-      sectionId,
+      section,
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
-      lesson
+      lesson,
+      levelUrl,
+      showGoogleClassroomButton
     } = this.props;
 
+    const sectionId = (section && section.id.toString()) || '';
     const showHiddenForSectionToggle =
-      sectionId && scriptAllowsHiddenStages && !hasNoSections;
+      section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =
       scriptAllowsHiddenStages &&
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+    const courseId =
+      (showGoogleClassroomButton &&
+        section &&
+        section.code &&
+        parseInt(section.code.substring(2))) ||
+      null;
+    const shouldRender =
+      lesson.lesson_plan_html_url ||
+      (lesson.lockable && !hasNoSections) ||
+      showHiddenForSectionToggle ||
+      showGoogleClassroomButton;
+    if (!shouldRender) {
+      return null;
+    }
 
     return (
       <TeacherInfoBox>
@@ -97,6 +137,19 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
+        {showGoogleClassroomButton && (
+          <div
+            style={{...styles.buttonContainer, ...styles.googleButtonMargin}}
+          >
+            <GoogleClassroomShareButton
+              buttonId={`gc-button-${lesson.id}`}
+              url={levelUrl}
+              title={lesson.name}
+              courseid={courseId}
+              analyticsData={this.firehoseData()}
+            />
+          </div>
+        )}
       </TeacherInfoBox>
     );
   }
@@ -106,13 +159,15 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId.toString(),
+    section:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
+    showGoogleClassroomButton: canShowGoogleShareButton(state)
   }),
   {toggleHiddenStage}
 )(ProgressLessonTeacherInfo);

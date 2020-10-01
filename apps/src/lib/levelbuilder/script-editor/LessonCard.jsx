@@ -7,7 +7,7 @@ import {
   setLessonGroup,
   moveLesson,
   removeLesson
-} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonGroupSelector from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupSelector';
 
 const styles = {

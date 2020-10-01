@@ -273,7 +273,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -444,7 +450,8 @@ P5Lab.prototype.init = function(config) {
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
-      this.isSpritelab /* shouldRunV3Migration */
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
     )
   );
 
@@ -794,8 +801,11 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    this.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     this.result = ResultType.SUCCESS;
@@ -808,6 +818,8 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
       executionError: this.executionError
     });
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else if (testResult) {
     this.testResults = testResult;
   } else {
