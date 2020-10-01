@@ -6,6 +6,7 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   unitHeader: {
@@ -48,7 +49,7 @@ const escape = str => str.replace(/'/, "\\'");
 class UnitCard extends Component {
   static propTypes = {
     // from redux
-    lessonGroups: PropTypes.array.isRequired,
+    lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     addGroup: PropTypes.func.isRequired,
     levelKeyList: PropTypes.object.isRequired
   };

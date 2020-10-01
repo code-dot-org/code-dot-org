@@ -221,7 +221,7 @@ class Lesson < ActiveRecord::Base
         relative_position: relative_position,
         name: localized_name,
         key: key,
-        assessment: assessment,
+        assessment: !!assessment,
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
