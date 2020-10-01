@@ -983,8 +983,8 @@ var projects = (module.exports = {
       parsedSample.getElementsByTagName('parsererror').length > 0
     ) {
       // Normalize line endings between unix and Windows OS.
-      normalizedSample = sampleCode.replaceAll('\r\n', '\n');
-      normalizedCurrent = currentCode.replaceAll('\r\n', '\n');
+      normalizedSample = sampleCode.replace(/\r\n/g, '\n');
+      normalizedCurrent = currentCode.replace(/\r\n/g, '\n');
     } else {
       // Normalize XML to ignore differences in closing tags.
       const serializer = new XMLSerializer();
