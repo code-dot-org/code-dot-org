@@ -17,6 +17,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
+    width: 950,
     fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   },
   dialogContent: {
@@ -146,7 +147,10 @@ export default class AddLevelDialog extends Component {
                   searchFields={this.state.searchFields}
                   handleSearch={this.handleSearch}
                 />
-                <AddLevelTable addLevel={this.props.addLevel} />
+                <AddLevelTable
+                  addLevel={this.props.addLevel}
+                  levels={this.state.levels}
+                />
               </div>
             )}
             {this.state.methodOfAddingLevel === 'Create New Level' && (
