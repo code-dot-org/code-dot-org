@@ -9,12 +9,15 @@ const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
+const REORDER_LESSON = 'scriptEditor/REORDER_LESSON';
+const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
 
-// NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
+// NOTE: Position for Lesson Groups and Lessons is 1 based.
 
-export const init = lessonGroups => ({
+export const init = (lessonGroups, levelKeyList) => ({
   type: INIT,
-  lessonGroups
+  lessonGroups,
+  levelKeyList
 });
 
 export const addGroup = (groupPosition, groupKey, groupName) => ({
@@ -24,9 +27,10 @@ export const addGroup = (groupPosition, groupKey, groupName) => ({
   groupName
 });
 
-export const addLesson = (groupPosition, lessonName) => ({
+export const addLesson = (groupPosition, lessonKey, lessonName) => ({
   type: ADD_LESSON,
   groupPosition,
+  lessonKey,
   lessonName
 });
 
@@ -72,6 +76,28 @@ export const convertGroupToUserFacing = (groupPosition, key, displayName) => ({
   displayName
 });
 
+export const reorderLesson = (
+  groupPosition,
+  originalLessonPosition,
+  newLessonPosition
+) => ({
+  type: REORDER_LESSON,
+  groupPosition,
+  originalLessonPosition,
+  newLessonPosition
+});
+
+export const updateLessonGroupField = (
+  lessonGroupPosition,
+  fieldName,
+  fieldValue
+) => ({
+  type: UPDATE_LESSON_GROUP_FIELD,
+  lessonGroupPosition,
+  fieldName,
+  fieldValue
+});
+
 function updateGroupPositions(lessonGroups) {
   for (let i = 0; i < lessonGroups.length; i++) {
     lessonGroups[i].position = i + 1;
@@ -95,8 +121,6 @@ function updateLessonPositions(lessonGroups) {
   });
 }
 
-export const NEW_LEVEL_ID = -1;
-
 function lessonGroups(state = [], action) {
   let newState = _.cloneDeep(state);
 
@@ -117,6 +141,7 @@ function lessonGroups(state = [], action) {
     case ADD_LESSON: {
       const lessons = newState[action.groupPosition - 1].lessons;
       lessons.push({
+        key: action.lessonKey,
         name: action.lessonName,
         levels: []
       });
@@ -202,11 +227,32 @@ function lessonGroups(state = [], action) {
       newState[action.groupPosition - 1].user_facing = true;
       break;
     }
+    case REORDER_LESSON: {
+      const lessons = newState[action.groupPosition - 1].lessons;
+      const temp = lessons.splice(action.originalLessonPosition - 1, 1);
+      lessons.splice(action.newLessonPosition - 1, 0, temp[0]);
+      updateLessonPositions(newState);
+      break;
+    }
+    case UPDATE_LESSON_GROUP_FIELD: {
+      const lessonGroup = newState[action.lessonGroupPosition - 1];
+      lessonGroup[action.fieldName] = action.fieldValue;
+      break;
+    }
   }
 
   return newState;
 }
 
+function levelKeyList(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.levelKeyList;
+  }
+  return state;
+}
+
 export default {
+  levelKeyList,
   lessonGroups
 };
