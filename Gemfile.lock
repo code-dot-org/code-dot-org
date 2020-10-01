@@ -727,9 +727,9 @@ GEM
     require_all (2.0.0)
     rerun (0.13.0)
       listen (~> 3.0)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -1024,7 +1024,7 @@ DEPENDENCIES
   redis-slave-read!
   require_all
   rerun
-  responders (~> 2.0)
+  responders (~> 3.0)
   rest-client (~> 2.0.1)
   retryable
   rinku
