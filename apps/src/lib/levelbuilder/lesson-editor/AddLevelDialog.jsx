@@ -17,8 +17,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    width: 950,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+    width: 1100,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    marginLeft: -600
   },
   dialogContent: {
     display: 'flex',
