@@ -26,7 +26,7 @@ en:
         math_category_name: Math
         research_studies_category_name: Research Studies
         twenty_hour_category_name: 20-Hour
-        tts_category_name: ??
+        tts_category_name: Text-to-Speech
         other_category_name: Other
       name:
         course1:
