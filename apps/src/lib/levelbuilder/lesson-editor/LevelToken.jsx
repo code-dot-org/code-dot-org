@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
-import {
-  borderRadius,
-  levelTokenMargin
-} from '@cdo/apps/lib/levelbuilder/constants';
+import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
@@ -18,7 +15,7 @@ const styles = {
     position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
-    margin: `${levelTokenMargin}px 0`
+    margin: `${tokenMargin}px 0`
   },
   reorder: {
     fontSize: 16,
