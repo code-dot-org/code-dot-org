@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import color from '../util/color';
 
-export default class HomeBanner extends React.Component {
+export default class Special2020Banner extends React.Component {
   static propTypes = {
     linkUrl: PropTypes.string.isRequired,
     body1: PropTypes.string.isRequired,
