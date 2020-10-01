@@ -1,6 +1,10 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  activityShape,
+  levelShape,
+  tipShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
@@ -398,6 +402,7 @@ function activities(state = [], action) {
       break;
     }
     case ADD_TIP: {
+      validateTip(action.tip, action.type);
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections[action.activitySectionPosition - 1].tips.push(
@@ -406,6 +411,7 @@ function activities(state = [], action) {
       break;
     }
     case UPDATE_TIP: {
+      validateTip(action.newTip, action.type);
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       const index = activitySections[
@@ -432,6 +438,7 @@ function activities(state = [], action) {
     }
 
     case ADD_LEVEL: {
+      validateLevel(action.level, action.type);
       const levels = getLevels(newState, action);
       levels.push(action.level);
       updateLevelPositions(levels);
@@ -548,6 +555,20 @@ function levelNameToIdMap(state = {}, action) {
 function validateActivities(activities, location) {
   const propTypes = {activities: PropTypes.arrayOf(activityShape)};
   PropTypes.checkPropTypes(propTypes, {activities}, 'property', location);
+}
+
+// Use PropTypes.checkPropTypes to enforce that each entry in the array of
+// tip matches the shape defined in tipShape.
+function validateTip(tip, location) {
+  const propTypes = {tip: tipShape};
+  PropTypes.checkPropTypes(propTypes, {tip}, 'property', location);
+}
+
+// Use PropTypes.checkPropTypes to enforce that each entry in the array of
+// level matches the shape defined in levelShape.
+function validateLevel(level, location) {
+  const propTypes = {level: levelShape};
+  PropTypes.checkPropTypes(propTypes, {level}, 'property', location);
 }
 
 export default {
