@@ -136,9 +136,7 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
