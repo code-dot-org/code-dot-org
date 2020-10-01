@@ -41,6 +41,6 @@ describe('ActivitySection', () => {
     const wrapper = shallow(
       <ActivitySection section={sampleActivities[0].activitySections[1]} />
     );
-    expect(wrapper.find('LessonTip').length).to.equal(1);
+    expect(wrapper.find('LessonTip').length).to.equal(2);
   });
 });

@@ -29,7 +29,6 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
 experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
-experiments.IMMERSIVE_READER = 'immersive-reader';
 experiments.I18N_TRACKING = 'i18n-tracking';
 
 /**
