@@ -45,9 +45,48 @@ function initializeMap() {
   document.getElementById('geocomplete').appendChild(geocoder.onAdd(map));
 }
 
-function loadWorkshops() {
-  //markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
+function loadImages() {
+  /*return Promise.all([
+    map.loadImage(
+      'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
+      (error, image) => {
+        console.log('hi');
+        if (error) {
+          console.log(error);
+          return;
+        }
+        map.addImage('blank-marker', image);
+        resolve();
+      }
+    )
+  ]);*/
+  return Promise.all(
+    [
+      {
+        url: 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
+        name: 'blank-marker'
+      },
+      {
+        url: 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png',
+        name: 'star-marker'
+      }
+    ].map(
+      img =>
+        new Promise((resolve, reject) => {
+          map.loadImage(img.url, function(error, img_result) {
+            if (error) {
+              console.log(error);
+              return;
+            }
+            map.addImage(img.name, img_result);
+            resolve();
+          });
+        })
+    )
+  );
+}
 
+function loadWorkshops() {
   const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
   let url = '/dashboardapi/v1/pd/k5workshops';
   if (deepDiveOnly !== undefined) {
@@ -57,15 +96,34 @@ function loadWorkshops() {
     type: 'geojson',
     data: url
   });
-  map.addLayer({
-    id: 'workshops',
-    type: 'circle',
-    source: 'workshops',
-    paint: {
-      'circle-color': 'blue'
+
+  placeIntroWorkshops();
+  placeDeepDiveWorkshops();
+}
+
+function placeIntroWorkshops() {
+  map.loadImage(
+    'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
+    (error, image) => {
+      console.log('hi');
+      if (error) {
+        console.log(error);
+        return;
+      }
+      map.addImage('marker', image);
+      map.addLayer({
+        id: 'intro-workshops',
+        type: 'symbol',
+        source: 'workshops',
+        filter: ['==', 'subject', SubjectNames.SUBJECT_CSF_201],
+        layout: {
+          'icon-image': 'marker',
+          'icon-size': 0.5
+        }
+      });
     }
-  });
-  map.on('click', 'workshops', e => {
+  );
+  map.on('click', 'intro-workshops', e => {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var workshop = e.features[0].properties;
     const description = compileHtml(workshop, false);
@@ -75,7 +133,44 @@ function loadWorkshops() {
       .setHTML(description)
       .addTo(map);
   });
-  map.on('mouseenter', 'workshops', function() {
+  map.on('mouseenter', 'intro-workshops', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+}
+
+function placeDeepDiveWorkshops() {
+  map.loadImage(
+    'https://maps.google.com/mapfiles/kml/paddle/red-stars.png',
+    (error, image) => {
+      console.log('hi');
+      if (error) {
+        console.log(error);
+        return;
+      }
+      map.addImage('star-marker', image);
+      map.addLayer({
+        id: 'deep-dive-workshops',
+        type: 'symbol',
+        source: 'workshops',
+        filter: ['!=', 'subject', SubjectNames.SUBJECT_CSF_201],
+        layout: {
+          'icon-image': 'star-marker',
+          'icon-size': 0.5
+        }
+      });
+    }
+  );
+  map.on('click', 'deep-dive-workshops', e => {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var workshop = e.features[0].properties;
+    const description = compileHtml(workshop, false);
+
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(map);
+  });
+  map.on('mouseenter', 'deep-dive-workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
