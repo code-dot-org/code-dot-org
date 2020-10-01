@@ -24,7 +24,7 @@ export default class AddLevelTable extends Component {
   render() {
     return (
       <div>
-        <table>
+        <table style={{width: '100%'}}>
           <thead>
             <tr>
               <th style={{width: '13%'}}>Actions</th>
