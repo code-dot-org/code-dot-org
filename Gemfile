@@ -11,7 +11,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7.2'
-gem 'rails-controller-testing'
+gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -57,7 +57,6 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate'
-  gem 'pry'
   gem 'web-console'
 end
 
@@ -237,7 +236,7 @@ gem 'paranoia'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_model_serializers', '~> 0.10.10'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -360,3 +359,5 @@ gem 'dotiw'
 gem 'datapackage'
 
 gem 'ruby-progressbar'
+
+gem 'pry'

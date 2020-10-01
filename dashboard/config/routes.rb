@@ -246,6 +246,10 @@ Dashboard::Application.routes.draw do
   end
 
   resources :levels do
+    collection do
+      get 'get_filters'
+      get 'get_filtered_levels'
+    end
     member do
       get 'get_rubric'
       get 'embed_level'

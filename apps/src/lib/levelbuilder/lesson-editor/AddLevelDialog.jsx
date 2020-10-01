@@ -9,6 +9,8 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import $ from 'jquery';
+import queryString from 'query-string';
 
 const styles = {
   dialog: {
@@ -60,9 +62,57 @@ export default class AddLevelDialog extends Component {
     super(props);
 
     this.state = {
-      methodOfAddingLevel: 'Find Level'
+      methodOfAddingLevel: 'Find Level',
+      levels: null,
+      searchFields: null,
+      currentPage: 1
     };
   }
+
+  componentDidMount() {
+    $.ajax({
+      url: `/levels/get_filters`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done((data, _, request) => {
+      this.setState({searchFields: data});
+    });
+
+    $.ajax({
+      url: `/levels/get_filtered_levels?page=${this.state.currentPage}`,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done(data => {
+      this.setState({levels: data});
+    });
+  }
+
+  handleSearch = (levelName, levelType, scriptId, ownerId) => {
+    let queryParams = {page: this.state.currentPage};
+    if (levelName) {
+      queryParams.name = levelName;
+    }
+    if (levelType) {
+      queryParams.level_type = levelType;
+    }
+    if (scriptId) {
+      queryParams.script_id = scriptId;
+    }
+    if (ownerId) {
+      queryParams.owner_id = ownerId;
+    }
+
+    const url =
+      '/levels/get_filtered_levels?' + queryString.stringify(queryParams);
+
+    $.ajax({
+      url: url,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    }).done((data, _, request) => {
+      this.setState({levels: data});
+    });
+  };
 
   handleToggle = value => {
     this.setState({methodOfAddingLevel: value});
@@ -92,7 +142,10 @@ export default class AddLevelDialog extends Component {
             </ToggleGroup>
             {this.state.methodOfAddingLevel === 'Find Level' && (
               <div style={styles.filtersAndLevels}>
-                <AddLevelFilters />
+                <AddLevelFilters
+                  searchFields={this.state.searchFields}
+                  handleSearch={this.handleSearch}
+                />
                 <AddLevelTable addLevel={this.props.addLevel} />
               </div>
             )}
@@ -120,7 +173,6 @@ export default class AddLevelDialog extends Component {
         </div>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}

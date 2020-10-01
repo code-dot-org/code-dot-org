@@ -13,6 +13,8 @@ const REMOVE_ACTIVITY_SECTION = 'activitiesEditor/REMOVE_ACTIVITY_SECTION';
 const UPDATE_ACTIVITY_SECTION_FIELD =
   'activitiesEditor/UPDATE_ACTIVITY_SECTION_FIELD';
 const ADD_TIP = 'activitiesEditor/ADD_TIP';
+const UPDATE_TIP = 'activitiesEditor/UPDATE_TIP';
+const REMOVE_TIP = 'activitiesEditor/REMOVE_TIP';
 const ADD_LEVEL = 'activitiesEditor/ADD_LEVEL';
 const REMOVE_LEVEL = 'activitiesEditor/REMOVE_LEVEL';
 const CHOOSE_LEVEL = 'activitiesEditor/CHOOSE_LEVEL';
@@ -227,6 +229,28 @@ export const addTip = (activityPosition, activitySectionPosition, tip) => ({
   tip
 });
 
+export const updateTip = (
+  activityPosition,
+  activitySectionPosition,
+  newTip
+) => ({
+  type: UPDATE_TIP,
+  activityPosition,
+  activitySectionPosition,
+  newTip
+});
+
+export const removeTip = (
+  activityPosition,
+  activitySectionPosition,
+  tipKey
+) => ({
+  type: REMOVE_TIP,
+  activityPosition,
+  activitySectionPosition,
+  tipKey
+});
+
 function updateActivityPositions(activities) {
   for (let i = 0; i < activities.length; i++) {
     activities[i].position = i + 1;
@@ -378,6 +402,31 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections[action.activitySectionPosition - 1].tips.push(
         action.tip
+      );
+      break;
+    }
+    case UPDATE_TIP: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      const index = activitySections[
+        action.activitySectionPosition - 1
+      ].tips.indexOf(tip => tip.key === action.newTip.key);
+      activitySections[action.activitySectionPosition - 1].tips.splice(
+        index - 1,
+        1,
+        action.newTip
+      );
+      break;
+    }
+    case REMOVE_TIP: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      activitySections[
+        action.activitySectionPosition - 1
+      ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
+        tip => {
+          return tip.key !== action.tipKey;
+        }
       );
       break;
     }
