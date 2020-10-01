@@ -159,7 +159,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: CdoTheme
+        theme: CdoTheme,
+        plugins: {}
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -222,6 +223,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     return blockXml;
   };
+
+  blocklyWrapper.Xml.fieldToDom_ = function(field) {
+    if (field.isSerializable()) {
+      // Titles were renamed to fields in 2013, but CDO Blockly and
+      // all existing student code uses titles, so to keep everything
+      // consistent, we should continue using titles here.
+      var container = Blockly.utils.xml.createElement('title');
+      container.setAttribute('name', field.name || '');
+      return field.toXml(container);
+    }
+    return null;
+  };
+
   blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
     // Switch argument order
     return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
