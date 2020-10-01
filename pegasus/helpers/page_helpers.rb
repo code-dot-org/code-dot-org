@@ -109,7 +109,7 @@ def hacky_localized_lesson_plan_url(path)
   # added automatically. This means if you try to link to a recently-added
   # lesson plan, it may not be there for any of these languages.
   additional_languages = [
-    'et-ee', 'fr-fr', 'ko-kr', 'zh-tw'
+    'ar-sa', 'de-de', 'fr-fr', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
   ]
 
   supported_languages = curriculumbuilder_languages + additional_languages
