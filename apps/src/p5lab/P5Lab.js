@@ -801,8 +801,11 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    this.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     this.result = ResultType.SUCCESS;
@@ -815,6 +818,8 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
       executionError: this.executionError
     });
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else if (testResult) {
     this.testResults = testResult;
   } else {
