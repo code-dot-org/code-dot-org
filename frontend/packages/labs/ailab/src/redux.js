@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 // Action types
 
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
@@ -122,10 +120,9 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return _.pull(
-    getContinuousColumns(state).concat(getCategoricalColumns(state)),
-    state.labelColumn
-  );
+  return getContinuousColumns(state)
+    .concat(getCategoricalColumns(state))
+    .filter(column => column !== state.labelColumn);
 }
 
 export const ColumnTypes = {
