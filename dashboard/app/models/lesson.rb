@@ -63,6 +63,7 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    script.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
