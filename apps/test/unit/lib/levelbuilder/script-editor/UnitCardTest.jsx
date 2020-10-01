@@ -5,6 +5,7 @@ import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/script
 
 const defaultProps = {
   addGroup: () => {},
+  levelKeyList: {},
   lessonGroups: [
     {
       key: 'lg-key',
