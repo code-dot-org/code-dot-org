@@ -1696,6 +1696,36 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal('CSP Test', assignable_info[:category])
   end
 
+  # This test checks that all categories that may show up in the UI have
+  # translation strings.
+  test 'all visible categories have translations' do
+    I18n.locale = 'en-US'
+
+    # A course can belong to more than one category and only the first
+    # category is shown in the UI (and thus needs a translation).
+
+    # To determine the set of categories that must be translated, we first
+    # collect the list of all scripts that are mapped to categories in
+    # ScriptConstants::CATEGORIES.
+    all_scripts = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
+      scripts | scripts_in_category
+    end
+
+    # Add a script that is not in any category so that the 'other' category
+    # will be tested.
+    all_scripts |= ['uncategorized-script']
+
+    untranslated_categories = Set.new
+    all_scripts.each do |script|
+      category = ScriptConstants.categories(script)[0] || ScriptConstants::OTHER_CATEGORY_NAME
+      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
+      untranslated_categories.add(category) if translation.nil?
+    end
+
+    assert untranslated_categories.empty?,
+      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
+  end
+
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
     student = create(:student)
 
