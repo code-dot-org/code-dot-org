@@ -35,6 +35,7 @@ class Lesson < ActiveRecord::Base
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
+  has_and_belongs_to_many :resources, join_table: :lessons_resources
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
