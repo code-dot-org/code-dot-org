@@ -19,8 +19,19 @@ class LessonsTest < ActionDispatch::IntegrationTest
       name: 'my activity',
       duration: 57
     )
-
     assert_equal @activity, @lesson.lesson_activities.first
+
+    @activity_section = create(
+      :activity_section,
+      lesson_activity: @activity,
+      position: 1,
+      name: 'activity section name',
+      remarks: false,
+      slide: true,
+      description: 'activity section description',
+      tips: []
+    )
+    assert_equal @activity_section, @activity.activity_sections.first
 
     @levelbuilder = create :levelbuilder
   end
@@ -42,10 +53,19 @@ class LessonsTest < ActionDispatch::IntegrationTest
     editable_data = lesson_data['editableData']
     assert_equal 'lesson overview', editable_data['overview']
     assert_equal 'student overview', editable_data['studentOverview']
+
     activities_data = editable_data['activities']
     assert_equal 1, activities_data.count
-    assert_equal 'my activity', activities_data.first['name']
-    assert_equal 57, activities_data.first['duration']
+    activity_data = activities_data.first
+    assert_equal 'my activity', activity_data['name']
+    assert_equal 57, activity_data['duration']
+
+    assert_equal 1, activity_data['activitySections'].count
+    activity_section_data = activity_data['activitySections'].first
+    assert_equal 'activity section name', activity_section_data['name']
+    # assigning a serialized_attribute to false sets the value to nil
+    assert_nil activity_section_data['remarks']
+    assert_equal true, activity_section_data['slide']
   end
 
   test 'update lesson using data from edit page' do
@@ -55,9 +75,15 @@ class LessonsTest < ActionDispatch::IntegrationTest
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     editable_data = lesson_data['editableData']
     editable_data['studentOverview'] = 'new student overview'
+
     activity_data = editable_data['activities'].first
     activity_data['name'] = 'new activity name'
     activity_data['duration'] = 58
+
+    activity_section_data = activity_data['activitySections'].first
+    activity_section_data['name'] = 'new activity section name'
+    activity_section_data['remarks'] = true
+    activity_section_data['slide'] = false
 
     # This part of the edit/update API is not symmetric, because the update
     # API expects the activities field to be JSON-encoded.
@@ -79,8 +105,15 @@ class LessonsTest < ActionDispatch::IntegrationTest
     @lesson.reload
     assert_equal 'lesson overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
+
     @activity.reload
     assert_equal 'new activity name', @activity.name
     assert_equal 58, @activity.duration
+
+    @activity_section.reload
+    assert_equal 'new activity section name', @activity_section.name
+    assert_equal true, @activity_section.remarks
+    # assigning a serialized_attribute to false sets the value to nil
+    assert_nil @activity_section.slide
   end
 end
