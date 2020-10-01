@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import ReactDOM from 'react-dom';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {
   moveLesson,
-  moveGroup,
   removeLesson,
   addLesson,
   removeGroup,
-  convertGroupToUserFacing,
+  moveGroup,
   setLessonGroup,
-  reorderLesson
+  reorderLesson,
+  convertGroupToUserFacing
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
-import color from '@cdo/apps/util/color';
 
 const styles = {
   checkbox: {
@@ -54,23 +54,23 @@ styles.targetLessonGroupCard = {
   padding: 16
 };
 
-export class LessonGroupCard extends Component {
+class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
-    lessonGroupsCount: PropTypes.number,
+    lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
     targetLessonGroupPos: PropTypes.number,
 
     // from redux
-    moveLesson: PropTypes.func.isRequired,
-    moveGroup: PropTypes.func.isRequired,
-    removeLesson: PropTypes.func.isRequired,
-    removeGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    convertGroupToUserFacing: PropTypes.func.isRequired,
+    moveGroup: PropTypes.func.isRequired,
+    removeGroup: PropTypes.func.isRequired,
+    moveLesson: PropTypes.func.isRequired,
+    removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
-    reorderLesson: PropTypes.func.isRequired
+    reorderLesson: PropTypes.func.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired
   };
 
   /**
