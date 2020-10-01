@@ -4,26 +4,38 @@ import reducers, {
   addGroup,
   addLesson,
   moveLesson,
-  setLessonGroup
+  setLessonGroup,
+  reorderLesson,
+  updateLessonGroupField
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import _ from 'lodash';
 
 const getInitialState = () => ({
+  levelKeyList: {},
   lessonGroups: [
     {
       key: 'lg-key',
       display_name: 'Display Name',
       position: 1,
-      user_facing: false,
+      user_facing: true,
       lessons: [
         {
           id: 100,
+          key: 'a',
           name: 'A',
           position: 1
         },
         {
           name: 'B',
+          key: 'b',
           id: 101,
           position: 2
+        },
+        {
+          name: 'C',
+          key: 'c',
+          id: 102,
+          position: 3
         }
       ]
     }
@@ -49,8 +61,15 @@ describe('scriptEditorRedux reducer tests', () => {
     assert.deepEqual(nextState[0].lessons.map(s => s.name), [
       'A',
       'B',
+      'C',
       'New Lesson 2'
     ]);
+  });
+
+  it('reorder lessons', () => {
+    const nextState = reducer(initialState, reorderLesson(1, 1, 3, 1))
+      .lessonGroups;
+    assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'c', 'a']);
   });
 
   describe('lesson groups', () => {
@@ -78,6 +97,18 @@ describe('scriptEditorRedux reducer tests', () => {
         }
       ];
       initialState.lessonGroups = initialLessonGroups;
+    });
+
+    it('update lesson group field', () => {
+      let state = reducer(
+        initialState,
+        updateLessonGroupField(1, 'description', 'Overview of the lesson group')
+      );
+
+      let expectedState = _.cloneDeep(initialLessonGroups);
+      expectedState[0].description = 'Overview of the lesson group';
+
+      assert.deepEqual(expectedState, state.lessonGroups);
     });
 
     it('moves a lesson up three times', () => {
