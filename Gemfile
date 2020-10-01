@@ -57,7 +57,6 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate'
-  gem 'pry'
   gem 'web-console'
 end
 
@@ -360,3 +359,5 @@ gem 'dotiw'
 gem 'datapackage'
 
 gem 'ruby-progressbar'
+
+gem 'pry'
