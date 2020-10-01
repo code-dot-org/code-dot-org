@@ -95,11 +95,11 @@ class LevelToken extends Component {
     draggedLevelPos: PropTypes.bool,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
+    removeLevel: PropTypes.func.isRequired,
 
-    //redux
+    // from redux
     levelKeyList: PropTypes.object.isRequired,
-    toggleExpand: PropTypes.func,
-    removeLevel: PropTypes.func.isRequired
+    toggleExpand: PropTypes.func
   };
 
   handleDragStart = e => {
