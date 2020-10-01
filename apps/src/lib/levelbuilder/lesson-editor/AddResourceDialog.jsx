@@ -40,7 +40,6 @@ export default class AddResourceDialog extends Component {
         </label>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={'Close and Add'}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}

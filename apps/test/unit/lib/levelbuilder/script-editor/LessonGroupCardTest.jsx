@@ -11,11 +11,20 @@ const defaultProps = {
   moveLesson: () => {},
   removeLesson: () => {},
   convertGroupToUserFacing: () => {},
+  setLessonGroup: () => {},
+  reorderLesson: () => {},
+  updateLessonGroupField: () => {},
+  lessonGroupMetrics: {},
+  setTargetLessonGroup: () => {},
+  targetLessonGroupPos: null,
+  generateLessonGroupKey: () => {},
   lessonGroup: {
     key: 'lg-key',
     display_name: 'Display Name',
     position: 1,
     user_facing: true,
+    description: 'Lesson group description',
+    big_questions: '',
     lessons: [
       {
         id: 100,

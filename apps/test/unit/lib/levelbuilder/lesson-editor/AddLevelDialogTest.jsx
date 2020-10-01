@@ -6,13 +6,17 @@ import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('AddLevelDialog', () => {
-  let defaultProps;
+  let defaultProps, handleConfirm, addLevel;
   beforeEach(() => {
+    handleConfirm = sinon.spy();
+    addLevel = sinon.spy();
     defaultProps = {
       isOpen: true,
-      handleConfirm: sinon.spy(),
+      handleConfirm,
       currentLevels: sampleActivities[0].activitySections[2].levels,
-      addLevel: sinon.spy()
+      addLevel,
+      activityPosition: 1,
+      activitySectionPosition: 3
     };
   });
 
