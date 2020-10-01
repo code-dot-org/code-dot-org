@@ -34,7 +34,12 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1
   def update
-    @lesson.update!(lesson_params)
+    puts lesson_params
+    JSON.parse(lesson_params['resources']).each do |resource_key|
+      persisted_resource = Resource.find_by_key(resource_key)
+      @lesson.resources << persisted_resource if persisted_resource
+    end
+    @lesson.update!(lesson_params.except(:resources))
 
     redirect_to lesson_path(id: @lesson.id)
   end
@@ -60,7 +65,8 @@ class LessonsController < ApplicationController
       :lockable,
       :purpose,
       :preparation,
-      :announcements
+      :announcements,
+      :resources
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp
