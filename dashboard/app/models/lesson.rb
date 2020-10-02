@@ -408,7 +408,10 @@ class Lesson < ActiveRecord::Base
     Time.parse(visible_after) <= Time.now
   end
 
-  # @param activities [Array<Hash>]
+  # Updates this lesson's lesson_activities to match the activities represented
+  # by the provided data, preserving existing objects in cases where ids match.
+  # @param activities [Array<Hash>] - Array of hashes representing
+  #   LessonActivity objects.
   def update_activities(activities)
     return unless activities
     # use assignment to delete any missing activities.

@@ -32,7 +32,11 @@ class LessonActivity < ApplicationRecord
     duration
   )
 
-  # @param sections [Array<Hash>] - Hash representing an ActivitySection.
+  # Updates this object's activity_sections to match the activity sections
+  # represented by the provided data, preserving existing objects in cases where
+  # ids match.
+  # @param sections [Array<Hash>] - Array of hashes, each representing an
+  #   ActivitySection.
   def update_activity_sections(sections)
     return unless sections
     # use assignment to delete any missing activity sections.
