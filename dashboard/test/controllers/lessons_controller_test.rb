@@ -108,8 +108,10 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     @update_params['activities'] = [
-      name: 'activity name',
-      position: 1
+      {
+        name: 'activity name',
+        position: 1
+      }
     ].to_json
 
     put :update, params: @update_params
@@ -122,5 +124,56 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.first
     assert_equal 'activity name', activity.name
     assert_equal 1, activity.position
+  end
+
+  test 'remove activity via lesson update' do
+    sign_in @levelbuilder
+
+    id_a = @lesson.lesson_activities.create(
+      name: 'A',
+      position: 1,
+      seeding_key: 'keyA'
+    ).id
+    id_b = @lesson.lesson_activities.create(
+      name: 'B',
+      position: 2,
+      seeding_key: 'keyB'
+    ).id
+    id_c = @lesson.lesson_activities.create(
+      name: 'C',
+      position: 3,
+      seeding_key: 'keyC'
+    ).id
+    assert_equal ['A', 'B', 'C'], @lesson.lesson_activities.map(&:name)
+
+    @update_params['activities'] = [
+      {
+        id: id_a,
+        name: 'A',
+        position: 1
+      },
+      {
+        id: id_c,
+        name: 'C',
+        position: 2
+      },
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal 2, @lesson.lesson_activities.count
+    activities = @lesson.lesson_activities
+
+    assert_equal 'A', activities.first.name
+    assert_equal 1, activities.first.position
+    assert_equal id_a, activities.first.id
+
+    assert_equal 'C', activities.last.name
+    assert_equal 2, activities.last.position
+    assert_equal id_c, activities.last.id
+
+    assert_equal 0, LessonActivity.where(id: id_b).count
   end
 end
