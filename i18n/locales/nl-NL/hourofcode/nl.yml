@@ -501,6 +501,7 @@ nl:
     kaart
   signup_event_type_in_school: In een school
   signup_event_type_out_of_school: Buiten de school
+  signup_event_type_at_home: Home
   signup_submit_census_label: Inzenden
   signup_submit_census_error_message: Onze excuses. Er is een fout opgetreden. Probeer
     het formulier opnieuw in te sturen.

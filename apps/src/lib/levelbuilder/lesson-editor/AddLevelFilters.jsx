@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
 
 const styles = {
   filters: {
@@ -13,11 +15,50 @@ const styles = {
   }
 };
 
-//TODO Hook up the filtering system to work on the real levels
-//Selects need real data added into them
-
 export default class AddLevelFilters extends Component {
-  static propTypes = {};
+  static propTypes = {
+    searchFields: PropTypes.object,
+    handleSearch: PropTypes.func
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      levelName: '',
+      levelType: this.props.searchFields.levelOptions[0][1],
+      scriptId: this.props.searchFields.scriptOptions[0][1],
+      ownerId: this.props.searchFields.ownerOptions[0][1]
+    };
+  }
+
+  handleSearch = _.debounce(
+    () => {
+      const {levelName, levelType, scriptId, ownerId} = this.state;
+      this.props.handleSearch(levelName, levelType, scriptId, ownerId);
+    },
+    1000,
+    {
+      leading: true,
+      trailing: false
+    }
+  );
+
+  handleInputChange = event => {
+    this.setState({levelName: event.target.value});
+  };
+
+  handleChangeLevelType = event => {
+    this.setState({levelType: event.target.value});
+  };
+
+  handleChangeScript = event => {
+    this.setState({scriptId: event.target.value});
+  };
+
+  handleChangeOwner = event => {
+    this.setState({ownerId: event.target.value});
+  };
 
   render() {
     return (
@@ -26,60 +67,55 @@ export default class AddLevelFilters extends Component {
           By Name:
           <input
             style={styles.dropdown}
-            onChange={() => {
-              console.log('filter by name');
-            }}
+            onChange={this.handleInputChange}
+            value={this.state.levelName}
           />
         </label>
         <label>
           By Type:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filter by type');
-            }}
+            onChange={this.handleChangeLevelType}
+            value={this.state.levelType}
           >
-            <option>All Types</option>
-            <option>App Lab</option>
-            <option>Game Lab</option>
-            <option>Standalone Video</option>
+            {this.props.searchFields.levelOptions.map(levelType => (
+              <option key={levelType[0]} value={levelType[1]}>
+                {levelType[0]}
+              </option>
+            ))}
           </select>
         </label>
         <label>
           By Script:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filer by script');
-            }}
+            onChange={this.handleChangeScript}
+            value={this.state.scriptId}
           >
-            <option>All Scripts</option>
-            <option>csp1-2020</option>
-            <option>csd3-2020</option>
-            <option>coursea-2020</option>
+            {this.props.searchFields.scriptOptions.map(script => (
+              <option key={script[0]} value={script[1]}>
+                {script[0]}
+              </option>
+            ))}
           </select>
         </label>
         <label>
           By Owner:
           <select
             style={styles.dropdown}
-            onClick={() => {
-              console.log('filter by owner');
-            }}
+            onChange={this.handleChangeOwner}
+            value={this.state.ownerId}
           >
-            <option>Any Owner</option>
-            <option>Hannah</option>
-            <option>Mike</option>
-            <option>Dan</option>
+            {this.props.searchFields.ownerOptions.map(owner => (
+              <option key={owner[0]} value={owner[1]}>
+                {owner[0]}
+              </option>
+            ))}
           </select>
         </label>
-        <Button
-          icon="search"
-          text={''}
-          onClick={() => {
-            console.log('Search');
-          }}
-        />
+        <button type="button" onClick={this.handleSearch}>
+          <FontAwesome icon="search" />
+        </button>
       </div>
     );
   }

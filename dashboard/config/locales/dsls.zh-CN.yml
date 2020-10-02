@@ -5500,7 +5500,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - text: 仔细看看下面的代码。 第一个造成错误的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
@@ -5531,7 +5531,8 @@ zh-CN:
         answers:
         - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
           feedback: 不正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
-        - correct: true
+        - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
+          correct: true
           feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - correct: true
           feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
@@ -6264,7 +6265,7 @@ zh-CN:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - text: 没东西了。代码只会剩下平地。
+        - text: 没东西了。只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -7116,7 +7117,7 @@ zh-CN:
 
 
         questions:
-        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -7518,3 +7519,4 @@ zh-CN:
           src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">"
       courseExpress_EOC_2020:
         display_name: 结课项目
+        description: 你已经完成了本课程！点击以创建项目。

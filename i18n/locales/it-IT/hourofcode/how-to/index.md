@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide
 
 # Come pianificare la tua Ora del Codice
 
-### Join the movement and introduce your students to computer science with these steps.
+### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Se hai ancora domande, dai un'occhiata alla nostra [guida alla partecipazione]({{ localized_files/participation_guide }}).
 
@@ -27,13 +27,13 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Guarda il video illustrativo dell'Ora del Codice <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Esplora attività e tutorial
 
 Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate]({{ urls/learn }}) per partecipanti di tutte le età e di diversi livelli di esperienza. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Esplora le attività e decidi prima se scegliere uno specifico tutorial da asseg
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Crea il tuo piano della giornata
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ Le persone di tutto il mondo partecipano alla celebrazione dell'Ora del Codice d
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Promuovi la tua Ora del Codice
 
 Ora che hai programmato l'evento, è il momento di cominciare a promuoverlo!
 

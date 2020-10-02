@@ -120,7 +120,7 @@ describe('StudioApp', () => {
         studio.reset = () => {};
 
         reportSpy = sinon.spy();
-        studio.report = reportSpy;
+        studio.debouncedSilentlyReport = reportSpy;
       });
 
       it('Sets hasReported to false', () => {
@@ -441,6 +441,37 @@ describe('StudioApp', () => {
 
       expect(changed1).to.be.true;
       expect(changed2).to.be.true;
+    });
+  });
+
+  describe('The StudioApp.validateCodeChanged function', () => {
+    let studio, codeDifferentStub;
+    beforeEach(() => {
+      codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
+      studio = studioApp();
+    });
+
+    afterEach(() => {
+      codeDifferentStub.restore();
+    });
+
+    it('returns true if validationEnabled is not set', () => {
+      studio.config = {level: {}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns true if validationEnabled is false', () => {
+      studio.config = {level: {validationEnabled: false}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns the result of project.isCurrentCodeDifferent', () => {
+      studio.config = {level: {validationEnabled: true}};
+      codeDifferentStub.returns(false);
+      expect(studio.validateCodeChanged()).to.be.false;
+      expect(codeDifferentStub).to.have.been.called;
     });
   });
 });

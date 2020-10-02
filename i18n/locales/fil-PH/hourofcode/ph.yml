@@ -509,6 +509,7 @@ ph:
     aming mapa
   signup_event_type_in_school: Sa paaralan
   signup_event_type_out_of_school: Sa labas ng paaralan
+  signup_event_type_at_home: Home
   signup_submit_census_label: I-sumite
   signup_submit_census_error_message: Humihingi kami ng tawad. Isang mali ang naganap.
     Muling subukang i-sumite muli ang form.
