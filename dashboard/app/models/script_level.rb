@@ -97,17 +97,19 @@ class ScriptLevel < ActiveRecord::Base
         position: (script_level_position += 1),
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
-        assessment: raw_script_level[:assessment],
-        properties: properties.with_indifferent_access
+        assessment: raw_script_level[:assessment]
       }
+      find_existing_script_level_attributes = script_level_attributes.slice(:script_id, :stage_id)
       script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
+        find_existing_script_level_attributes.all? {|k, v| sl.send(k) == v} &&
+          sl.levels.map(&:id).sort == levels.map(&:id).sort
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
 
       script_level.assign_attributes(script_level_attributes)
+      # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
+      script_level.properties = properties
       script_level.save! if script_level.changed?
       script_level
     end
