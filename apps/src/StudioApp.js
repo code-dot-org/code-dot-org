@@ -596,30 +596,35 @@ StudioApp.prototype.init = function(config) {
  * Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
  */
 StudioApp.prototype.editDuringRunAlertHandler = function() {
-  if (this.isRunning() && this.getCode().trim() !== this.executingCode.trim()) {
-    getStore().dispatch(setIsEditWhileRun(true));
-    this.clearHighlighting();
+  const hasEditedDuringRun =
+    this.isRunning() && this.getCode().trim() !== this.executingCode.trim();
+  if (!hasEditedDuringRun || this.editDuringRunAlert !== undefined) {
+    return;
+  }
 
-    // Check if the user has already dismissed this alert.
-    if (this.showEditDuringRunAlert) {
-      this.showEditDuringRunAlert =
-        utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
-    }
+  getStore().dispatch(setIsEditWhileRun(true));
+  this.clearHighlighting();
 
-    // Display the alert if the user hasn't previously dismissed it.
-    if (this.showEditDuringRunAlert && this.editDuringRunAlert === undefined) {
-      const onClose = () => {
-        utils.trySetLocalStorage('hideEditDuringRunAlert', true);
-        this.editDuringRunAlert = undefined;
-        this.showEditDuringRunAlert = false;
-      };
-      this.editDuringRunAlert = this.displayWorkspaceAlert(
-        'warning',
-        React.createElement('div', {}, msg.editDuringRunMessage()),
-        true /* bottom */,
-        onClose
-      );
-    }
+  // Check if the user has already dismissed this alert. Don't check localStorage again
+  // if showEditDuringRunAlert has already been set to false.
+  if (this.showEditDuringRunAlert) {
+    this.showEditDuringRunAlert =
+      utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
+  }
+
+  // Display the alert if the user hasn't previously dismissed it.
+  if (this.showEditDuringRunAlert) {
+    const onClose = () => {
+      utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+      this.editDuringRunAlert = undefined;
+      this.showEditDuringRunAlert = false;
+    };
+    this.editDuringRunAlert = this.displayWorkspaceAlert(
+      'warning',
+      React.createElement('div', {}, msg.editDuringRunMessage()),
+      true /* bottom */,
+      onClose
+    );
   }
 };
 
