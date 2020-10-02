@@ -201,8 +201,6 @@
         "script_level.level_keys": [
           "CSP U2L01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -224,8 +222,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -247,8 +243,6 @@
         "script_level.level_keys": [
           "CSP_U2_Shakespeare_Question_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -270,8 +264,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-2-levelgroup-U2Ch1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -292,8 +284,6 @@
         "script_level.level_keys": [
           "CSP U2L02 SFLP"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -315,8 +305,6 @@
         "script_level.level_keys": [
           "Text Compression_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -338,8 +326,6 @@
         "script_level.level_keys": [
           "Widget: Text Compression_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -361,8 +347,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -384,8 +368,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -407,8 +389,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -430,8 +410,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -452,8 +430,6 @@
         "script_level.level_keys": [
           "CSP U2L03 SFLP"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -475,8 +451,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -498,8 +472,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -521,8 +493,6 @@
         "script_level.level_keys": [
           "Widget: Black and White Pixelation_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -544,8 +514,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -567,8 +535,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -589,8 +555,6 @@
         "script_level.level_keys": [
           "CSP U2L04 SFLP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -612,8 +576,6 @@
         "script_level.level_keys": [
           "Images, Pixels, and RGB_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -635,8 +597,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -658,8 +618,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -681,8 +639,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -704,8 +660,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -727,8 +681,6 @@
         "script_level.level_keys": [
           "Pixelation Bee_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -750,8 +702,6 @@
         "script_level.level_keys": [
           "Favicon Instructions_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -773,8 +723,6 @@
         "script_level.level_keys": [
           "Widget: Color Pixelation_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -796,8 +744,6 @@
         "script_level.level_keys": [
           "U2L5 Color Pixel MC Question_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -819,8 +765,6 @@
         "script_level.level_keys": [
           "U2L5 FR brighten darken image_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -841,8 +785,6 @@
         "script_level.level_keys": [
           "CSP U2L05 SFLP"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -864,8 +806,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy Lossless MC 1_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -887,8 +827,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy Lossless MC 2_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -910,8 +848,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy vs. Lossless FR 1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -932,8 +868,6 @@
         "script_level.level_keys": [
           "CSP U2L06 SFLP"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Format Showdown",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -954,8 +888,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp2-2018"
@@ -972,8 +904,6 @@
         "script_level.level_keys": [
           "CSP U2L01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -985,8 +915,6 @@
         "script_level.level_keys": [
           "U1L12 Reflection Free Response_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -998,8 +926,6 @@
         "script_level.level_keys": [
           "CSP_U2_Shakespeare_Question_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1011,8 +937,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-2-levelgroup-U2Ch1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1024,8 +948,6 @@
         "script_level.level_keys": [
           "CSP U2L02 SFLP"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1037,8 +959,6 @@
         "script_level.level_keys": [
           "Text Compression_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1050,8 +970,6 @@
         "script_level.level_keys": [
           "Widget: Text Compression_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1063,8 +981,6 @@
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1076,8 +992,6 @@
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1089,8 +1003,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 1_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1102,8 +1014,6 @@
         "script_level.level_keys": [
           "U1L13 Assessment 2_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1115,8 +1025,6 @@
         "script_level.level_keys": [
           "CSP U2L03 SFLP"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1128,8 +1036,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1141,8 +1047,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1154,8 +1058,6 @@
         "script_level.level_keys": [
           "Widget: Black and White Pixelation_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1167,8 +1069,6 @@
         "script_level.level_keys": [
           "U1L14 Assessment 1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1180,8 +1080,6 @@
         "script_level.level_keys": [
           "U1L14 - Assessment 2_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1193,8 +1091,6 @@
         "script_level.level_keys": [
           "CSP U2L04 SFLP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1206,8 +1102,6 @@
         "script_level.level_keys": [
           "Images, Pixels, and RGB_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1219,8 +1113,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1232,8 +1124,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1245,8 +1135,6 @@
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1258,8 +1146,6 @@
         "script_level.level_keys": [
           "Pixelation Flappy_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1271,8 +1157,6 @@
         "script_level.level_keys": [
           "Pixelation Bee_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1284,8 +1168,6 @@
         "script_level.level_keys": [
           "Favicon Instructions_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1297,8 +1179,6 @@
         "script_level.level_keys": [
           "Widget: Color Pixelation_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1310,8 +1190,6 @@
         "script_level.level_keys": [
           "U2L5 Color Pixel MC Question_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1323,8 +1201,6 @@
         "script_level.level_keys": [
           "U2L5 FR brighten darken image_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1336,8 +1212,6 @@
         "script_level.level_keys": [
           "CSP U2L05 SFLP"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1349,8 +1223,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy Lossless MC 1_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1362,8 +1234,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy Lossless MC 2_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1375,8 +1245,6 @@
         "script_level.level_keys": [
           "U2L05 Lossy vs. Lossless FR 1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1388,8 +1256,6 @@
         "script_level.level_keys": [
           "CSP U2L06 SFLP"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Format Showdown",
         "lesson_group.key": "csp2_1_2018",
         "script.name": "csp2-2018"
@@ -1401,8 +1267,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Unit 2 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp2-2018"

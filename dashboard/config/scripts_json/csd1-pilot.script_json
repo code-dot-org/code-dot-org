@@ -204,8 +204,6 @@
         "script_level.level_keys": [
           "csd-pre-survey-2017-levelgroup_2018_2019_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd1-pilot"
@@ -226,8 +224,6 @@
         "script_level.level_keys": [
           "CSD U1L01 TFMD_pilot"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -248,8 +244,6 @@
         "script_level.level_keys": [
           "CSD U1L02 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -270,8 +264,6 @@
         "script_level.level_keys": [
           "CSD Problem Solving Process Video_pilot"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -292,8 +284,6 @@
         "script_level.level_keys": [
           "CSD U1L03 TFMD_pilot"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -314,8 +304,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP word search big"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -336,8 +324,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP seating big"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -358,8 +344,6 @@
         "script_level.level_keys": [
           "CSD U1L04 TFMD_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -380,8 +364,6 @@
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -402,8 +384,6 @@
         "script_level.level_keys": [
           "CSD U1L05 TFMD_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -424,8 +404,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -446,8 +424,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Story"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -468,8 +444,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser 2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -490,8 +464,6 @@
         "script_level.level_keys": [
           "CSD U1L06 TFMD_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -513,8 +485,6 @@
         "script_level.level_keys": [
           "CSD U1 processing bday"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -536,8 +506,6 @@
         "script_level.level_keys": [
           "CSD U1 processing npark"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -559,8 +527,6 @@
         "script_level.level_keys": [
           "CSD U1 processing countries"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -582,8 +548,6 @@
         "script_level.level_keys": [
           "CSD U1 processing writers"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -605,8 +569,6 @@
         "script_level.level_keys": [
           "CSD U1 processing notebook"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -628,8 +590,6 @@
         "script_level.level_keys": [
           "CSD U1 processing fastest"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -651,8 +611,6 @@
         "script_level.level_keys": [
           "CSD U1 processing guess"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -674,8 +632,6 @@
         "script_level.level_keys": [
           "CSD U1 processing live"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -696,8 +652,6 @@
         "script_level.level_keys": [
           "CSD U1L07 TFMD_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -718,8 +672,6 @@
         "script_level.level_keys": [
           "CSD U1 storage outfit"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -740,8 +692,6 @@
         "script_level.level_keys": [
           "CSD U1 storage friends"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -762,8 +712,6 @@
         "script_level.level_keys": [
           "CSD U1 storage movies"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -784,8 +732,6 @@
         "script_level.level_keys": [
           "CSD U1 storage video"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -802,8 +748,6 @@
         "script_level.level_keys": [
           "csd-pre-survey-2017-levelgroup_2018_2019_pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd1-pilot"
@@ -815,8 +759,6 @@
         "script_level.level_keys": [
           "CSD U1L01 TFMD_pilot"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -828,8 +770,6 @@
         "script_level.level_keys": [
           "CSD U1L02 TFMD_pilot"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -841,8 +781,6 @@
         "script_level.level_keys": [
           "CSD Problem Solving Process Video_pilot"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -854,8 +792,6 @@
         "script_level.level_keys": [
           "CSD U1L03 TFMD_pilot"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -867,8 +803,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP word search big"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -880,8 +814,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP seating big"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-pilot"
@@ -893,8 +825,6 @@
         "script_level.level_keys": [
           "CSD U1L04 TFMD_2020"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -906,8 +836,6 @@
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_2020"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -919,8 +847,6 @@
         "script_level.level_keys": [
           "CSD U1L05 TFMD_2020"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -932,8 +858,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -945,8 +869,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Story"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -958,8 +880,6 @@
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser 2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -971,8 +891,6 @@
         "script_level.level_keys": [
           "CSD U1L06 TFMD_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -984,8 +902,6 @@
         "script_level.level_keys": [
           "CSD U1 processing bday"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -997,8 +913,6 @@
         "script_level.level_keys": [
           "CSD U1 processing npark"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1010,8 +924,6 @@
         "script_level.level_keys": [
           "CSD U1 processing countries"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1023,8 +935,6 @@
         "script_level.level_keys": [
           "CSD U1 processing writers"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1036,8 +946,6 @@
         "script_level.level_keys": [
           "CSD U1 processing notebook"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1049,8 +957,6 @@
         "script_level.level_keys": [
           "CSD U1 processing fastest"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1062,8 +968,6 @@
         "script_level.level_keys": [
           "CSD U1 processing guess"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1075,8 +979,6 @@
         "script_level.level_keys": [
           "CSD U1 processing live"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1088,8 +990,6 @@
         "script_level.level_keys": [
           "CSD U1L07 TFMD_2020"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1101,8 +1001,6 @@
         "script_level.level_keys": [
           "CSD U1 storage outfit"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1114,8 +1012,6 @@
         "script_level.level_keys": [
           "CSD U1 storage friends"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1127,8 +1023,6 @@
         "script_level.level_keys": [
           "CSD U1 storage movies"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"
@@ -1140,8 +1034,6 @@
         "script_level.level_keys": [
           "CSD U1 storage video"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-pilot"

@@ -242,8 +242,6 @@
         "script_level.level_keys": [
           "CSP U3L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -265,8 +263,6 @@
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -288,8 +284,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -311,8 +305,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -334,8 +326,6 @@
         "script_level.level_keys": [
           "CSP U3 Four Square App"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -357,8 +347,6 @@
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -380,8 +368,6 @@
         "script_level.level_keys": [
           "How Computers Work part 1 CSP"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -403,8 +389,6 @@
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App Investigate"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -426,8 +410,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App Investigation"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -449,8 +431,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App Investigation"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -472,8 +452,6 @@
         "script_level.level_keys": [
           "CSP U3 Four Square App Investigation"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -495,8 +473,6 @@
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App Investigation"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -518,8 +494,6 @@
         "script_level.level_keys": [
           "CSP U3 L1 Input Output Matching"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -541,8 +515,6 @@
         "script_level.level_keys": [
           "CSP U3L2 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -564,8 +536,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township Design Mode"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -587,8 +557,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Themes"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -610,8 +578,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Colors"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -633,8 +599,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Images"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -656,8 +620,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Icons"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -679,8 +641,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode ids"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -702,8 +662,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Copy an App"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -725,8 +683,6 @@
         "script_level.level_keys": [
           "U3L2 CSP CFU ID names"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -748,8 +704,6 @@
         "script_level.level_keys": [
           "CSP U3L3 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -771,8 +725,6 @@
         "script_level.level_keys": [
           "CSP U3 L3 Check Your Understanding"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -794,8 +746,6 @@
         "script_level.level_keys": [
           "CSP U3L4 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -817,8 +767,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz Storyboard"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -840,8 +788,6 @@
         "script_level.level_keys": [
           "CSP U3 L4 Design Screens"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -863,8 +809,6 @@
         "script_level.level_keys": [
           "CSP U3L5 SFLP 20-21"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -886,8 +830,6 @@
         "script_level.level_keys": [
           "U3L5 CSP CFU natural language"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -909,8 +851,6 @@
         "script_level.level_keys": [
           "CSP U3L6 SFLP 20-21"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -932,8 +872,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -955,8 +893,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -978,8 +914,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1001,8 +935,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1024,8 +956,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1047,8 +977,6 @@
         "script_level.level_keys": [
           "U3L6 CSP CFU Sequential vs Event Driven"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1070,8 +998,6 @@
         "script_level.level_keys": [
           "CSP U3L7 SFLP 20-21"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1093,8 +1019,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1116,8 +1040,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1139,8 +1061,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 3"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1162,8 +1082,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 4"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1185,8 +1103,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 5"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1208,8 +1124,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 6"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1231,8 +1145,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 8"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1254,8 +1166,6 @@
         "script_level.level_keys": [
           "U3L7 CSP CFU What was confusing"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1277,8 +1187,6 @@
         "script_level.level_keys": [
           "CSP U3L8 SFLP 20-21"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1300,8 +1208,6 @@
         "script_level.level_keys": [
           "U3 L08 Pair Programming Video"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1323,8 +1229,6 @@
         "script_level.level_keys": [
           "CSP U3 L4 Add Code"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1346,8 +1250,6 @@
         "script_level.level_keys": [
           "CSP U3L9 SFLP 20-21"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1369,8 +1271,6 @@
         "script_level.level_keys": [
           "CSP U3 L9 Add More Code"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1392,8 +1292,6 @@
         "script_level.level_keys": [
           "CSP U3L10 SFLP 20-21"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1415,8 +1313,6 @@
         "script_level.level_keys": [
           "CSP U3 L10 Submit App"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1438,8 +1334,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 MC Assessment _2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1461,8 +1355,6 @@
         "script_level.level_keys": [
           "CSP U3 20-21 Student Pilot Survey"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 STUDENT Survey",
         "lesson_group.key": "required",
         "script.name": "csp3-pilot"
@@ -1484,8 +1376,6 @@
         "script_level.level_keys": [
           "CSP U3 20-21 Teacher Pilot Survey"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 TEACHER Survey",
         "lesson_group.key": "required",
         "script.name": "csp3-pilot"
@@ -1502,8 +1392,6 @@
         "script_level.level_keys": [
           "CSP U3L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1515,8 +1403,6 @@
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1528,8 +1414,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1541,8 +1425,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1554,8 +1436,6 @@
         "script_level.level_keys": [
           "CSP U3 Four Square App"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1567,8 +1447,6 @@
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1580,8 +1458,6 @@
         "script_level.level_keys": [
           "How Computers Work part 1 CSP"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1593,8 +1469,6 @@
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App Investigate"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1606,8 +1480,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App Investigation"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1619,8 +1491,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App Investigation"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1632,8 +1502,6 @@
         "script_level.level_keys": [
           "CSP U3 Four Square App Investigation"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1645,8 +1513,6 @@
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App Investigation"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1658,8 +1524,6 @@
         "script_level.level_keys": [
           "CSP U3 L1 Input Output Matching"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1671,8 +1535,6 @@
         "script_level.level_keys": [
           "CSP U3L2 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1684,8 +1546,6 @@
         "script_level.level_keys": [
           "CSP U3 Hamilton Township Design Mode"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1697,8 +1557,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Themes"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1710,8 +1568,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Colors"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1723,8 +1579,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Images"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1736,8 +1590,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Icons"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1749,8 +1601,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode ids"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1762,8 +1612,6 @@
         "script_level.level_keys": [
           "CSP U3 L2 Copy an App"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1775,8 +1623,6 @@
         "script_level.level_keys": [
           "U3L2 CSP CFU ID names"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1788,8 +1634,6 @@
         "script_level.level_keys": [
           "CSP U3L3 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1801,8 +1645,6 @@
         "script_level.level_keys": [
           "CSP U3 L3 Check Your Understanding"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1814,8 +1656,6 @@
         "script_level.level_keys": [
           "CSP U3L4 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1827,8 +1667,6 @@
         "script_level.level_keys": [
           "CSP U3 Bird Quiz Storyboard"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1840,8 +1678,6 @@
         "script_level.level_keys": [
           "CSP U3 L4 Design Screens"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1853,8 +1689,6 @@
         "script_level.level_keys": [
           "CSP U3L5 SFLP 20-21"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1866,8 +1700,6 @@
         "script_level.level_keys": [
           "U3L5 CSP CFU natural language"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1879,8 +1711,6 @@
         "script_level.level_keys": [
           "CSP U3L6 SFLP 20-21"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1892,8 +1722,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1905,8 +1733,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1918,8 +1744,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1931,8 +1755,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1944,8 +1766,6 @@
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1957,8 +1777,6 @@
         "script_level.level_keys": [
           "U3L6 CSP CFU Sequential vs Event Driven"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1970,8 +1788,6 @@
         "script_level.level_keys": [
           "CSP U3L7 SFLP 20-21"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1983,8 +1799,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -1996,8 +1810,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 2"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2009,8 +1821,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 3"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2022,8 +1832,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 4"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2035,8 +1843,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 5"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2048,8 +1854,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 6"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2061,8 +1865,6 @@
         "script_level.level_keys": [
           "U3 Program Practice Pt 8"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2074,8 +1876,6 @@
         "script_level.level_keys": [
           "U3L7 CSP CFU What was confusing"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Debugging",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2087,8 +1887,6 @@
         "script_level.level_keys": [
           "CSP U3L8 SFLP 20-21"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2100,8 +1898,6 @@
         "script_level.level_keys": [
           "U3 L08 Pair Programming Video"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2113,8 +1909,6 @@
         "script_level.level_keys": [
           "CSP U3 L4 Add Code"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2126,8 +1920,6 @@
         "script_level.level_keys": [
           "CSP U3L9 SFLP 20-21"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2139,8 +1931,6 @@
         "script_level.level_keys": [
           "CSP U3 L9 Add More Code"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2152,8 +1942,6 @@
         "script_level.level_keys": [
           "CSP U3L10 SFLP 20-21"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2165,8 +1953,6 @@
         "script_level.level_keys": [
           "CSP U3 L10 Submit App"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2178,8 +1964,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 MC Assessment _2020"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "content",
         "script.name": "csp3-pilot"
@@ -2191,8 +1975,6 @@
         "script_level.level_keys": [
           "CSP U3 20-21 Student Pilot Survey"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 STUDENT Survey",
         "lesson_group.key": "required",
         "script.name": "csp3-pilot"
@@ -2204,8 +1986,6 @@
         "script_level.level_keys": [
           "CSP U3 20-21 Teacher Pilot Survey"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 TEACHER Survey",
         "lesson_group.key": "required",
         "script.name": "csp3-pilot"

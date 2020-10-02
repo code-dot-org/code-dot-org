@@ -166,8 +166,6 @@
         "script_level.level_keys": [
           "UnplugHappyMaps"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -188,8 +186,6 @@
         "script_level.level_keys": [
           "MoveIt"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -210,8 +206,6 @@
         "script_level.level_keys": [
           "PlantASeed"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -232,8 +226,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -254,8 +246,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -276,8 +266,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -298,8 +286,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -320,8 +306,6 @@
         "script_level.level_keys": [
           "BinaryBracelets"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -342,8 +326,6 @@
         "script_level.level_keys": [
           "SongwritingParameters"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -360,8 +342,6 @@
         "script_level.level_keys": [
           "UnplugHappyMaps"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -373,8 +353,6 @@
         "script_level.level_keys": [
           "MoveIt"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -386,8 +364,6 @@
         "script_level.level_keys": [
           "PlantASeed"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -399,8 +375,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -425,8 +397,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -438,8 +408,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -451,8 +419,6 @@
         "script_level.level_keys": [
           "BinaryBracelets"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "asUnplugged"
@@ -464,8 +430,6 @@
         "script_level.level_keys": [
           "SongwritingParameters"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "asUnplugged"

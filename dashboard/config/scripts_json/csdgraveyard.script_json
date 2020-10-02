@@ -68,8 +68,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 7 Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -90,8 +88,6 @@
         "script_level.level_keys": [
           "CSDU2 - Intro to CSS"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -112,8 +108,6 @@
         "script_level.level_keys": [
           "CSDU2 - Selector and Property"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -134,8 +128,6 @@
         "script_level.level_keys": [
           "CSDU2 - p tags"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -156,8 +148,6 @@
         "script_level.level_keys": [
           "CSDU2 - head body"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -178,8 +168,6 @@
         "script_level.level_keys": [
           "CSDU2 - title element in head"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -200,8 +188,6 @@
         "script_level.level_keys": [
           "CSDU2 - body tags"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -222,8 +208,6 @@
         "script_level.level_keys": [
           "CSDU2 - text properties"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -244,8 +228,6 @@
         "script_level.level_keys": [
           "CSDU2 - font properties"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -266,8 +248,6 @@
         "script_level.level_keys": [
           "CSDU2 - image properties"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -288,8 +268,6 @@
         "script_level.level_keys": [
           "Stop: Intro to CSS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -310,8 +288,6 @@
         "script_level.level_keys": [
           "CSDU2 - About Me Page Styling"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -332,8 +308,6 @@
         "script_level.level_keys": [
           "Brand Book Example"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -354,8 +328,6 @@
         "script_level.level_keys": [
           "CSDU2 Pick Your Fonts"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -376,8 +348,6 @@
         "script_level.level_keys": [
           "CSDU2 Pick Your Colors"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -398,8 +368,6 @@
         "script_level.level_keys": [
           "CSDU2 - External Style Sheets"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -420,8 +388,6 @@
         "script_level.level_keys": [
           "CSDU2 - Link Tag"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -442,8 +408,6 @@
         "script_level.level_keys": [
           "CSDU2 - Using Your Font"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -464,8 +428,6 @@
         "script_level.level_keys": [
           "CSDU2 - Developing Brand Style"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -486,8 +448,6 @@
         "script_level.level_keys": [
           "CSDU2 - Separate Content and Style"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -508,8 +468,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Divs to break up the page"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -530,8 +488,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - External Style Sheets"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -552,8 +508,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Consistent Personal Site Style"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -574,8 +528,6 @@
         "script_level.level_keys": [
           "CSDU2 Make Your Logo"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -596,8 +548,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Image as A Link"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -618,8 +568,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Favicon"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -640,8 +588,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - ESS Final touches"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 15,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -658,8 +604,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 7 Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -671,8 +615,6 @@
         "script_level.level_keys": [
           "CSDU2 - Intro to CSS"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -684,8 +626,6 @@
         "script_level.level_keys": [
           "CSDU2 - Selector and Property"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -697,8 +637,6 @@
         "script_level.level_keys": [
           "CSDU2 - p tags"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -710,8 +648,6 @@
         "script_level.level_keys": [
           "CSDU2 - head body"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -723,8 +659,6 @@
         "script_level.level_keys": [
           "CSDU2 - title element in head"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -736,8 +670,6 @@
         "script_level.level_keys": [
           "CSDU2 - body tags"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -749,8 +681,6 @@
         "script_level.level_keys": [
           "CSDU2 - text properties"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -762,8 +692,6 @@
         "script_level.level_keys": [
           "CSDU2 - font properties"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -775,8 +703,6 @@
         "script_level.level_keys": [
           "CSDU2 - image properties"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -788,8 +714,6 @@
         "script_level.level_keys": [
           "Stop: Intro to CSS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -801,8 +725,6 @@
         "script_level.level_keys": [
           "CSDU2 - About Me Page Styling"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -814,8 +736,6 @@
         "script_level.level_keys": [
           "Brand Book Example"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -827,8 +747,6 @@
         "script_level.level_keys": [
           "CSDU2 Pick Your Fonts"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -840,8 +758,6 @@
         "script_level.level_keys": [
           "CSDU2 Pick Your Colors"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -853,8 +769,6 @@
         "script_level.level_keys": [
           "CSDU2 - External Style Sheets"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -866,8 +780,6 @@
         "script_level.level_keys": [
           "CSDU2 - Link Tag"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -879,8 +791,6 @@
         "script_level.level_keys": [
           "CSDU2 - Using Your Font"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -892,8 +802,6 @@
         "script_level.level_keys": [
           "CSDU2 - Developing Brand Style"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -905,8 +813,6 @@
         "script_level.level_keys": [
           "CSDU2 - Separate Content and Style"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -918,8 +824,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Divs to break up the page"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -931,8 +835,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - External Style Sheets"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -944,8 +846,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Consistent Personal Site Style"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -957,8 +857,6 @@
         "script_level.level_keys": [
           "CSDU2 Make Your Logo"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -970,8 +868,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Image as A Link"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -983,8 +879,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Favicon"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"
@@ -996,8 +890,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - ESS Final touches"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 15,
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
         "script.name": "csdgraveyard"

@@ -239,8 +239,6 @@
         "script_level.level_keys": [
           "CSD Web Sample Pages_2020_virtual"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -262,8 +260,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_virtual"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -284,8 +280,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_virtual"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -306,8 +300,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_virtual"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -328,8 +320,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_virtual"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -351,8 +341,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_virtual"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -374,8 +362,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_virtual"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -397,8 +383,6 @@
         "script_level.level_keys": [
           "CSD Web Debugging_virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -420,8 +404,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_virtual"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -443,8 +425,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading debug_virtual"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -466,8 +446,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_virtual"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -489,8 +467,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_virtual"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -512,8 +488,6 @@
         "script_level.level_keys": [
           "CSD Web Headings practice_2020_virtual"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -535,8 +509,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -558,8 +530,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -580,8 +550,6 @@
         "script_level.level_keys": [
           "CSD Web Headings challenge_2020_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -602,8 +570,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -624,8 +590,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -647,8 +611,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -670,8 +632,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -693,8 +653,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -715,8 +673,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -738,8 +694,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -761,8 +715,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -784,8 +736,6 @@
         "script_level.level_keys": [
           "CSD Web CSS Assessment_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -807,8 +757,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -830,8 +778,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -853,8 +799,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Credit_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -876,8 +820,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -899,8 +841,6 @@
         "script_level.level_keys": [
           "CSD U2 Image choose name_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -922,8 +862,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -945,8 +883,6 @@
         "script_level.level_keys": [
           "CSD U2 Image practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -968,8 +904,6 @@
         "script_level.level_keys": [
           "CSD U2 Image assessment_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -991,8 +925,6 @@
         "script_level.level_keys": [
           "CSD U2 Image challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1013,8 +945,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1036,8 +966,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1059,8 +987,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1082,8 +1008,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1105,8 +1029,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1128,8 +1050,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1151,8 +1071,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1174,8 +1092,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1197,8 +1113,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1219,8 +1133,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1242,8 +1154,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1265,8 +1175,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1288,8 +1196,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1311,8 +1217,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1333,8 +1237,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1356,8 +1258,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1378,8 +1278,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Purpose of a Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1401,8 +1299,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1424,8 +1320,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1447,8 +1341,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1470,8 +1362,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1492,8 +1382,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1515,8 +1403,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1538,8 +1424,6 @@
         "script_level.level_keys": [
           "CSD U2 making links_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 2,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1561,8 +1445,6 @@
         "script_level.level_keys": [
           "CSD U2 naming links_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 3,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1584,8 +1466,6 @@
         "script_level.level_keys": [
           "CSD U2 nav bar_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 4,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1607,8 +1487,6 @@
         "script_level.level_keys": [
           "CSD U2 adding pages_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 5,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1630,8 +1508,6 @@
         "script_level.level_keys": [
           "CSD U2 naming pages_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 6,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1653,8 +1529,6 @@
         "script_level.level_keys": [
           "CSD U2 external links_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 7,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1676,8 +1550,6 @@
         "script_level.level_keys": [
           "CSD web upload images multi_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 1,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1699,8 +1571,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 2,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1722,8 +1592,6 @@
         "script_level.level_keys": [
           "CSD web add html_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 3,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1745,8 +1613,6 @@
         "script_level.level_keys": [
           "CSD web add CSS_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 4,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1768,8 +1634,6 @@
         "script_level.level_keys": [
           "CSD web check_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 5,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1790,8 +1654,6 @@
         "script_level.level_keys": [
           "CSD Web incorporate feedback_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -1808,8 +1670,6 @@
         "script_level.level_keys": [
           "CSD Web Sample Pages_2020_virtual"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1821,8 +1681,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_virtual"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1834,8 +1692,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_virtual"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1847,8 +1703,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_virtual"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1860,8 +1714,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_virtual"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1873,8 +1725,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_virtual"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1886,8 +1736,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_virtual"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1899,8 +1747,6 @@
         "script_level.level_keys": [
           "CSD Web Debugging_virtual"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1912,8 +1758,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_virtual"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1925,8 +1769,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading debug_virtual"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1938,8 +1780,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_virtual"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1951,8 +1791,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_virtual"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1964,8 +1802,6 @@
         "script_level.level_keys": [
           "CSD Web Headings practice_2020_virtual"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1977,8 +1813,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -1990,8 +1824,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_virtual"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2003,8 +1835,6 @@
         "script_level.level_keys": [
           "CSD Web Headings challenge_2020_virtual"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2016,8 +1846,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_virtual"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2029,8 +1857,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_virtual"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2042,8 +1868,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_virtual"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2055,8 +1879,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_virtual"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2068,8 +1890,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_virtual"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2081,8 +1901,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_virtual"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2094,8 +1912,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_virtual"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2107,8 +1923,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2120,8 +1934,6 @@
         "script_level.level_keys": [
           "CSD Web CSS Assessment_virtual"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2133,8 +1945,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2146,8 +1956,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_virtual"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2159,8 +1967,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Credit_virtual"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2172,8 +1978,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_virtual"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2185,8 +1989,6 @@
         "script_level.level_keys": [
           "CSD U2 Image choose name_virtual"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2198,8 +2000,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_virtual"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2211,8 +2011,6 @@
         "script_level.level_keys": [
           "CSD U2 Image practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2224,8 +2022,6 @@
         "script_level.level_keys": [
           "CSD U2 Image assessment_virtual"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2237,8 +2033,6 @@
         "script_level.level_keys": [
           "CSD U2 Image challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2250,8 +2044,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2263,8 +2055,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_virtual"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2276,8 +2066,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_virtual"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2289,8 +2077,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_virtual"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2302,8 +2088,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_virtual"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2315,8 +2099,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_virtual"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2328,8 +2110,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style practice_pilot_2020_virtual"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2341,8 +2121,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_virtual"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2354,8 +2132,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style challenge_pilot_2020_virtual"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2367,8 +2143,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2380,8 +2154,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_virtual"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2393,8 +2165,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_virtual"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2406,8 +2176,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS_virtual"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2419,8 +2187,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_virtual"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2432,8 +2198,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video_virtual"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2445,8 +2209,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_virtual"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Project - Building a Webpage",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-virtual"
@@ -2458,8 +2220,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Purpose of a Websites",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2471,8 +2231,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_virtual"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2484,8 +2242,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_virtual"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2497,8 +2253,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_virtual"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2510,8 +2264,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_virtual"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2523,8 +2275,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_virtual"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "CSS Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2536,8 +2286,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_virtual"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2549,8 +2297,6 @@
         "script_level.level_keys": [
           "CSD U2 making links_virtual"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 2,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2562,8 +2308,6 @@
         "script_level.level_keys": [
           "CSD U2 naming links_virtual"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 3,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2575,8 +2319,6 @@
         "script_level.level_keys": [
           "CSD U2 nav bar_virtual"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 4,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2588,8 +2330,6 @@
         "script_level.level_keys": [
           "CSD U2 adding pages_virtual"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 5,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2601,8 +2341,6 @@
         "script_level.level_keys": [
           "CSD U2 naming pages_virtual"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 6,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2614,8 +2352,6 @@
         "script_level.level_keys": [
           "CSD U2 external links_virtual"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 7,
         "lesson.key": "Linking and Navigation",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2627,8 +2363,6 @@
         "script_level.level_keys": [
           "CSD web upload images multi_virtual"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 1,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2640,8 +2374,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_virtual"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 2,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2653,8 +2385,6 @@
         "script_level.level_keys": [
           "CSD web add html_virtual"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 3,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2666,8 +2396,6 @@
         "script_level.level_keys": [
           "CSD web add CSS_virtual"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 4,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2679,8 +2407,6 @@
         "script_level.level_keys": [
           "CSD web check_virtual"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 5,
         "lesson.key": "Project - Website for a Purpose",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"
@@ -2692,8 +2418,6 @@
         "script_level.level_keys": [
           "CSD Web incorporate feedback_virtual"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-virtual"

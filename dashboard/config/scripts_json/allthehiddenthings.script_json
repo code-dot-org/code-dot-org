@@ -68,8 +68,6 @@
         "script_level.level_keys": [
           "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Game Lab",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -90,8 +88,6 @@
         "script_level.level_keys": [
           "Test GameLab Predictive"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -112,8 +108,6 @@
         "script_level.level_keys": [
           "Test Contained Multi"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -134,8 +128,6 @@
         "script_level.level_keys": [
           "PS predictive Applab level test"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -152,8 +144,6 @@
         "script_level.level_keys": [
           "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Game Lab",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -165,8 +155,6 @@
         "script_level.level_keys": [
           "Test GameLab Predictive"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -178,8 +166,6 @@
         "script_level.level_keys": [
           "Test Contained Multi"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"
@@ -191,8 +177,6 @@
         "script_level.level_keys": [
           "PS predictive Applab level test"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthehiddenthings"

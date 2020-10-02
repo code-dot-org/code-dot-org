@@ -297,8 +297,6 @@
         "script_level.level_keys": [
           "CSP U4L01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -320,8 +318,6 @@
         "script_level.level_keys": [
           "U4L1 - MC moores law_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -343,8 +339,6 @@
         "script_level.level_keys": [
           "U4L1 - MC big data def_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -366,8 +360,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -388,8 +380,6 @@
         "script_level.level_keys": [
           "CSP U2L08 SFLP"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -411,8 +401,6 @@
         "script_level.level_keys": [
           "U2L8 google trends MC_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -434,8 +422,6 @@
         "script_level.level_keys": [
           "U2L8 google trends hypothesis_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -457,8 +443,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 google trends MC_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -480,8 +464,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 trends as predictors_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -502,8 +484,6 @@
         "script_level.level_keys": [
           "CSP U2L09 SFLP"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -525,8 +505,6 @@
         "script_level.level_keys": [
           "U2L9 What is digital divide MC_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -548,8 +526,6 @@
         "script_level.level_keys": [
           "U2L9 FR digital divide issue_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -571,8 +547,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 MC data bias_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -593,8 +567,6 @@
         "script_level.level_keys": [
           "CSP U4L02 SFLP"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -616,8 +588,6 @@
         "script_level.level_keys": [
           "Video - Data and Medicine_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -639,8 +609,6 @@
         "script_level.level_keys": [
           "Video - CS is Changing Everything_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -662,8 +630,6 @@
         "script_level.level_keys": [
           "U4L2 - FR Practice AP response about data_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -684,8 +650,6 @@
         "script_level.level_keys": [
           "CSP U4L03 SFLP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -706,8 +670,6 @@
         "script_level.level_keys": [
           "U4-AP-Practice-Choose-The-Data-Concern_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -729,8 +691,6 @@
         "script_level.level_keys": [
           "U4L3 - FR Identifying people_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -751,8 +711,6 @@
         "script_level.level_keys": [
           "CSP U4L04 SFLP"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -773,8 +731,6 @@
         "script_level.level_keys": [
           "U4-AP-Practice-Justify-the-Score_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -796,8 +752,6 @@
         "script_level.level_keys": [
           "U4L4 - MC cost of free_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -819,8 +773,6 @@
         "script_level.level_keys": [
           "U4L4 - FR cost of free_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -841,8 +793,6 @@
         "script_level.level_keys": [
           "CSP U4L05 SFLP"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -864,8 +814,6 @@
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -887,8 +835,6 @@
         "script_level.level_keys": [
           "Terminology Recap_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -910,8 +856,6 @@
         "script_level.level_keys": [
           "New Challenge Introduction_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -933,8 +877,6 @@
         "script_level.level_keys": [
           "Crack Random Substitution_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -956,8 +898,6 @@
         "script_level.level_keys": [
           "Technique: Frequency Analysis_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -979,8 +919,6 @@
         "script_level.level_keys": [
           "U2L13 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 7,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1002,8 +940,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 8,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1025,8 +961,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment3_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 9,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1048,8 +982,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment4_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 10,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1071,8 +1003,6 @@
         "script_level.level_keys": [
           "U2L13 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 11,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1094,8 +1024,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 12,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1116,8 +1044,6 @@
         "script_level.level_keys": [
           "CSP U4L06 SFLP"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1139,8 +1065,6 @@
         "script_level.level_keys": [
           "The Vigenere Cipher Widget_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1162,8 +1086,6 @@
         "script_level.level_keys": [
           "How Secure Is Your Password?_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1185,8 +1107,6 @@
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1208,8 +1128,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1231,8 +1149,6 @@
         "script_level.level_keys": [
           "U2L14 Assessment_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1254,8 +1170,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1277,8 +1191,6 @@
         "script_level.level_keys": [
           "U2L14 Assessment2_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1300,8 +1212,6 @@
         "script_level.level_keys": [
           "U2L15 Assessment1_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1322,8 +1232,6 @@
         "script_level.level_keys": [
           "CSP U4L07 SFLP"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1345,8 +1253,6 @@
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1368,8 +1274,6 @@
         "script_level.level_keys": [
           "Cups and Beans Activity_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1391,8 +1295,6 @@
         "script_level.level_keys": [
           "Modulo Clock Instructions_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1414,8 +1316,6 @@
         "script_level.level_keys": [
           "The Modulo Clock_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1437,8 +1337,6 @@
         "script_level.level_keys": [
           "Public Key Crypto Widget Instructions_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1460,8 +1358,6 @@
         "script_level.level_keys": [
           "Public Key Cryptography Widget_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1483,8 +1379,6 @@
         "script_level.level_keys": [
           "U2L18 Free Response Assessment 1_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1506,8 +1400,6 @@
         "script_level.level_keys": [
           "U2L18 Match terms to cups and beans analogy_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1529,8 +1421,6 @@
         "script_level.level_keys": [
           "U2L19 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 10,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1552,8 +1442,6 @@
         "script_level.level_keys": [
           "U2L19 mutlichoice 20 mod 15_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 11,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1575,8 +1463,6 @@
         "script_level.level_keys": [
           "U2L19 multichoice 13 MOD 17_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 12,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1598,8 +1484,6 @@
         "script_level.level_keys": [
           "U2L19 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 13,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1620,8 +1504,6 @@
         "script_level.level_keys": [
           "CSP U4L08 SFLP"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1643,8 +1525,6 @@
         "script_level.level_keys": [
           "Video - Cybersecurity and Crime_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 2,
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1665,8 +1545,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp4-2018"
@@ -1688,8 +1566,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp4-2018"
@@ -1706,8 +1582,6 @@
         "script_level.level_keys": [
           "CSP U4L01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1719,8 +1593,6 @@
         "script_level.level_keys": [
           "U4L1 - MC moores law_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1732,8 +1604,6 @@
         "script_level.level_keys": [
           "U4L1 - MC big data def_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1745,8 +1615,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1758,8 +1626,6 @@
         "script_level.level_keys": [
           "CSP U2L08 SFLP"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1771,8 +1637,6 @@
         "script_level.level_keys": [
           "U2L8 google trends MC_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1784,8 +1648,6 @@
         "script_level.level_keys": [
           "U2L8 google trends hypothesis_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1797,8 +1659,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 google trends MC_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1810,8 +1670,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 trends as predictors_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1823,8 +1681,6 @@
         "script_level.level_keys": [
           "CSP U2L09 SFLP"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1836,8 +1692,6 @@
         "script_level.level_keys": [
           "U2L9 What is digital divide MC_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1849,8 +1703,6 @@
         "script_level.level_keys": [
           "U2L9 FR digital divide issue_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1862,8 +1714,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 MC data bias_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1875,8 +1725,6 @@
         "script_level.level_keys": [
           "CSP U4L02 SFLP"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1888,8 +1736,6 @@
         "script_level.level_keys": [
           "Video - Data and Medicine_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1901,8 +1747,6 @@
         "script_level.level_keys": [
           "Video - CS is Changing Everything_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1914,8 +1758,6 @@
         "script_level.level_keys": [
           "U4L2 - FR Practice AP response about data_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1927,8 +1769,6 @@
         "script_level.level_keys": [
           "CSP U4L03 SFLP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1940,8 +1780,6 @@
         "script_level.level_keys": [
           "U4-AP-Practice-Choose-The-Data-Concern_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1953,8 +1791,6 @@
         "script_level.level_keys": [
           "U4L3 - FR Identifying people_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1966,8 +1802,6 @@
         "script_level.level_keys": [
           "CSP U4L04 SFLP"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1979,8 +1813,6 @@
         "script_level.level_keys": [
           "U4-AP-Practice-Justify-the-Score_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -1992,8 +1824,6 @@
         "script_level.level_keys": [
           "U4L4 - MC cost of free_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2005,8 +1835,6 @@
         "script_level.level_keys": [
           "U4L4 - FR cost of free_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2018,8 +1846,6 @@
         "script_level.level_keys": [
           "CSP U4L05 SFLP"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2031,8 +1857,6 @@
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2044,8 +1868,6 @@
         "script_level.level_keys": [
           "Terminology Recap_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2057,8 +1879,6 @@
         "script_level.level_keys": [
           "New Challenge Introduction_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2070,8 +1890,6 @@
         "script_level.level_keys": [
           "Crack Random Substitution_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 5,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2083,8 +1901,6 @@
         "script_level.level_keys": [
           "Technique: Frequency Analysis_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 6,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2096,8 +1912,6 @@
         "script_level.level_keys": [
           "U2L13 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 7,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2109,8 +1923,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 8,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2122,8 +1934,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment3_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 9,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2135,8 +1945,6 @@
         "script_level.level_keys": [
           "U2L13 Assessment4_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 10,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2148,8 +1956,6 @@
         "script_level.level_keys": [
           "U2L13 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 11,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2161,8 +1967,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 12,
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2174,8 +1978,6 @@
         "script_level.level_keys": [
           "CSP U4L06 SFLP"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2187,8 +1989,6 @@
         "script_level.level_keys": [
           "The Vigenere Cipher Widget_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2200,8 +2000,6 @@
         "script_level.level_keys": [
           "How Secure Is Your Password?_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2213,8 +2011,6 @@
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2226,8 +2022,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2239,8 +2033,6 @@
         "script_level.level_keys": [
           "U2L14 Assessment_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2252,8 +2044,6 @@
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2265,8 +2055,6 @@
         "script_level.level_keys": [
           "U2L14 Assessment2_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2278,8 +2066,6 @@
         "script_level.level_keys": [
           "U2L15 Assessment1_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2291,8 +2077,6 @@
         "script_level.level_keys": [
           "CSP U4L07 SFLP"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2304,8 +2088,6 @@
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2317,8 +2099,6 @@
         "script_level.level_keys": [
           "Cups and Beans Activity_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 3,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2330,8 +2110,6 @@
         "script_level.level_keys": [
           "Modulo Clock Instructions_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 4,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2343,8 +2121,6 @@
         "script_level.level_keys": [
           "The Modulo Clock_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 5,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2356,8 +2132,6 @@
         "script_level.level_keys": [
           "Public Key Crypto Widget Instructions_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 6,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2369,8 +2143,6 @@
         "script_level.level_keys": [
           "Public Key Cryptography Widget_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 7,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2382,8 +2154,6 @@
         "script_level.level_keys": [
           "U2L18 Free Response Assessment 1_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 8,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2395,8 +2165,6 @@
         "script_level.level_keys": [
           "U2L18 Match terms to cups and beans analogy_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 9,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2408,8 +2176,6 @@
         "script_level.level_keys": [
           "U2L19 Free Response Getting Started_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 10,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2421,8 +2187,6 @@
         "script_level.level_keys": [
           "U2L19 mutlichoice 20 mod 15_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 11,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2434,8 +2198,6 @@
         "script_level.level_keys": [
           "U2L19 multichoice 13 MOD 17_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 12,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2447,8 +2209,6 @@
         "script_level.level_keys": [
           "U2L19 Free Response Wrap Up_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 13,
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2460,8 +2220,6 @@
         "script_level.level_keys": [
           "CSP U4L08 SFLP"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2473,8 +2231,6 @@
         "script_level.level_keys": [
           "Video - Cybersecurity and Crime_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 2,
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
         "script.name": "csp4-2018"
@@ -2486,8 +2242,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp4-2018"
@@ -2499,8 +2253,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp4-2018"

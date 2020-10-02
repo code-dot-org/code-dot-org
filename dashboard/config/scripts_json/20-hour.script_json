@@ -325,8 +325,6 @@
         "script_level.level_keys": [
           "blockly:Unplug1:u_1_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Computer Science",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -347,8 +345,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -369,8 +365,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -391,8 +385,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2_5"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -413,8 +405,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -435,8 +425,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -457,8 +445,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -479,8 +465,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -501,8 +485,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -523,8 +505,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -545,8 +525,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -567,8 +545,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_10"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -589,8 +565,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_11"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -611,8 +585,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_12"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -633,8 +605,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_13"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -655,8 +625,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_14"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -677,8 +645,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_15"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -699,8 +665,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -721,8 +685,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -743,8 +705,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_18"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -765,8 +725,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_19"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -787,8 +745,6 @@
         "script_level.level_keys": [
           "blockly:Unplug2:u_2_1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -809,8 +765,6 @@
         "script_level.level_keys": [
           "blockly:Unplug3:u_3_1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -831,8 +785,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -853,8 +805,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -875,8 +825,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_3"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -897,8 +845,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_4"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -919,8 +865,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -941,8 +885,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_6"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -963,8 +905,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_7"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -985,8 +925,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_8"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1007,8 +945,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_9"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1029,8 +965,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_10"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1051,8 +985,6 @@
         "script_level.level_keys": [
           "blockly:Unplug4:u_4_1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Algorithms",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1073,8 +1005,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1095,8 +1025,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1117,8 +1045,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_3"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1139,8 +1065,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_4"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1161,8 +1085,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_5"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1183,8 +1105,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_6"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1205,8 +1125,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_7"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1227,8 +1145,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_8"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1249,8 +1165,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_9"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1271,8 +1185,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_10"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1293,8 +1205,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_11"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1315,8 +1225,6 @@
         "script_level.level_keys": [
           "blockly:Unplug5:u_5_1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1337,8 +1245,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1359,8 +1265,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1381,8 +1285,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1403,8 +1305,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1425,8 +1325,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1447,8 +1345,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_6"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1469,8 +1365,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_7"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1491,8 +1385,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_8"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1513,8 +1405,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_9"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1535,8 +1425,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_10"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 10,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1557,8 +1445,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_11"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 11,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1579,8 +1465,6 @@
         "script_level.level_keys": [
           "blockly:Unplug6:u_6_1"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1601,8 +1485,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1623,8 +1505,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_2"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 2,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1645,8 +1525,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_3"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 3,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1667,8 +1545,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 4,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1689,8 +1565,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_5"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 5,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1711,8 +1585,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_6"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 6,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1733,8 +1605,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_7"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 7,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1755,8 +1625,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_7_5"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 8,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1777,8 +1645,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_8"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 9,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1799,8 +1665,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_9"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 10,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1821,8 +1685,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_10"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 11,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1843,8 +1705,6 @@
         "script_level.level_keys": [
           "blockly:Unplug7:u_7_1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Song Writing",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1865,8 +1725,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_1"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1887,8 +1745,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1909,8 +1765,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_3"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1931,8 +1785,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_4"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1953,8 +1805,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_5"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1975,8 +1825,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_6"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -1997,8 +1845,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_7"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2019,8 +1865,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_8"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2041,8 +1885,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_9"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2063,8 +1905,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_10"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2085,8 +1925,6 @@
         "script_level.level_keys": [
           "blockly:Unplug8:u_8_1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Abstraction",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2107,8 +1945,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2129,8 +1965,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2151,8 +1985,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2173,8 +2005,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2195,8 +2025,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2217,8 +2045,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_6"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2239,8 +2065,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_7"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2261,8 +2085,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_8"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2283,8 +2105,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_9"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2305,8 +2125,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_10"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2327,8 +2145,6 @@
         "script_level.level_keys": [
           "blockly:Unplug9:u_9_1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Relay Programming",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2349,8 +2165,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_seq_1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2371,8 +2185,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_seq_2"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2393,8 +2205,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_repeat"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2415,8 +2225,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_while"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2437,8 +2245,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_if"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2459,8 +2265,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_if_else"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2481,8 +2285,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_1"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2503,8 +2305,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_2"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2525,8 +2325,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_3"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2547,8 +2345,6 @@
         "script_level.level_keys": [
           "blockly:Unplug10:u_10_1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "The Internet",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2569,8 +2365,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_1"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2591,8 +2385,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2613,8 +2405,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_3"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2635,8 +2425,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2657,8 +2445,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2679,8 +2465,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2701,8 +2485,6 @@
         "script_level.level_keys": [
           "blockly:Unplug11:u_11_1"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2719,8 +2501,6 @@
         "script_level.level_keys": [
           "blockly:Unplug1:u_1_1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Computer Science",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2732,8 +2512,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2745,8 +2523,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2758,8 +2534,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2_5"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2771,8 +2545,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2784,8 +2556,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2797,8 +2567,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2810,8 +2578,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2823,8 +2589,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2836,8 +2600,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2849,8 +2611,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2862,8 +2622,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_10"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2875,8 +2633,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_11"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2888,8 +2644,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_12"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2901,8 +2655,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_13"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2914,8 +2666,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_14"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2927,8 +2677,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_15"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2940,8 +2688,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2953,8 +2699,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2966,8 +2710,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_18"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2979,8 +2721,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_19"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "The Maze",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -2992,8 +2732,6 @@
         "script_level.level_keys": [
           "blockly:Unplug2:u_2_1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3005,8 +2743,6 @@
         "script_level.level_keys": [
           "blockly:Unplug3:u_3_1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3018,8 +2754,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3031,8 +2765,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3044,8 +2776,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_3"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3057,8 +2787,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_4"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3070,8 +2798,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3083,8 +2809,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_6"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3096,8 +2820,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_7"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3109,8 +2831,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_8"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3122,8 +2842,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_9"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3135,8 +2853,6 @@
         "script_level.level_keys": [
           "blockly:Artist:1_10"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "The Artist",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3148,8 +2864,6 @@
         "script_level.level_keys": [
           "blockly:Unplug4:u_4_1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Algorithms",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3161,8 +2875,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3174,8 +2886,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3187,8 +2897,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_3"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3200,8 +2908,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_4"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3213,8 +2919,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_5"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3226,8 +2930,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_6"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3239,8 +2941,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_7"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3252,8 +2952,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_8"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3265,8 +2963,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_9"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3278,8 +2974,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_10"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3291,8 +2985,6 @@
         "script_level.level_keys": [
           "blockly:Artist2:4_11"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "The Artist 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3304,8 +2996,6 @@
         "script_level.level_keys": [
           "blockly:Unplug5:u_5_1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3317,8 +3007,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3330,8 +3018,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3343,8 +3029,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3356,8 +3040,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3369,8 +3051,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3382,8 +3062,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_6"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3395,8 +3073,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_7"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3408,8 +3084,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_8"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3421,8 +3095,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_9"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3434,8 +3106,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_10"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 10,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3447,8 +3117,6 @@
         "script_level.level_keys": [
           "blockly:Farmer:karel_1_11"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 11,
         "lesson.key": "The Farmer",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3460,8 +3128,6 @@
         "script_level.level_keys": [
           "blockly:Unplug6:u_6_1"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3473,8 +3139,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_1"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3486,8 +3150,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_2"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 2,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3499,8 +3161,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_3"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 3,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3512,8 +3172,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 4,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3525,8 +3183,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_5"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 5,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3538,8 +3194,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_6"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 6,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3551,8 +3205,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_7"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 7,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3564,8 +3216,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_7_5"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 8,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3577,8 +3227,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_8"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 9,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3590,8 +3238,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_9"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 10,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3603,8 +3249,6 @@
         "script_level.level_keys": [
           "blockly:Artist3:2_10"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 11,
         "lesson.key": "The Artist 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3616,8 +3260,6 @@
         "script_level.level_keys": [
           "blockly:Unplug7:u_7_1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Song Writing",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3629,8 +3271,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_1"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3642,8 +3282,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3655,8 +3293,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_3"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3668,8 +3304,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_4"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3681,8 +3315,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_5"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3694,8 +3326,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_6"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3707,8 +3337,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_7"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3720,8 +3348,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_8"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3733,8 +3359,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_9"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3746,8 +3370,6 @@
         "script_level.level_keys": [
           "blockly:Farmer2:karel_2_10"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "The Farmer 2",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3759,8 +3381,6 @@
         "script_level.level_keys": [
           "blockly:Unplug8:u_8_1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Abstraction",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3772,8 +3392,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3785,8 +3403,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3798,8 +3414,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_3"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3811,8 +3425,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_4"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3824,8 +3436,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_5"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3837,8 +3447,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_6"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 6,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3850,8 +3458,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_7"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 7,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3863,8 +3469,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_8"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 8,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3876,8 +3480,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_9"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 9,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3889,8 +3491,6 @@
         "script_level.level_keys": [
           "blockly:Artist4:3_10"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 10,
         "lesson.key": "The Artist 4",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3902,8 +3502,6 @@
         "script_level.level_keys": [
           "blockly:Unplug9:u_9_1"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Relay Programming",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3915,8 +3513,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_seq_1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3928,8 +3524,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_seq_2"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3941,8 +3535,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_repeat"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3954,8 +3546,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_while"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3967,8 +3557,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_if"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3980,8 +3568,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_if_else"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -3993,8 +3579,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_1"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4006,8 +3590,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_2"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4019,8 +3601,6 @@
         "script_level.level_keys": [
           "blockly:Farmer3:karel_debug_function_3"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "The Farmer 3",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4032,8 +3612,6 @@
         "script_level.level_keys": [
           "blockly:Unplug10:u_10_1"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "The Internet",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4045,8 +3623,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_1"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4058,8 +3634,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4071,8 +3645,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_3"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4084,8 +3656,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4097,8 +3667,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4110,8 +3678,6 @@
         "script_level.level_keys": [
           "blockly:Artist5:5_6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "The Artist 5",
         "lesson_group.key": "",
         "script.name": "20-hour"
@@ -4123,8 +3689,6 @@
         "script_level.level_keys": [
           "blockly:Unplug11:u_11_1"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
         "script.name": "20-hour"

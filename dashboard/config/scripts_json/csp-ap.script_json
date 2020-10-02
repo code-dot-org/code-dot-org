@@ -184,8 +184,6 @@
         "script_level.level_keys": [
           "U6 AP Performance Task Tech Setup - Student Links"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
         "lesson_group.key": "csp_ap_1",
         "script.name": "csp-ap"
@@ -207,8 +205,6 @@
         "script_level.level_keys": [
           "U6 Create PT Review - Student Links"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -230,8 +226,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -253,8 +247,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -276,8 +268,6 @@
         "script_level.level_keys": [
           "U6 Explore PT Review - Student Links"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Explore PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
@@ -299,8 +289,6 @@
         "script_level.level_keys": [
           "U6 Explore PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Explore PT - Making a Plan",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
@@ -322,8 +310,6 @@
         "script_level.level_keys": [
           "U6 Explore PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Explore PT - Complete the Task",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
@@ -340,8 +326,6 @@
         "script_level.level_keys": [
           "U6 AP Performance Task Tech Setup - Student Links"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
         "lesson_group.key": "csp_ap_1",
         "script.name": "csp-ap"
@@ -353,8 +337,6 @@
         "script_level.level_keys": [
           "U6 Create PT Review - Student Links"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -366,8 +348,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -379,8 +359,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-ap"
@@ -392,8 +370,6 @@
         "script_level.level_keys": [
           "U6 Explore PT Review - Student Links"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Explore PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
@@ -405,8 +381,6 @@
         "script_level.level_keys": [
           "U6 Explore PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Explore PT - Making a Plan",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
@@ -418,8 +392,6 @@
         "script_level.level_keys": [
           "U6 Explore PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Explore PT - Complete the Task",
         "lesson_group.key": "csp_ap_2",
         "script.name": "csp-ap"
