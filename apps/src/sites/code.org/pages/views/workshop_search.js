@@ -1,19 +1,9 @@
-/* globals google, mapboxgl */
+/* globals mapboxgl */
 
 import $ from 'jquery';
-import MarkerClusterer from 'node-js-marker-clusterer';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-const markerCustererOptions = {
-  imagePath: getScriptData('workshopSearch').imagePath,
-  gridSize: 10
-};
-
-var map,
-  markersByLocation = {},
-  infoWindow,
-  markerClusterer;
+var map;
 
 $(document).ready(function() {
   initializeMap();
@@ -21,69 +11,19 @@ $(document).ready(function() {
 });
 
 function initializeMap() {
-  /*var mapOptions = {
-    center: new google.maps.LatLng(37.6, -95.665),
-    zoom: 4,
-    minZoom: 2,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-  gmap = new google.maps.Map(document.getElementById('gmap'), mapOptions);
-  infoWindow = new google.maps.InfoWindow();*/
   map = new mapboxgl.Map({
     container: 'gmap',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-95.665, 37.6],
     zoom: 4
   });
-  var geocoder = new MapboxGeocoder({
+  var geocoder = new mapboxgl.MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
     marker: false,
     types: 'country,region,district,postcode,locality,place'
   });
   document.getElementById('geocomplete').appendChild(geocoder.onAdd(map));
-}
-
-function loadImages() {
-  /*return Promise.all([
-    map.loadImage(
-      'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
-      (error, image) => {
-        console.log('hi');
-        if (error) {
-          console.log(error);
-          return;
-        }
-        map.addImage('blank-marker', image);
-        resolve();
-      }
-    )
-  ]);*/
-  return Promise.all(
-    [
-      {
-        url: 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
-        name: 'blank-marker'
-      },
-      {
-        url: 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png',
-        name: 'star-marker'
-      }
-    ].map(
-      img =>
-        new Promise((resolve, reject) => {
-          map.loadImage(img.url, function(error, img_result) {
-            if (error) {
-              console.log(error);
-              return;
-            }
-            map.addImage(img.name, img_result);
-            resolve();
-          });
-        })
-    )
-  );
 }
 
 function loadWorkshops() {
@@ -105,7 +45,6 @@ function placeIntroWorkshops() {
   map.loadImage(
     'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
     (error, image) => {
-      console.log('hi');
       if (error) {
         console.log(error);
         return;
@@ -115,7 +54,7 @@ function placeIntroWorkshops() {
         id: 'intro-workshops',
         type: 'symbol',
         source: 'workshops',
-        filter: ['==', 'subject', SubjectNames.SUBJECT_CSF_201],
+        filter: ['!=', 'subject', SubjectNames.SUBJECT_CSF_201],
         layout: {
           'icon-image': 'marker',
           'icon-size': 0.5
@@ -123,16 +62,7 @@ function placeIntroWorkshops() {
       });
     }
   );
-  map.on('click', 'intro-workshops', e => {
-    var coordinates = e.features[0].geometry.coordinates.slice();
-    var workshop = e.features[0].properties;
-    const description = compileHtml(workshop, false);
-
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(description)
-      .addTo(map);
-  });
+  map.on('click', 'intro-workshops', onMarkerClick);
   map.on('mouseenter', 'intro-workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
@@ -142,7 +72,6 @@ function placeDeepDiveWorkshops() {
   map.loadImage(
     'https://maps.google.com/mapfiles/kml/paddle/red-stars.png',
     (error, image) => {
-      console.log('hi');
       if (error) {
         console.log(error);
         return;
@@ -152,7 +81,7 @@ function placeDeepDiveWorkshops() {
         id: 'deep-dive-workshops',
         type: 'symbol',
         source: 'workshops',
-        filter: ['!=', 'subject', SubjectNames.SUBJECT_CSF_201],
+        filter: ['==', 'subject', SubjectNames.SUBJECT_CSF_201],
         layout: {
           'icon-image': 'star-marker',
           'icon-size': 0.5
@@ -160,75 +89,21 @@ function placeDeepDiveWorkshops() {
       });
     }
   );
-  map.on('click', 'deep-dive-workshops', e => {
-    var coordinates = e.features[0].geometry.coordinates.slice();
-    var workshop = e.features[0].properties;
-    const description = compileHtml(workshop, false);
-
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(description)
-      .addTo(map);
-  });
+  map.on('click', 'deep-dive-workshops', onMarkerClick);
   map.on('mouseenter', 'deep-dive-workshops', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
 
-function processPdWorkshops(workshops) {
-  $.each(workshops, function(i, workshop) {
-    var location = workshop.processed_location;
-    var latLng = new google.maps.LatLng(location.latitude, location.longitude);
-    var hash = latLng.toUrlValue();
+function onMarkerClick(e) {
+  var coordinates = e.features[0].geometry.coordinates.slice();
+  var workshop = e.features[0].properties;
+  const description = compileHtml(workshop, false);
 
-    var infoWindowContent = '';
-
-    if (markersByLocation[hash] === undefined) {
-      infoWindowContent = compileHtml(workshop, true);
-      markersByLocation[hash] = createNewMarker(
-        latLng,
-        workshop.location_name,
-        infoWindowContent,
-        workshop.subject
-      );
-    } else {
-      // Extend existing marker.
-      infoWindowContent = compileHtml(workshop, false);
-      markersByLocation[hash].infoWindowContent += infoWindowContent;
-      // Upgrade any marker containing a deep dive workshop to the deep dive icon
-      if (workshop.subject === SubjectNames.SUBJECT_CSF_201) {
-        markersByLocation[hash].icon = iconForSubject(workshop.subject);
-      }
-    }
-  });
-}
-
-function createNewMarker(latLng, title, infoWindowContent, subject) {
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map: gmap,
-    title: title,
-    infoWindowContent: infoWindowContent,
-    icon: iconForSubject(subject)
-  });
-  google.maps.event.addListener(marker, 'click', function() {
-    infoWindow.setContent(this.get('infoWindowContent'));
-    infoWindow.open(gmap, this);
-  });
-  markerClusterer.addMarker(marker);
-  return marker;
-}
-
-const iconForSubject = subject => ({
-  url:
-    subject === SubjectNames.SUBJECT_CSF_201
-      ? 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png'
-      : 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
-  scaledSize: new google.maps.Size(40, 40)
-});
-
-function completeProcessingPdWorkshops() {
-  addGeocomplete();
+  new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
 }
 
 function compileHtml(workshop, first) {
@@ -271,62 +146,4 @@ function compileHtml(workshop, first) {
   html += '</div>';
 
   return html;
-}
-
-function addGeocomplete() {
-  var geocomplete_options = {
-    country: 'us'
-  };
-
-  if (html5_storage_supported() && localStorage['geocomplete'] !== undefined) {
-    geocomplete_options.location = localStorage['geocomplete'];
-  }
-
-  $('#geocomplete')
-    .geocomplete(geocomplete_options)
-    .bind('geocode:result', function(event, result) {
-      gmap.fitBounds(result.geometry.viewport);
-
-      var bounds = gmap.getBounds();
-      var marker_found = false;
-
-      while (!marker_found && gmap.getZoom() > 4) {
-        $.each(markersByLocation, function(index, marker) {
-          if (bounds.contains(marker.getPosition())) {
-            marker_found = true;
-          }
-        });
-
-        if (!marker_found) {
-          gmap.setZoom(gmap.getZoom() - 1);
-          bounds = gmap.getBounds();
-        }
-      }
-
-      if (html5_storage_supported()) {
-        localStorage['geocomplete'] = result.formatted_address;
-      }
-    });
-
-  $('#btn-submit').click(function() {
-    $('#geocomplete').trigger('geocode');
-  });
-
-  $('#btn-reset').click(function() {
-    $('#geocomplete').val('');
-    gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
-    gmap.setZoom(4);
-    infoWindow.close();
-    if (html5_storage_supported()) {
-      localStorage.removeItem('geocomplete');
-    }
-  });
-}
-
-function html5_storage_supported() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-    return false;
-  }
 }
