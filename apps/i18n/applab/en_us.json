@@ -372,7 +372,7 @@
   "makerSetupMakerAppForMac": "Code.org Maker App for Mac",
   "makerSetupMakerAppForWindows": "Code.org Maker App for Windows",
   "makerSetupPlugInBoard": "Plug in your board to start using it with App Lab!",
-  "makerSetupPlugInBoardCheck": "We couldn't detect a Circuit Playground board. Make sure your board is plugged in, and click: ",
+  "makerSetupPlugInBoardCheck": "We couldn't detect a Circuit Playground or micro:bit board. Make sure your board is plugged in, and click: ",
   "makerSetupRedetect": "Once it is installed, come back to this page and click the \"re-detect\" button, above.",
   "makerSetupSerialConnector": "Maker Toolkit on Chromebook does not use the Code.org Maker App. Instead, it depends on the [Code.org Serial Connector]({webstoreURL}) Chrome App.",
   "makerSetupSignIn": "Open up the Code.org Maker App and sign in to Code.org.",
