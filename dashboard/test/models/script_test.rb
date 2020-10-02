@@ -2606,8 +2606,8 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    expected_message = 'Level cannot be added multiple times to one lesson. Lesson key: lesson1 Script name: level-included-multiple-times'
-    assert_equal expected_message, error.message
+    assert error.message.include? 'Duplicate entry'
+    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'seeding_key' do
