@@ -299,8 +299,6 @@
         "script_level.level_keys": [
           "courseB_video_Unspotted_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -321,8 +319,6 @@
         "script_level.level_keys": [
           "courseA_video_Stevie_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -343,8 +339,6 @@
         "script_level.level_keys": [
           "MoveItMoveIt_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Move It, Move It",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -365,8 +359,6 @@
         "script_level.level_keys": [
           "courseAB_video_NewIntro_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -387,8 +379,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp1_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -409,8 +399,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp2_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -431,8 +419,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp3a_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -453,8 +439,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp3b_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -475,8 +459,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp4a_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -497,8 +479,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp5a_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 7,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -519,8 +499,6 @@
         "script_level.level_keys": [
           "DigitalFootprint_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Your Digital Footprint",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -541,8 +519,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_MRF_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Programming: My Robotic Friends",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -563,8 +539,6 @@
         "script_level.level_keys": [
           "elementary_video_pairProgramming_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -585,8 +559,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq1_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -607,8 +579,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq4_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -629,8 +599,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq5_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -651,8 +619,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq6_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -673,8 +639,6 @@
         "script_level.level_keys": [
           "courseAB_video_debugging_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -695,8 +659,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq7_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -717,8 +679,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq8_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -740,8 +700,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq9_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -762,8 +720,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq10_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -784,8 +740,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq11_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -806,8 +760,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq12_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -828,8 +780,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq_challenge1_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -850,8 +800,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq_challenge2_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -872,8 +820,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_CnC_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Copyright and Creativity",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -894,8 +840,6 @@
         "script_level.level_keys": [
           "bb8_skinOverview_K-1_video"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -916,8 +860,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog1_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -938,8 +880,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -960,8 +900,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog3_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -982,8 +920,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog4_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1004,8 +940,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog5_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1026,8 +960,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog6_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1048,8 +980,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog7_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1071,8 +1001,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog8_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1093,8 +1021,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog9_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1115,8 +1041,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog10_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1137,8 +1061,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog11_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1159,8 +1081,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_loopyMRF_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1181,8 +1101,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1203,8 +1121,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1225,8 +1141,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops_video"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1247,8 +1161,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops3"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1269,8 +1181,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops4"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 5,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1291,8 +1201,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops6"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 6,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1313,8 +1221,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops7"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 7,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1335,8 +1241,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops8"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 8,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1357,8 +1261,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops9"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 9,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1380,8 +1282,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops10"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 10,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1402,8 +1302,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops11"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 11,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1424,8 +1322,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops12"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 12,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1446,8 +1342,6 @@
         "script_level.level_keys": [
           "courseAB_video_collector_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1468,8 +1362,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops1_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1490,8 +1382,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops2_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1512,8 +1402,6 @@
         "script_level.level_keys": [
           "courseA_video_Loops_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1534,8 +1422,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops3_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1556,8 +1442,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops4_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1578,8 +1462,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops5_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1600,8 +1482,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops6_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1622,8 +1502,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops7_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1645,8 +1523,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops8_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1667,8 +1543,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops9_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 11,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1689,8 +1563,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops10_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 12,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1711,8 +1583,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops11_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 13,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1733,8 +1603,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops_challenge1_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 14,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1755,8 +1623,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops_challenge2a_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 15,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1777,8 +1643,6 @@
         "script_level.level_keys": [
           "courseB_video_ArtistIntro_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1799,8 +1663,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops1_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1821,8 +1683,6 @@
         "script_level.level_keys": [
           "courseB_video_artistLoops_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1843,8 +1703,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops2_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1865,8 +1723,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops3_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1887,8 +1743,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops4_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1909,8 +1763,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops5_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1931,8 +1783,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops6_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1954,8 +1804,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops7_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1976,8 +1824,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops8_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -1998,8 +1844,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops9_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2020,8 +1864,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops10_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2042,8 +1884,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops_challenge1_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2064,8 +1904,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops_challenge2_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2086,8 +1924,6 @@
         "script_level.level_keys": [
           "BigEvent_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2108,8 +1944,6 @@
         "script_level.level_keys": [
           "courseA_video_events_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2130,8 +1964,6 @@
         "script_level.level_keys": [
           "courseB_playLab_events1_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2152,8 +1984,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events2_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2174,8 +2004,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events3_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2196,8 +2024,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events4_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2218,8 +2044,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events5_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2240,8 +2064,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events6_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2262,8 +2084,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events7_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2284,8 +2104,6 @@
         "script_level.level_keys": [
           "courseB_playlab_eventsFP_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2306,8 +2124,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events_challenge1_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2328,8 +2144,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events_challenge2_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2350,8 +2164,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2372,8 +2184,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2394,8 +2204,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2416,8 +2224,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2438,8 +2244,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2460,8 +2264,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_9"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2482,8 +2284,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2504,8 +2304,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_15"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2526,8 +2324,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_16"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 9,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2544,8 +2340,6 @@
         "script_level.level_keys": [
           "courseB_video_Unspotted_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2557,8 +2351,6 @@
         "script_level.level_keys": [
           "courseA_video_Stevie_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2570,8 +2362,6 @@
         "script_level.level_keys": [
           "MoveItMoveIt_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Move It, Move It",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2583,8 +2373,6 @@
         "script_level.level_keys": [
           "courseAB_video_NewIntro_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2596,8 +2384,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp1_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2609,8 +2395,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp2_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2622,8 +2406,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp3a_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2635,8 +2417,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp3b_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2648,8 +2428,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp4a_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2661,8 +2439,6 @@
         "script_level.level_keys": [
           "courseB_Scrat_ramp5a_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 7,
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2674,8 +2450,6 @@
         "script_level.level_keys": [
           "DigitalFootprint_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Your Digital Footprint",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2687,8 +2461,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_MRF_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Programming: My Robotic Friends",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2700,8 +2472,6 @@
         "script_level.level_keys": [
           "elementary_video_pairProgramming_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2713,8 +2483,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq1_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2726,8 +2494,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq4_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2739,8 +2505,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq5_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2752,8 +2516,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq6_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2765,8 +2527,6 @@
         "script_level.level_keys": [
           "courseAB_video_debugging_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2778,8 +2538,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq7_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2791,8 +2549,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq8_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2804,8 +2560,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq9_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2817,8 +2571,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq10_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2830,8 +2582,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq11_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2843,8 +2593,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq12_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2856,8 +2604,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq_challenge1_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2869,8 +2615,6 @@
         "script_level.level_keys": [
           "courseB_maze_seq_challenge2_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Programming in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2882,8 +2626,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_CnC_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Copyright and Creativity",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2895,8 +2637,6 @@
         "script_level.level_keys": [
           "bb8_skinOverview_K-1_video"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2908,8 +2648,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog1_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2921,8 +2659,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2934,8 +2670,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog3_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2947,8 +2681,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog4_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2960,8 +2692,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog5_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2973,8 +2703,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog6_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2986,8 +2714,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog7_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -2999,8 +2725,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog8_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3012,8 +2736,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog9_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3025,8 +2747,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog10_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3038,8 +2758,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog11_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3051,8 +2769,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_loopyMRF_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3064,8 +2780,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 1,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3077,8 +2791,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 2,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3090,8 +2802,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops_video"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 3,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3103,8 +2813,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops3"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 4,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3116,8 +2824,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops4"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 5,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3129,8 +2835,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops6"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 6,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3142,8 +2846,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops7"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 7,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3155,8 +2857,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops8"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 8,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3168,8 +2868,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops9"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 9,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3181,8 +2879,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops10"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 10,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3194,8 +2890,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops11"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 11,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3207,8 +2901,6 @@
         "script_level.level_keys": [
           "courseB_iceage_loops12"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 12,
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3220,8 +2912,6 @@
         "script_level.level_keys": [
           "courseAB_video_collector_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3233,8 +2923,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops1_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3246,8 +2934,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops2_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3259,8 +2945,6 @@
         "script_level.level_keys": [
           "courseA_video_Loops_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3272,8 +2956,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops3_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3285,8 +2967,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops4_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3298,8 +2978,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops5_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3311,8 +2989,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops6_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3324,8 +3000,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops7_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3337,8 +3011,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops8_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3350,8 +3022,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops9_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 11,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3363,8 +3033,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops10_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 12,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3376,8 +3044,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops11_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 13,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3389,8 +3055,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops_challenge1_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 14,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3402,8 +3066,6 @@
         "script_level.level_keys": [
           "courseB_collector_loops_challenge2a_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 15,
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3415,8 +3077,6 @@
         "script_level.level_keys": [
           "courseB_video_ArtistIntro_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3428,8 +3088,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops1_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3441,8 +3099,6 @@
         "script_level.level_keys": [
           "courseB_video_artistLoops_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3454,8 +3110,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops2_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3467,8 +3121,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops3_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3480,8 +3132,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops4_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3493,8 +3143,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops5_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3506,8 +3154,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops6_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3519,8 +3165,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops7_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3532,8 +3176,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops8_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3545,8 +3187,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops9_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3558,8 +3198,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops10_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3571,8 +3209,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops_challenge1_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3584,8 +3220,6 @@
         "script_level.level_keys": [
           "courseB_artist_loops_challenge2_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3597,8 +3231,6 @@
         "script_level.level_keys": [
           "BigEvent_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3610,8 +3242,6 @@
         "script_level.level_keys": [
           "courseA_video_events_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3623,8 +3253,6 @@
         "script_level.level_keys": [
           "courseB_playLab_events1_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3636,8 +3264,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events2_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3649,8 +3275,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events3_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3662,8 +3286,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events4_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3675,8 +3297,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events5_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3688,8 +3308,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events6_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3701,8 +3319,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events7_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3714,8 +3330,6 @@
         "script_level.level_keys": [
           "courseB_playlab_eventsFP_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3727,8 +3341,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events_challenge1_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3740,8 +3352,6 @@
         "script_level.level_keys": [
           "courseB_playlab_events_challenge2_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3753,8 +3363,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3766,8 +3374,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3779,8 +3385,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3792,8 +3396,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3805,8 +3407,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3818,8 +3418,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_9"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3831,8 +3429,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3844,8 +3440,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_15"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"
@@ -3857,8 +3451,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_16"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 9,
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
         "script.name": "pre-express-2018"

@@ -557,8 +557,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -579,8 +577,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -601,8 +597,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -623,8 +617,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -645,8 +637,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -667,8 +657,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -689,8 +677,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -711,8 +697,6 @@
         "script_level.level_keys": [
           "courseD_scrat_predict1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -733,8 +717,6 @@
         "script_level.level_keys": [
           "courseD_video_ScratLoops"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -755,8 +737,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp6"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -777,8 +757,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp7"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -800,8 +778,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp8"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -822,8 +798,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -844,8 +818,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp8"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -866,8 +838,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -888,8 +858,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp9"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -910,8 +878,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -932,8 +898,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -954,8 +918,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -976,8 +938,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -998,8 +958,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1020,8 +978,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1042,8 +998,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1064,8 +1018,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1087,8 +1039,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1109,8 +1059,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1131,8 +1079,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1154,8 +1100,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1177,8 +1121,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 12,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1199,8 +1141,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_loopyMRF"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1221,8 +1161,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1243,8 +1181,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1265,8 +1201,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1287,8 +1221,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1309,8 +1241,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1331,8 +1261,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1353,8 +1281,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1375,8 +1301,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1397,8 +1321,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops7"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1420,8 +1342,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1442,8 +1362,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops9"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1464,8 +1382,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1486,8 +1402,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1508,8 +1422,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1530,8 +1442,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 15,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1552,8 +1462,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 16,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1574,8 +1482,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 17,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1596,8 +1502,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1618,8 +1522,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1640,8 +1542,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1662,8 +1562,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1684,8 +1582,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops3"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1706,8 +1602,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1728,8 +1622,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1750,8 +1642,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1772,8 +1662,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops7"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1795,8 +1683,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1817,8 +1703,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1839,8 +1723,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1861,8 +1743,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1883,8 +1763,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1905,8 +1783,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 15,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1927,8 +1803,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 16,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1949,8 +1823,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 17,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1971,8 +1843,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1a"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -1993,8 +1863,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2015,8 +1883,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2037,8 +1903,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2059,8 +1923,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2081,8 +1943,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2103,8 +1963,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2125,8 +1983,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2147,8 +2003,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2170,8 +2024,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2192,8 +2044,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2214,8 +2064,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2236,8 +2084,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2258,8 +2104,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2280,8 +2124,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2302,8 +2144,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2324,8 +2164,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2346,8 +2184,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2368,8 +2204,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2390,8 +2224,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2412,8 +2244,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2434,8 +2264,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2456,8 +2284,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2478,8 +2304,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2500,8 +2324,6 @@
         "script_level.level_keys": [
           "Internet"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "How it Works: The Internet",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2522,8 +2344,6 @@
         "script_level.level_keys": [
           "courseD_unplugged_digitalCitizenship"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Common Sense Education: Digital Citizenship",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2544,8 +2364,6 @@
         "script_level.level_keys": [
           "courseC_Unplugged_ScreenOutTheMean"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Common Sense Education: Screen Out the Mean",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2566,8 +2384,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2588,8 +2404,6 @@
         "script_level.level_keys": [
           "elementary_video_pairProgramming"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2610,8 +2424,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_7_no_video"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2632,8 +2444,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_8"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2654,8 +2464,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_9"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2676,8 +2484,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_10"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2698,8 +2504,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_11"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2720,8 +2524,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_12"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2742,8 +2544,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_13"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2764,8 +2564,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_14"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2786,8 +2584,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_15"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 10,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2808,8 +2604,6 @@
         "script_level.level_keys": [
           "courseC_video_flappyIntro"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2831,8 +2625,6 @@
           "flappy_1",
           "courseC_flappy_events1"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2855,8 +2647,6 @@
           "flappy_2",
           "courseC_flappy_events2"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2879,8 +2669,6 @@
           "flappy_3",
           "courseC_flappy_events3"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2903,8 +2691,6 @@
           "flappy_4",
           "courseC_flappy_events4"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2927,8 +2713,6 @@
           "flappy_5",
           "courseC_flappy_events5"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2951,8 +2735,6 @@
           "flappy_6",
           "courseC_flappy_events6"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 7,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2975,8 +2757,6 @@
           "flappy_7",
           "courseC_flappy_events7"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 8,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -2999,8 +2779,6 @@
           "flappy_8",
           "courseC_flappy_events8"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 9,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3023,8 +2801,6 @@
           "flappy_9",
           "courseC_flappy_events9"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 10,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3047,8 +2823,6 @@
           "flappy_11",
           "courseC_flappy_events10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 11,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3071,8 +2845,6 @@
           "bounce_1",
           "courseD_bounce_events1s"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3095,8 +2867,6 @@
           "bounce_2",
           "courseD_bounce_events2s"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3119,8 +2889,6 @@
           "bounce_5",
           "courseD_bounce_events5s"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 3,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3143,8 +2911,6 @@
           "bounce_6",
           "courseD_bounce_events6s"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 4,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3167,8 +2933,6 @@
           "bounce_7",
           "courseD_bounce_events7s"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 5,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3191,8 +2955,6 @@
           "bounce_10",
           "courseD_bounce_events10s"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 6,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3215,8 +2977,6 @@
           "bounce_11",
           "courseD_bounce_events11s"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 7,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3239,8 +2999,6 @@
           "bounce_12",
           "courseD_bounce_events12s"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 8,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3262,8 +3020,6 @@
         "script_level.level_keys": [
           "Conditionals"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Conditionals: Conditionals with Cards",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3284,8 +3040,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3306,8 +3060,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3328,8 +3080,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while3"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 3,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3350,8 +3100,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 4,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3372,8 +3120,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 5,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3394,8 +3140,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 6,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3416,8 +3160,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 7,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3438,8 +3180,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 8,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3460,8 +3200,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 9,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3483,8 +3221,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 10,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3505,8 +3241,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 11,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3527,8 +3261,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 12,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3549,8 +3281,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10_predict2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 13,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3571,8 +3301,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge1"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 14,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3593,8 +3321,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge2"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 15,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3615,8 +3341,6 @@
         "script_level.level_keys": [
           "courseD_maze_until1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3637,8 +3361,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3659,8 +3381,6 @@
         "script_level.level_keys": [
           "courseD_maze_until2_predict1"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3681,8 +3401,6 @@
         "script_level.level_keys": [
           "courseD_maze_until3"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3703,8 +3421,6 @@
         "script_level.level_keys": [
           "courseD_maze_until4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3725,8 +3441,6 @@
         "script_level.level_keys": [
           "courseD_maze_until5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3747,8 +3461,6 @@
         "script_level.level_keys": [
           "courseD_maze_until6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3769,8 +3481,6 @@
         "script_level.level_keys": [
           "courseD_maze_until7"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3791,8 +3501,6 @@
         "script_level.level_keys": [
           "courseD_video_ifElse"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3813,8 +3521,6 @@
         "script_level.level_keys": [
           "courseD_maze_until8"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 10,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3836,8 +3542,6 @@
         "script_level.level_keys": [
           "courseD_maze_until9"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 11,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3858,8 +3562,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 12,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3880,8 +3582,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10_predict2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 13,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3902,8 +3602,6 @@
         "script_level.level_keys": [
           "courseD_maze_until_challenge1"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 14,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3924,8 +3622,6 @@
         "script_level.level_keys": [
           "courseD_farmer_until_challenge2"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 15,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3946,8 +3642,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3968,8 +3662,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -3990,8 +3682,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4012,8 +3702,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4034,8 +3722,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4056,8 +3742,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4078,8 +3762,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4100,8 +3782,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4122,8 +3802,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4144,8 +3822,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4166,8 +3842,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4188,8 +3862,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 12,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4210,8 +3882,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 13,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4232,8 +3902,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 14,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4254,8 +3922,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4276,8 +3942,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4298,8 +3962,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4320,8 +3982,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4342,8 +4002,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4364,8 +4022,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4387,8 +4043,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4409,8 +4063,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4431,8 +4083,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4453,8 +4103,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4475,8 +4123,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4497,8 +4143,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4519,8 +4163,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 1,
         "lesson.key": "Variables: Envelope Variables",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4541,8 +4183,6 @@
         "script_level.level_keys": [
           "grade5_artist_variables_triangles1"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 1,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4563,8 +4203,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables2"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 2,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4585,8 +4223,6 @@
         "script_level.level_keys": [
           "courseF_video_artistVariables"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 3,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4607,8 +4243,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3a_predict1"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 4,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4629,8 +4263,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 5,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4651,8 +4283,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables4"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 6,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4673,8 +4303,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables5"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 7,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4695,8 +4323,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 8,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4717,8 +4343,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6a"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 9,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4739,8 +4363,6 @@
         "script_level.level_keys": [
           "courseF_external_variableConstant"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 10,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4761,8 +4383,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables7"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 11,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4783,8 +4403,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables8"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 12,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4805,8 +4423,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables9"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 13,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4827,8 +4443,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables10"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 14,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4849,8 +4463,6 @@
         "script_level.level_keys": [
           "courseF_artist_variablesFP"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 15,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4871,8 +4483,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables_challenge1"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 16,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4893,8 +4503,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables_challenge2"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 17,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4915,8 +4523,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 1,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4937,8 +4543,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 2,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4959,8 +4563,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 3,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -4981,8 +4583,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 4,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5003,8 +4603,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 5,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5025,8 +4623,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5c"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 6,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5047,8 +4643,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6c"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 7,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5069,8 +4663,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7c"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 8,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5091,8 +4683,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables8c"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 9,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5113,8 +4703,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 10,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5135,8 +4723,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables_challenge1"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 11,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5157,8 +4743,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables_challenge2"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 12,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5179,8 +4763,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "For Loops: For Loop Fun",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5201,8 +4783,6 @@
         "script_level.level_keys": [
           "courseF_bee_for1"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5223,8 +4803,6 @@
         "script_level.level_keys": [
           "courseF_bee_for2"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5245,8 +4823,6 @@
         "script_level.level_keys": [
           "courseF_video_forBee"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5267,8 +4843,6 @@
         "script_level.level_keys": [
           "courseF_bee_for3_predict1"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5289,8 +4863,6 @@
         "script_level.level_keys": [
           "courseF_bee_for4"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5311,8 +4883,6 @@
         "script_level.level_keys": [
           "courseF_bee_for6"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5333,8 +4903,6 @@
         "script_level.level_keys": [
           "courseF_bee_for7"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5355,8 +4923,6 @@
         "script_level.level_keys": [
           "courseF_bee_for8"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5377,8 +4943,6 @@
         "script_level.level_keys": [
           "courseF_bee_for5"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5399,8 +4963,6 @@
         "script_level.level_keys": [
           "courseF_bee_for9"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5422,8 +4984,6 @@
         "script_level.level_keys": [
           "courseF_bee_for10"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5444,8 +5004,6 @@
         "script_level.level_keys": [
           "courseF_bee_for11"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5466,8 +5024,6 @@
         "script_level.level_keys": [
           "courseF_bee_for_challenge1"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 13,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5488,8 +5044,6 @@
         "script_level.level_keys": [
           "courseF_bee_for_challenge2"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 14,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5510,8 +5064,6 @@
         "script_level.level_keys": [
           "courseF_video_forArtist"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5532,8 +5084,6 @@
         "script_level.level_keys": [
           "courseF_artist_for1"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5554,8 +5104,6 @@
         "script_level.level_keys": [
           "courseF_artist_for2"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5576,8 +5124,6 @@
         "script_level.level_keys": [
           "courseF_artist_for3"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5598,8 +5144,6 @@
         "script_level.level_keys": [
           "courseF_artist_for4"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5620,8 +5164,6 @@
         "script_level.level_keys": [
           "courseF_artist_for5"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5642,8 +5184,6 @@
         "script_level.level_keys": [
           "courseF_artist_for6"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5664,8 +5204,6 @@
         "script_level.level_keys": [
           "courseF_artist_for7"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5686,8 +5224,6 @@
         "script_level.level_keys": [
           "courseF_artist_for8"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5708,8 +5244,6 @@
         "script_level.level_keys": [
           "courseF_artist_for9"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5730,8 +5264,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10_predict1"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5752,8 +5284,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5774,8 +5304,6 @@
         "script_level.level_keys": [
           "courseF_artist_for_challenge1"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 13,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5796,8 +5324,6 @@
         "script_level.level_keys": [
           "courseF_artist_for_challenge2"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 14,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5818,8 +5344,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 1,
         "lesson.key": "Functions: Songwriting with Parameters",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5840,8 +5364,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 1,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5862,8 +5384,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 2,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5884,8 +5404,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals2"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 3,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5906,8 +5424,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals3"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 4,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5928,8 +5444,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals4"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 5,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5950,8 +5464,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals5"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 6,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5972,8 +5484,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 7,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -5994,8 +5504,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 8,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6016,8 +5524,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals8"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 9,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6038,8 +5544,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals10"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 10,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6060,8 +5564,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsBee"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 11,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6082,8 +5584,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions2"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 12,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6104,8 +5604,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 13,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6126,8 +5624,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3a"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 14,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6148,8 +5644,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions4"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 15,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6170,8 +5664,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions5a"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 16,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6192,8 +5684,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctions"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 17,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6214,8 +5704,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions6"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 18,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6236,8 +5724,6 @@
         "script_level.level_keys": [
           "courseF_bee_functionsPre7"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 19,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6258,8 +5744,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions7"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 20,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6280,8 +5764,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions8a"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 21,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6302,8 +5784,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions_challenge1"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 22,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6324,8 +5804,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions_challenge2"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 23,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6346,8 +5824,6 @@
         "script_level.level_keys": [
           "courseF_video_artistFunctions"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6368,8 +5844,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp1"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6390,8 +5864,6 @@
         "script_level.level_keys": [
           "gradeF_video_artistParameters"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6412,8 +5884,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2_predict1"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6434,8 +5904,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6456,8 +5924,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctionArtist"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6478,8 +5944,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp3"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6500,8 +5964,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp4"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6522,8 +5984,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp5"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6545,8 +6005,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp6"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6567,8 +6025,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp7"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6589,8 +6045,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp8"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6611,8 +6065,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp9"
         ],
-        "script_level.chapter": 274,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6633,8 +6085,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp_challenge1"
         ],
-        "script_level.chapter": 275,
-        "script_level.position": 14,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6655,8 +6105,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp_challenge2"
         ],
-        "script_level.chapter": 276,
-        "script_level.position": 15,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6677,8 +6125,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp1"
         ],
-        "script_level.chapter": 277,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6699,8 +6145,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp2"
         ],
-        "script_level.chapter": 278,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6721,8 +6165,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp3"
         ],
-        "script_level.chapter": 279,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6743,8 +6185,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp4"
         ],
-        "script_level.chapter": 280,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6765,8 +6205,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp5"
         ],
-        "script_level.chapter": 281,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6787,8 +6225,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp6"
         ],
-        "script_level.chapter": 282,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6810,8 +6246,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp7"
         ],
-        "script_level.chapter": 283,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6832,8 +6266,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp8"
         ],
-        "script_level.chapter": 284,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6854,8 +6286,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp9_predict1"
         ],
-        "script_level.chapter": 285,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6876,8 +6306,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp_challenge1"
         ],
-        "script_level.chapter": 286,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6898,8 +6326,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp_challenge2"
         ],
-        "script_level.chapter": 287,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -6920,8 +6346,6 @@
         "script_level.level_keys": [
           "courseF_video_csMatters"
         ],
-        "script_level.chapter": 288,
-        "script_level.position": 1,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -6942,8 +6366,6 @@
         "script_level.level_keys": [
           "InspirationalArtwork"
         ],
-        "script_level.chapter": 289,
-        "script_level.position": 2,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -6964,8 +6386,6 @@
         "script_level.level_keys": [
           "FoodFight"
         ],
-        "script_level.chapter": 290,
-        "script_level.position": 3,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -6986,8 +6406,6 @@
         "script_level.level_keys": [
           "Guess The Number"
         ],
-        "script_level.chapter": 291,
-        "script_level.position": 4,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7008,8 +6426,6 @@
         "script_level.level_keys": [
           "Choose Your Own Adventure"
         ],
-        "script_level.chapter": 292,
-        "script_level.position": 5,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7030,8 +6446,6 @@
         "script_level.level_keys": [
           "Begin planning your project"
         ],
-        "script_level.chapter": 293,
-        "script_level.position": 1,
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7052,8 +6466,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project"
         ],
-        "script_level.chapter": 294,
-        "script_level.position": 1,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7074,8 +6486,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project"
         ],
-        "script_level.chapter": 295,
-        "script_level.position": 2,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7096,8 +6506,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project - Revise"
         ],
-        "script_level.chapter": 296,
-        "script_level.position": 1,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7118,8 +6526,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project - Revise"
         ],
-        "script_level.chapter": 297,
-        "script_level.position": 2,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7140,8 +6546,6 @@
         "script_level.level_keys": [
           "Prepare for your presentation"
         ],
-        "script_level.chapter": 298,
-        "script_level.position": 1,
         "lesson.key": "Present Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -7158,8 +6562,6 @@
         "script_level.level_keys": [
           "GraphPaperProgramming"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7171,8 +6573,6 @@
         "script_level.level_keys": [
           "courseE_video_ramp1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7184,8 +6584,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7197,8 +6595,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7210,8 +6606,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7223,8 +6617,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7236,8 +6628,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7249,8 +6639,6 @@
         "script_level.level_keys": [
           "courseD_scrat_predict1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7262,8 +6650,6 @@
         "script_level.level_keys": [
           "courseD_video_ScratLoops"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7275,8 +6661,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp6"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7288,8 +6672,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp7"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7301,8 +6683,6 @@
         "script_level.level_keys": [
           "courseD_scrat_ramp8"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7314,8 +6694,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7327,8 +6705,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp8"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7340,8 +6716,6 @@
         "script_level.level_keys": [
           "courseC_video_angles"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7353,8 +6727,6 @@
         "script_level.level_keys": [
           "courseE_artist_ramp9"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7366,8 +6738,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7379,8 +6749,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7392,8 +6760,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7405,8 +6771,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7418,8 +6782,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7431,8 +6793,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7444,8 +6804,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7457,8 +6815,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7470,8 +6826,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7483,8 +6837,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7496,8 +6848,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7509,8 +6859,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7522,8 +6870,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 12,
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7535,8 +6881,6 @@
         "script_level.level_keys": [
           "courseB_unplugged_loopyMRF"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7548,8 +6892,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7561,8 +6903,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7574,8 +6914,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7587,8 +6925,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7600,8 +6936,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7613,8 +6947,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7626,8 +6958,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7639,8 +6969,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7652,8 +6980,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops7"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7665,8 +6991,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7678,8 +7002,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops9"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7691,8 +7013,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7704,8 +7024,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7717,8 +7035,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7730,8 +7046,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 15,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7743,8 +7057,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 16,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7756,8 +7068,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 17,
         "lesson.key": "Loops in Artist (UPDATED!)",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7769,8 +7079,6 @@
         "script_level.level_keys": [
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7782,8 +7090,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7795,8 +7101,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7808,8 +7112,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7821,8 +7123,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops3"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7834,8 +7134,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7847,8 +7145,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7860,8 +7156,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7873,8 +7167,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops7"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7886,8 +7178,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7899,8 +7189,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7912,8 +7200,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7925,8 +7211,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7938,8 +7222,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 14,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7951,8 +7233,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 15,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7964,8 +7244,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 16,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7977,8 +7255,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 17,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -7990,8 +7266,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1a"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8003,8 +7277,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8016,8 +7288,6 @@
         "script_level.level_keys": [
           "courseD_video_nestedLoops"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8029,8 +7299,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8042,8 +7310,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8055,8 +7321,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8068,8 +7332,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8081,8 +7343,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8094,8 +7354,6 @@
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8107,8 +7365,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8120,8 +7376,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8133,8 +7387,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8146,8 +7398,6 @@
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8159,8 +7409,6 @@
         "script_level.level_keys": [
           "courseD_harvester_nested_loops_challenge1"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8172,8 +7420,6 @@
         "script_level.level_keys": [
           "courseD_collector_nested_loops_challenge2"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "Nested Loops",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8185,8 +7431,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8198,8 +7442,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8211,8 +7453,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8224,8 +7464,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8237,8 +7475,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8250,8 +7486,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8263,8 +7497,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8276,8 +7508,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8289,8 +7519,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "Nested Loops Project in Frozen",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8302,8 +7530,6 @@
         "script_level.level_keys": [
           "Internet"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "How it Works: The Internet",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8315,8 +7541,6 @@
         "script_level.level_keys": [
           "courseD_unplugged_digitalCitizenship"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Common Sense Education: Digital Citizenship",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8328,8 +7552,6 @@
         "script_level.level_keys": [
           "courseC_Unplugged_ScreenOutTheMean"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Common Sense Education: Screen Out the Mean",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8341,8 +7563,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8354,8 +7574,6 @@
         "script_level.level_keys": [
           "elementary_video_pairProgramming"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8367,8 +7585,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_7_no_video"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8380,8 +7596,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_8"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8393,8 +7607,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_9"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8406,8 +7618,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_10"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8419,8 +7629,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_11"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8432,8 +7640,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_12"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8445,8 +7651,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_13"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8458,8 +7662,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_14"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8471,8 +7673,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_15"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 10,
         "lesson.key": "Events in Star Wars",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8484,8 +7684,6 @@
         "script_level.level_keys": [
           "courseC_video_flappyIntro"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8498,8 +7696,6 @@
           "flappy_1",
           "courseC_flappy_events1"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8512,8 +7708,6 @@
           "flappy_1",
           "courseC_flappy_events1"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8526,8 +7720,6 @@
           "flappy_2",
           "courseC_flappy_events2"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8540,8 +7732,6 @@
           "flappy_2",
           "courseC_flappy_events2"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 3,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8554,8 +7744,6 @@
           "flappy_3",
           "courseC_flappy_events3"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8568,8 +7756,6 @@
           "flappy_3",
           "courseC_flappy_events3"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 4,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8582,8 +7768,6 @@
           "flappy_4",
           "courseC_flappy_events4"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8596,8 +7780,6 @@
           "flappy_4",
           "courseC_flappy_events4"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 5,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8610,8 +7792,6 @@
           "flappy_5",
           "courseC_flappy_events5"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8624,8 +7804,6 @@
           "flappy_5",
           "courseC_flappy_events5"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 6,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8638,8 +7816,6 @@
           "flappy_6",
           "courseC_flappy_events6"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 7,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8652,8 +7828,6 @@
           "flappy_6",
           "courseC_flappy_events6"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 7,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8666,8 +7840,6 @@
           "flappy_7",
           "courseC_flappy_events7"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 8,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8680,8 +7852,6 @@
           "flappy_7",
           "courseC_flappy_events7"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 8,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8694,8 +7864,6 @@
           "flappy_8",
           "courseC_flappy_events8"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 9,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8708,8 +7876,6 @@
           "flappy_8",
           "courseC_flappy_events8"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 9,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8722,8 +7888,6 @@
           "flappy_9",
           "courseC_flappy_events9"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 10,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8736,8 +7900,6 @@
           "flappy_9",
           "courseC_flappy_events9"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 10,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8750,8 +7912,6 @@
           "flappy_11",
           "courseC_flappy_events10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 11,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8764,8 +7924,6 @@
           "flappy_11",
           "courseC_flappy_events10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 11,
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8778,8 +7936,6 @@
           "bounce_1",
           "courseD_bounce_events1s"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8792,8 +7948,6 @@
           "bounce_1",
           "courseD_bounce_events1s"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8806,8 +7960,6 @@
           "bounce_2",
           "courseD_bounce_events2s"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8820,8 +7972,6 @@
           "bounce_2",
           "courseD_bounce_events2s"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8834,8 +7984,6 @@
           "bounce_5",
           "courseD_bounce_events5s"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 3,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8848,8 +7996,6 @@
           "bounce_5",
           "courseD_bounce_events5s"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 3,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8862,8 +8008,6 @@
           "bounce_6",
           "courseD_bounce_events6s"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 4,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8876,8 +8020,6 @@
           "bounce_6",
           "courseD_bounce_events6s"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 4,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8890,8 +8032,6 @@
           "bounce_7",
           "courseD_bounce_events7s"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 5,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8904,8 +8044,6 @@
           "bounce_7",
           "courseD_bounce_events7s"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 5,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8918,8 +8056,6 @@
           "bounce_10",
           "courseD_bounce_events10s"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 6,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8932,8 +8068,6 @@
           "bounce_10",
           "courseD_bounce_events10s"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 6,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8946,8 +8080,6 @@
           "bounce_11",
           "courseD_bounce_events11s"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 7,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8960,8 +8092,6 @@
           "bounce_11",
           "courseD_bounce_events11s"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 7,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8974,8 +8104,6 @@
           "bounce_12",
           "courseD_bounce_events12s"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 8,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -8988,8 +8116,6 @@
           "bounce_12",
           "courseD_bounce_events12s"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 8,
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9001,8 +8127,6 @@
         "script_level.level_keys": [
           "Conditionals"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Conditionals: Conditionals with Cards",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9014,8 +8138,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while1"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9027,8 +8149,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while2"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9040,8 +8160,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while3"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 3,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9053,8 +8171,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 4,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9066,8 +8182,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 5,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9079,8 +8193,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 6,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9092,8 +8204,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 7,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9105,8 +8215,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 8,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9118,8 +8226,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 9,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9131,8 +8237,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 10,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9144,8 +8248,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 11,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9157,8 +8259,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 12,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9170,8 +8270,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while10_predict2"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 13,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9183,8 +8281,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge1"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 14,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9196,8 +8292,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while_challenge2"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 15,
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9209,8 +8303,6 @@
         "script_level.level_keys": [
           "courseD_maze_until1"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9222,8 +8314,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9235,8 +8325,6 @@
         "script_level.level_keys": [
           "courseD_maze_until2_predict1"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9248,8 +8336,6 @@
         "script_level.level_keys": [
           "courseD_maze_until3"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9261,8 +8347,6 @@
         "script_level.level_keys": [
           "courseD_maze_until4"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9274,8 +8358,6 @@
         "script_level.level_keys": [
           "courseD_maze_until5"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9287,8 +8369,6 @@
         "script_level.level_keys": [
           "courseD_maze_until6"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9300,8 +8380,6 @@
         "script_level.level_keys": [
           "courseD_maze_until7"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9313,8 +8391,6 @@
         "script_level.level_keys": [
           "courseD_video_ifElse"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9326,8 +8402,6 @@
         "script_level.level_keys": [
           "courseD_maze_until8"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 10,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9339,8 +8413,6 @@
         "script_level.level_keys": [
           "courseD_maze_until9"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 11,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9352,8 +8424,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 12,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9365,8 +8435,6 @@
         "script_level.level_keys": [
           "courseD_maze_until10_predict2"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 13,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9378,8 +8446,6 @@
         "script_level.level_keys": [
           "courseD_maze_until_challenge1"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 14,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9391,8 +8457,6 @@
         "script_level.level_keys": [
           "courseD_farmer_until_challenge2"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 15,
         "lesson.key": "Conditional Loops in Maze",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9404,8 +8468,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9417,8 +8479,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9430,8 +8490,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9443,8 +8501,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9456,8 +8512,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9469,8 +8523,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9482,8 +8534,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9495,8 +8545,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9508,8 +8556,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9521,8 +8567,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9534,8 +8578,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9547,8 +8589,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 12,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9560,8 +8600,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 13,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9573,8 +8611,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 14,
         "lesson.key": "Conditionals in Minecraft",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9586,8 +8622,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 1,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9599,8 +8633,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 2,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9612,8 +8644,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 3,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9625,8 +8655,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 4,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9638,8 +8666,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 5,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9651,8 +8677,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 6,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9664,8 +8688,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 7,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9677,8 +8699,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 8,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9690,8 +8710,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 9,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9703,8 +8721,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 10,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9716,8 +8732,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 11,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9729,8 +8743,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 12,
         "lesson.key": "Conditionals & Loops in Farmer",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9742,8 +8754,6 @@
         "script_level.level_keys": [
           "EnvelopeVariables"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 1,
         "lesson.key": "Variables: Envelope Variables",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9755,8 +8765,6 @@
         "script_level.level_keys": [
           "grade5_artist_variables_triangles1"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 1,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9768,8 +8776,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables2"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 2,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9781,8 +8787,6 @@
         "script_level.level_keys": [
           "courseF_video_artistVariables"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 3,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9794,8 +8798,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3a_predict1"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 4,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9807,8 +8809,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables3"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 5,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9820,8 +8820,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables4"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 6,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9833,8 +8831,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables5"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 7,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9846,8 +8842,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 8,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9859,8 +8853,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables6a"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 9,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9872,8 +8864,6 @@
         "script_level.level_keys": [
           "courseF_external_variableConstant"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 10,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9885,8 +8875,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables7"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 11,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9898,8 +8886,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables8"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 12,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9911,8 +8897,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables9"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 13,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9924,8 +8908,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables10"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 14,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9937,8 +8919,6 @@
         "script_level.level_keys": [
           "courseF_artist_variablesFP"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 15,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9950,8 +8930,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables_challenge1"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 16,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9963,8 +8941,6 @@
         "script_level.level_keys": [
           "courseF_artist_variables_challenge2"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 17,
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9976,8 +8952,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 1,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -9989,8 +8963,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 2,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10002,8 +8974,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 3,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10015,8 +8985,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 4,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10028,8 +8996,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 5,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10041,8 +9007,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5c"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 6,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10054,8 +9018,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6c"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 7,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10067,8 +9029,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7c"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 8,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10080,8 +9040,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables8c"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 9,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10093,8 +9051,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 10,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10106,8 +9062,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables_challenge1"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 11,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10119,8 +9073,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables_challenge2"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 12,
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10132,8 +9084,6 @@
         "script_level.level_keys": [
           "ForLoopFun"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "For Loops: For Loop Fun",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10145,8 +9095,6 @@
         "script_level.level_keys": [
           "courseF_bee_for1"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10158,8 +9106,6 @@
         "script_level.level_keys": [
           "courseF_bee_for2"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10171,8 +9117,6 @@
         "script_level.level_keys": [
           "courseF_video_forBee"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10184,8 +9128,6 @@
         "script_level.level_keys": [
           "courseF_bee_for3_predict1"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10197,8 +9139,6 @@
         "script_level.level_keys": [
           "courseF_bee_for4"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10210,8 +9150,6 @@
         "script_level.level_keys": [
           "courseF_bee_for6"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10223,8 +9161,6 @@
         "script_level.level_keys": [
           "courseF_bee_for7"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10236,8 +9172,6 @@
         "script_level.level_keys": [
           "courseF_bee_for8"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10249,8 +9183,6 @@
         "script_level.level_keys": [
           "courseF_bee_for5"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10262,8 +9194,6 @@
         "script_level.level_keys": [
           "courseF_bee_for9"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10275,8 +9205,6 @@
         "script_level.level_keys": [
           "courseF_bee_for10"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10288,8 +9216,6 @@
         "script_level.level_keys": [
           "courseF_bee_for11"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10301,8 +9227,6 @@
         "script_level.level_keys": [
           "courseF_bee_for_challenge1"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 13,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10314,8 +9238,6 @@
         "script_level.level_keys": [
           "courseF_bee_for_challenge2"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 14,
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10327,8 +9249,6 @@
         "script_level.level_keys": [
           "courseF_video_forArtist"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 1,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10340,8 +9260,6 @@
         "script_level.level_keys": [
           "courseF_artist_for1"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 2,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10353,8 +9271,6 @@
         "script_level.level_keys": [
           "courseF_artist_for2"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 3,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10366,8 +9282,6 @@
         "script_level.level_keys": [
           "courseF_artist_for3"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 4,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10379,8 +9293,6 @@
         "script_level.level_keys": [
           "courseF_artist_for4"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 5,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10392,8 +9304,6 @@
         "script_level.level_keys": [
           "courseF_artist_for5"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 6,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10405,8 +9315,6 @@
         "script_level.level_keys": [
           "courseF_artist_for6"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 7,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10418,8 +9326,6 @@
         "script_level.level_keys": [
           "courseF_artist_for7"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 8,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10431,8 +9337,6 @@
         "script_level.level_keys": [
           "courseF_artist_for8"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 9,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10444,8 +9348,6 @@
         "script_level.level_keys": [
           "courseF_artist_for9"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 10,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10457,8 +9359,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10_predict1"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 11,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10470,8 +9370,6 @@
         "script_level.level_keys": [
           "courseF_artist_for10"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 12,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10483,8 +9381,6 @@
         "script_level.level_keys": [
           "courseF_artist_for_challenge1"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 13,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10496,8 +9392,6 @@
         "script_level.level_keys": [
           "courseF_artist_for_challenge2"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 14,
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10509,8 +9403,6 @@
         "script_level.level_keys": [
           "SongwritingWithParameters"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 1,
         "lesson.key": "Functions: Songwriting with Parameters",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10522,8 +9414,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 1,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10535,8 +9425,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals1_predict1"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 2,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10548,8 +9436,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals2"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 3,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10561,8 +9447,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals3"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 4,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10574,8 +9458,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals4"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 5,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10587,8 +9469,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals5"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 6,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10600,8 +9480,6 @@
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 7,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10613,8 +9491,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals7_predict2"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 8,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10626,8 +9502,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals8"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 9,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10639,8 +9513,6 @@
         "script_level.level_keys": [
           "courseF_bee_conditionals10"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 10,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10652,8 +9524,6 @@
         "script_level.level_keys": [
           "courseE_video_functionsBee"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 11,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10665,8 +9535,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions2"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 12,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10678,8 +9546,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 13,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10691,8 +9557,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions3a"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 14,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10704,8 +9568,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions4"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 15,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10717,8 +9579,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions5a"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 16,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10730,8 +9590,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctions"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 17,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10743,8 +9601,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions6"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 18,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10756,8 +9612,6 @@
         "script_level.level_keys": [
           "courseF_bee_functionsPre7"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 19,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10769,8 +9623,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions7"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 20,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10782,8 +9634,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions8a"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 21,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10795,8 +9645,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions_challenge1"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 22,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10808,8 +9656,6 @@
         "script_level.level_keys": [
           "courseF_bee_functions_challenge2"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 23,
         "lesson.key": "Functions in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10821,8 +9667,6 @@
         "script_level.level_keys": [
           "courseF_video_artistFunctions"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10834,8 +9678,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp1"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10847,8 +9689,6 @@
         "script_level.level_keys": [
           "gradeF_video_artistParameters"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10860,8 +9700,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2_predict1"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10873,8 +9711,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp2"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10886,8 +9722,6 @@
         "script_level.level_keys": [
           "courseF_video_createFunctionArtist"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10899,8 +9733,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp3"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10912,8 +9744,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp4"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10925,8 +9755,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp5"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10938,8 +9766,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp6"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10951,8 +9777,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp7"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10964,8 +9788,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp8"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10977,8 +9799,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp9"
         ],
-        "script_level.chapter": 274,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -10990,8 +9810,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp_challenge1"
         ],
-        "script_level.chapter": 275,
-        "script_level.position": 14,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11003,8 +9821,6 @@
         "script_level.level_keys": [
           "courseF_artist_fwp_challenge2"
         ],
-        "script_level.chapter": 276,
-        "script_level.position": 15,
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11016,8 +9832,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp1"
         ],
-        "script_level.chapter": 277,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11029,8 +9843,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp2"
         ],
-        "script_level.chapter": 278,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11042,8 +9854,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp3"
         ],
-        "script_level.chapter": 279,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11055,8 +9865,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp4"
         ],
-        "script_level.chapter": 280,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11068,8 +9876,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp5"
         ],
-        "script_level.chapter": 281,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11081,8 +9887,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp6"
         ],
-        "script_level.chapter": 282,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11094,8 +9898,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp7"
         ],
-        "script_level.chapter": 283,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11107,8 +9909,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp8"
         ],
-        "script_level.chapter": 284,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11120,8 +9920,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp9_predict1"
         ],
-        "script_level.chapter": 285,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11133,8 +9931,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp_challenge1"
         ],
-        "script_level.chapter": 286,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11146,8 +9942,6 @@
         "script_level.level_keys": [
           "courseF_bee_fwp_challenge2"
         ],
-        "script_level.chapter": 287,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
         "script.name": "new-express"
@@ -11159,8 +9953,6 @@
         "script_level.level_keys": [
           "courseF_video_csMatters"
         ],
-        "script_level.chapter": 288,
-        "script_level.position": 1,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11172,8 +9964,6 @@
         "script_level.level_keys": [
           "InspirationalArtwork"
         ],
-        "script_level.chapter": 289,
-        "script_level.position": 2,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11185,8 +9975,6 @@
         "script_level.level_keys": [
           "FoodFight"
         ],
-        "script_level.chapter": 290,
-        "script_level.position": 3,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11198,8 +9986,6 @@
         "script_level.level_keys": [
           "Guess The Number"
         ],
-        "script_level.chapter": 291,
-        "script_level.position": 4,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11211,8 +9997,6 @@
         "script_level.level_keys": [
           "Choose Your Own Adventure"
         ],
-        "script_level.chapter": 292,
-        "script_level.position": 5,
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11224,8 +10008,6 @@
         "script_level.level_keys": [
           "Begin planning your project"
         ],
-        "script_level.chapter": 293,
-        "script_level.position": 1,
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11237,8 +10019,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project"
         ],
-        "script_level.chapter": 294,
-        "script_level.position": 1,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11250,8 +10030,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project"
         ],
-        "script_level.chapter": 295,
-        "script_level.position": 2,
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11263,8 +10041,6 @@
         "script_level.level_keys": [
           "Course F: Artist Project - Revise"
         ],
-        "script_level.chapter": 296,
-        "script_level.position": 1,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11276,8 +10052,6 @@
         "script_level.level_keys": [
           "Course F: Play Lab Project - Revise"
         ],
-        "script_level.chapter": 297,
-        "script_level.position": 2,
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"
@@ -11289,8 +10063,6 @@
         "script_level.level_keys": [
           "Prepare for your presentation"
         ],
-        "script_level.chapter": 298,
-        "script_level.position": 1,
         "lesson.key": "Present Your Project",
         "lesson_group.key": "end_of_course_project",
         "script.name": "new-express"

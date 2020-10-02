@@ -82,8 +82,6 @@
         "script_level.level_keys": [
           "HOC pre-survey 2016 levelgroup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -104,8 +102,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -126,8 +122,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -148,8 +142,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2_5"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -170,8 +162,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -192,8 +182,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -214,8 +202,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -236,8 +222,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -258,8 +242,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -280,8 +262,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -302,8 +282,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -324,8 +302,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_10"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -346,8 +322,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_11"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -368,8 +342,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_12"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -390,8 +362,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_13"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -412,8 +382,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_14"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -434,8 +402,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_15"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -456,8 +422,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -478,8 +442,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -500,8 +462,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_18"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -522,8 +482,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_19"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -544,8 +502,6 @@
         "script_level.level_keys": [
           "HOC post-survey 2016 levelgroup"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -562,8 +518,6 @@
         "script_level.level_keys": [
           "HOC pre-survey 2016 levelgroup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -575,8 +529,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -588,8 +540,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -601,8 +551,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_2_5"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -614,8 +562,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -627,8 +573,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -640,8 +584,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -653,8 +595,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -666,8 +606,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -679,8 +617,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -692,8 +628,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -705,8 +639,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_10"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -718,8 +650,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_11"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -731,8 +661,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_12"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -744,8 +672,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_13"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 14,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -757,8 +683,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_14"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 15,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -770,8 +694,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_15"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 16,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -783,8 +705,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_16"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 17,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -796,8 +716,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_17"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 18,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -809,8 +727,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_18"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 19,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -822,8 +738,6 @@
         "script_level.level_keys": [
           "blockly:Maze:2_19"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 20,
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"
@@ -835,8 +749,6 @@
         "script_level.level_keys": [
           "HOC post-survey 2016 levelgroup"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
         "script.name": "hoc-impact-study"

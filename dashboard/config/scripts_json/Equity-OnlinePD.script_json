@@ -98,8 +98,6 @@
         "script_level.level_keys": [
           "Equity Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -120,8 +118,6 @@
         "script_level.level_keys": [
           "Equity About"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -142,8 +138,6 @@
         "script_level.level_keys": [
           "Equity Participation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -164,8 +158,6 @@
         "script_level.level_keys": [
           "Equity Stage1Go"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -186,8 +178,6 @@
         "script_level.level_keys": [
           "Equity Define"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -208,8 +198,6 @@
         "script_level.level_keys": [
           "Equity CS"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -230,8 +218,6 @@
         "script_level.level_keys": [
           "Equity Strategies"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -252,8 +238,6 @@
         "script_level.level_keys": [
           "Equity Stage2Go"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -274,8 +258,6 @@
         "script_level.level_keys": [
           "Equity Self Assess"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -296,8 +278,6 @@
         "script_level.level_keys": [
           "Equity Goals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -318,8 +298,6 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -340,8 +318,6 @@
         "script_level.level_keys": [
           "Equity Reflection"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -362,8 +338,6 @@
         "script_level.level_keys": [
           "Equity Stage3Go"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -384,8 +358,6 @@
         "script_level.level_keys": [
           "Equity Review"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -406,8 +378,6 @@
         "script_level.level_keys": [
           "Equity Keep Learning"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -428,8 +398,6 @@
         "script_level.level_keys": [
           "Equity Celebrate"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -446,8 +414,6 @@
         "script_level.level_keys": [
           "Equity Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -459,8 +425,6 @@
         "script_level.level_keys": [
           "Equity About"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -472,8 +436,6 @@
         "script_level.level_keys": [
           "Equity Participation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -485,8 +447,6 @@
         "script_level.level_keys": [
           "Equity Stage1Go"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -498,8 +458,6 @@
         "script_level.level_keys": [
           "Equity Define"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -511,8 +469,6 @@
         "script_level.level_keys": [
           "Equity CS"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -524,8 +480,6 @@
         "script_level.level_keys": [
           "Equity Strategies"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -537,8 +491,6 @@
         "script_level.level_keys": [
           "Equity Stage2Go"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -550,8 +502,6 @@
         "script_level.level_keys": [
           "Equity Self Assess"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -563,8 +513,6 @@
         "script_level.level_keys": [
           "Equity Goals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -576,8 +524,6 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -589,8 +535,6 @@
         "script_level.level_keys": [
           "Equity Reflection"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -602,8 +546,6 @@
         "script_level.level_keys": [
           "Equity Stage3Go"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -615,8 +557,6 @@
         "script_level.level_keys": [
           "Equity Review"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -628,8 +568,6 @@
         "script_level.level_keys": [
           "Equity Keep Learning"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"
@@ -641,8 +579,6 @@
         "script_level.level_keys": [
           "Equity Celebrate"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "Equity-OnlinePD"

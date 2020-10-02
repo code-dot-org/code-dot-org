@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "aEstory1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -76,8 +74,6 @@
         "script_level.level_keys": [
           "aE1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -98,8 +94,6 @@
         "script_level.level_keys": [
           "aE2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -120,8 +114,6 @@
         "script_level.level_keys": [
           "aE3"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -142,8 +134,6 @@
         "script_level.level_keys": [
           "aE3alternate"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -164,8 +154,6 @@
         "script_level.level_keys": [
           "aE3alternateB"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -186,8 +174,6 @@
         "script_level.level_keys": [
           "aE4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -208,8 +194,6 @@
         "script_level.level_keys": [
           "aE5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -230,8 +214,6 @@
         "script_level.level_keys": [
           "aE6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -252,8 +234,6 @@
         "script_level.level_keys": [
           "aE7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -274,8 +254,6 @@
         "script_level.level_keys": [
           "aE8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -296,8 +274,6 @@
         "script_level.level_keys": [
           "aEfreeplay"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -314,8 +290,6 @@
         "script_level.level_keys": [
           "aEstory1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -327,8 +301,6 @@
         "script_level.level_keys": [
           "aE1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -340,8 +312,6 @@
         "script_level.level_keys": [
           "aE2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -353,8 +323,6 @@
         "script_level.level_keys": [
           "aE3"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -366,8 +334,6 @@
         "script_level.level_keys": [
           "aE3alternate"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -379,8 +345,6 @@
         "script_level.level_keys": [
           "aE3alternateB"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -392,8 +356,6 @@
         "script_level.level_keys": [
           "aE4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -405,8 +367,6 @@
         "script_level.level_keys": [
           "aE5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -418,8 +378,6 @@
         "script_level.level_keys": [
           "aE6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -431,8 +389,6 @@
         "script_level.level_keys": [
           "aE7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -444,8 +400,6 @@
         "script_level.level_keys": [
           "aE8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"
@@ -457,8 +411,6 @@
         "script_level.level_keys": [
           "aEfreeplay"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
         "script.name": "artistExemplar"

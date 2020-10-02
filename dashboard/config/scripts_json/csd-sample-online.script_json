@@ -68,8 +68,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -90,8 +88,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -112,8 +108,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -134,8 +128,6 @@
         "script_level.level_keys": [
           "CSD digital Unplugged WIAC video"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -156,8 +148,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -178,8 +168,6 @@
         "script_level.level_keys": [
           "CSD digital unplugged WIAC Qs"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -200,8 +188,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP word search"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -222,8 +208,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP seating"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -240,8 +224,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -253,8 +235,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -266,8 +246,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -279,8 +257,6 @@
         "script_level.level_keys": [
           "CSD digital Unplugged WIAC video"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -292,8 +268,6 @@
         "script_level.level_keys": [
           "csd digital unplugged WIAC L3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -305,8 +279,6 @@
         "script_level.level_keys": [
           "CSD digital unplugged WIAC Qs"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -318,8 +290,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP word search"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"
@@ -331,8 +301,6 @@
         "script_level.level_keys": [
           "csd digital unplugged PSP seating"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
         "script.name": "csd-sample-online"

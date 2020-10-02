@@ -204,8 +204,6 @@
         "script_level.level_keys": [
           "CSP U2L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -227,8 +225,6 @@
         "script_level.level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -250,8 +246,6 @@
         "script_level.level_keys": [
           "U2L1 CFU how use internet"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -273,8 +267,6 @@
         "script_level.level_keys": [
           "CSP U2L2 SFLP 20-21"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -296,8 +288,6 @@
         "script_level.level_keys": [
           "U2L1 CFU paths"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -319,8 +309,6 @@
         "script_level.level_keys": [
           "CSP U2L3 SFLP 20-21"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -342,8 +330,6 @@
         "script_level.level_keys": [
           "U2L2 CSP Internet Simulator Broadcast"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -365,8 +351,6 @@
         "script_level.level_keys": [
           "U2L2 CSP CFU IP Addresses"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -388,8 +372,6 @@
         "script_level.level_keys": [
           "U2L2 CSP CFU IP works"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -411,8 +393,6 @@
         "script_level.level_keys": [
           "CSP U2L4 SFLP 20-21"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -434,8 +414,6 @@
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -457,8 +435,6 @@
         "script_level.level_keys": [
           "U2L3 CSP CFU Routers"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -480,8 +456,6 @@
         "script_level.level_keys": [
           "U2L3 CSP CFU Redundancy"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -503,8 +477,6 @@
         "script_level.level_keys": [
           "CSP U2L5 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -526,8 +498,6 @@
         "script_level.level_keys": [
           "U1L4 CSP Internet Simulator Packets 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -549,8 +519,6 @@
         "script_level.level_keys": [
           "U2L4 Multiple Choice packets"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -572,8 +540,6 @@
         "script_level.level_keys": [
           "U2L4 CSP CFU terms"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -595,8 +561,6 @@
         "script_level.level_keys": [
           "CSP U2L6 SFLP 20-21"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -618,8 +582,6 @@
         "script_level.level_keys": [
           "U1L5 CSP Internet Simulator DNS"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -641,8 +603,6 @@
         "script_level.level_keys": [
           "U2L4 CSP CFU scale"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -664,8 +624,6 @@
         "script_level.level_keys": [
           "U2L5 CSP CFU subgroups"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -687,8 +645,6 @@
         "script_level.level_keys": [
           "CSP U2L7 SFLP 20-21"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Project - Internet Dilemmas Part 1",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -710,8 +666,6 @@
         "script_level.level_keys": [
           "CSP U2L9 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project - Internet Dilemmas Part 2",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -733,8 +687,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 MC Assessment _2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -751,8 +703,6 @@
         "script_level.level_keys": [
           "CSP U2L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -764,8 +714,6 @@
         "script_level.level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -777,8 +725,6 @@
         "script_level.level_keys": [
           "U2L1 CFU how use internet"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -790,8 +736,6 @@
         "script_level.level_keys": [
           "CSP U2L2 SFLP 20-21"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -803,8 +747,6 @@
         "script_level.level_keys": [
           "U2L1 CFU paths"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -816,8 +758,6 @@
         "script_level.level_keys": [
           "CSP U2L3 SFLP 20-21"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -829,8 +769,6 @@
         "script_level.level_keys": [
           "U2L2 CSP Internet Simulator Broadcast"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -842,8 +780,6 @@
         "script_level.level_keys": [
           "U2L2 CSP CFU IP Addresses"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -855,8 +791,6 @@
         "script_level.level_keys": [
           "U2L2 CSP CFU IP works"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -868,8 +802,6 @@
         "script_level.level_keys": [
           "CSP U2L4 SFLP 20-21"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -881,8 +813,6 @@
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -894,8 +824,6 @@
         "script_level.level_keys": [
           "U2L3 CSP CFU Routers"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -907,8 +835,6 @@
         "script_level.level_keys": [
           "U2L3 CSP CFU Redundancy"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -920,8 +846,6 @@
         "script_level.level_keys": [
           "CSP U2L5 SFLP 20-21"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -933,8 +857,6 @@
         "script_level.level_keys": [
           "U1L4 CSP Internet Simulator Packets 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -946,8 +868,6 @@
         "script_level.level_keys": [
           "U2L4 Multiple Choice packets"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -959,8 +879,6 @@
         "script_level.level_keys": [
           "U2L4 CSP CFU terms"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Packets",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -972,8 +890,6 @@
         "script_level.level_keys": [
           "CSP U2L6 SFLP 20-21"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -985,8 +901,6 @@
         "script_level.level_keys": [
           "U1L5 CSP Internet Simulator DNS"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -998,8 +912,6 @@
         "script_level.level_keys": [
           "U2L4 CSP CFU scale"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -1011,8 +923,6 @@
         "script_level.level_keys": [
           "U2L5 CSP CFU subgroups"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "DNS and HTTP",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -1024,8 +934,6 @@
         "script_level.level_keys": [
           "CSP U2L7 SFLP 20-21"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Project - Internet Dilemmas Part 1",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -1037,8 +945,6 @@
         "script_level.level_keys": [
           "CSP U2L9 SFLP 20-21"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Project - Internet Dilemmas Part 2",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
@@ -1050,8 +956,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 MC Assessment _2020"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"

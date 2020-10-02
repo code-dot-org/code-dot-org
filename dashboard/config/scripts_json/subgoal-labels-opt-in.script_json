@@ -55,8 +55,6 @@
         "script_level.level_keys": [
           "csp_subgoal_labels_consent_intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Subgoal Labels Study Opt-In",
         "lesson_group.key": "",
         "script.name": "subgoal-labels-opt-in"
@@ -73,8 +71,6 @@
         "script_level.level_keys": [
           "csp_subgoal_labels_consent_intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Subgoal Labels Study Opt-In",
         "lesson_group.key": "",
         "script.name": "subgoal-labels-opt-in"

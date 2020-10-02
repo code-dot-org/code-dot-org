@@ -154,8 +154,6 @@
         "script_level.level_keys": [
           "CSPPD2 welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -176,8 +174,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -198,8 +194,6 @@
         "script_level.level_keys": [
           "CSPPD2 overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -220,8 +214,6 @@
         "script_level.level_keys": [
           "CSPPD2 tips for prep"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -242,8 +234,6 @@
         "script_level.level_keys": [
           "CSPPD2 participation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -264,8 +254,6 @@
         "script_level.level_keys": [
           "CSPPD2 lesson 1"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -286,8 +274,6 @@
         "script_level.level_keys": [
           "CSPPD2 lesson 1 reflection"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -308,8 +294,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -330,8 +314,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 lessons"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -352,8 +334,6 @@
         "script_level.level_keys": [
           "CSPPD2 PIvideo"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -374,8 +354,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 reflection"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -396,8 +374,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -418,8 +394,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 lessons"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -440,8 +414,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 reflection"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -462,8 +434,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -484,8 +454,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 lessons"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -506,8 +474,6 @@
         "script_level.level_keys": [
           "CSPPD2 share protocol"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -528,8 +494,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 reflection"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -550,8 +514,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -572,8 +534,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 lessons"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -594,8 +554,6 @@
         "script_level.level_keys": [
           "CSPPD2 share compression"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -616,8 +574,6 @@
         "script_level.level_keys": [
           "CSPPD2 pixel video 1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -638,8 +594,6 @@
         "script_level.level_keys": [
           "CSPPD2 pixel video 2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -660,8 +614,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 reflection"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -682,8 +634,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -704,8 +654,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT activity"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -726,8 +674,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT forum"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -748,8 +694,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT reflection"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -770,8 +714,6 @@
         "script_level.level_keys": [
           "CSPPD2 congrats"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -792,8 +734,6 @@
         "script_level.level_keys": [
           "CSPPD2 next step announcements"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -814,8 +754,6 @@
         "script_level.level_keys": [
           "CSPPD2 survey"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -832,8 +770,6 @@
         "script_level.level_keys": [
           "CSPPD2 welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -845,8 +781,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -858,8 +792,6 @@
         "script_level.level_keys": [
           "CSPPD2 overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -871,8 +803,6 @@
         "script_level.level_keys": [
           "CSPPD2 tips for prep"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -884,8 +814,6 @@
         "script_level.level_keys": [
           "CSPPD2 participation"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -897,8 +825,6 @@
         "script_level.level_keys": [
           "CSPPD2 lesson 1"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -910,8 +836,6 @@
         "script_level.level_keys": [
           "CSPPD2 lesson 1 reflection"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -923,8 +847,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -936,8 +858,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 lessons"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -949,8 +869,6 @@
         "script_level.level_keys": [
           "CSPPD2 PIvideo"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -962,8 +880,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 1 reflection"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -975,8 +891,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -988,8 +902,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 lessons"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1001,8 +913,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 2 reflection"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1014,8 +924,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1027,8 +935,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 lessons"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1040,8 +946,6 @@
         "script_level.level_keys": [
           "CSPPD2 share protocol"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1053,8 +957,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 3 reflection"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1066,8 +968,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1079,8 +979,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 lessons"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1092,8 +990,6 @@
         "script_level.level_keys": [
           "CSPPD2 share compression"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1105,8 +1001,6 @@
         "script_level.level_keys": [
           "CSPPD2 pixel video 1"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1118,8 +1012,6 @@
         "script_level.level_keys": [
           "CSPPD2 pixel video 2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1131,8 +1023,6 @@
         "script_level.level_keys": [
           "CSPPD2 chunk 4 reflection"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1144,8 +1034,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1157,8 +1045,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT activity"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1170,8 +1056,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT forum"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 3,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1183,8 +1067,6 @@
         "script_level.level_keys": [
           "CSPPD2 PT reflection"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 4,
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1196,8 +1078,6 @@
         "script_level.level_keys": [
           "CSPPD2 congrats"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1209,8 +1089,6 @@
         "script_level.level_keys": [
           "CSPPD2 next step announcements"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"
@@ -1222,8 +1100,6 @@
         "script_level.level_keys": [
           "CSPPD2 survey"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
         "script.name": "CSPPD2"

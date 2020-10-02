@@ -56,8 +56,6 @@
         "script_level.level_keys": [
           "plc csp1 intro to tools"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "netsim",
         "lesson_group.key": "",
         "script.name": "cspunit1-tools"
@@ -74,8 +72,6 @@
         "script_level.level_keys": [
           "plc csp1 intro to tools"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "netsim",
         "lesson_group.key": "",
         "script.name": "cspunit1-tools"

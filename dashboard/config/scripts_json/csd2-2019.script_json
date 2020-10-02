@@ -323,8 +323,6 @@
         "script_level.level_keys": [
           "CSD U2L01 TFMD_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -345,8 +343,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -367,8 +363,6 @@
         "script_level.level_keys": [
           "CSD U2L02 TFMD_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -389,8 +383,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -411,8 +403,6 @@
         "script_level.level_keys": [
           "CSD U2L03 TFMD_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -434,8 +424,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -456,8 +444,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -478,8 +464,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -500,8 +484,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -522,8 +504,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Tags Map_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -545,8 +525,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -568,8 +546,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -591,8 +567,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -613,8 +587,6 @@
         "script_level.level_keys": [
           "CSD U2L04 TFMD_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -635,8 +607,6 @@
         "script_level.level_keys": [
           "CSD U2 Pair Programming Video_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -658,8 +628,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -681,8 +649,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -704,8 +670,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -727,8 +691,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -749,8 +711,6 @@
         "script_level.level_keys": [
           "CSD U2 Headers map_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -771,8 +731,6 @@
         "script_level.level_keys": [
           "CSD U2 PSP Programming_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -794,8 +752,6 @@
         "script_level.level_keys": [
           "CSD U2 Design Project_2018_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -817,8 +773,6 @@
         "script_level.level_keys": [
           "CSD U2 Project Start_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -839,8 +793,6 @@
         "script_level.level_keys": [
           "CSD U2L05 TFMD_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -861,8 +813,6 @@
         "script_level.level_keys": [
           "Social Sleuth_2018_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -883,8 +833,6 @@
         "script_level.level_keys": [
           "CSD U2L06 TFMD_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -906,8 +854,6 @@
         "script_level.level_keys": [
           "CSD U2 lists intro_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -929,8 +875,6 @@
         "script_level.level_keys": [
           "CSD U2 unordered list_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -952,8 +896,6 @@
         "script_level.level_keys": [
           "CSD U2 ordered list_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -975,8 +917,6 @@
         "script_level.level_keys": [
           "CSD U2 lists match_2018_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -998,8 +938,6 @@
         "script_level.level_keys": [
           "CSD U2 un_ordered lists"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1020,8 +958,6 @@
         "script_level.level_keys": [
           "CSD U2 lists map_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1043,8 +979,6 @@
         "script_level.level_keys": [
           "CSD U2 expand project_2018_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1066,8 +1000,6 @@
         "script_level.level_keys": [
           "CSD U2 new page_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1088,8 +1020,6 @@
         "script_level.level_keys": [
           "CSD U2L07 TFMD_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1111,8 +1041,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1134,8 +1062,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1157,8 +1083,6 @@
         "script_level.level_keys": [
           "CSD U2 image debug match"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1180,8 +1104,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1202,8 +1124,6 @@
         "script_level.level_keys": [
           "CSD U2 images map_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1224,8 +1144,6 @@
         "script_level.level_keys": [
           "CSD U2 CC Search Map_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1247,8 +1165,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Attribution_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1270,8 +1186,6 @@
         "script_level.level_keys": [
           "CSD U2 Info Page Final Touches_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1292,8 +1206,6 @@
         "script_level.level_keys": [
           "CSD U2L08 TFMD_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1315,8 +1227,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 1_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1338,8 +1248,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 2_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1361,8 +1269,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 3_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1384,8 +1290,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 4_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1407,8 +1311,6 @@
         "script_level.level_keys": [
           "CSD U2 commenting_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1429,8 +1331,6 @@
         "script_level.level_keys": [
           "CSD U2 formatting map_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1452,8 +1352,6 @@
         "script_level.level_keys": [
           "CSD U2 challenge_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 8,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1474,8 +1372,6 @@
         "script_level.level_keys": [
           "CSD U2L09 TFMD_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1497,8 +1393,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1520,8 +1414,6 @@
         "script_level.level_keys": [
           "CSD U2 navigation_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1542,8 +1434,6 @@
         "script_level.level_keys": [
           "CSD U2 a tag map_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1564,8 +1454,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1587,8 +1475,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1610,8 +1496,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 7,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1633,8 +1517,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 8,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1656,8 +1538,6 @@
         "script_level.level_keys": [
           "CSD U2 header footer_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 9,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1679,8 +1559,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 10,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1701,8 +1579,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 11,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1724,8 +1600,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 12,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1747,8 +1621,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 13,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -1769,8 +1641,6 @@
         "script_level.level_keys": [
           "CSD U2L10 TFMD_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1791,8 +1661,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1813,8 +1681,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1836,8 +1702,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1859,8 +1723,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1881,8 +1743,6 @@
         "script_level.level_keys": [
           "CSD U2 Style Sheet Map_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1904,8 +1764,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1927,8 +1785,6 @@
         "script_level.level_keys": [
           "CSD U2 text style font family_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1950,8 +1806,6 @@
         "script_level.level_keys": [
           "CSD U2 text style decoration_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1973,8 +1827,6 @@
         "script_level.level_keys": [
           "CSD U2 text style text align_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -1995,8 +1847,6 @@
         "script_level.level_keys": [
           "CSD U2 Text Properties Map_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2017,8 +1867,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2040,8 +1888,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2063,8 +1909,6 @@
         "script_level.level_keys": [
           "CSD U2 text style freeplay_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2085,8 +1929,6 @@
         "script_level.level_keys": [
           "CSD U2L11 TFMD_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2108,8 +1950,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2131,8 +1971,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2153,8 +1991,6 @@
         "script_level.level_keys": [
           "CSS U2 Body Map_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2176,8 +2012,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2199,8 +2033,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style border_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2222,8 +2054,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style borderradius_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2245,8 +2075,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2268,8 +2096,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2291,8 +2117,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style margin_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2314,8 +2138,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2336,8 +2158,6 @@
         "script_level.level_keys": [
           "CSD U2 Layout Properties Map_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2359,8 +2179,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style freeplay_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2381,8 +2199,6 @@
         "script_level.level_keys": [
           "CSD U2L12 TFMD_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2403,8 +2219,6 @@
         "script_level.level_keys": [
           "CSD U2L13 TFMD_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2425,8 +2239,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2448,8 +2260,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB winter_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2471,8 +2281,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB summer_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2494,8 +2302,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB others_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2517,8 +2323,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2539,8 +2343,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS Classes Map_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2562,8 +2364,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2585,8 +2385,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2608,8 +2406,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 10,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2631,8 +2427,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Class Style Personal Site_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 11,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2653,8 +2447,6 @@
         "script_level.level_keys": [
           "CSD U2L14 TFMD_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2675,8 +2467,6 @@
         "script_level.level_keys": [
           "Final Personal Website_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2698,8 +2488,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 3,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2720,8 +2508,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -2742,8 +2528,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-2019"
@@ -2764,8 +2548,6 @@
         "script_level.level_keys": [
           "csd-post-survey-levelgroup_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-2019"
@@ -2782,8 +2564,6 @@
         "script_level.level_keys": [
           "CSD U2L01 TFMD_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2795,8 +2575,6 @@
         "script_level.level_keys": [
           "CSD U2 Top Websites_2018_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2808,8 +2586,6 @@
         "script_level.level_keys": [
           "CSD U2L02 TFMD_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2821,8 +2597,6 @@
         "script_level.level_keys": [
           "CSD U2 Expression Exemplars_2018_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2834,8 +2608,6 @@
         "script_level.level_keys": [
           "CSD U2L03 TFMD_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2847,8 +2619,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2860,8 +2630,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2873,8 +2641,6 @@
         "script_level.level_keys": [
           "CSD U2 Inspector Warm Up_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2886,8 +2652,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2899,8 +2663,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Tags Map_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2912,8 +2674,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2925,8 +2685,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2938,8 +2696,6 @@
         "script_level.level_keys": [
           "CSD U2 HTML Debug Paragraphs_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 9,
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2951,8 +2707,6 @@
         "script_level.level_keys": [
           "CSD U2L04 TFMD_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2964,8 +2718,6 @@
         "script_level.level_keys": [
           "CSD U2 Pair Programming Video_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2977,8 +2729,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Demo_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -2990,8 +2740,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Sizes_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3003,8 +2751,6 @@
         "script_level.level_keys": [
           "CSD Header Size MC_2018_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3016,8 +2762,6 @@
         "script_level.level_keys": [
           "CSD U2 Heading Test_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 6,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3029,8 +2773,6 @@
         "script_level.level_keys": [
           "CSD U2 Headers map_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 7,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3042,8 +2784,6 @@
         "script_level.level_keys": [
           "CSD U2 PSP Programming_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 8,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3055,8 +2795,6 @@
         "script_level.level_keys": [
           "CSD U2 Design Project_2018_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 9,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3068,8 +2806,6 @@
         "script_level.level_keys": [
           "CSD U2 Project Start_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 10,
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3081,8 +2817,6 @@
         "script_level.level_keys": [
           "CSD U2L05 TFMD_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3094,8 +2828,6 @@
         "script_level.level_keys": [
           "Social Sleuth_2018_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3107,8 +2839,6 @@
         "script_level.level_keys": [
           "CSD U2L06 TFMD_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3120,8 +2850,6 @@
         "script_level.level_keys": [
           "CSD U2 lists intro_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3133,8 +2861,6 @@
         "script_level.level_keys": [
           "CSD U2 unordered list_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3146,8 +2872,6 @@
         "script_level.level_keys": [
           "CSD U2 ordered list_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3159,8 +2883,6 @@
         "script_level.level_keys": [
           "CSD U2 lists match_2018_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3172,8 +2894,6 @@
         "script_level.level_keys": [
           "CSD U2 un_ordered lists"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3185,8 +2905,6 @@
         "script_level.level_keys": [
           "CSD U2 lists map_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3198,8 +2916,6 @@
         "script_level.level_keys": [
           "CSD U2 expand project_2018_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3211,8 +2927,6 @@
         "script_level.level_keys": [
           "CSD U2 new page_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3224,8 +2938,6 @@
         "script_level.level_keys": [
           "CSD U2L07 TFMD_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3237,8 +2949,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 1_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3250,8 +2960,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Debug_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3263,8 +2971,6 @@
         "script_level.level_keys": [
           "CSD U2 image debug match"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3276,8 +2982,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag 2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3289,8 +2993,6 @@
         "script_level.level_keys": [
           "CSD U2 images map_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3302,8 +3004,6 @@
         "script_level.level_keys": [
           "CSD U2 CC Search Map_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3315,8 +3015,6 @@
         "script_level.level_keys": [
           "CSD U2 Image Tag Attribution_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3328,8 +3026,6 @@
         "script_level.level_keys": [
           "CSD U2 Info Page Final Touches_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3341,8 +3037,6 @@
         "script_level.level_keys": [
           "CSD U2L08 TFMD_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3354,8 +3048,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 1_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3367,8 +3059,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 2_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3380,8 +3070,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 3_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3393,8 +3081,6 @@
         "script_level.level_keys": [
           "CSD U2 Debugging 4_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3406,8 +3092,6 @@
         "script_level.level_keys": [
           "CSD U2 commenting_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3419,8 +3103,6 @@
         "script_level.level_keys": [
           "CSD U2 formatting map_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3432,8 +3114,6 @@
         "script_level.level_keys": [
           "CSD U2 challenge_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 8,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3445,8 +3125,6 @@
         "script_level.level_keys": [
           "CSD U2L09 TFMD_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3458,8 +3136,6 @@
         "script_level.level_keys": [
           "CSD U2 link demo_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3471,8 +3147,6 @@
         "script_level.level_keys": [
           "CSD U2 navigation_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3484,8 +3158,6 @@
         "script_level.level_keys": [
           "CSD U2 a tag map_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3497,8 +3169,6 @@
         "script_level.level_keys": [
           "CSD U2 project guide_2018_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3510,8 +3180,6 @@
         "script_level.level_keys": [
           "CSD U2 create page_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3523,8 +3191,6 @@
         "script_level.level_keys": [
           "CSD U2 upload images_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 7,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3536,8 +3202,6 @@
         "script_level.level_keys": [
           "CSD U2 add content_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 8,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3549,8 +3213,6 @@
         "script_level.level_keys": [
           "CSD U2 header footer_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 9,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3562,8 +3224,6 @@
         "script_level.level_keys": [
           "CSD U2 project review_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 10,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3575,8 +3235,6 @@
         "script_level.level_keys": [
           "CSD U2 publish video"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 11,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3588,8 +3246,6 @@
         "script_level.level_keys": [
           "CSD U2 project share_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 12,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3601,8 +3257,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 13,
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
         "script.name": "csd2-2019"
@@ -3614,8 +3268,6 @@
         "script_level.level_keys": [
           "CSD U2L10 TFMD_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3627,8 +3279,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explore CSS_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3640,8 +3290,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3653,8 +3301,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3666,8 +3312,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3679,8 +3323,6 @@
         "script_level.level_keys": [
           "CSD U2 Style Sheet Map_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3692,8 +3334,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3705,8 +3345,6 @@
         "script_level.level_keys": [
           "CSD U2 text style font family_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3718,8 +3356,6 @@
         "script_level.level_keys": [
           "CSD U2 text style decoration_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3731,8 +3367,6 @@
         "script_level.level_keys": [
           "CSD U2 text style text align_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3744,8 +3378,6 @@
         "script_level.level_keys": [
           "CSD U2 Text Properties Map_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3757,8 +3389,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3770,8 +3400,6 @@
         "script_level.level_keys": [
           "CSD U2 add file_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3783,8 +3411,6 @@
         "script_level.level_keys": [
           "CSD U2 text style freeplay_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3796,8 +3422,6 @@
         "script_level.level_keys": [
           "CSD U2L11 TFMD_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3809,8 +3433,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3822,8 +3444,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3835,8 +3455,6 @@
         "script_level.level_keys": [
           "CSS U2 Body Map_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3848,8 +3466,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3861,8 +3477,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style border_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3874,8 +3488,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style borderradius_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3887,8 +3499,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3900,8 +3510,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3913,8 +3521,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style margin_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3926,8 +3532,6 @@
         "script_level.level_keys": [
           "CSD U2 add style_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3939,8 +3543,6 @@
         "script_level.level_keys": [
           "CSD U2 Layout Properties Map_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3952,8 +3554,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style freeplay_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3965,8 +3565,6 @@
         "script_level.level_keys": [
           "CSD U2L12 TFMD_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3978,8 +3576,6 @@
         "script_level.level_keys": [
           "CSD U2L13 TFMD_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -3991,8 +3587,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4004,8 +3598,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB winter_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 3,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4017,8 +3609,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB summer_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 4,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4030,8 +3620,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB others_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 5,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4043,8 +3631,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 6,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4056,8 +3642,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS Classes Map_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 7,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4069,8 +3653,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 8,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4082,8 +3664,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 9,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4095,8 +3675,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 10,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4108,8 +3686,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Class Style Personal Site_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 11,
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4121,8 +3697,6 @@
         "script_level.level_keys": [
           "CSD U2L14 TFMD_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4134,8 +3708,6 @@
         "script_level.level_keys": [
           "Final Personal Website_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4147,8 +3719,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 3,
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4160,8 +3730,6 @@
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
         "script.name": "csd2-2019"
@@ -4173,8 +3741,6 @@
         "script_level.level_keys": [
           "csd-post-survey-intro-2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-2019"
@@ -4186,8 +3752,6 @@
         "script_level.level_keys": [
           "csd-post-survey-levelgroup_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 2,
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd2-2019"
