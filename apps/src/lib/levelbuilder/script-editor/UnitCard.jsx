@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
-import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import {
+  addGroup,
+  convertGroupToUserFacing
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import ReactDOM from 'react-dom';
 
 const styles = {
@@ -32,7 +35,6 @@ const styles = {
     margin: '0 10px 10px 10px'
   },
   addGroupWithWarning: {
-    margin: '0 0 30px 0',
     display: 'flex',
     alignItems: 'center'
   },
@@ -49,7 +51,8 @@ class UnitCard extends Component {
   static propTypes = {
     // from redux
     lessonGroups: PropTypes.array.isRequired,
-    addGroup: PropTypes.func.isRequired
+    addGroup: PropTypes.func.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -125,6 +128,20 @@ class UnitCard extends Component {
     );
   };
 
+  handleMakeUserFacing = () => {
+    const newLessonGroupKey = this.generateLessonGroupKey();
+    const newLessonGroupDisplayName = prompt(
+      'Enter a display name for first lesson group'
+    );
+    if (newLessonGroupKey && newLessonGroupDisplayName) {
+      this.props.convertGroupToUserFacing(
+        1,
+        newLessonGroupKey,
+        newLessonGroupDisplayName
+      );
+    }
+  };
+
   render() {
     const {lessonGroups} = this.props;
 
@@ -155,24 +172,34 @@ class UnitCard extends Component {
             <button
               onMouseDown={this.handleAddLessonGroup}
               className="btn"
-              style={styles.addGroup}
               type="button"
-              disabled={
-                this.props.lessonGroups.length > 0 &&
-                !this.props.lessonGroups[0].user_facing
-              }
+              style={{
+                ...styles.addGroup,
+                ...(!this.props.lessonGroups[0].user_facing && {
+                  display: 'none'
+                })
+              }}
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Lesson Group
             </button>
+            {this.props.lessonGroups.length > 0 &&
+              !this.props.lessonGroups[0].user_facing && (
+                <button
+                  onMouseDown={this.handleMakeUserFacing}
+                  className="btn"
+                  style={{
+                    ...styles.addGroup,
+                    ...(this.props.lessonGroups[0].user_facing && {
+                      display: 'none'
+                    })
+                  }}
+                  type="button"
+                >
+                  Enable Lesson Groups
+                </button>
+              )}
           </div>
-          {this.props.lessonGroups.length > 0 &&
-            !this.props.lessonGroups[0].user_facing && (
-              <span style={styles.displayNameWarning}>
-                You must make the existing lesson group user facing before
-                adding more.
-              </span>
-            )}
         </div>
         <input
           type="hidden"
@@ -191,6 +218,7 @@ export default connect(
     lessonGroups: state.lessonGroups
   }),
   {
-    addGroup
+    addGroup,
+    convertGroupToUserFacing
   }
 )(UnitCard);

@@ -15,7 +15,7 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
-  const lesson_groups = (scriptData.lesson_groups || [])
+  let lesson_groups = (scriptData.lesson_groups || [])
     .filter(lesson_group => lesson_group.id)
     .map(lesson_group => ({
       key: lesson_group.key,
@@ -37,6 +37,20 @@ export default function initPage(scriptEditorData) {
           unplugged: lesson.unplugged
         }))
     }));
+  if (lesson_groups.length === 0) {
+    lesson_groups = [
+      {
+        key: `non-user-facing-lg`,
+        display_name: null,
+        user_facing: false,
+        position: 1,
+        big_questions: '',
+        description: '',
+        lessons: []
+      }
+    ];
+  }
+
   const locales = scriptEditorData.locales;
 
   registerReducers({...reducers, isRtl});

@@ -131,7 +131,7 @@ function lessonGroups(state = [], action) {
       newState.push({
         key: action.groupKey,
         display_name: action.groupName,
-        user_facing: newState.length > 0,
+        user_facing: true,
         position: action.groupPosition,
         big_questions: '',
         description: '',
@@ -152,6 +152,17 @@ function lessonGroups(state = [], action) {
     }
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
+      if (newState.length === 0) {
+        newState.push({
+          key: `non-user-facing-lg`,
+          display_name: null,
+          user_facing: false,
+          position: 1,
+          big_questions: '',
+          description: '',
+          lessons: []
+        });
+      }
       updateLessonPositions(newState);
       break;
     }
