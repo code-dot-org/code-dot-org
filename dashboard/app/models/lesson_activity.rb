@@ -31,4 +31,40 @@ class LessonActivity < ApplicationRecord
     name
     duration
   )
+
+  # @param sections [Array<Hash>] - Hash representing an ActivitySection.
+  def update_activity_sections(sections)
+    return unless sections
+    # use assignment to delete any missing activity sections.
+    self.activity_sections = sections.map do |section|
+      activity_section = fetch_activity_section(section)
+      activity_section.update!(
+        position: section['position'],
+        name: section['name'],
+        remarks: section['remarks'],
+        slide: section['slide'],
+        description: section['description'],
+        tips: section['tips']
+      )
+      activity_section
+    end
+  end
+
+  private
+
+  # Finds the ActivitySection by id, or creates a new one if id is not specified.
+  # @param section [Hash] - Hash representing an ActivitySection.
+  # @returns [ActivitySection]
+  def fetch_activity_section(section)
+    if section['id']
+      activity_section = activity_sections.find(section['id'])
+      raise "ActivitySection id #{section['id']} not found in LessonActivity id #{id}" unless activity_section
+      return activity_section
+    end
+
+    activity_sections.create(
+      position: section['position'],
+      seeding_key: SecureRandom.uuid
+    )
+  end
 end
