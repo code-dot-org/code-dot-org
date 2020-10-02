@@ -22,8 +22,8 @@ def get_rows
       frl_percent = app.sanitize_form_data_hash[:principal_free_lunch_percent].to_f
     end
     urm_percent = stats&.urm_percent
-    if app.sanitize_form_data_hash[:principal_underrepresented_minority_percent]
-      urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_minority_percent].to_f
+    if app.sanitize_form_data_hash[:principal_underrepresented_group_percent]
+      urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_group_percent].to_f
     end
 
     applications << [
