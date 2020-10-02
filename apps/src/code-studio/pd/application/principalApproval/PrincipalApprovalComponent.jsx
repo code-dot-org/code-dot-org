@@ -185,9 +185,9 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           {
             label: `A key part of Code.org's mission is to increase and diversify participation
                     in computer science, especially among female students and underrepresented
-                    groups. To that end, do you commit to recruiting and enrolling a diverse
-                    group of students in this course, representative of the overall demographics
-                    of your school?`
+                    racial and ethnic groups. To that end, do you commit to recruiting and 
+                    enrolling a diverse group of students in this course, representative of 
+                    the overall demographics of your school?`
           }
         )}
         <p style={styles.questionText}>
