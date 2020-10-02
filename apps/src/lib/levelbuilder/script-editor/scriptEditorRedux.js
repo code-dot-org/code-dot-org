@@ -131,8 +131,10 @@ function lessonGroups(state = [], action) {
       newState.push({
         key: action.groupKey,
         display_name: action.groupName,
-        user_facing: false,
+        user_facing: newState.length > 0,
         position: action.groupPosition,
+        big_questions: '',
+        description: '',
         lessons: []
       });
       updateGroupPositions(newState);

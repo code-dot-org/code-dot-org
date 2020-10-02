@@ -217,18 +217,22 @@ class UnitCard extends Component {
               className="btn"
               style={styles.addGroup}
               type="button"
-              disabled={!this.props.lessonGroups[0].user_facing}
+              disabled={
+                this.props.lessonGroups.length > 0 &&
+                !this.props.lessonGroups[0].user_facing
+              }
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Lesson Group
             </button>
           </div>
-          {!this.props.lessonGroups[0].user_facing && (
-            <span style={styles.displayNameWarning}>
-              You must make the existing lesson group user facing before adding
-              more.
-            </span>
-          )}
+          {this.props.lessonGroups.length > 0 &&
+            !this.props.lessonGroups[0].user_facing && (
+              <span style={styles.displayNameWarning}>
+                You must make the existing lesson group user facing before
+                adding more.
+              </span>
+            )}
         </div>
         <input
           type="hidden"
