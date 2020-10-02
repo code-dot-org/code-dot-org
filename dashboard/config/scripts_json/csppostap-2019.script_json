@@ -332,8 +332,6 @@
         "script_level.level_keys": [
           "CSP U2L07 SFLP_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -355,8 +353,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -377,8 +373,6 @@
         "script_level.level_keys": [
           "CSP U2L10 SFLP_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -400,8 +394,6 @@
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations_2018_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -423,8 +415,6 @@
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations_2018_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -446,8 +436,6 @@
         "script_level.level_keys": [
           "U2L10 FR why best worst viz_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -468,8 +456,6 @@
         "script_level.level_keys": [
           "CSP U2L11 SFLP_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -491,8 +477,6 @@
         "script_level.level_keys": [
           "Downloading the Data Set_2018_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -514,8 +498,6 @@
         "script_level.level_keys": [
           "Making a Scatter Plot_2018_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -537,8 +519,6 @@
         "script_level.level_keys": [
           "Making a Line Chart_2018_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -560,8 +540,6 @@
         "script_level.level_keys": [
           "Making a Bar Chart_2018_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -583,8 +561,6 @@
         "script_level.level_keys": [
           "Editing Chart Appearance_2018_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -606,8 +582,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play_2018_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -629,8 +603,6 @@
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -651,8 +623,6 @@
         "script_level.level_keys": [
           "CSP U2L12 SFLP_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -674,8 +644,6 @@
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -696,8 +664,6 @@
         "script_level.level_keys": [
           "CSP U2L13 SFLP_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -719,8 +685,6 @@
         "script_level.level_keys": [
           "Getting to Know Your Data_2018_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -742,8 +706,6 @@
         "script_level.level_keys": [
           "Cleaning Data_2018_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -765,8 +727,6 @@
         "script_level.level_keys": [
           "Categorizing Data_2018_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -788,8 +748,6 @@
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -811,8 +769,6 @@
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -833,8 +789,6 @@
         "script_level.level_keys": [
           "CSP U2L14 SFLP_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -856,8 +810,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics_2018_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -879,8 +831,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization_2018_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -902,8 +852,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3_2018_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -925,8 +873,6 @@
         "script_level.level_keys": [
           "U2L14 Summary Tables MC_2018_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -947,8 +893,6 @@
         "script_level.level_keys": [
           "CSP U2L15 SFLP_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -969,8 +913,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video_2018_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -991,8 +933,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1013,8 +953,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation_2019"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1035,8 +973,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1057,8 +993,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1079,8 +1013,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1101,8 +1033,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1123,8 +1053,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1145,8 +1073,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1167,8 +1093,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1189,8 +1113,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1211,8 +1133,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1233,8 +1153,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1255,8 +1173,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1277,8 +1193,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1299,8 +1213,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1321,8 +1233,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction_2018_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1343,8 +1253,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1365,8 +1273,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1387,8 +1293,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1409,8 +1313,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1431,8 +1333,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1453,8 +1353,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1475,8 +1373,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1497,8 +1393,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1519,8 +1413,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1541,8 +1433,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1563,8 +1453,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1585,8 +1473,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1607,8 +1493,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction_2018_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1629,8 +1513,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1651,8 +1533,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1673,8 +1553,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1695,8 +1573,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1717,8 +1593,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1739,8 +1613,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1761,8 +1633,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1783,8 +1653,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1805,8 +1673,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External_2018_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1827,8 +1693,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1849,8 +1713,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1871,8 +1733,6 @@
         "script_level.level_keys": [
           "U6 - deleteRecord - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1893,8 +1753,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation_2018_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1915,8 +1773,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1937,8 +1793,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1959,8 +1813,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -1981,8 +1833,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2003,8 +1853,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2025,8 +1873,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2047,8 +1893,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Default Block_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2069,8 +1913,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Callback Success Parameter_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 3,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2091,8 +1933,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Update Nonexistent Record_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 4,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2113,8 +1953,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit UI_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 5,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2135,8 +1973,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit event handler_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 6,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2157,8 +1993,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Save edited contact_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 7,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2179,8 +2013,6 @@
         "script_level.level_keys": [
           "U6 - ImportExport - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2201,8 +2033,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2223,8 +2053,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2245,8 +2073,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2267,8 +2093,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2289,8 +2113,6 @@
         "script_level.level_keys": [
           "U6 - Charts - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2311,8 +2133,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2333,8 +2153,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 3,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2355,8 +2173,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 4,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2377,8 +2193,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 5,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2399,8 +2213,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 6,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2421,8 +2233,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 7,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2443,8 +2253,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2465,8 +2273,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - User Login_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2487,8 +2293,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Class Survey_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 3,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2509,8 +2313,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Clicker Game_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 4,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2531,8 +2333,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Flashcards_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 5,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2553,8 +2353,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2575,8 +2373,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Project Level_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -2597,8 +2393,6 @@
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2019"
@@ -2619,8 +2413,6 @@
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2019"
@@ -2637,8 +2429,6 @@
         "script_level.level_keys": [
           "CSP U2L07 SFLP_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2650,8 +2440,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2663,8 +2451,6 @@
         "script_level.level_keys": [
           "CSP U2L10 SFLP_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2676,8 +2462,6 @@
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations_2018_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2689,8 +2473,6 @@
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations_2018_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2702,8 +2484,6 @@
         "script_level.level_keys": [
           "U2L10 FR why best worst viz_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2715,8 +2495,6 @@
         "script_level.level_keys": [
           "CSP U2L11 SFLP_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2728,8 +2506,6 @@
         "script_level.level_keys": [
           "Downloading the Data Set_2018_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2741,8 +2517,6 @@
         "script_level.level_keys": [
           "Making a Scatter Plot_2018_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2754,8 +2528,6 @@
         "script_level.level_keys": [
           "Making a Line Chart_2018_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2767,8 +2539,6 @@
         "script_level.level_keys": [
           "Making a Bar Chart_2018_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2780,8 +2550,6 @@
         "script_level.level_keys": [
           "Editing Chart Appearance_2018_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2793,8 +2561,6 @@
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play_2018_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2806,8 +2572,6 @@
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2819,8 +2583,6 @@
         "script_level.level_keys": [
           "CSP U2L12 SFLP_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2832,8 +2594,6 @@
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2845,8 +2605,6 @@
         "script_level.level_keys": [
           "CSP U2L13 SFLP_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2858,8 +2616,6 @@
         "script_level.level_keys": [
           "Getting to Know Your Data_2018_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2871,8 +2627,6 @@
         "script_level.level_keys": [
           "Cleaning Data_2018_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2884,8 +2638,6 @@
         "script_level.level_keys": [
           "Categorizing Data_2018_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2897,8 +2649,6 @@
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2910,8 +2660,6 @@
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2923,8 +2671,6 @@
         "script_level.level_keys": [
           "CSP U2L14 SFLP_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2936,8 +2682,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics_2018_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2949,8 +2693,6 @@
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization_2018_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2962,8 +2704,6 @@
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3_2018_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2975,8 +2715,6 @@
         "script_level.level_keys": [
           "U2L14 Summary Tables MC_2018_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -2988,8 +2726,6 @@
         "script_level.level_keys": [
           "CSP U2L15 SFLP_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story",
         "lesson_group.key": "csp_postap_1",
         "script.name": "csppostap-2019"
@@ -3001,8 +2737,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video_2018_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3014,8 +2748,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3027,8 +2759,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation_2019"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3040,8 +2770,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3053,8 +2781,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3066,8 +2792,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3079,8 +2803,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3092,8 +2814,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3105,8 +2825,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3118,8 +2836,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3131,8 +2847,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3144,8 +2858,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3157,8 +2869,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3170,8 +2880,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3183,8 +2891,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3196,8 +2902,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3209,8 +2913,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction_2018_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3222,8 +2924,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3235,8 +2935,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3248,8 +2946,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3261,8 +2957,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3274,8 +2968,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3287,8 +2979,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3300,8 +2990,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3313,8 +3001,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3326,8 +3012,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3339,8 +3023,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3352,8 +3034,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3365,8 +3045,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3378,8 +3056,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction_2018_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3391,8 +3067,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3404,8 +3078,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3417,8 +3089,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3430,8 +3100,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3443,8 +3111,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3456,8 +3122,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3469,8 +3133,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3482,8 +3144,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3495,8 +3155,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External_2018_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3508,8 +3166,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3521,8 +3177,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3534,8 +3188,6 @@
         "script_level.level_keys": [
           "U6 - deleteRecord - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3547,8 +3199,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation_2018_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3560,8 +3210,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3573,8 +3221,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3586,8 +3232,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3599,8 +3243,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3612,8 +3254,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3625,8 +3265,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3638,8 +3276,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Default Block_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3651,8 +3287,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Callback Success Parameter_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 3,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3664,8 +3298,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Update Nonexistent Record_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 4,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3677,8 +3309,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit UI_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 5,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3690,8 +3320,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit event handler_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 6,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3703,8 +3331,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Save edited contact_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 7,
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3716,8 +3342,6 @@
         "script_level.level_keys": [
           "U6 - ImportExport - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3729,8 +3353,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3742,8 +3364,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3755,8 +3375,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3768,8 +3386,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3781,8 +3397,6 @@
         "script_level.level_keys": [
           "U6 - Charts - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 1,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3794,8 +3408,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 2,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3807,8 +3419,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 3,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3820,8 +3430,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 4,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3833,8 +3441,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 5,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3846,8 +3452,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 6,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3859,8 +3463,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 7,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3872,8 +3474,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3885,8 +3485,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - User Login_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3898,8 +3496,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Class Survey_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 3,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3911,8 +3507,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Clicker Game_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 4,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3924,8 +3518,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Flashcards_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 5,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3937,8 +3529,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Student Introduction_2018_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3950,8 +3540,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Project Level_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 2,
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
         "script.name": "csppostap-2019"
@@ -3963,8 +3551,6 @@
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2019"
@@ -3976,8 +3562,6 @@
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 2,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2019"

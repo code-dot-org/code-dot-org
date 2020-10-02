@@ -244,8 +244,6 @@
         "script_level.level_keys": [
           "CSP U7L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -267,8 +265,6 @@
         "script_level.level_keys": [
           "U7L1 CFU Return"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -290,8 +286,6 @@
         "script_level.level_keys": [
           "CSP U7L2 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -313,8 +307,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -336,8 +328,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Poetry App"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -359,8 +349,6 @@
         "script_level.level_keys": [
           "U7L2 CSP CFU Param and Return"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -382,8 +370,6 @@
         "script_level.level_keys": [
           "CSP U7L3 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -405,8 +391,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -428,8 +412,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -451,8 +433,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -474,8 +454,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -497,8 +475,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -520,8 +496,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -543,8 +517,6 @@
         "script_level.level_keys": [
           "U7 Param Practice App 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -566,8 +538,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice MOD"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -589,8 +559,6 @@
         "script_level.level_keys": [
           "U73 CFU Param Return AP"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -612,8 +580,6 @@
         "script_level.level_keys": [
           "CSP U7L4 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -635,8 +601,6 @@
         "script_level.level_keys": [
           "U7 Param Return Make RPS App_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -658,8 +622,6 @@
         "script_level.level_keys": [
           "U7 Param Return Make RPS App Project_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -681,8 +643,6 @@
         "script_level.level_keys": [
           "CSP U7L5 SFLP 20-21"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -704,8 +664,6 @@
         "script_level.level_keys": [
           "U7 L04 Exit Ticket"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -727,8 +685,6 @@
         "script_level.level_keys": [
           "CSP U7L6 SFLP 20-21"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -750,8 +706,6 @@
         "script_level.level_keys": [
           "U7L6 States App Investigation"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -773,8 +727,6 @@
         "script_level.level_keys": [
           "U7L6 Pigify App Investigation"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -796,8 +748,6 @@
         "script_level.level_keys": [
           "U7L6 CSP CFU Libraries"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -819,8 +769,6 @@
         "script_level.level_keys": [
           "CSP U7L7 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -842,8 +790,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 3"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -865,8 +811,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -888,8 +832,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -911,8 +853,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -934,8 +874,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 4"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -957,8 +895,6 @@
         "script_level.level_keys": [
           "CSP U7L8 SFLP 20-21"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -980,8 +916,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1003,8 +937,6 @@
         "script_level.level_keys": [
           "CSP U7L9 SFLP 20-21"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1026,8 +958,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 2"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1049,8 +979,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Test a Library"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1072,8 +1000,6 @@
         "script_level.level_keys": [
           "CSP U7L10 SFLP 20-21"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1095,8 +1021,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 3"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1118,8 +1042,6 @@
         "script_level.level_keys": [
           "CSP U7L12 SFLP 20-21"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1141,8 +1063,6 @@
         "script_level.level_keys": [
           "CSP Unit 7 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1159,8 +1079,6 @@
         "script_level.level_keys": [
           "CSP U7L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1172,8 +1090,6 @@
         "script_level.level_keys": [
           "U7L1 CFU Return"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1185,8 +1101,6 @@
         "script_level.level_keys": [
           "CSP U7L2 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1198,8 +1112,6 @@
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1211,8 +1123,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Poetry App"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1224,8 +1134,6 @@
         "script_level.level_keys": [
           "U7L2 CSP CFU Param and Return"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1237,8 +1145,6 @@
         "script_level.level_keys": [
           "CSP U7L3 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1250,8 +1156,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1263,8 +1167,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1276,8 +1178,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1289,8 +1189,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1302,8 +1200,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1315,8 +1211,6 @@
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1328,8 +1222,6 @@
         "script_level.level_keys": [
           "U7 Param Practice App 2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1341,8 +1233,6 @@
         "script_level.level_keys": [
           "U7 Param Return Practice MOD"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1354,8 +1244,6 @@
         "script_level.level_keys": [
           "U73 CFU Param Return AP"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1367,8 +1255,6 @@
         "script_level.level_keys": [
           "CSP U7L4 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1380,8 +1266,6 @@
         "script_level.level_keys": [
           "U7 Param Return Make RPS App_2020"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1393,8 +1277,6 @@
         "script_level.level_keys": [
           "U7 Param Return Make RPS App Project_2020"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2020"
@@ -1406,8 +1288,6 @@
         "script_level.level_keys": [
           "CSP U7L5 SFLP 20-21"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 1,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1419,8 +1299,6 @@
         "script_level.level_keys": [
           "U7 L04 Exit Ticket"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 2,
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1432,8 +1310,6 @@
         "script_level.level_keys": [
           "CSP U7L6 SFLP 20-21"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1445,8 +1321,6 @@
         "script_level.level_keys": [
           "U7L6 States App Investigation"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1458,8 +1332,6 @@
         "script_level.level_keys": [
           "U7L6 Pigify App Investigation"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1471,8 +1343,6 @@
         "script_level.level_keys": [
           "U7L6 CSP CFU Libraries"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1484,8 +1354,6 @@
         "script_level.level_keys": [
           "CSP U7L7 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1497,8 +1365,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 3"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1510,8 +1376,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1523,8 +1387,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1536,8 +1398,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1549,8 +1409,6 @@
         "script_level.level_keys": [
           "U7 Libraries Practice 4"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1562,8 +1420,6 @@
         "script_level.level_keys": [
           "CSP U7L8 SFLP 20-21"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1575,8 +1431,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1588,8 +1442,6 @@
         "script_level.level_keys": [
           "CSP U7L9 SFLP 20-21"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1601,8 +1453,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 2"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1614,8 +1464,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Test a Library"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1627,8 +1475,6 @@
         "script_level.level_keys": [
           "CSP U7L10 SFLP 20-21"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1640,8 +1486,6 @@
         "script_level.level_keys": [
           "U7 Libraries Project Part 3"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1653,8 +1497,6 @@
         "script_level.level_keys": [
           "CSP U7L12 SFLP 20-21"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"
@@ -1666,8 +1508,6 @@
         "script_level.level_keys": [
           "CSP Unit 7 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2020"

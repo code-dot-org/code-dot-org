@@ -301,8 +301,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -323,8 +321,6 @@
         "script_level.level_keys": [
           "courseC_video_maze_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -345,8 +341,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming1_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -367,8 +361,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming2_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -389,8 +381,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -411,8 +401,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming4_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -433,8 +421,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming5_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -455,8 +441,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming6_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -478,8 +462,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming7_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -500,8 +482,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -522,8 +502,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_predict1_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -544,8 +522,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming9_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -566,8 +542,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge1_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -588,8 +562,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge2_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -610,8 +582,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -632,8 +602,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -654,8 +622,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -676,8 +642,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -698,8 +662,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -720,8 +682,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -742,8 +702,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -765,8 +723,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -787,8 +743,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -809,8 +763,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -831,8 +783,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -853,8 +803,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -875,8 +823,6 @@
         "script_level.level_keys": [
           "PaperPlanes_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -897,8 +843,6 @@
         "script_level.level_keys": [
           "courseC_video_collector_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -919,8 +863,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog1_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -941,8 +883,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -963,8 +903,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog3_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -985,8 +923,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog4_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1007,8 +943,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog5_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1029,8 +963,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog6_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1052,8 +984,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog7_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1074,8 +1004,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog8_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1096,8 +1024,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog9_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1118,8 +1044,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1140,8 +1064,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_predict1_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1162,8 +1084,6 @@
         "script_level.level_keys": [
           "grade2_collector_10_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1184,8 +1104,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge1_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1206,8 +1124,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge2_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 15,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1228,8 +1144,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1250,8 +1164,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1272,8 +1184,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1294,8 +1204,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1316,8 +1224,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1338,8 +1244,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog5_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1360,8 +1264,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1383,8 +1285,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1405,8 +1305,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog8_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1427,8 +1325,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_predict1_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1449,8 +1345,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1471,8 +1365,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 12,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1493,8 +1385,6 @@
         "script_level.level_keys": [
           "GettingLoopy_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1515,8 +1405,6 @@
         "script_level.level_keys": [
           "bb8_skinOverview_C-F_video"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1537,8 +1425,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1559,8 +1445,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_predict1_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1581,8 +1465,6 @@
         "script_level.level_keys": [
           "bb8_loops_C-F_video"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1603,8 +1485,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1625,8 +1505,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1647,8 +1525,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1669,8 +1545,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1691,8 +1565,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1714,8 +1586,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1736,8 +1606,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops9_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1758,8 +1626,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1780,8 +1646,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_predict2_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1802,8 +1666,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops11_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1824,8 +1686,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops_challenge1a_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1846,8 +1706,6 @@
         "script_level.level_keys": [
           "courseC_collector_loops_challenge2_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1868,8 +1726,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPrePre1a_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1890,8 +1746,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPre1a_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1912,8 +1766,6 @@
         "script_level.level_keys": [
           "courseC_artist_loop1_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1934,8 +1786,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1956,8 +1806,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -1978,8 +1826,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2000,8 +1846,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2022,8 +1866,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5a_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2044,8 +1886,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2066,8 +1906,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops6a_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2088,8 +1926,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops7a_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2110,8 +1946,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2132,8 +1966,6 @@
         "script_level.level_keys": [
           "harvester_skinOverview_video"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2154,8 +1986,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops1_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2176,8 +2006,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops2_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2198,8 +2026,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops3_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2220,8 +2046,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops4_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2242,8 +2066,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops6_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2264,8 +2086,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops7_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 7,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2286,8 +2106,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops5_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 8,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2309,8 +2127,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops8_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 9,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2331,8 +2147,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops9_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 10,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2353,8 +2167,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops10_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 11,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2375,8 +2187,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 12,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2397,8 +2207,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_predict1_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 13,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2419,8 +2227,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge1a_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 14,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2441,8 +2247,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge2_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 15,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2463,8 +2267,6 @@
         "script_level.level_keys": [
           "BigEvent_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2485,8 +2287,6 @@
         "script_level.level_keys": [
           "courseC_video_flappyIntro_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 1,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2507,8 +2307,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events1_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 2,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2529,8 +2327,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events2_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 3,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2551,8 +2347,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events3_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 4,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2573,8 +2367,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events4_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 5,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2595,8 +2387,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events5_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 6,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2617,8 +2407,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events6_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 7,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2639,8 +2427,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events7_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 8,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2661,8 +2447,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events8_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 9,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2683,8 +2467,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events9_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 10,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2705,8 +2487,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events10_2018"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 11,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2727,8 +2507,6 @@
         "script_level.level_keys": [
           "courseC_Unplugged_ScreenOutTheMean_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 1,
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2749,8 +2527,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events1_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2771,8 +2547,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events2_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2793,8 +2567,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events3_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2815,8 +2587,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events4_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2837,8 +2607,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events5_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2859,8 +2627,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events6_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2881,8 +2647,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events7_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2903,8 +2667,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events8_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2925,8 +2687,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events9_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2947,8 +2707,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsA_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2969,8 +2727,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsFP_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -2991,8 +2747,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events_challenge1_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 12,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3013,8 +2767,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 1,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3035,8 +2787,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 2,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3057,8 +2807,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 3,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3079,8 +2827,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 4,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3101,8 +2847,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 5,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3123,8 +2867,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 6,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3145,8 +2887,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 7,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3167,8 +2907,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 8,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3189,8 +2927,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 9,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3211,8 +2947,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 10,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3233,8 +2967,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 11,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3255,8 +2987,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 12,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3277,8 +3007,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 13,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3299,8 +3027,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 14,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3321,8 +3047,6 @@
         "script_level.level_keys": [
           "BinaryBracelets_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3339,8 +3063,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3352,8 +3074,6 @@
         "script_level.level_keys": [
           "courseC_video_maze_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3365,8 +3085,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming1_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3378,8 +3096,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming2_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3391,8 +3107,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3404,8 +3118,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming4_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3417,8 +3129,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming5_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3430,8 +3140,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming6_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3443,8 +3151,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming7_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3456,8 +3162,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3469,8 +3173,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_predict1_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3482,8 +3184,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming9_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3495,8 +3195,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge1_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3508,8 +3206,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge2_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3521,8 +3217,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3534,8 +3228,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3547,8 +3239,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3560,8 +3250,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3573,8 +3261,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3586,8 +3272,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3599,8 +3283,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3612,8 +3294,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3625,8 +3305,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3638,8 +3316,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3651,8 +3327,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3664,8 +3338,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3677,8 +3349,6 @@
         "script_level.level_keys": [
           "PaperPlanes_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3690,8 +3360,6 @@
         "script_level.level_keys": [
           "courseC_video_collector_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3703,8 +3371,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog1_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3716,8 +3382,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3729,8 +3393,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog3_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3742,8 +3404,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog4_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3755,8 +3415,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog5_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3768,8 +3426,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog6_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3781,8 +3437,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog7_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3794,8 +3448,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog8_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3807,8 +3459,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog9_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3820,8 +3470,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3833,8 +3481,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_predict1_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3846,8 +3492,6 @@
         "script_level.level_keys": [
           "grade2_collector_10_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3859,8 +3503,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge1_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3872,8 +3514,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge2_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 15,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3885,8 +3525,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3898,8 +3536,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3911,8 +3547,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3924,8 +3558,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3937,8 +3569,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3950,8 +3580,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog5_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3963,8 +3591,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3976,8 +3602,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -3989,8 +3613,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog8_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4002,8 +3624,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_predict1_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4015,8 +3635,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4028,8 +3646,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 12,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4041,8 +3657,6 @@
         "script_level.level_keys": [
           "GettingLoopy_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4054,8 +3668,6 @@
         "script_level.level_keys": [
           "bb8_skinOverview_C-F_video"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4067,8 +3679,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4080,8 +3690,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_predict1_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4093,8 +3701,6 @@
         "script_level.level_keys": [
           "bb8_loops_C-F_video"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4106,8 +3712,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4119,8 +3723,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4132,8 +3734,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4145,8 +3745,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4158,8 +3756,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4171,8 +3767,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4184,8 +3778,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops9_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4197,8 +3789,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4210,8 +3800,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_predict2_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4223,8 +3811,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops11_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4236,8 +3822,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops_challenge1a_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4249,8 +3833,6 @@
         "script_level.level_keys": [
           "courseC_collector_loops_challenge2_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Loops with Rey and BB-8",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4262,8 +3844,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPrePre1a_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 1,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4275,8 +3855,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPre1a_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 2,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4288,8 +3866,6 @@
         "script_level.level_keys": [
           "courseC_artist_loop1_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 3,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4301,8 +3877,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 4,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4314,8 +3888,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 5,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4327,8 +3899,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 6,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4340,8 +3910,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 7,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4353,8 +3921,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5a_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 8,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4366,8 +3932,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 9,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4379,8 +3943,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops6a_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 10,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4392,8 +3954,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops7a_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 11,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4405,8 +3965,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 12,
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4418,8 +3976,6 @@
         "script_level.level_keys": [
           "harvester_skinOverview_video"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4431,8 +3987,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops1_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 2,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4444,8 +3998,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops2_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 3,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4457,8 +4009,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops3_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 4,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4470,8 +4020,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops4_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 5,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4483,8 +4031,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops6_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 6,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4496,8 +4042,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops7_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 7,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4509,8 +4053,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops5_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 8,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4522,8 +4064,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops8_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 9,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4535,8 +4075,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops9_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 10,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4548,8 +4086,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops10_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 11,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4561,8 +4097,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 12,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4574,8 +4108,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_predict1_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 13,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4587,8 +4119,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge1a_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 14,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4600,8 +4130,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge2_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 15,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4613,8 +4141,6 @@
         "script_level.level_keys": [
           "BigEvent_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4626,8 +4152,6 @@
         "script_level.level_keys": [
           "courseC_video_flappyIntro_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 1,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4639,8 +4163,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events1_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 2,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4652,8 +4174,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events2_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 3,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4665,8 +4185,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events3_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 4,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4678,8 +4196,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events4_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 5,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4691,8 +4207,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events5_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 6,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4704,8 +4218,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events6_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 7,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4717,8 +4229,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events7_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 8,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4730,8 +4240,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events8_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 9,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4743,8 +4251,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events9_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 10,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4756,8 +4262,6 @@
         "script_level.level_keys": [
           "courseC_flappy_events10_2018"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 11,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4769,8 +4273,6 @@
         "script_level.level_keys": [
           "courseC_Unplugged_ScreenOutTheMean_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 1,
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4782,8 +4284,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events1_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4795,8 +4295,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events2_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4808,8 +4306,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events3_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4821,8 +4317,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events4_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4834,8 +4328,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events5_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4847,8 +4339,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events6_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4860,8 +4350,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events7_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4873,8 +4361,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events8_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4886,8 +4372,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events9_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4899,8 +4383,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsA_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4912,8 +4394,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsFP_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4925,8 +4405,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events_challenge1_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 12,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4938,8 +4416,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 1,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4951,8 +4427,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 2,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4964,8 +4438,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 3,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4977,8 +4449,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 4,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -4990,8 +4460,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 5,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5003,8 +4471,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 6,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5016,8 +4482,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 7,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5029,8 +4493,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 8,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5042,8 +4504,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 9,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5055,8 +4515,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 10,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5068,8 +4526,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 11,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5081,8 +4537,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 12,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5094,8 +4548,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 13,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5107,8 +4559,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 14,
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
         "script.name": "coursec-2018"
@@ -5120,8 +4570,6 @@
         "script_level.level_keys": [
           "BinaryBracelets_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "coursec-2018"

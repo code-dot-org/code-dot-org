@@ -60,8 +60,6 @@
         "script_level.level_keys": [
           "csd-post-survey-levelgroup-2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSD post-course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd-post-survey-2018"
@@ -78,8 +76,6 @@
         "script_level.level_keys": [
           "csd-post-survey-levelgroup-2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSD post-course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd-post-survey-2018"

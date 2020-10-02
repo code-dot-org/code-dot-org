@@ -658,8 +658,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:3"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -680,8 +678,6 @@
         "script_level.level_keys": [
           "k-1 maze 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -702,8 +698,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -724,8 +718,6 @@
         "script_level.level_keys": [
           "2-3 Maze 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -746,8 +738,6 @@
         "script_level.level_keys": [
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -768,8 +758,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -791,8 +779,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -813,8 +799,6 @@
         "script_level.level_keys": [
           "allthethings-anigif-instructions"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -835,8 +819,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -857,8 +839,6 @@
         "script_level.level_keys": [
           "2-3 Artist 1 new"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -879,8 +859,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 4"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -901,8 +879,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -923,8 +899,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -945,8 +919,6 @@
         "script_level.level_keys": [
           "Auto Open Function Editor"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -967,8 +939,6 @@
         "script_level.level_keys": [
           "Angle Helper Test"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -989,8 +959,6 @@
         "script_level.level_keys": [
           "allthethings-artist-project-backed"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1011,8 +979,6 @@
         "script_level.level_keys": [
           "Artist Autorun Test"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1033,8 +999,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1055,8 +1019,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1077,8 +1039,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 2A"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1099,8 +1059,6 @@
         "script_level.level_keys": [
           "2-3 Bee Conditionals 5"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1121,8 +1079,6 @@
         "script_level.level_keys": [
           "Bee Recommended Blocks test"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1143,8 +1099,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1165,8 +1119,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c2_1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1187,8 +1139,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1209,8 +1159,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1231,8 +1179,6 @@
         "script_level.level_keys": [
           "allthethings-playlab-project-backed"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1253,8 +1199,6 @@
         "script_level.level_keys": [
           "Allthethings Encrypted Play Lab Level"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1275,8 +1219,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 4"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1297,8 +1239,6 @@
         "script_level.level_keys": [
           "Farmer for Authored Hint testing"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1319,8 +1259,6 @@
         "script_level.level_keys": [
           "Farmer for TTS testing"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1341,8 +1279,6 @@
         "script_level.level_keys": [
           "flappy_1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Flappy",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1363,8 +1299,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1385,8 +1319,6 @@
         "script_level.level_keys": [
           "K-1 Happy Maps Multi 1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1407,8 +1339,6 @@
         "script_level.level_keys": [
           "Multi Horizontal Scroll Test"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1429,8 +1359,6 @@
         "script_level.level_keys": [
           "Submittable Multi"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1451,8 +1379,6 @@
         "script_level.level_keys": [
           "test questionless single multi"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1473,8 +1399,6 @@
         "script_level.level_keys": [
           "Choose 2 Test"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Multi2",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1495,8 +1419,6 @@
         "script_level.level_keys": [
           "K-1 Maze Match 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Match",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1517,8 +1439,6 @@
         "script_level.level_keys": [
           "Blocks to Math 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "TextMatch",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1539,8 +1459,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies O"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "TextMatch",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1561,8 +1479,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval .2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1583,8 +1499,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .2"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1605,8 +1519,6 @@
         "script_level.level_keys": [
           "Eval Contracts F"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1627,8 +1539,6 @@
         "script_level.level_keys": [
           "Eval Contracts A"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1649,8 +1559,6 @@
         "script_level.level_keys": [
           "Calc Vars 1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1671,8 +1579,6 @@
         "script_level.level_keys": [
           "Big Game Vars 1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1693,8 +1599,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 3"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1715,8 +1619,6 @@
         "script_level.level_keys": [
           "Eval Booleans 2"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1737,8 +1639,6 @@
         "script_level.level_keys": [
           "Sam the Butterfly 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1759,8 +1659,6 @@
         "script_level.level_keys": [
           "Luigi's Pizza 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1781,8 +1679,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs Test"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1803,8 +1699,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1825,8 +1719,6 @@
         "script_level.level_keys": [
           "U2L5 NetSim Classroom Internet"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1847,8 +1739,6 @@
         "script_level.level_keys": [
           "U2L7 NetSim Need for Packets"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1869,8 +1759,6 @@
         "script_level.level_keys": [
           "U2L10 NetSim Automatic DNS"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1891,8 +1779,6 @@
         "script_level.level_keys": [
           "NetSim_Superuser"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1913,8 +1799,6 @@
         "script_level.level_keys": [
           "Odometer"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Odometer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1935,8 +1819,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1957,8 +1839,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -1979,8 +1859,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2001,8 +1879,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2023,8 +1899,6 @@
         "script_level.level_keys": [
           "Pixelation - AllTheThings 4"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2045,8 +1919,6 @@
         "script_level.level_keys": [
           "Pixelation - AllTheThings 5"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2067,8 +1939,6 @@
         "script_level.level_keys": [
           "U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2089,8 +1959,6 @@
         "script_level.level_keys": [
           "U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2111,8 +1979,6 @@
         "script_level.level_keys": [
           "U3L07 - Starry Night Starter Code"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2133,8 +1999,6 @@
         "script_level.level_keys": [
           "U3L08 - Enchantment Under the Sea"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2155,8 +2019,6 @@
         "script_level.level_keys": [
           "AllTheThings Applab - Turtle move with button"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2177,8 +2039,6 @@
         "script_level.level_keys": [
           "U3L16 - use images"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2199,8 +2059,6 @@
         "script_level.level_keys": [
           "Applab test"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2221,8 +2079,6 @@
         "script_level.level_keys": [
           "allthethings data blocks test"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2243,8 +2099,6 @@
         "script_level.level_keys": [
           "allthethings design mode elements"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2265,8 +2119,6 @@
         "script_level.level_keys": [
           "allthethings_template_backed1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2287,8 +2139,6 @@
         "script_level.level_keys": [
           "allthethings_template_backed2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2309,8 +2159,6 @@
         "script_level.level_keys": [
           "allthethings_moviebot"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2331,8 +2179,6 @@
         "script_level.level_keys": [
           "Applab allthethings onRecordEvent"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2353,8 +2199,6 @@
         "script_level.level_keys": [
           "Embedded Video Test"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2375,8 +2219,6 @@
         "script_level.level_keys": [
           "Test Applab Predictive"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2397,8 +2239,6 @@
         "script_level.level_keys": [
           "allthethings level dataTables"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 16,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2419,8 +2259,6 @@
         "script_level.level_keys": [
           "Applab allthethings goals"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 17,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2441,8 +2279,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab MapReference"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 18,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2463,8 +2299,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab ReferenceLinks"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 19,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2485,8 +2319,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab AllResources"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 20,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2507,8 +2339,6 @@
         "script_level.level_keys": [
           "AllTheThings Applab DesignModeDefault"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 21,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2529,8 +2359,6 @@
         "script_level.level_keys": [
           "Applab allthethings Widget Mode"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 22,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2551,8 +2379,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings With No Animation Tab"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2573,8 +2399,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings With Prepopulated Animation"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2595,8 +2419,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings Embed Level"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2617,8 +2439,6 @@
         "script_level.level_keys": [
           "PDK5 Intro C"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Online PD",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2639,8 +2459,6 @@
         "script_level.level_keys": [
           "PDK5 Foundations F"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Online PD",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2661,8 +2479,6 @@
         "script_level.level_keys": [
           "Test External Markdown"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2683,8 +2499,6 @@
         "script_level.level_keys": [
           "Test embedded Blockly in instructions"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2705,8 +2519,6 @@
         "script_level.level_keys": [
           "Test embedded K1 Blockly in instructions"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2727,8 +2539,6 @@
         "script_level.level_keys": [
           "Resizing Test"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2749,8 +2559,6 @@
         "script_level.level_keys": [
           "K-1 Maze 11"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "Multi page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2771,8 +2579,6 @@
         "script_level.level_keys": [
           "Test longassessment levelgroup split new"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "Multi page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2793,8 +2599,6 @@
         "script_level.level_keys": [
           "blockly:StudioEC:js_hoc2015_event_two_items"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "Star wars",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2815,8 +2619,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_5"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "Star wars",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2837,8 +2639,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree - allthethings"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 1,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2859,8 +2659,6 @@
         "script_level.level_keys": [
           "MC Agent Freeplay"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 2,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2881,8 +2679,6 @@
         "script_level.level_keys": [
           "Craft Aquatic - allthethings"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 3,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2903,8 +2699,6 @@
         "script_level.level_keys": [
           "PS U3 Assessment1 new"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Rich long assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2925,8 +2719,6 @@
         "script_level.level_keys": [
           "Sample Free Response"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Free Response",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2947,8 +2739,6 @@
         "script_level.level_keys": [
           "Sample CSP Assessment"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "Sample PLC Assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2975,8 +2765,6 @@
           "2-3 Maze 1",
           "2-3 Maze 4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3004,8 +2792,6 @@
           "2-3 Maze 2",
           "2-3 Maze 5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3033,8 +2819,6 @@
           "2-3 Maze 3",
           "2-3 Maze 6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3062,8 +2846,6 @@
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3091,8 +2873,6 @@
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3120,8 +2900,6 @@
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3149,8 +2927,6 @@
           "4-5 Maze 1",
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3178,8 +2954,6 @@
           "4-5 Maze 2",
           "4-5 Maze 5"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3207,8 +2981,6 @@
           "4-5 Maze 3",
           "4-5 Maze 6"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3239,8 +3011,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3262,8 +3032,6 @@
         "script_level.level_keys": [
           "Test anonymous student survey"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3284,8 +3052,6 @@
         "script_level.level_keys": [
           "CSP pre-assessment survey"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey 2",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3306,8 +3072,6 @@
         "script_level.level_keys": [
           "AllTheThings Modulo Clock"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 1,
         "lesson.key": "Public Key Cryptography",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3328,8 +3092,6 @@
         "script_level.level_keys": [
           "AllTheThings Public Key Cryptography"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 2,
         "lesson.key": "Public Key Cryptography",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3350,8 +3112,6 @@
         "script_level.level_keys": [
           "Web Lab 1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 1,
         "lesson.key": "Web Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3372,8 +3132,6 @@
         "script_level.level_keys": [
           "Test longassessment levelgroup new"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Single page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3394,8 +3152,6 @@
         "script_level.level_keys": [
           "AllTheThings_StandaloneVideo"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Standalone video",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3416,8 +3172,6 @@
         "script_level.level_keys": [
           "allthethings_curriculum_reference"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "Curriculum Reference",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3438,8 +3192,6 @@
         "script_level.level_keys": [
           "allthethings_map"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "Curriculum Reference",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3460,8 +3212,6 @@
         "script_level.level_keys": [
           "allthethings_fish_tank"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3482,8 +3232,6 @@
         "script_level.level_keys": [
           "allthethings HOC Dance 1"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 1,
         "lesson.key": "Dance Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3504,8 +3252,6 @@
         "script_level.level_keys": [
           "allthethings HOC Dance 10 Measures"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 2,
         "lesson.key": "Dance Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3526,8 +3272,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3548,8 +3292,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric-weblab"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 2,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3570,8 +3312,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric-gamelab"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 3,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3592,8 +3332,6 @@
         "script_level.level_keys": [
           "Pluralsight LevelGroup Test"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "Pluralsight Test",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3614,8 +3352,6 @@
         "script_level.level_keys": [
           "allthethings_external_displayed_as_unplugged"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 1,
         "lesson.key": "Externals Optionally Displayed as Unplugged",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3636,8 +3372,6 @@
         "script_level.level_keys": [
           "allthethings_external_not_displayed_as_unplugged"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 2,
         "lesson.key": "Externals Optionally Displayed as Unplugged",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3658,8 +3392,6 @@
         "script_level.level_keys": [
           "allthethings_bubble_choice"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 1,
         "lesson.key": "Bubble Choice",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3680,8 +3412,6 @@
         "script_level.level_keys": [
           "contained_single_multi"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3702,8 +3432,6 @@
         "script_level.level_keys": [
           "Test GameLab Predictive"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3724,8 +3452,6 @@
         "script_level.level_keys": [
           "PS predictive Applab level test"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3746,8 +3472,6 @@
         "script_level.level_keys": [
           "contained_applab_choose2"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3768,8 +3492,6 @@
         "script_level.level_keys": [
           "contained_csf_multi2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3790,8 +3512,6 @@
         "script_level.level_keys": [
           "contained_csf_free_response"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3812,8 +3532,6 @@
         "script_level.level_keys": [
           "Test GameLab Submittable Free Response"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3834,8 +3552,6 @@
         "script_level.level_keys": [
           "Video - The Future of Big Data"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3856,8 +3572,6 @@
         "script_level.level_keys": [
           "allthethings HOC ML Fish 1"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "ML Fish",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3874,8 +3588,6 @@
         "script_level.level_keys": [
           "blockly:Jigsaw:3"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3887,8 +3599,6 @@
         "script_level.level_keys": [
           "k-1 maze 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3900,8 +3610,6 @@
         "script_level.level_keys": [
           "K-1 Maze Loops 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3913,8 +3621,6 @@
         "script_level.level_keys": [
           "2-3 Maze 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3926,8 +3632,6 @@
         "script_level.level_keys": [
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3939,8 +3643,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3952,8 +3654,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3965,8 +3665,6 @@
         "script_level.level_keys": [
           "allthethings-anigif-instructions"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3978,8 +3676,6 @@
         "script_level.level_keys": [
           "K-1 Artist1 1"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -3991,8 +3687,6 @@
         "script_level.level_keys": [
           "2-3 Artist 1 new"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4004,8 +3698,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 4"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4017,8 +3709,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Vars 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4030,8 +3720,6 @@
         "script_level.level_keys": [
           "NEW Course 4 Artist Functions 3"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4043,8 +3731,6 @@
         "script_level.level_keys": [
           "Auto Open Function Editor"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4056,8 +3742,6 @@
         "script_level.level_keys": [
           "Angle Helper Test"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4069,8 +3753,6 @@
         "script_level.level_keys": [
           "allthethings-artist-project-backed"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4082,8 +3764,6 @@
         "script_level.level_keys": [
           "Artist Autorun Test"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4095,8 +3775,6 @@
         "script_level.level_keys": [
           "K-1 Bee 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4108,8 +3786,6 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4121,8 +3797,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 2A"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4134,8 +3808,6 @@
         "script_level.level_keys": [
           "2-3 Bee Conditionals 5"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4147,8 +3819,6 @@
         "script_level.level_keys": [
           "Bee Recommended Blocks test"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Bee",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4160,8 +3830,6 @@
         "script_level.level_keys": [
           "blockly:Studio:k1_1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4173,8 +3841,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c2_1"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4186,8 +3852,6 @@
         "script_level.level_keys": [
           "Course 4 Play Labs For Loops 1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4199,8 +3863,6 @@
         "script_level.level_keys": [
           "Course 4 Play Lab Params 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4212,8 +3874,6 @@
         "script_level.level_keys": [
           "allthethings-playlab-project-backed"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4225,8 +3885,6 @@
         "script_level.level_keys": [
           "Allthethings Encrypted Play Lab Level"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "PlayLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4238,8 +3896,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 4"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4251,8 +3907,6 @@
         "script_level.level_keys": [
           "Farmer for Authored Hint testing"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4264,8 +3918,6 @@
         "script_level.level_keys": [
           "Farmer for TTS testing"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Farmer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4277,8 +3929,6 @@
         "script_level.level_keys": [
           "flappy_1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Flappy",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4290,8 +3940,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4303,8 +3951,6 @@
         "script_level.level_keys": [
           "K-1 Happy Maps Multi 1"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4316,8 +3962,6 @@
         "script_level.level_keys": [
           "Multi Horizontal Scroll Test"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4329,8 +3973,6 @@
         "script_level.level_keys": [
           "Submittable Multi"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4342,8 +3984,6 @@
         "script_level.level_keys": [
           "test questionless single multi"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Multi",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4355,8 +3995,6 @@
         "script_level.level_keys": [
           "Choose 2 Test"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Multi2",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4368,8 +4006,6 @@
         "script_level.level_keys": [
           "K-1 Maze Match 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Match",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4381,8 +4017,6 @@
         "script_level.level_keys": [
           "Blocks to Math 1"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "TextMatch",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4394,8 +4028,6 @@
         "script_level.level_keys": [
           "PDK5 Strategies O"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "TextMatch",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4407,8 +4039,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval .2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4420,8 +4050,6 @@
         "script_level.level_keys": [
           "Eval Strings Images .2"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4433,8 +4061,6 @@
         "script_level.level_keys": [
           "Eval Contracts F"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4446,8 +4072,6 @@
         "script_level.level_keys": [
           "Eval Contracts A"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4459,8 +4083,6 @@
         "script_level.level_keys": [
           "Calc Vars 1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4472,8 +4094,6 @@
         "script_level.level_keys": [
           "Big Game Vars 1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4485,8 +4105,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs 3"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4498,8 +4116,6 @@
         "script_level.level_keys": [
           "Eval Booleans 2"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4511,8 +4127,6 @@
         "script_level.level_keys": [
           "Sam the Butterfly 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4524,8 +4138,6 @@
         "script_level.level_keys": [
           "Luigi's Pizza 1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4537,8 +4149,6 @@
         "script_level.level_keys": [
           "Eval Define Funcs Test"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "CSinA",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4550,8 +4160,6 @@
         "script_level.level_keys": [
           "U1L4 NetSim SendAB"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4563,8 +4171,6 @@
         "script_level.level_keys": [
           "U2L5 NetSim Classroom Internet"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4576,8 +4182,6 @@
         "script_level.level_keys": [
           "U2L7 NetSim Need for Packets"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4589,8 +4193,6 @@
         "script_level.level_keys": [
           "U2L10 NetSim Automatic DNS"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4602,8 +4204,6 @@
         "script_level.level_keys": [
           "NetSim_Superuser"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Netsim",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4615,8 +4215,6 @@
         "script_level.level_keys": [
           "Odometer"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Odometer",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4628,8 +4226,6 @@
         "script_level.level_keys": [
           "U1L13 Text Compression"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 1,
         "lesson.key": "Text Compression",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4641,8 +4237,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 14 - Make the Letter A"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 1,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4654,8 +4248,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 2,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4667,8 +4259,6 @@
         "script_level.level_keys": [
           "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 3,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4680,8 +4270,6 @@
         "script_level.level_keys": [
           "Pixelation - AllTheThings 4"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 4,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4693,8 +4281,6 @@
         "script_level.level_keys": [
           "Pixelation - AllTheThings 5"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 5,
         "lesson.key": "Pixelation",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4706,8 +4292,6 @@
         "script_level.level_keys": [
           "U3L2 Using Simple Commands"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4719,8 +4303,6 @@
         "script_level.level_keys": [
           "U3L03 Define and use turnAround"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4732,8 +4314,6 @@
         "script_level.level_keys": [
           "U3L07 - Starry Night Starter Code"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4745,8 +4325,6 @@
         "script_level.level_keys": [
           "U3L08 - Enchantment Under the Sea"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4758,8 +4336,6 @@
         "script_level.level_keys": [
           "AllTheThings Applab - Turtle move with button"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4771,8 +4347,6 @@
         "script_level.level_keys": [
           "U3L16 - use images"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4784,8 +4358,6 @@
         "script_level.level_keys": [
           "Applab test"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4797,8 +4369,6 @@
         "script_level.level_keys": [
           "allthethings data blocks test"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4810,8 +4380,6 @@
         "script_level.level_keys": [
           "allthethings design mode elements"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4823,8 +4391,6 @@
         "script_level.level_keys": [
           "allthethings_template_backed1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4836,8 +4402,6 @@
         "script_level.level_keys": [
           "allthethings_template_backed2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4849,8 +4413,6 @@
         "script_level.level_keys": [
           "allthethings_moviebot"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4862,8 +4424,6 @@
         "script_level.level_keys": [
           "Applab allthethings onRecordEvent"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4875,8 +4435,6 @@
         "script_level.level_keys": [
           "Embedded Video Test"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4888,8 +4446,6 @@
         "script_level.level_keys": [
           "Test Applab Predictive"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4901,8 +4457,6 @@
         "script_level.level_keys": [
           "allthethings level dataTables"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 16,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4914,8 +4468,6 @@
         "script_level.level_keys": [
           "Applab allthethings goals"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 17,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4927,8 +4479,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab MapReference"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 18,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4940,8 +4490,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab ReferenceLinks"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 19,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4953,8 +4501,6 @@
         "script_level.level_keys": [
           "Applab AllTheThings ResourcesTab AllResources"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 20,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4966,8 +4512,6 @@
         "script_level.level_keys": [
           "AllTheThings Applab DesignModeDefault"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 21,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4979,8 +4523,6 @@
         "script_level.level_keys": [
           "Applab allthethings Widget Mode"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 22,
         "lesson.key": "AppLab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -4992,8 +4534,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings With No Animation Tab"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5005,8 +4545,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings With Prepopulated Animation"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5018,8 +4556,6 @@
         "script_level.level_keys": [
           "Gamelab AllTheThings Embed Level"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Gamelab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5031,8 +4567,6 @@
         "script_level.level_keys": [
           "PDK5 Intro C"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Online PD",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5044,8 +4578,6 @@
         "script_level.level_keys": [
           "PDK5 Foundations F"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Online PD",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5057,8 +4589,6 @@
         "script_level.level_keys": [
           "Test External Markdown"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5070,8 +4600,6 @@
         "script_level.level_keys": [
           "Test embedded Blockly in instructions"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5083,8 +4611,6 @@
         "script_level.level_keys": [
           "Test embedded K1 Blockly in instructions"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Markdown Details",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5096,8 +4622,6 @@
         "script_level.level_keys": [
           "Resizing Test"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Studio",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5109,8 +4633,6 @@
         "script_level.level_keys": [
           "K-1 Maze 11"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 1,
         "lesson.key": "Multi page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5122,8 +4644,6 @@
         "script_level.level_keys": [
           "Test longassessment levelgroup split new"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 2,
         "lesson.key": "Multi page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5135,8 +4655,6 @@
         "script_level.level_keys": [
           "blockly:StudioEC:js_hoc2015_event_two_items"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 1,
         "lesson.key": "Star wars",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5148,8 +4666,6 @@
         "script_level.level_keys": [
           "blockly:Studio:hoc2015_blockly_5"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 2,
         "lesson.key": "Star wars",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5161,8 +4677,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree - allthethings"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 1,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5174,8 +4688,6 @@
         "script_level.level_keys": [
           "MC Agent Freeplay"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 2,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5187,8 +4699,6 @@
         "script_level.level_keys": [
           "Craft Aquatic - allthethings"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 3,
         "lesson.key": "Minecraft",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5200,8 +4710,6 @@
         "script_level.level_keys": [
           "PS U3 Assessment1 new"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 1,
         "lesson.key": "Rich long assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5213,8 +4721,6 @@
         "script_level.level_keys": [
           "Sample Free Response"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Free Response",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5226,8 +4732,6 @@
         "script_level.level_keys": [
           "Sample CSP Assessment"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "Sample PLC Assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5240,8 +4744,6 @@
           "2-3 Maze 1",
           "2-3 Maze 4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5254,8 +4756,6 @@
           "2-3 Maze 1",
           "2-3 Maze 4"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5268,8 +4768,6 @@
           "2-3 Maze 2",
           "2-3 Maze 5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5282,8 +4780,6 @@
           "2-3 Maze 2",
           "2-3 Maze 5"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5296,8 +4792,6 @@
           "2-3 Maze 3",
           "2-3 Maze 6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5310,8 +4804,6 @@
           "2-3 Maze 3",
           "2-3 Maze 6"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5324,8 +4816,6 @@
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5338,8 +4828,6 @@
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5352,8 +4840,6 @@
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5366,8 +4852,6 @@
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5380,8 +4864,6 @@
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5394,8 +4876,6 @@
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5408,8 +4888,6 @@
           "4-5 Maze 1",
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5422,8 +4900,6 @@
           "4-5 Maze 1",
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5436,8 +4912,6 @@
           "4-5 Maze 2",
           "4-5 Maze 5"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5450,8 +4924,6 @@
           "4-5 Maze 2",
           "4-5 Maze 5"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5464,8 +4936,6 @@
           "4-5 Maze 3",
           "4-5 Maze 6"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5478,8 +4948,6 @@
           "4-5 Maze 3",
           "4-5 Maze 6"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5492,8 +4960,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5506,8 +4972,6 @@
           "csp_socialBelonging_intervention",
           "csp_socialBelonging_control"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5519,8 +4983,6 @@
         "script_level.level_keys": [
           "Test anonymous student survey"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5532,8 +4994,6 @@
         "script_level.level_keys": [
           "CSP pre-assessment survey"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey 2",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5545,8 +5005,6 @@
         "script_level.level_keys": [
           "AllTheThings Modulo Clock"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 1,
         "lesson.key": "Public Key Cryptography",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5558,8 +5016,6 @@
         "script_level.level_keys": [
           "AllTheThings Public Key Cryptography"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 2,
         "lesson.key": "Public Key Cryptography",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5571,8 +5027,6 @@
         "script_level.level_keys": [
           "Web Lab 1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 1,
         "lesson.key": "Web Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5584,8 +5038,6 @@
         "script_level.level_keys": [
           "Test longassessment levelgroup new"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 1,
         "lesson.key": "Single page assessment",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5597,8 +5049,6 @@
         "script_level.level_keys": [
           "AllTheThings_StandaloneVideo"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Standalone video",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5610,8 +5060,6 @@
         "script_level.level_keys": [
           "allthethings_curriculum_reference"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 1,
         "lesson.key": "Curriculum Reference",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5623,8 +5071,6 @@
         "script_level.level_keys": [
           "allthethings_map"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 2,
         "lesson.key": "Curriculum Reference",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5636,8 +5082,6 @@
         "script_level.level_keys": [
           "allthethings_fish_tank"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 1,
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5649,8 +5093,6 @@
         "script_level.level_keys": [
           "allthethings HOC Dance 1"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 1,
         "lesson.key": "Dance Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5662,8 +5104,6 @@
         "script_level.level_keys": [
           "allthethings HOC Dance 10 Measures"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 2,
         "lesson.key": "Dance Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5675,8 +5115,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 1,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5688,8 +5126,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric-weblab"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 2,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5701,8 +5137,6 @@
         "script_level.level_keys": [
           "allthethings-mini-rubric-gamelab"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 3,
         "lesson.key": "Mini Rubric",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5714,8 +5148,6 @@
         "script_level.level_keys": [
           "Pluralsight LevelGroup Test"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "Pluralsight Test",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5727,8 +5159,6 @@
         "script_level.level_keys": [
           "allthethings_external_displayed_as_unplugged"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 1,
         "lesson.key": "Externals Optionally Displayed as Unplugged",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5740,8 +5170,6 @@
         "script_level.level_keys": [
           "allthethings_external_not_displayed_as_unplugged"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 2,
         "lesson.key": "Externals Optionally Displayed as Unplugged",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5753,8 +5181,6 @@
         "script_level.level_keys": [
           "allthethings_bubble_choice"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 1,
         "lesson.key": "Bubble Choice",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5766,8 +5192,6 @@
         "script_level.level_keys": [
           "contained_single_multi"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5779,8 +5203,6 @@
         "script_level.level_keys": [
           "Test GameLab Predictive"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5792,8 +5214,6 @@
         "script_level.level_keys": [
           "PS predictive Applab level test"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5805,8 +5225,6 @@
         "script_level.level_keys": [
           "contained_applab_choose2"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5818,8 +5236,6 @@
         "script_level.level_keys": [
           "contained_csf_multi2"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5831,8 +5247,6 @@
         "script_level.level_keys": [
           "contained_csf_free_response"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5844,8 +5258,6 @@
         "script_level.level_keys": [
           "Test GameLab Submittable Free Response"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5857,8 +5269,6 @@
         "script_level.level_keys": [
           "Video - The Future of Big Data"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -5870,8 +5280,6 @@
         "script_level.level_keys": [
           "allthethings HOC ML Fish 1"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 1,
         "lesson.key": "ML Fish",
         "lesson_group.key": "",
         "script.name": "allthethings"

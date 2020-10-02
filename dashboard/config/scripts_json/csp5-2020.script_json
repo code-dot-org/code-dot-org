@@ -366,8 +366,6 @@
         "script_level.level_keys": [
           "CSP U5L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -389,8 +387,6 @@
         "script_level.level_keys": [
           "U5 L01 Introduction to Lists"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -412,8 +408,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -435,8 +429,6 @@
         "script_level.level_keys": [
           "csp-20-21-u5-assess-lists"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -458,8 +450,6 @@
         "script_level.level_keys": [
           "CSP U5L2 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -481,8 +471,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -504,8 +492,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Outfitly Code"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -527,8 +513,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Bandly Code"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -550,8 +534,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -573,8 +555,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Partnersly Code"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -596,8 +576,6 @@
         "script_level.level_keys": [
           "Random List Access Pattern"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -619,8 +597,6 @@
         "script_level.level_keys": [
           "List Scrolling Pattern"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -642,8 +618,6 @@
         "script_level.level_keys": [
           "CSP U5L3 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -665,8 +639,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -688,8 +660,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -711,8 +681,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.75"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -734,8 +702,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -757,8 +723,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 10"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -780,8 +744,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -803,8 +765,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 3"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -826,8 +786,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -849,8 +807,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 5"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -872,8 +828,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 9"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -895,8 +849,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -918,8 +870,6 @@
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -941,8 +891,6 @@
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -964,8 +912,6 @@
         "script_level.level_keys": [
           "CSP U5L4 SFLP 20-21"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -987,8 +933,6 @@
         "script_level.level_keys": [
           "U5 Lists Make Project Sample App 2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -1010,8 +954,6 @@
         "script_level.level_keys": [
           "U5 Lists Make Project 2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -1033,8 +975,6 @@
         "script_level.level_keys": [
           "CSP U5L5 SFLP 20-21"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1056,8 +996,6 @@
         "script_level.level_keys": [
           "csp_applab_loops_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1079,8 +1017,6 @@
         "script_level.level_keys": [
           "U3L5 CSP CFU Looping"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1102,8 +1038,6 @@
         "script_level.level_keys": [
           "CSP U5L6 SFLP 20-21"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1125,8 +1059,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper Predict"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1148,8 +1080,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1171,8 +1101,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Font Tester"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1194,8 +1122,6 @@
         "script_level.level_keys": [
           "U3L6 CSP CFU Element Looping"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1217,8 +1143,6 @@
         "script_level.level_keys": [
           "CSP U5L7 SFLP 20-21"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1240,8 +1164,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1263,8 +1185,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1286,8 +1206,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1309,8 +1227,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1332,8 +1248,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 5"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1355,8 +1269,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 6"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1378,8 +1290,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Sentence Randomizer"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 8,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1401,8 +1311,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Dice Roller"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 9,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1424,8 +1332,6 @@
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 10,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1447,8 +1353,6 @@
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode 2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 11,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1470,8 +1374,6 @@
         "script_level.level_keys": [
           "CSP U5L8 SFLP 20-21"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1493,8 +1395,6 @@
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App Example 2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1516,8 +1416,6 @@
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App 2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -1539,8 +1437,6 @@
         "script_level.level_keys": [
           "CSP U5L9 SFLP 20-21"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1562,8 +1458,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1585,8 +1479,6 @@
         "script_level.level_keys": [
           "U5 L09 Traversals Exit Ticket"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1608,8 +1500,6 @@
         "script_level.level_keys": [
           "CSP U5L10 SFLP 20-21"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1631,8 +1521,6 @@
         "script_level.level_keys": [
           "U5 Traversals Investigate Mile Tracker Modify"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1654,8 +1542,6 @@
         "script_level.level_keys": [
           "CSP U5L10 Traversals Investigate"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1677,8 +1563,6 @@
         "script_level.level_keys": [
           "U5 Traversals Investigate Dog Finder Modify"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1700,8 +1584,6 @@
         "script_level.level_keys": [
           "List Filter Pattern"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1723,8 +1605,6 @@
         "script_level.level_keys": [
           "List Reduce Pattern"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1746,8 +1626,6 @@
         "script_level.level_keys": [
           "CSP U5L10 CFU Traversals"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1769,8 +1647,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP 20-21"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1792,8 +1668,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1815,8 +1689,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 2"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1838,8 +1710,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 3"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1861,8 +1731,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 4"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1884,8 +1752,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 5"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1907,8 +1773,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 6"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1930,8 +1794,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 7"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1953,8 +1815,6 @@
         "script_level.level_keys": [
           "U5L11 CFU For Each Psuedocode"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1976,8 +1836,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP 20-21"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -1999,8 +1857,6 @@
         "script_level.level_keys": [
           "U5 Traversals Make Project Sample App 2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -2022,8 +1878,6 @@
         "script_level.level_keys": [
           "U5 Traversals Make Project 2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -2045,8 +1899,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP 20-21"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2068,8 +1920,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP 20-21"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2091,8 +1941,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 2"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2114,8 +1962,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP 20-21"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2137,8 +1983,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 3"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2160,8 +2004,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP 20-21"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2183,8 +2025,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 4"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2206,8 +2046,6 @@
         "script_level.level_keys": [
           "CSP U5L17 SFLP 20-21"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2229,8 +2067,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 5"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2252,8 +2088,6 @@
         "script_level.level_keys": [
           "CSP U5L18 SFLP 20-21"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2275,8 +2109,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -2293,8 +2125,6 @@
         "script_level.level_keys": [
           "CSP U5L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2306,8 +2136,6 @@
         "script_level.level_keys": [
           "U5 L01 Introduction to Lists"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2319,8 +2147,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2332,8 +2158,6 @@
         "script_level.level_keys": [
           "csp-20-21-u5-assess-lists"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2345,8 +2169,6 @@
         "script_level.level_keys": [
           "CSP U5L2 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2358,8 +2180,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2371,8 +2191,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Outfitly Code"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2384,8 +2202,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Bandly Code"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2397,8 +2213,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2410,8 +2224,6 @@
         "script_level.level_keys": [
           "U5 Lists Investigate Partnersly Code"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 6,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2423,8 +2235,6 @@
         "script_level.level_keys": [
           "Random List Access Pattern"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 7,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2436,8 +2246,6 @@
         "script_level.level_keys": [
           "List Scrolling Pattern"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 8,
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2449,8 +2257,6 @@
         "script_level.level_keys": [
           "CSP U5L3 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2462,8 +2268,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2475,8 +2279,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2488,8 +2290,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.75"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2501,8 +2301,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.5"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2514,8 +2312,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 10"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2527,8 +2323,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2540,8 +2334,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 3"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2553,8 +2345,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 4"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2566,8 +2356,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 5"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2579,8 +2367,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 9"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2592,8 +2378,6 @@
         "script_level.level_keys": [
           "U5 L03 Lists Practice 6"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2605,8 +2389,6 @@
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2618,8 +2400,6 @@
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 14,
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2631,8 +2411,6 @@
         "script_level.level_keys": [
           "CSP U5L4 SFLP 20-21"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2644,8 +2422,6 @@
         "script_level.level_keys": [
           "U5 Lists Make Project Sample App 2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2657,8 +2433,6 @@
         "script_level.level_keys": [
           "U5 Lists Make Project 2020"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2020"
@@ -2670,8 +2444,6 @@
         "script_level.level_keys": [
           "CSP U5L5 SFLP 20-21"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2683,8 +2455,6 @@
         "script_level.level_keys": [
           "csp_applab_loops_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2696,8 +2466,6 @@
         "script_level.level_keys": [
           "U3L5 CSP CFU Looping"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2709,8 +2477,6 @@
         "script_level.level_keys": [
           "CSP U5L6 SFLP 20-21"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 1,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2722,8 +2488,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper Predict"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 2,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2735,8 +2499,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 3,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2748,8 +2510,6 @@
         "script_level.level_keys": [
           "U5 Loops Investigate Font Tester"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 4,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2761,8 +2521,6 @@
         "script_level.level_keys": [
           "U3L6 CSP CFU Element Looping"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 5,
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2774,8 +2532,6 @@
         "script_level.level_keys": [
           "CSP U5L7 SFLP 20-21"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2787,8 +2543,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2800,8 +2554,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2813,8 +2565,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2826,8 +2576,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2839,8 +2587,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 5"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 6,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2852,8 +2598,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Part 6"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 7,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2865,8 +2609,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Sentence Randomizer"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 8,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2878,8 +2620,6 @@
         "script_level.level_keys": [
           "U5 Loops Practice Dice Roller"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 9,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2891,8 +2631,6 @@
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 10,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2904,8 +2642,6 @@
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode 2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 11,
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2917,8 +2653,6 @@
         "script_level.level_keys": [
           "CSP U5L8 SFLP 20-21"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2930,8 +2664,6 @@
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App Example 2020"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2943,8 +2675,6 @@
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App 2020"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2020"
@@ -2956,8 +2686,6 @@
         "script_level.level_keys": [
           "CSP U5L9 SFLP 20-21"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -2969,8 +2697,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -2982,8 +2708,6 @@
         "script_level.level_keys": [
           "U5 L09 Traversals Exit Ticket"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -2995,8 +2719,6 @@
         "script_level.level_keys": [
           "CSP U5L10 SFLP 20-21"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3008,8 +2730,6 @@
         "script_level.level_keys": [
           "U5 Traversals Investigate Mile Tracker Modify"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3021,8 +2741,6 @@
         "script_level.level_keys": [
           "CSP U5L10 Traversals Investigate"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3034,8 +2752,6 @@
         "script_level.level_keys": [
           "U5 Traversals Investigate Dog Finder Modify"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3047,8 +2763,6 @@
         "script_level.level_keys": [
           "List Filter Pattern"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3060,8 +2774,6 @@
         "script_level.level_keys": [
           "List Reduce Pattern"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3073,8 +2785,6 @@
         "script_level.level_keys": [
           "CSP U5L10 CFU Traversals"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3086,8 +2796,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP 20-21"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3099,8 +2807,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 1"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3112,8 +2818,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 2"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3125,8 +2829,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 3"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3138,8 +2840,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 4"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3151,8 +2851,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 5"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3164,8 +2862,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 6"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3177,8 +2873,6 @@
         "script_level.level_keys": [
           "U5 Traversals Practice Part 7"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3190,8 +2884,6 @@
         "script_level.level_keys": [
           "U5L11 CFU For Each Psuedocode"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3203,8 +2895,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP 20-21"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3216,8 +2906,6 @@
         "script_level.level_keys": [
           "U5 Traversals Make Project Sample App 2020"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3229,8 +2917,6 @@
         "script_level.level_keys": [
           "U5 Traversals Make Project 2020"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2020"
@@ -3242,8 +2928,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP 20-21"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3255,8 +2939,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP 20-21"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3268,8 +2950,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 2"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3281,8 +2961,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP 20-21"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3294,8 +2972,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 3"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3307,8 +2983,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP 20-21"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3320,8 +2994,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 4"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3333,8 +3005,6 @@
         "script_level.level_keys": [
           "CSP U5L17 SFLP 20-21"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3346,8 +3016,6 @@
         "script_level.level_keys": [
           "U5 Hackathon Project Day 5"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3359,8 +3027,6 @@
         "script_level.level_keys": [
           "CSP U5L18 SFLP 20-21"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"
@@ -3372,8 +3038,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2020"

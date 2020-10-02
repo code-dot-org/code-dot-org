@@ -125,8 +125,6 @@
         "script_level.level_keys": [
           "csp-tuesday-unit"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "csp-tuesday-unit2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "csp-tuesday-pedagogy"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "csp-tuesday-facilitation"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -215,8 +207,6 @@
         "script_level.level_keys": [
           "csp-wednesday-unit"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -238,8 +228,6 @@
         "script_level.level_keys": [
           "csp-wednesday-unit2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -260,8 +248,6 @@
         "script_level.level_keys": [
           "csp-wednesday-pedagogy"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -282,8 +268,6 @@
         "script_level.level_keys": [
           "csp-wednesday-facilitation"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -305,8 +289,6 @@
         "script_level.level_keys": [
           "csp-thursday-unit"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -328,8 +310,6 @@
         "script_level.level_keys": [
           "csp-thursday-unit2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -351,8 +331,6 @@
         "script_level.level_keys": [
           "csp-thursday-pedagogy"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -374,8 +352,6 @@
         "script_level.level_keys": [
           "csp-thursday-pedagogy2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -396,8 +372,6 @@
         "script_level.level_keys": [
           "csp-thursday-facilitation"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -419,8 +393,6 @@
         "script_level.level_keys": [
           "csd-tuesday-unit"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -442,8 +414,6 @@
         "script_level.level_keys": [
           "csd-tuesday-unit2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -464,8 +434,6 @@
         "script_level.level_keys": [
           "csd-tuesday-pedagogy"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -486,8 +454,6 @@
         "script_level.level_keys": [
           "csd-tuesday-facilitation"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -509,8 +475,6 @@
         "script_level.level_keys": [
           "csd-wednesday-unit"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -532,8 +496,6 @@
         "script_level.level_keys": [
           "csd-wednesday-unit2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -554,8 +516,6 @@
         "script_level.level_keys": [
           "csd-wednesday-pedagogy"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -576,8 +536,6 @@
         "script_level.level_keys": [
           "csd-wednesday-facilitation"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -599,8 +557,6 @@
         "script_level.level_keys": [
           "csd-thursday-unit"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -622,8 +578,6 @@
         "script_level.level_keys": [
           "csd-thursday-unit2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -645,8 +599,6 @@
         "script_level.level_keys": [
           "csd-thursday-pedagogy"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -668,8 +620,6 @@
         "script_level.level_keys": [
           "csd-thursday-pedagogy2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -690,8 +640,6 @@
         "script_level.level_keys": [
           "csd-thursday-facilitation"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -708,8 +656,6 @@
         "script_level.level_keys": [
           "csp-tuesday-unit"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -721,8 +667,6 @@
         "script_level.level_keys": [
           "csp-tuesday-unit2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -734,8 +678,6 @@
         "script_level.level_keys": [
           "csp-tuesday-pedagogy"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -747,8 +689,6 @@
         "script_level.level_keys": [
           "csp-tuesday-facilitation"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -760,8 +700,6 @@
         "script_level.level_keys": [
           "csp-wednesday-unit"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -773,8 +711,6 @@
         "script_level.level_keys": [
           "csp-wednesday-unit2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -786,8 +722,6 @@
         "script_level.level_keys": [
           "csp-wednesday-pedagogy"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -799,8 +733,6 @@
         "script_level.level_keys": [
           "csp-wednesday-facilitation"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -812,8 +744,6 @@
         "script_level.level_keys": [
           "csp-thursday-unit"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -825,8 +755,6 @@
         "script_level.level_keys": [
           "csp-thursday-unit2"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -838,8 +766,6 @@
         "script_level.level_keys": [
           "csp-thursday-pedagogy"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -851,8 +777,6 @@
         "script_level.level_keys": [
           "csp-thursday-pedagogy2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -864,8 +788,6 @@
         "script_level.level_keys": [
           "csp-thursday-facilitation"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -877,8 +799,6 @@
         "script_level.level_keys": [
           "csd-tuesday-unit"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -890,8 +810,6 @@
         "script_level.level_keys": [
           "csd-tuesday-unit2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -903,8 +821,6 @@
         "script_level.level_keys": [
           "csd-tuesday-pedagogy"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -916,8 +832,6 @@
         "script_level.level_keys": [
           "csd-tuesday-facilitation"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -929,8 +843,6 @@
         "script_level.level_keys": [
           "csd-wednesday-unit"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -942,8 +854,6 @@
         "script_level.level_keys": [
           "csd-wednesday-unit2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -955,8 +865,6 @@
         "script_level.level_keys": [
           "csd-wednesday-pedagogy"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -968,8 +876,6 @@
         "script_level.level_keys": [
           "csd-wednesday-facilitation"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -981,8 +887,6 @@
         "script_level.level_keys": [
           "csd-thursday-unit"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -994,8 +898,6 @@
         "script_level.level_keys": [
           "csd-thursday-unit2"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -1007,8 +909,6 @@
         "script_level.level_keys": [
           "csd-thursday-pedagogy"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -1020,8 +920,6 @@
         "script_level.level_keys": [
           "csd-thursday-pedagogy2"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"
@@ -1033,8 +931,6 @@
         "script_level.level_keys": [
           "csd-thursday-facilitation"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 5,
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
         "script.name": "novice-view"

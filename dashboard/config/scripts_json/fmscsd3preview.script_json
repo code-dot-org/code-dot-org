@@ -69,8 +69,6 @@
         "script_level.level_keys": [
           "CSD U3 Lesson Overview 2"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -91,8 +89,6 @@
         "script_level.level_keys": [
           "CSD U3 Describe the Picture"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -113,8 +109,6 @@
         "script_level.level_keys": [
           "CSD-U3-SFLP Simple Drawing"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -135,8 +129,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -157,8 +149,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -179,8 +169,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle Width and Height"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -201,8 +189,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - X and Y values"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -223,8 +209,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Order of Blocks"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -245,8 +229,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -267,8 +249,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Fill"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -289,8 +269,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Oval"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -311,8 +289,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Simple Shape Drawing"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -333,8 +309,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Ellipse and No Fill"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -355,8 +329,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Stroke and Stroke Weight"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 12,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -377,8 +349,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - No Fill"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 13,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -399,8 +369,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Comments"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 14,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -421,8 +389,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Road Rects and Color"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 15,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -443,8 +409,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Road Ellipse"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 16,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -465,8 +429,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - regular polygon"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 17,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -487,8 +449,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - text"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 18,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -509,8 +469,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Plan Personal Drawing"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 19,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -531,8 +489,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Personal Drawing"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 20,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -549,8 +505,6 @@
         "script_level.level_keys": [
           "CSD U3 Lesson Overview 2"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -562,8 +516,6 @@
         "script_level.level_keys": [
           "CSD U3 Describe the Picture"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -575,8 +527,6 @@
         "script_level.level_keys": [
           "CSD-U3-SFLP Simple Drawing"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -588,8 +538,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -601,8 +549,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -614,8 +560,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Rectangle Width and Height"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -627,8 +571,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - X and Y values"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -640,8 +582,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Order of Blocks"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -653,8 +593,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -666,8 +604,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Fill"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -679,8 +615,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Oval"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -692,8 +626,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Simple Shape Drawing"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -705,8 +637,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Ellipse and No Fill"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -718,8 +648,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Stroke and Stroke Weight"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 12,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -731,8 +659,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - No Fill"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 13,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -744,8 +670,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Comments"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 14,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -757,8 +681,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Road Rects and Color"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 15,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -770,8 +692,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Road Ellipse"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 16,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -783,8 +703,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - regular polygon"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 17,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -796,8 +714,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - text"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 18,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -809,8 +725,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Plan Personal Drawing"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 19,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"
@@ -822,8 +736,6 @@
         "script_level.level_keys": [
           "U3 - Simple Drawing - Personal Drawing"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 20,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
         "script.name": "fmscsd3preview"

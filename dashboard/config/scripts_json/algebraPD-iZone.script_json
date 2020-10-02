@@ -126,8 +126,6 @@
         "script_level.level_keys": [
           "PDAlg Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -148,8 +146,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -170,8 +166,6 @@
         "script_level.level_keys": [
           "PDAlg commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -192,8 +186,6 @@
         "script_level.level_keys": [
           "PDAlg commitment match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -214,8 +206,6 @@
         "script_level.level_keys": [
           "PDAlg attendance commitment"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -236,8 +226,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -258,8 +246,6 @@
         "script_level.level_keys": [
           "PDAlg Curriculum Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -280,8 +266,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -302,8 +286,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -346,8 +326,6 @@
         "script_level.level_keys": [
           "PDAlg Attitude Survey"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -368,8 +346,6 @@
         "script_level.level_keys": [
           "AlgPD Break"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -390,8 +366,6 @@
         "script_level.level_keys": [
           "PDAlg functions"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -412,8 +386,6 @@
         "script_level.level_keys": [
           "PDAlg hard video"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -434,8 +406,6 @@
         "script_level.level_keys": [
           "PDAlg functional"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -456,8 +426,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -478,8 +446,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -500,8 +466,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -522,8 +486,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -544,8 +506,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -566,8 +526,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -588,8 +546,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -610,8 +566,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 8"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -632,8 +586,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -654,8 +606,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -676,8 +626,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -698,8 +646,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -720,8 +666,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -742,8 +686,6 @@
         "script_level.level_keys": [
           "PDAlg Facilitators"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -764,8 +706,6 @@
         "script_level.level_keys": [
           "PDAlg End of P1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -786,8 +726,6 @@
         "script_level.level_keys": [
           "PDAlg Post Survey"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -804,8 +742,6 @@
         "script_level.level_keys": [
           "PDAlg Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -817,8 +753,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -830,8 +764,6 @@
         "script_level.level_keys": [
           "PDAlg commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -843,8 +775,6 @@
         "script_level.level_keys": [
           "PDAlg commitment match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -856,8 +786,6 @@
         "script_level.level_keys": [
           "PDAlg attendance commitment"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -869,8 +797,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Introduction"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -882,8 +808,6 @@
         "script_level.level_keys": [
           "PDAlg Curriculum Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -895,8 +819,6 @@
         "script_level.level_keys": [
           "PDAlg Scope"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -908,8 +830,6 @@
         "script_level.level_keys": [
           "PDAlg implementation"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -921,8 +841,6 @@
         "script_level.level_keys": [
           "PDAlg course goals"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -934,8 +852,6 @@
         "script_level.level_keys": [
           "PDAlg Attitude Survey"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -947,8 +863,6 @@
         "script_level.level_keys": [
           "AlgPD Break"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -960,8 +874,6 @@
         "script_level.level_keys": [
           "PDAlg functions"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -973,8 +885,6 @@
         "script_level.level_keys": [
           "PDAlg hard video"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -986,8 +896,6 @@
         "script_level.level_keys": [
           "PDAlg functional"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -999,8 +907,6 @@
         "script_level.level_keys": [
           "PDAlg Blocks Video"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1012,8 +918,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1025,8 +929,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1038,8 +940,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 3"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1051,8 +951,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1064,8 +962,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 6"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1077,8 +973,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1090,8 +984,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 8"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1103,8 +995,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval 9"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1116,8 +1006,6 @@
         "script_level.level_keys": [
           "Calc Circles of Eval Free Play"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 10,
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1129,8 +1017,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1142,8 +1028,6 @@
         "script_level.level_keys": [
           "PDK5 Teacher Dashboard 2"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1155,8 +1039,6 @@
         "script_level.level_keys": [
           "PDAlg Teacher Dashboard"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1168,8 +1050,6 @@
         "script_level.level_keys": [
           "PDAlg Facilitators"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1181,8 +1061,6 @@
         "script_level.level_keys": [
           "PDAlg End of P1"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"
@@ -1194,8 +1072,6 @@
         "script_level.level_keys": [
           "PDAlg Post Survey"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
         "script.name": "algebraPD-iZone"

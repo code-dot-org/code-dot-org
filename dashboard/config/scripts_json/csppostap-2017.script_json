@@ -203,8 +203,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -225,8 +223,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -247,8 +243,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -269,8 +263,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -291,8 +283,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -313,8 +303,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -335,8 +323,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -357,8 +343,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -379,8 +363,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -401,8 +383,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -423,8 +403,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -445,8 +423,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -467,8 +443,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -489,8 +463,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -511,8 +483,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -533,8 +503,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -555,8 +523,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -577,8 +543,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -599,8 +563,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -621,8 +583,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -643,8 +603,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -665,8 +623,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -687,8 +643,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -709,8 +663,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -731,8 +683,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -753,8 +703,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -775,8 +723,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -797,8 +743,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -819,8 +763,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -841,8 +783,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -863,8 +803,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -885,8 +823,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -907,8 +843,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -929,8 +863,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -951,8 +883,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -973,8 +903,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -995,8 +923,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1017,8 +943,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1039,8 +963,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1061,8 +983,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1083,8 +1003,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1105,8 +1023,6 @@
         "script_level.level_keys": [
           "U6 - deleteRecord - Student Introduction"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1127,8 +1043,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1149,8 +1063,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1171,8 +1083,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1193,8 +1103,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1215,8 +1123,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1237,8 +1143,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1259,8 +1163,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Student Introduction"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1281,8 +1183,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Default Block"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1303,8 +1203,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Callback Success Parameter"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1325,8 +1223,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Update Nonexistent Record"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1347,8 +1243,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit UI"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1369,8 +1263,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit event handler"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1391,8 +1283,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Save edited contact"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1413,8 +1303,6 @@
         "script_level.level_keys": [
           "U6 - ImportExport - Student Introduction"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1435,8 +1323,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1457,8 +1343,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1479,8 +1363,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1501,8 +1383,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1523,8 +1403,6 @@
         "script_level.level_keys": [
           "U6 - Charts - Student Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1545,8 +1423,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1567,8 +1443,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1589,8 +1463,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1611,8 +1483,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1633,8 +1503,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1655,8 +1523,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1677,8 +1543,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Student Introduction"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1699,8 +1563,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - User Login"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1721,8 +1583,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Class Survey"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1743,8 +1603,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Clicker Game"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1765,8 +1623,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Flashcards"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1787,8 +1643,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Student Introduction"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Final Project",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1809,8 +1663,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Project Level"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Final Project",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1832,8 +1684,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2017"
@@ -1855,8 +1705,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2017"
@@ -1873,8 +1721,6 @@
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1886,8 +1732,6 @@
         "script_level.level_keys": [
           "U4 - Objects - eventParameter"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1899,8 +1743,6 @@
         "script_level.level_keys": [
           "U4 - Objects - dotNotation"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1912,8 +1754,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1925,8 +1765,6 @@
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1938,8 +1776,6 @@
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1951,8 +1787,6 @@
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1964,8 +1798,6 @@
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1977,8 +1809,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactsData"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -1990,8 +1820,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact1"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2003,8 +1831,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2016,8 +1842,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showContact3"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2029,8 +1853,6 @@
         "script_level.level_keys": [
           "U4 - Objects - pullValues"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2042,8 +1864,6 @@
         "script_level.level_keys": [
           "U4 - Objects - createContactObject"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2055,8 +1875,6 @@
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2068,8 +1886,6 @@
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2081,8 +1897,6 @@
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2094,8 +1908,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2107,8 +1919,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2120,8 +1930,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2133,8 +1941,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 3"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2146,8 +1952,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 4"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2159,8 +1963,6 @@
         "script_level.level_keys": [
           "U4 - CreateRecord - 5"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2172,8 +1974,6 @@
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2185,8 +1985,6 @@
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2198,8 +1996,6 @@
         "script_level.level_keys": [
           "U4 - Add Row By Hand"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2211,8 +2007,6 @@
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2224,8 +2018,6 @@
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2237,8 +2029,6 @@
         "script_level.level_keys": [
           "U4 - last stage test adding contcts"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2250,8 +2040,6 @@
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2263,8 +2051,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2276,8 +2062,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2289,8 +2073,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 1.3"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2302,8 +2084,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 5,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2315,8 +2095,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 3"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 6,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2328,8 +2106,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 4.1"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 7,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2341,8 +2117,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - 5"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 8,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2354,8 +2128,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 9,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2367,8 +2139,6 @@
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 10,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2380,8 +2150,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 11,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2393,8 +2161,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 12,
         "lesson.key": "Reading Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2406,8 +2172,6 @@
         "script_level.level_keys": [
           "U6 - deleteRecord - Student Introduction"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2419,8 +2183,6 @@
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2432,8 +2194,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 0"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2445,8 +2205,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2458,8 +2216,6 @@
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2471,8 +2227,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2484,8 +2238,6 @@
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Deleting Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2497,8 +2249,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Student Introduction"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2510,8 +2260,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Default Block"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2523,8 +2271,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Callback Success Parameter"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2536,8 +2282,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Update Nonexistent Record"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2549,8 +2293,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit UI"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2562,8 +2304,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit event handler"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2575,8 +2315,6 @@
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Save edited contact"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Updating Records",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2588,8 +2326,6 @@
         "script_level.level_keys": [
           "U6 - ImportExport - Student Introduction"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2601,8 +2337,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2614,8 +2348,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2627,8 +2359,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2640,8 +2370,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Export Data"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2653,8 +2381,6 @@
         "script_level.level_keys": [
           "U6 - Charts - Student Introduction"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2666,8 +2392,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2679,8 +2403,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2692,8 +2414,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2705,8 +2425,6 @@
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2718,8 +2436,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2731,8 +2447,6 @@
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2744,8 +2458,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Student Introduction"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 1,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2757,8 +2469,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - User Login"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 2,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2770,8 +2480,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Class Survey"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 3,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2783,8 +2491,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Clicker Game"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 4,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2796,8 +2502,6 @@
         "script_level.level_keys": [
           "U6 - Sample Apps - Flashcards"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 5,
         "lesson.key": "Sample Apps",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2809,8 +2513,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Student Introduction"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Final Project",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2822,8 +2524,6 @@
         "script_level.level_keys": [
           "U6 - Final Project - Project Level"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Final Project",
         "lesson_group.key": "content",
         "script.name": "csppostap-2017"
@@ -2835,8 +2535,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2017"
@@ -2848,8 +2546,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csppostap-2017"

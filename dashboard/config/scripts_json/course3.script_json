@@ -345,8 +345,6 @@
         "script_level.level_keys": [
           "ComputationalThinking"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -367,8 +365,6 @@
         "script_level.level_keys": [
           "4-5 Computational Thinking Multi 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -389,8 +385,6 @@
         "script_level.level_keys": [
           "4-5 Computational Thinking Match 1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -411,8 +405,6 @@
         "script_level.level_keys": [
           "4-5 Maze 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -433,8 +425,6 @@
         "script_level.level_keys": [
           "4-5 Maze 2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -455,8 +445,6 @@
         "script_level.level_keys": [
           "4-5 Maze 3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -477,8 +465,6 @@
         "script_level.level_keys": [
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -499,8 +485,6 @@
         "script_level.level_keys": [
           "4-5 Maze 5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -521,8 +505,6 @@
         "script_level.level_keys": [
           "4-5 Maze 6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -543,8 +525,6 @@
         "script_level.level_keys": [
           "4-5 Maze 7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 7,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -565,8 +545,6 @@
         "script_level.level_keys": [
           "4-5 Maze 8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 8,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -587,8 +565,6 @@
         "script_level.level_keys": [
           "4-5 Maze 9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 9,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -609,8 +585,6 @@
         "script_level.level_keys": [
           "4-5 Maze 10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 10,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -631,8 +605,6 @@
         "script_level.level_keys": [
           "4-5 Maze 11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 11,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -653,8 +625,6 @@
         "script_level.level_keys": [
           "4-5 Maze 12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 12,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -675,8 +645,6 @@
         "script_level.level_keys": [
           "4-5 Maze Assessment 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 13,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -697,8 +665,6 @@
         "script_level.level_keys": [
           "4-5 maze match 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 14,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -719,8 +685,6 @@
         "script_level.level_keys": [
           "4-5 maze multi 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 15,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -741,8 +705,6 @@
         "script_level.level_keys": [
           "course3_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 16,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -763,8 +725,6 @@
         "script_level.level_keys": [
           "course3_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 17,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -785,8 +745,6 @@
         "script_level.level_keys": [
           "4-5 Artist 1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -807,8 +765,6 @@
         "script_level.level_keys": [
           "4-5 Artist 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -829,8 +785,6 @@
         "script_level.level_keys": [
           "4-5 Artist 3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -851,8 +805,6 @@
         "script_level.level_keys": [
           "4-5 Artist 3.5"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -873,8 +825,6 @@
         "script_level.level_keys": [
           "4-5 Artist 4"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -895,8 +845,6 @@
         "script_level.level_keys": [
           "4-5 Artist 5"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -917,8 +865,6 @@
         "script_level.level_keys": [
           "4-5 Artist 6"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -939,8 +885,6 @@
         "script_level.level_keys": [
           "4-5 Artist 7"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -961,8 +905,6 @@
         "script_level.level_keys": [
           "4-5 Artist 8"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -983,8 +925,6 @@
         "script_level.level_keys": [
           "4-5 Artist 9"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1005,8 +945,6 @@
         "script_level.level_keys": [
           "4-5 Artist 11"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1027,8 +965,6 @@
         "script_level.level_keys": [
           "4-5 Artist Assessment 1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1049,8 +985,6 @@
         "script_level.level_keys": [
           "4-5 artist multi 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1071,8 +1005,6 @@
         "script_level.level_keys": [
           "4-5 artist multi 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 14,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1093,8 +1025,6 @@
         "script_level.level_keys": [
           "4-5 Artist Free Draw 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 15,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1115,8 +1045,6 @@
         "script_level.level_keys": [
           "FunctionalSuncatchers"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1137,8 +1065,6 @@
         "script_level.level_keys": [
           "4-5 Suncatchers Multi 1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1159,8 +1085,6 @@
         "script_level.level_keys": [
           "4-5 Suncatchers Match 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1181,8 +1105,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1203,8 +1125,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1225,8 +1145,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1247,8 +1165,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1269,8 +1185,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 11"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1291,8 +1205,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 11.5"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1313,8 +1225,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 12"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1335,8 +1245,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 9"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1357,8 +1265,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 10"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1379,8 +1285,6 @@
         "script_level.level_keys": [
           "2-3 artist functions multi 1"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1401,8 +1305,6 @@
         "script_level.level_keys": [
           "course3_artist_functions_challenge1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1423,8 +1325,6 @@
         "script_level.level_keys": [
           "course3_artist_functions_challenge2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1445,8 +1345,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1467,8 +1365,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1489,8 +1385,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1511,8 +1405,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 4"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1533,8 +1425,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1555,8 +1445,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 6"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1577,8 +1465,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 8"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1599,8 +1485,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1621,8 +1505,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 10"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1643,8 +1525,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions Assessment 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1665,8 +1545,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions Assessment 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1687,8 +1565,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 12,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1709,8 +1585,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge2"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 13,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1731,8 +1605,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 1,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1753,8 +1625,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 2,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1775,8 +1645,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 3,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1797,8 +1665,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 4"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 4,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1819,8 +1685,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 5"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 5,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1841,8 +1705,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 6"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 6,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1863,8 +1725,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 7"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 7,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1885,8 +1745,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 8"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 8,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1907,8 +1765,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals Assessment 1"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 9,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1929,8 +1785,6 @@
         "script_level.level_keys": [
           "4-5 bee conditionals multi 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 10,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1951,8 +1805,6 @@
         "script_level.level_keys": [
           "course3_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 11,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1973,8 +1825,6 @@
         "script_level.level_keys": [
           "course3_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 12,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -1995,8 +1845,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2017,8 +1865,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2039,8 +1885,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 3"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2061,8 +1905,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 4"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2083,8 +1925,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 5"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2105,8 +1945,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 6"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2127,8 +1965,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 7"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2149,8 +1985,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 8"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2171,8 +2005,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 9"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 9,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2193,8 +2025,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 10"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 10,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2215,8 +2045,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals Assessment 1"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 11,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2237,8 +2065,6 @@
         "script_level.level_keys": [
           "4-5 maze conditionals multi 1"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 12,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2259,8 +2085,6 @@
         "script_level.level_keys": [
           "course3_maze_until_challenge1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 13,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2281,8 +2105,6 @@
         "script_level.level_keys": [
           "course3_farmer_until_challenge2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 14,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2303,8 +2125,6 @@
         "script_level.level_keys": [
           "SongwritingParameters"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2325,8 +2145,6 @@
         "script_level.level_keys": [
           "4-5 Songwriting Multi 1"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2347,8 +2165,6 @@
         "script_level.level_keys": [
           "DiceRace"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2369,8 +2185,6 @@
         "script_level.level_keys": [
           "4-5 Algorithms Match 1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2391,8 +2205,6 @@
         "script_level.level_keys": [
           "4-5 Algorithms Multi 1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2413,8 +2225,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2435,8 +2245,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 2"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2457,8 +2265,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 6"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2479,8 +2285,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 9"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2501,8 +2305,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 3"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2523,8 +2325,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 5"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2545,8 +2345,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2567,8 +2365,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 11"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2589,8 +2385,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 8"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2611,8 +2405,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 12"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2633,8 +2425,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops Assessment 1"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2655,8 +2445,6 @@
         "script_level.level_keys": [
           "4-5 artist loops multi 1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2677,8 +2465,6 @@
         "script_level.level_keys": [
           "course2_artist_nestedLoops_challenge1"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2699,8 +2485,6 @@
         "script_level.level_keys": [
           "course2_artist_nestedLoops_challenge2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2721,8 +2505,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 1"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2743,8 +2525,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 2"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2765,8 +2545,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 3"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2787,8 +2565,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 4"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2809,8 +2585,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 5"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 5,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2831,8 +2605,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 6"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 6,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2853,8 +2625,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 7"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 7,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2875,8 +2645,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 8"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 8,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2897,8 +2665,6 @@
         "script_level.level_keys": [
           "4-5 While Loops Assessment 1"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 9,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2919,8 +2685,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge3"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 10,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2941,8 +2705,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge4"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 11,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2963,8 +2725,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 1,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -2985,8 +2745,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 2"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 2,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3007,8 +2765,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 3"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 3,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3029,8 +2785,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 5"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 4,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3051,8 +2805,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 4"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 5,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3073,8 +2825,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 8"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 6,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3095,8 +2845,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 7"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 7,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3117,8 +2865,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 10"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 8,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3139,8 +2885,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 9"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 9,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3161,8 +2905,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops Rows"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 10,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3183,8 +2925,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops Assessment 1"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 11,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3205,8 +2945,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops Assessment 1"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 12,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3227,8 +2965,6 @@
         "script_level.level_keys": [
           "4-5 bee loops multi 1"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 13,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3249,8 +2985,6 @@
         "script_level.level_keys": [
           "course3_bee_debugging_challenge1"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 14,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3271,8 +3005,6 @@
         "script_level.level_keys": [
           "course3_collector_debugging_challenge2"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 15,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3293,8 +3025,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 1"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3315,8 +3045,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 2"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3337,8 +3065,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 3"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3359,8 +3085,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 4"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3381,8 +3105,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 5"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3403,8 +3125,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 6"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3425,8 +3145,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 7"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3447,8 +3165,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 8"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3469,8 +3185,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 9"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 9,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3491,8 +3205,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 10"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 10,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3513,8 +3225,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 11"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 11,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3535,8 +3245,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging Assessment 1"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 12,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3557,8 +3265,6 @@
         "script_level.level_keys": [
           "4-5 bee debug multi 1"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 13,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3579,8 +3285,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3601,8 +3305,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3623,8 +3325,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3645,8 +3345,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3667,8 +3365,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3689,8 +3385,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3711,8 +3405,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3733,8 +3425,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3755,8 +3445,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3777,8 +3465,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3799,8 +3485,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_1"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3821,8 +3505,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_2"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3843,8 +3525,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_3"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3865,8 +3545,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_4"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3887,8 +3565,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_5"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3909,8 +3585,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_6"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3931,8 +3605,6 @@
         "script_level.level_keys": [
           "course3_playLab_challenge1"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3953,8 +3625,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_1"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3975,8 +3645,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_2"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -3997,8 +3665,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_3"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4019,8 +3685,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_4"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4041,8 +3705,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_5"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4063,8 +3725,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_6"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4085,8 +3745,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_7"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4107,8 +3765,6 @@
         "script_level.level_keys": [
           "Internet"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 1,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4129,8 +3785,6 @@
         "script_level.level_keys": [
           "4-5 Internet Multi 1"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 2,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4151,8 +3805,6 @@
         "script_level.level_keys": [
           "4-5 Internet Multi 2"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 3,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4173,8 +3825,6 @@
         "script_level.level_keys": [
           "Crowdsourcing"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4195,8 +3845,6 @@
         "script_level.level_keys": [
           "4-5 Crowdsourcing Multi 1"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4217,8 +3865,6 @@
         "script_level.level_keys": [
           "4-5 Crowdsourcing Multi 2"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4239,8 +3885,6 @@
         "script_level.level_keys": [
           "DigitalCitizenship"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 1,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4261,8 +3905,6 @@
         "script_level.level_keys": [
           "4-5 Digital Footprint Multi 1"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 2,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4283,8 +3925,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 1"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 1,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4305,8 +3945,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 2"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 2,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4327,8 +3965,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 3"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 3,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4349,8 +3985,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 4"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 4,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4371,8 +4005,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 5"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 5,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4393,8 +4025,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 6"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 6,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4415,8 +4045,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 7"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 7,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4437,8 +4065,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 8"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 8,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4459,8 +4085,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 9"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 9,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4481,8 +4105,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 9.5"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 10,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4503,8 +4125,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 10"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 11,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4525,8 +4145,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 11"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 12,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4547,8 +4165,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 12"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 13,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4569,8 +4185,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 13"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 14,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4591,8 +4205,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns Free Play"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 15,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4609,8 +4221,6 @@
         "script_level.level_keys": [
           "ComputationalThinking"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4622,8 +4232,6 @@
         "script_level.level_keys": [
           "4-5 Computational Thinking Multi 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4635,8 +4243,6 @@
         "script_level.level_keys": [
           "4-5 Computational Thinking Match 1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Computational Thinking",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4648,8 +4254,6 @@
         "script_level.level_keys": [
           "4-5 Maze 1"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4661,8 +4265,6 @@
         "script_level.level_keys": [
           "4-5 Maze 2"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4674,8 +4276,6 @@
         "script_level.level_keys": [
           "4-5 Maze 3"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4687,8 +4287,6 @@
         "script_level.level_keys": [
           "4-5 Maze 4"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 4,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4700,8 +4298,6 @@
         "script_level.level_keys": [
           "4-5 Maze 5"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 5,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4713,8 +4309,6 @@
         "script_level.level_keys": [
           "4-5 Maze 6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 6,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4726,8 +4320,6 @@
         "script_level.level_keys": [
           "4-5 Maze 7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 7,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4739,8 +4331,6 @@
         "script_level.level_keys": [
           "4-5 Maze 8"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 8,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4752,8 +4342,6 @@
         "script_level.level_keys": [
           "4-5 Maze 9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 9,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4765,8 +4353,6 @@
         "script_level.level_keys": [
           "4-5 Maze 10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 10,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4778,8 +4364,6 @@
         "script_level.level_keys": [
           "4-5 Maze 11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 11,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4791,8 +4375,6 @@
         "script_level.level_keys": [
           "4-5 Maze 12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 12,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4804,8 +4386,6 @@
         "script_level.level_keys": [
           "4-5 Maze Assessment 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 13,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4817,8 +4397,6 @@
         "script_level.level_keys": [
           "4-5 maze match 1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 14,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4830,8 +4408,6 @@
         "script_level.level_keys": [
           "4-5 maze multi 1"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 15,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4843,8 +4419,6 @@
         "script_level.level_keys": [
           "course3_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 16,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4856,8 +4430,6 @@
         "script_level.level_keys": [
           "course3_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 17,
         "lesson.key": "Maze",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4869,8 +4441,6 @@
         "script_level.level_keys": [
           "4-5 Artist 1"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4882,8 +4452,6 @@
         "script_level.level_keys": [
           "4-5 Artist 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4895,8 +4463,6 @@
         "script_level.level_keys": [
           "4-5 Artist 3"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4908,8 +4474,6 @@
         "script_level.level_keys": [
           "4-5 Artist 3.5"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4921,8 +4485,6 @@
         "script_level.level_keys": [
           "4-5 Artist 4"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4934,8 +4496,6 @@
         "script_level.level_keys": [
           "4-5 Artist 5"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 6,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4947,8 +4507,6 @@
         "script_level.level_keys": [
           "4-5 Artist 6"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 7,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4960,8 +4518,6 @@
         "script_level.level_keys": [
           "4-5 Artist 7"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 8,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4973,8 +4529,6 @@
         "script_level.level_keys": [
           "4-5 Artist 8"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 9,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4986,8 +4540,6 @@
         "script_level.level_keys": [
           "4-5 Artist 9"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 10,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -4999,8 +4551,6 @@
         "script_level.level_keys": [
           "4-5 Artist 11"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 11,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5012,8 +4562,6 @@
         "script_level.level_keys": [
           "4-5 Artist Assessment 1"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 12,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5025,8 +4573,6 @@
         "script_level.level_keys": [
           "4-5 artist multi 1"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 13,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5038,8 +4584,6 @@
         "script_level.level_keys": [
           "4-5 artist multi 2"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 14,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5051,8 +4595,6 @@
         "script_level.level_keys": [
           "4-5 Artist Free Draw 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 15,
         "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5064,8 +4606,6 @@
         "script_level.level_keys": [
           "FunctionalSuncatchers"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5077,8 +4617,6 @@
         "script_level.level_keys": [
           "4-5 Suncatchers Multi 1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5090,8 +4628,6 @@
         "script_level.level_keys": [
           "4-5 Suncatchers Match 1"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Functional Suncatchers",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5103,8 +4639,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5116,8 +4650,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5129,8 +4661,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5142,8 +4672,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5155,8 +4683,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 11"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5168,8 +4694,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 11.5"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5181,8 +4705,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 12"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5194,8 +4716,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 9"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5207,8 +4727,6 @@
         "script_level.level_keys": [
           "2-3 Artist Functions 10"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5220,8 +4738,6 @@
         "script_level.level_keys": [
           "2-3 artist functions multi 1"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 10,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5233,8 +4749,6 @@
         "script_level.level_keys": [
           "course3_artist_functions_challenge1"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 11,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5246,8 +4760,6 @@
         "script_level.level_keys": [
           "course3_artist_functions_challenge2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 12,
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5259,8 +4771,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 3"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5272,8 +4782,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5285,8 +4793,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 3,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5298,8 +4804,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 4"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 4,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5311,8 +4815,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 5"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 5,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5324,8 +4826,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 6"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 6,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5337,8 +4837,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 8"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 7,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5350,8 +4848,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 9"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 8,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5363,8 +4859,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions 10"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 9,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5376,8 +4870,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions Assessment 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 10,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5389,8 +4881,6 @@
         "script_level.level_keys": [
           "2-3 Bee Functions Assessment 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 11,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5402,8 +4892,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge1"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 12,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5415,8 +4903,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge2"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 13,
         "lesson.key": "Bee: Functions",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5428,8 +4914,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 1"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 1,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5441,8 +4925,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 2"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 2,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5454,8 +4936,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 3"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 3,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5467,8 +4947,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 4"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 4,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5480,8 +4958,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 5"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 5,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5493,8 +4969,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 6"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 6,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5506,8 +4980,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 7"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 7,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5519,8 +4991,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals 8"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 8,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5532,8 +5002,6 @@
         "script_level.level_keys": [
           "4-5 Bee Conditionals Assessment 1"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 9,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5545,8 +5013,6 @@
         "script_level.level_keys": [
           "4-5 bee conditionals multi 1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 10,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5558,8 +5024,6 @@
         "script_level.level_keys": [
           "course3_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 11,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5571,8 +5035,6 @@
         "script_level.level_keys": [
           "course3_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 12,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5584,8 +5046,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 1"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5597,8 +5057,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5610,8 +5068,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 3"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5623,8 +5079,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 4"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 4,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5636,8 +5090,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 5"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 5,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5649,8 +5101,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 6"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 6,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5662,8 +5112,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 7"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 7,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5675,8 +5123,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 8"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 8,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5688,8 +5134,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 9"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 9,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5701,8 +5145,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals 10"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 10,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5714,8 +5156,6 @@
         "script_level.level_keys": [
           "4-5 Maze Conditionals Assessment 1"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 11,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5727,8 +5167,6 @@
         "script_level.level_keys": [
           "4-5 maze conditionals multi 1"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 12,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5740,8 +5178,6 @@
         "script_level.level_keys": [
           "course3_maze_until_challenge1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 13,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5753,8 +5189,6 @@
         "script_level.level_keys": [
           "course3_farmer_until_challenge2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 14,
         "lesson.key": "Maze: Conditionals",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5766,8 +5200,6 @@
         "script_level.level_keys": [
           "SongwritingParameters"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5779,8 +5211,6 @@
         "script_level.level_keys": [
           "4-5 Songwriting Multi 1"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5792,8 +5222,6 @@
         "script_level.level_keys": [
           "DiceRace"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5805,8 +5233,6 @@
         "script_level.level_keys": [
           "4-5 Algorithms Match 1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5818,8 +5244,6 @@
         "script_level.level_keys": [
           "4-5 Algorithms Multi 1"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Dice Race",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5831,8 +5255,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5844,8 +5266,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 2"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5857,8 +5277,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 6"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5870,8 +5288,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 9"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5883,8 +5299,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 3"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5896,8 +5310,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 5"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5909,8 +5321,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5922,8 +5332,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 11"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5935,8 +5343,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 8"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5948,8 +5354,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops 12"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5961,8 +5365,6 @@
         "script_level.level_keys": [
           "4-5 Nested Loops Assessment 1"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5974,8 +5376,6 @@
         "script_level.level_keys": [
           "4-5 artist loops multi 1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -5987,8 +5387,6 @@
         "script_level.level_keys": [
           "course2_artist_nestedLoops_challenge1"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6000,8 +5398,6 @@
         "script_level.level_keys": [
           "course2_artist_nestedLoops_challenge2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Artist: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6013,8 +5409,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 1"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6026,8 +5420,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 2"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6039,8 +5431,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 3"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6052,8 +5442,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 4"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6065,8 +5453,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 5"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 5,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6078,8 +5464,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 6"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 6,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6091,8 +5475,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 7"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 7,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6104,8 +5486,6 @@
         "script_level.level_keys": [
           "4-5 While Loops 8"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 8,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6117,8 +5497,6 @@
         "script_level.level_keys": [
           "4-5 While Loops Assessment 1"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 9,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6130,8 +5508,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge3"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 10,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6143,8 +5519,6 @@
         "script_level.level_keys": [
           "course3_bee_functions_challenge4"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 11,
         "lesson.key": "Farmer: While Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6156,8 +5530,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 1"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 1,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6169,8 +5541,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 2"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 2,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6182,8 +5552,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 3"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 3,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6195,8 +5563,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 5"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 4,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6208,8 +5574,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 4"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 5,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6221,8 +5585,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 8"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 6,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6234,8 +5596,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 7"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 7,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6247,8 +5607,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops 10"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 8,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6260,8 +5618,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops 9"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 9,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6273,8 +5629,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops Rows"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 10,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6286,8 +5640,6 @@
         "script_level.level_keys": [
           "2-3 Bee Loops Assessment 1"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 11,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6299,8 +5651,6 @@
         "script_level.level_keys": [
           "4-5 Bee Nested Loops Assessment 1"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 12,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6312,8 +5662,6 @@
         "script_level.level_keys": [
           "4-5 bee loops multi 1"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 13,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6325,8 +5673,6 @@
         "script_level.level_keys": [
           "course3_bee_debugging_challenge1"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 14,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6338,8 +5684,6 @@
         "script_level.level_keys": [
           "course3_collector_debugging_challenge2"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 15,
         "lesson.key": "Bee: Nested Loops",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6351,8 +5695,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 1"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 1,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6364,8 +5706,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 2"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 2,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6377,8 +5717,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 3"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 3,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6390,8 +5728,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 4"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 4,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6403,8 +5739,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 5"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 5,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6416,8 +5750,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 6"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 6,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6429,8 +5761,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 7"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 7,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6442,8 +5772,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 8"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 8,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6455,8 +5783,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 9"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 9,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6468,8 +5794,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 10"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 10,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6481,8 +5805,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging 11"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 11,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6494,8 +5816,6 @@
         "script_level.level_keys": [
           "4-5 Bee Debugging Assessment 1"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 12,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6507,8 +5827,6 @@
         "script_level.level_keys": [
           "4-5 bee debug multi 1"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 13,
         "lesson.key": "Bee: Debugging",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6520,8 +5838,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6533,8 +5849,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6546,8 +5860,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6559,8 +5871,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6572,8 +5882,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6585,8 +5893,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6598,8 +5904,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6611,8 +5915,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6624,8 +5926,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6637,8 +5937,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6650,8 +5948,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_1"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6663,8 +5959,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_2"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6676,8 +5970,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_3"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6689,8 +5981,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_4"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6702,8 +5992,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_5"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6715,8 +6003,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_story_6"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6728,8 +6014,6 @@
         "script_level.level_keys": [
           "course3_playLab_challenge1"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Story",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6741,8 +6025,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_1"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 1,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6754,8 +6036,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_2"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 2,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6767,8 +6047,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_3"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 3,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6780,8 +6058,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_4"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 4,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6793,8 +6069,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_5"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 5,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6806,8 +6080,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_6"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 6,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6819,8 +6091,6 @@
         "script_level.level_keys": [
           "blockly:Studio:c3_game_7"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 7,
         "lesson.key": "Studio: Create a Game",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6832,8 +6102,6 @@
         "script_level.level_keys": [
           "Internet"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 1,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6845,8 +6113,6 @@
         "script_level.level_keys": [
           "4-5 Internet Multi 1"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 2,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6858,8 +6124,6 @@
         "script_level.level_keys": [
           "4-5 Internet Multi 2"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 3,
         "lesson.key": "Internet",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6871,8 +6135,6 @@
         "script_level.level_keys": [
           "Crowdsourcing"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6884,8 +6146,6 @@
         "script_level.level_keys": [
           "4-5 Crowdsourcing Multi 1"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6897,8 +6157,6 @@
         "script_level.level_keys": [
           "4-5 Crowdsourcing Multi 2"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "Crowdsourcing",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6910,8 +6168,6 @@
         "script_level.level_keys": [
           "DigitalCitizenship"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 1,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6923,8 +6179,6 @@
         "script_level.level_keys": [
           "4-5 Digital Footprint Multi 1"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 2,
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6936,8 +6190,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 1"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 1,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6949,8 +6201,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 2"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 2,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6962,8 +6212,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 3"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 3,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6975,8 +6223,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 4"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 4,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -6988,8 +6234,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 5"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 5,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7001,8 +6245,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 6"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 6,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7014,8 +6256,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 7"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 7,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7027,8 +6267,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 8"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 8,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7040,8 +6278,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 9"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 9,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7053,8 +6289,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 9.5"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 10,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7066,8 +6300,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 10"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 11,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7079,8 +6311,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 11"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 12,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7092,8 +6322,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 12"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 13,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7105,8 +6333,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns 13"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 14,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"
@@ -7118,8 +6344,6 @@
         "script_level.level_keys": [
           "4-5 Artist Patterns Free Play"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 15,
         "lesson.key": "Artist: Patterns",
         "lesson_group.key": "",
         "script.name": "course3"

@@ -173,8 +173,6 @@
         "script_level.level_keys": [
           "CSP U9L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -196,8 +194,6 @@
         "script_level.level_keys": [
           "CSP U9L1 Metadata"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -219,8 +215,6 @@
         "script_level.level_keys": [
           "U9L1 google trends CFU"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -242,8 +236,6 @@
         "script_level.level_keys": [
           "CSP U9L2 SFLP 20-21"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -265,8 +257,6 @@
         "script_level.level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -288,8 +278,6 @@
         "script_level.level_keys": [
           "U9L2 CFU Histogram vs Bar Chart"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -311,8 +299,6 @@
         "script_level.level_keys": [
           "CSP U9L3 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -334,8 +320,6 @@
         "script_level.level_keys": [
           "CSP U9L3 Data Cleaning"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -357,8 +341,6 @@
         "script_level.level_keys": [
           "CSP U9L3 Data Filtering"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -380,8 +362,6 @@
         "script_level.level_keys": [
           "U9L3 CFU manually cleaning data"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -403,8 +383,6 @@
         "script_level.level_keys": [
           "CSP U9L4 SFLP 20-21"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -426,8 +404,6 @@
         "script_level.level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -449,8 +425,6 @@
         "script_level.level_keys": [
           "Which Type of Chart"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -472,8 +446,6 @@
         "script_level.level_keys": [
           "U9L4 CFU Two Column vs One"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -495,8 +467,6 @@
         "script_level.level_keys": [
           "CSP U9L6 SFLP 20-21"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -518,8 +488,6 @@
         "script_level.level_keys": [
           "CSP U9L7 SFLP 20-21"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -541,8 +509,6 @@
         "script_level.level_keys": [
           "Oceans_Video_Machine_Learning"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -564,8 +530,6 @@
         "script_level.level_keys": [
           "Oceans_FishVTrash"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -587,8 +551,6 @@
         "script_level.level_keys": [
           "Oceans_CreaturesVTrashDemo"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -610,8 +572,6 @@
         "script_level.level_keys": [
           "Oceans_CreaturesVTrash"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -633,8 +593,6 @@
         "script_level.level_keys": [
           "Oceans_Video_Training_Data"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -656,8 +614,6 @@
         "script_level.level_keys": [
           "Oceans_Short"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -679,8 +635,6 @@
         "script_level.level_keys": [
           "Oceans_Long"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -702,8 +656,6 @@
         "script_level.level_keys": [
           "U9L6 CFU ML Bias"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -725,8 +677,6 @@
         "script_level.level_keys": [
           "CSP U9L8 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -748,8 +698,6 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -771,8 +719,6 @@
         "script_level.level_keys": [
           "CSP U9L9 SFLP 20-21"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -794,8 +740,6 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -817,8 +761,6 @@
         "script_level.level_keys": [
           "CSP U9L10 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -840,8 +782,6 @@
         "script_level.level_keys": [
           "CSP Unit 9 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -858,8 +798,6 @@
         "script_level.level_keys": [
           "CSP U9L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -871,8 +809,6 @@
         "script_level.level_keys": [
           "CSP U9L1 Metadata"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -884,8 +820,6 @@
         "script_level.level_keys": [
           "U9L1 google trends CFU"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Learning From Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -897,8 +831,6 @@
         "script_level.level_keys": [
           "CSP U9L2 SFLP 20-21"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -910,8 +842,6 @@
         "script_level.level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -923,8 +853,6 @@
         "script_level.level_keys": [
           "U9L2 CFU Histogram vs Bar Chart"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 3,
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -936,8 +864,6 @@
         "script_level.level_keys": [
           "CSP U9L3 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -949,8 +875,6 @@
         "script_level.level_keys": [
           "CSP U9L3 Data Cleaning"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -962,8 +886,6 @@
         "script_level.level_keys": [
           "CSP U9L3 Data Filtering"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -975,8 +897,6 @@
         "script_level.level_keys": [
           "U9L3 CFU manually cleaning data"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -988,8 +908,6 @@
         "script_level.level_keys": [
           "CSP U9L4 SFLP 20-21"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1001,8 +919,6 @@
         "script_level.level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1014,8 +930,6 @@
         "script_level.level_keys": [
           "Which Type of Chart"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1027,8 +941,6 @@
         "script_level.level_keys": [
           "U9L4 CFU Two Column vs One"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1040,8 +952,6 @@
         "script_level.level_keys": [
           "CSP U9L6 SFLP 20-21"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1053,8 +963,6 @@
         "script_level.level_keys": [
           "CSP U9L7 SFLP 20-21"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1066,8 +974,6 @@
         "script_level.level_keys": [
           "Oceans_Video_Machine_Learning"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1079,8 +985,6 @@
         "script_level.level_keys": [
           "Oceans_FishVTrash"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1092,8 +996,6 @@
         "script_level.level_keys": [
           "Oceans_CreaturesVTrashDemo"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1105,8 +1007,6 @@
         "script_level.level_keys": [
           "Oceans_CreaturesVTrash"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1118,8 +1018,6 @@
         "script_level.level_keys": [
           "Oceans_Video_Training_Data"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 6,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1131,8 +1029,6 @@
         "script_level.level_keys": [
           "Oceans_Short"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 7,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1144,8 +1040,6 @@
         "script_level.level_keys": [
           "Oceans_Long"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 8,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1157,8 +1051,6 @@
         "script_level.level_keys": [
           "U9L6 CFU ML Bias"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 9,
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1170,8 +1062,6 @@
         "script_level.level_keys": [
           "CSP U9L8 SFLP 20-21"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1183,8 +1073,6 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 2,
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1196,8 +1084,6 @@
         "script_level.level_keys": [
           "CSP U9L9 SFLP 20-21"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1209,8 +1095,6 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1222,8 +1106,6 @@
         "script_level.level_keys": [
           "CSP U9L10 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"
@@ -1235,8 +1117,6 @@
         "script_level.level_keys": [
           "CSP Unit 9 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "",
         "script.name": "csp9-pilot"

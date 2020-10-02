@@ -154,8 +154,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -177,8 +175,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Try App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -200,8 +196,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Screen"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -223,8 +217,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Button"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -246,8 +238,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Event"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -269,8 +259,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Sound"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -292,8 +280,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Building a Choose Your Own Adventure"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -315,8 +301,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Build Your Adventure"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -338,8 +322,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Go Further"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -361,8 +343,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Try App"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -384,8 +364,6 @@
         "script_level.level_keys": [
           "HOC Intro to App Lab Example"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -407,8 +385,6 @@
         "script_level.level_keys": [
           "HOC Intro to App Lab Brainstorm"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -430,8 +406,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Try Cat Commander"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -453,8 +427,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit startScreen"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -476,8 +448,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit startScreen2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -499,8 +469,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Learn App Lab Video"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -522,8 +490,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit place1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -545,8 +511,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit place1 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -568,8 +532,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add Button"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -591,8 +553,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add onEvent"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -614,8 +574,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add more buttons"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -637,8 +595,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add more buttons 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -660,8 +616,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add images"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -683,8 +637,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add sound"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -706,8 +658,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - finish and share"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -729,8 +679,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent mouseOut"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -752,8 +700,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Screen Color"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -775,8 +721,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Text"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -798,8 +742,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Text 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -821,8 +763,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Full Text"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -844,8 +784,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Two Buttons"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -867,8 +805,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent intro"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -890,8 +826,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent before"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -913,8 +847,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent twoButtons"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -936,8 +868,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent mouseOver"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -959,8 +889,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - playSound"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -982,8 +910,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - stopSound"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1005,8 +931,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - thisOrThat"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1028,8 +952,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video Welcome"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1051,8 +973,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video setProperty"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1074,8 +994,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Screen Color"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1097,8 +1015,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Text"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1120,8 +1036,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Full Text"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1143,8 +1057,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Text 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1166,8 +1078,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Two Buttons"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1189,8 +1099,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1212,8 +1120,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent intro"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1235,8 +1141,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent before"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1258,8 +1162,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent twoButtons"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1281,8 +1183,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - playSound"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1304,8 +1204,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - stopSound"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1327,8 +1225,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video share thisThat"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1350,8 +1246,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - thisOrThat"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1373,8 +1267,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video sneak designMode"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1396,8 +1288,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - thisOrThat design"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1419,8 +1309,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Welcome to App Lab"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1442,8 +1330,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video setProperty"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1465,8 +1351,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Change Screen Color"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1488,8 +1372,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Change Text 2"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1511,8 +1393,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Full Text"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1534,8 +1414,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1557,8 +1435,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - onEvent intro"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1580,8 +1456,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - onEvent twoButtons"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1603,8 +1477,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Videos Sound"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1626,8 +1498,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - playSound"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1649,8 +1519,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - rate it app"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1672,8 +1540,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Intro Design Mode"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1695,8 +1561,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - addButton"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1718,8 +1582,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - setScreen"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1741,8 +1603,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Share Keep Going"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1764,8 +1624,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - share keep going"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1787,8 +1645,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - go further"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1810,8 +1666,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Welcome SetProperty"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1833,8 +1687,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Change Screen Color"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1856,8 +1708,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Change Text 2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1879,8 +1729,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Full Text"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1902,8 +1750,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1925,8 +1771,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - onEvent intro"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1948,8 +1792,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - onEvent twoButtons"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1971,8 +1813,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Images and Sounds"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -1994,8 +1834,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - playSound"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2017,8 +1855,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Design Mode and Screens"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2040,8 +1876,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2063,8 +1897,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2086,8 +1918,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2109,8 +1939,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Keep Going"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2132,8 +1960,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2155,8 +1981,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - animalSoundBoard"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2178,8 +2002,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - quizApp"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2201,8 +2023,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - blankApp"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 18,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2224,8 +2044,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Welcome SetProperty"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2247,8 +2065,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Screen Color"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2270,8 +2086,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Text 2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2293,8 +2107,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Full Text"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2316,8 +2128,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2339,8 +2149,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent intro"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2362,8 +2170,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent twoButtons"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2385,8 +2191,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Images and Sounds"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2408,8 +2212,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - playSound"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2431,8 +2233,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Design Mode and Screens"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2454,8 +2254,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2477,8 +2275,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2500,8 +2296,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2523,8 +2317,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Keep Going"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2546,8 +2338,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2569,8 +2359,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Getting Started"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2592,8 +2380,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Screen Color"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2615,8 +2401,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Text 2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2638,8 +2422,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Full Text"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2661,8 +2443,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Make It Interactive"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2684,8 +2464,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent intro"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2707,8 +2485,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent twoButtons"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2730,8 +2506,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Images and Sounds"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2753,8 +2527,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - playSound"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2776,8 +2548,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Design Mode"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2799,8 +2569,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2822,8 +2590,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 12,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2845,8 +2611,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 13,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2868,8 +2632,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Share Your App"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 14,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2891,8 +2653,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 15,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2909,8 +2669,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Welcome"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2922,8 +2680,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Try App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2935,8 +2691,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Screen"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2948,8 +2702,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Button"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2961,8 +2713,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Event"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2974,8 +2724,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Add Sound"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -2987,8 +2735,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Building a Choose Your Own Adventure"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3000,8 +2746,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Build Your Adventure"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3013,8 +2757,6 @@
         "script_level.level_keys": [
           "AppLab Intro 1 - Go Further"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3026,8 +2768,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Try App"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3039,8 +2779,6 @@
         "script_level.level_keys": [
           "HOC Intro to App Lab Example"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3052,8 +2790,6 @@
         "script_level.level_keys": [
           "HOC Intro to App Lab Brainstorm"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3065,8 +2801,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Try Cat Commander"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3078,8 +2812,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit startScreen"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3091,8 +2823,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit startScreen2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3104,8 +2834,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Learn App Lab Video"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3117,8 +2845,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit place1"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3130,8 +2856,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - Edit place1 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3143,8 +2867,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add Button"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3156,8 +2878,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add onEvent"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3169,8 +2889,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add more buttons"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3182,8 +2900,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add more buttons 2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3195,8 +2911,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add images"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3208,8 +2922,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - add sound"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3221,8 +2933,6 @@
         "script_level.level_keys": [
           "AppLab Intro 2 - finish and share"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3234,8 +2944,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent mouseOut"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3247,8 +2955,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Screen Color"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3260,8 +2966,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Text"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3273,8 +2977,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Text 2"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3286,8 +2988,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Full Text"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3299,8 +2999,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - Change Two Buttons"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3312,8 +3010,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent intro"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3325,8 +3021,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent before"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3338,8 +3032,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent twoButtons"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3351,8 +3043,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - onEvent mouseOver"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3364,8 +3054,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - playSound"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3377,8 +3065,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - stopSound"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3390,8 +3076,6 @@
         "script_level.level_keys": [
           "AppLab Intro 3 - thisOrThat"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3403,8 +3087,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video Welcome"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3416,8 +3098,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video setProperty"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3429,8 +3109,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Screen Color"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3442,8 +3120,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Text"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3455,8 +3131,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Full Text"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3468,8 +3142,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Text 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3481,8 +3153,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Change Two Buttons"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3494,8 +3164,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3507,8 +3175,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent intro"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3520,8 +3186,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent before"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3533,8 +3197,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - onEvent twoButtons"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3546,8 +3208,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - playSound"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3559,8 +3219,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - stopSound"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3572,8 +3230,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video share thisThat"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3585,8 +3241,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - thisOrThat"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3598,8 +3252,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video sneak designMode"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3611,8 +3263,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - thisOrThat design"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 2",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3624,8 +3274,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Welcome to App Lab"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3637,8 +3285,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video setProperty"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3650,8 +3296,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Change Screen Color"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3663,8 +3307,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Change Text 2"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3676,8 +3318,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Full Text"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3689,8 +3329,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3702,8 +3340,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - onEvent intro"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3715,8 +3351,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - onEvent twoButtons"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3728,8 +3362,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Videos Sound"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3741,8 +3373,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - playSound"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3754,8 +3384,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - rate it app"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3767,8 +3395,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Intro Design Mode"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3780,8 +3406,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - addButton"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3793,8 +3417,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - setScreen"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3806,8 +3428,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - Video Share Keep Going"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3819,8 +3439,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - share keep going"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3832,8 +3450,6 @@
         "script_level.level_keys": [
           "AppLab Intro 5 - go further"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 3",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3845,8 +3461,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Welcome SetProperty"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3858,8 +3472,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Change Screen Color"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3871,8 +3483,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Change Text 2"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3884,8 +3494,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Full Text"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3897,8 +3505,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3910,8 +3516,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - onEvent intro"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3923,8 +3527,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - onEvent twoButtons"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3936,8 +3538,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Images and Sounds"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3949,8 +3549,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - playSound"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3962,8 +3560,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Design Mode and Screens"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3975,8 +3571,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -3988,8 +3582,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4001,8 +3593,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4014,8 +3604,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Keep Going"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4027,8 +3615,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4040,8 +3626,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - animalSoundBoard"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 16,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4053,8 +3637,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - quizApp"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 17,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4066,8 +3648,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - blankApp"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 18,
         "lesson.key": "Intro to AppLab - Your First App 4",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4079,8 +3659,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Welcome SetProperty"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 1,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4092,8 +3670,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Screen Color"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 2,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4105,8 +3681,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Text 2"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 3,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4118,8 +3692,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Full Text"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 4,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4131,8 +3703,6 @@
         "script_level.level_keys": [
           "AppLab Intro 4 - Video using onEvent"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 5,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4144,8 +3714,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent intro"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 6,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4157,8 +3725,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent twoButtons"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 7,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4170,8 +3736,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Images and Sounds"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 8,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4183,8 +3747,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - playSound"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 9,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4196,8 +3758,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Design Mode and Screens"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 10,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4209,8 +3769,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 11,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4222,8 +3780,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 12,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4235,8 +3791,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 13,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4248,8 +3802,6 @@
         "script_level.level_keys": [
           "AppLab Intro 6 - Video Keep Going"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 14,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4261,8 +3813,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 15,
         "lesson.key": "Intro to AppLab - Getting Started",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4274,8 +3824,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Getting Started"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4287,8 +3835,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Screen Color"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4300,8 +3846,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Text 2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4313,8 +3857,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - Full Text"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4326,8 +3868,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Make It Interactive"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4339,8 +3879,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent intro"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4352,8 +3890,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent twoButtons"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4365,8 +3901,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Images and Sounds"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4378,8 +3912,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - playSound"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4391,8 +3923,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Design Mode"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4404,8 +3934,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddButton"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 11,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4417,8 +3945,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddScreen"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 12,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4430,8 +3956,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatSetScreen"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 13,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4443,8 +3967,6 @@
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Share Your App"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 14,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"
@@ -4456,8 +3978,6 @@
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatPersonalize"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 15,
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
         "script.name": "applab-intro-staging"

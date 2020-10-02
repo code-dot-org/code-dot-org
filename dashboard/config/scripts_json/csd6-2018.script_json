@@ -361,8 +361,6 @@
         "script_level.level_keys": [
           "CSD U6L01 TFMD_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Innovations in Computing",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -383,8 +381,6 @@
         "script_level.level_keys": [
           "CSDU6 Innovation_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Innovations in Computing",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -405,8 +401,6 @@
         "script_level.level_keys": [
           "CSD U6L02 TFMD_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -427,8 +421,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty Map_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -450,8 +442,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty predict app_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -473,8 +463,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty Text_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -496,8 +484,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -519,8 +505,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy click_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -542,8 +526,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy random_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -565,8 +547,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty hidden_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -588,8 +568,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty hidden 2_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 9,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -610,8 +588,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine example_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 10,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -633,8 +609,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 1_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 11,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -656,8 +630,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 2_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 12,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -679,8 +651,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 3_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 13,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -702,8 +672,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 4_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 14,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -724,8 +692,6 @@
         "script_level.level_keys": [
           "CSD U6L03 TFMD_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -746,8 +712,6 @@
         "script_level.level_keys": [
           "CSD U6 hardware software video_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -768,8 +732,6 @@
         "script_level.level_keys": [
           "CSD LEDs Map_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -791,8 +753,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -814,8 +774,6 @@
         "script_level.level_keys": [
           "CSD U6 test LED_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -837,8 +795,6 @@
         "script_level.level_keys": [
           "CSD U6 predict LED button_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -860,8 +816,6 @@
         "script_level.level_keys": [
           "CSD U6 add LED button_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -883,8 +837,6 @@
         "script_level.level_keys": [
           "CSD U6 LED toggle_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -906,8 +858,6 @@
         "script_level.level_keys": [
           "CSD U6 LED all_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -929,8 +879,6 @@
         "script_level.level_keys": [
           "CSD U6 LED create intro_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -952,8 +900,6 @@
         "script_level.level_keys": [
           "CSD U6 light show_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -975,8 +921,6 @@
         "script_level.level_keys": [
           "CSD U6 Catch the Mouse_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -998,8 +942,6 @@
         "script_level.level_keys": [
           "CSD U6 create LED app_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1021,8 +963,6 @@
         "script_level.level_keys": [
           "CSD U6 create LED app 2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 14,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1043,8 +983,6 @@
         "script_level.level_keys": [
           "CSD U6L04 TFMD_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1066,8 +1004,6 @@
         "script_level.level_keys": [
           "CSDU6 GameLab Input 1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1089,8 +1025,6 @@
         "script_level.level_keys": [
           "CSDU6 AppLab Input 1_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1111,8 +1045,6 @@
         "script_level.level_keys": [
           "CSD U6L05 TFMD_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1133,8 +1065,6 @@
         "script_level.level_keys": [
           "CSD onBoardEvent Map_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1156,8 +1086,6 @@
         "script_level.level_keys": [
           "CSDU6 - button LED prediction_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1179,8 +1107,6 @@
         "script_level.level_keys": [
           "CSDU6 - LED buttonL_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1202,8 +1128,6 @@
         "script_level.level_keys": [
           "CSDU6 - LED toggle buttonL up_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1224,8 +1148,6 @@
         "script_level.level_keys": [
           "CSD Board Buttons Map_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1247,8 +1169,6 @@
         "script_level.level_keys": [
           "CSDU6 - lightswitch toggleswitch_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 7,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1270,8 +1190,6 @@
         "script_level.level_keys": [
           "CSDU6 - toggle state LED prediction_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 8,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1293,8 +1211,6 @@
         "script_level.level_keys": [
           "CSDU6 - toggleswitch state setProp_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 9,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1315,8 +1231,6 @@
         "script_level.level_keys": [
           "CSD Buzzer Map_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 10,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1338,8 +1252,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer intro_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 11,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1361,8 +1273,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer duration_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 12,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1384,8 +1294,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer duration buttons_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 13,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1406,8 +1314,6 @@
         "script_level.level_keys": [
           "CSDU6 - board event challenge_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 14,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1428,8 +1334,6 @@
         "script_level.level_keys": [
           "CSD U6L06 TFMD_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1450,8 +1354,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty Map_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1473,8 +1375,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty Demo_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1496,8 +1396,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty input_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1519,8 +1417,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty dropdown_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1542,8 +1438,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty board predict_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1565,8 +1459,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty buzzer_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1588,8 +1480,6 @@
         "script_level.level_keys": [
           "CSD U6 slider intro_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1611,8 +1501,6 @@
         "script_level.level_keys": [
           "CSD U6 frequency_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1634,8 +1522,6 @@
         "script_level.level_keys": [
           "CSD U6 interval_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1656,8 +1542,6 @@
         "script_level.level_keys": [
           "CSD U6 Event Types_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1679,8 +1563,6 @@
         "script_level.level_keys": [
           "CSD U6 change_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1702,8 +1584,6 @@
         "script_level.level_keys": [
           "CSD U6 get toggle_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1725,8 +1605,6 @@
         "script_level.level_keys": [
           "CSD U6 getters debug_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 14,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1748,8 +1626,6 @@
         "script_level.level_keys": [
           "CSD U6 move motorcycle_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 15,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1771,8 +1647,6 @@
         "script_level.level_keys": [
           "CSD U6 design motorcycle_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 16,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1793,8 +1667,6 @@
         "script_level.level_keys": [
           "CSD U6 challenge motorcycle_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 17,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1815,8 +1687,6 @@
         "script_level.level_keys": [
           "CSD U6L07 TFMD_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1837,8 +1707,6 @@
         "script_level.level_keys": [
           "CSD U6 sensor experiment embedded_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1859,8 +1727,6 @@
         "script_level.level_keys": [
           "CSD Board Sensors Map_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1882,8 +1748,6 @@
         "script_level.level_keys": [
           "CSD U6 analog sound_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1905,8 +1769,6 @@
         "script_level.level_keys": [
           "CSD U6 analog light_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1928,8 +1790,6 @@
         "script_level.level_keys": [
           "CSD U6 analog temp_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1951,8 +1811,6 @@
         "script_level.level_keys": [
           "CSD U6 analog predict_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1973,8 +1831,6 @@
         "script_level.level_keys": [
           "CSD Polling Events Map_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -1996,8 +1852,6 @@
         "script_level.level_keys": [
           "CSD U6 analog data_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2019,8 +1873,6 @@
         "script_level.level_keys": [
           "CSD U6 analog change_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2042,8 +1894,6 @@
         "script_level.level_keys": [
           "CSD U6 analog threshold_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2064,8 +1914,6 @@
         "script_level.level_keys": [
           "CSD Set Scale Map_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2087,8 +1935,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rbg 1_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2110,8 +1956,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rbg 2_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2133,8 +1977,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rgb 3_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2155,8 +1997,6 @@
         "script_level.level_keys": [
           "CSD U6 analog challenge_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 16,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2177,8 +2017,6 @@
         "script_level.level_keys": [
           "CSD U6L08 TFMD_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2199,8 +2037,6 @@
         "script_level.level_keys": [
           "CSD U6 emoji race demo_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2221,8 +2057,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar stop_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 3,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2244,8 +2078,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 1_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 4,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2267,8 +2099,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 1.5_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 5,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2290,8 +2120,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 2_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 6,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2313,8 +2141,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 1_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 7,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2336,8 +2162,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 2_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 8,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2359,8 +2183,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 3_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 9,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2382,8 +2204,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar conditional_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 10,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2405,8 +2225,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar setScreen_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 11,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2428,8 +2246,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar setProperty_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 12,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2451,8 +2267,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar buzzer_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 13,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2473,8 +2287,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar final_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 14,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2495,8 +2307,6 @@
         "script_level.level_keys": [
           "CSD U6L09 TFMD_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2517,8 +2327,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar demo_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2539,8 +2347,6 @@
         "script_level.level_keys": [
           "CSD U6 game project stop_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2562,8 +2368,6 @@
         "script_level.level_keys": [
           "CSD U6 game project screens_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2585,8 +2389,6 @@
         "script_level.level_keys": [
           "CSD U6 game project screen links_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2608,8 +2410,6 @@
         "script_level.level_keys": [
           "CSD U6 game project board events_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2631,8 +2431,6 @@
         "script_level.level_keys": [
           "CSD U6 game project functions define_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2654,8 +2452,6 @@
         "script_level.level_keys": [
           "CSD U6 game project functions call_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2677,8 +2473,6 @@
         "script_level.level_keys": [
           "CSD U6 game project finish_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2700,8 +2494,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -2722,8 +2514,6 @@
         "script_level.level_keys": [
           "CSD U6L10 TFMD_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2744,8 +2534,6 @@
         "script_level.level_keys": [
           "CSD U6 arrays intro_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 2,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2767,8 +2555,6 @@
         "script_level.level_keys": [
           "CSD U6 arrays select predict_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 3,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2790,8 +2576,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select rainbow_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 4,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2813,8 +2597,6 @@
         "script_level.level_keys": [
           "CSDU6 array select days_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 5,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2836,8 +2618,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select random_2018"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 6,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2859,8 +2639,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select variable_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 7,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2881,8 +2659,6 @@
         "script_level.level_keys": [
           "CSD U6 array multi_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 8,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2903,8 +2679,6 @@
         "script_level.level_keys": [
           "CSD colorLed Map_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 9,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2926,8 +2700,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds predict_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 10,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2949,8 +2721,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLED on_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 11,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2972,8 +2742,6 @@
         "script_level.level_keys": [
           "CSD U6 LEDs color_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 12,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -2995,8 +2763,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds debug_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 13,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3018,8 +2784,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds intensity_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 14,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3041,8 +2805,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds light pattern_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 15,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3064,8 +2826,6 @@
         "script_level.level_keys": [
           "CSD U6 light pattern off_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 16,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3087,8 +2847,6 @@
         "script_level.level_keys": [
           "CSD U6 light pattern challenge_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 17,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3109,8 +2867,6 @@
         "script_level.level_keys": [
           "CSD U6L11 TFMD_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3132,8 +2888,6 @@
         "script_level.level_keys": [
           "CSDU6 circuit playground piano_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 2,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3155,8 +2909,6 @@
         "script_level.level_keys": [
           "CSDU6 frequency modification_2018"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 3,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3178,8 +2930,6 @@
         "script_level.level_keys": [
           "CSDU6 frequency creation_2018"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 4,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3200,8 +2950,6 @@
         "script_level.level_keys": [
           "Making Music_2018"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 5,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3223,8 +2971,6 @@
         "script_level.level_keys": [
           "CSDU6 piano with notes_2018"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 6,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3245,8 +2991,6 @@
         "script_level.level_keys": [
           "CSD-Arrays_2018"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 7,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3268,8 +3012,6 @@
         "script_level.level_keys": [
           "CSD U6 array piano_2018"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 8,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3291,8 +3033,6 @@
         "script_level.level_keys": [
           "CSD U6 random array notes_2018"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 9,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3314,8 +3054,6 @@
         "script_level.level_keys": [
           "CSDU6 making new arrays_2018"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 10,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3337,8 +3075,6 @@
         "script_level.level_keys": [
           "CSDU6 play predict code_2018"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 11,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3360,8 +3096,6 @@
         "script_level.level_keys": [
           "CSDU6 play songs_2018"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 12,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3383,8 +3117,6 @@
         "script_level.level_keys": [
           "CSDU6 play null notes_2018"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 13,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3406,8 +3138,6 @@
         "script_level.level_keys": [
           "CDU U6 Playground Sound Board_2018"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 14,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3428,8 +3158,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer 2d arrays_2018"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 15,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3450,8 +3178,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer.stop_2018"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 16,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3472,8 +3198,6 @@
         "script_level.level_keys": [
           "CSD U6L12 TFMD_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3495,8 +3219,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop click predict_2018"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3518,8 +3240,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop click exit_2018"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3540,8 +3260,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop map_2018"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3562,8 +3280,6 @@
         "script_level.level_keys": [
           "CSD: For Loop_2018"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3585,8 +3301,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict print_2018"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3608,8 +3322,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop button array_2018"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3631,8 +3343,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop list.length_2018"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3654,8 +3364,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop images_2018"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3677,8 +3385,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led on_2018"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 10,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3700,8 +3406,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led off_2018"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 11,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3723,8 +3427,6 @@
         "script_level.level_keys": [
           "CSD U6 functions paramters video_2018"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 12,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3746,8 +3448,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function_2018"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 13,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3769,8 +3469,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function call_2018"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 14,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3792,8 +3490,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function finish_2018"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 15,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3814,8 +3510,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 1_2018"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 16,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3836,8 +3530,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 2_2018"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 17,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3858,8 +3550,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 3_2018"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 18,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3880,8 +3570,6 @@
         "script_level.level_keys": [
           "CSD U6L13 TFMD_2018"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 1,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3902,8 +3590,6 @@
         "script_level.level_keys": [
           "The Accelerometer_2018"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 2,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3925,8 +3611,6 @@
         "script_level.level_keys": [
           "CSD U6 Airplane predict_2018"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 3,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3948,8 +3632,6 @@
         "script_level.level_keys": [
           "CSD U6 investigate orientation_2018"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 4,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3971,8 +3653,6 @@
         "script_level.level_keys": [
           "CSD U6 directional leds pitch_2018"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 5,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -3994,8 +3674,6 @@
         "script_level.level_keys": [
           "CSD U6 directional LEDs roll_2018"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 6,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4016,8 +3694,6 @@
         "script_level.level_keys": [
           "Using Accelerometer Events_2018"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 7,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4039,8 +3715,6 @@
         "script_level.level_keys": [
           "CSD U6 stillness game predict code_2018"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 8,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4062,8 +3736,6 @@
         "script_level.level_keys": [
           "CSD U6 Pedometer_2018"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 9,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4084,8 +3756,6 @@
         "script_level.level_keys": [
           "Revisiting the Counter Pattern_2018"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 10,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4107,8 +3777,6 @@
         "script_level.level_keys": [
           "CSD U6 goalie_2018"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 11,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4130,8 +3798,6 @@
         "script_level.level_keys": [
           "CSD U6 Driver pt1_2018"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 12,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4153,8 +3819,6 @@
         "script_level.level_keys": [
           "CSD U6 Driver pt 2_2018"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 13,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4175,8 +3839,6 @@
         "script_level.level_keys": [
           "CSD U6L14 TFMD_2018"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4198,8 +3860,6 @@
         "script_level.level_keys": [
           "CSD U6 params predict_2018"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4221,8 +3881,6 @@
         "script_level.level_keys": [
           "CSD U6 params modify clouds_2018"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4244,8 +3902,6 @@
         "script_level.level_keys": [
           "CSD U6 params modify planes_2018"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4267,8 +3923,6 @@
         "script_level.level_keys": [
           "CSD U6 params create colors_2018"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4290,8 +3944,6 @@
         "script_level.level_keys": [
           "CSD U6 iter predict bubbles_2018"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4313,8 +3965,6 @@
         "script_level.level_keys": [
           "CSD U6 iter modify bugs_2018"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4336,8 +3986,6 @@
         "script_level.level_keys": [
           "CSD U6 iter create notes_2018"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4359,8 +4007,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser intro_2018"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4382,8 +4028,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 1_2018"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4405,8 +4049,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 2_2018"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4428,8 +4070,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 3_2018"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4451,8 +4091,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 4_2018"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4474,8 +4112,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 5_2018"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 14,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4497,8 +4133,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser challenge 1_2018"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 15,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4520,8 +4154,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser challenge 2_2018"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 16,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4542,8 +4174,6 @@
         "script_level.level_keys": [
           "CSD U6L15 TFMD_2018"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 1,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4564,8 +4194,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit logic video_2018"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 2,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4587,8 +4215,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit predict_2018"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 3,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4610,8 +4236,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit LED map_2018"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 4,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4633,8 +4257,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit pinMode_2018"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 5,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4656,8 +4278,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit createLed_2018"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 6,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4679,8 +4299,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit multi led_2018"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 7,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4702,8 +4320,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinkers_2018"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 8,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4725,8 +4341,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker buttons_2018"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 9,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4748,8 +4362,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker build_2018"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 10,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4771,8 +4383,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit button map_2018"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 11,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4794,8 +4404,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit createButton_2018"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 12,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4817,8 +4425,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike buzzer_2018"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 13,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4840,8 +4446,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike light_2018"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 14,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4863,8 +4467,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike final_2018"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 15,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4885,8 +4487,6 @@
         "script_level.level_keys": [
           "CSD U6L16 TFMD_2018"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 1,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4907,8 +4507,6 @@
         "script_level.level_keys": [
           "CSD U6 final intro_2018"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 2,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4930,8 +4528,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 1_2018"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 3,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4953,8 +4549,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 2_2018"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 4,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4976,8 +4570,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 3_2018"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 5,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -4999,8 +4591,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 5_2018"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 6,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -5022,8 +4612,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 4_2018"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 7,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -5045,8 +4633,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 6_2018"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 8,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -5068,8 +4654,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2_2018"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 9,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -5091,8 +4675,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd6-2018"
@@ -5109,8 +4691,6 @@
         "script_level.level_keys": [
           "CSD U6L01 TFMD_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Innovations in Computing",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5122,8 +4702,6 @@
         "script_level.level_keys": [
           "CSDU6 Innovation_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Innovations in Computing",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5135,8 +4713,6 @@
         "script_level.level_keys": [
           "CSD U6L02 TFMD_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5148,8 +4724,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty Map_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5161,8 +4735,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty predict app_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5174,8 +4746,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty Text_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 4,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5187,8 +4757,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 5,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5200,8 +4768,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy click_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 6,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5213,8 +4779,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty xy random_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 7,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5226,8 +4790,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty hidden_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 8,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5239,8 +4801,6 @@
         "script_level.level_keys": [
           "CSD U6 setProperty hidden 2_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 9,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5252,8 +4812,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine example_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 10,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5265,8 +4823,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 1_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 11,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5278,8 +4834,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 2_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 12,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5291,8 +4845,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 3_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 13,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5304,8 +4856,6 @@
         "script_level.level_keys": [
           "CSD U6 emotion machine 4_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 14,
         "lesson.key": "Designing Screens with Code",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5317,8 +4867,6 @@
         "script_level.level_keys": [
           "CSD U6L03 TFMD_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5330,8 +4878,6 @@
         "script_level.level_keys": [
           "CSD U6 hardware software video_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5343,8 +4889,6 @@
         "script_level.level_keys": [
           "CSD LEDs Map_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 3,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5356,8 +4900,6 @@
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 4,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5369,8 +4911,6 @@
         "script_level.level_keys": [
           "CSD U6 test LED_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 5,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5382,8 +4922,6 @@
         "script_level.level_keys": [
           "CSD U6 predict LED button_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 6,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5395,8 +4933,6 @@
         "script_level.level_keys": [
           "CSD U6 add LED button_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 7,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5408,8 +4944,6 @@
         "script_level.level_keys": [
           "CSD U6 LED toggle_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 8,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5421,8 +4955,6 @@
         "script_level.level_keys": [
           "CSD U6 LED all_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 9,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5434,8 +4966,6 @@
         "script_level.level_keys": [
           "CSD U6 LED create intro_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 10,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5447,8 +4977,6 @@
         "script_level.level_keys": [
           "CSD U6 light show_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 11,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5460,8 +4988,6 @@
         "script_level.level_keys": [
           "CSD U6 Catch the Mouse_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 12,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5473,8 +4999,6 @@
         "script_level.level_keys": [
           "CSD U6 create LED app_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 13,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5486,8 +5010,6 @@
         "script_level.level_keys": [
           "CSD U6 create LED app 2_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 14,
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5499,8 +5021,6 @@
         "script_level.level_keys": [
           "CSD U6L04 TFMD_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5512,8 +5032,6 @@
         "script_level.level_keys": [
           "CSDU6 GameLab Input 1_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5525,8 +5043,6 @@
         "script_level.level_keys": [
           "CSDU6 AppLab Input 1_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5538,8 +5054,6 @@
         "script_level.level_keys": [
           "CSD U6L05 TFMD_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5551,8 +5065,6 @@
         "script_level.level_keys": [
           "CSD onBoardEvent Map_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5564,8 +5076,6 @@
         "script_level.level_keys": [
           "CSDU6 - button LED prediction_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5577,8 +5087,6 @@
         "script_level.level_keys": [
           "CSDU6 - LED buttonL_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5590,8 +5098,6 @@
         "script_level.level_keys": [
           "CSDU6 - LED toggle buttonL up_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5603,8 +5109,6 @@
         "script_level.level_keys": [
           "CSD Board Buttons Map_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5616,8 +5120,6 @@
         "script_level.level_keys": [
           "CSDU6 - lightswitch toggleswitch_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 7,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5629,8 +5131,6 @@
         "script_level.level_keys": [
           "CSDU6 - toggle state LED prediction_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 8,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5642,8 +5142,6 @@
         "script_level.level_keys": [
           "CSDU6 - toggleswitch state setProp_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 9,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5655,8 +5153,6 @@
         "script_level.level_keys": [
           "CSD Buzzer Map_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 10,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5668,8 +5164,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer intro_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 11,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5681,8 +5175,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer duration_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 12,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5694,8 +5186,6 @@
         "script_level.level_keys": [
           "CSDU6 - buzzer duration buttons_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 13,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5707,8 +5197,6 @@
         "script_level.level_keys": [
           "CSDU6 - board event challenge_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 14,
         "lesson.key": "Board Events",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5720,8 +5208,6 @@
         "script_level.level_keys": [
           "CSD U6L06 TFMD_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5733,8 +5219,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty Map_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5746,8 +5230,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty Demo_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5759,8 +5241,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty input_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 4,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5772,8 +5252,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty dropdown_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 5,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5785,8 +5263,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty board predict_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 6,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5798,8 +5274,6 @@
         "script_level.level_keys": [
           "CSD U6 getProperty buzzer_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 7,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5811,8 +5285,6 @@
         "script_level.level_keys": [
           "CSD U6 slider intro_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 8,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5824,8 +5296,6 @@
         "script_level.level_keys": [
           "CSD U6 frequency_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 9,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5837,8 +5307,6 @@
         "script_level.level_keys": [
           "CSD U6 interval_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 10,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5850,8 +5318,6 @@
         "script_level.level_keys": [
           "CSD U6 Event Types_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 11,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5863,8 +5329,6 @@
         "script_level.level_keys": [
           "CSD U6 change_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 12,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5876,8 +5340,6 @@
         "script_level.level_keys": [
           "CSD U6 get toggle_2018"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 13,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5889,8 +5351,6 @@
         "script_level.level_keys": [
           "CSD U6 getters debug_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 14,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5902,8 +5362,6 @@
         "script_level.level_keys": [
           "CSD U6 move motorcycle_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 15,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5915,8 +5373,6 @@
         "script_level.level_keys": [
           "CSD U6 design motorcycle_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 16,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5928,8 +5384,6 @@
         "script_level.level_keys": [
           "CSD U6 challenge motorcycle_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 17,
         "lesson.key": "Getting Properties",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5941,8 +5395,6 @@
         "script_level.level_keys": [
           "CSD U6L07 TFMD_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5954,8 +5406,6 @@
         "script_level.level_keys": [
           "CSD U6 sensor experiment embedded_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5967,8 +5417,6 @@
         "script_level.level_keys": [
           "CSD Board Sensors Map_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5980,8 +5428,6 @@
         "script_level.level_keys": [
           "CSD U6 analog sound_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -5993,8 +5439,6 @@
         "script_level.level_keys": [
           "CSD U6 analog light_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6006,8 +5450,6 @@
         "script_level.level_keys": [
           "CSD U6 analog temp_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6019,8 +5461,6 @@
         "script_level.level_keys": [
           "CSD U6 analog predict_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6032,8 +5472,6 @@
         "script_level.level_keys": [
           "CSD Polling Events Map_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6045,8 +5483,6 @@
         "script_level.level_keys": [
           "CSD U6 analog data_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6058,8 +5494,6 @@
         "script_level.level_keys": [
           "CSD U6 analog change_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6071,8 +5505,6 @@
         "script_level.level_keys": [
           "CSD U6 analog threshold_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6084,8 +5516,6 @@
         "script_level.level_keys": [
           "CSD Set Scale Map_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6097,8 +5527,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rbg 1_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6110,8 +5538,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rbg 2_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6123,8 +5549,6 @@
         "script_level.level_keys": [
           "CSD U6 analog rgb 3_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 15,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6136,8 +5560,6 @@
         "script_level.level_keys": [
           "CSD U6 analog challenge_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 16,
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6149,8 +5571,6 @@
         "script_level.level_keys": [
           "CSD U6L08 TFMD_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 1,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6162,8 +5582,6 @@
         "script_level.level_keys": [
           "CSD U6 emoji race demo_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 2,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6175,8 +5593,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar stop_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 3,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6188,8 +5604,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 1_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 4,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6201,8 +5615,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 1.5_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 5,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6214,8 +5626,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar design 2_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 6,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6227,8 +5637,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 1_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 7,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6240,8 +5648,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 2_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 8,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6253,8 +5659,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar variables 3_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 9,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6266,8 +5670,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar conditional_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 10,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6279,8 +5681,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar setScreen_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 11,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6292,8 +5692,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar setProperty_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 12,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6305,8 +5703,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar buzzer_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 13,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6318,8 +5714,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar final_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 14,
         "lesson.key": "The Program Design Process",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6331,8 +5725,6 @@
         "script_level.level_keys": [
           "CSD U6L09 TFMD_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6344,8 +5736,6 @@
         "script_level.level_keys": [
           "CSD U6 tugowar demo_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6357,8 +5747,6 @@
         "script_level.level_keys": [
           "CSD U6 game project stop_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6370,8 +5758,6 @@
         "script_level.level_keys": [
           "CSD U6 game project screens_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6383,8 +5769,6 @@
         "script_level.level_keys": [
           "CSD U6 game project screen links_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6396,8 +5780,6 @@
         "script_level.level_keys": [
           "CSD U6 game project board events_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6409,8 +5791,6 @@
         "script_level.level_keys": [
           "CSD U6 game project functions define_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6422,8 +5802,6 @@
         "script_level.level_keys": [
           "CSD U6 game project functions call_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6435,8 +5813,6 @@
         "script_level.level_keys": [
           "CSD U6 game project finish_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6448,8 +5824,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2018"
@@ -6461,8 +5835,6 @@
         "script_level.level_keys": [
           "CSD U6L10 TFMD_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 1,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6474,8 +5846,6 @@
         "script_level.level_keys": [
           "CSD U6 arrays intro_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 2,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6487,8 +5857,6 @@
         "script_level.level_keys": [
           "CSD U6 arrays select predict_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 3,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6500,8 +5868,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select rainbow_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 4,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6513,8 +5879,6 @@
         "script_level.level_keys": [
           "CSDU6 array select days_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 5,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6526,8 +5890,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select random_2018"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 6,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6539,8 +5901,6 @@
         "script_level.level_keys": [
           "CSDU6 arrays select variable_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 7,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6552,8 +5912,6 @@
         "script_level.level_keys": [
           "CSD U6 array multi_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 8,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6565,8 +5923,6 @@
         "script_level.level_keys": [
           "CSD colorLed Map_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 9,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6578,8 +5934,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds predict_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 10,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6591,8 +5945,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLED on_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 11,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6604,8 +5956,6 @@
         "script_level.level_keys": [
           "CSD U6 LEDs color_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 12,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6617,8 +5967,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds debug_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 13,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6630,8 +5978,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds intensity_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 14,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6643,8 +5989,6 @@
         "script_level.level_keys": [
           "CSD U6 colorLeds light pattern_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 15,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6656,8 +6000,6 @@
         "script_level.level_keys": [
           "CSD U6 light pattern off_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 16,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6669,8 +6011,6 @@
         "script_level.level_keys": [
           "CSD U6 light pattern challenge_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 17,
         "lesson.key": "Arrays and Color LEDs",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6682,8 +6022,6 @@
         "script_level.level_keys": [
           "CSD U6L11 TFMD_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 1,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6695,8 +6033,6 @@
         "script_level.level_keys": [
           "CSDU6 circuit playground piano_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 2,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6708,8 +6044,6 @@
         "script_level.level_keys": [
           "CSDU6 frequency modification_2018"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 3,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6721,8 +6055,6 @@
         "script_level.level_keys": [
           "CSDU6 frequency creation_2018"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 4,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6734,8 +6066,6 @@
         "script_level.level_keys": [
           "Making Music_2018"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 5,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6747,8 +6077,6 @@
         "script_level.level_keys": [
           "CSDU6 piano with notes_2018"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 6,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6760,8 +6088,6 @@
         "script_level.level_keys": [
           "CSD-Arrays_2018"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 7,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6773,8 +6099,6 @@
         "script_level.level_keys": [
           "CSD U6 array piano_2018"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 8,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6786,8 +6110,6 @@
         "script_level.level_keys": [
           "CSD U6 random array notes_2018"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 9,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6799,8 +6121,6 @@
         "script_level.level_keys": [
           "CSDU6 making new arrays_2018"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 10,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6812,8 +6132,6 @@
         "script_level.level_keys": [
           "CSDU6 play predict code_2018"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 11,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6825,8 +6143,6 @@
         "script_level.level_keys": [
           "CSDU6 play songs_2018"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 12,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6838,8 +6154,6 @@
         "script_level.level_keys": [
           "CSDU6 play null notes_2018"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 13,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6851,8 +6165,6 @@
         "script_level.level_keys": [
           "CDU U6 Playground Sound Board_2018"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 14,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6864,8 +6176,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer 2d arrays_2018"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 15,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6877,8 +6187,6 @@
         "script_level.level_keys": [
           "CSDU6 buzzer.stop_2018"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 16,
         "lesson.key": "Making Music",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6890,8 +6198,6 @@
         "script_level.level_keys": [
           "CSD U6L12 TFMD_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 1,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6903,8 +6209,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop click predict_2018"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 2,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6916,8 +6220,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop click exit_2018"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 3,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6929,8 +6231,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop map_2018"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 4,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6942,8 +6242,6 @@
         "script_level.level_keys": [
           "CSD: For Loop_2018"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 5,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6955,8 +6253,6 @@
         "script_level.level_keys": [
           "CSDU6 - for loop - predict print_2018"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 6,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6968,8 +6264,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop button array_2018"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 7,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6981,8 +6275,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop list.length_2018"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 8,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -6994,8 +6286,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop images_2018"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 9,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7007,8 +6297,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led on_2018"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 10,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7020,8 +6308,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led off_2018"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 11,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7033,8 +6319,6 @@
         "script_level.level_keys": [
           "CSD U6 functions paramters video_2018"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 12,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7046,8 +6330,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function_2018"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 13,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7059,8 +6341,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function call_2018"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 14,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7072,8 +6352,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led function finish_2018"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 15,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7085,8 +6363,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 1_2018"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 16,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7098,8 +6374,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 2_2018"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 17,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7111,8 +6385,6 @@
         "script_level.level_keys": [
           "CSD U6 for loop led bonus 3_2018"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 18,
         "lesson.key": "Arrays and For Loops",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7124,8 +6396,6 @@
         "script_level.level_keys": [
           "CSD U6L13 TFMD_2018"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 1,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7137,8 +6407,6 @@
         "script_level.level_keys": [
           "The Accelerometer_2018"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 2,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7150,8 +6418,6 @@
         "script_level.level_keys": [
           "CSD U6 Airplane predict_2018"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 3,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7163,8 +6429,6 @@
         "script_level.level_keys": [
           "CSD U6 investigate orientation_2018"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 4,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7176,8 +6440,6 @@
         "script_level.level_keys": [
           "CSD U6 directional leds pitch_2018"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 5,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7189,8 +6451,6 @@
         "script_level.level_keys": [
           "CSD U6 directional LEDs roll_2018"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 6,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7202,8 +6462,6 @@
         "script_level.level_keys": [
           "Using Accelerometer Events_2018"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 7,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7215,8 +6473,6 @@
         "script_level.level_keys": [
           "CSD U6 stillness game predict code_2018"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 8,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7228,8 +6484,6 @@
         "script_level.level_keys": [
           "CSD U6 Pedometer_2018"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 9,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7241,8 +6495,6 @@
         "script_level.level_keys": [
           "Revisiting the Counter Pattern_2018"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 10,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7254,8 +6506,6 @@
         "script_level.level_keys": [
           "CSD U6 goalie_2018"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 11,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7267,8 +6517,6 @@
         "script_level.level_keys": [
           "CSD U6 Driver pt1_2018"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 12,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7280,8 +6528,6 @@
         "script_level.level_keys": [
           "CSD U6 Driver pt 2_2018"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 13,
         "lesson.key": "Accelerometer",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7293,8 +6539,6 @@
         "script_level.level_keys": [
           "CSD U6L14 TFMD_2018"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 1,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7306,8 +6550,6 @@
         "script_level.level_keys": [
           "CSD U6 params predict_2018"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 2,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7319,8 +6561,6 @@
         "script_level.level_keys": [
           "CSD U6 params modify clouds_2018"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 3,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7332,8 +6572,6 @@
         "script_level.level_keys": [
           "CSD U6 params modify planes_2018"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 4,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7345,8 +6583,6 @@
         "script_level.level_keys": [
           "CSD U6 params create colors_2018"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 5,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7358,8 +6594,6 @@
         "script_level.level_keys": [
           "CSD U6 iter predict bubbles_2018"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 6,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7371,8 +6605,6 @@
         "script_level.level_keys": [
           "CSD U6 iter modify bugs_2018"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 7,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7384,8 +6616,6 @@
         "script_level.level_keys": [
           "CSD U6 iter create notes_2018"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 8,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7397,8 +6627,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser intro_2018"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 9,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7410,8 +6638,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 1_2018"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 10,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7423,8 +6649,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 2_2018"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 11,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7436,8 +6660,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 3_2018"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 12,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7449,8 +6671,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 4_2018"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 13,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7462,8 +6682,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser 5_2018"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 14,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7475,8 +6693,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser challenge 1_2018"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 15,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7488,8 +6704,6 @@
         "script_level.level_keys": [
           "CSD U6 params starchaser challenge 2_2018"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 16,
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7501,8 +6715,6 @@
         "script_level.level_keys": [
           "CSD U6L15 TFMD_2018"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 1,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7514,8 +6726,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit logic video_2018"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 2,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7527,8 +6737,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit predict_2018"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 3,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7540,8 +6748,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit LED map_2018"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 4,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7553,8 +6759,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit pinMode_2018"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 5,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7566,8 +6770,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit createLed_2018"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 6,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7579,8 +6781,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit multi led_2018"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 7,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7592,8 +6792,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinkers_2018"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 8,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7605,8 +6803,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker buttons_2018"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 9,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7618,8 +6814,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker build_2018"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 10,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7631,8 +6825,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit button map_2018"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 11,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7644,8 +6836,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit createButton_2018"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 12,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7657,8 +6847,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike buzzer_2018"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 13,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7670,8 +6858,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike light_2018"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 14,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7683,8 +6869,6 @@
         "script_level.level_keys": [
           "CSD U6 circuit smart bike final_2018"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 15,
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7696,8 +6880,6 @@
         "script_level.level_keys": [
           "CSD U6L16 TFMD_2018"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 1,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7709,8 +6891,6 @@
         "script_level.level_keys": [
           "CSD U6 final intro_2018"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 2,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7722,8 +6902,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 1_2018"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 3,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7735,8 +6913,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 2_2018"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 4,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7748,8 +6924,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 3_2018"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 5,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7761,8 +6935,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 5_2018"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 6,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7774,8 +6946,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 4_2018"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 7,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7787,8 +6957,6 @@
         "script_level.level_keys": [
           "CSDU6 - final project 6_2018"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 8,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7800,8 +6968,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2_2018"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 9,
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2018"
@@ -7813,8 +6979,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd6-2018"
