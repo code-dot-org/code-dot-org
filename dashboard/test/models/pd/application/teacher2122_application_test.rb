@@ -505,7 +505,7 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50,
+        principal_underrepresented_group_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher2122_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -524,7 +524,7 @@ module Pd::Application
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
-            underrepresented_minority_percent: YES,
+            underrepresented_group_percent: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -548,7 +548,7 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50,
+        principal_underrepresented_group_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher2122_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -567,7 +567,7 @@ module Pd::Application
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
-            underrepresented_minority_percent: YES,
+            underrepresented_group_percent: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -622,7 +622,7 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49,
+        principal_underrepresented_group_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
 
       application = create :pd_teacher2122_application, regional_partner: nil, form_data_hash: application_hash
@@ -640,7 +640,7 @@ module Pd::Application
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
-            underrepresented_minority_percent: NO,
+            underrepresented_group_percent: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -664,7 +664,7 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49,
+        principal_underrepresented_group_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
 
       application = create :pd_teacher2122_application, regional_partner: nil, form_data_hash: application_hash
@@ -682,7 +682,7 @@ module Pd::Application
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
-            underrepresented_minority_percent: NO,
+            underrepresented_group_percent: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -869,19 +869,19 @@ module Pd::Application
     test 'meets_scholarship_criteria' do
       application = create :pd_teacher2122_application
       test_cases = [
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO}
+        {underrepresented_group_percent: YES, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_group_percent: YES, free_lunch_percent: nil, verdict: YES},
+        {underrepresented_group_percent: YES, free_lunch_percent: NO, verdict: YES},
+        {underrepresented_group_percent: nil, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_group_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_group_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_group_percent: NO, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_group_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_group_percent: NO, free_lunch_percent: NO, verdict: NO}
       ]
 
       test_cases.each do |test_case|
-        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        input = test_case.slice(:underrepresented_group_percent, :free_lunch_percent)
         application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
 
         output = application.meets_scholarship_criteria

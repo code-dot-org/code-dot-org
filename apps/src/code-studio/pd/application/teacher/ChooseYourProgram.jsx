@@ -171,15 +171,10 @@ export default class ChooseYourProgram extends LabeledFormComponent {
 
         {showTeachingPlansNote && (
           <p style={styles.error}>
-            Note: The Professional Learning Program is designed to meet the
-            needs of those teaching the course in the {YEAR} school year. Check
-            with your administrators to ensure that the course will be offered
-            in {YEAR} before updating your answer to{' '}
-            <strong>
-              "Do you plan to personally teach this course in the {YEAR} school
-              year?"
-            </strong>{' '}
-            and submitting your application.
+            Note: This program is designed to work best for teachers who are
+            teaching this course in the {YEAR} school year. Scholarship
+            eligibility is dependent on whether or not you will be teaching the
+            course during the {YEAR} school year.
           </p>
         )}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceExisting', {

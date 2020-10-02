@@ -800,13 +800,13 @@ module Pd::Application
             nil
           end
 
-        urm_percent = responses[:principal_underrepresented_minority_percent].present? ?
-                        responses[:principal_underrepresented_minority_percent].to_i :
+        urg_percent = responses[:principal_underrepresented_group_percent].present? ?
+                        responses[:principal_underrepresented_group_percent].to_i :
                         school_stats&.urm_percent
 
-        meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
-          if urm_percent
-            urm_percent >= 50 ? YES : NO
+        meets_scholarship_criteria_scores[:underrepresented_group_percent] =
+          if urg_percent
+            urg_percent >= 50 ? YES : NO
           else
             nil
           end
@@ -912,8 +912,8 @@ module Pd::Application
             principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
-          principal_underrepresented_minority_percent:
-            principal_approval.underrepresented_minority_percent ? format("%0.02f%%", principal_approval.underrepresented_minority_percent) : nil,
+          principal_underrepresented_group_percent:
+            principal_approval.underrepresented_group_percent ? format("%0.02f%%", principal_approval.underrepresented_group_percent) : nil,
           principal_american_indian_or_native_alaskan_percent:
             principal_response[:american_indian] ? format("%0.02f%%", principal_response[:american_indian]) : nil,
           principal_asian_percent: principal_response[:asian] ? format("%0.02f%%", principal_response[:asian]) : nil,
