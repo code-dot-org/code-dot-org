@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
-import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
+import {sortableSectionShape} from './shapes.jsx';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';

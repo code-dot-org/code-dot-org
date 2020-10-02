@@ -11,7 +11,8 @@ import i18n from '@cdo/locale';
 const styles = {
   activitySection: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    width: '100%'
   },
   tipIcons: {
     display: 'flex',
@@ -21,8 +22,7 @@ const styles = {
   },
   tips: {
     display: 'flex',
-    flexDirection: 'column',
-    width: '40%'
+    flexDirection: 'column'
   },
   remarksHeader: {
     marginLeft: 5,
@@ -39,6 +39,8 @@ export default class ActivitySection extends Component {
     const {section} = this.props;
 
     const isProgressionSection = section.levels.length > 0;
+
+    const sectionHasTips = section.tips.length > 0;
 
     return (
       <div>
@@ -72,7 +74,7 @@ export default class ActivitySection extends Component {
           </div>
           {!isProgressionSection && <SafeMarkdown markdown={section.text} />}
           {isProgressionSection && <ProgressionDetails progression={section} />}
-          <div style={styles.tips}>
+          <div style={{...styles.tips, ...(sectionHasTips && {width: '40%'})}}>
             {section.tips.map((tip, index) => {
               return <LessonTip key={`tip-${index}`} tip={tip} />;
             })}
