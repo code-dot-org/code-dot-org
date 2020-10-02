@@ -19,9 +19,9 @@ export const levelShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
 
   // level id, or -1 if no level is selected.
-  activeId: PropTypes.number.isRequired,
+  activeId: PropTypes.number,
   // level ids for all variants of this level
-  ids: PropTypes.arrayOf(PropTypes.number).isRequired,
+  ids: PropTypes.arrayOf(PropTypes.number),
 
   // whether this LevelToken is expanded in the UI.
   expand: PropTypes.bool,
