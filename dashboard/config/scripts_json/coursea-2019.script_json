@@ -5,23 +5,11 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "hideable_lessons": "on",
-      "project_widget_visible": "on",
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "lesson_extras_available": "on",
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}",
-      "version_year": "2019",
-      "supported_locales": [
-        "cs-CZ",
-        "sk-SK"
-      ],
-      "curriculum_umbrella": "CSF",
-      "has_lesson_plan": true,
-      "is_stable": true,
-      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -44,8 +32,20 @@
           "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         ]
       ],
-      "is_course": true,
-      "peer_reviews_to_complete": 0
+      "has_lesson_plan": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}",
+      "version_year": "2019",
+      "curriculum_umbrella": "CSF",
+      "is_stable": true,
+      "family_name": "coursea",
+      "tts": true,
+      "supported_locales": [
+        "cs-CZ",
+        "sk-SK"
+      ],
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "is_course": true
     },
     "new_name": null,
     "family_name": "coursea",

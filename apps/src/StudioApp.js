@@ -1628,6 +1628,13 @@ StudioApp.prototype.displayFeedback = function(options) {
   );
 
   if (experiments.isEnabled('bubbleDialog')) {
+    // Track whether this experiment is in use. If not, delete this and similar
+    // sections of code. If it is, create a non-experiment flag.
+    trackEvent(
+      'experiment',
+      'Feedback bubbleDialog',
+      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
+    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {
