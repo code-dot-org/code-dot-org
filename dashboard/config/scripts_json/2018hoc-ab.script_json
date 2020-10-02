@@ -54,8 +54,6 @@
         "script_level.level_keys": [
           "HoCAB_labyrinth1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
         "script.name": "2018hoc-ab"
@@ -76,8 +74,6 @@
         "script_level.level_keys": [
           "HoCAB_labyrinth2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
         "script.name": "2018hoc-ab"
@@ -94,8 +90,6 @@
         "script_level.level_keys": [
           "HoCAB_labyrinth1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
         "script.name": "2018hoc-ab"
@@ -107,8 +101,6 @@
         "script_level.level_keys": [
           "HoCAB_labyrinth2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
         "script.name": "2018hoc-ab"

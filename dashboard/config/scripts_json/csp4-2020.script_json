@@ -338,8 +338,6 @@
         "script_level.level_keys": [
           "CSP U4L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -361,8 +359,6 @@
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -384,8 +380,6 @@
         "script_level.level_keys": [
           "U4 L01 Poetry App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -407,8 +401,6 @@
         "script_level.level_keys": [
           "U4 L01 Thermostat App"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -430,8 +422,6 @@
         "script_level.level_keys": [
           "U1 L02 CYU MC"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -453,8 +443,6 @@
         "script_level.level_keys": [
           "CSP U4L2 SFLP 20-21"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -476,8 +464,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -499,8 +485,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -522,8 +506,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -545,8 +527,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -568,8 +548,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -591,8 +569,6 @@
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 7,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -614,8 +590,6 @@
         "script_level.level_keys": [
           "CSP U4L3 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -637,8 +611,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -660,8 +632,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -683,8 +653,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -706,8 +674,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -729,8 +695,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -752,8 +716,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -775,8 +737,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -798,8 +758,6 @@
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -821,8 +779,6 @@
         "script_level.level_keys": [
           "U4 L03 Scope Issue"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -844,8 +800,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -867,8 +821,6 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -890,8 +842,6 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -913,8 +863,6 @@
         "script_level.level_keys": [
           "CSP U4L4 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -936,8 +884,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -959,8 +905,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -982,8 +926,6 @@
         "script_level.level_keys": [
           "CSP U4L5 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1004,8 +946,6 @@
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1027,8 +967,6 @@
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1050,8 +988,6 @@
         "script_level.level_keys": [
           "CSP U4L6 SFLP 20-21"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1073,8 +1009,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1096,8 +1030,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1119,8 +1051,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1142,8 +1072,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1165,8 +1093,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v2 Code"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1188,8 +1114,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1211,8 +1135,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v3 Code"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1234,8 +1156,6 @@
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1257,8 +1177,6 @@
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1280,8 +1198,6 @@
         "script_level.level_keys": [
           "CSP U4L7 SFLP 20-21"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1303,8 +1219,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1326,8 +1240,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1349,8 +1261,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1372,8 +1282,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1395,8 +1303,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1418,8 +1324,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1441,8 +1345,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1464,8 +1366,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1487,8 +1387,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1510,8 +1408,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1533,8 +1429,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1556,8 +1450,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 13,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1579,8 +1471,6 @@
         "script_level.level_keys": [
           "CSP U4L8 SFLP 20-21"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1602,8 +1492,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1625,8 +1513,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -1648,8 +1534,6 @@
         "script_level.level_keys": [
           "CSP U4L9 SFLP 20-21"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1671,8 +1555,6 @@
         "script_level.level_keys": [
           "U4 L09 Functions Song"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1694,8 +1576,6 @@
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1717,8 +1597,6 @@
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1740,8 +1618,6 @@
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1763,8 +1639,6 @@
         "script_level.level_keys": [
           "updateScreen Pattern"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1786,8 +1660,6 @@
         "script_level.level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1809,8 +1681,6 @@
         "script_level.level_keys": [
           "CSP U4L10 SFLP 20-21"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1832,8 +1702,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1855,8 +1723,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1878,8 +1744,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1901,8 +1765,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1924,8 +1786,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1947,8 +1807,6 @@
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1970,8 +1828,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -1993,8 +1849,6 @@
         "script_level.level_keys": [
           "When to Make Functions Map"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2016,8 +1870,6 @@
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2039,8 +1891,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Functions Psuedocode"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2062,8 +1912,6 @@
         "script_level.level_keys": [
           "CSP U4L11 SFLP 20-21"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2085,8 +1933,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 1 2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2108,8 +1954,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -2131,8 +1975,6 @@
         "script_level.level_keys": [
           "CSP U4L12 SFLP 20-21"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2154,8 +1996,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2177,8 +2017,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2200,8 +2038,6 @@
         "script_level.level_keys": [
           "CSP U4L13 SFLP 20-21"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2223,8 +2059,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2246,8 +2080,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2269,8 +2101,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2292,8 +2122,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2315,8 +2143,6 @@
         "script_level.level_keys": [
           "CSP U4L14 SFLP 20-21"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2338,8 +2164,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2361,8 +2185,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2384,8 +2206,6 @@
         "script_level.level_keys": [
           "CSP U4L15 SFLP 20-21"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Lesson 15: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2407,8 +2227,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Lesson 15: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -2425,8 +2243,6 @@
         "script_level.level_keys": [
           "CSP U4L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2438,8 +2254,6 @@
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2451,8 +2265,6 @@
         "script_level.level_keys": [
           "U4 L01 Poetry App"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2464,8 +2276,6 @@
         "script_level.level_keys": [
           "U4 L01 Thermostat App"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2477,8 +2287,6 @@
         "script_level.level_keys": [
           "U1 L02 CYU MC"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2490,8 +2298,6 @@
         "script_level.level_keys": [
           "CSP U4L2 SFLP 20-21"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2503,8 +2309,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2516,8 +2320,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2529,8 +2331,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2542,8 +2342,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2555,8 +2353,6 @@
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 6,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2568,8 +2364,6 @@
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 7,
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2581,8 +2375,6 @@
         "script_level.level_keys": [
           "CSP U4L3 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2594,8 +2386,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2607,8 +2397,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2620,8 +2408,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2633,8 +2419,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2646,8 +2430,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2659,8 +2441,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2672,8 +2452,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2685,8 +2463,6 @@
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2698,8 +2474,6 @@
         "script_level.level_keys": [
           "U4 L03 Scope Issue"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2711,8 +2485,6 @@
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2724,8 +2496,6 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2737,8 +2507,6 @@
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2750,8 +2518,6 @@
         "script_level.level_keys": [
           "CSP U4L4 SFLP 20-21"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2763,8 +2529,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2020"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2776,8 +2540,6 @@
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2020"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2020"
@@ -2789,8 +2551,6 @@
         "script_level.level_keys": [
           "CSP U4L5 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2802,8 +2562,6 @@
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2815,8 +2573,6 @@
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2828,8 +2584,6 @@
         "script_level.level_keys": [
           "CSP U4L6 SFLP 20-21"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2841,8 +2595,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2854,8 +2606,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2867,8 +2617,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2880,8 +2628,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2893,8 +2639,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v2 Code"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2906,8 +2650,6 @@
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2919,8 +2661,6 @@
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v3 Code"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2932,8 +2672,6 @@
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2945,8 +2683,6 @@
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2958,8 +2694,6 @@
         "script_level.level_keys": [
           "CSP U4L7 SFLP 20-21"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2971,8 +2705,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2984,8 +2716,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -2997,8 +2727,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3010,8 +2738,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3023,8 +2749,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3036,8 +2760,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3049,8 +2771,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3062,8 +2782,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3075,8 +2793,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3088,8 +2804,6 @@
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3101,8 +2815,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3114,8 +2826,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 13,
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3127,8 +2837,6 @@
         "script_level.level_keys": [
           "CSP U4L8 SFLP 20-21"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3140,8 +2848,6 @@
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample_2020"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3153,8 +2859,6 @@
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator_2020"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2020"
@@ -3166,8 +2870,6 @@
         "script_level.level_keys": [
           "CSP U4L9 SFLP 20-21"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 1,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3179,8 +2881,6 @@
         "script_level.level_keys": [
           "U4 L09 Functions Song"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 2,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3192,8 +2892,6 @@
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 3,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3205,8 +2903,6 @@
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 4,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3218,8 +2914,6 @@
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 5,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3231,8 +2925,6 @@
         "script_level.level_keys": [
           "updateScreen Pattern"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 6,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3244,8 +2936,6 @@
         "script_level.level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2020"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 7,
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3257,8 +2947,6 @@
         "script_level.level_keys": [
           "CSP U4L10 SFLP 20-21"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3270,8 +2958,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3283,8 +2969,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3296,8 +2980,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3309,8 +2991,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3322,8 +3002,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3335,8 +3013,6 @@
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3348,8 +3024,6 @@
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3361,8 +3035,6 @@
         "script_level.level_keys": [
           "When to Make Functions Map"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3374,8 +3046,6 @@
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3387,8 +3057,6 @@
         "script_level.level_keys": [
           "U4L10 CFU Functions Psuedocode"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3400,8 +3068,6 @@
         "script_level.level_keys": [
           "CSP U4L11 SFLP 20-21"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 1,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3413,8 +3079,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 1 2020"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 2,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3426,8 +3090,6 @@
         "script_level.level_keys": [
           "U4 L11 Functions Make 2020"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 3,
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2020"
@@ -3439,8 +3101,6 @@
         "script_level.level_keys": [
           "CSP U4L12 SFLP 20-21"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3452,8 +3112,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3465,8 +3123,6 @@
         "script_level.level_keys": [
           "U4 L12 Practice PT 2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3478,8 +3134,6 @@
         "script_level.level_keys": [
           "CSP U4L13 SFLP 20-21"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3491,8 +3145,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 1"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3504,8 +3156,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3517,8 +3167,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 4,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3530,8 +3178,6 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 5,
         "lesson.key": "Project - Decision Maker App Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3543,8 +3189,6 @@
         "script_level.level_keys": [
           "CSP U4L14 SFLP 20-21"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3556,8 +3200,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 1"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3569,8 +3211,6 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Project - Decision Maker App Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3582,8 +3222,6 @@
         "script_level.level_keys": [
           "CSP U4L15 SFLP 20-21"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 1,
         "lesson.key": "Lesson 15: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"
@@ -3595,8 +3233,6 @@
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 2,
         "lesson.key": "Lesson 15: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2020"

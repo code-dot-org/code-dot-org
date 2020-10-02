@@ -124,8 +124,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -146,8 +144,6 @@
         "script_level.level_keys": [
           "csp_U3_plan_code_FR"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -168,8 +164,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q1_mc"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -190,8 +184,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q2_mc"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -212,8 +204,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q3_mc"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -234,8 +224,6 @@
         "script_level.level_keys": [
           "csp_U3_subgoal_q4_mc"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -256,8 +244,6 @@
         "script_level.level_keys": [
           "subgoals_U3_turtle_prediction_FR"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -278,8 +264,6 @@
         "script_level.level_keys": [
           "subgoals_u3_top_down_FR"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -301,8 +285,6 @@
         "script_level.level_keys": [
           "U3L03 Three Steps"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -324,8 +306,6 @@
         "script_level.level_keys": [
           "U3L03 draw diamond"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -347,8 +327,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q1_mc"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -370,8 +348,6 @@
         "script_level.level_keys": [
           "csp3_U3_turtle_subgoal_mc_levelgroup"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -393,8 +369,6 @@
         "script_level.level_keys": [
           "subgoals_assessement_levelgroup_test2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "dummy",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -416,8 +390,6 @@
         "script_level.level_keys": [
           "U3L03 Draw a T using turnAround"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -439,8 +411,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -462,8 +432,6 @@
         "script_level.level_keys": [
           "U3L03 define turnRight and draw a rectangle"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -484,8 +452,6 @@
         "script_level.level_keys": [
           "subgoal_assessments_levelgroup_test"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "all assessment items clustered in levelgroup as a single \"test\"",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -507,8 +473,6 @@
         "script_level.level_keys": [
           "SG CSP Abstraction in Programming 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -530,8 +494,6 @@
         "script_level.level_keys": [
           "SG U3 whats a comment"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -553,8 +515,6 @@
         "script_level.level_keys": [
           "SG U3L08 how to add comments"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -571,8 +531,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -584,8 +542,6 @@
         "script_level.level_keys": [
           "csp_U3_plan_code_FR"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -597,8 +553,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q1_mc"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -610,8 +564,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q2_mc"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -623,8 +575,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q3_mc"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -636,8 +586,6 @@
         "script_level.level_keys": [
           "csp_U3_subgoal_q4_mc"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -649,8 +597,6 @@
         "script_level.level_keys": [
           "subgoals_U3_turtle_prediction_FR"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -662,8 +608,6 @@
         "script_level.level_keys": [
           "subgoals_u3_top_down_FR"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -675,8 +619,6 @@
         "script_level.level_keys": [
           "U3L03 Three Steps"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -688,8 +630,6 @@
         "script_level.level_keys": [
           "U3L03 draw diamond"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -701,8 +641,6 @@
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q1_mc"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -714,8 +652,6 @@
         "script_level.level_keys": [
           "csp3_U3_turtle_subgoal_mc_levelgroup"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -727,8 +663,6 @@
         "script_level.level_keys": [
           "subgoals_assessement_levelgroup_test2"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "dummy",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -740,8 +674,6 @@
         "script_level.level_keys": [
           "U3L03 Draw a T using turnAround"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -753,8 +685,6 @@
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -766,8 +696,6 @@
         "script_level.level_keys": [
           "U3L03 define turnRight and draw a rectangle"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -779,8 +707,6 @@
         "script_level.level_keys": [
           "subgoal_assessments_levelgroup_test"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "all assessment items clustered in levelgroup as a single \"test\"",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -792,8 +718,6 @@
         "script_level.level_keys": [
           "SG CSP Abstraction in Programming 2"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -805,8 +729,6 @@
         "script_level.level_keys": [
           "SG U3 whats a comment"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"
@@ -818,8 +740,6 @@
         "script_level.level_keys": [
           "SG U3L08 how to add comments"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
         "script.name": "subgoals-assessment-staging"

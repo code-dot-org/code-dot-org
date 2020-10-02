@@ -237,8 +237,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -259,8 +257,6 @@
         "script_level.level_keys": [
           "courseC_video_maze"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -281,8 +277,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -303,8 +297,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -325,8 +317,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -347,8 +337,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -369,8 +357,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -391,8 +377,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -414,8 +398,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -436,8 +418,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -458,8 +438,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_predict1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -480,8 +458,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -503,8 +479,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -526,8 +500,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -548,8 +520,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -570,8 +540,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -592,8 +560,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -614,8 +580,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -636,8 +600,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -658,8 +620,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -680,8 +640,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -703,8 +661,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -725,8 +681,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -747,8 +701,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -770,8 +722,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -793,8 +743,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -815,8 +763,6 @@
         "script_level.level_keys": [
           "PaperPlanes"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -837,8 +783,6 @@
         "script_level.level_keys": [
           "courseC_video_collector"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -859,8 +803,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog1"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -881,8 +823,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -903,8 +843,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog3"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -925,8 +863,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -947,8 +883,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog5"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -969,8 +903,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog6"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -992,8 +924,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog7"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1014,8 +944,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog8"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1036,8 +964,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog9"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1058,8 +984,6 @@
         "script_level.level_keys": [
           "grade2_collector_A"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1080,8 +1004,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_predict1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1102,8 +1024,6 @@
         "script_level.level_keys": [
           "grade2_collector_10"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1125,8 +1045,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1148,8 +1066,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 15,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1170,8 +1086,6 @@
         "script_level.level_keys": [
           "courseC_video_artist"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1192,8 +1106,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1214,8 +1126,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1236,8 +1146,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1258,8 +1166,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1280,8 +1186,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1302,8 +1206,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1325,8 +1227,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1347,8 +1247,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog8"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1369,8 +1267,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_predict1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1392,8 +1288,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1414,8 +1308,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1436,8 +1328,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1458,8 +1348,6 @@
         "script_level.level_keys": [
           "courseC_video_loops"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1480,8 +1368,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops2_predict1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1502,8 +1388,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1524,8 +1408,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops4"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1546,8 +1428,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops5"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1568,8 +1448,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops6"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1590,8 +1468,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1613,8 +1489,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1635,8 +1509,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops9"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1657,8 +1529,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops10"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1679,8 +1549,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops10_predict2"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 12,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1701,8 +1569,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops11"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 13,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1723,8 +1589,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops_challenge1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 14,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1745,8 +1609,6 @@
         "script_level.level_keys": [
           "courseC_collector_loops_challenge2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 15,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1767,8 +1629,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1789,8 +1649,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1811,8 +1669,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1833,8 +1689,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops4"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1855,8 +1709,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1877,8 +1729,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1899,8 +1749,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops5"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1922,8 +1770,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops8"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1944,8 +1790,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops9"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 9,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1966,8 +1810,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops10"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 10,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -1988,8 +1830,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 11,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2010,8 +1850,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_predict1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 12,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2032,8 +1870,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 13,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2054,8 +1890,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 14,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2076,8 +1910,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2098,8 +1930,6 @@
         "script_level.level_keys": [
           "flappy_1"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2120,8 +1950,6 @@
         "script_level.level_keys": [
           "flappy_2"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2142,8 +1970,6 @@
         "script_level.level_keys": [
           "flappy_3"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2164,8 +1990,6 @@
         "script_level.level_keys": [
           "flappy_4"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2186,8 +2010,6 @@
         "script_level.level_keys": [
           "flappy_5"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 5,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2208,8 +2030,6 @@
         "script_level.level_keys": [
           "flappy_6"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 6,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2230,8 +2050,6 @@
         "script_level.level_keys": [
           "flappy_7"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 7,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2252,8 +2070,6 @@
         "script_level.level_keys": [
           "flappy_8"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 8,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2274,8 +2090,6 @@
         "script_level.level_keys": [
           "flappy_9"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 9,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2296,8 +2110,6 @@
         "script_level.level_keys": [
           "flappy_11"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 10,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2318,8 +2130,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2340,8 +2150,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events2"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2362,8 +2170,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events3"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2384,8 +2190,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events4"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2406,8 +2210,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events5"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2428,8 +2230,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events6"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2450,8 +2250,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2472,8 +2270,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events8"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2494,8 +2290,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events9"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2516,8 +2310,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsA"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2538,8 +2330,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsFP"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2560,8 +2350,6 @@
         "script_level.level_keys": [
           "courseC_screenoutthemean"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2582,8 +2370,6 @@
         "script_level.level_keys": [
           "BinaryBracelets"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2600,8 +2386,6 @@
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2613,8 +2397,6 @@
         "script_level.level_keys": [
           "courseC_video_maze"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2626,8 +2408,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming1"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2639,8 +2419,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming2"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2652,8 +2430,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming3"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 4,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2665,8 +2441,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 5,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2678,8 +2452,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 6,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2691,8 +2463,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming6"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 7,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2704,8 +2474,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming7"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 8,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2717,8 +2485,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 9,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2730,8 +2496,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming8_predict1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 10,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2743,8 +2507,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming9"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 11,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2756,8 +2518,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 12,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2769,8 +2529,6 @@
         "script_level.level_keys": [
           "courseC_maze_programming_challenge2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 13,
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2782,8 +2540,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 1,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2795,8 +2551,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging1"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 2,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2808,8 +2562,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 3,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2821,8 +2573,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging3"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 4,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2834,8 +2584,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 5,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2847,8 +2595,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging5"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 6,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2860,8 +2606,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 7,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2873,8 +2617,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 8,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2886,8 +2628,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 9,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2899,8 +2639,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 10,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2912,8 +2650,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 11,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2925,8 +2661,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging_challenge2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 12,
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2938,8 +2672,6 @@
         "script_level.level_keys": [
           "PaperPlanes"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2951,8 +2683,6 @@
         "script_level.level_keys": [
           "courseC_video_collector"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 1,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2964,8 +2694,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog1"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 2,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2977,8 +2705,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog2"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 3,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -2990,8 +2716,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog3"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 4,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3003,8 +2727,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog4"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 5,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3016,8 +2738,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog5"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 6,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3029,8 +2749,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog6"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 7,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3042,8 +2760,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog7"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 8,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3055,8 +2771,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog8"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 9,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3068,8 +2782,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog9"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 10,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3081,8 +2793,6 @@
         "script_level.level_keys": [
           "grade2_collector_A"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 11,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3094,8 +2804,6 @@
         "script_level.level_keys": [
           "grade2_collector_A_predict1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 12,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3107,8 +2815,6 @@
         "script_level.level_keys": [
           "grade2_collector_10"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 13,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3120,8 +2826,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge1"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 14,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3133,8 +2837,6 @@
         "script_level.level_keys": [
           "courseC_collector_prog_challenge2"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 15,
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3146,8 +2848,6 @@
         "script_level.level_keys": [
           "courseC_video_artist"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3159,8 +2859,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3172,8 +2870,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3185,8 +2881,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3198,8 +2892,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3211,8 +2903,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog5"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3224,8 +2914,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3237,8 +2925,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3250,8 +2936,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog8"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 9,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3263,8 +2947,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog6_predict1"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 10,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3276,8 +2958,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 11,
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3289,8 +2969,6 @@
         "script_level.level_keys": [
           "GettingLoopy"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 1,
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3302,8 +2980,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops1"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3315,8 +2991,6 @@
         "script_level.level_keys": [
           "courseC_video_loops"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 2,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3328,8 +3002,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops2_predict1"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 3,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3341,8 +3013,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops2"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 4,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3354,8 +3024,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops4"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 5,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3367,8 +3035,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops5"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 6,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3380,8 +3046,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops6"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 7,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3393,8 +3057,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops7"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 8,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3406,8 +3068,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops8"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 9,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3419,8 +3079,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops9"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 10,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3432,8 +3090,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops10"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 11,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3445,8 +3101,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops10_predict2"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 12,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3458,8 +3112,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops11"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 13,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3471,8 +3123,6 @@
         "script_level.level_keys": [
           "courseC_maze_loops_challenge1"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 14,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3484,8 +3134,6 @@
         "script_level.level_keys": [
           "courseC_collector_loops_challenge2"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 15,
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3497,8 +3145,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops1"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3510,8 +3156,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops2"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3523,8 +3167,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops3"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3536,8 +3178,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops4"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3549,8 +3189,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops6"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3562,8 +3200,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops7"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3575,8 +3211,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops5"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3588,8 +3222,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops8"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3601,8 +3233,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops9"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 9,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3614,8 +3244,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops10"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 10,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3627,8 +3255,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 11,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3640,8 +3266,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops11_predict1"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 12,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3653,8 +3277,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge1"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 13,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3666,8 +3288,6 @@
         "script_level.level_keys": [
           "courseC_harvester_loops_challenge2"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 14,
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3679,8 +3299,6 @@
         "script_level.level_keys": [
           "BigEvent"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3692,8 +3310,6 @@
         "script_level.level_keys": [
           "flappy_1"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 1,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3705,8 +3321,6 @@
         "script_level.level_keys": [
           "flappy_2"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 2,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3718,8 +3332,6 @@
         "script_level.level_keys": [
           "flappy_3"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 3,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3731,8 +3343,6 @@
         "script_level.level_keys": [
           "flappy_4"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 4,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3744,8 +3354,6 @@
         "script_level.level_keys": [
           "flappy_5"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 5,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3757,8 +3365,6 @@
         "script_level.level_keys": [
           "flappy_6"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 6,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3770,8 +3376,6 @@
         "script_level.level_keys": [
           "flappy_7"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 7,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3783,8 +3387,6 @@
         "script_level.level_keys": [
           "flappy_8"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 8,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3796,8 +3398,6 @@
         "script_level.level_keys": [
           "flappy_9"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 9,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3809,8 +3409,6 @@
         "script_level.level_keys": [
           "flappy_11"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 10,
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3822,8 +3420,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events1"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3835,8 +3431,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events2"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3848,8 +3442,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events3"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3861,8 +3453,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events4"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3874,8 +3464,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events5"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3887,8 +3475,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events6"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3900,8 +3486,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3913,8 +3497,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events8"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3926,8 +3508,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_events9"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3939,8 +3519,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsA"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3952,8 +3530,6 @@
         "script_level.level_keys": [
           "courseC_PlayLab_eventsFP"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3965,8 +3541,6 @@
         "script_level.level_keys": [
           "courseC_screenoutthemean"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
         "script.name": "coursec-draft"
@@ -3978,8 +3552,6 @@
         "script_level.level_keys": [
           "BinaryBracelets"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 1,
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
         "script.name": "coursec-draft"

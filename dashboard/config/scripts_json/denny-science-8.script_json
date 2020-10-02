@@ -69,8 +69,6 @@
         "script_level.level_keys": [
           "CSD mini design mode video_copy"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -91,8 +89,6 @@
         "script_level.level_keys": [
           "Science earthquake 1_copy"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -113,8 +109,6 @@
         "script_level.level_keys": [
           "Science earthquake text_copy"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -135,8 +129,6 @@
         "script_level.level_keys": [
           "Science earthquake images_copy"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -157,8 +149,6 @@
         "script_level.level_keys": [
           "Science earthquake reflect_copy"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -179,8 +169,6 @@
         "script_level.level_keys": [
           "Science Circuit Playground Test_copy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -201,8 +189,6 @@
         "script_level.level_keys": [
           "Science event demo_copy"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -223,8 +209,6 @@
         "script_level.level_keys": [
           "Science event accel_copy"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -245,8 +229,6 @@
         "script_level.level_keys": [
           "Science event test_copy"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -267,8 +249,6 @@
         "script_level.level_keys": [
           "Science event challenge"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -285,8 +265,6 @@
         "script_level.level_keys": [
           "CSD mini design mode video_copy"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -298,8 +276,6 @@
         "script_level.level_keys": [
           "Science earthquake 1_copy"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -311,8 +287,6 @@
         "script_level.level_keys": [
           "Science earthquake text_copy"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -324,8 +298,6 @@
         "script_level.level_keys": [
           "Science earthquake images_copy"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -337,8 +309,6 @@
         "script_level.level_keys": [
           "Science earthquake reflect_copy"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -350,8 +320,6 @@
         "script_level.level_keys": [
           "Science Circuit Playground Test_copy"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -363,8 +331,6 @@
         "script_level.level_keys": [
           "Science event demo_copy"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -376,8 +342,6 @@
         "script_level.level_keys": [
           "Science event accel_copy"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -389,8 +353,6 @@
         "script_level.level_keys": [
           "Science event test_copy"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"
@@ -402,8 +364,6 @@
         "script_level.level_keys": [
           "Science event challenge"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
         "script.name": "denny-science-8"

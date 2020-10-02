@@ -133,8 +133,6 @@
         "script_level.level_keys": [
           "U6 Create PT Review - Student Links"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -156,8 +154,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -179,8 +175,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -202,8 +196,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -225,8 +217,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2017"
@@ -248,8 +238,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2017"
@@ -266,8 +254,6 @@
         "script_level.level_keys": [
           "U6 Create PT Review - Student Links"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -279,8 +265,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -292,8 +276,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Make a Plan - Student Links"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -305,8 +287,6 @@
         "script_level.level_keys": [
           "U6 Create PT - Complete the Task - Student Links"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2017"
@@ -318,8 +298,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2017"
@@ -331,8 +309,6 @@
         "script_level.level_keys": [
           "Click Here!"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2017"

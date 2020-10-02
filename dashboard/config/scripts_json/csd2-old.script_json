@@ -266,8 +266,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 1 Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Quality Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -288,8 +286,6 @@
         "script_level.level_keys": [
           "Rating Websites"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Quality Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -310,8 +306,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 2 Overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Website Design",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -332,8 +326,6 @@
         "script_level.level_keys": [
           "Personal Website Examples"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Website Design",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -354,8 +346,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 3 Overview"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Describing Web pages",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -376,8 +366,6 @@
         "script_level.level_keys": [
           "CSD Design Instructions Site"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Describing Web pages",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -398,8 +386,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 4 Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -420,8 +406,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -442,8 +426,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -464,8 +446,6 @@
         "script_level.level_keys": [
           "CSDU2 - Inspector Warm Up"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -486,8 +466,6 @@
         "script_level.level_keys": [
           "Introduction to HTML"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -508,8 +486,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -530,8 +506,6 @@
         "script_level.level_keys": [
           "CSDU2 - First-Weblab"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -552,8 +526,6 @@
         "script_level.level_keys": [
           "CSDU2 - Headers"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -574,8 +546,6 @@
         "script_level.level_keys": [
           "CSDU2 - Paragraphs 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -596,8 +566,6 @@
         "script_level.level_keys": [
           "CSD Header Size Prediction"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -618,8 +586,6 @@
         "script_level.level_keys": [
           "CSDU2 - Paragraphs 3"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 11,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -640,8 +606,6 @@
         "script_level.level_keys": [
           "Hobbies Page Example"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 12,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -662,8 +626,6 @@
         "script_level.level_keys": [
           "CSDU2 - HobbiesPage"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 13,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -684,8 +646,6 @@
         "script_level.level_keys": [
           "Stop: Hobbies Page"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 14,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -706,8 +666,6 @@
         "script_level.level_keys": [
           "Recipe Page Example"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 15,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -728,8 +686,6 @@
         "script_level.level_keys": [
           "CSDU2 - Recipe Page Start"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 16,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -750,8 +706,6 @@
         "script_level.level_keys": [
           "CSDU2 - Unordered Lists"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 17,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -772,8 +726,6 @@
         "script_level.level_keys": [
           "CSDU2 - ordered Lists"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 18,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -794,8 +746,6 @@
         "script_level.level_keys": [
           "CSDU2 - Finish Recipe"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 19,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -816,8 +766,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 3"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 20,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -838,8 +786,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 5 Overview"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -860,8 +806,6 @@
         "script_level.level_keys": [
           "CSDU2 - Recipe Valid Update"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -882,8 +826,6 @@
         "script_level.level_keys": [
           "CSDU2 - head and body tag intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -904,8 +846,6 @@
         "script_level.level_keys": [
           "CSDU2 - Hobbies Valid Update"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -926,8 +866,6 @@
         "script_level.level_keys": [
           "CSDU2 - Local Images"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -948,8 +886,6 @@
         "script_level.level_keys": [
           "Stop: Images"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -970,8 +906,6 @@
         "script_level.level_keys": [
           "CSDU2 - About Me Page start"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -992,8 +926,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 6 Overview"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1014,8 +946,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1036,8 +966,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1058,8 +986,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 3"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1080,8 +1006,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 4"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1102,8 +1026,6 @@
         "script_level.level_keys": [
           "CSD Creating Debugging Strat"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1124,8 +1046,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 7 Overview"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1146,8 +1066,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1168,8 +1086,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1190,8 +1106,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1212,8 +1126,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explain"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1234,8 +1146,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1256,8 +1166,6 @@
         "script_level.level_keys": [
           "CSD U2 text style font family"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1278,8 +1186,6 @@
         "script_level.level_keys": [
           "CSD U2 text style decoration"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1300,8 +1206,6 @@
         "script_level.level_keys": [
           "CSD U2 text style text align"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1322,8 +1226,6 @@
         "script_level.level_keys": [
           "CSD U2 text style review"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1344,8 +1246,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1366,8 +1266,6 @@
         "script_level.level_keys": [
           "CSD U2 add file - OLD"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 12,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1388,8 +1286,6 @@
         "script_level.level_keys": [
           "CSD U2 text style freeplay - OLD"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 13,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1410,8 +1306,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 8 Overview"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1432,8 +1326,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1454,8 +1346,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1476,8 +1366,6 @@
         "script_level.level_keys": [
           "CSD U2 more CSS"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1498,8 +1386,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1520,8 +1406,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style border"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1542,8 +1426,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style borderradius"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1564,8 +1446,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1586,8 +1466,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1608,8 +1486,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style margin"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1630,8 +1506,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style review"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 11,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1652,8 +1526,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style freeplay - OLD"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 12,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1674,8 +1546,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 9 Overview"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1696,8 +1566,6 @@
         "script_level.level_keys": [
           "CSDU2 - Starting Personal Home Page"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1718,8 +1586,6 @@
         "script_level.level_keys": [
           "Stop: Personal Home Page Warm Up"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1740,8 +1606,6 @@
         "script_level.level_keys": [
           "CSDU2 - Multi Site First"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1762,8 +1626,6 @@
         "script_level.level_keys": [
           "CSDU2 - New Html Files"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1784,8 +1646,6 @@
         "script_level.level_keys": [
           "CSDU2 - Copy Code"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1806,8 +1666,6 @@
         "script_level.level_keys": [
           "CSDU2 - New Class Files"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1828,8 +1686,6 @@
         "script_level.level_keys": [
           "CSDU2 - Link and Nav"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1850,8 +1706,6 @@
         "script_level.level_keys": [
           "CSDU2 - Header of Page"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1872,8 +1726,6 @@
         "script_level.level_keys": [
           "CSDU2 - Missing Home Link"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1894,8 +1746,6 @@
         "script_level.level_keys": [
           "Stop: Website Navigation"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1916,8 +1766,6 @@
         "script_level.level_keys": [
           "CSDU2 - Nav on Personal Website"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1938,8 +1786,6 @@
         "script_level.level_keys": [
           "CSDU2 - Nav add to Personal Site"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1960,8 +1806,6 @@
         "script_level.level_keys": [
           "CSDU2 - Style to Personal Site"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -1982,8 +1826,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 10 Overview"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2004,8 +1846,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2026,8 +1866,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB Colors"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2048,8 +1886,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB winter"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2070,8 +1906,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB summer"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2092,8 +1926,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB others"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2114,8 +1946,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2136,8 +1966,6 @@
         "script_level.level_keys": [
           "CSD U2 Classes Introduction"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2158,8 +1986,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2180,8 +2006,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2202,8 +2026,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2224,8 +2046,6 @@
         "script_level.level_keys": [
           "Stop: Classes"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2246,8 +2066,6 @@
         "script_level.level_keys": [
           "CSDU2 - Matching Class Style Checker"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2268,8 +2086,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Class Style Personal Site - OLD"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2290,8 +2106,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 11 Overview"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Peer Review",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2312,8 +2126,6 @@
         "script_level.level_keys": [
           "Peer Review: Personal Website"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "Peer Review",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2334,8 +2146,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 12 Overview"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2356,8 +2166,6 @@
         "script_level.level_keys": [
           "Social Sleuth"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2378,8 +2186,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 13 Overview"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 1,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2400,8 +2206,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing Check"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 2,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2422,8 +2226,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 2"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 3,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2444,8 +2246,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 3"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 4,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2466,8 +2266,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 4"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 5,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2488,8 +2286,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 5"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 6,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2510,8 +2306,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 6"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 7,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2532,8 +2326,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 14 Overview"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2554,8 +2346,6 @@
         "script_level.level_keys": [
           "Search Engine Optimizer"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2576,8 +2366,6 @@
         "script_level.level_keys": [
           "How Search Works"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 3,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2598,8 +2386,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 1"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 4,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2620,8 +2406,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 5,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2642,8 +2426,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 3"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 6,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2664,8 +2446,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 5"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 7,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2686,8 +2466,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO Final"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 8,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2708,8 +2486,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 15 Overview"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2730,8 +2506,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Portfolio"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2752,8 +2526,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Fair Use"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2774,8 +2546,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Research Content"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 4,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2796,8 +2566,6 @@
         "script_level.level_keys": [
           "CSDu2 IP CC Search"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 5,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2818,8 +2586,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Add Images"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 6,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2840,8 +2606,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Final Touches"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 7,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2862,8 +2626,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 16 Overview"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 1,
         "lesson.key": "Project: Personal Portfolio Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2884,8 +2646,6 @@
         "script_level.level_keys": [
           "Final Personal Website - OLD"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 2,
         "lesson.key": "Project: Personal Portfolio Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2902,8 +2662,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 1 Overview"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Quality Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2915,8 +2673,6 @@
         "script_level.level_keys": [
           "Rating Websites"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Quality Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2928,8 +2684,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 2 Overview"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Website Design",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2941,8 +2695,6 @@
         "script_level.level_keys": [
           "Personal Website Examples"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Website Design",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2954,8 +2706,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 3 Overview"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Describing Web pages",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2967,8 +2717,6 @@
         "script_level.level_keys": [
           "CSD Design Instructions Site"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Describing Web pages",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2980,8 +2728,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 4 Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -2993,8 +2739,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 1"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3006,8 +2750,6 @@
         "script_level.level_keys": [
           "CSDU2 - Type Anything"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 3,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3019,8 +2761,6 @@
         "script_level.level_keys": [
           "CSDU2 - Inspector Warm Up"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 4,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3032,8 +2772,6 @@
         "script_level.level_keys": [
           "Introduction to HTML"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 5,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3045,8 +2783,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 6,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3058,8 +2794,6 @@
         "script_level.level_keys": [
           "CSDU2 - First-Weblab"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 7,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3071,8 +2805,6 @@
         "script_level.level_keys": [
           "CSDU2 - Headers"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 8,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3084,8 +2816,6 @@
         "script_level.level_keys": [
           "CSDU2 - Paragraphs 2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 9,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3097,8 +2827,6 @@
         "script_level.level_keys": [
           "CSD Header Size Prediction"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 10,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3110,8 +2838,6 @@
         "script_level.level_keys": [
           "CSDU2 - Paragraphs 3"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 11,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3123,8 +2849,6 @@
         "script_level.level_keys": [
           "Hobbies Page Example"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 12,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3136,8 +2860,6 @@
         "script_level.level_keys": [
           "CSDU2 - HobbiesPage"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 13,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3149,8 +2871,6 @@
         "script_level.level_keys": [
           "Stop: Hobbies Page"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 14,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3162,8 +2882,6 @@
         "script_level.level_keys": [
           "Recipe Page Example"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 15,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3175,8 +2893,6 @@
         "script_level.level_keys": [
           "CSDU2 - Recipe Page Start"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 16,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3188,8 +2904,6 @@
         "script_level.level_keys": [
           "CSDU2 - Unordered Lists"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 17,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3201,8 +2915,6 @@
         "script_level.level_keys": [
           "CSDU2 - ordered Lists"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 18,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3214,8 +2926,6 @@
         "script_level.level_keys": [
           "CSDU2 - Finish Recipe"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 19,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3227,8 +2937,6 @@
         "script_level.level_keys": [
           "Intro to Web Lab - Part 3"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 20,
         "lesson.key": "Text on the Web",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3240,8 +2948,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 5 Overview"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 1,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3253,8 +2959,6 @@
         "script_level.level_keys": [
           "CSDU2 - Recipe Valid Update"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 2,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3266,8 +2970,6 @@
         "script_level.level_keys": [
           "CSDU2 - head and body tag intro"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 3,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3279,8 +2981,6 @@
         "script_level.level_keys": [
           "CSDU2 - Hobbies Valid Update"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 4,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3292,8 +2992,6 @@
         "script_level.level_keys": [
           "CSDU2 - Local Images"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 5,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3305,8 +3003,6 @@
         "script_level.level_keys": [
           "Stop: Images"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 6,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3318,8 +3014,6 @@
         "script_level.level_keys": [
           "CSDU2 - About Me Page start"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 7,
         "lesson.key": "Images in HTML",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3331,8 +3025,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 6 Overview"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3344,8 +3036,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3357,8 +3047,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3370,8 +3058,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 3"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3383,8 +3069,6 @@
         "script_level.level_keys": [
           "CSDU2 - Debugging 4"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 5,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3396,8 +3080,6 @@
         "script_level.level_keys": [
           "CSD Creating Debugging Strat"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 6,
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3409,8 +3091,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 7 Overview"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3422,8 +3102,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3435,8 +3113,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h1"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3448,8 +3124,6 @@
         "script_level.level_keys": [
           "CSD U2 text style h3"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3461,8 +3135,6 @@
         "script_level.level_keys": [
           "CSD U2 CSS explain"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 5,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3474,8 +3146,6 @@
         "script_level.level_keys": [
           "CSD U2 text style size"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 6,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3487,8 +3157,6 @@
         "script_level.level_keys": [
           "CSD U2 text style font family"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 7,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3500,8 +3168,6 @@
         "script_level.level_keys": [
           "CSD U2 text style decoration"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 8,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3513,8 +3179,6 @@
         "script_level.level_keys": [
           "CSD U2 text style text align"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 9,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3526,8 +3190,6 @@
         "script_level.level_keys": [
           "CSD U2 text style review"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 10,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3539,8 +3201,6 @@
         "script_level.level_keys": [
           "Video: Intro to CSS Part 2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 11,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3552,8 +3212,6 @@
         "script_level.level_keys": [
           "CSD U2 add file - OLD"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 12,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3565,8 +3223,6 @@
         "script_level.level_keys": [
           "CSD U2 text style freeplay - OLD"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 13,
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3578,8 +3234,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 8 Overview"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3591,8 +3245,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style sample"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3604,8 +3256,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style bgcolor"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 3,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3617,8 +3267,6 @@
         "script_level.level_keys": [
           "CSD U2 more CSS"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 4,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3630,8 +3278,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style body"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 5,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3643,8 +3289,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style border"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 6,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3656,8 +3300,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style borderradius"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 7,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3669,8 +3311,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style float"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 8,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3682,8 +3322,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style width"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 9,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3695,8 +3333,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style margin"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 10,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3708,8 +3344,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style review"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 11,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3721,8 +3355,6 @@
         "script_level.level_keys": [
           "CSD U2 layout style freeplay - OLD"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 12,
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3734,8 +3366,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 9 Overview"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 1,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3747,8 +3377,6 @@
         "script_level.level_keys": [
           "CSDU2 - Starting Personal Home Page"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 2,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3760,8 +3388,6 @@
         "script_level.level_keys": [
           "Stop: Personal Home Page Warm Up"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 3,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3773,8 +3399,6 @@
         "script_level.level_keys": [
           "CSDU2 - Multi Site First"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 4,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3786,8 +3410,6 @@
         "script_level.level_keys": [
           "CSDU2 - New Html Files"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 5,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3799,8 +3421,6 @@
         "script_level.level_keys": [
           "CSDU2 - Copy Code"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 6,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3812,8 +3432,6 @@
         "script_level.level_keys": [
           "CSDU2 - New Class Files"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 7,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3825,8 +3443,6 @@
         "script_level.level_keys": [
           "CSDU2 - Link and Nav"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 8,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3838,8 +3454,6 @@
         "script_level.level_keys": [
           "CSDU2 - Header of Page"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 9,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3851,8 +3465,6 @@
         "script_level.level_keys": [
           "CSDU2 - Missing Home Link"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 10,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3864,8 +3476,6 @@
         "script_level.level_keys": [
           "Stop: Website Navigation"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 11,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3877,8 +3487,6 @@
         "script_level.level_keys": [
           "CSDU2 - Nav on Personal Website"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 12,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3890,8 +3498,6 @@
         "script_level.level_keys": [
           "CSDU2 - Nav add to Personal Site"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 13,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3903,8 +3509,6 @@
         "script_level.level_keys": [
           "CSDU2 - Style to Personal Site"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 14,
         "lesson.key": "Multi-Page Websites",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3916,8 +3520,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 10 Overview"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 1,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3929,8 +3531,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB intro"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 2,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3942,8 +3542,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB Colors"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 3,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3955,8 +3553,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB winter"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 4,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3968,8 +3564,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB summer"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 5,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3981,8 +3575,6 @@
         "script_level.level_keys": [
           "CSD U2 RGB others"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 6,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -3994,8 +3586,6 @@
         "script_level.level_keys": [
           "CSD U2 classes sample"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 7,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4007,8 +3597,6 @@
         "script_level.level_keys": [
           "CSD U2 Classes Introduction"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 8,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4020,8 +3608,6 @@
         "script_level.level_keys": [
           "CSD U2 classes modify"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 9,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4033,8 +3619,6 @@
         "script_level.level_keys": [
           "CSD U2 classes spring"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 10,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4046,8 +3630,6 @@
         "script_level.level_keys": [
           "CSD U2 classes summer"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 11,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4059,8 +3641,6 @@
         "script_level.level_keys": [
           "Stop: Classes"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 12,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4072,8 +3652,6 @@
         "script_level.level_keys": [
           "CSDU2 - Matching Class Style Checker"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 13,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4085,8 +3663,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Class Style Personal Site - OLD"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 14,
         "lesson.key": "Classes",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4098,8 +3674,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 11 Overview"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Peer Review",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4111,8 +3685,6 @@
         "script_level.level_keys": [
           "Peer Review: Personal Website"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 2,
         "lesson.key": "Peer Review",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4124,8 +3696,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 12 Overview"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4137,8 +3707,6 @@
         "script_level.level_keys": [
           "Social Sleuth"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4150,8 +3718,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 13 Overview"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 1,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4163,8 +3729,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing Check"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 2,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4176,8 +3740,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 2"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 3,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4189,8 +3751,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 3"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 4,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4202,8 +3762,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 4"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 5,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4215,8 +3773,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 5"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 6,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4228,8 +3784,6 @@
         "script_level.level_keys": [
           "CSDU2 - PW - Pre Publishing 6"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 7,
         "lesson.key": "Publishing a Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4241,8 +3795,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 14 Overview"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 1,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4254,8 +3806,6 @@
         "script_level.level_keys": [
           "Search Engine Optimizer"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 2,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4267,8 +3817,6 @@
         "script_level.level_keys": [
           "How Search Works"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 3,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4280,8 +3828,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 1"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 4,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4293,8 +3839,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 2"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 5,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4306,8 +3850,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 3"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 6,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4319,8 +3861,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO 5"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 7,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4332,8 +3872,6 @@
         "script_level.level_keys": [
           "CSDU2 - SEO Final"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 8,
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4345,8 +3883,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 15 Overview"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4358,8 +3894,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Portfolio"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4371,8 +3905,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Fair Use"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4384,8 +3916,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Research Content"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 4,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4397,8 +3927,6 @@
         "script_level.level_keys": [
           "CSDu2 IP CC Search"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 5,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4410,8 +3938,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Add Images"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 6,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4423,8 +3949,6 @@
         "script_level.level_keys": [
           "CSDU2 IP Final Touches"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 7,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4436,8 +3960,6 @@
         "script_level.level_keys": [
           "Unit 2 Lesson 16 Overview"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 1,
         "lesson.key": "Project: Personal Portfolio Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"
@@ -4449,8 +3971,6 @@
         "script_level.level_keys": [
           "Final Personal Website - OLD"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 2,
         "lesson.key": "Project: Personal Portfolio Website",
         "lesson_group.key": "",
         "script.name": "csd2-old"

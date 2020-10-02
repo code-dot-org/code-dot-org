@@ -68,8 +68,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifvid"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -90,8 +88,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -112,8 +108,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -134,8 +128,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new1a"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -156,8 +148,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2a"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -178,8 +168,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -200,8 +188,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -222,8 +208,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifelsevid"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -244,8 +228,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum4"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -266,8 +248,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum5"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -288,8 +268,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3a"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -310,8 +288,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3b"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -332,8 +308,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3c"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -354,8 +328,6 @@
         "script_level.level_keys": [
           "KTest1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -376,8 +348,6 @@
         "script_level.level_keys": [
           "KTest2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -398,8 +368,6 @@
         "script_level.level_keys": [
           "testArtistForTestK"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -420,8 +388,6 @@
         "script_level.level_keys": [
           "testBeeFarmer"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -442,8 +408,6 @@
         "script_level.level_keys": [
           "testPlaylabLevel"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -460,8 +424,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifvid"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -473,8 +435,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -486,8 +446,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -499,8 +457,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new1a"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -512,8 +468,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2a"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -525,8 +479,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -538,8 +490,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum3"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -551,8 +501,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifelsevid"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -564,8 +512,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum4"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -577,8 +523,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum5"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -590,8 +534,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3a"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -603,8 +545,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3b"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -616,8 +556,6 @@
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3c"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -629,8 +567,6 @@
         "script_level.level_keys": [
           "KTest1"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -642,8 +578,6 @@
         "script_level.level_keys": [
           "KTest2"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -655,8 +589,6 @@
         "script_level.level_keys": [
           "testArtistForTestK"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -668,8 +600,6 @@
         "script_level.level_keys": [
           "testBeeFarmer"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"
@@ -681,8 +611,6 @@
         "script_level.level_keys": [
           "testPlaylabLevel"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 5,
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
         "script.name": "kinderTest"

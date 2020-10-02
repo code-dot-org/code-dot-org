@@ -298,8 +298,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1_control"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -321,8 +319,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1_control"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -344,8 +340,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_control"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -367,8 +361,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3_control"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -390,8 +382,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_control"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -413,8 +403,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_control"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -436,8 +424,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4_control"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -459,8 +445,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_control"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -482,8 +466,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_control"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -506,8 +488,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_control"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -529,8 +509,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5a_control"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -552,8 +530,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5c_control"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -575,8 +551,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_control"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -598,8 +572,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_control"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -621,8 +593,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_control"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -644,8 +614,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist_control"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -667,8 +635,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_control"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -690,8 +656,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_control"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -714,8 +678,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_control"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -737,8 +699,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4_control"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -760,8 +720,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5_control"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -783,8 +741,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6_control"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -807,8 +763,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8_control"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -829,8 +783,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_control"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -851,8 +803,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_control"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -874,8 +824,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1_control"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -897,8 +845,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_2_control"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -920,8 +866,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_3_control"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -943,8 +887,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_4_control"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -966,8 +908,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_5_control"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -989,8 +929,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_6_control"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1012,8 +950,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_7a_control"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1035,8 +971,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_8_control"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1058,8 +992,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_9b_control"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1081,8 +1013,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_10_control"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1104,8 +1034,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_11_control"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1127,8 +1055,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_control"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1150,8 +1076,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_control"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1173,8 +1097,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_control"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1196,8 +1118,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_control"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1219,8 +1139,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_control"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1242,8 +1160,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_control"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1265,8 +1181,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_control"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1288,8 +1202,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_control"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1311,8 +1223,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_control"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1334,8 +1244,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_control"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1357,8 +1265,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_control"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1381,8 +1287,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_control"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1404,8 +1308,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_control"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -1426,8 +1328,6 @@
         "script_level.level_keys": [
           "BigEvent-Unplugged_control"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "csf_events",
         "script.name": "time4cs-control-unit-1"
@@ -1448,8 +1348,6 @@
         "script_level.level_keys": [
           "SimonSays-Unplugged_control"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1471,8 +1369,6 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_control"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1494,8 +1390,6 @@
         "script_level.level_keys": [
           "Fish Tank 1-validated_control"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1517,8 +1411,6 @@
         "script_level.level_keys": [
           "Fish Tank 2-validated_control"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1540,8 +1432,6 @@
         "script_level.level_keys": [
           "Fish Tank 3-validated_control"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1563,8 +1453,6 @@
         "script_level.level_keys": [
           "Fish Tank 4-validated_control"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1586,8 +1474,6 @@
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_control"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1609,8 +1495,6 @@
         "script_level.level_keys": [
           "Fish Tank 5-validated_control"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 7,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1632,8 +1516,6 @@
         "script_level.level_keys": [
           "Fish Tank 6-validated_control"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 8,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1655,8 +1537,6 @@
         "script_level.level_keys": [
           "Fish Tank 7-validated_control"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 9,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1678,8 +1558,6 @@
         "script_level.level_keys": [
           "Dance Party 1-validated_control"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1701,8 +1579,6 @@
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_control"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1724,8 +1600,6 @@
         "script_level.level_keys": [
           "Dance Party 2_control"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1747,8 +1621,6 @@
         "script_level.level_keys": [
           "Dance Party 3_control"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1770,8 +1642,6 @@
         "script_level.level_keys": [
           "Dance Party 4_control"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1793,8 +1663,6 @@
         "script_level.level_keys": [
           "Dance Party 5_control"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1816,8 +1684,6 @@
         "script_level.level_keys": [
           "Dance Party 6_control"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1839,8 +1705,6 @@
         "script_level.level_keys": [
           "Dance Party 7_control"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 8,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1862,8 +1726,6 @@
         "script_level.level_keys": [
           "Dance Party Freeplay_control"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 9,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -1884,8 +1746,6 @@
         "script_level.level_keys": [
           "PrivatePersonalInformation-Unplugged_control"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -1907,8 +1767,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_1_control"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -1930,8 +1788,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_2_control"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -1953,8 +1809,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_3_control"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -1976,8 +1830,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_4_control"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -1999,8 +1851,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_5_control"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -2022,8 +1872,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_6_control"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -2044,8 +1892,6 @@
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2019_control"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
         "script.name": "time4cs-control-unit-1"
@@ -2067,8 +1913,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_control"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2090,8 +1934,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_control"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2113,8 +1955,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_control"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2136,8 +1976,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_control"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2159,8 +1997,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_control"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2182,8 +2018,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_control"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2205,8 +2039,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_control"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2228,8 +2060,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_control"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2251,8 +2081,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_control"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2274,8 +2102,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_control"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2297,8 +2123,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_control"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2321,8 +2145,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_control"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2344,8 +2166,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_control"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 13,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -2362,8 +2182,6 @@
         "script_level.level_keys": [
           "courseD_video_ramp1_control"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2375,8 +2193,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp1_control"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2388,8 +2204,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging9_control"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2401,8 +2215,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp3_control"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2414,8 +2226,6 @@
         "script_level.level_keys": [
           "courseC_video_debugging_control"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2427,8 +2237,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging2_control"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2440,8 +2248,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp4_control"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2453,8 +2259,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging4_control"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2466,8 +2270,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging6_control"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2479,8 +2281,6 @@
         "script_level.level_keys": [
           "courseC_maze_debugging7_control"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2492,8 +2292,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5a_control"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2505,8 +2303,6 @@
         "script_level.level_keys": [
           "courseD_maze_ramp5c_control"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "time4cs-control-unit-1"
@@ -2518,8 +2314,6 @@
         "script_level.level_keys": [
           "courseC_video_artist_control"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2531,8 +2325,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog1_control"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2544,8 +2336,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog2_control"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2557,8 +2347,6 @@
         "script_level.level_keys": [
           "ramp_video_loopsArtist_control"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2570,8 +2358,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog3_control"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 5,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2583,8 +2369,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog4_control"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 6,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2596,8 +2380,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog7_control"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 7,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2609,8 +2391,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops4_control"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 8,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2622,8 +2402,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops5_control"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 9,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2635,8 +2413,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops6_control"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 10,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2648,8 +2424,6 @@
         "script_level.level_keys": [
           "ramp_artist_loops8_control"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 11,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2661,8 +2435,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge1_control"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 12,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2674,8 +2446,6 @@
         "script_level.level_keys": [
           "courseC_artist_prog_challenge2a_control"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 13,
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "time4cs-control-unit-1"
@@ -2687,8 +2457,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1_control"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2700,8 +2468,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_2_control"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2713,8 +2479,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_3_control"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2726,8 +2490,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_4_control"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2739,8 +2501,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_5_control"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2752,8 +2512,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_6_control"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 6,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2765,8 +2523,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_7a_control"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 7,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2778,8 +2534,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_8_control"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 8,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2791,8 +2545,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_9b_control"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 9,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2804,8 +2556,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_10_control"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 10,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2817,8 +2567,6 @@
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_11_control"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 11,
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2830,8 +2578,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_control"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2843,8 +2589,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_control"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2856,8 +2600,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_control"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2869,8 +2611,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_control"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2882,8 +2622,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_control"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2895,8 +2633,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_control"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2908,8 +2644,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_control"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2921,8 +2655,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_control"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2934,8 +2666,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_control"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2947,8 +2677,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_control"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2960,8 +2688,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_control"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2973,8 +2699,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_control"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2986,8 +2710,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_control"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "time4cs-control-unit-1"
@@ -2999,8 +2721,6 @@
         "script_level.level_keys": [
           "BigEvent-Unplugged_control"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "csf_events",
         "script.name": "time4cs-control-unit-1"
@@ -3012,8 +2732,6 @@
         "script_level.level_keys": [
           "SimonSays-Unplugged_control"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3025,8 +2743,6 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_control"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 1,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3038,8 +2754,6 @@
         "script_level.level_keys": [
           "Fish Tank 1-validated_control"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 2,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3051,8 +2765,6 @@
         "script_level.level_keys": [
           "Fish Tank 2-validated_control"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 3,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3064,8 +2776,6 @@
         "script_level.level_keys": [
           "Fish Tank 3-validated_control"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 4,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3077,8 +2787,6 @@
         "script_level.level_keys": [
           "Fish Tank 4-validated_control"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 5,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3090,8 +2798,6 @@
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_control"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 6,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3103,8 +2809,6 @@
         "script_level.level_keys": [
           "Fish Tank 5-validated_control"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 7,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3116,8 +2820,6 @@
         "script_level.level_keys": [
           "Fish Tank 6-validated_control"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 8,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3129,8 +2831,6 @@
         "script_level.level_keys": [
           "Fish Tank 7-validated_control"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 9,
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3142,8 +2842,6 @@
         "script_level.level_keys": [
           "Dance Party 1-validated_control"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 1,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3155,8 +2853,6 @@
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_control"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 2,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3168,8 +2864,6 @@
         "script_level.level_keys": [
           "Dance Party 2_control"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 3,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3181,8 +2875,6 @@
         "script_level.level_keys": [
           "Dance Party 3_control"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 4,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3194,8 +2886,6 @@
         "script_level.level_keys": [
           "Dance Party 4_control"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 5,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3207,8 +2897,6 @@
         "script_level.level_keys": [
           "Dance Party 5_control"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 6,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3220,8 +2908,6 @@
         "script_level.level_keys": [
           "Dance Party 6_control"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 7,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3233,8 +2919,6 @@
         "script_level.level_keys": [
           "Dance Party 7_control"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 8,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3246,8 +2930,6 @@
         "script_level.level_keys": [
           "Dance Party Freeplay_control"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 9,
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "time4cs-control-unit-1"
@@ -3259,8 +2941,6 @@
         "script_level.level_keys": [
           "PrivatePersonalInformation-Unplugged_control"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3272,8 +2952,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_1_control"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3285,8 +2963,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_2_control"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3298,8 +2974,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_3_control"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3311,8 +2985,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_4_control"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3324,8 +2996,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_5_control"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3337,8 +3007,6 @@
         "script_level.level_keys": [
           "courseE_aboutme_6_control"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
         "script.name": "time4cs-control-unit-1"
@@ -3350,8 +3018,6 @@
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2019_control"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 1,
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
         "script.name": "time4cs-control-unit-1"
@@ -3363,8 +3029,6 @@
         "script_level.level_keys": [
           "courseD_video_whileIntro_control"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 1,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3376,8 +3040,6 @@
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_control"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 2,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3389,8 +3051,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_control"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 3,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3402,8 +3062,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_control"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 4,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3415,8 +3073,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_control"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 5,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3428,8 +3084,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_control"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 6,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3441,8 +3095,6 @@
         "script_level.level_keys": [
           "courseD_video_repeatUntil_control"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 7,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3454,8 +3106,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_control"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 8,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3467,8 +3117,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_control"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 9,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3480,8 +3128,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_control"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 10,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3493,8 +3139,6 @@
         "script_level.level_keys": [
           "courseE_video_BeeifElse_control"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 11,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3506,8 +3150,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_control"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 12,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
@@ -3519,8 +3161,6 @@
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_control"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 13,
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
         "script.name": "time4cs-control-unit-1"
