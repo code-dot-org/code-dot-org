@@ -97,8 +97,6 @@
         "script_level.level_keys": [
           "U5 - Explore PT Prep - Student Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Explore PT Prep",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -119,8 +117,6 @@
         "script_level.level_keys": [
           "U5 - Explore PT - Student Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Explore PT",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -141,8 +137,6 @@
         "script_level.level_keys": [
           "U5 - Create PT Prep - Student Introduction"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -163,8 +157,6 @@
         "script_level.level_keys": [
           "U5 - Create PT - Student Introduction"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -181,8 +173,6 @@
         "script_level.level_keys": [
           "U5 - Explore PT Prep - Student Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Explore PT Prep",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -194,8 +184,6 @@
         "script_level.level_keys": [
           "U5 - Explore PT - Student Introduction"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Explore PT",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -207,8 +195,6 @@
         "script_level.level_keys": [
           "U5 - Create PT Prep - Student Introduction"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep",
         "lesson_group.key": "",
         "script.name": "cspunit5"
@@ -220,8 +206,6 @@
         "script_level.level_keys": [
           "U5 - Create PT - Student Introduction"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT",
         "lesson_group.key": "",
         "script.name": "cspunit5"

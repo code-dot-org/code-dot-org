@@ -210,8 +210,6 @@
         "script_level.level_keys": [
           "sciPD Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -232,8 +230,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -254,8 +250,6 @@
         "script_level.level_keys": [
           "PDSci commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -276,8 +270,6 @@
         "script_level.level_keys": [
           "sciPD commitment match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -298,8 +290,6 @@
         "script_level.level_keys": [
           "sciPD what to expect"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -320,8 +310,6 @@
         "script_level.level_keys": [
           "sciPD intro video"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -342,8 +330,6 @@
         "script_level.level_keys": [
           "sciPD expectations"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -364,8 +350,6 @@
         "script_level.level_keys": [
           "sciPD meet and greet"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -386,8 +370,6 @@
         "script_level.level_keys": [
           "AlgPD Break"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -408,8 +390,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive video"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -430,8 +410,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -452,8 +430,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -474,8 +450,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive forum"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -496,8 +470,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS video"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -518,8 +490,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS 1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -540,8 +510,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -562,8 +530,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS forum"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -584,8 +550,6 @@
         "script_level.level_keys": [
           "sciPD agent based video"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -606,8 +570,6 @@
         "script_level.level_keys": [
           "sciPD agent based 1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -628,8 +590,6 @@
         "script_level.level_keys": [
           "sciPD agent based 2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -650,8 +610,6 @@
         "script_level.level_keys": [
           "sciPD agent based forum"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -672,8 +630,6 @@
         "script_level.level_keys": [
           "sciPD computer models video"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -694,8 +650,6 @@
         "script_level.level_keys": [
           "sciPD computer models 1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -716,8 +670,6 @@
         "script_level.level_keys": [
           "sciPD computer models 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -738,8 +690,6 @@
         "script_level.level_keys": [
           "sciPD computer models forum"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -760,8 +710,6 @@
         "script_level.level_keys": [
           "sciPD class models video"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -782,8 +730,6 @@
         "script_level.level_keys": [
           "sciPD class models 1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -804,8 +750,6 @@
         "script_level.level_keys": [
           "sciPD class models 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -826,8 +770,6 @@
         "script_level.level_keys": [
           "sciPD class models forum"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -848,8 +790,6 @@
         "script_level.level_keys": [
           "sciPD culture video"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -870,8 +810,6 @@
         "script_level.level_keys": [
           "sciPD culture 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -892,8 +830,6 @@
         "script_level.level_keys": [
           "sciPD culture 2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -914,8 +850,6 @@
         "script_level.level_keys": [
           "sciPD culture forum"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -936,8 +870,6 @@
         "script_level.level_keys": [
           "sciPD framework video"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -958,8 +890,6 @@
         "script_level.level_keys": [
           "sciPD framework 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -980,8 +910,6 @@
         "script_level.level_keys": [
           "sciPD framework 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1002,8 +930,6 @@
         "script_level.level_keys": [
           "sciPD framework forum"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1024,8 +950,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro video"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1046,8 +970,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1068,8 +990,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1090,8 +1010,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1112,8 +1030,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1134,8 +1050,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1156,8 +1070,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1178,8 +1090,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1200,8 +1110,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 4"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1222,8 +1130,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 5"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1244,8 +1150,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 6"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1266,8 +1170,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 7"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1288,8 +1190,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 8"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1310,8 +1210,6 @@
         "script_level.level_keys": [
           "sciPD survey1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1332,8 +1230,6 @@
         "script_level.level_keys": [
           "sciPD finish"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1350,8 +1246,6 @@
         "script_level.level_keys": [
           "sciPD Intro"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1363,8 +1257,6 @@
         "script_level.level_keys": [
           "PDECS tour"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1376,8 +1268,6 @@
         "script_level.level_keys": [
           "PDSci commitment"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1389,8 +1279,6 @@
         "script_level.level_keys": [
           "sciPD commitment match"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1402,8 +1290,6 @@
         "script_level.level_keys": [
           "sciPD what to expect"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1415,8 +1301,6 @@
         "script_level.level_keys": [
           "sciPD intro video"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1428,8 +1312,6 @@
         "script_level.level_keys": [
           "sciPD expectations"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 3,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1441,8 +1323,6 @@
         "script_level.level_keys": [
           "sciPD meet and greet"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 4,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1454,8 +1334,6 @@
         "script_level.level_keys": [
           "AlgPD Break"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 5,
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1467,8 +1345,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive video"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1480,8 +1356,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive 1"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1493,8 +1367,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive 2"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1506,8 +1378,6 @@
         "script_level.level_keys": [
           "sciPD complex adaptive forum"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1519,8 +1389,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS video"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1532,8 +1400,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS 1"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1545,8 +1411,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS 2"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1558,8 +1422,6 @@
         "script_level.level_keys": [
           "sciPD intro to CS forum"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1571,8 +1433,6 @@
         "script_level.level_keys": [
           "sciPD agent based video"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1584,8 +1444,6 @@
         "script_level.level_keys": [
           "sciPD agent based 1"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1597,8 +1455,6 @@
         "script_level.level_keys": [
           "sciPD agent based 2"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1610,8 +1466,6 @@
         "script_level.level_keys": [
           "sciPD agent based forum"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1623,8 +1477,6 @@
         "script_level.level_keys": [
           "sciPD computer models video"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 1,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1636,8 +1488,6 @@
         "script_level.level_keys": [
           "sciPD computer models 1"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 2,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1649,8 +1499,6 @@
         "script_level.level_keys": [
           "sciPD computer models 2"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 3,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1662,8 +1510,6 @@
         "script_level.level_keys": [
           "sciPD computer models forum"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 4,
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1675,8 +1521,6 @@
         "script_level.level_keys": [
           "sciPD class models video"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1688,8 +1532,6 @@
         "script_level.level_keys": [
           "sciPD class models 1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1701,8 +1543,6 @@
         "script_level.level_keys": [
           "sciPD class models 2"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1714,8 +1554,6 @@
         "script_level.level_keys": [
           "sciPD class models forum"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1727,8 +1565,6 @@
         "script_level.level_keys": [
           "sciPD culture video"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 1,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1740,8 +1576,6 @@
         "script_level.level_keys": [
           "sciPD culture 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 2,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1753,8 +1587,6 @@
         "script_level.level_keys": [
           "sciPD culture 2"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 3,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1766,8 +1598,6 @@
         "script_level.level_keys": [
           "sciPD culture forum"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 4,
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1779,8 +1609,6 @@
         "script_level.level_keys": [
           "sciPD framework video"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 1,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1792,8 +1620,6 @@
         "script_level.level_keys": [
           "sciPD framework 1"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 2,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1805,8 +1631,6 @@
         "script_level.level_keys": [
           "sciPD framework 2"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 3,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1818,8 +1642,6 @@
         "script_level.level_keys": [
           "sciPD framework forum"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 4,
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1831,8 +1653,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro video"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 1,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1844,8 +1664,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 1"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 2,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1857,8 +1675,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 2"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 3,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1870,8 +1686,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 3"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 4,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1883,8 +1697,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo intro 4"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 5,
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1896,8 +1708,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 1"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 1,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1909,8 +1719,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 2"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 2,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1922,8 +1730,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 3"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 3,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1935,8 +1741,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 4"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 4,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1948,8 +1752,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 5"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 5,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1961,8 +1763,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 6"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 6,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1974,8 +1774,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 7"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 7,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -1987,8 +1785,6 @@
         "script_level.level_keys": [
           "sciPD StarLogo tutorial 8"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 8,
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -2000,8 +1796,6 @@
         "script_level.level_keys": [
           "sciPD survey1"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"
@@ -2013,8 +1807,6 @@
         "script_level.level_keys": [
           "sciPD finish"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
         "script.name": "sciencePD-iZone"

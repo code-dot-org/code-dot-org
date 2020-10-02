@@ -208,8 +208,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -230,8 +228,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -252,8 +248,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -274,8 +268,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -296,8 +288,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -318,8 +308,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -340,8 +328,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -362,8 +348,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -384,8 +368,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -406,8 +388,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -428,8 +408,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -450,8 +428,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -472,8 +448,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_predict1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -494,8 +468,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -516,8 +488,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -538,8 +508,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -560,8 +528,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -582,8 +548,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -604,8 +568,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 8,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -626,8 +588,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops9"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 9,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -648,8 +608,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 10,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -670,8 +628,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_predict2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 11,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -692,8 +648,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops11"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 12,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -714,8 +668,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPrePre1a"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -736,8 +688,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPre1a"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -758,8 +708,6 @@
         "script_level.level_keys": [
           "courseC_artist_loop1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -780,8 +728,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -802,8 +748,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -824,8 +768,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -846,8 +788,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -868,8 +808,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5a"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -890,8 +828,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -912,8 +848,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops6a"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -934,8 +868,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops7a"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -956,8 +888,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -978,8 +908,6 @@
         "script_level.level_keys": [
           "courseD_video_debugging"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1000,8 +928,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1022,8 +948,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging2"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1044,8 +968,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging3"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1066,8 +988,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging4"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1088,8 +1008,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging5"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1110,8 +1028,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging6"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1132,8 +1048,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging7"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1154,8 +1068,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging8"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1176,8 +1088,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging9"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1198,8 +1108,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging10_predict1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1220,8 +1128,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1242,8 +1148,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1264,8 +1168,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1286,8 +1188,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1308,8 +1208,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1330,8 +1228,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1352,8 +1248,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1374,8 +1268,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1396,8 +1288,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1418,8 +1308,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1440,8 +1328,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1462,8 +1348,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1484,8 +1368,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1506,8 +1388,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1528,8 +1408,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1550,8 +1428,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1572,8 +1448,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1594,8 +1468,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1616,8 +1488,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1638,8 +1508,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1660,8 +1528,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1682,8 +1548,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1704,8 +1568,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1726,8 +1588,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1748,8 +1608,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1770,8 +1628,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1792,8 +1648,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1814,8 +1668,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1836,8 +1688,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5c"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1858,8 +1708,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6c"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1880,8 +1728,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7c"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1902,8 +1748,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables8c"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 9,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1924,8 +1768,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 10,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1946,8 +1788,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1968,8 +1808,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -1990,8 +1828,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2012,8 +1848,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2034,8 +1868,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2056,8 +1888,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2079,8 +1909,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2101,8 +1929,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2123,8 +1949,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2145,8 +1969,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 10,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2167,8 +1989,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 11,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2189,8 +2009,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 12,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2211,8 +2029,6 @@
         "script_level.level_keys": [
           "courseF_video_IceAgeIntro"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2233,8 +2049,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2255,8 +2069,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_2"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2277,8 +2089,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_3"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2299,8 +2109,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_4"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2321,8 +2129,6 @@
         "script_level.level_keys": [
           "courseF_video_iceAgeRepeat"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2343,8 +2149,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_5"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2365,8 +2169,6 @@
         "script_level.level_keys": [
           "courseF_video_IceAgeEvents"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2387,8 +2189,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_6"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2409,8 +2209,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2431,8 +2229,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_8"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2453,8 +2249,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_9"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2475,8 +2269,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_10"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 13,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2497,8 +2289,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_11"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 14,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2519,8 +2309,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2541,8 +2329,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2563,8 +2349,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2585,8 +2369,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2607,8 +2389,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2629,8 +2409,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2651,8 +2429,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2673,8 +2449,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2695,8 +2469,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2717,8 +2489,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2739,8 +2509,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events1s"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2761,8 +2529,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events2s"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2783,8 +2549,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events5s"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2805,8 +2569,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events6s"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2827,8 +2589,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events7s"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2849,8 +2609,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events10s"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2871,8 +2629,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events11s"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2893,8 +2649,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events12s"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2915,8 +2669,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars1"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 1,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2937,8 +2689,6 @@
         "script_level.level_keys": [
           "CourseF_video_PlayLab_vars"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 2,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2959,8 +2709,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars2"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 3,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -2981,8 +2729,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars3"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 4,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3003,8 +2749,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 5,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3025,8 +2769,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 6,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3047,8 +2789,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 7,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3069,8 +2809,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 8,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3091,8 +2829,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 9,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3113,8 +2849,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 10,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3135,8 +2869,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars10"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 11,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3153,8 +2885,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog1"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3166,8 +2896,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3179,8 +2907,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3192,8 +2918,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog4"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3205,8 +2929,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3218,8 +2940,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog6"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3231,8 +2951,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog7"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3244,8 +2962,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3257,8 +2973,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog9"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3270,8 +2984,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog10"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3283,8 +2995,6 @@
         "script_level.level_keys": [
           "courseB_starWars_prog11"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3296,8 +3006,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3309,8 +3017,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops1_predict1"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 2,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3322,8 +3028,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops2"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 3,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3335,8 +3039,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops4"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 4,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3348,8 +3050,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops5"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 5,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3361,8 +3061,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops6"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 6,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3374,8 +3072,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops7"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 7,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3387,8 +3083,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops8"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 8,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3400,8 +3094,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops9"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 9,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3413,8 +3105,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 10,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3426,8 +3116,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops10_predict2"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 11,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3439,8 +3127,6 @@
         "script_level.level_keys": [
           "courseC_starWars_loops11"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 12,
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3452,8 +3138,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPrePre1a"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3465,8 +3149,6 @@
         "script_level.level_keys": [
           "courseC_artist_loopsPre1a"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3478,8 +3160,6 @@
         "script_level.level_keys": [
           "courseC_artist_loop1"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3491,8 +3171,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops1a"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3504,8 +3182,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops2a"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3517,8 +3193,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops3a"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3530,8 +3204,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops4a"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3543,8 +3215,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5a"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3556,8 +3226,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops5b"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3569,8 +3237,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops6a"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3582,8 +3248,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops7a"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3595,8 +3259,6 @@
         "script_level.level_keys": [
           "courseC_artist_loops8a"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3608,8 +3270,6 @@
         "script_level.level_keys": [
           "courseD_video_debugging"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3621,8 +3281,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging1"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3634,8 +3292,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging2"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3647,8 +3303,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging3"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3660,8 +3314,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging4"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3673,8 +3325,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging5"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3686,8 +3336,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging6"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3699,8 +3347,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging7"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3712,8 +3358,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging8"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3725,8 +3369,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging9"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3738,8 +3380,6 @@
         "script_level.level_keys": [
           "courseD_collector_debugging10_predict1"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3751,8 +3391,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 1,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3764,8 +3402,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 2,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3777,8 +3413,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 3,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3790,8 +3424,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 4,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3803,8 +3435,6 @@
         "script_level.level_keys": [
           "courseD_artist_project5"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 5,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3816,8 +3446,6 @@
         "script_level.level_keys": [
           "courseD_artist_project1a"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 6,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3829,8 +3457,6 @@
         "script_level.level_keys": [
           "courseD_artist_project2a"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 7,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3842,8 +3468,6 @@
         "script_level.level_keys": [
           "courseD_artist_project3a"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 8,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3855,8 +3479,6 @@
         "script_level.level_keys": [
           "courseD_artist_project4a"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 9,
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3868,8 +3490,6 @@
         "script_level.level_keys": [
           "Overworld Move to Sheep"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3881,8 +3501,6 @@
         "script_level.level_keys": [
           "Overworld Chop Tree"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 2,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3894,8 +3512,6 @@
         "script_level.level_keys": [
           "Overworld Shear Sheep"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 3,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3907,8 +3523,6 @@
         "script_level.level_keys": [
           "Overworld Chop Trees"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 4,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3920,8 +3534,6 @@
         "script_level.level_keys": [
           "Overworld Place Wall"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 5,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3933,8 +3545,6 @@
         "script_level.level_keys": [
           "Overworld House Frame Chosen"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 6,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3946,8 +3556,6 @@
         "script_level.level_keys": [
           "Overworld Plant Crops"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 7,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3959,8 +3567,6 @@
         "script_level.level_keys": [
           "Overworld Avoid Monsters"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 8,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3972,8 +3578,6 @@
         "script_level.level_keys": [
           "Underground Mining Coal"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 9,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3985,8 +3589,6 @@
         "script_level.level_keys": [
           "Underground Iron"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 10,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -3998,8 +3600,6 @@
         "script_level.level_keys": [
           "Underground Avoiding Lava"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 11,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4011,8 +3611,6 @@
         "script_level.level_keys": [
           "Underground If Statements"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 12,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4024,8 +3622,6 @@
         "script_level.level_keys": [
           "Overworld Powered Minecart"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 13,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4037,8 +3633,6 @@
         "script_level.level_keys": [
           "Overworld Free Play 20x20"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 14,
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4050,8 +3644,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables1a"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 1,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4063,8 +3655,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables2b"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 2,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4076,8 +3666,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables3b_josh"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 3,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4089,8 +3677,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4c_predictive1"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 4,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4102,8 +3688,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables4b"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 5,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4115,8 +3699,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables5c"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 6,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4128,8 +3710,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables6c"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 7,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4141,8 +3721,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7c"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 8,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4154,8 +3732,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables8c"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 9,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4167,8 +3743,6 @@
         "script_level.level_keys": [
           "courseF_playlab_variables7b"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 10,
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4180,8 +3754,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops1"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 1,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4193,8 +3765,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops2"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 2,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4206,8 +3776,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops3"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 3,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4219,8 +3787,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops4"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 4,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4232,8 +3798,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops5"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 5,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4245,8 +3809,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops6"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 6,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4258,8 +3820,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops7"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 7,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4271,8 +3831,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops8"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 8,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4284,8 +3842,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 9,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4297,8 +3853,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops9_predict1"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 10,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4310,8 +3864,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge1"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 11,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4323,8 +3875,6 @@
         "script_level.level_keys": [
           "courseD_farmer_condLoops_challenge2"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 12,
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4336,8 +3886,6 @@
         "script_level.level_keys": [
           "courseF_video_IceAgeIntro"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 1,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4349,8 +3897,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_1"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 2,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4362,8 +3908,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_2"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 3,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4375,8 +3919,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_3"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 4,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4388,8 +3930,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_4"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 5,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4401,8 +3941,6 @@
         "script_level.level_keys": [
           "courseF_video_iceAgeRepeat"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 6,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4414,8 +3952,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_5"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 7,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4427,8 +3963,6 @@
         "script_level.level_keys": [
           "courseF_video_IceAgeEvents"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 8,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4440,8 +3974,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_6"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 9,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4453,8 +3985,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_7"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 10,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4466,8 +3996,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_8"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 11,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4479,8 +4007,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_9"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 12,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4492,8 +4018,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_10"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 13,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4505,8 +4029,6 @@
         "script_level.level_keys": [
           "courseF_IceAge_11"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 14,
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4518,8 +4040,6 @@
         "script_level.level_keys": [
           "bounce_1"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 1,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4531,8 +4051,6 @@
         "script_level.level_keys": [
           "bounce_2"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 2,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4544,8 +4062,6 @@
         "script_level.level_keys": [
           "bounce_3"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 3,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4557,8 +4073,6 @@
         "script_level.level_keys": [
           "bounce_4"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 4,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4570,8 +4084,6 @@
         "script_level.level_keys": [
           "bounce_5"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 5,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4583,8 +4095,6 @@
         "script_level.level_keys": [
           "bounce_6"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 6,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4596,8 +4106,6 @@
         "script_level.level_keys": [
           "bounce_7"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 7,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4609,8 +4117,6 @@
         "script_level.level_keys": [
           "bounce_10"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 8,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4622,8 +4128,6 @@
         "script_level.level_keys": [
           "bounce_11"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 9,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4635,8 +4139,6 @@
         "script_level.level_keys": [
           "bounce_12"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 10,
         "lesson.key": "Bounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4648,8 +4150,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events1s"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4661,8 +4161,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events2s"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4674,8 +4172,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events5s"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4687,8 +4183,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events6s"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4700,8 +4194,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events7s"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4713,8 +4205,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events10s"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4726,8 +4216,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events11s"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4739,8 +4227,6 @@
         "script_level.level_keys": [
           "courseD_bounce_events12s"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4752,8 +4238,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars1"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 1,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4765,8 +4249,6 @@
         "script_level.level_keys": [
           "CourseF_video_PlayLab_vars"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 2,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4778,8 +4260,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars2"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 3,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4791,8 +4271,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars3"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 4,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4804,8 +4282,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars4"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 5,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4817,8 +4293,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars5"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 6,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4830,8 +4304,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars6"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 7,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4843,8 +4315,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars7"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 8,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4856,8 +4326,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars8"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 9,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4869,8 +4337,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars9"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 10,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"
@@ -4882,8 +4348,6 @@
         "script_level.level_keys": [
           "CourseF_PlayLab_vars10"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 11,
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
         "script.name": "artist-and-bb8"

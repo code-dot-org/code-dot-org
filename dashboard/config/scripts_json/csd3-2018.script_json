@@ -458,8 +458,6 @@
         "script_level.level_keys": [
           "CSD U3L01 TFMD_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -480,8 +478,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -503,8 +499,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 4_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -526,8 +520,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 3_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -549,8 +541,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 1_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -572,8 +562,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 2_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -594,8 +582,6 @@
         "script_level.level_keys": [
           "CSD U3L02 TFMD_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -616,8 +602,6 @@
         "script_level.level_keys": [
           "CSD U3 Plotting Shapes Shape Lab_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -638,8 +622,6 @@
         "script_level.level_keys": [
           "CSD U3L03 TFMD_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -660,8 +642,6 @@
         "script_level.level_keys": [
           "CSD U3 rect_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -682,8 +662,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -704,8 +682,6 @@
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -726,8 +702,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -749,8 +723,6 @@
         "script_level.level_keys": [
           "CSD U3 fill_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -772,8 +744,6 @@
         "script_level.level_keys": [
           "CSD U3 sequence_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -795,8 +765,6 @@
         "script_level.level_keys": [
           "CSD U3 ellipse_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -818,8 +786,6 @@
         "script_level.level_keys": [
           "CSD U3 debug_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -840,8 +806,6 @@
         "script_level.level_keys": [
           "CSD U3 plotting shapes map_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -863,8 +827,6 @@
         "script_level.level_keys": [
           "CSD U3 picture_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -886,8 +848,6 @@
         "script_level.level_keys": [
           "CSD U3 challenge face_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 12,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -909,8 +869,6 @@
         "script_level.level_keys": [
           "CSD U3 challenge new shape_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 13,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -931,8 +889,6 @@
         "script_level.level_keys": [
           "CSD U3 L3 Freeplay_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 14,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -953,8 +909,6 @@
         "script_level.level_keys": [
           "CSD U3L04 TFMD_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -976,8 +930,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Taller Rectangle_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -998,8 +950,6 @@
         "script_level.level_keys": [
           "CSD U3 shape size map_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1021,8 +971,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Ellipse Behind_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1044,8 +992,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1067,8 +1013,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background2_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1090,8 +1034,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Grass_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1113,8 +1055,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Cloud_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1136,8 +1076,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1158,8 +1096,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Number Map Level_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1181,8 +1117,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse2_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1204,8 +1138,6 @@
         "script_level.level_keys": [
           "CSD U3 Random rainbow snake_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 12,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1226,8 +1158,6 @@
         "script_level.level_keys": [
           "CSD U3 L4 Freeplay_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 13,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1248,8 +1178,6 @@
         "script_level.level_keys": [
           "CSD U3L05 TFMD_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1270,8 +1198,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1293,8 +1219,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1315,8 +1239,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Map_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1338,8 +1260,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where XY_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1361,8 +1281,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables change circle size_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1384,8 +1302,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Poppy_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1406,8 +1322,6 @@
         "script_level.level_keys": [
           "CSD U3 naming map_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1429,8 +1343,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables naming rules v2_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1452,8 +1364,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random with assignment_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1474,8 +1384,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Challenge_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1496,8 +1404,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Challenge_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 12,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1518,8 +1424,6 @@
         "script_level.level_keys": [
           "CSD U3 L5 Freeplay_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 13,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1540,8 +1444,6 @@
         "script_level.level_keys": [
           "CSD U3L06 TFMD_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1562,8 +1464,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1584,8 +1484,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites Map_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1607,8 +1505,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1630,8 +1526,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro predict_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1653,8 +1547,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro debug_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1675,8 +1567,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1697,8 +1587,6 @@
         "script_level.level_keys": [
           "CSD U3 Animation Tab Map_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1720,8 +1608,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1743,8 +1629,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 2_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1766,8 +1650,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 3_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 11,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1789,8 +1671,6 @@
         "script_level.level_keys": [
           "CSD U3 drawSprites placement match"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 12,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1812,8 +1692,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 13,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1835,8 +1713,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text debug_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 14,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1857,8 +1733,6 @@
         "script_level.level_keys": [
           "CSD U3 Scene Example_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 15,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1880,8 +1754,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene drawing_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 16,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1903,8 +1775,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 17,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1926,8 +1796,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene text_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 18,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1948,8 +1816,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene challenge_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 19,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1970,8 +1836,6 @@
         "script_level.level_keys": [
           "CSD U3 L6 Freeplay_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 20,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -1992,8 +1856,6 @@
         "script_level.level_keys": [
           "CSD U3L07 TFMD_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2014,8 +1876,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2037,8 +1897,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 1_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2059,8 +1917,6 @@
         "script_level.level_keys": [
           "CSD U3 The Draw Loop Map_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2082,8 +1938,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged orange and green_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2105,8 +1959,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2128,8 +1980,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 7,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2150,8 +2000,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Properties Map_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 8,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2173,8 +2021,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite x_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 9,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2196,8 +2042,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite y_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 10,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2219,8 +2063,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite rotation_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 11,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2242,8 +2084,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged update your scene_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 12,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2264,8 +2104,6 @@
         "script_level.level_keys": [
           "CSD U3 L7 Freeplay_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 13,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2286,8 +2124,6 @@
         "script_level.level_keys": [
           "CSD U3L08 TFMD_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "The Counter Pattern Unplugged",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2308,8 +2144,6 @@
         "script_level.level_keys": [
           "CSD U3L09 TFMD_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2330,8 +2164,6 @@
         "script_level.level_keys": [
           "CSD: Animating Sprite Movement_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2352,8 +2184,6 @@
         "script_level.level_keys": [
           "CSD Counter Pattern Map_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2375,8 +2205,6 @@
         "script_level.level_keys": [
           "CSD U3 - Simple Counter Predict_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2398,8 +2226,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Right_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 5,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2421,8 +2247,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Left_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 6,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2444,8 +2268,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Predict_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 7,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2467,8 +2289,6 @@
         "script_level.level_keys": [
           "CSD U3 Diagonal Movement_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 8,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2489,8 +2309,6 @@
         "script_level.level_keys": [
           "CSD U3 Watchers Map_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 9,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2512,8 +2330,6 @@
         "script_level.level_keys": [
           "CSD U3 Watcher Predict_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 10,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2535,8 +2351,6 @@
         "script_level.level_keys": [
           "CSD U3 Watcher Debug_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 11,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2558,8 +2372,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 12,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2581,8 +2393,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Gears_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 13,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2604,8 +2414,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Your Own 1_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 14,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2627,8 +2435,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Your Own 2_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 15,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2649,8 +2455,6 @@
         "script_level.level_keys": [
           "CSD sprite movement challenge_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 16,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2671,8 +2475,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish challenge_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 17,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2693,8 +2495,6 @@
         "script_level.level_keys": [
           "CSD U3 L9 Freeplay_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 18,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2715,8 +2515,6 @@
         "script_level.level_keys": [
           "CSD U3L10 TFMD_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Booleans Unplugged",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2737,8 +2535,6 @@
         "script_level.level_keys": [
           "CSD U3L11 TFMD_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2760,8 +2556,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Predict_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2782,8 +2576,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2804,8 +2596,6 @@
         "script_level.level_keys": [
           "CSD Booleans Map_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2827,8 +2617,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Modify_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2850,8 +2638,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2873,8 +2659,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - transition_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2896,8 +2680,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2918,8 +2700,6 @@
         "script_level.level_keys": [
           "csd U3 conditional statements video"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2940,8 +2720,6 @@
         "script_level.level_keys": [
           "CSD If Statements Map_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2963,8 +2741,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -2986,8 +2762,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple 2_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3009,8 +2783,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional 2_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3031,8 +2803,6 @@
         "script_level.level_keys": [
           "CSD U3 L11 Freeplay_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3053,8 +2823,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3076,8 +2844,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3099,8 +2865,6 @@
         "script_level.level_keys": [
           "CSD U3 keydown conditional_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3122,8 +2886,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3145,8 +2907,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Fish_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3168,8 +2928,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Gears_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3191,8 +2949,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3213,8 +2969,6 @@
         "script_level.level_keys": [
           "CSD U3 Animation Edit Map_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3236,8 +2990,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Animations_2018"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 9,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3258,8 +3010,6 @@
         "script_level.level_keys": [
           "CSD U3 Keyboard Input Challenge_2018"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 10,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3280,8 +3030,6 @@
         "script_level.level_keys": [
           "CSD U3 L12 Freeplay_2018"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 11,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3302,8 +3050,6 @@
         "script_level.level_keys": [
           "CSD U3L13 TFMD_2018"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 1,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3325,8 +3071,6 @@
         "script_level.level_keys": [
           "CSD U3 Mouse Input Bee 1_2018"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 2,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3348,8 +3092,6 @@
         "script_level.level_keys": [
           "CSD U3 Mouse Input Bee 2_2018"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 3,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3370,8 +3112,6 @@
         "script_level.level_keys": [
           "CSD U3 - Conditionals Video_2018"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 4,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3392,8 +3132,6 @@
         "script_level.level_keys": [
           "CSD If Else Map_2018"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 5,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3415,8 +3153,6 @@
         "script_level.level_keys": [
           "CSD U3 Else_2018"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 6,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3438,8 +3174,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else_2018"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 7,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3461,8 +3195,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Watchers_2018"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 8,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3484,8 +3216,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Matching_2018"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 9,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3507,8 +3237,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse down_2018"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 10,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3530,8 +3258,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - key up and down_2018"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 11,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3553,8 +3279,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse move_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 12,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3575,8 +3299,6 @@
         "script_level.level_keys": [
           "CSD U3 Compound Nested Challenge_2018"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 13,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3597,8 +3319,6 @@
         "script_level.level_keys": [
           "CSD U3 L13 Freeplay_2018"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 14,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3619,8 +3339,6 @@
         "script_level.level_keys": [
           "CSD U3L14 TFMD_2018"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 1,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3641,8 +3359,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar_2018"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 2,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3663,8 +3379,6 @@
         "script_level.level_keys": [
           "CSD U3 Card Examples_2018"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 3,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3686,8 +3400,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background_2018"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 4,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3709,8 +3421,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites_2018"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 5,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3732,8 +3442,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input_2018"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 6,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3755,8 +3463,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals_2018"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 7,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3778,8 +3484,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final_2018"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 8,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3801,8 +3505,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch1_2018"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 9,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -3823,8 +3525,6 @@
         "script_level.level_keys": [
           "CSD U3L15 TFMD_2018"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 1,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3845,8 +3545,6 @@
         "script_level.level_keys": [
           "CSD: Sprite Velocity_2018"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 2,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3867,8 +3565,6 @@
         "script_level.level_keys": [
           "CSD U3 velocity map_2018"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 3,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3890,8 +3586,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_2018"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 4,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3913,8 +3607,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_2018"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 5,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3936,8 +3628,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_2018"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 6,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3959,8 +3649,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_2018"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 7,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -3982,8 +3670,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY control_2018"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 8,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4005,8 +3691,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_2018"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 9,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4028,8 +3712,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_2018"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 10,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4051,8 +3733,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jump_2018"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 11,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4074,8 +3754,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction tumbleweed_2018"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 12,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4097,8 +3775,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction looping_2018"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 13,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4119,8 +3795,6 @@
         "script_level.level_keys": [
           "CSD U3 L15 Freeplay_2018"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 14,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4141,8 +3815,6 @@
         "script_level.level_keys": [
           "CSD U3L16 TFMD_2018"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 1,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4163,8 +3835,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions car intro_2018"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 2,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4185,8 +3855,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_2018"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 3,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4208,8 +3876,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_2018"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 4,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4231,8 +3897,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg_2018"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 5,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4254,8 +3918,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg2_2018"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 6,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4277,8 +3939,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions horse_2018"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 7,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4300,8 +3960,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_2018"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 8,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4323,8 +3981,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions scoreboard_2018"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 9,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4346,8 +4002,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions sidescroll2_2018"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 10,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4368,8 +4022,6 @@
         "script_level.level_keys": [
           "CSD U3 istouching map_2018"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 11,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4390,8 +4042,6 @@
         "script_level.level_keys": [
           "CSD U3 L16 Freeplay_2018"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 12,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4412,8 +4062,6 @@
         "script_level.level_keys": [
           "CSD U3L17 TFMD_2018"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 1,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4434,8 +4082,6 @@
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_2018"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 2,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4457,8 +4103,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_2018"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 3,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4480,8 +4124,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_2018"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 4,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4503,8 +4145,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY up_2018"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 5,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4526,8 +4166,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_2018"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 6,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4549,8 +4187,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_2018"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 7,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4572,8 +4208,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jumping_2018"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 8,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4595,8 +4229,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter_2018"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 9,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4618,8 +4250,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter 2_2018"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 10,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4641,8 +4271,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction add coin_2018"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 11,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4664,8 +4292,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction reset coin_2018"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 12,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4687,8 +4313,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction make it your own_2018"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 13,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4709,8 +4333,6 @@
         "script_level.level_keys": [
           "CSD U3 acceleration map_2018"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 14,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4731,8 +4353,6 @@
         "script_level.level_keys": [
           "CSD U3 L17 Freeplay_2018"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 15,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4753,8 +4373,6 @@
         "script_level.level_keys": [
           "CSD U3L18 TFMD_2018"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 1,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4775,8 +4393,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions predict set velocity code_2018"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 2,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4798,8 +4414,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace x_2018"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 3,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4821,8 +4435,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace y_2018"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 4,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4844,8 +4456,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_2018"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 5,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4867,8 +4477,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_2018"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 6,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4890,8 +4498,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions types_2018"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 7,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4913,8 +4519,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions turtle_2018"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 8,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4936,8 +4540,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug_2018"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 9,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4959,8 +4561,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions setCollider_2018"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 10,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -4982,8 +4582,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions bounciness_2018"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 11,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5005,8 +4603,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman add obstacles_2018"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 12,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5028,8 +4624,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman bounceOff_2018"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 13,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5051,8 +4645,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman displace coin_2018"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 14,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5074,8 +4666,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman change colliders_2018"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 15,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5097,8 +4687,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman make it your own_2018"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 16,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5119,8 +4707,6 @@
         "script_level.level_keys": [
           "CSD U3 interactions map_2018"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 17,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5141,8 +4727,6 @@
         "script_level.level_keys": [
           "CSD U3 L18 Freeplay_2018"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 18,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5163,8 +4747,6 @@
         "script_level.level_keys": [
           "CSD U3L19 TFMD_2018"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5186,8 +4768,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_2018"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5209,8 +4789,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_2018"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5232,8 +4810,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_2018"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5255,8 +4831,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Draw Loop_2018"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5278,8 +4852,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Reset Sprite_2018"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5301,8 +4873,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Randomize Sprite_2018"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5324,8 +4894,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Create Function_2018"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5347,8 +4915,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_2018"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5370,8 +4936,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_2018"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5393,8 +4957,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_2018"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5415,8 +4977,6 @@
         "script_level.level_keys": [
           "CSD U3 functions review_2018"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 12,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5437,8 +4997,6 @@
         "script_level.level_keys": [
           "CSD U3 L19 Freeplay_2018"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 13,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5459,8 +5017,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD_2018"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 1,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5481,8 +5037,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti Play Defender_2018"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 2,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5503,8 +5057,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 3,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5526,8 +5078,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti introducing multiframe_2018"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 4,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5549,8 +5099,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti slow down_2018"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 5,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5572,8 +5120,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti mirror animation_2018"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 6,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5595,8 +5141,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate cake enemies_2018"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 7,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5618,8 +5162,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies move_2018"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 8,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5641,8 +5183,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake_2018"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 9,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5664,8 +5204,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2018"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 10,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5687,8 +5225,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender create set enemies_2018"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 11,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5710,8 +5246,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move player_2018"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 12,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5733,8 +5267,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move up down_2018"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 13,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5756,8 +5288,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate player_2018"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 14,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5779,8 +5309,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender displace enemies_2018"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 15,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5802,8 +5330,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender touch water_2018"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 16,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5825,8 +5351,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender make it your own_2018"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 17,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5847,8 +5371,6 @@
         "script_level.level_keys": [
           "CSD U3L21 TFMD_2018"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 1,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5869,8 +5391,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample1_2018"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 2,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5891,8 +5411,6 @@
         "script_level.level_keys": [
           "CSD U3 platform intro_2018"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 3,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5914,8 +5432,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background1_2018"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 4,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5937,8 +5453,6 @@
         "script_level.level_keys": [
           "CSD U3 platform variable1_2018"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 5,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5960,8 +5474,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background2_2018"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 6,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -5983,8 +5495,6 @@
         "script_level.level_keys": [
           "CSD U3 platform scoreboard_2018"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 7,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6006,8 +5516,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform1_2018"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 8,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6029,8 +5537,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform2_2018"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 9,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6052,8 +5558,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform3_2018"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 10,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6075,8 +5579,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items1_2018"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 11,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6098,8 +5600,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items2_2018"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 12,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6121,8 +5621,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items3_2018"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 13,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6144,8 +5642,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player1_2018"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 14,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6167,8 +5663,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player2_2018"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 15,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6190,8 +5684,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player3_2018"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 16,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6213,8 +5705,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player4_2018"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 17,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6235,8 +5725,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample2_2018"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 18,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6257,8 +5745,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample3_2018"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 19,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6279,8 +5765,6 @@
         "script_level.level_keys": [
           "CSD U3 platform challenge_2018"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 20,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6301,8 +5785,6 @@
         "script_level.level_keys": [
           "CSD U3L22 TFMD_2018"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 1,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6323,8 +5805,6 @@
         "script_level.level_keys": [
           "CSD U3 game intro_2018"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 2,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6346,8 +5826,6 @@
         "script_level.level_keys": [
           "CSD U3 game variables_2018"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 3,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6369,8 +5847,6 @@
         "script_level.level_keys": [
           "CSD U3 game backgrounds_2018"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 4,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6392,8 +5868,6 @@
         "script_level.level_keys": [
           "CSD U3 game display boards_2018"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 5,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6415,8 +5889,6 @@
         "script_level.level_keys": [
           "CSD U3 game choose background_2018"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 6,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6438,8 +5910,6 @@
         "script_level.level_keys": [
           "CSD U3 game animations_2018"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 7,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6461,8 +5931,6 @@
         "script_level.level_keys": [
           "CSD U3 game create sprites_2018"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 8,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6484,8 +5952,6 @@
         "script_level.level_keys": [
           "CSD U3 game sprite movement_2018"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 9,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6507,8 +5973,6 @@
         "script_level.level_keys": [
           "CSD U3 game user controls_2018"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 10,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6530,8 +5994,6 @@
         "script_level.level_keys": [
           "CSD U3 game interactions_2018"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 11,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6552,8 +6014,6 @@
         "script_level.level_keys": [
           "CSD U3 finishing touches_2018"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 12,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6575,8 +6035,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch2_2018"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 13,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -6597,8 +6055,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries End of Semester Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2018"
@@ -6620,8 +6076,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2018"
@@ -6638,8 +6092,6 @@
         "script_level.level_keys": [
           "CSD U3L01 TFMD_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6651,8 +6103,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6664,8 +6114,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 4_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6677,8 +6125,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 3_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6690,8 +6136,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 1_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6703,8 +6147,6 @@
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 2_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6716,8 +6158,6 @@
         "script_level.level_keys": [
           "CSD U3L02 TFMD_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6729,8 +6169,6 @@
         "script_level.level_keys": [
           "CSD U3 Plotting Shapes Shape Lab_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Plotting Shapes",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6742,8 +6180,6 @@
         "script_level.level_keys": [
           "CSD U3L03 TFMD_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6755,8 +6191,6 @@
         "script_level.level_keys": [
           "CSD U3 rect_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6768,8 +6202,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6781,8 +6213,6 @@
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6794,8 +6224,6 @@
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 5,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6807,8 +6235,6 @@
         "script_level.level_keys": [
           "CSD U3 fill_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 6,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6820,8 +6246,6 @@
         "script_level.level_keys": [
           "CSD U3 sequence_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 7,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6833,8 +6257,6 @@
         "script_level.level_keys": [
           "CSD U3 ellipse_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 8,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6846,8 +6268,6 @@
         "script_level.level_keys": [
           "CSD U3 debug_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 9,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6859,8 +6279,6 @@
         "script_level.level_keys": [
           "CSD U3 plotting shapes map_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 10,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6872,8 +6290,6 @@
         "script_level.level_keys": [
           "CSD U3 picture_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 11,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6885,8 +6301,6 @@
         "script_level.level_keys": [
           "CSD U3 challenge face_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 12,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6898,8 +6312,6 @@
         "script_level.level_keys": [
           "CSD U3 challenge new shape_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 13,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6911,8 +6323,6 @@
         "script_level.level_keys": [
           "CSD U3 L3 Freeplay_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 14,
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6924,8 +6334,6 @@
         "script_level.level_keys": [
           "CSD U3L04 TFMD_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6937,8 +6345,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Taller Rectangle_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6950,8 +6356,6 @@
         "script_level.level_keys": [
           "CSD U3 shape size map_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6963,8 +6367,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Ellipse Behind_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6976,8 +6378,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -6989,8 +6389,6 @@
         "script_level.level_keys": [
           "CSD U3 Random background2_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7002,8 +6400,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Grass_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7015,8 +6411,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Debug Cloud_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7028,8 +6422,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7041,8 +6433,6 @@
         "script_level.level_keys": [
           "CSD U3 Random Number Map Level_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7054,8 +6444,6 @@
         "script_level.level_keys": [
           "CSD U3 Random random ellipse2_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7067,8 +6455,6 @@
         "script_level.level_keys": [
           "CSD U3 Random rainbow snake_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 12,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7080,8 +6466,6 @@
         "script_level.level_keys": [
           "CSD U3 L4 Freeplay_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 13,
         "lesson.key": "Shapes and Randomization",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7093,8 +6477,6 @@
         "script_level.level_keys": [
           "CSD U3L05 TFMD_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7106,8 +6488,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7119,8 +6499,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7132,8 +6510,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Map_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7145,8 +6521,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where XY_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 5,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7158,8 +6532,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables change circle size_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 6,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7171,8 +6543,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Poppy_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 7,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7184,8 +6554,6 @@
         "script_level.level_keys": [
           "CSD U3 naming map_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 8,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7197,8 +6565,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables naming rules v2_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 9,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7210,8 +6576,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables random with assignment_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 10,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7223,8 +6587,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Draw Challenge_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 11,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7236,8 +6598,6 @@
         "script_level.level_keys": [
           "CSD U3 Variables Challenge_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 12,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7249,8 +6609,6 @@
         "script_level.level_keys": [
           "CSD U3 L5 Freeplay_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 13,
         "lesson.key": "Variables",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7262,8 +6620,6 @@
         "script_level.level_keys": [
           "CSD U3L06 TFMD_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 1,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7275,8 +6631,6 @@
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab_2018"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 2,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7288,8 +6642,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites Map_2018"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 3,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7301,8 +6653,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites_2018"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 4,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7314,8 +6664,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro predict_2018"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 5,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7327,8 +6675,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites intro debug_2018"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 6,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7340,8 +6686,6 @@
         "script_level.level_keys": [
           "CSD: Animation Tab_2018"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 7,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7353,8 +6697,6 @@
         "script_level.level_keys": [
           "CSD U3 Animation Tab Map_2018"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 8,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7366,8 +6708,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2018"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 9,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7379,8 +6719,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 2_2018"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 10,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7392,8 +6730,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 3_2018"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 11,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7405,8 +6741,6 @@
         "script_level.level_keys": [
           "CSD U3 drawSprites placement match"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 12,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7418,8 +6752,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text_2018"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 13,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7431,8 +6763,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites text debug_2018"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 14,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7444,8 +6774,6 @@
         "script_level.level_keys": [
           "CSD U3 Scene Example_2018"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 15,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7457,8 +6785,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene drawing_2018"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 16,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7470,8 +6796,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_2018"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 17,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7483,8 +6807,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene text_2018"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 18,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7496,8 +6818,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprites scene challenge_2018"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 19,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7509,8 +6829,6 @@
         "script_level.level_keys": [
           "CSD U3 L6 Freeplay_2018"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 20,
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7522,8 +6840,6 @@
         "script_level.level_keys": [
           "CSD U3L07 TFMD_2018"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 1,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7535,8 +6851,6 @@
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop_2018"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 2,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7548,8 +6862,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 1_2018"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 3,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7561,8 +6873,6 @@
         "script_level.level_keys": [
           "CSD U3 The Draw Loop Map_2018"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 4,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7574,8 +6884,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged orange and green_2018"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 5,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7587,8 +6895,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_2018"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 6,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7600,8 +6906,6 @@
         "script_level.level_keys": [
           "CSD U3 dancing alien_2018"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 7,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7613,8 +6917,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Properties Map_2018"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 8,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7626,8 +6928,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite x_2018"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 9,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7639,8 +6939,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite y_2018"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 10,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7652,8 +6950,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite rotation_2018"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 11,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7665,8 +6961,6 @@
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged update your scene_2018"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 12,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7678,8 +6972,6 @@
         "script_level.level_keys": [
           "CSD U3 L7 Freeplay_2018"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 13,
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7691,8 +6983,6 @@
         "script_level.level_keys": [
           "CSD U3L08 TFMD_2018"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 1,
         "lesson.key": "The Counter Pattern Unplugged",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7704,8 +6994,6 @@
         "script_level.level_keys": [
           "CSD U3L09 TFMD_2018"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 1,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7717,8 +7005,6 @@
         "script_level.level_keys": [
           "CSD: Animating Sprite Movement_2018"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 2,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7730,8 +7016,6 @@
         "script_level.level_keys": [
           "CSD Counter Pattern Map_2018"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 3,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7743,8 +7027,6 @@
         "script_level.level_keys": [
           "CSD U3 - Simple Counter Predict_2018"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 4,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7756,8 +7038,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Right_2018"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 5,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7769,8 +7049,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Left_2018"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 6,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7782,8 +7060,6 @@
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Predict_2018"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 7,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7795,8 +7071,6 @@
         "script_level.level_keys": [
           "CSD U3 Diagonal Movement_2018"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 8,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7808,8 +7082,6 @@
         "script_level.level_keys": [
           "CSD U3 Watchers Map_2018"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 9,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7821,8 +7093,6 @@
         "script_level.level_keys": [
           "CSD U3 Watcher Predict_2018"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 10,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7834,8 +7104,6 @@
         "script_level.level_keys": [
           "CSD U3 Watcher Debug_2018"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 11,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7847,8 +7115,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish_2018"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 12,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7860,8 +7126,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Gears_2018"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 13,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7873,8 +7137,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Your Own 1_2018"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 14,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7886,8 +7148,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Your Own 2_2018"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 15,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7899,8 +7159,6 @@
         "script_level.level_keys": [
           "CSD sprite movement challenge_2018"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 16,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7912,8 +7170,6 @@
         "script_level.level_keys": [
           "CSD U3 Movement Fish challenge_2018"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 17,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7925,8 +7181,6 @@
         "script_level.level_keys": [
           "CSD U3 L9 Freeplay_2018"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 18,
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7938,8 +7192,6 @@
         "script_level.level_keys": [
           "CSD U3L10 TFMD_2018"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 1,
         "lesson.key": "Booleans Unplugged",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7951,8 +7203,6 @@
         "script_level.level_keys": [
           "CSD U3L11 TFMD_2018"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 1,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7964,8 +7214,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Predict_2018"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 2,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7977,8 +7225,6 @@
         "script_level.level_keys": [
           "CSD U3 - Booleans Video_2018"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 3,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -7990,8 +7236,6 @@
         "script_level.level_keys": [
           "CSD Booleans Map_2018"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 4,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8003,8 +7247,6 @@
         "script_level.level_keys": [
           "CSD U3 Boolean Modify_2018"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 5,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8016,8 +7258,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 6,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8029,8 +7269,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - transition_2018"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 7,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8042,8 +7280,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple_2018"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 8,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8055,8 +7291,6 @@
         "script_level.level_keys": [
           "csd U3 conditional statements video"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 9,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8068,8 +7302,6 @@
         "script_level.level_keys": [
           "CSD If Statements Map_2018"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 10,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8081,8 +7313,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional_2018"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 11,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8094,8 +7324,6 @@
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple 2_2018"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 12,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8107,8 +7335,6 @@
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional 2_2018"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 13,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8120,8 +7346,6 @@
         "script_level.level_keys": [
           "CSD U3 L11 Freeplay_2018"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 14,
         "lesson.key": "Conditionals",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8133,8 +7357,6 @@
         "script_level.level_keys": [
           "CSD U3L12 TFMD_2018"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 1,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8146,8 +7368,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean_2018"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 2,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8159,8 +7379,6 @@
         "script_level.level_keys": [
           "CSD U3 keydown conditional_2018"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 3,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8172,8 +7390,6 @@
         "script_level.level_keys": [
           "CSD U3 UP_ARROW_2018"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 4,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8185,8 +7401,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Fish_2018"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 5,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8198,8 +7412,6 @@
         "script_level.level_keys": [
           "CSD U3 Input Gears_2018"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 6,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8211,8 +7423,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Arrows_2018"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 7,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8224,8 +7434,6 @@
         "script_level.level_keys": [
           "CSD U3 Animation Edit Map_2018"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 8,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8237,8 +7445,6 @@
         "script_level.level_keys": [
           "CSD U3 Direction Animations_2018"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 9,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8250,8 +7456,6 @@
         "script_level.level_keys": [
           "CSD U3 Keyboard Input Challenge_2018"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 10,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8263,8 +7467,6 @@
         "script_level.level_keys": [
           "CSD U3 L12 Freeplay_2018"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 11,
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8276,8 +7478,6 @@
         "script_level.level_keys": [
           "CSD U3L13 TFMD_2018"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 1,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8289,8 +7489,6 @@
         "script_level.level_keys": [
           "CSD U3 Mouse Input Bee 1_2018"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 2,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8302,8 +7500,6 @@
         "script_level.level_keys": [
           "CSD U3 Mouse Input Bee 2_2018"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 3,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8315,8 +7511,6 @@
         "script_level.level_keys": [
           "CSD U3 - Conditionals Video_2018"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 4,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8328,8 +7522,6 @@
         "script_level.level_keys": [
           "CSD If Else Map_2018"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 5,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8341,8 +7533,6 @@
         "script_level.level_keys": [
           "CSD U3 Else_2018"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 6,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8354,8 +7544,6 @@
         "script_level.level_keys": [
           "CSD U3 If Else_2018"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 7,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8367,8 +7555,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Watchers_2018"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 8,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8380,8 +7566,6 @@
         "script_level.level_keys": [
           "CSD U3 Keypress Matching_2018"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 9,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8393,8 +7577,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse down_2018"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 10,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8406,8 +7588,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - key up and down_2018"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 11,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8419,8 +7599,6 @@
         "script_level.level_keys": [
           "CSD U3 - complex - mouse move_2018"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 12,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8432,8 +7610,6 @@
         "script_level.level_keys": [
           "CSD U3 Compound Nested Challenge_2018"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 13,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8445,8 +7621,6 @@
         "script_level.level_keys": [
           "CSD U3 L13 Freeplay_2018"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 14,
         "lesson.key": "Other Forms of Input",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8458,8 +7632,6 @@
         "script_level.level_keys": [
           "CSD U3L14 TFMD_2018"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 1,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8471,8 +7643,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Exemplar_2018"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 2,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8484,8 +7654,6 @@
         "script_level.level_keys": [
           "CSD U3 Card Examples_2018"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 3,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8497,8 +7665,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Background_2018"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 4,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8510,8 +7676,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Sprites_2018"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 5,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8523,8 +7687,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card User Input_2018"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 6,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8536,8 +7698,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Other Conditionals_2018"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 7,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8549,8 +7709,6 @@
         "script_level.level_keys": [
           "CSD U3 Interactive Card Final_2018"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 8,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8562,8 +7720,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch1_2018"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 9,
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2018"
@@ -8575,8 +7731,6 @@
         "script_level.level_keys": [
           "CSD U3L15 TFMD_2018"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 1,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8588,8 +7742,6 @@
         "script_level.level_keys": [
           "CSD: Sprite Velocity_2018"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 2,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8601,8 +7753,6 @@
         "script_level.level_keys": [
           "CSD U3 velocity map_2018"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 3,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8614,8 +7764,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_2018"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 4,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8627,8 +7775,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_2018"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 5,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8640,8 +7786,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_2018"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 6,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8653,8 +7797,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_2018"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 7,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8666,8 +7808,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY control_2018"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 8,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8679,8 +7819,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_2018"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 9,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8692,8 +7830,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_2018"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 10,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8705,8 +7841,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jump_2018"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 11,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8718,8 +7852,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction tumbleweed_2018"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 12,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8731,8 +7863,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction looping_2018"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 13,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8744,8 +7874,6 @@
         "script_level.level_keys": [
           "CSD U3 L15 Freeplay_2018"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 14,
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8757,8 +7885,6 @@
         "script_level.level_keys": [
           "CSD U3L16 TFMD_2018"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 1,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8770,8 +7896,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions car intro_2018"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 2,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8783,8 +7907,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_2018"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 3,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8796,8 +7918,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_2018"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 4,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8809,8 +7929,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg_2018"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 5,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8822,8 +7940,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions egg2_2018"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 6,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8835,8 +7951,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions horse_2018"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 7,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8848,8 +7962,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_2018"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 8,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8861,8 +7973,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions scoreboard_2018"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 9,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8874,8 +7984,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions sidescroll2_2018"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 10,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8887,8 +7995,6 @@
         "script_level.level_keys": [
           "CSD U3 istouching map_2018"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 11,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8900,8 +8006,6 @@
         "script_level.level_keys": [
           "CSD U3 L16 Freeplay_2018"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 12,
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8913,8 +8017,6 @@
         "script_level.level_keys": [
           "CSD U3L17 TFMD_2018"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 1,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8926,8 +8028,6 @@
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_2018"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 2,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8939,8 +8039,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_2018"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 3,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8952,8 +8050,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_2018"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 4,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8965,8 +8061,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY up_2018"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 5,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8978,8 +8072,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_2018"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 6,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -8991,8 +8083,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_2018"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 7,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9004,8 +8094,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction jumping_2018"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 8,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9017,8 +8105,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter_2018"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 9,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9030,8 +8116,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter 2_2018"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 10,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9043,8 +8127,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction add coin_2018"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 11,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9056,8 +8138,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction reset coin_2018"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 12,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9069,8 +8149,6 @@
         "script_level.level_keys": [
           "CSD U3 abstraction make it your own_2018"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 13,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9082,8 +8160,6 @@
         "script_level.level_keys": [
           "CSD U3 acceleration map_2018"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 14,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9095,8 +8171,6 @@
         "script_level.level_keys": [
           "CSD U3 L17 Freeplay_2018"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 15,
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9108,8 +8182,6 @@
         "script_level.level_keys": [
           "CSD U3L18 TFMD_2018"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 1,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9121,8 +8193,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions predict set velocity code_2018"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 2,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9134,8 +8204,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace x_2018"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 3,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9147,8 +8215,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace y_2018"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 4,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9160,8 +8226,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_2018"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 5,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9173,8 +8237,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_2018"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 6,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9186,8 +8248,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions types_2018"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 7,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9199,8 +8259,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions turtle_2018"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 8,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9212,8 +8270,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions debug_2018"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 9,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9225,8 +8281,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions setCollider_2018"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 10,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9238,8 +8292,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions bounciness_2018"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 11,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9251,8 +8303,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman add obstacles_2018"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 12,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9264,8 +8314,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman bounceOff_2018"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 13,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9277,8 +8325,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman displace coin_2018"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 14,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9290,8 +8336,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman change colliders_2018"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 15,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9303,8 +8347,6 @@
         "script_level.level_keys": [
           "CSD U3 collisions flyman make it your own_2018"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 16,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9316,8 +8358,6 @@
         "script_level.level_keys": [
           "CSD U3 interactions map_2018"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 17,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9329,8 +8369,6 @@
         "script_level.level_keys": [
           "CSD U3 L18 Freeplay_2018"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 18,
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9342,8 +8380,6 @@
         "script_level.level_keys": [
           "CSD U3L19 TFMD_2018"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9355,8 +8391,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_2018"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 2,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9368,8 +8402,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_2018"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 3,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9381,8 +8413,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_2018"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 4,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9394,8 +8424,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Call Draw Loop_2018"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 5,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9407,8 +8435,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Reset Sprite_2018"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 6,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9420,8 +8446,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Randomize Sprite_2018"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 7,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9433,8 +8457,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Create Function_2018"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 8,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9446,8 +8468,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_2018"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 9,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9459,8 +8479,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_2018"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 10,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9472,8 +8490,6 @@
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_2018"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 11,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9485,8 +8501,6 @@
         "script_level.level_keys": [
           "CSD U3 functions review_2018"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 12,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9498,8 +8512,6 @@
         "script_level.level_keys": [
           "CSD U3 L19 Freeplay_2018"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 13,
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9511,8 +8523,6 @@
         "script_level.level_keys": [
           "CSD U3L20 TFMD_2018"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 1,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9524,8 +8534,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti Play Defender_2018"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 2,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9537,8 +8545,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 3,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9550,8 +8556,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti introducing multiframe_2018"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 4,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9563,8 +8567,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti slow down_2018"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 5,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9576,8 +8578,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti mirror animation_2018"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 6,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9589,8 +8589,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate cake enemies_2018"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 7,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9602,8 +8600,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies move_2018"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 8,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9615,8 +8611,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake_2018"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 9,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9628,8 +8622,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2018"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 10,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9641,8 +8633,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender create set enemies_2018"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 11,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9654,8 +8644,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move player_2018"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 12,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9667,8 +8655,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move up down_2018"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 13,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9680,8 +8666,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate player_2018"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 14,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9693,8 +8677,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender displace enemies_2018"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 15,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9706,8 +8688,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender touch water_2018"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 16,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9719,8 +8699,6 @@
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender make it your own_2018"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 17,
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9732,8 +8710,6 @@
         "script_level.level_keys": [
           "CSD U3L21 TFMD_2018"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 1,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9745,8 +8721,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample1_2018"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 2,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9758,8 +8732,6 @@
         "script_level.level_keys": [
           "CSD U3 platform intro_2018"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 3,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9771,8 +8743,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background1_2018"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 4,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9784,8 +8754,6 @@
         "script_level.level_keys": [
           "CSD U3 platform variable1_2018"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 5,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9797,8 +8765,6 @@
         "script_level.level_keys": [
           "CSD U3 platform background2_2018"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 6,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9810,8 +8776,6 @@
         "script_level.level_keys": [
           "CSD U3 platform scoreboard_2018"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 7,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9823,8 +8787,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform1_2018"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 8,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9836,8 +8798,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform2_2018"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 9,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9849,8 +8809,6 @@
         "script_level.level_keys": [
           "CSD U3 platform platform3_2018"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 10,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9862,8 +8820,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items1_2018"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 11,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9875,8 +8831,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items2_2018"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 12,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9888,8 +8842,6 @@
         "script_level.level_keys": [
           "CSD U3 platform items3_2018"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 13,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9901,8 +8853,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player1_2018"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 14,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9914,8 +8864,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player2_2018"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 15,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9927,8 +8875,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player3_2018"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 16,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9940,8 +8886,6 @@
         "script_level.level_keys": [
           "CSD U3 platform player4_2018"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 17,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9953,8 +8897,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample2_2018"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 18,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9966,8 +8908,6 @@
         "script_level.level_keys": [
           "CSD U3 platform sample3_2018"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 19,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9979,8 +8919,6 @@
         "script_level.level_keys": [
           "CSD U3 platform challenge_2018"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 20,
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -9992,8 +8930,6 @@
         "script_level.level_keys": [
           "CSD U3L22 TFMD_2018"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 1,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10005,8 +8941,6 @@
         "script_level.level_keys": [
           "CSD U3 game intro_2018"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 2,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10018,8 +8952,6 @@
         "script_level.level_keys": [
           "CSD U3 game variables_2018"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 3,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10031,8 +8963,6 @@
         "script_level.level_keys": [
           "CSD U3 game backgrounds_2018"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 4,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10044,8 +8974,6 @@
         "script_level.level_keys": [
           "CSD U3 game display boards_2018"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 5,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10057,8 +8985,6 @@
         "script_level.level_keys": [
           "CSD U3 game choose background_2018"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 6,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10070,8 +8996,6 @@
         "script_level.level_keys": [
           "CSD U3 game animations_2018"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 7,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10083,8 +9007,6 @@
         "script_level.level_keys": [
           "CSD U3 game create sprites_2018"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 8,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10096,8 +9018,6 @@
         "script_level.level_keys": [
           "CSD U3 game sprite movement_2018"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 9,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10109,8 +9029,6 @@
         "script_level.level_keys": [
           "CSD U3 game user controls_2018"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 10,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10122,8 +9040,6 @@
         "script_level.level_keys": [
           "CSD U3 game interactions_2018"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 11,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10135,8 +9051,6 @@
         "script_level.level_keys": [
           "CSD U3 finishing touches_2018"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 12,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10148,8 +9062,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U3Ch2_2018"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 13,
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2018"
@@ -10161,8 +9073,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2017-levelgroup_2018"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries End of Semester Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2018"
@@ -10174,8 +9084,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2018"

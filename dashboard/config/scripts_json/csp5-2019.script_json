@@ -425,8 +425,6 @@
         "script_level.level_keys": [
           "CSP U5L01 SFLP_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -448,8 +446,6 @@
         "script_level.level_keys": [
           "Introduction to Design Mode_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -471,8 +467,6 @@
         "script_level.level_keys": [
           "CSPU5_FirstTimeDesignMode_2018_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -494,8 +488,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Design Mode 1_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -517,8 +509,6 @@
         "script_level.level_keys": [
           "How onEvent Works_2018_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -540,8 +530,6 @@
         "script_level.level_keys": [
           "CSPU5_moveTurtleOnButtonClick_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -563,8 +551,6 @@
         "script_level.level_keys": [
           "CSPU5_turtleDriver_add2ndButton_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -586,8 +572,6 @@
         "script_level.level_keys": [
           "Event-Driven Programming Patterns_2018_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -609,8 +593,6 @@
         "script_level.level_keys": [
           "Rules About Choosing Good IDs_2018_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -632,8 +614,6 @@
         "script_level.level_keys": [
           "CSPU5_addDescriptiveIDsToTurtleDriver_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -655,8 +635,6 @@
         "script_level.level_keys": [
           "CSPU5_playWithEventTypes_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -678,8 +656,6 @@
         "script_level.level_keys": [
           "Intro to Debugging and Common Problems_2018_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -701,8 +677,6 @@
         "script_level.level_keys": [
           "CSPU5_predict_applab_onEventWithWrongID_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -724,8 +698,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging IDs case sensitive_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -747,8 +719,6 @@
         "script_level.level_keys": [
           "CSPU5_Debugging predict unexpected behavior - two onEvents to one_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -770,8 +740,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging 3_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -793,8 +761,6 @@
         "script_level.level_keys": [
           "How setPosition and screen dimensions work_2018_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -816,8 +782,6 @@
         "script_level.level_keys": [
           "CSPU5_setPosition to fixed location_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -839,8 +803,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - setPosition to move button_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -862,8 +824,6 @@
         "script_level.level_keys": [
           "CSPU5_AddLabelToChaserGame_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -885,8 +845,6 @@
         "script_level.level_keys": [
           "How Images Work_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 21,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -908,8 +866,6 @@
         "script_level.level_keys": [
           "Finalize Your Chaser Game v.1_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 22,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -931,8 +887,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 23,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -953,8 +907,6 @@
         "script_level.level_keys": [
           "CSP U5L02 SFLP_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -976,8 +928,6 @@
         "script_level.level_keys": [
           "CSPU5 Layering and Deleting in Design Mode_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -999,8 +949,6 @@
         "script_level.level_keys": [
           "CSPU5 Add onEvent from Design Mode_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1022,8 +970,6 @@
         "script_level.level_keys": [
           "CSPU5 First Time Console.log_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1045,8 +991,6 @@
         "script_level.level_keys": [
           "Debugging with Console.log_2018_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1068,8 +1012,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log in event v. global_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1091,8 +1033,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log debug when mouse events happen_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1114,8 +1054,6 @@
         "script_level.level_keys": [
           "CSPU5 Debugging Overlapping Objects and Screen Events_2019"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1137,8 +1075,6 @@
         "script_level.level_keys": [
           "Making Multiple Screens_2018_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1160,8 +1096,6 @@
         "script_level.level_keys": [
           "CSPU5 Add a 2nd Screen_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1183,8 +1117,6 @@
         "script_level.level_keys": [
           "CSPU5 Use setScreen for first time_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1206,8 +1138,6 @@
         "script_level.level_keys": [
           "Making a Multi Screen Chaser Game v.2_2018_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1229,8 +1159,6 @@
         "script_level.level_keys": [
           "CSPU5 Add welcome screen to chaser game_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 13,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1252,8 +1180,6 @@
         "script_level.level_keys": [
           "CSPU5 Add full screen image to bg of chaser game_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 14,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1275,8 +1201,6 @@
         "script_level.level_keys": [
           "CSPU5 Add game over screen_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 15,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1297,8 +1221,6 @@
         "script_level.level_keys": [
           "CSP U5L03 SFLP_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1320,8 +1242,6 @@
         "script_level.level_keys": [
           "Event Driven Programming Recap_2018_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1343,8 +1263,6 @@
         "script_level.level_keys": [
           "Tips For Working on Your Own_2018_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1366,8 +1284,6 @@
         "script_level.level_keys": [
           "Project - Your Own Multi Screen App_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1389,8 +1305,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Process_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1411,8 +1325,6 @@
         "script_level.level_keys": [
           "CSP U5L04 SFLP_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1434,8 +1346,6 @@
         "script_level.level_keys": [
           "Basic mechanics of variables_2018_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1457,8 +1367,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1480,8 +1388,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - three basic ops of variables_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1503,8 +1409,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - fix the var name syntax error v2_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1526,8 +1430,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - write var and string with same name v2_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1549,8 +1451,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Create And Assign_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1572,8 +1472,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Text Mode_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 8,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1595,8 +1493,6 @@
         "script_level.level_keys": [
           "Controlling Memory - Other ways to assign values_2018_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 9,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1618,8 +1514,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 10,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1641,8 +1535,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 11,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1664,8 +1556,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression with Other Variables_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 12,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1687,8 +1577,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Assigning Random Value_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 13,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1710,8 +1598,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Mini Calculator embed_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 14,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1733,8 +1619,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - User Input Division calculator_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 15,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1756,8 +1640,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - test reassignment of two vars_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 16,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1779,8 +1661,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 2_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 17,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1802,8 +1682,6 @@
         "script_level.level_keys": [
           "The Mental Model for Variables_2018_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 18,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1825,8 +1703,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Variable ReAssignment pt2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 19,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1848,8 +1724,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge1_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 20,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1871,8 +1745,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge2_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 21,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1894,8 +1766,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge3_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 22,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1917,8 +1787,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge4_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 23,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1940,8 +1808,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge5_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 24,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1963,8 +1829,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge6_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 25,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -1986,8 +1850,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - variable reassignment challenge pt2_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 26,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2009,8 +1871,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - MC variable reassignment_2018_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 27,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2031,8 +1891,6 @@
         "script_level.level_keys": [
           "CSP U5L05 SFLP_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2054,8 +1912,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 full clicker demo_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2077,8 +1933,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - practice with setText_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2100,8 +1954,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - DEMO up down count practice app_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2123,8 +1975,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - global var example count up_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2146,8 +1996,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - variable scoping problem debugging_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2169,8 +2017,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 spot the difference variable debugging_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2192,8 +2038,6 @@
         "script_level.level_keys": [
           "Variable Scope: Local vs. Global_2018_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2215,8 +2059,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - add code to make count down work_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2238,8 +2080,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug forget to set text_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2261,8 +2101,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug var not created globally_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2284,8 +2122,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug logic error wrong update_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2307,8 +2143,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - mini clicker update score_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2330,8 +2164,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 click add lives_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2353,8 +2185,6 @@
         "script_level.level_keys": [
           "Simple Decisions with if-statements_2018_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2376,8 +2206,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Simple If-statements in UpDown App_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2399,8 +2227,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Add reset button to UpDown app_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2422,8 +2248,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debugging Simple If-statements =v==_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2445,8 +2269,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug forget to update var on reset in UpDown app_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2468,8 +2290,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug if never triggers in UpDown app_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2491,8 +2311,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 full clicker app_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 21,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2514,8 +2332,6 @@
         "script_level.level_keys": [
           "U5 AP Create Practice onEvent Doesnt Count_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 22,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2536,8 +2352,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 1 MC_2018_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 1",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2558,8 +2372,6 @@
         "script_level.level_keys": [
           "CSP U5L06 SFLP_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2581,8 +2393,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Demo_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2604,8 +2414,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - introStrings_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2627,8 +2435,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - doubleQuotes_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2650,8 +2456,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - textInput getText write_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2673,8 +2477,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - intro getText_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2696,8 +2498,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - User Input - Save getText To Variable_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2719,8 +2519,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - outputWithTextArea_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2742,8 +2540,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - toUpper_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 9,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2765,8 +2561,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Student Setup_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 10,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2788,8 +2582,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib setText_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 11,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2811,8 +2603,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib getText_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 12,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2834,8 +2624,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib toUpper_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 13,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2857,8 +2645,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Clear Input_2019"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 14,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2880,8 +2666,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 Free Response 3_2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 15,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2902,8 +2686,6 @@
         "script_level.level_keys": [
           "CSP U5L07 SFLP_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2925,8 +2707,6 @@
         "script_level.level_keys": [
           "Big Picture: If-statements_2018_2019"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2948,8 +2728,6 @@
         "script_level.level_keys": [
           "Worked Example: If-statements and Robot_2018_2019"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2971,8 +2749,6 @@
         "script_level.level_keys": [
           "CSP Algorithms Map_2018_2019"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -2993,8 +2769,6 @@
         "script_level.level_keys": [
           "CSP U5L08 SFLP_2019"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 1,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3016,8 +2790,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Boolean Expressions_2019"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 2,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3039,8 +2811,6 @@
         "script_level.level_keys": [
           "Boolean Expressions and Comparison Operators_2018_2019"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 3,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3062,8 +2832,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L18 comparison operators_2019"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 4,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3085,8 +2853,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if Statements_2019"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 5,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3108,8 +2874,6 @@
         "script_level.level_keys": [
           "How If Statements Work pt 1_2018_2019"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 6,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3131,8 +2895,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - check driving age_2019"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 7,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3154,8 +2916,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - DIY secret number_2019"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 8,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3177,8 +2937,6 @@
         "script_level.level_keys": [
           "U5 Check Password if statement lock image_2019"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 9,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3200,8 +2958,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else Statements_2019"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 10,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3223,8 +2979,6 @@
         "script_level.level_keys": [
           "How If-Else Statements Work_2018_2019"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 11,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3246,8 +3000,6 @@
         "script_level.level_keys": [
           "U5 if-else simple movie ratings example_2019"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 12,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3269,8 +3021,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if-else - driving age_2019"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 13,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3292,8 +3042,6 @@
         "script_level.level_keys": [
           "U5 Check Password if-else string_2019"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 14,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3315,8 +3063,6 @@
         "script_level.level_keys": [
           "How Dropdown Menus Work_2018_2019"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 15,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3338,8 +3084,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown movie checker_2019"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 16,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3361,8 +3105,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown guess dice_2019"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 17,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3384,8 +3126,6 @@
         "script_level.level_keys": [
           "U5 if-else weeekend challenge_2019"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 18,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3406,8 +3146,6 @@
         "script_level.level_keys": [
           "CSP U5L09 SFLP_2019"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3429,8 +3167,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else-if Statements_2019"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 2,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3452,8 +3188,6 @@
         "script_level.level_keys": [
           "How \"if-else-if\" Works_2018_2019"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 3,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3475,8 +3209,6 @@
         "script_level.level_keys": [
           "U5 if-else-if movie example_2019"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 4,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3498,8 +3230,6 @@
         "script_level.level_keys": [
           "U5 if-else-if quiz grade_2019"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 5,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3521,8 +3251,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Else if_2019"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 6,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3544,8 +3272,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Debug_2019"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 7,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3567,8 +3293,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Compound Boolean Expressions_2019"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 8,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3590,8 +3314,6 @@
         "script_level.level_keys": [
           "How the Boolean &&, || and ! Operators Work_2018_2019"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 9,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3613,8 +3335,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple OR_2019"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 10,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3636,8 +3356,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple AND_2019"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 11,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3659,8 +3377,6 @@
         "script_level.level_keys": [
           "How Compound Boolean Expressions Work_2018_2019"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 12,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3682,8 +3398,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR Simple_2019"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 13,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3705,8 +3419,6 @@
         "script_level.level_keys": [
           "U5 compound boolean museum example_2019"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 14,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3728,8 +3440,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR and NOT_2019"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 15,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3751,8 +3461,6 @@
         "script_level.level_keys": [
           "U5-AP-Algorithm-Does-It-Count_2019"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 16,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3773,8 +3481,6 @@
         "script_level.level_keys": [
           "CSP U5L10 SFLP_2019"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3796,8 +3502,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Planning the App_2018_2019"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3819,8 +3523,6 @@
         "script_level.level_keys": [
           "How Set Property Works_2018_2019"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3842,8 +3544,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 1_2019"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3865,8 +3565,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 2 small color change_2019"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3888,8 +3586,6 @@
         "script_level.level_keys": [
           "How to pick a random button_2018_2019"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3911,8 +3607,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 3 pick random button_2019"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3934,8 +3628,6 @@
         "script_level.level_keys": [
           "How to make a random color_2018_2019"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3957,8 +3649,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 4 make random RGB string_2019"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -3980,8 +3670,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 5 make setBoard function_2019"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4003,8 +3691,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth add global var correct plus console.log_2019"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4026,8 +3712,6 @@
         "script_level.level_keys": [
           "U5 color sleuth check correct_2018_2019"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4049,8 +3733,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect make global var_2019"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4072,8 +3754,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part1 link to event handlers_2019"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4095,8 +3775,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part2 add if statement to check corre_2019"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4118,8 +3796,6 @@
         "script_level.level_keys": [
           "Color Sleuth - How to switch player turns_2018_2019"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4141,8 +3817,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt1 add var and function and console.log_2019"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4164,8 +3838,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_2019"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4187,8 +3859,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Keeping score_2018_2019"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4210,8 +3880,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt1 vars function stub console_2019"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4233,8 +3901,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt3 update UI for scoring_2019"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 21,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4256,8 +3922,6 @@
         "script_level.level_keys": [
           "Color Sleuth - How does it end?_2018_2019"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 22,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4279,8 +3943,6 @@
         "script_level.level_keys": [
           "Project: Finish Color Sleuth_2019"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 23,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4302,8 +3964,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Epilogue_2018_2019"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 24,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4325,8 +3985,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Abstraction Color Sleuth_2019"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 25,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4348,8 +4006,6 @@
         "script_level.level_keys": [
           "CSP U5 AP Practice Choose the Algorithm_2019"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 26,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4371,8 +4027,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Algorithm Color Sleuth_2019"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 27,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4393,8 +4047,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -4415,8 +4067,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP_2019"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4438,8 +4088,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 1_2019"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4461,8 +4109,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 2_2019"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4484,8 +4130,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 3_2019"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4507,8 +4151,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Typing in Console_2019"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4530,8 +4172,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 4_2019"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4553,8 +4193,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 5_2019"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4576,8 +4214,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 8_2019"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4599,8 +4235,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 6_2019"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4622,8 +4256,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 7_2019"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4645,8 +4277,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 9_2019"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4668,8 +4298,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops -  Complex Condition_2019"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4691,8 +4319,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 10_2019"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4714,8 +4340,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 11_2019"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4737,8 +4361,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 12_2019"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4760,8 +4382,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Plus Plus_2019"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4783,8 +4403,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Minus Minus_2019"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4806,8 +4424,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - plus and minus = operator_2019"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4829,8 +4445,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - minus = operator_2019"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4852,8 +4466,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 14_2019"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4875,8 +4487,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 15_2019"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4898,8 +4508,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4920,8 +4528,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP_2019"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4943,8 +4549,6 @@
         "script_level.level_keys": [
           "Make a Hypothesis_2018_2019"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4966,8 +4570,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 1_2019"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -4989,8 +4591,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2_2019"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5012,8 +4612,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.1_2019"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5035,8 +4633,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.5_2019"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5058,8 +4654,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 1_2018_2019"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5081,8 +4675,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 3_2019"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5104,8 +4696,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 4_2019"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5127,8 +4717,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 5_2019"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5150,8 +4738,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 2_2018_2019"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5173,8 +4759,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 6_2019"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5195,8 +4779,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP_2019"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5218,8 +4800,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 1_2019"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5241,8 +4821,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - createFirstArray_2019"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5264,8 +4842,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - appendItem_2019"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5287,8 +4863,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_2019"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5310,8 +4884,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - introIndex_2019"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5333,8 +4905,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - indexPractice_2019"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5356,8 +4926,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_2019"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5379,8 +4947,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment_2019"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5402,8 +4968,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment2_2019"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5425,8 +4989,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment3_2019"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5448,8 +5010,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - stringsInArrays_2019"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5471,8 +5031,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertingItems_2019"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5494,8 +5052,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - remove_2019"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5517,8 +5073,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertionErrors_2019"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5540,8 +5094,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_2019"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5563,8 +5115,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - length_2019"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5586,8 +5136,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - lengthMinus1_2019"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5609,8 +5157,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - expressionsAsIndexes_2019"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5632,8 +5178,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Demo App_2019"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5655,8 +5199,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings giveIDs_2019"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5678,8 +5220,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings createArray_2019"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5701,8 +5241,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings firstOutput_2019"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5724,8 +5262,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Counting Variable_2019"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5747,8 +5283,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Next_2019"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5770,8 +5304,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Prev_2019"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5793,8 +5325,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings addItem_2019"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5816,8 +5346,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings bounds_2019"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 28,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5839,8 +5367,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings keepPlaying_2019"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 29,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5862,8 +5388,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 1_2019"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 30,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5885,8 +5409,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 2_2019"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 31,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5907,8 +5429,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP_2019"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5930,8 +5450,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Demo App_2019"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5953,8 +5471,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - drag out key event_2019"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5976,8 +5492,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Key Up and Down_2019"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -5999,8 +5513,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - play sound when up key_2019"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6022,8 +5534,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Multiple Keys_2019"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6045,8 +5555,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Buttons and Keys_2019"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6068,8 +5576,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Functions_2019"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6091,8 +5597,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Add Image URLs_2019"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6114,8 +5618,6 @@
         "script_level.level_keys": [
           "Project - Final Image Scroller_2019"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6137,8 +5639,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Keys - Code Refactoring Exit Ticket_2019"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6159,8 +5659,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6181,8 +5679,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP_2019"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6204,8 +5700,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_2019"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6227,8 +5721,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Intro For Loop_2019"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6250,8 +5742,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Print Array_2019"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6273,8 +5763,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Add 5_2019"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6296,8 +5784,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Divid by 2_2019"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6319,8 +5805,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Loop Array If_2019"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6342,8 +5826,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Linear Search_2019"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6365,8 +5847,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Counting Times_2019"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6388,8 +5868,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Printing Single True_2019"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6411,8 +5889,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_2019"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6434,8 +5910,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function_2019"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6457,8 +5931,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2019"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6480,8 +5952,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - General Search Param_2019"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6503,8 +5973,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Find Min_2019"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 15,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6525,8 +5993,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP_2019"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6548,8 +6014,6 @@
         "script_level.level_keys": [
           "Using Output from Functions: The return Command_2018_2019"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6571,8 +6035,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - useMinVal_2019"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6594,8 +6056,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - writeMaxVal_2019"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6617,8 +6077,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingMaxVal_2019"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6640,8 +6098,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingConstrain_2019"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6663,8 +6119,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - constrainTurtle_2019"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6686,8 +6140,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - wrapTurtle_2019"
         ],
-        "script_level.chapter": 274,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6708,8 +6160,6 @@
         "script_level.level_keys": [
           "CSP U5L17 SFLP_2019"
         ],
-        "script_level.chapter": 275,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6731,8 +6181,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - introCanvas_2019"
         ],
-        "script_level.chapter": 276,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6754,8 +6202,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - 200dots_2019"
         ],
-        "script_level.chapter": 277,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6777,8 +6223,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - transparentDots_2019"
         ],
-        "script_level.chapter": 278,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6800,8 +6244,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - clickToAdd_2019"
         ],
-        "script_level.chapter": 279,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6823,8 +6265,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - usingOffsetXY_2019"
         ],
-        "script_level.chapter": 280,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6846,8 +6286,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - draw at click point_2019"
         ],
-        "script_level.chapter": 281,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6869,8 +6307,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - changeToMouseMove_2019"
         ],
-        "script_level.chapter": 282,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6892,8 +6328,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - shiftKey_2019"
         ],
-        "script_level.chapter": 283,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6915,8 +6349,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - appendToArray_2019"
         ],
-        "script_level.chapter": 284,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6938,8 +6370,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - delete_2019"
         ],
-        "script_level.chapter": 285,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6961,8 +6391,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom_2019"
         ],
-        "script_level.chapter": 286,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -6984,8 +6412,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom2_2019"
         ],
-        "script_level.chapter": 287,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7007,8 +6433,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawOriginal_2019"
         ],
-        "script_level.chapter": 288,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7030,8 +6454,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction_2019"
         ],
-        "script_level.chapter": 289,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7053,8 +6475,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction fix Orig_2019"
         ],
-        "script_level.chapter": 290,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7076,8 +6496,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - One Dot sprayPaint_2019"
         ],
-        "script_level.chapter": 291,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7099,8 +6517,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sprayPaint_2019"
         ],
-        "script_level.chapter": 292,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7122,8 +6538,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sketch_2019"
         ],
-        "script_level.chapter": 293,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7145,8 +6559,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - freePlay_2019"
         ],
-        "script_level.chapter": 294,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7167,8 +6579,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019"
         ],
-        "script_level.chapter": 295,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7189,8 +6599,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_2018_2019"
         ],
-        "script_level.chapter": 296,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -7211,8 +6619,6 @@
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
         ],
-        "script_level.chapter": 297,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp5-2019"
@@ -7233,8 +6639,6 @@
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
         ],
-        "script_level.chapter": 298,
-        "script_level.position": 2,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp5-2019"
@@ -7251,8 +6655,6 @@
         "script_level.level_keys": [
           "CSP U5L01 SFLP_2019"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7264,8 +6666,6 @@
         "script_level.level_keys": [
           "Introduction to Design Mode_2019"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7277,8 +6677,6 @@
         "script_level.level_keys": [
           "CSPU5_FirstTimeDesignMode_2018_2019"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7290,8 +6688,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Design Mode 1_2019"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7303,8 +6699,6 @@
         "script_level.level_keys": [
           "How onEvent Works_2018_2019"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7316,8 +6710,6 @@
         "script_level.level_keys": [
           "CSPU5_moveTurtleOnButtonClick_2019"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7329,8 +6721,6 @@
         "script_level.level_keys": [
           "CSPU5_turtleDriver_add2ndButton_2019"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7342,8 +6732,6 @@
         "script_level.level_keys": [
           "Event-Driven Programming Patterns_2018_2019"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7355,8 +6743,6 @@
         "script_level.level_keys": [
           "Rules About Choosing Good IDs_2018_2019"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7368,8 +6754,6 @@
         "script_level.level_keys": [
           "CSPU5_addDescriptiveIDsToTurtleDriver_2019"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7381,8 +6765,6 @@
         "script_level.level_keys": [
           "CSPU5_playWithEventTypes_2019"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7394,8 +6776,6 @@
         "script_level.level_keys": [
           "Intro to Debugging and Common Problems_2018_2019"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7407,8 +6787,6 @@
         "script_level.level_keys": [
           "CSPU5_predict_applab_onEventWithWrongID_2019"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7420,8 +6798,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging IDs case sensitive_2019"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7433,8 +6809,6 @@
         "script_level.level_keys": [
           "CSPU5_Debugging predict unexpected behavior - two onEvents to one_2019"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7446,8 +6820,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L13 - Debugging 3_2019"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7459,8 +6831,6 @@
         "script_level.level_keys": [
           "How setPosition and screen dimensions work_2018_2019"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7472,8 +6842,6 @@
         "script_level.level_keys": [
           "CSPU5_setPosition to fixed location_2019"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7485,8 +6853,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - setPosition to move button_2019"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7498,8 +6864,6 @@
         "script_level.level_keys": [
           "CSPU5_AddLabelToChaserGame_2019"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7511,8 +6875,6 @@
         "script_level.level_keys": [
           "How Images Work_2018_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 21,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7524,8 +6886,6 @@
         "script_level.level_keys": [
           "Finalize Your Chaser Game v.1_2019"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 22,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7537,8 +6897,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 23,
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7550,8 +6908,6 @@
         "script_level.level_keys": [
           "CSP U5L02 SFLP_2019"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 1,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7563,8 +6919,6 @@
         "script_level.level_keys": [
           "CSPU5 Layering and Deleting in Design Mode_2019"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 2,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7576,8 +6930,6 @@
         "script_level.level_keys": [
           "CSPU5 Add onEvent from Design Mode_2019"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 3,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7589,8 +6941,6 @@
         "script_level.level_keys": [
           "CSPU5 First Time Console.log_2019"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 4,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7602,8 +6952,6 @@
         "script_level.level_keys": [
           "Debugging with Console.log_2018_2019"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 5,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7615,8 +6963,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log in event v. global_2019"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 6,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7628,8 +6974,6 @@
         "script_level.level_keys": [
           "CSPU5 console.log debug when mouse events happen_2019"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 7,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7641,8 +6985,6 @@
         "script_level.level_keys": [
           "CSPU5 Debugging Overlapping Objects and Screen Events_2019"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 8,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7654,8 +6996,6 @@
         "script_level.level_keys": [
           "Making Multiple Screens_2018_2019"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 9,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7667,8 +7007,6 @@
         "script_level.level_keys": [
           "CSPU5 Add a 2nd Screen_2019"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 10,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7680,8 +7018,6 @@
         "script_level.level_keys": [
           "CSPU5 Use setScreen for first time_2019"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 11,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7693,8 +7029,6 @@
         "script_level.level_keys": [
           "Making a Multi Screen Chaser Game v.2_2018_2019"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 12,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7706,8 +7040,6 @@
         "script_level.level_keys": [
           "CSPU5 Add welcome screen to chaser game_2019"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 13,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7719,8 +7051,6 @@
         "script_level.level_keys": [
           "CSPU5 Add full screen image to bg of chaser game_2019"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 14,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7732,8 +7062,6 @@
         "script_level.level_keys": [
           "CSPU5 Add game over screen_2019"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 15,
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7745,8 +7073,6 @@
         "script_level.level_keys": [
           "CSP U5L03 SFLP_2019"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7758,8 +7084,6 @@
         "script_level.level_keys": [
           "Event Driven Programming Recap_2018_2019"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7771,8 +7095,6 @@
         "script_level.level_keys": [
           "Tips For Working on Your Own_2018_2019"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7784,8 +7106,6 @@
         "script_level.level_keys": [
           "Project - Your Own Multi Screen App_2019"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7797,8 +7117,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Process_2019"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Multi-Screen App",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7810,8 +7128,6 @@
         "script_level.level_keys": [
           "CSP U5L04 SFLP_2019"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7823,8 +7139,6 @@
         "script_level.level_keys": [
           "Basic mechanics of variables_2018_2019"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7836,8 +7150,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_2019"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7849,8 +7161,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - three basic ops of variables_2019"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7862,8 +7172,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - fix the var name syntax error v2_2019"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7875,8 +7183,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - write var and string with same name v2_2019"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 6,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7888,8 +7194,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Create And Assign_2019"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 7,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7901,8 +7205,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Variables - Text Mode_2019"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 8,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7914,8 +7216,6 @@
         "script_level.level_keys": [
           "Controlling Memory - Other ways to assign values_2018_2019"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 9,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7927,8 +7227,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression_2019"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 10,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7940,8 +7238,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - concatenate simple_2019"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 11,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7953,8 +7249,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Variables - Set to Expression with Other Variables_2019"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 12,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7966,8 +7260,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Assigning Random Value_2019"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 13,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7979,8 +7271,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Mini Calculator embed_2019"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 14,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -7992,8 +7282,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - User Input Division calculator_2019"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 15,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8005,8 +7293,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - test reassignment of two vars_2019"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 16,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8018,8 +7304,6 @@
         "script_level.level_keys": [
           "Introduction to Variables - Part 2_2019"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 17,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8031,8 +7315,6 @@
         "script_level.level_keys": [
           "The Mental Model for Variables_2018_2019"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 18,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8044,8 +7326,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - Variable ReAssignment pt2_2019"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 19,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8057,8 +7337,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge1_2019"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 20,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8070,8 +7348,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge2_2019"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 21,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8083,8 +7359,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge3_2019"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 22,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8096,8 +7370,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge4_2019"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 23,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8109,8 +7381,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge5_2019"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 24,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8122,8 +7392,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - moving memory challenge6_2019"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 25,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8135,8 +7403,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L19 - variable reassignment challenge pt2_2019"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 26,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8148,8 +7414,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L14 - MC variable reassignment_2018_2019"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 27,
         "lesson.key": "Controlling Memory with Variables",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8161,8 +7425,6 @@
         "script_level.level_keys": [
           "CSP U5L05 SFLP_2019"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8174,8 +7436,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 full clicker demo_2019"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8187,8 +7447,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - practice with setText_2019"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8200,8 +7458,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - DEMO up down count practice app_2019"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8213,8 +7469,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - global var example count up_2019"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8226,8 +7480,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - variable scoping problem debugging_2019"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8239,8 +7491,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 spot the difference variable debugging_2019"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8252,8 +7502,6 @@
         "script_level.level_keys": [
           "Variable Scope: Local vs. Global_2018_2019"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8265,8 +7513,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - add code to make count down work_2019"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8278,8 +7524,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug forget to set text_2019"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8291,8 +7535,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug var not created globally_2019"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8304,8 +7546,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - count upDown bug logic error wrong update_2019"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8317,8 +7557,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - mini clicker update score_2019"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8330,8 +7568,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 click add lives_2019"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8343,8 +7579,6 @@
         "script_level.level_keys": [
           "Simple Decisions with if-statements_2018_2019"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8356,8 +7590,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Simple If-statements in UpDown App_2019"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8369,8 +7601,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Add reset button to UpDown app_2019"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8382,8 +7612,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debugging Simple If-statements =v==_2019"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8395,8 +7623,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug forget to update var on reset in UpDown app_2019"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8408,8 +7634,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 - Debug if never triggers in UpDown app_2019"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8421,8 +7645,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L15 full clicker app_2019"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 21,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8434,8 +7656,6 @@
         "script_level.level_keys": [
           "U5 AP Create Practice onEvent Doesnt Count_2019"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 22,
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8447,8 +7667,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 1 MC_2018_2019"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 1",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8460,8 +7678,6 @@
         "script_level.level_keys": [
           "CSP U5L06 SFLP_2019"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 1,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8473,8 +7689,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Demo_2019"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 2,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8486,8 +7700,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - introStrings_2019"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 3,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8499,8 +7711,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - doubleQuotes_2019"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 4,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8512,8 +7722,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - textInput getText write_2019"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 5,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8525,8 +7733,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - intro getText_2019"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 6,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8538,8 +7744,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - User Input - Save getText To Variable_2019"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 7,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8551,8 +7755,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - outputWithTextArea_2019"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 8,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8564,8 +7766,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 - toUpper_2019"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 9,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8577,8 +7777,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Student Setup_2019"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 10,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8590,8 +7788,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib setText_2019"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 11,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8603,8 +7799,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib getText_2019"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 12,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8616,8 +7810,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib toUpper_2019"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 13,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8629,8 +7821,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L16 Mad Lib Clear Input_2019"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 14,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8642,8 +7832,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 Free Response 3_2019"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 15,
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8655,8 +7843,6 @@
         "script_level.level_keys": [
           "CSP U5L07 SFLP_2019"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 1,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8668,8 +7854,6 @@
         "script_level.level_keys": [
           "Big Picture: If-statements_2018_2019"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 2,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8681,8 +7865,6 @@
         "script_level.level_keys": [
           "Worked Example: If-statements and Robot_2018_2019"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 3,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8694,8 +7876,6 @@
         "script_level.level_keys": [
           "CSP Algorithms Map_2018_2019"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 4,
         "lesson.key": "\"If\" Statements Unplugged",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8707,8 +7887,6 @@
         "script_level.level_keys": [
           "CSP U5L08 SFLP_2019"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 1,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8720,8 +7898,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Boolean Expressions_2019"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 2,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8733,8 +7909,6 @@
         "script_level.level_keys": [
           "Boolean Expressions and Comparison Operators_2018_2019"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 3,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8746,8 +7920,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L18 comparison operators_2019"
         ],
-        "script_level.chapter": 116,
-        "script_level.position": 4,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8759,8 +7931,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if Statements_2019"
         ],
-        "script_level.chapter": 117,
-        "script_level.position": 5,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8772,8 +7942,6 @@
         "script_level.level_keys": [
           "How If Statements Work pt 1_2018_2019"
         ],
-        "script_level.chapter": 118,
-        "script_level.position": 6,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8785,8 +7953,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - check driving age_2019"
         ],
-        "script_level.chapter": 119,
-        "script_level.position": 7,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8798,8 +7964,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if - DIY secret number_2019"
         ],
-        "script_level.chapter": 120,
-        "script_level.position": 8,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8811,8 +7975,6 @@
         "script_level.level_keys": [
           "U5 Check Password if statement lock image_2019"
         ],
-        "script_level.chapter": 121,
-        "script_level.position": 9,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8824,8 +7986,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else Statements_2019"
         ],
-        "script_level.chapter": 122,
-        "script_level.position": 10,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8837,8 +7997,6 @@
         "script_level.level_keys": [
           "How If-Else Statements Work_2018_2019"
         ],
-        "script_level.chapter": 123,
-        "script_level.position": 11,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8850,8 +8008,6 @@
         "script_level.level_keys": [
           "U5 if-else simple movie ratings example_2019"
         ],
-        "script_level.chapter": 124,
-        "script_level.position": 12,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8863,8 +8019,6 @@
         "script_level.level_keys": [
           "CSPU5_basic if-else - driving age_2019"
         ],
-        "script_level.chapter": 125,
-        "script_level.position": 13,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8876,8 +8030,6 @@
         "script_level.level_keys": [
           "U5 Check Password if-else string_2019"
         ],
-        "script_level.chapter": 126,
-        "script_level.position": 14,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8889,8 +8041,6 @@
         "script_level.level_keys": [
           "How Dropdown Menus Work_2018_2019"
         ],
-        "script_level.chapter": 127,
-        "script_level.position": 15,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8902,8 +8052,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown movie checker_2019"
         ],
-        "script_level.chapter": 128,
-        "script_level.position": 16,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8915,8 +8063,6 @@
         "script_level.level_keys": [
           "U5 if-else dropdown guess dice_2019"
         ],
-        "script_level.chapter": 129,
-        "script_level.position": 17,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8928,8 +8074,6 @@
         "script_level.level_keys": [
           "U5 if-else weeekend challenge_2019"
         ],
-        "script_level.chapter": 130,
-        "script_level.position": 18,
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8941,8 +8085,6 @@
         "script_level.level_keys": [
           "CSP U5L09 SFLP_2019"
         ],
-        "script_level.chapter": 131,
-        "script_level.position": 1,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8954,8 +8096,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: if-else-if Statements_2019"
         ],
-        "script_level.chapter": 132,
-        "script_level.position": 2,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8967,8 +8107,6 @@
         "script_level.level_keys": [
           "How \"if-else-if\" Works_2018_2019"
         ],
-        "script_level.chapter": 133,
-        "script_level.position": 3,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8980,8 +8118,6 @@
         "script_level.level_keys": [
           "U5 if-else-if movie example_2019"
         ],
-        "script_level.chapter": 134,
-        "script_level.position": 4,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -8993,8 +8129,6 @@
         "script_level.level_keys": [
           "U5 if-else-if quiz grade_2019"
         ],
-        "script_level.chapter": 135,
-        "script_level.position": 5,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9006,8 +8140,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Else if_2019"
         ],
-        "script_level.chapter": 136,
-        "script_level.position": 6,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9019,8 +8151,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - High Low - Debug_2019"
         ],
-        "script_level.chapter": 137,
-        "script_level.position": 7,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9032,8 +8162,6 @@
         "script_level.level_keys": [
           "Introduction to Conditionals: Compound Boolean Expressions_2019"
         ],
-        "script_level.chapter": 138,
-        "script_level.position": 8,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9045,8 +8173,6 @@
         "script_level.level_keys": [
           "How the Boolean &&, || and ! Operators Work_2018_2019"
         ],
-        "script_level.chapter": 139,
-        "script_level.position": 9,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9058,8 +8184,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple OR_2019"
         ],
-        "script_level.chapter": 140,
-        "script_level.position": 10,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9071,8 +8195,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Simple AND_2019"
         ],
-        "script_level.chapter": 141,
-        "script_level.position": 11,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9084,8 +8206,6 @@
         "script_level.level_keys": [
           "How Compound Boolean Expressions Work_2018_2019"
         ],
-        "script_level.chapter": 142,
-        "script_level.position": 12,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9097,8 +8217,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR Simple_2019"
         ],
-        "script_level.chapter": 143,
-        "script_level.position": 13,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9110,8 +8228,6 @@
         "script_level.level_keys": [
           "U5 compound boolean museum example_2019"
         ],
-        "script_level.chapter": 144,
-        "script_level.position": 14,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9123,8 +8239,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Conditionals - Combine AND OR and NOT_2019"
         ],
-        "script_level.chapter": 145,
-        "script_level.position": 15,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9136,8 +8250,6 @@
         "script_level.level_keys": [
           "U5-AP-Algorithm-Does-It-Count_2019"
         ],
-        "script_level.chapter": 146,
-        "script_level.position": 16,
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9149,8 +8261,6 @@
         "script_level.level_keys": [
           "CSP U5L10 SFLP_2019"
         ],
-        "script_level.chapter": 147,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9162,8 +8272,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Planning the App_2018_2019"
         ],
-        "script_level.chapter": 148,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9175,8 +8283,6 @@
         "script_level.level_keys": [
           "How Set Property Works_2018_2019"
         ],
-        "script_level.chapter": 149,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9188,8 +8294,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 1_2019"
         ],
-        "script_level.chapter": 150,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9201,8 +8305,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 2 small color change_2019"
         ],
-        "script_level.chapter": 151,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9214,8 +8316,6 @@
         "script_level.level_keys": [
           "How to pick a random button_2018_2019"
         ],
-        "script_level.chapter": 152,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9227,8 +8327,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 3 pick random button_2019"
         ],
-        "script_level.chapter": 153,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9240,8 +8338,6 @@
         "script_level.level_keys": [
           "How to make a random color_2018_2019"
         ],
-        "script_level.chapter": 154,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9253,8 +8349,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 4 make random RGB string_2019"
         ],
-        "script_level.chapter": 155,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9266,8 +8360,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth part 5 make setBoard function_2019"
         ],
-        "script_level.chapter": 156,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9279,8 +8371,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth add global var correct plus console.log_2019"
         ],
-        "script_level.chapter": 157,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9292,8 +8382,6 @@
         "script_level.level_keys": [
           "U5 color sleuth check correct_2018_2019"
         ],
-        "script_level.chapter": 158,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9305,8 +8393,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect make global var_2019"
         ],
-        "script_level.chapter": 159,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9318,8 +8404,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part1 link to event handlers_2019"
         ],
-        "script_level.chapter": 160,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9331,8 +8415,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth checkCorrect part2 add if statement to check corre_2019"
         ],
-        "script_level.chapter": 161,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9344,8 +8426,6 @@
         "script_level.level_keys": [
           "Color Sleuth - How to switch player turns_2018_2019"
         ],
-        "script_level.chapter": 162,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9357,8 +8437,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt1 add var and function and console.log_2019"
         ],
-        "script_level.chapter": 163,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9370,8 +8448,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_2019"
         ],
-        "script_level.chapter": 164,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9383,8 +8459,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Keeping score_2018_2019"
         ],
-        "script_level.chapter": 165,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9396,8 +8470,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt1 vars function stub console_2019"
         ],
-        "script_level.chapter": 166,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9409,8 +8481,6 @@
         "script_level.level_keys": [
           "U5 ColorSleuth scoring pt3 update UI for scoring_2019"
         ],
-        "script_level.chapter": 167,
-        "script_level.position": 21,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9422,8 +8492,6 @@
         "script_level.level_keys": [
           "Color Sleuth - How does it end?_2018_2019"
         ],
-        "script_level.chapter": 168,
-        "script_level.position": 22,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9435,8 +8503,6 @@
         "script_level.level_keys": [
           "Project: Finish Color Sleuth_2019"
         ],
-        "script_level.chapter": 169,
-        "script_level.position": 23,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9448,8 +8514,6 @@
         "script_level.level_keys": [
           "Color Sleuth - Epilogue_2018_2019"
         ],
-        "script_level.chapter": 170,
-        "script_level.position": 24,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9461,8 +8525,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Abstraction Color Sleuth_2019"
         ],
-        "script_level.chapter": 171,
-        "script_level.position": 25,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9474,8 +8536,6 @@
         "script_level.level_keys": [
           "CSP U5 AP Practice Choose the Algorithm_2019"
         ],
-        "script_level.chapter": 172,
-        "script_level.position": 26,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9487,8 +8547,6 @@
         "script_level.level_keys": [
           "U5 AP Practice Create Algorithm Color Sleuth_2019"
         ],
-        "script_level.chapter": 173,
-        "script_level.position": 27,
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9500,8 +8558,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019"
         ],
-        "script_level.chapter": 174,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2019"
@@ -9513,8 +8569,6 @@
         "script_level.level_keys": [
           "CSP U5L11 SFLP_2019"
         ],
-        "script_level.chapter": 175,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9526,8 +8580,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 1_2019"
         ],
-        "script_level.chapter": 176,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9539,8 +8591,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 2_2019"
         ],
-        "script_level.chapter": 177,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9552,8 +8602,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 3_2019"
         ],
-        "script_level.chapter": 178,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9565,8 +8613,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Typing in Console_2019"
         ],
-        "script_level.chapter": 179,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9578,8 +8624,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 4_2019"
         ],
-        "script_level.chapter": 180,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9591,8 +8635,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 5_2019"
         ],
-        "script_level.chapter": 181,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9604,8 +8646,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 8_2019"
         ],
-        "script_level.chapter": 182,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9617,8 +8657,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 6_2019"
         ],
-        "script_level.chapter": 183,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9630,8 +8668,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 7_2019"
         ],
-        "script_level.chapter": 184,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9643,8 +8679,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 9_2019"
         ],
-        "script_level.chapter": 185,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9656,8 +8690,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops -  Complex Condition_2019"
         ],
-        "script_level.chapter": 186,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9669,8 +8701,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 10_2019"
         ],
-        "script_level.chapter": 187,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9682,8 +8712,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 11_2019"
         ],
-        "script_level.chapter": 188,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9695,8 +8723,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 12_2019"
         ],
-        "script_level.chapter": 189,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9708,8 +8734,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Plus Plus_2019"
         ],
-        "script_level.chapter": 190,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9721,8 +8745,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - Minus Minus_2019"
         ],
-        "script_level.chapter": 191,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9734,8 +8756,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - plus and minus = operator_2019"
         ],
-        "script_level.chapter": 192,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9747,8 +8767,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - minus = operator_2019"
         ],
-        "script_level.chapter": 193,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9760,8 +8778,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 14_2019"
         ],
-        "script_level.chapter": 194,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9773,8 +8789,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops - 15_2019"
         ],
-        "script_level.chapter": 195,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9786,8 +8800,6 @@
         "script_level.level_keys": [
           "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019"
         ],
-        "script_level.chapter": 196,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9799,8 +8811,6 @@
         "script_level.level_keys": [
           "CSP U5L12 SFLP_2019"
         ],
-        "script_level.chapter": 197,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9812,8 +8822,6 @@
         "script_level.level_keys": [
           "Make a Hypothesis_2018_2019"
         ],
-        "script_level.chapter": 198,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9825,8 +8833,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 1_2019"
         ],
-        "script_level.chapter": 199,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9838,8 +8844,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2_2019"
         ],
-        "script_level.chapter": 200,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9851,8 +8855,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.1_2019"
         ],
-        "script_level.chapter": 201,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9864,8 +8866,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 2.5_2019"
         ],
-        "script_level.chapter": 202,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9877,8 +8877,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 1_2018_2019"
         ],
-        "script_level.chapter": 203,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9890,8 +8888,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 3_2019"
         ],
-        "script_level.chapter": 204,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9903,8 +8899,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 4_2019"
         ],
-        "script_level.chapter": 205,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9916,8 +8910,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 5_2019"
         ],
-        "script_level.chapter": 206,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9929,8 +8921,6 @@
         "script_level.level_keys": [
           "Update your Hypothesis - Part 2_2018_2019"
         ],
-        "script_level.chapter": 207,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9942,8 +8932,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Simulation - 6_2019"
         ],
-        "script_level.chapter": 208,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9955,8 +8943,6 @@
         "script_level.level_keys": [
           "CSP U5L13 SFLP_2019"
         ],
-        "script_level.chapter": 209,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9968,8 +8954,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 1_2019"
         ],
-        "script_level.chapter": 210,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9981,8 +8965,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - createFirstArray_2019"
         ],
-        "script_level.chapter": 211,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -9994,8 +8976,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - appendItem_2019"
         ],
-        "script_level.chapter": 212,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10007,8 +8987,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_2019"
         ],
-        "script_level.chapter": 213,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10020,8 +8998,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - introIndex_2019"
         ],
-        "script_level.chapter": 214,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10033,8 +9009,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - indexPractice_2019"
         ],
-        "script_level.chapter": 215,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10046,8 +9020,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_2019"
         ],
-        "script_level.chapter": 216,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10059,8 +9031,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment_2019"
         ],
-        "script_level.chapter": 217,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10072,8 +9042,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment2_2019"
         ],
-        "script_level.chapter": 218,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10085,8 +9053,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - assignment3_2019"
         ],
-        "script_level.chapter": 219,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10098,8 +9064,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - stringsInArrays_2019"
         ],
-        "script_level.chapter": 220,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10111,8 +9075,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertingItems_2019"
         ],
-        "script_level.chapter": 221,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10124,8 +9086,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - remove_2019"
         ],
-        "script_level.chapter": 222,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10137,8 +9097,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - insertionErrors_2019"
         ],
-        "script_level.chapter": 223,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10150,8 +9108,6 @@
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_2019"
         ],
-        "script_level.chapter": 224,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10163,8 +9119,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - length_2019"
         ],
-        "script_level.chapter": 225,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10176,8 +9130,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - lengthMinus1_2019"
         ],
-        "script_level.chapter": 226,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10189,8 +9141,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - expressionsAsIndexes_2019"
         ],
-        "script_level.chapter": 227,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10202,8 +9152,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Demo App_2019"
         ],
-        "script_level.chapter": 228,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10215,8 +9163,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings giveIDs_2019"
         ],
-        "script_level.chapter": 229,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10228,8 +9174,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings createArray_2019"
         ],
-        "script_level.chapter": 230,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10241,8 +9185,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings firstOutput_2019"
         ],
-        "script_level.chapter": 231,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10254,8 +9196,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Counting Variable_2019"
         ],
-        "script_level.chapter": 232,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10267,8 +9207,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Next_2019"
         ],
-        "script_level.chapter": 233,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10280,8 +9218,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings Prev_2019"
         ],
-        "script_level.chapter": 234,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10293,8 +9229,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings addItem_2019"
         ],
-        "script_level.chapter": 235,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10306,8 +9240,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings bounds_2019"
         ],
-        "script_level.chapter": 236,
-        "script_level.position": 28,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10319,8 +9251,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - favThings keepPlaying_2019"
         ],
-        "script_level.chapter": 237,
-        "script_level.position": 29,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10332,8 +9262,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 1_2019"
         ],
-        "script_level.chapter": 238,
-        "script_level.position": 30,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10345,8 +9273,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Arrays - Wrap Up 2_2019"
         ],
-        "script_level.chapter": 239,
-        "script_level.position": 31,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10358,8 +9284,6 @@
         "script_level.level_keys": [
           "CSP U5L14 SFLP_2019"
         ],
-        "script_level.chapter": 240,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10371,8 +9295,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Demo App_2019"
         ],
-        "script_level.chapter": 241,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10384,8 +9306,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - drag out key event_2019"
         ],
-        "script_level.chapter": 242,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10397,8 +9317,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Key Up and Down_2019"
         ],
-        "script_level.chapter": 243,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10410,8 +9328,6 @@
         "script_level.level_keys": [
           "CSPU5_U3L25 - play sound when up key_2019"
         ],
-        "script_level.chapter": 244,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10423,8 +9339,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Multiple Keys_2019"
         ],
-        "script_level.chapter": 245,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10436,8 +9350,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Buttons and Keys_2019"
         ],
-        "script_level.chapter": 246,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10449,8 +9361,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Functions_2019"
         ],
-        "script_level.chapter": 247,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10462,8 +9372,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Keys - Add Image URLs_2019"
         ],
-        "script_level.chapter": 248,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10475,8 +9383,6 @@
         "script_level.level_keys": [
           "Project - Final Image Scroller_2019"
         ],
-        "script_level.chapter": 249,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10488,8 +9394,6 @@
         "script_level.level_keys": [
           "CSPU5_U3- Keys - Code Refactoring Exit Ticket_2019"
         ],
-        "script_level.chapter": 250,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10501,8 +9405,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019"
         ],
-        "script_level.chapter": 251,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10514,8 +9416,6 @@
         "script_level.level_keys": [
           "CSP U5L15 SFLP_2019"
         ],
-        "script_level.chapter": 252,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10527,8 +9427,6 @@
         "script_level.level_keys": [
           "Processing Lists with Loops_2019"
         ],
-        "script_level.chapter": 253,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10540,8 +9438,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Intro For Loop_2019"
         ],
-        "script_level.chapter": 254,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10553,8 +9449,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Print Array_2019"
         ],
-        "script_level.chapter": 255,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10566,8 +9460,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Add 5_2019"
         ],
-        "script_level.chapter": 256,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10579,8 +9471,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Divid by 2_2019"
         ],
-        "script_level.chapter": 257,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10592,8 +9482,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Loop Array If_2019"
         ],
-        "script_level.chapter": 258,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10605,8 +9493,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Linear Search_2019"
         ],
-        "script_level.chapter": 259,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10618,8 +9504,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Counting Times_2019"
         ],
-        "script_level.chapter": 260,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10631,8 +9515,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Printing Single True_2019"
         ],
-        "script_level.chapter": 261,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10644,8 +9526,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_2019"
         ],
-        "script_level.chapter": 262,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10657,8 +9537,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function_2019"
         ],
-        "script_level.chapter": 263,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10670,8 +9548,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2019"
         ],
-        "script_level.chapter": 264,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10683,8 +9559,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - General Search Param_2019"
         ],
-        "script_level.chapter": 265,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10696,8 +9570,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Loops And Arrays - Find Min_2019"
         ],
-        "script_level.chapter": 266,
-        "script_level.position": 15,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10709,8 +9581,6 @@
         "script_level.level_keys": [
           "CSP U5L16 SFLP_2019"
         ],
-        "script_level.chapter": 267,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10722,8 +9592,6 @@
         "script_level.level_keys": [
           "Using Output from Functions: The return Command_2018_2019"
         ],
-        "script_level.chapter": 268,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10735,8 +9603,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - useMinVal_2019"
         ],
-        "script_level.chapter": 269,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10748,8 +9614,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - writeMaxVal_2019"
         ],
-        "script_level.chapter": 270,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10761,8 +9625,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingMaxVal_2019"
         ],
-        "script_level.chapter": 271,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10774,8 +9636,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - debuggingConstrain_2019"
         ],
-        "script_level.chapter": 272,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10787,8 +9647,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - constrainTurtle_2019"
         ],
-        "script_level.chapter": 273,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10800,8 +9658,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Return Values - wrapTurtle_2019"
         ],
-        "script_level.chapter": 274,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10813,8 +9669,6 @@
         "script_level.level_keys": [
           "CSP U5L17 SFLP_2019"
         ],
-        "script_level.chapter": 275,
-        "script_level.position": 1,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10826,8 +9680,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - introCanvas_2019"
         ],
-        "script_level.chapter": 276,
-        "script_level.position": 2,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10839,8 +9691,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - 200dots_2019"
         ],
-        "script_level.chapter": 277,
-        "script_level.position": 3,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10852,8 +9702,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - transparentDots_2019"
         ],
-        "script_level.chapter": 278,
-        "script_level.position": 4,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10865,8 +9713,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - clickToAdd_2019"
         ],
-        "script_level.chapter": 279,
-        "script_level.position": 5,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10878,8 +9724,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - usingOffsetXY_2019"
         ],
-        "script_level.chapter": 280,
-        "script_level.position": 6,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10891,8 +9735,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - draw at click point_2019"
         ],
-        "script_level.chapter": 281,
-        "script_level.position": 7,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10904,8 +9746,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - changeToMouseMove_2019"
         ],
-        "script_level.chapter": 282,
-        "script_level.position": 8,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10917,8 +9757,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - shiftKey_2019"
         ],
-        "script_level.chapter": 283,
-        "script_level.position": 9,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10930,8 +9768,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - appendToArray_2019"
         ],
-        "script_level.chapter": 284,
-        "script_level.position": 10,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10943,8 +9779,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - delete_2019"
         ],
-        "script_level.chapter": 285,
-        "script_level.position": 11,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10956,8 +9790,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom_2019"
         ],
-        "script_level.chapter": 286,
-        "script_level.position": 12,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10969,8 +9801,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawRandom2_2019"
         ],
-        "script_level.chapter": 287,
-        "script_level.position": 13,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10982,8 +9812,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - redrawOriginal_2019"
         ],
-        "script_level.chapter": 288,
-        "script_level.position": 14,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -10995,8 +9823,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction_2019"
         ],
-        "script_level.chapter": 289,
-        "script_level.position": 15,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11008,8 +9834,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - movementFunction fix Orig_2019"
         ],
-        "script_level.chapter": 290,
-        "script_level.position": 16,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11021,8 +9845,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - One Dot sprayPaint_2019"
         ],
-        "script_level.chapter": 291,
-        "script_level.position": 17,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11034,8 +9856,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sprayPaint_2019"
         ],
-        "script_level.chapter": 292,
-        "script_level.position": 18,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11047,8 +9867,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - sketch_2019"
         ],
-        "script_level.chapter": 293,
-        "script_level.position": 19,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11060,8 +9878,6 @@
         "script_level.level_keys": [
           "CSPU5_U3 - Canvas - freePlay_2019"
         ],
-        "script_level.chapter": 294,
-        "script_level.position": 20,
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11073,8 +9889,6 @@
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019"
         ],
-        "script_level.chapter": 295,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11086,8 +9900,6 @@
         "script_level.level_keys": [
           "CSP Cumulative Assess A_2018_2019"
         ],
-        "script_level.chapter": 296,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
         "script.name": "csp5-2019"
@@ -11099,8 +9911,6 @@
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
         ],
-        "script_level.chapter": 297,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp5-2019"
@@ -11112,8 +9922,6 @@
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
         ],
-        "script_level.chapter": 298,
-        "script_level.position": 2,
         "lesson.key": "CS Principles Post Course survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp5-2019"

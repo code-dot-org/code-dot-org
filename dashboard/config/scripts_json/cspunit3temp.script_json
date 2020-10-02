@@ -152,8 +152,6 @@
         "script_level.level_keys": [
           "U3L28 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -174,8 +172,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -196,8 +192,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -218,8 +212,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 3"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -240,8 +232,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Typing in Console"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -262,8 +252,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -284,8 +272,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -306,8 +292,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -328,8 +312,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -350,8 +332,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -372,8 +352,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -394,8 +372,6 @@
         "script_level.level_keys": [
           "U3 - Loops -  Complex Condition"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -416,8 +392,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -438,8 +412,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -460,8 +432,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -482,8 +452,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Plus Plus"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -504,8 +472,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Minus Minus"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -526,8 +492,6 @@
         "script_level.level_keys": [
           "U3 - Loops - plus and minus = operator"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -548,8 +512,6 @@
         "script_level.level_keys": [
           "U3 - Loops - minus = operator"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -570,8 +532,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 14"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -592,8 +552,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 15"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -614,8 +572,6 @@
         "script_level.level_keys": [
           "U3L28 Free Response Wrap Up"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -636,8 +592,6 @@
         "script_level.level_keys": [
           "U3L29 Student Lesson Introduction"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -658,8 +612,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -680,8 +632,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -702,8 +652,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -724,8 +672,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2.1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -746,8 +692,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2.5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -768,8 +712,6 @@
         "script_level.level_keys": [
           "U3 Simulation Updating Hypotheses"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -790,8 +732,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 3"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -812,8 +752,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 4"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -834,8 +772,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 5"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -856,8 +792,6 @@
         "script_level.level_keys": [
           "U3 Simulations Hypotheses Reflections"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -878,8 +812,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 6"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -900,8 +832,6 @@
         "script_level.level_keys": [
           "U3L30 Student Lesson Introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -922,8 +852,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - createFirstArray"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -944,8 +872,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - appendItem"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -966,8 +892,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - introIndex"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -988,8 +912,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - indexPractice"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1010,8 +932,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1032,8 +952,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1054,8 +972,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment3"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1076,8 +992,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - stringsInArrays"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1098,8 +1012,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - insertingItems"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1120,8 +1032,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - remove"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1142,8 +1052,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - insertionErrors"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1164,8 +1072,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - length"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1186,8 +1092,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - lengthMinus1"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1208,8 +1112,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - expressionsAsIndexes"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1230,8 +1132,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Demo App"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1252,8 +1152,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings giveIDs"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1274,8 +1172,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings createArray"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1296,8 +1192,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings firstOutput"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1318,8 +1212,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Counting Variable"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1340,8 +1232,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Next"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1362,8 +1252,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Prev"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1384,8 +1272,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings addItem"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1406,8 +1292,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings bounds"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1428,8 +1312,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings keepPlaying"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1450,8 +1332,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Wrap Up 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1472,8 +1352,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Wrap Up 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1494,8 +1372,6 @@
         "script_level.level_keys": [
           "U3L31 Student Lesson Introduction"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1516,8 +1392,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Demo App"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1538,8 +1412,6 @@
         "script_level.level_keys": [
           "U3L25 - drag out key event"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1560,8 +1432,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Key Up and Down"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1582,8 +1452,6 @@
         "script_level.level_keys": [
           "U3L25 - play sound when up key"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1604,8 +1472,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Multiple Keys"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1626,8 +1492,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Buttons and Keys"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1648,8 +1512,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Functions"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1670,8 +1532,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Add Image URLs"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1692,8 +1552,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Final Image Scroller"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 10,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1714,8 +1572,6 @@
         "script_level.level_keys": [
           "U3- Keys - Code Refactoring Exit Ticket"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 11,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1736,8 +1592,6 @@
         "script_level.level_keys": [
           "U3L32 Student Lesson Introduction"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1758,8 +1612,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Intro For Loop"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1780,8 +1632,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Print Array"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1802,8 +1652,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Add 5"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1824,8 +1672,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Divid by 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1846,8 +1692,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Loop Array If"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1868,8 +1712,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Linear Search"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1890,8 +1732,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Counting Times"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1912,8 +1752,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Printing Single True"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1934,8 +1772,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Search with Boolean Var"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1956,8 +1792,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Make it a Function"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -1978,8 +1812,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Make it a Function - add list parameter"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2000,8 +1832,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - General Search Param"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2022,8 +1852,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Find Min"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2044,8 +1872,6 @@
         "script_level.level_keys": [
           "U3L27 Student Lesson Introduction"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2066,8 +1892,6 @@
         "script_level.level_keys": [
           "U3 - Arrays and Loops - Explain Functions with Returns"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2088,8 +1912,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - useMinVal"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2110,8 +1932,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - writeMaxVal"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2132,8 +1952,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - debuggingMaxVal"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2154,8 +1972,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - debuggingConstrain"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2176,8 +1992,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - constrainTurtle"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2198,8 +2012,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - wrapTurtle"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2220,8 +2032,6 @@
         "script_level.level_keys": [
           "U3L33 Student Lesson Introduction"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2242,8 +2052,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - introCanvas"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2264,8 +2072,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - 200dots"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2286,8 +2092,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - transparentDots"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2308,8 +2112,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - clickToAdd"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2330,8 +2132,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - usingOffsetXY"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2352,8 +2152,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - draw at click point"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2374,8 +2172,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - changeToMouseMove"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2396,8 +2192,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - shiftKey"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2418,8 +2212,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - appendToArray"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2440,8 +2232,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawRandom"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2462,8 +2252,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawRandom2"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2484,8 +2272,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawOriginal"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2506,8 +2292,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - delete"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2528,8 +2312,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - movementFunction"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 15,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2550,8 +2332,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - movementFunction fix Orig"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 16,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2572,8 +2352,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - sprayPaint"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 17,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2594,8 +2372,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - sketch"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 18,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2616,8 +2392,6 @@
         "script_level.level_keys": [
           "U3L33 Free Response Getting Started"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 19,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2638,8 +2412,6 @@
         "script_level.level_keys": [
           "U3L34 Student Lesson Introduction"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2660,8 +2432,6 @@
         "script_level.level_keys": [
           "U3 - Practice Create Performance Task"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2678,8 +2448,6 @@
         "script_level.level_keys": [
           "U3L28 Student Lesson Introduction"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2691,8 +2459,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 1"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2704,8 +2470,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 2"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2717,8 +2481,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 3"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2730,8 +2492,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Typing in Console"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2743,8 +2503,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 4"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 6,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2756,8 +2514,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 5"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 7,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2769,8 +2525,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 8"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 8,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2782,8 +2536,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 6"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 9,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2795,8 +2547,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 7"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 10,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2808,8 +2558,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 9"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 11,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2821,8 +2569,6 @@
         "script_level.level_keys": [
           "U3 - Loops -  Complex Condition"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 12,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2834,8 +2580,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 10"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 13,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2847,8 +2591,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 11"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 14,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2860,8 +2602,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 12"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 15,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2873,8 +2613,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Plus Plus"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 16,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2886,8 +2624,6 @@
         "script_level.level_keys": [
           "U3 - Loops - Minus Minus"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 17,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2899,8 +2635,6 @@
         "script_level.level_keys": [
           "U3 - Loops - plus and minus = operator"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 18,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2912,8 +2646,6 @@
         "script_level.level_keys": [
           "U3 - Loops - minus = operator"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 19,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2925,8 +2657,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 14"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 20,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2938,8 +2668,6 @@
         "script_level.level_keys": [
           "U3 - Loops - 15"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 21,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2951,8 +2679,6 @@
         "script_level.level_keys": [
           "U3L28 Free Response Wrap Up"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 22,
         "lesson.key": "While Loops",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2964,8 +2690,6 @@
         "script_level.level_keys": [
           "U3L29 Student Lesson Introduction"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 1,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2977,8 +2701,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - Intro"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 2,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -2990,8 +2712,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 1"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 3,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3003,8 +2723,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 4,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3016,8 +2734,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2.1"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 5,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3029,8 +2745,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 2.5"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 6,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3042,8 +2756,6 @@
         "script_level.level_keys": [
           "U3 Simulation Updating Hypotheses"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 7,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3055,8 +2767,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 3"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 8,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3068,8 +2778,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 4"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 9,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3081,8 +2789,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 5"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 10,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3094,8 +2800,6 @@
         "script_level.level_keys": [
           "U3 Simulations Hypotheses Reflections"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 11,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3107,8 +2811,6 @@
         "script_level.level_keys": [
           "U3 - Simulation - 6"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 12,
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3120,8 +2822,6 @@
         "script_level.level_keys": [
           "U3L30 Student Lesson Introduction"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 1,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3133,8 +2833,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - createFirstArray"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 2,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3146,8 +2844,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - appendItem"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 3,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3159,8 +2855,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - introIndex"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 4,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3172,8 +2866,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - indexPractice"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 5,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3185,8 +2877,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 6,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3198,8 +2888,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment2"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 7,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3211,8 +2899,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - assignment3"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 8,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3224,8 +2910,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - stringsInArrays"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 9,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3237,8 +2921,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - insertingItems"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 10,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3250,8 +2932,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - remove"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 11,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3263,8 +2943,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - insertionErrors"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 12,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3276,8 +2954,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - length"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 13,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3289,8 +2965,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - lengthMinus1"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 14,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3302,8 +2976,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - expressionsAsIndexes"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 15,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3315,8 +2987,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Demo App"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 16,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3328,8 +2998,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings giveIDs"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 17,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3341,8 +3009,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings createArray"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 18,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3354,8 +3020,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings firstOutput"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 19,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3367,8 +3031,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Counting Variable"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 20,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3380,8 +3042,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Next"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 21,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3393,8 +3053,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings Prev"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 22,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3406,8 +3064,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings addItem"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 23,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3419,8 +3075,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings bounds"
         ],
-        "script_level.chapter": 58,
-        "script_level.position": 24,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3432,8 +3086,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - favThings keepPlaying"
         ],
-        "script_level.chapter": 59,
-        "script_level.position": 25,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3445,8 +3097,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Wrap Up 1"
         ],
-        "script_level.chapter": 60,
-        "script_level.position": 26,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3458,8 +3108,6 @@
         "script_level.level_keys": [
           "U3 - Arrays - Wrap Up 2"
         ],
-        "script_level.chapter": 61,
-        "script_level.position": 27,
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3471,8 +3119,6 @@
         "script_level.level_keys": [
           "U3L31 Student Lesson Introduction"
         ],
-        "script_level.chapter": 62,
-        "script_level.position": 1,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3484,8 +3130,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Demo App"
         ],
-        "script_level.chapter": 63,
-        "script_level.position": 2,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3497,8 +3141,6 @@
         "script_level.level_keys": [
           "U3L25 - drag out key event"
         ],
-        "script_level.chapter": 64,
-        "script_level.position": 3,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3510,8 +3152,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Key Up and Down"
         ],
-        "script_level.chapter": 65,
-        "script_level.position": 4,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3523,8 +3163,6 @@
         "script_level.level_keys": [
           "U3L25 - play sound when up key"
         ],
-        "script_level.chapter": 66,
-        "script_level.position": 5,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3536,8 +3174,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Multiple Keys"
         ],
-        "script_level.chapter": 67,
-        "script_level.position": 6,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3549,8 +3185,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Buttons and Keys"
         ],
-        "script_level.chapter": 68,
-        "script_level.position": 7,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3562,8 +3196,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Functions"
         ],
-        "script_level.chapter": 69,
-        "script_level.position": 8,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3575,8 +3207,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Add Image URLs"
         ],
-        "script_level.chapter": 70,
-        "script_level.position": 9,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3588,8 +3218,6 @@
         "script_level.level_keys": [
           "U3 - Keys - Final Image Scroller"
         ],
-        "script_level.chapter": 71,
-        "script_level.position": 10,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3601,8 +3229,6 @@
         "script_level.level_keys": [
           "U3- Keys - Code Refactoring Exit Ticket"
         ],
-        "script_level.chapter": 72,
-        "script_level.position": 11,
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3614,8 +3240,6 @@
         "script_level.level_keys": [
           "U3L32 Student Lesson Introduction"
         ],
-        "script_level.chapter": 73,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3627,8 +3251,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Intro For Loop"
         ],
-        "script_level.chapter": 74,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3640,8 +3262,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Print Array"
         ],
-        "script_level.chapter": 75,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3653,8 +3273,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Add 5"
         ],
-        "script_level.chapter": 76,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3666,8 +3284,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Divid by 2"
         ],
-        "script_level.chapter": 77,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3679,8 +3295,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Loop Array If"
         ],
-        "script_level.chapter": 78,
-        "script_level.position": 6,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3692,8 +3306,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Linear Search"
         ],
-        "script_level.chapter": 79,
-        "script_level.position": 7,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3705,8 +3317,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Counting Times"
         ],
-        "script_level.chapter": 80,
-        "script_level.position": 8,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3718,8 +3328,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Printing Single True"
         ],
-        "script_level.chapter": 81,
-        "script_level.position": 9,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3731,8 +3339,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Search with Boolean Var"
         ],
-        "script_level.chapter": 82,
-        "script_level.position": 10,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3744,8 +3350,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Make it a Function"
         ],
-        "script_level.chapter": 83,
-        "script_level.position": 11,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3757,8 +3361,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Make it a Function - add list parameter"
         ],
-        "script_level.chapter": 84,
-        "script_level.position": 12,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3770,8 +3372,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - General Search Param"
         ],
-        "script_level.chapter": 85,
-        "script_level.position": 13,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3783,8 +3383,6 @@
         "script_level.level_keys": [
           "U3 - Loops And Arrays - Find Min"
         ],
-        "script_level.chapter": 86,
-        "script_level.position": 14,
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3796,8 +3394,6 @@
         "script_level.level_keys": [
           "U3L27 Student Lesson Introduction"
         ],
-        "script_level.chapter": 87,
-        "script_level.position": 1,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3809,8 +3405,6 @@
         "script_level.level_keys": [
           "U3 - Arrays and Loops - Explain Functions with Returns"
         ],
-        "script_level.chapter": 88,
-        "script_level.position": 2,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3822,8 +3416,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - useMinVal"
         ],
-        "script_level.chapter": 89,
-        "script_level.position": 3,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3835,8 +3427,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - writeMaxVal"
         ],
-        "script_level.chapter": 90,
-        "script_level.position": 4,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3848,8 +3438,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - debuggingMaxVal"
         ],
-        "script_level.chapter": 91,
-        "script_level.position": 5,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3861,8 +3449,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - debuggingConstrain"
         ],
-        "script_level.chapter": 92,
-        "script_level.position": 6,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3874,8 +3460,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - constrainTurtle"
         ],
-        "script_level.chapter": 93,
-        "script_level.position": 7,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3887,8 +3471,6 @@
         "script_level.level_keys": [
           "U3 - Return Values - wrapTurtle"
         ],
-        "script_level.chapter": 94,
-        "script_level.position": 8,
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3900,8 +3482,6 @@
         "script_level.level_keys": [
           "U3L33 Student Lesson Introduction"
         ],
-        "script_level.chapter": 95,
-        "script_level.position": 1,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3913,8 +3493,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - introCanvas"
         ],
-        "script_level.chapter": 96,
-        "script_level.position": 2,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3926,8 +3504,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - 200dots"
         ],
-        "script_level.chapter": 97,
-        "script_level.position": 3,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3939,8 +3515,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - transparentDots"
         ],
-        "script_level.chapter": 98,
-        "script_level.position": 4,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3952,8 +3526,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - clickToAdd"
         ],
-        "script_level.chapter": 99,
-        "script_level.position": 5,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3965,8 +3537,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - usingOffsetXY"
         ],
-        "script_level.chapter": 100,
-        "script_level.position": 6,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3978,8 +3548,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - draw at click point"
         ],
-        "script_level.chapter": 101,
-        "script_level.position": 7,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -3991,8 +3559,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - changeToMouseMove"
         ],
-        "script_level.chapter": 102,
-        "script_level.position": 8,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4004,8 +3570,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - shiftKey"
         ],
-        "script_level.chapter": 103,
-        "script_level.position": 9,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4017,8 +3581,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - appendToArray"
         ],
-        "script_level.chapter": 104,
-        "script_level.position": 10,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4030,8 +3592,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawRandom"
         ],
-        "script_level.chapter": 105,
-        "script_level.position": 11,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4043,8 +3603,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawRandom2"
         ],
-        "script_level.chapter": 106,
-        "script_level.position": 12,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4056,8 +3614,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - redrawOriginal"
         ],
-        "script_level.chapter": 107,
-        "script_level.position": 13,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4069,8 +3625,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - delete"
         ],
-        "script_level.chapter": 108,
-        "script_level.position": 14,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4082,8 +3636,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - movementFunction"
         ],
-        "script_level.chapter": 109,
-        "script_level.position": 15,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4095,8 +3647,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - movementFunction fix Orig"
         ],
-        "script_level.chapter": 110,
-        "script_level.position": 16,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4108,8 +3658,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - sprayPaint"
         ],
-        "script_level.chapter": 111,
-        "script_level.position": 17,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4121,8 +3669,6 @@
         "script_level.level_keys": [
           "U3 - Canvas - sketch"
         ],
-        "script_level.chapter": 112,
-        "script_level.position": 18,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4134,8 +3680,6 @@
         "script_level.level_keys": [
           "U3L33 Free Response Getting Started"
         ],
-        "script_level.chapter": 113,
-        "script_level.position": 19,
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4147,8 +3691,6 @@
         "script_level.level_keys": [
           "U3L34 Student Lesson Introduction"
         ],
-        "script_level.chapter": 114,
-        "script_level.position": 1,
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"
@@ -4160,8 +3702,6 @@
         "script_level.level_keys": [
           "U3 - Practice Create Performance Task"
         ],
-        "script_level.chapter": 115,
-        "script_level.position": 2,
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
         "script.name": "cspunit3temp"

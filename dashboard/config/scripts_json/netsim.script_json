@@ -181,8 +181,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -203,8 +201,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup 2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -225,8 +221,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -247,8 +241,6 @@
         "script_level.level_keys": [
           "NetSim Standalone SendAB"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -269,8 +261,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Sending Numbers"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Numbers",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -291,8 +281,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Sending Numbers Ascii"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Ascii",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -313,8 +301,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Broadcast"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Broadcasting messages",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -335,8 +321,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Classroom Routers"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Routers and addresses",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -357,8 +341,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Packets TCP"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Packets and Reliability",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -379,8 +361,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Manual DNS"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Manual DNS",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -401,8 +381,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Automatic DNS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Automatic DNS node",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -423,8 +401,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Freeplay"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Internet Simulator Freeplay",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -441,8 +417,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -454,8 +428,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup 2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -467,8 +439,6 @@
         "script_level.level_keys": [
           "Internet Simulator Setup 3"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -480,8 +450,6 @@
         "script_level.level_keys": [
           "NetSim Standalone SendAB"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -493,8 +461,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Sending Numbers"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Numbers",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -506,8 +472,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Sending Numbers Ascii"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Peer to Peer - Sending Ascii",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -519,8 +483,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Broadcast"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Broadcasting messages",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -532,8 +494,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Classroom Routers"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 1,
         "lesson.key": "Routers and addresses",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -545,8 +505,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Packets TCP"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Packets and Reliability",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -558,8 +516,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Manual DNS"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Manual DNS",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -571,8 +527,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Automatic DNS"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Automatic DNS node",
         "lesson_group.key": "",
         "script.name": "netsim"
@@ -584,8 +538,6 @@
         "script_level.level_keys": [
           "NetSim Standalone Freeplay"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 1,
         "lesson.key": "Internet Simulator Freeplay",
         "lesson_group.key": "",
         "script.name": "netsim"

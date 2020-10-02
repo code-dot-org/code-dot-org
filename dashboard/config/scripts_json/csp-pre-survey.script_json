@@ -125,8 +125,6 @@
         "script_level.level_keys": [
           "CSP pre-assessment survey"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student pre-survey",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -153,8 +151,6 @@
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -176,8 +172,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -198,8 +192,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -220,8 +212,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -242,8 +232,6 @@
         "script_level.level_keys": [
           "csp_ap_questions"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey: Taking the AP exam",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -260,8 +248,6 @@
         "script_level.level_keys": [
           "CSP pre-assessment survey"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student pre-survey",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -274,8 +260,6 @@
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -288,8 +272,6 @@
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -301,8 +283,6 @@
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -314,8 +294,6 @@
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -327,8 +305,6 @@
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"
@@ -340,8 +316,6 @@
         "script_level.level_keys": [
           "csp_ap_questions"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Anonymous student survey: Taking the AP exam",
         "lesson_group.key": "",
         "script.name": "csp-pre-survey"

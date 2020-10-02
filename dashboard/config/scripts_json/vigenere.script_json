@@ -55,8 +55,6 @@
         "script_level.level_keys": [
           "Vigenere"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Vigenere",
         "lesson_group.key": "",
         "script.name": "vigenere"
@@ -73,8 +71,6 @@
         "script_level.level_keys": [
           "Vigenere"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Vigenere",
         "lesson_group.key": "",
         "script.name": "vigenere"

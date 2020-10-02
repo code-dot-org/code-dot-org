@@ -205,8 +205,6 @@
         "script_level.level_keys": [
           "What's inside and how is it organized?"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -227,8 +225,6 @@
         "script_level.level_keys": [
           "Introduction to Unit 5"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -249,8 +245,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Philosophy and Commentary"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -271,8 +265,6 @@
         "script_level.level_keys": [
           "Unit 5 Concepts and AP Assessments"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -293,8 +285,6 @@
         "script_level.level_keys": [
           "Practice Performance Task in Unit 5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -315,8 +305,6 @@
         "script_level.level_keys": [
           "5.1 - 5.3 Lesson Connections"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -337,8 +325,6 @@
         "script_level.level_keys": [
           "Design Mode Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -359,8 +345,6 @@
         "script_level.level_keys": [
           "Events Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -381,8 +365,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Multi-Screen App"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -403,8 +385,6 @@
         "script_level.level_keys": [
           "U5 L1 - 3: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -425,8 +405,6 @@
         "script_level.level_keys": [
           "5.4 - 5.6 Lesson Connections"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -447,8 +425,6 @@
         "script_level.level_keys": [
           "Variables Overview"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -469,8 +445,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Clicker Game"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -491,8 +465,6 @@
         "script_level.level_keys": [
           "Strings Overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -513,8 +485,6 @@
         "script_level.level_keys": [
           "U5 L4 - 6: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -535,8 +505,6 @@
         "script_level.level_keys": [
           "5.7- 5.10 Lesson Connections"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -557,8 +525,6 @@
         "script_level.level_keys": [
           "Boolean Logic and Expression Overview"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -579,8 +545,6 @@
         "script_level.level_keys": [
           "Conditionals Overview"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -601,8 +565,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Color Sleuth"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -623,8 +585,6 @@
         "script_level.level_keys": [
           "U5 L7 - 10: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -645,8 +605,6 @@
         "script_level.level_keys": [
           "5.11 - 5.14 Lesson Connections"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -667,8 +625,6 @@
         "script_level.level_keys": [
           "While Loops Overview"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -689,8 +645,6 @@
         "script_level.level_keys": [
           "Arrays Overview"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -711,8 +665,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Image Scroller"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -733,8 +685,6 @@
         "script_level.level_keys": [
           "U5 L11 - 14: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -755,8 +705,6 @@
         "script_level.level_keys": [
           "5.15 - 5.17 Lesson Connections"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -777,8 +725,6 @@
         "script_level.level_keys": [
           "Processing Arrays"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -799,8 +745,6 @@
         "script_level.level_keys": [
           "Functions that Return Values"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -821,8 +765,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Building a Canvas Painter"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -843,8 +785,6 @@
         "script_level.level_keys": [
           "U5 L15 - 17: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -865,8 +805,6 @@
         "script_level.level_keys": [
           "Overview: Group Work and Peer Learning"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -887,8 +825,6 @@
         "script_level.level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -909,8 +845,6 @@
         "script_level.level_keys": [
           "The Official Peer Instruction Blog"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -931,8 +865,6 @@
         "script_level.level_keys": [
           "the Journal of Peer Learning"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -953,8 +885,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -975,8 +905,6 @@
         "script_level.level_keys": [
           "Overview: Balancing Teachers and Tools"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -997,8 +925,6 @@
         "script_level.level_keys": [
           "Classroom Management Tips for School Computer Labs"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1019,8 +945,6 @@
         "script_level.level_keys": [
           "Considerations for the 1-to-1 Classroom"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1041,8 +965,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1063,8 +985,6 @@
         "script_level.level_keys": [
           "Overview: Discovery Learning"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1085,8 +1005,6 @@
         "script_level.level_keys": [
           "Discovery learning definition and history"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1107,8 +1025,6 @@
         "script_level.level_keys": [
           "Discovery learning techniques"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1129,8 +1045,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Discovery Learning"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1151,8 +1065,6 @@
         "script_level.level_keys": [
           "Overview: Capturing Student Learning"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1173,8 +1085,6 @@
         "script_level.level_keys": [
           "What is the difference between formative and summative assessment?"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1195,8 +1105,6 @@
         "script_level.level_keys": [
           "Designing Assessment Questions"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1217,8 +1125,6 @@
         "script_level.level_keys": [
           "Classroom Assessment Techniques"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1239,8 +1145,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Assessing Student Learning"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1257,8 +1161,6 @@
         "script_level.level_keys": [
           "What's inside and how is it organized?"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -1270,8 +1172,6 @@
         "script_level.level_keys": [
           "Introduction to Unit 5"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -1283,8 +1183,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Philosophy and Commentary"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 3,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -1296,8 +1194,6 @@
         "script_level.level_keys": [
           "Unit 5 Concepts and AP Assessments"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 4,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -1309,8 +1205,6 @@
         "script_level.level_keys": [
           "Practice Performance Task in Unit 5"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 5,
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
         "script.name": "csp-online-test"
@@ -1322,8 +1216,6 @@
         "script_level.level_keys": [
           "5.1 - 5.3 Lesson Connections"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1335,8 +1227,6 @@
         "script_level.level_keys": [
           "Design Mode Overview"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 2,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1348,8 +1238,6 @@
         "script_level.level_keys": [
           "Events Overview"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 3,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1361,8 +1249,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Multi-Screen App"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 4,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1374,8 +1260,6 @@
         "script_level.level_keys": [
           "U5 L1 - 3: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 5,
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1387,8 +1271,6 @@
         "script_level.level_keys": [
           "5.4 - 5.6 Lesson Connections"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1400,8 +1282,6 @@
         "script_level.level_keys": [
           "Variables Overview"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1413,8 +1293,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Clicker Game"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1426,8 +1304,6 @@
         "script_level.level_keys": [
           "Strings Overview"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1439,8 +1315,6 @@
         "script_level.level_keys": [
           "U5 L4 - 6: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1452,8 +1326,6 @@
         "script_level.level_keys": [
           "5.7- 5.10 Lesson Connections"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 1,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1465,8 +1337,6 @@
         "script_level.level_keys": [
           "Boolean Logic and Expression Overview"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 2,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1478,8 +1348,6 @@
         "script_level.level_keys": [
           "Conditionals Overview"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 3,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1491,8 +1359,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Color Sleuth"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 4,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1504,8 +1370,6 @@
         "script_level.level_keys": [
           "U5 L7 - 10: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 5,
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1517,8 +1381,6 @@
         "script_level.level_keys": [
           "5.11 - 5.14 Lesson Connections"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 1,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1530,8 +1392,6 @@
         "script_level.level_keys": [
           "While Loops Overview"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 2,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1543,8 +1403,6 @@
         "script_level.level_keys": [
           "Arrays Overview"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 3,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1556,8 +1414,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Image Scroller"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 4,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1569,8 +1425,6 @@
         "script_level.level_keys": [
           "U5 L11 - 14: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 5,
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1582,8 +1436,6 @@
         "script_level.level_keys": [
           "5.15 - 5.17 Lesson Connections"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 1,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1595,8 +1447,6 @@
         "script_level.level_keys": [
           "Processing Arrays"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 2,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1608,8 +1458,6 @@
         "script_level.level_keys": [
           "Functions that Return Values"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 3,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1621,8 +1469,6 @@
         "script_level.level_keys": [
           "Project Breakdown: Building a Canvas Painter"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 4,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1634,8 +1480,6 @@
         "script_level.level_keys": [
           "U5 L15 - 17: Teaching and Student Support Plan"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 5,
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
         "script.name": "csp-online-test"
@@ -1647,8 +1491,6 @@
         "script_level.level_keys": [
           "Overview: Group Work and Peer Learning"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1660,8 +1502,6 @@
         "script_level.level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1673,8 +1513,6 @@
         "script_level.level_keys": [
           "The Official Peer Instruction Blog"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1686,8 +1524,6 @@
         "script_level.level_keys": [
           "the Journal of Peer Learning"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1699,8 +1535,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1712,8 +1546,6 @@
         "script_level.level_keys": [
           "Overview: Balancing Teachers and Tools"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 1,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1725,8 +1557,6 @@
         "script_level.level_keys": [
           "Classroom Management Tips for School Computer Labs"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 2,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1738,8 +1568,6 @@
         "script_level.level_keys": [
           "Considerations for the 1-to-1 Classroom"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 3,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1751,8 +1579,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 4,
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1764,8 +1590,6 @@
         "script_level.level_keys": [
           "Overview: Discovery Learning"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 1,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1777,8 +1601,6 @@
         "script_level.level_keys": [
           "Discovery learning definition and history"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 2,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1790,8 +1612,6 @@
         "script_level.level_keys": [
           "Discovery learning techniques"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 3,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1803,8 +1623,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Discovery Learning"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 4,
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1816,8 +1634,6 @@
         "script_level.level_keys": [
           "Overview: Capturing Student Learning"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1829,8 +1645,6 @@
         "script_level.level_keys": [
           "What is the difference between formative and summative assessment?"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1842,8 +1656,6 @@
         "script_level.level_keys": [
           "Designing Assessment Questions"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1855,8 +1667,6 @@
         "script_level.level_keys": [
           "Classroom Assessment Techniques"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"
@@ -1868,8 +1678,6 @@
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Assessing Student Learning"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 5,
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
         "script.name": "csp-online-test"

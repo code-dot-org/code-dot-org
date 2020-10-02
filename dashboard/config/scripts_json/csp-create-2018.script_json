@@ -165,8 +165,6 @@
         "script_level.level_keys": [
           "CSP CreateL01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -188,8 +186,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -210,8 +206,6 @@
         "script_level.level_keys": [
           "CSP CreateL02 SFLP_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -232,8 +226,6 @@
         "script_level.level_keys": [
           "CSP CreateL03 SFLP"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -255,8 +247,6 @@
         "script_level.level_keys": [
           "Practice Create Performance Task_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -278,8 +268,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2018"
@@ -296,8 +284,6 @@
         "script_level.level_keys": [
           "CSP CreateL01 SFLP"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -309,8 +295,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 2,
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -322,8 +306,6 @@
         "script_level.level_keys": [
           "CSP CreateL02 SFLP_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -335,8 +317,6 @@
         "script_level.level_keys": [
           "CSP CreateL03 SFLP"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -348,8 +328,6 @@
         "script_level.level_keys": [
           "Practice Create Performance Task_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 2,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
         "script.name": "csp-create-2018"
@@ -361,8 +339,6 @@
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp-create-2018"

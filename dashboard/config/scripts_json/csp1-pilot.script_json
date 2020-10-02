@@ -296,8 +296,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-2017-levelgroup_2020 pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -319,8 +317,6 @@
         "script_level.level_keys": [
           "CSP U1L1 SFLP 20-21"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -342,8 +338,6 @@
         "script_level.level_keys": [
           "Computer Science is Changing Everything_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -365,8 +359,6 @@
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -388,8 +380,6 @@
         "script_level.level_keys": [
           "CSP U1L2 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Representing Information",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -411,8 +401,6 @@
         "script_level.level_keys": [
           "U1L3 CFU Sending Complex Messages"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Representing Information",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -434,8 +422,6 @@
         "script_level.level_keys": [
           "CSP U1L4 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -457,8 +443,6 @@
         "script_level.level_keys": [
           "CSP U1L4 CYU3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -480,8 +464,6 @@
         "script_level.level_keys": [
           "CSP U1L5 SFLP 20-21"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -503,8 +485,6 @@
         "script_level.level_keys": [
           "U1L5 CFU how many bits"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -526,8 +506,6 @@
         "script_level.level_keys": [
           "U1L5 CFU adding bits"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -549,8 +527,6 @@
         "script_level.level_keys": [
           "U1L5 CFU bin dec similarities"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -572,8 +548,6 @@
         "script_level.level_keys": [
           "CSP U1L6 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -595,8 +569,6 @@
         "script_level.level_keys": [
           "Widget: Binary Odometer_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -618,8 +590,6 @@
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -641,8 +611,6 @@
         "script_level.level_keys": [
           "U1L6 CFU representing fractions"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -664,8 +632,6 @@
         "script_level.level_keys": [
           "CSP U1L7 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Representing Text",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -687,8 +653,6 @@
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Representing Text",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -710,8 +674,6 @@
         "script_level.level_keys": [
           "CSP U1L8 SFLP 20-21"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -733,8 +695,6 @@
         "script_level.level_keys": [
           "U1 L9 Introduction to Pixelation"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -756,8 +716,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation - Make the Letter A_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -779,8 +737,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget Fix bit offset"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -802,8 +758,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge a"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -825,8 +779,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge B"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -848,8 +800,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge C"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -871,8 +821,6 @@
         "script_level.level_keys": [
           "U1L9 CFU pixel data"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -894,8 +842,6 @@
         "script_level.level_keys": [
           "U1L9 Multiple Choice Digital Analog"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -917,8 +863,6 @@
         "script_level.level_keys": [
           "U1L9 CFU Sampling"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -940,8 +884,6 @@
         "script_level.level_keys": [
           "CSP U1L9 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -963,8 +905,6 @@
         "script_level.level_keys": [
           "CSP U1L10 RGB"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -986,8 +926,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1009,8 +947,6 @@
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1032,8 +968,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1055,8 +989,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1078,8 +1010,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1101,8 +1031,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1124,8 +1052,6 @@
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1147,8 +1073,6 @@
         "script_level.level_keys": [
           "U1L10 CFU Sampling"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1170,8 +1094,6 @@
         "script_level.level_keys": [
           "CSP U1L10 SFLP 20-21"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1193,8 +1115,6 @@
         "script_level.level_keys": [
           "U1L11 Widget: Text Compression"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1216,8 +1136,6 @@
         "script_level.level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1239,8 +1157,6 @@
         "script_level.level_keys": [
           "U1L11 Multiple Choice lossless compression"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1262,8 +1178,6 @@
         "script_level.level_keys": [
           "U1L11 CFU Compression for Email"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1285,8 +1199,6 @@
         "script_level.level_keys": [
           "CSP U1L11 SFLP 20-21"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1308,8 +1220,6 @@
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1331,8 +1241,6 @@
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1354,8 +1262,6 @@
         "script_level.level_keys": [
           "U1L11 CPS CFU Cell Phone"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1377,8 +1283,6 @@
         "script_level.level_keys": [
           "CSP U1L12 SFLP 20-21"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1400,8 +1304,6 @@
         "script_level.level_keys": [
           "U1L12 CFU Creative Commons"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1423,8 +1325,6 @@
         "script_level.level_keys": [
           "U1L12 CFU Copyright"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1446,8 +1346,6 @@
         "script_level.level_keys": [
           "CSP U1L13 SFLP 20-21"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1469,8 +1367,6 @@
         "script_level.level_keys": [
           "U1L13 CFU Digital Representation"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1492,8 +1388,6 @@
         "script_level.level_keys": [
           "CSP U1L14 SFLP 20-21"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1515,8 +1409,6 @@
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1538,8 +1430,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1561,8 +1451,6 @@
         "script_level.level_keys": [
           "CSP U1 20-21 Student Pilot Survey"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 STUDENT Survey",
         "lesson_group.key": "required",
         "script.name": "csp1-pilot"
@@ -1584,8 +1472,6 @@
         "script_level.level_keys": [
           "CSP U1 20-21 Teacher Pilot Survey"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 TEACHER Survey",
         "lesson_group.key": "required",
         "script.name": "csp1-pilot"
@@ -1602,8 +1488,6 @@
         "script_level.level_keys": [
           "csp-pre-survey-2017-levelgroup_2020 pilot"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1615,8 +1499,6 @@
         "script_level.level_keys": [
           "CSP U1L1 SFLP 20-21"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1628,8 +1510,6 @@
         "script_level.level_keys": [
           "Computer Science is Changing Everything_2020"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 2,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1641,8 +1521,6 @@
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 3,
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1654,8 +1532,6 @@
         "script_level.level_keys": [
           "CSP U1L2 SFLP 20-21"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Representing Information",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1667,8 +1543,6 @@
         "script_level.level_keys": [
           "U1L3 CFU Sending Complex Messages"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 2,
         "lesson.key": "Representing Information",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1680,8 +1554,6 @@
         "script_level.level_keys": [
           "CSP U1L4 SFLP 20-21"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1693,8 +1565,6 @@
         "script_level.level_keys": [
           "CSP U1L4 CYU3"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1706,8 +1576,6 @@
         "script_level.level_keys": [
           "CSP U1L5 SFLP 20-21"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1719,8 +1587,6 @@
         "script_level.level_keys": [
           "U1L5 CFU how many bits"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 2,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1732,8 +1598,6 @@
         "script_level.level_keys": [
           "U1L5 CFU adding bits"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 3,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1745,8 +1609,6 @@
         "script_level.level_keys": [
           "U1L5 CFU bin dec similarities"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 4,
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1758,8 +1620,6 @@
         "script_level.level_keys": [
           "CSP U1L6 SFLP 20-21"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 1,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1771,8 +1631,6 @@
         "script_level.level_keys": [
           "Widget: Binary Odometer_2020"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 2,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1784,8 +1642,6 @@
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 3,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1797,8 +1653,6 @@
         "script_level.level_keys": [
           "U1L6 CFU representing fractions"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 4,
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1810,8 +1664,6 @@
         "script_level.level_keys": [
           "CSP U1L7 SFLP 20-21"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Representing Text",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1823,8 +1675,6 @@
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 2,
         "lesson.key": "Representing Text",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1836,8 +1686,6 @@
         "script_level.level_keys": [
           "CSP U1L8 SFLP 20-21"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 1,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1849,8 +1697,6 @@
         "script_level.level_keys": [
           "U1 L9 Introduction to Pixelation"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 2,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1862,8 +1708,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation - Make the Letter A_2019"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 3,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1875,8 +1719,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget Fix bit offset"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 4,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1888,8 +1730,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge a"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 5,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1901,8 +1741,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge B"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 6,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1914,8 +1752,6 @@
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge C"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 7,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1927,8 +1763,6 @@
         "script_level.level_keys": [
           "U1L9 CFU pixel data"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 8,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1940,8 +1774,6 @@
         "script_level.level_keys": [
           "U1L9 Multiple Choice Digital Analog"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 9,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1953,8 +1785,6 @@
         "script_level.level_keys": [
           "U1L9 CFU Sampling"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 10,
         "lesson.key": "Black and White Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1966,8 +1796,6 @@
         "script_level.level_keys": [
           "CSP U1L9 SFLP 20-21"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 1,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1979,8 +1807,6 @@
         "script_level.level_keys": [
           "CSP U1L10 RGB"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 2,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -1992,8 +1818,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 3,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2005,8 +1829,6 @@
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 4,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2018,8 +1840,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 5,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2031,8 +1851,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 6,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2044,8 +1862,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 7,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2057,8 +1873,6 @@
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 8,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2070,8 +1884,6 @@
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 9,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2083,8 +1895,6 @@
         "script_level.level_keys": [
           "U1L10 CFU Sampling"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 10,
         "lesson.key": "Color Images",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2096,8 +1906,6 @@
         "script_level.level_keys": [
           "CSP U1L10 SFLP 20-21"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 1,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2109,8 +1917,6 @@
         "script_level.level_keys": [
           "U1L11 Widget: Text Compression"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 2,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2122,8 +1928,6 @@
         "script_level.level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 3,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2135,8 +1939,6 @@
         "script_level.level_keys": [
           "U1L11 Multiple Choice lossless compression"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 4,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2148,8 +1950,6 @@
         "script_level.level_keys": [
           "U1L11 CFU Compression for Email"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 5,
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2161,8 +1961,6 @@
         "script_level.level_keys": [
           "CSP U1L11 SFLP 20-21"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 1,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2174,8 +1972,6 @@
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v1"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 2,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2187,8 +1983,6 @@
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v2"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 3,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2200,8 +1994,6 @@
         "script_level.level_keys": [
           "U1L11 CPS CFU Cell Phone"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 4,
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2213,8 +2005,6 @@
         "script_level.level_keys": [
           "CSP U1L12 SFLP 20-21"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2226,8 +2016,6 @@
         "script_level.level_keys": [
           "U1L12 CFU Creative Commons"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2239,8 +2027,6 @@
         "script_level.level_keys": [
           "U1L12 CFU Copyright"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 3,
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2252,8 +2038,6 @@
         "script_level.level_keys": [
           "CSP U1L13 SFLP 20-21"
         ],
-        "script_level.chapter": 51,
-        "script_level.position": 1,
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2265,8 +2049,6 @@
         "script_level.level_keys": [
           "U1L13 CFU Digital Representation"
         ],
-        "script_level.chapter": 52,
-        "script_level.position": 2,
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2278,8 +2060,6 @@
         "script_level.level_keys": [
           "CSP U1L14 SFLP 20-21"
         ],
-        "script_level.chapter": 53,
-        "script_level.position": 1,
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2291,8 +2071,6 @@
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information"
         ],
-        "script_level.chapter": 54,
-        "script_level.position": 2,
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2304,8 +2082,6 @@
         "script_level.level_keys": [
           "CSP Unit 1 AP-Style Assessment _2020"
         ],
-        "script_level.chapter": 55,
-        "script_level.position": 1,
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-pilot"
@@ -2317,8 +2093,6 @@
         "script_level.level_keys": [
           "CSP U1 20-21 Student Pilot Survey"
         ],
-        "script_level.chapter": 56,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 STUDENT Survey",
         "lesson_group.key": "required",
         "script.name": "csp1-pilot"
@@ -2330,8 +2104,6 @@
         "script_level.level_keys": [
           "CSP U1 20-21 Teacher Pilot Survey"
         ],
-        "script_level.chapter": 57,
-        "script_level.position": 1,
         "lesson.key": "Unit 1 TEACHER Survey",
         "lesson_group.key": "required",
         "script.name": "csp1-pilot"

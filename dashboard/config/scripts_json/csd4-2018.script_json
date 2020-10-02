@@ -354,8 +354,6 @@
         "script_level.level_keys": [
           "CSD U4L01 autoSFLP_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Analysis of Design",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -376,8 +374,6 @@
         "script_level.level_keys": [
           "CSD U4L02 autoSFLP_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Understanding Your User",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -398,8 +394,6 @@
         "script_level.level_keys": [
           "CSD U4L03 autoSFLP_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "User-Centered Design Micro Activity",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -420,8 +414,6 @@
         "script_level.level_keys": [
           "CSD U4L04 autoSFLP_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "User Interfaces",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -442,8 +434,6 @@
         "script_level.level_keys": [
           "CSD U4L05 autoSFLP_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Feedback and Testing",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -464,8 +454,6 @@
         "script_level.level_keys": [
           "CSD U4L06 autoSFLP_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Identifying User Needs",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -486,8 +474,6 @@
         "script_level.level_keys": [
           "CSD U4L07 autoSFLP_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -509,8 +495,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -531,8 +515,6 @@
         "script_level.level_keys": [
           "CSD U4L08 autoSFLP_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -553,8 +535,6 @@
         "script_level.level_keys": [
           "CSD U4L09 autoSFLP_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Market Research",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -575,8 +555,6 @@
         "script_level.level_keys": [
           "CSD U4L10 autoSFLP_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -597,8 +575,6 @@
         "script_level.level_keys": [
           "Example App Types_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -620,8 +596,6 @@
         "script_level.level_keys": [
           "CSDU4 Quiz App Demo_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -643,8 +617,6 @@
         "script_level.level_keys": [
           "CSDU4 Decision App Demo_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -666,8 +638,6 @@
         "script_level.level_keys": [
           "CSDU4 List App Demo_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -689,8 +659,6 @@
         "script_level.level_keys": [
           "CSDU4 Crowdsource App Demo_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -711,8 +679,6 @@
         "script_level.level_keys": [
           "CSD U4L11 autoSFLP_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Prototype Testing",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -733,8 +699,6 @@
         "script_level.level_keys": [
           "CSD U4L12 autoSFLP_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -755,8 +719,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Mode Map_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -777,8 +739,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -800,8 +760,6 @@
         "script_level.level_keys": [
           "U4 Model Design 1_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -823,8 +781,6 @@
         "script_level.level_keys": [
           "U4 Model Design 2_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -846,8 +802,6 @@
         "script_level.level_keys": [
           "U4 Model Design 3_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -869,8 +823,6 @@
         "script_level.level_keys": [
           "U4 Model Design 4_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -891,8 +843,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Elements Map_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -914,8 +864,6 @@
         "script_level.level_keys": [
           "U4 Model Design 5_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -937,8 +885,6 @@
         "script_level.level_keys": [
           "U4 Model Design 6_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -960,8 +906,6 @@
         "script_level.level_keys": [
           "U4 Model Design 7_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -982,8 +926,6 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 12,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1005,8 +947,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 13,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1027,8 +967,6 @@
         "script_level.level_keys": [
           "CSD U4L13 autoSFLP_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1050,8 +988,6 @@
         "script_level.level_keys": [
           "CSD U4 Mult Screen Map_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1073,8 +1009,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1096,8 +1030,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1119,8 +1051,6 @@
         "script_level.level_keys": [
           "CSD U4 Importing Screens Map_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1142,8 +1072,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1165,8 +1093,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1188,8 +1114,6 @@
         "script_level.level_keys": [
           "CSD U4 User Input Map_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1211,8 +1135,6 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1234,8 +1156,6 @@
         "script_level.level_keys": [
           "CSD U4 Change Screen Map_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1257,8 +1177,6 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1280,8 +1198,6 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1302,8 +1218,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Import_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 13,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1324,8 +1238,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Events_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 14,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1346,8 +1258,6 @@
         "script_level.level_keys": [
           "CSD U4L14 autoSFLP_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Testing the App",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1368,8 +1278,6 @@
         "script_level.level_keys": [
           "CSD U4L15 autoSFLP_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1390,8 +1298,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1412,8 +1318,6 @@
         "script_level.level_keys": [
           "CSD U4L16 autoSFLP_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1435,8 +1339,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1458,8 +1360,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd4-2018"
@@ -1476,8 +1376,6 @@
         "script_level.level_keys": [
           "CSD U4L01 autoSFLP_2018"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Analysis of Design",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1489,8 +1387,6 @@
         "script_level.level_keys": [
           "CSD U4L02 autoSFLP_2018"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Understanding Your User",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1502,8 +1398,6 @@
         "script_level.level_keys": [
           "CSD U4L03 autoSFLP_2018"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "User-Centered Design Micro Activity",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1515,8 +1409,6 @@
         "script_level.level_keys": [
           "CSD U4L04 autoSFLP_2018"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 1,
         "lesson.key": "User Interfaces",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1528,8 +1420,6 @@
         "script_level.level_keys": [
           "CSD U4L05 autoSFLP_2018"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 1,
         "lesson.key": "Feedback and Testing",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1541,8 +1431,6 @@
         "script_level.level_keys": [
           "CSD U4L06 autoSFLP_2018"
         ],
-        "script_level.chapter": 6,
-        "script_level.position": 1,
         "lesson.key": "Identifying User Needs",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1554,8 +1442,6 @@
         "script_level.level_keys": [
           "CSD U4L07 autoSFLP_2018"
         ],
-        "script_level.chapter": 7,
-        "script_level.position": 1,
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1567,8 +1453,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2018"
         ],
-        "script_level.chapter": 8,
-        "script_level.position": 2,
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2018"
@@ -1580,8 +1464,6 @@
         "script_level.level_keys": [
           "CSD U4L08 autoSFLP_2018"
         ],
-        "script_level.chapter": 9,
-        "script_level.position": 1,
         "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1593,8 +1475,6 @@
         "script_level.level_keys": [
           "CSD U4L09 autoSFLP_2018"
         ],
-        "script_level.chapter": 10,
-        "script_level.position": 1,
         "lesson.key": "Market Research",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1606,8 +1486,6 @@
         "script_level.level_keys": [
           "CSD U4L10 autoSFLP_2018"
         ],
-        "script_level.chapter": 11,
-        "script_level.position": 1,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1619,8 +1497,6 @@
         "script_level.level_keys": [
           "Example App Types_2018"
         ],
-        "script_level.chapter": 12,
-        "script_level.position": 2,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1632,8 +1508,6 @@
         "script_level.level_keys": [
           "CSDU4 Quiz App Demo_2018"
         ],
-        "script_level.chapter": 13,
-        "script_level.position": 3,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1645,8 +1519,6 @@
         "script_level.level_keys": [
           "CSDU4 Decision App Demo_2018"
         ],
-        "script_level.chapter": 14,
-        "script_level.position": 4,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1658,8 +1530,6 @@
         "script_level.level_keys": [
           "CSDU4 List App Demo_2018"
         ],
-        "script_level.chapter": 15,
-        "script_level.position": 5,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1671,8 +1541,6 @@
         "script_level.level_keys": [
           "CSDU4 Crowdsource App Demo_2018"
         ],
-        "script_level.chapter": 16,
-        "script_level.position": 6,
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1684,8 +1552,6 @@
         "script_level.level_keys": [
           "CSD U4L11 autoSFLP_2018"
         ],
-        "script_level.chapter": 17,
-        "script_level.position": 1,
         "lesson.key": "Prototype Testing",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1697,8 +1563,6 @@
         "script_level.level_keys": [
           "CSD U4L12 autoSFLP_2018"
         ],
-        "script_level.chapter": 18,
-        "script_level.position": 1,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1710,8 +1574,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Mode Map_2018"
         ],
-        "script_level.chapter": 19,
-        "script_level.position": 2,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1723,8 +1585,6 @@
         "script_level.level_keys": [
           "CSDU4 Design Mode Video_2018"
         ],
-        "script_level.chapter": 20,
-        "script_level.position": 3,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1736,8 +1596,6 @@
         "script_level.level_keys": [
           "U4 Model Design 1_2018"
         ],
-        "script_level.chapter": 21,
-        "script_level.position": 4,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1749,8 +1607,6 @@
         "script_level.level_keys": [
           "U4 Model Design 2_2018"
         ],
-        "script_level.chapter": 22,
-        "script_level.position": 5,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1762,8 +1618,6 @@
         "script_level.level_keys": [
           "U4 Model Design 3_2018"
         ],
-        "script_level.chapter": 23,
-        "script_level.position": 6,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1775,8 +1629,6 @@
         "script_level.level_keys": [
           "U4 Model Design 4_2018"
         ],
-        "script_level.chapter": 24,
-        "script_level.position": 7,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1788,8 +1640,6 @@
         "script_level.level_keys": [
           "CSD U4 Design Elements Map_2018"
         ],
-        "script_level.chapter": 25,
-        "script_level.position": 8,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1801,8 +1651,6 @@
         "script_level.level_keys": [
           "U4 Model Design 5_2018"
         ],
-        "script_level.chapter": 26,
-        "script_level.position": 9,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1814,8 +1662,6 @@
         "script_level.level_keys": [
           "U4 Model Design 6_2018"
         ],
-        "script_level.chapter": 27,
-        "script_level.position": 10,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1827,8 +1673,6 @@
         "script_level.level_keys": [
           "U4 Model Design 7_2018"
         ],
-        "script_level.chapter": 28,
-        "script_level.position": 11,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1840,8 +1684,6 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2018"
         ],
-        "script_level.chapter": 29,
-        "script_level.position": 12,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1853,8 +1695,6 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2018"
         ],
-        "script_level.chapter": 30,
-        "script_level.position": 13,
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1866,8 +1706,6 @@
         "script_level.level_keys": [
           "CSD U4L13 autoSFLP_2018"
         ],
-        "script_level.chapter": 31,
-        "script_level.position": 1,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1879,8 +1717,6 @@
         "script_level.level_keys": [
           "CSD U4 Mult Screen Map_2018"
         ],
-        "script_level.chapter": 32,
-        "script_level.position": 2,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1892,8 +1728,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2018"
         ],
-        "script_level.chapter": 33,
-        "script_level.position": 3,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1905,8 +1739,6 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2018"
         ],
-        "script_level.chapter": 34,
-        "script_level.position": 4,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1918,8 +1750,6 @@
         "script_level.level_keys": [
           "CSD U4 Importing Screens Map_2018"
         ],
-        "script_level.chapter": 35,
-        "script_level.position": 5,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1931,8 +1761,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2018"
         ],
-        "script_level.chapter": 36,
-        "script_level.position": 6,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1944,8 +1772,6 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2018"
         ],
-        "script_level.chapter": 37,
-        "script_level.position": 7,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1957,8 +1783,6 @@
         "script_level.level_keys": [
           "CSD U4 User Input Map_2018"
         ],
-        "script_level.chapter": 38,
-        "script_level.position": 8,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1970,8 +1794,6 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2018"
         ],
-        "script_level.chapter": 39,
-        "script_level.position": 9,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1983,8 +1805,6 @@
         "script_level.level_keys": [
           "CSD U4 Change Screen Map_2018"
         ],
-        "script_level.chapter": 40,
-        "script_level.position": 10,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -1996,8 +1816,6 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2018"
         ],
-        "script_level.chapter": 41,
-        "script_level.position": 11,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2009,8 +1827,6 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2018"
         ],
-        "script_level.chapter": 42,
-        "script_level.position": 12,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2022,8 +1838,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Import_2018"
         ],
-        "script_level.chapter": 43,
-        "script_level.position": 13,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2035,8 +1849,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Events_2018"
         ],
-        "script_level.chapter": 44,
-        "script_level.position": 14,
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2048,8 +1860,6 @@
         "script_level.level_keys": [
           "CSD U4L14 autoSFLP_2018"
         ],
-        "script_level.chapter": 45,
-        "script_level.position": 1,
         "lesson.key": "Testing the App",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2061,8 +1871,6 @@
         "script_level.level_keys": [
           "CSD U4L15 autoSFLP_2018"
         ],
-        "script_level.chapter": 46,
-        "script_level.position": 1,
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2074,8 +1882,6 @@
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature_2018"
         ],
-        "script_level.chapter": 47,
-        "script_level.position": 2,
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2087,8 +1893,6 @@
         "script_level.level_keys": [
           "CSD U4L16 autoSFLP_2018"
         ],
-        "script_level.chapter": 48,
-        "script_level.position": 1,
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2100,8 +1904,6 @@
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2018"
         ],
-        "script_level.chapter": 49,
-        "script_level.position": 2,
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2018"
@@ -2113,8 +1915,6 @@
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
-        "script_level.chapter": 50,
-        "script_level.position": 1,
         "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd4-2018"

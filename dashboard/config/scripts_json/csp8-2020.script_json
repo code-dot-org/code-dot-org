@@ -119,8 +119,6 @@
         "script_level.level_keys": [
           "CSP U8L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Review the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -142,8 +140,6 @@
         "script_level.level_keys": [
           "CSP U8L2 SFLP 20-21"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Make a Plan",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -165,8 +161,6 @@
         "script_level.level_keys": [
           "CSP U8L3 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -188,8 +182,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -211,8 +203,6 @@
         "script_level.level_keys": [
           "Create PT Workspace 2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -229,8 +219,6 @@
         "script_level.level_keys": [
           "CSP U8L1 SFLP 20-21"
         ],
-        "script_level.chapter": 1,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Review the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -242,8 +230,6 @@
         "script_level.level_keys": [
           "CSP U8L2 SFLP 20-21"
         ],
-        "script_level.chapter": 2,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Make a Plan",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -255,8 +241,6 @@
         "script_level.level_keys": [
           "CSP U8L3 SFLP 20-21"
         ],
-        "script_level.chapter": 3,
-        "script_level.position": 1,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -268,8 +252,6 @@
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2020"
         ],
-        "script_level.chapter": 4,
-        "script_level.position": 2,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
@@ -281,8 +263,6 @@
         "script_level.level_keys": [
           "Create PT Workspace 2020"
         ],
-        "script_level.chapter": 5,
-        "script_level.position": 3,
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
         "script.name": "csp8-2020"
