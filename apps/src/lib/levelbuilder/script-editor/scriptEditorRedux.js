@@ -153,15 +153,7 @@ function lessonGroups(state = [], action) {
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
       if (newState.length === 0) {
-        newState.push({
-          key: `non-user-facing-lg`,
-          display_name: null,
-          user_facing: false,
-          position: 1,
-          big_questions: '',
-          description: '',
-          lessons: []
-        });
+        newState.push(empty_non_user_facing_group);
       }
       updateLessonPositions(newState);
       break;
@@ -268,4 +260,14 @@ function levelKeyList(state = {}, action) {
 export default {
   levelKeyList,
   lessonGroups
+};
+
+export const empty_non_user_facing_group = {
+  key: `non-user-facing-lg`,
+  display_name: null,
+  user_facing: false,
+  position: 1,
+  big_questions: '',
+  description: '',
+  lessons: []
 };

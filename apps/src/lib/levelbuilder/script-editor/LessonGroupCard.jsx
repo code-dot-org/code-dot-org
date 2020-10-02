@@ -33,7 +33,8 @@ const styles = {
   },
   lessonGroupCardHeader: {
     color: '#5b6770',
-    marginBottom: 15
+    marginBottom: 15,
+    minHeight: 10
   },
   bottomControls: {
     height: 30
