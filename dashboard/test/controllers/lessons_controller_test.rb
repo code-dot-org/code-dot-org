@@ -216,4 +216,55 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'section name', section.name
     assert_equal 1, section.position
   end
+
+  test 'remove activity section via lesson update' do
+    sign_in @levelbuilder
+
+    activity = @lesson.lesson_activities.create(
+      name: 'activity name',
+      position: 1,
+      seeding_key: 'activity-key'
+    )
+    activity.activity_sections.create(
+      name: 'section one',
+      position: 1,
+      seeding_key: 'key one'
+    )
+    activity.activity_sections.create(
+      name: 'section two',
+      position: 2,
+      seeding_key: 'key two'
+    )
+    old_section_ids = activity.activity_sections.map(&:id)
+
+    @update_params['activities'] = [
+      {
+        id: activity.id,
+        name: 'A',
+        position: 1,
+        activitySections: [
+          {
+            id: old_section_ids[1], # section two's original id
+            name: 'section two',
+            position: 1
+          }
+        ]
+      }
+    ].to_json
+
+    put :update, params: @update_params
+    assert_redirected_to "/lessons/#{@lesson.id}"
+
+    @lesson.reload
+    assert_equal 1, @lesson.lesson_activities.count
+    activity = @lesson.lesson_activities.first
+    assert_equal 1, activity.activity_sections.count
+    section = activity.activity_sections.first
+
+    assert_equal 'section two', section.name
+    assert_equal 1, section.position
+    assert_equal old_section_ids[1], section.id
+
+    assert_equal 0, LessonActivity.where(id: old_section_ids[0]).count
+  end
 end
