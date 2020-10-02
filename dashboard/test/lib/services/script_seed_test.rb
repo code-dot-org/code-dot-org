@@ -39,12 +39,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     #   13 queries - two for each model, + one extra query each for Lessons, ScriptLevels and LevelsScriptLevels
     #   8 queries, one for each LevelsScriptLevel.
     #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
+    #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
     # LevelsScriptLevels has queries which scale linearly with the number of rows.
     # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
     # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-    assert_queries(33) do
+    assert_queries(34) do
       ScriptSeed.seed_from_json(json)
     end
 

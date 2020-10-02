@@ -5,7 +5,6 @@ import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
-const SET_ACTIVITY = 'activitiesEditor/SET_ACTIVITY';
 const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
 const UPDATE_ACTIVITY_FIELD = 'activitiesEditor/UPDATE_ACTIVITY_FIELD';
 const ADD_ACTIVITY_SECTION = 'activitiesEditor/ADD_ACTIVITY_SECTION';
@@ -14,6 +13,8 @@ const REMOVE_ACTIVITY_SECTION = 'activitiesEditor/REMOVE_ACTIVITY_SECTION';
 const UPDATE_ACTIVITY_SECTION_FIELD =
   'activitiesEditor/UPDATE_ACTIVITY_SECTION_FIELD';
 const ADD_TIP = 'activitiesEditor/ADD_TIP';
+const UPDATE_TIP = 'activitiesEditor/UPDATE_TIP';
+const REMOVE_TIP = 'activitiesEditor/REMOVE_TIP';
 const ADD_LEVEL = 'activitiesEditor/ADD_LEVEL';
 const REMOVE_LEVEL = 'activitiesEditor/REMOVE_LEVEL';
 const CHOOSE_LEVEL = 'activitiesEditor/CHOOSE_LEVEL';
@@ -221,22 +222,33 @@ export const removeActivitySection = (
   activitySectionPosition
 });
 
-export const setActivity = (
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-) => ({
-  type: SET_ACTIVITY,
-  activitySectionPosition,
-  oldActivityPosition,
-  newActivityPosition
-});
-
 export const addTip = (activityPosition, activitySectionPosition, tip) => ({
   type: ADD_TIP,
   activityPosition,
   activitySectionPosition,
   tip
+});
+
+export const updateTip = (
+  activityPosition,
+  activitySectionPosition,
+  newTip
+) => ({
+  type: UPDATE_TIP,
+  activityPosition,
+  activitySectionPosition,
+  newTip
+});
+
+export const removeTip = (
+  activityPosition,
+  activitySectionPosition,
+  tipKey
+) => ({
+  type: REMOVE_TIP,
+  activityPosition,
+  activitySectionPosition,
+  tipKey
 });
 
 function updateActivityPositions(activities) {
@@ -378,23 +390,6 @@ function activities(state = [], action) {
       updateActivitySectionPositions(newState);
       break;
     }
-    case SET_ACTIVITY: {
-      // Remove the activitySection from the old activity
-      const oldActivitySections =
-        newState[action.oldActivityPosition - 1].activitySections;
-      const curActivitySection = oldActivitySections.splice(
-        action.activitySectionPosition - 1,
-        1
-      )[0];
-
-      // add activitySection to the new activity
-      const newActivitySections =
-        newState[action.newActivityPosition - 1].activitySections;
-      newActivitySections.push(curActivitySection);
-      updateActivitySectionPositions(newState);
-
-      break;
-    }
     case UPDATE_ACTIVITY_SECTION_FIELD: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
@@ -407,6 +402,31 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections[action.activitySectionPosition - 1].tips.push(
         action.tip
+      );
+      break;
+    }
+    case UPDATE_TIP: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      const index = activitySections[
+        action.activitySectionPosition - 1
+      ].tips.indexOf(tip => tip.key === action.newTip.key);
+      activitySections[action.activitySectionPosition - 1].tips.splice(
+        index - 1,
+        1,
+        action.newTip
+      );
+      break;
+    }
+    case REMOVE_TIP: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      activitySections[
+        action.activitySectionPosition - 1
+      ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
+        tip => {
+          return tip.key !== action.tipKey;
+        }
       );
       break;
     }
