@@ -1068,7 +1068,6 @@ StudioApp.prototype.toggleRunReset = function(button) {
 };
 
 StudioApp.prototype.isRunning = function() {
-  // TODO: FIX TESTS WHERE THIS IS UNDEFINED
   return getStore().getState().runState.isRunning;
 };
 
