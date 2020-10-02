@@ -69,12 +69,14 @@ export default class StudentSelector extends React.Component {
     } else if (this.props.students.length === 0) {
       return <span>{i18n.noStudentsInSection()}</span>;
     }
+    const {students} = this.props;
+    const {selectedStudentIds} = this.state;
+    const exceededMaximum = selectedStudentIds.length >= 4;
 
-    const exceededMaximum = this.state.selectedStudentIds.length >= 4;
-    const studentBtns = this.props.students.map(student => {
+    const studentBtns = students.map(student => {
       let className = 'selected';
       let disabled = false;
-      if (this.state.selectedStudentIds.indexOf(student.id) === -1) {
+      if (selectedStudentIds.indexOf(student.id) === -1) {
         className = 'selectable';
         disabled = exceededMaximum;
       }
@@ -108,7 +110,7 @@ export default class StudentSelector extends React.Component {
         {exceededMaximum && (
           <p style={styles.warning}>{i18n.exceededPairProgrammingMax()}</p>
         )}
-        {this.state.selectedStudentIds.length !== 0 && (
+        {selectedStudentIds.length !== 0 && (
           <button
             style={styles.buttonLeft}
             type="button"
