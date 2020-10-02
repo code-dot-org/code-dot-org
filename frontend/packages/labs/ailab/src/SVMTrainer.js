@@ -3,7 +3,12 @@
 /* eslint-env node */
 const svmjs = require("svm");
 import { store } from "./index.js";
-import { setPrediction } from "./redux";
+import {
+  setPrediction,
+  getUniqueOptions,
+  getSelectedCategoricalColumns,
+  setFeatureNumberKey
+} from "./redux";
 
 export default class SVMTrainer {
   constructor() {
@@ -14,20 +19,48 @@ export default class SVMTrainer {
     this.svm = new svmjs.SVM();
     const state = store.getState();
     this.state = state;
+    this.buildFeatureToNumberKey(state);
   }
 
   startTraining() {
     this.addTrainingData();
   }
 
+  buildFeatureToNumberKeyForColumn = column => {
+    let optionsMappedToNumbers = {};
+    const uniqueOptions = getUniqueOptions(this.state, column);
+    uniqueOptions.forEach(
+      option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
+    );
+    return optionsMappedToNumbers;
+  };
+
+  buildFeatureToNumberKey(state) {
+    let optionsMappedToNumbersByFeature = {};
+    getSelectedCategoricalColumns(state).forEach(
+      feature =>
+        (optionsMappedToNumbersByFeature[
+          feature
+        ] = this.buildFeatureToNumberKeyForColumn(feature))
+    );
+    store.dispatch(setFeatureNumberKey(optionsMappedToNumbersByFeature));
+  }
+
   extractLabels = row => {
     return parseInt(row[this.state.labelColumn]);
+  };
+
+  convertValue = (feature, row) => {
+    const updatedState = store.getState();
+    return getSelectedCategoricalColumns(updatedState).includes(feature)
+      ? updatedState.featureNumberKey[feature][row[feature]]
+      : parseInt(row[feature]);
   };
 
   extractExamples = row => {
     let exampleValues = [];
     this.state.selectedFeatures.forEach(feature =>
-      exampleValues.push(parseInt(row[feature]))
+      exampleValues.push(this.convertValue(feature, row))
     );
     return exampleValues;
   };
