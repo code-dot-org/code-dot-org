@@ -407,4 +407,39 @@ class Lesson < ActiveRecord::Base
 
     Time.parse(visible_after) <= Time.now
   end
+
+  # @param activities [Array<Hash>]
+  def update_activities(activities)
+    return unless activities
+    # use assignment to delete any missing activities.
+    self.lesson_activities = activities.map do |activity|
+      lesson_activity = fetch_activity(activity)
+      lesson_activity.update!(
+        position: activity['position'],
+        name: activity['name'],
+        duration: activity['duration']
+      )
+
+      lesson_activity.update_activity_sections(activity['activitySections'])
+      lesson_activity
+    end
+  end
+
+  private
+
+  # Finds the LessonActivity by id, or creates a new one if id is not specified.
+  # @param activity [Hash]
+  # @returns [LessonActivity]
+  def fetch_activity(activity)
+    if activity['id']
+      lesson_activity = lesson_activities.find(activity['id'])
+      raise "LessonActivity id #{activity['id']} not found in Lesson id #{id}" unless lesson_activity
+      return lesson_activity
+    end
+
+    lesson_activities.create(
+      position: activity['position'],
+      seeding_key: SecureRandom.uuid
+    )
+  end
 end
