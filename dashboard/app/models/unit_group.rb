@@ -224,9 +224,10 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.all_courses
-    Rails.cache.fetch('valid_courses/all') do
-      UnitGroup.all.to_a.freeze
+    all_courses = Rails.cache.fetch('valid_courses/all') do
+      UnitGroup.all.to_a
     end
+    all_courses.freeze
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -242,8 +243,9 @@ class UnitGroup < ApplicationRecord
     end
 
     courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      UnitGroup.valid_courses_without_cache.to_a.freeze
+      UnitGroup.valid_courses_without_cache.to_a
     end
+    courses.freeze
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
