@@ -306,6 +306,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
+    original_seed_keys = script.script_levels.map(&:seed_key).compact
+    assert_equal 5, original_seed_keys.length
+    original_script_level_ids = script.script_levels.map(&:id)
+
     script_names, _ = Script.setup([@script_file])
     script = Script.find_by!(name: script_names.first)
     first = script.lessons[0].script_levels[0]
@@ -315,6 +319,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, second.position
     assert_equal 3, third.position
     assert_equal original_count, ScriptLevel.count
+    assert_equal original_seed_keys, script.script_levels.map(&:seed_key)
+    assert_equal original_script_level_ids, script.script_levels.map(&:id)
   end
 
   test 'unplugged in script' do
@@ -2600,8 +2606,8 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    expected_message = 'Level cannot be added multiple times to one lesson. Lesson key: lesson1 Script name: level-included-multiple-times'
-    assert_equal expected_message, error.message
+    assert error.message.include? 'Duplicate entry'
+    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'seeding_key' do
