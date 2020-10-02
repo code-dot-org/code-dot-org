@@ -68,7 +68,7 @@ class LessonsController < ApplicationController
         duration: activity['duration']
       )
 
-      update_activity_sections(lesson_activity, activity['activitySections'])
+      lesson_activity.update_activity_sections(activity['activitySections'])
       lesson_activity
     end
   end
@@ -85,41 +85,6 @@ class LessonsController < ApplicationController
 
     @lesson.lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
-    )
-  end
-
-  # @param lesson_activity [LessonActivity] LessonActivity whose activity sections we are updating.
-  # @param sections [Array<Hash>] - Hash representing an ActivitySection.
-  def update_activity_sections(lesson_activity, sections)
-    return unless sections
-    # use assignment to delete any missing activity sections.
-    lesson_activity.activity_sections = sections.map do |section|
-      activity_section = fetch_activity_section(lesson_activity, section)
-      activity_section.update!(
-        position: section['position'],
-        name: section['name'],
-        remarks: section['remarks'],
-        slide: section['slide'],
-        description: section['description'],
-        tips: section['tips']
-      )
-      activity_section
-    end
-  end
-
-  # Finds the ActivitySection by id, or creates a new one if id is not specified.
-  # @param section [Hash] - Hash representing an ActivitySection.
-  # @returns [ActivitySection]
-  def fetch_activity_section(lesson_activity, section)
-    if section['id']
-      activity_section = lesson_activity.activity_sections.find(section['id'])
-      raise "ActivitySection id #{section['id']} not found in LessonActivity id #{lesson_activity.id}" unless activity_section
-      return activity_section
-    end
-
-    lesson_activity.activity_sections.create(
-      position: section['position'],
       seeding_key: SecureRandom.uuid
     )
   end
